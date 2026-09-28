@@ -1,0 +1,1998 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/office-equipment",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\office-equipment",
+    "generatedAtUnix": 1790587585,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Office Equipment",
+      "slug": "office-equipment",
+      "parentSlug": null,
+      "image": "/images/products/office-equipment/barcode-scanner/deli/deli-14952w-handheld-barcode-scanner.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Id Card Printer",
+      "slug": "id-card-printer",
+      "parentSlug": "office-equipment",
+      "image": "/images/products/office-equipment/id-card-printer/evolis/evolis-avansia-id-card-printer.png",
+      "isActive": true,
+      "sortOrder": 6,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "EVOLIS",
+      "slug": "evolis",
+      "logo": null
+    },
+    {
+      "name": "HID",
+      "slug": "hid",
+      "logo": null
+    },
+    {
+      "name": "Zebra",
+      "slug": "zebra",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Evolis Avansia Dual-Sided ID Card Printer",
+      "slug": "evolis-avansia-id-card-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-21217",
+      "description": "<h2>Evolis Avansia Dual-Sided ID Card Printer</h2><p style=\"text-align: justify; \">The Evolis Avansia Dual-Sided ID Card Printer comes with the excellent print quality and over-the-edge printing that's only achieved with retransfer technology. This printer is designed to prevent non-authorized users from issuing cards. The standard built-in card flattener gives you perfect results. The Evolis Avansia Dual-Sided ID Card Printer has all types of data encoding options: magnetic stripe, contact, and contactless smart cards. This printer comes with Kensington style lock that provides you an optional second level of security. The high-capacity feed and output tray (250 cards each) allow you to print your cards without interruption, saving you valuable time. This Printer is compatible with Windows XP, Windows Vista - 32bit, Windows Vista - 64bit, Windows 7 - 64bit, Windows 8 - 32bit, Windows 8 - 64 bit. The Evolis Avansia printer comes with a 3-year Service warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Avansia</li><li>Resolution :600 DPI</li><li>Retransfer technology</li><li>Dual-sided card printing</li><li>Security graphics</li></ul>",
+      "model": "Avansia",
+      "warranty": "03-year service warranty",
+      "basePrice": 600000.0,
+      "originalPrice": 645001.0,
+      "currency": "BDT",
+      "weight": 44.09,
+      "dimensions": {
+        "length": 436.0,
+        "width": 340.0,
+        "height": 297.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "EVOLIS",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "64 MB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-21217",
+          "price": 600000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "64 MB"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 576000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Display",
+              "value": "Two-line LCD display and LED status indicator Printer graphical notifications: empty input hopper, empty/low-level ribbon alert...",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "(H x W x D): 436 x 340 x 297 mm (17.16” x 13.38” x 11.69”)",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "44.09 lbs",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Print",
+          "position": 1,
+          "items": [
+            {
+              "label": "Print Speed",
+              "value": "Upto 37.5 Seconds",
+              "position": 0
+            },
+            {
+              "label": "First Print Out Time",
+              "value": "Printout: Y/M/C 256 level",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Scan",
+          "position": 2,
+          "items": [
+            {
+              "label": "Scan Resolution",
+              "value": "600 DPI",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Fax",
+          "position": 3,
+          "items": [
+            {
+              "label": "Memory",
+              "value": "64 MB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Paper Handling",
+          "position": 4,
+          "items": [
+            {
+              "label": "Others",
+              "value": "OS Compatibility : Windows XP Windows Vista - 32 bit Windows Vista - 64 bit Windows 7 - 64 bit Windows 8 - 32 bit Windows 8 - 64 bit",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connectivity",
+          "position": 5,
+          "items": [
+            {
+              "label": "USB",
+              "value": "Ethernet USB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 6,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "03-year service warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/evolis-avansia-id-card-printer",
+      "sourceProductCode": "21217",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Avansia",
+        "Resolution :600 DPI",
+        "Retransfer technology",
+        "Dual-sided card printing",
+        "Security graphics"
+      ],
+      "needsReview": false,
+      "categorySlug": "id-card-printer",
+      "image": "/images/products/office-equipment/id-card-printer/evolis/evolis-avansia-id-card-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/id-card-printer/evolis/evolis-avansia-id-card-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "evolis-avansia-id-card-printer",
+        "candidateTitle": "Evolis Avansia Dual-Sided ID Card Printer",
+        "attemptStem": "evolis-avansia-id-card-printer"
+      }
+    },
+    {
+      "name": "Evolis Primacy 2 Duplex Expert ID Card Printer",
+      "slug": "evolis-primacy-2-id-card-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-22527",
+      "description": "<h2><div style=\"\"><div style=\"text-align: justify; \">Evolis Primacy 2 Duplex Expert ID Card Printer</div></div></h2><p style=\"text-align: justify; \">The Evolis Primacy 2 is an expert ID card printer. It is ultra-fast, powerful, and efficient. It uses advanced encoding technologies, this office printer is the ideal solution for printing personalized cards, from the simplest to the most secure. It offers double-sided printing, a 200-card feeder, encoders, a lamination module, and an LCD panel. It gives you an output capacity suitable for medium to large runs and high-quality printing. Its printing speed of up to 280 cards per hour, combined with its 100- or 200-card feeder, are the two major assets of the Primacy 2 that allow it to reach a high level of productivity and autonomy. Alongside this, its high-resolution printing mode coupled with its colorimetric profile as close to real-life colors as possible allows you to obtain a high-quality rendering on all your cards. The Evolis Primacy 2 comes with a 03-year service warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Primacy 2</li><li>Direct-to-card dye-sublimation/Resin thermal transfer/ Rewrite</li><li>Edge-to-edge printing, single or dual-sided</li><li>Customizable 300 x 600 dpi resolution</li><li>Single or double-sided print module</li></ul>",
+      "model": "Primacy 2",
+      "warranty": "03-year service warranty",
+      "basePrice": 175000.0,
+      "originalPrice": 186500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "EVOLIS",
+      "variantOptions": [
+        {
+          "name": "Input Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "Feeder capacity: 100 cards (0.76 mm – 30 mil) Hopper capacity: 100 cards (0.76 mm – 30 mil) Rear hopper capacity: 50 cards (0.76 mm – 30 mil)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-22527",
+          "price": 175000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Input Capacity": "Feeder capacity: 100 cards (0.76 mm – 30 mil) Hopper capacity: 100 cards (0.76 mm – 30 mil) Rear hopper capacity: 50 cards (0.76 mm – 30 mil)"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 168000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Display",
+              "value": "LED panel or LCD touch screen",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Print",
+          "position": 1,
+          "items": [
+            {
+              "label": "Print Speed",
+              "value": "Single-sided (YMCKO): up to 280 cards/hour Double-sided (YMCKOK): 170 cards/hour Single-sided (YMCK) with lamination module: up to 215 cards/hour",
+              "position": 0
+            },
+            {
+              "label": "Print Resolution",
+              "value": "300 x 600 dpi (color and monochrome printing) 300 x 1200 dpi (monochrome printing only)",
+              "position": 1
+            },
+            {
+              "label": "Duplex Printing",
+              "value": "Yes",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Paper Handling",
+          "position": 2,
+          "items": [
+            {
+              "label": "Input Capacity",
+              "value": "Feeder capacity: 100 cards (0.76 mm – 30 mil) Hopper capacity: 100 cards (0.76 mm – 30 mil) Rear hopper capacity: 50 cards (0.76 mm – 30 mil)",
+              "position": 0
+            },
+            {
+              "label": "Paper Type",
+              "value": "PVC cards, composite PVC cards, PET cards, ABS cards, and rewritable card",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Connectivity",
+          "position": 3,
+          "items": [
+            {
+              "label": "LAN",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Wi-Fi",
+              "value": "Wi-Fi (Optional)",
+              "position": 1
+            },
+            {
+              "label": "USB",
+              "value": "Yes",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "03-year service warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/evolis-primacy-2-id-card-printer",
+      "sourceProductCode": "22527",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Primacy 2",
+        "Direct-to-card dye-sublimation/Resin thermal transfer/ Rewrite",
+        "Edge-to-edge printing, single or dual-sided",
+        "Customizable 300 x 600 dpi resolution",
+        "Single or double-sided print module"
+      ],
+      "needsReview": false,
+      "categorySlug": "id-card-printer",
+      "image": "/images/products/office-equipment/id-card-printer/evolis/evolis-primacy-2-id-card-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/id-card-printer/evolis/evolis-primacy-2-id-card-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "evolis-primacy-2-id-card-printer",
+        "candidateTitle": "Evolis Primacy 2 Duplex Expert ID Card Printer",
+        "attemptStem": "evolis-primacy-2-id-card-printer"
+      }
+    },
+    {
+      "name": "Evolis Primacy 2 Simplex Expert ID Card Printer",
+      "slug": "evolis-primacy-2-simplex-expert-id-card-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-35949",
+      "description": "<h2>Evolis Primacy 2 Simplex Expert ID Card Printer</h2><p>The Evolis <span style=\"font-weight: bold;\">Primacy 2 Simplex</span> Expert ID Card Printer provides a flexible, high-performance solution for all your ID card printing needs. Because it is designed to be dependable and efficient, this printer is ideal for businesses and organizations that want high-quality, on-demand card printing. It uses direct-to-card dye sublimation and resin thermal transfer methods. Additionally, when the previous print is removed, cards can be reused thanks to the rewrite capability. The printer has edge-to-edge printing for a professional look, as well as flexible print resolution options, such as 300 x 600 dpi for color and monochrome printing and 300 x 1200 dpi for monochrome printing alone. Standard USB and Ethernet ports provide smooth connectivity, and an optional WiFi function is available for even more versatility. For larger volume printing requirements, the printer may be upgraded to a 200-card feeder capacity, which is in addition to the regular 100-card capacity. With an hourly maximum print capacity of 280 single-sided cards, it guarantees rapid turnaround times for bulk orders. The Evolis Primacy 2 Simplex Expert <a href=\"https://www.startech.com.bd/id-card-printer\" style=\"color: rgb(0, 0, 0);\" target=\"\">ID Card Printer</a> is a useful tool for any organization that needs to quickly and effectively produce ID cards of a high caliber. It is made to meet the rigorous specifications of a variety of industries, including corporate settings, educational institutions, and governmental organizations.</p><h2 style=\"\">Buy Evolis Primacy 2 Simplex Expert ID Card Printer from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Evolis Primacy 2 Simplex Expert ID Card Printer</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/evolis-id-card-printer\" target=\"\">Evolis ID Card Printer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Evolis Primacy 2 Simplex Expert ID Card Printer comes with 03-year service warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Primacy 2</li><li>Direct-to-card dye-sublimation/Resin thermal transfer/ Rewrite</li><li>Edge-to-edge printing, single</li><li>Customizable 300 x 600 dpi resolution</li><li>Interfaces: USB, Ethernet, Wifi (optional)</li></ul>",
+      "model": "Primacy 2",
+      "warranty": "03-year service warranty",
+      "basePrice": 135000.0,
+      "originalPrice": 150000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "EVOLIS",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-35949",
+          "price": 135000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 129600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Printer Type",
+              "value": "Edge-to-edge printing, single",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Technical Specs",
+          "position": 1,
+          "items": [
+            {
+              "label": "Connectivity",
+              "value": "USB, Ethernet, Wifi (optional)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Direct-to-card dye-sublimation/Resin thermal transfer/ Rewrite Customizable 300 x 600 dpi resolution (color and monochrome printing) or 300 x 1200 dpi resolution (monochrome printing only) Feeder capacity: 200 cards (optional), Feeder capacity: 100 cards Printing performances Single side: 280 cards/hour",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "03-year service warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/evolis-primacy-2-simplex-expert-id-card-printer",
+      "sourceProductCode": "35949",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Primacy 2",
+        "Direct-to-card dye-sublimation/Resin thermal transfer/ Rewrite",
+        "Edge-to-edge printing, single",
+        "Customizable 300 x 600 dpi resolution",
+        "Interfaces: USB, Ethernet, Wifi (optional)"
+      ],
+      "needsReview": false,
+      "categorySlug": "id-card-printer",
+      "image": "/images/products/office-equipment/id-card-printer/evolis/evolis-primacy-2-simplex-expert-id-card-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/id-card-printer/evolis/evolis-primacy-2-simplex-expert-id-card-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "evolis-primacy-2-simplex-expert-id-card-printer",
+        "candidateTitle": "Evolis Primacy 2 Simplex Expert ID Card Printer",
+        "attemptStem": "evolis-primacy-2-simplex-expert-id-card-printer"
+      }
+    },
+    {
+      "name": "Evolis Zenius Classic Card Printer",
+      "slug": "evolis-zenius-card-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-21213",
+      "description": "<h2 style=\"\">Evolis Zenius Classic Card Printer</h2><p style=\"text-align: justify; \">The Evolis Zenius printer is designed as a compact solution for efficient ID card printing. The Evolis Zenius Comes with Dye-sublimation technology that allows you to print full-color images at speeds of up to 150 cards per hour. This printer features an output tray that holds 20 cards, 300 DPI, and USB 3.0 connectivity. This printer has an Edge-to-edge printing feature. This unique feature ensures that your print comes out correctly and without borders. The Evolis Zenius printer supports Kensington security lock and data encryption for magnetic encoding. This Printer also comes with sleep modes that reduce energy consumption. Its compact size and weight make this product perfect for home use or small office space. The Evolis Zenius printer Comes with a 03-year service warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Zenius</li><li>Color Print Speed: 120-150 Cards/Hour</li><li>Resolution: 300 DPI</li><li>USB 3.0 Connectivity</li><li>Dye Sublimation/Thermal Transfer</li></ul>",
+      "model": "Zenius",
+      "warranty": "03-year service warranty",
+      "basePrice": 115000.0,
+      "originalPrice": 118270.0,
+      "currency": "BDT",
+      "weight": 7.3,
+      "dimensions": {
+        "length": 80.0,
+        "width": 7810.0,
+        "height": 53.98,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "EVOLIS",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-21213",
+          "price": 115000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 110400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Display",
+              "value": "Printer LEDs Graphical notifications from the printer2: cleaning alerts, empty/low level ribbon alert, etc.",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "Card format: ISO CR80 – ISO 7810 (53.98 mm x 85.60 mm)",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "7.3 lb / 3.3 kg",
+              "position": 2
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Print",
+          "position": 1,
+          "items": [
+            {
+              "label": "Print Technology",
+              "value": "Dye, Thermal",
+              "position": 0
+            },
+            {
+              "label": "Print Speed",
+              "value": "YMCKO: 150 Cards per Hour (24 Seconds per Card) Monochrome: 500 Cards per Hour (7.2 Seconds per Card)",
+              "position": 1
+            },
+            {
+              "label": "Print Resolution",
+              "value": "300 dpi print head",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Connectivity",
+          "position": 2,
+          "items": [
+            {
+              "label": "USB",
+              "value": "USB 3.0 Connectivity",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Refill Supplies",
+          "position": 3,
+          "items": [
+            {
+              "label": "Cartridge",
+              "value": "Black Monochrome, Colored Monochrome, Half-Panel YMCKO, Hologram, KO, YMCKO",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "03-year service warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/evolis-zenius-card-printer",
+      "sourceProductCode": "21213",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Zenius",
+        "Color Print Speed: 120-150 Cards/Hour",
+        "Resolution: 300 DPI",
+        "USB 3.0 Connectivity",
+        "Dye Sublimation/Thermal Transfer"
+      ],
+      "needsReview": false,
+      "categorySlug": "id-card-printer",
+      "image": "/images/products/office-equipment/id-card-printer/evolis/evolis-zenius-card-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/id-card-printer/evolis/evolis-zenius-card-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "evolis-zenius-card-printer",
+        "candidateTitle": "Evolis Zenius Classic Card Printer",
+        "attemptStem": "evolis-zenius-card-printer"
+      }
+    },
+    {
+      "name": "HID FARGO DTC1250E FD AP Dual Side Plastic Card Printer",
+      "slug": "hid-fargo-dtc1250e-fd-ap-card-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-33781",
+      "description": "<h2>HID FARGO DTC1250E FD AP Dual Side Plastic Card Printer</h2><p>The HID <strong>FARGO DTC1250E FD AP</strong> Dual Side Plastic Card <a href=\"https://www.startech.com.bd/id-card-printer\" style=\"color: rgb(0, 0, 0);\" target=\"\">Printer </a>is an innovative and feature-rich card printing system designed to meet the needs of secure identification and credentialing. This printer uses a mix of dye sublimation and resin thermal transfer print processes to achieve painstaking precision and clarity, with an exceptional resolution of 300 dpi (11.8 dots/mm) in continuous tone. Its color support is vast, with up to 16.7 million colors or 256 shades per pixel, allowing the manufacture of visually appealing and colorful cards appropriate for a wide range of applications. To increase productivity, the printer has a standard resin black ribbon capable of producing up to 1000 prints, providing a cost-effective and dependable option for high-volume card printing requirements. Speed is a standout. Speed is an impressive feature, reducing wait times for customized cards and IDs. The printer's quick print speed is matched by a dedication to high-quality output, allowing customers to produce visually appealing and professional-quality credentials on demand. Ease of use is a top priority, and the plug-and-play feature provides a flawless experience. The user-friendly interface facilitates setup, consumable loading, and general operation, making it suitable for users with varied levels of technical experience. The incorporation of AES-256 encryption ensures strong data security. Furthermore, the resin scramble function improves security by concealing crucial information during the printing process, maintaining the integrity of the printed credentials. The HID FARGO DTC1250E FD AP Dual Side Plastic Card Printer provides a complete and safe solution for creating customized and high-quality cards. Its combination of speed, accuracy, and security features makes it an essential tool for enterprises that need rapid and dependable card printing in a range of circumstances. </p><h2>Buy HID FARGO DTC1250E FD AP Dual Side Plastic Card Printer from Star Tech</h2><p>In Bangladesh, you can get original <strong>HID FARGO DTC1250E FD AP Dual Side Plastic Card Printer</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/hid-printer\" target=\"\">HID ID Card Printer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The HID FARGO DTC1250E FD AP Dual Side Plastic Card Printer comes with 1 year of warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FARGO DTC1250E FD AP</li><li>Print Method: Dye sublimation / resin thermal transfer</li><li>Resolution: 300 dpi (11.8 dots/mm) continuous tone</li><li>Colors: Up to 16.7 million / 256 shades per pixel</li><li>Resin black (standard), 1000 prints</li></ul>",
+      "model": "FARGO DTC1250E FD AP",
+      "warranty": "01-year",
+      "basePrice": 220000.0,
+      "originalPrice": 231000.0,
+      "currency": "BDT",
+      "weight": 7.5,
+      "dimensions": {
+        "length": 8.8,
+        "width": 13.7,
+        "height": 7.9,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "HID",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "32 MB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Input Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "100 cards (.030˝ / .762 mm)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Output Capacity",
+          "position": 2,
+          "values": [
+            {
+              "value": "Single-sided: Up to 30 cards.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-33781",
+          "price": 220000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "32 MB RAM",
+            "Input Capacity": "100 cards (.030˝ / .762 mm)",
+            "Output Capacity": "Single-sided: Up to 30 cards."
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 211200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Memory",
+              "value": "32 MB RAM",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "Single-sided printer: 8.8˝H x 13.7˝W x 7.9˝D / 224 mm H x 348 mm W x 201 mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "Single-sided: 7.5 lbs. / 3.4 Kg; dual-sided: 10 lbs. / 4.54 Kg",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Print",
+          "position": 1,
+          "items": [
+            {
+              "label": "Print Technology",
+              "value": "Dye sublimation / resin thermal transfer",
+              "position": 0
+            },
+            {
+              "label": "Print Speed",
+              "value": "6 seconds per card (K*); 8 seconds per card (KO*); 16 seconds per card (YMCKO*); 24 seconds per card (YMCKOK*)",
+              "position": 1
+            },
+            {
+              "label": "Print Resolution",
+              "value": "300 dpi (11.8 dots/mm) continuous tone",
+              "position": 2
+            },
+            {
+              "label": "Duplex Printing",
+              "value": "Yes",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Paper Handling",
+          "position": 2,
+          "items": [
+            {
+              "label": "Input Capacity",
+              "value": "100 cards (.030˝ / .762 mm)",
+              "position": 0
+            },
+            {
+              "label": "Output Capacity",
+              "value": "Single-sided: Up to 30 cards.",
+              "position": 1
+            },
+            {
+              "label": "Paper Type",
+              "value": "PVC cards, composite PVC cards, PET cards, ABS cards, and rewritable card",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Print Ribbon Options Options include easy-to-use ribbon with disposable ribbon cartridge (EZ) and more economical and ecofriendly refill ribbon for cartridge (ECO). Both EZ and ECO: • Full-color with resin black and overlay panel, YMCKO*, 250 prints • Resin black (standard), 1000 prints • Full-color half-panel with resin black and overlay panel, YMCKO*, 350 prints EZ only: • Full-color with two resin black panels and overlay panel, YMCKOK*, 200 prints • Resin black and overlay panel, KO*, 500 prints • Resin black (premium), 1000 prints • Resin white, 1000 prints • Gold metallic, 450 prints",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Connectivity",
+          "position": 3,
+          "items": [
+            {
+              "label": "USB",
+              "value": "USB 2.0, optional Ethernet with internal print server",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hid-fargo-dtc1250e-fd-ap-card-printer",
+      "sourceProductCode": "33781",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FARGO DTC1250E FD AP",
+        "Print Method: Dye sublimation / resin thermal transfer",
+        "Resolution: 300 dpi (11.8 dots/mm) continuous tone",
+        "Colors: Up to 16.7 million / 256 shades per pixel",
+        "Resin black (standard), 1000 prints"
+      ],
+      "needsReview": false,
+      "categorySlug": "id-card-printer",
+      "image": "/images/products/office-equipment/id-card-printer/hid/hid-fargo-dtc1250e-fd-ap-card-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/id-card-printer/hid/hid-fargo-dtc1250e-fd-ap-card-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hid-fargo-dtc1250e-fd-ap-card-printer",
+        "candidateTitle": "HID FARGO DTC1250E FD AP Dual Side Plastic Card Printer",
+        "attemptStem": "hid-fargo-dtc1250e-fd-ap-card-printer"
+      }
+    },
+    {
+      "name": "Zebra ZC100 Single-Sided Card Printer (Without Ribbon & Card)",
+      "slug": "zebra-zc100-card-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-14392",
+      "description": "<h2>Zebra ZC100 Single-Sided Card Printer (Without Ribbon &amp; Card)<br/></h2><p>Whether you need to print single-sided employee identity badges or membership and event guest cards, card printing is a crucial aspect of your business. Deployment flexibility and the time it takes to print and manage your card printing solutions all have an impact on your business â€” from your brand image to staff productivity to overall operational efficiency. Now there's a new kind of card printer designed to address it all â€” the ZC100. You get groundbreaking simple operation and the slimmest fit-everywhere design, along with a toolbox of additional capabilities that make the ZC100 even easier to integrate, use, and manage. The ZC100 â€” when only the best single-sided card printer will do. With the plug-and-play deployment, instant card feeder adjustment, intuitive icons, and driver interface, the ZC100 are easy to integrate, use, and manage. Ribbon changing is virtually fool-proof, and the revolutionary hopper design makes loading and unloading cards easier than ever. Even though the ZC100 is built for business, it has the consumer good looks required to fit in customer-facing areas from the corporate office to the university to the retail shop. The advanced security features of the ZC100 enable printer-to-host authentication to help prevent unauthorized printing, and government-grade encryption protects the most sensitive data during printing. One of the most intuitive and easy-to-use card printers on the market the ZC100 automatically adjusts to any card thickness, innovations make ribbon changes virtually fool-proof, and a new printer driver offers a one-of-a-kind graphical user interface that brings a new level of simplicity to control the printing process. And, Print DNA offers a collection of high-value solutions that makes it easier than ever to integrate card printing into your apps, design cards, and support your printers. It has a 01-year service warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Zebra ZC100</li><li>Revolutionary New Hopper Design</li><li>Advance Security</li><li>Fits Everywhere Design</li><li>Game-Changing Simplicity</li></ul>",
+      "model": "Zebra ZC100",
+      "warranty": "01-year service warranty",
+      "basePrice": 86000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 3.9,
+      "dimensions": {
+        "length": 258.0,
+        "width": 157.0,
+        "height": 383.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Zebra",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black and White",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Input Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "100 Card Capacity, auto-adjusting input hopper (30mil)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Output Capacity",
+          "position": 2,
+          "values": [
+            {
+              "value": "100 Card Capacity output hopper (30mil)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Paper Size",
+          "position": 3,
+          "values": [
+            {
+              "value": "CR 80 ISO 7810 ID-1 Format",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color Output",
+          "position": 4,
+          "values": [
+            {
+              "value": "Black and White and Color",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-14392",
+          "price": 86000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black and White",
+            "Input Capacity": "100 Card Capacity, auto-adjusting input hopper (30mil)",
+            "Output Capacity": "100 Card Capacity output hopper (30mil)",
+            "Paper Size": "CR 80 ISO 7810 ID-1 Format",
+            "Color Output": "Black and White and Color"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 82560.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Power",
+              "value": "90-132VAC and 190-265VAC",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "258 x 157 x 383 mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "3.9Kg",
+              "position": 2
+            },
+            {
+              "label": "Color",
+              "value": "Black and White",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Print",
+          "position": 1,
+          "items": [
+            {
+              "label": "Print Speed",
+              "value": "YMCKO: Single-Sided- 150cph Monochrome: Single-Sided- 700cph",
+              "position": 0
+            },
+            {
+              "label": "Print Resolution",
+              "value": "300 dpi",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Paper Handling",
+          "position": 2,
+          "items": [
+            {
+              "label": "Input Capacity",
+              "value": "100 Card Capacity, auto-adjusting input hopper (30mil)",
+              "position": 0
+            },
+            {
+              "label": "Output Capacity",
+              "value": "100 Card Capacity output hopper (30mil)",
+              "position": 1
+            },
+            {
+              "label": "Paper Size",
+              "value": "CR 80 ISO 7810 ID-1 Format",
+              "position": 2
+            },
+            {
+              "label": "Paper Type",
+              "value": "PVC and PVC Composite",
+              "position": 3
+            },
+            {
+              "label": "Paper Weight",
+              "value": "30mil",
+              "position": 4
+            },
+            {
+              "label": "Color Output",
+              "value": "Black and White and Color",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Connectivity",
+          "position": 3,
+          "items": [
+            {
+              "label": "USB",
+              "value": "USB 2.0",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-year service warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zebra-zc100-card-printer",
+      "sourceProductCode": "14392",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Zebra ZC100",
+        "Revolutionary New Hopper Design",
+        "Advance Security",
+        "Fits Everywhere Design",
+        "Game-Changing Simplicity"
+      ],
+      "needsReview": false,
+      "categorySlug": "id-card-printer",
+      "image": "/images/products/office-equipment/id-card-printer/zebra/zebra-zc100-card-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/id-card-printer/zebra/zebra-zc100-card-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zebra-zc100-card-printer",
+        "candidateTitle": "Zebra ZC100 Single-Sided Card Printer (Without Ribbon & Card)",
+        "attemptStem": "zebra-zc100-card-printer"
+      }
+    },
+    {
+      "name": "Zebra ZC300 Dual-Sided ID Card Printer (Without Ribbon & Card)",
+      "slug": "zebra-zc300-dual-sided-card-printer",
+      "type": "PHYSICAL",
+      "sku": "ZC32-000C000IN00",
+      "description": "<h2 style=\"\">Zebra ZC300 Dual-Sided ID Card Printer (Without Ribbon &amp; Card)</h2><p style=\"\">The ZC300 Dual-Sided ID Card Printer is the simplest card printer there is. It comes with a highly graphical interface, a new ingenious card feeder and a revolutionary new hopper design. It features 300 dpi (11.8 dots/mm) print resolution. The image size supported is 1006 x 640 pixels. It supports USB 2.0 and Ethernet connectivity and has a 2 GB flash memory. itis an awesome dual-sided card printer.</p><h3 style=\"\">Highly graphical LED/LCD interface</h3><p style=\"\">The ZC300 Dual-Sided ID Card Printer comes with highly-intuitive well-tested icons, animations and text-based messages in your own language. It allows any user to easily understand how to clear a printer jam, fix a ribbon, load a ribbon or cards and what the printer needs and how to perform virtually any function.</p><h3 style=\"\">A new ingenious card feeder handles varying card thickness on the-fly</h3><p style=\"\">The card feeder instantly adjusts to the thickness of each card. It can handle card thickness between 10-40 mil. Card Size: CR80 ISO 7810 ID-1 format, CR79. It supports PVC and PVC composite material. It also can handle adhesive back and writable back cards, also transparent cards.</p><h3 style=\"\">Groundbreaking new driver with a graphical user interface</h3><p style=\"\">The ZC300 Dual-Sided ID Card Printer has an intuitive interface and the newly-designed driver makes it easier to print cards. Settings are grouped into tabs where they can be easily accessed with a click. A visual display allowing you to instantly see how the card looks of your card make printing simple, monochrome and complex colour cards equally easy. It can print 900 cards/hour single-sided monochrome, 200 cards/hour single-sided YMCKO, 140 cards/hour dual-sided YMCKOK and 450 cards/hour dual-sided monochrome.</p><h3 style=\"\">The new revolutionary hopper design</h3><p style=\"\">The completely re-designed hopper makes loading and unloading cards easier than ever. It supports 100 card capacity auto-adjusting input hopper (30 mils) and 100 card capacity output hopper (30 mils). As the input and output hoppers have the same capacity, it reduces the need to refill and empty the hoppers.</p><h3 style=\"\">Fool-proof ribbon changing</h3><p style=\"\">Changing a ribbon requires no instructions. The newly designed ribbon door latch unlocks and opens in one motion. The unique door-handle style grip leaves no question about how to remove or insert the ribbon. And with embedded smart chips, you always know when to change the ribbon.</p><h2>Buy Zebra ZC300 Single-Sided ID Card Printer (Without Ribbon &amp; Card) from Star Tech</h2><p>In Bangladesh, you can get original <strong>Zebra ZC300 Dual-Sided ID Card Printer</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/zebra-id-card-printer\" target=\"\">Zebra ID Card Printer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Zebra ZC300 Dual-Sided ID Card Printer comes with 01-year service warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: ZC32-000C000IN00</li><li>Model: ZC300</li><li>300 dpi (11.8 dots/mm) print resolution</li><li>Image size: 1006 x 640 pixels</li><li>USB 2.0 and Ethernet connectivity</li><li>2 GB flash memory</li></ul>",
+      "model": "ZC300",
+      "warranty": "01-year service warranty",
+      "basePrice": 97000.0,
+      "originalPrice": 98000.0,
+      "currency": "BDT",
+      "weight": 9.7,
+      "dimensions": {
+        "length": 10.2,
+        "width": 6.2,
+        "height": 18.4,
+        "unit": "in"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Zebra",
+      "variantOptions": [
+        {
+          "name": "Input Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "100 card capacity auto-adjusting input hopper (30 mil)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Output Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "100 card capacity output hopper (30 mil)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Paper Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "CR80 ISO 7810 ID-1 format, CR79",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ZC32-000C000IN00",
+          "price": 97000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Input Capacity": "100 card capacity auto-adjusting input hopper (30 mil)",
+            "Output Capacity": "100 card capacity output hopper (30 mil)",
+            "Paper Size": "CR80 ISO 7810 ID-1 format, CR79"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 93120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Display",
+              "value": "Graphical colour LCD",
+              "position": 0
+            },
+            {
+              "label": "Power",
+              "value": "90-132VAC and 190-264VAC RMS",
+              "position": 1
+            },
+            {
+              "label": "Dimensions",
+              "value": "10.2 in. H x 6.2 in. W x 18.4 in. D 258 mm H x 157 mm W x 468 mm D",
+              "position": 2
+            },
+            {
+              "label": "Weight",
+              "value": "9.7 lbs (4.4 kg)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Print",
+          "position": 1,
+          "items": [
+            {
+              "label": "Print Speed",
+              "value": "900 cards/hour single-sided monochrome 200 cards/hour single-sided YMCKO 140 cards/hour dual-sided YMCKOK 450 cards/hour dual-sided monochrome",
+              "position": 0
+            },
+            {
+              "label": "Print Resolution",
+              "value": "300 dpi (11.8 dots/mm) print resolution Image size: 1006 x 640 pixels",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Paper Handling",
+          "position": 2,
+          "items": [
+            {
+              "label": "Input Capacity",
+              "value": "100 card capacity auto-adjusting input hopper (30 mil)",
+              "position": 0
+            },
+            {
+              "label": "Output Capacity",
+              "value": "100 card capacity output hopper (30 mil)",
+              "position": 1
+            },
+            {
+              "label": "Paper Size",
+              "value": "CR80 ISO 7810 ID-1 format, CR79",
+              "position": 2
+            },
+            {
+              "label": "Paper Type",
+              "value": "PVC and PVC composite",
+              "position": 3
+            },
+            {
+              "label": "Paper Weight",
+              "value": "10-40 mil",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-year service warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zebra-zc300-dual-sided-card-printer",
+      "sourceProductCode": "16232",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "ZC32-000C000IN00",
+      "sourceKeyFeatures": [
+        "MPN: ZC32-000C000IN00",
+        "Model: ZC300",
+        "300 dpi (11.8 dots/mm) print resolution",
+        "Image size: 1006 x 640 pixels",
+        "USB 2.0 and Ethernet connectivity",
+        "2 GB flash memory"
+      ],
+      "needsReview": false,
+      "categorySlug": "id-card-printer",
+      "image": "/images/products/office-equipment/id-card-printer/zebra/zebra-zc300-dual-sided-card-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/id-card-printer/zebra/zebra-zc300-dual-sided-card-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zebra-zc300-dual-sided-card-printer",
+        "candidateTitle": "Zebra ZC300 Dual-Sided ID Card Printer (Without Ribbon & Card)",
+        "attemptStem": "zebra-zc300-dual-sided-card-printer"
+      }
+    },
+    {
+      "name": "Zebra ZC300 Single-Sided ID Card Printer (Without Ribbon & Card)",
+      "slug": "zebra-zc300-id-card-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-42184",
+      "description": "<h2>Zebra ZC300 Single-Sided ID Card Printer (Without Ribbon &amp; Card)</h2><p>The Zebra <strong>ZC300</strong> Single-Sided <a href=\"https://www.startech.com.bd/id-card-printer\" style=\"color: rgb(0, 0, 0);\" target=\"\">ID Card Printer</a> is a powerful and compact solution that meets the high-quality card printing requirements of modern enterprises, schools, and government organizations. This Zebra ZC300 ID Card Printer has a 300 dpi (11.8 dots/mm) resolution and can produce crisp, clear pictures up to 1006 x 640 pixels, making it suitable for professional ID cards, access badges, membership cards, and other applications. It can handle a variety of card types, including PVC and PVC composite cards in CR80 ISO 7810 ID-1 and CR79 formats, with thicknesses ranging from 10 to 40 mil. The Zebra ZC300 Printer, with its 100-card auto-adjusting input hopper and 100-card output hopper, allows for continuous batch printing, resulting in more efficient operations. It delivers fast print speeds of up to 900 cards per hour for single-sided monochrome, 200 cards per hour for full-color YMCKO, and 140 cards per hour for dual-sided YMCKOK, ensuring quick turnaround even in high-demand environments. The printer includes both USB 2.0 and Ethernet 10/100 connectivity, allowing seamless integration into existing networks and systems. A graphical color LCD display provides intuitive control and real-time status updates, enhancing user experience and minimizing training time. The Zebra ZC300 Single-Sided ID Card Printer fits easily on desks with small dimensions of 10.2 in. H x 6.2 in. W x 18.4 in. D (258 mm x 157 mm x 468 mm) and a lightweight design weighing just 9.7 lbs (4.4 kg). It has a wide input voltage range of 90-132VAC and 190-264VAC RMS, making it ideal for global deployment. Whether you value durability, print quality, or convenience of use, the Zebra ZC300 ID Card Printer provides a dependable and efficient card printing experience customized to your organization's requirements.</p><h2>Buy Zebra ZC300 Single-Sided ID Card Printer (Without Ribbon &amp; Card) from Star Tech</h2><p>In Bangladesh, you can get original <strong>Zebra ZC300 Single-Sided ID Card Printer</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/zebra-id-card-printer\" target=\"\">Zebra ID Card Printer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Zebra ZC300 Single-Sided ID Card Printer comes with 01-year service warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ZC300</li><li>300 Dpi (11.8 Dots/mm) Print</li><li>Image Resolution: 1006 X 640 Pixels</li><li>Output Capacity: 100-Card Capacity</li><li>USB 2.0 and Ethernet 10/100 Connectivity</li></ul>",
+      "model": "ZC300",
+      "warranty": "01-year service warranty",
+      "basePrice": 88000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 9.7,
+      "dimensions": {
+        "length": 10.2,
+        "width": 6.2,
+        "height": 18.4,
+        "unit": "in"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Zebra",
+      "variantOptions": [
+        {
+          "name": "Input Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "100 card capacity auto-adjusting input hopper (30 mil)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Output Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "100 card capacity output hopper (30 mil)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Paper Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "CR80 ISO 7810 ID-1 format, CR79",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-42184",
+          "price": 88000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Input Capacity": "100 card capacity auto-adjusting input hopper (30 mil)",
+            "Output Capacity": "100 card capacity output hopper (30 mil)",
+            "Paper Size": "CR80 ISO 7810 ID-1 format, CR79"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 84480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Display",
+              "value": "Graphical colour LCD",
+              "position": 0
+            },
+            {
+              "label": "Power",
+              "value": "90-132VAC and 190-264VAC RMS",
+              "position": 1
+            },
+            {
+              "label": "Dimensions",
+              "value": "10.2 in. H x 6.2 in. W x 18.4 in. D 258 mm H x 157 mm W x 468 mm D",
+              "position": 2
+            },
+            {
+              "label": "Weight",
+              "value": "9.7 lbs (4.4 kg)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Print",
+          "position": 1,
+          "items": [
+            {
+              "label": "Print Speed",
+              "value": "900 cards/hour single-sided monochrome 200 cards/hour single-sided YMCKO",
+              "position": 0
+            },
+            {
+              "label": "Print Resolution",
+              "value": "300 dpi (11.8 dots/mm) print resolution Image size: 1006 x 640 pixels",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Paper Handling",
+          "position": 2,
+          "items": [
+            {
+              "label": "Input Capacity",
+              "value": "100 card capacity auto-adjusting input hopper (30 mil)",
+              "position": 0
+            },
+            {
+              "label": "Output Capacity",
+              "value": "100 card capacity output hopper (30 mil)",
+              "position": 1
+            },
+            {
+              "label": "Paper Size",
+              "value": "CR80 ISO 7810 ID-1 format, CR79",
+              "position": 2
+            },
+            {
+              "label": "Paper Type",
+              "value": "PVC and PVC composite",
+              "position": 3
+            },
+            {
+              "label": "Paper Weight",
+              "value": "10-40 mil",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Connectivity",
+          "position": 3,
+          "items": [
+            {
+              "label": "LAN",
+              "value": "Ethernet 10/100 connectivity",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-year service warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zebra-zc300-id-card-printer",
+      "sourceProductCode": "42184",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ZC300",
+        "300 Dpi (11.8 Dots/mm) Print",
+        "Image Resolution: 1006 X 640 Pixels",
+        "Output Capacity: 100-Card Capacity",
+        "USB 2.0 and Ethernet 10/100 Connectivity"
+      ],
+      "needsReview": false,
+      "categorySlug": "id-card-printer",
+      "image": "/images/products/office-equipment/id-card-printer/zebra/zebra-zc300-id-card-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/id-card-printer/zebra/zebra-zc300-id-card-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zebra-zc300-id-card-printer",
+        "candidateTitle": "Zebra ZC300 Single-Sided ID Card Printer (Without Ribbon & Card)",
+        "attemptStem": "zebra-zc300-id-card-printer"
+      }
+    },
+    {
+      "name": "Zebra ZXP Series 7 Card Printer (Single -Sided Printing, without Ribbon & Card)",
+      "slug": "zebra-zxp-series-7-card-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-14394",
+      "description": "<h2>Zebra ZXP Series 7 Card Printer (Single-Sided Printing, without Ribbon &amp; Card)<br/></h2><p>Utilizing the latest in card-printing technology, the ZXP Series 7 card printer provides high-quality card printing. The printer delivers fast yet reliable performance while offering users exceptional value by lowering the printer's total cost of ownership. Time after time, it prints sharp vivid cards with precise color control. The ZXP Series 7 printer has an innovative design. It automatically adjusts to the thickness of the card, and ribbon loading is easy. With color-coded guides and a clear LCD control panel, it is simple for anyone to use. Choose from numerous encoding, connectivity, and ribbon options, and if extra security or durability is needed for cards, wasteless single or dual-sided lamination is also available. Locking mechanisms protect the printer and media, and software provides further security by tracking and restricting activities as required. Genuine Zebra supplies meet stringent quality standards and are recommended for optimal printing quality and proper printer performance. The ZXP Series 7 printer is designed to work only with Zebra True Colours ix Series ribbons and Zebra True Secure I Series laminates. The ZXP Series 7 printer offers real flexibility. You can select options whenever you need them so you can add to your portfolio of card printing applications and manage your investment at the same time. The ZXP Series 7 printer is designed to work with Zebra True Colours ix Series ribbons and Zebra True Secure I Series laminate. The high-capacity ribbons reduce costs by delivering more images per roll and feature an improved formulation for printing high-quality images at higher speeds. Many ribbon types are available in two sizes to meet the needs of every printing task. Zebra True Secure laminates reduce the risk of counterfeiting and extend the life of your high-security cards. The unique laminate design dramatically reduces waste by eliminating the need for carrier material, backings, and liners. Specially designed cartridges make laminate replacement simple. Both the ribbons and laminates utilize intelligent media technology, which automatically detects and calibrates the printer. Whether you are a small business or a large enterprise, Zebras CardStudio makes designing and printing professional-looking cards easy. It lets you make the most of ZXP Series 7 printers' functionality, including smart-card encoding and laminating. Flexible single or multiple-user network licensing and database integration options make CardStudio the ideal card-design software complement for the ZXP Series 7 printer. It has a 01-year service warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Zebra ZXP Series 7</li><li>Interface: Standard: USB &amp; Ethernet</li><li>Print Technology: Direct-to-Card Printer</li><li>Print Speed: Color-300 CPH, Mono-1,375 CPH</li><li>Image per Ribbon Roll: Color-750, Mono-5,000</li></ul>",
+      "model": "Zebra ZXP Series 7",
+      "warranty": "01-year service warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 12.2,
+      "dimensions": {
+        "length": 277.0,
+        "width": 699.0,
+        "height": 306.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Zebra",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Input Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "200-card capacity feeder (30 mil)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Output Capacity",
+          "position": 2,
+          "values": [
+            {
+              "value": "100-card output hopper (30 mil)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Paper Size",
+          "position": 3,
+          "values": [
+            {
+              "value": "CR-80, ISO 7810 format, Type ID-1",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color Output",
+          "position": 4,
+          "values": [
+            {
+              "value": "Black and White and Color",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-14394",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black",
+            "Input Capacity": "200-card capacity feeder (30 mil)",
+            "Output Capacity": "100-card output hopper (30 mil)",
+            "Paper Size": "CR-80, ISO 7810 format, Type ID-1",
+            "Color Output": "Black and White and Color"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Display",
+              "value": "21-character x 6-line LCD operator display with configurable soft keys",
+              "position": 0
+            },
+            {
+              "label": "Power",
+              "value": "90V – 264V AC and 47 – 63Hz (50 – 60Hz nominal)",
+              "position": 1
+            },
+            {
+              "label": "Dimensions",
+              "value": "277 x 699 /306 mm",
+              "position": 2
+            },
+            {
+              "label": "Weight",
+              "value": "12.2 Kg",
+              "position": 3
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Print",
+          "position": 1,
+          "items": [
+            {
+              "label": "Print Speed",
+              "value": "1375 cards/hour monochrome single-sided or 555 cards/hour dual-sided printing 300 cards/hour full-color YMCKO single-sided printing 225 cards/hour full-color YMCKOK dual-sided printing",
+              "position": 0
+            },
+            {
+              "label": "Print Resolution",
+              "value": "300 dpi/11.8 dots per mm print resolution",
+              "position": 1
+            },
+            {
+              "label": "Duplex Printing",
+              "value": "Yes",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Paper Handling",
+          "position": 2,
+          "items": [
+            {
+              "label": "Input Capacity",
+              "value": "200-card capacity feeder (30 mil)",
+              "position": 0
+            },
+            {
+              "label": "Output Capacity",
+              "value": "100-card output hopper (30 mil)",
+              "position": 1
+            },
+            {
+              "label": "Paper Size",
+              "value": "CR-80, ISO 7810 format, Type ID-1",
+              "position": 2
+            },
+            {
+              "label": "Paper Type",
+              "value": "PVC and composite, ABS cards, PET, PET-G, PET-F, PETix, and Teslin composite",
+              "position": 3
+            },
+            {
+              "label": "Paper Weight",
+              "value": "Card thickness: 10 – 50 mil (0.25 – 1.27 mm) Card thickness for lamination: 30 mil (0.76 mm)",
+              "position": 4
+            },
+            {
+              "label": "Color Output",
+              "value": "Black and White and Color",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Connectivity",
+          "position": 3,
+          "items": [
+            {
+              "label": "LAN",
+              "value": "Ethernet 10/100",
+              "position": 0
+            },
+            {
+              "label": "USB",
+              "value": "USB 2.0",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-year service warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zebra-zxp-series-7-card-printer",
+      "sourceProductCode": "14394",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Zebra ZXP Series 7",
+        "Interface: Standard: USB & Ethernet",
+        "Print Technology: Direct-to-Card Printer",
+        "Print Speed: Color-300 CPH, Mono-1,375 CPH",
+        "Image per Ribbon Roll: Color-750, Mono-5,000"
+      ],
+      "needsReview": true,
+      "categorySlug": "id-card-printer",
+      "image": "/images/products/office-equipment/id-card-printer/zebra/zebra-zxp-series-7-card-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/id-card-printer/zebra/zebra-zxp-series-7-card-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zebra-zxp-series-7-card-printer",
+        "candidateTitle": "Zebra ZXP Series 7 Card Printer (Single -Sided Printing, without Ribbon & Card)",
+        "attemptStem": "zebra-zxp-series-7-card-printer"
+      }
+    },
+    {
+      "name": "Zebra ZXP Series 3 Single Sided ID Card Printer Without Ribbon & Card",
+      "slug": "zebra-zxp3-digital-id-card-printer",
+      "type": "PHYSICAL",
+      "sku": "Z31-00000000US00",
+      "description": "<h2><span style=\"font-weight: bold;\">Zebra ZXP Series 3 Single Sided ID Card Printer Without Ribbon &amp; Card</span></h2>\n<div style=\"text-align: justify;\">The ZXP Series 3 features a Print Touch NFC tag that allows you to tap and connect to a compatible mobile device in order to open up documentation on the printer. The printer is also able to have optional upgrades installed and it has a 16 character LCD display for convenience. Additionally, there is a Kensington security lock slot and USB 2.0 connectivity. It has Auto-switching single-phase AC power supply and Auto calibration of ribbon. With true Colors ix Series ZXP 3 high-performance ribbons with intelligent media technology Zebra ZRaster host-based image processing technology produces quality prints at high speeds. It also has Smart card and magnetic stripe encoding options. On the other hand it can work with cards from 10-40 mil thick.</div>\n<p><span style=\"font-weight: bold;\">1 Year Service Warranty (Without Head)</span><br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: Z31-00000000US00</li><li>Model: Zebra ZXP3</li><li>Print Speed (hour) : 700 cards(B&amp;W) &amp;140 cards (Color)</li><li>Single sided cards</li><li>Resolution: 300 dpi</li><li>USB 2.0 Connectivity</li></ul>",
+      "model": "Zebra ZXP3",
+      "warranty": "01 Year Service Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 12.2,
+      "dimensions": {
+        "length": 12.2,
+        "width": 7.9,
+        "height": 14.5,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Zebra",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "USB V2.0 (cable included) - standard",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Sizes",
+          "position": 1,
+          "values": [
+            {
+              "value": "2.12\" x 3.38\" - CR-80 Card",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory capacity",
+          "position": 3,
+          "values": [
+            {
+              "value": "Standard Memory: 32 MB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "Z31-00000000US00",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "USB V2.0 (cable included) - standard",
+            "Sizes": "2.12\" x 3.38\" - CR-80 Card",
+            "Color": "Black",
+            "Memory capacity": "Standard Memory: 32 MB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Printing Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Print Speed",
+              "value": "Maximum Mono Print Speed: 4.8 Second Maximum Color Print Speed: 20 Second",
+              "position": 0
+            },
+            {
+              "label": "Resolution",
+              "value": "300 dpi",
+              "position": 1
+            },
+            {
+              "label": "Print Technology",
+              "value": "Direct to Card",
+              "position": 2
+            },
+            {
+              "label": "Display",
+              "value": "Display Screen Type: LCD",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "USB V2.0 (cable included) - standard",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Single sided cards",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Paper Handling",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sizes",
+              "value": "2.12\" x 3.38\" - CR-80 Card",
+              "position": 0
+            },
+            {
+              "label": "Types",
+              "value": "PVC Card PVC Composite Magnetic Stripe Card",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Copying Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Media Load Type: Auto Feed Media Handling: 1 x Feeder 100 Card 1 x Output Hopper 45 Card Media Size: 2.12\" x 3.38\" - CR-80 Card Media Thickness: 30 mil",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 3,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Dimensions (W x D x H)",
+              "value": "Height: 12.2\" Width: 7.9\" Depth: 14.5\"",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "12.20 lb (Approximate)",
+              "position": 2
+            },
+            {
+              "label": "Voltage",
+              "value": "110 V AC 220 V AC",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Fax",
+          "position": 4,
+          "items": [
+            {
+              "label": "Memory capacity",
+              "value": "Standard Memory: 32 MB",
+              "position": 0
+            },
+            {
+              "label": "Resolution",
+              "value": "Maximum Print Resolution: 300 dpi",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 5,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 Year Service Warranty",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Supplies",
+          "position": 6,
+          "items": [
+            {
+              "label": "Cartridge/ Toner Model No.",
+              "value": "1. 52.703.01 Zebra ZXP Series 3 Black Ribbon(2000 Print) 2. 52.703.04 Zebra ZXP Series 3 Color Ribbon(280 Print), 3. 130.761.66 K2 Mango TK 28 RFID Card (Please make sure your existing & mentioned toner/cartridge/ink bottle models are the same before buying a new one)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zebra-zxp3-digital-id-card-printer",
+      "sourceProductCode": "2394",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "Z31-00000000US00",
+      "sourceKeyFeatures": [
+        "MPN: Z31-00000000US00",
+        "Model: Zebra ZXP3",
+        "Print Speed (hour) : 700 cards(B&W) &140 cards (Color)",
+        "Single sided cards",
+        "Resolution: 300 dpi",
+        "USB 2.0 Connectivity"
+      ],
+      "needsReview": true,
+      "categorySlug": "id-card-printer",
+      "image": "/images/products/office-equipment/id-card-printer/zebra/zebra-zxp3-digital-id-card-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/id-card-printer/zebra/zebra-zxp3-digital-id-card-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zebra-zxp3-digital-id-card-printer",
+        "candidateTitle": "Zebra ZXP Series 3 Single Sided ID Card Printer Without Ribbon & Card",
+        "attemptStem": "zebra-zxp3-digital-id-card-printer"
+      }
+    }
+  ]
+}

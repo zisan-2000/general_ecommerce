@@ -1,0 +1,488 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/office-equipment",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\office-equipment",
+    "generatedAtUnix": 1790587585,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Office Equipment",
+      "slug": "office-equipment",
+      "parentSlug": null,
+      "image": "/images/products/office-equipment/barcode-scanner/deli/deli-14952w-handheld-barcode-scanner.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Telephone Set",
+      "slug": "telephone-set",
+      "parentSlug": "office-equipment",
+      "image": "/images/products/office-equipment/telephone-set/panasonic-kx-at7730sx-telephone.png",
+      "isActive": true,
+      "sortOrder": 27,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Panasonic",
+      "slug": "panasonic",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Panasonic KX-AT7730SX Proprietary Telephone Set",
+      "slug": "panasonic-kx-at7730sx-telephone",
+      "type": "PHYSICAL",
+      "sku": "ST-9435",
+      "description": "<h2>Panasonic KX-AT7730SX Proprietary Telephone Set</h2><p>Panasonic KX-AT7730SX Telephone With Alphanumeric Display. It has Programmable Keys With Dual Colour LED. Feature Access Keys for LCD.hands-Free Speech. SP-Phone (Monitor) Volume Control. Handset Volume Control.Ringer Volume Control. Contrast Control. Incoming Call I Message Lamp. Auto Answer Mute.\r\nVoice Call. Headset Compatible  It has a <span style='font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Web\", sans-serif; font-size: 14px;'>no warranty.</span></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: KX-AT7730SX</li><li>Alphanumeric Display</li><li>Programmable Keys</li><li>Auto Answer Mute</li><li>Voice Call</li></ul>",
+      "model": "KX-AT7730SX",
+      "warranty": null,
+      "basePrice": 5200.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Panasonic",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-9435",
+          "price": 5200.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4992.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "KX-AT7730SX",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/panasonic-kx-at7730sx-telephone",
+      "sourceProductCode": "9435",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: KX-AT7730SX",
+        "Alphanumeric Display",
+        "Programmable Keys",
+        "Auto Answer Mute",
+        "Voice Call"
+      ],
+      "needsReview": false,
+      "categorySlug": "telephone-set",
+      "image": "/images/products/office-equipment/telephone-set/panasonic-kx-at7730sx-telephone.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/telephone-set/panasonic-kx-at7730sx-telephone.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "panasonic-kx-at7730sx-telephone",
+        "candidateTitle": "Panasonic KX-AT7730SX Proprietary Telephone Set",
+        "attemptStem": "panasonic-kx-at7730sx-telephone"
+      }
+    },
+    {
+      "name": "Panasonic KX-T7705SX Analog Corded Telephone Set",
+      "slug": "panasonic-kx-t7705sx-corded-telephone-set",
+      "type": "PHYSICAL",
+      "sku": "ST-22508",
+      "description": "<h2>Panasonic KX-T7705SX Analog Corded Telephone Set</h2><p style=\"text-align: justify;\">Panasonic KX-T7705SX is a Telephone Set With a Display. The display is a 2-line LCD with a time display. It is a Corded Phone Set with a 30-station speed dialer only applicable for the PBX system), 5-station redial memory, 3-step ringer volume control, caller ID, and Call restriction. The Call Feature includes one phone Line with a redial option. The Redial Memory capacity is 5. The Features of this telephone set include the last number redial, Timed flash, 3Step ringer selector, and Switchable Tone and Pulse setting. The Country Of Origin is Japan but it is Made in Malaysia and Assembled in Vietnam. The Main Features include Caller ID, call waiting off, low, and high Volume Control, Flash Button, Redial Memory of the Last 5 Numbers, Electronic Volume Control 4 Steps, Timed Flash 600 ms., Speaker Phone, Phonebook, etc. It also has a mute key and a 30-memory for Phone Book. This telephone set is also Wall Mount supported. The Dimensions of this phone are 130 x 202.5 x 76.5mm and the weight is 443 gm. Panasonic KX-T7705SX Corded Telephone Set offers no<span style='font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Web\", sans-serif; font-size: 14px;'> warranty.</span></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: KX-T7705SX</li><li>2-line LCD with time display</li><li>Caller ID &amp; Caller ID call waiting</li><li>30-station Caller ID memory</li><li>SpeakerPhone</li></ul>",
+      "model": "KX-T7705SX",
+      "warranty": null,
+      "basePrice": 3500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 130.0,
+        "width": 202.5,
+        "height": 76.5,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Panasonic",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-22508",
+          "price": 3500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "KX-T7705SX",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/panasonic-kx-t7705sx-corded-telephone-set",
+      "sourceProductCode": "22508",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: KX-T7705SX",
+        "2-line LCD with time display",
+        "Caller ID & Caller ID call waiting",
+        "30-station Caller ID memory",
+        "SpeakerPhone"
+      ],
+      "needsReview": false,
+      "categorySlug": "telephone-set",
+      "image": "/images/products/office-equipment/telephone-set/panasonic-kx-t7705sx-corded-telephone-set.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/telephone-set/panasonic-kx-t7705sx-corded-telephone-set.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "panasonic-kx-t7705sx-corded-telephone-set",
+        "candidateTitle": "Panasonic KX-T7705SX Analog Corded Telephone Set",
+        "attemptStem": "panasonic-kx-t7705sx-corded-telephone-set"
+      }
+    },
+    {
+      "name": "Panasonic KX-TS500MX Telephone Set Without Display",
+      "slug": "panasonic-kx-ts500mx-telephone",
+      "type": "PHYSICAL",
+      "sku": "ST-9324",
+      "description": "<h2>Panasonic KX-TS500MX Telephone Set Without Display</h2><p>Redial Memory Last Number, Electronic Volume Control 4 Steps, Timed Flash 600 ms.</p><p>It has <span style='font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Web\", sans-serif; font-size: 14px;'>no warranty</span></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: KX-TS500MX</li><li>Redial Memory Last Number</li><li>Electronic Volume Control 4 Steps</li><li>Timed Flash 600 ms</li></ul>",
+      "model": "KX-TS500MX",
+      "warranty": null,
+      "basePrice": 2100.0,
+      "originalPrice": 2310.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Panasonic",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-9324",
+          "price": 2100.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2016.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "KX-TS500MX",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/panasonic-kx-ts500mx-telephone",
+      "sourceProductCode": "9324",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: KX-TS500MX",
+        "Redial Memory Last Number",
+        "Electronic Volume Control 4 Steps",
+        "Timed Flash 600 ms"
+      ],
+      "needsReview": false,
+      "categorySlug": "telephone-set",
+      "image": "/images/products/office-equipment/telephone-set/panasonic-kx-ts500mx-telephone.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/telephone-set/panasonic-kx-ts500mx-telephone.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "panasonic-kx-ts500mx-telephone",
+        "candidateTitle": "Panasonic KX-TS500MX Telephone Set Without Display",
+        "attemptStem": "panasonic-kx-ts500mx-telephone"
+      }
+    },
+    {
+      "name": "Panasonic KX-TS500MX White Telephone Set",
+      "slug": "panasonic-kx-ts500mx-white-telephone-set",
+      "type": "PHYSICAL",
+      "sku": "ST-33967",
+      "description": "<h2>Panasonic KX-TS500MX White Telephone Set</h2><p>The Panasonic <span style=\"font-weight: bold;\">KX-TS500MX</span> White Telephone Set is a dependable and user-friendly communication equipment that meets your telephone requirements with ease and performance. This sleek white telephone set comes with a variety of functions to improve your calling experience. The simple redial memory function eliminates the need to dial a number again. The Panasonic KX-TS500MX allows you to rapidly redial the last number you called, saving you time and effort. Customize your listening experience with the electronic handset volume control, which has four adjustable stages. Whether you prefer a quieter discussion or a louder call, this function lets you choose the ideal volume level. The timed flash function, which lasts 600 milliseconds, offers flawless call handling and allows for precise navigation across various phone services and capabilities. The two-step ringer volume control allows you to tailor the ringing level to your tastes. Choose between low and loud settings to guarantee that you never miss a critical call and may enjoy a more inconspicuous ring when necessary. This Panasonic telephone set combines a sleek and modern style with useful functionality, making it ideal for both home and small business settings. Stay connected and communicate clearly with the Panasonic KX-TS500MX White Telephone Set.</p><h2 style=\"\">Buy Panasonic KX-TS500MX White Telephone Set from the best Telephone Set Shop in BD<br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Panasonic KX-TS500MX White Telephone Set</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/office-equipment/telephone-set\" target=\"\">Panasonic Telephone Set</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Panasonic KX-TS500MX White Telephone Set comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: KX-TS500MX</li><li>Redial Memory Last Number</li><li>Electronic handset volume control (4 steps)</li><li>Timed Flash 600 ms</li><li>2-step ringer volume control</li></ul>",
+      "model": "KX-TS500MX",
+      "warranty": "01-year free service warranty.",
+      "basePrice": 2200.0,
+      "originalPrice": 2365.0,
+      "currency": "BDT",
+      "weight": 0.475,
+      "dimensions": {
+        "length": 150.0,
+        "width": 200.0,
+        "height": 96.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Panasonic",
+      "variantOptions": [
+        {
+          "name": "Colors",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-33967",
+          "price": 2200.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Colors": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2112.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Physical specification",
+          "position": 0,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "150 x 200 x 96mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "475 gm",
+              "position": 1
+            },
+            {
+              "label": "Colors",
+              "value": "White",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-year free service warranty.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/panasonic-kx-ts500mx-white-telephone-set",
+      "sourceProductCode": "33967",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: KX-TS500MX",
+        "Redial Memory Last Number",
+        "Electronic handset volume control (4 steps)",
+        "Timed Flash 600 ms",
+        "2-step ringer volume control"
+      ],
+      "needsReview": false,
+      "categorySlug": "telephone-set",
+      "image": "/images/products/office-equipment/telephone-set/panasonic-kx-ts500mx-white-telephone-set.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/telephone-set/panasonic-kx-ts500mx-white-telephone-set.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "panasonic-kx-ts500mx-white-telephone-set",
+        "candidateTitle": "Panasonic KX-TS500MX White Telephone Set",
+        "attemptStem": "panasonic-kx-ts500mx-white-telephone-set"
+      }
+    },
+    {
+      "name": "Panasonic KX-TS880MX BLACK Corded Telephone Set With Display",
+      "slug": "panasonic-kx-ts880mxb-telephone",
+      "type": "PHYSICAL",
+      "sku": "ST-9325",
+      "description": "<h2>Panasonic KX-TS880MX BLACK Corded Telephone Set With Display</h2><p>20-One-Touch / 10-Speed Dialer 20-Redial Memory / Auto Redial, Caller ID Compatible, Hands-Free Speakerphone. It has a <span style='font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", \"Apple Color Emoji\", \"Segoe UI Emoji\", \"Segoe UI Web\", sans-serif; font-size: 14px;'>no warranty.</span></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: KX-TS880MX Black</li><li>20-One-Touch, 10-Speed Dialer</li><li>Auto Redial</li><li>Caller ID Compatible</li><li>Hands-Free Speakerphone</li></ul>",
+      "model": "KX-TS880MX Black",
+      "warranty": null,
+      "basePrice": 4300.0,
+      "originalPrice": 4620.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Panasonic",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-9325",
+          "price": 4300.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4128.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "KX-TS880MX Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/panasonic-kx-ts880mxb-telephone",
+      "sourceProductCode": "9325",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: KX-TS880MX Black",
+        "20-One-Touch, 10-Speed Dialer",
+        "Auto Redial",
+        "Caller ID Compatible",
+        "Hands-Free Speakerphone"
+      ],
+      "needsReview": false,
+      "categorySlug": "telephone-set",
+      "image": "/images/products/office-equipment/telephone-set/panasonic-kx-ts880mxb-telephone.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/telephone-set/panasonic-kx-ts880mxb-telephone.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "panasonic-kx-ts880mxb-telephone",
+        "candidateTitle": "Panasonic KX-TS880MX BLACK Corded Telephone Set With Display",
+        "attemptStem": "panasonic-kx-ts880mxb-telephone"
+      }
+    }
+  ]
+}

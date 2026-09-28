@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/security-camera",
+  "imageFolder": "/images/products/security-camera/access-control/Hikvision",
+  "groups": [
+    {
+      "name": "access-control",
+      "file": "access-control.json",
+      "status": "completed",
+      "products": 115,
+      "matched": 115,
+      "unmatched": 0
+    },
+    {
+      "name": "cc-camera",
+      "file": "cc-camera.json",
+      "status": "completed",
+      "products": 127,
+      "matched": 127,
+      "unmatched": 0
+    },
+    {
+      "name": "cc-camera-accessories",
+      "file": "cc-camera-accessories.json",
+      "status": "completed",
+      "products": 13,
+      "matched": 13,
+      "unmatched": 0
+    },
+    {
+      "name": "cc-camera-package",
+      "file": "cc-camera-package.json",
+      "status": "completed",
+      "products": 13,
+      "matched": 13,
+      "unmatched": 0
+    },
+    {
+      "name": "digital-locker-vault",
+      "file": "digital-locker-vault.json",
+      "status": "completed",
+      "products": 34,
+      "matched": 34,
+      "unmatched": 0
+    },
+    {
+      "name": "door-lock",
+      "file": "door-lock.json",
+      "status": "completed",
+      "products": 49,
+      "matched": 49,
+      "unmatched": 0
+    },
+    {
+      "name": "dvr",
+      "file": "dvr.json",
+      "status": "completed",
+      "products": 37,
+      "matched": 37,
+      "unmatched": 0
+    },
+    {
+      "name": "entrance-control",
+      "file": "entrance-control.json",
+      "status": "completed",
+      "products": 33,
+      "matched": 33,
+      "unmatched": 0
+    },
+    {
+      "name": "ip-camera",
+      "file": "ip-camera.json",
+      "status": "completed",
+      "products": 232,
+      "matched": 232,
+      "unmatched": 0
+    },
+    {
+      "name": "ip-camera-package",
+      "file": "ip-camera-package.json",
+      "status": "completed",
+      "products": 13,
+      "matched": 13,
+      "unmatched": 0
+    },
+    {
+      "name": "kvm-switch",
+      "file": "kvm-switch.json",
+      "status": "completed",
+      "products": 11,
+      "matched": 11,
+      "unmatched": 0
+    },
+    {
+      "name": "nvr",
+      "file": "nvr.json",
+      "status": "completed",
+      "products": 122,
+      "matched": 122,
+      "unmatched": 0
+    },
+    {
+      "name": "portable-wifi-camera",
+      "file": "portable-wifi-camera.json",
+      "status": "completed",
+      "products": 149,
+      "matched": 149,
+      "unmatched": 0
+    },
+    {
+      "name": "ptz-camera",
+      "file": "ptz-camera.json",
+      "status": "completed",
+      "products": 31,
+      "matched": 31,
+      "unmatched": 0
+    },
+    {
+      "name": "smart-door-bell",
+      "file": "smart-door-bell.json",
+      "status": "completed",
+      "products": 16,
+      "matched": 16,
+      "unmatched": 0
+    },
+    {
+      "name": "xvr",
+      "file": "xvr.json",
+      "status": "completed",
+      "products": 29,
+      "matched": 29,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790590171
+}

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/power",
+  "imageFolder": "/images/products/power/inverter",
+  "groups": [
+    {
+      "name": "inverter",
+      "file": "inverter.json",
+      "status": "completed",
+      "products": 12,
+      "matched": 12,
+      "unmatched": 0
+    },
+    {
+      "name": "ips",
+      "file": "ips.json",
+      "status": "completed",
+      "products": 16,
+      "matched": 16,
+      "unmatched": 0
+    },
+    {
+      "name": "mini-ups",
+      "file": "mini-ups.json",
+      "status": "completed",
+      "products": 42,
+      "matched": 42,
+      "unmatched": 0
+    },
+    {
+      "name": "online-ups",
+      "file": "online-ups.json",
+      "status": "completed",
+      "products": 100,
+      "matched": 100,
+      "unmatched": 0
+    },
+    {
+      "name": "portable-power-station",
+      "file": "portable-power-station.json",
+      "status": "completed",
+      "products": 38,
+      "matched": 38,
+      "unmatched": 0
+    },
+    {
+      "name": "solar-panel",
+      "file": "solar-panel.json",
+      "status": "completed",
+      "products": 12,
+      "matched": 12,
+      "unmatched": 0
+    },
+    {
+      "name": "ups",
+      "file": "ups.json",
+      "status": "completed",
+      "products": 113,
+      "matched": 79,
+      "unmatched": 34
+    },
+    {
+      "name": "ups-battery",
+      "file": "ups-battery.json",
+      "status": "completed",
+      "products": 58,
+      "matched": 58,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790589999
+}

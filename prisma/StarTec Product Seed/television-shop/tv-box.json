@@ -1,0 +1,1880 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/television-shop",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\television-shop",
+    "generatedAtUnix": 1790589618,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Television Shop",
+      "slug": "television-shop",
+      "parentSlug": null,
+      "image": "/images/products/television-shop/smart-tv/smart/smart-sel-65s224kks-65-inch-4k-android-tv.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "TV Box",
+      "slug": "tv-box",
+      "parentSlug": "television-shop",
+      "image": "/images/products/television-shop/tv-box/Apple/apple-tv-4k-128gb-tv-box.png",
+      "isActive": true,
+      "sortOrder": 3,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Transpeed",
+      "slug": "tv-box-transpeed",
+      "parentSlug": "tv-box",
+      "image": "/images/products/television-shop/tv-box/Transpeed/transpeed-x88-mini-tv-box.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "TX",
+      "slug": "tv-box-tx",
+      "parentSlug": "tv-box",
+      "image": "/images/products/television-shop/tv-box/TX/tx10-pro-android-tv-box.png",
+      "isActive": true,
+      "sortOrder": 1,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Apple",
+      "slug": "apple",
+      "logo": null
+    },
+    {
+      "name": "Google",
+      "slug": "google",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    },
+    {
+      "name": "XIAOMI",
+      "slug": "xiaomi",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Apple TV 4K 128GB 3rd Generation TV Box",
+      "slug": "apple-tv-4k-128gb-tv-box",
+      "type": "PHYSICAL",
+      "sku": "ST-40350",
+      "description": "<h2>Apple TV 4K 128GB 3rd Generation TV Box</h2><p>The <strong>Apple TV 4K</strong> 128GB 3rd Generation <a href=\"https://www.startech.com.bd/tv-box\" style=\"color: rgb(0, 0, 0);\" target=\"\">TV Box</a> is a premium streaming device that delivers an unparalleled entertainment experience. With 128GB of storage, the Apple TV 4K 128GB 3rd Gen TV Box provides ample space for apps, games, and media, ensuring seamless access to your favorite content. This model supports Wi-Fi + Ethernet connectivity, featuring Wi-Fi 6 (802.11ax) with 2x2 MIMO for ultra-fast wireless streaming and Gigabit Ethernet for a stable wired connection. Equipped with HDMI 2.1, the Apple TV 4K 128GB TV Box enables Dolby Vision, HDR10+, and 4K HDR streaming at 2160p, 60 fps, with HDMI Quick Media Switching (QMS) for smooth format transitions. Powered by the A15 Bionic chip, the Apple 4K TV Box delivers lightning-fast performance, ensuring fluid navigation and immersive viewing. The Siri Remote enhances the user experience with a touch-enabled click pad, USB-C charging, an IR transmitter, and a built-in microphone for voice commands, allowing easy control of your TV and smart home devices via IR or HDMI-CEC. Supporting Dolby Atmos, Dolby Digital 5.1, and Dolby Digital Plus 7.1, the Apple TV 4K ensures cinematic sound quality. With access to Apple TV+, Netflix, Disney+, Prime Video, and live TV services, the Apple 128GB TV Box is your all-in-one entertainment hub. Compact and lightweight, it features a built-in power supply and supports Thread networking technology, making it an excellent addition to any smart home setup. Whether streaming, gaming, or exploring the App Store, the Apple TV 4K 128GB 3rd Generation TV Box sets a new standard for home entertainment.</p><h2>Buy Apple TV 4K 128GB 3rd Generation TV Box from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Apple TV 4K 128GB 3rd Generation TV Box</strong> From Star Tech. We have a large collection of the latest Apple <a href=\"https://www.startech.com.bd/tv-box\" target=\"\">TV Box</a> to purchase for your Printer. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Apple TV 4K 128GB 3rd Generation TV Box has no warranty.</p><p></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Apple TV 4K</li><li>Processor: A15 Bionic Chip</li><li>Compat­ibility: HD and UHD TVs with HDMI</li><li>Storage Capacity: 128GB</li><li>Wi-Fi + Ethernet model, Siri Remote</li></ul>",
+      "model": "Apple TV 4K",
+      "warranty": null,
+      "basePrice": 25000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "Storage Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "128GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40350",
+          "price": 25000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Storage Capacity": "128GB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 24000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Apple TV 4K",
+              "position": 0
+            },
+            {
+              "label": "Processor",
+              "value": "A15 Bionic Chip",
+              "position": 1
+            },
+            {
+              "label": "Compat­ibility",
+              "value": "HD and UHD TVs with HDMI",
+              "position": 2
+            },
+            {
+              "label": "Storage Capacity",
+              "value": "128GB",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-tv-4k-128gb-tv-box",
+      "sourceProductCode": "40350",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Apple TV 4K",
+        "Processor: A15 Bionic Chip",
+        "Compat­ibility: HD and UHD TVs with HDMI",
+        "Storage Capacity: 128GB",
+        "Wi-Fi + Ethernet model, Siri Remote"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-box",
+      "image": "/images/products/television-shop/tv-box/Apple/apple-tv-4k-128gb-tv-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-box/Apple/apple-tv-4k-128gb-tv-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-tv-4k-128gb-tv-box",
+        "candidateTitle": "Apple TV 4K 128GB 3rd Generation TV Box",
+        "attemptStem": "apple-tv-4k-128gb-tv-box"
+      }
+    },
+    {
+      "name": "Apple TV 4K 32GB 6th Generation TV Box 2021 (MXGY2)",
+      "slug": "apple-tv-4k-32gb-6th-gen-tv-box",
+      "type": "PHYSICAL",
+      "sku": "MXGY2",
+      "description": "<h2 style=\"text-align: justify; \">Apple TV 4K 32GB 6th Generation TV Box 2021 (MXGY2)</h2><p style=\"text-align: justify; \">The new Apple TV 4K 6th Generation TV Box brings the best of TV together with your favorite Apple devices and services in a powerful experience that will transform your living room into a theater, a gym, a concert hall, an arcade. Its 4K High Frame Rate HDR, with Dolby Atmos sound capabilities, delivers a truly cinematic experience to your screen whether youâ€™re watching sport or a film. You can enjoy content from Apple TV+, Amazon Prime, Netflix and Disney+, as well as live channels from Hulu, YouTube TV and Sling TV. The A12 Bionic brings more performance to your TV. It comes with a A new Siri Remote for precise control. With its all-new touch-enabled clickpad, gives you precise control. Click titles, swipe through playlists and use a circular gesture on the outer ring to find just the scene youâ€™re looking for. With three-dimensional audio with a Dolby Atmos compatible sound system, Apple TV 4K brings home a truly cinematic experience. At twice the frame rate for high dynamic range (HDR) video, Apple TV 4K delivers brighter, more realistic colors and greater detail. Fast-action sports look incredibly smooth. Nature documentaries come alive. And YouTube videos jump off the screen. Apple TV 4K now works with your iPhone to automatically calibrate what you watch. Just point your iPhone at your TV screen once, then sit back and see how amazing your shows and movies are supposed to look. The Apple TV 4K is compatible with HD and UHD TVs with HDMI. It has been designed with HDMI 2.1, 802.11ax Wiâ€‘Fi 6 with MIMO; simultaneous dual band (2.4GHz and 5GHz), Gigabit Ethernet, Bluetooth 5.0 wireless technology, IR receiver and Built-in power supply. It has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MXGY2</li><li>Model: Apple TV 4K</li><li>A12 Bionic chip with 64-bit architecture</li><li>4K High Frame Rate HDR for fluid, crisp video</li><li>A new Siri Remote for precise control</li><li>Storage Capacity: 32GB</li></ul>",
+      "model": "Apple TV 4K",
+      "warranty": null,
+      "basePrice": 24000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "Storage Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "32GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "MXGY2",
+          "price": 24000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Storage Capacity": "32GB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 23040.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "MXGY2",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Apple TV 4K",
+              "position": 1
+            },
+            {
+              "label": "Storage Capacity",
+              "value": "32GB",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-tv-4k-32gb-6th-gen-tv-box",
+      "sourceProductCode": "18339",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MXGY2",
+      "sourceKeyFeatures": [
+        "MPN: MXGY2",
+        "Model: Apple TV 4K",
+        "A12 Bionic chip with 64-bit architecture",
+        "4K High Frame Rate HDR for fluid, crisp video",
+        "A new Siri Remote for precise control",
+        "Storage Capacity: 32GB"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-box",
+      "image": "/images/products/television-shop/tv-box/Apple/apple-tv-4k-32gb-6th-gen-tv-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-box/Apple/apple-tv-4k-32gb-6th-gen-tv-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-tv-4k-32gb-6th-gen-tv-box",
+        "candidateTitle": "Apple TV 4K 32GB 6th Generation TV Box 2021 (MXGY2)",
+        "attemptStem": "apple-tv-4k-32gb-6th-gen-tv-box"
+      }
+    },
+    {
+      "name": "Apple TV 4K 64GB 6th Generation TV Box 2021 (MXH02)",
+      "slug": "apple-tv-4k-64gb-6th-gen-tv-box",
+      "type": "PHYSICAL",
+      "sku": "MXH02",
+      "description": "<h2 style=\"text-align: justify; \">Apple TV 4K 64GB 6th Generation TV Box 2021 (MXH02)</h2><p style=\"text-align: justify; \">The new Apple TV 4K 6th Generation TV Box brings the best of TV together with your favorite Apple devices and services in a powerful experience that will transform your living room into a theater, a gym, a concert hall, an arcade. Its 4K High Frame Rate HDR, with Dolby Atmos sound capabilities, delivers a truly cinematic experience to your screen whether youâ€™re watching sport or a film. You can enjoy content from Apple TV+, Amazon Prime, Netflix and Disney+, as well as live channels from Hulu, YouTube TV and Sling TV. The A12 Bionic brings more performance to your TV. It comes with a A new Siri Remote for precise control. With its all-new touch-enabled clickpad, gives you precise control. Click titles, swipe through playlists and use a circular gesture on the outer ring to find just the scene youâ€™re looking for. With three-dimensional audio with a Dolby Atmos compatible sound system, Apple TV 4K brings home a truly cinematic experience. At twice the frame rate for high dynamic range (HDR) video, Apple TV 4K delivers brighter, more realistic colors and greater detail. Fast-action sports look incredibly smooth. Nature documentaries come alive. And YouTube videos jump off the screen. Apple TV 4K now works with your iPhone to automatically calibrate what you watch. Just point your iPhone at your TV screen once, then sit back and see how amazing your shows and movies are supposed to look. The Apple TV 4K is compatible with HD and UHD TVs with HDMI. It has been designed with HDMI 2.1, 802.11ax Wiâ€‘Fi 6 with MIMO; simultaneous dual band (2.4GHz and 5GHz), Gigabit Ethernet, Bluetooth 5.0 wireless technology, IR receiver and Built-in power supply. It has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MXH02</li><li>Model: Apple TV 4K</li><li>A12 Bionic chip with 64-bit architecture</li><li>4K High Frame Rate HDR for fluid, crisp video</li><li>A new Siri Remote for precise control</li><li>Storage Capacity: 64GB</li></ul>",
+      "model": "Apple TV 4K",
+      "warranty": null,
+      "basePrice": 32000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "Storage Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "64GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "MXH02",
+          "price": 32000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Storage Capacity": "64GB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 30720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "MXH02",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Apple TV 4K",
+              "position": 1
+            },
+            {
+              "label": "Storage Capacity",
+              "value": "64GB",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-tv-4k-64gb-6th-gen-tv-box",
+      "sourceProductCode": "18340",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MXH02",
+      "sourceKeyFeatures": [
+        "MPN: MXH02",
+        "Model: Apple TV 4K",
+        "A12 Bionic chip with 64-bit architecture",
+        "4K High Frame Rate HDR for fluid, crisp video",
+        "A new Siri Remote for precise control",
+        "Storage Capacity: 64GB"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-box",
+      "image": "/images/products/television-shop/tv-box/Apple/apple-tv-4k-64gb-6th-gen-tv-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-box/Apple/apple-tv-4k-64gb-6th-gen-tv-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-tv-4k-64gb-6th-gen-tv-box",
+        "candidateTitle": "Apple TV 4K 64GB 6th Generation TV Box 2021 (MXH02)",
+        "attemptStem": "apple-tv-4k-64gb-6th-gen-tv-box"
+      }
+    },
+    {
+      "name": "Apple TV HD A1625 32GB 4th Generation TV Box (MHY93ZP/A)",
+      "slug": "apple-tv-hd-32gb-4th-generation-tv-box",
+      "type": "PHYSICAL",
+      "sku": "MHY93ZP/A",
+      "description": "<h2 style=\"text-align: justify; \">Apple TV HD A1625 32GB 4th Generation TV Box (MHY93ZP/A)</h2><p style=\"text-align: justify; \">The Apple TV HD brings the best shows, movies, live sport, and access to your favorite Apple services. And use the Apple TV Remote (2nd generation) to control it all. It is equipped with the A8 chip with 64-bit architecture. The Apple TV HD comes with HDMI 1.44, 802.11ac Wi-Fi with MIMO, 10/100BASE-T Ethernet, Bluetooth 4.0 wireless technology, IR receiver, USB-C for service and support, and a built-in power supply. It comes with an Apple TV Remote that supports Bluetooth 5.0 wireless technology, IR transmitter, a lightning connector for charging, a rechargeable battery providing months of battery life on a single charge (with typical daily usage), Charging via USB to computer system or power adapter (sold separately) and control your TV or receiver via IR or CEC. It requires 802.11 wireless, Ethernet network, or broadband Internet access. The Apple TV HD comes with no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MHY93ZP/A</li><li>Model: Apple TV HD A1625</li><li>A8 chip with 64-bit architecture</li><li>802.11ac Wi-Fi with MIMO</li><li>Dolby Digital Plus 7.1 surround sound</li><li>Capacity: 32GB</li></ul>",
+      "model": "Apple TV HD A1625",
+      "warranty": "no warranty",
+      "basePrice": 17500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "32GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "MHY93ZP/A",
+          "price": 17500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "32GB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 16800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "MHY93ZP/A",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Apple TV HD A1625",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "32GB",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-tv-hd-32gb-4th-generation-tv-box",
+      "sourceProductCode": "20413",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MHY93ZP/A",
+      "sourceKeyFeatures": [
+        "MPN: MHY93ZP/A",
+        "Model: Apple TV HD A1625",
+        "A8 chip with 64-bit architecture",
+        "802.11ac Wi-Fi with MIMO",
+        "Dolby Digital Plus 7.1 surround sound",
+        "Capacity: 32GB"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-box",
+      "image": "/images/products/television-shop/tv-box/Apple/apple-tv-hd-32gb-4th-generation-tv-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-box/Apple/apple-tv-hd-32gb-4th-generation-tv-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-tv-hd-32gb-4th-generation-tv-box",
+        "candidateTitle": "Apple TV HD A1625 32GB 4th Generation TV Box (MHY93ZP/A)",
+        "attemptStem": "apple-tv-hd-32gb-4th-generation-tv-box"
+      }
+    },
+    {
+      "name": "Google Chromecast with Google TV 4K",
+      "slug": "google-chromecast-with-google-tv",
+      "type": "PHYSICAL",
+      "sku": "GA01919-US",
+      "description": "<h2 style=\"text-align: justify; \">Google Chromecast with Google TV 4K</h2><p style=\"text-align: justify; \">Google Chromecast With Google TV featured with Wi-Fi 5 (802.11ac) Standards, 2.4 GHz, 5 GHz Wi-Fi Bands. Google TV organizes movies and TV shows from your favorite services into a single big screen. You can enjoy HDR 4K UHD content from your favorite apps and mobile devices. It plugs into the HDMI port on your display and connects to your Wi-Fi network to provide access to a variety of apps via the onboard Android TV operating system. This Google Chromecast supports 4K UHD (3840 x 2160) resolution at 60 Hz and the HDR10, HDR10+, and Dolby Vision HDR formats to provide a vibrant, detailed image on compatible displays too. It will Cast from thousands of compatible Android and iOS apps directly from your phone, laptop, or tablet. And Users also can mirror their Chrome browser to your TV via the Chromecast with Google TV. With this Google Chromecast, you can upgrade your non-smart TV and help keep waste out of landfills. This new Google Chromecast has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: GA01919-US</li><li>Model: Chromecast with Google TV</li><li>Wirelessly Stream &amp; Mirror Content</li><li>HDR10, HDR10+, Dolby Vision Support</li><li>Dual-Band Wi-Fi 5 Connectivity</li><li>4K and HDR Capable</li></ul>",
+      "model": "Chromecast with Google TV",
+      "warranty": null,
+      "basePrice": 7500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Google",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "GA01919-US",
+          "price": 7500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 7200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "GA01919-US",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Chromecast with Google TV",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/google-chromecast-with-google-tv",
+      "sourceProductCode": "20039",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "GA01919-US",
+      "sourceKeyFeatures": [
+        "MPN: GA01919-US",
+        "Model: Chromecast with Google TV",
+        "Wirelessly Stream & Mirror Content",
+        "HDR10, HDR10+, Dolby Vision Support",
+        "Dual-Band Wi-Fi 5 Connectivity",
+        "4K and HDR Capable"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-box",
+      "image": "/images/products/television-shop/tv-box/Google/google-chromecast-with-google-tv.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-box/Google/google-chromecast-with-google-tv.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "google-chromecast-with-google-tv",
+        "candidateTitle": "Google Chromecast with Google TV 4K",
+        "attemptStem": "google-chromecast-with-google-tv"
+      }
+    },
+    {
+      "name": "TRANSPEED X88 MINI Android TV Box",
+      "slug": "transpeed-x88-mini-tv-box",
+      "type": "PHYSICAL",
+      "sku": "ST-48472",
+      "description": "<h2>TRANSPEED X88 MINI Android TV Box</h2><p>The TRANSPEED<strong> X88 MINI</strong> TV Box is a compact yet powerful Android TV Box designed to upgrade your home entertainment experience with smooth performance and versatile connectivity. Measuring just 88×88×18mm, this lightweight device is powered by the RK3518 Quad-Core 64-bit Cortex-A53 chipset and Mali-450 MP2 GPU, delivering fast processing and seamless 4K video playback at 60fps. With 2GB SDRAM and 16GB eMMC storage (expandable via micro SD up to 64GB), the X88 MINI Android TV Box provides ample space for apps and media, while dual USB 2.0 ports, HDMI 2.0b output, and Ethernet RJ-45 ensure flexible connectivity. It supports dual-band WiFi (2.4G/5G) and Bluetooth 5.0 for stable wireless connections, along with wide format compatibility including H.264, H.265, VP9, AVS2 up to 4K/60fps and popular media formats like AVI, MKV, MOV, MP3, AAC, FLAC, JPEG, PNG. Running on Android 14.0, the TRANSPEED X88 MINI Android TV Box gives you access to apps such as YouTube, Netflix, Kodi, Facebook, and more, with support for USB and wireless mouse/keyboard for easy navigation. Certified with CE, FCC, and RoHS, this X88 MINI TV Box combines portability, performance, and smart functionality, making it the perfect solution for streaming, gaming, and enjoying high-definition entertainment at home.</p><h2>Buy TRANSPEED X88 MINI Android TV Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>TRANSPEED X88 MINI Android TV Box</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/tv-box\">TV Box</a> to purchase for your <a href=\"https://www.startech.com.bd/television-startech\">Television</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at lowest price. The TRANSPEED X88 MINI Android TV Box comes with 3 months warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: X88 Mini</li><li>Supported Resolution: Up to 4K 60FPS</li><li>CPU: RK3518 Quad Core Chipset</li><li>RAM: 2GB. ROM: 16GB</li><li>Features: Wi-Fi 6, Micro SD Card Support, Android 14</li></ul>",
+      "model": "X88 Mini",
+      "warranty": "3 Months",
+      "basePrice": 3900.0,
+      "originalPrice": 4200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 88.0,
+        "width": 88.0,
+        "height": 18.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "2GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "1x 10 / 100M RJ-45, 1x TF , 2x USB 2.0, 1x HDMI 2.0",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-48472",
+          "price": 3900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "2GB",
+            "Color": "Black",
+            "Interface": "1x 10 / 100M RJ-45, 1x TF , 2x USB 2.0, 1x HDMI 2.0"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3744.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "CPU",
+              "value": "RK3518 Quad-Core 64-bit Cortex-A53 chipset",
+              "position": 0
+            },
+            {
+              "label": "Core",
+              "value": "4 Core",
+              "position": 1
+            },
+            {
+              "label": "RAM",
+              "value": "2GB",
+              "position": 2
+            },
+            {
+              "label": "ROM",
+              "value": "16GB",
+              "position": 3
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Media Support",
+          "position": 1,
+          "items": [
+            {
+              "label": "Video Format",
+              "value": "Supported Resolution : 4K/60fps Formats: AVI, MKV, MOV, TS, ISO, MP3, AAC, FLAC, JPEG, PNG",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Product Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Dual-band WiFi 2.4G/5G (802.11 a/b/g/n/ac/ax)",
+              "position": 0
+            },
+            {
+              "label": "Bluetooth",
+              "value": "Bluetooth 5.0",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "1x 10 / 100M RJ-45, 1x TF , 2x USB 2.0, 1x HDMI 2.0",
+              "position": 2
+            },
+            {
+              "label": "HDMI",
+              "value": "Yes",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Operating System: Android 14.0 Micro SD card support up to 64GB for extended storage Mali-450 MP2 GPU for smooth 4K video playback",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 3,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "88×88×18 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 Months",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transpeed-x88-mini-tv-box",
+      "sourceProductCode": "48472",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: X88 Mini",
+        "Supported Resolution: Up to 4K 60FPS",
+        "CPU: RK3518 Quad Core Chipset",
+        "RAM: 2GB. ROM: 16GB",
+        "Features: Wi-Fi 6, Micro SD Card Support, Android 14"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-box-transpeed",
+      "image": "/images/products/television-shop/tv-box/Transpeed/transpeed-x88-mini-tv-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-box/Transpeed/transpeed-x88-mini-tv-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transpeed-x88-mini-tv-box",
+        "candidateTitle": "TRANSPEED X88 MINI Android TV Box",
+        "attemptStem": "transpeed-x88-mini-tv-box"
+      }
+    },
+    {
+      "name": "TX10 Pro 8K Android TV Box with Voice Control Remote",
+      "slug": "tx10-pro-android-tv-box",
+      "type": "PHYSICAL",
+      "sku": "ST-34719",
+      "description": "<h2>TX10 Pro 8K Android TV Box with Voice Control Remote</h2>\n<p>The <span style=\"font-weight: bold;\">TX10 Pro</span> 8K Android TV Box is a state-of-the-art entertainment center that enhances your living room with 8K quality and smooth connection. This TV box transforms the way you consume multimedia content with its sophisticated features and elegant appearance. With its potent Allwinner H616 ARM Cortex A53 64-bit CPU, the TX10 Pro promises seamless operation and blazingly quick processing rates. With a whopping 8GB or 16GB of RAM and a generous 128GB or 256GB of internal storage (ROM), you won't have to sacrifice speed or performance to save your favorite programs, games, or video files. The TX10 Pro's outstanding 8K display quality is its best feature; it offers unmatched clarity and detail for a completely immersive viewing experience. Every moment comes to life in amazing clarity, whether you're gaming with pals, watching your favorite TV show, or streaming the newest blockbuster movies. With the voice-commandable remote, you can enjoy hands-free navigation and control over your entertainment. It's now simpler than ever to access your favorite content without lifting a finger by just speaking instructions to search for content, change settings, or open apps. The TX10 Pro offers a wide range of connectivity possibilities. With dual-band 802.11n Wi-Fi (2.4 GHz + 5 GHz) and Bluetooth v5.0, you can enjoy seamless wireless connectivity with quick and dependable connections for surfing and streaming. For those who want direct connectivity to your network, the Ethernet connector (1 x 10 / 100M RJ-45) offers a dependable wired connection as well. Experience the ultimate in-home entertainment with the TX10 Pro 8K Android <a href=\"https://www.startech.com.bd/accessories/tv-card\" style=\"color: rgb(0, 0, 0);\" target=\"\">TV Box</a>, which offers unparalleled performance, breathtaking images, and user-friendly control choices. The TX10 Pro is the perfect entertainment partner whether you enjoy gaming, watching movies, or just streaming your favorite media.</p>\n<h2 style=\"\"><span style=\"color: inherit; font-family: inherit;\">Buy </span>TX10 Pro 8K Android TV Box with Voice Control Remote<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2>\n<p style=\"\">In Bangladesh, you can get original <span style=\"font-weight: bold;\">TX10 Pro 8K Android TV Box with Voice Control Remote</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/tv-box\" target=\"\">TV Box</a> to purchase for your <a href=\"https://www.startech.com.bd/television-startech\" target=\"\">Television</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The TX10 Pro 8K Android TV Box comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TX10 Pro</li><li>Resolution 4320p, 2160p, 1080p and 720p up to 60 fps</li><li>Quad-core CPU 1.7 GHz, GPU 650 MHz</li><li>8GB/16GB RAM, 128GB/256GB ROM</li><li>Dolby Atmos Audio Support</li></ul>",
+      "model": "TX10 Pro",
+      "warranty": "No Warranty",
+      "basePrice": 2299.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "8GB / 16GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "1x 10 / 100M RJ-45, 1x TF, 2x USB, 1x AV, 1x HDMI, 1x DCIN",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34719",
+          "price": 2299.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "8GB / 16GB",
+            "Color": "Black",
+            "Interface": "1x 10 / 100M RJ-45, 1x TF, 2x USB, 1x AV, 1x HDMI, 1x DCIN"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2207.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "CPU",
+              "value": "Allwinner H616 ARM Cortex A53 64 Bit",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "8GB / 16GB",
+              "position": 1
+            },
+            {
+              "label": "ROM",
+              "value": "128GB / 256GB",
+              "position": 2
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Media Support",
+          "position": 1,
+          "items": [
+            {
+              "label": "Audio Format",
+              "value": "Dolby / DTS / MP3 / WMA / APE / FLAC / OGG / AC3 / AAC",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Product Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Wi-Fi: Dual Band 802.11n (2.4GHz + 5GHz)",
+              "position": 0
+            },
+            {
+              "label": "Bluetooth",
+              "value": "Bluetooth v5.0",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "1x 10 / 100M RJ-45, 1x TF, 2x USB, 1x AV, 1x HDMI, 1x DCIN",
+              "position": 2
+            },
+            {
+              "label": "HDMI",
+              "value": "Yes",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tx10-pro-android-tv-box",
+      "sourceProductCode": "34719",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TX10 Pro",
+        "Resolution 4320p, 2160p, 1080p and 720p up to 60 fps",
+        "Quad-core CPU 1.7 GHz, GPU 650 MHz",
+        "8GB/16GB RAM, 128GB/256GB ROM",
+        "Dolby Atmos Audio Support"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-box-tx",
+      "image": "/images/products/television-shop/tv-box/TX/tx10-pro-android-tv-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-box/TX/tx10-pro-android-tv-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tx10-pro-android-tv-box",
+        "candidateTitle": "TX10 Pro 8K Android TV Box with Voice Control Remote",
+        "attemptStem": "tx10-pro-android-tv-box"
+      }
+    },
+    {
+      "name": "TX20 Pro 12K Android TV Box with Voice Control Remote",
+      "slug": "tx20-pro-android-tv-box",
+      "type": "PHYSICAL",
+      "sku": "ST-49362",
+      "description": "<h2>TX20 Pro 12K Android TV Box with Voice Control Remote</h2><p>The <strong>TX20 Pro</strong> Android TV Box with Voice Control Remote is a powerful smart entertainment hub designed to deliver ultra‑clear 12K visuals and seamless connectivity. Equipped with a Quad‑Core Cortex‑A53 CPU and ARM Mali‑G31 GPU, this Android TV Box ensures smooth performance for streaming, gaming, and multitasking. With 2GB RAM and 16GB ROM, it offers responsive operation and reliable storage for apps and media. Running on Android 15, the TX20 Pro Android TV Box supports popular platforms like YouTube, Toffee, and access to 1500+ free TV channels (subscriptions required), making it a versatile choice for home entertainment. Connectivity is effortless with built‑in Wi‑Fi, Bluetooth, and screen mirroring via Miracast, while the included voice control remote enhances convenience. Multiple interfaces including USB, TF, HDMI, AV, and LAN ensure compatibility with a wide range of devices. Compact, efficient, and powered by a 5V 2A adapter, the TX20 Pro Android TV Box is the perfect solution for users seeking a reliable smart TV box with advanced features, universal connectivity, and immersive 12K resolution support.</p><h2>Buy TX20 Pro 12K Android TV Box with Voice Control Remote from Star Tech</h2><p>In Bangladesh, you can get original <strong>TX20 Pro 12K Android TV Box with Voice Control Remote</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/tv-box\">TV Box</a> to purchase for your <a href=\"https://www.startech.com.bd/television-startech\">Television</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at lowest price. The TX10 Pro 8K Android TV Box comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TX20 Pro</li><li>Resolution 4320p, 2160p, 1080p and 720p up to 60 fps</li><li>Quad-core CPU 1.7 GHz, GPU 650 MHz</li><li>2GB RAM, 16GB ROM</li><li>Dolby Atmos Audio Support</li></ul>",
+      "model": "TX20 Pro",
+      "warranty": "No Warranty",
+      "basePrice": 3000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "2GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "USB, TF, HDMI, AV, LAN-1",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-49362",
+          "price": 3000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "2GB",
+            "Color": "Black",
+            "Interface": "USB, TF, HDMI, AV, LAN-1"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "CPU",
+              "value": "Quad Core 4X Cortex-A53@1.30 GHz GPU: ARM Mali-G31",
+              "position": 0
+            },
+            {
+              "label": "Core",
+              "value": "Quad Core",
+              "position": 1
+            },
+            {
+              "label": "RAM",
+              "value": "2GB",
+              "position": 2
+            },
+            {
+              "label": "ROM",
+              "value": "16GB",
+              "position": 3
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Media Support",
+          "position": 1,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Android Version: 15 Bluetooth & Voice Control Remote Screen Mirroring: Miracast Toffee, YouTube, 1500+ Free TV Channel Support (Subscriptions Required)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Product Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Bluetooth",
+              "value": "Yes",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "USB, TF, HDMI, AV, LAN-1",
+              "position": 2
+            },
+            {
+              "label": "HDMI",
+              "value": "Yes",
+              "position": 3
+            },
+            {
+              "label": "Power Consumption",
+              "value": "Power Adapter: 5V 2A",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tx20-pro-android-tv-box",
+      "sourceProductCode": "49362",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TX20 Pro",
+        "Resolution 4320p, 2160p, 1080p and 720p up to 60 fps",
+        "Quad-core CPU 1.7 GHz, GPU 650 MHz",
+        "2GB RAM, 16GB ROM",
+        "Dolby Atmos Audio Support"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-box-tx",
+      "image": "/images/products/television-shop/tv-box/TX/tx20-pro-android-tv-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-box/TX/tx20-pro-android-tv-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tx20-pro-android-tv-box",
+        "candidateTitle": "TX20 Pro 12K Android TV Box with Voice Control Remote",
+        "attemptStem": "tx20-pro-android-tv-box"
+      }
+    },
+    {
+      "name": "TX3 Mini-A Android 7.1 2GB RAM 16GB ROM TV Box",
+      "slug": "tx3-mini-a-android-tv-box",
+      "type": "PHYSICAL",
+      "sku": "ST-12403",
+      "description": "<h2 style=\"text-align: justify; \"><span style=\"font-weight: bold;\">TX3 Mini-A Android 7.1 2GB RAM 16GB ROM TV Box</span></h2><p style=\"text-align: justify;\">TX3 Mini-A Android 7.1 TV Box is built in Wifi,802.1.1b/g/n, RJ45 Ethernet port. This TV Box has 2GB DDR3 RAM and 16GB ROM, DC 5V/2A, Mail-450 penta-core,up to 750MHz+(DVFS) GPU, Amlogic S905W up to 2.0GHz,Quad core ARM Cortex-A53 CPU, 2 High speed USB 2.0,support U DISK and USB HDD with TF Card Reader. The AV(3 in 1)port also available in this TV Box. This TV Box supports TV, Projectors, and Monitors as well as USB webcams, USB Mouse and also Wireless Mouse and Gyroscopic Mouse Keyboard. HDMI ,AV, Optical, USB x 2, Ethernet/ LAN port, DC 5V Power Input, SD/ MMC Card Slot are also available in this TV Box. It has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TX3 Mini-A Android 7.1</li><li>2 High speed USB 2.0,support U DISK and USB HDD</li><li>RAM: 2GB DDR3, ROM: 16GB</li><li>DC 5V/2A, AV(3 in 1) port</li><li>Built-in Wifi, 802.1.1b/g/n</li></ul>",
+      "model": "TX3 Mini-A Android 7.1",
+      "warranty": null,
+      "basePrice": 2400.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "2GB DDR3, ROM: 16GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-12403",
+          "price": 2400.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "2GB DDR3, ROM: 16GB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2304.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TX3 Mini-A Android 7.1",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "2GB DDR3, ROM: 16GB",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tx3-mini-a-android-tv-box",
+      "sourceProductCode": "12403",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TX3 Mini-A Android 7.1",
+        "2 High speed USB 2.0,support U DISK and USB HDD",
+        "RAM: 2GB DDR3, ROM: 16GB",
+        "DC 5V/2A, AV(3 in 1) port",
+        "Built-in Wifi, 802.1.1b/g/n"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-box-tx",
+      "image": "/images/products/television-shop/tv-box/TX/tx3-mini-a-android-tv-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-box/TX/tx3-mini-a-android-tv-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tx3-mini-a-android-tv-box",
+        "candidateTitle": "TX3 Mini-A Android 7.1 2GB RAM 16GB ROM TV Box",
+        "attemptStem": "tx3-mini-a-android-tv-box"
+      }
+    },
+    {
+      "name": "TX60 Pro 14K Ultra HD Smart Android TV Box with Voice Control Remote",
+      "slug": "tx60-pro-smart-android-tv-box",
+      "type": "PHYSICAL",
+      "sku": "ST-41910",
+      "description": "<h2>TX60 Pro 14K Ultra HD Smart Android TV Box with Voice Control Remote</h2><p>The <strong>TX60 Pro</strong> 14K Ultra HD Smart Android <a href=\"https://www.startech.com.bd/tv-box\" style=\"color: rgb(0, 0, 0);\" target=\"\">TV Box</a> is a revolutionary, full of functions streaming solution for those who need superior performance and immersive entertainment. The TX60 Pro 14K UHD Smart Android TV Box is powered by the efficient Allwinner H313 processor, which has a Quad-Core 4X Cortex-A53 CPU and a Mali-G31 GPU, ensuring quick, lagless performance. It comes equipped with a massive 16GB RAM and 256GB ROM, offering exceptional multitasking and ample storage for apps, games, and media content. Running on the latest Android 16 OS, the TX60 Pro Android TV Box supports thousands of apps through the Google Play Store, including Netflix, YouTube, DSTV Stream, Showmax, and more. Enjoy breathtaking picture quality with 14K Ultra HD and HDR support, providing lifelike visuals and stunning clarity. The TX60 Pro 14K Android TV Box also features dual-band Wi-Fi (2.4GHz/5GHz), Bluetooth 5.0, DLNA, Miracast, and LAN RJ45 Ethernet for smooth and stable connectivity. With audio support for Dolby Digital and DTS via HDMI, AV, and Bluetooth, every scene sounds as incredible as it looks. Navigation is seamless with the included voice control remote, and support for Free Dish Channels enhances your viewing options. The TX60 Pro TV Box is compatible with LED TVs, projectors, monitors, and CRT/Box TVs, and its expandable storage via USB and TF card slot makes it a truly versatile home entertainment hub.</p><h2>Buy TX60 Pro 14K Ultra HD Smart Android TV Box From Star Tech<br/></h2><p style=\"\">In Bangladesh, you can get original <strong>TX60 Pro 14K Ultra HD Smart Android TV Box</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/tv-box\" target=\"\">TV Box</a> to purchase for your <a href=\"https://www.startech.com.bd/television-startech\" target=\"\">Television</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The TX60 Pro 14K Ultra HD Smart Android TV Box comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TX60 Pro</li><li>Resolution: Up to 14K Ultra HD</li><li>Processor: Quad Core 4X Cortex-A53 @ 1.30 GHz</li><li>RAM: 16 GB ROM: 256 GB</li><li>Wi-Fi, Bluetooth, Dolby Digital, Miracast</li></ul>",
+      "model": "TX60 Pro",
+      "warranty": "No Warranty",
+      "basePrice": 2600.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "16 GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "RJ-45, TF, USB, HDMI",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41910",
+          "price": 2600.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "16 GB",
+            "Color": "Black",
+            "Interface": "RJ-45, TF, USB, HDMI"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2496.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "CPU",
+              "value": "Quad Core 4X Cortex-A53 @ 1.30 GHz",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "16 GB",
+              "position": 1
+            },
+            {
+              "label": "ROM",
+              "value": "256 GB",
+              "position": 2
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Media Support",
+          "position": 1,
+          "items": [
+            {
+              "label": "Audio Format",
+              "value": "Dolby / DTS / MP3 / WMA / APE / FLAC / OGG / AC3 / AAC",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Compatibility: LED TV, Monitor, Projector, CRT/Box TV Supported Apps: YouTube, Toffee, Play Store Apps & More",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Product Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Wi-Fi 2.4GHz / 5GHz",
+              "position": 0
+            },
+            {
+              "label": "Bluetooth",
+              "value": "Bluetooth v5.0",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "RJ-45, TF, USB, HDMI",
+              "position": 2
+            },
+            {
+              "label": "HDMI",
+              "value": "Yes",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tx60-pro-smart-android-tv-box",
+      "sourceProductCode": "41910",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TX60 Pro",
+        "Resolution: Up to 14K Ultra HD",
+        "Processor: Quad Core 4X Cortex-A53 @ 1.30 GHz",
+        "RAM: 16 GB ROM: 256 GB",
+        "Wi-Fi, Bluetooth, Dolby Digital, Miracast"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-box-tx",
+      "image": "/images/products/television-shop/tv-box/TX/tx60-pro-smart-android-tv-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-box/TX/tx60-pro-smart-android-tv-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tx60-pro-smart-android-tv-box",
+        "candidateTitle": "TX60 Pro 14K Ultra HD Smart Android TV Box with Voice Control Remote",
+        "attemptStem": "tx60-pro-smart-android-tv-box"
+      }
+    },
+    {
+      "name": "Xiaomi Mi MDZ-27-EU HDMI Android 4K TV Stick",
+      "slug": "xiaomi-mi-mdz-27-eu-tv-stick",
+      "type": "PHYSICAL",
+      "sku": "ST-39968",
+      "description": "<h2>Xiaomi Mi MDZ-27-EU HDMI Android 4K TV Stick</h2><p>The Xiaomi Mi MDZ-27-EU HDMI Android 4K <a href=\"https://www.startech.com.bd/accessories/tv-card\" style=\"color: rgb(0, 0, 0);\" target=\"\">TV Stick</a> is a suitable device that will enhance your entertainment experience. This Xiaomi Mi MDZ-27-EU 4K TV Stick is compact and lightweight, measuring only 106.8mm x 29.4mm x 15.4mm and weighing 42.8g, making it very portable and suitable for usage anywhere. The Xiaomi Mi MDZ-27-EU TV Stick, which is powered by a quad-core Cortex A35 CPU, Mali G31 MP2 GPU, 2GB RAM and 8GB storage, provides fast, smooth and dependable performance for streaming, gaming and other tasks. The Xiaomi TV Stick 4K has outstanding graphics, including 4K resolution, Dolby Vision, and HDR10, as well as Dolby Atmos and DTS HD audio technologies for an immersive surround sound experience. The Xiaomi Mi TV Stick 4K, which runs Android TV 11, gives you access to over 400000 movies and shows as well as 7000 applications from Google Play, including pre-installed apps like Netflix, Amazon Prime Video, and YouTube. The Xiaomi MDZ-27-EU TV Stick 4K boasts Wi-Fi 2.4GHz 5GHz, Bluetooth 5.2 and an HDMI connection for smooth communication. The 360-degree Bluetooth IR remote control now supports Google Assistant, allowing for voice requests and intuitive navigation. Chromecast built-in allows you to cast entertainment from your phone, tablet, or laptop to your TV. This sleek and versatile Xiaomi TV Stick 4K is ideal for creating a more intelligent and connected home entertainment experience.</p><h3>Buy Xiaomi Mi MDZ-27-EU HDMI Android 4K TV Stick from the best TV Stick Shop in Bangladesh: Star Tech</h3><p>In Bangladesh, you can get the original <strong>Xiaomi Mi MDZ-27-EU HDMI Android 4K TV Stick</strong> from Star Tech. We have a large collection of the latest Xiaomi Mi MDZ-27-AA HDMI Android 4K <a href=\"https://www.startech.com.bd/accessories/tv-card\" target=\"\">TV Stick</a>. Order online or visit your nearest <a href=\"https://www.startech.com.bd\" target=\"_blank\">Star Tech shop</a> to get yours at the lowest price. The Xiaomi Mi MDZ-27-EU HDMI Android 4K TV Stick has 6 months warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Xiaomi TV Stick 4K</li><li>Resolution: 4k</li><li>CPU: Quad-core Cortex-A35</li><li>RAM: 2GB, Storage: 8GB</li><li>Ports: HDMI x 1, Micro USB x 1</li></ul>",
+      "model": "Xiaomi TV Stick 4K",
+      "warranty": "6 Months",
+      "basePrice": 6000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.0428,
+      "dimensions": {
+        "length": 106.8,
+        "width": 29.4,
+        "height": 15.4,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "XIAOMI",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "2GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "HDMI x 1 Micro USB x 1",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39968",
+          "price": 6000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "2GB",
+            "Color": "Black",
+            "Interface": "HDMI x 1 Micro USB x 1"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 5760.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "CPU",
+              "value": "Cortex-A35",
+              "position": 0
+            },
+            {
+              "label": "Core",
+              "value": "Quad Core",
+              "position": 1
+            },
+            {
+              "label": "RAM",
+              "value": "2GB",
+              "position": 2
+            },
+            {
+              "label": "ROM",
+              "value": "8GB",
+              "position": 3
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Media Support",
+          "position": 1,
+          "items": [
+            {
+              "label": "Video Format",
+              "value": "MKV, MPG, MPEG, DAT, AVI, MOV, ISO, MP4, RM",
+              "position": 0
+            },
+            {
+              "label": "Audio Format",
+              "value": "MP3, AAC, RM, FLAC",
+              "position": 1
+            },
+            {
+              "label": "Photo Format",
+              "value": "JPG, BMP, GIF, PNG",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Audio decoder: DTS HD, Dolby Atmos Video decoder: AV1, VP9, H.265, H.264, MPEG-2, MPEG-1",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Product Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Wi-Fi 2.4GHz/5GHz",
+              "position": 0
+            },
+            {
+              "label": "Bluetooth",
+              "value": "Bluetooth 5.2",
+              "position": 1
+            },
+            {
+              "label": "Power",
+              "value": "Power adapter x 1",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "HDMI x 1 Micro USB x 1",
+              "position": 3
+            },
+            {
+              "label": "HDMI",
+              "value": "Yes",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 3,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "Length: 106.8mm Width: 29.4mm Thickness: 15.4mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "42.8g",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "6 Months",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-mi-mdz-27-eu-tv-stick",
+      "sourceProductCode": "39968",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Xiaomi TV Stick 4K",
+        "Resolution: 4k",
+        "CPU: Quad-core Cortex-A35",
+        "RAM: 2GB, Storage: 8GB",
+        "Ports: HDMI x 1, Micro USB x 1"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-box",
+      "image": "/images/products/television-shop/tv-box/xiaomi/xiaomi-mi-mdz-27-eu-tv-stick.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-box/xiaomi/xiaomi-mi-mdz-27-eu-tv-stick.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "xiaomi-mi-mdz-27-eu-tv-stick",
+        "candidateTitle": "Xiaomi Mi MDZ-27-EU HDMI Android 4K TV Stick",
+        "attemptStem": "xiaomi-mi-mdz-27-eu-tv-stick"
+      }
+    },
+    {
+      "name": "Xiaomi TV Box S (2nd Gen) with Google TV",
+      "slug": "xiaomi-tv-box-s-2nd-gen",
+      "type": "PHYSICAL",
+      "sku": "MDZ-28-AA",
+      "description": "<h2>Xiaomi TV Box S (2nd Gen)</h2><p>The Xiaomi <strong>TV Box S 2nd Gen</strong> is a powerful and compact TV Box designed to elevate home entertainment with stunning visuals and immersive audio. Featuring 4K Ultra HD resolution, this Xiaomi TV Box delivers crisp, detailed images with vibrant colors, ensuring an exceptional viewing experience. The inclusion of Dolby Vision and HDR10+ enhances brightness, contrast, and color accuracy, making every scene more lifelike, while Dolby Atmos and DTS-HD provide a cinematic sound experience, surrounding users with rich, dynamic audio. Powered by a quad-core CPU and high-performance GPU, the Mi TV Box ensures smooth performance, while the 2GB RAM and 8GB ROM combination offers seamless multitasking and storage for apps. Running on Google TV, the Xiaomi TV Box S 2nd Generation organizes content from various streaming services into a personalized interface, making it easier to discover new movies and shows. The Google Assistant integration allows voice control for effortless navigation, content search, and smart home management. The 360° Bluetooth &amp; IR remote control ensures quick access to favorite content from any angle, while the Chromecast Built-in feature enables wireless projection from smart devices onto the TV. With dual-band Wi-Fi and Bluetooth 5.2 connectivity, users can enjoy stable streaming and quick device pairing. The mainstream ports, including HDMI 2.1, USB 2.0, and audio output, provide easy expansion options for enhanced functionality. Whether for streaming, gaming, or smart home integration, the Xiaomi 4K TV Box is a versatile and high-performance media player that transforms any TV into a smart entertainment hub, offering a seamless and immersive viewing experience.</p><h2>Buy Xiaomi TV Box S (2nd Gen) from Star Tech</h2><p>In Bangladesh, you can get original <strong>Xiaomi TV Box S (2nd Gen)</strong> From Star Tech. We have a large collection of latest Xiaomi <a href=\"https://www.startech.com.bd/tv-box\">TV Box</a> to purchase for your <a href=\"https://www.startech.com.bd/television-startech\">Television</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Xiaomi TV Box S (2nd Gen) with Google TV comes with 6 months warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MDZ-28-AA</li><li>Model: Xiaomi TV Box S (2nd Gen)</li><li>Output Resolution: 4K (3840 x 2160)</li><li>CPU: Quad-Core Cortex-A55</li><li>GPU: ARM Mali G31 MP2</li><li>RAM: 2GB, ROM: 8GB</li></ul>",
+      "model": "Xiaomi TV Box S (2nd Gen)",
+      "warranty": "6 months warranty",
+      "basePrice": 5899.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "XIAOMI",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "2GB, ROM: 8GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "MDZ-28-AA",
+          "price": 5899.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "2GB, ROM: 8GB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 5663.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "MDZ-28-AA",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Xiaomi TV Box S (2nd Gen)",
+              "position": 1
+            },
+            {
+              "label": "Output Resolution",
+              "value": "4K (3840 x 2160)",
+              "position": 2
+            },
+            {
+              "label": "CPU",
+              "value": "Quad-Core Cortex-A55",
+              "position": 3
+            },
+            {
+              "label": "GPU",
+              "value": "ARM Mali G31 MP2",
+              "position": 4
+            },
+            {
+              "label": "RAM",
+              "value": "2GB, ROM: 8GB",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-tv-box-s-2nd-gen",
+      "sourceProductCode": "27924",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MDZ-28-AA",
+      "sourceKeyFeatures": [
+        "MPN: MDZ-28-AA",
+        "Model: Xiaomi TV Box S (2nd Gen)",
+        "Output Resolution: 4K (3840 x 2160)",
+        "CPU: Quad-Core Cortex-A55",
+        "GPU: ARM Mali G31 MP2",
+        "RAM: 2GB, ROM: 8GB"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-box",
+      "image": "/images/products/television-shop/tv-box/xiaomi/xiaomi-tv-box-s-2nd-gen.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-box/xiaomi/xiaomi-tv-box-s-2nd-gen.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "xiaomi-tv-box-s-2nd-gen",
+        "candidateTitle": "Xiaomi TV Box S (2nd Gen) with Google TV",
+        "attemptStem": "xiaomi-tv-box-s-2nd-gen"
+      }
+    },
+    {
+      "name": "Xiaomi TV Box S 3rd Gen 4K",
+      "slug": "xiaomi-tv-box-s-3rd-gen",
+      "type": "PHYSICAL",
+      "sku": "MDZ-32-AA",
+      "description": "<h2>Xiaomi TV Box S 3rd Gen Android TV Box</h2><p>The <strong>Xiaomi TV Box S 3rd Gen</strong> Android <a href=\"https://www.startech.com.bd/tv-box\" style=\"color: rgb(0, 0, 0);\" target=\"\">TV Box</a> transforms your living room into a cinematic center, an all-in-one streaming powerhouse designed for smooth performance and immersive entertainment. Equipped with a high-performance quad-core processor clocked up to 2.5GHz and an advanced ARM G310 V2 GPU, this sleek device delivers ultra-smooth 4K streaming at 60FPS, ensuring every frame bursts with clarity and color. Whether you're binge-watching your favorite series or diving into blockbuster movies, Dolby Vision and HDR10+ technologies bring visuals to life with stunning contrast and vibrant detail, while Dolby Audio and DTS:X support envelop you in rich, multidimensional sound. Running on the intuitive Google TV platform, the Xiaomi TV Box S 3rd Gen offers a personalized and content-rich interface with access to thousands of apps, streaming services, and Google Assistant voice control. With 2GB of RAM and a generous 32GB of internal storage, you’ll enjoy fast app launches, smooth multitasking, and ample space for your favorite content. Dual-band Wi-Fi (2.4GHz/5GHz) and Bluetooth 5.2 ensure stable, high-speed connections and effortless pairing with wireless accessories. The HDMI 2.1 port guarantees top-tier video output, while the USB 2.0 port allows easy access to external drives and media. Whether you're upgrading your smart TV experience or adding smart capabilities to a standard display, the Xiaomi TV Box S (3rd Gen) is your gateway to next-level home entertainment.</p><h3>Key Features of Xiaomi TV Box S 3rd Gen Android TV Box</h3><p></p><ul><li><span style=\"font-weight: bold;\">Quad-Core Processor &amp; ARM G310 V2 GPU:</span> Smooth performance for 4K content at 60FPS.</li><li><span style=\"font-weight: bold;\">4K HDR Support:</span> Dolby Vision &amp; HDR10+ for vibrant visuals and stunning contrast.</li><li><span style=\"font-weight: bold;\">Dolby Audio &amp; DTS:X:</span> Rich, immersive sound for movies, shows, and music.</li><li><span style=\"font-weight: bold;\">Google TV Platform:</span> Personalized interface with access to thousands of apps.</li><li><span style=\"font-weight: bold;\">2GB RAM + 32GB Storage:</span> Smooth multitasking and space for apps and media.</li><li><span style=\"font-weight: bold;\">Dual-Band Wi-Fi &amp; Bluetooth 5.2:</span> Stable connectivity and wireless accessory pairing.</li><li><span style=\"font-weight: bold;\">HDMI 2.1 &amp; USB 2.0 Ports:</span> High-quality video output and easy media access.</li><li><span style=\"font-weight: bold;\">Voice Control &amp; Smart Recommendations:</span> Google Assistant integration for hands-free convenience.</li></ul><p></p><h3>Immersive Home Entertainment</h3><p>Enjoy cinematic 4K HDR streaming with smooth frame rates, vivid colors, and lifelike audio. Whether watching movies, series, or streaming music, every detail comes alive with Xiaomi TV Box S 3rd Gen.</p><h3>Smart Features &amp; Connectivity</h3><p>Google TV provides a personalized content hub, while Bluetooth 5.2 ensures seamless connection with headphones, speakers, or game controllers. Dual-band Wi-Fi supports stable streaming for uninterrupted entertainment.</p><h3>Expandable &amp; Convenient</h3><p>The USB 2.0 port lets you connect external drives, while HDMI 2.1 ensures the highest-quality video output. Its compact design and intuitive interface make it easy to upgrade any TV into a smart home entertainment system.</p><h2>Buy Xiaomi TV Box S 3rd Gen Android TV Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Xiaomi TV Box S 3rd Gen Android TV Box</strong> From Star Tech. We have a large collection of latest Xiaomi <a href=\"https://www.startech.com.bd/tv-box\">TV Box</a> to purchase for your <a href=\"https://www.startech.com.bd/xiaomi-television\" target=\"\">Xiaomi Television</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Xiaomi TV Box S 3rd Gen Android TV Box comes with 6 months warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MDZ-32-AA</li><li>Model: Xiaomi TV Box S 3rd Gen</li><li>Output Resolution: 4K (3840 x 2160)</li><li>CPU: Quad-Core up to 2.5GHz</li><li>GPU: ARM G310 V2, RAM: 2GB, ROM: 32GB</li><li>Warranty: 6 months</li></ul>",
+      "model": "Xiaomi TV Box S 3rd Gen",
+      "warranty": "6 months",
+      "basePrice": 9999.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "XIAOMI",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "MDZ-32-AA",
+          "price": 9999.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 9599.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "MDZ-32-AA",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Xiaomi TV Box S 3rd Gen",
+              "position": 1
+            },
+            {
+              "label": "Output Resolution",
+              "value": "4K (3840 x 2160)",
+              "position": 2
+            },
+            {
+              "label": "CPU",
+              "value": "Quad-Core up to 2.5GHz",
+              "position": 3
+            },
+            {
+              "label": "GPU",
+              "value": "ARM G310 V2, RAM: 2GB, ROM: 32GB",
+              "position": 4
+            },
+            {
+              "label": "Warranty",
+              "value": "6 months",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-tv-box-s-3rd-gen",
+      "sourceProductCode": "43307",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MDZ-32-AA",
+      "sourceKeyFeatures": [
+        "MPN: MDZ-32-AA",
+        "Model: Xiaomi TV Box S 3rd Gen",
+        "Output Resolution: 4K (3840 x 2160)",
+        "CPU: Quad-Core up to 2.5GHz",
+        "GPU: ARM G310 V2, RAM: 2GB, ROM: 32GB",
+        "Warranty: 6 months"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-box",
+      "image": "/images/products/television-shop/tv-box/xiaomi/xiaomi-tv-box-s-3rd-gen.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-box/xiaomi/xiaomi-tv-box-s-3rd-gen.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "xiaomi-tv-box-s-3rd-gen",
+        "candidateTitle": "Xiaomi TV Box S 3rd Gen 4K",
+        "attemptStem": "xiaomi-tv-box-s-3rd-gen"
+      }
+    }
+  ]
+}

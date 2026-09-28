@@ -1,0 +1,2875 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/power",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\power",
+    "generatedAtUnix": 1790589998,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Power",
+      "slug": "power",
+      "parentSlug": null,
+      "image": "/images/products/power/inverter/gospower-1-6kw-hybrid-solar-inveter.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "IPS",
+      "slug": "ips",
+      "parentSlug": "power",
+      "image": "/images/products/power/ips/exide-700va-ips.png",
+      "isActive": true,
+      "sortOrder": 1,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Exide",
+      "slug": "exide",
+      "logo": null
+    },
+    {
+      "name": "Luminous",
+      "slug": "luminous",
+      "logo": null
+    },
+    {
+      "name": "MARSRIVA",
+      "slug": "marsriva",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Exide 700VA Pure Sine Wave IPS With Battery",
+      "slug": "exide-700va-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-41516",
+      "description": "<h2>Exide 700VA Pure Sine Wave IPS</h2><p>The Exide 700VA Pure Sine Wave <a href=\"https://www.startech.com.bd/ips\" style=\"color: rgb(0, 0, 0);\" target=\"\">IPS </a>is a small and effective power backup system for homes and small businesses. With a power output capacity of 700VA, it provides reliable and clean energy, making it perfect for safely operating sensitive electrical devices. This inverter relies on a single 100AH battery, making it both powerful and practical for those looking for a reliable backup system without the need for a huge setup. The Exide 700VA IPS has a backup time of up to 3 hours, depending on the connected load, allowing customers to retain critical functions during extended outages. It is designed to power a balanced combination of equipment, including three 20-watt lights, two fans, and a router. This Exide 700VA Pure Sine Wave IPS is ideal for keeping your basic lighting, ventilation, and internet operating smoothly even when the main grid is down. The pure sine wave output assures stable voltage and frequency, thereby protecting equipment from the potential damage caused by low-quality inverters. This Exide 700VA Pure Sine Wave IPS function is particularly useful for delicate equipment such as routers and advanced fan systems. </p><h2>Buy Exide 700VA IPS from Star Tech</h2><p>In Bangladesh, you can get original <strong>Exide 700VA IPS</strong> From Star Tech. We have a large collection of latest Exide <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Exide 700VA IPS comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 700VA</li><li>Output Capacity: 700VA</li><li>Battery: 1x 100AH</li><li>Backup Time: Up to 3 hours (Depending on load)</li><li>Capacity: 3x 20W Light, 2x FAN, 1x Router</li></ul>",
+      "model": "700VA",
+      "warranty": "1 year",
+      "basePrice": 27800.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Exide",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "700VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41516",
+          "price": 27800.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "700VA"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 26688.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "700VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "LCD display",
+              "position": 1
+            },
+            {
+              "label": "Output Voltage",
+              "value": "120Vac / 220Vac",
+              "position": 2
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "+/-0.1Hz",
+              "position": 3
+            },
+            {
+              "label": "Noise Level",
+              "value": "Less than 50dBA (at 1M)",
+              "position": 4
+            },
+            {
+              "label": "Battery",
+              "value": "Battery: 1x 100AH Backup Time: Up to 3 Hour (depending on load) Battery Brand: Hamko or Equivalent",
+              "position": 5
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 6
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 3x 20W Light, 2x FAN, 1x Router",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "60Hz / 50Hz",
+              "position": 0
+            },
+            {
+              "label": "Power Factor",
+              "value": "120Vac / 220Vac",
+              "position": 1
+            },
+            {
+              "label": "Voltage Range",
+              "value": "65-140Vac / 135-280Vac",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "120Vac / 220Vac +/-3%",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/exide-700va-ips",
+      "sourceProductCode": "41516",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 700VA",
+        "Output Capacity: 700VA",
+        "Battery: 1x 100AH",
+        "Backup Time: Up to 3 hours (Depending on load)",
+        "Capacity: 3x 20W Light, 2x FAN, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/exide-700va-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/exide-700va-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "exide-700va-ips",
+        "candidateTitle": "Exide 700VA Pure Sine Wave IPS With Battery",
+        "attemptStem": "exide-700va-ips"
+      }
+    },
+    {
+      "name": "Exide GQP 1125VA Pure Sine Wave IPS With Battery",
+      "slug": "exide-gqp-1125va-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-41519",
+      "description": "<h2>Exide GQP 1125VA Pure Sine Wave IPS</h2><p>The Exide GQP 1125VA Pure Sine Wave <a href=\"https://www.startech.com.bd/ips\" style=\"color: rgb(0, 0, 0);\" target=\"\">IPS </a>is a power backup solution designed for homes and small offices. With an excellent output capacity of 1125VA, this IPS provides consistent and efficient performance even in difficult settings. It runs on a single 200AH battery and provides stable backup power for up to 3.5 hours, depending on the load, making it suitable for both everyday use and emergency scenarios. The Exide GQP 1125VA IPS capacity allows it to power up to five 20W lights, five fans, one television, and one router, ensuring that important equipment continue to function during power outages. Its pure sine wave technology generates clean, noiseless electricity, extending the life and performance of connected equipment while increasing energy efficiency. This Exide IPS characteristic sets it apart from typical inverters. The Exide GQP 1125VA IPS has a user-friendly design that simplifies installation and operation, making it ideal for modern households and office setups. Its sleek and compact design suits modern environments, blending in effortlessly with your surroundings. This Exide GQP 1125VA Pure Sine Wave IPS is designed to provide constant and high-quality performance, whether you need uninterrupted power for business, domestic convenience, or entertainment.</p><h2>Buy Exide GQP 1125VA IPS from Star Tech</h2><p>In Bangladesh, you can get original <strong>Exide GQP 1125VA IPS</strong> From Star Tech. We have a large collection of latest Exide <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Exide GQP 1125VA IPS comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GQP 1125VA</li><li>Output Capacity: 1125VA</li><li>Battery: 1x 200AH</li><li>Backup Time: Up to 3.5 hours (Depending on load)</li><li>Capacity: 5x 20W Light, 5x FAN, 1x Television, 1x Router</li></ul>",
+      "model": "GQP 1125VA",
+      "warranty": "1 year",
+      "basePrice": 49500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Exide",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1125VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41519",
+          "price": 49500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "1125VA"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 47520.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "1125VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "LCD display",
+              "position": 1
+            },
+            {
+              "label": "Output Voltage",
+              "value": "120Vac / 220Vac",
+              "position": 2
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "+/-0.1Hz",
+              "position": 3
+            },
+            {
+              "label": "Noise Level",
+              "value": "Less than 50dBA (at 1M)",
+              "position": 4
+            },
+            {
+              "label": "Battery",
+              "value": "Battery: 1x 200AH Backup Time: Up to 3.5 Hour (depending on load) Battery Brand: Hamko or Equivalent",
+              "position": 5
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 6
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 5x 20W Light, 5x FAN, 1x Television, 1x Router",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "60Hz / 50Hz",
+              "position": 0
+            },
+            {
+              "label": "Power Factor",
+              "value": "120Vac / 220Vac",
+              "position": 1
+            },
+            {
+              "label": "Voltage Range",
+              "value": "65-140Vac / 135-280Vac",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "120Vac / 220Vac +/-3%",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/exide-gqp-1125va-ips",
+      "sourceProductCode": "41519",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GQP 1125VA",
+        "Output Capacity: 1125VA",
+        "Battery: 1x 200AH",
+        "Backup Time: Up to 3.5 hours (Depending on load)",
+        "Capacity: 5x 20W Light, 5x FAN, 1x Television, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/exide-gqp-1125va-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/exide-gqp-1125va-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "exide-gqp-1125va-ips",
+        "candidateTitle": "Exide GQP 1125VA Pure Sine Wave IPS With Battery",
+        "attemptStem": "exide-gqp-1125va-ips"
+      }
+    },
+    {
+      "name": "Exide GQP 1125VA Pure Sine Wave IPS Without Battery",
+      "slug": "exide-gqp-1125va-ips-without-battery",
+      "type": "PHYSICAL",
+      "sku": "ST-41782",
+      "description": "<h2>Exide GQP 1125VA Pure Sine Wave IPS Without Battery</h2><p>The Exide <strong>GQP 1125VA</strong> Pure Sine Wave <a href=\"https://www.startech.com.bd/ips\" style=\"color: rgb(0, 0, 0);\" target=\"\">IPS</a> Without Battery is an excellent inverter power solution that provides efficient, steady, and clean backup electricity, making it perfect for households and small businesses in areas prone to power outages. With a dependable output capacity of 1125VA, the Exide GQP 1125VA IPS Without Battery can power important household equipment such as five 20W LED lights, five fans, one television, and one Wi-Fi router, assuring uninterrupted operation during load shedding or power outages. One of the most notable aspects of the Exide GQP 1125VA IPS is its pure sine wave output, which provides clean and grid-like power suited for sensitive gadgets such as smart TVs, modems, and home entertainment systems. Equipped with an advanced digital LCD display, the Exide GQP 1125VA IPS Without Battery offers real-time insights into voltage levels, battery status, load percentages, and system alerts, giving users complete operational transparency. It supports dual output voltages of 120Vac and 220Vac ±3%, maintaining system stability even with fluctuating inputs. In battery mode, it provides excellent frequency accuracy with a variation of just ±0.1Hz, ensuring the longevity and safety of connected devices. The input voltage range of 65- 140Vac / 135-280Vac, along with dual-frequency compatibility (50Hz and 60Hz), makes the Exide GQP 1125VA highly adaptable to varying power conditions. The inverter functions softly, with a noise level of less than 50 decibels at one meter, guaranteeing a tranquil home atmosphere. It also has built-in audio alarms and visual indicators to alert users to overloads, low batteries, and malfunctions. The Exide GQP 1125VA IPS is compatible with a broad selection of external batteries, allowing customers to tailor their backup length to suit requirements. With high efficiency, user-friendly features, and long-lasting performance, the Exide GQP 1125VA Pure Sine Wave IPS Without Battery is an excellent choice for anybody looking for a stable and intelligent power backup option.</p><h2>Buy Exide GQP 1125VA Pure Sine Wave IPS Without Battery from Star Tech</h2><p>In Bangladesh, you can get original <strong>Exide GQP 1125VA Pure Sine Wave IPS Without Battery</strong> From Star Tech. We have a large collection of latest Exide <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Exide GQP 1125VA Pure Sine Wave IPS Without Battery comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GQP 1125VA</li><li>Output Capacity: 1125VA</li><li>Digital LCD Display</li><li>Noise Level: Less than 50dBA (at 1M)</li><li>Capacity: 5x 20W Light, 5x FAN, 1x Television, 1x Router</li></ul>",
+      "model": "GQP 1125VA",
+      "warranty": "1 year",
+      "basePrice": 16000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Exide",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1125VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41782",
+          "price": 16000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "1125VA"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 15360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "1125VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "LCD display",
+              "position": 1
+            },
+            {
+              "label": "Output Voltage",
+              "value": "120Vac / 220Vac",
+              "position": 2
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "+/-0.1Hz",
+              "position": 3
+            },
+            {
+              "label": "Noise Level",
+              "value": "Less than 50dBA (at 1M)",
+              "position": 4
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 5
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 6
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 5x 20W Light, 5x FAN, 1x Television, 1x Router",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "60Hz / 50Hz",
+              "position": 0
+            },
+            {
+              "label": "Power Factor",
+              "value": "120Vac / 220Vac",
+              "position": 1
+            },
+            {
+              "label": "Voltage Range",
+              "value": "65-140Vac / 135-280Vac",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "120Vac / 220Vac +/-3%",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/exide-gqp-1125va-ips-without-battery",
+      "sourceProductCode": "41782",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GQP 1125VA",
+        "Output Capacity: 1125VA",
+        "Digital LCD Display",
+        "Noise Level: Less than 50dBA (at 1M)",
+        "Capacity: 5x 20W Light, 5x FAN, 1x Television, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/exide-gqp-1125va-ips-without-battery.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/exide-gqp-1125va-ips-without-battery.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "exide-gqp-1125va-ips-without-battery",
+        "candidateTitle": "Exide GQP 1125VA Pure Sine Wave IPS Without Battery",
+        "attemptStem": "exide-gqp-1125va-ips-without-battery"
+      }
+    },
+    {
+      "name": "Exide Star 1125VA Pure Sine Wave IPS With Battery",
+      "slug": "exide-star-1125va-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-49315",
+      "description": "<h2>Exide Star 1125VA Pure Sine Wave IPS</h2><p>The Exide Star 1125VA Pure Sine Wave IPS is a power backup solution designed for homes and small offices. With an excellent output capacity of 1125VA, this IPS provides consistent and efficient performance even in difficult settings. It runs on a single 200AH battery and provides stable backup power for up to 3.5 hours, depending on the load, making it suitable for both everyday use and emergency scenarios. The Exide Star 1125VA IPS capacity allows it to power up to five 20W lights, five fans, one television, and one router, ensuring that important equipment continue to function during power outages. Its pure sine wave technology generates clean, noiseless electricity, extending the life and performance of connected equipment while increasing energy efficiency. This Exide IPS characteristic sets it apart from typical inverters. The Exide Star 1125VA IPS has a user-friendly design that simplifies installation and operation, making it ideal for modern households and office setups. Its sleek and compact design suits modern environments, blending in effortlessly with your surroundings. This Exide Star 1125VA Pure Sine Wave IPS is designed to provide constant and high-quality performance, whether you need uninterrupted power for business, domestic convenience, or entertainment.</p><h2>Buy Exide Star 1125VA IPS from Star Tech</h2><p>In Bangladesh, you can get original <strong>Exide Star 1125VA IPS</strong> From Star Tech. We have a large collection of latest Exide <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Exide Star 1125VA IPS comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Star 1125VA</li><li>Output Capacity: 1125VA</li><li>Battery: 1x 200AH</li><li>Backup Time: Up to 3.5 hours (Depending on load)</li><li>Capacity: 5x 20W Light, 5x FAN, 1x Television, 1x Router</li></ul>",
+      "model": "Star 1125VA",
+      "warranty": "1 year",
+      "basePrice": 46500.0,
+      "originalPrice": 55000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Exide",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1125VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-49315",
+          "price": 46500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1125VA"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 44640.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "1125VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "LCD display",
+              "position": 1
+            },
+            {
+              "label": "Output Voltage",
+              "value": "120Vac / 220Vac",
+              "position": 2
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "+/-0.1Hz",
+              "position": 3
+            },
+            {
+              "label": "Noise Level",
+              "value": "Less than 50dBA (at 1M)",
+              "position": 4
+            },
+            {
+              "label": "Battery",
+              "value": "Battery: 1x 200AH Backup Time: Up to 3 Hour (depending on load) Battery Brand: Hamko or Equivalent",
+              "position": 5
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 6
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 5x 20W Light, 5x FAN, 1x Television, 1x Router",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "60Hz / 50Hz",
+              "position": 0
+            },
+            {
+              "label": "Power Factor",
+              "value": "120Vac / 220Vac",
+              "position": 1
+            },
+            {
+              "label": "Voltage Range",
+              "value": "65-140Vac / 135-280Vac",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "120Vac / 220Vac +/-3%",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/exide-star-1125va-ips",
+      "sourceProductCode": "49315",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Star 1125VA",
+        "Output Capacity: 1125VA",
+        "Battery: 1x 200AH",
+        "Backup Time: Up to 3.5 hours (Depending on load)",
+        "Capacity: 5x 20W Light, 5x FAN, 1x Television, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/exide-star-1125va-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/exide-star-1125va-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "exide-star-1125va-ips",
+        "candidateTitle": "Exide Star 1125VA Pure Sine Wave IPS With Battery",
+        "attemptStem": "exide-star-1125va-ips"
+      }
+    },
+    {
+      "name": "Exide Star 1625VA Pure Sine Wave IPS With Battery",
+      "slug": "exide-star-1625va-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-41522",
+      "description": "<h2>Exide Star 1625VA Pure Sine Wave IPS</h2><p>The Exide Star 1625VA Pure Sine Wave <a href=\"https://www.startech.com.bd/ips\" style=\"color: rgb(0, 0, 0);\" target=\"\">IPS </a>is a high-performance inverter system designed to offer dependable backup. With a high output capacity of 1625VA , it provides clean and reliable electricity, making it perfect for powering a variety of vital appliances without endangering delicate electronics. This Exide Star 1625VA IPS runs on a single 200AH battery, providing a powerful and reliable energy reserve for extended use. Exide Star 1625VA Pure Sine Wave IPS has a backup time of up to 3 hours, depending on the load, letting customers to continue their everyday operations uninterrupted when the main power supply fails. It is designed for larger power requirements and can power eight 20-watt lights, six fans, one television, and one router at the same time. This Exide Star 1625VA Pure Sine Wave IPS is ideal for keeping important aspects of your home operational, such as lighting and ventilation, entertainment, and internet access. The Exide Star 1625VA IPS uses pure sine wave technology to ensure a smooth flow of power, which is critical for protecting electrical equipment and ensuring they run efficiently without noise or performance difficulties.</p><h2>Buy Exide Star 1625VA IPS from Star Tech</h2><p>In Bangladesh, you can get original <strong>Exide Star 1625VA IPS</strong> From Star Tech. We have a large collection of latest Exide <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Exide Star 1625VA IPS comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Star 1625VA</li><li>Output Capacity: 1625VA</li><li>Battery: 2x 130AH</li><li>Backup Time: Up to 3 hours (Depending on load)</li><li>Capacity: 8x 20W Light, 6x FAN, 1x Television, 1x Router</li></ul>",
+      "model": "Star 1625VA",
+      "warranty": "1 year",
+      "basePrice": 64500.0,
+      "originalPrice": 69500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Exide",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1625VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41522",
+          "price": 64500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1625VA"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 61920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "1625VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "LCD display",
+              "position": 1
+            },
+            {
+              "label": "Output Voltage",
+              "value": "120Vac / 220Vac",
+              "position": 2
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "+/-0.1Hz",
+              "position": 3
+            },
+            {
+              "label": "Noise Level",
+              "value": "Less than 50dBA (at 1M)",
+              "position": 4
+            },
+            {
+              "label": "Battery",
+              "value": "Battery: 2x 130AH Backup Time: Up to 3 Hour (depending on load) Battery Brand: Hamko or Equivalent",
+              "position": 5
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 6
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 8x 20W Light, 6x FAN, 1x Television, 1x Router",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "60Hz / 50Hz",
+              "position": 0
+            },
+            {
+              "label": "Power Factor",
+              "value": "120Vac / 220Vac",
+              "position": 1
+            },
+            {
+              "label": "Voltage Range",
+              "value": "65-140Vac / 135-280Vac",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "120Vac / 220Vac +/-3%",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/exide-star-1625va-ips",
+      "sourceProductCode": "41522",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Star 1625VA",
+        "Output Capacity: 1625VA",
+        "Battery: 2x 130AH",
+        "Backup Time: Up to 3 hours (Depending on load)",
+        "Capacity: 8x 20W Light, 6x FAN, 1x Television, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/exide-star-1625va-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/exide-star-1625va-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "exide-star-1625va-ips",
+        "candidateTitle": "Exide Star 1625VA Pure Sine Wave IPS With Battery",
+        "attemptStem": "exide-star-1625va-ips"
+      }
+    },
+    {
+      "name": "Exide Star 2550VA Pure Sine Wave IPS With Battery",
+      "slug": "exide-star-2550va-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-42167",
+      "description": "<h2>Exide Star 2550VA Pure Sine Wave IPS</h2><p>The Exide Star 2550VA Pure Sine Wave <a href=\"https://www.startech.com.bd/ips\" style=\"color: rgb(0, 0, 0);\" target=\"\">IPS </a>is an power backup solution that can easily meet the needs of modern households and small enterprises. With a high output capacity of 2550VA, this IPS provides consistent and uninterrupted power transmission to a wide range of vital equipment during power outages. It comes with two powerful 200AH batteries, which provide dependable backup power for up to 2.5 hours, depending on the connected load. This Exide Star 2550VA Pure Sine Wave IPS is a practical and dependable alternative for users who require constant performance throughout emergencies. With its outstanding capacity, the Exide Star 2550VA IPS can power up to eight 20W lights, seven fans, one television, and one router at the same time, ensuring that important equipment continue to function. Pure sine wave technology provides clean, noise-free electricity, improving the performance and durability of connected equipment while increasing energy economy. This function distinguishes the Exide Star 2550VA IPS from other typical power backup devices. Its smart design blends user-friendly functionality with sleek aesthetics, allowing for simple installation and operation while seamlessly fitting into modern spaces.</p><h2>Buy Exide Star 2550VA IPS from Star Tech</h2><p>In Bangladesh, you can get original <strong>Exide Star 2550VA IPS</strong> From Star Tech. We have a large collection of latest Exide <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Exide Star 2550VA IPS comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Star 2550VA</li><li>Output Capacity: 2550VA</li><li>Battery: 2x 200AH</li><li>Backup Time: Up to 2.5 hours (Depending on load)</li><li>Capacity: 8x 20W Light, 7x FAN, 1x Television, 1x Router</li></ul>",
+      "model": "Star 2550VA",
+      "warranty": "1 year",
+      "basePrice": 82900.0,
+      "originalPrice": 87500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Exide",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "2550VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-42167",
+          "price": 82900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "2550VA"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 79584.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "2550VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "LCD display",
+              "position": 1
+            },
+            {
+              "label": "Output Voltage",
+              "value": "120Vac / 220Vac",
+              "position": 2
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "+/-0.1Hz",
+              "position": 3
+            },
+            {
+              "label": "Noise Level",
+              "value": "Less than 50dBA (at 1M)",
+              "position": 4
+            },
+            {
+              "label": "Battery",
+              "value": "Battery: 2x 200AH Backup Time: Up to 2.5 Hour (depending on load) Battery Brand: Hamko or Equivalent",
+              "position": 5
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 6
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 8x 20W Light, 7x FAN, 1x Television, 1x Router",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "60Hz / 50Hz",
+              "position": 0
+            },
+            {
+              "label": "Power Factor",
+              "value": "120Vac / 220Vac",
+              "position": 1
+            },
+            {
+              "label": "Voltage Range",
+              "value": "65-140Vac / 135-280Vac",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "120Vac / 220Vac +/-3%",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/exide-star-2550va-ips",
+      "sourceProductCode": "42167",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Star 2550VA",
+        "Output Capacity: 2550VA",
+        "Battery: 2x 200AH",
+        "Backup Time: Up to 2.5 hours (Depending on load)",
+        "Capacity: 8x 20W Light, 7x FAN, 1x Television, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/exide-star-2550va-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/exide-star-2550va-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "exide-star-2550va-ips",
+        "candidateTitle": "Exide Star 2550VA Pure Sine Wave IPS With Battery",
+        "attemptStem": "exide-star-2550va-ips"
+      }
+    },
+    {
+      "name": "Exide Star 700VA Pure Sine Wave IPS With Battery",
+      "slug": "exide-star-700va-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-41517",
+      "description": "<h2>Exide Star 700VA Pure Sine Wave IPS</h2><p>The Exide Star 700VA Pure Sine Wave <a href=\"https://www.startech.com.bd/ips\" style=\"color: rgb(0, 0, 0);\" target=\"\">IPS </a>is a small and effective power backup system for homes and small businesses. With a power output capacity of 700VA, it provides reliable and clean energy, making it perfect for safely operating sensitive electrical devices. This inverter relies on a single 130AH battery, making it both powerful and practical for those looking for a reliable backup system without the need for a huge setup. The Exide Star 700VA IPS has a backup time of up to 3 hours, depending on the connected load, allowing customers to retain critical functions during extended outages. It is designed to power a balanced combination of equipment, including four 20-watt lights, three fans, and a router. This Exide Star 700VA Pure Sine Wave IPS is ideal for keeping your basic lighting, ventilation, and internet operating smoothly even when the main grid is down. The pure sine wave output assures stable voltage and frequency, thereby protecting equipment from the potential damage caused by low-quality inverters. This Exide Star 700VA Pure Sine Wave IPS function is particularly useful for delicate equipment such as routers and advanced fan systems. </p><h2>Buy Exide Star 700VA IPS from Star Tech</h2><p>In Bangladesh, you can get original <strong>Exide Star 700VA IPS</strong> From Star Tech. We have a large collection of latest Exide <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Exide Star 700VA IPS comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Star 700VA</li><li>Output Capacity: 700VA</li><li>Battery: 1x 130AH</li><li>Backup Time: Up to 3 hours (Depending on load)</li><li>Capacity: 4x 20W Light, 3x FAN, 1x Router</li></ul>",
+      "model": "Star 700VA",
+      "warranty": "1 year",
+      "basePrice": 32900.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Exide",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "700VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41517",
+          "price": 32900.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "700VA"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 31584.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "700VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "LCD display",
+              "position": 1
+            },
+            {
+              "label": "Output Voltage",
+              "value": "120Vac / 220Vac",
+              "position": 2
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "+/-0.1Hz",
+              "position": 3
+            },
+            {
+              "label": "Noise Level",
+              "value": "Less than 50dBA (at 1M)",
+              "position": 4
+            },
+            {
+              "label": "Battery",
+              "value": "Battery: 1x 130AH Backup Time: Up to 3 Hour (depending on load) Battery Brand: Hamko or Equivalent",
+              "position": 5
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 6
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 4x 20W Light, 3x FAN, 1x Router",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "60Hz / 50Hz",
+              "position": 0
+            },
+            {
+              "label": "Power Factor",
+              "value": "120Vac / 220Vac",
+              "position": 1
+            },
+            {
+              "label": "Voltage Range",
+              "value": "65-140Vac / 135-280Vac",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "120Vac / 220Vac +/-3%",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/exide-star-700va-ips",
+      "sourceProductCode": "41517",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Star 700VA",
+        "Output Capacity: 700VA",
+        "Battery: 1x 130AH",
+        "Backup Time: Up to 3 hours (Depending on load)",
+        "Capacity: 4x 20W Light, 3x FAN, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/exide-star-700va-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/exide-star-700va-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "exide-star-700va-ips",
+        "candidateTitle": "Exide Star 700VA Pure Sine Wave IPS With Battery",
+        "attemptStem": "exide-star-700va-ips"
+      }
+    },
+    {
+      "name": "Exide Star 900VA Pure Sine Wave IPS With Battery",
+      "slug": "exide-star-900va-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-41518",
+      "description": "<h2>Exide Star 900VA Pure Sine Wave IPS</h2><p>The Exide Star 900VA Pure Sine Wave <a href=\"https://www.startech.com.bd/ips\" style=\"color: rgb(0, 0, 0);\" target=\"\">IPS </a>is a reliable power source for the home and small office. This IPS is designed to offer stable and clean energy and has a robust output capacity of 900VA, guaranteeing that your vital appliances work reliably during power outages. With a single 165AH battery, it provides an impressive backup period of up to three hours, depending on the connected load. This Exide Star 900VA Pure Sine Wave IPS is an excellent choice for both regular use and emergency scenarios, providing peace of mind during power outages. With its varied capacity, the Exide IPS can power four 20W lights, three fans, one television, and one router at the same time. This Exide Star 900VA Pure Sine Wave IPS keeps your key devices working, allowing you to stay connected and productive. Its pure sine wave technology reduces noise, extends appliance life, and improves energy efficiency, making it a better alternative than standard inverters. The Exide Star 900VA Pure Sine Wave IPS is both compact and user-friendly, making it an ideal addition to any environment.</p><h2>Buy Exide Star 900VA IPS from Star Tech</h2><p>In Bangladesh, you can get original <strong>Exide Star 900VA IPS</strong> From Star Tech. We have a large collection of latest Exide <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Exide Star 900VA IPS comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Star 900VA</li><li>Output Capacity: 900VA</li><li>Battery: 1x 165AH</li><li>Backup Time: Up to 3 hours (Depending on load)</li><li>Capacity: 4x 20W Light, 3x FAN, 1x Television, 1x Router</li></ul>",
+      "model": "Star 900VA",
+      "warranty": "1 year",
+      "basePrice": 38950.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Exide",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "900VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41518",
+          "price": 38950.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "900VA"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 37392.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "900VA",
+              "position": 0
+            },
+            {
+              "label": "Output Voltage",
+              "value": "120Vac / 220Vac",
+              "position": 1
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "+/-0.1Hz",
+              "position": 2
+            },
+            {
+              "label": "Noise Level",
+              "value": "Less than 50dBA (at 1M)",
+              "position": 3
+            },
+            {
+              "label": "Battery",
+              "value": "Battery: 1x 165AH Backup Time: Up to 3 Hour (depending on load) Battery Brand: Hamko or Equivalent",
+              "position": 4
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 5
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 6
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 4x 20W Light, 3x FAN, 1x Television, 1x Router",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "60Hz / 50Hz",
+              "position": 0
+            },
+            {
+              "label": "Power Factor",
+              "value": "120Vac / 220Vac",
+              "position": 1
+            },
+            {
+              "label": "Voltage Range",
+              "value": "65-140Vac / 135-280Vac",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "120Vac / 220Vac +/-3%",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/exide-star-900va-ips",
+      "sourceProductCode": "41518",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Star 900VA",
+        "Output Capacity: 900VA",
+        "Battery: 1x 165AH",
+        "Backup Time: Up to 3 hours (Depending on load)",
+        "Capacity: 4x 20W Light, 3x FAN, 1x Television, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/exide-star-900va-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/exide-star-900va-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "exide-star-900va-ips",
+        "candidateTitle": "Exide Star 900VA Pure Sine Wave IPS With Battery",
+        "attemptStem": "exide-star-900va-ips"
+      }
+    },
+    {
+      "name": "Luminous Eco Volt Neo 2800VA Pure Sine Wave IPS With Battery",
+      "slug": "luminous-eco-volt-neo-2800va-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-41526",
+      "description": "<h2>Luminous Eco Volt Neo 2800VA Pure Sine Wave IPS</h2><p>The Luminous Eco Volt Neo 2800VA Pure Sine Wave <a href=\"https://www.startech.com.bd/ips\" style=\"color: rgb(0, 0, 0);\" target=\"\">IPS </a>is an power backup solution that can easily meet the needs of modern households and small enterprises. With a high output capacity of 2800VA , this IPS provides consistent and uninterrupted power transmission to a wide range of vital equipment during power outages. It comes with two powerful 200AH batteries, which provide dependable backup power for up to 3 hours, depending on the connected load. This Luminous Eco Volt Neo 2800VA Pure Sine Wave IPS is a practical and dependable alternative for users who require constant performance throughout emergencies. With its outstanding capacity, the Luminous Eco Volt Neo 2800VA  IPS can power up to ten 20W lights, ten fans, one television, one PC, and one router at the same time, ensuring that important equipment continues to function. Pure sine wave technology provides clean, noise-free electricity, improving the performance and durability of connected equipment while increasing energy economy. This function distinguishes the Luminous Eco Volt Neo 2800VA IPS from other typical power backup devices. Its smart design blends user-friendly functionality with sleek aesthetics, allowing for simple installation and operation while seamlessly fitting into modern spaces.</p><h2>Buy Luminous Eco Volt Neo 2800VA IPS from Star Tech</h2><p>In Bangladesh, you can get original <strong>Luminous Eco Volt Neo 2800VA IPS</strong> From Star Tech. We have a large collection of latest Luminous <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Luminous Eco Volt Neo 2800VA IPS comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Eco Volt Neo 2800VA</li><li>Output Capacity: 2800VA</li><li>Battery: 2x 200AH</li><li>Backup Time: Up to 3 hours (Depending on load)</li><li>Capacity: 10x 20W Light, 10x FAN, 1x TV, 1xPC, 1x Router</li></ul>",
+      "model": "Eco Volt Neo 2800VA",
+      "warranty": "1 year",
+      "basePrice": 104000.0,
+      "originalPrice": 120000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Luminous",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "2800VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41526",
+          "price": 104000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "2800VA"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 99840.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "2800VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "LCD display",
+              "position": 1
+            },
+            {
+              "label": "Output Voltage",
+              "value": "120Vac / 220Vac",
+              "position": 2
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "+/-0.1Hz",
+              "position": 3
+            },
+            {
+              "label": "Noise Level",
+              "value": "Less than 50dBA (at 1M)",
+              "position": 4
+            },
+            {
+              "label": "Battery",
+              "value": "Battery: 2x 200AH Backup Time: Up to 3 Hour (depending on load) Battery Brand: Hamko or Equivalent",
+              "position": 5
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 6
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 10x 20W Light, 10x FAN, 1x Television, 1x PC, 1x Router",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "60Hz / 50Hz",
+              "position": 0
+            },
+            {
+              "label": "Power Factor",
+              "value": "120Vac / 220Vac",
+              "position": 1
+            },
+            {
+              "label": "Voltage Range",
+              "value": "65-140Vac / 135-280Vac",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "120Vac / 220Vac +/-3%",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/luminous-eco-volt-neo-2800va-ips",
+      "sourceProductCode": "41526",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Eco Volt Neo 2800VA",
+        "Output Capacity: 2800VA",
+        "Battery: 2x 200AH",
+        "Backup Time: Up to 3 hours (Depending on load)",
+        "Capacity: 10x 20W Light, 10x FAN, 1x TV, 1xPC, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/luminous-eco-volt-neo-2800va-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/luminous-eco-volt-neo-2800va-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "luminous-eco-volt-neo-2800va-ips",
+        "candidateTitle": "Luminous Eco Volt Neo 2800VA Pure Sine Wave IPS With Battery",
+        "attemptStem": "luminous-eco-volt-neo-2800va-ips"
+      }
+    },
+    {
+      "name": "Luminous Eco Watt Neo 1050 900VA Non Sine Wave IPS With Battery",
+      "slug": "luminous-eco-watt-neo-1050-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-49089",
+      "description": "<h2>Luminous Eco Watt Neo 1050 900VA Non Sine Wave IPS With Battery</h2>\n<p>The Luminous <strong>Eco Watt Neo 1050</strong> IPS offers a 900VA capacity with a maximum bulb load of 756W. The Luminous Eco Watt Neo 1050 900VA IPS comes with a 165Ah battery, up to three hours of backup depending on usage. This Luminous 900VA IPS easily supports four 20W lights, three fans, one TV, and one router for daily essential needs. Luminous Eco Watt Neo 1050 900VA IPS uses intelligent square wave technology to deliver stable power output while protecting connected devices. The inverter includes adaptive battery charging control, which enhances battery lifespan and ensures higher backup efficiency. Luminous IPS ensures faster battery charging with a maximum charging current of 17 amps, downtime between outages. The advanced microprocessor design enables quick switchover time under 20 milliseconds, uninterrupted performance during sudden power cuts. Luminous Eco Watt Neo 1050 900VA Non Sine Wave IPS features dual operation modes, UPS mode and Eco mode for flexible performance. In UPS mode, it maintains voltage between 180V and 260V, protection for sensitive electronics like computers. In Eco mode, the voltage range extends from 100V to 290V, battery usage and improving efficiency. Luminous Eco Watt Neo 1050 900VA IPS supports low voltage charging starting from 90V, making it ideal for areas with unstable electricity supply. The IPS includes user-friendly LED indicators for monitoring inverter and battery performance easily. Luminous IPS supports multiple battery types, including tubular, SMF, flat plate, and local batteries for convenience. Built-in safety features include overcharging, overload, short circuit, over-temperature protection, and overload alarm. This inverter ensures dependable power backup, efficient performance, and long-lasting battery support for everyday use.</p>\n<h2>Buy Luminous Eco Watt Neo 1050 900VA IPS from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Luminous Eco Watt Neo 1050 900VA IPS</strong> From Star Tech. We have a large collection of latest Luminous <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Luminous Eco Watt Neo 1050 900VA IPS comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Eco Watt Neo 1050</li><li>Output Capacity: 900VA</li><li>Battery: 1x 165AH</li><li>Backup Time: Up to 3 hours (Depending on load)</li><li>Capacity: 4x 20W Light, 3x FAN, 1x TV, 1x Router</li></ul>",
+      "model": "Eco Watt Neo 1050",
+      "warranty": "1 year",
+      "basePrice": 39000.0,
+      "originalPrice": 44500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Luminous",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "900VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-49089",
+          "price": 39000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "900VA"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 37440.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "900VA",
+              "position": 0
+            },
+            {
+              "label": "Battery",
+              "value": "Battery: 1x 165AH Backup Time: Up to 3 Hour (depending on load) Battery Brand: Hamko or Equivalent",
+              "position": 1
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 2
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 4x 20W Light, 3x FAN, 1x TV, 1x Router",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/luminous-eco-watt-neo-1050-ips",
+      "sourceProductCode": "49089",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Eco Watt Neo 1050",
+        "Output Capacity: 900VA",
+        "Battery: 1x 165AH",
+        "Backup Time: Up to 3 hours (Depending on load)",
+        "Capacity: 4x 20W Light, 3x FAN, 1x TV, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/luminous-eco-watt-neo-1050-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/luminous-eco-watt-neo-1050-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "luminous-eco-watt-neo-1050-ips",
+        "candidateTitle": "Luminous Eco Watt Neo 1050 900VA Non Sine Wave IPS With Battery",
+        "attemptStem": "luminous-eco-watt-neo-1050-ips"
+      }
+    },
+    {
+      "name": "Luminous Eco Watt Neo 1150VA Non Sine Wave IPS With Battery",
+      "slug": "luminous-eco-watt-neo-1150va-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-41523",
+      "description": "<h2>Luminous Eco Watt Neo 1150VA Non Sine Wave IPS</h2>\n<p>The Luminous Eco Watt Neo 1150VA Non Sine Wave <a href=\"https://www.startech.com.bd/ips\" style=\"color: rgb(0, 0, 0);\" target=\"\">IPS </a>provides a dependable and efficient power backup option. With a strong output capacity of 1150VA , this IPS ensures that vital appliances run smoothly during power outages, allowing you to preserve productivity and convenience. With a powerful 200AH battery, the Luminous Eco Watt Neo 1150VA IPS provides an extended backup period of up to 3.5 hours, depending on the load, making it a reliable solution for both everyday use and emergencies. The Luminous Eco Watt Neo 1100 VA IPS With the ability to support up to five 20W lights, five fans, one television, and one router, this IPS is versatile and practical, guaranteeing that critical equipment stays operational without interruption. The Luminous Eco Watt Neo 1150VA Non Sine Wave IPS's use of Non sine wave technology ensures clean and consistent power output, improving energy economy and extending the life and performance of connected appliances.</p>\n<h2>Buy Luminous Eco Watt Neo 1150VA IPS from Star Tech</h2>\n<p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Luminous Eco </span><span style=\"font-weight: 700;\">Watt</span><span style=\"font-weight: bold;\"> Neo 1150VA IPS</span> From Star Tech. We have a large collection of latest Luminous <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Luminous Eco Watt Neo 1150VA IPS comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Eco Watt Neo 1150</li><li>Output Capacity: 1150VA</li><li>Battery: 1x 200AH</li><li>Backup Time: Up to 3.5 hours (Depending on load)</li><li>Capacity: 5x 20W Light, 5x FAN, 1x Television, 1x Router</li></ul>",
+      "model": "Eco Watt Neo 1150",
+      "warranty": "1 year",
+      "basePrice": 48000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Luminous",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1150VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41523",
+          "price": 48000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "1150VA"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 46080.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "1150VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "LCD display",
+              "position": 1
+            },
+            {
+              "label": "Output Voltage",
+              "value": "120Vac / 220Vac",
+              "position": 2
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "+/-0.1Hz",
+              "position": 3
+            },
+            {
+              "label": "Noise Level",
+              "value": "Less than 50dBA (at 1M)",
+              "position": 4
+            },
+            {
+              "label": "Battery",
+              "value": "Battery: 1x 200AH Backup Time: Up to 3 Hour (depending on load) Battery Brand: Hamko or Equivalent",
+              "position": 5
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 6
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 5x 20W Light, 5x FAN, 1x Television, 1x Router",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "60Hz / 50Hz",
+              "position": 0
+            },
+            {
+              "label": "Power Factor",
+              "value": "120Vac / 220Vac",
+              "position": 1
+            },
+            {
+              "label": "Voltage Range",
+              "value": "65-140Vac / 135-280Vac",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "120Vac / 220Vac +/-3%",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/luminous-eco-watt-neo-1150va-ips",
+      "sourceProductCode": "41523",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Eco Watt Neo 1150",
+        "Output Capacity: 1150VA",
+        "Battery: 1x 200AH",
+        "Backup Time: Up to 3.5 hours (Depending on load)",
+        "Capacity: 5x 20W Light, 5x FAN, 1x Television, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/luminous-eco-watt-neo-1150va-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/luminous-eco-watt-neo-1150va-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "luminous-eco-watt-neo-1150va-ips",
+        "candidateTitle": "Luminous Eco Watt Neo 1150VA Non Sine Wave IPS With Battery",
+        "attemptStem": "luminous-eco-watt-neo-1150va-ips"
+      }
+    },
+    {
+      "name": "Luminous Eco Watt Neo 2300VA Pure Sine Wave IPS With Battery",
+      "slug": "luminous-eco-watt-neo-2300va-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-41524",
+      "description": "<h2>Luminous Eco Watt Neo 2300VA Pure Sine Wave IPS</h2><p>The Luminous Eco Watt Neo 2300VA Pure Sine Wave <a href=\"https://www.startech.com.bd/ips\" style=\"color: rgb(0, 0, 0);\" target=\"\">IPS </a>offers a reliable and efficient power backup solution. With a powerful output capacity of 2300VA, this IPS keeps critical equipment running smoothly during power outages, allowing you to maintain productivity and convenience. With a powerful two 200AH batteries, the Luminous Eco Watt Neo 2300VA IPS offers an extended backup period of up to 2.5 hours, depending on the load, making it a dependable alternative for both everyday use and emergencies. The Luminous Eco Watt Neo 1100 VA (IPS) This IPS is adaptable and practical, supporting up to eight 20W lights, seven fans, one television, and one router, ensuring that important equipment operates uninterrupted. The Luminous Eco Watt Neo 2300VA Pure Sine Wave IPS uses pure sine wave technology to provide clean and steady power output, enhancing energy efficiency and extending the life and performance of connected appliances.</p><h2>Buy Luminous Eco Watt Neo 2300VA IPS from Star Tech</h2><p>In Bangladesh, you can get original <strong>Luminous Eco Watt Neo 2300VA IPS</strong> From Star Tech. We have a large collection of latest Luminous <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Luminous Eco Watt Neo 2300VA IPS comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Eco Watt Neo 2300VA</li><li>Output Capacity: 2300VA</li><li>Battery: Battery: 2x 200AH</li><li>Backup Time: Up to 2.5 hours (Depending on load)</li><li>Capacity: 8x 20W Light, 7x FAN, 1x Television, 1x Router</li></ul>",
+      "model": "Eco Watt Neo 2300VA",
+      "warranty": "1 year",
+      "basePrice": 84500.0,
+      "originalPrice": 89400.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Luminous",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "2300VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41524",
+          "price": 84500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "2300VA"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 81120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "2300VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "LCD display",
+              "position": 1
+            },
+            {
+              "label": "Output Voltage",
+              "value": "120Vac / 220Vac",
+              "position": 2
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "+/-0.1Hz",
+              "position": 3
+            },
+            {
+              "label": "Noise Level",
+              "value": "Less than 50dBA (at 1M)",
+              "position": 4
+            },
+            {
+              "label": "Battery",
+              "value": "Battery: 2x 200AH Backup Time: Up to 2.5 Hour (depending on load) Battery Brand: Hamko or Equivalent",
+              "position": 5
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 6
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 8x 20W Light, 7x FAN, 1x Television, 1x Router",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "60Hz / 50Hz",
+              "position": 0
+            },
+            {
+              "label": "Power Factor",
+              "value": "120Vac / 220Vac",
+              "position": 1
+            },
+            {
+              "label": "Voltage Range",
+              "value": "65-140Vac / 135-280Vac",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "120Vac / 220Vac +/-3%",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/luminous-eco-watt-neo-2300va-ips",
+      "sourceProductCode": "41524",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Eco Watt Neo 2300VA",
+        "Output Capacity: 2300VA",
+        "Battery: Battery: 2x 200AH",
+        "Backup Time: Up to 2.5 hours (Depending on load)",
+        "Capacity: 8x 20W Light, 7x FAN, 1x Television, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/luminous-eco-watt-neo-2300va-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/luminous-eco-watt-neo-2300va-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "luminous-eco-watt-neo-2300va-ips",
+        "candidateTitle": "Luminous Eco Watt Neo 2300VA Pure Sine Wave IPS With Battery",
+        "attemptStem": "luminous-eco-watt-neo-2300va-ips"
+      }
+    },
+    {
+      "name": "Luminous Eco Watt Neo 700 600VA Non Sine Wave IPS With Battery",
+      "slug": "luminous-eco-watt-neo-700-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-49088",
+      "description": "<h2>Luminous Eco Watt Neo 700 600VA Non Sine Wave IPS With Battery</h2><p>The Luminous <strong>Eco Watt Neo 700</strong> 600VA IPS features a 600VA capacity with a maximum bulb load of 504W, efficient performance. Luminous IPS supports one 12V battery and includes a 100Ah battery, up to three hours of backup depending on load conditions. This Luminous IPS system easily powers three 20W lights, two fans, and one router, it ideal for essential daily needs. Luminous Eco Watt Neo 700 600VA Non Sine Wave IPS uses intelligent square wave technology to deliver consistent output and protect connected devices. The IPS includes adaptive battery charging control, which improves battery life and ensures higher backup efficiency over time. Luminous Eco Watt Neo 700 IPS provides faster battery charging with a maximum charging current of 14 amps, downtime between power cuts. The advanced microprocessor design ensures quick switchover time under 20 milliseconds for uninterrupted performance. Luminous Eco Watt Neo 700 600VA IPS offers dual operation modes, UPS mode for sensitive devices and Eco mode for energy savings. In UPS mode, it maintains voltage between 180V and 260V, while Eco mode supports a wider range from 100V to 290V. Luminous IPS also starts charging at low voltage from 90V, it suitable for areas with unstable electricity supply. The system includes LED indicators for easy monitoring of inverter and battery status. Luminous Eco Watt Neo 700 600VA Non Sine Wave IPS supports multiple battery types, tubular, SMF, flat plate, and local batteries. Built-in safety features include overcharging, overload, short circuit, and over-temperature protection for reliable operation. This inverter ensures efficient performance, longer battery life, and dependable backup power for everyday use.</p><h2>Buy Luminous Eco Watt Neo 700 600VA IPS from Star Tech</h2><p>In Bangladesh, you can get original <strong>Luminous Eco Watt Neo 700 600VA IPS</strong> From Star Tech. We have a large collection of latest Luminous <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Luminous Eco Watt Neo 700 600VA IPS comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Eco Watt Neo 700</li><li>Output Capacity: 600VA</li><li>Battery: 1x 100AH</li><li>Backup Time: Up to 3 hours (Depending on load)</li><li>Capacity: 3x 20W Light, 2x FAN, 1x Router</li></ul>",
+      "model": "Eco Watt Neo 700",
+      "warranty": "1 year",
+      "basePrice": 32000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Luminous",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "600VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-49088",
+          "price": 32000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "600VA"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 30720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "600VA",
+              "position": 0
+            },
+            {
+              "label": "Battery",
+              "value": "Battery: 1x 100AH Backup Time: Up to 3 Hour (depending on load) Battery Brand: Hamko or Equivalent",
+              "position": 1
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 2
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 3x 20W Light, 2x FAN, 1x Router",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/luminous-eco-watt-neo-700-ips",
+      "sourceProductCode": "49088",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Eco Watt Neo 700",
+        "Output Capacity: 600VA",
+        "Battery: 1x 100AH",
+        "Backup Time: Up to 3 hours (Depending on load)",
+        "Capacity: 3x 20W Light, 2x FAN, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/luminous-eco-watt-neo-700-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/luminous-eco-watt-neo-700-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "luminous-eco-watt-neo-700-ips",
+        "candidateTitle": "Luminous Eco Watt Neo 700 600VA Non Sine Wave IPS With Battery",
+        "attemptStem": "luminous-eco-watt-neo-700-ips"
+      }
+    },
+    {
+      "name": "Marsriva MR-UT1000 1000VA IPS With Battery",
+      "slug": "marsriva-mr-ut1000-1000va-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-52673",
+      "description": "<h2>Marsriva MR-UT1000 1000VA IPS (With Battery)</h2>\n<p>The <strong>Marsriva MR-UT1000</strong> 1000VA IPS (With Battery) is built to deliver dependable backup power for households and small offices. With a 1000VA capacity, it ensures your essential devices stay powered during outages, offering peace of mind when you need it most.This Marsriva 1000VA IPS features a smart LCD display that keeps you informed about voltage, load, and battery status in real time. Its advanced microprocessor design supports smart charging, efficient cooling fan control, and automatic battery condition detection, helping extend battery life and maintain consistent performance.Safety is a key focus of the Marsriva MR-UT1000 IPS. It provides protection against overload, short circuit, and overheating, while maintaining isolation between battery and AC utility for added reliability. With pure sine wave output, your sensitive electronics such as TVs, routers, and computers receive clean and stable power.The Marsriva IPS with battery offers backup time that varies with load, making it suitable for powering lights, fans, and entertainment devices during outages. Fast transfer time under 10ms ensures uninterrupted operation, while dynamic performance keeps the system stable under varying conditions.Compact, efficient, and user‑friendly, the Marsriva MR-UT1000 1000VA IPS is a practical solution for anyone seeking reliable power backup. It combines smart technology with everyday usability, making it one of the most trusted options in the Marsriva IPS lineup.</p>\n<h2>Buy Marsriva MR-UT1000 1000VA IPS (With Battery) from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Marsriva MR-UT1000 1000VA IPS (With Battery)</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/ips\">IPS</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Marsriva MR-UT1000 1000VA IPS comes with 2 years IPS &amp; 5 years battery warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MR-UT1000</li><li>Rated Power: 1000VA /800W, Pure Sine Wave Output</li><li>Microprocessor-Based Design, Isolation Between Battery and AC Utility</li><li>Smart Charging, Real-Time Auto-Detection for Battery Condition</li><li>Protection for Overload, Short Circuit, &amp; Over Temp</li></ul>",
+      "model": "MR-UT1000",
+      "warranty": "2 years IPS & 5 years battery warranty",
+      "basePrice": 46990.0,
+      "originalPrice": 51689.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 290.0,
+        "width": 257.0,
+        "height": 123.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MARSRIVA",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1000VA",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Load Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "800W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52673",
+          "price": 46990.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1000VA",
+            "Load Capacity": "800W"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 45110.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "1000VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "Smart LCD display",
+              "position": 1
+            },
+            {
+              "label": "Load Capacity",
+              "value": "800W",
+              "position": 2
+            },
+            {
+              "label": "Input Voltage",
+              "value": "230VAC",
+              "position": 3
+            },
+            {
+              "label": "Output Voltage",
+              "value": "UPS mode: 203–238VAC±5VAC INV mode: 150–255VAC±5VAC (AC Mode) 220VAC ± 5VAC (Battery Mode)",
+              "position": 4
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "50Hz ± 0.5Hz",
+              "position": 5
+            },
+            {
+              "label": "Battery",
+              "value": "12.8V/100Ah or 12.8V/ 200Ah",
+              "position": 6
+            },
+            {
+              "label": "Others",
+              "value": "Microprocessor based design. Smart charging. Speed control for cooling fan. Real time auto-detection for battery condition. Protection for overload, short circuit, & over temp. Isolation between battery and AC utility. Outstanding dynamic performance.",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "45Hz - 65Hz",
+              "position": 0
+            },
+            {
+              "label": "Voltage Range",
+              "value": "UPS mode: 145–270VAC±5VAC INV mode: 100–290VAC±5VAC",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Backup Time",
+              "value": "Up to 3 Hours (Depends on Load) 8 * Light (LED-20W) + 5 * Ceiling Fan 56\" (90W) + 1 * TV 32\"(100W)",
+              "position": 0
+            },
+            {
+              "label": "Voltage Range",
+              "value": "UPS mode: 203–238VAC±5VAC INV mode: 150–255VAC±5VAC (AC Mode) 220VAC ± 5VAC (Battery Mode)",
+              "position": 1
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 2
+            },
+            {
+              "label": "Transfer Time",
+              "value": "＜10ms",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 3,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "290 x 257 x 123 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 years IPS & 5 years battery warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-ut1000-1000va-ips",
+      "sourceProductCode": "52673",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MR-UT1000",
+        "Rated Power: 1000VA /800W, Pure Sine Wave Output",
+        "Microprocessor-Based Design, Isolation Between Battery and AC Utility",
+        "Smart Charging, Real-Time Auto-Detection for Battery Condition",
+        "Protection for Overload, Short Circuit, & Over Temp"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/marsriva-mr-ut1000-1000va-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/marsriva-mr-ut1000-1000va-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "marsriva-mr-ut1000-1000va-ips",
+        "candidateTitle": "Marsriva MR-UT1000 1000VA IPS With Battery",
+        "attemptStem": "marsriva-mr-ut1000-1000va-ips"
+      }
+    },
+    {
+      "name": "Marsriva MR-UT1200 1200VA IPS With Battery",
+      "slug": "marsriva-mr-ut1200-1200va-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-52671",
+      "description": "<h2>Marsriva MR-UT1200 1200VA IPS With Battery</h2><p>The <strong>Marsriva MR-UT1200 1200VA IPS</strong> (With Battery) is an excellent power backup solution designed to keep your home and office appliances running smoothly during power interruptions. With a strong 1200VA capacity and up to 1000W load support, it delivers consistent performance for lights, fans, televisions, and other essential devices. The smart LCD display makes it easy to monitor system status, battery condition, and load capacity in real time, giving you complete control and confidence.Built with a microprocessor‑based design, the Marsriva MR-UT1200 IPS ensures intelligent operation and efficient energy use. Features like smart charging, cooling fan speed control, and real‑time battery detection extend battery life and improve reliability. Safety is a priority, with protection against overload, short circuit, and overheating, along with isolation between battery and AC utility for added security.This Marsriva 1200VA IPS provides pure sine wave output, ensuring stable and clean power for sensitive electronics. In UPS mode, voltage ranges from 203–238VAC±5VAC, while in battery mode it maintains 220VAC±5VAC at 50Hz±0.5Hz. With a transfer time of less than 10ms, it switches seamlessly during outages, keeping your devices powered without interruption.Backup time can reach up to 3 hours depending on load, making it suitable for running multiple devices at once for example, 10 LED lights, 5 ceiling fans, and a 32‑inch TV. The Marsriva MR-UT1200 IPS is designed for outstanding dynamic performance, ensuring smooth operation even under varying power conditions.Compact, efficient, and user‑friendly, the Marsriva MR-UT1200 1200VA IPS (With Battery) is the perfect choice for households and offices that need reliable backup power. It combines smart technology, strong performance, and practical usability, making it one of the most versatile IPS solutions available.</p><h2>Buy Marsriva MR-UT1200 1200VA IPS (With Battery) from Star Tech</h2><p>In Bangladesh, you can get original <strong>Marsriva MR-UT1200 1200VA IPS (With Battery)</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/ips\">IPS</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Marsriva MR-UT1200 1200VA IPS comes with 2 years IPS &amp; 5 years battery warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MR-UT1200</li><li>Rated Power: 1200VA /1000W, Pure Sine Wave Output</li><li>Microprocessor-Based Design, Isolation Between Battery and AC Utility</li><li>Smart Charging, Real-Time Auto-Detection for Battery Condition</li><li>Protection for Overload, Short Circuit, &amp; Over Temp</li></ul>",
+      "model": "MR-UT1200",
+      "warranty": "2 years IPS & 5 years battery warranty",
+      "basePrice": 47990.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 290.0,
+        "width": 257.0,
+        "height": 123.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "MARSRIVA",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1200VA",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Load Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "1000W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52671",
+          "price": 47990.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "1200VA",
+            "Load Capacity": "1000W"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 46070.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "1200VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "Smart LCD display",
+              "position": 1
+            },
+            {
+              "label": "Load Capacity",
+              "value": "1000W",
+              "position": 2
+            },
+            {
+              "label": "Input Voltage",
+              "value": "230VAC",
+              "position": 3
+            },
+            {
+              "label": "Output Voltage",
+              "value": "UPS mode: 203–238VAC±5VAC INV mode: 150–255VAC±5VAC (AC Mode) 220VAC ± 5VAC (Battery Mode)",
+              "position": 4
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "50Hz ± 0.5Hz",
+              "position": 5
+            },
+            {
+              "label": "Battery",
+              "value": "12.8V/100Ah or 12.8V/ 200Ah",
+              "position": 6
+            },
+            {
+              "label": "Others",
+              "value": "Microprocessor based design. Smart charging. Speed control for cooling fan. Real time auto-detection for battery condition. Protection for overload, short circuit, & over temp. Isolation between battery and AC utility. Outstanding dynamic performance.",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "45Hz - 65Hz",
+              "position": 0
+            },
+            {
+              "label": "Voltage Range",
+              "value": "UPS mode: 145–270VAC±5VAC INV mode: 100–290VAC±5VAC",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Backup Time",
+              "value": "Up to 3 Hours (Depends on Load) 10* Light (LED-20W) + 5 * Ceiling Fan 56\" (90W) + 1 * TV 32\"(100W)",
+              "position": 0
+            },
+            {
+              "label": "Voltage Range",
+              "value": "UPS mode: 203–238VAC±5VAC INV mode: 150–255VAC±5VAC (AC Mode) 220VAC ± 5VAC (Battery Mode)",
+              "position": 1
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 2
+            },
+            {
+              "label": "Transfer Time",
+              "value": "＜10ms",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 3,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "290 x 257 x 123 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 years IPS & 5 years battery warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-ut1200-1200va-ips",
+      "sourceProductCode": "52671",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MR-UT1200",
+        "Rated Power: 1200VA /1000W, Pure Sine Wave Output",
+        "Microprocessor-Based Design, Isolation Between Battery and AC Utility",
+        "Smart Charging, Real-Time Auto-Detection for Battery Condition",
+        "Protection for Overload, Short Circuit, & Over Temp"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/marsriva-mr-ut1200-1200va-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/marsriva-mr-ut1200-1200va-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "marsriva-mr-ut1200-1200va-ips",
+        "candidateTitle": "Marsriva MR-UT1200 1200VA IPS With Battery",
+        "attemptStem": "marsriva-mr-ut1200-1200va-ips"
+      }
+    },
+    {
+      "name": "NPTE 200VA Sine Wave IPS With Battery",
+      "slug": "npte-200va-ips",
+      "type": "PHYSICAL",
+      "sku": "ST-41514",
+      "description": "<h2>NPTE 200VA Sine Wave IPS</h2><p>The NPTE 200VA Sine Wave <a href=\"https://www.startech.com.bd/ips\" style=\"color: rgb(0, 0, 0);\" target=\"\">IPS </a>is a dependable and efficient power backup option for essential home and office appliances during power outages. With a 200VA output capacity, this NPTE IPS provides reliable and clean power that is safe for delicate devices. It runs on a single 55AH or 60AH battery, making it a practical and energy-efficient option for those who want reliable power without the headache of sophisticated systems. The NPTE 200VA Sine Wave IPS offers a backup time of up to three hours, depending on the load. This length is excellent for short to moderate power outages, giving customers adequate time to resume their everyday tasks without interruption. The NPTE 200VA IPS can power two 20-watt lights, one fan, and a Wi-Fi router at the same time, making it ideal for maintaining basic house illumination, ventilation, and internet connectivity. The sine wave output guarantees that devices run smoothly, reducing the possibility of damage or malfunction caused by modified sine wave inverters. The NPTE 200VA Sine Wave IPS is designed for efficiency and performance, making it an excellent choice for consumers in locations with regular load shedding or unreliable supply. The NPTE 200VA IPS is ideal for a modest house, student apartment, or tiny office setup, providing constant power when it is most needed.</p><h2>Buy NPTE 200VA IPS from Star Tech</h2><p>In Bangladesh, you can get original <strong>NPTE 200VA IPS</strong> From Star Tech. We have a large collection of latest NPTE <a href=\"https://www.startech.com.bd/ips\" target=\"\">IPS </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The NPTE 200VA IPS comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NPTE 200VA</li><li>Output Capacity: 200VA</li><li>Battery: 1x 55/60AH</li><li>Backup Time: Up to 3 hours (Depending on load)</li><li>Capacity: 2x 20W Light, 1x FAN, 1x Router</li></ul>",
+      "model": "NPTE 200VA",
+      "warranty": "1 year",
+      "basePrice": 17000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "200VA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41514",
+          "price": 17000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "200VA"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 16320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "200VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "LCD display",
+              "position": 1
+            },
+            {
+              "label": "Output Voltage",
+              "value": "120Vac / 220Vac",
+              "position": 2
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "+/-0.1Hz",
+              "position": 3
+            },
+            {
+              "label": "Noise Level",
+              "value": "Less than 50dBA (at 1M)",
+              "position": 4
+            },
+            {
+              "label": "Battery",
+              "value": "Battery: 1x 55/60AH Backup Time: Up to 3 Hour (depending on load) Battery Brand: Hamko or Equivalent",
+              "position": 5
+            },
+            {
+              "label": "Alarm",
+              "value": "Yes",
+              "position": 6
+            },
+            {
+              "label": "Indications",
+              "value": "Yes",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: 2x 20W Light, 1x FAN, 1x Router",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "60Hz / 50Hz",
+              "position": 0
+            },
+            {
+              "label": "Power Factor",
+              "value": "120Vac / 220Vac",
+              "position": 1
+            },
+            {
+              "label": "Voltage Range",
+              "value": "65-140Vac / 135-280Vac",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "120Vac / 220Vac +/-3%",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Sine Wave",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/npte-200va-ips",
+      "sourceProductCode": "41514",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NPTE 200VA",
+        "Output Capacity: 200VA",
+        "Battery: 1x 55/60AH",
+        "Backup Time: Up to 3 hours (Depending on load)",
+        "Capacity: 2x 20W Light, 1x FAN, 1x Router"
+      ],
+      "needsReview": false,
+      "categorySlug": "ips",
+      "image": "/images/products/power/ips/npte-200va-ips.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/ips/npte-200va-ips.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "npte-200va-ips",
+        "candidateTitle": "NPTE 200VA Sine Wave IPS With Battery",
+        "attemptStem": "npte-200va-ips"
+      }
+    }
+  ]
+}

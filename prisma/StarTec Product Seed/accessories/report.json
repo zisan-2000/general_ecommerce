@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/accessories",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\accessories",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\accessories",
+  "imagesFound": 5854,
+  "uniqueProductStems": 5829,
+  "productsInJson": 5829,
+  "matchedProducts": 5769,
+  "unmatchedProducts": 60,
+  "imageCoverage": 5854,
+  "jsonGroupFiles": 28,
+  "matchMethods": {
+    "direct-slug": 5463,
+    "search": 306,
+    "unmatched": 60
+  },
+  "jsonGenerationTimeSeconds": 3305.46,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 5829,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\accessories\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\accessories\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\accessories\\unmatched.json"
+  },
+  "seedTimeSeconds": 80.77
+}

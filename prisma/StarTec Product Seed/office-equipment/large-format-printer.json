@@ -1,0 +1,1313 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/office-equipment",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\office-equipment",
+    "generatedAtUnix": 1790587585,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Office Equipment",
+      "slug": "office-equipment",
+      "parentSlug": null,
+      "image": "/images/products/office-equipment/barcode-scanner/deli/deli-14952w-handheld-barcode-scanner.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Large Format Printer",
+      "slug": "large-format-printer",
+      "parentSlug": "office-equipment",
+      "image": "/images/products/office-equipment/large-format-printer/_direct/hp-designjet-studio-steel-24-inch-printer.png",
+      "isActive": true,
+      "sortOrder": 13,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "HP",
+      "slug": "hp",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "HP DesignJet Studio Steel 24\" Large Format Plotter Printer",
+      "slug": "hp-designjet-studio-steel-24-inch-printer",
+      "type": "PHYSICAL",
+      "sku": "5HB12C",
+      "description": "<h2 style=\"text-align: justify; \">HP DesignJet Studio Steel 24\" Large Format Plotter Printer</h2><p style=\"text-align: justify; \">The HP DesignJet Studio Steel 24\" Large Format Plotter Printer is easy to use with an intuitive driver and true print preview. You can easily set up your plotter using your smartphone. Print multi-size A3/B and A1/D without manually switching the media source. Print multi-size A3/B and A1/D or A0/E projects automatically, without manually switching the media source. Save time with the world's easiest job submission â€“ send multiple files in one click with HP Click software.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 5HB12C</li><li>Model: DesignJet Studio Steel</li><li>Print speed: 26 sec/page on A1, 81 A1 prints per hour</li><li>Print resolution: Up to 2400 x 1200 optimized dpi</li><li>Gigabit Ethernet, Hi-Speed USB 2.0, Wi-Fi 802.11</li><li>Print from smartphone, tablet and PC</li></ul>",
+      "model": "DesignJet Studio Steel",
+      "warranty": "1 year",
+      "basePrice": 400000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 60.0,
+      "dimensions": {
+        "length": 1013.0,
+        "width": 555.0,
+        "height": 932.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "HP",
+      "variantOptions": [
+        {
+          "name": "Output Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Color",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Paper Size",
+          "position": 1,
+          "values": [
+            {
+              "value": "Bond and coated paper (bond, coated, heavyweight coated, plain, bright white, blueprint), technical paper (natural tracing), film (clear, matte), photographic paper (satin, gloss, semi-gloss, polypropylene), self-adhesive (adhesive, polypropylene)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 2,
+          "values": [
+            {
+              "value": "1GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 3,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "5HB12C",
+          "price": 400000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Output Color": "Color",
+            "Paper Size": "Bond and coated paper (bond, coated, heavyweight coated, plain, bright white, blueprint), technical paper (natural tracing), film (clear, matte), photographic paper (satin, gloss, semi-gloss, polypropylene), self-adhesive (adhesive, polypropylene)",
+            "Memory": "1GB",
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 384000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Functions",
+              "value": "Print Only",
+              "position": 0
+            },
+            {
+              "label": "Printer Type",
+              "value": "Single Function DesignJet Printer",
+              "position": 1
+            },
+            {
+              "label": "Output Color",
+              "value": "Color",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Print",
+          "position": 1,
+          "items": [
+            {
+              "label": "Technology",
+              "value": "HP Thermal Inkjet",
+              "position": 0
+            },
+            {
+              "label": "Print Speed",
+              "value": "26 sec/page on A1, 81 A1 prints per hour",
+              "position": 1
+            },
+            {
+              "label": "Print Resolution",
+              "value": "Up to 2400 x 1200 optimized dpi",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Paper Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Paper Size",
+              "value": "Bond and coated paper (bond, coated, heavyweight coated, plain, bright white, blueprint), technical paper (natural tracing), film (clear, matte), photographic paper (satin, gloss, semi-gloss, polypropylene), self-adhesive (adhesive, polypropylene)",
+              "position": 0
+            },
+            {
+              "label": "Paper Type",
+              "value": "Sheet feed, roll feed, automatic sheet feeder, media bin, automatic horizontal cutter",
+              "position": 1
+            },
+            {
+              "label": "Paper Weight",
+              "value": "60 to 220 g/m2 (Auto Sheet Feeder), 60 to 280 g/m2 (Roll/Manual Feed",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Technical Specs",
+          "position": 3,
+          "items": [
+            {
+              "label": "Memory",
+              "value": "1GB",
+              "position": 0
+            },
+            {
+              "label": "Connectivity",
+              "value": "LAN Gigabit Ethernet (1000Base-T) Wi-Fi Wi-Fi 802.11 USB Hi-Speed USB 2.0",
+              "position": 1
+            },
+            {
+              "label": "Power Consumption",
+              "value": "100-240 V (+-10%), 50/60 Hz (+-3 Hz), 1200 mA max, <35 W (printing), <5.6 W (ready), <2.1 W (sleep), <0.2 W (standby)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specs",
+          "position": 4,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "1013 x 555 x 932mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "33.6Kg",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Support",
+          "position": 5,
+          "items": [
+            {
+              "label": "Toner/ Cartridge/ Refill",
+              "value": "HP 712B 38-ml Black DesignJet Ink Cartridge, HP 712B 80-ml Black DesignJet Ink Cartridge, HP 712 29-ml Cyan DesignJet Ink Cartridge, HP 712 29-ml Magenta DesignJet Ink Cartridge, HP 712 29-ml Yellow DesignJet Ink Cartridge (Please make sure your existing & mentioned toner/cartridge/ink bottle models are the same before buying a new one)",
+              "position": 0
+            },
+            {
+              "label": "Software",
+              "value": "Windows and MacOS",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 6,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hp-designjet-studio-steel-24-inch-printer",
+      "sourceProductCode": "19162",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": "5HB12C",
+      "sourceKeyFeatures": [
+        "MPN: 5HB12C",
+        "Model: DesignJet Studio Steel",
+        "Print speed: 26 sec/page on A1, 81 A1 prints per hour",
+        "Print resolution: Up to 2400 x 1200 optimized dpi",
+        "Gigabit Ethernet, Hi-Speed USB 2.0, Wi-Fi 802.11",
+        "Print from smartphone, tablet and PC"
+      ],
+      "needsReview": false,
+      "categorySlug": "large-format-printer",
+      "image": "/images/products/office-equipment/large-format-printer/_direct/hp-designjet-studio-steel-24-inch-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/large-format-printer/_direct/hp-designjet-studio-steel-24-inch-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hp-designjet-studio-steel-24-inch-printer",
+        "candidateTitle": "HP DesignJet Studio Steel 24\" Large Format Plotter Printer",
+        "attemptStem": "hp-designjet-studio-steel-24-inch-printer"
+      }
+    },
+    {
+      "name": "HP DesignJet Studio Steel 36\" Large Format Plotter Printer",
+      "slug": "hp-designjet-studio-steel-36-inch-printer",
+      "type": "PHYSICAL",
+      "sku": "5HB14C",
+      "description": "<h2 style=\"text-align: justify; \">HP DesignJet Studio Steel 36\" Large Format Plotter Printer</h2><p style=\"text-align: justify; \">The HP DesignJet Studio Steel 36\" Large Format Plotter Printer is easy to use with an intuitive driver and true print preview. You can easily set up your plotter using your smartphone. Print multi-size A3/B and A1/D without manually switching the media source. Print multi-size A3/B and A1/D or A0/E projects automatically, without manually switching the media source. Save time with the world's easiest job submission â€“ send multiple files in one click with HP Click software.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 5HB14C</li><li>Model: DesignJet Studio Steel</li><li>Print speed: 25 sec/page on A1, 82 A1 prints per hour</li><li>Print resolution: Up to 2400 x 1200 optimized dpi</li><li>Gigabit Ethernet, Hi-Speed USB 2.0, Wi-Fi 802.11</li><li>Print from smartphone, tablet and PC</li></ul>",
+      "model": "DesignJet Studio Steel",
+      "warranty": "1 year",
+      "basePrice": 340000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 60.0,
+      "dimensions": {
+        "length": 1317.0,
+        "width": 555.0,
+        "height": 932.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "HP",
+      "variantOptions": [
+        {
+          "name": "Output Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Color",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Paper Size",
+          "position": 1,
+          "values": [
+            {
+              "value": "A4, A3, A2, A1, A0",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 2,
+          "values": [
+            {
+              "value": "1GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 3,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "5HB14C",
+          "price": 340000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Output Color": "Color",
+            "Paper Size": "A4, A3, A2, A1, A0",
+            "Memory": "1GB",
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 326400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Functions",
+              "value": "Print Only",
+              "position": 0
+            },
+            {
+              "label": "Printer Type",
+              "value": "Single Function DesignJet Printer",
+              "position": 1
+            },
+            {
+              "label": "Output Color",
+              "value": "Color",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Print",
+          "position": 1,
+          "items": [
+            {
+              "label": "Technology",
+              "value": "HP Thermal Inkjet",
+              "position": 0
+            },
+            {
+              "label": "Print Speed",
+              "value": "(Black)-25spp (Color)-25spp",
+              "position": 1
+            },
+            {
+              "label": "Print Resolution",
+              "value": "2400 x 1200dpi",
+              "position": 2
+            },
+            {
+              "label": "Duplex",
+              "value": "Manual",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Paper Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Paper Size",
+              "value": "A4, A3, A2, A1, A0",
+              "position": 0
+            },
+            {
+              "label": "Paper Type",
+              "value": "Sheet feed, roll feed, automatic sheet feeder, media bin, automatic horizontal cutter",
+              "position": 1
+            },
+            {
+              "label": "Paper Weight",
+              "value": "60 to 220 g/m2 (Auto Sheet Feeder), 60 to 280 g/m2 (Roll/Manual Feed",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Technical Specs",
+          "position": 3,
+          "items": [
+            {
+              "label": "Memory",
+              "value": "1GB",
+              "position": 0
+            },
+            {
+              "label": "Connectivity",
+              "value": "LAN Gigabit Ethernet (1000Base-T) Wi-Fi Wi-Fi 802.11 USB Hi-Speed USB 2.0",
+              "position": 1
+            },
+            {
+              "label": "Power Consumption",
+              "value": "100-240 V (+-10%), 50/60 Hz (+-3 Hz), 1200 mA max, <35 W (printing), <5.6 W (ready), <2.1 W (sleep), <0.2 W (standby)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specs",
+          "position": 4,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "1317 x 555 x 932mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "41.7Kg",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Support",
+          "position": 5,
+          "items": [
+            {
+              "label": "Toner/ Cartridge/ Refill",
+              "value": "HP 712B 38-ml Black DesignJet Ink Cartridge, HP 712B 80-ml Black DesignJet Ink Cartridge, HP 712 29-ml Cyan DesignJet Ink Cartridge, HP 712 29-ml Magenta DesignJet Ink Cartridge, HP 712 29-ml Yellow DesignJet Ink Cartridge (Please make sure your existing & mentioned toner/cartridge/ink bottle models are the same before buying a new one)",
+              "position": 0
+            },
+            {
+              "label": "Software",
+              "value": "Windows and MacOS",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 6,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hp-designjet-studio-steel-36-inch-printer",
+      "sourceProductCode": "19165",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "5HB14C",
+      "sourceKeyFeatures": [
+        "MPN: 5HB14C",
+        "Model: DesignJet Studio Steel",
+        "Print speed: 25 sec/page on A1, 82 A1 prints per hour",
+        "Print resolution: Up to 2400 x 1200 optimized dpi",
+        "Gigabit Ethernet, Hi-Speed USB 2.0, Wi-Fi 802.11",
+        "Print from smartphone, tablet and PC"
+      ],
+      "needsReview": false,
+      "categorySlug": "large-format-printer",
+      "image": "/images/products/office-equipment/large-format-printer/_direct/hp-designjet-studio-steel-36-inch-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/large-format-printer/_direct/hp-designjet-studio-steel-36-inch-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hp-designjet-studio-steel-36-inch-printer",
+        "candidateTitle": "HP DesignJet Studio Steel 36\" Large Format Plotter Printer",
+        "attemptStem": "hp-designjet-studio-steel-36-inch-printer"
+      }
+    },
+    {
+      "name": "HP DesignJet T250 24\" Compact Large Format Plotter Printer",
+      "slug": "hp-designjet-t250-24-inch-printer",
+      "type": "PHYSICAL",
+      "sku": "5HB06A",
+      "description": "<h2 style=\"text-align: justify; \">HP DesignJet T250 24\" Compact Large Format Plotter Printer</h2><p style=\"text-align: justify; \">The HP DesignJet T250 is perfect for AEC, GIS, and MCAD professionals who want to print maps, technical drawings, posters, and renders with precise, accurate line quality and crisp text Print easily and affordably with the world's smallest wide-format printer. The T250 has been designed to fit your office, budget, and the way you work, the world's smallest plotters provide outstanding simplicity. You can send multiple files in just one click and print your A1/D plot as fast as 30 seconds. 500 MB memory. Impressive simplicity helps you save time and reduces waste. Use up to 95% less ink for routine maintenance. More sustainable design reduces CO2e up to 7.3 tons/year by units sold by using up to 30% recycled plastic. With an accessory option, print multi-size A3/B and A1/D projects without manually switching the media source. This printer is intended to work only with cartridges that have a new or reused HP chip, and it uses dynamic security measures to block cartridges using a non-HP chip. Periodic firmware updates will maintain the effectiveness of these measures and block cartridges that previously worked. A reused HP chip enables the use of reused, remanufactured, and refilled cartridges. The HP DesignJet T250 comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 5HB06A</li><li>Model: DesignJet T250</li><li>Print speed: 30 sec/page on A1, 76 A1 prints per hour</li><li>Print resolution: Up to 2400 x 1200 optimized dpi</li><li>Standard sheets: A4, A3, A2, A1</li><li>Print from smartphone, tablet and PC</li></ul>",
+      "model": "DesignJet T250",
+      "warranty": "1 year",
+      "basePrice": 125000.0,
+      "originalPrice": 135000.0,
+      "currency": "BDT",
+      "weight": 60.0,
+      "dimensions": {
+        "length": 1013.0,
+        "width": 285.0,
+        "height": 440.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "HP",
+      "variantOptions": [
+        {
+          "name": "Output Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Color",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Paper Size",
+          "position": 1,
+          "values": [
+            {
+              "value": "Roll size 279 to 610 mm, Sheet size 210 x 279 to 610 x 1897 mm, Standard sheets A4, A3, A2, A1",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 2,
+          "values": [
+            {
+              "value": "512MB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 3,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "5HB06A",
+          "price": 125000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Output Color": "Color",
+            "Paper Size": "Roll size 279 to 610 mm, Sheet size 210 x 279 to 610 x 1897 mm, Standard sheets A4, A3, A2, A1",
+            "Memory": "512MB",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 120000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Functions",
+              "value": "Print Only",
+              "position": 0
+            },
+            {
+              "label": "Printer Type",
+              "value": "Single Function DesignJet Printer",
+              "position": 1
+            },
+            {
+              "label": "Output Color",
+              "value": "Color",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Print",
+          "position": 1,
+          "items": [
+            {
+              "label": "Technology",
+              "value": "HP Thermal Inkjet",
+              "position": 0
+            },
+            {
+              "label": "Print Speed",
+              "value": "30 sec/page on A1, 76 A1 prints per hour",
+              "position": 1
+            },
+            {
+              "label": "Print Resolution",
+              "value": "Up to 2400 x 1200 optimized dpi",
+              "position": 2
+            },
+            {
+              "label": "Duplex",
+              "value": "Manual",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Paper Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Paper Size",
+              "value": "Roll size 279 to 610 mm, Sheet size 210 x 279 to 610 x 1897 mm, Standard sheets A4, A3, A2, A1",
+              "position": 0
+            },
+            {
+              "label": "Paper Type",
+              "value": "Bond and coated paper (bond, coated, heavyweight coated, plain, bright white, blueprint), technical paper (natural tracing), film (clear, matte), photographic paper (satin, gloss, semigloss, polypropylene), self-adhesive (adhesive, polypropylene)",
+              "position": 1
+            },
+            {
+              "label": "Paper Weight",
+              "value": "60 to 280 g/m2",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Technical Specs",
+          "position": 3,
+          "items": [
+            {
+              "label": "Memory",
+              "value": "512MB",
+              "position": 0
+            },
+            {
+              "label": "Connectivity",
+              "value": "LAN Gigabit Ethernet (1000Base-T) Wi-Fi Wi-Fi 802.11a/b/g/n, Wi-Fi Direct USB Hi-Speed USB 2.0",
+              "position": 1
+            },
+            {
+              "label": "Power Consumption",
+              "value": "100-240 V (+-10%), 50/60 Hz (+-3 Hz), 1200 mA max, <35 W (printing), <5.6 W (ready), <2.1 W (sleep), <0.2 W (standby)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specs",
+          "position": 4,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "1013 x 285 x 440mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "21.5Kg",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Support",
+          "position": 5,
+          "items": [
+            {
+              "label": "Toner/ Cartridge/ Refill",
+              "value": "HP 712 38-ml Black DesignJet Ink Cartridge, HP 712 29-ml Cyan, Magenta, Yellow DesignJet Ink Cartridge (Please make sure your existing & mentioned toner/cartridge model are same before buying new one)",
+              "position": 0
+            },
+            {
+              "label": "Software",
+              "value": "Windows and macOS",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 6,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hp-designjet-t250-24-inch-printer",
+      "sourceProductCode": "19158",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "5HB06A",
+      "sourceKeyFeatures": [
+        "MPN: 5HB06A",
+        "Model: DesignJet T250",
+        "Print speed: 30 sec/page on A1, 76 A1 prints per hour",
+        "Print resolution: Up to 2400 x 1200 optimized dpi",
+        "Standard sheets: A4, A3, A2, A1",
+        "Print from smartphone, tablet and PC"
+      ],
+      "needsReview": false,
+      "categorySlug": "large-format-printer",
+      "image": "/images/products/office-equipment/large-format-printer/_direct/hp-designjet-t250-24-inch-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/large-format-printer/_direct/hp-designjet-t250-24-inch-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hp-designjet-t250-24-inch-printer",
+        "candidateTitle": "HP DesignJet T250 24\" Compact Large Format Plotter Printer",
+        "attemptStem": "hp-designjet-t250-24-inch-printer"
+      }
+    },
+    {
+      "name": "HP DesignJet T650 36\" Large Format Plotter Printer",
+      "slug": "hp-designjet-t650-36-inch-large-format-plotter-printer",
+      "type": "PHYSICAL",
+      "sku": "5HB10A",
+      "description": "<h2 style=\"text-align: justify; \">HP DesignJet T650 36\" Large Format Plotter Printer</h2><p style=\"text-align: justify; \">The HP DesignJet T650 is perfect for AEC, GIS, and MCAD professionals who want to print maps, technical drawings, posters, and renders with precise, accurate line quality and crisp text Print easily and affordably with the world's smallest wide-format printer. The T650 has been designed to fit your office, budget, and the way you work, the world's smallest plotters provide outstanding simplicity. You can send multiple files in just one click and print your A1/D plot as fast as 25 seconds. 500 MB memory. Impressive simplicity helps you save time and reduces waste. Use up to 95% less ink for routine maintenance. More sustainable design reduces CO2e up to 7.3 tons/year by units sold by using up to 30% recycled plastic. With an accessory option, print multi-size A3/B and A1/D projects without manually switching the media source. This inkjet printer is intended to work only with cartridges that have a new or reused HP chip, and it uses dynamic security measures to block cartridges using a non-HP chip. Periodic firmware updates will maintain the effectiveness of these measures and block cartridges that previously worked. A reused HP chip enables the use of reused, remanufactured, and refilled cartridges. The HP DesignJet T650 comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 5HB10A</li><li>Model: DesignJet T650</li><li>Print speed: 25 sec/page on A1, 82 A1 prints per hour</li><li>Print resolution: Up to 2400 x 1200 optimized dpi</li><li>Connectivity: Ethernet, USB, Wi-Fi</li><li>Print from smartphone, tablet and PC</li></ul>",
+      "model": "DesignJet T650",
+      "warranty": "1 year",
+      "basePrice": 350000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 60.0,
+      "dimensions": {
+        "length": 1317.0,
+        "width": 605.0,
+        "height": 932.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "HP",
+      "variantOptions": [
+        {
+          "name": "Output Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Color",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 1,
+          "values": [
+            {
+              "value": "1GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "5HB10A",
+          "price": 350000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Output Color": "Color",
+            "Memory": "1GB",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 336000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Functions",
+              "value": "Print Only",
+              "position": 0
+            },
+            {
+              "label": "Printer Type",
+              "value": "Single Function DesignJet Printer",
+              "position": 1
+            },
+            {
+              "label": "Output Color",
+              "value": "Color",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Print",
+          "position": 1,
+          "items": [
+            {
+              "label": "Technology",
+              "value": "HP Thermal Inkjet",
+              "position": 0
+            },
+            {
+              "label": "Print Speed",
+              "value": "25 sec/page on A1, 82 A1 prints per hour",
+              "position": 1
+            },
+            {
+              "label": "Print Resolution",
+              "value": "Print Resolution (Pixel)",
+              "position": 2
+            },
+            {
+              "label": "Duplex",
+              "value": "Manual",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Paper Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Paper Type",
+              "value": "Sheet feed, roll feed, automatic sheet feeder, media bin, automatic horizontal cutter",
+              "position": 0
+            },
+            {
+              "label": "Paper Weight",
+              "value": "60 to 220 g/m2 (Auto Sheet Feeder), 60 to 280 g/m2 (Roll/Manual Feed",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Technical Specs",
+          "position": 3,
+          "items": [
+            {
+              "label": "Memory",
+              "value": "1GB",
+              "position": 0
+            },
+            {
+              "label": "Connectivity",
+              "value": "LAN Gigabit Ethernet (1000Base-T) Wi-Fi Wi-Fi 802.11a/b/g/n, Supports gigabit ethernet and wifi connectivity USB Hi-Speed USB 2.0",
+              "position": 1
+            },
+            {
+              "label": "Power Consumption",
+              "value": "100-240 V (+-10%), 50/60 Hz (+-3 Hz), 1200 mA max, <35 W (printing), <5.6 W (ready), <2.1 W (sleep), <0.2 W (standby)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specs",
+          "position": 4,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "1317 x 605 x 932mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "35.4Kg",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Support",
+          "position": 5,
+          "items": [
+            {
+              "label": "Toner/ Cartridge/ Refill",
+              "value": "HP 712B 38-ml Black DesignJet Ink Cartridge, HP 712B 80-ml Black DesignJet Ink Cartridge, HP 712 29-ml Cyan DesignJet Ink Cartridge, HP 712 29-ml Magenta DesignJet Ink Cartridge, HP 712 29-ml Yellow DesignJet Ink Cartridge (Please make sure your existing & mentioned toner/cartridge/ink bottle models are the same before buying a new one)",
+              "position": 0
+            },
+            {
+              "label": "Software",
+              "value": "Windows and MacOS",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 6,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hp-designjet-t650-36-inch-large-format-plotter-printer",
+      "sourceProductCode": "22357",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": "5HB10A",
+      "sourceKeyFeatures": [
+        "MPN: 5HB10A",
+        "Model: DesignJet T650",
+        "Print speed: 25 sec/page on A1, 82 A1 prints per hour",
+        "Print resolution: Up to 2400 x 1200 optimized dpi",
+        "Connectivity: Ethernet, USB, Wi-Fi",
+        "Print from smartphone, tablet and PC"
+      ],
+      "needsReview": false,
+      "categorySlug": "large-format-printer",
+      "image": "/images/products/office-equipment/large-format-printer/_direct/hp-designjet-t650-36-inch-large-format-plotter-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/large-format-printer/_direct/hp-designjet-t650-36-inch-large-format-plotter-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hp-designjet-t650-36-inch-large-format-plotter-printer",
+        "candidateTitle": "HP DesignJet T650 36\" Large Format Plotter Printer",
+        "attemptStem": "hp-designjet-t650-36-inch-large-format-plotter-printer"
+      }
+    },
+    {
+      "name": "HP DesignJet Z6 44\" PostScript Printer",
+      "slug": "hp-designjet-z6-44-inch-postscript-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-30568",
+      "description": "<h2>HP DesignJet Z6 44\" PostScript Printer</h2><p>The HP <span style=\"font-weight: bold;\">DesignJet Z6</span> 44\" PostScript Printer is a professional and multifunctional printer capable of producing high-quality prints for a wide range of applications. It is a print-only device that delivers brilliant colors and crisp details by utilizing HP Thermal Inkjet technology and six pigment-based ink cartridges. It offers an optimum resolution of up to 2400 x 1200 dpi and a print speed of up to 866 ft2/hr on plain media. It supports the print languages Adobe PostScript 3, Adobe PDF 1.7, TIFF, JPEG, CALS G4, HP-GL/2, and HP-RTL, allowing you to print complicated and huge files with ease. It supports A4, A3, A2, A1, A0 media typed. The HP DesignJet Z6 44\" PostScript Printer offers a modern and ergonomic design that is ideal for usage in the office. It has a roll feed, a rear sheet feed, a media output bin, and an automatic horizontal cutter that can handle photographic, fine art, self-adhesive, banner and sign, bond and coated, and backlit media. It contains an LED display that indicates the printer status as well as the printer settings. It also includes a Gigabit Ethernet port and a Hi-Speed USB 2.0 port for connecting the printer to your network or computer. You may also print from your mobile device using the HP ePrint and HP Smart apps. The HP <span style=\"font-weight: bold;\">DesignJet Z6</span> 44\" PostScript Printer is an intelligent and dependable printer that can boost your productivity and creativity. It contains 128 GB of virtual memory and a 500 GB self-encrypting hard disk that can store and execute massive files efficiently. It also has less than 1 dE2000 color stability in less than 5 minutes and print repeatability of less than 0.5 dE2000, ensuring consistent and accurate colors across prints.</p><h2>Buy HP DesignJet Z6 44\" PostScript Printer from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">HP DesignJet Z6 44\" PostScript Printer</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/office-equipment/printer/HP-printer\" target=\"\">HP Printer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The HP DesignJet Z6 44\" PostScript Printer comes with 1 Year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DesignJet Z6</li><li>Interface: USB, LAN</li><li>Print Speed: Up to 80.5m/hr</li><li>Paper Size: Max A0</li><li>Functions: Print Only</li></ul>",
+      "model": "DesignJet Z6",
+      "warranty": "01 year warranty",
+      "basePrice": 765000.0,
+      "originalPrice": 810000.0,
+      "currency": "BDT",
+      "weight": 80.0,
+      "dimensions": {
+        "length": 1802.0,
+        "width": 998.0,
+        "height": 695.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "HP",
+      "variantOptions": [
+        {
+          "name": "Output Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Color",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Paper Size",
+          "position": 1,
+          "values": [
+            {
+              "value": "A4, A3, A2, A1, A0, 279 to 1118-mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 2,
+          "values": [
+            {
+              "value": "128GB (virtual), 500GB (self-encrypting Internal)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 3,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-30568",
+          "price": 765000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Output Color": "Color",
+            "Paper Size": "A4, A3, A2, A1, A0, 279 to 1118-mm",
+            "Memory": "128GB (virtual), 500GB (self-encrypting Internal)",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 734400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General",
+          "position": 0,
+          "items": [
+            {
+              "label": "Functions",
+              "value": "Print Only",
+              "position": 0
+            },
+            {
+              "label": "Printer Type",
+              "value": "Photo Printer",
+              "position": 1
+            },
+            {
+              "label": "Output Color",
+              "value": "Color",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Print",
+          "position": 1,
+          "items": [
+            {
+              "label": "Technology",
+              "value": "Ink",
+              "position": 0
+            },
+            {
+              "label": "Print Speed",
+              "value": "80.5m/hr",
+              "position": 1
+            },
+            {
+              "label": "Print Resolution",
+              "value": "2400 x 1200dpi",
+              "position": 2
+            },
+            {
+              "label": "Duplex",
+              "value": "Manual",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Paper Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Paper Size",
+              "value": "A4, A3, A2, A1, A0, 279 to 1118-mm",
+              "position": 0
+            },
+            {
+              "label": "Paper Type",
+              "value": "Photographic, fine art printing material, self-adhesive, banner and sign, bond and coated, backlit",
+              "position": 1
+            },
+            {
+              "label": "Paper Weight",
+              "value": "80 to 500 g/m2",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Technical Specs",
+          "position": 3,
+          "items": [
+            {
+              "label": "Memory",
+              "value": "128GB (virtual), 500GB (self-encrypting Internal)",
+              "position": 0
+            },
+            {
+              "label": "Connectivity",
+              "value": "USB, LAN",
+              "position": 1
+            },
+            {
+              "label": "Power Consumption",
+              "value": "100-240 V (+-10%), 50/60 Hz (+-3 Hz), 2 A max, 100 W (printing), 32 W (ready), 0.3 W (< 6.5 W with embedded Digital Front End) (sleep)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specs",
+          "position": 4,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "1802 x 998 x 695mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "86Kg",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Support",
+          "position": 5,
+          "items": [
+            {
+              "label": "Toner/ Cartridge/ Refill",
+              "value": "HP 746 300-ml (cyan, magenta, yellow, matte black, photo black, chromatic red) (Please make sure your existing & mentioned toner/cartridge model are same before buying new one)",
+              "position": 0
+            },
+            {
+              "label": "Software",
+              "value": "HP Click printing software, HP PrintOS, HP Web Jetadmin, HP DesignJet Utility including HP Color Center, HP Partner Link, HP JetAdvantage Security Manager (optional), HP SmartStream (optional), HP SmartTracker (optional)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 6,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 year warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hp-designjet-z6-44-inch-postscript-printer",
+      "sourceProductCode": "30568",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DesignJet Z6",
+        "Interface: USB, LAN",
+        "Print Speed: Up to 80.5m/hr",
+        "Paper Size: Max A0",
+        "Functions: Print Only"
+      ],
+      "needsReview": false,
+      "categorySlug": "large-format-printer",
+      "image": "/images/products/office-equipment/large-format-printer/_direct/hp-designjet-z6-44-inch-postscript-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/large-format-printer/_direct/hp-designjet-z6-44-inch-postscript-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hp-designjet-z6-44-inch-postscript-printer",
+        "candidateTitle": "HP DesignJet Z6 44\" PostScript Printer",
+        "attemptStem": "hp-designjet-z6-44-inch-postscript-printer"
+      }
+    }
+  ]
+}

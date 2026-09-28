@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/television-shop",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\television-shop",
+    "generatedAtUnix": 1790589618,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Television Shop",
+      "slug": "television-shop",
+      "parentSlug": null,
+      "image": "/images/products/television-shop/smart-tv/smart/smart-sel-65s224kks-65-inch-4k-android-tv.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Smart",
+      "slug": "smart",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Smart SEL-65S224KKS 65\" 4K Voice Control Android TV",
+      "slug": "smart-sel-65s224kks-65-inch-4k-android-tv",
+      "type": "PHYSICAL",
+      "sku": "ST-24875",
+      "description": "<h2 style=\"text-align: justify; \">Smart SEL-65S224KKS 65\" 4K Voice Control Android TV</h2><p style=\"text-align: justify; \">The Smart SEL-65S224KKS 65\" 4K Voice Control Android Television is an excellent overall performer. This television includes 65 Inch Screen, You will also be able to enjoy the crisp image quality, which will further enhance your viewing experience, The smart Television comes with 4k Resolution (3840 x 2160) Pixels. This Smart TV will also provide you with a Standard sound experience, as well as an immersive sound experience. The smart television support all applications, and television features a 16GB storage capacity. To perform efficiently and fast, all of these systems require 2GB of RAM. The TV supports Wi-Fi and, more crucially, Voice Operate with the Android TV, which you may always control. This Android Tv Built-in app support Play Store, App Store, Netflix, YouTube, Multimedia, E-sharing server, Cast Play, and File Manager. This <a href=\"https://www.startech.com.bd/android-tv\" style=\"color: rgb(0, 0, 0);\" target=\"_blank\">Android TV </a>is provided by the Voice Control Smart TV. You will be able to watch all of your favorite TV series and movies on the Smart Voice Control Android Smart TV at your leisure. The new Smart 4K Voice Control Android Television includes 2x HDMI, 2x USB Ports, AV Mode, and 1x Audio Line Out. The Smart SEL-65S224KKS 65\" 4K Voice Control Android TV comes with 3-year panel and 2-year parts &amp; 5-year service warranty by Smart. Warranty card must be kept for warranty claims. For warranty, Call Smart at 09610977977. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SEL-65S224KKS</li><li>Resolution: 4K (3840x2160) Resolution</li><li>2x HDMI, 2x USB, Audio Out</li><li>RAM: 2GB, ROM: 16GB</li><li>Play Store, App Store, Netflix, YouTube, Cast Play, share server supported</li></ul>",
+      "model": "SEL-65S224KKS",
+      "warranty": "3-year panel and 2-year parts & 5-year service warranty by Smart. Warranty card must be kept for warranty claims. For warranty, Call Smart at 09610977977. (Star Tech will not bear warranty claims).",
+      "basePrice": 73749.0,
+      "originalPrice": 110900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Smart",
+      "variantOptions": [
+        {
+          "name": "Screen Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "65 Inch",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "RAM",
+          "position": 1,
+          "values": [
+            {
+              "value": "2 GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 2,
+          "values": [
+            {
+              "value": "16 GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-24875",
+          "price": 73749.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Screen Size": "65 Inch",
+            "RAM": "2 GB",
+            "Storage": "16 GB"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 70799.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Display Type",
+              "value": "4K",
+              "position": 0
+            },
+            {
+              "label": "Screen Size",
+              "value": "65 Inch",
+              "position": 1
+            },
+            {
+              "label": "Resolution",
+              "value": "4K Resolution (3840x2160 )",
+              "position": 2
+            },
+            {
+              "label": "RAM",
+              "value": "2 GB",
+              "position": 3
+            },
+            {
+              "label": "Storage",
+              "value": "16 GB",
+              "position": 4
+            },
+            {
+              "label": "Operating System",
+              "value": "Android",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Connectivity",
+          "position": 1,
+          "items": [
+            {
+              "label": "USB",
+              "value": "2x USB",
+              "position": 0
+            },
+            {
+              "label": "HDMI",
+              "value": "2x HDMI",
+              "position": 1
+            },
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "AV Mode",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Audio",
+          "position": 2,
+          "items": [
+            {
+              "label": "Audio Output",
+              "value": "Audio Line Out",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3-year panel and 2-year parts & 5-year service warranty by Smart. Warranty card must be kept for warranty claims. For warranty, Call Smart at 09610977977. (Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-65s224kks-65-inch-4k-android-tv",
+      "sourceProductCode": "24875",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SEL-65S224KKS",
+        "Resolution: 4K (3840x2160) Resolution",
+        "2x HDMI, 2x USB, Audio Out",
+        "RAM: 2GB, ROM: 16GB",
+        "Play Store, App Store, Netflix, YouTube, Cast Play, share server supported"
+      ],
+      "needsReview": false,
+      "categorySlug": "television-shop",
+      "image": "/images/products/television-shop/smart-tv/smart/smart-sel-65s224kks-65-inch-4k-android-tv.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/all-tv/smart/smart-sel-65s224kks-65-inch-4k-android-tv.png",
+        "/images/products/television-shop/android-tv/smart/smart-sel-65s224kks-65-inch-4k-android-tv.png",
+        "/images/products/television-shop/smart-tv/smart/smart-sel-65s224kks-65-inch-4k-android-tv.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "smart-sel-65s224kks-65-inch-4k-android-tv",
+        "candidateTitle": "Smart SEL-65S224KKS 65\" 4K Voice Control Android TV",
+        "attemptStem": "smart-sel-65s224kks-65-inch-4k-android-tv"
+      }
+    }
+  ]
+}

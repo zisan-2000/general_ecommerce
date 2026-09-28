@@ -1,0 +1,762 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/television-shop",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\television-shop",
+    "generatedAtUnix": 1790589618,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Television Shop",
+      "slug": "television-shop",
+      "parentSlug": null,
+      "image": "/images/products/television-shop/smart-tv/smart/smart-sel-65s224kks-65-inch-4k-android-tv.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "TV Stand Wall Mount",
+      "slug": "tv-stand-wall-mount",
+      "parentSlug": "television-shop",
+      "image": "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-24-to-32-inch-support.png",
+      "isActive": true,
+      "sortOrder": 4,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "TV Wall Mount Bracket For 24-32 Inch Support",
+      "slug": "tv-wall-mount-kit-24-to-32-inch-support",
+      "type": "PHYSICAL",
+      "sku": "ST-12709",
+      "description": "<h2 style=\"\">TV Wall Mount Bracket For 24-32 Inch Support</h2><p style=\"\">This TV Wall Mount Kiy supports 24 to 32 Inch Plasma, LED, LCD TVs up to VESA 420 x 400 which consists of measurement- 16.5'' Horizontally &amp; 15.75'' vertically. Easy to install with any type of wall or board</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TV Wall Mount Kit</li><li>Supports 24 to 32 inch Television</li><li>Ultra Low Profile with High Grade Steel</li><li>Lock Attachment with Adjustable Tabs</li><li>Easy to install</li></ul>",
+      "model": "TV Wall Mount Kit",
+      "warranty": null,
+      "basePrice": 500.0,
+      "originalPrice": 550.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-12709",
+          "price": 500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TV Wall Mount Kit",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tv-wall-mount-kit-24-to-32-inch-support",
+      "sourceProductCode": "12709",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TV Wall Mount Kit",
+        "Supports 24 to 32 inch Television",
+        "Ultra Low Profile with High Grade Steel",
+        "Lock Attachment with Adjustable Tabs",
+        "Easy to install"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-stand-wall-mount",
+      "image": "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-24-to-32-inch-support.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-24-to-32-inch-support.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tv-wall-mount-kit-24-to-32-inch-support",
+        "candidateTitle": "TV Wall Mount Bracket For 24-32 Inch Support",
+        "attemptStem": "tv-wall-mount-kit-24-to-32-inch-support"
+      }
+    },
+    {
+      "name": "TV Wall Mount Bracket For 40-55 Inch Support",
+      "slug": "tv-wall-mount-kit-40-to-55-inch-support",
+      "type": "PHYSICAL",
+      "sku": "ST-12710",
+      "description": "<h2 style=\"\">TV Wall Mount Bracket For 40-55 Inch Support</h2><p style=\"\">This TV Wall Mount Kiy supports 40 to 55\" Plasma, LED, LCD TVs. Easy to install with any type of wall or board.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TV Wall Mount Kit</li><li>Supports 40 to 55 inch Television</li><li>Ultra Low Profile with High Grade Steel</li><li>Lock Attachment with Adjustable Tabs</li><li>Easy to install</li></ul>",
+      "model": "TV Wall Mount Kit",
+      "warranty": null,
+      "basePrice": 800.0,
+      "originalPrice": 1000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-12710",
+          "price": 800.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 768.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TV Wall Mount Kit",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tv-wall-mount-kit-40-to-55-inch-support",
+      "sourceProductCode": "12710",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TV Wall Mount Kit",
+        "Supports 40 to 55 inch Television",
+        "Ultra Low Profile with High Grade Steel",
+        "Lock Attachment with Adjustable Tabs",
+        "Easy to install"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-stand-wall-mount",
+      "image": "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-40-to-55-inch-support.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-40-to-55-inch-support.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tv-wall-mount-kit-40-to-55-inch-support",
+        "candidateTitle": "TV Wall Mount Bracket For 40-55 Inch Support",
+        "attemptStem": "tv-wall-mount-kit-40-to-55-inch-support"
+      }
+    },
+    {
+      "name": "TV Wall Mount Bracket For 55-75 Inch Support",
+      "slug": "tv-wall-mount-kit-55-to-75-inch-support",
+      "type": "PHYSICAL",
+      "sku": "ST-12711",
+      "description": "<h2 style=\"\">TV Wall Mount Bracket For 55-75 Inch Support</h2><p style=\"\">This TV Wall Mount Kiy supports 55 to 75 Inch Plasma, LED, LCD TVs. Easy to install with any type of wall or board.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TV Wall Mount Kit</li><li>Supports 55 to 75 inch Television</li><li>Ultra Low Profile with High Grade Steel</li><li>Lock Attachment with Adjustable Tabs</li><li>Easy to install</li></ul>",
+      "model": "TV Wall Mount Kit",
+      "warranty": null,
+      "basePrice": 1500.0,
+      "originalPrice": 1900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-12711",
+          "price": 1500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1440.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TV Wall Mount Kit",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tv-wall-mount-kit-55-to-75-inch-support",
+      "sourceProductCode": "12711",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TV Wall Mount Kit",
+        "Supports 55 to 75 inch Television",
+        "Ultra Low Profile with High Grade Steel",
+        "Lock Attachment with Adjustable Tabs",
+        "Easy to install"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-stand-wall-mount",
+      "image": "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-55-to-75-inch-support.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-55-to-75-inch-support.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tv-wall-mount-kit-55-to-75-inch-support",
+        "candidateTitle": "TV Wall Mount Bracket For 55-75 Inch Support",
+        "attemptStem": "tv-wall-mount-kit-55-to-75-inch-support"
+      }
+    },
+    {
+      "name": "TV Wall Mount Bracket For 75-100 Inch Support",
+      "slug": "tv-wall-mount-kit-75-to-100-inch-support",
+      "type": "PHYSICAL",
+      "sku": "ST-23600",
+      "description": "<h2 style=\"text-align: justify; \">TV Wall Mount Bracket For 75-100 Inch Support<br/></h2><p style=\"text-align: justify; \">This TV Wall Mount Bracket supports 75 to 100 Inch Plasma, LED, and LCD TVs. It is very easy to install with any type of wall or board. It is built for Ultra Low Profile with High-Grade Steel. The TV Wall Mount Bracket offers a Lock Attachment with Adjustable Tabs. This TV Wall Mount Bracket comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TV Wall Mount Kit</li><li>Supports 75 to 100 inch Television</li><li>Ultra Low Profile with High-Grade Steel</li><li>Lock Attachment with Adjustable Tabs</li><li>Easy to install</li></ul>",
+      "model": "TV Wall Mount Kit",
+      "warranty": "no warranty",
+      "basePrice": 2800.0,
+      "originalPrice": 3500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-23600",
+          "price": 2800.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2688.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TV Wall Mount Kit",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tv-wall-mount-kit-75-to-100-inch-support",
+      "sourceProductCode": "23600",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TV Wall Mount Kit",
+        "Supports 75 to 100 inch Television",
+        "Ultra Low Profile with High-Grade Steel",
+        "Lock Attachment with Adjustable Tabs",
+        "Easy to install"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-stand-wall-mount",
+      "image": "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-75-to-100-inch-support.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-75-to-100-inch-support.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tv-wall-mount-kit-75-to-100-inch-support",
+        "candidateTitle": "TV Wall Mount Bracket For 75-100 Inch Support",
+        "attemptStem": "tv-wall-mount-kit-75-to-100-inch-support"
+      }
+    },
+    {
+      "name": "TV Wall Mount Bracket For 75-85 Inch Support",
+      "slug": "tv-wall-mount-kit-75-to-85-inch-support",
+      "type": "PHYSICAL",
+      "sku": "ST-23677",
+      "description": "<h2 style=\"text-align: justify; \">TV Wall Mount Bracket For 75-85 Inch Support<br/></h2><p style=\"text-align: justify; \">This TV Wall Mount Bracket supports 75 to 85 Inch Plasma, LED, and LCD TVs. It is very easy to install with any type of wall or board. It is built for Ultra Low Profile with High-Grade Steel. The TV Wall Mount Bracket offers a Lock Attachment with Adjustable Tabs. This TV Wall Mount Bracket comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TV Wall Mount Kit</li><li>Supports 75 to 85 inch Television</li><li>Ultra Low Profile with High-Grade Steel</li><li>Lock Attachment with Adjustable Tabs</li><li>Easy to install</li></ul>",
+      "model": "TV Wall Mount Kit",
+      "warranty": "no warranty",
+      "basePrice": 2000.0,
+      "originalPrice": 3000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-23677",
+          "price": 2000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TV Wall Mount Kit",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tv-wall-mount-kit-75-to-85-inch-support",
+      "sourceProductCode": "23677",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TV Wall Mount Kit",
+        "Supports 75 to 85 inch Television",
+        "Ultra Low Profile with High-Grade Steel",
+        "Lock Attachment with Adjustable Tabs",
+        "Easy to install"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-stand-wall-mount",
+      "image": "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-75-to-85-inch-support.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-stand-wall-mount/tv-wall-mount-kit-75-to-85-inch-support.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tv-wall-mount-kit-75-to-85-inch-support",
+        "candidateTitle": "TV Wall Mount Bracket For 75-85 Inch Support",
+        "attemptStem": "tv-wall-mount-kit-75-to-85-inch-support"
+      }
+    },
+    {
+      "name": "Universal TV Stand For 32-70 Inch Television",
+      "slug": "universal-tv-stand",
+      "type": "PHYSICAL",
+      "sku": "ST-20684",
+      "description": "<h2 style=\"text-align: justify; \">Universal TV Stand For 32-70 Inch Television</h2><p style=\"text-align: justify; \">This TV stand is 32-70 Inch Height Adjustable and comes with 4 high-quality wheels. This Television Stand comes in Black color and it perfectly fits your space. The build quality is very nice and strong. You can adjust the height of your tv according to your mood. The universal TV Stand offers no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TV Stand</li><li>32-70 Inch Height Adjustable</li><li>High-Quality Materials</li><li>With Wheels</li><li>Color: Black</li></ul>",
+      "model": "TV Stand",
+      "warranty": null,
+      "basePrice": 13900.0,
+      "originalPrice": 15000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-20684",
+          "price": 13900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 13344.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TV Stand",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/universal-tv-stand",
+      "sourceProductCode": "20684",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TV Stand",
+        "32-70 Inch Height Adjustable",
+        "High-Quality Materials",
+        "With Wheels",
+        "Color: Black"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-stand-wall-mount",
+      "image": "/images/products/television-shop/tv-stand-wall-mount/universal-tv-stand.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-stand-wall-mount/universal-tv-stand.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "universal-tv-stand",
+        "candidateTitle": "Universal TV Stand For 32-70 Inch Television",
+        "attemptStem": "universal-tv-stand"
+      }
+    },
+    {
+      "name": "Universal TV Stand For 43-100 Inch Television",
+      "slug": "universal-tv-stand-for-43-100-inch-television",
+      "type": "PHYSICAL",
+      "sku": "ST-35899",
+      "description": "<h2>Universal TV Stand For 43-100 Inch Television</h2><p>The Universal TV Stand is designed for televisions from 43 to 100 inches. Made with high-quality materials, it offers durability and stability. The stand adjusts up to 5 feet in height for optimal viewing and features a sleek design that complements any decor. Easy to install with clear instructions and hardware included, it also has an integrated cable management system to keep your space tidy. In the case of smaller televisions, The same features and quality are available with this stand for 32- to 70-inch TVs. Both stands offer a fashionable and useful addition to your home theater system, ensuring stable installation and improved viewing. With our adaptable TV stands, you may enjoy better viewing and peace of mind.</p><h2 style='font-family: \"Open Sans\", sans-serif; color: rgb(102, 102, 102);'>Buy Universal TV Stand For 43-100 Inch Television from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Universal TV Stand For 43-100 Inch Television</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/wall-mount\" target=\"\">TV Stands &amp; Wall mounts</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Universal TV Stand For a 43-100 Inch Television comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TV Stand</li><li>Stand for 43-100 Inch TV</li><li>Height 5 Feet</li><li>High-Quality Materials</li><li>Color: Black</li></ul>",
+      "model": "TV Stand",
+      "warranty": "no warranty",
+      "basePrice": 20500.0,
+      "originalPrice": 23000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-35899",
+          "price": 20500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 19680.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TV Stand",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/universal-tv-stand-for-43-100-inch-television",
+      "sourceProductCode": "35899",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TV Stand",
+        "Stand for 43-100 Inch TV",
+        "Height 5 Feet",
+        "High-Quality Materials",
+        "Color: Black"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-stand-wall-mount",
+      "image": "/images/products/television-shop/tv-stand-wall-mount/universal-tv-stand-for-43-100-inch-television.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-stand-wall-mount/universal-tv-stand-for-43-100-inch-television.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "universal-tv-stand-for-43-100-inch-television",
+        "candidateTitle": "Universal TV Stand For 43-100 Inch Television",
+        "attemptStem": "universal-tv-stand-for-43-100-inch-television"
+      }
+    },
+    {
+      "name": "ZENO T750 Ceiling Mount Kit 3 Feet for 32-80\" Television",
+      "slug": "zeno-t750-ceiling-mount-kit",
+      "type": "PHYSICAL",
+      "sku": "ST-42994",
+      "description": "<h2>ZENO T750 Ceiling Mount Kit 3 Feet for 32-80\" Television</h2><p>The ZENO <strong>T750</strong> Ceiling Mount Kit by K2 is a robust and versatile mounting solution designed specifically for televisions ranging from 32 to 80 inches. This heavy-duty ZENO T750 Ceiling Mount Kit for 32-80\" Television supports a maximum load capacity of 68.5 kg (151 lbs), ensuring stability and safety for large displays. The mount offers a tilt adjustment range of 5° to 15°, providing flexibility to achieve the most comfortable and glare-free viewing angle. It is fully VESA compatible with mounting patterns from 100x100mm to 600x400mm, making it suitable for a wide range of TV brands and models. The adjustable ceiling-to-TV distance spans from 1236mm to 1585mm, giving users control over the installation height. Ideal for both home and commercial spaces, this ZENO T750 3 Feet Ceiling Mount Kit for 32-80\" Television supports one screen and combines strong build quality with advanced functionality. Whether used in a living room, office, or public area, the ZENO T750 Ceiling Mount Kit ensures a clean, space-saving installation with premium viewing comfort.</p><h2>Buy ZENO T750 Ceiling Mount Kit 3 Feet for 32-80\" Television from Star Tech</h2><p>In Bangladesh, you can get original <strong>ZENO T750 Ceiling Mount Kit 3 Feet for 32-80\" Television</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/wall-mount\" style=\"\" target=\"\">TV Stands &amp; Wall mounts</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The ZENO T750 Ceiling Mount Kit 3 Feet for 32-80\" Television comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: T750</li><li>Compatible Screen Size: 32 - 80 Inch</li><li>Weight Capacity: 68Kg</li><li>Tilt: 5 Degree - 15 Degree</li><li>Compatibility: VESA up to 100x100~600x400mm</li></ul>",
+      "model": "T750",
+      "warranty": "no warranty",
+      "basePrice": 6000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 68.0,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Compatible Screen Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "32 - 80 Inch",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Weight Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "68Kg",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-42994",
+          "price": 6000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Compatible Screen Size": "32 - 80 Inch",
+            "Weight Capacity": "68Kg"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 5760.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "T750",
+              "position": 0
+            },
+            {
+              "label": "Compatible Screen Size",
+              "value": "32 - 80 Inch",
+              "position": 1
+            },
+            {
+              "label": "Weight Capacity",
+              "value": "68Kg",
+              "position": 2
+            },
+            {
+              "label": "Tilt",
+              "value": "5 Degree - 15 Degree",
+              "position": 3
+            },
+            {
+              "label": "Compatibility",
+              "value": "VESA up to 100x100~600x400mm",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zeno-t750-ceiling-mount-kit",
+      "sourceProductCode": "42994",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: T750",
+        "Compatible Screen Size: 32 - 80 Inch",
+        "Weight Capacity: 68Kg",
+        "Tilt: 5 Degree - 15 Degree",
+        "Compatibility: VESA up to 100x100~600x400mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "tv-stand-wall-mount",
+      "image": "/images/products/television-shop/tv-stand-wall-mount/zeno-t750-ceiling-mount-kit.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/tv-stand-wall-mount/zeno-t750-ceiling-mount-kit.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zeno-t750-ceiling-mount-kit",
+        "candidateTitle": "ZENO T750 Ceiling Mount Kit 3 Feet for 32-80\" Television",
+        "attemptStem": "zeno-t750-ceiling-mount-kit"
+      }
+    }
+  ]
+}

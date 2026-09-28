@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/laptop-notebook",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\laptop",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\laptop-notebook",
+  "imagesFound": 1558,
+  "uniqueProductStems": 1558,
+  "productsInJson": 1558,
+  "matchedProducts": 1555,
+  "unmatchedProducts": 3,
+  "imageCoverage": 1558,
+  "jsonGroupFiles": 5,
+  "matchMethods": {
+    "direct-slug": 1555,
+    "unmatched": 3
+  },
+  "jsonGenerationTimeSeconds": 831.01,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 1558,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\laptop-notebook\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\laptop-notebook\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\laptop-notebook\\unmatched.json"
+  },
+  "seedTimeSeconds": 36.68
+}

@@ -1,0 +1,2708 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\networking",
+    "generatedAtUnix": 1790590909,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Networking",
+      "slug": "networking",
+      "parentSlug": null,
+      "image": "/images/products/networking/firewall/sonicwall-nsa-2700-16-port-firewall.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "OLT",
+      "slug": "olt",
+      "parentSlug": "networking",
+      "image": "/images/products/networking/olt/bdcom-gp3600-04d-2ac-4-port-gpon-olt.png",
+      "isActive": true,
+      "sortOrder": 11,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "BDCOM",
+      "slug": "bdcom",
+      "logo": null
+    },
+    {
+      "name": "C-Data",
+      "slug": "c-data",
+      "logo": null
+    },
+    {
+      "name": "RicherLink",
+      "slug": "richerlink",
+      "logo": null
+    },
+    {
+      "name": "Solitine",
+      "slug": "solitine",
+      "logo": null
+    },
+    {
+      "name": "VSOL",
+      "slug": "vsol",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "BDCOM GP3600-04D-2AC 4-Port GPON OLT",
+      "slug": "bdcom-gp3600-04d-2ac-4-port-gpon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-35381",
+      "description": "<h2>BDCOM GP3600-04D-2AC 4-Port GPON OLT</h2><p>The BDCOM <strong>GP3600-04D-2AC</strong> 4-Port GPON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT </a>is a high-performance solution intended for advanced broadband networks. It provides flexibility and dependability for deployment with its dual 100-240V power supply and small 19-inch rack-mounted installation. With four PON ports, four Gigabit RJ45 GE uplinks, and four 10G/GE SFP+ uplinks, it offers flexible connectivity choices to suit different network setups. By supporting several GPON and SFP module classes, such as B+, C+, C++, and C+++, it guarantees network environment compatibility. For demanding applications, its 126Gbps backplane, 512MB DRAM, and 32MB Flash provide dependable performance. Interoperability and compliance are guaranteed by the BDCOM GP3600-04D-2AC 4-Port GPON OLT's conformance with IEEE and ITU-T G.984/G.988 standards, which include VLAN, Spanning Tree, RSTP, and physical link aggregation. Layer 3 functions, multicast, VLANs, and QoS features improve network efficiency and flexibility while giving traffic priority for optimal performance. Features include aberrant luminescence ONU detection and UDLD, which improve reliability and guarantee continuous operation. In order to protect against unwanted access and attacks, network security is handled by DHCP functions, access control lists, MAC limiting, port isolation, packet storm control, and data encryption on the PON interface. A variety of modes, such as CLI, Telnet, SSH, HTTP, SSL, and SNMP, are available for management, and features like ISSU, FTP/TFTP, SPAN/RSPAN, and NTP are supported. A complete and dependable solution for advanced GPON networks is provided by the BDCOM GP3600-04D-2AC 4-Port GPON OLT, which also includes extra capabilities like STP/RSTP/MSTP and EAPS for network availability and redundancy.</p><h2>Buy BDCOM GP3600-04D-2AC 4-Port GPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <strong>BDCOM GP3600-04D-2AC 4-Port GPON OLT</strong> From Star Tech. We have a large collection of latest BDCOM <a href=\"https://www.startech.com.bd\" target=\"\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The BDCOM GP3600-04D-2AC 4-Port GPON OLT comes with 1 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GP3600-04D-2AC</li><li>GPON Ports: 4x fixed GPON ports</li><li>Ports: 4x GE ports, 4x 10G/GE SFP+ ports</li><li>126Gbps Backplane, 64K MAC table</li><li>Routing Table: 32K IPv4, 8K IPv6</li></ul>",
+      "model": "GP3600-04D-2AC",
+      "warranty": "1 years warranty",
+      "basePrice": 94500.0,
+      "originalPrice": 103950.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "BDCOM",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-35381",
+          "price": 94500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 90720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "GP3600-04D-2AC",
+              "position": 0
+            },
+            {
+              "label": "GPON Ports",
+              "value": "4x fixed GPON ports",
+              "position": 1
+            },
+            {
+              "label": "Ports",
+              "value": "4x GE ports, 4x 10G/GE SFP+ ports",
+              "position": 2
+            },
+            {
+              "label": "Routing Table",
+              "value": "32K IPv4, 8K IPv6",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bdcom-gp3600-04d-2ac-4-port-gpon-olt",
+      "sourceProductCode": "35381",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GP3600-04D-2AC",
+        "GPON Ports: 4x fixed GPON ports",
+        "Ports: 4x GE ports, 4x 10G/GE SFP+ ports",
+        "126Gbps Backplane, 64K MAC table",
+        "Routing Table: 32K IPv4, 8K IPv6"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/bdcom-gp3600-04d-2ac-4-port-gpon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/bdcom-gp3600-04d-2ac-4-port-gpon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bdcom-gp3600-04d-2ac-4-port-gpon-olt",
+        "candidateTitle": "BDCOM GP3600-04D-2AC 4-Port GPON OLT",
+        "attemptStem": "bdcom-gp3600-04d-2ac-4-port-gpon-olt"
+      }
+    },
+    {
+      "name": "BDCOM GP3600-04L-2AC 4-Port GPON OLT",
+      "slug": "bdcom-gp3600-04l-2ac-gpon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-43186",
+      "description": "<h2>BDCOM GP3600-04L-2AC 4-Port GPON OLT</h2><p>The BDCOM <strong>GP3600-04L-2AC</strong> 4-Port GPON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT </a>is a high-performance optical line terminal specifically developed for next-generation access network deployments. With 1.25 Gbps uplink and 2.5 Gbps downlink capacity, it provides effective bandwidth utilization and dependable Ethernet services in large-scale network systems. With four GPON ports, the BDCOM GP3600-04L-2AC GPON OLT can support a splitting ratio of up to 1:128, making it ideal for high-density user access. The device includes four Gigabit RJ45 connections and four 10G/GE SFP+ connectors for increased network scalability and redundancy. It is compatible with Class B+, C+, C++, and C+++ GPON SFP modules, providing a variety of deployment choices. The BDCOM GP3600-04L-2AC 4-Port GPON OLT has an RJ45 console port, a Mini-USB console port, and an out-of-band management port for easy configuration and remote access. Internally, it contains 1024MB of DRAM and 32MB of flash memory, allowing for a powerful backplane bandwidth of 126Gbps. The BDCOM GP3600-04L-2AC 4-Port GPON OLT supports a MAC address table of up to 24,000 entries and has a 2MB buffer size with support for jumbo frames up to 2KB. It can support up to 24,000 IPv4 routes, 6,000 IPv6 routes, 4,094 active VLANs, and 512 SVI numbers, enabling extensive Layer 3 routing and VLAN segmentation. Its store-and-forward switching method enables efficient and reliable data transfer. The BDCOM GP3600-04L-2AC GPON OLT operates on an AC power supply of 100 to 240 volts, consuming a maximum of 50 watts and producing a total output of 170.65 BTU per hour. The system consists of three fans with a left-to-right airflow arrangement and has a noise level of less than 45 dBA at 25°C, providing silent performance in data center and business environments. The BDCOM GP3600-04L-2AC is an excellent choice for ISPs and big companies wanting a scalable, efficient, and high-capacity GPON deployment.</p><h2>Buy BDCOM GP3600-04L-2AC 4-Port GPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <strong>BDCOM GP3600-04L-2AC 4-Port GPON OLT</strong> From Star Tech. We have a large collection of latest BDCOM <a href=\"https://www.startech.com.bd\" target=\"\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The BDCOM GP3600-04L-2AC 4-Port GPON OLT comes with 1 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GP3600-04L-2AC</li><li>GPON Ports: 4 (Class B+, C+, C++, C+++)</li><li>Ports: 4-Port Gigabit RJ45, 4-Port 10G/GE SFP+</li><li>Splitting ratio up to 1:128, Forwarding Mode: Store-and-forward</li><li>Bandwidth: 1.25 Gbps Uplink &amp; 2.5 Gbps Downlink</li></ul>",
+      "model": "GP3600-04L-2AC",
+      "warranty": "1 years warranty",
+      "basePrice": 94500.0,
+      "originalPrice": 104000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "BDCOM",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-43186",
+          "price": 94500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 90720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "GP3600-04L-2AC",
+              "position": 0
+            },
+            {
+              "label": "GPON Ports",
+              "value": "4 (Class B+, C+, C++, C+++)",
+              "position": 1
+            },
+            {
+              "label": "Ports",
+              "value": "4-Port Gigabit RJ45, 4-Port 10G/GE SFP+",
+              "position": 2
+            },
+            {
+              "label": "Splitting ratio up to 1",
+              "value": "128, Forwarding Mode: Store-and-forward",
+              "position": 3
+            },
+            {
+              "label": "Bandwidth",
+              "value": "1.25 Gbps Uplink & 2.5 Gbps Downlink",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bdcom-gp3600-04l-2ac-gpon-olt",
+      "sourceProductCode": "43186",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GP3600-04L-2AC",
+        "GPON Ports: 4 (Class B+, C+, C++, C+++)",
+        "Ports: 4-Port Gigabit RJ45, 4-Port 10G/GE SFP+",
+        "Splitting ratio up to 1:128, Forwarding Mode: Store-and-forward",
+        "Bandwidth: 1.25 Gbps Uplink & 2.5 Gbps Downlink"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/bdcom-gp3600-04l-2ac-gpon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/bdcom-gp3600-04l-2ac-gpon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bdcom-gp3600-04l-2ac-gpon-olt",
+        "candidateTitle": "BDCOM GP3600-04L-2AC 4-Port GPON OLT",
+        "attemptStem": "bdcom-gp3600-04l-2ac-gpon-olt"
+      }
+    },
+    {
+      "name": "BDCOM GP3600-08 8 Port GPON OLT",
+      "slug": "bdcom-gp3600-08-8-port-gpon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-33977",
+      "description": "<h2>BDCOM GP3600-08 8 Port GPON OLT</h2><p>The BDCOM <strong>GP3600-08</strong> 8 Port GPON OLT is a reliable and adaptable <a href=\"https://www.startech.com.bd/networking\" style=\"color: rgb(0, 0, 0);\" target=\"\">networking </a>device that is designed to satisfy the needs of today's telecom infrastructure. The 8 PON port, numerous GE and 10GE uplink choices, and high-speed connectivity of the BDCOM GP3600-08 8 Port GPON OLT facilitate effective data transmission. Support for multiple GPON SFP modules Class B+, Class C+, Class C++, and Class C+++ ensures adaptability and interoperability across diverse network configurations. With its wealth of management and security features, such as multicast support, BDCOM GP3600-08 8 Port GPON OLT, VLAN support, layer 3 functions like routing protocols (RIPv1/v2, OSPF, BGP), QoS mechanisms, and DHCP functionalities, it allows for effective traffic management and network optimization. Additionally, network stability and uptime are improved by reliability features such as optical path protection, hot swapping of optical modules, and UDLD. ACLs, MAC restrictions, and transmission data encryption on the PON interface are examples of security features that guarantee data integrity and defend against different types of assaults. Comprehensive management options, including CLI, Telnet, SSH, HTTP, SSL, and SNMP, are also provided by the BDCOM GP3600-08 8 Port GPON OLT, making configuration and monitoring simple. It guarantees high availability and resilience by supporting features like BPDU guard and EAPS in addition to network availability protocols like STP, RSTP, and MSTP. In general, the BDCOM GP3600-08 is a dependable and feature-rich GPON network building and management solution.</p><h2>Buy BDCOM GP3600-08 8 Port GPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <strong>BDCOM GP3600-08 8 Port GPON OLT</strong> From Star Tech. We have a large collection of latest BDCOM <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The BDCOM GP3600-08 8 Port GPON OLT comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GP3600-08</li><li>Ports: 8 GPON ports</li><li>GE Uplink: 4 100/1000M SFP + 4 GE SFP/TX</li><li>10GE Uplink: 4 10G E SF P+</li><li>GPON SFP Module: Class B+, Class C+, Class C++, Class C+++</li></ul>",
+      "model": "GP3600-08",
+      "warranty": "1-year warranty",
+      "basePrice": 134500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "BDCOM",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-33977",
+          "price": 134500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 129120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "GP3600-08",
+              "position": 0
+            },
+            {
+              "label": "Ports",
+              "value": "8 GPON ports",
+              "position": 1
+            },
+            {
+              "label": "GE Uplink",
+              "value": "4 100/1000M SFP + 4 GE SFP/TX",
+              "position": 2
+            },
+            {
+              "label": "10GE Uplink",
+              "value": "4 10G E SF P+",
+              "position": 3
+            },
+            {
+              "label": "GPON SFP Module",
+              "value": "Class B+, Class C+, Class C++, Class C+++",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bdcom-gp3600-08-8-port-gpon-olt",
+      "sourceProductCode": "33977",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GP3600-08",
+        "Ports: 8 GPON ports",
+        "GE Uplink: 4 100/1000M SFP + 4 GE SFP/TX",
+        "10GE Uplink: 4 10G E SF P+",
+        "GPON SFP Module: Class B+, Class C+, Class C++, Class C+++"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/bdcom-gp3600-08-8-port-gpon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/bdcom-gp3600-08-8-port-gpon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bdcom-gp3600-08-8-port-gpon-olt",
+        "candidateTitle": "BDCOM GP3600-08 8 Port GPON OLT",
+        "attemptStem": "bdcom-gp3600-08-8-port-gpon-olt"
+      }
+    },
+    {
+      "name": "BDCOM GP3600-08D-2AC 8-Port GPON OLT",
+      "slug": "bdcom-gp3600-08d-2ac-8-port-gpon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-35382",
+      "description": "<h2>BDCOM GP3600-08D-2AC 8-Port GPON OLT</h2><p>The BDCOM <strong>GP3600-08D-2AC</strong> 8-Port GPON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT </a>is a high-performance and scalable solution for advanced broadband networks. With two 100-240V power supplies and a 19-inch rack-mounted installation, it provides versatility and dependability for network environment deployment. With eight PON ports, four 10G/GE SFP+ uplinks, and four Gigabit RJ45 GE uplinks, it offers a wide range of connectivity choices to support expansive network topologies. With support for B+, C+, C++, and C+++ GPON and SFP module classes, it guarantees compatibility with a variety of network settings and deployment scenarios. With a 126Gbps backplane, 32MB of Flash, and 512MB of DRAM, it provides strong performance to match the needs of contemporary broadband networks. Interoperability and compliance are guaranteed by the BDCOM GP3600-08D-2AC 8-Port GPON OLT's adherence to IEEE and ITU-T G.984/G.988 standards, which include VLAN, Spanning Tree, RSTP, and physical link aggregation. Layer 3 functions, multicast, VLANs, and QoS features improve network efficiency and flexibility while giving traffic priority for optimal performance. With features including anomalous luminescence ONU detection and UDLD, the BDCOM GP3600-08D-2AC 8-Port GPON OLT reliability is improved, guaranteeing continuous operation and prompt fault identification. With capabilities like MAC limiting, port isolation, DHCP snooping, and transmission data encryption on the PON interface, network security is fully covered and protected from hostile and unauthorized access. A variety of modes, such as CLI, Telnet, SSH, HTTP, SSL, and SNMP, are available for management, and features like ISSU, FTP/TFTP, SPAN/RSPAN, and NTP are supported. For large-scale GPON networks, the BDCOM GP3600-08D-2AC 8-Port GPON OLT provides a comprehensive and dependable solution with extra capabilities like STP/RSTP/MSTP and EAPS for network availability and redundancy.</p><h2>Buy BDCOM GP3600-08D-2AC 8-Port GPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <strong>BDCOM GP3600-08D-2AC 8-Port GPON OLT</strong> From Star Tech. We have a large collection of latest BDCOM <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The BDCOM GP3600-08D-2AC 8-Port GPON OLT comes with 1 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GP3600-08D-2AC</li><li>GPON Ports: 8x fixed GPON ports</li><li>Ports: 4x GE ports, 4x 10G/GE SFP+ ports</li><li>126Gbps Backplane, 64K MAC table</li><li>Routing Table: 32K IPv4, 8K IPv6</li></ul>",
+      "model": "GP3600-08D-2AC",
+      "warranty": "1 years warranty",
+      "basePrice": 138600.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "BDCOM",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-35382",
+          "price": 138600.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 133056.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "GP3600-08D-2AC",
+              "position": 0
+            },
+            {
+              "label": "GPON Ports",
+              "value": "8x fixed GPON ports",
+              "position": 1
+            },
+            {
+              "label": "Ports",
+              "value": "4x GE ports, 4x 10G/GE SFP+ ports",
+              "position": 2
+            },
+            {
+              "label": "Routing Table",
+              "value": "32K IPv4, 8K IPv6",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bdcom-gp3600-08d-2ac-8-port-gpon-olt",
+      "sourceProductCode": "35382",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GP3600-08D-2AC",
+        "GPON Ports: 8x fixed GPON ports",
+        "Ports: 4x GE ports, 4x 10G/GE SFP+ ports",
+        "126Gbps Backplane, 64K MAC table",
+        "Routing Table: 32K IPv4, 8K IPv6"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/bdcom-gp3600-08d-2ac-8-port-gpon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/bdcom-gp3600-08d-2ac-8-port-gpon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bdcom-gp3600-08d-2ac-8-port-gpon-olt",
+        "candidateTitle": "BDCOM GP3600-08D-2AC 8-Port GPON OLT",
+        "attemptStem": "bdcom-gp3600-08d-2ac-8-port-gpon-olt"
+      }
+    },
+    {
+      "name": "BDCOM P3310C-2AC 4-Port EPON OLT",
+      "slug": "bdcom-p3310c-2ac-4-port-epon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-35377",
+      "description": "<h2>BDCOM P3310C-2AC 4-Port EPON OLT</h2><p>The BDCOM <strong>P3310C-2AC</strong> 4-Port EPON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT </a>provides an efficient and scalable connection for network expansion with a system capacity that permits a maximum division ratio of 1:64 and a backplane throughput of 32 Gbps. With interfaces that include four fixed EPON ports and six GE ports (two RJ45, two COMBO, and two SFP), it offers flexible connectivity choices for different network configurations. Reliable data transfer is ensured by the EPON interface, which provides symmetrical downlink/uplink transmission rates of 1 Gbps, PON port average optical power ranging from +2dBm to +7dBm, and sensitivity of -30 dBm. ONU authentication techniques are one type of security feature that protects network integrity. Respecting IEEE standards like 802.3ah, 802.1D, 802.1Q, and 802.1w guarantees that it will work and communicate with the current network architecture. Efficient traffic management is ensured by prioritizing Quality of Service (QoS) with features including back pressure flow control, IEEE 802.3x flow control, and support for DBA and SLA. The IEEE802.1Q and port-based VLANs are supported by the BDCOM P3310C-2AC 4-Port EPON OLT. Multicast capabilities like IGMP Snooping improve network performance. Features that ensure continuous operation, such as hot-swappable EPON optical modules and Unidirectional Link Detection (UDLD), reinforce reliability. ACLs, storm control, port isolation, user limiting, and data encryption on the PON interface all contribute to network security. TFTP and FTP are supported for software upgrades, and management is enabled via CLI, Web, SNMP, and TELNET, among other modalities. Standard 19\" rack compatibility facilitates installation, and two PSUs with input voltages ranging from 100V to 240V are supported as power supply options to accommodate various deployment scenarios. The BDCOM P3310C-2AC offers broadband service providers and businesses a comprehensive and dependable EPON OLT solution, with a maximum power consumption of 48W.</p><h2>Buy BDCOM P3310C-2AC 4-Port EPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <strong>BDCOM P3310C-2AC 4-Port EPON OLT</strong> From Star Tech. We have a large collection of latest BDCOM <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The BDCOM P3310C-2AC 4-Port EPON OLT comes with 1 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: P3310C-2AC</li><li>EPON Ports: 4 fixed EPON ports</li><li>Ports: 6 GE ports (2 RJ45, 2 COMBO, 2 SFP)</li><li>Up To 256 ONUs and the 1/64 coupling ratio</li><li>PON Transmission Rate: Uplink/downlink 1.25 Gbps</li></ul>",
+      "model": "P3310C-2AC",
+      "warranty": "1 years warranty",
+      "basePrice": 47250.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "BDCOM",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-35377",
+          "price": 47250.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 45360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "P3310C-2AC",
+              "position": 0
+            },
+            {
+              "label": "EPON Ports",
+              "value": "4 fixed EPON ports",
+              "position": 1
+            },
+            {
+              "label": "Ports",
+              "value": "6 GE ports (2 RJ45, 2 COMBO, 2 SFP)",
+              "position": 2
+            },
+            {
+              "label": "PON Transmission Rate",
+              "value": "Uplink/downlink 1.25 Gbps",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bdcom-p3310c-2ac-4-port-epon-olt",
+      "sourceProductCode": "35377",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: P3310C-2AC",
+        "EPON Ports: 4 fixed EPON ports",
+        "Ports: 6 GE ports (2 RJ45, 2 COMBO, 2 SFP)",
+        "Up To 256 ONUs and the 1/64 coupling ratio",
+        "PON Transmission Rate: Uplink/downlink 1.25 Gbps"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/bdcom-p3310c-2ac-4-port-epon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/bdcom-p3310c-2ac-4-port-epon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bdcom-p3310c-2ac-4-port-epon-olt",
+        "candidateTitle": "BDCOM P3310C-2AC 4-Port EPON OLT",
+        "attemptStem": "bdcom-p3310c-2ac-4-port-epon-olt"
+      }
+    },
+    {
+      "name": "BDCOM P3600-04-2AC 4-Port 10G EPON OLT",
+      "slug": "bdcom-p3600-04-2ac-4-port-epon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-35380",
+      "description": "<h2>BDCOM P3600-04-2AC 4-Port 10G EPON OLT</h2><p>The BDCOM <strong>P3600-04-2AC</strong> 4-Port 10G EPON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT </a>provides strong installation versatility with its dual AC100-240V power supply and small, rack-mounted 19-inch design. With four GE TX uplinks, four PON ports, and four 10GE/GE SFP+ uplinks, it offers a wide range of connectivity choices for different network setups. With support for GPON and several SFP modules (PX20+, PX20++, and PX20+++), it guarantees network environment compatibility. For demanding applications, its 512MB DRAM, 32MB Flash, and 128Gbps backplane provide dependable performance. Interoperability and compliance are guaranteed by the BDCOM P3600-04-2AC 4-Port 10G EPON OLT's compliance with multiple industry standards, including as IEEE 802.3ah and China Telecom EPON Technical Requirements. Layer 3 functions, multicast, VLANs, and QoS features improve network efficiency and flexibility while giving traffic priority for optimal performance. Features that ensure continuous operation, such as hot swapping of EPON optical modules and UDLD, improve reliability. Access control lists, data encryption on the PON port, and DHCP operations all contribute to network security by preventing unwanted access and data breaches. TFTP/FTP is supported for software upgrades, and a number of interfaces, including CLI, SNMP, and HTTP/HTTPS, are available for management. The BDCOM P3600-04-2AC 4-Port EPON OLT provides a complete and dependable solution for high-speed EPON networks, with added capabilities like STP, RSTP, MSTP, and EAPS for network availability and redundancy.</p><h2>Buy BDCOM P3600-04-2AC 4-Port 10G EPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <strong>BDCOM P3600-04-2AC 4-Port 10G EPON OLT</strong> From Star Tech. We have a large collection of latest BDCOM <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The BDCOM P3600-04-2AC 4-Port 10G EPON OLT comes with 1 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: P3600-04-2AC</li><li>EPON Ports: 4 fixed EPON ports</li><li>Ports: 4x GE TX ports, 4x 10GE SFP+ ports</li><li>128Gbps Backplane, 16K MAC table</li><li>Routing Table: 6K IPv4, 2K IPv6</li></ul>",
+      "model": "P3600-04-2AC",
+      "warranty": "1 years warranty",
+      "basePrice": 45500.0,
+      "originalPrice": 49500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "BDCOM",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-35380",
+          "price": 45500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 43680.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "P3600-04-2AC",
+              "position": 0
+            },
+            {
+              "label": "EPON Ports",
+              "value": "4 fixed EPON ports",
+              "position": 1
+            },
+            {
+              "label": "Ports",
+              "value": "4x GE TX ports, 4x 10GE SFP+ ports",
+              "position": 2
+            },
+            {
+              "label": "Routing Table",
+              "value": "6K IPv4, 2K IPv6",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bdcom-p3600-04-2ac-4-port-epon-olt",
+      "sourceProductCode": "35380",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: P3600-04-2AC",
+        "EPON Ports: 4 fixed EPON ports",
+        "Ports: 4x GE TX ports, 4x 10GE SFP+ ports",
+        "128Gbps Backplane, 16K MAC table",
+        "Routing Table: 6K IPv4, 2K IPv6"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/bdcom-p3600-04-2ac-4-port-epon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/bdcom-p3600-04-2ac-4-port-epon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bdcom-p3600-04-2ac-4-port-epon-olt",
+        "candidateTitle": "BDCOM P3600-04-2AC 4-Port 10G EPON OLT",
+        "attemptStem": "bdcom-p3600-04-2ac-4-port-epon-olt"
+      }
+    },
+    {
+      "name": "C-Data FD1104SN-R1-DAP EPON 1U OLT",
+      "slug": "c-data-fd1104sn-r1-dap-epon-1u-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-29171",
+      "description": "<h2>C-Data FD1104SN-R1-DAP EPON 1U OLT</h2><p>The C-Data FD1104SN-R1-DAP EPON 1U <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT</a> is a compact and cost-effective device that provides Ethernet Passive Optical Network (EPON) access for broadband network operators. The device has four EPON ports that can support up to 256 Optical Network Units (ONUs) under a 1:64 splitter ratio. It also has four Gigabit Ethernet (GE) ports and four Small Form-factor Pluggable (SFP) ports for uplink and downlink connections. The C-Data FD1104SN-R1-DAP EPON 1U OLT has a Type-C port for console management and a 1U high, 19-inch rack mount design for easy installation. C-Data FD1104SN-R1-DAP EPON 1U OLT supports 1.25 Gbps transmission speed for both upstream and downstream directions and provides various features such as VLAN, QoS, multicast, security, and management. </p><h2>Buy C-Data FD1104SN-R1-DAP EPON 1U OLT from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/c-data-fd1104sn-r1-dap-epon-1u-olt\" target=\"\">C-Data FD1104SN-R1-DAP EPON 1U OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The C-Data FD1104SN-R1-DAP EPON 1U OLT comes with 1 year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD1104SN-R1-DAP</li><li>Ports: 1x Type-C, 4x GE, 4x SFP, 4x EPON</li><li>1U high 19-inch rack mount</li><li>support 256 ONU under 1:64 splitter ratio</li><li>1.25Gbps Transmission speed</li></ul>",
+      "model": "FD1104SN-R1-DAP",
+      "warranty": "1 year warranty",
+      "basePrice": 52000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29171",
+          "price": 52000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 49920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD1104SN-R1-DAP",
+              "position": 0
+            },
+            {
+              "label": "Ports",
+              "value": "1x Type-C, 4x GE, 4x SFP, 4x EPON",
+              "position": 1
+            },
+            {
+              "label": "support 256 ONU under 1",
+              "value": "64 splitter ratio",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd1104sn-r1-dap-epon-1u-olt",
+      "sourceProductCode": "29171",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD1104SN-R1-DAP",
+        "Ports: 1x Type-C, 4x GE, 4x SFP, 4x EPON",
+        "1U high 19-inch rack mount",
+        "support 256 ONU under 1:64 splitter ratio",
+        "1.25Gbps Transmission speed"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/c-data-fd1104sn-r1-dap-epon-1u-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/c-data-fd1104sn-r1-dap-epon-1u-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd1104sn-r1-dap-epon-1u-olt",
+        "candidateTitle": "C-Data FD1104SN-R1-DAP EPON 1U OLT",
+        "attemptStem": "c-data-fd1104sn-r1-dap-epon-1u-olt"
+      }
+    },
+    {
+      "name": "C-Data FD1204S-B0-NDA0 4 Port E-PON OLT",
+      "slug": "c-data-fd1204s-b0-nda0-4-port-e-pon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-29174",
+      "description": "<h2>C-Data FD1204S-B0-NDA0 4 Port E-PON OLT</h2><p>The C-Data FD1204S-B0-NDA0 4 Port E-PON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT </a>fully complies with IEEE 802.3x and FSAN requirements. The device is a 1U rack-mounted item that has 4 uplink GE ports, 4 uplink SFP ports, 2 10-gigabit uplink ports, and 4 EPON ports in addition to 1 USB interface. in C-Data FD1204S-B0-NDA0 4 Port E-PON OLT a 1:64 splitting ratio is supported by a single port. The maximum number of EPON terminals the system can support is 256. Enable OAMremote management for ONT/ONU, compatible with IEEE 3x OAM Protocol 1Uheight 8PON OLT product in the small design of Pizza-Box Layer 2 Switching Function QOSGuarantee Easy-to-Use Management System. Meet IEEE3x standard and related EPON specifications of Chinese Communication Industry.A 4-port E-PON (Ethernet Passive Optical Network) OLT (Optical Line Terminal) made for usage in fiber-to-the-building (FTTB) and fiber-to-the-home (FTTH) networks is the C-Data FD1204S-B0-NDA0 4 Port E-PON OLT.</p><h2>Buy C-Data FD1204S-B0-NDA0 4 Port E-PON OLT from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/c-data-fd1204s-b0-nda0-4-port-e-pon-olt\" target=\"\">C-Data FD1204S-B0-NDA0 4 Port E-PON OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The C-Data FD1204S-B0-NDA0 4 Port E-PON OLT comes with 1 year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD1204S-B0-NDA0</li><li>support up to 256 ONUs</li><li>Max splitting ratio 1:64</li><li>1.25Gbps Transmission speed</li><li>Management Rack Type 1U</li></ul>",
+      "model": "FD1204S-B0-NDA0",
+      "warranty": "1 year warranty",
+      "basePrice": 52000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29174",
+          "price": 52000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 49920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD1204S-B0-NDA0",
+              "position": 0
+            },
+            {
+              "label": "Max splitting ratio 1",
+              "value": "64",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd1204s-b0-nda0-4-port-e-pon-olt",
+      "sourceProductCode": "29174",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD1204S-B0-NDA0",
+        "support up to 256 ONUs",
+        "Max splitting ratio 1:64",
+        "1.25Gbps Transmission speed",
+        "Management Rack Type 1U"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/c-data-fd1204s-b0-nda0-4-port-e-pon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/c-data-fd1204s-b0-nda0-4-port-e-pon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd1204s-b0-nda0-4-port-e-pon-olt",
+        "candidateTitle": "C-Data FD1204S-B0-NDA0 4 Port E-PON OLT",
+        "attemptStem": "c-data-fd1204s-b0-nda0-4-port-e-pon-olt"
+      }
+    },
+    {
+      "name": "C-Data FD1208S-B0-NDA0 8 Port E-PON OLT",
+      "slug": "c-data-fd1208s-b0-nda0-8-port-e-pon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-29176",
+      "description": "<h2>C-Data FD1208S-B0-NDA0\r\n 8 Port E-PON OLT</h2><p>The C-Data FD1208S-B0-NDA0 8 Port E-PON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT</a> is a high-performance and cost-effective device that provides Ethernet Passive Optical Network (E-PON) access for broadband network operators. It has eight E-PON ports that can support up to 512 Optical Network Units (ONUs) under 1:64 splitter ratio. The device also has eight PON SFP slots for optical modules. The C-Data FD1208S-B0-NDA0 8 Port E-PON OLT supports 1.25Gbps transmission speed for both upstream and downstream directions and provides various features such as layer 2 switching, QoS guarantee, multicast, security, and management. The C-Data FD1208S-B0-NDA0 8 Port E-PON OLT meets IEEE3x standard and relative E-PON standards of Chinese Communication Industry and supports OAM remote management for ONT/ONU, compatible with IEEE 3x OAM Protocol.</p><h2>Buy C-Data FD1208S-B0-NDA0\r\n 8 Port E-PON OLT from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/c-data-fd1208s-b0-nda0-8-port-e-pon-olt\" target=\"\">C-Data FD1208S-B0 8 Port E-PON OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The C-Data FD1208S-B0 8 Port E-PON OLT comes with 1 year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD1204S-B0-NDA0</li><li>support up to 512 ONUs</li><li>Max splitting ratio 1:64</li><li>1.25Gbps Transmission speed</li><li>8x PON SFP Slots</li></ul>",
+      "model": "FD1204S-B0-NDA0",
+      "warranty": "1 year warranty",
+      "basePrice": 85000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29176",
+          "price": 85000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 81600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD1204S-B0-NDA0",
+              "position": 0
+            },
+            {
+              "label": "Max splitting ratio 1",
+              "value": "64",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd1208s-b0-nda0-8-port-e-pon-olt",
+      "sourceProductCode": "29176",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD1204S-B0-NDA0",
+        "support up to 512 ONUs",
+        "Max splitting ratio 1:64",
+        "1.25Gbps Transmission speed",
+        "8x PON SFP Slots"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/c-data-fd1208s-b0-nda0-8-port-e-pon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/c-data-fd1208s-b0-nda0-8-port-e-pon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd1208s-b0-nda0-8-port-e-pon-olt",
+        "candidateTitle": "C-Data FD1208S-B0-NDA0 8 Port E-PON OLT",
+        "attemptStem": "c-data-fd1208s-b0-nda0-8-port-e-pon-olt"
+      }
+    },
+    {
+      "name": "C-Data FD1304S-B1-PDA0 4 Ports E-PON OLT",
+      "slug": "c-data-fd1304s-b1-pda0-e-pon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-45483",
+      "description": "<h2>C-Data FD1304S-B1-PDA0 4 Ports E-PON OLT</h2><p>The C-Data <strong>FD1304S-B1-PDA0</strong> 4 Ports E-PON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT</a> is a high-performance optical line terminal designed for stable and scalable EPON networking. Built in a 1U 19-inch standard rack box with dimensions of 306 × 266 × 44 mm and weighing 2.6 kg, this compact device ensures easy deployment in data centers and ISP networks. The C-Data FD1304S-B1-PDA0 supports EPON (IEEE 802.3ah) technology with 4 PON ports, each delivering a 1:64 splitting ratio and a 20KM transmission distance, making it ideal for large-scale fiber access projects. For uplink performance, it integrates 4 × 10/100/1000M auto-negotiation Ethernet ports and 4 × 10G SFP+ interfaces, powered by a 98G backplane bandwidth for efficient data transfer. The C-Data FD1304S-B1-PDA0 4 Ports E-PON OLT is equipped with a 100/1000BASE-Tx out-band Ethernet management port and a CONSOLE local port, ensuring flexible management options. Its PON ports provide a symmetrical 1.25Gbps rate using SC/UPC interfaces over 9/125μm single-mode fiber, with optical specifications including a 1490nm forwarding wavelength, 1310nm receiving wavelength, PX20+ transmission power (2~5.5 dBm), -28dBm receiving sensitivity, and -8dBm saturation power. Power supply flexibility is enhanced with support for 100V ~ 240V AC (47–63Hz) or -36V ~ -72V DC. Built for durability, the C-Data FD1304S-B1-PDA0 4 Ports E-PON OLT operates reliably in temperatures from -15℃ to 50℃, stores safely from -40℃ to 85℃, and functions in 5–90% non-condensing humidity, making it an excellent choice for ISPs and enterprises deploying next-generation EPON networks.</p><h2>Buy C-Data FD1304S-B1-PDA0 4 Ports E-PON OLT from Star Tech</h2><p>In Bangladesh, you can get original <strong>C-Data FD1304S-B1-PDA0 4 Ports E-PON OLT</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The C-Data FD1304S-B1-PDA0 4 Ports E-PON OLT comes with 2 year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD1304S-B1-PDA0</li><li>Management Rack: 1U 19-inch standard box</li><li>Interface: EPON: IEEE 802.3ah</li><li>Uplink Port: 4 × 10/100/1000M auto-negotiation Ethernet ports</li><li>10-Gigabit 4 × SFP+ interfaces</li></ul>",
+      "model": "FD1304S-B1-PDA0",
+      "warranty": "2 year warranty",
+      "basePrice": 35000.0,
+      "originalPrice": 38500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 306.0,
+        "width": 266.0,
+        "height": 44.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "C-Data",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "EPON: IEEE 802.3ah",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-45483",
+          "price": 35000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "EPON: IEEE 802.3ah"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 33600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD1304S-B1-PDA0",
+              "position": 0
+            },
+            {
+              "label": "Management Rack",
+              "value": "1U 19-inch standard box",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "EPON: IEEE 802.3ah",
+              "position": 2
+            },
+            {
+              "label": "Uplink Port",
+              "value": "4 × 10/100/1000M auto-negotiation Ethernet ports",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd1304s-b1-pda0-e-pon-olt",
+      "sourceProductCode": "45483",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD1304S-B1-PDA0",
+        "Management Rack: 1U 19-inch standard box",
+        "Interface: EPON: IEEE 802.3ah",
+        "Uplink Port: 4 × 10/100/1000M auto-negotiation Ethernet ports",
+        "10-Gigabit 4 × SFP+ interfaces"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/c-data-fd1304s-b1-pda0-e-pon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/c-data-fd1304s-b1-pda0-e-pon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd1304s-b1-pda0-e-pon-olt",
+        "candidateTitle": "C-Data FD1304S-B1-PDA0 4 Ports E-PON OLT",
+        "attemptStem": "c-data-fd1304s-b1-pda0-e-pon-olt"
+      }
+    },
+    {
+      "name": "C-Data FD1604SN-B0-NDA0 G-PON OLT",
+      "slug": "c-data-fd1604sn-b0-nda0-g-pon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-29182",
+      "description": "<h2>C-Data FD1604SN-B0-NDA0 G-PON OLT</h2><p>The C-Data FD1604SN-B0-NDA0 G-PON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT </a>is a 1U rack-mounted device with 1 a USB interface, 4 uplink GE ports, 4 uplink SFP ports, 2 10-gigabit uplink ports, and 4 GPON ports. Each GPON port supports the splitting ratio of 1:128 and provides downstream bandwidth of 2.5Gbps and upstream bandwidth of 1.25Gbps. The C-Data FD1604SN-B0-NDA0 G-PON OLT can support up to 512 GPON terminals accessing it. The G-PON (Gigabit Passive Optical Network) OLT (Optical Line Terminal) C-Data FD1604SN-B0-NDA0 is made for usage in FTTH (Fiber-to-the-Home) and FTTB (Fiber-to-the-Building) networks. G-PON, a passive optical network technology, employs optical fibers to provide VoIP, IPTV, and high-speed internet connectivity to several endpoints. The C-Data FD1604SN-B0-NDA0 G-PON OLT can support up to 256 ONUs (Optical Network Units).</p><h2>Buy C-Data FD1604SN-B0-NDA0 G-PON OLT from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/c-data-fd1604sn-b0-nda0-g-pon-olt\" target=\"\">C-Data FD1604SN-B0-NDA0 G-PON OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The C-Data FD1604SN-B0-NDA0 G-PON OLT comes with 1 year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD1604SN-B0-NDA0</li><li>Support up to 256 ONUs</li><li>Max splitting ratio 1:128</li><li>1.25Gbps Transmission speed</li><li>Ports: 4x GE, 4x SFP ports, 2x 10-gigabit ports, 4x GPON</li></ul>",
+      "model": "FD1604SN-B0-NDA0",
+      "warranty": "1 year warranty",
+      "basePrice": 92000.0,
+      "originalPrice": 101200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29182",
+          "price": 92000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 88320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD1604SN-B0-NDA0",
+              "position": 0
+            },
+            {
+              "label": "Max splitting ratio 1",
+              "value": "128",
+              "position": 1
+            },
+            {
+              "label": "Ports",
+              "value": "4x GE, 4x SFP ports, 2x 10-gigabit ports, 4x GPON",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd1604sn-b0-nda0-g-pon-olt",
+      "sourceProductCode": "29182",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD1604SN-B0-NDA0",
+        "Support up to 256 ONUs",
+        "Max splitting ratio 1:128",
+        "1.25Gbps Transmission speed",
+        "Ports: 4x GE, 4x SFP ports, 2x 10-gigabit ports, 4x GPON"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/c-data-fd1604sn-b0-nda0-g-pon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/c-data-fd1604sn-b0-nda0-g-pon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd1604sn-b0-nda0-g-pon-olt",
+        "candidateTitle": "C-Data FD1604SN-B0-NDA0 G-PON OLT",
+        "attemptStem": "c-data-fd1604sn-b0-nda0-g-pon-olt"
+      }
+    },
+    {
+      "name": "C-Data FD1608S-B0 GPON 8 PORT OLT",
+      "slug": "c-data-fd1608s-b0-gpon-8-port-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-29185",
+      "description": "<h2>C-Data FD1608S-B0 GPON 8 PORT OLT</h2><p>The C-Data FD1608S-B0 GPON 8 PORT <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT </a>is a compact and cost-effective device that provides Gigabit Passive Optical Network (GPON) access for broadband network operators. The device has eight GPON ports that can support up to 128 Optical Network Units (ONUs) under 1:128 splitter ratio. The C-Data FD1608S-B0 GPON 8 PORT OLT also has a 1U 19-inch standard box design for easy installation. The device supports AC 100V～240V, 47/63Hz power supply and provides various features such as VLAN, QoS, multicast, security, and management.</p><h2>Buy C-Data FD1608S-B0 GPON 8 PORT OLT from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/c-data-fd1608s-b0-gpon-8-port-olt\" target=\"\">C-Data FD1608S-B0 GPON 8 PORT OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The C-Data FD1608S-B0 GPON 8 PORT OLT comes with 1 year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD1608S-B0</li><li>8 PON Port</li><li>1U 19-inch Standard Box</li><li>Max splitting ratio: GPON 1:128</li><li>Power supply: AC 100V240V, 47/63Hz</li></ul>",
+      "model": "FD1608S-B0",
+      "warranty": "1 year warranty",
+      "basePrice": 135000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29185",
+          "price": 135000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 129600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD1608S-B0",
+              "position": 0
+            },
+            {
+              "label": "Max splitting ratio",
+              "value": "GPON 1:128",
+              "position": 1
+            },
+            {
+              "label": "Power supply",
+              "value": "AC 100V240V, 47/63Hz",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd1608s-b0-gpon-8-port-olt",
+      "sourceProductCode": "29185",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD1608S-B0",
+        "8 PON Port",
+        "1U 19-inch Standard Box",
+        "Max splitting ratio: GPON 1:128",
+        "Power supply: AC 100V240V, 47/63Hz"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/c-data-fd1608s-b0-gpon-8-port-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/c-data-fd1608s-b0-gpon-8-port-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd1608s-b0-gpon-8-port-olt",
+        "candidateTitle": "C-Data FD1608S-B0 GPON 8 PORT OLT",
+        "attemptStem": "c-data-fd1608s-b0-gpon-8-port-olt"
+      }
+    },
+    {
+      "name": "C-Data FD1608S-B0 XPON 8 PORT OLT",
+      "slug": "c-data-fd1608s-b0-xpon-8-port-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-29187",
+      "description": "<h2>C-Data FD1608S-B0 XPON 8 PORT OLT</h2><p>The C-Data FD1608S-B0 XPON 8 PORT <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT </a>is a small, affordable device that gives broadband network operators access to the XPON. With its 8 XPON ports and Layer 2 switching capabilities, the device can support up to 128 Optical Network Units (ONUs). The device has numerous functions including VLAN, QoS, multicast, security, and management and supports AC 100V–240V, 47/63Hz power supply.  The C-Data FD1608S-B0 XPON 8 PORT OLT is a 1U rack-mounted device with 1 USB interface, 4 uplink GE ports, 4 uplink SFP ports, 2*10GE uplink ports, and 8 XPON ports. It fully complies with ITU G.984.x, IEEE 802.3x, and FSAN standards. Each GPON port may allow a splitting ratio of 1:128 when the XPON mode is GPON; each EPON port can support a splitting ratio of 1:64 when the XPON mode is EPON. The maximum number of terminals supported by GPON and EPON systems is 1024 and 512, respectively, together with dual power supplies. The C-Data FD1608S-B0 XPON 8 PORT OLT includes an Easy-to-Use administration system and is very user-friendly.</p><h2>Buy C-Data FD1608S-B0 XPON 8 PORT OLT from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/c-data-fd1608s-b0-xpon-8-port-olt\" target=\"\">C-Data FD1608S-B0 XPON 8 PORT OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The C-Data FD1608S-B0 XPON 8 PORT OLT comes with 1 year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD1608S-B0</li><li>8 XPON Port</li><li>1U 19-inch Standard Box</li><li>Max splitting ratio: XPON 1:128</li><li>Power supply: AC 100V～240V, 47/63Hz</li></ul>",
+      "model": "FD1608S-B0",
+      "warranty": "1 year warranty",
+      "basePrice": 135000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29187",
+          "price": 135000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 129600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD1608S-B0",
+              "position": 0
+            },
+            {
+              "label": "Max splitting ratio",
+              "value": "XPON 1:128",
+              "position": 1
+            },
+            {
+              "label": "Power supply",
+              "value": "AC 100V～240V, 47/63Hz",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd1608s-b0-xpon-8-port-olt",
+      "sourceProductCode": "29187",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD1608S-B0",
+        "8 XPON Port",
+        "1U 19-inch Standard Box",
+        "Max splitting ratio: XPON 1:128",
+        "Power supply: AC 100V～240V, 47/63Hz"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/c-data-fd1608s-b0-xpon-8-port-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/c-data-fd1608s-b0-xpon-8-port-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd1608s-b0-xpon-8-port-olt",
+        "candidateTitle": "C-Data FD1608S-B0 XPON 8 PORT OLT",
+        "attemptStem": "c-data-fd1608s-b0-xpon-8-port-olt"
+      }
+    },
+    {
+      "name": "C-Data FD1616SN-B0-NDA0 16 Port G-PON OLT",
+      "slug": "c-data-fd1616s-b0-gpon-16-port-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-29190",
+      "description": "<h2>C-Data FD1616SN-B0-NDA0 16 Port G-PON OLT</h2><p>The C-Data FD1616S-B0 GPON 16 PORT <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT </a>is a high-performance and cost-effective device that delivers broadband access to multiple users through fiber-optic networks. It complies with the ITU G.984.x and FSAN standards and has a compact 1U rack-mounted design. C-Data FD1616S-B0 GPON 16 PORT OLT features 1 USB interface, 4 uplink GE ports, 4 uplinks SFP ports, 2 10-gigabit uplink ports, and 16 GPON ports that can connect up to 2048 GPON terminals with a 1:128 splitting ratio. C-Data FD1616S-B0 GPON 16 PORT OLT offers downstream bandwidth of 2.5 Gbps and upstream bandwidth of 1.25 Gbps per GPON port, ensuring high-speed and reliable data transmission for various applications.</p><h2>Buy C-Data FD1616SN-B0 GPON 16 PORT OLT from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/c-data-fd1616s-b0-gpon-16-port-olt\" style=\"\" target=\"\">C-Data FD1616SN-B0 GPON 16 PORT OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The C-Data FD1616SN-B0 GPON 16 PORT OLT comes with 1 year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD1616SN-B0</li><li>16 GPON Port</li><li>1U 19-inch Standard Box</li><li>Max splitting ratio: GPON 1:128</li><li>Power supply: AC 100V～240V, 47/63Hz</li></ul>",
+      "model": "FD1616SN-B0",
+      "warranty": "1 year warranty",
+      "basePrice": 235000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29190",
+          "price": 235000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 225600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD1616SN-B0",
+              "position": 0
+            },
+            {
+              "label": "Max splitting ratio",
+              "value": "GPON 1:128",
+              "position": 1
+            },
+            {
+              "label": "Power supply",
+              "value": "AC 100V～240V, 47/63Hz",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd1616s-b0-gpon-16-port-olt",
+      "sourceProductCode": "29190",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD1616SN-B0",
+        "16 GPON Port",
+        "1U 19-inch Standard Box",
+        "Max splitting ratio: GPON 1:128",
+        "Power supply: AC 100V～240V, 47/63Hz"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/c-data-fd1616s-b0-gpon-16-port-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/c-data-fd1616s-b0-gpon-16-port-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd1616s-b0-gpon-16-port-olt",
+        "candidateTitle": "C-Data FD1616SN-B0-NDA0 16 Port G-PON OLT",
+        "attemptStem": "c-data-fd1616s-b0-gpon-16-port-olt"
+      }
+    },
+    {
+      "name": "Richerlink RL8004EL 4 port EPON OLT",
+      "slug": "richerlink-rl8004el-4-port-epon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-27842",
+      "description": "<h2>Richerlink RL8004EL 4 port EPON OLT</h2><p>The RicherLink RL8004EL 4 port EPON OLT is self-developed Compact 1U EPON OLT equipment that meets the IEEE802.3ah and YD/T 1945-2006 EPON OLT equipment requirements. Access network technical requirements based on Ethernet Passive Optical Network (EPON) and China Telecom EPON technical requirements 3.0, with super EPON access capacity, carrier-class reliability, and full security function. Because of its excellent management, maintenance, and monitoring capabilities, extensive service features, and flexible network mode, it can meet long-distance optical fiber access requirements. The Richerlink RL8004EL can be used in conjunction with the NMS2000 network management system to provide users with the ideal solution. The Richerlink RL8004EL EPON OLT provides 4 Downstream EPON ports, 4 Uplink GE ETH-ports, and 2 Uplink GE SFP ports. Up to 1:64 Split ratio for up to 256 EPON users. The 1U pizzabox design is for easy installation, Maintenance, and Space-saving. Richerlink RL8004EL 4 port EPON OLT is suitable for Broadcast three in one, video surveillance network, enterprise LAN, Internet of Things, etc.</p><h2>Buy Richerlink RL8004EL 4 port EPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/richerlink-rl8004el-4-port-epon-olt\" target=\"\">Richerlink RL8004EL 4 port EPON OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Richerlink RL8004EL 4 port EPON OLT comes with 1 year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: RL8004EL</li><li>IEEE Standard 4 EPON OLT Interfaces</li><li>NMS2000 Network Management System</li><li>1:64 Split ratio support</li><li>Standalone 1U Product, User Friendly CLI</li></ul>",
+      "model": "RL8004EL",
+      "warranty": "1 year warranty",
+      "basePrice": 46000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "RicherLink",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-27842",
+          "price": 46000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 44160.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "RL8004EL",
+              "position": 0
+            },
+            {
+              "label": "1",
+              "value": "64 Split ratio support",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/richerlink-rl8004el-4-port-epon-olt",
+      "sourceProductCode": "27842",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: RL8004EL",
+        "IEEE Standard 4 EPON OLT Interfaces",
+        "NMS2000 Network Management System",
+        "1:64 Split ratio support",
+        "Standalone 1U Product, User Friendly CLI"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/richerlink-rl8004el-4-port-epon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/richerlink-rl8004el-4-port-epon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "richerlink-rl8004el-4-port-epon-olt",
+        "candidateTitle": "Richerlink RL8004EL 4 port EPON OLT",
+        "attemptStem": "richerlink-rl8004el-4-port-epon-olt"
+      }
+    },
+    {
+      "name": "Richerlink RL8004GL 4 port GPON OLT",
+      "slug": "richerlink-rl8004gl-4-port-gpon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-28619",
+      "description": "<h2>Richerlink RL8004GL 4 port GPON OLT</h2><p>The RicherLink RL8004GL is a self-developed compact 1U GPON OLT equipment that complies with the ITU-T G.984/G.988 and China Telecom/Unicom GPON standards. It offers super GPON access capacity, carrier-class reliability, and complete security functions. The OLT is compatible with the NMS3000 network management system, providing excellent management, maintenance, and monitoring capabilities, as well as extensive service features and flexible network modes. The RL8004GL features 4 downstream GPON ports, 4 uplink GE ETH ports, and 2 uplink 10G SFP+ ports. It supports a split ratio of up to 1:128, accommodating up to 1024 GPON users. With its 1U pizza box design, the OLT is easy to install, maintain, and saves space. It is suitable for various applications, including broadcast, video surveillance networks, enterprise LAN, and the Internet of Things. The RL8004GL supports VLAN, QinQ, MAC-based VLAN, and various Ethernet switching functionalities. It also offers security features such as anti-ARP spoofing and flood attack control, IP and MAC binding, port isolation, and more. The OLT supports network management through CLI, console, Telnet, and web configuration, and it is equipped with RMON, SNMP, NTP, and the NMS2000 network management system.</p><h2>Buy Richerlink RL8004GL 4 port GPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/richerlink-rl8004gl-4-port-gpon-olt\" target=\"\">Richerlink RL8004GL 4 port GPON OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Richerlink RL8004GL 4 port GPON OLT comes with 1 year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: RL8004GL</li><li>ITU-T Standard 4 GPON OLT Interfaces</li><li>NMS3000 Network Management System</li><li>1:128 Split ratio support</li><li>Standalone 1U Product, User Friendly CLI</li></ul>",
+      "model": "RL8004GL",
+      "warranty": "1 year warranty",
+      "basePrice": 80000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "RicherLink",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-28619",
+          "price": 80000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 76800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "RL8004GL",
+              "position": 0
+            },
+            {
+              "label": "1",
+              "value": "128 Split ratio support",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/richerlink-rl8004gl-4-port-gpon-olt",
+      "sourceProductCode": "28619",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: RL8004GL",
+        "ITU-T Standard 4 GPON OLT Interfaces",
+        "NMS3000 Network Management System",
+        "1:128 Split ratio support",
+        "Standalone 1U Product, User Friendly CLI"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/richerlink-rl8004gl-4-port-gpon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/richerlink-rl8004gl-4-port-gpon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "richerlink-rl8004gl-4-port-gpon-olt",
+        "candidateTitle": "Richerlink RL8004GL 4 port GPON OLT",
+        "attemptStem": "richerlink-rl8004gl-4-port-gpon-olt"
+      }
+    },
+    {
+      "name": "Richerlink RL8008ES 8 port EPON OLT",
+      "slug": "richerlink-rl8008es-8-port-epon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-27843",
+      "description": "<h2>Richerlink RL8008ES 8 port EPON OLT</h2><p>The RicherLink RL8008ES OLT device is self-developed Compact 1U EPON OLT equipment that meets the IEEE802.3ah and YD/T 1945-2006 EPON OLT requirements. Access network technical requirements based on Ethernet Passive Optical Network (EPON) and China Telecom EPON technical requirements 3.0, with super EPON access capacity, carrier-class reliability, and full security function. Because of its excellent management, maintenance, and monitoring capabilities, extensive service features, and flexible network mode, it can meet long-distance optical fiber access requirements. The RL8008ES OLT FTTH can be used in conjunction with the NMS2000 network management system to provide users with the ideal solution. The RL8008ES OLT device provides 8x Downstream EPON ports, 4GEx Uplink ETH ports, 2GEx Uplink SFP ports, and 2x 10G Uplink SFP+ ports. Up to 1:64 Split ratio for up to 512 EPON users. The 1U pizzabox design is for easy installation, Maintenance, and Space-saving. RL8008ES EPON OLT is suitable for Broadcast three in one, video surveillance network, enterprise LAN, Internet of Things, etc.<br/></p><h2>Buy Richerlink RL8008ES 8 port EPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/richerlink-rl8008es-8-port-epon-olt\" target=\"\">Richerlink RL8008ES 8 port EPON OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Richerlink RL8008ES EPON OLT comes with 1 year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: RL8008ES</li><li>IEEE Standard 8 GPON OLT Interfaces</li><li>NMS2000 Network Management System</li><li>1:64 Split ratio support</li><li>Standalone 1U Product, User Friendly CLI</li></ul>",
+      "model": "RL8008ES",
+      "warranty": "1 year warranty",
+      "basePrice": 75000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "RicherLink",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-27843",
+          "price": 75000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 72000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "RL8008ES",
+              "position": 0
+            },
+            {
+              "label": "1",
+              "value": "64 Split ratio support",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/richerlink-rl8008es-8-port-epon-olt",
+      "sourceProductCode": "27843",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: RL8008ES",
+        "IEEE Standard 8 GPON OLT Interfaces",
+        "NMS2000 Network Management System",
+        "1:64 Split ratio support",
+        "Standalone 1U Product, User Friendly CLI"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/richerlink-rl8008es-8-port-epon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/richerlink-rl8008es-8-port-epon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "richerlink-rl8008es-8-port-epon-olt",
+        "candidateTitle": "Richerlink RL8008ES 8 port EPON OLT",
+        "attemptStem": "richerlink-rl8008es-8-port-epon-olt"
+      }
+    },
+    {
+      "name": "Richerlink RL8008GL 8 port GPON OLT",
+      "slug": "richerlink-rl8008gl-8-port-gpon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-28621",
+      "description": "<h2>Richerlink RL8008GL 8 port GPON OLT</h2><p>The RicherLink RL8008GL is a self-developed compact 1U GPON OLT equipment that complies with the ITU-T G.984/G.988 and China Telecom/Unicom GPON standards. It offers super GPON access capacity, carrier-class reliability, and complete security functions. The OLT is compatible with the NMS2000 network management system, providing excellent management, maintenance, and monitoring capabilities, as well as extensive service features and flexible network modes. The RL8008GL features 8 downstream GPON ports, 4 uplink GE ETH ports, and 2 uplink 10G SFP+ ports. It supports a split ratio of up to 1:128, accommodating up to 1024 GPON users. With its 1U pizza box design, the OLT is easy to install, maintain, and saves space. It is suitable for various applications, including broadcast, video surveillance networks, enterprise LAN, and the Internet of Things. The RL8008GL supports VLAN, QinQ, MAC-based VLAN, and various Ethernet switching functionalities. It also offers security features such as anti-ARP spoofing and flood attack control, IP and MAC binding, port isolation, and more. The OLT supports network management through CLI, console, Telnet, and web configuration, and it is equipped with RMON, SNMP, NTP, and the NMS2000 network management system.</p><h2>Buy Richerlink RL8008GL 8 port GPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/richerlink-rl8008gl-8-port-gpon-olt\" target=\"\">Richerlink RL8008GL 8 port GPON OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Richerlink RL8008GL 8 port GPON OLT comes with 1 year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: RL8008GL</li><li>ITU-T Standard 8 GPON OLT Interfaces</li><li>NMS2000 Network Management System</li><li>1:128 Split ratio support</li><li>Standalone 1U Product, User Friendly CLI</li></ul>",
+      "model": "RL8008GL",
+      "warranty": "1 year warranty",
+      "basePrice": 115000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "RicherLink",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-28621",
+          "price": 115000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 110400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "RL8008GL",
+              "position": 0
+            },
+            {
+              "label": "1",
+              "value": "128 Split ratio support",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/richerlink-rl8008gl-8-port-gpon-olt",
+      "sourceProductCode": "28621",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: RL8008GL",
+        "ITU-T Standard 8 GPON OLT Interfaces",
+        "NMS2000 Network Management System",
+        "1:128 Split ratio support",
+        "Standalone 1U Product, User Friendly CLI"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/richerlink-rl8008gl-8-port-gpon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/richerlink-rl8008gl-8-port-gpon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "richerlink-rl8008gl-8-port-gpon-olt",
+        "candidateTitle": "Richerlink RL8008GL 8 port GPON OLT",
+        "attemptStem": "richerlink-rl8008gl-8-port-gpon-olt"
+      }
+    },
+    {
+      "name": "Solitine SOL1002-SP 2 Port 10G EPON OLT",
+      "slug": "solitine-sol1002-sp-epon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-41492",
+      "description": "<h2>Solitine SOL1002-SP 2 Port 10G EPON OLT</h2><p>The Solitine <strong>SOL1002-SP</strong> 2 Port 10G EPON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT </a>is a high-performance optical line terminal designed for effective fiber-to-the-home (FTTH) and fiber-to-the-building (FTTB) deployments. Built on a 1U rack-mounted chassis, this OLT provides dependable performance and is simple to integrate into existing network infrastructures. It has three uplink ports: two RJ45 GE ports and one combo SFP port that can support both GE and 10GE via SFP+ for high-speed uplink connectivity. The Solitine SOL1002-SP OLT supports EPON technology and has one dedicated GPON port that provides upstream speeds of 1.244Gbps and downstream rates of 2.488Gbps, making it perfect for high-bandwidth services. The Solitine SOL1002-SP 2 Port 10G EPON OLT has a maximum splitting ratio of 1:128 and a transmission range of up to 20 kilometers over 9/125 single-mode fiber. The SC/UPC connector is compatible with both Class C++ and Class C+++ optical modules, providing TX power more than 6.5dBm or 7.5dBm and sensitivity of -32dBm or -33dBm, respectively. It ensures efficient bidirectional data transmission by operating at 1490nm TX and 1310nm RX wavelengths, respectively. The Solitine SOL1002-SP 10G EPON OLT features a single RJ45 console connector for simple local management and configuration. It provides a 16Gbps backplane bandwidth and a port forwarding rate of 23.808 million packets per second, ensuring that data flows smoothly and quickly across the network. The Solitine SOL1002-SP 10G EPON OLT allows for flexible network administration by supporting numerous management modes such as web interface, Telnet, CLI, and SNMP, providing network operators with powerful monitoring and setup tools.</p><h2>Buy Solitine SOL1002-SP 10G EPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <strong>Solitine SOL1002-SP 10G EPON OLT</strong> From Star Tech. We have a large collection of latest Solitine <a href=\"https://www.startech.com.bd/olt\" style=\"\" target=\"_blank\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. The Solitine SOL1002-SP 10G EPON OLTcomes with 2 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SOL2001-SP</li><li>Uplink Port: 2x GE (Copper) RJ45, 1x 10GE SFP</li><li>Transmission Distance: 20KM</li><li>Port Forwarding Rate: 23.808Mpps</li><li>GPON Speed: Upstream 1.244Gbps, Downstream 2.488Gbps</li></ul>",
+      "model": "SOL2001-SP",
+      "warranty": "2 years warranty",
+      "basePrice": 36000.0,
+      "originalPrice": 36500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Solitine",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41492",
+          "price": 36000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 34560.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "SOL2001-SP",
+              "position": 0
+            },
+            {
+              "label": "Uplink Port",
+              "value": "2x GE (Copper) RJ45, 1x 10GE SFP",
+              "position": 1
+            },
+            {
+              "label": "Transmission Distance",
+              "value": "20KM",
+              "position": 2
+            },
+            {
+              "label": "Port Forwarding Rate",
+              "value": "23.808Mpps",
+              "position": 3
+            },
+            {
+              "label": "GPON Speed",
+              "value": "Upstream 1.244Gbps, Downstream 2.488Gbps",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/solitine-sol1002-sp-epon-olt",
+      "sourceProductCode": "41492",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SOL2001-SP",
+        "Uplink Port: 2x GE (Copper) RJ45, 1x 10GE SFP",
+        "Transmission Distance: 20KM",
+        "Port Forwarding Rate: 23.808Mpps",
+        "GPON Speed: Upstream 1.244Gbps, Downstream 2.488Gbps"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/solitine-sol1002-sp-epon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/solitine-sol1002-sp-epon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "solitine-sol1002-sp-epon-olt",
+        "candidateTitle": "Solitine SOL1002-SP 2 Port 10G EPON OLT",
+        "attemptStem": "solitine-sol1002-sp-epon-olt"
+      }
+    },
+    {
+      "name": "Solitine SOL1004-1G-DP 4 Port 1G EPON OLT",
+      "slug": "solitine-sol1004-1g-dp-1g-epon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-28393",
+      "description": "<h2 style=\"text-align: justify; \">Solitine SOL1004-1G-DP 4 Port 1G EPON OLT</h2><p style=\"text-align: justify; \">The Solitine SOL1004-1G-DP 4 Port 1G EPON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"_blank\">OLT</a> is a small very effective optical line termination (OLT) system that has a splitting ratio of 1:64 per PON port. It can provide high-speed internet connectivity to up to 256 optical network units (ONUs). Solitine SOL1004-1G-DP features 4 PON ports with SC/UPC connections and PX20++ SFP modules that are compliant with the EPON standard. Solitine SOL1004-1G-DP provide transmission distances of up to 20 kilometers. Along with two redundant power sources that can accept AC input ranging from 100 to 240. Solitine SOL1004-1G-DP also offers two Ethernet uplink ports with 1.25G SFP sockets. SNMP, Telnet, HTTPS, SSH login access management, Layer 2 features, IEEE802.12x, VLAN, Radious, Tacacs+, HTTPS, and SSH V2 are the management tools that the device provides. High performance broadband access networks can use it since it is reliable and inexpensive.</p><h2 style=\"text-align: justify; \">Buy Solitine SOL1004-1G-DP 4 Port 1G EPON OLT from the best Networking Shop in Bangladesh: Star Tech</h2><p style=\"text-align: justify; \">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/solitine-sol1004-1g-dp-1g-epon-olt\" target=\"_blank\">Solitine SOL1004-1G-DP 4 Port 1G EPON OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"_blank\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. The Solitine SOL1004-1G-DP 4 Port 1G EPON OLT comes with 2 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SOL1004-1G-DP</li><li>PON Port Quantity: 4</li><li>Interface Type: SC/UPC</li><li>PON Port Type: PX20++ SC/UPC</li><li>Management Port: 1 AUX, 1 Consele Ethernet, 2 Redundant</li></ul>",
+      "model": "SOL1004-1G-DP",
+      "warranty": "2 years warranty",
+      "basePrice": 46500.0,
+      "originalPrice": 49500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Solitine",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-28393",
+          "price": 46500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 44640.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "SOL1004-1G-DP",
+              "position": 0
+            },
+            {
+              "label": "PON Port Quantity",
+              "value": "4",
+              "position": 1
+            },
+            {
+              "label": "Interface Type",
+              "value": "SC/UPC",
+              "position": 2
+            },
+            {
+              "label": "PON Port Type",
+              "value": "PX20++ SC/UPC",
+              "position": 3
+            },
+            {
+              "label": "Management Port",
+              "value": "1 AUX, 1 Consele Ethernet, 2 Redundant",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/solitine-sol1004-1g-dp-1g-epon-olt",
+      "sourceProductCode": "28393",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SOL1004-1G-DP",
+        "PON Port Quantity: 4",
+        "Interface Type: SC/UPC",
+        "PON Port Type: PX20++ SC/UPC",
+        "Management Port: 1 AUX, 1 Consele Ethernet, 2 Redundant"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/solitine-sol1004-1g-dp-1g-epon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/solitine-sol1004-1g-dp-1g-epon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "solitine-sol1004-1g-dp-1g-epon-olt",
+        "candidateTitle": "Solitine SOL1004-1G-DP 4 Port 1G EPON OLT",
+        "attemptStem": "solitine-sol1004-1g-dp-1g-epon-olt"
+      }
+    },
+    {
+      "name": "Solitine SOL1004-DP 4 Port 10G EPON OLT",
+      "slug": "solitine-sol1004-dp-10g-epon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-28394",
+      "description": "<h2 style=\"text-align: justify; \">Solitine SOL1004-DP 4 Port 10G EPON OLT</h2>\n<p style=\"text-align: justify; \">The Solitine SOL1004-DP 4 Port 10G EPON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"_blank\">OLT </a>provides high-speed internet access for up to 256 Optical Network Units (ONUs) with a splitting ratio of 1:64 per PON port. Solitine SOL1004-DP OLT has 4 PON ports with SFP slots and SC/UPC connectors that support EPON standard and 10G speed. Solitine SOL1004-DP OLT has an AC power supply that supports input 100 to 240V. The Solitine OLT supports various features such as IEEE802.12x, VLAN, Radious, Tacacs+, HTTPS and SSH V2.0. Solitine SOL1004-DP EPON OLT also supports SNMP, Telnet, Https, SSH login access management for easy configuration and monitoring. The Solitine SOL1004-DP OLT is compatible with any brand EPON ONU, making it a flexible and reliable solution for broadband access networks.</p>\n<h2 style=\"text-align: justify; \">Buy Solitine SOL1004-DP 4 Port 10G EPON OLT from the best Networking Shop in Bangladesh: Star Tech</h2>\n<p style=\"text-align: justify; \">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/solitine-sol1004-dp-10g-epon-olt\" target=\"_blank\">Solitine SOL1004-DP 4 Port 10G EPON OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"_blank\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. The Solitine SOL1004-DP 4 Port 10G EPON OLT comes with 2 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SOL1004-DP</li><li>PON Port Quantity: 4</li><li>Interface Type: SC/UPC</li><li>PON Port Type: PX20++ SC/UPC</li><li>PON Port Max. Splitting Ratio: 1:64</li></ul>",
+      "model": "SOL1004-DP",
+      "warranty": "2 years warranty",
+      "basePrice": 47000.0,
+      "originalPrice": 49500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Solitine",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-28394",
+          "price": 47000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 45120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "SOL1004-DP",
+              "position": 0
+            },
+            {
+              "label": "PON Port Quantity",
+              "value": "4",
+              "position": 1
+            },
+            {
+              "label": "Interface Type",
+              "value": "SC/UPC",
+              "position": 2
+            },
+            {
+              "label": "PON Port Type",
+              "value": "PX20++ SC/UPC",
+              "position": 3
+            },
+            {
+              "label": "PON Port Max. Splitting Ratio",
+              "value": "1:64",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/solitine-sol1004-dp-10g-epon-olt",
+      "sourceProductCode": "28394",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SOL1004-DP",
+        "PON Port Quantity: 4",
+        "Interface Type: SC/UPC",
+        "PON Port Type: PX20++ SC/UPC",
+        "PON Port Max. Splitting Ratio: 1:64"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/solitine-sol1004-dp-10g-epon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/solitine-sol1004-dp-10g-epon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "solitine-sol1004-dp-10g-epon-olt",
+        "candidateTitle": "Solitine SOL1004-DP 4 Port 10G EPON OLT",
+        "attemptStem": "solitine-sol1004-dp-10g-epon-olt"
+      }
+    },
+    {
+      "name": "Solitine SOL1008-DP 8 Port 10G EPON OLT",
+      "slug": "solitine-sol1008-dp-10g-epon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-28398",
+      "description": "<h2 style=\"text-align: justify; \">Solitine SOL1008-DP 8 Port 10G EPON OLT</h2><p style=\"text-align: justify; \">The Solitine SOL1008-DP 8 Port 10G EPON <a href=\"https://www.startech.com.bd/olt\" target=\"_blank\">OLT </a>has 8 port. High-speed internet access for up to 256 Optical Network Units (ONUs) is provided by the Solitine SOL1008-DP 8 Port 10G EPON OLT, which has a splitting ratio of 1:64 per PON port. The Solitine SOL1008-DP OLT includes four PON ports with SC/UPC connectors, SFP slots, and support for the EPON standard and 10G speed. The AC power supply in the Solitine SOL1008-DP OLT accepts input voltages between 100 and 240V. Numerous features are supported by the Solitine OLT, including IEEE802.12x, VLAN, Radious, Tacacs+, HTTPS, and SSH V2.0. Additionally supporting SNMP, Telnet, HTTPS, and SSH login access management for simple configuration and monitoring is the Solitine SOL1008-DP 8 Port 10G EPON OLT. A versatile and dependable option for broadband access networks, the Solitine SOL1008-DP OLT is compatible with any brand of EPON ONU.</p><h2 style=\"text-align: justify; \">Buy Solitine SOL1008-DP 8 Port 10G EPON OLT from the best Networking Shop in Bangladesh: Star Tech</h2><p style=\"text-align: justify; \">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/solitine-sol1008-dp-10g-epon-olt\" target=\"_blank\">Solitine SOL1008-DP 8 Port 10G EPON OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" target=\"_blank\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. The Solitine <span style=\"text-align: start;\">SOL1008</span>-DP 8 Port 10G EPON OLT comes with 2 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SOL1008-DP</li><li>PON Port Quantity: 8</li><li>Interface Type: SC/UPC</li><li>PON Port Type: PX20++ SC/UPC</li><li>PON Port Max. Splitting Ratio: 1:64</li></ul>",
+      "model": "SOL1008-DP",
+      "warranty": "2 years warranty",
+      "basePrice": 78500.0,
+      "originalPrice": 79500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Solitine",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-28398",
+          "price": 78500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 75360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "SOL1008-DP",
+              "position": 0
+            },
+            {
+              "label": "PON Port Quantity",
+              "value": "8",
+              "position": 1
+            },
+            {
+              "label": "Interface Type",
+              "value": "SC/UPC",
+              "position": 2
+            },
+            {
+              "label": "PON Port Type",
+              "value": "PX20++ SC/UPC",
+              "position": 3
+            },
+            {
+              "label": "PON Port Max. Splitting Ratio",
+              "value": "1:64",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/solitine-sol1008-dp-10g-epon-olt",
+      "sourceProductCode": "28398",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SOL1008-DP",
+        "PON Port Quantity: 8",
+        "Interface Type: SC/UPC",
+        "PON Port Type: PX20++ SC/UPC",
+        "PON Port Max. Splitting Ratio: 1:64"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/solitine-sol1008-dp-10g-epon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/solitine-sol1008-dp-10g-epon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "solitine-sol1008-dp-10g-epon-olt",
+        "candidateTitle": "Solitine SOL1008-DP 8 Port 10G EPON OLT",
+        "attemptStem": "solitine-sol1008-dp-10g-epon-olt"
+      }
+    },
+    {
+      "name": "Solitine SOL2001-SP 1 Port 10G Layer 3 GPON OLT",
+      "slug": "solitine-sol2001-sp-1-port-10g-gpon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-41636",
+      "description": "<h2>Solitine SOL2001-SP 1 Port 10G Layer 3 GPON OLT</h2><p>The Solitine <strong>SOL2001-SP</strong> 1 Port 10G Layer 3 GPON OLT is a cutting-edge networking solution that demonstrates the power and versatility of a modern Solitine GPON OLT. This Solitine 1 Port GPON OLT, which has been expertly built for high-performance fiber-optic networks, is intended to handle a wide range of applications from triple-play services to enterprise-grade deployments while providing stable and reliable connectivity. With a dedicated GPON port and SC/UPC connectors, it efficiently manages downstream rates of up to 2.488Gbps and upstream speeds of 1.244Gbps, increasing fiber transmission distances up to 20 kilometers. In addition, the unit provides diverse uplink options through two GE RJ45 ports and an SFP slot that accepts both GE and 10G SFP+ modules, ensuring robust network scalability and future-proofing. In addition to its excellent optical performance, the Solitine SOL2001-SP GPON OLT incorporates powerful Layer 3 routing functionalities—such as NAT, dynamic and static ARP, DMZ, and QoS—to optimize IP traffic and improve network management capabilities. The SOL2001-SP 10G OLT, with its straightforward management via Telnet, CLI, Web, and SNMP interfaces, is excellent for ISPs and corporations looking for a compact, high-performance, and dependable solution for today's demanding digital infrastructure.</p><h2>Buy Solitine SOL2001-SP 1 Port 10G Layer 3 GPON OLT from the best Networking Shop in Bangladesh: Star Tech</h2><p>In Bangladesh, you can get original <strong>Solitine SOL2001-SP 1 Port 10G Layer 3 GPON OLT</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at lowest price. The Solitine SOL2001-SP 1 Port 10G Layer 3 GPON OLT comes with 2 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SOL2001-SP</li><li>PON Port : 1</li><li>GPON port speed : Upstream 1.244Gbps, Downstream 2.488Gbps</li><li>Transmission Distance: Up to 20KM</li><li>Connector: SC/UPC, Class C++, Class C+++</li></ul>",
+      "model": "SOL2001-SP",
+      "warranty": "2 years warranty",
+      "basePrice": 35000.0,
+      "originalPrice": 35500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Solitine",
+      "variantOptions": [
+        {
+          "name": "Connector",
+          "position": 0,
+          "values": [
+            {
+              "value": "SC/UPC, Class C++, Class C+++",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41636",
+          "price": 35000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Connector": "SC/UPC, Class C++, Class C+++"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 33600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "SOL2001-SP",
+              "position": 0
+            },
+            {
+              "label": "PON Port",
+              "value": "1",
+              "position": 1
+            },
+            {
+              "label": "GPON port speed",
+              "value": "Upstream 1.244Gbps, Downstream 2.488Gbps",
+              "position": 2
+            },
+            {
+              "label": "Transmission Distance",
+              "value": "Up to 20KM",
+              "position": 3
+            },
+            {
+              "label": "Connector",
+              "value": "SC/UPC, Class C++, Class C+++",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/solitine-sol2001-sp-1-port-10g-gpon-olt",
+      "sourceProductCode": "41636",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SOL2001-SP",
+        "PON Port : 1",
+        "GPON port speed : Upstream 1.244Gbps, Downstream 2.488Gbps",
+        "Transmission Distance: Up to 20KM",
+        "Connector: SC/UPC, Class C++, Class C+++"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/solitine-sol2001-sp-1-port-10g-gpon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/solitine-sol2001-sp-1-port-10g-gpon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "solitine-sol2001-sp-1-port-10g-gpon-olt",
+        "candidateTitle": "Solitine SOL2001-SP 1 Port 10G Layer 3 GPON OLT",
+        "attemptStem": "solitine-sol2001-sp-1-port-10g-gpon-olt"
+      }
+    },
+    {
+      "name": "Solitine SOL2004-GPON-DP 4 Port 10G GPON OLT",
+      "slug": "solitine-sol2004-gpon-dp-gpon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-28403",
+      "description": "<h2>Solitine SOL2004-GPON-DP 4 Port 10G GPON OLT</h2><p>The Solitine SOL2004-GPON-DP 4 Port 10G GPON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"_blank\">OLT </a>is an Optical Line Termination OLT device that provides high-speed internet access for up to 512 ONUs with a splitting ratio of 1:128 per PON port. Solitine SOL2004-GPON-DP GPON OLT supports various features such as IEEE802.12x, VLAN, Radius, Tacacs+, HTTPS and SSH V2.0. Solitine GPON OLT also supports SNMP, Telnet, HTTPS, SSH login access management for easy configuration and monitoring. The device also has a management port with AUX, Console and USB Type-A interfaces for additional functionality. The Solitine SOL2004-GPON-DP is a cost-effective and reliable solution for broadband access networks that require high performance and scalability. Solitine SOL2004-GPON-DP GPON OLT has 4 PON ports with SC/UPC connectors and Class C+/C++ SFP modules that support GPON standard and 10G speed. Solitine SOL2004-GPON-DP GPON OLT also has two Ethernet uplink ports with SFP(GE)/SFP+(10GE) slots and an AC power supply that supports input from 100 to 240V.</p><h2>Buy Solitine SOL2004-GPON-DP 4 Port 10G GPON OLT from the best Networking Shop in Bangladesh: Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/solitine-sol2004-gpon-dp-gpon-olt\" target=\"_blank\">Solitine SOL2004-GPON-DP 4 Port 10G GPON OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" style=\"\" target=\"_blank\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. The Solitine SOL2004-GPON-DP 4 Port 10G GPON OLT comes with 2 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SOL2004-GPON-DP</li><li>PON Port Quantity: 4</li><li>ON Port Interface Type: SC/UPC</li><li>PON Port Connector Type: Class C +/ C++, SC/UPC</li><li>Management Port: 1 AUX, 1 Console Ethernet, 1 USB Type A</li></ul>",
+      "model": "SOL2004-GPON-DP",
+      "warranty": "2 years warranty",
+      "basePrice": 93000.0,
+      "originalPrice": 94000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Solitine",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-28403",
+          "price": 93000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 89280.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "SOL2004-GPON-DP",
+              "position": 0
+            },
+            {
+              "label": "PON Port Quantity",
+              "value": "4",
+              "position": 1
+            },
+            {
+              "label": "ON Port Interface Type",
+              "value": "SC/UPC",
+              "position": 2
+            },
+            {
+              "label": "PON Port Connector Type",
+              "value": "Class C +/ C++, SC/UPC",
+              "position": 3
+            },
+            {
+              "label": "Management Port",
+              "value": "1 AUX, 1 Console Ethernet, 1 USB Type A",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/solitine-sol2004-gpon-dp-gpon-olt",
+      "sourceProductCode": "28403",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SOL2004-GPON-DP",
+        "PON Port Quantity: 4",
+        "ON Port Interface Type: SC/UPC",
+        "PON Port Connector Type: Class C +/ C++, SC/UPC",
+        "Management Port: 1 AUX, 1 Console Ethernet, 1 USB Type A"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/solitine-sol2004-gpon-dp-gpon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/solitine-sol2004-gpon-dp-gpon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "solitine-sol2004-gpon-dp-gpon-olt",
+        "candidateTitle": "Solitine SOL2004-GPON-DP 4 Port 10G GPON OLT",
+        "attemptStem": "solitine-sol2004-gpon-dp-gpon-olt"
+      }
+    },
+    {
+      "name": "Solitine SOL2008-GPON-DP 8 Port 10G GPON OLT",
+      "slug": "solitine-sol2008-gpon-dp-gpon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-28405",
+      "description": "<h2 style=\"\">Solitine SOL2008-GPON-DP 8 Port 10G GPON OLT</h2><p style=\"\">The Solitine SOL2008-GPON-DP 8 Port 10G GPON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"_blank\">OLT </a>provides high-speed internet access up to 1024 Optical Network Units (ONUs) with per PON port splitting ratio 1:128. It has eight PON ports with SC/UPC connectors and Class C+/C++ SFP modules that support GPON standard and 10G speed. Solitine SOL2008-GPON-DP GPON OLT also has four Ethernet uplink ports with COMBO interfaces that support SFP(GE) or SFP+(10GE) slots and an AC power supply that supports input from 100 to 240V. The Solitine SOL2008-GPON-DP GPON OLT supports various features such as Layer 3, IEEE802.12x, VLAN, Radius, Tacacs+, HTTPS and SSH V2.0. It also supports SNMP, Telnet, HTTPS, SSH login access management for easy configuration and monitoring. The Solitine SOL2008-GPON-DP OLT also has a management port with AUX, Console and USB Type-A interfaces for additional functionality. The Solitine SOL2008-GPON-DP is a cost-effective and reliable solution for broadband access networks that require high performance and scalability.</p><h2 style=\"\">Buy Solitine SOL2008-GPON-DP 8 Port 10G GPON OLT from the best Networking Shop in Bangladesh: Star Tech</h2><p style=\"\">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/solitine-sol2008-gpon-dp-gpon-olt\" target=\"_blank\">Solitine SOL2008-GPON-DP 8 Port 10G GPON OLT</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/olt\" style=\"\" target=\"_blank\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. The Solitine SOL2008-GPON-DP 8 Port 10G GPON OLT comes with 2 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SOL2008-GPON-DP</li><li>PON Port Quantity: 4</li><li>ON Port Interface Type: SC/UPC</li><li>PON Port Connector Type: Class C +/ C++, SC/UPC</li><li>Management Port: 1 AUX, 1 Console Ethernet, 1 USB Type A</li></ul>",
+      "model": "SOL2008-GPON-DP",
+      "warranty": "2 years warranty",
+      "basePrice": 136000.0,
+      "originalPrice": 138500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Solitine",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-28405",
+          "price": 136000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 130560.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "SOL2008-GPON-DP",
+              "position": 0
+            },
+            {
+              "label": "PON Port Quantity",
+              "value": "4",
+              "position": 1
+            },
+            {
+              "label": "ON Port Interface Type",
+              "value": "SC/UPC",
+              "position": 2
+            },
+            {
+              "label": "PON Port Connector Type",
+              "value": "Class C +/ C++, SC/UPC",
+              "position": 3
+            },
+            {
+              "label": "Management Port",
+              "value": "1 AUX, 1 Console Ethernet, 1 USB Type A",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/solitine-sol2008-gpon-dp-gpon-olt",
+      "sourceProductCode": "28405",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SOL2008-GPON-DP",
+        "PON Port Quantity: 4",
+        "ON Port Interface Type: SC/UPC",
+        "PON Port Connector Type: Class C +/ C++, SC/UPC",
+        "Management Port: 1 AUX, 1 Console Ethernet, 1 USB Type A"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/solitine-sol2008-gpon-dp-gpon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/solitine-sol2008-gpon-dp-gpon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "solitine-sol2008-gpon-dp-gpon-olt",
+        "candidateTitle": "Solitine SOL2008-GPON-DP 8 Port 10G GPON OLT",
+        "attemptStem": "solitine-sol2008-gpon-dp-gpon-olt"
+      }
+    },
+    {
+      "name": "Vsol V1600D8 8 Port EPON OLT",
+      "slug": "vsol-v1600d8-8-port-epon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-34291",
+      "description": "<h2>Vsol V1600D8 8 Port EPON OLT </h2><p>The V-SOL <strong>V1600D8</strong> 8 Port EPON <a href=\"https://www.startech.com.bd/olt\" style=\"color: rgb(0, 0, 0);\" target=\"\">OLT </a>is a solution that has been precisely built to provide exceptional performance and reliability in current networking situations. This network switch is designed to perform perfectly across a wide range of temperatures, from 0°C to +50°C, ensuring excellent operation even in demanding circumstances. Furthermore, its storage temperature range of -40°C to +85°C ensures durability and endurance, making it suited for use in a wide range of scenarios. The V1600D8 shines with a low power consumption of 45W, guaranteeing energy savings while maintaining performance. Its versatile power supply choices, including AC:100~240V, 47/63Hz, and DC:-48V, along with the availability of a BBU (Battery Backup Unit) for D4-BT and double power module hot backup, offer redundant power. With a net weight of 4.5kg (in single AC power mode), this network switch achieves the ideal mix between robustness and manageability. Its lightweight design allows for simple installation and maintenance, while its strong construction provides long-term performance in demanding network settings. With superior PON (Passive Optical Network) port requirements, the V1600D8 has outstanding transmission capabilities, including a transmission distance of up to 20KM. This switch provides high-speed and dependable connection for a wide range of networking applications, thanks to EPON (Ethernet Passive Optical Network) port speeds of 1.25G upstream and downstream, as well as SC/UPC connectors. It supports 9/125μm Single-Mode Fiber (SMF) for interoperability with common fiber optic cable infrastructure. The TX/RX wavelengths of 1490nm and 1310nm enable excellent signal transmission and reception. Furthermore, the switch's RX sensitivity of &lt; -32dBm and saturating optical power of -8dBm add to its remarkable performance and stability. Whether you're constructing network infrastructure for telecoms carriers, internet service providers, corporations, or small companies, the V-SOL V1600D8 8 Port EPON OLT Network Switch exemplifies networking technology innovation, efficiency, and dependability.</p><h2>Buy Vsol V1600D8 8 Port EPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <strong>Vsol V1600D8 8 Port EPON OLT</strong> From Star Tech. We have a large collection of latest Vsol <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Vsol V1600D8 8 Port EPON OLT  comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: V1600D8</li><li>10G EPON Ports: 8 Ports</li><li>Port Speed: 1.25G</li><li>Transmission Distance: 20KM</li><li>Supports 9/125μm Single-Mode Fiber</li></ul>",
+      "model": "V1600D8",
+      "warranty": "1-year warranty",
+      "basePrice": 84000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "VSOL",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34291",
+          "price": 84000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 80640.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "V1600D8",
+              "position": 0
+            },
+            {
+              "label": "10G EPON Ports",
+              "value": "8 Ports",
+              "position": 1
+            },
+            {
+              "label": "Port Speed",
+              "value": "1.25G",
+              "position": 2
+            },
+            {
+              "label": "Transmission Distance",
+              "value": "20KM",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vsol-v1600d8-8-port-epon-olt",
+      "sourceProductCode": "34291",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: V1600D8",
+        "10G EPON Ports: 8 Ports",
+        "Port Speed: 1.25G",
+        "Transmission Distance: 20KM",
+        "Supports 9/125μm Single-Mode Fiber"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/vsol-v1600d8-8-port-epon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/vsol-v1600d8-8-port-epon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vsol-v1600d8-8-port-epon-olt",
+        "candidateTitle": "Vsol V1600D8 8 Port EPON OLT",
+        "attemptStem": "vsol-v1600d8-8-port-epon-olt"
+      }
+    },
+    {
+      "name": "Vsol V1600G0-B 4 Port GPON OLT",
+      "slug": "vsol-v1600g0-b-4-port-gpon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-33979",
+      "description": "<h2>Vsol V1600G0-B 4 Port GPON OLT</h2><p>The Vsol <strong>V1600G0-B</strong> is a high-performance 4-port GPON OLT (Gigabit Passive Optical Network Optical Line Terminal) that provides effective communication in network situations. With two RJ45 (GE) and two SFP+ (10GE) GE/10GE uplink ports, this Vsol V1600G0-B 4 Port GPON OLT provides adaptable connectivity options for a range of network configurations. The efficient distribution of high-speed internet services to many users is made possible by the Vsol V1600G0-B 4 Port GPON OLT, which has 4 GPON ports with SFP slots and supports a maximum splitting ratio of &lt; 1:128. For console management (G2-B model), the VSOL OLT has management ports such as one FE out-band port, one CONSOLE port, one USB 2.0 port, and one Type-C USB port. PON port specifications, which guarantee dependable and fast data transmission, include a transmission distance of 20 km, an upstream speed of 1.244Gbps, and a downstream speed of 2.488Gbps. Using TX 1490nm and RX 1310nm wavelengths with SC/UPC connections and 9/125μm SMF fiber type, the Vsol V1600G0-B 4 Port GPON OLT offers Class B+, C, C+, C++, and C+++ PON module levels. The OLT has two power modules that are hot backup for increased reliability. It supports both DC (-48V) and AC (100~240V, 47/63Hz) power supplies. It operates energy-efficiently with a 35W power usage. Flexible and convenient management options are offered by EMS, WEB, SNMP, Telnet, and CLI, among other means of management. </p><h2>Buy Vsol V1600G0-B 4 Port GPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <strong>Vsol V1600G0-B 4 Port GPON OLT</strong> From Star Tech. We have a large collection of latest Vsol <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Vsol V1600G0-B 4 Port GPON OLT comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: V1600G0-B</li><li>10GE Uplink Ports: 4 Ports</li><li>GPON port speed: Upstream 1.244Gbps, Downstream 2.488Gbps</li><li>Transmission Distance: 20KM</li><li>PON Module Level: Class B+, C, C+, C++, C+++</li></ul>",
+      "model": "V1600G0-B",
+      "warranty": "1-year warranty",
+      "basePrice": 127000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "VSOL",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-33979",
+          "price": 127000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 121920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "V1600G0-B",
+              "position": 0
+            },
+            {
+              "label": "10GE Uplink Ports",
+              "value": "4 Ports",
+              "position": 1
+            },
+            {
+              "label": "GPON port speed",
+              "value": "Upstream 1.244Gbps, Downstream 2.488Gbps",
+              "position": 2
+            },
+            {
+              "label": "Transmission Distance",
+              "value": "20KM",
+              "position": 3
+            },
+            {
+              "label": "PON Module Level",
+              "value": "Class B+, C, C+, C++, C+++",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vsol-v1600g0-b-4-port-gpon-olt",
+      "sourceProductCode": "33979",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: V1600G0-B",
+        "10GE Uplink Ports: 4 Ports",
+        "GPON port speed: Upstream 1.244Gbps, Downstream 2.488Gbps",
+        "Transmission Distance: 20KM",
+        "PON Module Level: Class B+, C, C+, C++, C+++"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/vsol-v1600g0-b-4-port-gpon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/vsol-v1600g0-b-4-port-gpon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vsol-v1600g0-b-4-port-gpon-olt",
+        "candidateTitle": "Vsol V1600G0-B 4 Port GPON OLT",
+        "attemptStem": "vsol-v1600g0-b-4-port-gpon-olt"
+      }
+    },
+    {
+      "name": "Vsol V3600D8 8 Port 10G EPON OLT",
+      "slug": "vsol-v3600d8-8-port-epon-olt",
+      "type": "PHYSICAL",
+      "sku": "ST-33978",
+      "description": "<h2>Vsol V3600D8 8 Port 10G EPON OLT</h2><p>The Vsol <strong>V3600D8</strong> is an advanced 8-port 10G EPON OLT (Optical Line Terminal) designed for high-performance <a href=\"https://www.startech.com.bd/networking\" style=\"color: rgb(0, 0, 0);\" target=\"\">networking </a>applications. Having a strong 880 Gbps backplane bandwidth and a 523.776 Mpps port forwarding rate, this OLT guarantees smooth data transfer and effective network administration. The Vsol V3600D8 8 Port 10G EPON OLT, which is housed in a small 1U 19-inch standard rack, provides configurable uplink configurations with two GE (RJ45) connections, two 1/10GE (SFP+) ports, two 10/25GE (SFP28) ports, and two 40/50/100GE (QSFP28) ports providing a variety of connectivity options. With eight 10G EPON ports with SFP+ slots, the Vsol V3600D8 8 Port 10G EPON OLT may handle a maximum splitting ratio of 1:256. One 10/100/1000BASE-T out-band port, one CONSOLE port, one Micro SD slot, one Type-C port, one USB 3.0 port, and one Micro SD slot are additional interfaces that improve connectivity and management possibilities. For network installations, the Vsol V3600D8 8 Port 10G EPON OLT provides a small and light solution, measuring 442 x 369 x 46.6 mm and weighing 3.9 kg net. Ensuring energy efficiency, the OLT may be powered by both DC (-48V) and AC (100~240V, 50/60Hz, 200W) power supply. Its power usage is ≤145W. It is appropriate for a variety of climatic circumstances since it can operate in a wide temperature range of 0°C to +50°C, with a storage temperature of -40°C to +85°C and a relative humidity range of 5% to 90% (non-condensing). </p><h2>Buy Vsol V3600D8 8 Port 10G EPON OLT from Star Tech</h2><p>In Bangladesh, you can get original <strong>Vsol V3600D8 8 Port 10G EPON OLT</strong> From Star Tech. We have a large collection of latest Vsol <a href=\"https://www.startech.com.bd/olt\" target=\"\">OLT </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Vsol V3600D8 8 Port 10G EPON OLT comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: V3600D8</li><li>10G EPON Ports: 8 Ports</li><li>Backplane Bandwidth: 880 Gbps</li><li>Port Forwarding Rate: 523.776 Mpps</li><li>Rack Mount: 1U 19-inch standard box</li></ul>",
+      "model": "V3600D8",
+      "warranty": "1-year warranty",
+      "basePrice": 84500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 442.0,
+        "width": 369.0,
+        "height": 46.6,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "VSOL",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-33978",
+          "price": 84500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 81120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "V3600D8",
+              "position": 0
+            },
+            {
+              "label": "10G EPON Ports",
+              "value": "8 Ports",
+              "position": 1
+            },
+            {
+              "label": "Backplane Bandwidth",
+              "value": "880 Gbps",
+              "position": 2
+            },
+            {
+              "label": "Port Forwarding Rate",
+              "value": "523.776 Mpps",
+              "position": 3
+            },
+            {
+              "label": "Rack Mount",
+              "value": "1U 19-inch standard box",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vsol-v3600d8-8-port-epon-olt",
+      "sourceProductCode": "33978",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: V3600D8",
+        "10G EPON Ports: 8 Ports",
+        "Backplane Bandwidth: 880 Gbps",
+        "Port Forwarding Rate: 523.776 Mpps",
+        "Rack Mount: 1U 19-inch standard box"
+      ],
+      "needsReview": false,
+      "categorySlug": "olt",
+      "image": "/images/products/networking/olt/vsol-v3600d8-8-port-epon-olt.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/olt/vsol-v3600d8-8-port-epon-olt.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vsol-v3600d8-8-port-epon-olt",
+        "candidateTitle": "Vsol V3600D8 8 Port 10G EPON OLT",
+        "attemptStem": "vsol-v3600d8-8-port-epon-olt"
+      }
+    }
+  ]
+}

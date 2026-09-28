@@ -1,0 +1,996 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/gaming",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\gaming",
+    "generatedAtUnix": 1790588490,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Gaming",
+      "slug": "gaming",
+      "parentSlug": null,
+      "image": "/images/products/gaming/games/007-first-light-for-ps5.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Racing Wheel",
+      "slug": "racing-wheel",
+      "parentSlug": "gaming",
+      "image": "/images/products/gaming/racing-wheel/logitech-driving-force-g29.png",
+      "isActive": true,
+      "sortOrder": 9,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Logitech",
+      "slug": "logitech",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    },
+    {
+      "name": "PXN",
+      "slug": "pxn",
+      "logo": null
+    },
+    {
+      "name": "Thrustmaster",
+      "slug": "thrustmaster",
+      "logo": null
+    },
+    {
+      "name": "Xtrike Me",
+      "slug": "xtrike-me",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Logitech Driving Force G29 Racing Gaming Wheel for PlayStation and PC",
+      "slug": "logitech-driving-force-g29",
+      "type": "PHYSICAL",
+      "sku": "ST-6674",
+      "description": "<h2>Logitech Driving Force G29 Racing Gaming Wheel for PlayStation and PC</h2><span style=\"font-weight: bold;\"><div style=\"text-align: justify;\">FOR PLAYSTATION 3 AND PLAYSTATION 4</div></span><div style=\"text-align: justify; \">Enhance your console experience</div><div style=\"text-align: justify; \">You will never want to race with a regular controller again after you add Driving Force to your controller selection.</div><div style=\"text-align: justify; \">G29 game steering wheel is designed for the latest racing games for your PlayStation 4 or PlayStationÂ®3 console. G29 Driving Force also works on your PC using Logitech Gaming Software.</div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\">DUAL-MOTOR FORCE FEEDBACK</span></div><div style=\"text-align: justify; \">Feel every weight shift, and tire slip</div><div style=\"text-align: justify; \">Feel your tires on every turn and type of terrain, sense under- or over-steer drifting, and more. Powerful dual-motor force feedback realistically simulates force effects so you can respond with precision.</div><div style=\"text-align: justify; \">QUALITY CONSTRUCTION</div><div style=\"text-align: justify; \">Race-ready materials that can handle it all</div><div style=\"text-align: justify; \">Driving Force handles the stress of racing action and is built for long-lasting reliability. G29 has solid steel ball bearings in the wheel shaft and stainless steel paddle shifters and pedals. The race wheel is covered in high-quality, hand-stitched leather, giving it the look and feel of a high-performance racecar wheel and giving you a more comfortable, durable experience.</div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\">HELICAL GEARING WITH ANTI-BACKLASH</span></div><div style=\"text-align: justify; \">Tight, smooth, precise control</div><div style=\"text-align: justify; \">You get an exceptionally smooth, quiet steering action. Helical gears are modeled after gears used in automotive transmissions to reduce unwanted noise and vibration. Anti-backlash keeps the wheel and pedals tight, maximizing your control. G29 Driving Force Racing Wheel features a long-lasting, reliable hall-effect steering sensor, using magnetic fields to sense the position of the wheel.</div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\"><br/></span></div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\">EASY-ACCESS GAME CONTROLS</span></div><div style=\"text-align: justify; \">Control right at your fingertips</div><div style=\"text-align: justify; \">All your controls are where you can reach them. The D-Pad, buttons, and paddle shifters are incorporated into the racing wheel. LED indicator lights positioned just above the center of the wheel tell you exactly when to up or down-shift. You maintain maximum acceleration without taking your eyes off the track. A 24-point selection dial and the +/- buttons on the front of the wheel let you further fine-tune your driving preferences.</div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\"><br/></span></div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\">RESPONSIVE FLOOR PEDAL UNIT</span></div><div style=\"text-align: justify; \">Adjustable for maximum control</div><div style=\"text-align: justify; \">Maintain a more realistic driving body position with the separate floor pedal unit with integrated throttle, brake, and clutch pedals. G29 Driving Force lets you comfortably accelerate, brake and change gears with the feel of an actual car.</div><div style=\"text-align: justify; \">The nonlinear brake pedal mimics the performance of a pressure-sensitive brake system for a more responsive, accurate braking feel. For even finer control, reposition the pedal faces to make heel-toe maneuvers easier to perform.</div><div style=\"text-align: justify; \">Rubber feet for hard surfaces and a patented retractable carpet grip system help your pedals stay right where you put them.</div><div style=\"text-align: justify; \"><br/></div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\">MOUNTS SECURELY</span></div><div style=\"text-align: justify; \">Performance that stays where you want it</div><div style=\"text-align: justify; \">Drive fearlessly knowing the wheel wonâ€™t shift during aggressive maneuvers. The racing wheel mounts securely to your table or racing rig via built-in clamps or screw mounting points.</div><div style=\"text-align: justify; \">Take your racing to the next level with a PlayseatÂ® racing simulation cockpit.</div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\"><br/></span></div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\">900Â° STEERING</span></div><div style=\"text-align: justify; \">For realistic turns on the track</div><div style=\"text-align: justify; \">The 900-degree lock-to-lock rotation of the G29 Driving Force means you can turn the wheel two and a half times. Itâ€™s the same degree of motion as a steering wheel inside a car.</div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\"><br/></span></div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\">WORKS WITH DRIVING FORCE SHIFTER ATTACHMENT</span></div><div style=\"text-align: justify; \">Pinpoint gear selection</div><div style=\"text-align: justify; \">Complete your racing rig for the most realistic experience. Add the 6-speed manual Driving Force shifter to your racing wheel setup.</div><div style=\"text-align: justify; \"><br/></div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\">GAME COMPATIBILITY </span></div><div style=\"text-align: justify; \">To ensure compatibility, we work closely with game developers to ensure compatibility with our wheels. To see a list of tested games.</div><div style=\"text-align: justify; \"><br/></div><div><div style='font-family: \"Segoe UI\", system-ui, \"Apple Color Emoji\", \"Segoe UI Emoji\", sans-serif; font-size: 14px;'><div style=\"text-align: justify; \"><span style='font-family: \"Open Sans\", sans-serif; font-size: 12px; font-weight: 700;'>IN THE BOX</span><br/></div><div style=\"text-align: justify; \">Steering wheel, Pedals, Power adapter, User documentation</div></div></div><div style=\"text-align: justify; \"><br/></div><div style=\"text-align: justify; \">Warranty - 2 Years</div><div style=\"text-align: justify; \"><br/></div><div style=\"text-align: justify; \"><br/></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: G29</li><li>FOR PLAYSTATION 3/4 / PC</li><li>DUAL-MOTOR FORCE FEEDBACK</li><li>HELICAL GEARING ANTI-BACKLASH</li><li>EASY-ACCESS GAME CONTROLS</li></ul>",
+      "model": "G29",
+      "warranty": null,
+      "basePrice": 38000.0,
+      "originalPrice": 41200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Logitech",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-6674",
+          "price": 38000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 36480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "G29",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/logitech-driving-force-g29",
+      "sourceProductCode": "6674",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: G29",
+        "FOR PLAYSTATION 3/4 / PC",
+        "DUAL-MOTOR FORCE FEEDBACK",
+        "HELICAL GEARING ANTI-BACKLASH",
+        "EASY-ACCESS GAME CONTROLS"
+      ],
+      "needsReview": false,
+      "categorySlug": "racing-wheel",
+      "image": "/images/products/gaming/racing-wheel/logitech-driving-force-g29.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/racing-wheel/logitech-driving-force-g29.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "logitech-driving-force-g29",
+        "candidateTitle": "Logitech Driving Force G29 Racing Gaming Wheel for PlayStation and PC",
+        "attemptStem": "logitech-driving-force-g29"
+      }
+    },
+    {
+      "name": "Logitech Driving Force Shifter",
+      "slug": "logitech-driving-force-shifter",
+      "type": "PHYSICAL",
+      "sku": "941-000132",
+      "description": "<div><span style=\"font-weight: bold;\">Designed for G29, G920 &amp; </span><span style=\"font-size: 12px; font-weight: 700;\">G923</span><span style=\"font-weight: bold;\"> Driving Force Wheels</span></div><div><ul><li>Lock in the right gear at the right time.<br/></li><li>Driving Force Shifter is designed for both G29 and G920 Driving Force racing wheels, to enhance the latest PC and console racing titles. Add a Driving Force Shifter to your racing wheel setup to complete your racing rig for a more realistic experience<br/></li></ul></div><div><span style=\"font-weight: bold;\">System Requirements  </span></div><div>Logitech G29, G920 &amp; G923 Driving Force Racing Wheel Games that support Logitech Driving Force Shifter, Windows 8.1, Windows 8, or Windows 7</div><div><span style=\"font-weight: bold;\">Package Contents    </span>       </div><div>Shifter, User documentation</div><div><span style=\"font-weight: bold;\">Technical specifications    </span>          </div><div>Designed to work with G29/G920/G923 Driving Force Racing Wheels, Mounts securely to a racing rig, Six speeds with push-down reverse gear, and Steel and leather components for comfort and durability</div><div><span style=\"font-weight: bold;\">Physical Specifications </span></div><div><ul><li>Depth 146.4 mm (5.76 in)<br/></li><li>Height: 206.5 mm (8.13 in)<br/></li><li>Weight with cable: 0.76 kg (1.66 lb)<br/></li><li>Weight without cable: 0.72 kg (1.59 lb)<br/></li><li>Width: 176.4 mm (6.94 in)</li><li><span style=\"font-weight: bold;\">2 Years of Warranty</span></li></ul></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 941-000132</li><li>Model: Logitech Driving Force Shifter</li><li>Designed to Work with G923, G29 and G920 Racing Wheels</li><li>Six Speeds with Push-Down Reverse Gear</li><li>Steel and Leather Components for Comfort and Durability</li><li>Mounts Securely to a Racing Rig</li></ul>",
+      "model": "Logitech Driving Force Shifter",
+      "warranty": null,
+      "basePrice": 7000.0,
+      "originalPrice": 7490.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Logitech",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "941-000132",
+          "price": 7000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 6720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "941-000132",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Logitech Driving Force Shifter",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/logitech-driving-force-shifter",
+      "sourceProductCode": "7909",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "941-000132",
+      "sourceKeyFeatures": [
+        "MPN: 941-000132",
+        "Model: Logitech Driving Force Shifter",
+        "Designed to Work with G923, G29 and G920 Racing Wheels",
+        "Six Speeds with Push-Down Reverse Gear",
+        "Steel and Leather Components for Comfort and Durability",
+        "Mounts Securely to a Racing Rig"
+      ],
+      "needsReview": false,
+      "categorySlug": "racing-wheel",
+      "image": "/images/products/gaming/racing-wheel/logitech-driving-force-shifter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/racing-wheel/logitech-driving-force-shifter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "logitech-driving-force-shifter",
+        "candidateTitle": "Logitech Driving Force Shifter",
+        "attemptStem": "logitech-driving-force-shifter"
+      }
+    },
+    {
+      "name": "Logitech G923 TRUEFORCE Gaming Racing Wheel for PlayStation and PC",
+      "slug": "logitech-g923-trueforce-gaming-racing-wheel",
+      "type": "PHYSICAL",
+      "sku": "941-000163",
+      "description": "<h2>Logitech G923 TRUEFORCE Gaming Racing Wheel for PlayStation and PC</h2><p>The Logitech G923 Gaming Racing Wheel has TRUEFORCE force feedback technology, which syncs with game engines and physics to provide tangible realism. Similarly, for exact torque, the close-loop motor control matches voltage to in-game physics output. A 24-point selection dial is used to adjust the torque, traction, and brake force. The steering wheel's integrated console controls enable controller-like commands without leaving the driver's seat. Use the dual-clutch launch assist to get off to a speedier start. The G923 simulates the feel of a pressure-sensitive brake system thanks to a progressive brake pedal. The pedal faces can also be repositioned for authentic heel-toe driving. When used with approved games, a steering-wheel-mounted rev indicator with colored LEDs displays RPM range. Using the G Hub program, you may change your settings and create custom profiles for games. Add to the realism with the optional Logitech G Driving Force Shifter. The Logitech G G923 TRUEFORCE Sim Racing Wheel and Pedals are PC, PS4, and PS5 compatible.</p><h3>TRUEFORCE Feedback Technology</h3><p>The Logitech G923 integrates force feedback technology, which communicates directly with in-game simulation engines and physics to create higher-quality, real-time answers. In addition, the feedback frequency range has been expanded for significantly greater detail and realism as compared to earlier generations.</p><h3>Closed-Loop Motor Control</h3><p>The advanced programming in the G923 monitors all current going through the wheel motors, continuously altering voltage to match game physics outputs. G923 gives pinpoint precision and unmatched realism by going beyond normal settings.</p><h3>On-Wheel Game Controls and 24-Point Selection Dial</h3><p>The steering wheel incorporates full console controls. Every command is directly at hand, regardless of how you race. An integrated dial control allows you to regulate traction, torque, and brake force.</p><h3>Progressive Brake Pedal</h3><p>The Logitech G923 TRUEFORCE Gaming Racing Wheel has a progressive spring that mimics the performance of a pressure-sensitive brake system for a realistic racing experience. Reposition the pedal faces for heel-toe motions and even more control.</p><h3>Built-In Rev Indicator</h3><p>The Logitech G923 has built-in colorful LEDs that display your RPM range in supported games. See when you're redlining, right in front of your eyes.</p><h3>6-speed “H” Pattern Shifter</h3><p>The Logitech G923 provides the realism of a specialized shifter to elevate the racing simulation experience. The Driving Force Shifter from Logitech G is a driving partner you won't soon forget, with a short-throw sensation and a 6-speed \"H\" pattern shifter with push-down reverse.</p><h2>Buy Logitech G923 TRUEFORCE Gaming Racing Wheel from the best Gaming Shop in BD</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/logitech-g923-trueforce-gaming-racing-wheel\" target=\"\">Logitech G923 TRUEFORCE Gaming Racing Wheel</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/gaming/game-pad/logitech-gamepad\" target=\"\">Logitech Gaming</a> Racing Wheel to purchase for your <a href=\"https://www.startech.com.bd/desktops/gaming-pc\" target=\"\">Gaming Desktop PC</a> or <a href=\"https://www.startech.com.bd/play-station\" target=\"\">PlayStation</a>. Order Online Or Visit your Nearest<a href=\"https://www.startech.com.bd/\" target=\"\"> Star Tech </a>Shop to get yours at lowest price. The Logitech G923 TRUEFORCE Gaming Racing Wheel comes with 2 Years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 941-000163</li><li>Model: G923</li><li>Racing Wheel with Pedals and Integrated Console Controls</li><li>TRUEFORCE Force Feedback Technology</li><li>Adjustable Traction, Torque &amp; Brakes</li><li>Compatible with PC, PS4 &amp; PS5</li></ul>",
+      "model": "G923",
+      "warranty": "2 Years warranty",
+      "basePrice": 46000.0,
+      "originalPrice": 49900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Logitech",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "941-000163",
+          "price": 46000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 44160.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "941-000163",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "G923",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/logitech-g923-trueforce-gaming-racing-wheel",
+      "sourceProductCode": "26042",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "941-000163",
+      "sourceKeyFeatures": [
+        "MPN: 941-000163",
+        "Model: G923",
+        "Racing Wheel with Pedals and Integrated Console Controls",
+        "TRUEFORCE Force Feedback Technology",
+        "Adjustable Traction, Torque & Brakes",
+        "Compatible with PC, PS4 & PS5"
+      ],
+      "needsReview": false,
+      "categorySlug": "racing-wheel",
+      "image": "/images/products/gaming/racing-wheel/logitech-g923-trueforce-gaming-racing-wheel.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/racing-wheel/logitech-g923-trueforce-gaming-racing-wheel.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "logitech-g923-trueforce-gaming-racing-wheel",
+        "candidateTitle": "Logitech G923 TRUEFORCE Gaming Racing Wheel for PlayStation and PC",
+        "attemptStem": "logitech-g923-trueforce-gaming-racing-wheel"
+      }
+    },
+    {
+      "name": "MOZA R5 Bundle Racing Wheel Combo",
+      "slug": "moza-r5-bundle-racing-wheel-combo",
+      "type": "PHYSICAL",
+      "sku": "ST-47413",
+      "description": "<h2>MOZA R5 Bundle Racing Wheel Combo</h2><p>The MOZA<strong> R5 Bundle Racing Wheel</strong> Combo is a complete and performance-focused sim racing solution built for drivers who want realistic force feedback, precise control, and a professional racing feel. As a premium MOZA Racing Wheel bundle, it includes the powerful R5 direct drive wheel base, a responsive MOZA steering wheel, and a high-quality pedal set, delivering an immersive driving experience right out of the box. The direct drive technology in the MOZA R5 Wheel Base provides detailed and consistent force feedback, accurately conveying road texture, curb impacts, tire grip, and vehicle dynamics for enhanced realism in every race. Designed for smooth and responsive handling, the MOZA R5 Racing Wheel offers low-latency performance and customizable feedback settings to suit different racing styles and simulator titles. The ergonomic wheel layout ensures comfortable control during long sessions, while the included pedals deliver realistic throttle and braking response for improved lap times and driving precision. Compatible with popular PC racing simulators, the MOZA R5 Bundle Racing Wheel Combo is an ideal choice for sim racers upgrading from entry-level setups who want a reliable, immersive, and high-performance MOZA Sim Racing Wheel system that balances realism, durability, and value.</p><h2>Buy MOZA R5 Bundle Racing Wheel Combo from the best Gaming Shop in BD: Star Tech</h2><p>In Bangladesh, you can get original <strong>MOZA R5 Bundle Racing Wheel Combo</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/game-pad\">Gamepad</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops/gaming-pc\">Gaming Desktop PC</a> or <a href=\"https://www.startech.com.bd/play-station\">PlayStation</a>. Order Online Or Visit your Nearest<a href=\"https://www.startech.com.bd/\"> Star Tech </a>Shop to get yours at lowest price. The Thrustmaster T300RS Force Feedback GT Racing Wheel comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: R5</li><li>Direct Drive, 2700° Steering Angle</li><li>5.5Nm Peak Torque, App Support</li><li>22 Button Steering Wheel, Hall Sensor Pedals</li><li>Compatible with PC, Desk Clamp</li></ul>",
+      "model": "R5",
+      "warranty": "no warranty",
+      "basePrice": 57500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47413",
+          "price": 57500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 55200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "R5",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/moza-r5-bundle-racing-wheel-combo",
+      "sourceProductCode": "47413",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: R5",
+        "Direct Drive, 2700° Steering Angle",
+        "5.5Nm Peak Torque, App Support",
+        "22 Button Steering Wheel, Hall Sensor Pedals",
+        "Compatible with PC, Desk Clamp"
+      ],
+      "needsReview": false,
+      "categorySlug": "racing-wheel",
+      "image": "/images/products/gaming/racing-wheel/moza-r5-bundle-racing-wheel-combo.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/racing-wheel/moza-r5-bundle-racing-wheel-combo.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "moza-r5-bundle-racing-wheel-combo",
+        "candidateTitle": "MOZA R5 Bundle Racing Wheel Combo",
+        "attemptStem": "moza-r5-bundle-racing-wheel-combo"
+      }
+    },
+    {
+      "name": "PXN V10 Ultra Gaming Racing Wheel With Pedal",
+      "slug": "pxn-v10-ultra-gaming-racing-wheel",
+      "type": "PHYSICAL",
+      "sku": "ST-51103",
+      "description": "<h2>PXN V10 Ultra Gaming Racing Wheel With Pedal</h2><p>The PXN <strong>V10 Ultra</strong> Gaming Racing Wheel With Pedal delivers realistic sim racing experience for both beginners and experienced drivers. This Racing Wheel features a dual-motor direct-drive force feedback system generating up to 3.2Nm of torque for authentic road feel. A 270mm microfiber leather steering wheel, adjustable magnetic pedals, and a 6-speed H-pattern shifter with reverse gear complete the full bundle. The PXN V10 Ultra Gaming Wheel suits PC, PS4, Xbox One, and Xbox Series X/S for broad platform versatility. Built from aluminum alloy and leather materials, the full bundle weighs approximately 10 kilograms for a sturdy, race-ready setup. This PXN Racing Wheel With Pedal suits dorm rooms, study spaces, and living room gaming setups.</p><h3>3.2Nm Dual-Motor Direct-Drive Force Feedback System</h3><p>The PXN V10 Ultra Gaming Racing Wheel uses a servo motor direct-drive system for authentic, high-fidelity force feedback. Dual-motor technology generates up to 3.2Nm of torque for realistic resistance during cornering, braking, and acceleration. This direct-drive configuration eliminates gear-driven lag, delivering faster and more precise feedback to the driver's hands. Nuanced road texture, surface changes, and collision impacts all transmit directly through the wheel in real time. This level of feedback quality rivals sim racing setups costing significantly more than the PXN V10 Ultra. Both newcomers exploring sim racing and seasoned drivers seeking realism benefit equally from this force feedback system.</p><h3>270mm Leather Steering Wheel</h3><p>The PXN V10 Ultra Gaming Wheel features an 11-inch 270mm detachable steering wheel rim for comfortable, natural control. Microfiber leather wrapping delivers a premium grip texture that reduces hand fatigue during long racing sessions., responsive gear changes without releasing the wheel. The detachable rim design supports optional accessories including the W V10F Formula Wheel Mod for a more specialized racing experience. This Formula Wheel Mod suits the V10 Pro and Ultra native base with quick-release compatibility. The leather grip and solid wheel construction give the <strong>PXN V10 Ultra</strong> Racing Wheel a premium, realistic feel.</p><h3>Adjustable Magnetic Pedals with Full Three-Pedal Control</h3><p>The PXN V10 Ultra Gaming Racing Wheel With Pedal includes a full three-pedal set for manual driving control. Pedals cover clutch, brake, and accelerator inputs for authentic manual transmission simulation during gameplay. Magnetic pedal technology replaces traditional potentiometers for more precise, consistent, and durable input detection. Adjustable positioning allows drivers to customize pedal placement to match their natural driving stance comfortably. Precise brake modulation improves lap consistency and gives drivers finer control over deceleration in challenging corners. The magnetic sensors eliminate wear-related input drift that commonly affects conventional pedal sets over time. This PXN V10 Ultra Gaming Wheel pedal set suits competitive sim racing titles requiring precise footwork and braking control.</p><h2>Buy PXN V10 Ultra Gaming Racing Wheel from Star Tech</h2><p>In Bangladesh, you can get original <strong>PXN V10 Ultra Gaming Racing Wheel</strong> From Star Tech. We have a large collection of latest PXN <a href=\"https://www.startech.com.bd/racing-wheel\" target=\"\">Racing Wheel</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops/gaming-pc\" style=\"\" target=\"\">Gaming Desktop PC</a> or <a href=\"https://www.startech.com.bd/play-station\" target=\"\">PlayStation</a>. Order Online Or Visit your Nearest<a href=\"https://www.startech.com.bd/\" target=\"\"> Star Tech </a>Shop to get yours at lowest price. The PXN V10 Ultra Gaming Racing Wheel comes with 6 Month Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: V10 Ultra</li><li>Dual-motor direct drive system with 3.2Nm torque</li><li>280mm leather-grip steering wheel</li><li>Adjustable magnetic pedals for precise input</li><li>Compatible with PC, PS4, Xbox</li></ul>",
+      "model": "V10 Ultra",
+      "warranty": "6 Month Service Warranty",
+      "basePrice": 38700.0,
+      "originalPrice": 42000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "PXN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-51103",
+          "price": 38700.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 37152.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "V10 Ultra",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/pxn-v10-ultra-gaming-racing-wheel",
+      "sourceProductCode": "51103",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: V10 Ultra",
+        "Dual-motor direct drive system with 3.2Nm torque",
+        "280mm leather-grip steering wheel",
+        "Adjustable magnetic pedals for precise input",
+        "Compatible with PC, PS4, Xbox"
+      ],
+      "needsReview": false,
+      "categorySlug": "racing-wheel",
+      "image": "/images/products/gaming/racing-wheel/pxn-v10-ultra-gaming-racing-wheel.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/racing-wheel/pxn-v10-ultra-gaming-racing-wheel.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "pxn-v10-ultra-gaming-racing-wheel",
+        "candidateTitle": "PXN V10 Ultra Gaming Racing Wheel With Pedal",
+        "attemptStem": "pxn-v10-ultra-gaming-racing-wheel"
+      }
+    },
+    {
+      "name": "PXN V3 PRO Gaming Racing Wheel with Pedal",
+      "slug": "pxn-v3-pro-racing-wheel",
+      "type": "PHYSICAL",
+      "sku": "ST-45394",
+      "description": "<h2>PXN V3 PRO Gaming Racing Wheel with Pedal</h2><p>The PXN <strong>V3 PRO</strong> Gaming Racing Wheel with Pedal is a premium racing accessory designed for gamers who want realistic driving simulations across multiple platforms. Built with durable rubber and plastic materials, this high-quality PXN V3 PRO Gaming Wheel offers a firm, comfortable grip that enhances control during long gaming sessions. Its 180° rotation range delivers precise steering response, while the compact foldable pedal set provides smooth throttle and brake control, giving players the feel of real on-road racing. Perfect for competitive and casual gamers alike, the PXN V3 PRO Racing Wheel is widely compatible with PC (Windows), Xbox One, Xbox Series X/S, PS3, PS4, and Nintendo Switch, ensuring you can enjoy your favorite racing games on nearly any platform. The wired USB connection guarantees stable input without lag, so every turn, drift, and brake command registers instantly for maximum performance. Measuring 260 × 320 × 245 mm, the PXN V3 PRO Driving Wheel is compact yet ergonomically designed to fit perfectly into any gaming setup. Whether you’re playing racing simulators like Forza, Gran Turismo, or Need for Speed, this versatile PXN V3 PRO Gaming Racing Wheel is built to deliver an authentic driving experience, making it the perfect choice for gamers seeking control, precision, and immersion.</p><h2>Buy PXN V3 PRO Gaming Racing Wheel with Pedal from the best Gaming Shop in BD</h2><p>In Bangladesh, you can get original <strong>PXN V3 PRO Gaming Racing Wheel with Pedal</strong> From Star Tech. We have a large collection of latest PXN <a href=\"https://www.startech.com.bd/game-pad\" target=\"\">Gamepad</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops/gaming-pc\" style=\"\" target=\"\">Gaming Desktop PC</a> or <a href=\"https://www.startech.com.bd/play-station\" target=\"\">PlayStation</a>. Order Online Or Visit your Nearest<a href=\"https://www.startech.com.bd/\" target=\"\"> Star Tech </a>Shop to get yours at lowest price. The PXN V3 PRO Gaming Racing Wheel with Pedal comes with 6 Month Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: V3 PRO</li><li>Racing Wheel with Pedals</li><li>Rotation Range: 180°</li><li>Control: compact foldable pedal set for throttle and brake control</li><li>Compatible with PC (Windows)/ Xbox One/ Xbox Series/ PS3/ PS4/ Switch</li></ul>",
+      "model": "V3 PRO",
+      "warranty": "6 Month Service Warranty",
+      "basePrice": 14500.0,
+      "originalPrice": 15660.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 260.0,
+        "width": 320.0,
+        "height": 245.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "PXN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45394",
+          "price": 14500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 13920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "V3 PRO",
+              "position": 0
+            },
+            {
+              "label": "Rotation Range",
+              "value": "180°",
+              "position": 1
+            },
+            {
+              "label": "Control",
+              "value": "compact foldable pedal set for throttle and brake control",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/pxn-v3-pro-racing-wheel",
+      "sourceProductCode": "45394",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: V3 PRO",
+        "Racing Wheel with Pedals",
+        "Rotation Range: 180°",
+        "Control: compact foldable pedal set for throttle and brake control",
+        "Compatible with PC (Windows)/ Xbox One/ Xbox Series/ PS3/ PS4/ Switch"
+      ],
+      "needsReview": false,
+      "categorySlug": "racing-wheel",
+      "image": "/images/products/gaming/racing-wheel/pxn-v3-pro-racing-wheel.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/racing-wheel/pxn-v3-pro-racing-wheel.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "pxn-v3-pro-racing-wheel",
+        "candidateTitle": "PXN V3 PRO Gaming Racing Wheel with Pedal",
+        "attemptStem": "pxn-v3-pro-racing-wheel"
+      }
+    },
+    {
+      "name": "PXN V9 GEN2 Racing Wheel With Shifter & Pedal",
+      "slug": "pxn-v9-gen2-racing-wheel",
+      "type": "PHYSICAL",
+      "sku": "ST-45395",
+      "description": "<h2>PXN V9 GEN2 Racing Wheel With Shifter &amp; Pedal</h2><p>The PXN <strong>V9 GEN2</strong> Gaming Racing Wheel with Shifter and Pedal is a high-performance racing controller that offers gamers a genuine driving experience. The wheel's ergonomic black shape and rubberized grip guarantee comfort during lengthy workouts, while its 3.28 kg weight provides stability. The PXN V9 GEN2 Racing Wheel features 14 customizable buttons, a D-pad, L3/R3, and a mode switch for rapid modifications, as well as paddle shifters and a 6+R manual gear lever for realistic gear shifting. The dual-motor vibration system offers adaptable force feedback, and the 16-bit magnetic encoder ensures precise and quick steering. The PXN V9 GEN2 Gaming Wheel allows players to effortlessly convert between 270° for arcade-style racing and 900° for simulation driving, making it flexible across many game genres. The supplied pedal set, which includes gas, brake, and clutch with hall-effect magnetic induction, provides precise and robust foot pressure sensing for a realistic driving experience. Integrated RGB lighting bars enhance the immersion by responding dynamically to throttle and braking input. The PXN V9 GEN2 Driving Wheel, which measures 285 mm in height and 280 mm in breadth, employs a wired USB-A connection for PCs and a USB data cable to connect to consoles, completely supporting PC, PS4, Xbox One, and Xbox Series X|S. Combining realism, precision, and adaptability, the PXN V9 GEN2 is an excellent choice for both casual racers and serious sim drivers.</p><h2>Buy PXN V9 GEN2 Racing Wheel With Shifter &amp; Pedal from the best Gaming Shop in BD</h2><p>In Bangladesh, you can get original <strong>PXN V9 GEN2 Racing Wheel With Shifter &amp; Pedal</strong> From Star Tech. We have a large collection of latest PXN <a href=\"https://www.startech.com.bd/game-pad\" target=\"\">Gamepad</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops/gaming-pc\" style=\"\" target=\"\">Gaming Desktop PC</a> or <a href=\"https://www.startech.com.bd/play-station\" target=\"\">PlayStation</a>. Order Online Or Visit your Nearest<a href=\"https://www.startech.com.bd/\" target=\"\"> Star Tech </a>Shop to get yours at lowest price. The PXN V9 GEN2 Racing Wheel With Shifter &amp; Pedal comes with 6 Month Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: V9 GEN2</li><li>14 Programmable Buttons, RGB Lighting</li><li>Adjustable Rotation: Both 270° and 900° Angles</li><li>Dual-Motor Vibration System</li><li>Compatible with PC, PS4, Xbox One, Xbox Series X|S</li></ul>",
+      "model": "V9 GEN2",
+      "warranty": "6 Month Service Warranty",
+      "basePrice": 23900.0,
+      "originalPrice": 24000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "PXN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45395",
+          "price": 23900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 22944.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "V9 GEN2",
+              "position": 0
+            },
+            {
+              "label": "Adjustable Rotation",
+              "value": "Both 270° and 900° Angles",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/pxn-v9-gen2-racing-wheel",
+      "sourceProductCode": "45395",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: V9 GEN2",
+        "14 Programmable Buttons, RGB Lighting",
+        "Adjustable Rotation: Both 270° and 900° Angles",
+        "Dual-Motor Vibration System",
+        "Compatible with PC, PS4, Xbox One, Xbox Series X|S"
+      ],
+      "needsReview": false,
+      "categorySlug": "racing-wheel",
+      "image": "/images/products/gaming/racing-wheel/pxn-v9-gen2-racing-wheel.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/racing-wheel/pxn-v9-gen2-racing-wheel.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "pxn-v9-gen2-racing-wheel",
+        "candidateTitle": "PXN V9 GEN2 Racing Wheel With Shifter & Pedal",
+        "attemptStem": "pxn-v9-gen2-racing-wheel"
+      }
+    },
+    {
+      "name": "PXN V9 Racing Wheel With Shifter and Pedal",
+      "slug": "pxn-v9-racing-wheel",
+      "type": "PHYSICAL",
+      "sku": "ST-41625",
+      "description": "<h2>PXN V9 Racing Wheel With Shifter and Pedal</h2><p>The PXN <strong>V9</strong> Racing Wheel with Shifter and Pedal provides a fully immersive and realistic driving experience that is ideal for both casual gamers and simulation fans. This PXN V9 Racing Wheel has a 270°/900° rotation range, allowing for a smooth transition from arcade-style control to advanced racing simulation with a single touch. The complete control system consists of a sensitive steering wheel, handbrake, six-speed \"H\" pattern gear changer, and floor pedals for accurate acceleration and stopping. The PXN V9, with its sleek black finish and weight of 3.28 kg, is compatible with a variety of platforms, including PC (Windows 7/8/10), PS3, PS4, Xbox One, Xbox Series X|S, and Nintendo Switch (original console controllers are required for Xbox and PlayStation). The USB-wired connection provides consistent performance, while built-in twin motors provide realistic vibration feedback to imitate various terrains and collisions (force feedback not included). The PXN Racing Wheel also has integrated console controls and is 280mm x 340mm x 285mm for a small yet strong design. Improve your experience even further with the \"PXN Wheel\" app, which allows you to change steering sensitivity and read thorough instructions. For PC users, switching to \"D-Input\" mode is as simple as holding down the MODE button for three seconds. Whether you are preparing for high-speed races or drifting difficulties, the PXN V9 Racing Wheel With Shifter and Pedal will take your racing game to the next level.</p><h2>Vibration Feedback Racing Wheel</h2><p>The PXN <strong>V9</strong> Vibration Feedback Racing Wheel provides an authentic racing experience with dual vibration motors that imitate road textures, bumps, and collisions. It has adjustable sensitivity with three levels to meet your driving style or gaming needs, as well as programmable buttons for customizable controls. The pedals are adjustable to fit various foot sizes and driving preferences, and their non-slip construction assures stability even during hard braking. Overall, the PXN V9 offers a realistic, adaptable, and pleasant gaming experience for those wishing to improve their racing skills.</p><h2>270- &amp; 900-Degree Gaming Steering Wheel</h2><p>The PXN <strong>V9</strong> gaming steering wheel provides adaptable performance by switching between 270-degree and 900-degree rotation modes at the push of a button. The 900-degree mode adds realism to driving simulations such as Euro Truck Simulator and American Truck Simulator, allowing for smooth and precise steering in long-haul scenarios. On the other hand, the 270-degree mode is designed for high-speed racing games like Need for Speed and Forza Horizon, providing faster and more responsive turns for a spectacular racing experience. This versatility makes the PXN V9 an excellent choice for gamers who like a wide range of driving simulators.</p><h2>Multi-Platform Steering Wheel</h2><p>The PXN <strong>V9</strong> steering wheel is seamlessly compatible across numerous platforms, making it an excellent alternative for racing aficionados who use diverse systems. Whether you are playing on the PS4, PS4 Slim, PS4 Pro, PS3, Xbox One, Xbox Series S&amp;X, Nintendo Switch, or PC, the PXN V9 provides a smooth and responsive experience. This adaptable wheel, which supports both X-Input and D-Input on PC, adjusts to any configuration and provides great control and precision for a wide range of racing games. No matter where your racing adventure takes you, the PXN V9 delivers a dependable and immersive experience across all of your preferred platforms.</p><h2>Buy PXN V9 Racing Wheel With Shifter and Pedal from the best Gaming Shop in BD</h2><p>In Bangladesh, you can get original <strong>PXN V9 Racing Wheel With Shifter and Pedal</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/pxn-gamepad\" target=\"\">PXN Gamepad</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops/gaming-pc\" target=\"\">Gaming Desktop PC</a> or <a href=\"https://www.startech.com.bd/play-station\" target=\"\">PlayStation</a>. Order Online Or Visit your Nearest<a href=\"https://www.startech.com.bd/\" target=\"\"> Star Tech </a>Shop to get yours at lowest price. The PXN V9 Racing Wheel with Shifter and Pedal comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: V9</li><li>Racing Wheel with Pedals and Integrated Console Controls</li><li>Rotation Range: 270°/ 900° Degree Wheel</li><li>Control: Handbrake, Gear Shifters, Pedals, Steering Wheel</li><li>Compatible with PC, PS3, PS4, Xbox One, Xbox Series X|S Switch</li></ul>",
+      "model": "V9",
+      "warranty": "no warranty",
+      "basePrice": 21990.0,
+      "originalPrice": 23000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 280.0,
+        "width": 340.0,
+        "height": 285.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "PXN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41625",
+          "price": 21990.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 21110.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "V9",
+              "position": 0
+            },
+            {
+              "label": "Rotation Range",
+              "value": "270°/ 900° Degree Wheel",
+              "position": 1
+            },
+            {
+              "label": "Control",
+              "value": "Handbrake, Gear Shifters, Pedals, Steering Wheel",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/pxn-v9-racing-wheel",
+      "sourceProductCode": "41625",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: V9",
+        "Racing Wheel with Pedals and Integrated Console Controls",
+        "Rotation Range: 270°/ 900° Degree Wheel",
+        "Control: Handbrake, Gear Shifters, Pedals, Steering Wheel",
+        "Compatible with PC, PS3, PS4, Xbox One, Xbox Series X|S Switch"
+      ],
+      "needsReview": false,
+      "categorySlug": "racing-wheel",
+      "image": "/images/products/gaming/racing-wheel/pxn-v9-racing-wheel.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/racing-wheel/pxn-v9-racing-wheel.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "pxn-v9-racing-wheel",
+        "candidateTitle": "PXN V9 Racing Wheel With Shifter and Pedal",
+        "attemptStem": "pxn-v9-racing-wheel"
+      }
+    },
+    {
+      "name": "PXN V99 EU FFB Racing Wheel with Pedal and Shifter",
+      "slug": "pxn-v99-eu-ffb-racing-wheel",
+      "type": "PHYSICAL",
+      "sku": "ST-45397",
+      "description": "<h2>PXN V99 EU FFB Racing Wheel with Pedal and Shifter</h2>\n<p>The PXN <strong>V99 EU FFB</strong> Gaming Racing Wheel is a modern racing simulator that offers unparalleled realism and precision to both casual gamers and dedicated sim racing lovers. The PXN V99 EU FFB Racing Wheel, one of the most sophisticated versions on the market, has a powerful dual-motor force feedback system with a peak torque of 3.2Nm, providing authentic road feel, smooth steering, and dynamic response during high-speed driving. This PXN V99 EU FFB Gaming Steering Wheel has a removable 11-inch (300mm) aluminum steering wheel designed for ergonomic comfort, as well as adjustable pedals with Hall magnetic induction linear pedal technology for very precise braking and accelerating. It also has a 6+R gear lever with two distinct customisable buttons for enhanced gear change and handbrake control in racing games, which increases gaming realism. The PXN V99 Driving Wheel, with a switchable steering angle of 900°/270°, is suitable for a variety of racing genres, including Formula and rally racing. Built from high-quality materials, the wheel is long-lasting and weighs 6.325kg, ensuring steady handling. With dimensions of 270 × 300 × 249 mm and a sleek black finish, this device offers both small design and outstanding performance. The PXN V99 Racing Wheel is completely compatible with PC (X-input/D-input), PS4, Xbox One, and Xbox Series X|S, making it one of the most flexible gaming accessories available. A separate app allows for easy adjustment of force feedback intensity, pedal sensitivity, and steering settings, while firmware upgrades keep the system up to date with the latest features. For those seeking an amazing racing configuration, the PXN V99 EU FFB Gaming Racing Wheel stands out as a top pick, combining cutting-edge technology with realistic driving simulation.</p>\n<h2>Buy PXN V99 EU FFB Racing Wheel with Pedal and Shifter from the best Gaming Shop in BD</h2>\n<p>In Bangladesh, you can get original <strong>PXN V99 EU FFB Racing Wheel with Pedal and Shifter</strong> From Star Tech. We have a large collection of latest PXN <a href=\"https://www.startech.com.bd/game-pad\" target=\"\">Gamepad</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops/gaming-pc\" style=\"\" target=\"\">Gaming Desktop PC</a> or <a href=\"https://www.startech.com.bd/play-station\" target=\"\">PlayStation</a>. Order Online Or Visit your Nearest<a href=\"https://www.startech.com.bd/\" target=\"\"> Star Tech </a>Shop to get yours at lowest price. The PXN V99 EU FFB Racing Wheel with Pedal and Shifter comes with 6 Month Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: V99 EU FFB</li><li>3.2nm Dual-Motor Force</li><li>270°/900° Switchable Steering Angle</li><li>Includes Pedals and 6-Speed H-Pattern Shifter</li><li>Compatible with Pc, Playstation 4, Xbox One/series X|s</li></ul>",
+      "model": "V99 EU FFB",
+      "warranty": "6 Month Service Warranty",
+      "basePrice": 36400.0,
+      "originalPrice": 39000.0,
+      "currency": "BDT",
+      "weight": 6.325,
+      "dimensions": {
+        "length": 270.0,
+        "width": 300.0,
+        "height": 249.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "PXN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45397",
+          "price": 36400.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 34944.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "V99 EU FFB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/pxn-v99-eu-ffb-racing-wheel",
+      "sourceProductCode": "45397",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: V99 EU FFB",
+        "3.2nm Dual-Motor Force",
+        "270°/900° Switchable Steering Angle",
+        "Includes Pedals and 6-Speed H-Pattern Shifter",
+        "Compatible with Pc, Playstation 4, Xbox One/series X|s"
+      ],
+      "needsReview": false,
+      "categorySlug": "racing-wheel",
+      "image": "/images/products/gaming/racing-wheel/pxn-v99-eu-ffb-racing-wheel.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/racing-wheel/pxn-v99-eu-ffb-racing-wheel.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "pxn-v99-eu-ffb-racing-wheel",
+        "candidateTitle": "PXN V99 EU FFB Racing Wheel with Pedal and Shifter",
+        "attemptStem": "pxn-v99-eu-ffb-racing-wheel"
+      }
+    },
+    {
+      "name": "Thrustmaster T300RS Force Feedback GT Racing Wheel",
+      "slug": "thrustmaster-t300rs-force-feedback-gt-racing-wheel",
+      "type": "PHYSICAL",
+      "sku": "ST-47409",
+      "description": "<h2>Thrustmaster T300RS Force Feedback GT Racing Wheel</h2><p>The Thrustmaster <strong>T300RS Force Feedback GT</strong> Racing Wheel is a high-end sim racing controller designed to deliver an authentic and immersive driving experience for serious racing enthusiasts. As a premium Thrustmaster Racing Wheel, the T300RS features advanced force feedback technology that accurately simulates road textures, cornering forces, tire grip, and vehicle behavior, making every race feel realistic and engaging. Powered by a powerful brushless motor, this Thrustmaster Force Feedback Wheel offers smooth, responsive, and detailed steering response, ideal for competitive sim racing. The ergonomic GT-style wheel design, combined with a responsive pedal set, provides precise control and long-term comfort during extended racing sessions. Fully compatible with popular racing simulators on PC and supported consoles, the Thrustmaster T300RS Racing Wheel is a trusted choice for gamers looking for a professional-grade Thrustmaster Steering Wheel that enhances realism, control, and overall racing performance.</p><h2>Buy Thrustmaster T300RS Force Feedback GT Racing Wheel from the best Gaming Shop in BD: Star Tech</h2><p>In Bangladesh, you can get original <strong>Thrustmaster T300RS Force Feedback GT Racing Wheel</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/game-pad\" target=\"\">Gamepad</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops/gaming-pc\">Gaming Desktop PC</a> or <a href=\"https://www.startech.com.bd/play-station\">PlayStation</a>. Order Online Or Visit your Nearest<a href=\"https://www.startech.com.bd/\"> Star Tech </a>Shop to get yours at lowest price. The Thrustmaster T300RS Force Feedback GT Racing Wheel comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: T300RS Force Feedback GT</li><li>Dual Belt System, T3PA-GT Pedals</li><li>HallEffect AccuRate Technology (H.E.A.R.T)</li><li>Steering Wheel, Pedals</li><li>Compatible with PS5, PS5 Pro, PS4 &amp; PC</li></ul>",
+      "model": "T300RS Force Feedback GT",
+      "warranty": "no warranty",
+      "basePrice": 67000.0,
+      "originalPrice": 69392.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Thrustmaster",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47409",
+          "price": 67000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 64320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "T300RS Force Feedback GT",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/thrustmaster-t300rs-force-feedback-gt-racing-wheel",
+      "sourceProductCode": "47409",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: T300RS Force Feedback GT",
+        "Dual Belt System, T3PA-GT Pedals",
+        "HallEffect AccuRate Technology (H.E.A.R.T)",
+        "Steering Wheel, Pedals",
+        "Compatible with PS5, PS5 Pro, PS4 & PC"
+      ],
+      "needsReview": false,
+      "categorySlug": "racing-wheel",
+      "image": "/images/products/gaming/racing-wheel/thrustmaster-t300rs-force-feedback-gt-racing-wheel.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/racing-wheel/thrustmaster-t300rs-force-feedback-gt-racing-wheel.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "thrustmaster-t300rs-force-feedback-gt-racing-wheel",
+        "candidateTitle": "Thrustmaster T300RS Force Feedback GT Racing Wheel",
+        "attemptStem": "thrustmaster-t300rs-force-feedback-gt-racing-wheel"
+      }
+    },
+    {
+      "name": "Xtrike Me GP-903 Gaming Racing Wheel",
+      "slug": "xtrike-me-gp-903-racing-wheel",
+      "type": "PHYSICAL",
+      "sku": "ST-33260",
+      "description": "<h2>Xtrike Me GP-903 Gaming Racing Wheel</h2><p>The Xtrike Me <strong>GP-903</strong> Gaming Racing Wheel provides a realistic and exciting gaming experience that is compatible with a variety of gaming platforms. It has a USB-connected connection and a long 1.9-meter cable, ensuring stable communication for uninterrupted games. The steering wheel, which measures 220 x 270 x 230mm, provides a realistic and pleasant grip, improving the sense of racing simulators. The accompanying pedal set, measuring roughly 210 x 200 x 130mm, enhances the game experience. This Xtrike Me GP-903 Gaming Racing Wheel is extremely adaptable, as it is compatible with PC, PS3, PS4, Xbox One, Xbox 360, Android, and SWITCH consoles, making it an excellent choice for a variety of gaming settings. It functions effectively with a current consumption of less than 100 mA and does not place a substantial strain on power resources. The system is compatible with a wide range of gaming platforms, including PC, PS3, PS4, Xbox One, Xbox 360, Android, and SWITCH consoles, making it a versatile and cross-platform gaming accessory. Additionally, the Xtrike Me GP-903 Racing Wheel combines precision, compatibility, and comfort, making it an excellent choice for racing lovers across a variety of gaming platforms.</p><h2>Buy Xtrike Me GP-903 Gaming Racing Wheel From Star Tech</h2><p>In Bangladesh, you can get original <strong>Xtrike Me GP-903 Gaming Racing Wheel</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/xtrike-me-gamepad\" target=\"\">Xtrike Me Gamepad </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Xtrike Me GP-903 Racing Wheel comes with 1 year warranty.</p><div style=\"text-align: justify;\"></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GP-903</li><li>Built-in Dual Vibration Motor</li><li>Imitation Racing Wheel Ergonomic Design</li><li>180 Turning Angles and Rubber Grip</li><li>Precise Action Buttons and Directional Pad</li></ul>",
+      "model": "GP-903",
+      "warranty": "1 year warranty",
+      "basePrice": 6700.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 220.0,
+        "width": 270.0,
+        "height": 230.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Xtrike Me",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-33260",
+          "price": 6700.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 6432.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "GP-903",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/xtrike-me-gp-903-racing-wheel",
+      "sourceProductCode": "33260",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GP-903",
+        "Built-in Dual Vibration Motor",
+        "Imitation Racing Wheel Ergonomic Design",
+        "180 Turning Angles and Rubber Grip",
+        "Precise Action Buttons and Directional Pad"
+      ],
+      "needsReview": false,
+      "categorySlug": "racing-wheel",
+      "image": "/images/products/gaming/racing-wheel/xtrike-me-gp-903-racing-wheel.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/racing-wheel/xtrike-me-gp-903-racing-wheel.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "xtrike-me-gp-903-racing-wheel",
+        "candidateTitle": "Xtrike Me GP-903 Gaming Racing Wheel",
+        "attemptStem": "xtrike-me-gp-903-racing-wheel"
+      }
+    }
+  ]
+}

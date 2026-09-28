@@ -1,0 +1,793 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/accessories",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\accessories",
+    "generatedAtUnix": 1790591006,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "parentSlug": null,
+      "image": "/images/products/accessories/keyboard/bajeal/bajeal-k100-mechanical-keyboard.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Wrist Rest",
+      "slug": "wrist-rest",
+      "parentSlug": "accessories",
+      "image": "/images/products/accessories/wrist-rest/ajazz/ajazz-block98-wrist-rest.png",
+      "isActive": true,
+      "sortOrder": 26,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "AJAZZ",
+      "slug": "ajazz",
+      "logo": null
+    },
+    {
+      "name": "Asus",
+      "slug": "asus",
+      "logo": null
+    },
+    {
+      "name": "Fantech",
+      "slug": "fantech",
+      "logo": null
+    },
+    {
+      "name": "Keychron",
+      "slug": "keychron",
+      "logo": null
+    },
+    {
+      "name": "MSI",
+      "slug": "msi",
+      "logo": null
+    },
+    {
+      "name": "Redragon",
+      "slug": "redragon",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "AJAZZ Block98 Wrist Rest",
+      "slug": "ajazz-block98-wrist-rest",
+      "type": "PHYSICAL",
+      "sku": "ST-46272",
+      "description": "<h2>AJAZZ Block98 Wrist Rest</h2><p>The AJAZZ <strong>Block98</strong> <a href=\"https://www.startech.com.bd/wrist-rest\" style=\"color: rgb(0, 0, 0);\" target=\"\">Wrist Rest</a> is a premium accessory designed to enhance both gaming and typing experiences with superior comfort and support. Featuring a soft flannel surface, this AJAZZ Block98 Wrist Pad is made from 100% skin-friendly polyester, providing a smooth, breathable texture that stays gentle on your skin during long gaming or work sessions. Its ergonomic square design ensures universal compatibility with all keyboard setups and desktop configurations, while the sandwich foam construction delivers advanced pressure relief and rapid rebound for consistent wrist support. Stability is guaranteed with the hexagonal anti-slip base, keeping the AJAZZ Block98 Wrist Rest securely in place even during intense gaming moments. Built with premium durable materials, this wrist pad maintains its shape and cushioning over time, offering long-lasting performance for daily typing, gaming, or work. Combining thoughtful ergonomic design with robust construction, the AJAZZ Block98 Wrist Pad is the perfect choice for anyone seeking comfort, durability, and healthy hand positioning.</p><h2>Buy AJAZZ Block98 Wrist Rest from Star Tech</h2><p>In Bangladesh, you can get original <strong>AJAZZ Block98 Wrist Rest</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/wrist-rest\" target=\"\">Wrist Rest</a> to purchase. Order Online or Visit your Nearest <a href=\"https://www.startech.com.bd/\" style=\"background-color: rgb(255, 255, 255);\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The AJAZZ Block98 Wrist Rest comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Block98</li><li>100% Soft Flannel Surface</li><li>Anti-Slip Hexagonal Base</li><li>Rapid Rebound Foam</li><li>Ergonomic Square Design</li></ul>",
+      "model": "Block98",
+      "warranty": "no warranty",
+      "basePrice": 1000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "AJAZZ",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-46272",
+          "price": 1000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 960.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Block98",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ajazz-block98-wrist-rest",
+      "sourceProductCode": "46272",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Block98",
+        "100% Soft Flannel Surface",
+        "Anti-Slip Hexagonal Base",
+        "Rapid Rebound Foam",
+        "Ergonomic Square Design"
+      ],
+      "needsReview": false,
+      "categorySlug": "wrist-rest",
+      "image": "/images/products/accessories/wrist-rest/ajazz/ajazz-block98-wrist-rest.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/wrist-rest/ajazz/ajazz-block98-wrist-rest.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ajazz-block98-wrist-rest",
+        "candidateTitle": "AJAZZ Block98 Wrist Rest",
+        "attemptStem": "ajazz-block98-wrist-rest"
+      }
+    },
+    {
+      "name": "AJAZZ PU Leather Wrist Pad for 87-Key Keyboard",
+      "slug": "ajazz-pu-leather-wrist-pad",
+      "type": "PHYSICAL",
+      "sku": "ST-46270",
+      "description": "<h2>AJAZZ PU Leather Wrist Pad for 87-Key Keyboard</h2><p>The <strong>AJAZZ PU Leather Wrist Pad</strong> for 87-Key Keyboard is a quality accessory that provides greater comfort, support, and durability. This AJAZZ PU Leather <a href=\"https://www.startech.com.bd/wrist-rest\" style=\"color: rgb(0, 0, 0);\" target=\"\">Wrist Pad</a> is made of high-quality PU leather and memory foam, creating a soft, comfortable surface that conforms to the natural contours of your wrists. Its ergonomic design promotes appropriate wrist alignment, considerably decreasing strain, tiredness, and pain during extended typing sessions or intensive gaming marathons. The wrist pad is equipped with non-slip rubber feet, which keep it securely in place even during fast-paced gaming or intensive typing. Perfectly compatible with TKL or 87% keyboard layouts, the AJAZZ Wrist Pad for 87-Key Keyboard seamlessly integrates with your setup, making it an ideal addition for both professional workstations and home gaming desks. Beyond comfort, this wrist pad is built for long-lasting durability—the PU leather resists wear and tear, while the memory foam retains its shape over time, offering consistent support for years. Lightweight yet sturdy, it is easy to place, move, and carry, giving you a versatile solution for every typing and gaming environment. Whether you’re a programmer, writer, gamer, or casual user, the AJAZZ PU Leather Wrist Pad enhances productivity while adding a touch of elegance to your desk. Invest in the AJAZZ Wrist Pad for 87-Key Keyboard today and transform your typing experience with ergonomic support, luxurious materials, and unmatched comfort designed to protect your wrists and elevate your overall performance.</p><h2>Buy AJAZZ PU Leather Wrist Pad for 87-Key Keyboard from Star Tech</h2><p>In Bangladesh, you can get original <strong>AJAZZ PU Leather Wrist Pad for 87-Key Keyboard</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/wrist-rest\" target=\"\">Wrist Rest</a> to purchase. Order Online or Visit your Nearest <a href=\"https://www.startech.com.bd/\" style=\"background-color: rgb(255, 255, 255);\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The AJAZZ PU Leather Wrist Pad for 87-Key Keyboard comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AJAZZ PU Leather Wrist Pad</li><li>Materials: PU Leather Memory Foam</li><li>Layout: TKL or 87%</li><li>Design: Ergonomic Design</li><li>Non-Slip Rubber Feet</li></ul>",
+      "model": "AJAZZ PU Leather Wrist Pad",
+      "warranty": "no warranty",
+      "basePrice": 900.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "AJAZZ",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-46270",
+          "price": 900.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 864.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AJAZZ PU Leather Wrist Pad",
+              "position": 0
+            },
+            {
+              "label": "Materials",
+              "value": "PU Leather Memory Foam",
+              "position": 1
+            },
+            {
+              "label": "Layout",
+              "value": "TKL or 87%",
+              "position": 2
+            },
+            {
+              "label": "Design",
+              "value": "Ergonomic Design",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ajazz-pu-leather-wrist-pad",
+      "sourceProductCode": "46270",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AJAZZ PU Leather Wrist Pad",
+        "Materials: PU Leather Memory Foam",
+        "Layout: TKL or 87%",
+        "Design: Ergonomic Design",
+        "Non-Slip Rubber Feet"
+      ],
+      "needsReview": false,
+      "categorySlug": "wrist-rest",
+      "image": "/images/products/accessories/wrist-rest/ajazz/ajazz-pu-leather-wrist-pad.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/wrist-rest/ajazz/ajazz-pu-leather-wrist-pad.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ajazz-pu-leather-wrist-pad",
+        "candidateTitle": "AJAZZ PU Leather Wrist Pad for 87-Key Keyboard",
+        "attemptStem": "ajazz-pu-leather-wrist-pad"
+      }
+    },
+    {
+      "name": "Asus AC01 ROG Gaming Wrist Rest",
+      "slug": "asus-ac01-rog-wrist-rest",
+      "type": "PHYSICAL",
+      "sku": "ST-18256",
+      "description": "<h2>Asus AC01 ROG Gaming Wrist Rest\n\n</h2>\n<p style=\"text-align: justify;\">Asus has beyond their level of comfort to provide gamers with the best quality wrist rest. The Asus AC01 ROG Gaming Wrist Rest is very comfortable and relives strain from your arms and shoulder as it is able to support your hand and wrist comfortably. The Asus AC01 ROG Wrist Rest features special leather based materials and integrated into a very strong and rigid base structure. The wrist rest has non-slip rubber feet which allows it to stay in one place without slipping and causing a mishap. The overall design and structure can easily fit into any gaming environment and provide the utmost comfort. </p>\n<h3>ULTIMATE CUSHIONED COMFORT</h3>\n<p style=\"text-align: justify;\">The ROG Gaming Wrist Rest is crafted for gamers who demand next-level comfort. With a foam core encased in fine leatherette, it offers cushioned support and a smooth, soft surface. It also features non-slip rubber feet that hold it firmly in place. A soft foam cushion ensures superior comfort and support. Designed with an elevated angle, it keeps your hands at an ergonomic input position to alleviate wrist fatigue during long sessions.</p>\n<h3>Premium Leatherette Surface</h3>\n<p style=\"text-align: justify;\">Fine leatherette provides a smooth and soft surface that's splash-resistant for easy cleaning and maintenance, and anti-fray stitching with a concealed seam improves durability. Serious gaming is intense, so we equipped ROG Gaming Wrist Rest with anti-slip rubber feet to keep it firmly anchored during heated action.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AC01 ROG</li><li>Leatherette Surface</li><li>Non-Slip Rubber Feet</li><li>Comfortable Soft-Foam</li><li>Anti-Fray Stitched Edges</li></ul>",
+      "model": "AC01 ROG",
+      "warranty": "01 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-18256",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Warranty Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-ac01-rog-wrist-rest",
+      "sourceProductCode": "18256",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AC01 ROG",
+        "Leatherette Surface",
+        "Non-Slip Rubber Feet",
+        "Comfortable Soft-Foam",
+        "Anti-Fray Stitched Edges"
+      ],
+      "needsReview": true,
+      "categorySlug": "wrist-rest",
+      "image": "/images/products/accessories/wrist-rest/asus/asus-ac01-rog-wrist-rest.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/wrist-rest/asus/asus-ac01-rog-wrist-rest.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-ac01-rog-wrist-rest",
+        "candidateTitle": "Asus AC01 ROG Gaming Wrist Rest",
+        "attemptStem": "asus-ac01-rog-wrist-rest"
+      }
+    },
+    {
+      "name": "Fantech AC4101L Keyboard Wristpad Large Black",
+      "slug": "fantech-ac4101-pilo-keyboard-wristpad",
+      "type": "PHYSICAL",
+      "sku": "ST-14973",
+      "description": "<h2 style=\"text-align: justify; \">Fantech AC4101L Keyboard Wristpad Large Black</h2>\n<p style=\"text-align: justify; \">Fantech AC4101L PILO Keyboard Wristpad built in fitperfectly with TKL and full size Gaming keyboard. Here, Anti-Slip rubber base provides anti-slip protection during your gaming hour. It is the perfect gaming companion providing comfort and support through regular and marathon play with soft foam cushion. This Fantech AC4101L PILO Keyboard Wristpad has no warranty.\n\n</p>\n<div class=\"video-wrapper\"></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AC4101L</li><li>Dimensions: 446 x 95 x 18mm</li><li>Fit Perfectly with TKL</li><li>Anti-slip Rubber Base</li><li>Soft Foam Cushion</li></ul>",
+      "model": "AC4101L",
+      "warranty": null,
+      "basePrice": 500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 446.0,
+        "width": 95.0,
+        "height": 18.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Fantech",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-14973",
+          "price": 500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AC4101L",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "446 x 95 x 18mm",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fantech-ac4101-pilo-keyboard-wristpad",
+      "sourceProductCode": "14973",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AC4101L",
+        "Dimensions: 446 x 95 x 18mm",
+        "Fit Perfectly with TKL",
+        "Anti-slip Rubber Base",
+        "Soft Foam Cushion"
+      ],
+      "needsReview": false,
+      "categorySlug": "wrist-rest",
+      "image": "/images/products/accessories/wrist-rest/fantech/fantech-ac4101-pilo-keyboard-wristpad.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/wrist-rest/fantech/fantech-ac4101-pilo-keyboard-wristpad.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fantech-ac4101-pilo-keyboard-wristpad",
+        "candidateTitle": "Fantech AC4101L Keyboard Wristpad Large Black",
+        "attemptStem": "fantech-ac4101-pilo-keyboard-wristpad"
+      }
+    },
+    {
+      "name": "Fantech AC4101M PILO Ergonomic Black Keyboard Wristpad",
+      "slug": "fantech-ac4101m-pilo-ergonomic-keyboard-wristpad",
+      "type": "PHYSICAL",
+      "sku": "ST-13855",
+      "description": "<h2 style=\"text-align: justify; \"><span style=\"font-weight: bold;\">Fantech AC4101M PILO Ergonomic Keyboard Wristpad</span></h2>\n<p style=\"text-align: justify; \">Fantech AC4101M PILO Ergonomic Keyboard Wristpad built to fit perfectly with TKL and full size gaming keyboard. The Keyboard Wristpad is designed with 359x95x18mm size and here, Anti-Slip BaseFantech PILO use anti-slip base rubber base its provides anti-slip protection. This Wristpad is  perfect gaming companion, providing comfort and support through regular and marathon play with soft foam cushion. This new fantech has 01 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AC4101M PILO Ergonomic</li><li>Anti-Slip Rubber</li><li>Size: 359 x 95 x 18mm</li><li>Built to fit perfectly with TKL</li><li>For full size gaming keyboard</li></ul>",
+      "model": "AC4101M PILO Ergonomic",
+      "warranty": null,
+      "basePrice": 480.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 359.0,
+        "width": 95.0,
+        "height": 18.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Fantech",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "359 x 95 x 18mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-13855",
+          "price": 480.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "359 x 95 x 18mm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 460.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AC4101M PILO Ergonomic",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "359 x 95 x 18mm",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fantech-ac4101m-pilo-ergonomic-keyboard-wristpad",
+      "sourceProductCode": "13855",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AC4101M PILO Ergonomic",
+        "Anti-Slip Rubber",
+        "Size: 359 x 95 x 18mm",
+        "Built to fit perfectly with TKL",
+        "For full size gaming keyboard"
+      ],
+      "needsReview": false,
+      "categorySlug": "wrist-rest",
+      "image": "/images/products/accessories/wrist-rest/fantech/fantech-ac4101m-pilo-ergonomic-keyboard-wristpad.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/wrist-rest/fantech/fantech-ac4101m-pilo-ergonomic-keyboard-wristpad.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fantech-ac4101m-pilo-ergonomic-keyboard-wristpad",
+        "candidateTitle": "Fantech AC4101M PILO Ergonomic Black Keyboard Wristpad",
+        "attemptStem": "fantech-ac4101m-pilo-ergonomic-keyboard-wristpad"
+      }
+    },
+    {
+      "name": "Keychron Resin Palm Rest For K2 K6 K6 Pro Keyboard",
+      "slug": "keychron-resin-palm-rest-for-k2-k6-k6-pro-keyboard",
+      "type": "PHYSICAL",
+      "sku": "ST-26542",
+      "description": "<h2>Keychron Resin Palm Rest For K2 K6 K6 Pro Keyboard</h2><p style=\"text-align: justify; \">The Keychron palm rest is made of sleek solid wood and resin, and it provides superb wrist support when using a keyboard. This wrist rest, made of high-quality wood and trimmed with resin to represent fluidity, provides great ergonomic support and optimal comfort for long hours at the computer. The palm rest is visually appealing and helps you to easily glide across the smooth surface while typing. The resin and wood wrist rest comes with a cleaning cloth as well as four rubber bump-on to protect it from sliding about on your desk.</p><h2 style=\"\">Buy Keychron Resin Palm Rest For K2 K6 K6 Pro Keyboard from the best Keyboard Shop in BD</h2><p>In Bangladesh, you can get the original <a href=\"https://www.startech.com.bd/keychron-resin-palm-rest-for-k2-k6-k6-pro-keyboard\" target=\"_blank\">Keychron Resin Palm Rest For K2 K6 K6 Pro Keyboard</a> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/keychron-keyboard\" target=\"_blank\">Keychron Keyboard</a> to purchase for your <a href=\"https://www.startech.com.bd/laptop-notebook\" target=\"_blank\">Laptop</a>, <a href=\"https://www.startech.com.bd/desktops\" target=\"_blank\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"_blank\">Star Tech</a> Shop to get yours at the lowest price. The Keychron Resin Palm Rest For K2 K6 K6 Pro Keyboard has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Resin Palm Rest</li><li>Suitable with Keychron K2, K6, and K6 Pro keyboard</li><li>Surface: Resin and Wood</li><li>Bottom: Rubber feet</li><li>Easy to install and clean</li></ul>",
+      "model": "Resin Palm Rest",
+      "warranty": null,
+      "basePrice": 3500.0,
+      "originalPrice": 3815.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Keychron",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-26542",
+          "price": 3500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Resin Palm Rest",
+              "position": 0
+            },
+            {
+              "label": "Surface",
+              "value": "Resin and Wood",
+              "position": 1
+            },
+            {
+              "label": "Bottom",
+              "value": "Rubber feet",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/keychron-resin-palm-rest-for-k2-k6-k6-pro-keyboard",
+      "sourceProductCode": "26542",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Resin Palm Rest",
+        "Suitable with Keychron K2, K6, and K6 Pro keyboard",
+        "Surface: Resin and Wood",
+        "Bottom: Rubber feet",
+        "Easy to install and clean"
+      ],
+      "needsReview": false,
+      "categorySlug": "wrist-rest",
+      "image": "/images/products/accessories/wrist-rest/keychron/keychron-resin-palm-rest-for-k2-k6-k6-pro-keyboard.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/wrist-rest/keychron/keychron-resin-palm-rest-for-k2-k6-k6-pro-keyboard.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "keychron-resin-palm-rest-for-k2-k6-k6-pro-keyboard",
+        "candidateTitle": "Keychron Resin Palm Rest For K2 K6 K6 Pro Keyboard",
+        "attemptStem": "keychron-resin-palm-rest-for-k2-k6-k6-pro-keyboard"
+      }
+    },
+    {
+      "name": "MSI VIGOR WR01 Keyboard Wrist Rest",
+      "slug": "msi-vigor-wr01-wrist-rest",
+      "type": "PHYSICAL",
+      "sku": "ST-19336",
+      "description": "<h2 style=\"text-align: justify; \">MSI VIGOR WR01 Keyboard Wrist Rest</h2><p style=\"text-align: justify; \">The MSI VIGOR WR01 Wrist Rest has an ergonomic shape that will provide you optimal comfort and support with any full-size keyboard. It is made from ice silk lycra with an antibacterial coating. The WR01's surface is smooth and cool to the touch. This is a cooling gel-infused pad with specially engineered memory foam that will keep your hands cool and comfortable during your gaming sessions. It has been designed with an anti-slip rubber base to minimize movement on your desk. It has a 432 x 86 x 25mm dimension. It comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: VIGOR WR01</li><li>Smooth and comfortable cool and antibacterial surface</li><li>Excellent anti-slip touch</li><li>Highly ergonomic design</li><li>Cooling gel-infused pad</li></ul>",
+      "model": "VIGOR WR01",
+      "warranty": "a 1-year warranty",
+      "basePrice": 1600.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 432.0,
+        "width": 86.0,
+        "height": 25.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "MSI",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-19336",
+          "price": 1600.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1536.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "VIGOR WR01",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/msi-vigor-wr01-wrist-rest",
+      "sourceProductCode": "19336",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: VIGOR WR01",
+        "Smooth and comfortable cool and antibacterial surface",
+        "Excellent anti-slip touch",
+        "Highly ergonomic design",
+        "Cooling gel-infused pad"
+      ],
+      "needsReview": false,
+      "categorySlug": "wrist-rest",
+      "image": "/images/products/accessories/wrist-rest/msi/msi-vigor-wr01-wrist-rest.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/wrist-rest/msi/msi-vigor-wr01-wrist-rest.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "msi-vigor-wr01-wrist-rest",
+        "candidateTitle": "MSI VIGOR WR01 Keyboard Wrist Rest",
+        "attemptStem": "msi-vigor-wr01-wrist-rest"
+      }
+    },
+    {
+      "name": "Redragon P023 Wrist Rest Pad",
+      "slug": "redragon-p023-wrist-rest-pad",
+      "type": "PHYSICAL",
+      "sku": "ST-17996",
+      "description": "<h2 style=\"text-align: justify; \">Redragon P023 Wrist Rest Pad</h2><p style=\"text-align: justify; \">The Redragon P023 Wrist Rest Pad is made of Memory Foam, Wrist Support Size of 3.19 x 0.87 x 14.35 Inches (362 x 81 x22mm) perfect size wrist hand rest for compact slim 87 key gaming keyboards and laptops. Improves hand and wrist posture, even allows you to rest your elbows on a cushion instead of the desk. It features Premium Quality Memory Foam with Soft-Medium Firmness. The advantage of Memory Foam over Gel or Silicon is that it provides a True Wrist Fit and Pressure Point Relief specific to your wristâ€™s unique shape. The Wrist Cushion will help you to maintain proper wrist alignment and supports your wrist during repetitive motions and assists to prevent wrist complications like numbness, tingling, Carpal Tunnel Syndrome. The Redragon P023 Wrist Cushion is washable and easy to clean. The Waterproof coating prevents damage from spilled drinks or other accidents. The Top Side with Memory Foam features a Silicone textured surface, the underside is made of silicon rubber, which adapts to different surface materials and provides a solid gaming platform, high-quality long-life design. The anti-slip silicon rubber base helps the Redragon Wrist Wrest to stay securely in place and prevents curling. The slick-looking Red Black Vibrant Design makes it a joy to use on any desk.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: P023</li><li>Size: 360 x 80 x 23 mm</li><li>Durable, Premium Quality &amp; Waterproof</li><li>Thick High-Quality Materials</li><li>Zero Slip and Anti-Curling</li></ul>",
+      "model": "P023",
+      "warranty": null,
+      "basePrice": 750.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 362.0,
+        "width": 81.0,
+        "height": 22.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Redragon",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "360 x 80 x 23 mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-17996",
+          "price": 750.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "360 x 80 x 23 mm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "P023",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "360 x 80 x 23 mm",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/redragon-p023-wrist-rest-pad",
+      "sourceProductCode": "17996",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: P023",
+        "Size: 360 x 80 x 23 mm",
+        "Durable, Premium Quality & Waterproof",
+        "Thick High-Quality Materials",
+        "Zero Slip and Anti-Curling"
+      ],
+      "needsReview": false,
+      "categorySlug": "wrist-rest",
+      "image": "/images/products/accessories/wrist-rest/redragon/redragon-p023-wrist-rest-pad.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/wrist-rest/redragon/redragon-p023-wrist-rest-pad.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "redragon-p023-wrist-rest-pad",
+        "candidateTitle": "Redragon P023 Wrist Rest Pad",
+        "attemptStem": "redragon-p023-wrist-rest-pad"
+      }
+    }
+  ]
+}

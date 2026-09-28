@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/accessories",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\accessories",
+    "generatedAtUnix": 1790591006,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "parentSlug": null,
+      "image": "/images/products/accessories/keyboard/bajeal/bajeal-k100-mechanical-keyboard.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Sound Card",
+      "slug": "sound-card",
+      "parentSlug": "accessories",
+      "image": "/images/products/accessories/sound-card/orico/orico-sc2-usb-external-sound-card.jpg",
+      "isActive": true,
+      "sortOrder": 21,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "ORICO",
+      "slug": "orico",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Orico SC2 USB 2.0 External Sound Card",
+      "slug": "orico-sc2-usb-external-sound-card",
+      "type": "PHYSICAL",
+      "sku": "SC2-BK",
+      "description": "<h2 style=\"text-align: justify; \">Orico SC2 USB 2.0 External Sound Card<br/></h2><p style=\"text-align: justify; \">The Orico SC2 USB 2.0 External Sound Card features Driver-free Installation, Dual earphone ports, 3-port output, Volume adjustable, and a 10cm integrated cable. It has a Microphone interface, 4PIN Headset interface, and Earphone ports. Expand earphones and microphone ports for computers and share the music. With the help of this sound card, you can listen and communicate in a timely. The Orico SC2 is compatible with most earphones, microphones, and speakers that can transfer analog signals of the tablet, laptop, desktop into digital signal output. It has a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SC2-BK</li><li>Model: SC2</li><li>Output: Microphone interface, 4PIN Headset interface, Earphone</li><li>Input interface: USB2.0</li><li>Silence switch, Volume adjustment</li><li>10cm Integrated Cable</li></ul>",
+      "model": "SC2",
+      "warranty": null,
+      "basePrice": 1050.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "ORICO",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "SC2-BK",
+          "price": 1050.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1008.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "SC2-BK",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "SC2",
+              "position": 1
+            },
+            {
+              "label": "Output",
+              "value": "Microphone interface, 4PIN Headset interface, Earphone",
+              "position": 2
+            },
+            {
+              "label": "Input interface",
+              "value": "USB2.0",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/orico-sc2-usb-external-sound-card",
+      "sourceProductCode": "18523",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "SC2-BK",
+      "sourceKeyFeatures": [
+        "MPN: SC2-BK",
+        "Model: SC2",
+        "Output: Microphone interface, 4PIN Headset interface, Earphone",
+        "Input interface: USB2.0",
+        "Silence switch, Volume adjustment",
+        "10cm Integrated Cable"
+      ],
+      "needsReview": false,
+      "categorySlug": "sound-card",
+      "image": "/images/products/accessories/sound-card/orico/orico-sc2-usb-external-sound-card.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/sound-card/orico/orico-sc2-usb-external-sound-card.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "orico-sc2-usb-external-sound-card",
+        "candidateTitle": "Orico SC2 USB 2.0 External Sound Card",
+        "attemptStem": "orico-sc2-usb-external-sound-card"
+      }
+    },
+    {
+      "name": "Orico SKT3 USB 2.0 External Sound Card",
+      "slug": "orico-skt3-usb-external-sound-card",
+      "type": "PHYSICAL",
+      "sku": "SKT3-BK",
+      "description": "<h2 style=\"text-align: justify; \">Orico SKT3 USB 2.0 External Sound Card<br/></h2><p style=\"text-align: justify; \">The Orico SKT3 USB 2.0 External Sound Card features Driver-free Installation, 3-port audio output, and a 10cm integrated cable. It has USB-A x1, 3.5mm x1(microphone&amp;earphone), 3.5mm earphone x1, 3.5mm microphone x1 ports. Expand earphones and microphone ports for computers and share the music. With the help of this sound card, you can listen and communicate in a timely. The Orico SKT3 is compatible with most earphones, microphones, and speakers that can transfer analog signals of the tablet, laptop, desktop into digital signal output. It has a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SKT3-BK</li><li>Model: SKT3</li><li>3.5mm (mic&amp;earphone), 3.5mm earphone, 3.5mm microphone</li><li>Input interface: USB2.0</li><li>10cm Integrated Cable</li><li>Driver-free, Plug and Play</li></ul>",
+      "model": "SKT3",
+      "warranty": null,
+      "basePrice": 799.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "ORICO",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "SKT3-BK",
+          "price": 799.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 767.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "SKT3-BK",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "SKT3",
+              "position": 1
+            },
+            {
+              "label": "Input interface",
+              "value": "USB2.0",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/orico-skt3-usb-external-sound-card",
+      "sourceProductCode": "18522",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "SKT3-BK",
+      "sourceKeyFeatures": [
+        "MPN: SKT3-BK",
+        "Model: SKT3",
+        "3.5mm (mic&earphone), 3.5mm earphone, 3.5mm microphone",
+        "Input interface: USB2.0",
+        "10cm Integrated Cable",
+        "Driver-free, Plug and Play"
+      ],
+      "needsReview": false,
+      "categorySlug": "sound-card",
+      "image": "/images/products/accessories/sound-card/orico/orico-skt3-usb-external-sound-card.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/sound-card/orico/orico-skt3-usb-external-sound-card.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "orico-skt3-usb-external-sound-card",
+        "candidateTitle": "Orico SKT3 USB 2.0 External Sound Card",
+        "attemptStem": "orico-skt3-usb-external-sound-card"
+      }
+    }
+  ]
+}

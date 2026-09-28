@@ -1,0 +1,3475 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/accessories",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\accessories",
+    "generatedAtUnix": 1790591006,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "parentSlug": null,
+      "image": "/images/products/accessories/keyboard/bajeal/bajeal-k100-mechanical-keyboard.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Card Reader",
+      "slug": "card-reader",
+      "parentSlug": "accessories",
+      "image": "/images/products/accessories/card-reader/amalink/amalink-al-cr531a-card-reader.png",
+      "isActive": true,
+      "sortOrder": 5,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Amalink",
+      "slug": "amalink",
+      "logo": null
+    },
+    {
+      "name": "Baseus",
+      "slug": "baseus",
+      "logo": null
+    },
+    {
+      "name": "BWOO",
+      "slug": "bwoo",
+      "logo": null
+    },
+    {
+      "name": "Hiksemi",
+      "slug": "hiksemi",
+      "logo": null
+    },
+    {
+      "name": "Hoco",
+      "slug": "hoco",
+      "logo": null
+    },
+    {
+      "name": "Onten",
+      "slug": "onten",
+      "logo": null
+    },
+    {
+      "name": "ORICO",
+      "slug": "orico",
+      "logo": null
+    },
+    {
+      "name": "Transcend",
+      "slug": "transcend",
+      "logo": null
+    },
+    {
+      "name": "UGREEN",
+      "slug": "ugreen",
+      "logo": null
+    },
+    {
+      "name": "Ulanzi",
+      "slug": "ulanzi",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Amalink AL-CR531A Dual Port Card Reader",
+      "slug": "amalink-al-cr531a-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-52169",
+      "description": "<h2>Amalink AL-CR531A Dual Port Card Reader</h2><p>The Amalink <strong>AL-CR531A</strong> Dual Port Card Reader is a compact and efficient solution for fast and reliable memory card access, designed to support modern devices with dual interface options. Featuring both Type-C and USB-A inputs, this Amalink Card Reader offers maximum flexibility, allowing seamless use across laptops, desktops, tablets, and smartphones. Supporting SD, microSD, and TF cards, it ensures smooth data transfer and easy access to photos, videos, and files, making it ideal for photographers, content creators, and everyday users. A standout feature of the Amalink AL-CR531A Type-C Card Reader is its direct copy function, enabling quick transfers from SD to microSD cards without the need for a computer, saving time and simplifying workflow. Built for universal compatibility, this Amalink Dual Port Card Reader works effortlessly with Windows, macOS, Chrome OS, Android, and iOS, offering true plug-and-play convenience without additional drivers. Compact, durable, and portable, the Amalink AL-CR531A Card Reader combines speed, versatility, and convenience, making it the perfect accessory for anyone seeking a dependable card reader with modern connectivity and optimized performance.</p><h2>Buy Amalink AL-CR531A Dual Port Card Reader from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Amalink AL-CR531A Dual Port Card Reader</strong> From Star Tech. We have a large collection of latest Amalink <a href=\"https://www.startech.com.bd/card-reader\">Card Reader</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\">laptop</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at lowest price. The Amalink AL-CR531A Dual Port Card Reader comes with 2 Years Replacement Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AL-CR531A</li><li>Input: 1 x Type-C, 1 x USB-A</li><li>Supports SD, microSD, TF Cards</li><li>Supports Direct copy from SD to MicroSD Cards</li><li>Compatible with Windows/macOS/Chrome OS/Android/iOS</li></ul>",
+      "model": "AL-CR531A",
+      "warranty": "2 Years Replacement Warranty",
+      "basePrice": 633.0,
+      "originalPrice": 825.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Amalink",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-52169",
+          "price": 633.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 607.68,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AL-CR531A",
+              "position": 0
+            },
+            {
+              "label": "Input",
+              "value": "1 x Type-C, 1 x USB-A",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/amalink-al-cr531a-card-reader",
+      "sourceProductCode": "52169",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AL-CR531A",
+        "Input: 1 x Type-C, 1 x USB-A",
+        "Supports SD, microSD, TF Cards",
+        "Supports Direct copy from SD to MicroSD Cards",
+        "Compatible with Windows/macOS/Chrome OS/Android/iOS"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/amalink/amalink-al-cr531a-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/amalink/amalink-al-cr531a-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "amalink-al-cr531a-card-reader",
+        "candidateTitle": "Amalink AL-CR531A Dual Port Card Reader",
+        "attemptStem": "amalink-al-cr531a-card-reader"
+      }
+    },
+    {
+      "name": "Amalink AL-CR532 Dual Mode Card Reader",
+      "slug": "amalink-al-cr532-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-52448",
+      "description": "<h2>Amalink AL-CR532 Dual Mode Card Reader</h2><p>The Amalink<strong> AL-CR532</strong> Dual Mode Card Reader is a compact and versatile solution for fast and reliable memory card access across multiple devices. Featuring dual interface support with both USB and Type-C inputs, the Amalink AL-CR532 Card Reader offers maximum flexibility for laptops, desktops, tablets, and smartphones. It supports a wide range of cards including SD, SDHC, microSD, TF, MMC, RS-MMC, and UHS-I, ensuring smooth compatibility for photographers, content creators, and everyday users. With data transfer speeds of up to 450Mbps, this Amalink Card Reader makes it easy to move photos, videos, and files quickly and efficiently.Built for universal compatibility, the Amalink Dual Mode Card Reader works seamlessly with Windows, macOS, Chrome OS, Android, and iOS, providing true plug-and-play convenience without the need for additional drivers. Compact, durable, and portable, the Amalink AL-CR532 combines speed, versatility, and modern connectivity, making it an essential accessory for anyone seeking dependable card reading performance on the go.</p><h2>Buy Amalink AL-CR532 Dual Mode Card Reader from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Amalink AL-CR532 Dual Mode Card Reader</strong> From <a href=\"https://www.startech.com.bd/\">Star Tech</a>. We have a large collection of latest Hoco <a href=\"https://www.startech.com.bd/card-reader\">Card Reader</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\">laptop</a>. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The Amalink AL-CR532 Dual Mode Card Reader comes with a 2 Years Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AL-CR532</li><li>Input Interface: USB, Type-C</li><li>Supported Cards: SD/SDHC, Micro SD/TF/MMC/RS-MMC/UHS-I</li><li>Data Trasfer Up to 450Mbps</li><li>Compatible with Windows/macOS//Chrome OS/Android/iOS</li></ul>",
+      "model": "AL-CR532",
+      "warranty": "a 2 Years Warranty",
+      "basePrice": 604.0,
+      "originalPrice": 788.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Amalink",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-52448",
+          "price": 604.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 579.84,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AL-CR532",
+              "position": 0
+            },
+            {
+              "label": "Input Interface",
+              "value": "USB, Type-C",
+              "position": 1
+            },
+            {
+              "label": "Supported Cards",
+              "value": "SD/SDHC, Micro SD/TF/MMC/RS-MMC/UHS-I",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/amalink-al-cr532-card-reader",
+      "sourceProductCode": "52448",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AL-CR532",
+        "Input Interface: USB, Type-C",
+        "Supported Cards: SD/SDHC, Micro SD/TF/MMC/RS-MMC/UHS-I",
+        "Data Trasfer Up to 450Mbps",
+        "Compatible with Windows/macOS//Chrome OS/Android/iOS"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/amalink/amalink-al-cr532-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/amalink/amalink-al-cr532-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "amalink-al-cr532-card-reader",
+        "candidateTitle": "Amalink AL-CR532 Dual Mode Card Reader",
+        "attemptStem": "amalink-al-cr532-card-reader"
+      }
+    },
+    {
+      "name": "Baseus BH-OH069 TA/TC Dual Mode Card Reader",
+      "slug": "baseus-bh-oh069-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-50547",
+      "description": "<h2>Baseus BH-OH069 TA/TC Dual Mode Card Reader</h2><p>The Baseus<strong> BH‑OH069 </strong>TA/TC Dual Mode Card Reader is a versatile accessory designed for fast data transfer and universal compatibility. Featuring dual interfaces with USB‑A and Type‑C, the Baseus BH‑OH069 Card Reader connects seamlessly to laptops, desktops, and mobile devices. With transfer speeds up to 104MB/s via USB 3.0, it ensures quick access to photos, videos, and files, making it ideal for professionals and everyday users.</p><p>Supporting memory cards up to 2TB, the Baseus Card Reader provides ample storage management for large files and extended use. Its ability to read SD and MicroSD cards simultaneously enhances productivity, allowing users to manage multiple cards at once without switching. Compact and durable, the Baseus Dual Mode Card Reader combines speed, convenience, and reliability, making it an essential tool for efficient data transfer and storage expansion.</p><h2>Buy Baseus BH-OH069 TA/TC Dual Mode Card Reader from Star Tech</h2><p>In Bangladesh, you can get original <strong>Baseus BH-OH069 TA/TC Dual Mode Card Reader</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/accessories\">Accessories</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at lowest price. The Baseus BH-OH069 TA/TC Dual Mode Card Reader comes with 01 Year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: BH-OH069</li><li>Interface: USB A &amp; Type-C</li><li>Transfer rate: Up to 104MB/s USB 3.0</li><li>Supports memory cards up to 2 TB</li><li>Simultaneous SD + MicroSD reading</li></ul>",
+      "model": "BH-OH069",
+      "warranty": "01 Year warranty",
+      "basePrice": 1150.0,
+      "originalPrice": 1200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Baseus",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "USB A & Type-C",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-50547",
+          "price": 1150.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "USB A & Type-C"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1104.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "BH-OH069",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "USB A & Type-C",
+              "position": 1
+            },
+            {
+              "label": "Transfer rate",
+              "value": "Up to 104MB/s USB 3.0",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/baseus-bh-oh069-card-reader",
+      "sourceProductCode": "50547",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: BH-OH069",
+        "Interface: USB A & Type-C",
+        "Transfer rate: Up to 104MB/s USB 3.0",
+        "Supports memory cards up to 2 TB",
+        "Simultaneous SD + MicroSD reading"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/baseus/baseus-bh-oh069-card-reader.webp",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/baseus/baseus-bh-oh069-card-reader.webp"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "baseus-bh-oh069-card-reader",
+        "candidateTitle": "Baseus BH-OH069 TA/TC Dual Mode Card Reader",
+        "attemptStem": "baseus-bh-oh069-card-reader"
+      }
+    },
+    {
+      "name": "BWOO BO-BZ64 2-in-1 Type-C Multifunctional Card Reader",
+      "slug": "bwoo-bo-bz64-type-c-card-reader",
+      "type": "PHYSICAL",
+      "sku": "693365481754",
+      "description": "<h2>BWOO BO-BZ64 2-in-1 Type-C Multifunctional Card Reader</h2><p>The <strong>BWOO BO-BZ64</strong> 2-in-1 Type-C Multifunctional Card Reader is designed for smooth and efficient data access. This compact device combines SD and TF card slots, offering quick plug-and-play functionality for smartphones, tablets, and laptops with USB-C ports. The BWOO BO-BZ64 ensures stable performance through its intelligent chipset, enabling reliable transfer of photos, videos, and documents. With a transmission speed of up to 480Mbps, users can import HD videos and high-resolution images without delay. The lightweight build of 27g, braided wire, and durable ABS plus aluminum alloy construction make the BWOO BO-BZ64 a practical accessory for professionals and content creators. Certified with CE, FCC, and RoHS, the BWOO BO-BZ64 guarantees safety and quality standards. Its 20cm length and sleek grey finish add convenience and style to modern workflows.</p><h3>High-Speed Transfer</h3><p>The BWOO BO-BZ64 features a smart chipset that ensures smooth and reliable transmission. Supporting speeds up to 480Mbps, it allows quick import of large files, HD videos, and essential documents. This performance-focused design enhances productivity for users managing heavy workloads.</p><h3>Wide Compatibility</h3><p>The BWOO BO-BZ64 offers dual-slot simultaneous reading, enabling access to SD and TF cards at once. It works seamlessly with USB type-C phones, tablets, and laptops without requiring drivers or apps. This user-friendly design simplifies file management and boosts efficiency.</p><p><span style=\"color: inherit; font-family: inherit; font-size: 25px;\">Buy </span><span style=\"font-size: 25px;\">BWOO BO-BZ64 2-in-1 Type-C Multifunctional Card Reader</span><span style=\"color: inherit; font-family: inherit; font-size: 25px;\"> from Star Tech</span></p><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">BWOO BO-BZ64 2-in-1 Type-C Multifunctional Card Reader</span> From Star Tech. We have a large collection of latest BWOO <a href=\"https://www.startech.com.bd/card-reader\" style=\"\" target=\"\">Card Reader</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The BWOO BO-BZ64 2-in-1 Type-C Multifunctional Card Reader comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 693365481754</li><li>Model: BO-BZ64</li><li>Input Interface: Type-C</li><li>Interfaces: SD/TF</li><li>Speed: Up to 480Mbps</li><li>Material: ABS+PC+Aluminum alloy+Braided wire</li></ul>",
+      "model": "BO-BZ64",
+      "warranty": "1 Year Warranty",
+      "basePrice": 700.0,
+      "originalPrice": 760.0,
+      "currency": "BDT",
+      "weight": 0.027,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "BWOO",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Grey",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "693365481754",
+          "price": 700.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Grey"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 672.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Input Interface",
+              "value": "Type-C",
+              "position": 0
+            },
+            {
+              "label": "Output Interface",
+              "value": "SD/TF",
+              "position": 1
+            },
+            {
+              "label": "Transmission Rate",
+              "value": "480Mbps",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Material",
+              "value": "ABS+Transparent PC+Aluminum alloy+Braided wire",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "Grey",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "27g",
+              "position": 2
+            },
+            {
+              "label": "Cable Length",
+              "value": "20cm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bwoo-bo-bz64-type-c-card-reader",
+      "sourceProductCode": "49860",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "693365481754",
+      "sourceKeyFeatures": [
+        "MPN: 693365481754",
+        "Model: BO-BZ64",
+        "Input Interface: Type-C",
+        "Interfaces: SD/TF",
+        "Speed: Up to 480Mbps",
+        "Material: ABS+PC+Aluminum alloy+Braided wire"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/bwoo/bwoo-bo-bz64-type-c-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/bwoo/bwoo-bo-bz64-type-c-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bwoo-bo-bz64-type-c-card-reader",
+        "candidateTitle": "BWOO BO-BZ64 2-in-1 Type-C Multifunctional Card Reader",
+        "attemptStem": "bwoo-bo-bz64-type-c-card-reader"
+      }
+    },
+    {
+      "name": "BWOO BO-BZ70 Lightning to USB-A Converter",
+      "slug": "bwoo-bo-bz70-lightning-otg-cable",
+      "type": "PHYSICAL",
+      "sku": "693365481788",
+      "description": "<h2>BWOO BO-BZ70 Lightning to USB-A Converter<br/></h2><p>The <strong>BWOO BO-BZ70 Lightning to USB-A Converter</strong> delivers smooth connectivity for Apple devices. Built with braided wire and aluminum shells, it ensures durability and long-lasting performance. Its sleek grey finish adds a modern touch, while the OTG cable design supports fast data transfer and charging. Compact and lightweight, the BWOO BO-BZ70 fits easily into bags or pockets, offering reliable functionality wherever you go. Designed for convenience, it bridges compatibility gaps between Lightning devices and USB-A accessories. With strong build quality and efficient performance, the BWOO BO-BZ70 stands out as a practical accessory for modern digital lifestyles.</p><h3>Premium Build Quality</h3><p>The BWOO BO-BZ70 features braided wire construction that resists tangling and enhances strength. Aluminum shells provide extra protection against wear, ensuring long-term use. Its grey color offers a professional look suitable for work or travel. The OTG cable design supports seamless data transfer between devices, giving users flexibility in multiple scenarios. With its compact size, the BWOO BO-BZ70 is a smart companion for those who value durability and efficiency in their tech accessories.</p><h3>Reliable Connectivity Features</h3><p>The BWOO BO-BZ70 ensures smooth charging and stable data transmission. Its strong build reduces risks of breakage, while the OTG function expands device compatibility. The converter supports quick connections, helping users stay productive in different environments. Designed for convenience, it works well with various accessories, offering consistent performance. The BWOO BO-BZ70 is a practical solution for users seeking a sturdy and efficient Lightning to USB-A converter.</p><p><span style=\"color: inherit; font-family: inherit; font-size: 25px;\">Buy </span><span style=\"font-size: 25px;\">BWOO BO-BZ70 Lightning to USB-A Converter</span><span style=\"color: inherit; font-family: inherit; font-size: 25px;\"> from Star Tech</span></p><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">BWOO BO-BZ70 Lightning to USB-A Converter</span> From Star Tech. We have a large collection of latest BWOO <a href=\"https://www.startech.com.bd/usb-converter\" target=\"\">Converter </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The BWOO BO-BZ70 Lightning to USB-A Converter comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 693365481788</li><li>Model: BO-BZ70</li><li>Input Interface: Lightning</li><li>Interfaces: Lightning Male To USB-A Female</li><li>Speed: Up to 480Mbps</li><li>Material: ABS+PC+Aluminum alloy+Braided wire</li></ul>",
+      "model": "BO-BZ70",
+      "warranty": "1 Year Warranty",
+      "basePrice": 700.0,
+      "originalPrice": 760.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "BWOO",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Grey",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "693365481788",
+          "price": 700.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Grey"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 672.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Input Interface",
+              "value": "Lightning",
+              "position": 0
+            },
+            {
+              "label": "Output Interface",
+              "value": "Lightning Male To USB-A Female",
+              "position": 1
+            },
+            {
+              "label": "Transmission Rate",
+              "value": "480Mbps",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Material",
+              "value": "ABS+Transparent PC+Aluminum alloy+Braided wire",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "Grey",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bwoo-bo-bz70-lightning-otg-cable",
+      "sourceProductCode": "49862",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "693365481788",
+      "sourceKeyFeatures": [
+        "MPN: 693365481788",
+        "Model: BO-BZ70",
+        "Input Interface: Lightning",
+        "Interfaces: Lightning Male To USB-A Female",
+        "Speed: Up to 480Mbps",
+        "Material: ABS+PC+Aluminum alloy+Braided wire"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/bwoo/bwoo-bo-bz70-lightning-otg-cable.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/bwoo/bwoo-bo-bz70-lightning-otg-cable.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bwoo-bo-bz70-lightning-otg-cable",
+        "candidateTitle": "BWOO BO-BZ70 Lightning to USB-A Converter",
+        "attemptStem": "bwoo-bo-bz70-lightning-otg-cable"
+      }
+    },
+    {
+      "name": "Hiksemi CR01 2 in 1 Card Reader",
+      "slug": "hiksemi-cr01-card-reader",
+      "type": "PHYSICAL",
+      "sku": "HS-HUB-CR01",
+      "description": "<h2>Hiksemi CR01 2 in 1 Card Reader</h2><p>The Hiksemi <strong>CR01</strong> Card Reader features dual output interfaces including USB 3.0 and Type-C, allowing flexible connectivity with modern laptops, smartphones, and tablets. This Hiksemi Type-C <a href=\"https://www.startech.com.bd/card-reader\" style=\"color: rgb(0, 0, 0);\" target=\"\">Card Reader</a> supports a fast transmission rate up to 5Gbps through the USB 3.0 interface. The Hiksemi Card Reader also delivers reading speeds up to 100MB per second for efficient file transfers. Hiksemi CR01 2 in 1 Card Reader includes two dedicated card slots that support SD cards and TF cards simultaneously. Users can insert both SD and TF cards at the same time for simultaneous reading and easy data transfer between storage devices. Hiksemi CR01 Card Reader supports a wide range of SD and TF card capacities including both standard capacity and high capacity memory cards. The Hiksemi Type-C Card Reader allows photographers, content creators, and everyday users to manage files quickly and efficiently. Hiksemi USB Card Reader operates with a plug and play design that requires no additional drivers or software installation. Users can simply connect the Hiksemi CR01 Type-C Card Reader to their device and start transferring files immediately. Hiksemi Card Reader works with multiple operating systems including Windows, Mac OS, Linux, and Android platforms. This broad compatibility ensures the Hiksemi Card Reader functions reliably across various devices and computing environments. Hiksemi CR01 2 in 1 Card Reader performs safely within an operating temperature range of 0°C to 40°C. For storage, the Hiksemi Type-C Card Reader supports temperatures ranging from minus 10°C to 55°C. The device also meets RoHS certification standards, ensuring safe materials and reliable electronic compliance.</p><h2>Buy Hiksemi CR01 2 in 1 Card Reader from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hiksemi CR01 2 in 1 Card Reader</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Hiksemi CR01 2 in 1 Card Reader comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HS-HUB-CR01</li><li>Model: CR01</li><li>Data Interfaces: USB 3.0 &amp; Type-C</li><li>Card Slots: 1x SD Cards, 1x TF Cards</li><li>Transmission Rate: Up to 5Gbps</li><li>Material: Aluminum alloy</li></ul>",
+      "model": "CR01",
+      "warranty": "1-year warranty",
+      "basePrice": 700.0,
+      "originalPrice": 770.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hiksemi",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "HS-HUB-CR01",
+          "price": 700.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 672.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "HS-HUB-CR01",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "CR01",
+              "position": 1
+            },
+            {
+              "label": "Data Interfaces",
+              "value": "USB 3.0 & Type-C",
+              "position": 2
+            },
+            {
+              "label": "Card Slots",
+              "value": "1x SD Cards, 1x TF Cards",
+              "position": 3
+            },
+            {
+              "label": "Transmission Rate",
+              "value": "Up to 5Gbps",
+              "position": 4
+            },
+            {
+              "label": "Material",
+              "value": "Aluminum alloy",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hiksemi-cr01-card-reader",
+      "sourceProductCode": "48487",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "HS-HUB-CR01",
+      "sourceKeyFeatures": [
+        "MPN: HS-HUB-CR01",
+        "Model: CR01",
+        "Data Interfaces: USB 3.0 & Type-C",
+        "Card Slots: 1x SD Cards, 1x TF Cards",
+        "Transmission Rate: Up to 5Gbps",
+        "Material: Aluminum alloy"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/hiksemi/hiksemi-cr01-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/hiksemi/hiksemi-cr01-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hiksemi-cr01-card-reader",
+        "candidateTitle": "Hiksemi CR01 2 in 1 Card Reader",
+        "attemptStem": "hiksemi-cr01-card-reader"
+      }
+    },
+    {
+      "name": "Hiksemi CR01 Mini Type-C Card Reader",
+      "slug": "hiksemi-cr01-mini-card-reader",
+      "type": "PHYSICAL",
+      "sku": "HS- HUB-CR01 MINI",
+      "description": "<h2>Hiksemi CR01 Mini Type-C Card Reader</h2><p>The Hiksemi <strong>CR01 Mini</strong> Card Reader uses a USB 3.2 Type-C interface that ensures fast and stable connectivity with compatible laptops, tablets, and smartphones. The Hiksemi Type-C Card Reader supports transmission speeds up to 5Gbps, allowing users to transfer photos, videos, and files efficiently. This Hiksemi Card Reader is specially designed for Micro SD card reading, making it ideal for cameras, drones, smartphones, and action cameras. Hiksemi CR01 Mini Type-C Card Reader includes one dedicated card slot that supports Micro SD cards for reliable data access. The specialized single card reading design ensures efficient performance and smooth data transfer for everyday storage needs. Hiksemi CR01 Mini Card Reader features durable zinc alloy construction that enhances strength and long term reliability. The metal material also helps protect the Hiksemi Type-C Card Reader from daily wear while maintaining a premium appearance. Hiksemi Card Reader offers broad compatibility with multiple operating systems including Windows, Mac OS, Linux, Android, and iOS devices. This wide system support ensures the Hiksemi CR01 Mini Type-C Card Reader works smoothly across different platforms and devices. Hiksemi Mini Card Reader operates with a plug and play design that requires no additional drivers or software installation. Users can simply connect the Hiksemi Type-C Card Reader to a compatible device and instantly access their Micro SD card data. Hiksemi Card Reader provides high speed and stable data transfer through the advanced USB 3.2 Type-C interface. This efficient connection allows faster file movement compared to older USB interfaces. Hiksemi CR01 Mini Type-C Card Reader features a compact and portable design that easily fits in pockets or small accessory bags.</p><h2>Buy Hiksemi CR01 Mini Type-C Card Reader from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hiksemi CR01 Mini Type-C Card Reader</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Hiksemi CR01 Mini Type-C Card Reader comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HS- HUB-CR01 MINI</li><li>Model: CR01 Mini</li><li>Data Interfaces: USB 3.2 Type-C</li><li>Specialized in Micro SD Card Reading</li><li>Transmission Rate: Up to 5Gbps</li><li>Material: Zinc alloy</li></ul>",
+      "model": "CR01 Mini",
+      "warranty": "1-year warranty",
+      "basePrice": 600.0,
+      "originalPrice": 660.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hiksemi",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "HS- HUB-CR01 MINI",
+          "price": 600.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 576.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "HS- HUB-CR01 MINI",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "CR01 Mini",
+              "position": 1
+            },
+            {
+              "label": "Data Interfaces",
+              "value": "USB 3.2 Type-C",
+              "position": 2
+            },
+            {
+              "label": "Transmission Rate",
+              "value": "Up to 5Gbps",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Zinc alloy",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hiksemi-cr01-mini-card-reader",
+      "sourceProductCode": "48515",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "HS- HUB-CR01 MINI",
+      "sourceKeyFeatures": [
+        "MPN: HS- HUB-CR01 MINI",
+        "Model: CR01 Mini",
+        "Data Interfaces: USB 3.2 Type-C",
+        "Specialized in Micro SD Card Reading",
+        "Transmission Rate: Up to 5Gbps",
+        "Material: Zinc alloy"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/hiksemi/hiksemi-cr01-mini-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/hiksemi/hiksemi-cr01-mini-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hiksemi-cr01-mini-card-reader",
+        "candidateTitle": "Hiksemi CR01 Mini Type-C Card Reader",
+        "attemptStem": "hiksemi-cr01-mini-card-reader"
+      }
+    },
+    {
+      "name": "Hoco HB20 Mindful 2-in-1 USB 3.0 Card Reader",
+      "slug": "hoco-hb20-mindful-usb-3-0-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-37470",
+      "description": "<h2>Hoco HB20 Mindful 2-in-1 USB 3.0 Card Reader</h2><p>The Hoco <strong>HB20 Mindful</strong> USB 3.0 Card Reader is a small and lightweight device that allows for effective data management on the road. This Hoco HB20 Mindful compact card reader weighs only 10 grams and measures 691913mm. It is made of robust ABS plastic, so it can handle the demands of regular usage while staying incredibly portable. It has a USB 2.0 interface and a potential transmission speed of up to 5Mbps, making it ideal for transferring a wide range of items, from documents to multimedia. The Hoco HB20 Mindful supports both TF and SD cards, giving users the ability to access and transfer data between devices. With a theoretical support capacity of up to 2TB, this card reader is designed to handle big storage cards, making it suitable for professionals who need a lot of storage space for their data. Furthermore, the Hoco HB20 Mindful is compatible with the majority of operating systems, including Windows and Mac OS, providing widespread usage across several devices and platforms. Whether you're working on a laptop or a desktop, the Hoco HB20 Mindful USB 3.0 Card Reader provides dependable performance in a simple and user-friendly design. </p><h2>Buy Hoco HB20 Mindful 2-in-1 USB 3.0 Card Reader from Star Tech</h2><p>In Bangladesh, you can get the original <span style=\"font-weight: bold;\">Hoco HB20 Mindful 2-in-1 USB 3.0 Card Reader</span> From <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a>. We have a large collection of latest Hoco Card Reader to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\" target=\"\">laptop</a>. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The Hoco HB20 Mindful 2-in-1 USB 3.0 Card Reader comes with 3 Months Warranty (Must Claim With Box &amp; All Accessories).<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HB20 Mindful</li><li>Interface: USB2.0</li><li>Transmission Speed: 480Mbps</li><li>Supports up to 2Tb memory card</li><li>Compatibility: Support TF/SD card</li></ul>",
+      "model": "HB20 Mindful",
+      "warranty": "3 Months Warranty",
+      "basePrice": 330.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Hoco",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "USB2.0",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-37470",
+          "price": 330.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "USB2.0"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 316.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "HB20 Mindful",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "USB2.0",
+              "position": 1
+            },
+            {
+              "label": "Transmission Speed",
+              "value": "480Mbps",
+              "position": 2
+            },
+            {
+              "label": "Compatibility",
+              "value": "Support TF/SD card",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hoco-hb20-mindful-usb-3-0-card-reader",
+      "sourceProductCode": "37470",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HB20 Mindful",
+        "Interface: USB2.0",
+        "Transmission Speed: 480Mbps",
+        "Supports up to 2Tb memory card",
+        "Compatibility: Support TF/SD card"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/hoco/hoco-hb20-mindful-usb-3-0-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/hoco/hoco-hb20-mindful-usb-3-0-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hoco-hb20-mindful-usb-3-0-card-reader",
+        "candidateTitle": "Hoco HB20 Mindful 2-in-1 USB 3.0 Card Reader",
+        "attemptStem": "hoco-hb20-mindful-usb-3-0-card-reader"
+      }
+    },
+    {
+      "name": "Hoco HB20 Mindful 2-in-1 USB 2.0 Card Reader",
+      "slug": "hoco-hb20-mindful-usb-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-37472",
+      "description": "<h2>Hoco HB20 Mindful 2-in-1 USB 2.0 Card Reader</h2>\n<p>The Hoco <strong>HB20 Mindful</strong> USB 2.0 Card Reader is a compact and lightweight device that enables efficient data management on the go. The Hoco HB20 Mindful tiny card reader weighs just 10 grams and measures 691913mm. It is built of durable ABS plastic, allowing it to withstand daily use while remaining extremely portable. It includes a USB 2.0 interface and a maximum transmission speed of 480Mbps, making it suitable for transmitting a broad range of objects, including documents and entertainment. The Hoco HB20 Mindful supports both TF and SD cards, allowing users to view and transfer data between devices. With a theoretical capacity of up to 2TB, this card reader is intended to handle large storage cards, making it suited for professionals. Furthermore, the Hoco HB20 Mindful is compatible with the majority of operating systems, including Windows and Mac OS, providing widespread usage across several devices and platforms. Whether you're working on a laptop or a desktop, the Hoco HB20 Mindful USB 2.0 Card Reader provides dependable performance in a simple and user-friendly design. </p>\n<h2>Buy Hoco HB20 Mindful 2-in-1 USB 2.0 Card Reader from Star Tech</h2>\n<p>In Bangladesh, you can get the original <span style=\"font-weight: bold;\">Hoco HB20 Mindful 2-in-1 USB 2.0 Card Reader</span> From <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a>. We have a large collection of latest Hoco Card Reader to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\" target=\"\">laptop</a>. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The Hoco HB20 Mindful 2-in-1 USB 2.0 Card Reader comes with 3 Months Warranty (Must Claim With Box &amp; All Accessories).<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HB20 Mindful</li><li>Interface: USB2.0</li><li>Transmission Speed: 480Mbps</li><li>Supports up to 2Tb memory card</li><li>Compatibility: Support TF/SD card</li></ul>",
+      "model": "HB20 Mindful",
+      "warranty": "3 Months Warranty",
+      "basePrice": 250.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Hoco",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "USB2.0",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-37472",
+          "price": 250.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "USB2.0"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "HB20 Mindful",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "USB2.0",
+              "position": 1
+            },
+            {
+              "label": "Transmission Speed",
+              "value": "480Mbps",
+              "position": 2
+            },
+            {
+              "label": "Compatibility",
+              "value": "Support TF/SD card",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hoco-hb20-mindful-usb-card-reader",
+      "sourceProductCode": "37472",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HB20 Mindful",
+        "Interface: USB2.0",
+        "Transmission Speed: 480Mbps",
+        "Supports up to 2Tb memory card",
+        "Compatibility: Support TF/SD card"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/hoco/hoco-hb20-mindful-usb-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/hoco/hoco-hb20-mindful-usb-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hoco-hb20-mindful-usb-card-reader",
+        "candidateTitle": "Hoco HB20 Mindful 2-in-1 USB 2.0 Card Reader",
+        "attemptStem": "hoco-hb20-mindful-usb-card-reader"
+      }
+    },
+    {
+      "name": "Hoco HB39 2-in-1 USB & Type-C 3.0 Card Reader",
+      "slug": "hoco-hb39-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-42004",
+      "description": "<h2>Hoco HB39 2-in-1 USB &amp; Type-C 3.0 Card Reader</h2><p>The Hoco <strong>HB39</strong> 2-in-1 USB &amp; Type-C 3.0 <a href=\"https://www.startech.com.bd/card-reader\" style=\"color: rgb(0, 0, 0);\" target=\"\">Card Reader</a> is a small, advanced device designed for quick and dependable data transfer. With dual interface connection, this flexible device works effortlessly as both a Hoco HB39 USB Card Reader and a Hoco HB39 Type-C Card Reader, enabling compatibility with a broad range of devices such as laptops, tablets, and smartphones. The Hoco HB39 Card Reader, with a potential transfer speed of up to 5 Gbps, allows for quick file transfers, making it ideal for customers working with huge media files or extensive data sets. Its dual card slot allows for simultaneous SD and TF card reading, which considerably increases productivity by letting users to read and write to two memory cards at once. Supporting up to 2TB memory capacity, this USB and Type-C card reader handles high-volume storage needs with ease. Built from a premium combination of zinc alloy and PC, the Hoco HB39 Card Reader is both durable and ultra-lightweight at just 23g. Measuring only 69.5 × 22 × 9mm, it is compact enough to fit in your pocket, making it ideal for on-the-go professionals. The card reader operates efficiently at just 5V/100mA and offers broad compatibility with Windows, Mac OS, Linux, and Android systems. Whether you're a content creator, traveler, or business user, the Hoco HB39 2-in-1 USB &amp; Type-C 3.0 Card Reader delivers the speed, reliability, and portability you need for effortless data access and transfer.</p><h2>Buy Hoco HB39 2-in-1 USB &amp; Type-C 3.0 Card Reader from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Hoco HB39 2-in-1 USB &amp; Type-C 3.0 Card Reader</strong> From <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a>. We have a large collection of latest Hoco Card Reader to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\" target=\"\">laptop</a>. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The Hoco HB39 2-in-1 USB &amp; Type-C 3.0 Card Reader comes with 3 Months Warranty (Must Claim With Box &amp; All Accessories).<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HB39</li><li>Input Interface: USB/TYPE-C3.0 to SD+TF3.0</li><li>Theoretical Transfer Speed: 5 Gbps</li><li>Working Voltage / Current: 5V / 100mA.</li><li>Supports Up to 2 TB Memory Card</li></ul>",
+      "model": "HB39",
+      "warranty": "3 Months Warranty",
+      "basePrice": 1100.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 69.5,
+        "width": 22.0,
+        "height": 9.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Hoco",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-42004",
+          "price": 1100.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1056.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "HB39",
+              "position": 0
+            },
+            {
+              "label": "Input Interface",
+              "value": "USB/TYPE-C3.0 to SD+TF3.0",
+              "position": 1
+            },
+            {
+              "label": "Theoretical Transfer Speed",
+              "value": "5 Gbps",
+              "position": 2
+            },
+            {
+              "label": "Working Voltage / Current",
+              "value": "5V / 100mA.",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hoco-hb39-card-reader",
+      "sourceProductCode": "42004",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HB39",
+        "Input Interface: USB/TYPE-C3.0 to SD+TF3.0",
+        "Theoretical Transfer Speed: 5 Gbps",
+        "Working Voltage / Current: 5V / 100mA.",
+        "Supports Up to 2 TB Memory Card"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/hoco/hoco-hb39-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/hoco/hoco-hb39-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hoco-hb39-card-reader",
+        "candidateTitle": "Hoco HB39 2-in-1 USB & Type-C 3.0 Card Reader",
+        "attemptStem": "hoco-hb39-card-reader"
+      }
+    },
+    {
+      "name": "Hoco HB45 Spirit 2-in-1 USB & Type-C 2.0 Card Reader",
+      "slug": "hoco-hb45-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-37469",
+      "description": "<h2>Hoco HB45 Spirit 2-in-1 USB &amp; Type-C 2.0 Card Reader</h2><p>The Hoco <strong>HB45</strong> Spirit 2-in-1 USB &amp; Type-C 2.0 Card Reader is a precisely developed gadget that connects a variety of digital devices to memory cards. With a dual interface that includes both USB-A and Type-C ports, this card reader offers unrivaled versatility, assuring compatibility with a wide range of devices, including current smartphones and tablets, laptops, cameras, and dashboard cameras. Whether you're on the road or at your desk, the Hoco HB45 makes it easier to view and share data. One of the Hoco HB45's notable characteristics is its ability to read and write SD and TF cards at the same time. This dual-slot feature not only increases efficiency, but also enables for rapid backups and transfers between various memory. The gadget can handle high-capacity memory cards of up to 2TB, making it ideal for professionals and hobbyists that work with big amounts of data, such as photographers, filmmakers, and tech-savvy consumers. The Hoco HB45 delivers exceptional performance. The card reader has two transmission speeds, depending on the connection type. USB 2.0 has a potential transmission speed of up to 480Mbps, which is suitable for most workloads.  The Hoco HB45 is made of high-quality ABS plastic, which ensures it can resist the rigors of regular use. The gadget runs efficiently at a working voltage of 5V and a current of 100mA, making it energy-efficient and simple to power from any compatible device without depleting battery life. The Hoco HB45 is more than just a card reader; it's a full-featured data management tool that adapts to your needs, whether you're moving files between your camera and smartphone or accessing data from many devices. Its small size makes it easy to transport in your purse or pocket, guaranteeing that you always have access to your data, no matter where you are. With its sturdy features and dependable performance, the Hoco HB45 Spirit 2-in-1 USB &amp; Type-C 2.0 Card Reader is an important tool for anybody who requires a versatile, high-speed, and durable card. </p><h2>Buy Hoco HB45 Spirit 2-in-1 USB &amp; Type-C 2.0 Card Reader from Star Tech</h2><p>In Bangladesh, you can get the original <span style=\"font-weight: bold;\">Hoco HB45 Spirit 2-in-1 USB &amp; Type-C 2.0 Card Reader</span> From <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a>. We have a large collection of latest Hoco Card Reader to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\" target=\"\">laptop</a>. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The Hoco HB45 Spirit 2-in-1 USB &amp; Type-C 2.0 Card Reader comes with 1-year Warranty (Must Claim With Box &amp; All Accessories).<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HB45</li><li>Input Interface: USB-A &amp; Type C</li><li>Theoretical transfer speed: USB-A / Type-C [USB2.0] – 480Mbps</li><li>Working voltage / current: 5V / 100mA.</li><li>Supports up to 2Tb memory card</li></ul>",
+      "model": "HB45",
+      "warranty": "1-year Warranty",
+      "basePrice": 350.0,
+      "originalPrice": 450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hoco",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37469",
+          "price": 350.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 336.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "HB45",
+              "position": 0
+            },
+            {
+              "label": "Input Interface",
+              "value": "USB-A & Type C",
+              "position": 1
+            },
+            {
+              "label": "Theoretical transfer speed",
+              "value": "USB-A / Type-C [USB2.0] – 480Mbps",
+              "position": 2
+            },
+            {
+              "label": "Working voltage / current",
+              "value": "5V / 100mA.",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hoco-hb45-card-reader",
+      "sourceProductCode": "37469",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HB45",
+        "Input Interface: USB-A & Type C",
+        "Theoretical transfer speed: USB-A / Type-C [USB2.0] – 480Mbps",
+        "Working voltage / current: 5V / 100mA.",
+        "Supports up to 2Tb memory card"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/hoco/hoco-hb45-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/hoco/hoco-hb45-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hoco-hb45-card-reader",
+        "candidateTitle": "Hoco HB45 Spirit 2-in-1 USB & Type-C 2.0 Card Reader",
+        "attemptStem": "hoco-hb45-card-reader"
+      }
+    },
+    {
+      "name": "Hoco HB45 Spirit 2-in-1 USB & Type-C 3.0 Card Reader",
+      "slug": "hoco-hb45-spirit-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-37468",
+      "description": "<h2>Hoco HB45 Spirit 2-in-1 USB &amp; Type-C 3.0 Card Reader</h2><p>The Hoco <strong>HB45</strong> Spirit 2-in-1 USB &amp; Type-C 3.0 Card Reader is a precisely developed gadget that connects a variety of digital devices to memory cards. With a dual interface that includes both USB-A and Type-C ports, this card reader offers unrivaled versatility, assuring compatibility with a wide range of devices, including current smartphones and tablets, laptops, cameras, and dashboard cameras. Whether you're on the road or at your desk, the Hoco HB45 makes it easier to view and share data. One of the Hoco HB45's notable characteristics is its ability to read and write SD and TF cards at the same time. This dual-slot feature not only increases efficiency, but also enables for rapid backups and transfers between various memory. The gadget can handle high-capacity memory cards of up to 2TB, making it ideal for professionals and hobbyists that work with big amounts of data, such as photographers, filmmakers, and tech-savvy consumers. The Hoco HB45 delivers exceptional performance. The card reader has two transmission speeds, depending on the connection type. When connected via USB 3.0, the speed jumps substantially to 5Gbps, allowing for the speedy transmission of huge data, such as 4K films or high-resolution photos, in only seconds. The Hoco HB45 is built with durability in mind, using high-quality ABS material to resist the rigors of everyday usage while being lightweight and portable. The gadget runs efficiently at a working voltage of 5V and a current of 100mA, making it energy-efficient and simple to power from any compatible device without depleting battery life. The Hoco HB45 is more than just a card reader; it's a full-featured data management tool that adapts to your needs, whether you're moving files between your camera and smartphone or accessing data from many devices. Its small size makes it easy to transport in your purse or pocket, guaranteeing that you always have access to your data, no matter where you are. </p><h2>Buy Hoco HB45 Spirit 2-in-1 USB &amp; Type-C 3.0 Card Reader from Star Tech</h2><p>In Bangladesh, you can get the original <span style=\"font-weight: bold;\">Hoco HB45 Spirit 2-in-1 USB &amp; Type-C 3.0 Card Reader</span> From <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a>. We have a large collection of latest Hoco Card Reader to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\" target=\"\">laptop</a>. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The Hoco HB45 Spirit 2-in-1 USB &amp; Type-C 3.0 Card Reader comes with 1 year Warranty (Must Claim With Box &amp; All Accessories).<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HB45</li><li>Input Interface: USB-A &amp; Type C</li><li>Theoretical transfer speed: USB-A / Type-C [USB3.0] – 5Gbps</li><li>Working voltage / current: 5V / 100mA.</li><li>Supports up to 2Tb memory card</li></ul>",
+      "model": "HB45",
+      "warranty": "1 year Warranty",
+      "basePrice": 600.0,
+      "originalPrice": 660.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hoco",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37468",
+          "price": 600.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 576.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "HB45",
+              "position": 0
+            },
+            {
+              "label": "Input Interface",
+              "value": "USB-A & Type C",
+              "position": 1
+            },
+            {
+              "label": "Theoretical transfer speed",
+              "value": "USB-A / Type-C [USB3.0] – 5Gbps",
+              "position": 2
+            },
+            {
+              "label": "Working voltage / current",
+              "value": "5V / 100mA.",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hoco-hb45-spirit-card-reader",
+      "sourceProductCode": "37468",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HB45",
+        "Input Interface: USB-A & Type C",
+        "Theoretical transfer speed: USB-A / Type-C [USB3.0] – 5Gbps",
+        "Working voltage / current: 5V / 100mA.",
+        "Supports up to 2Tb memory card"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/hoco/hoco-hb45-spirit-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/hoco/hoco-hb45-spirit-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hoco-hb45-spirit-card-reader",
+        "candidateTitle": "Hoco HB45 Spirit 2-in-1 USB & Type-C 3.0 Card Reader",
+        "attemptStem": "hoco-hb45-spirit-card-reader"
+      }
+    },
+    {
+      "name": "Hoco HB45 Spirit Single Mode USB 2.0 Card Reader",
+      "slug": "hoco-hb45-spirit-usb-2-0-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-43398",
+      "description": "<h2>Hoco HB45 Spirit Single Mode USB 2.0 Card Reader</h2><p>The Hoco <strong>HB45 Spirit</strong> USB Single Mode <a href=\"https://www.startech.com.bd/card-reader\" style=\"color: rgb(0, 0, 0);\" target=\"\">Card Reader</a> is a compact and efficient tool for fast data transfer. It supports USB 2.0 for stable and reliable performance. This single-mode card reader is designed to read SD, TF, and microSD cards with ease. Just plug it in—no drivers or setup needed. It works with laptops, desktops, and OTG-enabled smartphones. Whether you're transferring photos, videos, or documents, the HB45 makes the process quick and simple. Built with a sleek and portable design, the Hoco HB45 Spirit USB 2.0 Card Reader fits easily into your pocket or bag. It’s perfect for students, photographers, and professionals who need file access on the go. The durable build ensures long-lasting use, while the Hoco brand guarantees trusted quality. This USB card reader is ideal for everyday use, whether at home, in the office, or while traveling. The Hoco HB45 Spirit card reader is compatible with Windows, macOS, and Android systems. It offers plug-and-play convenience with no extra software required. With its lightweight body and modern look, it blends style with function. If you need a reliable memory card reader that’s easy to carry and simple to use, the Hoco HB45 Spirit Single Mode Card Reader is a smart choice.</p><h2>Buy Hoco HB45 Spirit Single Mode USB 2.0 Card Reader from Star Tech</h2><p>In Bangladesh, you can get the original <span style=\"font-weight: bold;\">Hoco HB45 Spirit Single Mode USB 2.0 Card Reader</span> From <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a>. We have a large collection of latest Hoco <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\" target=\"\">laptop</a>. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The Hoco HB45 Spirit Single Mode USB 2.0 Card Reader comes with a 12 months Warranty (Must Claim With Box &amp; All Accessories).<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HB45 Spirit</li><li>Input Interface: USB</li><li>Theoretical transfer speed: USB2.0 – 480Mbps</li><li>Working voltage / current: 5V / 100mA.</li><li>Supports up to 2Tb memory card</li></ul>",
+      "model": "HB45 Spirit",
+      "warranty": "a 12 months Warranty",
+      "basePrice": 350.0,
+      "originalPrice": 385.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hoco",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-43398",
+          "price": 350.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 336.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "HB45 Spirit",
+              "position": 0
+            },
+            {
+              "label": "Input Interface",
+              "value": "USB",
+              "position": 1
+            },
+            {
+              "label": "Theoretical transfer speed",
+              "value": "USB2.0 – 480Mbps",
+              "position": 2
+            },
+            {
+              "label": "Working voltage / current",
+              "value": "5V / 100mA.",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hoco-hb45-spirit-usb-2-0-card-reader",
+      "sourceProductCode": "43398",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HB45 Spirit",
+        "Input Interface: USB",
+        "Theoretical transfer speed: USB2.0 – 480Mbps",
+        "Working voltage / current: 5V / 100mA.",
+        "Supports up to 2Tb memory card"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/hoco/hoco-hb45-spirit-usb-2-0-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/hoco/hoco-hb45-spirit-usb-2-0-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hoco-hb45-spirit-usb-2-0-card-reader",
+        "candidateTitle": "Hoco HB45 Spirit Single Mode USB 2.0 Card Reader",
+        "attemptStem": "hoco-hb45-spirit-usb-2-0-card-reader"
+      }
+    },
+    {
+      "name": "Hoco HB45 Spirit USB 3.0 Card Reader",
+      "slug": "hoco-hb45-spirit-usb-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-40265",
+      "description": "<h2>Hoco HB45 Spirit USB 3.0 Card Reader</h2><p>The Hoco <strong>HB45 Spirit</strong> USB Card Reader is a versatile and effective data management tool. This Hoco card reader supports USB-A connections, making it compatible with a wide range of devices, including smartphones, cameras, and laptops and desktops. With a potential transfer speed of up to 5Gbps over USB 3.0, data transfers are swift and efficient. The Hoco HB45 Spirit can support memory cards up to 2TB, allowing you to manage large amounts of data without hassle. The dual-slot capability allows for simultaneous reading and writing of SD and TF cards, increasing productivity and saving time. This card reader, made of high-quality ABS plastic, is long-lasting and intended for frequent usage. Its compact size makes it portable, allowing you to retrieve your data from anywhere. Whether for personal or business use, the Hoco HB45 Spirit USB Card Reader provides a dependable and fast solution for all of your data transmission requirements.</p><h2>Buy Hoco HB45 Spirit USB 3.0 Card Reader from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Hoco HB45 Spirit USB Card Reader</strong> From <a href=\"https://www.startech.com.bd/\">Star Tech</a>. We have a large collection of latest Hoco Card Reader to purchase for your <a href=\"https://www.startech.com.bd/desktops\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\">laptop</a>. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The Hoco HB45 Spirit USB Card Reader comes with 1-year Warranty (Must Claim With Box &amp; All Accessories).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HB45</li><li>Input Interface: USB 3.0</li><li>Transfer speed: USB 3.0- Up to 5Gbps</li><li>Supports up to 2Tb memory card</li><li>Supports TF / SD separate reading and writing</li></ul>",
+      "model": "HB45",
+      "warranty": "1-year Warranty",
+      "basePrice": 520.0,
+      "originalPrice": 572.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hoco",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-40265",
+          "price": 520.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 499.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "HB45",
+              "position": 0
+            },
+            {
+              "label": "Input Interface",
+              "value": "USB 3.0",
+              "position": 1
+            },
+            {
+              "label": "Transfer speed",
+              "value": "USB 3.0- Up to 5Gbps",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hoco-hb45-spirit-usb-card-reader",
+      "sourceProductCode": "40265",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HB45",
+        "Input Interface: USB 3.0",
+        "Transfer speed: USB 3.0- Up to 5Gbps",
+        "Supports up to 2Tb memory card",
+        "Supports TF / SD separate reading and writing"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/hoco/hoco-hb45-spirit-usb-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/hoco/hoco-hb45-spirit-usb-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hoco-hb45-spirit-usb-card-reader",
+        "candidateTitle": "Hoco HB45 Spirit USB 3.0 Card Reader",
+        "attemptStem": "hoco-hb45-spirit-usb-card-reader"
+      }
+    },
+    {
+      "name": "Onten CR538S USB-C & USB-A Card Reader with USB-C Hub",
+      "slug": "onten-cr538s-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-46741",
+      "description": "<h2>Onten CR538S USB-C &amp; USB-A Card Reader with USB-C Hub</h2><p>The Onten <span style=\"font-weight: bold;\">CR538S</span> USB-C &amp; USB-A <a href=\"https://www.startech.com.bd/card-reader\" style=\"color: rgb(0, 0, 0);\" target=\"\">Card Reader</a> with USB-C Hub is a multifunctional, high-speed data transfer solution designed for modern devices. The Onten CR538S is a versatile card reader and hub that combines USB-C and USB-A interfaces, making it compatible with a wide range of laptops, desktops, tablets, and smartphones. Built with SD 3.0 and TF 3.0 card reader support, it ensures fast and efficient data transfer for photographers, videographers, and professionals who frequently work with memory cards. Its dual-interface design allows seamless switching between traditional USB-A ports and the latest USB-C connections, ensuring universal usability across old and new devices. The hub functionality adds extra convenience, enabling users to connect additional peripherals such as flash drives, external hard drives, keyboards, or mice through its USB 3.0 hub expansion, all while maintaining stable performance. Compact and lightweight, the CR538S is ideal for on-the-go professionals, offering portability without compromising speed or reliability. With OTG (On-The-Go) support, users can directly connect it to smartphones or tablets to access photos, videos, and documents instantly, making it perfect for mobile content creators. The plug-and-play design eliminates the need for drivers or complex setup, ensuring quick usability. The Onten CR538S USB-C &amp; USB-A Card Reader with USB-C Hub is a multi-in-one solution that combines card reading, hub expansion, and universal compatibility. </p><h2>Buy Onten CR538S USB-C &amp; USB-A Card Reader with USB-C Hub from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Onten CR538S USB-C &amp; USB-A Card Reader with USB-C Hub</strong> From Star Tech. We have a large collection of latest Onten <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\">laptop</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Onten CR538S USB-C &amp; USB-A Card Reader with USB-C Hub comes with 2 years Replacement Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CR538S</li><li>Input: USB &amp; USB-C</li><li>Output: SD 3.0 &amp; TF 3.0 &amp; USB-C</li><li>Max Speed: 5Gbps</li><li>Compatible with Mac OS,iPad OS,Windows,Linux,Android</li></ul>",
+      "model": "CR538S",
+      "warranty": "2 years Replacement Warranty",
+      "basePrice": 1089.0,
+      "originalPrice": 1176.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-46741",
+          "price": 1089.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1045.44,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "CR538S",
+              "position": 0
+            },
+            {
+              "label": "Input",
+              "value": "USB & USB-C",
+              "position": 1
+            },
+            {
+              "label": "Output",
+              "value": "SD 3.0 & TF 3.0 & USB-C",
+              "position": 2
+            },
+            {
+              "label": "Max Speed",
+              "value": "5Gbps",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-cr538s-card-reader",
+      "sourceProductCode": "46741",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CR538S",
+        "Input: USB & USB-C",
+        "Output: SD 3.0 & TF 3.0 & USB-C",
+        "Max Speed: 5Gbps",
+        "Compatible with Mac OS,iPad OS,Windows,Linux,Android"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/onten/onten-cr538s-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/onten/onten-cr538s-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-cr538s-card-reader",
+        "candidateTitle": "Onten CR538S USB-C & USB-A Card Reader with USB-C Hub",
+        "attemptStem": "onten-cr538s-card-reader"
+      }
+    },
+    {
+      "name": "Onten OTN-5223 4-in-1 USB Hub with Card Reader",
+      "slug": "onten-otn-5223-4-in-1-usb-hub",
+      "type": "PHYSICAL",
+      "sku": "ST-48675",
+      "description": "<h2>Onten OTN-5223 4-in-1 USB Hub with Card Reader</h2><p>The <strong>Onten OTN-5223</strong> is a multifuntional 4-in-1 USB hub designed for fast, reliable connectivity and seamless device expansion. The Onten OTN-5223 features a USB Type-A input and offers three USB 3.0 ports, plus SD and TF card slots. With a high-speed 5Gbps transfer rate, the Onten OTN-5223 ensures quick data syncing for files, photos, and videos. This multiport USB hub is compatible with Windows, macOS, and Linux systems, its very useful for work and daily use. Its compact 0.2 meter cable length enhances portability while reducing clutter on your desk. The crystal teal finish gives a modern and stylish look that stands out among standard hubs. Equipped with three USB ports, it allows easy connection of peripherals like keyboards, mice, and flash drives. The integrated SD and TF card reader supports convenient access to memory cards without additional adapters. Designed with a durable USB-A male connector and multiport female interface, it ensures stable and secure connections. Whether for office tasks or travel needs, this USB hub offers efficient performance and convenience. Choose this reliable solution for expanding your device connectivity with speed and ease.</p><h2>Buy Onten OTN-5223 4-in-1 USB Hub with Card Reader from Star Tech</h2><p>In Bangladesh, you can get original <strong>Onten OTN-5223 4-in-1 USB Hub with Card Reader</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/onten-hubs-and-docks\" target=\"\">Onten Hub</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Onten OTN-5223 4-in-1 USB Hub with Card Reader comes with 2 year Replacement warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-5223</li><li>Input Port: 1× USB Type-A</li><li>Output Port: 3× USB 3.0, 1× SD &amp; TF</li><li>transfer Rate: 5Gbps</li><li>Works with Windows, macOS, Linux</li></ul>",
+      "model": "OTN-5223",
+      "warranty": "2 Year Replacement Warranty",
+      "basePrice": 990.0,
+      "originalPrice": 1070.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Crystal Teal",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-48675",
+          "price": 990.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Crystal Teal"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 950.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Input Interface",
+              "value": "USB Type-A",
+              "position": 0
+            },
+            {
+              "label": "Output Interface",
+              "value": "3 × USB 3.0 1 × SD & TF",
+              "position": 1
+            },
+            {
+              "label": "Transmission Rate",
+              "value": "USB 3.0: 5Gbps",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Material",
+              "value": "Aluminium",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "Crystal Teal",
+              "position": 1
+            },
+            {
+              "label": "Cable Length",
+              "value": "0.2M",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 Year Replacement Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-5223-4-in-1-usb-hub",
+      "sourceProductCode": "48675",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-5223",
+        "Input Port: 1× USB Type-A",
+        "Output Port: 3× USB 3.0, 1× SD & TF",
+        "transfer Rate: 5Gbps",
+        "Works with Windows, macOS, Linux"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/onten/onten-otn-5223-4-in-1-usb-hub.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/onten/onten-otn-5223-4-in-1-usb-hub.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-5223-4-in-1-usb-hub",
+        "candidateTitle": "Onten OTN-5223 4-in-1 USB Hub with Card Reader",
+        "attemptStem": "onten-otn-5223-4-in-1-usb-hub"
+      }
+    },
+    {
+      "name": "Onten OTN-91182 5 in 1 Type-C Multifunctional Card Reader",
+      "slug": "onten-otn-91182-5-in-1-type-c-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-48667",
+      "description": "<h2>Onten OTN-91182 5 in 1 Type-C Multifunctional Card Reader</h2><p>The Onten <strong>OTN-91182 5 in 1 Type-C Multifunctional Card Reader</strong> is a compact and efficient device designed for seamless data transfer. Built with durable aluminum alloy, the Onten OTN-91182 ensures long-lasting performance and stylish appeal. It features a Type-C male connector on one side, making it compatible with modern USB Type-C devices. On the other side, it offers dual USB ports, CF, SD, and TF female slots, providing versatile multiport functionality. With a length of 0.2 meters, the Onten OTN-91182 is portable and easy to carry for travel or office use. The card reader supports two USB connections simultaneously, enhancing productivity and convenience. Its sleek silver color complements laptops, tablets, and smartphones, while maintaining a professional look. This multifunctional card reader is ideal for photographers, students, and professionals who need quick access to multiple storage formats. The Onten OTN-91182 delivers reliable speed and compatibility, making it a must-have accessory for efficient data management. Whether transferring photos, videos, or documents, this device ensures smooth performance without hassle. Its plug-and-play design eliminates the need for drivers, offering instant usability. Optimize your workflow with this multifuntional card reader that combines durability, portability, and functionality in one compact solution.</p><h2>Buy Onten OTN-91182 5 in 1 Type-C Multifunctional Card Reader from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Onten OTN-91182 5 in 1 Type-C Multifunctional Card Reader</span> From Star Tech. We have a large collection of latest Onten <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Onten OTN-91182 5 in 1 Type-C Multifunctional Card Reader comes with 2 year Replacement warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-91182</li><li>Input Interface: Type-C,</li><li>Interfaces: Type-C, CF, SD, TF , USB 3.0</li><li>Cable Length: 0.8 m</li><li>Material: Aluminum alloy + ABS</li></ul>",
+      "model": "OTN-91182",
+      "warranty": "2 Year Replacement Warranty",
+      "basePrice": 1450.0,
+      "originalPrice": 1500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Grey",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-48667",
+          "price": 1450.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Grey"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1392.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Input Interface",
+              "value": "Type-C",
+              "position": 0
+            },
+            {
+              "label": "Output Interface",
+              "value": "Type-C, CF, SD, TF , USB 3.0",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Material",
+              "value": "Aluminum alloy + ABS",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "Grey",
+              "position": 1
+            },
+            {
+              "label": "Cable Length",
+              "value": "0.2mm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 Year Replacement Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-91182-5-in-1-type-c-card-reader",
+      "sourceProductCode": "48667",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-91182",
+        "Input Interface: Type-C,",
+        "Interfaces: Type-C, CF, SD, TF , USB 3.0",
+        "Cable Length: 0.8 m",
+        "Material: Aluminum alloy + ABS"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/onten/onten-otn-91182-5-in-1-type-c-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/onten/onten-otn-91182-5-in-1-type-c-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-91182-5-in-1-type-c-card-reader",
+        "candidateTitle": "Onten OTN-91182 5 in 1 Type-C Multifunctional Card Reader",
+        "attemptStem": "onten-otn-91182-5-in-1-type-c-card-reader"
+      }
+    },
+    {
+      "name": "Onten OTN-9597 4-in-1 Type-C Hub with Card Reader",
+      "slug": "onten-otn-9597-4-in-1-type-c-hub",
+      "type": "PHYSICAL",
+      "sku": "ST-48689",
+      "description": "<h2>Onten OTN-9597 4-in-1 Type-C Hub with Card Reader</h2><p>The <strong>Onten OTN-9597</strong> 4-in-1 Type-C Hub with Card Reader is a compact and flexible accessory designed for modern USB Type-C devices. The Onten OTN-9597 delivers seamless connectivity with a USB Type-C male interface and multiple expansion ports. It features three USB 3.0 ports supporting data transfer speeds up to 5Gbps. This ensures fast file transfers for professionals and regular users. The integrated SD card reader allows quick access to camera and storage media. The TF card reader adds extra flexibility for mobile and action camera users. With a short 0.2 meter cable, it remains highly portable and easy to carry. The crystal teal color provides a sleek and modern aesthetic appeal. The Onten OTN-9597 is ideal for laptops, tablets, and smartphones with USB Type-C ports. Its plug-and-play functionality eliminates the need for additional drivers or software. The durable design ensures reliable performance for daily use. This hub is perfect for multitasking, data management, and device expansion. Whether at home, office, or travel, it enhances productivity efficiently. Choose the Onten OTN-9597 for a reliable, high-speed, and stylish USB-C hub solution.</p><h2>Buy Onten OTN-9597 4-in-1 Type-C Hub with Card Reader from Star Tech</h2><p>In Bangladesh, you can get original <strong>Onten OTN-9597 4-in-1 Type-C Hub with Card Reader</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/onten-hubs-and-docks\" target=\"\">Onten Hub</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Onten OTN-9597 4-in-1 Type-C Hub with Card Reader comes with 2 year Replacement warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-9597</li><li>Input Port: 1× USB Type-C</li><li>Output Port: 3× USB 3.0, 1× SD &amp; TF</li><li>transfer Rate: 5Gbps</li><li>Works with Windows, macOS, Linux</li></ul>",
+      "model": "OTN-9597",
+      "warranty": "2 Year Replacement Warranty",
+      "basePrice": 1080.0,
+      "originalPrice": 1400.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Crystal Teal",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-48689",
+          "price": 1080.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Crystal Teal"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1036.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Input Interface",
+              "value": "USB Type-C",
+              "position": 0
+            },
+            {
+              "label": "Output Interface",
+              "value": "3 × USB 3.0 1 × SD & TF",
+              "position": 1
+            },
+            {
+              "label": "Transmission Rate",
+              "value": "USB 3.0: 5Gbps",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Material",
+              "value": "Aluminium",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "Crystal Teal",
+              "position": 1
+            },
+            {
+              "label": "Cable Length",
+              "value": "0.2M",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 Year Replacement Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-9597-4-in-1-type-c-hub",
+      "sourceProductCode": "48689",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-9597",
+        "Input Port: 1× USB Type-C",
+        "Output Port: 3× USB 3.0, 1× SD & TF",
+        "transfer Rate: 5Gbps",
+        "Works with Windows, macOS, Linux"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/onten/onten-otn-9597-4-in-1-type-c-hub.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/onten/onten-otn-9597-4-in-1-type-c-hub.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-9597-4-in-1-type-c-hub",
+        "candidateTitle": "Onten OTN-9597 4-in-1 Type-C Hub with Card Reader",
+        "attemptStem": "onten-otn-9597-4-in-1-type-c-hub"
+      }
+    },
+    {
+      "name": "Onten OTN-CR532 Type-C & USB-A Card Reader",
+      "slug": "onten-otn-cr532-type-c-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-48704",
+      "description": "<h2>Onten OTN-CR532 Type-C &amp; USB-A Card Reader</h2><p>The <strong>Onten OTN-CR532 Type-C &amp; USB-A Card Reader</strong> stands out as a compact, dual-interface card reader built for modern data transfer needs. Designed with both USB Type-C and USB-A connectors, Onten OTN-CR532 ensures seamless compatibility across laptops, desktops, and other USB-enabled devices. This 2-in-1 SD 2.0 and TF 2.0 card reader supports multiple formats including SD, SDHC, MMC, RS-MMC, and MicroSD cards. It enables efficient read and write operations with speeds up to 25Mbps for reading and 10Mbps for writing. Crafted using durable aluminium alloy and ABS materials, the device combines strength with lightweight portability. The double-sided cap design protects against dust and water, making it reliable for daily use. Onten OTN-CR532 also allows direct data replication between SD and MicroSD cards, simplifying file management without extra tools. Its slim size ensures easy carrying, fitting perfectly into pockets or laptop bags. Ideal for photographers, content creators, and professionals, this multifuntional card reader enhances workflow efficiency. Whether transferring files or backing up data, it delivers stable performance with wide card compatibility. Optimize your digital storage handling with this reliable and travel-friendly solution.</p><h2>Buy Onten OTN-CR532 USB-C &amp; USB-A Card Reader from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Onten OTN-CR532 Type-C &amp; USB-A Card Reader</strong> From Star Tech. We have a large collection of latest Onten <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\">laptop</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Onten OTN-CR532 Type-C &amp; USB-A Card Reader comes with 2 Years Replacement Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-CR532</li><li>Input: USB &amp; USB Type-C</li><li>Write speed: 10Mbps, read speed: 25Mbps</li><li>Support direct replication between SD and MicroSD</li><li>Support SD card series, including MicroSD, such as SD, SDHC, MMC, RS-MMC, T-Flash</li></ul>",
+      "model": "OTN-CR532",
+      "warranty": "2 Years Replacement Warranty",
+      "basePrice": 590.0,
+      "originalPrice": 640.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-48704",
+          "price": 590.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 566.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "OTN-CR532",
+              "position": 0
+            },
+            {
+              "label": "Input",
+              "value": "USB & USB Type-C",
+              "position": 1
+            },
+            {
+              "label": "Write speed",
+              "value": "10Mbps, read speed: 25Mbps",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-cr532-type-c-card-reader",
+      "sourceProductCode": "48704",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-CR532",
+        "Input: USB & USB Type-C",
+        "Write speed: 10Mbps, read speed: 25Mbps",
+        "Support direct replication between SD and MicroSD",
+        "Support SD card series, including MicroSD, such as SD, SDHC, MMC, RS-MMC, T-Flash"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/onten/onten-otn-cr532-type-c-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/onten/onten-otn-cr532-type-c-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-cr532-type-c-card-reader",
+        "candidateTitle": "Onten OTN-CR532 Type-C & USB-A Card Reader",
+        "attemptStem": "onten-otn-cr532-type-c-card-reader"
+      }
+    },
+    {
+      "name": "Onten OTN-CR633 Type-C & USB-A to CF Express Card Reader",
+      "slug": "onten-otn-cr633-cf-express-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-48718",
+      "description": "<h2>Onten OTN-CR633 Type-C &amp; USB-A to CF Express Card Reader</h2><p>The <strong>Onten OTN-CR633 Type-C &amp; USB-A to CF Express Card Reader</strong> is a high-performance solution for fast and reliable data transfer. Designed for professionals, the Onten OTN-CR633 supports CF Express Type-B cards for superior speed and efficiency. With dual interfaces, USB-A and Type-C, it ensures seamless compatibility with PCs, laptops, tablets, and smartphones. This Smart card reader delivers ultra-fast transfer speeds up to 10 GB/s, ideal for 4K and 8K video editing. Photographers and content creators benefit from quick file access and smooth media backups using the Onten OTN-CR633. Its compact and portable design allows easy use in studios or on-the-go work environments. The crystal teal color adds a modern and stylish look to your workspace. Built for durability and performance, it handles large files like RAW images and high-resolution videos effortlessly. The plug-and-play functionality ensures hassle-free connectivity without additional drivers. Whether transferring data or managing storage, this device enhances productivity and workflow efficiency. Choose this reliable card reader for professional-grade performance and speed.</p><h2>Buy Onten OTN-CR633 Type-C &amp; USB-A to CF Express Card Reader from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Onten OTN-CR633 Type-C &amp; USB-A to CF Express Card Reader</strong> From Star Tech. We have a large collection of latest Onten <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\">laptop</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Onten OTN-CR633 Type-C &amp; USB-A to CF Express Card Reader comes with 2 Years Replacement Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-CR633</li><li>Input: USB &amp; USB Type-C</li><li>Transfer speed: up to 10 GB/s,</li><li>Card Support - CF Express Type-B Card</li><li>Compatibility: PC, Laptop, Phone Tablet</li></ul>",
+      "model": "OTN-CR633",
+      "warranty": "2 Years Replacement Warranty",
+      "basePrice": 1990.0,
+      "originalPrice": 2100.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-48718",
+          "price": 1990.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1910.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "OTN-CR633",
+              "position": 0
+            },
+            {
+              "label": "Input",
+              "value": "USB & USB Type-C",
+              "position": 1
+            },
+            {
+              "label": "Transfer speed",
+              "value": "up to 10 GB/s,",
+              "position": 2
+            },
+            {
+              "label": "Compatibility",
+              "value": "PC, Laptop, Phone Tablet",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-cr633-cf-express-card-reader",
+      "sourceProductCode": "48718",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-CR633",
+        "Input: USB & USB Type-C",
+        "Transfer speed: up to 10 GB/s,",
+        "Card Support - CF Express Type-B Card",
+        "Compatibility: PC, Laptop, Phone Tablet"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/onten/onten-otn-cr633-cf-express-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/onten/onten-otn-cr633-cf-express-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-cr633-cf-express-card-reader",
+        "candidateTitle": "Onten OTN-CR633 Type-C & USB-A to CF Express Card Reader",
+        "attemptStem": "onten-otn-cr633-cf-express-card-reader"
+      }
+    },
+    {
+      "name": "Onten OTN-CR635 Type-C & USB-A to XQD Card Reader",
+      "slug": "onten-otn-cr635-xqd-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-48717",
+      "description": "<h2>Onten OTN-CR635 Type-C &amp; USB-A to XQD Card Reader</h2><p>The <stronng>Onten OTN-CR635 Type-C &amp; USB-A to XQD Card Reader is a high-performance solution for fast and reliable data transfer. Designed for modern users, the Onten OTN-CR635 supports both USB and Type-C interfaces for maximum flexibility. With USB 3.0 technology, it ensures high-speed file transfers, making it ideal for photographers and content creators. This card reader supports XQD cards, delivering efficient performance for handling large media files. The Onten OTN-CR635 is compatible with PC, laptops, smartphones, and tablets, offering seamless connectivity across devices. It works smoothly with Windows, macOS, Android, and iPadOS operating systems without additional drivers. Its compact and portable design makes it easy to carry for on-the-go use. The crystal teal color adds a stylish and modern touch to its appearance. Users can enjoy stable performance and reliable data access anytime. This device is perfect for professionals needing quick and secure file transfers.</stronng></p><h2>Buy Onten OTN-CR635 Type-C &amp; USB-A to XQD Card Reader from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Onten OTN-CR635 Type-C &amp; USB-A to XQD Card Reader</strong> From Star Tech. We have a large collection of latest Onten <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\">laptop</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The OOnten OTN-CR635 Type-C &amp; USB-A to XQD Card Reader comes with 2 Years Replacement Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-CR635</li><li>Input: USB &amp; USB Type-C</li><li>Write speed: 10Mbps, read speed: 25Mbps</li><li>Card Support - XQD USB</li><li>Compatibility: PC, Laptop, Phone Tablet</li></ul>",
+      "model": "OTN-CR635",
+      "warranty": "2 Years Replacement Warranty",
+      "basePrice": 1500.0,
+      "originalPrice": 1570.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-48717",
+          "price": 1500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1440.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "OTN-CR635",
+              "position": 0
+            },
+            {
+              "label": "Input",
+              "value": "USB & USB Type-C",
+              "position": 1
+            },
+            {
+              "label": "Write speed",
+              "value": "10Mbps, read speed: 25Mbps",
+              "position": 2
+            },
+            {
+              "label": "Compatibility",
+              "value": "PC, Laptop, Phone Tablet",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-cr635-xqd-card-reader",
+      "sourceProductCode": "48717",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-CR635",
+        "Input: USB & USB Type-C",
+        "Write speed: 10Mbps, read speed: 25Mbps",
+        "Card Support - XQD USB",
+        "Compatibility: PC, Laptop, Phone Tablet"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/onten/onten-otn-cr635-xqd-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/onten/onten-otn-cr635-xqd-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-cr635-xqd-card-reader",
+        "candidateTitle": "Onten OTN-CR635 Type-C & USB-A to XQD Card Reader",
+        "attemptStem": "onten-otn-cr635-xqd-card-reader"
+      }
+    },
+    {
+      "name": "ORICO CL4T-A3 4-in-1 USB Type-C Multifunction Card Reader",
+      "slug": "orico-cl4t-a3-multifunction-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-31395",
+      "description": "<h2>ORICO CL4T-A3 4-in-1 USB Type-C Multifunction Card Reader</h2><p style=\"text-align: justify; \">The ORICO <span style=\"font-weight: bold;\">CL4T-A3</span> is a versatile 4-in-1 USB Type-C multifunction card reader designed to meet your diverse data transfer needs efficiently. This compact and sleek device is an essential addition to your tech arsenal, offering the ability to read four different types of memory cards simultaneously, making it an ideal solution for photographers, videographers, and anyone working with multiple storage media. The ORICO CL4T-A3 is equipped with a USB-A 3.0 interface, allowing you to read four different types of memory cards at the same time. This feature saves you time and effort when transferring data from various sources. This card reader supports TF (Micro SD), SD, CF, and MS memory card formats, ensuring compatibility with the most commonly used memory card types. Whether you're dealing with camera cards, smartphone storage, or other devices, this card reader has you covered. With a blazing-fast transmission rate of 5Gbps, you can transfer large files quickly and efficiently. This high-speed capability is especially crucial when working with high-resolution images and videos. The ORICO CL4T-A3 is built to last, featuring a combination of ABS and aluminum alloy materials. This robust construction ensures durability and longevity, making it suitable for frequent use in various environments. Its black color and compact dimensions (73 x 42.5 x 14mm) make the ORICO CL4T-A3 not only functional but also aesthetically pleasing. It easily fits into your pocket or laptop bag for on-the-go data access. The attached 15cm conjoined cable provides a hassle-free connection to your computer or USB-enabled device. This eliminates the need for additional cables and ensures a secure and reliable connection. The ORICO CL4T-A3 4-in-1 USB Type-C multifunction card reader is your all-in-one solution for managing and transferring data from various memory card formats. Whether you're a professional photographer, videographer, or simply someone who wants a versatile card reader for personal use, this device offers speed, convenience, and reliability in a sleek and durable package. Say goodbye to the hassle of switching between multiple card readers and streamline your data management with this multifunctional tool.</p><h2 style=\"text-align: justify; \"><span style=\"color: inherit; font-family: inherit;\">Buy </span>ORICO CL4T-A3 4-in-1 USB Type-C Multifunction Card Reader<span style=\"color: inherit; font-family: inherit;\"> from the best Card Reader Shop in BD</span><br/></h2><p>In Bangladesh, you can get the original <span style=\"font-weight: bold;\">ORICO CL4T-A3 4-in-1 USB Type-C Multifunction Card Reader</span> From <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a>. We have a large collection of latest ORICO Card Reader to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\" target=\"\">laptop</a>. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The ORICO CRS31A 4-IN-1 Multifunction Card Reader comes with 1 Year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CL4T-A3</li><li>Input Interface: USB-A 3.0</li><li>Output Interface: TF (Micro SD)x1, SDx1, CFx1, MSx1</li><li>Transmission Rate: 5Gbps</li><li>Cable Length: Conjoined/15cm</li></ul>",
+      "model": "CL4T-A3",
+      "warranty": "1 Year warranty",
+      "basePrice": 2110.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 73.0,
+        "width": 42.5,
+        "height": 14.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "ORICO",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-31395",
+          "price": 2110.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2025.6,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "CL4T-A3",
+              "position": 0
+            },
+            {
+              "label": "Input Interface",
+              "value": "USB-A 3.0",
+              "position": 1
+            },
+            {
+              "label": "Output Interface",
+              "value": "TF (Micro SD)x1, SDx1, CFx1, MSx1",
+              "position": 2
+            },
+            {
+              "label": "Transmission Rate",
+              "value": "5Gbps",
+              "position": 3
+            },
+            {
+              "label": "Cable Length",
+              "value": "Conjoined/15cm",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/orico-cl4t-a3-multifunction-card-reader",
+      "sourceProductCode": "31395",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CL4T-A3",
+        "Input Interface: USB-A 3.0",
+        "Output Interface: TF (Micro SD)x1, SDx1, CFx1, MSx1",
+        "Transmission Rate: 5Gbps",
+        "Cable Length: Conjoined/15cm"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/orico/orico-cl4t-a3-multifunction-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/orico/orico-cl4t-a3-multifunction-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "orico-cl4t-a3-multifunction-card-reader",
+        "candidateTitle": "ORICO CL4T-A3 4-in-1 USB Type-C Multifunction Card Reader",
+        "attemptStem": "orico-cl4t-a3-multifunction-card-reader"
+      }
+    },
+    {
+      "name": "Transcend TS-RDC8K2 USB-3.1 Card Reader",
+      "slug": "transcend-ts-rdc8k2-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-37983",
+      "description": "<h2>Transcend TS-RDC8K2 USB-3.1 Card Reader</h2>\n<p>The Transcend <strong>TS-RDC8K2</strong> USB-3.1 Card Reader is a high-performance and adaptable device for quickly transferring data from memory cards to computers. With a micro USB to USB Type C connection, it works seamlessly with a broad range of current devices, including laptops, tablets, and smartphones. This card reader is completely compatible with numerous operating systems, including Windows 7, 8, 10, Mac OS X 10.2.8 or later, and Linux Kernel 2.6.30 or later, making it a great solution for a wide range of user situations. The TS-RDC8K2 is compact in size, measuring only 67.6 x 45 x 15.2mm and weighs only 32 grams, making it easy to carry in your backpack or pocket for on-the-go use. Although it accepts CompactFlash cards, it is vital to note that simultaneous insertion of two cards is not possible, guaranteeing that your data transfer procedure is simple and hassle-free. This TS-RDC8K2 card reader is equipped with modern technology, allowing you to swiftly and efficiently transfer high-resolution photographs and video recordings to your computer. Transfer speeds may vary depending on host hardware, software, use, and storage capacity, however the USB 3.1 interface provides higher data transfer rates than prior USB versions. The built-in LED indicators give real-time feedback on transfer progress, keeping you informed throughout the procedure. The Transcend TS-RDC8K2 has an ideal temperature range of 0°C (32°F) to 70°C (158°F) at a standard working voltage of 5V, guaranteeing consistent performance even under changing environmental circumstances. This card reader is certified by CE, FCC, BSMI, KC, RCM, and EAC, ensuring that it satisfies international quality and safety requirements. Whether you're a professional photographer, videographer, or casual user, the Transcend TS-RDC8K2 provides an effective and easy solution for your data transfer needs, enabling you to focus on what's most important: creating and sharing memories. </p>\n<h2>Buy Transcend TS-RDC8K2 USB-3.1 Card Reader from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Transcend TS-RDC8K2 USB-3.1 Card Reader</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Transcend TS-RDC8K2 USB-3.1 Card Reader comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TS-RDC8K2</li><li>All-In-One Multi Memory</li><li>USB Type: micro USB to USB Type A</li><li>Card Reader Slots: SD, microSD, CompactFlash</li><li>Operating Voltage: 5V</li></ul>",
+      "model": "TS-RDC8K2",
+      "warranty": "1-year warranty",
+      "basePrice": 1800.0,
+      "originalPrice": 1920.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 67.6,
+        "width": 45.0,
+        "height": 15.2,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Transcend",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37983",
+          "price": 1800.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1728.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TS-RDC8K2",
+              "position": 0
+            },
+            {
+              "label": "USB Type",
+              "value": "micro USB to USB Type A",
+              "position": 1
+            },
+            {
+              "label": "Card Reader Slots",
+              "value": "SD, microSD, CompactFlash",
+              "position": 2
+            },
+            {
+              "label": "Operating Voltage",
+              "value": "5V",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-ts-rdc8k2-card-reader",
+      "sourceProductCode": "37983",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TS-RDC8K2",
+        "All-In-One Multi Memory",
+        "USB Type: micro USB to USB Type A",
+        "Card Reader Slots: SD, microSD, CompactFlash",
+        "Operating Voltage: 5V"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/transcend/transcend-ts-rdc8k2-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/transcend/transcend-ts-rdc8k2-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-ts-rdc8k2-card-reader",
+        "candidateTitle": "Transcend TS-RDC8K2 USB-3.1 Card Reader",
+        "attemptStem": "transcend-ts-rdc8k2-card-reader"
+      }
+    },
+    {
+      "name": "Transcend TS-RDF5K USB 3.1 Card Reader",
+      "slug": "transcend-ts-rdf5k-usb-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-33647",
+      "description": "<h2>Transcend TS-RDF5K USB 3.1 Card Reader</h2><p>The Transcend <strong>TS-RDF5K</strong> Card Reader was designed to deliver fast data transfer rates. The RDF5 card reader is compatible with microSDHC/SDXC and SDHC/SDXC cards, and it has a USB 3.1 Gen 1 interface. With its ability to plug straight into any desktop or notebook computer's USB port, the incredibly small RDF5 provides convenient file sharing in any circumstance. With two card slots for SD and microSD memory cards, the Transcend TS-RDF5K USB 3.1 Card Reader can accommodate most of your daily data transfer demands between PCs, phones, and cameras. The RDF5 card reader from Transcend is equipped with a conventional USB Type-A connector. You only need to insert it straight into the computer's USB port to start enjoying fast transmission. For optimal convenience, the RDF5 card reader is compact enough to fit into your briefcase or pocket. Your most important files can be easily transferred between the RDF5 and your computer at any time or place thanks to its plug-and-play capability. RecoveRx is a free data recovery tool from Transcend that lets you look deep inside a storage device for files that have been deleted, including digital images, documents, music, and movies.</p><h2>Buy Transcend TS-RDF5K USB 3.1 Card Reader from Star Tech</h2><p>In Bangladesh, you can get original <strong>Transcend TS-RDF5K USB 3.1 Card Reader</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Transcend TS-RDF5K USB 3.1 Card Reader comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TS-RDF5K</li><li>Connection Interface: USB 3.1 Gen 1</li><li>Card Reader Slot: SD, microSD</li><li>Transfer Rate: 5 Gbps</li><li>LED Indicator for Card Insertion, Data Transfer Activity</li></ul>",
+      "model": "TS-RDF5K",
+      "warranty": "1-year warranty",
+      "basePrice": 850.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Transcend",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-33647",
+          "price": 850.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 816.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TS-RDF5K",
+              "position": 0
+            },
+            {
+              "label": "Connection Interface",
+              "value": "USB 3.1 Gen 1",
+              "position": 1
+            },
+            {
+              "label": "Card Reader Slot",
+              "value": "SD, microSD",
+              "position": 2
+            },
+            {
+              "label": "Transfer Rate",
+              "value": "5 Gbps",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-ts-rdf5k-usb-card-reader",
+      "sourceProductCode": "33647",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TS-RDF5K",
+        "Connection Interface: USB 3.1 Gen 1",
+        "Card Reader Slot: SD, microSD",
+        "Transfer Rate: 5 Gbps",
+        "LED Indicator for Card Insertion, Data Transfer Activity"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/transcend/transcend-ts-rdf5k-usb-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/transcend/transcend-ts-rdf5k-usb-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-ts-rdf5k-usb-card-reader",
+        "candidateTitle": "Transcend TS-RDF5K USB 3.1 Card Reader",
+        "attemptStem": "transcend-ts-rdf5k-usb-card-reader"
+      }
+    },
+    {
+      "name": "Transcend TS-RDF5R USB 3.1 Card Reader",
+      "slug": "transcend-ts-rdf5r-usb-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-33648",
+      "description": "<h2>Transcend TS-RDF5R USB 3.1 Card Reader</h2><p>The Transcend <strong>TS-RDF5R</strong> USB Card Reader is made to transmit data between SDHC, SDXC, MicroSDHC, and MicroSDXC cards fast and smoothly. This reader is ideal for usage at home, in the workplace, or when traveling because of its stylish and portable design. With the ultra-fast USB 3.1 Gen 1 interface on this reader, data transfer rates of up to 5 Gbps are possible. This makes it perfect for swiftly and effectively transmitting big files, such movies, pictures, and documents. Furthermore, even while transferring enormous volumes of data, the TS-RDF5R guarantees steady and dependable performance by supporting UHS-I class 30 cards. The TS-RDF5R's LED indicator, which offers visual feedback for both card insertion and data transfer operation, is another noteworthy feature. This removes any uncertainty or guesswork for users by enabling them to rapidly determine when their card is being inserted correctly and when data is being sent. Every TS-RDF5R purchase from Transcend comes with a free download of RecoveRx photo recovery software. In the event of a card failure or data loss, this software helps recover lost or deleted images, movies, and other crucial data, saving users time and trouble. The TS-RDF5R is designed to work seamlessly in any computer environment and is compatible with Windows, Mac, and Linux operating systems. Its portable design further facilitates data transfer on the go by eliminating the need for a large reader. Combining speed, dependability, and convenience, the Transcend TS-RDF5R USB 3.1 Card Reader is an excellent storage option. For individuals seeking to swiftly and effectively transfer data from their SDHC, SDXC, MicroSDHC, or MicroSDXC cards, this reader is a crucial tool thanks to its lightning-fast USB interface, LED indicator, and complimentary photo recovery software.</p><h2>Buy Transcend TS-RDF5R USB 3.1 Card Reader from Star Tech</h2><p>In Bangladesh, you can get original <strong>Transcend TS-RDF5R USB 3.1 Card Reader</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Transcend TS-RDF5R USB 3.1 Card Reader comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TS-RDF5R</li><li>Connection Interface: USB 3.1 Gen 1</li><li>Card Reader Slot: SD, microSD</li><li>Transfer Rate: 5Gbps</li><li>LED Indicator for Card Insertion, Data Transfer Activity</li></ul>",
+      "model": "TS-RDF5R",
+      "warranty": "1-year warranty",
+      "basePrice": 875.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Transcend",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-33648",
+          "price": 875.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 840.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TS-RDF5R",
+              "position": 0
+            },
+            {
+              "label": "Connection Interface",
+              "value": "USB 3.1 Gen 1",
+              "position": 1
+            },
+            {
+              "label": "Card Reader Slot",
+              "value": "SD, microSD",
+              "position": 2
+            },
+            {
+              "label": "Transfer Rate",
+              "value": "5Gbps",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-ts-rdf5r-usb-card-reader",
+      "sourceProductCode": "33648",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TS-RDF5R",
+        "Connection Interface: USB 3.1 Gen 1",
+        "Card Reader Slot: SD, microSD",
+        "Transfer Rate: 5Gbps",
+        "LED Indicator for Card Insertion, Data Transfer Activity"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/transcend/transcend-ts-rdf5r-usb-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/transcend/transcend-ts-rdf5r-usb-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-ts-rdf5r-usb-card-reader",
+        "candidateTitle": "Transcend TS-RDF5R USB 3.1 Card Reader",
+        "attemptStem": "transcend-ts-rdf5r-usb-card-reader"
+      }
+    },
+    {
+      "name": "Transcend TS-RDF8K2 USB 3.1 Gen1 All-In-One Multi Memory Card Reader",
+      "slug": "transcend-ts-rdf8k2-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-37981",
+      "description": "<h2>Transcend TS-RDF8K2 USB 3.1 Gen1 All-In-One Multi Memory Card Reader</h2>\n<p>The Transcend <strong>TS-RDF8K2</strong> USB 3.1 Gen1 All-In-One Multi Memory Card Reader is intended for those that want unparalleled versatility in processing a wide range of memory cards with optimal efficiency. This small and lightweight gadget, weighing just 32 kilos and measuring 67.6 x 45 x 15.2mm, is incredibly portable, making it an excellent companion for photographers, filmmakers, and anybody who often transfers data between different card kinds. It supports all the major formats, including SDHC (UHS-I), SDXC (UHS-I), microSDHC (UHS-I), microSDXC (UHS-I), and CompactFlash (UDMA7), allowing you to quickly transfer data from cameras, cellphones, and other devices. Equipped with USB 3.1 Gen1 technology and a USB Type-A connection, this card reader provides blazing-fast transfer speeds, considerably decreasing the time needed to transmit big files such as high-resolution photos and videos. It runs on a 5V power supply and is compatible with a variety of operating systems, including Windows 7, 8, 10, Mac OS X 10.2.8 or later, and Linux Kernel 2.6.30 or later, assuring widespread use across devices. The Transcend TS-RDF8K2 not only provides great performance but also ensures maximum compatibility and ease, making it an ideal all-in-one option for both professionals and hobbyists who want quick and dependable data transfer.\r\n\r\n</p>\n<h2>Buy Transcend TS-RDF8K2 USB 3.1 Gen1 All-In-One Multi Memory Card Reader from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Transcend TS-RDF8K2 USB 3.1 Gen1 All-In-One Multi Memory Card Reader\r\n</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Transcend TS-RDF8K2 USB 3.1 Gen1 All-In-One Multi Memory Card Reader comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TS-RDF8K2</li><li>All-In-One Multi Memory</li><li>USB Type: micro USB to USB Type A</li><li>Card Reader Slots: SD, microSD, CompactFlash</li><li>Operating Voltage: 5V</li></ul>",
+      "model": "TS-RDF8K2",
+      "warranty": "1-year warranty",
+      "basePrice": 1799.0,
+      "originalPrice": 1900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 67.6,
+        "width": 45.0,
+        "height": 15.2,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Transcend",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37981",
+          "price": 1799.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1727.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TS-RDF8K2",
+              "position": 0
+            },
+            {
+              "label": "USB Type",
+              "value": "micro USB to USB Type A",
+              "position": 1
+            },
+            {
+              "label": "Card Reader Slots",
+              "value": "SD, microSD, CompactFlash",
+              "position": 2
+            },
+            {
+              "label": "Operating Voltage",
+              "value": "5V",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-ts-rdf8k2-card-reader",
+      "sourceProductCode": "37981",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TS-RDF8K2",
+        "All-In-One Multi Memory",
+        "USB Type: micro USB to USB Type A",
+        "Card Reader Slots: SD, microSD, CompactFlash",
+        "Operating Voltage: 5V"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/transcend/transcend-ts-rdf8k2-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/transcend/transcend-ts-rdf8k2-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-ts-rdf8k2-card-reader",
+        "candidateTitle": "Transcend TS-RDF8K2 USB 3.1 Gen1 All-In-One Multi Memory Card Reader",
+        "attemptStem": "transcend-ts-rdf8k2-card-reader"
+      }
+    },
+    {
+      "name": "Transcend TS-RDF9K2 USB-3.1 Multi Memory Card Reader",
+      "slug": "transcend-ts-rdf9k2-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-37984",
+      "description": "<h2>Transcend TS-RDF9K2 USB-3.1 Multi Memory Card Reader</h2>\n<p>The Transcend <strong>TS-RDF9K2</strong> USB-3.1 Multi Memory Card Reader is designed for those that want efficient and fast data transmission across a variety of memory card types. This sleek and small TS-RDF9K2 card reader, finished in a classy black, is intended to improve your productivity, whether you're a professional photographer, videographer, or a regular user. Its USB 3.1 interface works with a wide range of devices, including laptops, desktops, and tablets, ensuring a smooth connection for all of your data transfer needs. One of the TS-RDF9K2's distinguishing qualities is its compatibility with a wide range of memory card types. The TS-RDF9K2 is compatible with SDXC (UHS-I/II) and SDHC (UHS-I/II) cards, microSDXC (UHS-I) and microSDHC (UHS-I) cards, Memory Stick (MSXC), and CompactFlash (UDMA6/UDMA7) cards. This adaptability enables you to utilize the reader with almost any device that requires data transmission, making it an essential tool for anybody dealing with digital files. The TS-RDF9K2 card reader supports UHS-II technology, which considerably increases data transfer speeds, allowing for the speedy transfer of huge files like high-resolution pictures and 4K video recordings. However, it is worth mentioning that simultaneous insertion of two cards is not possible, thus the user experience is simplified by focusing on one card at a time. Transfer rates might vary depending on host hardware, software settings, and storage space, although USB 3.1 technology promises better performance than prior standards. The Transcend TS-RDF9K2 is the excellent accessory for anybody wishing to improve their data transfer experience while still having the convenience of a versatile and dependable card reader.</p>\n<h2>Buy Transcend TS-RDF9K2 USB-3.1 Multi Memory Card Reader from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Transcend TS-RDF9K2 USB-3.1 Multi Memory Card Reader</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Transcend TS-RDF9K2 USB-3.1 Multi Memory Card Reader comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TS-RDF9K2</li><li>All-In-One Multi Memory</li><li>USB Type: micro USB to USB Type A</li><li>Card Reader Slots: SD, microSD, CompactFlash</li><li>Operating Voltage: 5V</li></ul>",
+      "model": "TS-RDF9K2",
+      "warranty": "1-year warranty",
+      "basePrice": 1850.0,
+      "originalPrice": 1940.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Transcend",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37984",
+          "price": 1850.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1776.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TS-RDF9K2",
+              "position": 0
+            },
+            {
+              "label": "USB Type",
+              "value": "micro USB to USB Type A",
+              "position": 1
+            },
+            {
+              "label": "Card Reader Slots",
+              "value": "SD, microSD, CompactFlash",
+              "position": 2
+            },
+            {
+              "label": "Operating Voltage",
+              "value": "5V",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-ts-rdf9k2-card-reader",
+      "sourceProductCode": "37984",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TS-RDF9K2",
+        "All-In-One Multi Memory",
+        "USB Type: micro USB to USB Type A",
+        "Card Reader Slots: SD, microSD, CompactFlash",
+        "Operating Voltage: 5V"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/transcend/transcend-ts-rdf9k2-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/transcend/transcend-ts-rdf9k2-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-ts-rdf9k2-card-reader",
+        "candidateTitle": "Transcend TS-RDF9K2 USB-3.1 Multi Memory Card Reader",
+        "attemptStem": "transcend-ts-rdf9k2-card-reader"
+      }
+    },
+    {
+      "name": "Transcend TS-RDP9K USB 2.0 OTG Card Reader",
+      "slug": "transcend-ts-rdp9k-otg-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-37960",
+      "description": "<h2>Transcend TS-RDP9K USB 2.0 OTG Card Reader</h2><p></p><p>The Transcend <span style=\"font-weight: bold;\">TS-RDP9K</span> USB 2.0 OTG Card Reader is a versatile and portable device designed for seamless data management and effortless file sharing between various storage media and Android devices. Whether you need to quickly transfer files, expand storage, or connect external accessories, the RDP9K offers an all-in-one solution. It features a compact and user-friendly design that makes it an essential accessory for those who frequently use memory cards or USB flash drives with their mobile devices. With USB On-The-Go (OTG) technology, it provides the flexibility and convenience of connecting directly to your Android smartphone or tablet without the need for a computer. The Transcend TS-RDP9K can connect directly to Android devices through a micro USB connection, allowing users to transfer data seamlessly between memory cards and mobile devices. This makes it an ideal tool for travelers, photographers, or anyone needing to manage files efficiently while on the move. The USB OTG functionality means you can simply plug the reader into your phone or tablet and instantly gain access to the contents of your SD or microSD memory card. This feature is particularly useful when transferring large photo or video files, enabling you to save space on your phone and organize your data more effectively. The TS-RDP9K card reader comes equipped with a USB 2.0 port in addition to dual memory card slots. This means you can not only transfer data but also connect external accessories such as a mouse or keyboard to your mobile device. This feature expands the functionality of your Android device, allowing you to perform tasks that require more precise control or additional input. The dual card slots consist of one SD card slot and one microSD card slot, both of which support UHS-I SDXC and SDHC cards. This allows for high-speed data transfer and provides a convenient solution to overcome storage limitations. By expanding your device’s storage with additional SD or microSD cards, you can store more photos, videos, and other files without worrying about running out of space. The Transcend TS-RDP9K maintains an ultra-portable and compact design. It is small enough to fit comfortably in your pocket or bag, making it an ideal companion for travel or business trips. Whether you are taking photos during a vacation or working on important documents during a business trip, the RDP9K’s portability ensures you always have access to additional storage and data management capabilities when you need them. Its sleek design combines practicality with aesthetic appeal, making it a stylish addition to your tech accessories. To enhance user experience, the RDP9K is also compatible with the Transcend Elite app, which further simplifies file management. With the app, users can easily back up and share their files with just a few taps, making the process quick and straightforward. This feature is particularly useful for individuals who need to frequently back up important data or share files across multiple devices. Whether it’s photos, videos, documents, or music, the Transcend Elite app provides a seamless interface to manage your data efficiently. The Transcend TS-RDP9K USB 2.0 OTG <a href=\"https://www.startech.com.bd/card-reader\" style=\"color: rgb(0, 0, 0);\" target=\"\">Card Reader</a> is a highly versatile, functional, and portable solution for anyone looking to expand their storage and manage their data more effectively. With its USB OTG compatibility, dual card slots, built-in USB port, and compatibility with the Transcend Elite app, it provides a comprehensive solution for file transfer and storage expansion. Whether you are a professional on a business trip, a student needing extra storage for projects, or a traveler looking to store and share vacation photos, the TS-RDP9K is a reliable and convenient tool that enhances your mobile device’s capabilities while keeping everything compact and easy to carry.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>Transcend TS-RDP9K USB 2.0 OTG Card Reader<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2>\n<p>In Bangladesh, you can get the original <span style=\"font-weight: 700;\">Transcend TS-RDP9K USB 2.0 OTG Card Reader</span> From <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a>. We have a large collection of latest Transcend <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\" target=\"\">laptop</a>. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The Transcend TS-RDP9K USB 2.0 OTG Card Reader comes with 01-year Warranty (Must Claim With Box &amp; All Accessories).<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TS-RDP9K</li><li>USB Type: micro USB</li><li>Interface: USB 2.0</li><li>Compatibility: SD /microSD/CompactFlash</li><li>USB OTG-compatible devices supported</li></ul>",
+      "model": "TS-RDP9K",
+      "warranty": "01-year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Transcend",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "USB 2.0",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-37960",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "USB 2.0"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TS-RDP9K",
+              "position": 0
+            },
+            {
+              "label": "USB Type",
+              "value": "micro USB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "USB 2.0",
+              "position": 2
+            },
+            {
+              "label": "Compatibility",
+              "value": "SD /microSD/CompactFlash",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-ts-rdp9k-otg-card-reader",
+      "sourceProductCode": "37960",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TS-RDP9K",
+        "USB Type: micro USB",
+        "Interface: USB 2.0",
+        "Compatibility: SD /microSD/CompactFlash",
+        "USB OTG-compatible devices supported"
+      ],
+      "needsReview": true,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/transcend/transcend-ts-rdp9k-otg-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/transcend/transcend-ts-rdp9k-otg-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-ts-rdp9k-otg-card-reader",
+        "candidateTitle": "Transcend TS-RDP9K USB 2.0 OTG Card Reader",
+        "attemptStem": "transcend-ts-rdp9k-otg-card-reader"
+      }
+    },
+    {
+      "name": "UGREEN CM304 2-in-1 USB A & Type-C Memory Card Reader #80191",
+      "slug": "ugreen-cm304-2-in-1-card-reader",
+      "type": "PHYSICAL",
+      "sku": "80191",
+      "description": "<h2>UGREEN CM304 2-in-1 USB A &amp; Type-C Memory Card Reader #80191</h2><p>The UGREEN CM304 is an external card reader that combines USB 3.0 and USB Type-C plugs, making it compatible with a wide range of devices. It is compatible with USB-A devices like PS4, Xbox One, PCs, or USB-C devices such as smartphones, tablets, and laptops, this card reader has got you covered. It requires no driver installation and is compatible with various operating systems including Windows, macOS, Chrome, Linux, Android, and iPadOS.<br/></p><h3>Dual Card Slots for Simultaneous Reading and Writing</h3><p>The UGREEN CM304 2-in-1 Card Reader has dual card slots for SD and TF (Micro SD), allowing you to read and write data on two cards at the same time. When working with multiple memory cards from devices such as camcorders, dash cams, sports cameras, DSLR cameras, monitors, drones, and digital cameras, this feature is especially useful. You can even use apps like Lightroom to access and edit files directly on your phone or tablet, as well as play back videos, without the need for additional adapters.</p><h3>Fast and Efficient Data Transfer</h3><p>The UGREEN CM304 Card Reader offers impressive transmission speeds of up to 5Gbps, ensuring quick and efficient file transfers. Whether you're backing up or offloading files and photos from your SD or TF card, you can transfer videos and photos in just seconds. This makes it a valuable tool for photographers, videographers, and content creators who need to work on-the-go.</p><h3>Perfect for On-the-Go Photography</h3><p>UGREEN CM304 2-in-1 USB A &amp; Type-C Memory Card Reader allows you to easily transfer, copy, and playback your travel photos on your USB-C OTG enabled phone or tablet. You can share your photos instantly on social media platforms like Facebook and Instagram, making it ideal for quick photo sharing while traveling.</p><h3>Compatible with Various Digital Cards</h3><p>The UGREEN CM304 supports a wide range of digital memory cards with capacities of up to 2TB. The SD slot is compatible with UHS-I SDXC, SDHC, SD, MMC, RS-MMC, and MMC micro cards, including popular options like SanDisk Ultra Class 10 UHS-I SDHC and Extreme Pro UHS-I SDXC. The Micro SD/TF slot is compatible with UHS-I Micro SD, Micro SDXC, and Micro SDHC cards, including options like EVO Plus Class 10 Micro SDXC and Ultra 128GB microSDXC.</p><h2 style=\"\">Buy UGREEN CM304 2-in-1 USB A &amp; Type-C Card Reader #80191 from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/ugreen-cm187-1-in-4-out-hdmi-splitter\" target=\"\">UGREEN CM304 2-in-1 USB A &amp; Type-C Card Reader #80191</a> From Star Tech. We have a large collection of latest Ugreen Splitter to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The UGREEN CM304 2-in-1 USB A &amp; Type-C Card Reader comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 80191</li><li>Model: CM304</li><li>Compatible with USB-A and USB-C Devices</li><li>Read and write 2 cards (SD/Micro SD) simultaneously</li><li>5Gbps High Speed</li><li>Supports up to 2TB</li></ul>",
+      "model": "CM304",
+      "warranty": "1-year warranty",
+      "basePrice": 750.0,
+      "originalPrice": 820.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "80191",
+          "price": 750.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "80191",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "CM304",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-cm304-2-in-1-card-reader",
+      "sourceProductCode": "29753",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "80191",
+      "sourceKeyFeatures": [
+        "MPN: 80191",
+        "Model: CM304",
+        "Compatible with USB-A and USB-C Devices",
+        "Read and write 2 cards (SD/Micro SD) simultaneously",
+        "5Gbps High Speed",
+        "Supports up to 2TB"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/ugreen/ugreen-cm304-2-in-1-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/ugreen/ugreen-cm304-2-in-1-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-cm304-2-in-1-card-reader",
+        "candidateTitle": "UGREEN CM304 2-in-1 USB A & Type-C Memory Card Reader #80191",
+        "attemptStem": "ugreen-cm304-2-in-1-card-reader"
+      }
+    },
+    {
+      "name": "UGREEN CM803 2-in-1 USB-A & Type-C Memory Card Reader #65024",
+      "slug": "ugreen-cm803-2-in-1-card-reader-65024",
+      "type": "PHYSICAL",
+      "sku": "65024",
+      "description": "<h2>UGREEN CM803 2-in-1 USB-A &amp; Type-C Memory Card Reader #65024</h2><p>The <strong>UGREEN CM803 2-in-1 USB-A &amp; Type-C Memory Card Reader #65024 </strong>delivers fast and efficient data access for professionals and regular users. This Memory Card Reader features a 2-in-1 USB-A and USB Type-C design, ensuring broad compatibility with laptops, desktops, tablets, and OTG-supported smartphones. It also works as a practical Memory Card Adapter for transferring files between multiple devices.</p><p>With USB 3.0 technology, it supports transfer speeds up to 5Gbps and reaches 312 MB/s when paired with UHS-II cards. Dual SD and MicroSD card slots allow simultaneous reading and writing, saving valuable time during file management. The reader supports memory cards up to 2TB, making it suitable for large photo, video, and document collections.</p><p>The UGREEN CM803 Memory Card Reader features a durable aluminum alloy body with a compact, lightweight design for convenient portability. Its plug-and-play functionality eliminates driver installation, allowing quick setup across compatible operating systems. Secure card slots provide a stable connection during data transfers.</p><p>Whether you handle 4K videos, high-resolution photos, or important documents, this Memory Card Adapter offers consistent performance and reliable connectivity. The UGREEN CM803 Memory Card Reader is an excellent choice for photographers, content creators, students, and office users seeking fast, stable, and convenient storage access.</p><h2>Buy UGREEN CM803 2-in-1 USB-A &amp; Type-C Card Reader from Star Tech</h2><p>In Bangladesh, you can get original <strong>UGREEN CM803 2-in-1 USB-A &amp; Type-C Memory Card Reader #65024</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">Card Reader</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" style=\"background-color: rgb(255, 255, 255);\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The UGREEN CM803 2-in-1 USB-A &amp; Type-C Memory Card Reader #65024 comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 65024</li><li>Model: CM803</li><li>Supports up to 2TB</li><li>Compatible with USB-A and USB Type-C Devices</li><li>Read and write 2 cards (SD/Micro SD) simultaneously</li><li>312 MB/s High-Speed Transfer, UHS-II card support.</li></ul>",
+      "model": "CM803",
+      "warranty": "1-year warranty",
+      "basePrice": 1300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "65024",
+          "price": 1300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1248.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "65024",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "CM803",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-cm803-2-in-1-card-reader-65024",
+      "sourceProductCode": "50928",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "65024",
+      "sourceKeyFeatures": [
+        "MPN: 65024",
+        "Model: CM803",
+        "Supports up to 2TB",
+        "Compatible with USB-A and USB Type-C Devices",
+        "Read and write 2 cards (SD/Micro SD) simultaneously",
+        "312 MB/s High-Speed Transfer, UHS-II card support."
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/ugreen/ugreen-cm803-2-in-1-card-reader-65024.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/ugreen/ugreen-cm803-2-in-1-card-reader-65024.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-cm803-2-in-1-card-reader-65024",
+        "candidateTitle": "UGREEN CM803 2-in-1 USB-A & Type-C Memory Card Reader #65024",
+        "attemptStem": "ugreen-cm803-2-in-1-card-reader-65024"
+      }
+    },
+    {
+      "name": "UGREEN CM898 3-in-1 Type-C Card Reader #65095",
+      "slug": "ugreen-cm898-type-c-card-reader",
+      "type": "PHYSICAL",
+      "sku": "65095",
+      "description": "<h2>UGREEN CM898 3-in-1 Type-C Card Reader #65095</h2><p>The UGREEN <strong>CM898 </strong>3-in-1 Type-C Card Reader #65095 is a versatile and high-speed accessory designed for professionals and everyday users. With its USB Type-C interface, the UGREEN CM898 Type-C Card Reader supports SD 4.0 and UHS-II standards, offering transfer speeds of up to 312MB/s for quick and efficient file handling.This Ugreen Card Reader includes dual card slots, one SD (UHS-II) and one TF/MicroSD (UHS-II), making it ideal for photographers, content creators, and users who need reliable access to high-speed storage. It also supports 100W PD pass-through charging (input only), allowing you to charge your device while transferring data.Built with aluminum alloy and TPE materials, the UGREEN CM898 combines durability with a sleek design. It is compatible with iPhone 15/16/17, MacBook, iPad Pro, Android, Windows, and Linux, ensuring broad usability across multiple platforms.Compact and portable, the UGREEN CM898 3-in-1 Type-C Card Reader delivers speed, convenience, and reliability, making it an essential tool for everyday data transfer and professional workflows.</p><h2>Buy UGREEN CM898 3-in-1 Type-C Card Reader #65095 from Star Tech</h2><p>In Bangladesh, you can get original <strong>UGREEN CM898 3-in-1 Type-C Card Reader #65095</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/card-reader\">Card Reader</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at lowest price. The UGREEN CM898 3-in-1 Type-C Card Reader #65095 comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 65095</li><li>Model: CM898</li><li>Interface: Type-C</li><li>Standard: SD 4.0 / UHS-II; Magnetic Design</li><li>1 x SD (UHS-II), 1 x TF/Micro SD (UHS-II)</li><li>Max Transfer Rate: Up to 312 MB/s</li></ul>",
+      "model": "CM898",
+      "warranty": "1-year warranty",
+      "basePrice": 2400.0,
+      "originalPrice": 2640.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "UGREEN",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "Type-C",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "65095",
+          "price": 2400.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "Type-C"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2304.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "65095",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "CM898",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "Type-C",
+              "position": 2
+            },
+            {
+              "label": "Standard",
+              "value": "SD 4.0 / UHS-II; Magnetic Design",
+              "position": 3
+            },
+            {
+              "label": "Max Transfer Rate",
+              "value": "Up to 312 MB/s",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-cm898-type-c-card-reader",
+      "sourceProductCode": "52602",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "65095",
+      "sourceKeyFeatures": [
+        "MPN: 65095",
+        "Model: CM898",
+        "Interface: Type-C",
+        "Standard: SD 4.0 / UHS-II; Magnetic Design",
+        "1 x SD (UHS-II), 1 x TF/Micro SD (UHS-II)",
+        "Max Transfer Rate: Up to 312 MB/s"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/ugreen/ugreen-cm898-type-c-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/ugreen/ugreen-cm898-type-c-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-cm898-type-c-card-reader",
+        "candidateTitle": "UGREEN CM898 3-in-1 Type-C Card Reader #65095",
+        "attemptStem": "ugreen-cm898-type-c-card-reader"
+      }
+    },
+    {
+      "name": "Ugreen CR125 3-in-1 Type-A Male to SD-TF Card Reader #30333",
+      "slug": "ugreen-cr125-3-in-1-type-a-to-sd-tf-card-reader",
+      "type": "PHYSICAL",
+      "sku": "30333",
+      "description": "<h2>Ugreen CR125 3-in-1 Type-A Male to SD-TF Card Reader #30333</h2><p>With the Ugreen <strong>CR125</strong> 3-in-1 Type-A Male to SD-TF <a href=\"https://www.startech.com.bd/card-reader\" style=\"color: rgb(0, 0, 0);\" target=\"\">Card Reader</a>, you may enable seamless data transfer. With this small and multifunctional card reader, which has a stylish black style that goes well with any setup, simple file management is within reach. Card Reader may be connected to a variety of devices, such as laptops, desktop computers, tablets, and smartphones, thanks to its USB 2.0 Type-A Male interface. Additionally, it guarantees compatibility with Linux, macOS, and Windows.This card reader is compatible with SDHC cards up to 32GB and 2TB, as well as micro SDHC and micro SDXC cards. It has Secure Digital (SD) and Micro SD (TF) card slots. The Ugreen CR125 meets your demands whether you're a photographer, videographer, or just need to transmit data while you're on the road.Up to 480 Mbps of dependable data transfer speed are provided. You can monitor the progress of the transfer with the embedded LED indicator. The card reader can be used without the need for additional software or drivers because it is plug-and-play compatible.The card reader is small and light, measuring just 55 x 17 x 8 mm and weighing 10g. It might easily slip into your pocket or backpack. Its hot-swappable feature allows you to switch cards without stopping activities.Because of the built-in protections against overcurrent, overvoltage, and short-circuit situations, you can relax knowing that your data is secure.  For all of your data transmission needs, the Ugreen CR125 USB Male to SD-TF Black Card Reader provides stability and assurance.</p><h2>Buy Ugreen CR125 3-in-1 Type-A Male to SD-TF Card Reader #30333 from Star Tech</h2><p>In Bangladesh, you can get original <strong>Ugreen CR125 3-in-1 Type-A Male to SD-TF Card Reader</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/card-reader\" target=\"\">card readers</a> to purchase for your cards. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price.The Ugreen CR125 3-in-1 Type-A Male to SD-TF Card Reader comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 30333</li><li>Model: CR125</li><li>Input: USB 2.0 Type A Male</li><li>Card Slots: SD, TF (Micro SD)</li><li>Transfer Speed: Up to 480 Mbps</li><li>Compatibility: Windows, MacOS, Linux</li></ul>",
+      "model": "CR125",
+      "warranty": "1 year warranty",
+      "basePrice": 1440.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 55.0,
+        "width": 17.0,
+        "height": 8.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "30333",
+          "price": 1440.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1382.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "30333",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "CR125",
+              "position": 1
+            },
+            {
+              "label": "Input",
+              "value": "USB 2.0 Type A Male",
+              "position": 2
+            },
+            {
+              "label": "Card Slots",
+              "value": "SD, TF (Micro SD)",
+              "position": 3
+            },
+            {
+              "label": "Transfer Speed",
+              "value": "Up to 480 Mbps",
+              "position": 4
+            },
+            {
+              "label": "Compatibility",
+              "value": "Windows, MacOS, Linux",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-cr125-3-in-1-type-a-to-sd-tf-card-reader",
+      "sourceProductCode": "36526",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "30333",
+      "sourceKeyFeatures": [
+        "MPN: 30333",
+        "Model: CR125",
+        "Input: USB 2.0 Type A Male",
+        "Card Slots: SD, TF (Micro SD)",
+        "Transfer Speed: Up to 480 Mbps",
+        "Compatibility: Windows, MacOS, Linux"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/ugreen/ugreen-cr125-3-in-1-type-a-to-sd-tf-card-reader.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/ugreen/ugreen-cr125-3-in-1-type-a-to-sd-tf-card-reader.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-cr125-3-in-1-type-a-to-sd-tf-card-reader",
+        "candidateTitle": "Ugreen CR125 3-in-1 Type-A Male to SD-TF Card Reader #30333",
+        "attemptStem": "ugreen-cr125-3-in-1-type-a-to-sd-tf-card-reader"
+      }
+    },
+    {
+      "name": "Ulanzi CR1 3-in-1 USB Card Reader",
+      "slug": "ulanzi-cr1-card-reader",
+      "type": "PHYSICAL",
+      "sku": "ST-50528",
+      "description": "<h2>Ulanzi CR1 3-in-1 USB Card Reader</h2><p>The <strong>Ulanzi CR1</strong> Card Reader is a compact and versatile 3‑in‑1 solution designed for fast data transfer and reliable connectivity, equipped with input interfaces including USB‑A, SDXC, and microSDXC to support multiple formats for photos, videos, and files. Delivering transfer speeds of up to 5Gbps and USB read speeds reaching 170MB/s, the Ulanzi CR1 Card Reader ensures quick access and efficient storage management, making it ideal for photographers, content creators, and everyday users. With dual connectivity options through USB and Type‑C, this Ulanzi Type‑C Card Reader offers broad compatibility across laptops, desktops, and mobile devices, while the dual cap protection design keeps ports safe from dust and damage for long‑term durability. Lightweight and easy to carry, the Ulanzi CR1 Card Reader combines speed, convenience, and protection in one device, making it an essential accessory for anyone seeking a dependable card reader for work, travel, or daily use.</p><h2>Buy Ulanzi CR1 3-in-1 USB Card Reader from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Ulanzi CR1 3-in-1 USB Card Reader</strong> From <a href=\"https://www.startech.com.bd/\">Star Tech</a>. We have a large collection of latest Hoco Card Reader to purchase for your <a href=\"https://www.startech.com.bd/desktops\">Desktop PC</a> or <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\">laptop</a>. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The Ulanzi CR1 3-in-1 USB Card Reader comes with 1-year Warranty (Must Claim With Box &amp; All Accessories).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CR1</li><li>Input Interface: 1x USB-A, 1x SDXC, 1x microSDXC</li><li>Transfer speed: Up to 5Gbps, USB: Up to 170MB/s</li><li>Connectivity: USB, Type-C</li><li>Dual Cap for Protection</li></ul>",
+      "model": "CR1",
+      "warranty": "1-year Warranty",
+      "basePrice": 890.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Ulanzi",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-50528",
+          "price": 890.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 854.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "CR1",
+              "position": 0
+            },
+            {
+              "label": "Input Interface",
+              "value": "1x USB-A, 1x SDXC, 1x microSDXC",
+              "position": 1
+            },
+            {
+              "label": "Transfer speed",
+              "value": "Up to 5Gbps, USB: Up to 170MB/s",
+              "position": 2
+            },
+            {
+              "label": "Connectivity",
+              "value": "USB, Type-C",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ulanzi-cr1-card-reader",
+      "sourceProductCode": "50528",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CR1",
+        "Input Interface: 1x USB-A, 1x SDXC, 1x microSDXC",
+        "Transfer speed: Up to 5Gbps, USB: Up to 170MB/s",
+        "Connectivity: USB, Type-C",
+        "Dual Cap for Protection"
+      ],
+      "needsReview": false,
+      "categorySlug": "card-reader",
+      "image": "/images/products/accessories/card-reader/ulanzi/ulanzi-cr1-card-reader.webp",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/card-reader/ulanzi/ulanzi-cr1-card-reader.webp"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ulanzi-cr1-card-reader",
+        "candidateTitle": "Ulanzi CR1 3-in-1 USB Card Reader",
+        "attemptStem": "ulanzi-cr1-card-reader"
+      }
+    }
+  ]
+}

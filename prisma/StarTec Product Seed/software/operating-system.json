@@ -1,0 +1,1049 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/software",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\software",
+    "generatedAtUnix": 1790589365,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Software",
+      "slug": "software",
+      "parentSlug": null,
+      "image": "/images/products/software/adobe/adobe-acrobat-pro-dc-for-teams.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Operating System",
+      "slug": "operating-system",
+      "parentSlug": "software",
+      "image": "/images/products/software/operating-system/Microsoft Windows/microsoft-windows-11-professional.jpg",
+      "isActive": true,
+      "sortOrder": 5,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Microsoft",
+      "slug": "microsoft",
+      "logo": null
+    },
+    {
+      "name": "Red Hat",
+      "slug": "red-hat",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Microsoft Windows 11 Professional",
+      "slug": "microsoft-windows-11-professional",
+      "type": "PHYSICAL",
+      "sku": "ST-21044",
+      "description": "<h2 style=\"text-align: justify; \">Microsoft Windows 11 Professional</h2><p style=\"text-align: justify; \">The Windows 11 Pro is here! It comes with many incredibly useful features. It is built on the consistent and compatible Windows 10 foundation. Windows 11 is designed for powerful security and a great user experience across a wide range of devices and configurations. Windows 11 can be managed with your familiar tools and processes. Improve your focus with a simpler, more intuitive experience and effortless navigation. Get things done with fewer steps using the refreshed Start, Taskbar, and Navigation Center. You can snap the apps you need into a group and seamlessly return to it even when you open another app or dock and undock your monitor. You can create a custom desktop for each project and switch instantly between them from your taskbar. You can also type with your voice that instantly turns your ideas into text. Window 11 offers smarter collaboration with Teams. You can mute and unmute your mic directly from your taskbar without having to find and click on your meetings app and instantly share any app or window directly from your taskbar in online meetings. The next evolution of Windows is here.</p><div class=\"video-wrapper\" style=\"text-align: justify; \"> </div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Windows 11 Professional</li><li>Processor: 1 gigahertz (GHz) or faster with 2 or more cores</li><li>Memory: 4 GB RAM, Storage: 64 GB or larger storage</li><li>Trusted Platform Module (TPM) version: 2.0</li><li>License Type: Perpetual (Life Time)</li></ul>",
+      "model": "Windows 11 Professional",
+      "warranty": null,
+      "basePrice": 20200.0,
+      "originalPrice": 22220.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "4 GB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "64 GB or larger storage device",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-21044",
+          "price": 20200.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "4 GB RAM",
+            "Storage": "64 GB or larger storage device"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 19392.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "1 gigahertz (GHz) or faster with 2 or more cores on a compatible 64-bit processor or System on a Chip (SoC)",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "4 GB RAM",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "64 GB or larger storage device",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "TPM: Trusted Platform Module (TPM) version 2.0. Graphics card: DirectX 12 compatible graphics / WDDM 2.x Display Resolution: >9\" with HD Resolution (720p)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "Retail Box",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-windows-11-professional",
+      "sourceProductCode": "21044",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Windows 11 Professional",
+        "Processor: 1 gigahertz (GHz) or faster with 2 or more cores",
+        "Memory: 4 GB RAM, Storage: 64 GB or larger storage",
+        "Trusted Platform Module (TPM) version: 2.0",
+        "License Type: Perpetual (Life Time)"
+      ],
+      "needsReview": false,
+      "categorySlug": "operating-system",
+      "image": "/images/products/software/operating-system/Microsoft Windows/microsoft-windows-11-professional.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/operating-system/Microsoft Windows/microsoft-windows-11-professional.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-windows-11-professional",
+        "candidateTitle": "Microsoft Windows 11 Professional",
+        "attemptStem": "microsoft-windows-11-professional"
+      }
+    },
+    {
+      "name": "Windows Server 2025 Standard - 16 Core License Pack",
+      "slug": "microsoft-windows-server",
+      "type": "PHYSICAL",
+      "sku": "ST-12640",
+      "description": "<h2>Windows Server 2025 Standard - 16 Core License Pack</h2><p>Extend your datacenter to Azure to maximize your investments and gain new hybrid capabilities. Elevate your security posture by protecting the data center, starting with the operating system. Enable the creation of cloud-native apps, and modernize traditional apps using containers and microservices. Evolve your datacenter infrastructure to achieve greater efficiency and security.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Windows Server 2025</li><li>Unprecedented hyper-converged infrastructure</li><li>Hybrid capabilities with Azure</li><li>Advanced multilayer security</li><li>Faster innovation for applications</li></ul>",
+      "model": "Windows Server 2025",
+      "warranty": null,
+      "basePrice": 165140.0,
+      "originalPrice": 181654.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-12640",
+          "price": 165140.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 158534.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "License",
+          "position": 0,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "E-License",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-windows-server",
+      "sourceProductCode": "12640",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Windows Server 2025",
+        "Unprecedented hyper-converged infrastructure",
+        "Hybrid capabilities with Azure",
+        "Advanced multilayer security",
+        "Faster innovation for applications"
+      ],
+      "needsReview": false,
+      "categorySlug": "operating-system",
+      "image": "/images/products/software/operating-system/Microsoft Windows/microsoft-windows-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/operating-system/Microsoft Windows/microsoft-windows-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-windows-server",
+        "candidateTitle": "Windows Server 2025 Standard - 16 Core License Pack",
+        "attemptStem": "microsoft-windows-server"
+      }
+    },
+    {
+      "name": "Microsoft Windows Server 2019 Standard OEI DVD",
+      "slug": "microsoft-windows-server-2019-oem",
+      "type": "PHYSICAL",
+      "sku": "ST-15794",
+      "description": "<h2 style=\"text-align: justify; \"><span style=\"font-weight: 700;\">Microsoft Windows Server 2019 Standard 16 Core - OEI Pack</span><br/></h2><p style=\"display: inline !important;\"><span style=\"font-weight: 700;\">Main Features</span></p><ul><li>    License<br/></li><li>    16 cores<br/></li><li>    OEI<br/></li><li>    DVD<br/></li><li>     64-bit<br/></li><li>    English</li></ul><p>Windows Server 2019 is here. Get the cloud-ready operating system today to apply another levels of security and innovation to the applications and infrastructure, that power your business. Support the workloads you run today, and make it easier to move to the cloud, when you're ready.</p><p><span style=\"font-weight: 700;\">Technical Specifications</span></p><ul><li>Licensing<br/></li><li>License Pricing : OEM<br/></li><li>Licensing Details : 64-bit</li></ul><p><span style=\"font-weight: 700;\">Software</span></p><ul><li>License Category : License<br/></li><li>License Qty : 16 cores<br/></li><li>License Type : License<br/></li><li>Licensing Program : Microsoft OEM</li></ul><p><span style=\"font-weight: 700;\">Header</span></p><ul><li>Brand : Microsoft<br/></li><li>Compatibility : PC<br/></li><li>Localization : English<br/></li><li>Manufacturer : Microsoft OEM Software<br/></li><li>Model : Server 2019 Standard<br/></li><li>Packaged Quantity : 1<br/></li><li>Product Line : Microsoft Windows</li></ul><p><span style=\"font-weight: 700;\">OS Provided</span></p><ul><li>Media : DVD-ROM<br/></li><li>OS Family : Windows Server<br/></li><li>Type : Microsoft Windows Server 2019 Standard</li></ul><p><span style=\"font-weight: 700;\">Software Family</span></p><ul><li>Microsoft Edition : Standard<br/></li><li>Microsoft Family : MS Windows Server<br/></li><li>Microsoft Version : 2019<br/></li></ul>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Windows Server 2019 Standard</li><li>16 cores</li><li>OEI</li><li>DVD</li><li>64-bit</li></ul>",
+      "model": "Windows Server 2019 Standard",
+      "warranty": null,
+      "basePrice": 57000.0,
+      "originalPrice": 62700.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "512 MB (2 GB for Server with Desktop Experience installation option) ECC (Error Correcting Code) type or similar technology",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "32 GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-15794",
+          "price": 57000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "512 MB (2 GB for Server with Desktop Experience installation option) ECC (Error Correcting Code) type or similar technology",
+            "Storage": "32 GB"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 54720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "1.4 GHz 64-bit processor Compatible with x64 instruction set Supports NX and DEP Supports CMPXCHG16b, LAHF/SAHF, and PrefetchW Supports Second Level Address Translation (EPT or NPT)",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "512 MB (2 GB for Server with Desktop Experience installation option) ECC (Error Correcting Code) type or similar technology",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "32 GB",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Graphics device and monitor capable of Super VGA (1024 x 768) or higher-resolution",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "Retail Box",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-windows-server-2019-oem",
+      "sourceProductCode": "15794",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Windows Server 2019 Standard",
+        "16 cores",
+        "OEI",
+        "DVD",
+        "64-bit"
+      ],
+      "needsReview": false,
+      "categorySlug": "operating-system",
+      "image": "/images/products/software/operating-system/Microsoft Windows/microsoft-windows-server-2019-oem.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/operating-system/Microsoft Windows/microsoft-windows-server-2019-oem.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-windows-server-2019-oem",
+        "candidateTitle": "Microsoft Windows Server 2019 Standard OEI DVD",
+        "attemptStem": "microsoft-windows-server-2019-oem"
+      }
+    },
+    {
+      "name": "Microsoft Windows Server 2025 Remote Desktop Services - 1 Device CAL (CSP Perpetual)",
+      "slug": "microsoft-windows-server-2025-remote-desktop-services",
+      "type": "PHYSICAL",
+      "sku": "ST-39036",
+      "description": "<h2>Microsoft Windows Server 2025 Remote Desktop Services - 1 Device CAL</h2><p>The <strong>Microsoft Windows Server 2025 Remote Desktop Services</strong> - 1 Device Client Access License (CAL) grants access to Remote Desktop Services for a single device, allowing for safe and efficient remote access to desktops and applications. This Microsoft Windows Server 2025 RDS license arrangement is suited for settings where numerous users use a single device, such as shift-based organizations. Organizations can reduce expenses by licensing at the device level while guaranteeing that users have consistent access to virtualized programs and desktops. Windows Server 2025 improves on this with additional security features and hybrid cloud capabilities, making it a reliable alternative for modern remote work requirements.</p><h2>Buy Microsoft Windows Server 2025 Remote Desktop Services - 1 Device CAL  from Star Tech</h2><p>In Bangladesh, you can get original <strong>Microsoft Windows Server 2025 RDS - 1 Device CAL </strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/software\">Software</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Windows Server 2025 Remote Desktop Services</li><li>Securely connect remote users</li><li>Get access from managed or unmanaged devices</li><li>Connect to session-based or virtual-machine-based desktops</li><li>Use datacenter apps within corporate networks or from the internet</li></ul>",
+      "model": "Windows Server 2025 Remote Desktop Services",
+      "warranty": null,
+      "basePrice": 19850.0,
+      "originalPrice": 21835.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39036",
+          "price": 19850.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 19056.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "License",
+          "position": 0,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "E-License",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-windows-server-2025-remote-desktop-services",
+      "sourceProductCode": "39036",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Windows Server 2025 Remote Desktop Services",
+        "Securely connect remote users",
+        "Get access from managed or unmanaged devices",
+        "Connect to session-based or virtual-machine-based desktops",
+        "Use datacenter apps within corporate networks or from the internet"
+      ],
+      "needsReview": false,
+      "categorySlug": "operating-system",
+      "image": "/images/products/software/operating-system/Microsoft Windows/microsoft-windows-server-2025-remote-desktop-services.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/operating-system/Microsoft Windows/microsoft-windows-server-2025-remote-desktop-services.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-windows-server-2025-remote-desktop-services",
+        "candidateTitle": "Microsoft Windows Server 2025 Remote Desktop Services - 1 Device CAL (CSP Perpetual)",
+        "attemptStem": "microsoft-windows-server-2025-remote-desktop-services"
+      }
+    },
+    {
+      "name": "Microsoft Windows Server Standard 2025 - 2 Core License Pack",
+      "slug": "microsoft-windows-server-standard-2025-2-core-license-pack",
+      "type": "PHYSICAL",
+      "sku": "ST-39032",
+      "description": "<h2>Microsoft Windows Server Standard 2025 - 2 Core License Pack</h2><p>The <strong>Microsoft Windows Server Standard 2025</strong> - 2 Core License Pack is intended for physical or minimally virtualized settings and provides a cost-effective solution for enterprises. This Windows Server Standard 2025 package offers advanced multi-layer security, hybrid capabilities with Azure, and a configurable application platform. The core-based licensing approach enables flexible scaling, guaranteeing that enterprises may effectively manage their server resources. With support for up to two virtual machines or Hyper-V containers per license, this Windows Server Standard 2025 serves as a solid foundation for modern IT infrastructures, improving both performance and security.</p><h2>Buy Microsoft Windows Server Standard 2025 - 2 Core License Pack from Star Tech</h2><p>In Bangladesh, you can get original <strong>Microsoft Windows Server Standard 2025 - 2 Core License Pack</strong> From Star Tech. We have a large collection of latest Software to purchase. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Windows Server 2025</li><li>2 Core License</li><li>Perpetual CSP</li><li>Secured-core server</li><li>Azure Arc-enabled Windows Servers</li></ul>",
+      "model": "Windows Server 2025",
+      "warranty": null,
+      "basePrice": 20640.0,
+      "originalPrice": 22704.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39032",
+          "price": 20640.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 19814.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "License",
+          "position": 0,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "E-License",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-windows-server-standard-2025-2-core-license-pack",
+      "sourceProductCode": "39032",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Windows Server 2025",
+        "2 Core License",
+        "Perpetual CSP",
+        "Secured-core server",
+        "Azure Arc-enabled Windows Servers"
+      ],
+      "needsReview": false,
+      "categorySlug": "operating-system",
+      "image": "/images/products/software/operating-system/Microsoft Windows/microsoft-windows-server-standard-2025-2-core-license-pack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/operating-system/Microsoft Windows/microsoft-windows-server-standard-2025-2-core-license-pack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-windows-server-standard-2025-2-core-license-pack",
+        "candidateTitle": "Microsoft Windows Server Standard 2025 - 2 Core License Pack",
+        "attemptStem": "microsoft-windows-server-standard-2025-2-core-license-pack"
+      }
+    },
+    {
+      "name": "Red Hat Enterprise Linux Server Standard (Annual Subscription)",
+      "slug": "red-hat-enterprise-linux-server",
+      "type": "PHYSICAL",
+      "sku": "RH00004",
+      "description": "<h2 style=\"text-align: justify; \">Red Hat Enterprise Linux Server Standard (Annual Subscription)</h2><p class=\"MsoNormal\" style=\"text-align: justify; \">Red Hat Enterprise Linux Server is an easy-to-administer, simple-to-control operating system that can be deployed on physical systems (Self-support, Standard, and Premium subscriptions), in the cloud (Standard and Premium subscriptions), or as a guest on the most widely available hypervisors (Standard and Premium subscriptions). It orchestrates the hardware resources for all your basic computing requirements and includes support for all major hardware platforms and thousands of commercial and custom applications. IT organizations\r\nwant to deliver greater business value by increasing productivity, delivering\r\nservices faster, and remaining flexible to incorporate the latest innovations\r\nlike cloud, containers, and configuration automation. Modern workloads are\r\nexpected to be portable and scalable, and they need a modern, secure\r\nplatform.  Red Hat Enterprise Linux Server powers business applications with the\r\ncontrol, confidence, and freedom that comes from a consistent foundation across\r\nhybrid cloud deployments.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: RH00004</li><li>Model: Red Hat Enterprise Linux Server</li><li>Easy-to-administer, Simple-to-control</li><li>Enterprise application support</li><li>Web and phone support channels</li><li>Unlimited support cases</li></ul>",
+      "model": "Red Hat Enterprise Linux Server",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Red Hat",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "RH00004",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "License",
+          "position": 0,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "E-License",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 1,
+          "items": [
+            {
+              "label": "Duration",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/red-hat-enterprise-linux-server",
+      "sourceProductCode": "8164",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "RH00004",
+      "sourceKeyFeatures": [
+        "MPN: RH00004",
+        "Model: Red Hat Enterprise Linux Server",
+        "Easy-to-administer, Simple-to-control",
+        "Enterprise application support",
+        "Web and phone support channels",
+        "Unlimited support cases"
+      ],
+      "needsReview": true,
+      "categorySlug": "operating-system",
+      "image": "/images/products/software/operating-system/Red Hat/red-hat-enterprise-linux-server.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/operating-system/Red Hat/red-hat-enterprise-linux-server.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "red-hat-enterprise-linux-server",
+        "candidateTitle": "Red Hat Enterprise Linux Server Standard (Annual Subscription)",
+        "attemptStem": "red-hat-enterprise-linux-server"
+      }
+    },
+    {
+      "name": "Red Hat Enterprise Linux Server Premium (Annual Subscription)",
+      "slug": "red-hat-enterprise-linux-server-premium",
+      "type": "PHYSICAL",
+      "sku": "RH00003",
+      "description": "<h2 style=\"text-align: justify; \">Red Hat Enterprise Linux Server Premium (Annual Subscription)</h2><p style=\"text-align: justify; \">The Red Hat Enterprise Linux Server is an easy-to-administer, simple-to-control operating system that can be deployed on physical systems (Self-support, Standard, and Premium subscriptions), in the cloud (Standard and Premium subscriptions), or as a guest on the most widely available hypervisors (Standard and Premium subscriptions). It orchestrates the hardware resources for all your basic computing requirements and includes support for all major hardware platforms and thousands of commercial and custom applications. IT organizations want to deliver greater business value by increasing productivity, delivering services faster, and remaining flexible to incorporate the latest innovations like cloud, containers, and configuration automation. Modern workloads are expected to be portable and scalable, and they need a modern, secure platform.  Red Hat Enterprise Linux Server powers business applications with the control, confidence, and freedom that comes from a consistent foundation across hybrid cloud deployments. The Red Hat Enterprise Linux Server Premium comes with a 1-year Subscription.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: RH00003</li><li>Model: Red Hat Enterprise Linux Server</li><li>Easy-to-administer, Simple-to-control</li><li>24x7 for severity 1 and 2 cases</li><li>Web and phone support channels</li><li>Unlimited support cases</li></ul>",
+      "model": "Red Hat Enterprise Linux Server",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Red Hat",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "RH00003",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "License",
+          "position": 0,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "E-License",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 1,
+          "items": [
+            {
+              "label": "Duration",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/red-hat-enterprise-linux-server-premium",
+      "sourceProductCode": "19139",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "RH00003",
+      "sourceKeyFeatures": [
+        "MPN: RH00003",
+        "Model: Red Hat Enterprise Linux Server",
+        "Easy-to-administer, Simple-to-control",
+        "24x7 for severity 1 and 2 cases",
+        "Web and phone support channels",
+        "Unlimited support cases"
+      ],
+      "needsReview": true,
+      "categorySlug": "operating-system",
+      "image": "/images/products/software/operating-system/Red Hat/red-hat-enterprise-linux-server-premium.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/operating-system/Red Hat/red-hat-enterprise-linux-server-premium.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "red-hat-enterprise-linux-server-premium",
+        "candidateTitle": "Red Hat Enterprise Linux Server Premium (Annual Subscription)",
+        "attemptStem": "red-hat-enterprise-linux-server-premium"
+      }
+    },
+    {
+      "name": "Windows Server 2025 Datacenter - 16 Core License Pack",
+      "slug": "windows-server-2025-datacenter-16-core-license-pack",
+      "type": "PHYSICAL",
+      "sku": "ST-39035",
+      "description": "<h2>Windows Server 2025 Datacenter - 16 Core License Pack</h2><p>The <strong>Windows Server 2025 Datacenter</strong> - 16 Core License Pack is designed for highly virtualized datacenters and cloud settings, with unrestricted virtualization privileges. This Windows Server 2025 Datacenter license features superior multilayer security, hybrid Azure capabilities, and speedier application innovation. The core-based licensing architecture enables flexible scaling and effective resource management, resulting in robust performance and security. This Windows Server 2025 Datacenter license pack is ideal for organizations wishing to optimize their IT infrastructure, as it supports significant virtualization and provides a comprehensive solution for modern datacenter demands.</p><h2>Buy Windows Server 2025 Datacenter - 16 Core License Pack from Star Tech</h2><p>In Bangladesh, you can get original <strong>Windows Server 2025 Datacenter - 16 Core License Pack</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/software\">Software</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Windows Server 2025 Datacenter</li><li>Unprecedented hyper-converged infrastructure</li><li>Hybrid capabilities with Azure</li><li>Advanced multilayer security</li><li>Faster innovation for applications</li></ul>",
+      "model": "Windows Server 2025 Datacenter",
+      "warranty": null,
+      "basePrice": 950640.0,
+      "originalPrice": 1045704.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39035",
+          "price": 950640.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 912614.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "License",
+          "position": 0,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "E-License",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/windows-server-2025-datacenter-16-core-license-pack",
+      "sourceProductCode": "39035",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Windows Server 2025 Datacenter",
+        "Unprecedented hyper-converged infrastructure",
+        "Hybrid capabilities with Azure",
+        "Advanced multilayer security",
+        "Faster innovation for applications"
+      ],
+      "needsReview": false,
+      "categorySlug": "operating-system",
+      "image": "/images/products/software/operating-system/Microsoft Windows/windows-server-2025-datacenter-16-core-license-pack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/operating-system/Microsoft Windows/windows-server-2025-datacenter-16-core-license-pack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "windows-server-2025-datacenter-16-core-license-pack",
+        "candidateTitle": "Windows Server 2025 Datacenter - 16 Core License Pack",
+        "attemptStem": "windows-server-2025-datacenter-16-core-license-pack"
+      }
+    },
+    {
+      "name": "Windows Server 2025 Datacenter - 2 Core (CSP Perpetual)",
+      "slug": "windows-server-2025-datacenter-2-core",
+      "type": "PHYSICAL",
+      "sku": "ST-39029",
+      "description": "<h2>Windows Server 2025 Datacenter - 2 core (CSP Perpetual)</h2><p>The <strong>Windows Server 2025 Datacenter - 2 Core</strong> (CSP Perpetual) is intended for highly virtualized datacenters and cloud environments, with unrestricted virtualization permissions. This Windows Server 2025 edition offers additional security features, faster performance, and hybrid cloud capabilities, making it suited for current IT infrastructures. Its core-based licensing architecture enables flexible growth and effective resource management. Perpetual license through the Cloud Solution Provider (CSP) program provides continual access to the most recent updates and features, improving operational efficiency and security. This Windows Server 2025 Datacenter solution is ideal for enterprises seeking to improve their datacenter operations through strong, scalable, and secure server administration.</p><h2>Buy Windows Server 2025 Datacenter - 2 Core (CSP Perpetual) from Star Tech</h2><p>In Bangladesh, you can get original <strong>Windows Server 2025 Datacenter - 2 Core (CSP Perpetual)</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/software\">Software</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Windows Server 2025 Datacenter</li><li>Unprecedented hyper-converged infrastructure</li><li>Hybrid capabilities with Azure</li><li>Advanced multilayer security</li><li>Faster innovation for applications</li></ul>",
+      "model": "Windows Server 2025 Datacenter",
+      "warranty": null,
+      "basePrice": 118795.0,
+      "originalPrice": 130675.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39029",
+          "price": 118795.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 114043.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "License",
+          "position": 0,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "E-License",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/windows-server-2025-datacenter-2-core",
+      "sourceProductCode": "39029",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Windows Server 2025 Datacenter",
+        "Unprecedented hyper-converged infrastructure",
+        "Hybrid capabilities with Azure",
+        "Advanced multilayer security",
+        "Faster innovation for applications"
+      ],
+      "needsReview": false,
+      "categorySlug": "operating-system",
+      "image": "/images/products/software/operating-system/Microsoft Windows/windows-server-2025-datacenter-2-core.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/operating-system/Microsoft Windows/windows-server-2025-datacenter-2-core.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "windows-server-2025-datacenter-2-core",
+        "candidateTitle": "Windows Server 2025 Datacenter - 2 Core (CSP Perpetual)",
+        "attemptStem": "windows-server-2025-datacenter-2-core"
+      }
+    },
+    {
+      "name": "Windows Server 2025 - Device CAL",
+      "slug": "windows-server-2025-device-cal",
+      "type": "PHYSICAL",
+      "sku": "ST-39030",
+      "description": "<h2>Windows Server 2025 - Device CAL</h2><p>The <strong>Windows Server 2025</strong> - Device Client Access License (CAL) allows a specific device to access server resources such as file sharing, printing, and other network services, independent of who is using it. This Windows Server 2025 licensing arrangement is especially cost-effective for firms that have several users sharing devices, such as shift-based work situations. By licensing at the device level, enterprises may ensure secure and efficient access to server resources while lowering licensing costs. Windows Server 2025 also has improved security features and hybrid cloud capabilities, making it a solid choice for current IT infrastructures.</p><h2>Buy Windows Server 2025 - Device CAL from Star Tech</h2><p>In Bangladesh, you can get original <strong>Windows Server 2025 - Device CAL</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/software\">Software</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Windows Server 2025</li><li>Unprecedented hyper-converged infrastructure</li><li>Hybrid capabilities with Azure</li><li>Advanced multilayer security</li><li>Faster innovation for applications</li></ul>",
+      "model": "Windows Server 2025",
+      "warranty": null,
+      "basePrice": 5480.0,
+      "originalPrice": 6030.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39030",
+          "price": 5480.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 5260.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "License",
+          "position": 0,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "E-License",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/windows-server-2025-device-cal",
+      "sourceProductCode": "39030",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Windows Server 2025",
+        "Unprecedented hyper-converged infrastructure",
+        "Hybrid capabilities with Azure",
+        "Advanced multilayer security",
+        "Faster innovation for applications"
+      ],
+      "needsReview": false,
+      "categorySlug": "operating-system",
+      "image": "/images/products/software/operating-system/Microsoft Windows/windows-server-2025-device-cal.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/Microsoft/windows-server-2025-device-cal.png",
+        "/images/products/software/operating-system/Microsoft Windows/windows-server-2025-device-cal.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "windows-server-2025-device-cal",
+        "candidateTitle": "Windows Server 2025 - Device CAL",
+        "attemptStem": "windows-server-2025-device-cal"
+      }
+    },
+    {
+      "name": "Windows Server 2025 - User CAL",
+      "slug": "windows-server-2025-user-cal",
+      "type": "PHYSICAL",
+      "sku": "ST-39027",
+      "description": "<h2>Windows Server 2025 - User CAL</h2><p>The <strong>Windows Server 2025</strong> includes advanced features and updates to improve security, performance, and flexibility. A User Client Access License (CAL) for Windows Server 2025 enables a single user to use server resources such as file sharing, printing, and other network services, regardless of the device. This Windows Server 2025 license arrangement is excellent for enterprises where employees need to access the server from different devices while maintaining efficient and secure connectivity. With the most recent security upgrades and hybrid cloud capabilities, Windows Server 2025 provides a dependable and scalable option for modern IT settings.</p><h2>Buy Windows Server 2025 - User CAL from Star Tech</h2><p>In Bangladesh, you can get original <strong>Windows Server 2025 - User CAL</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/software\">Software</a> to purchase <a href=\"https://www.startech.com.bd/desktops\">Desktop</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Windows Server 2025</li><li>Unprecedented hyper-converged infrastructure</li><li>Hybrid capabilities with Azure</li><li>Advanced multilayer security</li><li>Faster innovation for applications</li></ul>",
+      "model": "Windows Server 2025",
+      "warranty": null,
+      "basePrice": 7020.0,
+      "originalPrice": 7722.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39027",
+          "price": 7020.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 6739.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "License",
+          "position": 0,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "E-License",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/windows-server-2025-user-cal",
+      "sourceProductCode": "39027",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Windows Server 2025",
+        "Unprecedented hyper-converged infrastructure",
+        "Hybrid capabilities with Azure",
+        "Advanced multilayer security",
+        "Faster innovation for applications"
+      ],
+      "needsReview": false,
+      "categorySlug": "operating-system",
+      "image": "/images/products/software/operating-system/Microsoft Windows/windows-server-2025-user-cal.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/operating-system/Microsoft Windows/windows-server-2025-user-cal.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "windows-server-2025-user-cal",
+        "candidateTitle": "Windows Server 2025 - User CAL",
+        "attemptStem": "windows-server-2025-user-cal"
+      }
+    }
+  ]
+}

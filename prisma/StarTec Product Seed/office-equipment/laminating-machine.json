@@ -1,0 +1,2094 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/office-equipment",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\office-equipment",
+    "generatedAtUnix": 1790587585,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Office Equipment",
+      "slug": "office-equipment",
+      "parentSlug": null,
+      "image": "/images/products/office-equipment/barcode-scanner/deli/deli-14952w-handheld-barcode-scanner.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Laminating Machine",
+      "slug": "laminating-machine",
+      "parentSlug": "office-equipment",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/best-quality-a3-330c-laminator-machine.png",
+      "isActive": true,
+      "sortOrder": 12,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Deli",
+      "slug": "deli",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Best Quality A3-330C Laminator Machine",
+      "slug": "best-quality-a3-330c-laminator-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-9455",
+      "description": "<h2>Best Quality A3-330C Laminator Machine</h2><p>Best Quality A3-330C laminating machine has 600MM speed ISINGIASS heating system, Max. laminating width 320MM, operating temperature 0-180C, driving motor - AC geared motor, dimensions(W.L.H) 550.290.160(MM), weight 8.5KGS. The Best Quality A3-330C Laminator Machine has 1 Year Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Best Quality A3-330C</li><li>600MM speed ISINGIASS heating system</li><li>Width 320MM</li><li>Operating temperature 0-180C</li></ul>",
+      "model": "Best Quality A3-330C",
+      "warranty": null,
+      "basePrice": 5400.0,
+      "originalPrice": 5600.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-9455",
+          "price": 5400.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 5184.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Best Quality A3-330C",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/best-quality-a3-330c-laminator-machine",
+      "sourceProductCode": "9455",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Best Quality A3-330C",
+        "600MM speed ISINGIASS heating system",
+        "Width 320MM",
+        "Operating temperature 0-180C"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/best-quality-a3-330c-laminator-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/best-quality-a3-330c-laminator-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "best-quality-a3-330c-laminator-machine",
+        "candidateTitle": "Best Quality A3-330C Laminator Machine",
+        "attemptStem": "best-quality-a3-330c-laminator-machine"
+      }
+    },
+    {
+      "name": "Blue Sky BS A3-330C Laminating Machine",
+      "slug": "blue-sky-bs-a3-330c-laminating-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-9457",
+      "description": "Blue Sky BS A3-330C Laminating Speed - 480mm/min, Max Laminating Width - 320mm, Operating Temp. - 0-180.c, Heating System - Quartz h.tube, Driving Motor - Syn motor, Power - 220-240v 620W. The Blue Sky BS A3-330C Laminating Machine has no Warranty.",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Blue Sky BS A3-330C</li><li>Laminating Speed - 480mm/min</li><li>Max Laminating Width - 320mm</li><li>Operating Temp. - 0-180.c</li><li>Heating System - Quartz h.tube</li></ul>",
+      "model": "Blue Sky BS A3-330C",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-9457",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Blue Sky BS A3-330C",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/blue-sky-bs-a3-330c-laminating-machine",
+      "sourceProductCode": "9457",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Blue Sky BS A3-330C",
+        "Laminating Speed - 480mm/min",
+        "Max Laminating Width - 320mm",
+        "Operating Temp. - 0-180.c",
+        "Heating System - Quartz h.tube"
+      ],
+      "needsReview": true,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/blue-sky-bs-a3-330c-laminating-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/blue-sky-bs-a3-330c-laminating-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "blue-sky-bs-a3-330c-laminating-machine",
+        "candidateTitle": "Blue Sky BS A3-330C Laminating Machine",
+        "attemptStem": "blue-sky-bs-a3-330c-laminating-machine"
+      }
+    },
+    {
+      "name": "Deli 14318 A3 Laminating Machine",
+      "slug": "deli-14318-a3-laminating-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-22911",
+      "description": "<h2>Deli 14318 A3 Laminating Machine</h2><p>Deli 14318 is an A3 and A4 Film Laminating Machine from Deli. 14318 is suitable for documents below 250mm or A3 width. Both of them have a maximum laminating thickness of 0.6mm, and also have 2 adjustable temperature gear which is designed to fit with different thicknesses of the film. The noise is less than 55dB when they're operating is another popular feature. It has a pre-heat time of 3 to 5 minutes. The speed is ranged from 250 mm per minute to 400 mm per minute. The Glue Speed of this Laminator is 300- 500 mm per minute. It features an adjustable temperature and a work status indicator. It also has a reverse function with a Laminating film size range support of 70-150 mic. The maximum supported film width is of A4 size with a plastic package of less or equal to 0.6 mm thickness. It also has a manual film stripping button. In case of a power failure or a plastic packaging deviation, the manual film stripping button can be pushed immediately to suspend the plastic sealing and take it out manually. Deli 14318 A3 Laminating Machine offers 1 Year Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 14318</li><li>Laminating Speed: 250-400 mm/min</li><li>Film width: A3; Laminating Width: 70-150 mm</li><li>Film range: 70-150 mic</li><li>Plastic package thickness: ≤0.6 mm</li></ul>",
+      "model": "14318",
+      "warranty": "1 Year Service Warranty",
+      "basePrice": 6500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 490.0,
+        "width": 150.0,
+        "height": 75.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Light Gray",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-22911",
+          "price": 6500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Light Gray"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 6240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Speed",
+              "value": "300-500mm / min",
+              "position": 0
+            },
+            {
+              "label": "Max laminating thickness",
+              "value": "0.6mm",
+              "position": 1
+            },
+            {
+              "label": "Voltage/frequency",
+              "value": "AC 220-240 (V)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "490 * 150 * 75mm",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "Light Gray",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Service Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-14318-a3-laminating-machine",
+      "sourceProductCode": "22911",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 14318",
+        "Laminating Speed: 250-400 mm/min",
+        "Film width: A3; Laminating Width: 70-150 mm",
+        "Film range: 70-150 mic",
+        "Plastic package thickness: ≤0.6 mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/deli-14318-a3-laminating-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/deli-14318-a3-laminating-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-14318-a3-laminating-machine",
+        "candidateTitle": "Deli 14318 A3 Laminating Machine",
+        "attemptStem": "deli-14318-a3-laminating-machine"
+      }
+    },
+    {
+      "name": "Deli E14379 A3 Laminating Machine",
+      "slug": "deli-e14379-a3-laminating-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-34989",
+      "description": "<h2>Deli E14379 A3 Laminating Machine</h2><p>The Deli <span style=\"font-weight: bold;\">E14379 </span>A3 Laminating Machine is a versatile solution for professional laminating needs, boasting a sleek and compact design that seamlessly integrates into any workspace. It offers a maximum laminating width of A3 size, accommodating documents up to 297mm x 420mm, while supporting a laminating range of 80 to 125 microns for flexible thickness options. With a laminating speed of 260mm per minute, it efficiently processes documents, reducing waiting times and enhancing productivity. Capable of continuous operation for up to 8 hours, it's well-suited for busy office environments or heavy-duty laminating tasks. Operating at a noise level of just 50 decibels (d/B), Deli E14379 ensures a quiet working environment, minimizing disruptions. Consuming 400 watts of power, it strikes a balance between energy efficiency and performance. Whether it's preserving important documents, creating signage, or enhancing presentation materials, the Deli E14379 A3 <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Laminating Machine</a> delivers consistent results with ease of use, making it an indispensable tool for offices, print shops, schools, and other professional environments. From safeguarding important paperwork to upgrading presentation visuals or creating personalized graphics, the Deli E14379 ensures flawless, wrinkle-free lamination with ease and dependable performance. It’s designed to make every project look polished and professional, without the hassle.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>Deli E14379 A3 Laminating Machine<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Deli E14379 A3 Laminating Machine</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" target=\"\">Laminating Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Deli E14379 A3 Laminating Machine comes with 1 Year Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: E14379</li><li>Laminate Speed：260mm/min</li><li>Maximum laminating width: A3</li><li>Laminating range：80-125mic</li><li>Noise Level：50 d/B</li></ul>",
+      "model": "E14379",
+      "warranty": "1 Year Service Warranty",
+      "basePrice": 6300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 457.0,
+        "width": 118.0,
+        "height": 108.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34989",
+          "price": 6300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 6048.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Speed",
+              "value": "260mm/min",
+              "position": 0
+            },
+            {
+              "label": "Machine noise",
+              "value": "Noise Level：50 d/B",
+              "position": 1
+            },
+            {
+              "label": "Voltage/frequency",
+              "value": "Rated Power：400W",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Running Time: 8 Hours",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "457x118x108 mm",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Service Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-e14379-a3-laminating-machine",
+      "sourceProductCode": "34989",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: E14379",
+        "Laminate Speed：260mm/min",
+        "Maximum laminating width: A3",
+        "Laminating range：80-125mic",
+        "Noise Level：50 d/B"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/deli-e14379-a3-laminating-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/deli-e14379-a3-laminating-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-e14379-a3-laminating-machine",
+        "candidateTitle": "Deli E14379 A3 Laminating Machine",
+        "attemptStem": "deli-e14379-a3-laminating-machine"
+      }
+    },
+    {
+      "name": "Deli E2132 A4 Laminating Machine",
+      "slug": "deli-e2132-a4-laminating-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-34985",
+      "description": "<h2>Deli E2132 A4 Laminating Machine</h2><p>The Deli <span style=\"font-weight: bold;\">E2132</span> A4 Laminating Machine is a versatile and efficient tool designed to preserve and protect your important documents and photographs. With a maximum laminating width of A4 size, this Laminating machine offers a comprehensive solution for laminating a variety of materials within the range of 70 to 100 microns. With a laminating speed of 220mm/min, the Laminating Machine guarantees smooth and rapid operation, which makes it perfect for both home and business use. This laminating machine can operate for up to 8 hours, so it's designed to withstand extended use without sacrificing efficiency. With a noise output of below 50 dB when in operation, the Deli E2132 ensures a peaceful and comfortable workspace. This <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">laminating machine</a> is suitable for laminating a wide range of documents, including credit cards, drawings, contracts, certificates, and photographs. Encapsulating your documents in a protective layer helps to prevent fading, tearing, and other forms of damage, ensuring longevity and durability. The Deli E2132 provides convenience and simplicity of use with its big buttons and LED indications, among other user-friendly features. You may immediately begin your laminating duties since the machine warms up quickly—it reaches operational temperature in about five minutes. Smooth and hassle-free operation is ensured by the machine's reverse feature, which makes it simple to fix misfeeds and remove lost laminating film. For all of your laminator requirements, the Deli E2132 A4 Laminating Machine offers a dependable combination of durability, efficiency, and ease of use. This adaptable Laminating Machine consistently produces excellent results, whether you're saving significant paper or improving the appearance of photos.</p><h2>Buy Deli E2132 A4 Laminating Machine from Star Tech<br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Deli E2132 A4 Laminating Machine</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" target=\"\">Laminating Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Deli E2132 A4 Laminating Machine comes with 1 Year Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: E2132</li><li>Laminate Speed：220mm/min</li><li>Maximum laminating width: A4</li><li>Laminating range: 70-100mic</li><li>Laminating thickness: ≤0.5mm</li></ul>",
+      "model": "E2132",
+      "warranty": "1 Year Service Warranty",
+      "basePrice": 3500.0,
+      "originalPrice": 3960.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 330.0,
+        "width": 108.0,
+        "height": 60.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34985",
+          "price": 3500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Speed",
+              "value": "220mm/min",
+              "position": 0
+            },
+            {
+              "label": "Preheat time",
+              "value": "5min",
+              "position": 1
+            },
+            {
+              "label": "Max laminating thickness",
+              "value": "≤0.5mm",
+              "position": 2
+            },
+            {
+              "label": "Machine noise",
+              "value": "Noise Level：50 d/B",
+              "position": 3
+            },
+            {
+              "label": "Voltage/frequency",
+              "value": "Rated Power：265W",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "330x108x60 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Service Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-e2132-a4-laminating-machine",
+      "sourceProductCode": "34985",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: E2132",
+        "Laminate Speed：220mm/min",
+        "Maximum laminating width: A4",
+        "Laminating range: 70-100mic",
+        "Laminating thickness: ≤0.5mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/deli-e2132-a4-laminating-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/deli-e2132-a4-laminating-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-e2132-a4-laminating-machine",
+        "candidateTitle": "Deli E2132 A4 Laminating Machine",
+        "attemptStem": "deli-e2132-a4-laminating-machine"
+      }
+    },
+    {
+      "name": "Deli E3892-EU A3 Heat & Cold Laminating Machine",
+      "slug": "deli-e3892-eu-a3-laminating-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-34986",
+      "description": "<h2>Deli E3892-EU A3 Heat &amp; Cold Laminating Machine</h2><p>The Deli <span style=\"font-weight: bold;\">E3892-EU</span> A3 Laminating Machine can reliably and effectively laminate documents up to A3 in size. Its robust construction and intricate features offer great performance suitable for a variety of applications. With a maximum laminating width of A3 and a maximum laminating thickness of 0.6mm, this machine can handle laminating film with a thickness ranging from 80 to 200 microns. It can accomplish laminating work quickly because of its 300 mm/min speed. Because it can operate continuously for up to eight hours, the machine is designed for extended usage and is appropriate for hectic office situations. It minimizes disturbances by operating silently at a 50 dBA noise level. Its rated power of 410W guarantees adequate power for steady and reliable operation, while its autonomous feature simplifies the laminating process and improves efficiency. Document enhancement and preservation are made simple with the help of the durable and trustworthy Deli E3892-EU A3 <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Laminating Machine</a>.</p><h2>Buy Deli E3892-EU A3 Heat &amp; Cold Laminating Machine from Star Tech<br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Deli E3892-EU A3 Heat &amp; Cold Laminating Machine</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" target=\"\">Laminating Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Deli E3892-EU A3 Heat &amp; Cold Laminating Machine comes with 1 Year Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: E3892-EU</li><li>Laminate Speed：300mm/min</li><li>Maximum laminating width: A3</li><li>Laminating range：80-200mic</li><li>Laminating thickness: ≤0.6mm</li></ul>",
+      "model": "E3892-EU",
+      "warranty": "1 Year Service Warranty",
+      "basePrice": 8300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 466.0,
+        "width": 145.0,
+        "height": 103.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34986",
+          "price": 8300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 7968.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Speed",
+              "value": "300mm/min",
+              "position": 0
+            },
+            {
+              "label": "Preheat time",
+              "value": "5min",
+              "position": 1
+            },
+            {
+              "label": "Max laminating thickness",
+              "value": "≤0.6mm",
+              "position": 2
+            },
+            {
+              "label": "Machine noise",
+              "value": "Noise Level：50 d/B",
+              "position": 3
+            },
+            {
+              "label": "Voltage/frequency",
+              "value": "Rated Power：410W",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Automatic Running Time: 8 Hours",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Material",
+              "value": "ABS Shell",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "466×145×103mm",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Service Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-e3892-eu-a3-laminating-machine",
+      "sourceProductCode": "34986",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: E3892-EU",
+        "Laminate Speed：300mm/min",
+        "Maximum laminating width: A3",
+        "Laminating range：80-200mic",
+        "Laminating thickness: ≤0.6mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/deli-e3892-eu-a3-laminating-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/deli-e3892-eu-a3-laminating-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-e3892-eu-a3-laminating-machine",
+        "candidateTitle": "Deli E3892-EU A3 Heat & Cold Laminating Machine",
+        "attemptStem": "deli-e3892-eu-a3-laminating-machine"
+      }
+    },
+    {
+      "name": "Deli E3893-EU A4 Heat Laminating Machine",
+      "slug": "deli-e3893-eu-a4-heat-laminating-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-22909",
+      "description": "<h2>Deli E3895-EU A3 Heat and Cold Laminating Machine</h2><p>Deli E3893-EU is an A4 Film width Heat and Cold Laminating Machine from Deli. E3893-EU is suitable for documents below 236mm (A4) width. Both of the two have a maximum laminating thickness of 0.6mm, and also have 2 adjustable temperature gear which is designed to fit with different thicknesses of the film. The noise is less than 55dB when they're operating is another popular feature. This laminator has two temperature options; gear 1 is for 80-110 mic and gear 2 for 120-175 mic thick laminating films. Constant temperature to laminate files smoothly while the entrance with a scale makes it easy to measure the size of documents. The E3893-EU is a heat A4 laminator. It has a pre-heat time of 3 to 5 minutes and a speed of 300mm per minute. It features an adjustable temperature and a work status indicator. It also has a reverse function with a Laminating film size range support of 80-175mic. The maximum supported film width is of A4 size with a plastic package of less or equal to 0.6 mm thickness. Deli E3893-EU A4 Laminating Machine offers a 1 Year Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: E3893-EU A4</li><li>Laminating Speed: 300mm/min</li><li>Film width: A4; Laminating Width: 80-175mm</li><li>Film range: 80-175mic</li><li>Plastic package thickness: ≤0.6 mm</li></ul>",
+      "model": "E3893-EU A4",
+      "warranty": "1 Year Service Warranty",
+      "basePrice": 4000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 365.0,
+        "width": 145.0,
+        "height": 90.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Light grey",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-22909",
+          "price": 4000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Light grey"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3840.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Speed",
+              "value": "300mm/min",
+              "position": 0
+            },
+            {
+              "label": "Preheat time",
+              "value": "<5 min",
+              "position": 1
+            },
+            {
+              "label": "Temperature range",
+              "value": "85℃-145℃",
+              "position": 2
+            },
+            {
+              "label": "Max laminating width",
+              "value": "236mm",
+              "position": 3
+            },
+            {
+              "label": "Max laminating thickness",
+              "value": "0.6mm",
+              "position": 4
+            },
+            {
+              "label": "Machine noise",
+              "value": "<55dB",
+              "position": 5
+            },
+            {
+              "label": "Machine power",
+              "value": "200W",
+              "position": 6
+            },
+            {
+              "label": "Voltage/frequency",
+              "value": "AC220-240V 50HZ",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Material",
+              "value": "ABS Shell",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "365*145*90mm",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Light grey",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Service Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-e3893-eu-a4-heat-laminating-machine",
+      "sourceProductCode": "22909",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: E3893-EU A4",
+        "Laminating Speed: 300mm/min",
+        "Film width: A4; Laminating Width: 80-175mm",
+        "Film range: 80-175mic",
+        "Plastic package thickness: ≤0.6 mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/deli-e3893-eu-a4-heat-laminating-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/deli-e3893-eu-a4-heat-laminating-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-e3893-eu-a4-heat-laminating-machine",
+        "candidateTitle": "Deli E3893-EU A4 Heat Laminating Machine",
+        "attemptStem": "deli-e3893-eu-a4-heat-laminating-machine"
+      }
+    },
+    {
+      "name": "Deli E3894-EU A3 Laminating Machine",
+      "slug": "deli-e3894-eu-a3-laminating-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-34987",
+      "description": "<h2>Deli E3894-EU A3 Laminating Machine</h2><p>The Deli <span style=\"font-weight: bold;\">E3894-EU</span> A3 Laminating Machine is a versatile solution for both professional and personal lamination needs. With a maximum laminating width of A3, it can handle a variety of documents and materials, ensuring flexibility in your projects. Operating at a speed of 300mm/min, this machine offers efficient lamination, saving time without compromising on quality. It supports laminating films ranging from 80 to 200 microns in thickness, accommodating different types of laminating tasks with ease. Capable of laminating materials up to 0.6mm thick, it provides a smooth and professional finish. With a running time of up to 8 hours, the Deli E3894-EU ensures continuous operation, ideal for heavy-duty usage. Operating at a noise level of 50 d/B, it maintains a relatively quiet working environment. Rated at 410W, this laminating machine delivers efficient performance while conserving energy. Overall, the Deli E3894-EU A3 <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Laminating Machine</a> combines speed, precision, and durability, making it a reliable choice for various laminating applications in offices, schools, and homes alike.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>Deli E3894-EU A3 Laminating Machine<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Deli E3894-EU A3 Laminating Machine</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" target=\"\">Laminating Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Deli E3892-EU A3 Laminating Machine comes with 1 Year Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: E3894-EU</li><li>Laminate Speed：300mm/min</li><li>Maximum laminating width: A3</li><li>Laminating range：80-200mic</li><li>Laminating thickness: ≤0.6mm</li></ul>",
+      "model": "E3894-EU",
+      "warranty": "1 Year Service Warranty",
+      "basePrice": 6500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 466.0,
+        "width": 145.0,
+        "height": 103.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34987",
+          "price": 6500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 6240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Speed",
+              "value": "300mm/min",
+              "position": 0
+            },
+            {
+              "label": "Preheat time",
+              "value": "5min",
+              "position": 1
+            },
+            {
+              "label": "Max laminating thickness",
+              "value": "≤0.6mm",
+              "position": 2
+            },
+            {
+              "label": "Machine noise",
+              "value": "Noise Level：50 d/B",
+              "position": 3
+            },
+            {
+              "label": "Voltage/frequency",
+              "value": "Rated Power：410W",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Automatic Running Time: 8 Hours",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Material",
+              "value": "ABS Shell",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "466×145×103mm",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Service Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-e3894-eu-a3-laminating-machine",
+      "sourceProductCode": "34987",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: E3894-EU",
+        "Laminate Speed：300mm/min",
+        "Maximum laminating width: A3",
+        "Laminating range：80-200mic",
+        "Laminating thickness: ≤0.6mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/deli-e3894-eu-a3-laminating-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/deli-e3894-eu-a3-laminating-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-e3894-eu-a3-laminating-machine",
+        "candidateTitle": "Deli E3894-EU A3 Laminating Machine",
+        "attemptStem": "deli-e3894-eu-a3-laminating-machine"
+      }
+    },
+    {
+      "name": "Deli E3895-EU A3 Heat and Cold Laminating Machine",
+      "slug": "deli-e3895-eu-a3-laminating-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-22907",
+      "description": "<h2>Deli E3895-EU A3 Heat and Cold Laminating Machine</h2><p>The Deli <strong>E3895-EU</strong> A3 <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Laminating Machine</a> is a dual-function laminator designed to handle both heat and cold lamination with precision and speed. Supporting documents up to A3 size, it accommodates laminating pouches from 50 to 200 microns, making it ideal for a wide range of materials—from delicate certificates to thicker signage or ID cards. With a swift 600mm/min laminating speed, this Deli E3895-EU ensures efficient output, cutting down processing time in fast-paced offices, schools, or creative studios. The Deli E3895-EU Laminating Machine boasts a continuous 8-hour runtime, allowing professionals to tackle high-volume tasks without interruption. Despite its power, it maintains a surprisingly low 50 dB noise level, ensuring a quiet work environment. It's 410W rated power delivers consistent performance while optimizing energy consumption, making it both powerful and practical. Whether you're protecting documents, enhancing presentation materials, or crafting custom visuals, the Deli E3895-EU Heat and Cold Laminating Machine delivers smooth, bubble-free laminations with minimal effort and maximum reliability.</p><h2>Deli E3895-EU A3 Heat and Cold Laminating Machine</h2><p>In Bangladesh, you can get original <strong>Deli E3895-EU A3 Heat and Cold Laminating Machine</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" target=\"\">Laminating Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Deli E3895-EU A3 Heat and Cold Laminating Machine comes with 1 Year Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: E3895-EU</li><li>Laminating Speed: 600mm/min</li><li>Film width: A3; Laminating Width: 50-200mm</li><li>Film range: 50-200mic</li><li>Plastic package thickness: ≤1.0mm</li></ul>",
+      "model": "E3895-EU",
+      "warranty": "1 Year Service Warranty",
+      "basePrice": 12500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Gray",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-22907",
+          "price": 12500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Gray"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 12000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Speed",
+              "value": "600mm/min",
+              "position": 0
+            },
+            {
+              "label": "Preheat time",
+              "value": "5min",
+              "position": 1
+            },
+            {
+              "label": "Max laminating width",
+              "value": "A3",
+              "position": 2
+            },
+            {
+              "label": "Max laminating thickness",
+              "value": "1mm",
+              "position": 3
+            },
+            {
+              "label": "Machine noise",
+              "value": "50dB",
+              "position": 4
+            },
+            {
+              "label": "Machine power",
+              "value": "600W",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Gray",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Service Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-e3895-eu-a3-laminating-machine",
+      "sourceProductCode": "22907",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: E3895-EU",
+        "Laminating Speed: 600mm/min",
+        "Film width: A3; Laminating Width: 50-200mm",
+        "Film range: 50-200mic",
+        "Plastic package thickness: ≤1.0mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/deli-e3895-eu-a3-laminating-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/deli-e3895-eu-a3-laminating-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-e3895-eu-a3-laminating-machine",
+        "candidateTitle": "Deli E3895-EU A3 Heat and Cold Laminating Machine",
+        "attemptStem": "deli-e3895-eu-a3-laminating-machine"
+      }
+    },
+    {
+      "name": "Deli ET100 A4 Laminating Machine",
+      "slug": "deli-et100-laminating-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-47712",
+      "description": "<h2>Deli ET100 A4 Laminating Machine</h2><p>The Deli <strong>ET100</strong> A4 Laminating Machine has a maximum laminating width of up to 230mm, providing for easy handling of certificates, notices, pictures, and educational materials. With a steady laminate speed of 270mm/min, the Deli Laminating Machine produces high-quality results while saving time on daily activities. The laminating thickness capacity of up to 0.5mm provides compatibility with common laminating pouches, offering papers increased resilience and long-term protection. Deli ET100 Laminating Machine employs a dependable thermal heating mode that ensures even heat distribution for clear, bubble-free lamination. The warm-up period of around five minutes allows for quick preparation before usage, making the Deli ET100 A4 Laminating Machine ideal for busy situations. This Deli Laminating Machine runs on a reliable 230V and 50Hz power source, providing safe and consistent performance. The Deli ET100 Laminating Machine's compact design, user-friendly operation, and consistent results make it a smart investment for document protection, presentation quality, and everyday lamination needs in modern offices, schools, print corners, and home workspaces, ensuring neat, professional-looking output while supporting efficient workflow, long-term document preservation, and reliable daily use for users who value quality, simplicity, safety, and trustworthiness.</p><h2>Buy Deli ET100 A4 Laminating Machine from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET100 A4 Laminating Machine</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" target=\"\">Laminating Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Deli ET100 A4 Laminating Machine comes with 1 Year Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET100</li><li>Laminate Speed: 270mm/min</li><li>Maximum laminating width: A4 (230mm)</li><li>Laminating thickness: ≤0.5mm</li><li>Heating Mode: Thermal, Warm Up Time: About 5 Min</li></ul>",
+      "model": "ET100",
+      "warranty": "1 Year Service Warranty",
+      "basePrice": 4000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 334.0,
+        "width": 110.0,
+        "height": 70.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47712",
+          "price": 4000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3840.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Speed",
+              "value": "270mm/min",
+              "position": 0
+            },
+            {
+              "label": "Preheat time",
+              "value": "About 5 Min",
+              "position": 1
+            },
+            {
+              "label": "Max laminating width",
+              "value": "230mm",
+              "position": 2
+            },
+            {
+              "label": "Max laminating thickness",
+              "value": "≤0.5mm",
+              "position": 3
+            },
+            {
+              "label": "Voltage/frequency",
+              "value": "~ 230V/ 50Hz",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "334x110x70 mm",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Service Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et100-laminating-machine",
+      "sourceProductCode": "47712",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET100",
+        "Laminate Speed: 270mm/min",
+        "Maximum laminating width: A4 (230mm)",
+        "Laminating thickness: ≤0.5mm",
+        "Heating Mode: Thermal, Warm Up Time: About 5 Min"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/deli-et100-laminating-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/deli-et100-laminating-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et100-laminating-machine",
+        "candidateTitle": "Deli ET100 A4 Laminating Machine",
+        "attemptStem": "deli-et100-laminating-machine"
+      }
+    },
+    {
+      "name": "Deli ET104 A3 Laminating Machine",
+      "slug": "deli-et104-laminating-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-47713",
+      "description": "<h2>Deli ET104 A3 Laminating Machine</h2><p>The Deli <strong>ET104</strong> A3 Laminating Machine has a generous maximum laminating width of up to 330mm, making it suitable for posters, charts, certifications, educational materials, menus, and presentation sheets. With a laminate speed of 300mm per minute, the Deli ET104 Laminating Machine allows customers to finish jobs quickly while keeping constant sealing quality. The laminating thickness support of up to 0.6mm provides compatibility with standard laminating pouches, resulting in excellent protection and a smooth surface. The Deli ET104 A3 Laminating Machine has dual heating settings and offers both cold and thermal laminating choices, making it suitable for both heat-sensitive materials and regular thermal films. The five-minute warm-up time guarantees that you are ready for your day's job quickly. The Deli Laminating Machine is powered by a stable 230V at 50Hz supply and operates at a current of 2.2A, providing dependable and safe performance for regular use. Deli ET104 Laminating Machine is intended for easy use, making it ideal for both beginners and professionals. The durable design, reliable heating control, and smooth paper feeding improve overall usability. Deli Laminating Machine performance promotes long-term document preservation while increasing visual appeal and durability. The Deli ET104 A3 Laminating Machine integrates effortlessly into modern operations, combining speed, flexibility, and dependable power economy. As a reliable Deli Laminating Machine alternative, it meets the daily laminating requirements of offices, institutions, training centers, copy shops, and creative workspaces.</p><h2>Buy Deli ET104 A3 Laminating Machine from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET104 A3 Laminating Machine</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" target=\"\">Laminating Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Deli ET104 A3 Laminating Machine comes with 1 Year Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET104</li><li>Laminate Speed: 300mm/min</li><li>Maximum laminating width: A3 (330mm)</li><li>Laminating thickness: ≤0.6mm</li><li>Heating Mode: Cold/Thermal, Warm Up Time: About 5 Min</li></ul>",
+      "model": "ET104",
+      "warranty": "1 Year Service Warranty",
+      "basePrice": 8200.0,
+      "originalPrice": 9020.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 442.0,
+        "width": 120.0,
+        "height": 70.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47713",
+          "price": 8200.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 7872.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Speed",
+              "value": "300mm/min",
+              "position": 0
+            },
+            {
+              "label": "Preheat time",
+              "value": "About 5 Min",
+              "position": 1
+            },
+            {
+              "label": "Max laminating width",
+              "value": "330mm",
+              "position": 2
+            },
+            {
+              "label": "Max laminating thickness",
+              "value": "≤0.6mm",
+              "position": 3
+            },
+            {
+              "label": "Voltage/frequency",
+              "value": "~ 230V/ 50Hz",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "442x120x70 mm",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Service Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et104-laminating-machine",
+      "sourceProductCode": "47713",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET104",
+        "Laminate Speed: 300mm/min",
+        "Maximum laminating width: A3 (330mm)",
+        "Laminating thickness: ≤0.6mm",
+        "Heating Mode: Cold/Thermal, Warm Up Time: About 5 Min"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/deli-et104-laminating-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/deli-et104-laminating-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et104-laminating-machine",
+        "candidateTitle": "Deli ET104 A3 Laminating Machine",
+        "attemptStem": "deli-et104-laminating-machine"
+      }
+    },
+    {
+      "name": "Deli ET111 A4 Laminating Machine",
+      "slug": "deli-et111-laminating-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-51940",
+      "description": "<h2>Deli ET111 A4 Laminating Machine</h2><p>The <strong>Deli ET111 A4 Laminating Machine</strong> is designed for warm lamination of documents, cards, and printed materials. It supports 80-125mic laminating thickness for different protection needs. The A4 Lamination Machine reaches a laminating speed of 300 mm/min. Its two-roller system supports consistent document feeding during operation. With a maximum format of A4, this machine suits offices, schools, shops, and home workspaces. The compact structure measures 344×102×66 mm for convenient placement on a desk.</p><p>For efficient preparation, the Deli ET111 A4 Laminator Machine requires approximately 5 minutes of preheating before lamination. Its warm laminating type supports suitable document protection using compatible pouches. The machine accepts membrane thickness below 0.5mm for supported applications. The 80-125mic range provides options for laminating various paper-based materials. As a Plastics Laminator, it helps cover documents with protective plastic pouches. This can help reduce exposure to dust, moisture, handling, and regular surface wear.</p><p>Deli ET111 Plastics Laminator provides straightforward operation with a 300 mm/min laminating speed. Its two rollers guide materials through the heating and sealing process. The A4 Laminator Machine supports common A4 documents and other compatible formats within its maximum capacity. Users can select pouches from 80mic to 125mic based on their document requirements. Its compact dimensions also support storage where workspace is limited. This A4 Lamination Machine suits routine document finishing tasks across different working environments.</p><p>For transportation and storage, Deli ET111 is supplied in outer packaging measuring 54×40.5×34 cm. The outer box gross weight is 13.6 kg. Its specifications support warm lamination for A4-sized documents using compatible pouch thicknesses. The Plastics Laminator offers a simple option for protecting certificates, notices, photographs, menus, and printed sheets.</p><h2>Buy Deli ET111 A4 Laminating Machine from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET111 A4 Laminating Machine</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" target=\"\">Laminating Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Deli ET111 A4 Laminating Machine comes with 1 Year Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET111</li><li>Lamination Speed: 300mm/min</li><li>Maximum laminating width: A4 (230mm)</li><li>Number of Rollers: 2 Rollers</li><li>Laminating range: 80-125 microns</li></ul>",
+      "model": "ET111",
+      "warranty": "1 Year Service Warranty",
+      "basePrice": 4500.0,
+      "originalPrice": 4950.0,
+      "currency": "BDT",
+      "weight": 13.6,
+      "dimensions": {
+        "length": 54.0,
+        "width": 40.5,
+        "height": 34.0,
+        "unit": "cm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51940",
+          "price": 4500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Speed",
+              "value": "300mm/min",
+              "position": 0
+            },
+            {
+              "label": "Preheat time",
+              "value": "About 5 Min",
+              "position": 1
+            },
+            {
+              "label": "Temperature range",
+              "value": "80-125 mic",
+              "position": 2
+            },
+            {
+              "label": "Max laminating width",
+              "value": "A4 230mm",
+              "position": 3
+            },
+            {
+              "label": "Max laminating thickness",
+              "value": "≤0.5mm",
+              "position": 4
+            },
+            {
+              "label": "Voltage/frequency",
+              "value": "~ 230V/ 50Hz",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "54x40.5x34(cm)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "13.6kg",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Service Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et111-laminating-machine",
+      "sourceProductCode": "51940",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET111",
+        "Lamination Speed: 300mm/min",
+        "Maximum laminating width: A4 (230mm)",
+        "Number of Rollers: 2 Rollers",
+        "Laminating range: 80-125 microns"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/deli-et111-laminating-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/deli-et111-laminating-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et111-laminating-machine",
+        "candidateTitle": "Deli ET111 A4 Laminating Machine",
+        "attemptStem": "deli-et111-laminating-machine"
+      }
+    },
+    {
+      "name": "Deli ET115 A3 Laminating Machine",
+      "slug": "deli-et115-laminating-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-51937",
+      "description": "<h2>Deli ET115 A3 Laminating Machine</h2><p>The <strong>Deli ET115 A3 Laminating Machine</strong> is a Heavy Duty A3 Laminator built for reliable document finishing. It supports A3 sheets with a maximum laminating width of 320mm. The machine accepts pouches from 50 to 250 microns. For flexible document protection, the Deli ET115 Laminator Machine supports warm and cold lamination. Its four-roller system delivers consistent pouch feeding at 460mm per minute. It also includes temperature regulation for controlled lamination.</p><p>The Deli ET115 A3 Lamination Machine features a metal body for regular workplace use. It requires about seven minutes for preheating before operation. Overheating protection adds an important safety feature during extended laminating tasks. Powered by 550W at 230V~/50Hz, the Deli ET115 A3 Laminating Machine measures 500 × 200 × 110mm. It handles materials below 1mm thick and operates at ≤50dBA. This Heat and Cold Laminating Machine suits offices, schools, print shops, and document service centers.</p><h2>Buy Deli ET115 Laminating Machine from Star Tech<br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Deli ET115 Laminating Machine</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" style=\"\" target=\"\">Laminating Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Deli ET115 Laminating Machine comes with 1 Year Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET115</li><li>Power Consumption: 550W</li><li>Laminate Speed: 460mm/min</li><li>Maximum Laminating width: A3</li><li>Laminating range(mic): 50-250 microns</li></ul>",
+      "model": "ET115",
+      "warranty": "1 Year Service Warranty",
+      "basePrice": 12500.0,
+      "originalPrice": 13750.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 500.0,
+        "width": 200.0,
+        "height": 110.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-51937",
+          "price": 12500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 12000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Speed",
+              "value": "460mm/min",
+              "position": 0
+            },
+            {
+              "label": "Preheat time",
+              "value": "7min",
+              "position": 1
+            },
+            {
+              "label": "Temperature range",
+              "value": "50 -250 (mic)",
+              "position": 2
+            },
+            {
+              "label": "Max laminating width",
+              "value": "A3",
+              "position": 3
+            },
+            {
+              "label": "Machine noise",
+              "value": "Noise Level：50 d/B",
+              "position": 4
+            },
+            {
+              "label": "Machine power",
+              "value": "550W",
+              "position": 5
+            },
+            {
+              "label": "Voltage/frequency",
+              "value": "230V~/50Hz",
+              "position": 6
+            },
+            {
+              "label": "Others",
+              "value": "Number of Rollers: 4 Rollers",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "500*200*110 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Service Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et115-laminating-machine",
+      "sourceProductCode": "51937",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET115",
+        "Power Consumption: 550W",
+        "Laminate Speed: 460mm/min",
+        "Maximum Laminating width: A3",
+        "Laminating range(mic): 50-250 microns"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/deli-et115-laminating-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/deli-et115-laminating-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et115-laminating-machine",
+        "candidateTitle": "Deli ET115 A3 Laminating Machine",
+        "attemptStem": "deli-et115-laminating-machine"
+      }
+    },
+    {
+      "name": "Deli ET131 A3 Laminating Machine",
+      "slug": "deli-et131-laminator-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-40974",
+      "description": "<h2>Deli ET131 A3 Laminating Machine</h2><p>The Deli <strong>ET131</strong> <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Laminating Machine</a> is a dependable and flexible equipment ideal for individuals, small enterprises, and organizations. With the capacity to laminate papers up to A3 size, it is versatile for a variety of purposes, including preserving essential certifications, ID cards, pictures, and creative projects. The Laminating Machine has a rapid warm-up period of about 3 minutes, allowing users to begin their work effectively without delay. The Deli ET131 lamination speed of 330mm per minute assures smooth, bubble-free results, making it ideal for producing high-quality, professional-looking output. The Deli ET131 A3 laminator is designed to handle high workloads and can operate continuously for up to 8 hours, making it perfect for heavy-duty usage. Its noise level of under 50 decibels provides peaceful lamination, making it perfect for both home and office environments. This Document Laminator Powered by a 265W motor, the laminator delivers consistent performance while maintaining energy efficiency. Its compact size and lightweight build make it easy to store and transport, enhancing its user convenience. Whether for protecting important documents or enhancing creative materials, the Deli ET131 Laminating Machine combines speed, efficiency, and durability to deliver outstanding results.</p><h2>Buy Deli ET131 Laminating Machine from Star Tech<br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Deli ET131 Laminating Machine</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" target=\"\">Laminating Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Deli ET131 Laminating Machine comes with 1 Year Service Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET131</li><li>Laminate Speed: 330mm/min</li><li>Maximum Laminating width: A3</li><li>Machine Noise: 50 d/B</li><li>Rated Power: 265W</li></ul>",
+      "model": "ET131",
+      "warranty": "1 Year Service Warranty",
+      "basePrice": 8200.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 330.0,
+        "width": 108.0,
+        "height": 60.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-40974",
+          "price": 8200.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 7872.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Speed",
+              "value": "330mm/min",
+              "position": 0
+            },
+            {
+              "label": "Preheat time",
+              "value": "3min Running Time：8 Hours",
+              "position": 1
+            },
+            {
+              "label": "Max laminating width",
+              "value": "A3",
+              "position": 2
+            },
+            {
+              "label": "Machine noise",
+              "value": "Noise Level：50 d/B",
+              "position": 3
+            },
+            {
+              "label": "Machine power",
+              "value": "Rated Power：265W",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "330*108*60 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Service Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et131-laminator-machine",
+      "sourceProductCode": "40974",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET131",
+        "Laminate Speed: 330mm/min",
+        "Maximum Laminating width: A3",
+        "Machine Noise: 50 d/B",
+        "Rated Power: 265W"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/deli-et131-laminator-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/deli-et131-laminator-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et131-laminator-machine",
+        "candidateTitle": "Deli ET131 A3 Laminating Machine",
+        "attemptStem": "deli-et131-laminator-machine"
+      }
+    },
+    {
+      "name": "King A3-330D Laminating Machine",
+      "slug": "king-a3-330d-laminating-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-34041",
+      "description": "<h2>King A3-330D Laminating Machine</h2><p>The King <strong>A3-330D</strong> <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Laminating Machine</a> is a flexible and efficient instrument that simplifies document preservation and enhancement procedures. This machine is equipped with modern features and can laminate papers up to A3 size, meeting a broad range of professional and personal requirements. Its sturdy structure provides durability and endurance, making it ideal for regular and heavy-duty usage in a variety of settings, from workplaces to schools. The intuitive control panel and user-friendly interface make operation simple, and the customizable temperature and speed settings support a variety of laminating pouches and materials. With its rapid warm-up time and high laminating speed, the King A3-330D Laminating Machine provides speedy and efficient laminating, saving time and enhancing production. Furthermore, this machine produces consistent and high-quality lamination results because to its precision heating components and pressure distribution system. The King A3-330D Laminating Machine easily produces professional-grade results whether laminating crucial papers, images, or instructional materials, making it an invaluable tool in any corporate or educational setting. </p><h2>Buy King A3-330D Laminating Machine from Star Tech</h2><p>In Bangladesh, you can get original <strong>King A3-330D Laminating Machine</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" target=\"\">Laminating Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The King A3-330D Laminating Machine comes with no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A3-330D</li><li>Laminate Papers up to A3 Size</li><li>Intuitive Control Panel</li><li>User-friendly Interface</li><li>Speedy and Efficient Laminating</li></ul>",
+      "model": "A3-330D",
+      "warranty": "no Warranty",
+      "basePrice": 4200.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34041",
+          "price": 4200.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4032.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "A3-330D",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/king-a3-330d-laminating-machine",
+      "sourceProductCode": "34041",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A3-330D",
+        "Laminate Papers up to A3 Size",
+        "Intuitive Control Panel",
+        "User-friendly Interface",
+        "Speedy and Efficient Laminating"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/king-a3-330d-laminating-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/king-a3-330d-laminating-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "king-a3-330d-laminating-machine",
+        "candidateTitle": "King A3-330D Laminating Machine",
+        "attemptStem": "king-a3-330d-laminating-machine"
+      }
+    },
+    {
+      "name": "Master A3 320 Laminator Machine",
+      "slug": "master-a3-320-laminator-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-34043",
+      "description": "<h2>Master A3 320 Laminator Machine</h2><p>The Master <strong>A3 320</strong> <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Laminator Machine</a> is the peak of durability and functionality in document protection technology. This laminator's heavy-duty metal chassis allows it to survive hard operation in a variety of professional and educational environments. It has both hot and cold lamination settings, making it versatile enough to accept various types of laminating pouches and materials, assuring ideal results for a wide range of applications. With a warm-up period of about 3-5 minutes, users may begin laminating operations without delay, increasing efficiency and productivity. The addition of a reverse switch improves ease by allowing users to swiftly fix any misfeeds or jams. The temperature control knob and temperature meter allow for perfect control of the laminating process, providing consistent and high-quality results every time. The Master A3 320 Laminator Machine can handle papers up to A3 size and has enough capacity for a wide range of document kinds and sizes. Whether protecting vital papers, developing instructional materials, or improving visuals, this laminator provides professional-grade lamination with convenience and dependability, making it an indispensable tool in any business or educational setting. </p><h2>Buy Master A3 320 Laminator Machine from Star Tech</h2><p>In Bangladesh, you can get original <strong>Master A3 320 Laminator Machine</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/office-equipment/laminating-machine\" target=\"\">Laminating Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Master A3 320 Laminator Machine comes with no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A3 320</li><li>Laminate Papers up to A3 Size</li><li>Heavy-duty metal chassis</li><li>Hot and Cold Lamination Settings</li><li>Quick warm-up time: 3-5 mins</li></ul>",
+      "model": "A3 320",
+      "warranty": "no Warranty",
+      "basePrice": 4700.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34043",
+          "price": 4700.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4512.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "A3 320",
+              "position": 0
+            },
+            {
+              "label": "Quick warm-up time",
+              "value": "3-5 mins",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/master-a3-320-laminator-machine",
+      "sourceProductCode": "34043",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A3 320",
+        "Laminate Papers up to A3 Size",
+        "Heavy-duty metal chassis",
+        "Hot and Cold Lamination Settings",
+        "Quick warm-up time: 3-5 mins"
+      ],
+      "needsReview": false,
+      "categorySlug": "laminating-machine",
+      "image": "/images/products/office-equipment/laminating-machine/_direct/master-a3-320-laminator-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/laminating-machine/_direct/master-a3-320-laminator-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "master-a3-320-laminator-machine",
+        "candidateTitle": "Master A3 320 Laminator Machine",
+        "attemptStem": "master-a3-320-laminator-machine"
+      }
+    }
+  ]
+}

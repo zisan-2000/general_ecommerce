@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/office-equipment",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\office-equipment",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\office-equipment",
+  "imagesFound": 2338,
+  "uniqueProductStems": 2132,
+  "productsInJson": 2132,
+  "matchedProducts": 2132,
+  "unmatchedProducts": 0,
+  "imageCoverage": 2338,
+  "jsonGroupFiles": 30,
+  "matchMethods": {
+    "direct-slug": 2132
+  },
+  "jsonGenerationTimeSeconds": 1098.64,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 2132,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\office-equipment\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\office-equipment\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\office-equipment\\unmatched.json"
+  },
+  "seedTimeSeconds": 53.66
+}

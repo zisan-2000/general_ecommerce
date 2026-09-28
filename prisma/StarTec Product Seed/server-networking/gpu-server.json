@@ -1,0 +1,2650 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/server-networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\server-networking",
+    "generatedAtUnix": 1790588977,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Server Networking",
+      "slug": "server-networking",
+      "parentSlug": null,
+      "image": "/images/products/server-networking/server-and-storage/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "GPU Server",
+      "slug": "gpu-server",
+      "parentSlug": "server-networking",
+      "image": "/images/products/server-networking/gpu-server/asus-esc-n4a-e11-gpu-server.png",
+      "isActive": true,
+      "sortOrder": 1,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Asus",
+      "slug": "asus",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Asus ESC N4A-E11 AMD EPYC 7003 GPU Server and ASUS ASMB10-iKVM",
+      "slug": "asus-esc-n4a-e11-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40310",
+      "description": "<h2>Asus ESC N4A-E11 AMD EPYC 7003 GPU Server and ASUS ASMB10-iKVM</h2><p>The ASUS <strong>ESC N4A-E11</strong> is a high-performance Asus GPU Server intended for AI supercomputing and high-performance computing (HPC) applications. The Asu GPU Server has a dual-socket AMD EPYC 7003 series processor and four NVIDIA HGX A100 Tensor Core GPUs, resulting in up to 80 teraFLOPS of FP64 performance. This Asus GPU Server has 16 DIMM slots that accept DDR4-3200 memory, giving ample memory capacity. It also has three PCIe 4.0 ports for fast connection and four hot-swappable 3.5-inch disk bays for ample storage. The ESC N4A-E11 has an improved thermal design, including discrete CPU and GPU airflow tunnels for effective cooling. The inclusion of PFR FPGA as the platform's Root-of-Trust solution provides enhanced security. This Asus GPU server is suited for applications that require great computational power, such as AI, data analytics, and simulation.</p><h2>Buy Asus ESC N4A-E11 AMD EPYC 7003 GPU Server ASUS ASMB10-iKVM from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC N4A-E11 AMD EPYC 7003 GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC N4A-E11 AMD EPYC 7003 GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC N4A-E11</li><li>Processor: 2 x AMD EPYC 7003 CPU (LGA 4094)</li><li>Memory: Maximum up to 4TB (DDR4 3200 RDIMM / LRDIMM / LRDIMM 3DS)</li><li>Storage: 4 x 3.5&quot; Hot-swap Storage Bays</li><li>GPU Support: 4 x NVIDIA HGX A100 AI Tensor Core GPUs</li></ul>",
+      "model": "ESC N4A-E11",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots 16 (8-channel per CPU) Capacity Maximum up to 4,096GB Memory Type DDR4 3200 RDIMM/LR-DIMM/LR-DIMM 3DS Memory Size 64GB, 32GB, 16GB(RDIMM), 128GB, 64GB(LRDIMM), 256GB, 128GB, 64GB(LRDIMM 3D)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "4U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40310",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots 16 (8-channel per CPU) Capacity Maximum up to 4,096GB Memory Type DDR4 3200 RDIMM/LR-DIMM/LR-DIMM 3DS Memory Size 64GB, 32GB, 16GB(RDIMM), 128GB, 64GB(LRDIMM), 256GB, 128GB, 64GB(LRDIMM 3D)",
+            "Form Factor": "4U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket SP3 (LGA 4094) AMD EPYC 7003 Series",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots 16 (8-channel per CPU) Capacity Maximum up to 4,096GB Memory Type DDR4 3200 RDIMM/LR-DIMM/LR-DIMM 3DS Memory Size 64GB, 32GB, 16GB(RDIMM), 128GB, 64GB(LRDIMM), 256GB, 128GB, 64GB(LRDIMM 3D)",
+              "position": 1
+            },
+            {
+              "label": "Video Memory",
+              "value": "4 x NVIDIA HGX A100 AI Tensor Core GPUs",
+              "position": 2
+            },
+            {
+              "label": "Network",
+              "value": "2 x 10GbE LAN ports (Intel X710-AT2) 1 x Dedicated management port (BMC AST2600)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "2+2 Redundant 2200W 80 PLUS Titanium Power Supply Rating: 100-127v, 50-60Hz, 1000W Max / 200V-240V, 50-60Hz, 2200W Max Class I 2+2 Redundant 2600W 80 PLUS Titanium Power Supply Rating: 100-127v, 50-60Hz, 1000W Max / 200-240V, 50-60Hz, 2600W Max Class I 2+2 Redundant 3000W 80 PLUS Titanium Power Supply Rating: 100-127v, 50-60Hz, 1000W Max / 200-220V, 50-60Hz, 2600W Max Class I / 220-240V, 50-60Hz, 3000W Max Class I",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "4 x 3.5\" Hot-swap Storage Bays (Backplane supports 4 x SATA/SAS/MVMe Devices) 1 x M.2 socket (Gen4 x4 link, up to 2280 module)",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "4U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 1 x USB 3.2 Gen1 ports Rear I/O Ports: 2 x USB 3.2 Gen1 port 2 x 10GbE LAN ports (RJ45) 1 x Management port (RJ45) 1 x VGA port 1 x COM port",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Front: 1 x Power button/LED, 1 x Location button/LED 1 x Reset switch 1 x HDD Access LED 1 x Message LED 2 x LAN LED Rear: 1 x Q-Code/Port 80 LED 1 x Power button/LED 1 x Location button/LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc-n4a-e11-gpu-server",
+      "sourceProductCode": "40310",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC N4A-E11",
+        "Processor: 2 x AMD EPYC 7003 CPU (LGA 4094)",
+        "Memory: Maximum up to 4TB (DDR4 3200 RDIMM / LRDIMM / LRDIMM 3DS)",
+        "Storage: 4 x 3.5\" Hot-swap Storage Bays",
+        "GPU Support: 4 x NVIDIA HGX A100 AI Tensor Core GPUs"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc-n4a-e11-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc-n4a-e11-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc-n4a-e11-gpu-server",
+        "candidateTitle": "Asus ESC N4A-E11 AMD EPYC 7003 GPU Server and ASUS ASMB10-iKVM",
+        "attemptStem": "asus-esc-n4a-e11-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC N8-E11/ESC N8-E11V 5th Gen Intel Xeon Scalable GPU Server",
+      "slug": "asus-esc-n8-e11esc-n8-e11v-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40240",
+      "description": "<h2>Asus ESC N8-E11/ESC N8-E11V 5th Gen Intel Xeon Scalable GPU Server</h2><p>The Asus <strong>ESC N8-E11/ESC N8-E11V</strong> 5th Gen Intel Xeon Scalable GPU Server is a high-performance computing powerhouse built to handle demanding AI and HPC workloads. This Asus GPU Server has two 4th/5th Generation Intel Xeon Scalable processors that provide up to 128 cores and 1,150 MB of L3 cache, providing remarkable processing capability. The server has eight NVIDIA H100/H200 Tensor Core GPUs, which provide exceptional graphical performance and direct GPU-to-GPU connectivity via NVLink for easy scaling. The Asus GPU Server has 12 PCIe lanes, 24 DIMM slots that support DDR5 memory, and 10 NVMe slots, ensuring fast data processing and plenty of storage space. The Asus GPU Server has an 80 PLUS Titanium power supply for energy efficiency, and its modular design with fewer cables improves thermal optimization and simplicity of maintenance. The one-GPU-to-one-NIC topology allows up to eight NICs, resulting in the greatest throughput for compute-intensive workloads. This server is optimized for generative AI, deep learning, and scientific research, making it an excellent alternative for businesses seeking cutting-edge technology.</p><h2>Buy Asus ESC N8-E11/ESC N8-E11V 5th Gen Intel Xeon Scalable GPU Server from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC N8-E11/ESC N8-E11V 5th Gen Intel Xeon Scalable GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC4000-E11 5th Gen Intel Xeon Scalable GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC N8-E11/ESC N8-E11V</li><li>Processor: 2x Intel 4th/5th Gen Xeon Scalable Processor</li><li>Memory: Up to 4TB (per CPU Socket), DDR5 5600 RDIMM/ 3DS RDIMM</li><li>Storage: 10 x 2.5&quot; Front Hot-swap Storage Bays</li><li>GPU Support: up to 8 x NVIDIA HGX H100/H200</li></ul>",
+      "model": "ESC N8-E11/ESC N8-E11V",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots: 32 (8 channel per CPU, 16 DIMM per CPU) Capacity: Maximum up to 4TB per CPU socket Memory Type: 4th: DDR5 5600 RDIMM/ 3DS RDIMM (2DPC) 5th: DDR5 5600 RDIMM/ 3DS RDIMM (2DPC) Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "7U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40240",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots: 32 (8 channel per CPU, 16 DIMM per CPU) Capacity: Maximum up to 4TB per CPU socket Memory Type: 4th: DDR5 5600 RDIMM/ 3DS RDIMM (2DPC) 5th: DDR5 5600 RDIMM/ 3DS RDIMM (2DPC) Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+            "Form Factor": "7U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket 4th Intel Xeon Processor Scalable Family (Up to 350W) 5th Intel Xeon Processor Scalable Family (Up to 350W)",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots: 32 (8 channel per CPU, 16 DIMM per CPU) Capacity: Maximum up to 4TB per CPU socket Memory Type: 4th: DDR5 5600 RDIMM/ 3DS RDIMM (2DPC) 5th: DDR5 5600 RDIMM/ 3DS RDIMM (2DPC) Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+              "position": 1
+            },
+            {
+              "label": "Network",
+              "value": "2 x 10 Gigabit LAN ports (Intel X710-AT2 Controller) 1 x Management Por",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "4+2 Redundant 3000W 80 PLUS Titanium Power Supply",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "10 x 2.5” hot-swap drive bays (8 NVMe, 2 NVMe/SATA/SAS*) [PCIe Switch directly] Front: 8 NVMe [CPU directly] Rear: 2 NVMe(CPU2)/SATA(PCH)",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "7U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 4 x USB3.2 Gen1 ports 1 x VGA port 2 x 10Gb RJ45 LAN module (Intel-x710 Based) 1 x Mgmt LAN 1 x locate button 1 x power button Rear I/O Ports: 1 x Locate button 1 x Power button",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Front : 1 x Power Button/LED 1 x Location Button/LED 1 x Message LED 1 x Q-Code/Port 80 LED Rear : 1 x Power Button /LED 1 x Location Button /LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc-n8-e11esc-n8-e11v-gpu-server",
+      "sourceProductCode": "40240",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC N8-E11/ESC N8-E11V",
+        "Processor: 2x Intel 4th/5th Gen Xeon Scalable Processor",
+        "Memory: Up to 4TB (per CPU Socket), DDR5 5600 RDIMM/ 3DS RDIMM",
+        "Storage: 10 x 2.5\" Front Hot-swap Storage Bays",
+        "GPU Support: up to 8 x NVIDIA HGX H100/H200"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc-n8-e11esc-n8-e11v-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc-n8-e11esc-n8-e11v-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc-n8-e11esc-n8-e11v-gpu-server",
+        "candidateTitle": "Asus ESC N8-E11/ESC N8-E11V 5th Gen Intel Xeon Scalable GPU Server",
+        "attemptStem": "asus-esc-n8-e11esc-n8-e11v-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC N8A-E12 AMD EPYC 9004 GPU Server",
+      "slug": "asus-esc-n8a-e12-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40234",
+      "description": "<h2>Asus ESC N8A-E12 AMD EPYC 9004 GPU Server</h2><p>The Asus <strong>ESC N8A-E12</strong> AMD EPYC 9004 GPU Server is a high-performance computing powerhouse built to handle demanding AI and HPC workloads. It is powered by two AMD EPYC 9004 processors and can accommodate up to 128 cores and 1,150 MB L3 cache, providing excellent performance. The Asus server has support for 8 NVIDIA H100 Tensor Core GPUs, which provide exceptional graphics performance and direct GPU-to-GPU connectivity via NVLink for optimal scaling. The Asus GPU Server has 12 PCIe lanes, 24 DIMM slots that support DDR5 memory, and 10 NVMe slots, ensuring fast data processing and plenty of storage space. The Asus GPU Server has an 80 PLUS Titanium power supply for energy efficiency, and its modular design with fewer cables improves thermal optimization and simplicity of maintenance. The one-GPU-to-one-NIC topology allows up to eight NICs, resulting in the greatest throughput for compute-intensive workloads. This server is optimized for generative AI, deep learning, and scientific research, making it an excellent alternative for businesses seeking cutting-edge technology.</p><h2>Buy Asus ESC N8A-E12 AMD EPYC 9004 GPU Server from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC N8A-E12 AMD EPYC 9004 GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC N8A-E12 AMD EPYC 9004 GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC8000A-E13P</li><li>Processor: 2x AMD EPYC 9004 series (LGA 6096)</li><li>Memory: Up to 3TB (per CPU Socket), DDR5 4800/4400 RDIMM/ 3DS RDIMM</li><li>Storage: 10 x 2.5&quot; Front Hot-swap Storage Bays</li><li>GPU support: up to 8 x NVIDIA HGX H100</li></ul>",
+      "model": "ESC8000A-E13P",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots: 24 (12 channel per CPU, 12 DIMM per CPU) Capacity: Maximum up to 3TB per CPU socket Memory Type: DDR5 4800/4400 RDIMM/ 3DS RDIMM Memory Size: 96GB, 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "7U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40234",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots: 24 (12 channel per CPU, 12 DIMM per CPU) Capacity: Maximum up to 3TB per CPU socket Memory Type: DDR5 4800/4400 RDIMM/ 3DS RDIMM Memory Size: 96GB, 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+            "Form Factor": "7U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket SP5 (LGA 6096) AMD EPYC 9004 series processors 4th Generation AMD EPYC Processors with AMD 3D V-Cache technology",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots: 24 (12 channel per CPU, 12 DIMM per CPU) Capacity: Maximum up to 3TB per CPU socket Memory Type: DDR5 4800/4400 RDIMM/ 3DS RDIMM Memory Size: 96GB, 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+              "position": 1
+            },
+            {
+              "label": "Network",
+              "value": "2 x 10GbE LAN ports (Intel X710-AT2 Controller) 1 x Management Port",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "4+2 or 3+3 Redundant 3000W 54V 80 PLUS Titanium Power Supply",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "10 x 2.5\" Hot-swap Drive Bays (8 NVMe, 2 NVMe/SATA*/SAS*) [PCIe Switch directly] - 8 xNVMe [CPU directly] - 2 xNVMe/SATA*/SAS* *SATA/SAS support requires an optional HBA/RAID card 2 x M.2 Gen5 x4 link",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "7U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 4 x USB 3.2 Gen1 ports 1 x VGA port 2 x 10Gb RJ45 LAN module (Intel-x710 Based) 1 x Mgmt LAN 1 x Locate button 1 x Power button Rear I/O Ports: 1 x Locate button 1 x Power button",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Front : 1 x Power Button/LED 1 x Location Button/LED 1 x Message LED 1 x Q-Code/Port 80 LED Rear : 1 x Power Button /LED 1 x Location Button /LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc-n8a-e12-gpu-server",
+      "sourceProductCode": "40234",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC8000A-E13P",
+        "Processor: 2x AMD EPYC 9004 series (LGA 6096)",
+        "Memory: Up to 3TB (per CPU Socket), DDR5 4800/4400 RDIMM/ 3DS RDIMM",
+        "Storage: 10 x 2.5\" Front Hot-swap Storage Bays",
+        "GPU support: up to 8 x NVIDIA HGX H100"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc-n8a-e12-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc-n8a-e12-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc-n8a-e12-gpu-server",
+        "candidateTitle": "Asus ESC N8A-E12 AMD EPYC 9004 GPU Server",
+        "attemptStem": "asus-esc-n8a-e12-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC4000-E10 3rd Gen Intel Xeon Scalable GPU Server and ASUS ASMB10-iKVM",
+      "slug": "asus-esc4000-e10-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40312",
+      "description": "<h2>Asus ESC4000-E10 3rd Gen Intel Xeon Scalable GPU Server and ASUS ASMB10-iKVM</h2><p>The ASUS <strong>ESC4000-E10</strong> is a high-performance Asus GPU Server designed for demanding AI, high-performance computing (HPC), and virtual desktop infrastructure (VDI) applications. It is powered by dual-socket 3rd Gen Intel Xeon Scalable processors, which offer core counts ranging from 8 to 40 and deliver up to 40% better performance compared to previous generations. This Asus GPU server supports up to four dual-slot GPUs, including NVIDIA A100 or Quadro, with NVIDIA NVLink bridge for performance scaling. It features 16 DIMM slots for extensive memory capacity, eight hot-swappable NVMe and SATA/SAS drive bays for high-throughput storage, and 11 PCIe 4.0 slots for higher bandwidth and improved data transfer rates. The ESC4000-E10 has redundant 2200W or 1600W 80 Plus Platinum power supply and an optimized thermal architecture with independent CPU and GPU airflow tunnels, resulting in exceptional power efficiency. The inclusion of PFR FPGA as the platform's Root-of-Trust solution provides enhanced security. This Asus GPU Server is great for applications that require a lot of computing power, like AI, machine learning, and big data analytics.</p><h2>Buy Asus ESC4000-E10 3rd Gen Intel Xeon Scalable GPU Server and ASUS ASMB10-iKVM from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC4000-E10 3rd Gen Intel Xeon Scalable GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC4000-E10 3rd Gen Intel Xeon Scalable GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC4000-E10</li><li>Processor: 2x AMD EPYC 9004 series (4th Gen EYPC) CPU</li><li>Memory: Up to 3TB (per CPU Socket), DDR5 4800/4400 MHz RDIMM/3DS RDIMM</li><li>Storage: 8 x 3.5&quot;/2.5&quot; Front Hot-swap Storage Bays</li><li>GPU Support: 8x Dual Slot GPU Supported</li></ul>",
+      "model": "ESC4000-E10",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots : 16 (8-channel, 1DPC) Capacity : Up to 4,096GB DIMM Up to 6,144GB DIMM+PMem (200 series) Memory Type : DDR4 3200 RDIMM / LRDIMM / LRDIMM 3DS Memory Size : 256GB, 128GB, 64GB, 32GB, 16GB 512GB, 256GB, 128GB Intel® Optane™ DC Persistent Memory 200 Series (DCPMM)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "2U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40312",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots : 16 (8-channel, 1DPC) Capacity : Up to 4,096GB DIMM Up to 6,144GB DIMM+PMem (200 series) Memory Type : DDR4 3200 RDIMM / LRDIMM / LRDIMM 3DS Memory Size : 256GB, 128GB, 64GB, 32GB, 16GB 512GB, 256GB, 128GB Intel® Optane™ DC Persistent Memory 200 Series (DCPMM)",
+            "Form Factor": "2U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket P+ (LGA 4189) 3rd Gen Intel® Xeon® Scalable Processors Family(205W)",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots : 16 (8-channel, 1DPC) Capacity : Up to 4,096GB DIMM Up to 6,144GB DIMM+PMem (200 series) Memory Type : DDR4 3200 RDIMM / LRDIMM / LRDIMM 3DS Memory Size : 256GB, 128GB, 64GB, 32GB, 16GB 512GB, 256GB, 128GB Intel® Optane™ DC Persistent Memory 200 Series (DCPMM)",
+              "position": 1
+            },
+            {
+              "label": "Video Memory",
+              "value": "Supports: 4 x dual-slot GPUs",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Server RedHat Enterprise Linux, SuSE® Linux Enterprise Server, CentOS, Ubuntu, VMware",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "2 x 1GbE LAN ports (RJ45, Intel I350-AM2)",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "1+1 Redundant 1600W 80 PLUS Platinum Power Supply C-14 power inlet Rating: 100-127Vac/200-240Vac,12.9A/9.5A,50-60Hz 1+1 Redundant 2200W 80 PLUS TITANIUM Power Supply C-20 power inlet Rating: 100-127Vac/200-240Vac,14A/12.6A,47-63Hz",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "8 x 3.5\" Hot-swap Storage Bays (SKU-1 & SKU-2 Backplane Supports 6 x SATA/SAS + 2 x SATA/SAS/NVMe Devices**) (SKU-3 Backplane Supports 8 x SATA/SAS/NVMe Devices) 1 x M.2 socket (Gen3 x4 link or SATA mode, up to 2280 on-motherboard)",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "2U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 4 x USB 3.2 Gen1 ports Rear I/O Ports: 2 x USB 3.2 Gen1 ports 1 x VGA port 2 x 1GbE LAN ports (RJ45) 1 x Management port (RJ45)",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Front : 1 x Power Button/LED 1 x Location Button/LED 2 x LAN LED 1 x Message LED 1 x HDD Access LED Rear : 1 x Power Button/LED 1 x Location LED 1 x Message LED 1 x HDD Access LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc4000-e10-gpu-server",
+      "sourceProductCode": "40312",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC4000-E10",
+        "Processor: 2x AMD EPYC 9004 series (4th Gen EYPC) CPU",
+        "Memory: Up to 3TB (per CPU Socket), DDR5 4800/4400 MHz RDIMM/3DS RDIMM",
+        "Storage: 8 x 3.5\"/2.5\" Front Hot-swap Storage Bays",
+        "GPU Support: 8x Dual Slot GPU Supported"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc4000-e10-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc4000-e10-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc4000-e10-gpu-server",
+        "candidateTitle": "Asus ESC4000-E10 3rd Gen Intel Xeon Scalable GPU Server and ASUS ASMB10-iKVM",
+        "attemptStem": "asus-esc4000-e10-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC4000-E10S 3rd Gen Intel Xeon Scalable GPU Server and ASUS ASMB10-iKVM",
+      "slug": "asus-esc4000-e10s-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40302",
+      "description": "<h2>Asus ESC4000-E10S 3rd Gen Intel Xeon Scalable GPU Server and ASUS ASMB10-iKVM</h2><p>The ASUS <strong>ESC4000-E10S</strong> GPU Server is a high-performance solution built to handle demanding AI, HPC, and VDI applications. It is powered by dual-socket 3rd Generation Intel Xeon Scalable processors, which have core counts ranging from 8 to 40 and give up to 40% higher performance than prior versions. This 2U ASUS GPU Server can accommodate up to four dual-slot GPUs with NVIDIA NVLink bridge for performance scaling and has 16 DIMM slots for increased data processing. This Asus GPU Server has eight bays for Tri-Mode NVMe/SATA/SAS drives and 11 PCIe 4.0 slots for increased bandwidth and system upgrades, all supported by two 2200W or 1600W 80 Plus Platinum power supplies to ensure continuous operation. The Asus GPU Server server includes distinct CPU and GPU airflow tunnels for thermal efficiency, as well as an optional OCP 3.0 module with a PCIe 4.0 slot for speedier networking. When used with the ASUS ASMB10-iKVM baseboard management console module, administrators can remotely monitor, control, and automate provisioning, configuration, and monitoring. The ASMB10-iKVM minimizes downtime through remote troubleshooting and repairs, provides security and compliance, and enables out-of-band management even when the server is turned off or unresponsive. Together, these components offer a robust, dependable, and secure framework for managing high-performance computing environments.</p><h2>Buy Asus ESC4000-E10S 3rd Gen Intel Xeon Scalable GPU Server and ASUS ASMB10-iKVM from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC4000-E10S 3rd Gen Intel Xeon Scalable GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC4000-E10S 3rd Gen Intel Xeon Scalable GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC4000-E10S</li><li>Processor: 2 x Intel Xeon Scalable</li><li>Memory: Up to 2048GB</li><li>Storage: 8 x 2.5&quot; Hot-swap Storage Bays</li><li>GPU Support: 4 x dual-slot GPUs</li></ul>",
+      "model": "ESC4000-E10S",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots : 16 (8-channel per CPU, 8 DIMM per CPU) Capacity : Maximum up to 2048GB RDIMM Memory Type : DDR4 3200 RDIMM DDR4 3200 LRDIMM DDR4 3200 LR-DIMM 3DS Memory Size : 128GB, 64GB, 32GB, 16GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "2U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40302",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots : 16 (8-channel per CPU, 8 DIMM per CPU) Capacity : Maximum up to 2048GB RDIMM Memory Type : DDR4 3200 RDIMM DDR4 3200 LRDIMM DDR4 3200 LR-DIMM 3DS Memory Size : 128GB, 64GB, 32GB, 16GB",
+            "Form Factor": "2U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket P+ (LGA 4189) 3rd Gen Intel® Xeon® Scalable Processors Family(235W)",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots : 16 (8-channel per CPU, 8 DIMM per CPU) Capacity : Maximum up to 2048GB RDIMM Memory Type : DDR4 3200 RDIMM DDR4 3200 LRDIMM DDR4 3200 LR-DIMM 3DS Memory Size : 128GB, 64GB, 32GB, 16GB",
+              "position": 1
+            },
+            {
+              "label": "Video Memory",
+              "value": "Supports: 4 x dual-slot GPUs",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Server RedHat Enterprise Linux, SuSE® Linux Enterprise Server, CentOS, Ubuntu, VMware",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "2 x 1GbE LAN ports (RJ45, Intel I350-AM2)",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "1+1 Redundant 1600W 80 PLUS Platinum Power Supply C-14 power inlet Rating: 100-127Vac/200-240Vac,12.9A/9.5A,50-60Hz 1+1 Redundant 2200W 80 PLUS TITANIUM Power Supply C-20 power inlet Rating: 100-127Vac/200-240Vac,14A/12.6A,47-63Hz",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "8 x 2.5\" Hot-swap Storage Bays (SKU-1 & SKU-2 Backplane Supports 6 x SATA/SAS + 2 x SATA/SAS/NVMe Devices**) (SKU-3 Backplane Supports 8 x SATA/SAS/NVMe Devices) 1 x M.2 socket (Gen3 x4 link or SATA mode, up to 2280 on-motherboard)",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "2U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 4 x USB 3.2 Gen1 ports Rear I/O Ports: 2 x USB 3.2 Gen1 ports 1 x VGA port 2 x 1GbE LAN ports (RJ45) 1 x Management port (RJ45)",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Front : 1 x Power Button/LED 1 x Location Button/LED 2 x LAN LED 1 x Message LED 1 x HDD Access LED Rear : 1 x Power Button/LED 1 x Location LED 1 x Message LED 1 x HDD Access LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc4000-e10s-gpu-server",
+      "sourceProductCode": "40302",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC4000-E10S",
+        "Processor: 2 x Intel Xeon Scalable",
+        "Memory: Up to 2048GB",
+        "Storage: 8 x 2.5\" Hot-swap Storage Bays",
+        "GPU Support: 4 x dual-slot GPUs"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc4000-e10s-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc4000-e10s-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc4000-e10s-gpu-server",
+        "candidateTitle": "Asus ESC4000-E10S 3rd Gen Intel Xeon Scalable GPU Server and ASUS ASMB10-iKVM",
+        "attemptStem": "asus-esc4000-e10s-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC4000-E11 5th Gen Intel Xeon Scalable GPU Server and ASUS ASMB11-iKVM",
+      "slug": "asus-esc4000-e11-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40237",
+      "description": "<h2>Asus ESC4000-E11 5th Gen Intel Xeon Scalable GPU Server and ASUS ASMB11-iKVM</h2><p>The Asus <strong>ESC4000-E11</strong> 5th Gen Intel Xeon Scalable GPU Server is a high-performance computing powerhouse built to handle demanding AI and HPC workloads. The Asus GPU Server has two 5th Generation Intel Xeon Scalable processors that provide up to 128 cores and 1,150 MB of L3 cache, providing remarkable processing capability. The server has 4 dual-slot NVIDIA H100/H200 Tensor Core GPUs, which provide exceptional graphics performance and direct GPU-to-GPU connectivity via NVLink for optimal scaling. The Asus ESC4000-E11 GPU Server has 12 PCIe lanes, 24 DIMM slots that support DDR5 memory, and 10 NVMe slots, ensuring fast data processing and plenty of storage space. The Asus GPU Server has an 80 PLUS Titanium power supply for energy efficiency, and its modular design with fewer cables improves thermal optimization and simplicity of maintenance. The one-GPU-to-one-NIC topology allows up to 8 NICs, resulting in the greatest throughput for compute-intensive workloads. This server is optimized for generative AI, deep learning, and scientific research, making it an excellent alternative for businesses seeking cutting-edge technology.</p><h2>Buy Asus ESC4000-E11 5th Gen Intel Xeon Scalable GPU Server and ASUS ASMB11-iKVM from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC4000-E11 5th Gen Intel Xeon Scalable GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC4000-E11 5th Gen Intel Xeon Scalable GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC4000-E11</li><li>Processor: 2x Intel 4th/5th Gen Xeon Scalable Processor</li><li>Memory: Up to 4TB (per CPU Socket), DDR5 5600/4800 MHz RDIMM/3DS RDIMM</li><li>Storage: 2 x 2.5” &amp; 4 x 3.5“ Hot-swap Storage Bays</li><li>GPU Support: 4x Dual Slot GPU Supported</li></ul>",
+      "model": "ESC4000-E11",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots: 16 (8 channels per CPU, 8 DIMM per CPU) Capacity: Maximum up to 4TB per CPU socket Memory Type: 4th: DDR5 4800 MHz RDIMM/3DS RDIMM (1DPC) 5th: DDR5 5600/4800 MHz RDIMM/3DS RDIMM (1DPC) 512GB, 256GB, 128GB Intel Optane persistent memory 300 series",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "2U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40237",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots: 16 (8 channels per CPU, 8 DIMM per CPU) Capacity: Maximum up to 4TB per CPU socket Memory Type: 4th: DDR5 4800 MHz RDIMM/3DS RDIMM (1DPC) 5th: DDR5 5600/4800 MHz RDIMM/3DS RDIMM (1DPC) 512GB, 256GB, 128GB Intel Optane persistent memory 300 series",
+            "Form Factor": "2U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket 4th Gen Intel Xeon Scalable processors (Up to 350W) 5th Gen Intel Xeon Scalable processors (Up to 350W)",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots: 16 (8 channels per CPU, 8 DIMM per CPU) Capacity: Maximum up to 4TB per CPU socket Memory Type: 4th: DDR5 4800 MHz RDIMM/3DS RDIMM (1DPC) 5th: DDR5 5600/4800 MHz RDIMM/3DS RDIMM (1DPC) 512GB, 256GB, 128GB Intel Optane persistent memory 300 series",
+              "position": 1
+            },
+            {
+              "label": "Chipset",
+              "value": "Intel C741 Chipset",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Server RedHat Enterprise Linux SuSE Linux Enterprise Server CentOS Ubuntu Vmware",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "2 x 1 Gigabit LAN ports (Intel I350 Controller) 1 x Management Port",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "1+1 Redundant 2600W 80 PLUS Titanium CRPS-R Power Supply 2600W PSU supports 1+1 redundant with GPU card power consumption ≦ 300W",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "2 x 2.5” & 4 x 3.5“ Hot-swap Storage Bays SKU1: 2 x 2.5” SATA/SAS*/NVMe + 2 x 3.5” SATA/SAS*/NVMe + 2 x 3.5” SATA/SAS* SKU2: Build to order 2 x 2.5” SATA/SAS*/NVMe + 4 x 3.5” SATA/SAS*/NVMe (Occupy 1 x PCIe x8 link ) *SAS support required a HBA/RAID card. **For SKU1 additional 2 x NVMe support required a RAID card. 1 x M.2 socket (Gen3 x4 link PCIe mode, up to 2280)",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "2U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 4 x USB 3.2 Gen1 ports Rear I/O Ports: 2 x USB 3.2 Gen1 ports 2 x Gigabit LAN ports (RJ45) 1 x MAnagement port (RJ45) 1 x VGA port",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Front : 1 x Power Button/LED 1 x Location Button/LED 1 x Message LED 1 x Q-Code/Port 80 LED 2 x LAN LED Rear : 1 x Power Button/LED 1 x Location LED 1 x Message LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc4000-e11-gpu-server",
+      "sourceProductCode": "40237",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC4000-E11",
+        "Processor: 2x Intel 4th/5th Gen Xeon Scalable Processor",
+        "Memory: Up to 4TB (per CPU Socket), DDR5 5600/4800 MHz RDIMM/3DS RDIMM",
+        "Storage: 2 x 2.5” & 4 x 3.5“ Hot-swap Storage Bays",
+        "GPU Support: 4x Dual Slot GPU Supported"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc4000-e11-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc4000-e11-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc4000-e11-gpu-server",
+        "candidateTitle": "Asus ESC4000-E11 5th Gen Intel Xeon Scalable GPU Server and ASUS ASMB11-iKVM",
+        "attemptStem": "asus-esc4000-e11-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC4000A-E11 AMD EPYC 7003 & 7002 GPU Server and ASUS ASMB10-iKVM",
+      "slug": "asus-esc4000a-e11-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40304",
+      "description": "<h2>Asus ESC4000A-E11 AMD EPYC 7003 &amp; 7002 GPU Server and ASUS ASMB10-iKVM</h2><p>The ASUS <strong>ESC4000A-E11</strong> is a high-performance, high-density server built to handle demanding computational operations. This server, powered by AMD EPYC 7003 series processors, delivers remarkable performance with up to 64 cores and 128 threads. This Asus GPU Server also supports the previous generation AMD EPYC 7002 series processors. Asus ESC4000A-E11 GPU Server supports up to 2048GB of ECC RDIMM memory, ensuring reliable performance. Key features include up to 11 PCIe 4.0 slots for increased bandwidth and data transfer speeds, as well as support for up to 8 single-slot GPUs such as the NVIDIA A100, Tesla T4, and Quadro A, making it perfect for AI and HPC workloads. The front panel design is flexible, allowing for easy storage and network extensions, while the redundant 2200W or 1600W Platinum power supplies provide exceptional power efficiency. The addition of PFR FPGA as the platform Root-of-Trust solution for firmware resiliency provides enhanced security. The ASUS ESC4000A-E11 is ideal for applications that require significant computational capacity, such as AI, machine learning, big data analytics, and others.</p><h2>Buy Asus ESC4000A-E11 AMD EPYC 7003 GPU Server and ASUS ASMB10-iKVM from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC4000A-E11 AMD EPYC 7003 GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC4000A-E11 AMD EPYC 7003 GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC4000A-E11</li><li>Processor: 1x AMD EPYC 7003, 1x AMD EPYC 7002</li><li>Memory: Maximum up to 2048GB RDIMM</li><li>Storage: 8 x 3.5&quot; or 2.5&quot; Hot-swap Storage Bays</li><li>GPU Support: 8x Single Slot GPU Supported</li></ul>",
+      "model": "ESC4000A-E11",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots : 8 (8-channel) Capacity : Maximum up to 2048GB RDIMM Memory Type : DDR4 3200 RDIMM DDR4 3200 LRDIMM DDR4 3200 LR-DIMM 3DS Memory Size : 256GB, 128GB, 64GB, 32GB, 16GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "2U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40304",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots : 8 (8-channel) Capacity : Maximum up to 2048GB RDIMM Memory Type : DDR4 3200 RDIMM DDR4 3200 LRDIMM DDR4 3200 LR-DIMM 3DS Memory Size : 256GB, 128GB, 64GB, 32GB, 16GB",
+            "Form Factor": "2U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "1 x Socket SP3 (LGA 4094) Option 1 AMD EPYC 7003 Series AMD EPYC 7002 Series 3rd Gen AMD EPYC processors with AMD 3D V-Cache technology",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots : 8 (8-channel) Capacity : Maximum up to 2048GB RDIMM Memory Type : DDR4 3200 RDIMM DDR4 3200 LRDIMM DDR4 3200 LR-DIMM 3DS Memory Size : 256GB, 128GB, 64GB, 32GB, 16GB",
+              "position": 1
+            },
+            {
+              "label": "Video Memory",
+              "value": "Supports: 8 x Single-Slot GPUs",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Server RedHat Enterprise Linux, SuSE Linux Enterprise Server, CentOS, Ubuntu, VMware",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "1 x Dual Port Intel I350-AM2 Gigabit LAN controller + 1 x Mgmt LAN",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "1+1 Redundant 1600W 80 PLUS Platinum Power Supply Rating: 100-127Vac/200-240Vac,12.9A/9.5A,50-60Hz 1+1 Redundant 2200W 80 PLUS Platinum Power Supply Rating: 100-127Vac/200-240Vac,14A/12.6A,47-63Hz",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "8 x 3.5\" or 2.5\" Hot-swap Storage Bays (Backplane Supports 4 x SATA/SAS + 4 x SATA/SAS/NVMe Devices)* (default:2*NVMe support)",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "2U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 1 x Q-code/port-80 LED 4 x USB 3.2 Gen1 ports Rear I/O Ports: 2 x USB 3.2 Gen1 port 1 x VGA port 1 x Management port (RJ45) 2 x Gigabit LAN ports (RJ45)",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Rear: 1 x Power Button/LED 1 x Location LED 1 x Message LED 1 x HDD Access LED Front: 1 x Power Button/LED 1 x Location Button/LED 2 x LAN LED 1 x Message LED 1 x HDD Access LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc4000a-e11-gpu-server",
+      "sourceProductCode": "40304",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC4000A-E11",
+        "Processor: 1x AMD EPYC 7003, 1x AMD EPYC 7002",
+        "Memory: Maximum up to 2048GB RDIMM",
+        "Storage: 8 x 3.5\" or 2.5\" Hot-swap Storage Bays",
+        "GPU Support: 8x Single Slot GPU Supported"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc4000a-e11-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc4000a-e11-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc4000a-e11-gpu-server",
+        "candidateTitle": "Asus ESC4000A-E11 AMD EPYC 7003 & 7002 GPU Server and ASUS ASMB10-iKVM",
+        "attemptStem": "asus-esc4000a-e11-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC4000A-E12 AMD EPYC 9004 GPU Server and ASUS ASMB11-iKVM",
+      "slug": "asus-esc4000a-e12-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40301",
+      "description": "<h2>Asus ESC4000A-E12 AMD EPYC 9004 GPU Server and ASUS ASMB11-iKVM</h2><p>The ASUS <strong>ESC4000A-E12</strong> GPU Server is a high-performance solution designed to handle demanding AI, HPC, and VDI applications. This Asus GPU Server is powered by AMD EPYC 9004 processors with up to 128 Zen 4c cores and supports 12-channel DDR5 memory at up to 4800 MHz. This single-socket 2U ASUS GPU Server can support up to four dual-slot GPUs and an NVIDIA NVLink bridge for performance scaling. It has 12 DIMM slots for faster data processing and eight bays for tri-mode NVMe/SATA/SAS storage. This ASUS GPU Server has 11 PCIe 5.0 slots for increased bandwidth and system updates, and it is powered by two 2600W Titanium redundant power supplies for reliable operation. The server has distinct CPU and GPU airflow tunnels for thermal optimization, and an optional OCP. The Asus GPU server includes distinct CPU and GPU airflow tunnels for thermal optimization, as well as an optional OCP 3.0 module with a PCIe 5.0 slot for speedier connection. When used with the ASUS ASMB11-iKVM baseboard management console module, administrators can remotely monitor, control, and automate provisioning, configuration, and monitoring. The ASMB11-iKVM minimizes downtime through remote troubleshooting and repairs, provides security and compliance, and enables out-of-band management even when the server is turned off or unresponsive. Together, these components offer a robust, dependable, and secure framework for managing high-performance computing environments.</p><h2>Buy Asus ESC4000A-E12 AMD EPYC 9004 GPU Server and ASUS ASMB11-iKVM from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC4000A-E12 AMD EPYC 9004 GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC4000A-E12 AMD EPYC 9004 GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC4000A-E12</li><li>Processor: 2x AMD EPYC 9004 series (4th Gen EYPC) CPU</li><li>Memory: Up to 3TB (per CPU Socket), DDR5 4800/4400 MHz RDIMM/3DS RDIMM</li><li>Storage: 8 x 3.5&quot;/2.5&quot; Front Hot-swap Storage Bays</li><li>GPU Support: 8x Dual Slot GPU Supported</li></ul>",
+      "model": "ESC4000A-E12",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots : 12 (12-channel) Capacity : Maximum up to 3TB RDIMM Memory Type : DDR5 4800/4400 RDIMM/RDIMM 3DS Memory Size : 64GB, 32GB, 16GB RDIMM 256GB, 128GB 3DS RDIMM * Refer to support page for more information",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "2U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40301",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots : 12 (12-channel) Capacity : Maximum up to 3TB RDIMM Memory Type : DDR5 4800/4400 RDIMM/RDIMM 3DS Memory Size : 64GB, 32GB, 16GB RDIMM 256GB, 128GB 3DS RDIMM * Refer to support page for more information",
+            "Form Factor": "2U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "1 x Socket SP5 (LGA 6096) AMD EPYC 9004 series (up to 400W) 4th Generation AMD EPYC Processorswith AMD 3D V-Cache technology",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots : 12 (12-channel) Capacity : Maximum up to 3TB RDIMM Memory Type : DDR5 4800/4400 RDIMM/RDIMM 3DS Memory Size : 64GB, 32GB, 16GB RDIMM 256GB, 128GB 3DS RDIMM * Refer to support page for more information",
+              "position": 1
+            },
+            {
+              "label": "Video Memory",
+              "value": "Supports: 8x Dual Slot GPU Supported",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Server RedHat Enterprise Linux, SuSE® Linux Enterprise Server, CentOS, Ubuntu, VMware",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "2 x GbE LAN ports (Intel I350 Controller) 1 x Management Port",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "1+1 Redundant 2600W 80 PLUS Titanium CRPS-R Power Supply",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "2 x 2.5” & 4 x 3.5“ Hot-swap Storage Bays SKU1: 2 x 2.5” SATA/SAS*/NVMe + 2 x 3.5” SATA/SAS*/NVMe + 2 x 3.5” SATA/SAS* SKU2: Build to order 2 x 2.5” SATA/SAS*/NVMe + 4 x 3.5” SATA/SAS*/NVMe (Occupy 1 x PCIe x8 link ) Optional: 1 x M.2 with riser module",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "2U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 1 x Q-code/port-80 LED 4 x USB 3.2 Gen1 ports Rear I/O Ports: 2 x USB 3.2 Gen1 ports 2 x Gigabit LAN ports 1 x MAnagement port 1 x VGA port",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Front : 1 x Power Button/LED 1 x Location Button/LED 1 x Message LED 1 x Q-Code/Port 80 LED 2 x LAN LED Rear : 1 x Power Button/LED 1 x Location LED 1 x Message LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc4000a-e12-gpu-server",
+      "sourceProductCode": "40301",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC4000A-E12",
+        "Processor: 2x AMD EPYC 9004 series (4th Gen EYPC) CPU",
+        "Memory: Up to 3TB (per CPU Socket), DDR5 4800/4400 MHz RDIMM/3DS RDIMM",
+        "Storage: 8 x 3.5\"/2.5\" Front Hot-swap Storage Bays",
+        "GPU Support: 8x Dual Slot GPU Supported"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc4000a-e12-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc4000a-e12-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc4000a-e12-gpu-server",
+        "candidateTitle": "Asus ESC4000A-E12 AMD EPYC 9004 GPU Server and ASUS ASMB11-iKVM",
+        "attemptStem": "asus-esc4000a-e12-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC8000-E11 5th Gen Intel Xeon Scalable GPU Server and ASUS ASMB11-iKVM",
+      "slug": "asus-esc8000-e11-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40294",
+      "description": "<h2>Asus ESC8000-E11 5th Gen Intel Xeon Scalable GPU Server and ASUS ASMB11-iKVM</h2><p>The ASUS <strong>ESC8000-E11</strong> is a powerful GPU server built for demanding AI and High-Performance Computing (HPC) tasks. It features 5th Gen Intel Xeon Scalable processors that provide up to 21% more general-purpose performance per watt. It supports up to eight dual-slot GPUs and contains the NVIDIA NVLink bridge for performance scalability, as well as up to 32 DIMM slots that support DDR5 memory for faster data processing. The server has eight bays for Tri-Mode NVMe/SATA/SAS drives and 11 PCIe 5.0 slots for increased bandwidth and system upgrades, all powered by four 3000W Titanium power supplies for reliable operation. This Asus GPU Server thermally designed with distinct CPU and GPU airflow tunnels, and the optional OCP 3.0 module with PCIe 5.0 slot allows for quicker communication. When used with the ASUS ASMB11-iKVM, a baseboard management console module, the server enables administrators to remotely monitor, run, and automate provisioning, configuration, and monitoring. The ASMB11-iKVM minimizes downtime through remote troubleshooting and repairs, provides security and compliance, and enables out-of-band management even when the server is turned off or unresponsive. Together, these components offer a robust, dependable, and secure framework for managing high-performance computing environments.</p><h2>Buy Asus ESC8000-E11 5th Gen Intel Xeon Scalable GPU Server and ASUS ASMB11-iKVM from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC8000-E11 5th Gen Intel Xeon Scalable GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC8000-E11 5th Gen Intel Xeon Scalable GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC8000-E11</li><li>Processor: 2x Intel 4th/5th Gen Xeon Scalable Processor</li><li>Memory: Up to 4TB (per CPU Socket), DDR5 4400 MHz RDIMM/3DS RDIMM</li><li>Storage: 8 x 3.5&quot;/2.5&quot; Front Hot-swap Storage Bays</li><li>GPU Support: 8x Dual Slot GPU Supported</li></ul>",
+      "model": "ESC8000-E11",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots: 32 (8 channel per CPU, 16 DIMM per CPU) Capacity: Maximum up to 4TB per CPU socket Memory Type: 4th: DDR5 4400 RDIMM/ 3DS RDIMM (2DPC) 5th: DDR5 4400 RDIMM/ 3DS RDIMM (2DPC) Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "4U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40294",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots: 32 (8 channel per CPU, 16 DIMM per CPU) Capacity: Maximum up to 4TB per CPU socket Memory Type: 4th: DDR5 4400 RDIMM/ 3DS RDIMM (2DPC) 5th: DDR5 4400 RDIMM/ 3DS RDIMM (2DPC) Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+            "Form Factor": "4U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket 4th Gen Intel Xeon Scalable processors (Up to 350W) 5th Gen Intel Xeon Scalable processors (Up to 350W)",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots: 32 (8 channel per CPU, 16 DIMM per CPU) Capacity: Maximum up to 4TB per CPU socket Memory Type: 4th: DDR5 4400 RDIMM/ 3DS RDIMM (2DPC) 5th: DDR5 4400 RDIMM/ 3DS RDIMM (2DPC) Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+              "position": 1
+            },
+            {
+              "label": "Video Memory",
+              "value": "Supports: Eight dual-slot GPUs",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Server RedHat® Enterprise Linux, SuSE® Linux Enterprise Server, CentOS, Ubuntu, VMware",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "2 x 1 Gigabit LAN ports (Intel I350 Controller) 1 x Management Port",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "2+2 Redundant 2600W/3000W 80 PLUS Titanium Power Supply 2+1 Redundant 3000W 80 PLUS Titanium Power Supply Rating: 220-240 Vac, 15.5A(x4), 50-60 Hz",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "2 x 2.5” & 4 x 3.5“ Hot-swap Storage Bays SKU1: 2 x 2.5” SATA/SAS*/NVMe + 2 x 3.5” SATA/SAS*/NVMe + 2 x 3.5” SATA/SAS* SKU2: Build to order 2 x 2.5” SATA/SAS*/NVMe + 4 x 3.5” SATA/SAS*/NVMe (Occupy 1 x PCIe x8 link ) *SAS support required a HBA/RAID card. **For SKU1 additional 2 x NVMe support required a RAID card. 1 x M.2 socket (Gen3 x4 link PCIe mode, up to 2280)",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "4U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 2 x USB 3.2 Gen1 ports 1 x VGA port Rear I/O Ports: 1 x COM port 2 x 10GbE/1GbE LAN ports (RJ45, build for order) 1 x Management port (RJ45)",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Front : 1 x Power Button w/LED 1 x Location Button w/LED 1 x Message LED 1 x Q-Code/Port 80 LED 1 x Clear CMOS Switch 1 x Reset Switch 1 x M.2 LED Rear : 1 x Power Button w/LED 1 x Location Button w/LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc8000-e11-gpu-server",
+      "sourceProductCode": "40294",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC8000-E11",
+        "Processor: 2x Intel 4th/5th Gen Xeon Scalable Processor",
+        "Memory: Up to 4TB (per CPU Socket), DDR5 4400 MHz RDIMM/3DS RDIMM",
+        "Storage: 8 x 3.5\"/2.5\" Front Hot-swap Storage Bays",
+        "GPU Support: 8x Dual Slot GPU Supported"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc8000-e11-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc8000-e11-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc8000-e11-gpu-server",
+        "candidateTitle": "Asus ESC8000-E11 5th Gen Intel Xeon Scalable GPU Server and ASUS ASMB11-iKVM",
+        "attemptStem": "asus-esc8000-e11-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC8000-E11P 5th Gen Intel Xeon Scalable GPU Server and ASUS ASMB11-iKVM",
+      "slug": "asus-esc8000-e11p-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40296",
+      "description": "<h2>Asus ESC8000-E11P 5th Gen Intel Xeon Scalable GPU Server and ASUS ASMB11-iKVM</h2><p>The ASUS <strong>ESC8000-E11P</strong> is a powerful GPU server built for demanding AI and High-Performance Computing (HPC) tasks. It features 5th Generation Intel Xeon Scalable processors that provide up to 21% more general-purpose performance per watt. It supports up to eight dual-slot GPUs and contains the NVIDIA NVLink bridge for performance scalability, as well as up to 32 DIMM slots that support DDR5 memory for faster data processing. The server has eight bays for Tri-Mode NVMe/SATA/SAS drives and 13 PCIe 5.0 slots for increased bandwidth and system upgrades, all powered by four 3000W Titanium power supplies for stable operation. It is thermally designed with distinct CPU and GPU airflow tunnels, and the optional OCP 3.0 module with PCIe 5.0 slot allows for quicker communication. When used with the ASUS ASMB11-iKVM, a baseboard management console module, the server enables administrators to remotely monitor, run, and automate provisioning, configuration, and monitoring. The ASMB11-iKVM minimizes downtime through remote troubleshooting and repairs, provides security and compliance, and enables out-of-band management even when the server is turned off or unresponsive. Together, these components offer a robust, dependable, and secure framework for managing high-performance computing environments.</p><h2>Buy Asus ESC8000-E11P 5th Gen Intel Xeon Scalable GPU Server and ASUS ASMB11-iKVM from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC8000-E11P 5th Gen Intel Xeon Scalable GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC8000-E11P 5th Gen Intel Xeon Scalable GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC8000-E11P</li><li>Processor: 2x Intel 4th/5th Gen Xeon Scalable Processor</li><li>Memory: Up to 4TB (per CPU Socket), DDR5 4400 MHz RDIMM/3DS RDIMM</li><li>Storage: 8 x 3.5&quot;/2.5&quot; Front Hot-swap Storage Bays</li><li>GPU Support: 8x Dual Slot GPU Supported</li></ul>",
+      "model": "ESC8000-E11P",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots: 32 (8 channel per CPU, 16 DIMM per CPU) Capacity: Maximum up to 4TB per CPU socket Memory Type: 4th: DDR5 4400 RDIMM/ 3DS RDIMM (2DPC) 5th: DDR5 4400 RDIMM/ 3DS RDIMM (2DPC) Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "4U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40296",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots: 32 (8 channel per CPU, 16 DIMM per CPU) Capacity: Maximum up to 4TB per CPU socket Memory Type: 4th: DDR5 4400 RDIMM/ 3DS RDIMM (2DPC) 5th: DDR5 4400 RDIMM/ 3DS RDIMM (2DPC) Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+            "Form Factor": "4U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket 4th Gen Intel Xeon Scalable processors (Up to 350W) 5th Gen Intel Xeon Scalable processors (Up to 350W)",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots: 32 (8 channel per CPU, 16 DIMM per CPU) Capacity: Maximum up to 4TB per CPU socket Memory Type: 4th: DDR5 4400 RDIMM/ 3DS RDIMM (2DPC) 5th: DDR5 4400 RDIMM/ 3DS RDIMM (2DPC) Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+              "position": 1
+            },
+            {
+              "label": "Video Memory",
+              "value": "Supports: Eight dual-slot GPUs",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Server RedHat® Enterprise Linux, SuSE® Linux Enterprise Server, CentOS, Ubuntu, VMware",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "2 x 1 Gigabit LAN ports (Intel I350 Controller) 1 x Management Port",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "2+2 Redundant 2600W/3000W 80 PLUS Titanium Power Supply 2+1 Redundant 3000W 80 PLUS Titanium Power Supply Rating: 220-240 Vac, 15.5A(x4), 50-60 Hz",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "2 x 2.5” & 4 x 3.5“ Hot-swap Storage Bays SKU1: 2 x 2.5” SATA/SAS*/NVMe + 2 x 3.5” SATA/SAS*/NVMe + 2 x 3.5” SATA/SAS* SKU2: Build to order 2 x 2.5” SATA/SAS*/NVMe + 4 x 3.5” SATA/SAS*/NVMe (Occupy 1 x PCIe x8 link ) *SAS support required a HBA/RAID card. **For SKU1 additional 2 x NVMe support required a RAID card. 1 x M.2 socket (Gen3 x4 link PCIe mode, up to 2280)",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "4U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 2 x USB 3.2 Gen1 ports 1 x VGA port Rear I/O Ports: 1 x COM port 2 x 10GbE/1GbE LAN ports (RJ45, build for order) 1 x Management port (RJ45)",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Front : 1 x Power Button w/LED 1 x Location Button w/LED 1 x Message LED 1 x Q-Code/Port 80 LED 1 x Clear CMOS Switch 1 x Reset Switch 1 x M.2 LED Rear : 1 x Power Button w/LED 1 x Location Button w/LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc8000-e11p-gpu-server",
+      "sourceProductCode": "40296",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC8000-E11P",
+        "Processor: 2x Intel 4th/5th Gen Xeon Scalable Processor",
+        "Memory: Up to 4TB (per CPU Socket), DDR5 4400 MHz RDIMM/3DS RDIMM",
+        "Storage: 8 x 3.5\"/2.5\" Front Hot-swap Storage Bays",
+        "GPU Support: 8x Dual Slot GPU Supported"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc8000-e11p-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc8000-e11p-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc8000-e11p-gpu-server",
+        "candidateTitle": "Asus ESC8000-E11P 5th Gen Intel Xeon Scalable GPU Server and ASUS ASMB11-iKVM",
+        "attemptStem": "asus-esc8000-e11p-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC8000 G4/10G 2nd Gen Intel Xeon Scalable GPU Server",
+      "slug": "asus-esc8000-g4-10g-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40314",
+      "description": "<h2>Asus ESC8000 G4/10G 2nd Gen Intel Xeon Scalable GPU Server</h2><p>The ASUS <strong>ESC8000 G4/10G</strong> is a high-density Asus GPU Server built for demanding AI, HPC, and VDI applications. It supports 1st and 2nd generation Intel Xeon Scalable processors, with core counts ranging from 8 to 40 and up to 40% faster performance than previous generations. This 4U Asus GPU server can support up to eight dual-slot GPUs, such as NVIDIA Quadro or Tesla, and uses the NVIDIA NVLink bridge for performance scalability. It has eight PCIe Gen3 x16 slots for high-density, parallel computing capability, two PCIe Gen3 x16 slots for fast networking cards, and one internal PCIe Gen3 x8 slot for an HBA/RAID card. The ESC8000 G4/10G also has two on-board 10G LAN ports for reliable connectivity and high-bandwidth access-layer networks. Hot-swappable redundant fans and dedicated air tunnels provide improved cooling while providing efficient thermal management. This Asus GPU Server is great for applications that require a lot of computing power, like AI, machine learning, and big data analytics.</p><h2>Asus ESC8000 G4/10G 2nd Gen Intel Xeon Scalable GPU Server from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC8000 G4/10G 2nd Gen Intel Xeon Scalable GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC8000 G4/10G 2nd Gen Intel Xeon Scalable GPU Server Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC8000 G4/10G</li><li>Processor: 2x Intel 1st/2nd Gen Xeon Scalable Processor</li><li>Memory: Maximum up to 3072GB LRDIMM</li><li>Storage: 8 x Hot-swap 2.5&quot; Storage Bays</li><li>GPU Support: 8x Dual Slot GPU Supported</li></ul>",
+      "model": "ESC8000 G4/10G",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots : 24 (6-channel per CPU, 12 DIMM per CPU) Capacity : Maximum up to 3072GB LRDIMM Memory Type : DDR4 2933/2666/2400 /2133 RDIMM DDR4 2933/2666/2400 /2133 LRDIMM DDR4 2933/2666/2400 /2133 LR-DIMM 3DS DDR4 Intel® Optane™ DC Persistent Memory Memory Size : 64GB, 32GB, 16GB RDIMM 128GB, 64GB, 32GB LRDIMM 128GB, 64GB LR-DIMM 3DS",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "4U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40314",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots : 24 (6-channel per CPU, 12 DIMM per CPU) Capacity : Maximum up to 3072GB LRDIMM Memory Type : DDR4 2933/2666/2400 /2133 RDIMM DDR4 2933/2666/2400 /2133 LRDIMM DDR4 2933/2666/2400 /2133 LR-DIMM 3DS DDR4 Intel® Optane™ DC Persistent Memory Memory Size : 64GB, 32GB, 16GB RDIMM 128GB, 64GB, 32GB LRDIMM 128GB, 64GB LR-DIMM 3DS",
+            "Form Factor": "4U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket P (LGA 3647) 1st and 2nd Gen Xeon® Scalable Processor Family",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots : 24 (6-channel per CPU, 12 DIMM per CPU) Capacity : Maximum up to 3072GB LRDIMM Memory Type : DDR4 2933/2666/2400 /2133 RDIMM DDR4 2933/2666/2400 /2133 LRDIMM DDR4 2933/2666/2400 /2133 LR-DIMM 3DS DDR4 Intel® Optane™ DC Persistent Memory Memory Size : 64GB, 32GB, 16GB RDIMM 128GB, 64GB, 32GB LRDIMM 128GB, 64GB LR-DIMM 3DS",
+              "position": 1
+            },
+            {
+              "label": "Video Memory",
+              "value": "Supports: Eight GPUs, and Dual Onboard 10G LAN",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Server RedHat Enterprise Linux, SuSE Linux Enterprise Server, CentOS, Ubuntu, VMware",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "1 x Dual Port Intel X550-AT2 10GbE LAN controller + 1 x Mgmt LAN",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "2+1 Redundant 1600W 80PLUS Platinum Power Supply; 100-127 / 200-240Vac, 12.9 / 9.5A（for each inlet）, 47-63Hz, Class I 2+1 Redundant 2200W 80PLUS Platinum Power Supply Rating: 100-127/200-240 Vac, 12.9/9.5 A (for each inlet), 47-63 Hz, Class I *2200W Power supply is only available for selected countries.",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "8 x Hot-swap 2.5\" Storage Bays (Storage bay 1 & 2 support NVMe/SATA/SAS* drives, Storage bay 3~8 support SATA/SAS* drives. Storage bay location numbers are from top to bottom. *SAS from optional ASUS PIKE II 3108/3008 cards.)",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "4U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 2 x USB 3.2 Gen1 ports 1 x VGA port Rear I/O Ports: 1 x COM port 2 x 10GbE/1GbE LAN ports (RJ45, build for order) 1 x Management port (RJ45)",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Front Switch/LED: 1 x Q-Code/Port 80 LED 1 x Power switch/LED 1 x Location switch/LED 1 x HDD Access LED 1 x Message LED Front Switch/LED: 1 x Q-Code/Port 80 LED 1 x Power switch/LED 1 x Location switch/LED 1 x HDD Access LED 1 x Message LED 2 x LAN LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc8000-g4-10g-gpu-server",
+      "sourceProductCode": "40314",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC8000 G4/10G",
+        "Processor: 2x Intel 1st/2nd Gen Xeon Scalable Processor",
+        "Memory: Maximum up to 3072GB LRDIMM",
+        "Storage: 8 x Hot-swap 2.5\" Storage Bays",
+        "GPU Support: 8x Dual Slot GPU Supported"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc8000-g4-10g-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc8000-g4-10g-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc8000-g4-10g-gpu-server",
+        "candidateTitle": "Asus ESC8000 G4/10G 2nd Gen Intel Xeon Scalable GPU Server",
+        "attemptStem": "asus-esc8000-g4-10g-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC8000 G4 2nd Gen Intel Xeon Scalable GPU Server",
+      "slug": "asus-esc8000-g4-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40316",
+      "description": "<h2>Asus ESC8000 G4 2nd Gen Intel Xeon Scalable GPU Server</h2><p>The ASUS <strong>ESC8000 G4</strong> is a high-density Asus GPU Server built for demanding AI, HPC, and VDI applications. This Asus GPU Server supports 2nd gen Intel Xeon Scalable processors as well as 1st Gen Intel Xeon Scalable CPU with core counts ranging from 8 to 40 and up to 40% faster performance than previous generations. This 4U server can support up to eight dual-slot GPUs, such as NVIDIA Quadro or Tesla, and uses the NVIDIA NVLink bridge for performance scalability. The G has eight PCIe Gen3 x16 slots for high-density, parallel computing capability, two PCIe Gen3 x16 slots for fast networking cards, and one internal PCIe Gen3 x8 slot for an HBA/RAID card. The ESC8000 G4 also has two on-board 10G LAN ports for reliable connectivity and high-bandwidth access-layer networks. Hot-swappable redundant fans and dedicated air tunnels provide improved cooling while providing efficient thermal management. This Asus GPU Server is great for applications that require a lot of computing power, like AI, machine learning, and big data analytics.</p><h2>Asus ESC8000 G4 2nd Gen Intel Xeon Scalable GPU Server from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC8000 G4 2nd Gen Intel Xeon Scalable GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC8000 G4 2nd Gen Intel Xeon Scalable GPU Server Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC8000 G4</li><li>Processor: 2x Intel 1st/2nd Gen Xeon Scalable Processor</li><li>Memory: Maximum up to 3072GB RDIMM</li><li>Storage: 8 x Hot-swap 2.5&quot; Storage Bays</li><li>GPU Support: 8x Dual Slot GPU Supported</li></ul>",
+      "model": "ESC8000 G4",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots : 24 (6-channel per CPU, 12 DIMM per CPU) Capacity : Maximum up to 3072GB RDIMM Memory Type : DDR4 2933/2666/2400 /2133 RDIMM DDR4 2933/2666/2400 /2133 LRDIMM DDR4 2933/2666/2400 /2133 LR-DIMM 3DS DDR4 Intel® Optane™ DC Persistent Memory Memory Size : 64GB, 32GB, 16GB RDIMM 128GB, 64GB, 32GB LRDIMM 128GB, 64GB LR-DIMM 3DS",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "4U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40316",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots : 24 (6-channel per CPU, 12 DIMM per CPU) Capacity : Maximum up to 3072GB RDIMM Memory Type : DDR4 2933/2666/2400 /2133 RDIMM DDR4 2933/2666/2400 /2133 LRDIMM DDR4 2933/2666/2400 /2133 LR-DIMM 3DS DDR4 Intel® Optane™ DC Persistent Memory Memory Size : 64GB, 32GB, 16GB RDIMM 128GB, 64GB, 32GB LRDIMM 128GB, 64GB LR-DIMM 3DS",
+            "Form Factor": "4U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket P (LGA 3647) 1st and 2nd Gen Xeon® Scalable Processor Family",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots : 24 (6-channel per CPU, 12 DIMM per CPU) Capacity : Maximum up to 3072GB RDIMM Memory Type : DDR4 2933/2666/2400 /2133 RDIMM DDR4 2933/2666/2400 /2133 LRDIMM DDR4 2933/2666/2400 /2133 LR-DIMM 3DS DDR4 Intel® Optane™ DC Persistent Memory Memory Size : 64GB, 32GB, 16GB RDIMM 128GB, 64GB, 32GB LRDIMM 128GB, 64GB LR-DIMM 3DS",
+              "position": 1
+            },
+            {
+              "label": "Video Memory",
+              "value": "Supports: Eight GPUs",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Server RedHat Enterprise Linux, SuSE Linux Enterprise Server, CentOS, Ubuntu, VMware",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "1 x Dual Port Intel I350-AM2 Gigabit LAN controller + 1 x Mgmt LAN",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "2+1 Redundant 1600W 80PLUS Platinum Power Supply; 100-127 / 200-240Vac, 12.9 / 9.5A（for each inlet）, 47-63Hz, Class I 2+1 Redundant 2200W 80PLUS Platinum Power Supply Rating: 100-127/200-240 Vac, 12.9/9.5 A (for each inlet), 47-63 Hz, Class I *2200W Power supply is only available for selected countries.",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "8 x Hot-swap 2.5\" Storage Bays (Storage bay 1 & 2 support NVMe/SATA/SAS* drives, Storage bay 3~8 support SATA/SAS* drives. Storage bay location numbers are from top to bottom. *SAS from optional ASUS PIKE II 3108/3008 cards.)",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "4U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 2 x USB 3.0 ports 2 x USB 2.0 ports 1 x VGA port 1 x COM port Rear I/O Ports: 2 x RJ-45 GbE LAN ports 1 x RJ-45 Mgmt LAN port",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Front Switch/LED: 1 x Q-Code/Port 80 LED 1 x Power switch/LED 1 x Location switch/LED 1 x HDD Access LED 1 x Message LED Front Switch/LED: 1 x Q-Code/Port 80 LED 1 x Power switch/LED 1 x Location switch/LED 1 x HDD Access LED 1 x Message LED 2 x LAN LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc8000-g4-gpu-server",
+      "sourceProductCode": "40316",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC8000 G4",
+        "Processor: 2x Intel 1st/2nd Gen Xeon Scalable Processor",
+        "Memory: Maximum up to 3072GB RDIMM",
+        "Storage: 8 x Hot-swap 2.5\" Storage Bays",
+        "GPU Support: 8x Dual Slot GPU Supported"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc8000-g4-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc8000-g4-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc8000-g4-gpu-server",
+        "candidateTitle": "Asus ESC8000 G4 2nd Gen Intel Xeon Scalable GPU Server",
+        "attemptStem": "asus-esc8000-g4-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC8000A-E11 AMD EPYC 7003 GPU Server and ASUS ASMB10-iKVM",
+      "slug": "asus-esc8000a-e11-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40307",
+      "description": "<h2>Asus ESC8000A-E11 AMD EPYC 7003 GPU Server and ASUS ASMB10-iKVM</h2><p>The ASUS <strong>ESC8000A-E11</strong> is a high-density GPU server that runs heavy computing operations on dual-socket AMD EPYC 7003 CPUs. This Asus GPU server can host up to 8 dual-slot active or passive GPUs, including the NVIDIA A100 and AMD Instinct MI100, making it suitable for AI and high-performance computing. This Asus GPU Server has up to 11 PCIe 4.0 slots for increased bandwidth and faster data transfer rates, as well as up to eight flexible storage bays for large amounts of storage and high throughput. The server has four redundant 3000 W 80 Plus Titanium power supply and an improved thermal architecture with separate CPU and GPU ventilation tunnels. The incorporation of PFR FPGA as the platform Root-of-Trust solution for firmware resiliency provides enhanced security. The ASUS ESC8000A-E11 is ideal for applications that require significant computational capacity, such as AI, machine learning, big data analytics, and others.</p><h2>Buy Asus ESC8000A-E11 AMD EPYC 7003 GPU Server and ASUS ASMB10-iKVM from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC8000A-E11 AMD EPYC 7003 GPU Server and ASUS ASMB10-iKVM</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC8000A-E11 AMD EPYC 7003 GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC8000A-E11</li><li>Processor: 2 x AMD EPYC 7003 CPU (LGA 4094)</li><li>Memory: Maximum up to 4TB (DDR4 3200 RDIMM / LRDIMM / LRDIMM 3DS)</li><li>Storage: 8 x 3.5&quot; Hot-swap Storage Bays</li><li>GPU Support: 8x Dual Slot GPU Supported</li></ul>",
+      "model": "ESC8000A-E11",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots : 32 (8-channel, 2DPC) Capacity : Up to 4TB Memory Type : DDR4 3200 RDIMM / LRDIMM / LRDIMM 3DS Memory Size : 128GB, 64GB, 32GB, 16GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "4U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40307",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots : 32 (8-channel, 2DPC) Capacity : Up to 4TB Memory Type : DDR4 3200 RDIMM / LRDIMM / LRDIMM 3DS Memory Size : 128GB, 64GB, 32GB, 16GB",
+            "Form Factor": "4U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket SP3 (LGA 4094) AMD EPYC 7003 Series",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots : 32 (8-channel, 2DPC) Capacity : Up to 4TB Memory Type : DDR4 3200 RDIMM / LRDIMM / LRDIMM 3DS Memory Size : 128GB, 64GB, 32GB, 16GB",
+              "position": 1
+            },
+            {
+              "label": "Video Memory",
+              "value": "Supports: 8 x Dual-Slot GPUs",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Server RedHat Enterprise Linux, SuSE Linux Enterprise Server, CentOS, Ubuntu, VMware",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "2+2 Redundant 2200W 80 PLUS Titanium Power Supply Rating: 100-127v, 50-60Hz, 1000W Max / 200V-240V, 50-60Hz, 2200W Max Class I 2+2 Redundant 2600W 80 PLUS Titanium Power Supply Rating: 100-127v, 50-60Hz, 1000W Max / 200-240V, 50-60Hz, 2600W Max Class I 2+2 Redundant 3000W 80 PLUS Titanium Power Supply Rating: 100-127v, 50-60Hz, 1000W Max / 200-220V, 50-60Hz, 2600W Max Class I / 220-240V, 50-60Hz, 3000W Max Class I",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "8 x 3.5\" Hot-swap Storage Bays (Backplane Supports 4 x SATA/SAS + 4 SATA/SAS/NVMe Devices)* Modular support 2 x M.2 sockets (Gen4 x4 link, up to 22110) by SKU configuration.",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "4U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 2 x USB 3.2 Gen1 ports Rear I/O Ports: 1 x Management port (RJ45)",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Front : 1 x Power Button/LED 1 x Location Button/LED 1 x Message LED Rear : 1 x Location LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc8000a-e11-gpu-server",
+      "sourceProductCode": "40307",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC8000A-E11",
+        "Processor: 2 x AMD EPYC 7003 CPU (LGA 4094)",
+        "Memory: Maximum up to 4TB (DDR4 3200 RDIMM / LRDIMM / LRDIMM 3DS)",
+        "Storage: 8 x 3.5\" Hot-swap Storage Bays",
+        "GPU Support: 8x Dual Slot GPU Supported"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc8000a-e11-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc8000a-e11-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc8000a-e11-gpu-server",
+        "candidateTitle": "Asus ESC8000A-E11 AMD EPYC 7003 GPU Server and ASUS ASMB10-iKVM",
+        "attemptStem": "asus-esc8000a-e11-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC8000A-E12 AMD EPYC 9004 GPU Server and ASUS ASMB11-iKVM",
+      "slug": "asus-esc8000a-e12-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40299",
+      "description": "<h2>Asus ESC8000A-E12 AMD EPYC 9004 GPU Server and ASUS ASMB11-iKVM</h2><p>The ASUS <strong>ESC8000A-E12</strong> GPU Server is a high-performance server built to handle demanding AI and HPC tasks. It is powered by AMD EPYC 9004 processors, which have up to 128 Zen 4c cores and enable 12-channel DDR5 memory up to 4800 MHz. This Asus GPU server supports up to eight dual-slot GPUs with NVIDIA NVLink bridge for performance scalability and has 24 DIMM slots for increased data processing. It has eight bays for Tri-Mode NVMe/SATA/SAS drives and eleven PCIe 5.0 slots for increased bandwidth and system updates, all supported by four 3000W Titanium power supplies for continuous operation. The server is thermally optimized, with separate CPU and GPU airflow tunnels and an optional OCP 3.0 module with a PCIe 5.0 slot for improved connectivity. When used with the ASUS ASMB11-iKVM baseboard management console module, administrators can remotely monitor, control, and automate provisioning, configuration, and monitoring. The ASMB11-iKVM minimizes downtime through remote troubleshooting and repairs, provides security and compliance, and enables out-of-band management even when the server is turned off or unresponsive. Together, these components create a robust, dependable, and secure framework for managing high-performance computing infrastructures.</p><h2>Buy Asus ESC8000A-E12 AMD EPYC 9004 GPU Server and ASUS ASMB11-iKVM from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC8000A-E12 AMD EPYC 9004 GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC8000A-E12 AMD EPYC 9004 GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC8000A-E12</li><li>Processor: 2x AMD EPYC 9004 series (4th Gen EYPC) CPU</li><li>Memory: Up to 3TB (per CPU Socket), DDR5 4800/4400 MHz RDIMM/3DS RDIMM</li><li>Storage: 8 x 3.5&quot;/2.5&quot; Front Hot-swap Storage Bays</li><li>GPU Support: 8x Dual Slot GPU Supported</li></ul>",
+      "model": "ESC8000A-E12",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots: 24 (12 channel per CPU, 12 DIMM per CPU) Capacity: Maximum up to 3TB per CPU socket Memory Type: DDR5 4800/4400 RDIMM/ 3DS RDIMM Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "4U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40299",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots: 24 (12 channel per CPU, 12 DIMM per CPU) Capacity: Maximum up to 3TB per CPU socket Memory Type: DDR5 4800/4400 RDIMM/ 3DS RDIMM Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+            "Form Factor": "4U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket (LGA 6096) AMD EPYC 9004 series(up to 400W) 4th Generation AMD EPYC Processors with AMD 3D V-Cache technology",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots: 24 (12 channel per CPU, 12 DIMM per CPU) Capacity: Maximum up to 3TB per CPU socket Memory Type: DDR5 4800/4400 RDIMM/ 3DS RDIMM Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+              "position": 1
+            },
+            {
+              "label": "Video Memory",
+              "value": "Supports: Eight dual-slot GPUs",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Server RedHat Enterprise Linux, SuSE® Linux Enterprise Server, CentOS, Ubuntu, VMware",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "2 x 10GbE LAN ports (RJ45, X710-AT2) or 2 x Gigabit LAN ports (RJ45, I350-AM2) 1 x Management Port",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "2+2 Redundant 2600W/3000W 80 PLUS Titanium Power Supply 2+1 Redundant 3000W 80 PLUS Titanium Power Supply Rating: 220-240 Vac, 15.5A(x4), 50-60 Hz",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "8 x 3.5\"/2.5\" Front Hot-swap Storage Bays (Backplane supports up to 8 x NVMe*/SATA/SAS**) *NVMe support on selected SKUs *SAS support requires an optional HBA/RAID card 1 x M.2 Socket, supports up to 22110 type (PCIe Gen3 x4 link)",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "4U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 2 x USB 3.2 Gen1 ports 1 x VGA port Rear I/O Ports: 1 x COM port 2 x 10GbE/1GbE LAN ports (RJ45, build for order) 1 x Management port (RJ45)",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Front : 1 x Power Button w/LED 1 x Location Button w/LED 1 x Message LED 1 x Q-Code/Port 80 LED 1 x Clear CMOS Switch 1 x Reset Switch 1 x M.2 LED Rear : 1 x Power Button w/LED 1 x Location Button w/LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc8000a-e12-gpu-server",
+      "sourceProductCode": "40299",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC8000A-E12",
+        "Processor: 2x AMD EPYC 9004 series (4th Gen EYPC) CPU",
+        "Memory: Up to 3TB (per CPU Socket), DDR5 4800/4400 MHz RDIMM/3DS RDIMM",
+        "Storage: 8 x 3.5\"/2.5\" Front Hot-swap Storage Bays",
+        "GPU Support: 8x Dual Slot GPU Supported"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc8000a-e12-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc8000a-e12-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc8000a-e12-gpu-server",
+        "candidateTitle": "Asus ESC8000A-E12 AMD EPYC 9004 GPU Server and ASUS ASMB11-iKVM",
+        "attemptStem": "asus-esc8000a-e12-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC8000A-E12P AMD EPYC 9004 GPU Server and ASUS ASMB11-iKVM",
+      "slug": "asus-esc8000a-e12p-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40300",
+      "description": "<h2>Asus ESC8000A-E12P AMD EPYC 9004 GPU Server and ASUS ASMB11-iKVM</h2><p>The ASUS <strong>ESC8000A-E12P</strong> GPU Server is a high-performance GPU Server designed to handle demanding AI and HPC workloads. This Asus GPU Server is powered by AMD EPYC 9004 processors, which have up to 128 Zen 4c cores and enable 12-channel DDR5 memory up to 4800 MHz. This ASUS GPU server supports up to eight dual-slot GPUs with NVIDIA NVLink bridge for performance scalability and has 24 DIMM slots for increased data processing. It has eight bays for Tri-Mode NVMe/SATA/SAS drives and 13 PCIe 5.0 slots for increased bandwidth and system updates, all supported by four 3000W Titanium power supplies that ensure continuous operation. The server is thermally optimized, with separate CPU and GPU airflow tunnels and an optional OCP 3.0 module with PCIe 5.0 slot for quicker connectivity. When used with the ASUS ASMB11-iKVM baseboard management console module, this ASUS GPU server enables administrators to remotely monitor, run, and automate provisioning, configuration, and monitoring. The ASMB11-iKVM minimizes downtime through remote troubleshooting and repairs, provides security and compliance, and enables out-of-band management even when the server is turned off or unresponsive. Together, these components offer a robust, dependable, and secure framework for managing high-performance computing environments.</p><h2>Buy Asus ESC8000A-E12P AMD EPYC 9004 GPU Server and ASUS ASMB11-iKVM from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC8000A-E12P AMD EPYC 9004 GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC8000A-E12P AMD EPYC 9004 GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC8000A-E12P</li><li>Processor: 2x AMD EPYC 9004 series (4th Gen EYPC) CPU</li><li>Memory: Up to 3TB (per CPU Socket), DDR5 4800/4400 MHz RDIMM/3DS RDIMM</li><li>Storage: 8 x 3.5&quot;/2.5&quot; Front Hot-swap Storage Bays</li><li>GPU Support: 8x Dual Slot GPU Supported</li></ul>",
+      "model": "ESC8000A-E12P",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots: 24 (12 channel per CPU, 12 DIMM per CPU) Capacity: Maximum up to 3TB per CPU socket Memory Type: DDR5 4800/4400 RDIMM/ 3DS RDIMM Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "4U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40300",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots: 24 (12 channel per CPU, 12 DIMM per CPU) Capacity: Maximum up to 3TB per CPU socket Memory Type: DDR5 4800/4400 RDIMM/ 3DS RDIMM Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+            "Form Factor": "4U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket (LGA 6096) AMD EPYC 9004 series(up to 400W) 4th Generation AMD EPYC Processors with AMD 3D V-Cache technology",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots: 24 (12 channel per CPU, 12 DIMM per CPU) Capacity: Maximum up to 3TB per CPU socket Memory Type: DDR5 4800/4400 RDIMM/ 3DS RDIMM Memory Size: 64GB, 32GB, 16GB RDIMM 256GB, 128GB RDIMM 3DS",
+              "position": 1
+            },
+            {
+              "label": "Video Memory",
+              "value": "Supports: Eight dual-slot GPUs",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Server RedHat Enterprise Linux, SuSE® Linux Enterprise Server, CentOS, Ubuntu, VMware",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "2 x 10GbE LAN ports (RJ45, X710-AT2) or 2 x Gigabit LAN ports (RJ45, I350-AM2) 1 x Management Port",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "2+2 Redundant 2600W/3000W 80 PLUS Titanium Power Supply 2+1 Redundant 3000W 80 PLUS Titanium Power Supply Rating: 220-240 Vac, 15.5A(x4), 50-60 Hz",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "8 x 3.5\"/2.5\" Front Hot-swap Storage Bays (Backplane supports up to 8 x NVMe*/SATA/SAS**) *NVMe support on selected SKUs **SAS support requires an optional HBA/RAID card 1 x M.2 Socket, supports up to 22110 type (PCIe Gen3 x4 link)",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "4U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 2 x USB 3.2 Gen1 ports 1 x VGA port Rear I/O Ports: 1 x COM port 2 x 10GbE/1GbE LAN ports (RJ45, build for order) 1 x Management port (RJ45)",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Front : 1 x Power Button w/LED 1 x Location Button w/LED 1 x Message LED 1 x Q-Code/Port 80 LED 1 x Clear CMOS Switch 1 x Reset Switch 1 x M.2 LED Rear : 1 x Power Button w/LED 1 x Location Button w/LED",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc8000a-e12p-gpu-server",
+      "sourceProductCode": "40300",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC8000A-E12P",
+        "Processor: 2x AMD EPYC 9004 series (4th Gen EYPC) CPU",
+        "Memory: Up to 3TB (per CPU Socket), DDR5 4800/4400 MHz RDIMM/3DS RDIMM",
+        "Storage: 8 x 3.5\"/2.5\" Front Hot-swap Storage Bays",
+        "GPU Support: 8x Dual Slot GPU Supported"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc8000a-e12p-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc8000a-e12p-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc8000a-e12p-gpu-server",
+        "candidateTitle": "Asus ESC8000A-E12P AMD EPYC 9004 GPU Server and ASUS ASMB11-iKVM",
+        "attemptStem": "asus-esc8000a-e12p-gpu-server"
+      }
+    },
+    {
+      "name": "Asus ESC8000A-E13P AMD EPYC 9005 GPU Server",
+      "slug": "asus-esc8000a-e13p-gpu-server",
+      "type": "PHYSICAL",
+      "sku": "ST-40232",
+      "description": "<h2>Asus ESC8000A-E13P AMD EPYC 9005 GPU Server</h2><p>The Asus <strong>ESC8000A-E13P</strong> AMD EPYC 9005 GPU Server is a high-performance system built to handle demanding tasks. This Asus server, powered by AMD EPYC 9005 series processors with up to 128 cores and 512 threads, excels at AI, machine learning, and high-performance computing. The addition of eight dual-slot NVIDIA H200 GPUs, each capable of handling up to 600 watts, delivers excellent graphical and data processing capabilities. The Asus GPU Server is further boosted by five PCIe 5.0 slots, which provide high-bandwidth connectivity for NIC cards and DPUs, resulting in faster data transfer and better performance. Furthermore, the server supports up to 24 DIMM slots with DDR5 memory, allowing for high-speed data processing and large memory capacities. The 3200W redundant 80 PLUS Titanium power supply ensures consistent power delivery and efficiency. The ASUS-exclusive toolless architecture enables simple maintenance and speedy upgrades, improving the overall user experience. With these qualities, the Asus ESC8000A-E13P AMD EPYC 9005 GPU Server stands out as an excellent solution for businesses looking for cutting-edge technology to tackle complex computing tasks</p><h2>Buy Asus ESC8000A-E13P AMD EPYC 9005 GPU Server from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ESC8000A-E13P AMD EPYC 9005 GPU Server</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-server\">Asus Server</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Asus ESC8000A-E13P AMD EPYC 9005 GPU Server has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESC8000A-E13P</li><li>Processor: 2x AMD EPYC 9005 series (LGA 6096)</li><li>Memory: Up to 3TB (per CPU Socket), DDR5 6400**/6000//5600</li><li>Storage: 8 x 2.5&quot; Front Hot-swap Storage Bays</li><li>GPU support: up to 8 x Dual Slot Nvidia H200</li></ul>",
+      "model": "ESC8000A-E13P",
+      "warranty": "1 year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Total Slots: 24 (12 channel per CPU, 12 DIMM per CPU) Capacity: Maximum up to 3TB per CPU socket Memory Type: DDR5 6400**/6000//5600 RDIMM Memory Size: 128GB, 64GB, 32GB RDIMM **DDR5 6400 support expected in Q1 2025",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "4U",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40232",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Total Slots: 24 (12 channel per CPU, 12 DIMM per CPU) Capacity: Maximum up to 3TB per CPU socket Memory Type: DDR5 6400**/6000//5600 RDIMM Memory Size: 128GB, 64GB, 32GB RDIMM **DDR5 6400 support expected in Q1 2025",
+            "Form Factor": "4U"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x Socket SP5 (LGA 6096) AMD EPYC 9005 series processors Up to 500W TDP, TDP support varies by configuration",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Total Slots: 24 (12 channel per CPU, 12 DIMM per CPU) Capacity: Maximum up to 3TB per CPU socket Memory Type: DDR5 6400**/6000//5600 RDIMM Memory Size: 128GB, 64GB, 32GB RDIMM **DDR5 6400 support expected in Q1 2025",
+              "position": 1
+            },
+            {
+              "label": "Network",
+              "value": "2 x 10GbE LAN ports (RJ45, X710-AT2) 1 x Management Port",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "3+1 redundant 3200W 80 PLUS Titanium power supply 20-240 Vac, 16A (x4) 50/60Hz",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "8 x 2.5\" Front Hot-swap Storage Bays (Backplane supports up to 8 x NVMe) 2 x M.2 Socket, supports up to 22110 type (PCIe Gen5 x4 link) (M.2 board supports up to 2 x NVMe",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "4U",
+              "position": 2
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Front I/O Ports: 1 x Mini DisplayPort 2 x USB 5Gbps ports Rear I/O Ports: 1 x USB 5Gbps port 2 x RJ-45 LAN ports 1 x RJ-45 management LAN port",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Switch/LED: Front : 1 x Power switch/LED 1 x Location switch/LED 1 x Message LED 1 x Clear CMOS switch 1 x Reset Switch 2 x M.2 LEDs 2 x LAN LEDs 1 x Q-code/Port 80 LED Rear : 1 x Power switch/LED 1 x Location switch/LED 1 x Message LED Multi-GPU Support",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-esc8000a-e13p-gpu-server",
+      "sourceProductCode": "40232",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESC8000A-E13P",
+        "Processor: 2x AMD EPYC 9005 series (LGA 6096)",
+        "Memory: Up to 3TB (per CPU Socket), DDR5 6400**/6000//5600",
+        "Storage: 8 x 2.5\" Front Hot-swap Storage Bays",
+        "GPU support: up to 8 x Dual Slot Nvidia H200"
+      ],
+      "needsReview": true,
+      "categorySlug": "gpu-server",
+      "image": "/images/products/server-networking/gpu-server/asus-esc8000a-e13p-gpu-server.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/gpu-server/asus-esc8000a-e13p-gpu-server.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-esc8000a-e13p-gpu-server",
+        "candidateTitle": "Asus ESC8000A-E13P AMD EPYC 9005 GPU Server",
+        "attemptStem": "asus-esc8000a-e13p-gpu-server"
+      }
+    }
+  ]
+}

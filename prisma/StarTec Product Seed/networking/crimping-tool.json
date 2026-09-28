@@ -1,0 +1,2106 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\networking",
+    "generatedAtUnix": 1790590909,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Networking",
+      "slug": "networking",
+      "parentSlug": null,
+      "image": "/images/products/networking/firewall/sonicwall-nsa-2700-16-port-firewall.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Crimping Tool",
+      "slug": "crimping-tool",
+      "parentSlug": "networking",
+      "image": "/images/products/networking/crimping-tool/commscope-1725150-6-jack-termination-tool.png",
+      "isActive": true,
+      "sortOrder": 3,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "CommScope",
+      "slug": "commscope",
+      "logo": null
+    },
+    {
+      "name": "Cote",
+      "slug": "cote",
+      "logo": null
+    },
+    {
+      "name": "Dintek",
+      "slug": "dintek",
+      "logo": null
+    },
+    {
+      "name": "Noyafa",
+      "slug": "noyafa",
+      "logo": null
+    },
+    {
+      "name": "Onten",
+      "slug": "onten",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    },
+    {
+      "name": "Safenet",
+      "slug": "safenet",
+      "logo": null
+    },
+    {
+      "name": "Tolsen",
+      "slug": "tolsen",
+      "logo": null
+    },
+    {
+      "name": "TRENDnet",
+      "slug": "trendnet",
+      "logo": null
+    },
+    {
+      "name": "UGREEN",
+      "slug": "ugreen",
+      "logo": null
+    },
+    {
+      "name": "Vention",
+      "slug": "vention",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "CommScope 1725150-6 Jack Termination Tool with Lacing Fixture",
+      "slug": "commscope-1725150-6-jack-termination-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-36761",
+      "description": "<h2>CommScope 1725150-6 Jack Termination Tool with Lacing Fixture</h2><p>The CommScope <strong>1725150-6</strong> Jack Termination Tool with Lacing Fixture is a highly efficient and adaptable tool for terminating a variety of modular jacks, including the AMP-TWIST, SLX, SL, UNJ, and KJ series. This all-in-one instrument simplifies the procedure from beginning to end by identifying foil, stripping cables, and simultaneously cutting and terminating all eight conductors. It guarantees the twisted pair integrity, which is essential to preserving the dependability and efficiency of network connections. The CommScope 1725150-6 Jack Termination Tool is particularly helpful in cutting expenses and saving time since it streamlines the lacing procedure, making it quicker and more effective. Using a lacing fixture ensures accurate and simple terminations, especially with SL-style jacks. Its use is extensive; it includes UNJ Series outlets, KJ Series outlets, SL Series outlets, AMP-TWIST 6S and 6AS SL outlets, and SLX outlets. It also includes AMP-TWIST 7AS SL outlets. The tool is appropriate for a variety of setups since it can work with wires up to a maximum diameter of 7.24 mm (0.285 inches). To obtain dependable and effective terminations in their network configurations, experts need to have the CommScope 1725150-6 Jack Termination Tool.</p><h2>Buy CommScope 1725150-6 Jack Termination Tool with Lacing Fixture from Star Tech</h2><p>In Bangladesh, you can get original <strong>CommScope 1725150-6 Jack Termination Tool with Lacing Fixture</strong> From Star Tech. We have a large collection of latest CommScope <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Crimping Tool</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The CommScope 1725150-6 Jack Termination Tool comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 1725150-6</li><li>Compatible Cable Diameter: 7.24 mm (0.285 in)</li><li>Lacing Fixture Used Only When Terminating SL-style Jacks</li><li>Strips cable, marks foil, terminates and cuts 8 conductors</li><li>Terminates all AMP-TWIST, SLX, SL, UNJ, and KJ Series Modular Jacks</li></ul>",
+      "model": "1725150-6",
+      "warranty": "no warranty",
+      "basePrice": 11500.0,
+      "originalPrice": 11900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "CommScope",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-36761",
+          "price": 11500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 11040.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "1725150-6",
+              "position": 0
+            },
+            {
+              "label": "Compatible Cable Diameter",
+              "value": "7.24 mm (0.285 in)",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/commscope-1725150-6-jack-termination-tool",
+      "sourceProductCode": "36761",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 1725150-6",
+        "Compatible Cable Diameter: 7.24 mm (0.285 in)",
+        "Lacing Fixture Used Only When Terminating SL-style Jacks",
+        "Strips cable, marks foil, terminates and cuts 8 conductors",
+        "Terminates all AMP-TWIST, SLX, SL, UNJ, and KJ Series Modular Jacks"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/commscope-1725150-6-jack-termination-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/commscope-1725150-6-jack-termination-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "commscope-1725150-6-jack-termination-tool",
+        "candidateTitle": "CommScope 1725150-6 Jack Termination Tool with Lacing Fixture",
+        "attemptStem": "commscope-1725150-6-jack-termination-tool"
+      }
+    },
+    {
+      "name": "COTE CCT-208 Crimping Tool",
+      "slug": "cote-cct-208-crimping-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-49420",
+      "description": "<h2>COTE CCT-208 Crimping Tool</h2><p>The COTE<strong> CCT‑208 </strong>Crimping Tool is a versatile and durable networking tool designed for precision and ease of use. Built to handle RJ11, RJ12, and RJ45 connectors, this professional crimping tool features a built‑in cutter and stripper, making cable preparation fast and efficient. Compact in size and easy to handle, the COTE CCT‑208 ensures secure crimps for three different plug sizes, delivering reliable performance for both home and office network installations. Engineered for durability and convenience, this COTE Crimping Tool is the perfect choice for technicians, IT professionals, and DIY users who need a dependable solution for structured cabling and connector assembly.</p><h2>Buy COTE CCT-208 Crimping Tool from Star Tech</h2><p>In Bangladesh, you can get original  <strong>COTE CCT-208 Crimping Tool</strong>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/crimping-tool\">Crimping Tool</a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at lowest price. The COTE CCT-208 Crimping Tool comes with No warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CCT-208</li><li>Functions for RJ11/RJ12/RJ45</li><li>Built-in cutter and stripper</li><li>Compact size, easy to handle</li><li>Crimps 3 sizes of plugs</li></ul>",
+      "model": "CCT-208",
+      "warranty": "No warranty",
+      "basePrice": 2000.0,
+      "originalPrice": 2200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Cote",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-49420",
+          "price": 2000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "CCT-208",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cote-cct-208-crimping-tool",
+      "sourceProductCode": "49420",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CCT-208",
+        "Functions for RJ11/RJ12/RJ45",
+        "Built-in cutter and stripper",
+        "Compact size, easy to handle",
+        "Crimps 3 sizes of plugs"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/cote-cct-208-crimping-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/cote-cct-208-crimping-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cote-cct-208-crimping-tool",
+        "candidateTitle": "COTE CCT-208 Crimping Tool",
+        "attemptStem": "cote-cct-208-crimping-tool"
+      }
+    },
+    {
+      "name": "Cote Networking Toolbox Set",
+      "slug": "cote-networking-toolbox-set",
+      "type": "PHYSICAL",
+      "sku": "ST-39597",
+      "description": "<h2>Cote Networking Toolbox Set</h2><p>The <strong>Cote Networking Toolbox</strong> Set is a complete kit for network installation and management. This Networking Toolbox includes necessary tools such as a crimping tool for RJ-45 modular plugs, a punch-down tool, a stripping tool for communication cables, a multi-functional tester for cables with RJ-45, RJ-15, RJ-12, and RJ-11 plugs, a multi-function screwdriver set, and 6 CAT6 modular plugs. This toolbox set is great for both pros and DIY enthusiasts, as This Network ToolBox includes all of the equipment required to complete many networking jobs easily. Its small and tidy design allows for easy transportation and accessibility, making it an excellent match to any networking toolkit.</p><h2>Buy Cote Networking Toolbox Set from Star Tech</h2><p>In Bangladesh, you can get original <strong>Cote Networking Toolbox Set</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/crimping-tool\">Crimping Tool</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Cote Networking Toolbox Set has No Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Networking Toolbox Set</li><li>Networking Toolbox Set</li><li>Number of tools: 11</li><li>1 x Multi-function Screwdriver Set</li><li>1 x Crimping Tool for RJ-45 Modular Plug</li></ul>",
+      "model": "Networking Toolbox Set",
+      "warranty": null,
+      "basePrice": 4500.0,
+      "originalPrice": 4900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Cote",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39597",
+          "price": 4500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Networking Toolbox Set",
+              "position": 0
+            },
+            {
+              "label": "Number of tools",
+              "value": "11",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cote-networking-toolbox-set",
+      "sourceProductCode": "39597",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Networking Toolbox Set",
+        "Networking Toolbox Set",
+        "Number of tools: 11",
+        "1 x Multi-function Screwdriver Set",
+        "1 x Crimping Tool for RJ-45 Modular Plug"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/cote-networking-toolbox-set.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/cote-networking-toolbox-set.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cote-networking-toolbox-set",
+        "candidateTitle": "Cote Networking Toolbox Set",
+        "attemptStem": "cote-networking-toolbox-set"
+      }
+    },
+    {
+      "name": "Dintek 6102-01002CH RJ12/45 Crimping Tool",
+      "slug": "dintek-6102-01002ch-crimping-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-30477",
+      "description": "<h2>Dintek 6102-01002CH RJ12/45 Crimping Tool</h2><p>The Dintek<span style=\"font-weight: bold;\"> 6102-01002CH </span>RJ45/12 Crimping tools is a useful and flexible equipment that may assist you in easily creating your own network cables. It's a crimping tool that can connect RJ45, RJ12, and RJ11 connectors to paired conductor cables for voice and data applications. It can also precisely trim and strip cables in one motion for consistent and high-quality connections. The tool includes two crimping slots for modular plugs with 6 and 8 positions. It's comprised of heat-treated carbon steel with a black oxide coating for extra strength and longevity. The ratchet action assures a secure and exact crimp every time. The equipment supports both solid and stranded cables, which are common in network wiring. It can terminate telephone, fax, modem, and Ethernet connections using RJ11, RJ12, and RJ45 ports. The Dintek 6102-01002CH RJ12/45 Crimping Tool is simple to use and does not require any specific skills or knowledge. Simply enter the cable into the stripper slot, push the handle to cut and strip the cable, insert the plug into the crimping slot, then squeeze the handle again to crimp the plug.</p><h2>Buy Dintek 6102-01002CH RJ12/45 Crimping Tool from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Dintek 6102-01002CH RJ12/45 Crimping Tool </span>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Crimping Tool</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech </a>Shop to get yours at lowest price. The Dintek 6102-01002CH RJ12/45 Crimping Tool comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 6102-01002CH</li><li>Crimps Different Positions</li><li>Safety Blade Guard</li><li>Portable and Compact Structure</li><li>Black Oxide Finish for Superior Durability</li></ul>",
+      "model": "6102-01002CH",
+      "warranty": "no warranty",
+      "basePrice": 3290.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dintek",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-30477",
+          "price": 3290.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3158.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "6102-01002CH",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dintek-6102-01002ch-crimping-tool",
+      "sourceProductCode": "30477",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 6102-01002CH",
+        "Crimps Different Positions",
+        "Safety Blade Guard",
+        "Portable and Compact Structure",
+        "Black Oxide Finish for Superior Durability"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/dintek-6102-01002ch-crimping-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/dintek-6102-01002ch-crimping-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dintek-6102-01002ch-crimping-tool",
+        "candidateTitle": "Dintek 6102-01002CH RJ12/45 Crimping Tool",
+        "attemptStem": "dintek-6102-01002ch-crimping-tool"
+      }
+    },
+    {
+      "name": "Dintek 6102-01021 All-in-One Passthrough RJ45 Plug Crimping Tool",
+      "slug": "dintek-6102-01021-crimping-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-49980",
+      "description": "<h2>Dintek 6102-01021 All-in-One Passthrough RJ45 Plug Crimping Tool</h2><p>The Dintek <strong>6102-01021</strong> All-in-One Passthrough RJ45 Plug Crimping Tool works with ezi-PLUG RJ45 Cat.5e and Cat.6 pass-through connectors for accurate and consistent terminations every time. It features a straight-action crimping motion that delivers the most reliable and repeatable results across both stranded and solid core cable types. The crimping dies are precision-ground from high carbon steel, ensuring long-lasting sharpness and dimensional accuracy throughout extensive daily use. Manufactured from high-strength steel, the Dintek 6102-01021 Crimping Tool offers exceptional durability and resistance to mechanical stress during demanding field and workshop applications. A built-in wire cutter integrated into the handle allows users to trim excess wire cleanly immediately after crimping without switching tools. The ratcheting mechanism ensures each crimp cycle completes fully before releasing, preventing incomplete terminations that could compromise network signal quality. Dintek Crimping Tool supports a wide range of network and communication applications including 1000BASE-TX Gigabit Ethernet at 550MHz and 10BASE-T and 100BASE-TX Fast Ethernet under IEEE 802.3 standards. It also supports Voice, T1, and ISDN installations alongside 100 VG-AnyLAN under IEEE 802.12 and 155/622 Mbps ATM network environments. The Dintek 6102-01021 All-in-One Passthrough RJ45 Plug Crimping Tool fully supports PoE++ and 4PPoE applications under IEEE 802.3bt Level 3 and Level 4 standards for modern power-over-Ethernet deployments.</p><h2>Buy Dintek 6102-01021 RJ45 Plug Crimping Tool from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dintek 6102-01021 RJ45 Plug Crimping Tool</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/crimping-tool\">Crimping Tool</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Dintek 6102-01021 RJ45 Plug Crimping Tool has No Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 6102-01021</li><li>One-Cycle Crimp and Trim Function</li><li>High Carbon Steel Precision Dies</li><li>Ergonomic Non-Slip Handle Design</li><li>Compatible with Cat5e &amp; Cat6 Connectors</li></ul>",
+      "model": "6102-01021",
+      "warranty": null,
+      "basePrice": 4300.0,
+      "originalPrice": 4600.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dintek",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-49980",
+          "price": 4300.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4128.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "6102-01021",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dintek-6102-01021-crimping-tool",
+      "sourceProductCode": "49980",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 6102-01021",
+        "One-Cycle Crimp and Trim Function",
+        "High Carbon Steel Precision Dies",
+        "Ergonomic Non-Slip Handle Design",
+        "Compatible with Cat5e & Cat6 Connectors"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/dintek-6102-01021-crimping-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/dintek-6102-01021-crimping-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dintek-6102-01021-crimping-tool",
+        "candidateTitle": "Dintek 6102-01021 All-in-One Passthrough RJ45 Plug Crimping Tool",
+        "attemptStem": "dintek-6102-01021-crimping-tool"
+      }
+    },
+    {
+      "name": "Dintek 6103-01005 e-Tool for Keystone E-Jack",
+      "slug": "dintek-6103-01005-e-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-30574",
+      "description": "<h2>Dintek 6103-01005 e-Tool for Keystone E-Jack</h2><p>The Dintek <span style=\"font-weight: bold;\">6103-01005</span> e-Tool is an easy-to-use network cable installation and termination tool. It works with both vertical and horizontal jacks and allows you to punch down all eight wires in a single move. The e-Tool evenly trims the surplus wire, resulting in a clean and professional appearance. Dintek 6103-01005 e-Tool for Keystone E-Jack also keeps IDC connections gastight, which is critical for preventing corrosion and enhancing signal quality. Return loss and cross talk, which are common sources of interference and noise in network communications, are reduced by the e-Tool. The e-Tool uses multi-purpose keystones that may be used in both the e-Tool and the traditional punch-down tool. The Dintek 6103-01005 e-Tool is a versatile and reliable network installation tool.</p><h2>Buy Dintek 6103-01005 e-Tool for Keystone E-Jack from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Dintek 6103-01005 e-Tool for Keystone E-Jack</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/gadget\" target=\"\">Gadget </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Dintek 6103-01005 e-Tool for Keystone E-Jack comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 6103-01005</li><li>Vertical and horizontal jack versions</li><li>All-in-one punch down of 8 wires</li><li>Even wire trimming</li><li>Maintains gas tight IDC connections</li></ul>",
+      "model": "6103-01005",
+      "warranty": "no warranty",
+      "basePrice": 5200.0,
+      "originalPrice": 5500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dintek",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-30574",
+          "price": 5200.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4992.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "6103-01005",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dintek-6103-01005-e-tool",
+      "sourceProductCode": "30574",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 6103-01005",
+        "Vertical and horizontal jack versions",
+        "All-in-one punch down of 8 wires",
+        "Even wire trimming",
+        "Maintains gas tight IDC connections"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/dintek-6103-01005-e-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/dintek-6103-01005-e-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dintek-6103-01005-e-tool",
+        "candidateTitle": "Dintek 6103-01005 e-Tool for Keystone E-Jack",
+        "attemptStem": "dintek-6103-01005-e-tool"
+      }
+    },
+    {
+      "name": "Informate HT-568R Dual Modular Crimping Tool",
+      "slug": "informate-crimping-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-5986",
+      "description": "<p><span style=\"font-weight: 700;\">Informate HT-568R Original Crimping Tool</span><br/></p><p></p><ul><li>Crimps different positions of RJ-45,RJ-11 connectors and others <br/></li><li>Sturdy metal construction for reliability even after heavy use<br/></li><li>This network stripping tool has comfortable contour grips<br/></li><li>Good quality design and construction, portable &amp; compact structure<br/></li></ul><p></p><p><span style=\"font-weight: bold;\"></span>No Warranty</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HT-568R</li><li>Crimps different positions</li><li>Good quality design</li><li>Portable &amp; compact structure</li></ul>",
+      "model": "HT-568R",
+      "warranty": null,
+      "basePrice": 850.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-5986",
+          "price": 850.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 816.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "HT-568R",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/informate-crimping-tool",
+      "sourceProductCode": "5986",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HT-568R",
+        "Crimps different positions",
+        "Good quality design",
+        "Portable & compact structure"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/informate-crimping-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/informate-crimping-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "informate-crimping-tool",
+        "candidateTitle": "Informate HT-568R Dual Modular Crimping Tool",
+        "attemptStem": "informate-crimping-tool"
+      }
+    },
+    {
+      "name": "Noyafa NF-5310B Pocket Digital Multimeter",
+      "slug": "noyafa-nf-5310b-pocket-digital-multimeter",
+      "type": "PHYSICAL",
+      "sku": "ST-30575",
+      "description": "<h2>Noyafa NF-5310B Pocket Digital Multimeter</h2><p>The Noyafa <span style=\"font-weight: bold;\">NF-5310B </span>Pocket Digital Multimeter is a convenient and accurate tool for measuring many kinds of electrical properties. It has a liquid crystal display (LCD) with automated polarity indication that can display up to 5999 digits. It measures voltage, current, resistance, capacitance, frequency, duty cycle, and temperature using a double integral A/D conversion method. The Noyafa NF-5310B Pocket Digital Multimeter can detect over range and low voltage conditions and has a sample rate of around 3 times per second. It operates in temperatures ranging from 0 to 40 degrees Celsius and relative humidity levels of less than 80%. It weighs roughly 205 grams and runs on a 1.5-volt battery. The Noyafa NF-5310B Pocket Digital Multimeter is a safe and dependable gadget that has passed RoHS, FCC, and CE compliance testing and is ISO 9001 certified.</p><h2>Buy Noyafa NF-5310B Pocket Digital Multimeter from Star Tech</h2><p>In Bangladesh, you can get original<span style=\"font-weight: bold;\"> Noyafa NF-5310B Pocket Digital Multimeter </span>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/gadget\" target=\"\">Gadget </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Noyafa NF-5310B Pocket Digital Multimeter comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NF-5310B</li><li>LCD Display</li><li>Double Integral A/D Conversion</li><li>Sampling Rate: About 3 Times Per Second</li><li>Over-range and low-voltage Display</li></ul>",
+      "model": "NF-5310B",
+      "warranty": "no warranty",
+      "basePrice": 3700.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Noyafa",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-30575",
+          "price": 3700.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3552.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "NF-5310B",
+              "position": 0
+            },
+            {
+              "label": "Sampling Rate",
+              "value": "About 3 Times Per Second",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/noyafa-nf-5310b-pocket-digital-multimeter",
+      "sourceProductCode": "30575",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NF-5310B",
+        "LCD Display",
+        "Double Integral A/D Conversion",
+        "Sampling Rate: About 3 Times Per Second",
+        "Over-range and low-voltage Display"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/noyafa-nf-5310b-pocket-digital-multimeter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/noyafa-nf-5310b-pocket-digital-multimeter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "noyafa-nf-5310b-pocket-digital-multimeter",
+        "candidateTitle": "Noyafa NF-5310B Pocket Digital Multimeter",
+        "attemptStem": "noyafa-nf-5310b-pocket-digital-multimeter"
+      }
+    },
+    {
+      "name": "Onten OTN-E901 Network Cable Stripping Tool",
+      "slug": "onten-otn-e901-crimping-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-46761",
+      "description": "<h2>Onten OTN-E901 Network Cable Stripping Tool</h2>\n<p>The Onten <strong>OTN-E901</strong> <a href=\"https://www.startech.com.bd/crimping-tool\" style=\"color: rgb(0, 0, 0);\" target=\"\">Crimping Tool</a> is a high-quality, professional-grade 3-in-1 device designed to handle all your wiring needs with ease. Combining multiple functions in a single tool, the Onten OTN-E901 crimps, cuts, and strips wires, making it an essential addition for both network and telephone installations. This versatile tool is fully compatible with RJ45, RJ12, and RJ11 connectors, ensuring reliable connections for Ethernet cables, phone lines, and other structured wiring applications. Crafted from robust metal construction, the Onten OTN-E901 Stripping Tool delivers exceptional durability and long service life, even with frequent use in demanding environments. Its coated handles provide enhanced comfort, better grip, and reduced hand fatigue, allowing for extended use without compromising control or precision. Compact yet highly functional, the Onten OTN-E901 Network Cable Stripping Tool is perfect for professionals, technicians, and DIY enthusiasts who need a reliable, all-in-one solution for installing, maintaining, and repairing network and telephone systems efficiently.</p>\n<h2>Buy Onten OTN-E901 Network Cable Stripping Tool from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Onten OTN-E901 Network Cable Stripping Tool</strong> From Star Tech. We have a large collection of latest Ugreen <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Crimping Tool </a>to purchase. Order Online or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Onten OTN-E901 Network Cable Stripping Tool comes with 2 Years Replacement warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-E901</li><li>3-in-1 Tool: Crimps, Cuts and Strips</li><li>Coated Handles for Greater Comfort and Better Grip</li><li>Compatible with RJ45, RJ12 and RJ11 connectors</li><li>Material: Metal Construction</li></ul>",
+      "model": "OTN-E901",
+      "warranty": "2 Years Replacement warranty",
+      "basePrice": 660.0,
+      "originalPrice": 713.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-46761",
+          "price": 660.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 633.6,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "OTN-E901",
+              "position": 0
+            },
+            {
+              "label": "3-in-1 Tool",
+              "value": "Crimps, Cuts and Strips",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "Metal Construction",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-e901-crimping-tool",
+      "sourceProductCode": "46761",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-E901",
+        "3-in-1 Tool: Crimps, Cuts and Strips",
+        "Coated Handles for Greater Comfort and Better Grip",
+        "Compatible with RJ45, RJ12 and RJ11 connectors",
+        "Material: Metal Construction"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/onten-otn-e901-crimping-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/onten-otn-e901-crimping-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-e901-crimping-tool",
+        "candidateTitle": "Onten OTN-E901 Network Cable Stripping Tool",
+        "attemptStem": "onten-otn-e901-crimping-tool"
+      }
+    },
+    {
+      "name": "Onten OTN-E902 Network Cable Stripping Tool",
+      "slug": "onten-otn-e902-crimping-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-46764",
+      "description": "<h2>Onten OTN-E902 Network Cable Stripping Tool</h2>\n<p>The Onten <strong>OTN-E902</strong> <a href=\"https://www.startech.com.bd/crimping-tool\" style=\"color: rgb(0, 0, 0);\" target=\"\">Crimping Tool</a> is a high-performance, all-in-one solution for professionals and DIY enthusiasts working on wiring and network installations. This 3-in-1 tool is designed to crimp, cut, and strip wires efficiently, making it an essential companion for data and telephone network projects. Built with durable metal construction, the Onten OTN-E902 Network Cable Stripping Tool ensures long-lasting reliability, while its ergonomic coated handles provide superior comfort, control, and a secure grip during prolonged use. Fully compatible with RJ45, RJ12, and RJ11 connectors, the Onten OTN-E902 Stripping Tool allows precise stripping of wires, guaranteeing clean connections and professional results. Its universal design supports a wide range of wiring projects, including structured cabling, office and home network setups, and field installations, making it ideal for technicians, installers, and maintenance professionals. Whether for installation, maintenance, or troubleshooting, the Onten OTN-E902 Network Cable Stripping Tool delivers unmatched versatility, durability, and efficiency, ensuring every project is completed with ease and precision.</p>\n<h2>Buy Onten OTN-E902 Network Cable Stripping Tool from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Onten OTN-E902 Network Cable Stripping Tool</strong> From Star Tech. We have a large collection of latest Ugreen <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Crimping Tool </a>to purchase. Order Online or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Onten OTN-E902 Network Cable Stripping Tool comes with 2 Years Replacement warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-E902</li><li>3-in-1 Tool: Crimps, Cuts and Strips</li><li>Coated Handles for Greater Comfort and Better Grip</li><li>Compatible with RJ45, RJ12 and RJ11 connectors</li><li>Material: Metal Construction</li></ul>",
+      "model": "OTN-E902",
+      "warranty": "2 Years Replacement warranty",
+      "basePrice": 710.0,
+      "originalPrice": 762.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-46764",
+          "price": 710.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 681.6,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "OTN-E902",
+              "position": 0
+            },
+            {
+              "label": "3-in-1 Tool",
+              "value": "Crimps, Cuts and Strips",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "Metal Construction",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-e902-crimping-tool",
+      "sourceProductCode": "46764",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-E902",
+        "3-in-1 Tool: Crimps, Cuts and Strips",
+        "Coated Handles for Greater Comfort and Better Grip",
+        "Compatible with RJ45, RJ12 and RJ11 connectors",
+        "Material: Metal Construction"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/onten-otn-e902-crimping-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/onten-otn-e902-crimping-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-e902-crimping-tool",
+        "candidateTitle": "Onten OTN-E902 Network Cable Stripping Tool",
+        "attemptStem": "onten-otn-e902-crimping-tool"
+      }
+    },
+    {
+      "name": "Onten OTN-E992 Network Cable Crimping Tool",
+      "slug": "onten-otn-e992-network-cable-crimping-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-50718",
+      "description": "<h2>Onten OTN-E992 Network Cable Crimping Tool</h2><p>The <strong>Onten OTN-E992 Network Cable Crimping Tool</strong> is crafted for professionals who demand precision. It supports 6P4C connections and ensures smooth performance with Cat 6 and Cat 5e cables. This model combines strength with efficiency, offering a reliable solution for structured cabling tasks.</p><p>With the Onten OTN-E992, users benefit from a built-in Network Cable Stripper. This feature simplifies cable preparation, reducing time and effort during installations. Its ProCrimp design enhances accuracy, ensuring consistent results for every project. The tool’s construction guarantees long-lasting use even under heavy workloads.</p><p>The Onten OTN-E992 stands out due to its durable metal body. This strong build provides confidence when handling demanding tasks. It is a trusted choice for technicians who require a tool that performs consistently. The combination of stripping and crimping functions makes it a practical addition to any toolkit.</p><p>For professionals seeking a dependable solution, the Onten OTN-E992 delivers efficient performance. Its Crimping Tool capability ensures secure connections, while the integrated stripper adds convenience. Designed for efficiency, this tool supports modern cabling needs with ease. It is a smart investment for networking projects.</p><h2>Buy Onten OTN-E992 Network Cable Crimping Tool from Star Tech</h2><p>In Bangladesh, you can get original <strong>Onten OTN-E992 Network Cable Crimping Tool</strong> From Star Tech. We have a large collection of latest Ugreen <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Crimping Tool </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Onten OTN-E992 Network Cable Crimping Tool comes with 2 Years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-E992</li><li>Supports: 6P4C</li><li>Non-Slip Soft Rubber Handle</li><li>Compatible with Cat 5e,Cat6 Cable Crimping Professional Tool</li><li>Function: Network Cable Stripper, ProCrimp. Durable Metal</li></ul>",
+      "model": "OTN-E992",
+      "warranty": "2 Years warranty",
+      "basePrice": 2000.0,
+      "originalPrice": 2170.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-50718",
+          "price": 2000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "OTN-E992",
+              "position": 0
+            },
+            {
+              "label": "Supports",
+              "value": "6P4C",
+              "position": 1
+            },
+            {
+              "label": "Function",
+              "value": "Network Cable Stripper, ProCrimp. Durable Metal",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-e992-network-cable-crimping-tool",
+      "sourceProductCode": "50718",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-E992",
+        "Supports: 6P4C",
+        "Non-Slip Soft Rubber Handle",
+        "Compatible with Cat 5e,Cat6 Cable Crimping Professional Tool",
+        "Function: Network Cable Stripper, ProCrimp. Durable Metal"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/onten-otn-e992-network-cable-crimping-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/onten-otn-e992-network-cable-crimping-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-e992-network-cable-crimping-tool",
+        "candidateTitle": "Onten OTN-E992 Network Cable Crimping Tool",
+        "attemptStem": "onten-otn-e992-network-cable-crimping-tool"
+      }
+    },
+    {
+      "name": "Onten OTN-E993 Crimping Tool",
+      "slug": "onten-otn-e993-crimping-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-46760",
+      "description": "<h2>Onten OTN-E993 Crimping Tool</h2><p>The Onten <strong>OTN-E993</strong> <a href=\"https://www.startech.com.bd/crimping-tool\" style=\"color: rgb(0, 0, 0);\" target=\"\">Crimping Tool</a> is a premium, multifunctional professional tool designed for seamless network cable installation and maintenance. Crafted from durable metal construction, the Onten OTN-E993 delivers exceptional strength, reliability, and long-lasting performance, making it perfect for both home users and professional network technicians. This versatile tool functions as an 8P network cable crimper, flat cable stripper, and network cable cutter, supporting a wide range of connectors, including 6P4C and 4P2C, which ensures precise crimping for telephone and data cables. Safety and usability are prioritized with a built-in blade guard, while the non-slip soft rubber handle provides a comfortable and secure grip, reducing hand fatigue during extended use. Fully compatible with Cat 5 and Cat 5e cables, the Onten OTN-E993 Stripping Tool allows users to strip, cut, and crimp cables effortlessly, making it an indispensable tool for structured cabling projects. Whether you are setting up a home network, repairing telecommunications lines, or handling professional IT installations, the Onten OTN-E993 Crimping Tool combines durability, precision, and multifunctionality to meet all your networking needs.</p><h2>Buy Onten OTN-E993 Crimping Tool from Star Tech</h2><p>In Bangladesh, you can get original <strong>Onten OTN-E993 Crimping Tool</strong> From Star Tech. We have a large collection of latest Ugreen <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Crimping Tool </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Onten OTN-E993 Crimping Tool comes with 2 Years Replacement warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-E993</li><li>Supports: 6P4C/4P2C, Cable Cutter</li><li>Blade Guard, Non-Slip Soft Rubber Handle</li><li>Compatible with Cat 5e/5 Cable Crimping Professional Tool</li><li>Function: 8P Network Cable Crimper, Flat Cable Stripper</li></ul>",
+      "model": "OTN-E993",
+      "warranty": "2 Years Replacement warranty",
+      "basePrice": 1400.0,
+      "originalPrice": 1530.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-46760",
+          "price": 1400.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1344.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "OTN-E993",
+              "position": 0
+            },
+            {
+              "label": "Supports",
+              "value": "6P4C/4P2C, Cable Cutter",
+              "position": 1
+            },
+            {
+              "label": "Function",
+              "value": "8P Network Cable Crimper, Flat Cable Stripper",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-e993-crimping-tool",
+      "sourceProductCode": "46760",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-E993",
+        "Supports: 6P4C/4P2C, Cable Cutter",
+        "Blade Guard, Non-Slip Soft Rubber Handle",
+        "Compatible with Cat 5e/5 Cable Crimping Professional Tool",
+        "Function: 8P Network Cable Crimper, Flat Cable Stripper"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/onten-otn-e993-crimping-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/onten-otn-e993-crimping-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-e993-crimping-tool",
+        "candidateTitle": "Onten OTN-E993 Crimping Tool",
+        "attemptStem": "onten-otn-e993-crimping-tool"
+      }
+    },
+    {
+      "name": "Safenet 18-3010BL All-in-One Punch Down & Wire Trimmer",
+      "slug": "safenet-18-3010bl-wire-trimmer",
+      "type": "PHYSICAL",
+      "sku": "ST-47583",
+      "description": "<h2>Safenet 18-3010BL All-in-One Punch Down &amp; Wire Trimmer</h2><p>The Safenet <strong>18-3010BL</strong> All-in-One Punch Down &amp; Wire Trimmer is a professional-grade network and connectivity tool designed for efficient cable termination and clean wire management in IT, data center, and server environments. This all-in-one punch down tool allows precise wire seating and trimming in a single action, improving installation speed and accuracy. It supports VGA, DVI, HDMI, and DisplayPort (DP) server connectivity, making it suitable for multi-interface system setups, and features keyboard and mouse emulation for seamless operation during system configuration and maintenance. The Safenet 18-3010BL offers broad operating system compatibility, including Linux, Unix, macOS, Solaris (Sun), Red Hat, and Ubuntu, ensuring reliable performance across diverse platforms. Ideal for network technicians, system administrators, and professional installers, this punch down and wire trimmer tool delivers durability, versatility, and optimized performance for modern connectivity and cabling tasks.</p><h2>Buy Safenet 18-3010BL All-in-One Punch Down &amp; Wire Trimmer from Star Tech</h2><p>In Bangladesh, you can get original <strong>Safenet 18-3010BL Punch Down &amp; Wire Trimmer</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/crimping-tool\">Crimping Tool </a>to purchase. Order Online or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Safenet 18-3010BL All-in-One Punch Down &amp; Wire Trimmer comes with NO warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 18-3010BL</li><li>Type: Punch Down &amp; Wire Trimmer</li><li>Supports: VGA, DVI, HDMI, DP Port servers Connectivity</li><li>Compatible OS: Linux, Unix, Mac, Solaris (Sun), Redhat, Ubuntu</li><li>Support Keyboard and mouse emulation</li></ul>",
+      "model": "18-3010BL",
+      "warranty": "NO warranty",
+      "basePrice": 5500.0,
+      "originalPrice": 5900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Safenet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47583",
+          "price": 5500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 5280.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "18-3010BL",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "Punch Down & Wire Trimmer",
+              "position": 1
+            },
+            {
+              "label": "Supports",
+              "value": "VGA, DVI, HDMI, DP Port servers Connectivity",
+              "position": 2
+            },
+            {
+              "label": "Compatible OS",
+              "value": "Linux, Unix, Mac, Solaris (Sun), Redhat, Ubuntu",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/safenet-18-3010bl-wire-trimmer",
+      "sourceProductCode": "47583",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 18-3010BL",
+        "Type: Punch Down & Wire Trimmer",
+        "Supports: VGA, DVI, HDMI, DP Port servers Connectivity",
+        "Compatible OS: Linux, Unix, Mac, Solaris (Sun), Redhat, Ubuntu",
+        "Support Keyboard and mouse emulation"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/safenet-18-3010bl-wire-trimmer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/safenet-18-3010bl-wire-trimmer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "safenet-18-3010bl-wire-trimmer",
+        "candidateTitle": "Safenet 18-3010BL All-in-One Punch Down & Wire Trimmer",
+        "attemptStem": "safenet-18-3010bl-wire-trimmer"
+      }
+    },
+    {
+      "name": "Safenet 18-7000C Professional Crimping Tool with Ratchet",
+      "slug": "safenet-18-7000c-crimping-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-47584",
+      "description": "<h2>Safenet 18-7000C Professional Crimping Tool with Ratchet</h2><p>The Safenet <strong>18-7000C</strong> Professional Crimping Tool with Ratchet is a high-performance crimping solution engineered for network and connectivity professionals who require precision, reliability, and ease of use in cable installation and server infrastructure setups. Built with a robust ratchet mechanism, this crimping tool delivers consistent, secure terminations for a wide range of cable types and connectors, ensuring dependable performance in demanding environments. Designed to support VGA, DVI, HDMI, and DisplayPort (DP) server connectivity, the Safenet 18-7000C simplifies the crimping process across multiple interface standards commonly used in modern IT, audiovisual, and data center applications. Its flexibility is further enhanced with keyboard and mouse emulation support, enabling smooth integration during system configuration and troubleshooting. Compatible with major operating systems including Linux, Unix, macOS, Solaris (Sun), Red Hat, and Ubuntu, this professional crimping tool is ideal for system administrators, network engineers, and technical installers seeking a versatile, durable tool that delivers precise crimps and reliable connectivity every time.</p><h2>Buy Safenet 18-7000C Professional Crimping Tool with Ratchet from Star Tech</h2><p>In Bangladesh, you can get original <strong>Safenet 18-7000C Professional Crimping Tool with Ratchet</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/crimping-tool\">Crimping Tool </a>to purchase. Order Online or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Safenet 18-7000C Professional Crimping Tool with Ratchet comes with NO warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 18-7000C</li><li>Type: Crimping Tool</li><li>Supports: VGA, DVI, HDMI, DP Port servers Connectivity</li><li>Compatible OS: Linux, Unix, Mac, Solaris (Sun), Redhat, Ubuntu</li><li>Support Keyboard and mouse emulation</li></ul>",
+      "model": "18-7000C",
+      "warranty": "NO warranty",
+      "basePrice": 2200.0,
+      "originalPrice": 2350.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Safenet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47584",
+          "price": 2200.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2112.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "18-7000C",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "Crimping Tool",
+              "position": 1
+            },
+            {
+              "label": "Supports",
+              "value": "VGA, DVI, HDMI, DP Port servers Connectivity",
+              "position": 2
+            },
+            {
+              "label": "Compatible OS",
+              "value": "Linux, Unix, Mac, Solaris (Sun), Redhat, Ubuntu",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/safenet-18-7000c-crimping-tool",
+      "sourceProductCode": "47584",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 18-7000C",
+        "Type: Crimping Tool",
+        "Supports: VGA, DVI, HDMI, DP Port servers Connectivity",
+        "Compatible OS: Linux, Unix, Mac, Solaris (Sun), Redhat, Ubuntu",
+        "Support Keyboard and mouse emulation"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/safenet-18-7000c-crimping-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/safenet-18-7000c-crimping-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "safenet-18-7000c-crimping-tool",
+        "candidateTitle": "Safenet 18-7000C Professional Crimping Tool with Ratchet",
+        "attemptStem": "safenet-18-7000c-crimping-tool"
+      }
+    },
+    {
+      "name": "Tolsen 38049 7 Inch Automatic Wire Stripper",
+      "slug": "tolsen-38049-automatic-wire-stripper",
+      "type": "PHYSICAL",
+      "sku": "ST-51256",
+      "description": "<h2>Tolsen 38049 7 Inch Automatic Wire Stripper</h2><p>The Tolsen <strong>38049</strong> 7 Inch Automatic Wire Stripper measures 180mm, offering a compact and manageable overall length. It handles applicable wire diameters ranging from 1.0mm to 3.2mm effectively. This tool supports AWG sizes between 18 and 8, ensuring broad wiring compatibility. The Tolsen 38049 Automatic Wire Stripper covers a stripping range from AWG 10 through 22. Cross-section compatibility spans 0.6mm² to 2.6mm², making it genuinely versatile for various wires. </p><p>Crafted from hardened tool steel with blackening, this Tolsen 7 Inch Wire Stripper resists corrosion. Its durable construction ensures long-lasting performance under frequent daily use. This automatic wire stripper efficiently strips insulation without damaging the underlying wire strands. Built-in nippers allow convenient wire cutting without needing a separate cutting tool. Additional holes enable easy loop forming for terminal connections and wiring tasks. </p><p>The Tolsen 38049 Wire Stripper features two-component handles combining plastic and rubber materials. These handles include finger rests for improved grip and comfortable handling. This ergonomic design reduces hand fatigue during repetitive stripping and cutting tasks. Electricians, technicians, and DIY users benefit from this tool's multifunctional capabilities significantly. The Tolsen 38049 7 Inch Automatic Wire Stripper suits residential, automotive, and industrial wiring projects. </p><p>Its automatic mechanism simplifies stripping, saving time compared to manual wire strippers. This Tolsen Automatic Wire Stripper combines precision, durability, and comfort into one reliable tool. Whether for professional electrical work or home projects, this tool performs consistently well. The Tolsen 7 Inch Wire Stripper remains a trustworthy choice for demanding wiring tasks.</p><h2>Buy Tolsen 38049 7 Inch Automatic Wire Stripper from Star Tech</h2><p>In Bangladesh, you can get original <strong>Tolsen 38049 7 Inch Automatic Wire Stripper</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Crimping Tool</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Tolsen 38049 7 Inch Automatic Wire Stripper comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 38049</li><li>Size: 7 inch / 180mm, Self-Adjusting Mechanism</li><li>Hardened tool steel with blackening</li><li>Two-component (plastic + rubber) with finger rests</li><li>Applicable Wire Diameter: 1.0, 1.6, 2.0, 2.6, 3.2mm(18-8AWG)</li></ul>",
+      "model": "38049",
+      "warranty": "no warranty",
+      "basePrice": 800.0,
+      "originalPrice": 900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Tolsen",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "7 inch / 180mm, Self-Adjusting Mechanism",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51256",
+          "price": 800.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "7 inch / 180mm, Self-Adjusting Mechanism"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 768.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "38049",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "7 inch / 180mm, Self-Adjusting Mechanism",
+              "position": 1
+            },
+            {
+              "label": "Applicable Wire Diameter",
+              "value": "1.0, 1.6, 2.0, 2.6, 3.2mm(18-8AWG)",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tolsen-38049-automatic-wire-stripper",
+      "sourceProductCode": "51256",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 38049",
+        "Size: 7 inch / 180mm, Self-Adjusting Mechanism",
+        "Hardened tool steel with blackening",
+        "Two-component (plastic + rubber) with finger rests",
+        "Applicable Wire Diameter: 1.0, 1.6, 2.0, 2.6, 3.2mm(18-8AWG)"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/tolsen-38049-automatic-wire-stripper.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/tolsen-38049-automatic-wire-stripper.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tolsen-38049-automatic-wire-stripper",
+        "candidateTitle": "Tolsen 38049 7 Inch Automatic Wire Stripper",
+        "attemptStem": "tolsen-38049-automatic-wire-stripper"
+      }
+    },
+    {
+      "name": "Tolsen 38056 8.7 Inch Rachet Crimping Plier",
+      "slug": "tolsen-38056-87-inch-rachet-crimping-plier",
+      "type": "PHYSICAL",
+      "sku": "ST-51209",
+      "description": "<h2>Tolsen 38056 8.7 Inch Rachet Crimping Plier</h2><p>The Tolsen <strong>38056</strong> 8.7 Inch Rachet Crimping Plier delivers precise performance for electrical work. This Tolsen Crimping Plier features carbon steel construction with hardened and tempered jaws. Its ratchet mechanism ensures full-cycle crimping for consistent, dependable connections every time. Continuous crimping at preset tension guarantees accurate results without guesswork or inconsistency. This Tolsen 38056 Rachet Crimping Plier suits insulated terminals across multiple size standards. </p><p>It handles DIN sizes of 0.5-1.0, 1.5-2.5, and 4-6 mm² efficiently. AWG compatibility spans 22-18, 16-14, and 12-10 gauge ranges for versatile use. The chemically black finished surface offers strong resistance against corrosion and wear. This 8.7 Inch Crimping Plier measures 220mm, providing excellent leverage during crimping tasks. Comfortable PVC grips ensure a secure, non-slip hold throughout extended working sessions. As an Industrial Crimping Plier, it suits electricians, technicians, and maintenance professionals confidently. The hardened and tempered jaws deliver long-lasting durability under repeated daily use. </p><p>This Tolsen Crimping Tool ensures accurate, professional-grade results on every insulated terminal connection. Its preset tension mechanism eliminates inconsistent crimps common with standard manual pliers. The Tolsen 38056 8.7 Inch Rachet Crimping Plier remains reliable across demanding work environments. Whether for home projects or industrial applications, this tool performs consistently well. This Tolsen Crimping Plier combines durability, precision, and comfort into one dependable tool. Its ergonomic design reduces hand fatigue during repetitive crimping tasks throughout the day. The corrosion-resistant finish extends the tool's lifespan, even in humid conditions.</p><h2>Buy Tolsen 38056 8.7 Inch Rachet Crimping Plier from Star Tech</h2><p>In Bangladesh, you can get original <strong>Tolsen 38056 8.7 Inch Rachet Crimping Plier</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Crimping Tool </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Tolsen 38056 8.7 Inch Rachet Crimping Plier comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 38056</li><li>Size: 8.7&quot;/220mm DIN 0.5-6mm</li><li>Carbon steel with hardened and tempered jaws</li><li>Chemically black finished surface, PVC grips</li><li>For DIN 0.5-1.0 / 1.5-2.5 / 4-6 mm AWG 22-18 / 16-14 / 12-10</li></ul>",
+      "model": "38056",
+      "warranty": "no warranty",
+      "basePrice": 1250.0,
+      "originalPrice": 1350.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Tolsen",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "8.7\"/220mm DIN 0.5-6mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51209",
+          "price": 1250.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "8.7\"/220mm DIN 0.5-6mm"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "38056",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "8.7\"/220mm DIN 0.5-6mm",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tolsen-38056-87-inch-rachet-crimping-plier",
+      "sourceProductCode": "51209",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 38056",
+        "Size: 8.7\"/220mm DIN 0.5-6mm",
+        "Carbon steel with hardened and tempered jaws",
+        "Chemically black finished surface, PVC grips",
+        "For DIN 0.5-1.0 / 1.5-2.5 / 4-6 mm AWG 22-18 / 16-14 / 12-10"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/tolsen-38056-87-inch-rachet-crimping-plier.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/tolsen-38056-87-inch-rachet-crimping-plier.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tolsen-38056-87-inch-rachet-crimping-plier",
+        "candidateTitle": "Tolsen 38056 8.7 Inch Rachet Crimping Plier",
+        "attemptStem": "tolsen-38056-87-inch-rachet-crimping-plier"
+      }
+    },
+    {
+      "name": "Tolsen 38058 7 Inch Rachet Crimping Plier",
+      "slug": "tolsen-38058-7-inch-rachet-crimping-plier",
+      "type": "PHYSICAL",
+      "sku": "ST-51211",
+      "description": "<h2>Tolsen 38058 7 Inch Rachet Crimping Plier</h2><p>The Tolsen <strong>38058</strong> 7 Inch Rachet Crimping Plier features a wide wire gauge range of 0.25 to 10 mm². It supports AWG 23-7 terminals, making it versatile for various wiring needs. The Tolsen Crimping Plier includes self-adjustable pressure through a convenient star wheel. This mechanism prevents over-crimping while ensuring consistent, accurate connections every single time. Its ratchet mechanism guarantees full-cycle crimping for dependable, professional-grade results consistently. </p><p>The Tolsen 38058 Crimping Plier features an ABS ergonomic handle for comfortable, fatigue-free use. This design reduces hand strain during extended crimping sessions or repetitive tasks. A built-in safety lock secures the handles when squeezed, ensuring safe storage. The quick release trigger inside the handle allows effortless jaw opening. Precision crimping dies offer multiple jaw positions for different terminal sizes accurately. This Crimping Plier suits insulated terminals in red, blue, and yellow colors. It also handles non-insulated terminals, connectors, and bootlace ferrules efficiently. </p><p>The Tolsen 38058 7 Inch Rachet Crimping Plier proves useful for automotive electrical repairs. It also supports industrial control panel wiring and HVAC electrical connections reliably. DIY enthusiasts find this tool perfect for various home electrical projects too. Its self-adjustable pressure system eliminates guesswork, ensuring accurate crimps across different applications. The Tolsen 38058 7 Inch Crimping Plier combines safety, precision, and comfort into one tool. Whether for professional or home use, this tool performs consistently and reliably.</p><h2>Buy Tolsen 38058 7 Inch Rachet Crimping Plier from Star Tech</h2><p>In Bangladesh, you can get original <strong>Tolsen 38058 7 Inch Rachet Crimping Plier</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Crimping Tool</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Tolsen 38058 7 Inch Rachet Crimping Plier comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 38058</li><li>Size: 7 inch / 175mm, Safety Lock, Quick Release Trigger</li><li>Crimping Pressure: Self-Adjustable via Star Wheel</li><li>Applicable Wire Gauge: 0.25 to 10 mm² (AWG23-7)</li><li>ABS Ergonomic Handle, Self-Adjustable Pressure</li></ul>",
+      "model": "38058",
+      "warranty": "no warranty",
+      "basePrice": 1500.0,
+      "originalPrice": 1600.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Tolsen",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "7 inch / 175mm, Safety Lock, Quick Release Trigger",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51211",
+          "price": 1500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "7 inch / 175mm, Safety Lock, Quick Release Trigger"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1440.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "38058",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "7 inch / 175mm, Safety Lock, Quick Release Trigger",
+              "position": 1
+            },
+            {
+              "label": "Crimping Pressure",
+              "value": "Self-Adjustable via Star Wheel",
+              "position": 2
+            },
+            {
+              "label": "Applicable Wire Gauge",
+              "value": "0.25 to 10 mm² (AWG23-7)",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tolsen-38058-7-inch-rachet-crimping-plier",
+      "sourceProductCode": "51211",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 38058",
+        "Size: 7 inch / 175mm, Safety Lock, Quick Release Trigger",
+        "Crimping Pressure: Self-Adjustable via Star Wheel",
+        "Applicable Wire Gauge: 0.25 to 10 mm² (AWG23-7)",
+        "ABS Ergonomic Handle, Self-Adjustable Pressure"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/tolsen-38058-7-inch-rachet-crimping-plier.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/tolsen-38058-7-inch-rachet-crimping-plier.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tolsen-38058-7-inch-rachet-crimping-plier",
+        "candidateTitle": "Tolsen 38058 7 Inch Rachet Crimping Plier",
+        "attemptStem": "tolsen-38058-7-inch-rachet-crimping-plier"
+      }
+    },
+    {
+      "name": "TRENDnet TC-CT68 Crimping Tool",
+      "slug": "trendnet-tc-ct68-crimping-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-31468",
+      "description": "<h2>TRENDnet TC-CT68 Crimping Tool</h2><p>The TRENDnet<span style=\"font-weight: bold;\"> TC-CT68</span> Crimping Tool is a valuable tool for making your own network cables. It has one option for cutting and stripping flat cable and crimping two sizes of plugs: 8P/RJ-45 and 6P/RJ-12, RJ-11. The tool is composed of steel for long-lasting toughness and is finely ground for precise crimping. The gadget also has a built-in cutter and stripper for trimming the cable and removing the insulation. The TRENDnet TC-CT68 Crimping Tool is small and lightweight, making it easy to use. A ratchet mechanism locks the tool closed while not in use, limiting unintentional harm or damage. The TRENDnet TC-CT68 Crimping Tool is an excellent tool for anyone who wishes to easily and efficiently construct their own network connections.</p><h2>Buy TRENDnet TC-CT68 Crimping Tool from Star Tech</h2><p>In Bangladesh, you can get original  <span style=\"font-weight: bold;\">TRENDnet TC-CT68 Crimping Tool </span>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Crimping Tool</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" style=\"background-color: rgb(255, 255, 255);\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The TRENDnet TC-CT68 Crimping Tool comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TC-CT68</li><li>Functions for 8P/RJ-45 and 6P/RJ-12, RJ-11</li><li>Built-in cutter and stripper</li><li>Compact size, easy to handle</li><li>Crimps two sizes of plugs</li></ul>",
+      "model": "TC-CT68",
+      "warranty": "1 year warranty",
+      "basePrice": 2400.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "TRENDnet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-31468",
+          "price": 2400.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2304.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TC-CT68",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/trendnet-tc-ct68-crimping-tool",
+      "sourceProductCode": "31468",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TC-CT68",
+        "Functions for 8P/RJ-45 and 6P/RJ-12, RJ-11",
+        "Built-in cutter and stripper",
+        "Compact size, easy to handle",
+        "Crimps two sizes of plugs"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/trendnet-tc-ct68-crimping-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/trendnet-tc-ct68-crimping-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "trendnet-tc-ct68-crimping-tool",
+        "candidateTitle": "TRENDnet TC-CT68 Crimping Tool",
+        "attemptStem": "trendnet-tc-ct68-crimping-tool"
+      }
+    },
+    {
+      "name": "TRENDnet TC-PDT Punch Down Tool with 110 and Krone Blade",
+      "slug": "trendnet-tc-pdt-punch-down-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-32254",
+      "description": "<h2>TRENDnet TC-PDT Punch Down Tool</h2><p>The TRENDnet TC-PDT Punch Down Tool is a handy and professional tool that can help you insert and cut terminations in one simple operation. The TRENDnet TC-PDT Punch Down Tool has precision blades that are interchangeable and reversible between 110 and Krone standards and suit different types of cables and connectors. It also has an adjustable high and low actuation setting that can accommodate your termination requirements or preferences. The TRENDnet TC-PDT Punch Down Tool has a comfortable shape and an easy-to-handle comfort grip, reducing hand fatigue and increasing work efficiency. The TRENDnet TC-PDT tool also has a twist-and-lock style holder that provides fast and easy blade changes and prevents blade pullout. The tool also has safe storage for the spare blade, preventing blade loss and damage. </p><h2>Buy TRENDnet TC-PDT Punch Down Tool From Star Tech</h2><p>In Bangladesh, you can get original <strong>TRENDnet TC-PDT Punch Down Tool</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/gadget/daily-lifestyle\" target=\"\">Daily Lifestyle Gadget</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The TRENDnet TC-PDT Punch Down Tool comes with 1 Years Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TC-PDT</li><li>Comfortable Shape, Easy to Handle</li><li>Interchangeable and Reversible Blades</li><li>Safe Storage for Spare Blade</li><li>Twist and Lock Style Holder</li></ul>",
+      "model": "TC-PDT",
+      "warranty": "1 Years Warranty",
+      "basePrice": 3050.0,
+      "originalPrice": 3500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TRENDnet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-32254",
+          "price": 3050.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2928.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TC-PDT",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/trendnet-tc-pdt-punch-down-tool",
+      "sourceProductCode": "32254",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TC-PDT",
+        "Comfortable Shape, Easy to Handle",
+        "Interchangeable and Reversible Blades",
+        "Safe Storage for Spare Blade",
+        "Twist and Lock Style Holder"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/trendnet-tc-pdt-punch-down-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/trendnet-tc-pdt-punch-down-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "trendnet-tc-pdt-punch-down-tool",
+        "candidateTitle": "TRENDnet TC-PDT Punch Down Tool with 110 and Krone Blade",
+        "attemptStem": "trendnet-tc-pdt-punch-down-tool"
+      }
+    },
+    {
+      "name": "UGREEN NW136 Crimping Tool #70683",
+      "slug": "ugreen-nw136-crimping-tool",
+      "type": "PHYSICAL",
+      "sku": "70683",
+      "description": "<h2>UGREEN NW136 Crimping Tool #70683</h2><p>The UGREEN <strong>NW136</strong> Crimping Tool is a professional-grade, all-in-one solution for efficient network and telephone cable installation. This UGREEN NW136 <a href=\"https://www.startech.com.bd/crimping-tool\" style=\"color: rgb(0, 0, 0);\" target=\"\">Crimping Tool</a>, made with a Q235 carbon structural steel crimping head, has remarkable strength and durability, making it suitable for regular usage in both home and professional environments. Its versatile design allows users to crimp, cut, and strip 8P and 6P network and telephone cables with a single tool. The <strong>UGREEN NW136</strong> Crimping Tool works with a broad variety of modular plugs, including 8P8C (RJ45), 8P6C, 8P4C, 8P2C, 6P6C (RJ11), 6P4C, and 6P2C, making it perfect for a variety of cabling chores such as Ethernet connections and telephone wiring. The integrated flat and round cable strippers, as well as a cable cutter and blade guard, increase the adaptability and safety of any application. The UGREEN NW136 Crimping Tool's SK5 steel blades deliver precise, clean cuts and constant stripping performance, resulting in less wire damage during installation. The handle is made of TPE (thermoplastic elastomer), which provides a plush, non-slip grip for improved control and reduced fatigue. This makes the UGREEN NW136 Crimping Tool ideal for professionals that want consistent performance over lengthy durations. Its small size enables for convenient storage and transport, whether in a tool belt or equipment container. This UGREEN NW136 Crimping Tool makes it easier to set up home networks, rewire offices, and manage phone lines.</p><h2>Buy UGREEN NW136 Crimping Tool from Star Tech</h2><p>In Bangladesh, you can get original <strong>UGREEN NW136 Crimping Tool</strong> From Star Tech. We have a large collection of latest Ugreen <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Crimping Tool </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The UGREEN NW136 Crimping Tool comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 70683</li><li>Model: NW136</li><li>Crimp Port: 8P/6P, Cable Cutter</li><li>Blade Guard, Non-Slip Soft Rubber Handle</li><li>6P Telephone Line Crimper, Blade Guard</li><li>Function: 8P Network Cable Crimper, Flat Cable Stripper</li></ul>",
+      "model": "NW136",
+      "warranty": "no warranty",
+      "basePrice": 1200.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "70683",
+          "price": 1200.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1152.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "70683",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "NW136",
+              "position": 1
+            },
+            {
+              "label": "Crimp Port",
+              "value": "8P/6P, Cable Cutter",
+              "position": 2
+            },
+            {
+              "label": "Function",
+              "value": "8P Network Cable Crimper, Flat Cable Stripper",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-nw136-crimping-tool",
+      "sourceProductCode": "42751",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "70683",
+      "sourceKeyFeatures": [
+        "MPN: 70683",
+        "Model: NW136",
+        "Crimp Port: 8P/6P, Cable Cutter",
+        "Blade Guard, Non-Slip Soft Rubber Handle",
+        "6P Telephone Line Crimper, Blade Guard",
+        "Function: 8P Network Cable Crimper, Flat Cable Stripper"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/ugreen-nw136-crimping-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/ugreen-nw136-crimping-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-nw136-crimping-tool",
+        "candidateTitle": "UGREEN NW136 Crimping Tool #70683",
+        "attemptStem": "ugreen-nw136-crimping-tool"
+      }
+    },
+    {
+      "name": "Vention KEAB0 3 in 1 Multi-Function Cable Crimping Tool",
+      "slug": "vention-keab0-crimping-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-34892",
+      "description": "<h2>Vention KEAB0 3 in 1 Multi-Function Cable Crimping Tool</h2><p>The Vention <strong>KEAB0</strong> 3 in 1 Multi-Function Cable <a href=\"https://www.startech.com.bd/crimping-tool\" style=\"color: rgb(0, 0, 0);\" target=\"\">Crimping Tool</a> is an indispensable tool for anyone working in networking or telecommunications. With its dual 8P network cable and 6P phone head crimping ports, it provides flexible functionality to accommodate different kinds of cables and uses. Its exact placement guarantees consistent, accurate crimping, which in turn provides dependable connections. Because of its high-strength, hardened blade construction and sharp blades, the Vention KEAB0 Multi-Function Cable Crimping Tool performs exceptionally well while stripping and cutting cables. By offering a snug and comfortable grip, the antiskid handle improves user control and safety while in operation. Vention KEAB0 Multi-Use Cable Crimping Instrument Its sharpened blade provides easy cutting of flat cores and reduces the possibility of harming the interior cable core during stripping. Its standard port size also lowers the likelihood of plug breakage during crimping, guaranteeing reliable and long-lasting connections. The Vention KEAB0 cable crimping tool provides efficiency, dependability, and versatility for all your cable crimping needs, regardless of whether you're a professional installer or a do-it-yourself enthusiast.</p><h2>Buy Vention KEAB0 3 in 1 Multi-Function Cable Crimping Tool from Star Tech</h2><p>In Bangladesh, you can get original <strong>Vention KEAB0 3 in 1 Multi Function Cable Crimping Tool</strong> From Star Tech. We have a large collection of latest Vention <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Crimping Tool </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Vention KEAB0 3 in 1 Multi-Function Cable Crimping Tool comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: KEAB0</li><li>Multi-Function in one (Stripping, Cutting, and Crimping)</li><li>8P network cable crimping port</li><li>6P telephone head crimping port</li><li>Soft rubber handle, Sharp Blade</li></ul>",
+      "model": "KEAB0",
+      "warranty": "1 year warranty",
+      "basePrice": 1000.0,
+      "originalPrice": 1100.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34892",
+          "price": 1000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 960.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "KEAB0",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-keab0-crimping-tool",
+      "sourceProductCode": "34892",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: KEAB0",
+        "Multi-Function in one (Stripping, Cutting, and Crimping)",
+        "8P network cable crimping port",
+        "6P telephone head crimping port",
+        "Soft rubber handle, Sharp Blade"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/vention-keab0-crimping-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/vention-keab0-crimping-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-keab0-crimping-tool",
+        "candidateTitle": "Vention KEAB0 3 in 1 Multi-Function Cable Crimping Tool",
+        "attemptStem": "vention-keab0-crimping-tool"
+      }
+    },
+    {
+      "name": "Vention KEBL0 Blue Coaxial Cable Stripper",
+      "slug": "vention-kebl0-cable-stripper",
+      "type": "PHYSICAL",
+      "sku": "ST-47935",
+      "description": "<h2>Vention KEBL0 Blue Coaxial Cable Stripper</h2><p>The <strong>Vention KEBL0 Blue Coaxial Cable Stripper</strong> is a multifunctional tool designed for accurate cable cutting, shearing, and stripping in professional and home setups. It supports cable diameters from 3.2mm to 9.0mm, making it suitable for various coaxial and network cables. The tool includes a sharp blade and an adjustable screw position that helps control stripping depth with precision. Its double spring design ensures smooth operation and reduces hand fatigue during long tasks. The Vention KEBL0 Blue Coaxial Cable Stripper offers dedicated ports for twisted pair cables, flat network cables, and coaxial round cables. Users can place the cable in the correct port based on its outer diameter for clean and quick stripping. The stripping rotary buckle improves accuracy and helps maintain consistent results. The Vention KEBL0 Blue Coaxial Cable Stripper has a convertible knife set adds flexibility for different cable types and working situations. The non-slip handle features smooth ergonomic lines that provide a firm and comfortable grip during use. A labor-saving spring mechanism helps increase efficiency and reduces strain while performing repetitive tasks. The tool also includes a reliable cutting port that delivers clean edges without damaging the inner structure. Its compact and lightweight design makes it easy to store in toolboxes or carry on job sites. With durable construction and precise performance, the Vention KEBL0 Blue Coaxial Cable Stripper is an excellent choice for technicians, installers, and DIY users who need dependable cable preparation for networking and coaxial projects.</p><h2>Buy Vention KEBL0 Blue Coaxial Cable Stripper from Star Tech</h2><p>In Bangladesh, you can get original <strong>Vention KEBL0 Blue Coaxial Cable Stripper</strong> from Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Cable Stripper</a> to purchase. Order Online Or Visit your Nearest<a href=\"https://www.startech.com.bd\" target=\"\"> Star Tech Shop</a> to get yours at lowest price. The Vention KEBL0 Blue Coaxial Cable Stripper comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: KEBL0</li><li>Applicable Cable Diameter: 3.2-9.0mm</li><li>Multifunctional Cable Stripper: Shear, Cut, Strip</li><li>Screw position adjust, Sharp blade, Double spring design.</li><li>Stripping / Shearing Cable 2-in-1, Double Spring Design</li></ul>",
+      "model": "KEBL0",
+      "warranty": "1 year warranty",
+      "basePrice": 700.0,
+      "originalPrice": 750.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47935",
+          "price": 700.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 672.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "KEBL0",
+              "position": 0
+            },
+            {
+              "label": "Applicable Cable Diameter",
+              "value": "3.2-9.0mm",
+              "position": 1
+            },
+            {
+              "label": "Multifunctional Cable Stripper",
+              "value": "Shear, Cut, Strip",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-kebl0-cable-stripper",
+      "sourceProductCode": "47935",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: KEBL0",
+        "Applicable Cable Diameter: 3.2-9.0mm",
+        "Multifunctional Cable Stripper: Shear, Cut, Strip",
+        "Screw position adjust, Sharp blade, Double spring design.",
+        "Stripping / Shearing Cable 2-in-1, Double Spring Design"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/vention-kebl0-cable-stripper.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/vention-kebl0-cable-stripper.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-kebl0-cable-stripper",
+        "candidateTitle": "Vention KEBL0 Blue Coaxial Cable Stripper",
+        "attemptStem": "vention-kebl0-cable-stripper"
+      }
+    },
+    {
+      "name": "VENTION KECO0 Punch Down Impact Tool",
+      "slug": "vention-keco0-punch-down-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-52623",
+      "description": "<h2>VENTION KECO0 Punch Down Impact Tool</h2><p>The <strong>VENTION KECO0 Punch Down Impact Tool</strong> is a compact hand tool designed for precise and efficient wire termination tasks. Its punch down impact mechanism supports accurate cable placement during installation and maintenance work. This orange punch down tool features a double-blade design for greater flexibility during different termination requirements. The removable blade offers convenient handling, replacement, and storage when needed. Its sharp, wear-resistant blade supports clean and consistent wire insertion with repeated use. The durable blade construction helps maintain effective performance across various cabling applications. Weighing only 0.5 kg, the VENTION KECO0 remains lightweight enough for comfortable handling during extended installation tasks. Its compact dimensions measure 10 by 3.5 by 25 cm, supporting easy storage in toolboxes and work kits. This one-piece punch down impact tool suits network technicians, installers, electricians, and maintenance professionals. It can assist with structured cabling, telephone wiring, and network connection projects. The impact mechanism helps apply controlled pressure for accurate wire seating into compatible terminals. Its ergonomic size supports better control while working in confined installation areas. The removable double-blade configuration also provides added convenience during routine servicing and cable termination. Choose the VENTION KECO0 Punch Down Impact Tool for precise cable termination and organized network installation tasks.</p><h2>Buy VENTION KECO0 Punch Down Impact Tool From Star Tech</h2><p>In Bangladesh, you can get original <strong>VENTION KECO0 Punch Down Impact Tool</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/crimping-tool\" target=\"\">Crimping Tool</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The VENTION KECO0 Punch Down Impact Tool comes with 1 Years Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: KECO0</li><li>Product Type: Punch Down Impact Tool</li><li>Blade: Double-Blade Design</li><li>Removable blade, practical and convenient.</li><li>Sharp and Wear-resistant Blade</li></ul>",
+      "model": "KECO0",
+      "warranty": "1 Years Warranty",
+      "basePrice": 950.0,
+      "originalPrice": 1100.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TRENDnet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-52623",
+          "price": 950.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 912.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "KECO0",
+              "position": 0
+            },
+            {
+              "label": "Product Type",
+              "value": "Punch Down Impact Tool",
+              "position": 1
+            },
+            {
+              "label": "Blade",
+              "value": "Double-Blade Design",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-keco0-punch-down-tool",
+      "sourceProductCode": "52623",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: KECO0",
+        "Product Type: Punch Down Impact Tool",
+        "Blade: Double-Blade Design",
+        "Removable blade, practical and convenient.",
+        "Sharp and Wear-resistant Blade"
+      ],
+      "needsReview": false,
+      "categorySlug": "crimping-tool",
+      "image": "/images/products/networking/crimping-tool/vention-keco0-punch-down-tool.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/crimping-tool/vention-keco0-punch-down-tool.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-keco0-punch-down-tool",
+        "candidateTitle": "VENTION KECO0 Punch Down Impact Tool",
+        "attemptStem": "vention-keco0-punch-down-tool"
+      }
+    }
+  ]
+}

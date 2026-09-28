@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/networking",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\networking",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\networking",
+  "imagesFound": 1803,
+  "uniqueProductStems": 1798,
+  "productsInJson": 1798,
+  "matchedProducts": 1797,
+  "unmatchedProducts": 1,
+  "imageCoverage": 1803,
+  "jsonGroupFiles": 24,
+  "matchMethods": {
+    "direct-slug": 1795,
+    "unmatched": 1,
+    "search": 2
+  },
+  "jsonGenerationTimeSeconds": 917.5,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 1798,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\networking\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\networking\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\networking\\unmatched.json"
+  },
+  "seedTimeSeconds": 27.18
+}

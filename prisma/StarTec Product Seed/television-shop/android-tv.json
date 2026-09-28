@@ -1,0 +1,300 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/television-shop",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\television-shop",
+    "generatedAtUnix": 1790589618,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Television Shop",
+      "slug": "television-shop",
+      "parentSlug": null,
+      "image": "/images/products/television-shop/smart-tv/smart/smart-sel-65s224kks-65-inch-4k-android-tv.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Android TV",
+      "slug": "android-tv",
+      "parentSlug": "television-shop",
+      "image": "/images/products/television-shop/android-tv/smart/smart-sel-32g25f-tv.png",
+      "isActive": true,
+      "sortOrder": 1,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Smart",
+      "slug": "smart",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV",
+      "slug": "smart-sel-32g25f-tv",
+      "type": "PHYSICAL",
+      "sku": "ST-47625",
+      "description": "<h2>Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV</h2><p>The Smart <strong>SEL-32G25F</strong> Android Smart Google <a href=\"https://www.startech.com.bd/television-startech\" style=\"color: rgb(0, 0, 0);\" target=\"\">TV</a> boasts a 32-inch BOE panel with Full HD resolution of 1920 x 1080, ensuring clear details, rich colors, and a smooth 60Hz refresh rate for everyday viewing. The Smart SEL-32G25F 32\" FHD Smart TV has a brightness rating of 180±10% nits and 176-degree horizontal and vertical viewing angles, ensuring constant picture quality from any seat in the room. The Smart SEL-32G25F Smart Google TV, which runs Android 13, provides personalized content recommendations based on your tastes, making entertainment discovery simple and exciting. Built-in voice control with Google Assistant enables hands-free navigation, quick searches, and even smart home control, increasing ease in everyday use. With several HDMI connectors, USB ports, AV input, Ethernet compatibility, Wi-Fi, and Bluetooth, you can easily connect to gaming consoles, sound systems, and external storage devices. The Smart SEL-32G25F 32\" FHD Google TV boasts dual 10W stereo speakers powered by Dolby Audio MS12/AC-4 and Dolby Atmos, resulting in a cinema-like soundstage that enriches movies, shows, and music. Power efficiency is carefully balanced, with 75W consumed during FHD use and standby power usage at under 0.5W. With dependable performance, smart functionality, and a stylish style, the Smart SEL-32G25F 32\" FHD Android Smart Google TV is an excellent choice for bedrooms, living rooms, or flats. Whether streaming, browsing, or gaming, this Smart Google TV provides a seamless, user-friendly, and connected entertainment experience.</p><h2>Buy Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV from Star Tech</h2><p>In Bangladesh, you can get original <strong>Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV</strong> From Star Tech. We have a large collection of latest Smart <a href=\"https://www.startech.com.bd/television-startech\" target=\"\">TV </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV comes with 3-year panel and 2-year parts &amp; 5-year service warranty by Smart. Warranty card must be kept for warranty claims. For warranty, Call Smart at 09610977977. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SEL-32G25F</li><li>Screen: 32-inch, FHD (1920 x 1080), 60Hz</li><li>RAM: 1GB, ROM: 8GB, 2 x 10W Stereo Speakers</li><li>Connectivity: HDMI, USB, Ethernet, AV Input</li><li>Features: Dolby Vision, Dolby Atmos, Wi-Fi, Google Assistant</li></ul>",
+      "model": "SEL-32G25F",
+      "warranty": "3-year panel and 2-year parts & 5-year service warranty by Smart. Warranty card must be kept for warranty claims. For warranty, Call Smart at 09610977977. (Star Tech will not bear warranty claims).",
+      "basePrice": 23500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 6.28,
+      "dimensions": {
+        "length": 964.0,
+        "width": 95.0,
+        "height": 568.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Smart",
+      "variantOptions": [
+        {
+          "name": "Screen Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "32 inch",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "RAM",
+          "position": 1,
+          "values": [
+            {
+              "value": "1GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 2,
+          "values": [
+            {
+              "value": "8GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47625",
+          "price": 23500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Screen Size": "32 inch",
+            "RAM": "1GB",
+            "Storage": "8GB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 22560.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Display Type",
+              "value": "LED",
+              "position": 0
+            },
+            {
+              "label": "Screen Size",
+              "value": "32 inch",
+              "position": 1
+            },
+            {
+              "label": "Resolution",
+              "value": "FHD (1920 x 1080)",
+              "position": 2
+            },
+            {
+              "label": "Refresh rate",
+              "value": "60Hz",
+              "position": 3
+            },
+            {
+              "label": "Brightness",
+              "value": "180±10% nits",
+              "position": 4
+            },
+            {
+              "label": "Viewing angle",
+              "value": "176° (Horizontal) x 176° (Vertical)",
+              "position": 5
+            },
+            {
+              "label": "RAM",
+              "value": "1GB",
+              "position": 6
+            },
+            {
+              "label": "Storage",
+              "value": "8GB",
+              "position": 7
+            },
+            {
+              "label": "Operating System",
+              "value": "Google TV (Android 13)",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Connectivity",
+          "position": 1,
+          "items": [
+            {
+              "label": "USB",
+              "value": "1-2 (USB 2.0)",
+              "position": 0
+            },
+            {
+              "label": "HDMI",
+              "value": "2-3 (HDMI 1.4 or 2.0)",
+              "position": 1
+            },
+            {
+              "label": "Bluetooth",
+              "value": "Yes",
+              "position": 2
+            },
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "AV Input: Composite video and audio Ethernet Port: Yes",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Audio",
+          "position": 2,
+          "items": [
+            {
+              "label": "Audio Output",
+              "value": "Internal Audio Output",
+              "position": 0
+            },
+            {
+              "label": "Speaker System",
+              "value": "2 x 10W Stereo Speakers Dolby Audio MS12/AC-4 Dolby Atmos: Cinema-like audio experience",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 3,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "75W",
+              "position": 0
+            },
+            {
+              "label": "Standby Power Consumption",
+              "value": "≤0.5W",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 4,
+          "items": [
+            {
+              "label": "Dimension (L x W x H)",
+              "value": "Without Stand: 964mm x 95mm x 568mm With Stand: 964mm x 193mm x 600mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "Net Weight (without Stand): 6.28 kg Net Weight (with Stand): 6.4 kg",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 5,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3-year panel and 2-year parts & 5-year service warranty by Smart. Warranty card must be kept for warranty claims. For warranty, Call Smart at 09610977977. (Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-32g25f-tv",
+      "sourceProductCode": "47625",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SEL-32G25F",
+        "Screen: 32-inch, FHD (1920 x 1080), 60Hz",
+        "RAM: 1GB, ROM: 8GB, 2 x 10W Stereo Speakers",
+        "Connectivity: HDMI, USB, Ethernet, AV Input",
+        "Features: Dolby Vision, Dolby Atmos, Wi-Fi, Google Assistant"
+      ],
+      "needsReview": false,
+      "categorySlug": "android-tv",
+      "image": "/images/products/television-shop/android-tv/smart/smart-sel-32g25f-tv.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/television-shop/all-tv/smart/smart-sel-32g25f-tv.png",
+        "/images/products/television-shop/android-tv/smart/smart-sel-32g25f-tv.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "smart-sel-32g25f-tv",
+        "candidateTitle": "Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV",
+        "attemptStem": "smart-sel-32g25f-tv"
+      }
+    }
+  ]
+}

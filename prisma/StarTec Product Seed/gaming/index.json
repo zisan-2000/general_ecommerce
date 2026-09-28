@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/gaming",
+  "imageFolder": "/images/products/gaming",
+  "groups": [
+    {
+      "name": "_direct",
+      "file": "_direct.json",
+      "status": "completed",
+      "products": 75,
+      "matched": 75,
+      "unmatched": 0
+    },
+    {
+      "name": "gamepad",
+      "file": "gamepad.json",
+      "status": "completed",
+      "products": 150,
+      "matched": 150,
+      "unmatched": 0
+    },
+    {
+      "name": "games",
+      "file": "games.json",
+      "status": "completed",
+      "products": 4,
+      "matched": 4,
+      "unmatched": 0
+    },
+    {
+      "name": "gaming-chair",
+      "file": "gaming-chair.json",
+      "status": "completed",
+      "products": 56,
+      "matched": 56,
+      "unmatched": 0
+    },
+    {
+      "name": "gaming-console",
+      "file": "gaming-console.json",
+      "status": "completed",
+      "products": 45,
+      "matched": 45,
+      "unmatched": 0
+    },
+    {
+      "name": "gaming-desk",
+      "file": "gaming-desk.json",
+      "status": "completed",
+      "products": 7,
+      "matched": 7,
+      "unmatched": 0
+    },
+    {
+      "name": "headphone",
+      "file": "headphone.json",
+      "status": "completed",
+      "products": 212,
+      "matched": 212,
+      "unmatched": 0
+    },
+    {
+      "name": "keyboard",
+      "file": "keyboard.json",
+      "status": "completed",
+      "products": 458,
+      "matched": 458,
+      "unmatched": 0
+    },
+    {
+      "name": "mouse",
+      "file": "mouse.json",
+      "status": "completed",
+      "products": 365,
+      "matched": 365,
+      "unmatched": 0
+    },
+    {
+      "name": "mouse-pad",
+      "file": "mouse-pad.json",
+      "status": "completed",
+      "products": 81,
+      "matched": 81,
+      "unmatched": 0
+    },
+    {
+      "name": "racing-wheel",
+      "file": "racing-wheel.json",
+      "status": "completed",
+      "products": 11,
+      "matched": 11,
+      "unmatched": 0
+    },
+    {
+      "name": "vr",
+      "file": "vr.json",
+      "status": "completed",
+      "products": 20,
+      "matched": 20,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790588492
+}

@@ -1,0 +1,1387 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/software",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\software",
+    "generatedAtUnix": 1790589365,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Software",
+      "slug": "software",
+      "parentSlug": null,
+      "image": "/images/products/software/adobe/adobe-acrobat-pro-dc-for-teams.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Antivirus",
+      "slug": "antivirus",
+      "parentSlug": "software",
+      "image": "/images/products/software/antivirus/eset-cyber-security-pro-internet-security-for-mac.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Eset",
+      "slug": "eset",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "ESET Cyber Security Pro Internet Security for Mac",
+      "slug": "eset-cyber-security-pro-internet-security-for-mac",
+      "type": "PHYSICAL",
+      "sku": "ST-1746",
+      "description": "<h2 style=\"text-align: justify; \">ESET Cyber Security Pro Internet Security for Mac</h2><div style=\"text-align: justify; \">ESET Cyber Security Pro Internet Security for Mac adds layers of protection with Firewall and Parental Control and is built for speed, to safely navigate to your destination. It offers Antivirus, Antispyware, Cloud-powered Scanning, Anti-Phishing, Personal Firewall, Parental Control, Social Media Scanner, Removable Media Control, Small System Footprint, and Presentation Mode. ESET Cyber Security Pro is found to be an excellent anti-malware solution for Mac OS X.<br/></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESET Cyber Security Pro</li><li>Removable Media Control</li><li>Personal Firewall</li><li>Anti-Phishing</li></ul>",
+      "model": "ESET Cyber Security Pro",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-1746",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ESET Cyber Security Pro",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-cyber-security-pro-internet-security-for-mac",
+      "sourceProductCode": "1746",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESET Cyber Security Pro",
+        "Removable Media Control",
+        "Personal Firewall",
+        "Anti-Phishing"
+      ],
+      "needsReview": true,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-cyber-security-pro-internet-security-for-mac.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-cyber-security-pro-internet-security-for-mac.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-cyber-security-pro-internet-security-for-mac",
+        "candidateTitle": "ESET Cyber Security Pro Internet Security for Mac",
+        "attemptStem": "eset-cyber-security-pro-internet-security-for-mac"
+      }
+    },
+    {
+      "name": "Eset Endpoint Encryption (Volume 05 to As per Customer Requirement)",
+      "slug": "eset-endpoint-encryption",
+      "type": "PHYSICAL",
+      "sku": "ST-20987",
+      "description": "<h2 style=\"text-align: justify; \">Eset Endpoint Encryption (Volume 05 to As per Customer Requirement)</h2><div style=\"text-align: justify; \"><div>The ESET Endpoint encryption is an essential tool for data security, providing encryption of files and disks on the organizationâ€™s endpoint devices. This prevents the data from being readable and misused, should they fall in the wrong hands. It is simple-to-use encryption for companies large and small, which supports full disk encryption (FDE), file/ folder encryption, email encryption, and USB encryption.</div><div><br/></div></div><div style=\"text-align: justify; \"><span style=\"background-color: yellow; font-weight: bold;\">Note: Price Given For Individual Item.</span><br/></div><p></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Endpoint Encryption</li><li>Full Disk Encryption Encrypt</li><li>Removable Media Encryption</li><li>File &amp; Folder Encryption</li><li>Manage Devices anywhere</li></ul>",
+      "model": "Endpoint Encryption",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-20987",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Endpoint Encryption",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-endpoint-encryption",
+      "sourceProductCode": "20987",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Endpoint Encryption",
+        "Full Disk Encryption Encrypt",
+        "Removable Media Encryption",
+        "File & Folder Encryption",
+        "Manage Devices anywhere"
+      ],
+      "needsReview": true,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-endpoint-encryption.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-endpoint-encryption.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-endpoint-encryption",
+        "candidateTitle": "Eset Endpoint Encryption (Volume 05 to As per Customer Requirement)",
+        "attemptStem": "eset-endpoint-encryption"
+      }
+    },
+    {
+      "name": "Eset Endpoint Security E-License (Volume 05 to As per Customer Requirement)",
+      "slug": "eset-endpoint-protection-advance",
+      "type": "PHYSICAL",
+      "sku": "ST-4102",
+      "description": "<h2 style=\"text-align: justify; \">Eset Endpoint Security E-License (Volume 05 to As per Customer Requirement)</h2><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\">Endpoint Antivirus:</span> <span style=\"font-size: 12px;\">Provides robust Antivirus and Antispyware protection, whether your endpoints run Windows or OS X. Our award-winning Anti-Phishing engine protects sensitive company information, such as usernames and passwords, against fake websites. The other advanced technologies inside include Cloud-Powered Scanning, Device Control, and more.</span></div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\">EMobile Security:</span> <span style=\"font-size: 12px;\">ESET NOD32Â® proactive technology, which is optimized for mobile platforms, delivers real-time protection to shield all your applications and files on Android devices, and includes Anti-Phishing and Application Control. For iOS devices, you can remotely push settings and restrictions to boost the security of your iOS mobile fleet. Anti-Theft lets you remotely lock/unlock, or wipe all data, from both Android and iOS devices.</span></div><div style=\"text-align: justify; \"><span style=\"font-size: 12px; font-weight: bold;\">Virtualization Security: </span><span style=\"font-size: 12px;\">Whether you use VMware or another virtualization solution, you can rely on ESET protection to keep your VMs secure. With ESET Shared Local Cache and the protection of an agent-based ESET security product, you get significantly boosted scanning speed.</span></div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\">File Security: </span><span style=\"font-size: 12px;\">Antivirus and Antispyware protection eliminates all types of threats, including viruses, rootkits, worms and spyware. Advanced Memory Scanner monitors the behavior of malicious processes, while optional cloud-powered scanning ensures even better performance and detection.</span></div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\">Endpoint Security:</span> <span style=\"font-size: 12px;\">ESET Endpoint Security delivers all the benefits of ESET Endpoint Antivirus, plus Two-Way Firewall, Web Control, Botnet Protection, and more. With this solution you have the option of installing either ESET Endpoint Security or ESET Endpoint Antivirus on individual endpoints, whether they run Windows or OS X, as you choose</span></div><div style=\"text-align: justify; \"><span style=\"font-weight: bold;\">Remote Management:</span> <span style=\"font-size: 12px;\">Whether you are running Windows, Mac, or Linux endpoints, or even virtual machines and smartphones, you can manage company security from one point. Install security software remotely and get at-a-glance network security overviews.</span></div><div style=\"text-align: justify; font-weight: bold;\"><br/></div><p></p><p style=\"text-align: justify; \"><span style=\"font-size: 12px; background-color: yellow;\">Note: Price Given For Individual Item.</span><br/></p><p></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESET Endpoint Protection Advance</li><li>Anti-malware protection</li><li>Advanced memory scanner</li><li>Ransomware Protection</li><li>Server Protection</li></ul>",
+      "model": "ESET Endpoint Protection Advance",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-4102",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ESET Endpoint Protection Advance",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-endpoint-protection-advance",
+      "sourceProductCode": "4102",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESET Endpoint Protection Advance",
+        "Anti-malware protection",
+        "Advanced memory scanner",
+        "Ransomware Protection",
+        "Server Protection"
+      ],
+      "needsReview": true,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-endpoint-protection-advance.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-endpoint-protection-advance.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-endpoint-protection-advance",
+        "candidateTitle": "Eset Endpoint Security E-License (Volume 05 to As per Customer Requirement)",
+        "attemptStem": "eset-endpoint-protection-advance"
+      }
+    },
+    {
+      "name": "ESET Home Office Security Pack New 1-year 10-user",
+      "slug": "eset-home-office-security-pack-new-1-year-10-user",
+      "type": "PHYSICAL",
+      "sku": "ST-2217",
+      "description": "<p>Office Pack includes: Endpoint Security or Endpoint Antivirus (10 seats); Endpoint Security for Mobile (5 seats); File Security (1 server)</p>\n<div class=\"feature\">\n<h3><b>Combine Your Security Options</b></h3>\n<p>No matter the operating system on your computers or smartphones, protect them all. File Server and Endpoint Protection for Windows, OS X, Linux or Android as you need, without wasting a single license.</p>\n<div class=\"feature\">\n<h3><b>Manage Security Efficiently</b></h3>\n<p>Freeing up valuable IT resources, you can manage network security from one console. The solutionâ€™s small system footprint extends lifetime of older machines.</p>\n<div class=\"feature\">\n<h3><b>Always the Latest Protection</b></h3>\n<p>If there is a newer version of the installed products, upgrade for free. You will always have access to the latest technology. New computer in the network? Transfer the license and stay protected.</p>\n<div class=\"feature\">\n<h3><b>Mail Security</b></h3>\n<p>Secures company mail traffic with proven detection technology. Protects the whole server â€“ mailboxes and the server environment, no matter the operating system.</p>\n</div>\n</div>\n</div>\n</div>\n<div id=\"__if72ru4sdfsdfruh7fewui_once\" style=\"display:none;\"> </div>\n<div id=\"__hggasdgjhsagd_once\" style=\"display:none;\"> </div>\n<div id=\"__if72ru4rkjahiuyi_once\" style=\"display:none;\"> </div>\n<div id=\"__if72ru4rkjahiuyi_once\" style=\"display:none;\"> </div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESET Home Office Security Pack</li><li>Low System Demands</li><li>Remote Management</li><li>Mail Security</li></ul>",
+      "model": "ESET Home Office Security Pack",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-2217",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ESET Home Office Security Pack",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-home-office-security-pack-new-1-year-10-user",
+      "sourceProductCode": "2217",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESET Home Office Security Pack",
+        "Low System Demands",
+        "Remote Management",
+        "Mail Security"
+      ],
+      "needsReview": true,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-home-office-security-pack-new-1-year-10-user.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-home-office-security-pack-new-1-year-10-user.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-home-office-security-pack-new-1-year-10-user",
+        "candidateTitle": "ESET Home Office Security Pack New 1-year 10-user",
+        "attemptStem": "eset-home-office-security-pack-new-1-year-10-user"
+      }
+    },
+    {
+      "name": "ESET Home Security Essential 2 User for 1 Year",
+      "slug": "eset-home-security-essential-2-user-for-1-year",
+      "type": "PHYSICAL",
+      "sku": "ST-25990",
+      "description": "<h2>ESET Home Security Essential 2 User for 1 Year</h2><p>The ESETs award-winning detection technology gives a great opportunity to explore online securely. It's curated by more than 110- million users in the world. This can detect and neutralize all types of digital threats. It also guards against evasion strategies and inhibits targeted assaults and exploits. This anti-virus prevents malware from spreading and gives user protection against all kinds of online and offline threats. Another feature is this can give you protection from block attacks for web browsers, pdf readers, and also other applications. Java-based software is also included here. Here an advanced memory scanner improved the detection of persistent malware. This antivirus assures to stop unknown malware automatically. It works on the base of the ESET live grid file reputation database and comparing with a cloud-based reputation system. It also scans the file while downloading. It scans your computer deeply while the computer is not used and can detect harmful inactive threats before this threat turns into damage. This anti-virus detects attacks by using malicious scripts which can attack windows and PowerShell. Malicious java-script is also detected by this anti-virus which can attack users' browsers. Mozilla Firefox, Google Chrome, Microsoft Internet Explorer, and Microsoft Edge browsers are supported by this anti-virus. It allows you to customize the system and also a way to specify the rule for the system registry, active processes, and security posture.</p><h3>Enjoy the Full Power Of Your Computer</h3>The ESET internet security offers you to work, play, and browse your internet without interruption. This can fit with any kind of system environment and can save internet bandwidth. It can maintain performance and can enhance the lifetime of hardware. If any program is run with a full-scree, the ESET internet security goes to silent mode automatically. The amazing part is it can postpone all the non-actionable pop-up windows, updates, and system-hungry activities and conserve the system resources. For this, you can stay connected online and unplugged for longer.<p></p><h3>Protect Your Privacy</h3><p>The ESET internet security gives you security by protecting your password from hackers and gives you a safe way to do your online banking and payment. You can keep your webcam and home wifi secured by using this. To save your data and enjoy a safer connection, ESET internet security can be a great choice. It allows you to check your home router for flaws like weak passwords or outdated firmware and provides you with repair alternatives. It also gives you a simple way to see a list of all the smartphones, IoT devices, and other things that are connected to the router. This anti-virus helps you to prevent unauthorized access to your computer. A special feature that helps you from keylogger and also gives you a secured browser for internet baking sites is given by this. An additional layer of security guards against botnet malware, preventing network attacks and spam from being exploited on your computer. Network Signatures provide a new type of detection for even quicker blocking of fraudulent traffic. It has an alert system that alerts you while connecting to an unknown network. Then it switches to the protection mode which makes your device invisible to another computer that is connected to the same network.</p><h3>Your Kids Are Safe On The Internet</h3><p>Nowadays, safe internet for kinds is essential. To protect your children from online unwanted activities, this ESET internet security can give you a great opportunity. It gives you a way that is parental control. It prevents your child from offensive online content and blocks more than 20 website categories. It gives you the option to choose categories and gives you a way to set a password. It prevents unauthorized product uninstallation.</p><h3>Anti-Theft - Stay safer by tracking and locating your missing compute</h3><p>The ESET Internet security system protects your laptop when it gets stolen. You can start automatic monitoring by marking a device as missing using the ESET Anti-Theft online interface at my.eset.com. When the device comes online, it displays the position of the area on the map that is based on wifi networks. It collects all the snapshots of the missing laptop screen via a built camera. This anti-virus makes an easy way to configure Windows auto-login and operating system account passwords. You can modify the key system settings which help you to increase the security level.</p><h3>Install and forget, or customize to meet your exact requirements</h3><p>The ESET Internet Security informs you of potential security problems and enables you to take quick action on them from the main screen. Its slick user interface is made to make setting up all normal activities simple for you. Additionally, you have access to more than 150 technical parameters to fine-tune your security posture. It gives you a one-click solution. This security system also has product upgradation. ESET Internet Security offers a user an in-depth security setting. It allows the definition of maximum scanning depth, scanning time, size of the scanned files and archives, and much more. ESET Internet Security gives a sophisticated diagnostic tool. This tool gathers essential data from the system to solve a variety of security and compatibility issues.</p><h2 style='font-family: \"Open Sans\", sans-serif; color: rgb(102, 102, 102);'>Buy ESET Internet Security 2 User for 1 Year from the best Antivirus Shop in Bangladesh: Star Tech</h2><p>In Bangladesh, you can get the original ESET Home Security Essential 2 User for 1 Year From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/software/antivirus\" target=\"\">ESET Internet Security</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>, <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\" target=\"\">Laptop</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The ESET Home Security Essential 2 User comes with 1 Year of warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESET Home Security Essential</li><li>Award-winning antivirus</li><li>Secures your financial transactions</li><li>Prevents malware</li><li>Personal firewall</li></ul>",
+      "model": "ESET Home Security Essential",
+      "warranty": "1 Year of warranty",
+      "basePrice": 899.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-25990",
+          "price": 899.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 863.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Operating System",
+              "value": "WINDOWS Microsoft Windows® 10, 8.1, 8, 7 with SP1 and latest KB updates installed MAC macOS 10.15 (Catalina), macOS 10.14 (Mojave), macOS 10.13 (High Sierra), macOS 10.12.x (Sierra), OS X 10.11.x (El Capitan), OS X 10.10.x (Yosemite), OS X 10.9.x (Mavericks) ANDROID Android 4.0 and higher * (*ESTV AndroidTV 7.0 and higher) LINUX Debian, RedHat, Ubuntu, OpenSuSe, Fedora, Mandriva and a majority of RPM and DEB distributions",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 1,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "2 User",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "01-Year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-home-security-essential-2-user-for-1-year",
+      "sourceProductCode": "25990",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESET Home Security Essential",
+        "Award-winning antivirus",
+        "Secures your financial transactions",
+        "Prevents malware",
+        "Personal firewall"
+      ],
+      "needsReview": false,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-home-security-essential-2-user-for-1-year.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-home-security-essential-2-user-for-1-year.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-home-security-essential-2-user-for-1-year",
+        "candidateTitle": "ESET Home Security Essential 2 User for 1 Year",
+        "attemptStem": "eset-home-security-essential-2-user-for-1-year"
+      }
+    },
+    {
+      "name": "ESET Home Security Essential Internet Security for 1 User 1 Year",
+      "slug": "eset-home-security-essential-antivirus",
+      "type": "PHYSICAL",
+      "sku": "ST-34621",
+      "description": "<h2>ESET Home Security Essential Internet Security for 1 User 1 Year</h2><p>The ESET <strong>Home Security Essential</strong> Antivirus provides complete protection for users across many platforms, including 24/7 real-time defense against a wide range of cyber threats. Users may enjoy continuous productivity while protecting their devices from malware, spyware, and phishing attempts with quick scans that run smoothly in the background. The program secures every facet of customers' digital lives by extending its protection to smartphones and smart homes. Proactive defensive mechanisms like Exploit Blocker and Advanced Machine Learning offer proactive security against ever-evolving threats, while Anti-Phishing, Ransomware Shield, and Script-Based Attack Protection reinforce security against them. Extra features like cloud-powered scanning, gamer mode, and UEFI scanning improve the user experience without slowing down the machine. With capabilities like firewall, network attack prevention, antispam, and safe banking, the software also provides multi-platform protection for Android, Windows, and macOS devices. Features like Network Inspector, Webcam Protection, Browser Privacy &amp; Security, and Safe Browsing all address privacy concerns. Families may feel secure knowing that parental control and anti-theft features are in place, while brute force attack protection offers strong security against unwanted access attempts. In today's digital world, ESET Home Security Essential Antivirus offers users complete protection and peace of mind with free help in local languages and frequent security reports.</p><h3>24/7 real-time protection</h3><p>The ESET Home Security Essential provides proactive antivirus protection against all forms of malware, including viruses, trojans, worms, and spyware. To stop identity theft and improper use of your personal information, anti-phishing software prevents websites that attempt to obtain it. Malware that attempts to lock you out of your data and demand a \"ransom\" payment is blocked by Ransomware Shield. Device Control stops sending unwanted copies of your personal information to external devices. Our protection's artificial intelligence detects sophisticated, never-before-seen malware with negligible performance impact. For a constant high degree of security, seamless product updates, make sure you take advantage of new protection technologies as soon as they become available. ESET uses multilayered technological solutions that combine human expertise and artificial intelligence with a prevention-first philosophy.</p><h3>Non-stop safe banking &amp; browsing</h3><p>The ESET Home Security Essential Antivirus comes with a secure browser mode, which is available for popular browsers, provides automated security when banking online and accessing web-based cryptocurrency wallets. Additionally encrypted is the communication between the keyboard and browser, guaranteeing secure transactions and defense against keyloggers. Protect your online activity by using a browser that is protected. By guarding against viruses, keylogging, and other online dangers, this feature provides an extra degree of browsing security.</p><h3>Identity protection</h3><p>ESET Home Security Essential Antivirus scans thousands of websites, including the Dark Web, black market chat rooms, blogs, and other data sources, to detect illicit trade and sale of your personal information. To enable you to act right away, our cutting-edge technology sends timely warnings.</p><h3>Virtual Private Network (VPN)</h3><p>Using the ESET Home Security Essential Antivirus, you can establish a private and secure connection over open networks like the internet. Since all of the data is encrypted during transmission between your device and the VPN server, any attempt to intercept it will be thwarted. For instance, if you use a coffee shop or airport's public Wi-Fi network, hackers connected to the same network may be able to intercept your data. However, when you use a VPN, your data is secured and encrypted, making it far more difficult for someone to access or intercept it.</p><h2>Buy ESET Home Security Essential Antivirus for 1 User 1 Year from Star Tech</h2><p>In Bangladesh, you can get original <strong>ESET Home Security Essential Antivirus for 1 User 1 Year</strong> From Star Tech. We have a large collection of latest ESET <a href=\"https://www.startech.com.bd/software/antivirus\" target=\"\">Antivirus </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The ESET Home Security Essential Antivirus comes with a 1 year license.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Home Security Essential</li><li>24/7 real-time protection</li><li>Fast scans without interruptions</li><li>Non-stop safe banking &amp; browsing</li><li>Protected smartphones and smartphones</li></ul>",
+      "model": "Home Security Essential",
+      "warranty": null,
+      "basePrice": 750.0,
+      "originalPrice": 825.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34621",
+          "price": 750.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Subscription",
+          "position": 0,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "1 User",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 Year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-home-security-essential-antivirus",
+      "sourceProductCode": "34621",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Home Security Essential",
+        "24/7 real-time protection",
+        "Fast scans without interruptions",
+        "Non-stop safe banking & browsing",
+        "Protected smartphones and smartphones"
+      ],
+      "needsReview": false,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-home-security-essential-antivirus.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-home-security-essential-antivirus.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-home-security-essential-antivirus",
+        "candidateTitle": "ESET Home Security Essential Internet Security for 1 User 1 Year",
+        "attemptStem": "eset-home-security-essential-antivirus"
+      }
+    },
+    {
+      "name": "ESET Internet Security 3 User for 1 Year",
+      "slug": "eset-internet-security-3-user-for-1-year",
+      "type": "PHYSICAL",
+      "sku": "ST-25991",
+      "description": "<h2 style=\"text-align: justify; \">ESET Internet Security 3 User for 1</h2><p style=\"text-align: justify;\">The ESETs award-winning detection technology gives a great opportunity to explore online securely. It's curated by more than 110- million users in the world. This can detect and neutralize all types of digital threats. It also guards against evasion strategies and inhibits targeted assaults and exploits. This anti-virus prevents malware from spreading and gives user protection against all kinds of online and offline threats. Another feature is this can give you protection from block attacks for web browsers, pdf readers, and also other applications. Java-based software is also included here. Here an advanced memory scanner improved the detection of persistent malware. This antivirus assures to stop unknown malware automatically. It works on the base of the ESET live grid file reputation database and comparing with a cloud-based reputation system. It also scans the file while downloading. It scans your computer deeply while the computer is not used and can detect harmful inactive threats before this threat turns into damage. This anti-virus detects attacks by using malicious scripts which can attack windows and PowerShell. Malicious java-script is also detected by this anti-virus which can attack users' browsers. Mozilla Firefox, Google Chrome, Microsoft Internet Explorer, and Microsoft Edge browsers are supported by this anti-virus. It allows you to customize the system and also a way to specify the rule for the system registry, active processes, and security posture.</p><h3 style=\"text-align: justify;\">Enjoy the Full Power Of Your Computer</h3><div style=\"text-align: justify;\">The ESET internet security offers you to work, play, and browse your internet without interruption. This can fit with any kind of system environment and can save internet bandwidth. It can maintain performance and can enhance the lifetime of hardware. If any program is run with a full-scree, the ESET internet security goes to silent mode automatically. The amazing part is it can postpone all the non-actionable pop-up windows, updates, and system-hungry activities and conserve the system resources. For this, you can stay connected online and unplugged for longer.</div><p></p><h3 style=\"text-align: justify;\">Protect Your Privacy</h3><p style=\"text-align: justify;\">The ESET internet security gives you security by protecting your password from hackers and gives you a safe way to do your online banking and payment. You can keep your webcam and home wifi secured by using this. To save your data and enjoy a safer connection, ESET internet security can be a great choice. It allows you to check your home router for flaws like weak passwords or outdated firmware and provides you with repair alternatives. It also gives you a simple way to see a list of all the smartphones, IoT devices, and other things that are connected to the router. This anti-virus helps you to prevent unauthorized access to your computer. A special feature that helps you from keylogger and also gives you a secured browser for internet baking sites is given by this. An additional layer of security guards against botnet malware, preventing network attacks and spam from being exploited on your computer. Network Signatures provide a new type of detection for even quicker blocking of fraudulent traffic. It has an alert system that alerts you while connecting to an unknown network. Then it switches to the protection mode which makes your device invisible to another computer that is connected to the same network.</p><h3 style=\"text-align: justify;\">Your Kids Are Safe On The Internet</h3><p style=\"text-align: justify;\">Nowadays, safe internet for kinds is essential. To protect your children from online unwanted activities, this ESET internet security can give you a great opportunity. It gives you a way that is parental control. It prevents your child from offensive online content and blocks more than 20 website categories. It gives you the option to choose categories and gives you a way to set a password. It prevents unauthorized product uninstallation.</p><h3 style=\"text-align: justify;\">Anti-Theft - Stay safer by tracking and locating your missing compute</h3><p style=\"text-align: justify;\">The ESET Internet security system protects your laptop when it gets stolen. You can start automatic monitoring by marking a device as missing using the ESET Anti-Theft online interface at my.eset.com. When the device comes online, it displays the position of the area on the map that is based on wifi networks. It collects all the snapshots of the missing laptop screen via a built camera. This anti-virus makes an easy way to configure Windows auto-login and operating system account passwords. You can modify the key system settings which help you to increase the security level.</p><h3 style=\"text-align: justify;\">Install and forget, or customize to meet your exact requirements</h3><p style=\"text-align: justify;\">The ESET Internet Security informs you of potential security problems and enables you to take quick action on them from the main screen. Its slick user interface is made to make setting up all normal activities simple for you. Additionally, you have access to more than 150 technical parameters to fine-tune your security posture. It gives you a one-click solution. This security system also has product upgradation. ESET Internet Security offers a user an in-depth security setting. It allows the definition of maximum scanning depth, scanning time, size of the scanned files and archives, and much more. ESET Internet Security gives a sophisticated diagnostic tool. This tool gathers essential data from the system to solve a variety of security and compatibility issues.</p><h3 style='font-family: \"Open Sans\", sans-serif; color: rgb(102, 102, 102);'>Buy ESET Internet Security 3 User for 1 Year with a Free ESET Backpack from the best Internet Security Shop in Bangladesh: Star Tech</h3><p>In Bangladesh, you can get the original Maono ESET Internet Security 3 User for 1 Year with a Free ESET Backpack from Star Tech. We have a large collection of the latest ESET Antivirus to purchase for your Desktop PC, Laptop. Order online or visit your nearest <a href=\"https://www.startech.com.bd/netac-sa500-120-gb-ssd\" target=\"\">Star Tech shop</a> to get yours at the lowest price. The ESET Internet Security comes with a 6 months warranty (Warranty must be claimed with box and all accessories).</p><h2 style='font-family: \"Open Sans\", sans-serif; color: rgb(102, 102, 102);'>Buy ESET Internet Security 2 User for 1 Year with a Free ESET Backpack from the best Antivirus Shop in Bangladesh: Star Tech</h2><p>In Bangladesh, you can get the original <a href=\"https://www.startech.com.bd/eset-internet-security-3-user-for-1-year\" target=\"\">ESET Internet Security 3 User for 1 Year with a Free ESET Backpack</a> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/software/antivirus\" target=\"\">ESET Internet Security</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>, <a href=\"https://www.startech.com.bd/laptop-notebook/laptop\" target=\"\">Laptop</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The ESET Internet Security Single User comes with 1 Year of warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESET Internet Security 3 User</li><li>Award-winning antivirus</li><li>Secures your financial transactions</li><li>Prevents malware</li><li>Personal firewall</li></ul>",
+      "model": "ESET Internet Security 3 User",
+      "warranty": "a 6 months warranty",
+      "basePrice": 1300.0,
+      "originalPrice": 1900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-25991",
+          "price": 1300.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1248.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Operating System",
+              "value": "WINDOWS Microsoft Windows® 10, 8.1, 8, 7 with SP1 and latest KB updates installed MAC macOS 10.15 (Catalina), macOS 10.14 (Mojave), macOS 10.13 (High Sierra), macOS 10.12.x (Sierra), OS X 10.11.x (El Capitan), OS X 10.10.x (Yosemite), OS X 10.9.x (Mavericks) ANDROID Android 4.0 and higher * (*ESTV AndroidTV 7.0 and higher) LINUX Debian, RedHat, Ubuntu, OpenSuSe, Fedora, Mandriva and a majority of RPM and DEB distributions",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 1,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "3 User",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "01-Year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-internet-security-3-user-for-1-year",
+      "sourceProductCode": "25991",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESET Internet Security 3 User",
+        "Award-winning antivirus",
+        "Secures your financial transactions",
+        "Prevents malware",
+        "Personal firewall"
+      ],
+      "needsReview": false,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-internet-security-3-user-for-1-year.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-internet-security-3-user-for-1-year.jpg",
+        "/images/products/software/eset-internet-security-3-user-for-1-year.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-internet-security-3-user-for-1-year",
+        "candidateTitle": "ESET Internet Security 3 User for 1 Year",
+        "attemptStem": "eset-internet-security-3-user-for-1-year"
+      }
+    },
+    {
+      "name": "ESET Internet Security 5 User 1 Year",
+      "slug": "eset-internet-security-antivirus-5-user",
+      "type": "PHYSICAL",
+      "sku": "ST-17762",
+      "description": "<h2 style=\"text-align: justify; \">ESET Internet Security 5 User 1 Year<br/></h2><p style=\"text-align: justify; \"><span style=\"font-weight: bold;\">Secure all your devices: </span><span style=\"font-size: 12px;\">Split the protection among 5 or 3 devices, be it a PC, Mac, smartphone, or tablet. Replacing a device? Just transfer the license to the new one.</span></p><p style=\"text-align: justify; \">Internet Security: <span style=\"font-size: 12px;\">Antivirus, </span><span style=\"font-size: 12px;\">Antispyware, </span><span style=\"font-size: 12px;\">Anti-Phishing, </span><span style=\"font-size: 12px;\">Anti-Theft, </span><span style=\"font-size: 12px;\">Personal Firewall, </span><span style=\"font-size: 12px;\">Parental Control, </span><span style=\"font-size: 12px;\">Device Control, </span><span style=\"font-size: 12px;\">Antispam, </span><span style=\"font-size: 12px;\">Banking &amp; Payment Protection, </span><span style=\"font-size: 12px;\">Botnet Protection, </span><span style=\"font-size: 12px;\">Exploit Blocker, </span><span style=\"font-size: 12px;\">Advanced Memory Scanner, </span><span style=\"font-size: 12px;\">Network Attack Protection, </span><span style=\"font-size: 12px;\">Small System Footprint, </span><span style=\"font-size: 12px;\">Gamer Mode, </span><span style=\"font-size: 12px;\">Free Technical Support</span></p><p style=\"text-align: justify; \"><span style=\"font-weight: bold;\">Tablet and Mobile Security:  </span><span style=\"font-size: 12px;\">Antivirus, </span><span style=\"font-size: 12px;\">Anti-Phishing, </span><span style=\"font-size: 12px;\">App Scanning, </span><span style=\"font-size: 12px;\">SMS &amp; Call Filter, </span><span style=\"font-size: 12px;\">Apps Audit, </span><span style=\"font-size: 12px;\">Proactive Anti-Theft, </span><span style=\"font-size: 12px;\">Remote Lock, </span><span style=\"font-size: 12px;\">Remote Wipe, </span><span style=\"font-size: 12px;\">Remote Siren, </span><span style=\"font-size: 12px;\">GPS Tracking, </span><span style=\"font-size: 12px;\">Camera Snapshots, </span><span style=\"font-size: 12px;\">SIM Guard, </span><span style=\"font-size: 12px;\">Free Technical Support</span></p><p style=\"text-align: justify; \"><span style=\"font-weight: bold;\">Computer:</span></p><p></p><ul><li style=\"text-align: justify; \"><span style=\"font-size: 12px;\">Windows OS: </span><span style=\"font-size: 12px;\">ESET Smart Security, </span><span style=\"font-size: 12px;\">ESET NOD32 Antivirus</span><br/></li><li style=\"text-align: justify; \"><span style=\"font-size: 12px;\">Mac OS X: </span><span style=\"font-size: 12px;\">ESET Cyber Security Pro, </span><span style=\"font-size: 12px;\">ESET Cyber Security</span><br/></li><li style=\"text-align: justify; \"><span style=\"font-size: 12px;\">Linux: </span><span style=\"font-size: 12px;\">ESET NOD32 Antivirus for Linux Desktop</span><br/></li><li style=\"text-align: justify; \"><span style=\"font-size: 12px;\">Smartphones: </span><span style=\"font-size: 12px;\">ESET Parental Control for Android, </span><span style=\"font-size: 12px;\">ESET Mobile Security for Android </span><br/></li><li style=\"text-align: justify; \"><span style=\"font-size: 12px;\">Android Tablets: </span><span style=\"font-size: 12px;\">ESET Parental Control for Android, </span><span style=\"font-size: 12px;\">ESET Mobile Security for Android</span><br/></li></ul><p></p><div id=\"__if72ru4sdfsdfruh7fewui_once\" style=\"display:none;\"> </div><div id=\"__hggasdgjhsagd_once\" style=\"display:none;\"> </div><div id=\"__if72ru4rkjahiuyi_once\" style=\"display:none;\"> </div><div id=\"__if72ru4rkjahiuyi_once\" style=\"display:none;\"> </div><div class=\"video-wrapper\"> </div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESET Internet Security 5 User</li><li>Powerful Antivirus</li><li>Anti-Phishing</li><li>Anti-Theft</li><li>Personal Firewall</li></ul>",
+      "model": "ESET Internet Security 5 User",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-17762",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Operating System",
+              "value": "WINDOWS Microsoft Windows® 10, 8.1, 8, 7 with SP1 and latest KB updates installed MAC macOS 10.15 (Catalina), macOS 10.14 (Mojave), macOS 10.13 (High Sierra), macOS 10.12.x (Sierra), OS X 10.11.x (El Capitan), OS X 10.10.x (Yosemite), OS X 10.9.x (Mavericks) ANDROID Android 4.0 and higher * (*ESTV AndroidTV 7.0 and higher) LINUX Debian, RedHat, Ubuntu, OpenSuSe, Fedora, Mandriva and a majority of RPM and DEB distributions",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 1,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "5 User",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-internet-security-antivirus-5-user",
+      "sourceProductCode": "17762",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESET Internet Security 5 User",
+        "Powerful Antivirus",
+        "Anti-Phishing",
+        "Anti-Theft",
+        "Personal Firewall"
+      ],
+      "needsReview": true,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-internet-security-antivirus-5-user.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-internet-security-antivirus-5-user.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-internet-security-antivirus-5-user",
+        "candidateTitle": "ESET Internet Security 5 User 1 Year",
+        "attemptStem": "eset-internet-security-antivirus-5-user"
+      }
+    },
+    {
+      "name": "ESET Internet Security Single User with 03 Years License",
+      "slug": "eset-internet-security-antivirus-one-user",
+      "type": "PHYSICAL",
+      "sku": "ST-17765",
+      "description": "<h2 style=\"text-align: justify; \">ESET Internet Security Single User with 03 Years License</h2>\n<div class=\"video-wrapper\"> </div>\n<h3>Making the internet safer for you to enjoy</h3>\n<p>Explore the great online, securely protected by ESETâ€™s award-winning detection technology. Itâ€™s trusted by over 110 million users worldwide to detect and neutralize all types of digital threats, including viruses, rootkits, worms and spyware. It also protects against techniques that seek to evade detection, and blocks targeted attacks and exploits.</p>\n<table class=\"table\">\n<tbody>\n<tr>\n<td>Antivirus and Antispyware</td>\n<td>Provides proactive protection against all types of online and offline threats and prevents malware spreading to other users</td>\n</tr>\n<tr>\n<td>Exploit Blocker</td>\n<td>Blocks attacks specifically designed to evade antivirus detection and eliminates lockscreens and ransomware Protects against attacks on web browsers, PDF readers and other applications, including Java-based software</td>\n</tr>\n<tr>\n<td>Advanced Memory Scanner</td>\n<td>Enables improved detection of persistent malware that employs multiple layers of encryption to conceal its activity</td>\n</tr>\n<tr>\n<td>Cloud-Powered Scanning</td>\n<td>Speeds up scans by whitelisting safe files based on the ESET Live GridÂ® file reputation database Helps to proactively stop unknown malware based on its behavior, by comparing it with our cloud-based reputation system</td>\n</tr>\n<tr>\n<td>Scan While Downloading Files</td>\n<td>Decreases scanning time by scanning specific file types âˆ’ such as archives âˆ’ during the download process</td>\n</tr>\n<tr>\n<td>Idle-State Scanning</td>\n<td>Aids system performance by performing in-depth scans when your computer is not in use Helps detect potential inactive threats before they can cause damage</td>\n</tr>\n<tr>\n<td>Host-Based Intrusion Prevention System (HIPS)</td>\n<td>Lets you customize the behavior of the system in greater detail. Gives you the option to specify rules for system registry, active processes and programs to fine-tune your security posture</td>\n</tr>\n<tr>\n<td>Script-Based Attack Protection</td>\n<td>Detects attacks by malicious scripts that try to exploit Windows PowerShell  Also detects malicious JavaScripts that can attack via your browser. Mozilla Firefox, Google Chrome, Microsoft Internet Explorer and Microsoft Edge browsers are all supported</td>\n</tr>\n<tr>\n<td>UEFI Scanner</td>\n<td>Protects from threats that attack your computer on a deeper level, even before the start of Windows - on systems with the UEFI system interface</td>\n</tr>\n</tbody>\n</table>\n<h4>Enjoy the full power of your computer</h4>\n<p>Leaving more power to the programs you use daily, ESET Internet Security lets you play, work and browse the internet without slowdowns. Stay unplugged and online longer with battery-saving mode and enjoy gaming without distracting pop-ups.</p>\n<table class=\"table\">\n<tbody>\n<tr>\n<td>Small System Footprint</td>\n<td>Maintains high performance and extends the lifetime of hardware. Fits any type of system environment.  Saves internet bandwidth with extremely small update packages. </td>\n</tr>\n<tr>\n<td>Gamer Mode</td>\n<td>ESET Internet Security automatically switches to silent mode if any program is run in full-screen System updates and notifications are postponed to save resources for gaming, video, photos or presentations</td>\n</tr>\n<tr>\n<td>Portable Computer Support</td>\n<td>Postpones all non-actionable pop-up windows, updates and system-hungry activities to preserve system resources so that you can stay online and unplugged longer</td>\n</tr>\n</tbody>\n</table>\n<h3>Protect your privacy</h3>\n<p>Stop hackers from misusing your passwords and stay safe while online banking and making online payments. Enjoy safer connections,  protect your webcam and home Wi-Fi router from intruders, and protect your private data from ransomware. Ensure your privacy by actively testing your router-connected smart devices. </p>\n<table class=\"table\">\n<tbody>\n<tr>\n<td>Ransomware Shield</td>\n<td>Blocks malware that tries to lock you out of your personal data and then asks you to pay a â€˜ransomâ€™ to unlock it</td>\n</tr>\n<tr>\n<td>Connected Home Monitor</td>\n<td>Enables you to test your home router for vulnerabilities, such as weak passwords or out of date firmware, and offers you remediation options. Provides you with an easy-to-access list of router-connected devices (smartphone, IoT, etc.), to show you whoâ€™s connected. Enables you to scan smart devices for vulnerabilities, and gives you suggestions on how to fix possible issues. </td>\n</tr>\n<tr>\n<td>Firewall</td>\n<td>Prevents unauthorized access to your computer and misuse of your personal dat</td>\n</tr>\n<tr>\n<td>Network Attack Protection</td>\n<td>In addition to Firewall, automatically protects your computer from malicious network traffic, blocking threats revealed by dangerous traffic patterns</td>\n</tr>\n<tr>\n<td>Banking &amp; Payment Protection</td>\n<td>Features a special secured browser through which you can safely pay online. Automatically protects you on internet banking sites. Encrypts the communication between the keyboard and the browser for safer transactions. Protects you from keyloggers</td>\n</tr>\n<tr>\n<td>Botnet Protection</td>\n<td>Added layer of security that protects against botnet malware â€“ preventing your computer from being misused for spam and network attacks. Benefit from a new type of detection thanks to Network Signatures, for even faster blocking of malicious traffi</td>\n</tr>\n<tr>\n<td>Anti-Phishing</td>\n<td>Protects you from attempts to acquire sensitive information such as usernames, passwords or other sensitive personal details by fake websites masquerading as trustworthy ones</td>\n</tr>\n<tr>\n<td>Out-of-Home Network</td>\n<td>Alerts you when connecting to an unknown network and prompts you to switch to the Strict Protection mode Makes your device invisible to other computers connected to the same network</td>\n</tr>\n<tr>\n<td>Device Control</td>\n<td>Allows you to prevent unauthorized copying of your private data to an external device. Allows you to block storage media â€“ CDs, DVDs, USB sticks, and disk storage devices. Lets you block devices connecting via Bluetooth, FireWire and serial/parallel ports.</td>\n</tr>\n<tr>\n<td>Antispam</td>\n<td>Keeps unwanted emails from clogging your mailbox</td>\n</tr>\n</tbody>\n</table>\n<h3>Enjoy more control over your licenses at my.eset.com</h3>\n<p>Create a free <a href=\"http://my.eset.com\" target=\"_blank\">my.eset.com</a> account and enjoy an instant overview of the status of your licenses and connected devices.</p>\n<h3>Keep your kids safe on the internet</h3>\n<p>Show kids only the good side of the internet with Parental Control, preventing them from being exposed to offensive online content. Block more than 20 website categories, or add individual sites to the blacklist.</p>\n<table class=\"table\">\n<tbody>\n<tr>\n<td>Parental Control</td>\n<td>Gives you the option to choose from predefined categories according to the age of your kids Lets you set a password to protect settings against modification as well as prevent unauthorized product uninstallation </td>\n</tr>\n</tbody>\n</table>\n<h3>Anti-Theft â€“ Stay safer by tracking and locating your missing compute</h3>\n<p>Protect your laptop in case it gets lost or stolen, and increase the chances of its retrieval.</p>\n<table class=\"table\">\n<tbody>\n<tr>\n<td>Location Tracking</td>\n<td>Lets you mark a device as missing via the ESETÂ® Anti-Theft web interface at my.eset.com to initiate automatic monitoring. Displays position on a map based on the Wi-Fi networks in range when the device comes online. Allows you to access the gathered information via ESET Anti-Theft at            <a href=\"my.eset.com\" target=\"_blank\"></a>my.eset.com. </td>\n</tr>\n<tr>\n<td>Laptop Activity Watch</td>\n<td>Allows you to watch thieves via your laptopâ€™s built-in camera. Collects snapshots of the missing laptopâ€™s screen. Saves all recent photos and snapshots to the web interface at            <a href=\"my.eset.com\" target=\"_blank\"></a>my.eset.com</td>\n</tr>\n<tr>\n<td>Anti-Theft Optimization</td>\n<td>Lets you easily set up/configure Anti-Theft for maximum protection of your device. Makes it easy to configure Windows auto-login and operating system account passwords. Helps you increase the level of security by prompting you to modify key system settings.</td>\n</tr>\n<tr>\n<td>One-Way Messaging</td>\n<td>At <a href=\"my.eset.com\" target=\"_blank\"></a>my.eset.com, create a message and have it displayed on your missing device â€“ to increase the chances of its retrieva</td>\n</tr>\n</tbody>\n</table>\n<h3>Install and forget, or customize to meet your exact requirements</h3>\n<p>Delivering top protection right from the start with its default settings, ESET Internet Security keeps you informed about potential security  issues and lets you address them directly from the main screen. Its sleek user interface is designed to let you easily set up all routine tasks.   In addition, you can fine-tune your security profile with more than 150 detailed settings.</p>\n<table class=\"table\">\n<tbody>\n<tr>\n<td>One-Click Solution</td>\n<td>Protection status and all frequently used actions and tools are accessible from all screens. In case of any security alerts, quickly find the solution in one click</td>\n</tr>\n<tr>\n<td>Smooth Product Upgrades</td>\n<td>Benefit from new protection technologies as soon as they become available, for a continuously high level of security</td>\n</tr>\n<tr>\n<td>Settings for Advanced Users</td>\n<td>Offers in-depth security settings to fit your needs Allows you to define maximum scanning depth, scanning time, size of the scanned files and archives and much more</td>\n</tr>\n<tr>\n<td>ESET SysInspector</td>\n<td>An advanced diagnostic tool that captures critical information from the system to troubleshoot a broad range of security and compatibility issues</td>\n</tr>\n</tbody>\n</table>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESET Internet Security Single User</li><li>Award-winning antivirus</li><li>Secures your financial transactions</li><li>Prevents malware</li><li>Personal firewall</li></ul>",
+      "model": "ESET Internet Security Single User",
+      "warranty": null,
+      "basePrice": 1300.0,
+      "originalPrice": 1450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-17765",
+          "price": 1300.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1248.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Operating System",
+              "value": "WINDOWS Microsoft Windows® 10, 8.1, 8, 7 with SP1 and latest KB updates installed MAC macOS 10.15 (Catalina), macOS 10.14 (Mojave), macOS 10.13 (High Sierra), macOS 10.12.x (Sierra), OS X 10.11.x (El Capitan), OS X 10.10.x (Yosemite), OS X 10.9.x (Mavericks) ANDROID Android 4.0 and higher * (*ESTV AndroidTV 7.0 and higher) LINUX Debian, RedHat, Ubuntu, OpenSuSe, Fedora, Mandriva and a majority of RPM and DEB distributions",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 1,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "1 user",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "3 years",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-internet-security-antivirus-one-user",
+      "sourceProductCode": "17765",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESET Internet Security Single User",
+        "Award-winning antivirus",
+        "Secures your financial transactions",
+        "Prevents malware",
+        "Personal firewall"
+      ],
+      "needsReview": false,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-internet-security-antivirus-one-user.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-internet-security-antivirus-one-user.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-internet-security-antivirus-one-user",
+        "candidateTitle": "ESET Internet Security Single User with 03 Years License",
+        "attemptStem": "eset-internet-security-antivirus-one-user"
+      }
+    },
+    {
+      "name": "ESET NOD32 Antivirus One User 1 Year",
+      "slug": "eset-legendary-nod32-antivirus",
+      "type": "PHYSICAL",
+      "sku": "ST-12273",
+      "description": "<h2 style=\"text-align: justify; \">ESET NOD32 Antivirus One User 1 Year</h2><p style=\"text-align: justify; \"><span style=\"font-weight: bold;\"> Legendary NOD32 Antivirus</span></p><div style=\"text-align: justify;\">Protects you against all types of malware, including viruses, ransomware, worms, and spyware.</div><p style=\"text-align: justify;\"><span style=\"font-weight: bold;\"> Light on computer resources</span></p><div style=\"text-align: justify;\">Enjoy the full power of your computer. Play, work and browse the internet without slowdowns.</div><p style=\"text-align: justify;\"><span style=\"font-weight: bold;\"> Uninterrupted gaming and videos</span></p><div style=\"text-align: justify;\">No system updates or annoying pop-ups while you play games or run a program in full-screen mode.</div><p style=\"text-align: justify;\"><span style=\"font-weight: bold;\"> Legendary antivirus technology</span></p><div style=\"text-align: justify;\">Protect yourself from ransomware and other types of malware with ESET's time-proven multilayered protection, trusted by over 110 million users worldwide.</div><p style=\"text-align: justify;\"><span style=\"font-weight: bold;\">Minimal power usage</span></p><div style=\"text-align: justify;\">Play, work and browse the internet without slowdowns. Stay unplugged and online longer with battery-saving mode, and enjoy gaming without distracting pop-ups.</div><p style=\"text-align: justify; \"><span style=\"font-weight: bold;\">Install and forget</span></p><div style=\"text-align: justify;\">Easy to install, renew and upgrade, our security is also designed for simple set up of all routine tasks. If you want, fine-tune your profile with 150 detailed settings.</div><p style=\"text-align: justify;\"><span style=\"font-weight: bold;\">Transfer your license</span></p><div style=\"text-align: justify;\">ESET NOD32 Antivirus license can be transferred to macOS or Linux operating systems.</div><p style=\"text-align: justify;\"><span style=\"font-weight: bold;\"> Scan while downloading files</span></p><div style=\"text-align: justify;\">Decreases scanning time by scanning specific file types âˆ’ such as archives âˆ’ during the download process.</div><p style=\"text-align: justify;\"><span style=\"font-weight: bold;\"> Device Control</span></p><div style=\"text-align: justify;\">Allows you to prevent unauthorized copying of your private data to an external device. Allows you to block storage media â€“ CDs, DVDs, USB sticks, and disk storage devices. Lets you block devices connecting via Bluetooth, FireWire and serial/parallel ports.</div><p style=\"text-align: justify;\"><span style=\"font-weight: bold;\"> Script-Based Attack Protection</span></p><div style=\"text-align: justify;\">Detects attacks by malicious scripts that try to exploit Windows PowerShell. Also detects malicious JavaScripts that can attack via your browser. Mozilla Firefox, Google Chrome, Microsoft Internet Explorer and Microsoft Edge browsers are all supported.</div><p style=\"text-align: justify;\"><span style=\"font-weight: bold;\"> Privacy protection</span></p><div style=\"text-align: justify;\">Stop hackers from misusing your passwords. Bank and purchase online safely. Prevent your kids from being exposed to offensive online content.</div><p style=\"text-align: justify;\"><span style=\"font-weight: bold;\"> Anti-Theft</span></p><div style=\"text-align: justify;\">Stay safer by tracking and locating your missing computer in case it gets lost or stolen, and identify thieves via your laptopâ€™s built-in camera.</div><p style=\"text-align: justify;\"><span style=\"font-weight: bold;\"> Minimal power usage</span></p><div style=\"text-align: justify;\">Whether you're working or playing, browse the internet without slowdowns.. Stay unplugged and online longer with battery-saving mode and enjoy gaming without distracting pop-ups.</div><p style=\"text-align: justify;\"><span style=\"font-weight: bold;\"> Install and forget</span></p><div style=\"text-align: justify;\">Easy to install, renew and upgrade, our security is also designed for the simple setup of all routine tasks. Or, fine-tune your profile with 150 detailed settings. New computer? Transfer your license anytime with ease.</div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NOD32</li><li>Reliable protection without slowdowns</li><li>Minimal power usage</li><li>Light on computer resources</li><li>Uninterrupted gaming and videos</li></ul>",
+      "model": "NOD32",
+      "warranty": null,
+      "basePrice": 400.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-12273",
+          "price": 400.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 384.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Subscription",
+          "position": 0,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "1 User",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 Year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-legendary-nod32-antivirus",
+      "sourceProductCode": "12273",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NOD32",
+        "Reliable protection without slowdowns",
+        "Minimal power usage",
+        "Light on computer resources",
+        "Uninterrupted gaming and videos"
+      ],
+      "needsReview": false,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-legendary-nod32-antivirus.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-legendary-nod32-antivirus.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-legendary-nod32-antivirus",
+        "candidateTitle": "ESET NOD32 Antivirus One User 1 Year",
+        "attemptStem": "eset-legendary-nod32-antivirus"
+      }
+    },
+    {
+      "name": "ESET Protect Entry E-License Subscription",
+      "slug": "eset-protect-entry-e-license-subscription",
+      "type": "PHYSICAL",
+      "sku": "ST-42951",
+      "description": "<h2>ESET Protect Entry E-License Subscription</h2><p>The ESET Protect Entry E-License Subscription is a complete security solution for endpoints that provides current multilayered protection. It includes comprehensive endpoint security, as well as next-generation antivirus and server protection, to provide a strong defense against changing threats. The ESET Protect Entry E-License Subscription features a cloud-based management panel for easy deployment and monitoring, as well as full disk encryption to keep important data private. ESET's vulnerability and patch management features help to eradicate system flaws, while advanced threat defense techniques provide proactive protection against zero-day assaults. The ESET Protect Entry E-License Subscription also offers cloud app protection, making it suitable for enterprises that use SaaS platforms, as well as mail security to protect against phishing, spam, and malware threats transmitted by email. Mobile threat defense protects smartphones and tablets, while multi-factor authentication provides an additional layer of security for key systems and data. The ESET Protect Entry E-License Subscription's combined MDR (Managed Detection and Response) service and XDR (Extended Detection and Response) capabilities provide extensive visibility and control, allowing IT teams to detect and respond to threats quickly and effectively. One of the primary benefits of the ESET Protect Entry license is its flexibility. ESET's Unilicense technology enables customers to combine security across Windows, macOS, Linux, and Android devices without wasting licenses. Users can add protection to additional desktops, mobile devices, laptops, or servers at any time, without the need for a new subscription.</p><h2>Buy ESET Protect Entry E-License Subscription from Star Tech</h2><p>In Bangladesh, you can get original <strong>ESET Protect Entry E-License Subscription</strong> From Star Tech. We have a large collection of latest ESET <a href=\"https://www.startech.com.bd/software/antivirus\" target=\"\">Antivirus</a><a href=\"https://www.startech.com.bd/software/antivirus\" target=\"\"> </a>to purchase for Business users. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESET Protect Entry</li><li>Modern multilayered endpoint protection</li><li>Console, Full Disk Encryption</li><li>Modern Endpoint Protection with Next-gen Antivirus</li><li>Server Security, Advanced Threat Defense</li></ul>",
+      "model": "ESET Protect Entry",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-42951",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ESET Protect Entry",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-protect-entry-e-license-subscription",
+      "sourceProductCode": "42951",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESET Protect Entry",
+        "Modern multilayered endpoint protection",
+        "Console, Full Disk Encryption",
+        "Modern Endpoint Protection with Next-gen Antivirus",
+        "Server Security, Advanced Threat Defense"
+      ],
+      "needsReview": true,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-protect-entry-e-license-subscription.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-protect-entry-e-license-subscription.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-protect-entry-e-license-subscription",
+        "candidateTitle": "ESET Protect Entry E-License Subscription",
+        "attemptStem": "eset-protect-entry-e-license-subscription"
+      }
+    },
+    {
+      "name": "ESET Small Business Security (1 Server, 5 Windows PC)",
+      "slug": "eset-small-business-security",
+      "type": "PHYSICAL",
+      "sku": "ST-37224",
+      "description": "<h1>ESET Small Business Security (1 Server, 5 Windows PC)</h1>\n<p>ESET Small Business Security is a sophisticated and comprehensive cybersecurity solution designed exclusively for small enterprises, including protection for one server and five Windows PCs. This bundle includes numerous layers of security to keep your organization secure from a variety of cyber attacks. The basis of the defense is Antivirus and Antispyware capabilities, which identify and eliminate malware, viruses, and other harmful software before they can infect your devices. One of the most notable features is the Ransomware Shield, which offers crucial security against ransomware attacks that might encrypt and keep your important company data hostage. The solution makes use of Intel Threat Detection Technology, which detects complex attacks using powerful hardware-based security, as well as Artificial Intelligence, to improve its capacity to identify and respond to new threats in real time. ESET Small Business Security now contains ESET SysInspector, a sophisticated tool that performs in-depth system diagnostics, helping you to discover and handle any issues before they escalate. The Brute Force Attack Protection function is intended to prevent cybercriminals from gaining unauthorized access to your systems via repetitive password guessing. Furthermore, the integrated firewall serves as a barrier to unlawful network traffic, protecting your internal network from external threats. ESET Live Guard provides an additional degree of protection by examining suspicious files in a secure, cloud-based sandbox environment before they are executed on your devices. This preventive strategy helps to keep new and undiscovered risks from causing harm. The solution is intended for ease of use, with a quick installation procedure and streamlined management via ESET HOME, a comprehensive security management platform. ESET HOME enables you to monitor the security status of all protected devices in your organization at any time, delivering real-time insights into possible threats and system performance. You may easily share protection with coworkers and employees, ensuring that everyone in your business is covered by the same canopy of protection. The software also provides critical security notifications via a mobile app, allowing you to respond swiftly to any problems, no matter where you are. ESET Small Business Security is more than just an antivirus; it's a complete security suite that offers peace of mind by combining powerful threat detection, simple management, and real-time protection designed exclusively for small businesses.</p>\n<div class=\"video-wrapper\">  </div>\n<h2>Buy ESET Small Business Security (1 Server, 5 Windows PC) from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>ESET Small Business Security (1 Server, 5 Windows PC)</strong> From Star Tech. We have a large collection of latest ESET <a href=\"https://www.startech.com.bd/software/antivirus\" target=\"\">Antivirus </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The ESET Small Business Security (1 Server, 5 Windows PC) comes with a 1 year license.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESET Small Business Security 5 User</li><li>24/7 real-time protection</li><li>Fast scans without interruptions</li><li>Non-stop safe banking &amp; browsing</li><li>Protected smartphones and smartphones</li></ul>",
+      "model": "ESET Small Business Security 5 User",
+      "warranty": null,
+      "basePrice": 5599.0,
+      "originalPrice": 6200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37224",
+          "price": 5599.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 5375.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Operating System",
+              "value": "Windows, Windows Server, macOS, Android & iOS",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 1,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "(1 Server, 5 Windows PC)",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 Year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-small-business-security",
+      "sourceProductCode": "37224",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESET Small Business Security 5 User",
+        "24/7 real-time protection",
+        "Fast scans without interruptions",
+        "Non-stop safe banking & browsing",
+        "Protected smartphones and smartphones"
+      ],
+      "needsReview": false,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-small-business-security.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-small-business-security.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-small-business-security",
+        "candidateTitle": "ESET Small Business Security (1 Server, 5 Windows PC)",
+        "attemptStem": "eset-small-business-security"
+      }
+    },
+    {
+      "name": "ESET Small Business Security (Server) for 10 users",
+      "slug": "eset-small-business-security-10-user",
+      "type": "PHYSICAL",
+      "sku": "ST-40241",
+      "description": "<h1>ESET Small Business Security (Server) for 10 users</h1><p><strong>ESET Small Business Security</strong> is a smart and comprehensive cybersecurity solution tailored specifically for small businesses, including protection for one server and five Windows PCs. This package provides many layers of security to protect your firm from a range of cyber threats. The protection is built around antivirus and antispyware capabilities, which detect and remove malware, viruses, and other hazardous applications before they infect your devices. One of the most noticeable features is the Ransomware Shield, which provides critical protection against ransomware attacks that might encrypt and hold your essential enterprise data hostage. The system employs Intel Threat Detection Technology, which identifies sophisticated assaults using robust hardware-based protection, as well as Artificial Intelligence, to increase its ability to identify and respond to emerging threats in real-time. ESET Small Business Security now includes ESET SysInspector, a powerful tool that performs in-depth system diagnostics, allowing you to identify and resolve issues before they worsen. The Brute Force Attack Protection feature is designed to prevent hackers from getting unauthorized access to your systems through repeated password guessing. Furthermore, the in built firewall acts as a barrier against unauthorized network traffic, shielding your internal network from external dangers. ESET Live Guard adds an extra layer of security by reviewing suspicious files in a secure, cloud-based sandbox before they are run on your devices. This preventative method aims to protect new and unknown threats from creating damage. The solution is designed for ease of use, with rapid installation and easy management using ESET HOME, a complete security management platform. ESET HOME allows you to monitor the security status of all protected devices in your business at any time, providing real-time information on potential threats and system performance. You may simply share insurance with coworkers and employees, ensuring that everyone in your company is covered under the same umbrella of protection. The program also sends important security notifications to your mobile app, allowing you to respond quickly to any issues, no matter where you are. ESET Small Business Security is more than just an antivirus; it's a full-featured security suite that provides peace of mind by combining effective threat detection, easy management, and real-time protection tailored specifically for small enterprises.</p><h2>Buy ESET Small Business Security (Server) for 10 users from Star Tech</h2><p>In Bangladesh, you can get original <strong>ESET Small Business Security (Server) for 10 users</strong> From Star Tech. We have a large collection of latest ESET <a href=\"https://www.startech.com.bd/software/antivirus\" target=\"\">Antivirus </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The ESET Small Business Security (Server) for 10 users comes with a 1 year license.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESET Small Business Security 10 users</li><li>24/7 real-time protection, 10 users</li><li>Fast scans without interruptions</li><li>Non-stop safe banking &amp; browsing</li><li>Protected smartphones and Email protection</li></ul>",
+      "model": "ESET Small Business Security 10 users",
+      "warranty": null,
+      "basePrice": 9999.0,
+      "originalPrice": 10999.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-40241",
+          "price": 9999.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 9599.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Operating System",
+              "value": "Windows, Windows Server, macOS, Android & iOS",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Cyberattack protection Secure banking & browsing Anti-Theft Server protection Email protection: Antispam, Email Client Antimalware Data protection: Unlimited VPN, Secure Data, Password Manager Free local support",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 1,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "10 Users",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 Year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-small-business-security-10-user",
+      "sourceProductCode": "40241",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESET Small Business Security 10 users",
+        "24/7 real-time protection, 10 users",
+        "Fast scans without interruptions",
+        "Non-stop safe banking & browsing",
+        "Protected smartphones and Email protection"
+      ],
+      "needsReview": false,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-small-business-security-10-user.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-small-business-security-10-user.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-small-business-security-10-user",
+        "candidateTitle": "ESET Small Business Security (Server) for 10 users",
+        "attemptStem": "eset-small-business-security-10-user"
+      }
+    },
+    {
+      "name": "ESET Small Business Security (Server) for 15 users",
+      "slug": "eset-small-business-security-15-user",
+      "type": "PHYSICAL",
+      "sku": "ST-40243",
+      "description": "<h1>ESET Small Business Security (Server) for 15 users</h1><p><strong>ESET Small Business Security</strong> is a smart and comprehensive cybersecurity solution tailored specifically for small businesses, including protection for one server and five Windows PCs. This package provides many layers of security to protect your firm from a range of cyber threats. The protection is built around antivirus and antispyware capabilities, which detect and remove malware, viruses, and other hazardous applications before they infect your devices. One of the most noticeable features is the Ransomware Shield, which provides critical protection against ransomware attacks that might encrypt and hold your essential enterprise data hostage. The system employs Intel Threat Detection Technology, which identifies sophisticated assaults using robust hardware-based protection, as well as Artificial Intelligence, to increase its ability to identify and respond to emerging threats in real-time. ESET Small Business Security now includes ESET SysInspector, a powerful tool that performs in-depth system diagnostics, allowing you to identify and resolve issues before they worsen. The Brute Force Attack Protection feature is designed to prevent hackers from getting unauthorized access to your systems through repeated password guessing. Furthermore, the in built firewall acts as a barrier against unauthorized network traffic, shielding your internal network from external dangers. ESET Live Guard adds an extra layer of security by reviewing suspicious files in a secure, cloud-based sandbox before they are run on your devices. This preventative method aims to protect new and unknown threats from creating damage. The solution is designed for ease of use, with rapid installation and easy management using ESET HOME, a complete security management platform. ESET HOME allows you to monitor the security status of all protected devices in your business at any time, providing real-time information on potential threats and system performance. You may simply share insurance with coworkers and employees, ensuring that everyone in your company is covered under the same umbrella of protection. The program also sends important security notifications to your mobile app, allowing you to respond quickly to any issues, no matter where you are. ESET Small Business Security is more than just an antivirus; it's a full-featured security suite that provides peace of mind by combining effective threat detection, easy management, and real-time protection tailored specifically for small enterprises.</p><h2>Buy ESET Small Business Security (Server) for 15 users from Star Tech</h2><p>In Bangladesh, you can get original <strong>ESET Small Business Security (Server) for 15 users</strong> From Star Tech. We have a large collection of latest ESET <a href=\"https://www.startech.com.bd/software/antivirus\" target=\"\">Antivirus </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The ESET Small Business Security (Server) for 15 users comes with a 1 year license.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESET Small Business Security 15 users</li><li>24/7 real-time protection for 15 Users</li><li>Fast scans without interruptions</li><li>Non-stop safe banking &amp; browsing</li><li>Protected smartphones and Email protection</li></ul>",
+      "model": "ESET Small Business Security 15 users",
+      "warranty": null,
+      "basePrice": 14999.0,
+      "originalPrice": 16499.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-40243",
+          "price": 14999.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 14399.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Operating System",
+              "value": "Windows, Windows Server, macOS, Android & iOS",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Cyberattack protection Secure banking & browsing Anti-Theft Server protection Email protection: Antispam, Email Client Antimalware Data protection: Unlimited VPN, Secure Data, Password Manager Free local support",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 1,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "15 Users",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 Year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-small-business-security-15-user",
+      "sourceProductCode": "40243",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESET Small Business Security 15 users",
+        "24/7 real-time protection for 15 Users",
+        "Fast scans without interruptions",
+        "Non-stop safe banking & browsing",
+        "Protected smartphones and Email protection"
+      ],
+      "needsReview": false,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-small-business-security-15-user.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-small-business-security-15-user.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-small-business-security-15-user",
+        "candidateTitle": "ESET Small Business Security (Server) for 15 users",
+        "attemptStem": "eset-small-business-security-15-user"
+      }
+    },
+    {
+      "name": "ESET Small Business Security (Server) for 25 users",
+      "slug": "eset-small-business-security-25-user",
+      "type": "PHYSICAL",
+      "sku": "ST-40244",
+      "description": "<h1>ESET Small Business Security (Server) for 25 users</h1><p><strong>ESET Small Business Security</strong> (Server) for 25 users is a powerful ESET Small Business Security solution designed to protect small businesses from cyber threats, data breaches, and human error. This ESET Small Business Security Server secures up to 25 devices, including Windows PCs, macOS, mobile devices, and Windows Servers, ensuring seamless business operations. With advanced ESET Small Business Security Antivirus, businesses benefit from features like ESET Antivirus for real-time threat detection, Anti-Theft to safeguard lost or stolen devices, Safe Banking for secure online transactions, and Anti-Phishing to block fraudulent websites. Additionally, the solution includes an Unlimited VPN for private browsing, Secure Data encryption for protecting sensitive business information, and a Safe Server to ensure data security on Windows Servers. Managed easily through the ESET Security Antivirus platform, businesses can monitor security statuses, share protection with employees, and receive critical alerts via a mobile app. Ideal for small businesses without dedicated IT teams, ESET Small Business Security delivers enterprise-grade cybersecurity with an intuitive, user-friendly interface for optimal protection.</p><h2>Buy ESET Small Business Security (Server) for 25 users from Star Tech</h2><p>In Bangladesh, you can get original <strong>ESET Small Business Security (Server) for 25 users</strong> From Star Tech. We have a large collection of latest ESET <a href=\"https://www.startech.com.bd/software/antivirus\" target=\"\">Antivirus </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The ESET Small Business Security (Server) for 25 users comes with a 1-year license.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ESET Small Business Security 25 users</li><li>24/7 real-time protection for 25 users</li><li>Fast scans without interruptions</li><li>Non-stop safe banking &amp; browsing</li><li>Protected smartphones and Email protection</li></ul>",
+      "model": "ESET Small Business Security 25 users",
+      "warranty": null,
+      "basePrice": 25999.0,
+      "originalPrice": 28599.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Eset",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-40244",
+          "price": 25999.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 24959.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Operating System",
+              "value": "Windows, Windows Server, macOS, Android & iOS",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Cyberattack protection Secure banking & browsing Anti-Theft Server protection Email protection: Antispam, Email Client Antimalware Data protection: Unlimited VPN, Secure Data, Password Manager Free local support",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 1,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "25 Users",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 Year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/eset-small-business-security-25-user",
+      "sourceProductCode": "40244",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ESET Small Business Security 25 users",
+        "24/7 real-time protection for 25 users",
+        "Fast scans without interruptions",
+        "Non-stop safe banking & browsing",
+        "Protected smartphones and Email protection"
+      ],
+      "needsReview": false,
+      "categorySlug": "antivirus",
+      "image": "/images/products/software/antivirus/eset-small-business-security-25-user.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/antivirus/eset-small-business-security-25-user.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "eset-small-business-security-25-user",
+        "candidateTitle": "ESET Small Business Security (Server) for 25 users",
+        "attemptStem": "eset-small-business-security-25-user"
+      }
+    }
+  ]
+}

@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/server-networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\server-networking",
+    "generatedAtUnix": 1790588977,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Server Networking",
+      "slug": "server-networking",
+      "parentSlug": null,
+      "image": "/images/products/server-networking/server-and-storage/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Server RAM",
+      "slug": "server-ram",
+      "parentSlug": "server-networking",
+      "image": "/images/products/server-networking/server-ram/synology-16gb-ddr4-2666mhz-ecc-so-dimm-ram.png",
+      "isActive": true,
+      "sortOrder": 9,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Synology",
+      "slug": "synology",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Synology 16GB DDR4 2666MHz ECC SO-DIMM RAM",
+      "slug": "synology-16gb-ddr4-2666mhz-ecc-so-dimm-ram",
+      "type": "PHYSICAL",
+      "sku": "D4ECSO-2666-16G",
+      "description": "<h2>Synology 16GB DDR4 2666MHz ECC SO-DIMM RAM</h2><p style=\"\">The Synology 16GB DDR4 2666MHz ECC SO-DIMM RAM can be used to upgrade the memory in your compatible NAS server. This single RAM module has a 16GB capacity, a 2666 MHz (PC4-21300) clock speed, and a SO-DIMM form factor. It uses ECC technology and is unbuffered to safeguard the integrity of your data. The Synology 16GB DDR4 2666MHz ECC SO-DIMM RAM is compatible with 21 Series: RS1221RP+, RS1221+, DS1821+, DS1621xs+, DS1621+, DVA3221; 20 series: RS820RP+ (does not support ECC function, regardless of whether the expansion memory is ECC or non-ECC); 19 series: DS2419+, DS1819+; 18 series: DS3018xs, DS1618+; 17 Series: DS3617xs models.<br/></p><h2 style=\"\">Buy Synology 16GB DDR4 2666MHz ECC SO-DIMM RAM from Star Tech</h2><p>In Bangladesh, you can get the original <a href=\"https://www.startech.com.bd/synology-16gb-ddr4-2666mhz-ecc-so-dimm-ram\" target=\"\">Synology 16GB DDR4 2666MHz ECC SO-DIMM RAM</a> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-ram\" target=\"\">Server RAM</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology 16GB DDR4 2666MHz ECC SO-DIMM RAM comes with 5 years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: D4ECSO-2666-16G</li><li>Model: DDR4 2666MHz ECC SO-DIMM</li><li>For Selected Synology NAS Servers</li><li>16GB (1 x 16GB) Capacity</li><li>2666 MHz Clock Speed</li><li>ECC Error Correction</li></ul>",
+      "model": "DDR4 2666MHz ECC SO-DIMM",
+      "warranty": "No Warranty",
+      "basePrice": 53500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 1.8,
+        "width": 3.75,
+        "height": 0.3,
+        "unit": "inches"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "16 GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "D4ECSO-2666-16G",
+          "price": 53500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "16 GB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 51360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "16 GB",
+              "position": 0
+            },
+            {
+              "label": "Frequency",
+              "value": "2666 MHz",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical dimension",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "1.8 x 3.75 x 0.3 inches",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-16gb-ddr4-2666mhz-ecc-so-dimm-ram",
+      "sourceProductCode": "28411",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "D4ECSO-2666-16G",
+      "sourceKeyFeatures": [
+        "MPN: D4ECSO-2666-16G",
+        "Model: DDR4 2666MHz ECC SO-DIMM",
+        "For Selected Synology NAS Servers",
+        "16GB (1 x 16GB) Capacity",
+        "2666 MHz Clock Speed",
+        "ECC Error Correction"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-ram",
+      "image": "/images/products/server-networking/server-ram/synology-16gb-ddr4-2666mhz-ecc-so-dimm-ram.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-ram/synology-16gb-ddr4-2666mhz-ecc-so-dimm-ram.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-16gb-ddr4-2666mhz-ecc-so-dimm-ram",
+        "candidateTitle": "Synology 16GB DDR4 2666MHz ECC SO-DIMM RAM",
+        "attemptStem": "synology-16gb-ddr4-2666mhz-ecc-so-dimm-ram"
+      }
+    }
+  ]
+}

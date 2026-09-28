@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/television-shop",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\television-shop",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\television-shop",
+  "imagesFound": 645,
+  "uniqueProductStems": 185,
+  "productsInJson": 185,
+  "matchedProducts": 185,
+  "unmatchedProducts": 0,
+  "imageCoverage": 645,
+  "jsonGroupFiles": 6,
+  "matchMethods": {
+    "direct-slug": 185
+  },
+  "jsonGenerationTimeSeconds": 90.33,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 185,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\television-shop\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\television-shop\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\television-shop\\unmatched.json"
+  },
+  "seedTimeSeconds": 5.64
+}

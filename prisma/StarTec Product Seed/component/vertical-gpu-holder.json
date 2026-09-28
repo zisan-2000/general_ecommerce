@@ -1,0 +1,2489 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/component",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\component",
+    "generatedAtUnix": 1790589891,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Component",
+      "slug": "component",
+      "parentSlug": null,
+      "image": "/images/products/component/ssd cooler/Arctic M2 Pro M.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Vertical GPU Holder",
+      "slug": "vertical-gpu-holder",
+      "parentSlug": "component",
+      "image": "/images/products/component/vertical-gpu-holder/antec-at-gpuh-argb-aluminum-gpu-holder.png",
+      "isActive": true,
+      "sortOrder": 13,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Antec",
+      "slug": "antec",
+      "logo": null
+    },
+    {
+      "name": "Asus",
+      "slug": "asus",
+      "logo": null
+    },
+    {
+      "name": "Cooler Master",
+      "slug": "cooler-master",
+      "logo": null
+    },
+    {
+      "name": "Corsair",
+      "slug": "corsair",
+      "logo": null
+    },
+    {
+      "name": "Deepcool",
+      "slug": "deepcool",
+      "logo": null
+    },
+    {
+      "name": "NZXT",
+      "slug": "nzxt",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Antec AT-GPUH-ARGB Aluminum ARGB GPU Holder",
+      "slug": "antec-at-gpuh-argb-aluminum-gpu-holder",
+      "type": "PHYSICAL",
+      "sku": "ST-39192",
+      "description": "<h2>Antec AT-GPUH-ARGB Aluminum ARGB GPU Holder</h2><p>The Antec <strong>AT-GPUH-ARGB</strong> Aluminum ARGB <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" style=\"color: rgb(0, 0, 0);\" target=\"\">GPU Holder</a> is made of durable aluminum alloy, providing reliable support for your graphics card. With its anti-scratch and insulating rubber pad, it gives your GPU extra security and stability while guarding against harm. With its magnet base, the Antec AT-GPUH-ARGB Aluminum GPU Holder is simple to install and can be placed securely inside your case. This holder supports a broad range of GPU sizes with a depth of 55mm and a flexible support range of 46mm to 165mm. Quick and easy adjustments are made possible by the tool-free thumb screw design, which simplifies installation. Additionally, the Daisy Chain design with 3-Pin 5V ARGB sync guarantees smooth integration with your system's lighting configuration, giving your build a lively and dynamic visual component. The Antec AT-GPUH-ARGB Aluminum GPU Holder is the ideal choice for gamers and PC enthusiasts who want to mix modern design with practicality, giving their high-performance components both support and style.</p><h2>Buy Antec AT-GPUH-ARGB Aluminum ARGB GPU Holder from Star Tech</h2><p>In Bangladesh, you can get original <strong>Antec AT-GPUH-ARGB Aluminum ARGB GPU Holder</strong> From Star Tech. We have a large collection of latest Antec <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Graphics Card Holder</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Antec AT-GPUH-ARGB Aluminum ARGB GPU Holder comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AT-GPUH-ARGB</li><li>Anti-Scratch &amp; Insulation Rubber Pad, Magnet Base</li><li>Tool Free Thumb Screw, Aluminum Alloy Material</li><li>3-Pin 5V ARGB Sync with Daisy Chain Design</li><li>Versatile Support from 46mm to 165mm with 55mm Depth</li></ul>",
+      "model": "AT-GPUH-ARGB",
+      "warranty": "no warranty",
+      "basePrice": 2800.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Antec",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39192",
+          "price": 2800.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2688.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AT-GPUH-ARGB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/antec-at-gpuh-argb-aluminum-gpu-holder",
+      "sourceProductCode": "39192",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AT-GPUH-ARGB",
+        "Anti-Scratch & Insulation Rubber Pad, Magnet Base",
+        "Tool Free Thumb Screw, Aluminum Alloy Material",
+        "3-Pin 5V ARGB Sync with Daisy Chain Design",
+        "Versatile Support from 46mm to 165mm with 55mm Depth"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/antec-at-gpuh-argb-aluminum-gpu-holder.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/antec-at-gpuh-argb-aluminum-gpu-holder.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "antec-at-gpuh-argb-aluminum-gpu-holder",
+        "candidateTitle": "Antec AT-GPUH-ARGB Aluminum ARGB GPU Holder",
+        "attemptStem": "antec-at-gpuh-argb-aluminum-gpu-holder"
+      }
+    },
+    {
+      "name": "Antec AT-GPUH-ARGB-TG-BK Tempered Glass ARGB GPU Holder",
+      "slug": "antec-at-gpuh-argb-tg-bk-tempered-glass-gpu-holder",
+      "type": "PHYSICAL",
+      "sku": "ST-39164",
+      "description": "<h2>Antec AT-GPUH-ARGB-TG-BK Tempered Glass ARGB GPU Holder</h2><p>The Antec <strong>AT-GPUH-ARGB-TG-BK</strong> Tempered Glass ARGB GPU Holder is a sophisticated accessory designed to elevate both the aesthetics and functionality of your gaming rig. This GPU Holder features a 5V 3PIN ARGB connector that synchronizes with a daisy chain design, offering seamless integration with your system's lighting setup. Its edge-lit ARGB tempered glass provides a striking visual effect, while the magnet base ensures easy installation and stability. With versatile support ranging from 46 to 165mm and a depth of 55mm, this Antec AT-GPUH-ARGB-TG-BK Tempered Glass GPU Holder accommodates a wide range of GPUs, making it a flexible choice for various builds. The tool-free thumb screw design simplifies the installation process, allowing for quick and hassle-free adjustments. Constructed from durable aluminum alloy material, the Antec AT-GPUH-ARGB-TG-BK Holder not only provides robust support for your graphics card but also adds a sleek and modern touch to your setup. Whether you're looking to enhance the look of your gaming PC or ensure the stability of your GPU, this Antec AT-GPUH-ARGB-TG-BK Tempered Glass ARGB Graphics Card Holder is an ideal solution for tech enthusiasts seeking both style and performance in their hardware accessories.</p><h2>Buy Antec AT-GPUH-ARGB-TG-BK Tempered Glass ARGB GPU Holder from Star Tech</h2><p>In Bangladesh, you can get original <strong>Antec AT-GPUH-ARGB-TG-BK Tempered Glass ARGB GPU Holder</strong> From Star Tech. We have a large collection of latest Antec <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Graphics Card Holder</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Antec AT-GPUH-ARGB-TG-BK Tempered Glass ARGB GPU Holder comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AT-GPUH-ARGB-TG-BK</li><li>5V 3PIN ARGB Connector Sync with Daisy Chain Design</li><li>EDGE-LIT ARGB Tempered Glass, Magnet Base</li><li>Versatile Support from 46 to 165mm with 55mm depth</li><li>Tool Free Thumb Screw, Aluminum Alloy Material</li></ul>",
+      "model": "AT-GPUH-ARGB-TG-BK",
+      "warranty": "no warranty",
+      "basePrice": 2550.0,
+      "originalPrice": 2600.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Antec",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39164",
+          "price": 2550.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2448.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AT-GPUH-ARGB-TG-BK",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/antec-at-gpuh-argb-tg-bk-tempered-glass-gpu-holder",
+      "sourceProductCode": "39164",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AT-GPUH-ARGB-TG-BK",
+        "5V 3PIN ARGB Connector Sync with Daisy Chain Design",
+        "EDGE-LIT ARGB Tempered Glass, Magnet Base",
+        "Versatile Support from 46 to 165mm with 55mm depth",
+        "Tool Free Thumb Screw, Aluminum Alloy Material"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/antec-at-gpuh-argb-tg-bk-tempered-glass-gpu-holder.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/antec-at-gpuh-argb-tg-bk-tempered-glass-gpu-holder.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "antec-at-gpuh-argb-tg-bk-tempered-glass-gpu-holder",
+        "candidateTitle": "Antec AT-GPUH-ARGB-TG-BK Tempered Glass ARGB GPU Holder",
+        "attemptStem": "antec-at-gpuh-argb-tg-bk-tempered-glass-gpu-holder"
+      }
+    },
+    {
+      "name": "Antec AT-HGPUH-ARGB DAGGER ARGB GPU Holder",
+      "slug": "antec-at-hgpuh-argb-dagger-argb-gpu-holder",
+      "type": "PHYSICAL",
+      "sku": "ST-39166",
+      "description": "<h2>Antec AT-HGPUH-ARGB DAGGER ARGB GPU Holder</h2><p>The Antec <strong>AT-HGPUH-ARGB</strong> DAGGER ARGB GPU Holder is a premium accessory designed to provide robust support and stunning aesthetics for your gaming PC. Featuring a 5V 3PIN ARGB connector that syncs with a daisy chain design, this GPU holder ensures seamless integration with your system's lighting setup, adding a vibrant touch to your build. The five-hole bracket is equipped with anti-scratch and shock-absorbing rubber pads, offering superior protection for your graphics card. The Antec DAGGER ARGB GPU Holder supports a height range of 40-65mm and a width range of 170-270mm, making it versatile enough to accommodate various GPU sizes. The tool-free thumb screw and adjustable support column facilitate easy installation and customization, allowing you to achieve the perfect fit and stability for your GPU. Constructed with high-quality materials, the Antec AT-HGPUH-ARGB DAGGER ARGB Graphics Card Holder combines functionality with a sleek design, ensuring that your graphics card remains secure while enhancing the overall look of your gaming rig. Whether you're a professional gamer or a PC enthusiast, this Antec AT-HGPUH-ARGB DAGGER ARGB GPU Holder is an excellent addition to your setup, providing both style and support for your high-performance components.</p><h2>Buy Antec AT-HGPUH-ARGB DAGGER ARGB GPU Holder from Star Tech</h2><p>In Bangladesh, you can get original <strong>Antec AT-HGPUH-ARGB DAGGER ARGB GPU Holder</strong> From Star Tech. We have a large collection of latest Antec <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Graphics Card Holder</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Antec AT-HGPUH-ARGB DAGGER ARGB GPU Holder comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AT-HGPUH-ARGB</li><li>5V 3PIN ARGB Connector Sync with Daisy Chain Design</li><li>Five-Hole Bracket, Anti-Scratch &amp; Shock-Absorbing Rubber Pad</li><li>40-65mm Height of Support Range, 170-270mm Width of Support Range</li><li>Tool Free Thumb Screw, Adjustable Support Column</li></ul>",
+      "model": "AT-HGPUH-ARGB",
+      "warranty": "no warranty",
+      "basePrice": 2500.0,
+      "originalPrice": 2750.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Antec",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39166",
+          "price": 2500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AT-HGPUH-ARGB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/antec-at-hgpuh-argb-dagger-argb-gpu-holder",
+      "sourceProductCode": "39166",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AT-HGPUH-ARGB",
+        "5V 3PIN ARGB Connector Sync with Daisy Chain Design",
+        "Five-Hole Bracket, Anti-Scratch & Shock-Absorbing Rubber Pad",
+        "40-65mm Height of Support Range, 170-270mm Width of Support Range",
+        "Tool Free Thumb Screw, Adjustable Support Column"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/antec-at-hgpuh-argb-dagger-argb-gpu-holder.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/antec-at-hgpuh-argb-dagger-argb-gpu-holder.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "antec-at-hgpuh-argb-dagger-argb-gpu-holder",
+        "candidateTitle": "Antec AT-HGPUH-ARGB DAGGER ARGB GPU Holder",
+        "attemptStem": "antec-at-hgpuh-argb-dagger-argb-gpu-holder"
+      }
+    },
+    {
+      "name": "Antec AT-IGPUH-BK I Shape GPU Holder",
+      "slug": "antec-at-igpuh-bk-gpu-holder",
+      "type": "PHYSICAL",
+      "sku": "ST-34761",
+      "description": "<h2>Antec AT-IGPUH-BK I Shape GPU Holder</h2><p>The Antec <strong>AT-IGPUH-BK</strong> I Shape <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" style=\"color: rgb(0, 0, 0);\" target=\"\">GPU Holder</a> is a useful accessory for supporting single graphics cards in PC configurations. It can be adjusted from 80mm to 130mm in height, to suit different GPU sizes and setups. A sturdy rubber cushion on the Antec AT-IGPUH-BK I Shape GPU Holder safely and non-damagingly supports the graphics card. Its aluminum alloy metal design offers durability and dependability, and its tool-free installation ensures a hassle-free setup. The magnetic non-slip base of the Antec AT-IGPUH-BK I Shape GPU Holder adds even more stability by keeping the GPU from moving or slipping while in operation. This <strong>Antec I Shape GPU Holder</strong>, made especially for single graphics card configurations, helps keep your GPU from drooping and prolongs the life of your system, guaranteeing peak performance. All things considered, the Antec AT-IGPUH-BK I Shape GPU Holder provides a straightforward but efficient way to preserve the integrity and stability of your graphics card inside your PC setup.</p><h2>Buy Antec AT-IGPUH-BK I Shape GPU Holder from Star Tech</h2><p>In Bangladesh, you can get original <strong>Antec AT-IGPUH-BK I Shape GPU Holder</strong> From Star Tech. We have a large collection of latest Antec <span style=\"color: inherit;\"><a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" style=\"\" target=\"\">GPU Holder</a> </span>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Antec AT-IGPUH-BK I Shape GPU Holder has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AT-IGPUH-BK</li><li>80mm to 130mm Adjustable Height</li><li>Stable Rubber Pad, Tool-Free Installation</li><li>Aluminum Alloy Metal, Magnetic Non-Slip Base</li><li>Support only single Graphics card</li></ul>",
+      "model": "AT-IGPUH-BK",
+      "warranty": null,
+      "basePrice": 900.0,
+      "originalPrice": 990.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Antec",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34761",
+          "price": 900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 864.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AT-IGPUH-BK",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/antec-at-igpuh-bk-gpu-holder",
+      "sourceProductCode": "34761",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AT-IGPUH-BK",
+        "80mm to 130mm Adjustable Height",
+        "Stable Rubber Pad, Tool-Free Installation",
+        "Aluminum Alloy Metal, Magnetic Non-Slip Base",
+        "Support only single Graphics card"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/antec-at-igpuh-bk-gpu-holder.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/antec-at-igpuh-bk-gpu-holder.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "antec-at-igpuh-bk-gpu-holder",
+        "candidateTitle": "Antec AT-IGPUH-BK I Shape GPU Holder",
+        "attemptStem": "antec-at-igpuh-bk-gpu-holder"
+      }
+    },
+    {
+      "name": "Antec I Shape Prism GPU Holder",
+      "slug": "antec-i-shape-prism-gpu-holder",
+      "type": "PHYSICAL",
+      "sku": "AT-IGPUH-L100-PRSM-BK",
+      "description": "<h2>Antec I Shape Prism GPU Holder</h2><p>The Antec <strong>I Shape Prism</strong> <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" style=\"color: rgb(0, 0, 0);\" target=\"\">GPU Holder</a> is a high-performance attachment that provides reliable support for the RTX 40 series graphics cards. It is precisely crafted and has a sturdy aluminum alloy structure that guarantees stability and dependability for a long time. It is simple to set up and requires no tools, saving time and effort while ensuring a snug fit. The graphics card is better protected by the sturdy rubber pad, which lessens vibrations and guards against possible damage while in operation. With its magnetic non-slip base that sticks firmly to the surface, this Antec I Shape Prism GPU Stand provides extra stability and inhibits undesired movement. Modern, high-performance builds that require accuracy and dependability are specifically catered to by its elegant and practical design, which guarantees compatibility with a single graphics card. The graphics card stand is a necessary tool for gamers, multimedia producers, and PC enthusiasts since it efficiently supports the graphics card, reducing lag and maximizing performance. By keeping your graphics card firmly in place, the Antec I Shape Prism GPU Holder not only improves the build's general functioning but also its visual appeal. This creative fix tackles typical GPU droop problems that can shorten the lifespan and effectiveness of expensive components. This Antec I Shape Prism GPU Holder is a dependable and useful addition to any system, whether you're creating a state-of-the-art gaming PC or a professional workstation. Its compatibility with RTX 40 series cards and contemporary design.</p><h2>Buy Antec I Shape Prism GPU Holder from Star Tech</h2><p>In Bangladesh, you can get original <strong>Antec I Shape Prism GPU Holder</strong> From Star Tech. We have a large collection of latest Antec <span style=\"color: inherit;\"><a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" style=\"\" target=\"\">GPU Holder</a> </span>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Antec I Shape Prism GPU Holder has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: AT-IGPUH-L100-PRSM-BK</li><li>Model: I Shape Prism</li><li>Supporting RTX 40 Series Graphics Cards</li><li>Stable Rubber Pad, Tool-Free Installation</li><li>Aluminum Alloy Metal, Magnetic Non-Slip Base</li><li>Support only single Graphics card</li></ul>",
+      "model": "I Shape Prism",
+      "warranty": null,
+      "basePrice": 900.0,
+      "originalPrice": 990.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Antec",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "AT-IGPUH-L100-PRSM-BK",
+          "price": 900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 864.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "AT-IGPUH-L100-PRSM-BK",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "I Shape Prism",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/antec-i-shape-prism-gpu-holder",
+      "sourceProductCode": "39105",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "AT-IGPUH-L100-PRSM-BK",
+      "sourceKeyFeatures": [
+        "MPN: AT-IGPUH-L100-PRSM-BK",
+        "Model: I Shape Prism",
+        "Supporting RTX 40 Series Graphics Cards",
+        "Stable Rubber Pad, Tool-Free Installation",
+        "Aluminum Alloy Metal, Magnetic Non-Slip Base",
+        "Support only single Graphics card"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/antec-i-shape-prism-gpu-holder.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/antec-i-shape-prism-gpu-holder.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "antec-i-shape-prism-gpu-holder",
+        "candidateTitle": "Antec I Shape Prism GPU Holder",
+        "attemptStem": "antec-i-shape-prism-gpu-holder"
+      }
+    },
+    {
+      "name": "Antec RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit",
+      "slug": "antec-rtx40-pcie4-0-riser-cable-vertical-bracket-kit",
+      "type": "PHYSICAL",
+      "sku": "AT-RCVB-BK200-PCIE4-RTX40",
+      "description": "<h2>Antec RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit</h2><p>The Antec <strong>RTX40 PCIe 4.0 Riser Cable Vertical Bracket Kit</strong> includes a high-speed PCIe 4.0 Gen4 cable. guarantees incredibly quick data transfer, with the ability to increase bandwidth to 16Gbps and higher. It comes with ultra-flexible cable covers for simple installation, as well as a premium golden plate and shielded PCB for improved performance and durability. The Antec RTX40 PCIe 4.0 Riser Cable Vertical Bracket Kit, which was designed without the need for any tools, is compatible with a variety of GPUs, including the potent Nvidia RTX 4090 and AMD Radeon RX7900 XT. This Antec <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" style=\"color: rgb(0, 0, 0);\" target=\"\">vertical GPU Card Holder</a> compatibility with different motherboard and GPU configurations is guaranteed by the 200mm cable length, which supports PCIe 4.0, 3.0, 2.0, and 1.0 standards. The portable bracket provides additional freedom in utilizing PC case internal space, but it should be noted that it only supports FULL-BREAK PCIe expansion slot chassis. The Antec RTX40 bracket kit provides great stability and complete PCIe Gen4 x16 speed, this Graphics Card Holder offering a plug-and-play experience. It is also backward compatible with previous PCIe standards like as 3.0, 2.0, and 1.0. The gold-plated pin connections are extremely durable, with a retention force of 400g per contact pair, increasing the connection's lifespan. This Antec RTX40 PCIe 4.0 Riser Cable Vertical Bracket Kit is compatible with popular GPUs like as the RTX3090, RTX3080, RTX3070, RTX3060TI, RX6900XT, and RX6800, making it an excellent choice for a variety of PC configurations.</p><h2>Buy Antec RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit from Star Tech</h2><p>In Bangladesh, you can get original <strong>Antec RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit</strong> From Star Tech. We have a large collection of latest Antec <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Vertical Graphics Card Holder</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Antec RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: AT-RCVB-BK200-PCIE4-RTX40</li><li>Model: RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit</li><li>200mm High-Speed PCIe 4.0 Gen4 Cable</li><li>Ultra Flexible Cable Sleeves, Tool-Free Design</li><li>High-Quality Golden Plate and Shielded PCB</li><li>Supports up to Nvidia RTX 4090 and Radeon RX7900 XT</li></ul>",
+      "model": "RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit",
+      "warranty": "No Warranty",
+      "basePrice": 3500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 18.7,
+        "width": 11.0,
+        "height": 13.0,
+        "unit": "cm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Antec",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "AT-RCVB-BK200-PCIE4-RTX40",
+          "price": 3500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Vertical mounting GPU bracket High-speed PCIe 4.0 Gen4 cable High-quality golden plate and shielded PCB Ultra flexible cable sleeves Tool-free design Supports up to Nvidia RTX 4090 and AMD Radeon RX7900 XT Interface PCI-E 4.0 Cable length: 200mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "18.7 x 11 x 13 cm",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/antec-rtx40-pcie4-0-riser-cable-vertical-bracket-kit",
+      "sourceProductCode": "40440",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "AT-RCVB-BK200-PCIE4-RTX40",
+      "sourceKeyFeatures": [
+        "MPN: AT-RCVB-BK200-PCIE4-RTX40",
+        "Model: RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit",
+        "200mm High-Speed PCIe 4.0 Gen4 Cable",
+        "Ultra Flexible Cable Sleeves, Tool-Free Design",
+        "High-Quality Golden Plate and Shielded PCB",
+        "Supports up to Nvidia RTX 4090 and Radeon RX7900 XT"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/antec-rtx40-pcie4-0-riser-cable-vertical-bracket-kit.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/antec-rtx40-pcie4-0-riser-cable-vertical-bracket-kit.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "antec-rtx40-pcie4-0-riser-cable-vertical-bracket-kit",
+        "candidateTitle": "Antec RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit",
+        "attemptStem": "antec-rtx40-pcie4-0-riser-cable-vertical-bracket-kit"
+      }
+    },
+    {
+      "name": "Antec RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit White",
+      "slug": "antec-rtx40-pcie4-0-riser-cable-vertical-bracket-kit-white",
+      "type": "PHYSICAL",
+      "sku": "AT-RCVB-W200-PCIE4-RTX40",
+      "description": "<h2>Antec RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit White</h2><p>The Antec <strong>RTX40 PCIe 4.0 Riser Cable Vertical Bracket Kit White</strong> comes with a high-speed PCIe 4.0 Gen 4 cable. Guarantees extremely fast data transfer, with the option to boost bandwidth to 16Gbps or higher. It includes ultra-flexible cable covers for easy installation, as well as a high gold plate and insulated PCB for increased performance and durability. The Antec RTX40 PCIe 4.0 Riser Cable Vertical Bracket Kit White, which requires no tools, works with a wide range of GPUs, including the powerful Nvidia RTX 4090 and AMD Radeon RX7900 XT. The 200mm cable length of this Antec <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" style=\"color: rgb(0, 0, 0);\" target=\"\">vertical GPU Card Holder</a> ensures compatibility with various motherboard and GPU setups, while also supporting PCIe 4.0, 3.0, 2.0, and 1.0 standards. The portable mount allows for greater flexibility in utilizing PC case internal space, but it should be noted that it only supports FULL-BREAK PCIe expansion slot chassis. The Antec RTX40 bracket kit White offers excellent stability and full PCIe Gen4 x16 speed, with this Graphics Card Holder providing a plug-and-play experience. It is also backward compatible with older PCIe standards, including 3.0, 2.0, and 1.0. The gold-plated pin connections are exceptionally durable, with a retention force of 400g per contact pair, which extends the connection's life. This Antec RTX40 PCIe 4.0 Riser Cable Vertical Bracket Kit White works with popular GPUs such as the RTX3090, RTX3080, RTX3070, RTX3060TI, RX6900XT, and RX6800, making it an ideal choice for a wide range of PC systems.</p><h2>Buy Antec RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit White from Star Tech</h2><p>In Bangladesh, you can get original <strong>Antec RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit White</strong> From Star Tech. We have a large collection of latest Antec <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Vertical Graphics Card Holder</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Antec RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit White comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: AT-RCVB-W200-PCIE4-RTX40</li><li>Model: RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit</li><li>200mm High-Speed PCIe 4.0 Gen4 Cable</li><li>Ultra Flexible Cable Sleeves, Tool-Free Design</li><li>High-Quality Golden Plate and Shielded PCB</li><li>Supports up to Nvidia RTX 4090 and Radeon RX7900 XT</li></ul>",
+      "model": "RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit",
+      "warranty": "No Warranty",
+      "basePrice": 3500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 18.7,
+        "width": 11.0,
+        "height": 13.0,
+        "unit": "cm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Antec",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "AT-RCVB-W200-PCIE4-RTX40",
+          "price": 3500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Vertical mounting GPU bracket High-speed PCIe 4.0 Gen4 cable High-quality golden plate and shielded PCB Ultra flexible cable sleeves Tool-free design Supports up to Nvidia RTX 4090 and AMD Radeon RX7900 XT Interface PCI-E 4.0 Cable length: 200mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "18.7 x 11 x 13 cm",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/antec-rtx40-pcie4-0-riser-cable-vertical-bracket-kit-white",
+      "sourceProductCode": "40441",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "AT-RCVB-W200-PCIE4-RTX40",
+      "sourceKeyFeatures": [
+        "MPN: AT-RCVB-W200-PCIE4-RTX40",
+        "Model: RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit",
+        "200mm High-Speed PCIe 4.0 Gen4 Cable",
+        "Ultra Flexible Cable Sleeves, Tool-Free Design",
+        "High-Quality Golden Plate and Shielded PCB",
+        "Supports up to Nvidia RTX 4090 and Radeon RX7900 XT"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/antec-rtx40-pcie4-0-riser-cable-vertical-bracket-kit-white.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/antec-rtx40-pcie4-0-riser-cable-vertical-bracket-kit-white.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "antec-rtx40-pcie4-0-riser-cable-vertical-bracket-kit-white",
+        "candidateTitle": "Antec RTX40 PCIe4.0 Riser Cable Vertical Bracket Kit White",
+        "attemptStem": "antec-rtx40-pcie4-0-riser-cable-vertical-bracket-kit-white"
+      }
+    },
+    {
+      "name": "Antec RTX50 PCI-E 5.0 Vertical GPU Bracket With Riser Cable",
+      "slug": "antec-rtx50-pci-e-5-0-vertical-gpu-bracket",
+      "type": "PHYSICAL",
+      "sku": "AT-RCVB-BK200-PCIE5",
+      "description": "<h2>Antec RTX50 PCI-E 5.0 Vertical GPU Bracket With Riser Cable</h2><p>The Antec <strong>RTX50 PCI-E 5.0</strong> Vertical GPU Bracket supports the latest PCI-E 5.0 interface, ensuring fast and reliable data transmission for modern gaming and professional systems. With a 200 mm riser cable, Antec GPU Holder provides flexible installation and neat cable management for a clean PC build. Antec RTX50 PCI-E 5.0 GPU Bracket offers a transfer rate of 32 GT/s, delivering exceptional speed for demanding workloads and gaming applications. With a maximum bandwidth of 64 GB/s on x16 configuration, Antec GPU Holder ensures optimal performance without bottlenecks. Antec GPU Bracket With Riser Cable supports powerful GPUs, including NVIDIA GeForce RTX 5090 and AMD Radeon RX 9070 XT. This Antec GPU Bracket enhances airflow and improves cooling by positioning the graphics card vertically inside the case. Antec RTX50 PCI-E 5.0 Vertical GPU Holder maintains stability and durability, ensuring secure mounting even with heavy and high-performance GPUs. The bracket is compatible with Flux Series, CB Series, C7 Series, Performance 1 FT, and P20C Series cases. Antec GPU Holder requires a chassis with fully open PCIe expansion slots, ensuring proper installation and alignment for best results.</p><h2>Buy Antec RTX50 PCI-E 5.0 Vertical GPU Bracket With Riser Cable from Star Tech</h2><p>In Bangladesh, you can get original <strong>Antec RTX50 PCI-E 5.0 Vertical GPU Bracket With Riser Cable</strong> From Star Tech. We have a large collection of latest Antec <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Vertical Graphics Card Holder</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Antec RTX50 PCI-E 5.0 Vertical GPU Bracket With Riser Cable comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: AT-RCVB-BK200-PCIE5</li><li>Model: RTX50 PCI-E 5.0</li><li>Interface: PCI-E 5.0, Cable Length: 200 mm</li><li>Transfer Rate: 32 GT/s, Max Bandwidth: 64 GB/s (x16)</li><li>GPU Compatibility: Up to RTX 5090 / Radeon RX 9070 XT</li><li>Case Compatibility: Flux Series, CB Series, C7 Series, Performance 1 FT, P20C Series</li></ul>",
+      "model": "RTX50 PCI-E 5.0",
+      "warranty": "no warranty",
+      "basePrice": 7200.0,
+      "originalPrice": 7920.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Antec",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "PCI-E 5.0, Cable Length: 200 mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "AT-RCVB-BK200-PCIE5",
+          "price": 7200.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "PCI-E 5.0, Cable Length: 200 mm"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 6912.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "AT-RCVB-BK200-PCIE5",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "RTX50 PCI-E 5.0",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "PCI-E 5.0, Cable Length: 200 mm",
+              "position": 2
+            },
+            {
+              "label": "Transfer Rate",
+              "value": "32 GT/s, Max Bandwidth: 64 GB/s (x16)",
+              "position": 3
+            },
+            {
+              "label": "GPU Compatibility",
+              "value": "Up to RTX 5090 / Radeon RX 9070 XT",
+              "position": 4
+            },
+            {
+              "label": "Case Compatibility",
+              "value": "Flux Series, CB Series, C7 Series, Performance 1 FT, P20C Series",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/antec-rtx50-pci-e-5-0-vertical-gpu-bracket",
+      "sourceProductCode": "49037",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "AT-RCVB-BK200-PCIE5",
+      "sourceKeyFeatures": [
+        "MPN: AT-RCVB-BK200-PCIE5",
+        "Model: RTX50 PCI-E 5.0",
+        "Interface: PCI-E 5.0, Cable Length: 200 mm",
+        "Transfer Rate: 32 GT/s, Max Bandwidth: 64 GB/s (x16)",
+        "GPU Compatibility: Up to RTX 5090 / Radeon RX 9070 XT",
+        "Case Compatibility: Flux Series, CB Series, C7 Series, Performance 1 FT, P20C Series"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/antec-rtx50-pci-e-5-0-vertical-gpu-bracket.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/antec-rtx50-pci-e-5-0-vertical-gpu-bracket.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "antec-rtx50-pci-e-5-0-vertical-gpu-bracket",
+        "candidateTitle": "Antec RTX50 PCI-E 5.0 Vertical GPU Bracket With Riser Cable",
+        "attemptStem": "antec-rtx50-pci-e-5-0-vertical-gpu-bracket"
+      }
+    },
+    {
+      "name": "Antec RTX50 PCI-E 5.0 Vertical GPU Bracket With Riser Cable White",
+      "slug": "antec-rtx50-pci-e-5-0-vertical-gpu-bracket-white",
+      "type": "PHYSICAL",
+      "sku": "AT-RCVB-W200-PCIE5",
+      "description": "<h2>Antec RTX50 PCI-E 5.0 Vertical GPU Bracket With Riser Cable White</h2>\n<p>The Antec <strong>RTX50 PCI-E 5.0</strong> Vertical GPU Bracket in White supports the latest PCI-E 5.0 interface, ensuring fast and reliable data transmission for modern gaming and professional systems. With a 200 mm riser cable, Antec GPU Holder provides flexible installation and neat cable management for a clean PC build. Antec RTX50 PCI-E 5.0 GPU Bracket White offers a transfer rate of 32 GT/s, delivering exceptional speed for demanding workloads and gaming applications. With a maximum bandwidth of 64 GB/s on x16 configuration, Antec GPU Holder ensures optimal performance without bottlenecks. Antec White GPU Bracket With Riser Cable supports powerful GPUs, including NVIDIA GeForce RTX 5090 and AMD Radeon RX 9070 XT. This Antec GPU Bracket enhances airflow and improves cooling by positioning the graphics card vertically inside the case. Antec RTX50 PCI-E 5.0 Vertical GPU Holder White maintains stability and durability, ensuring secure mounting even with heavy and high-performance GPUs. The bracket is compatible with Flux Series, CB Series, C7 Series, Performance 1 FT, and P20C Series cases. Antec GPU Holder requires a chassis with fully open PCIe expansion slots, ensuring proper installation and alignment for best results.</p>\n<h2>Buy Antec RTX50 PCI-E 5.0 Vertical GPU Bracket White from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Antec RTX50 PCI-E 5.0 Vertical GPU Bracket White</strong> From Star Tech. We have a large collection of latest Antec <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Vertical Graphics Card Holder</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Antec RTX50 PCI-E 5.0 Vertical GPU Bracket White comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: AT-RCVB-W200-PCIE5</li><li>Model: RTX50 PCI-E 5.0</li><li>Interface: PCI-E 5.0, Cable Length: 200 mm</li><li>Transfer Rate: 32 GT/s, Max Bandwidth: 64 GB/s (x16)</li><li>GPU Compatibility: Up to RTX 5090 / Radeon RX 9070 XT</li><li>Case Compatibility: Flux Series, CB Series, C7 Series, Performance 1 FT, P20C Series</li></ul>",
+      "model": "RTX50 PCI-E 5.0",
+      "warranty": "no warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Antec",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "PCI-E 5.0, Cable Length: 200 mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "AT-RCVB-W200-PCIE5",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "PCI-E 5.0, Cable Length: 200 mm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "AT-RCVB-W200-PCIE5",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "RTX50 PCI-E 5.0",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "PCI-E 5.0, Cable Length: 200 mm",
+              "position": 2
+            },
+            {
+              "label": "Transfer Rate",
+              "value": "32 GT/s, Max Bandwidth: 64 GB/s (x16)",
+              "position": 3
+            },
+            {
+              "label": "GPU Compatibility",
+              "value": "Up to RTX 5090 / Radeon RX 9070 XT",
+              "position": 4
+            },
+            {
+              "label": "Case Compatibility",
+              "value": "Flux Series, CB Series, C7 Series, Performance 1 FT, P20C Series",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/antec-rtx50-pci-e-5-0-vertical-gpu-bracket-white",
+      "sourceProductCode": "49041",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": "AT-RCVB-W200-PCIE5",
+      "sourceKeyFeatures": [
+        "MPN: AT-RCVB-W200-PCIE5",
+        "Model: RTX50 PCI-E 5.0",
+        "Interface: PCI-E 5.0, Cable Length: 200 mm",
+        "Transfer Rate: 32 GT/s, Max Bandwidth: 64 GB/s (x16)",
+        "GPU Compatibility: Up to RTX 5090 / Radeon RX 9070 XT",
+        "Case Compatibility: Flux Series, CB Series, C7 Series, Performance 1 FT, P20C Series"
+      ],
+      "needsReview": true,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/antec-rtx50-pci-e-5-0-vertical-gpu-bracket-white.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/antec-rtx50-pci-e-5-0-vertical-gpu-bracket-white.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "antec-rtx50-pci-e-5-0-vertical-gpu-bracket-white",
+        "candidateTitle": "Antec RTX50 PCI-E 5.0 Vertical GPU Bracket With Riser Cable White",
+        "attemptStem": "antec-rtx50-pci-e-5-0-vertical-gpu-bracket-white"
+      }
+    },
+    {
+      "name": "Antec SHIFT ARGB Vertical GPU Bracket With PCI-E 5.0 Riser Cable",
+      "slug": "antec-shift-argb-gpu-bracket",
+      "type": "PHYSICAL",
+      "sku": "AT-ARCVB-BK190-A-PCIE5",
+      "description": "<h2>Antec SHIFT ARGB Vertical GPU Bracket With PCI-E 5.0 Riser Cable</h2><p>The Antec <strong>SHIFT ARGB</strong> Vertical GPU Bracket With PCI-E 5.0 Riser Cable is a high-performance and stylish GPU mounting solution designed for gamers and PC enthusiasts seeking both aesthetics and efficiency. This Antec SHIFT ARGB Vertical GPU Bracket supports E-ATX, ATX, and Micro ATX chassis (conditionally) and accommodates graphics cards up to 3 slots wide, ensuring compatibility with the latest GPUs. Equipped with a 190mm PCI-E 5.0 x16 riser cable, the Antec SHIFT ARGB Vertical GPU Bracket guarantees ultra-fast data transfer speeds and stable connectivity across PCI-E 5.0 and older standards. It features 3-pin 5V ARGB connectors for customizable RGB lighting, allowing users to create stunning visual effects that sync with other system components. Requiring a minimum of 4 PCI slots, this bracket ensures a secure fit and optimal airflow for enhanced cooling performance. The durable black ARGB design offers a premium appearance, while its solid build weighs 0.94 kg (net) and 1.13 kg (gross). With dimensions of 284.1 × 145 × 133.1 mm (closed) and 337.6 × 178 × 195.6 mm (open), the Antec SHIFT ARGB Vertical GPU Bracket With PCI-E 5.0 Riser Cable delivers both compact form and flexibility. Powered by DC 12V at 5A, it provides efficient power delivery and reliable operation, making the Antec SHIFT ARGB Vertical GPU Bracket an excellent choice for showcasing your graphics card while enhancing system performance and visual appeal.</p><h2>Buy Antec SHIFT ARGB Vertical GPU Bracket With PCI-E 5.0 Riser Cable from Star Tech</h2><p>In Bangladesh, you can get original <strong>Antec SHIFT ARGB Vertical GPU Bracket</strong> From Star Tech. We have a large collection of latest Antec <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Vertical Graphics Card Holder</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Antec SHIFT ARGB Vertical GPU Bracket comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: AT-ARCVB-BK190-A-PCIE5</li><li>Model: SHIFT ARGB</li><li>Supported Chassis Type: E-AT, ATX, Micro ATX (Conditional)</li><li>Supported Graphics Cards: Max. 3 slots wide</li><li>Riser Cable Length: 190mm PCI-E 5.0 Riser Cable</li><li>LED Type: 3-Pin 5V ARGB Connectors</li></ul>",
+      "model": "SHIFT ARGB",
+      "warranty": "No Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.94,
+      "dimensions": {
+        "length": 284.1,
+        "width": 145.0,
+        "height": 133.1,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Antec",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black ARGB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "AT-ARCVB-BK190-A-PCIE5",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black ARGB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Power",
+              "value": "Rated Voltage: DC 12V Rated Current: 5A",
+              "position": 0
+            },
+            {
+              "label": "Connectivity",
+              "value": "Supported Chassis Type: E-AT, ATX, Micro ATX(Conditional) Supported Graphics Cards: Max. 3 slots wide PCI Slot Number: Min. 4 PCI slots required",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Cable Length: 190 mm PCle Standard: PCle 5.0 x 16 Compatibility: PCle 5.0 and older LED Type: 3-Pin 5V ARGB Connectors",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black ARGB",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "Net Weight: 0.94 kg Gross Weight: 1.13 kg",
+              "position": 1
+            },
+            {
+              "label": "Dimensions",
+              "value": "284.1 (L) × 145(W) x 133.1 (H) mm (close) 337.6(L) × 178(W) x 195.6(H) mm (open)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/antec-shift-argb-gpu-bracket",
+      "sourceProductCode": "46413",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": "AT-ARCVB-BK190-A-PCIE5",
+      "sourceKeyFeatures": [
+        "MPN: AT-ARCVB-BK190-A-PCIE5",
+        "Model: SHIFT ARGB",
+        "Supported Chassis Type: E-AT, ATX, Micro ATX (Conditional)",
+        "Supported Graphics Cards: Max. 3 slots wide",
+        "Riser Cable Length: 190mm PCI-E 5.0 Riser Cable",
+        "LED Type: 3-Pin 5V ARGB Connectors"
+      ],
+      "needsReview": true,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/antec-shift-argb-gpu-bracket.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/antec-shift-argb-gpu-bracket.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "antec-shift-argb-gpu-bracket",
+        "candidateTitle": "Antec SHIFT ARGB Vertical GPU Bracket With PCI-E 5.0 Riser Cable",
+        "attemptStem": "antec-shift-argb-gpu-bracket"
+      }
+    },
+    {
+      "name": "Antec SHIFT Vertical GPU Bracket With PCI-E 4.0 Riser Cable",
+      "slug": "antec-shift-vertical-gpu-bracket",
+      "type": "PHYSICAL",
+      "sku": "AT-ARCVB-BK190-PCIE4-RTX40",
+      "description": "<h2>Antec SHIFT Vertical GPU Bracket With PCI-E 4.0 Riser Cable</h2><p>The Antec <strong>SHIFT</strong> Vertical GPU Bracket comes with a PCI-E 4.0 Riser Cable for vertical GPU mounting. This Antec GPU Holder has a horizontal adjustment of 53mm and a side panel adjustment of 33mm, making it suited for a variety of setups. The bundled PCI-E 4.0 riser cable is 190mm length, ensuring compatibility with the latest GPUs while also supporting PCIe 4.0 and earlier standards. This adaptability makes it an excellent choice for a variety of builds. The Antec SHIFT <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" style=\"color: rgb(0, 0, 0);\" target=\"\">Vertical GPU Bracket</a> is compatible with E-ATX, ATX, and Micro ATX cases, with a 54mm adjustable range to fit even the largest cases and graphics cards up to three slots wide. It requires at least four PCI slots for installation and is compatible with all standard M-ATX chassis, as long as the back fan is removed if necessary and the GPU cooler height is no more than 70mm. The Antec SHIFT GPU Bracket measures 284.1mm (L) x 145mm (W) x 133.1mm (H) when closed and 337.6mm (L) x 178mm (W) x 195.6mm (H) when open, with plenty of room for a variety of GPU sizes. The riser cable provides exceptional performance with a PCIe 4.0 x 16 standard and is rated for a DC 12V supply and 5A current. The Antec SHIFT Vertical GPU Bracket provides robust and efficient connectivity for high-performance graphics cards.</p><h2>Buy Antec SHIFT Vertical GPU Bracket from Star Tech</h2><p>In Bangladesh, you can get original <strong>Antec SHIFT Vertical GPU Bracket</strong> From Star Tech. We have a large collection of latest Antec <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Vertical Graphics Card Holder</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Antec SHIFT Vertical GPU Bracket comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: AT-ARCVB-BK190-PCIE4-RTX40</li><li>Model: SHIFT</li><li>53mm Horizontally and 33mm Towards the Side Panel</li><li>Riser Cable Length: 190mm PCI-E 4.0 Riser Cable</li><li>54mm Adjustable Range to Bottom, Supported Max. 3 Slots GPU</li><li>Supported Casing Type: E-ATX, ATX, Micro ATX (Conditional)</li></ul>",
+      "model": "SHIFT",
+      "warranty": "No Warranty",
+      "basePrice": 4500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 1.01,
+      "dimensions": {
+        "length": 33.7,
+        "width": 17.8,
+        "height": 19.5,
+        "unit": "cm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Antec",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "AT-ARCVB-BK190-PCIE4-RTX40",
+          "price": 4500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Power",
+              "value": "Rated Voltage: DC 12V Rated Current: 5A",
+              "position": 0
+            },
+            {
+              "label": "Connectivity",
+              "value": "Supported Chassis Type: E-ATX, ATX, Micro-ATX (Conditional) Supported Graphics Cards: Max. 3 slots wide PCI Slot Number: Min. 4 PCI slots required",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Cable Length: 19 cm PCIe Standard: PCIe 4.0 x 16 Compatibility: PCIe 4.0 and older",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "1010g",
+              "position": 1
+            },
+            {
+              "label": "Dimensions",
+              "value": "Open: 33.7 x 17.8 x 19.5 cm Closed: 28.4 x 14.5 x 13.3 cm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/antec-shift-vertical-gpu-bracket",
+      "sourceProductCode": "40434",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "AT-ARCVB-BK190-PCIE4-RTX40",
+      "sourceKeyFeatures": [
+        "MPN: AT-ARCVB-BK190-PCIE4-RTX40",
+        "Model: SHIFT",
+        "53mm Horizontally and 33mm Towards the Side Panel",
+        "Riser Cable Length: 190mm PCI-E 4.0 Riser Cable",
+        "54mm Adjustable Range to Bottom, Supported Max. 3 Slots GPU",
+        "Supported Casing Type: E-ATX, ATX, Micro ATX (Conditional)"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/antec-shift-vertical-gpu-bracket.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/antec-shift-vertical-gpu-bracket.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "antec-shift-vertical-gpu-bracket",
+        "candidateTitle": "Antec SHIFT Vertical GPU Bracket With PCI-E 4.0 Riser Cable",
+        "attemptStem": "antec-shift-vertical-gpu-bracket"
+      }
+    },
+    {
+      "name": "Antec SHIFT White Vertical GPU Bracket With PCI-E 4.0 Riser Cable",
+      "slug": "antec-shift-white-vertical-gpu-bracket",
+      "type": "PHYSICAL",
+      "sku": "AT-ARCVB-W190-PCIE4-RTX40",
+      "description": "<h2>Antec SHIFT White Vertical GPU Bracket With PCI-E 4.0 Riser Cable</h2><p>The Antec <strong>SHIFT White</strong> Vertical GPU Bracket is equipped with a PCI-E 4.0 Riser Cable for vertical GPU mounting. With its 53mm horizontal adjustment and 33mm side panel adjustment, this Antec GPU Holder can be used in a number of configurations. With its 190mm length, the included PCI-E 4.0 riser cable supports both PCIe 4.0 and previous standards and is compatible with the newest GPUs. Because of its versatility, it's a great option for a range of builds. With a 54mm adjustable range, the Antec SHIFT White <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" style=\"color: rgb(0, 0, 0);\" target=\"\">Vertical GPU Bracket </a>fits even the largest cases and graphics cards up to three slots wide. It is compatible with E-ATX, ATX, and Micro ATX cases. Installing it requires at least four PCI slots, and it can be installed on any normal M-ATX chassis as long as the GPU cooler is no higher than 70mm and the back fan is removed if needed. With ample space for a range of GPU sizes, the Antec SHIFT White GPU Bracket measures 284.1mm (L) x 145mm (W) x 133.1mm (H) when closed and 337.6mm (L) x 178mm (W) x 195.6mm (H) when open. With a PCIe 4.0 x 16 standard and a DC 12V supply and 5A current rating, the riser cable offers outstanding performance. For high-performance graphics cards, the Antec SHIFT White Vertical GPU Bracket offers reliable and effective communication.</p><h2>Buy Antec SHIFT White Vertical GPU Bracket from Star Tech</h2><p>In Bangladesh, you can get original <strong>Antec SHIFT White Vertical GPU Bracket</strong> From Star Tech. We have a large collection of latest Antec <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Vertical Graphics Card Holder</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Antec SHIFT White Vertical GPU Bracket comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: AT-ARCVB-W190-PCIE4-RTX40</li><li>Model: SHIFT White</li><li>53mm Horizontally and 33mm Towards the Side Panel</li><li>Riser Cable Length: 190mm PCI-E 4.0 Riser Cable</li><li>54mm Adjustable Range to Bottom, Supported Max. 3 Slots GPU</li><li>Supported Casing Type: E-ATX, ATX, Micro ATX (Conditional)</li></ul>",
+      "model": "SHIFT White",
+      "warranty": "No Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 1.01,
+      "dimensions": {
+        "length": 33.7,
+        "width": 17.8,
+        "height": 19.5,
+        "unit": "cm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Antec",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "AT-ARCVB-W190-PCIE4-RTX40",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Power",
+              "value": "Rated Voltage: DC 12V Rated Current: 5A",
+              "position": 0
+            },
+            {
+              "label": "Connectivity",
+              "value": "Supported Chassis Type: E-ATX, ATX, Micro-ATX (Conditional) Supported Graphics Cards: Max. 3 slots wide PCI Slot Number: Min. 4 PCI slots required",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Cable Length: 19 cm PCIe Standard: PCIe 4.0 x 16 Compatibility: PCIe 4.0 and older",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "1010g",
+              "position": 1
+            },
+            {
+              "label": "Dimensions",
+              "value": "Open: 33.7 x 17.8 x 19.5 cm Closed: 28.4 x 14.5 x 13.3 cm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/antec-shift-white-vertical-gpu-bracket",
+      "sourceProductCode": "40436",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": "AT-ARCVB-W190-PCIE4-RTX40",
+      "sourceKeyFeatures": [
+        "MPN: AT-ARCVB-W190-PCIE4-RTX40",
+        "Model: SHIFT White",
+        "53mm Horizontally and 33mm Towards the Side Panel",
+        "Riser Cable Length: 190mm PCI-E 4.0 Riser Cable",
+        "54mm Adjustable Range to Bottom, Supported Max. 3 Slots GPU",
+        "Supported Casing Type: E-ATX, ATX, Micro ATX (Conditional)"
+      ],
+      "needsReview": true,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/antec-shift-white-vertical-gpu-bracket.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/antec-shift-white-vertical-gpu-bracket.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "antec-shift-white-vertical-gpu-bracket",
+        "candidateTitle": "Antec SHIFT White Vertical GPU Bracket With PCI-E 4.0 Riser Cable",
+        "attemptStem": "antec-shift-white-vertical-gpu-bracket"
+      }
+    },
+    {
+      "name": "ASUS XH01 ROG Herculx Graphics Card Holder",
+      "slug": "asus-rog-herculx-graphics-card-holder",
+      "type": "PHYSICAL",
+      "sku": "ST-28271",
+      "description": "<h2 style=\"\">ASUS XH01 ROG Herculx Graphics Card Holder</h2><p style=\"\">The ASUS XH01 ROG Herculx Graphics Card Holder is a durable and reliable solution to securely support high-performance graphics cards. Its stand design is compatible with various chassis and does not occupy PCIe slots. With a support height range of 72-128 mm, it offers a strong and adaptable design. The holder is specifically designed to support NVIDIA GeForce RTX 40 series graphics cards. Setup and removal are made easy with an adjustable wheel and release button, and a spirit level is included for convenient setup. The ASUS XH01 ROG Herculx Graphics Card Holder comes with an embedded 3D ARGB element that is compatible with Aura Sync for customizable lighting effects.</p><h2 style=\"\">Buy ASUS XH01 ROG Herculx Graphics Card Holder from Star Tech</h2><p style=\"\">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/asus-rog-herculx-graphics-card-holder\" target=\"\">ASUS XH01 ROG Herculx Graphics Card Holder</a> From Star Tech. We have a large collection of latest ASUS Graphics Card Holder to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The ASUS XH01 ROG Herculx Graphics Card Holder comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: XH01 ROG Herculx</li><li>Compatible with a variety of chassis and doesn’t occupy PCIe slots</li><li>Offers a support height of 72-128 mm</li><li>Supports NVIDIA GeForce RTX 40 series</li><li>Included spirit level simplifies setup</li></ul>",
+      "model": "XH01 ROG Herculx",
+      "warranty": "1 year warranty",
+      "basePrice": 6500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-28271",
+          "price": 6500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 6240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "XH01 ROG Herculx",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-rog-herculx-graphics-card-holder",
+      "sourceProductCode": "28271",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: XH01 ROG Herculx",
+        "Compatible with a variety of chassis and doesn’t occupy PCIe slots",
+        "Offers a support height of 72-128 mm",
+        "Supports NVIDIA GeForce RTX 40 series",
+        "Included spirit level simplifies setup"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/asus-rog-herculx-graphics-card-holder.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/asus-rog-herculx-graphics-card-holder.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-rog-herculx-graphics-card-holder",
+        "candidateTitle": "ASUS XH01 ROG Herculx Graphics Card Holder",
+        "attemptStem": "asus-rog-herculx-graphics-card-holder"
+      }
+    },
+    {
+      "name": "Asus RS200 ROG Strix Riser Cable",
+      "slug": "asus-rs200-rog-strix-riser-cable",
+      "type": "PHYSICAL",
+      "sku": "90DC0080-B00010",
+      "description": "<h2 style=\"text-align: justify; \">Asus RS200 ROG Strix Riser Cable</h2><p style=\"text-align: justify; \">Asus RS200 ROG Strix Riser Cable comes with ROG Strix 240 mm PCI-E 3.0 x 16 Riser Cable with 90-degree adapter, patent SafeSlot design. This Riser Cable is Featuring a new manufacturing process that integrates fortifying metal and additional solder points. In this Asus RS200 ROG Strix Riser Cable, the SafeSlot makes sure your graphics card connection is solid and stable. It comes with a Slim, flat and foldable design, that achieves transmission efficiency and stability, and easy cable management</p> <h3 style=\"text-align: justify; \">Patent Safe slot PCIe Design</h3><p style=\"text-align: justify; \">This Asus RS200 ROG Strix Riser Cable is only compatible with PCI-E 3.0. If you use this product with a motherboard that supports PCI-E 4.0, please enter into the BIOS option and select PCI-E 3.0 before installation. The patent SafeSlot PCIe design makes sure your graphics card's connection is more stable and safe. It is also Featuring a new single-step, an insert-molding manufacturing process that integrates fortifying metal and additional solder points. And also the SafeSlot provides stronger PCIe device retention and greater shearing resistance.</p><h3 style=\"text-align: justify; \">High Graphics Card Performance</h3><p style=\"text-align: justify; \">This Riser cable featured with High-frequency and low-resistance PCB designed to reduce interference, ensure maximum performance. It is Full PCI Express 3.0 support and a length of 240mm for easy installation and display graphics cards in vertically.</p><h3 style=\"text-align: justify; \">Bendable, Flexibility, And Efficiency</h3><p style=\"text-align: justify; \">This Riser cable comes with a slim, flat, and foldable design which does not affect the cable transmission efficiency and stability, and makes cable management easier. Due to its light weight, resistance to corrosion, Bendable, flexibility, and processing advantages. This cable has a slim, flat, and foldable design that does not affect the cable transmission efficiency and stability, and makes cable management easier.</p><h3 style=\"text-align: justify; \">Strengthen, Connection, Protection</h3><p style=\"text-align: justify; \">In this Asus RS200 ROG Strix Riser Cable, the strengthened protection equiped with the ROG logo, which has been printed on both sides to avoid signal loss and enhance the durability when connecting to the motherboard and the riser cable is folded or twisted in order to maximize the internal space and optimize the airflow.</p><p style=\"text-align: justify; \">The latest Asus RS200 has no warranty facility.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 90DC0080-B00010</li><li>Model: RS200 ROG Strix</li><li>ASUS Patent SafeSlot PCI-E</li><li>Bendable, Flexibility And Efficiency</li><li>Strengthen, Connection, Protection</li><li>Cable Length: 240 mm</li></ul>",
+      "model": "RS200 ROG Strix",
+      "warranty": null,
+      "basePrice": 4500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "90DC0080-B00010",
+          "price": 4500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "90DC0080-B00010",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "RS200 ROG Strix",
+              "position": 1
+            },
+            {
+              "label": "Cable Length",
+              "value": "240 mm",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-rs200-rog-strix-riser-cable",
+      "sourceProductCode": "18864",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "90DC0080-B00010",
+      "sourceKeyFeatures": [
+        "MPN: 90DC0080-B00010",
+        "Model: RS200 ROG Strix",
+        "ASUS Patent SafeSlot PCI-E",
+        "Bendable, Flexibility And Efficiency",
+        "Strengthen, Connection, Protection",
+        "Cable Length: 240 mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/asus-rs200-rog-strix-riser-cable.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/asus-rs200-rog-strix-riser-cable.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-rs200-rog-strix-riser-cable",
+        "candidateTitle": "Asus RS200 ROG Strix Riser Cable",
+        "attemptStem": "asus-rs200-rog-strix-riser-cable"
+      }
+    },
+    {
+      "name": "Cooler Master ARGB GPU Support Bracket",
+      "slug": "cooler-master-argb-gpu-support-bracket",
+      "type": "PHYSICAL",
+      "sku": "MCA-U000R-GSBTG-00",
+      "description": "<h2 style=\"text-align: justify; \">Cooler Master ARGB GPU Support Bracket</h2><p style=\"text-align: justify;\">The Cooler Master ARGB GPU Support Bracket is an Innovative Kind of Reinforcement. Tempered glass, addressable RGB, and edge-lighting technologies jammed into a complicated graphics card support bracket. Certainly, GPU brackets are useful for protecting your motherboard's PCI-e slot from sagging, but we're guessing you didn't expect it to be the new focal point of your build. The MasterAccessory ARGB GPU Support Bracket takes tempered glass's robustness and elegance to new heights. The TG's strength allows for the use of the most powerful and dangerous cards available. Edge-lit ARGB is provided through CNC machining. The support arm's universal design allows for easy modification by sliding and locking into position to accommodate a wide range of graphics card and PC case combinations. If your construction is more understated, turn off the LEDs to create an exquisite, invisible GPU support bracket. The MasterAccessory ARGB GPU Support Bracket is equal parts useful and aesthetic, protecting your PCI-e slots while keeping you looking at your magnificent setup for far too long.</p><h3 style=\"text-align: justify;\">Eliminate Graphics Card Sag</h3><p style=\"text-align: justify;\">PCI-e slots suffer from increased stress and weight as graphics cards get larger and heavier. The MasterAccessory Cooler Master ARGB GPU Support Bracket solves this by supporting the GPU's weight-critical locations.</p><h3 style=\"text-align: justify;\">Edge-Lit Argb Tempered Glass</h3><p style=\"text-align: justify;\">This Cooler Master ARGB GPU Support Bracket CNC machining on tempered glass produces rails for ARGB lights to travel throughout the bracket. The illumination may also be turned off for a nearly undetectable appearance.</p><h3 style=\"text-align: justify;\">Easy to Install</h3><p style=\"text-align: justify;\">This Cooler Master ARGB GPU Support Bracket Installation is simple because to its tool-free design and simple adjustment of the support. A powerful magnet secures the sturdy foundation in place.</p><h3 style=\"text-align: justify;\">Multiple Orientations</h3><p style=\"text-align: justify;\">The Cooler Master ARGB GPU Support Bracket comes with two supports, each with a different orientation, so you may position it at the tail end of the GPU or on the side of the GPU nearest to the side panel.</p><h3 style=\"text-align: justify;\">Protect Your Components</h3><p style=\"text-align: justify;\">Reduce the strain on your motherboard's PCI-e slot and protect your card when moving. Extensive strength testing demonstrates that the glass can handle the heaviest of cards without flinching.</p><h3 style=\"text-align: justify;\">Versatile Support</h3><p style=\"text-align: justify;\">The support arm's universal design allows for easy adjustment from 41mm to 171mm. The bracket can suit a wide range of graphics card and PC case combinations by sliding and locking into position.</p><h2 style=\"\">Buy Cooler Master ARGB GPU Support Bracket from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/cooler-master-argb-gpu-support-bracket\" target=\"\">Cooler Master ARGB GPU Support Bracket</a> From Star Tech. We have a large collection of latest Cooler Master ARGB GPU Support Brackets to purchase for your <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Vertical Graphics Card Holder</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Cooler Master ARGB GPU Support Bracket comes with a 02-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MCA-U000R-GSBTG-00</li><li>Model: ARGB GPU Support Bracket</li><li>Eliminate Graphics Card Sag</li><li>Edge-Lit ARGB Tempered Glass</li><li>Materials: ABS Plastic, Tempered Glass</li><li>Dimensions (L x W x H): 58 x 58 x 177mm</li></ul>",
+      "model": "ARGB GPU Support Bracket",
+      "warranty": "02-Year Warranty",
+      "basePrice": 2700.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Cooler Master",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "MCA-U000R-GSBTG-00",
+          "price": 2700.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2592.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Warranty",
+          "position": 0,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "02-Year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cooler-master-argb-gpu-support-bracket",
+      "sourceProductCode": "27618",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MCA-U000R-GSBTG-00",
+      "sourceKeyFeatures": [
+        "MPN: MCA-U000R-GSBTG-00",
+        "Model: ARGB GPU Support Bracket",
+        "Eliminate Graphics Card Sag",
+        "Edge-Lit ARGB Tempered Glass",
+        "Materials: ABS Plastic, Tempered Glass",
+        "Dimensions (L x W x H): 58 x 58 x 177mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/cooler-master-argb-gpu-support-bracket.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/cooler-master-argb-gpu-support-bracket.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cooler-master-argb-gpu-support-bracket",
+        "candidateTitle": "Cooler Master ARGB GPU Support Bracket",
+        "attemptStem": "cooler-master-argb-gpu-support-bracket"
+      }
+    },
+    {
+      "name": "Cooler Master PCIe 4.0 x16 300mm Riser Cable",
+      "slug": "cooler-master-pcie-4-0-x16-300mm-riser-cable",
+      "type": "PHYSICAL",
+      "sku": "MCA-U000C-KPCI40-300",
+      "description": "<h2 style=\"\">Cooler Master PCIe 4.0 x16 300mm Riser Cable</h2><p style=\"\">The Cooler Master Riser Cable PCIe 4.0 x16 - 300mm is made for maximum flexibility, durability, and data transmission efficiency. For the tightest PCI card installations, high-grade polymers boost cable flexibility and strength, while heavy-duty shielding prevents electromagnetic interference from affecting signal quality. The multi-layer coated PCB provides best-in-class cable flex, moisture resistance, and performance under high thermal loads.</p><h3 style=\"\">PCIe 4.0 Compatible</h3><p style=\"\">The Cooler Master PCIe 4.0 x16 300mm Riser Cable fully supports PCIe 4.0 devices' 16GT/s bit rate while offering double the bandwidth of PCIe 3.0 and being backwards compatible with a maximum transfer rate of over 64Gb/s (bidirectional).</p><h3 style=\"\">Ultra Durable PCB</h3><p style=\"\">Cooler Master Riser Cable PCIe 4.0 x16 has a multi-layer coated PCB that provides best-in-class cable flex, moisture resistance, and performance under high thermal loads.</p><h3 style=\"\">Heavy Duty Shielding</h3><p style=\"\">The Cooler Master PCI-E 4.0 x16 Riser Cable is manufactured with high-quality 30 AWG tinned copper wires to ensure minimal cable signal delay. This product features 96 ground wires with premium EMI shielding technology applied, designed to provide an electromagnetic interference-free data transmission experience.</p><h3 style=\"\">Gold-Plated Pin Connections</h3><p style=\"\">The Gold-plated PCI pin is rated 400g of retention force per contact pair, ensuring maximum product lifespan and durability.</p><h2 style=\"\">Buy Cooler Master PCIe 4.0 x16 300mm Riser Cable from Star Tech</h2><p style=\"\">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/cooler-master-pcie-4-0-x16-300mm-riser-cable\" target=\"\">Cooler Master PCIe 4.0 x16 300mm Riser Cable</a> From Star Tech. We have a large collection of latest Cooler Master Riser Cable to purchase for your <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Vertical Graphics Card Holder</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Cooler Master PCIe 4.0 x16 300mm Riser Cable comes with no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MCA-U000C-KPCI40-300</li><li>Model: Riser Cable</li><li>PCIe 4.0 Compatible</li><li>Ultra Durable PCB</li><li>Heavy Duty Shielding</li><li>Gold-Plated Pin Connections</li></ul>",
+      "model": "Riser Cable",
+      "warranty": "no warranty",
+      "basePrice": 6000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Cooler Master",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "MCA-U000C-KPCI40-300",
+          "price": 6000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 5760.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "MCA-U000C-KPCI40-300",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Riser Cable",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cooler-master-pcie-4-0-x16-300mm-riser-cable",
+      "sourceProductCode": "26731",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MCA-U000C-KPCI40-300",
+      "sourceKeyFeatures": [
+        "MPN: MCA-U000C-KPCI40-300",
+        "Model: Riser Cable",
+        "PCIe 4.0 Compatible",
+        "Ultra Durable PCB",
+        "Heavy Duty Shielding",
+        "Gold-Plated Pin Connections"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/cooler-master-pcie-4-0-x16-300mm-riser-cable.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/cooler-master-pcie-4-0-x16-300mm-riser-cable.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cooler-master-pcie-4-0-x16-300mm-riser-cable",
+        "candidateTitle": "Cooler Master PCIe 4.0 x16 300mm Riser Cable",
+        "attemptStem": "cooler-master-pcie-4-0-x16-300mm-riser-cable"
+      }
+    },
+    {
+      "name": "Cooler Master Universal Vertical Graphics Card Holder Kit V2 (PCIe 4.0)",
+      "slug": "cooler-master-universal-vertical-graphics-card-holder-kit-v2",
+      "type": "PHYSICAL",
+      "sku": "MCA-U000R-KFVK02",
+      "description": "<h2 style=\"text-align: justify; \">Cooler Master Universal Vertical Graphics Card Holder Kit V2 (PCIe 4.0)</h2><p style=\"text-align: justify; \">The Cooler Master Universal Vertical Graphics Card Holder Kit V2 has been upgraded to include a PCIe 4.0 riser cable, allowing full compatibility across hardware components. The vertical graphics card holder Kit allows vertical installation of a GPU on any chassis to better show off the visual design of the GPU and its cooler. It features an exclusive adjustable bracket. It can be adjusted back and forth to accommodate all standard ATX chassis and various GPU lengths. The high-quality Cooler Master PCIe 4.0 Riser Cable allows data transmission at greater efficiency and higher speeds, compatible with a wide range of hardware components. The Cooler Master Universal Vertical Graphics Card Holder comes with a 1-year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MCA-U000R-KFVK02</li><li>Model: Universal Vertical Graphics Card Holder Kit V2</li><li>Cooler Master Riser Cable PCIe 4.0 Included</li><li>Compatible With All Standard ATX Chassis</li><li>Modular, Instantly Adjustable Design</li><li>Durable, High Quality Materials</li></ul>",
+      "model": "Universal Vertical Graphics Card Holder Kit V2",
+      "warranty": "a 1-year warranty",
+      "basePrice": 7200.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Cooler Master",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "MCA-U000R-KFVK02",
+          "price": 7200.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 6912.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "MCA-U000R-KFVK02",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Universal Vertical Graphics Card Holder Kit V2",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cooler-master-universal-vertical-graphics-card-holder-kit-v2",
+      "sourceProductCode": "22457",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MCA-U000R-KFVK02",
+      "sourceKeyFeatures": [
+        "MPN: MCA-U000R-KFVK02",
+        "Model: Universal Vertical Graphics Card Holder Kit V2",
+        "Cooler Master Riser Cable PCIe 4.0 Included",
+        "Compatible With All Standard ATX Chassis",
+        "Modular, Instantly Adjustable Design",
+        "Durable, High Quality Materials"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/cooler-master-universal-vertical-graphics-card-holder-kit-v2.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/cooler-master-universal-vertical-graphics-card-holder-kit-v2.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cooler-master-universal-vertical-graphics-card-holder-kit-v2",
+        "candidateTitle": "Cooler Master Universal Vertical Graphics Card Holder Kit V2 (PCIe 4.0)",
+        "attemptStem": "cooler-master-universal-vertical-graphics-card-holder-kit-v2"
+      }
+    },
+    {
+      "name": "Cooler Master Universal VGA Holder for all size Tower Chassis",
+      "slug": "cooler-master-universal-vga-holder",
+      "type": "PHYSICAL",
+      "sku": "ST-11272",
+      "description": "<h2>Cooler Master Universal VGA Holder for all size Tower Chassis</h2>\n<p style=\"text-align: justify; \">Cooler Master Universal VGA Holder for all size Tower Chassis is features magnetic feet with plastic covers to keep the VGA holder from sliding around, two adjustable shelves, and two 12cm poles which screw together to reach a height of 24 centimeters.\n\nIt is build with Steel, ABS materials with 2 pcs support bracket. This VGA holder for Computer Cases and also supports 2 VGA Graphics Card for Support and No Sagging Graphic Cards Easy Assembly and Adjustment with 154 x 32 x144mm  Dimensions (LxWxH). To support cards held higher than 24cm, poles from additional holders can be combined. It will make your system look better than before.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Cooler Master Universal VGA Holder</li><li>Supports 2 VGA Graphics Card</li><li>Materials: Steel, ABS</li><li>Easy Assembly and Adjustment</li><li>Two 12cm poles</li></ul>",
+      "model": "Cooler Master Universal VGA Holder",
+      "warranty": null,
+      "basePrice": 1300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 154.0,
+        "width": 32.0,
+        "height": 144.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Cooler Master",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-11272",
+          "price": 1300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1248.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Cooler Master Universal VGA Holder",
+              "position": 0
+            },
+            {
+              "label": "Materials",
+              "value": "Steel, ABS",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cooler-master-universal-vga-holder",
+      "sourceProductCode": "11272",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Cooler Master Universal VGA Holder",
+        "Supports 2 VGA Graphics Card",
+        "Materials: Steel, ABS",
+        "Easy Assembly and Adjustment",
+        "Two 12cm poles"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/cooler-master-universal-vga-holder.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/cooler-master-universal-vga-holder.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cooler-master-universal-vga-holder",
+        "candidateTitle": "Cooler Master Universal VGA Holder for all size Tower Chassis",
+        "attemptStem": "cooler-master-universal-vga-holder"
+      }
+    },
+    {
+      "name": "Cooler Master Vertical Graphics Card Holder Kit V3 (PCIe 4.0)",
+      "slug": "cooler-master-vertical-graphics-card-holder-kit-v3",
+      "type": "PHYSICAL",
+      "sku": "MCA-U000R-KFVK03",
+      "description": "<h2>Cooler Master Vertical Graphics Card Holder Kit V3 (PCIe 4.0)</h2><p>The Cooler Master Vertical Graphics Card Holder Kit V3 will improve the looks and functionality of your gaming setup. With this creative kit, you can show off your graphics card and yet be compatible with a lot of different settings. A Cooler Master Riser Cable PCIe 4.0 x16 is included, which makes it easier to connect your newest hardware components and transfer data quickly. Because of the connections' PCIe x16 Male to PCIe x16 90° Female design, your graphics card will be less stressed and have more flexibility. With a detachable, adjustable GPU bracket that provides unmatched adaptability for a broad range of configurations, this holder—which supports graphics cards of any length and up to three slots wide is made for ATX and m-ATX cases. Compatible with all standard ATX chassis, including Micro ATX, ATX, and E-ATX configurations, is the <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" style=\"color: rgb(0, 0, 0);\" target=\"\">Vertical Graphics Card Holder</a> Kit. It's crucial to remember that it could get in the way of installing components on the back panel and that the CPU cooler can only be raised a maximum of 70mm. By using this kit, you can easily display your GPU and highlight the best parts of your PC build, all while making an eye-catching setup. With the Cooler Master Vertical Graphics Card Holder Kit V3, you can upgrade your system right now and enjoy unmatched design and versatility.</p><h2 style=\"\">Buy Cooler Master Vertical Graphics Card Holder Kit V3 (PCIe 4.0) from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Cooler Master Vertical Graphics Card Holder Kit V3 (PCIe 4.0)</span> From Star Tech. We have a large collection of latest Cooler Master <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">GPU Holders</a><span style=\"color: inherit;\"> </span>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Cooler Master Vertical Graphics Card Holder Kit V3 has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MCA-U000R-KFVK03</li><li>Model: Universal Vertical Graphics Card Holder Kit V3</li><li>Cooler Master Riser Cable PCIe 4.0 x16 Included</li><li>Supported Chassis Type: E-ATX, ATX, Micro ATX</li><li>Supported Graphics Cards: Any length, up to 3 slots wide</li><li>Connectors: PCIe x16 Male to PCIe x16 90° Female</li></ul>",
+      "model": "Universal Vertical Graphics Card Holder Kit V3",
+      "warranty": null,
+      "basePrice": 7300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Cooler Master",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "MCA-U000R-KFVK03",
+          "price": 7300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 7008.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "MCA-U000R-KFVK03",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Universal Vertical Graphics Card Holder Kit V3",
+              "position": 1
+            },
+            {
+              "label": "Supported Chassis Type",
+              "value": "E-ATX, ATX, Micro ATX",
+              "position": 2
+            },
+            {
+              "label": "Supported Graphics Cards",
+              "value": "Any length, up to 3 slots wide",
+              "position": 3
+            },
+            {
+              "label": "Connectors",
+              "value": "PCIe x16 Male to PCIe x16 90° Female",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cooler-master-vertical-graphics-card-holder-kit-v3",
+      "sourceProductCode": "38796",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MCA-U000R-KFVK03",
+      "sourceKeyFeatures": [
+        "MPN: MCA-U000R-KFVK03",
+        "Model: Universal Vertical Graphics Card Holder Kit V3",
+        "Cooler Master Riser Cable PCIe 4.0 x16 Included",
+        "Supported Chassis Type: E-ATX, ATX, Micro ATX",
+        "Supported Graphics Cards: Any length, up to 3 slots wide",
+        "Connectors: PCIe x16 Male to PCIe x16 90° Female"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/cooler-master-vertical-graphics-card-holder-kit-v3.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/cooler-master-vertical-graphics-card-holder-kit-v3.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cooler-master-vertical-graphics-card-holder-kit-v3",
+        "candidateTitle": "Cooler Master Vertical Graphics Card Holder Kit V3 (PCIe 4.0)",
+        "attemptStem": "cooler-master-vertical-graphics-card-holder-kit-v3"
+      }
+    },
+    {
+      "name": "Cooler Master White Vertical Graphics Card Holder Kit V3 (PCIe 4.0)",
+      "slug": "cooler-master-white-vertical-graphics-card-holder-kit-v3",
+      "type": "PHYSICAL",
+      "sku": "MCA-U000R-WFVK03",
+      "description": "<h2>Cooler Master White Vertical Graphics Card Holder Kit V3 (PCIe 4.0)</h2><p>The Cooler Master White Vertical Graphics Card Holder Kit V3 will improve the looks and functionality of your gaming setup. With this creative kit, you can show off your graphics card and yet be compatible with a lot of different settings. A Cooler Master Riser Cable PCIe 4.0 x16 is included, which makes it easier to connect your newest hardware components and transfer data quickly. Because of the connections' PCIe x16 Male to PCIe x16 90° Female design, your graphics card will be less stressed and have more flexibility. With a detachable, adjustable GPU bracket that provides unmatched adaptability for a broad range of configurations, this holder—which supports graphics cards of any length and up to three slots wide is made for ATX and m-ATX cases. Compatible with all standard ATX chassis, including Micro ATX, ATX, and E-ATX configurations, is the <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" style=\"color: rgb(0, 0, 0);\" target=\"\">Vertical Graphics Card Holder</a> Kit. It's crucial to remember that it could get in the way of installing components on the back panel and that the CPU cooler can only be raised a maximum of 70mm. By using this kit, you can easily display your GPU and highlight the best parts of your PC build, all while making an eye-catching setup. With the Cooler Master White Vertical Graphics Card Holder Kit V3, you can upgrade your system right now and enjoy unmatched design and versatility.</p><h2 style=\"\">Buy Cooler Master White Vertical Graphics Card Holder Kit V3 (PCIe 4.0) from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Cooler Master White Vertical Graphics Card Holder Kit V3 (PCIe 4.0)</span> From Star Tech. We have a large collection of latest Cooler Master <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">GPU Holders</a><span style=\"color: inherit;\"> </span>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Cooler Master White Vertical Graphics Card Holder Kit V3 has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MCA-U000R-WFVK03</li><li>Model: Universal Vertical Graphics Card Holder Kit V3</li><li>Cooler Master Riser Cable PCIe 4.0 x16 Included</li><li>Supported Chassis Type: E-ATX, ATX, Micro ATX</li><li>Supported Graphics Cards: Any length, up to 3 slots wide</li><li>Connectors: PCIe x16 Male to PCIe x16 90° Female</li></ul>",
+      "model": "Universal Vertical Graphics Card Holder Kit V3",
+      "warranty": null,
+      "basePrice": 8000.0,
+      "originalPrice": 8500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Cooler Master",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "MCA-U000R-WFVK03",
+          "price": 8000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 7680.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "MCA-U000R-WFVK03",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Universal Vertical Graphics Card Holder Kit V3",
+              "position": 1
+            },
+            {
+              "label": "Supported Chassis Type",
+              "value": "E-ATX, ATX, Micro ATX",
+              "position": 2
+            },
+            {
+              "label": "Supported Graphics Cards",
+              "value": "Any length, up to 3 slots wide",
+              "position": 3
+            },
+            {
+              "label": "Connectors",
+              "value": "PCIe x16 Male to PCIe x16 90° Female",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cooler-master-white-vertical-graphics-card-holder-kit-v3",
+      "sourceProductCode": "38075",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "MCA-U000R-WFVK03",
+      "sourceKeyFeatures": [
+        "MPN: MCA-U000R-WFVK03",
+        "Model: Universal Vertical Graphics Card Holder Kit V3",
+        "Cooler Master Riser Cable PCIe 4.0 x16 Included",
+        "Supported Chassis Type: E-ATX, ATX, Micro ATX",
+        "Supported Graphics Cards: Any length, up to 3 slots wide",
+        "Connectors: PCIe x16 Male to PCIe x16 90° Female"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/cooler-master-white-vertical-graphics-card-holder-kit-v3.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/cooler-master-white-vertical-graphics-card-holder-kit-v3.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cooler-master-white-vertical-graphics-card-holder-kit-v3",
+        "candidateTitle": "Cooler Master White Vertical Graphics Card Holder Kit V3 (PCIe 4.0)",
+        "attemptStem": "cooler-master-white-vertical-graphics-card-holder-kit-v3"
+      }
+    },
+    {
+      "name": "CORSAIR PREMIUM PCIE 3.0 X16 EXTENSION 300MM CABLE",
+      "slug": "corsair-vertical-mount-cable",
+      "type": "PHYSICAL",
+      "sku": "CC-8900419",
+      "description": "<h2><span style=\"font-weight: bold;\">CORSAIR PREMIUM PCIE 3.0 X16 EXTENSION 300MM CABLE<br/></span></h2><p>Deliver all the performance of PCIe 3.0 to your GPU, without compromise. A generous 300mm of cable length and a 90Â° female PCIe connector minimizes cable strain making it easy to install your GPU vertically incompatible cases. Electromagnetic interference (EMI) shielding ensures maximum performance. Five-wire banded construction allows for full flexibility to reach through even the tightest gaps. <br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: CC-8900419</li><li>Model: Corsair Vertical Mount</li><li>FULL-SPEED PCIE 3.0 X16 BANDWIDTH</li><li>EXTENDED &amp; ANGLED</li><li>EMI SHIELDED &amp; FULLY FLEXIBLE</li></ul>",
+      "model": "Corsair Vertical Mount",
+      "warranty": null,
+      "basePrice": 3600.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Corsair",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "CC-8900419",
+          "price": 3600.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3456.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "CC-8900419",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Corsair Vertical Mount",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/corsair-vertical-mount-cable",
+      "sourceProductCode": "12808",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "CC-8900419",
+      "sourceKeyFeatures": [
+        "MPN: CC-8900419",
+        "Model: Corsair Vertical Mount",
+        "FULL-SPEED PCIE 3.0 X16 BANDWIDTH",
+        "EXTENDED & ANGLED",
+        "EMI SHIELDED & FULLY FLEXIBLE"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/corsair-vertical-mount-cable.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/corsair-vertical-mount-cable.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "corsair-vertical-mount-cable",
+        "candidateTitle": "CORSAIR PREMIUM PCIE 3.0 X16 EXTENSION 300MM CABLE",
+        "attemptStem": "corsair-vertical-mount-cable"
+      }
+    },
+    {
+      "name": "DeepCool PCIe 4.0 Vertical GPU Bracket",
+      "slug": "deepcool-pcie-4-0-vertical-gpu-bracket",
+      "type": "PHYSICAL",
+      "sku": "R-Vertical-GPU-Bracket-G-1",
+      "description": "<h2>DeepCool PCIe 4.0 Vertical GPU Bracket</h2><p style=\"text-align: justify; \">The DeepCool PCIe 4.0 Vertical GPU Bracket is a practical and convenient accessory for computer enthusiasts who want to display their graphics cards in a vertical position. This bracket is designed to convert the traditional horizontal PCI expansion slots of a computer case into a vertical mount for graphics cards, allowing users to showcase their GPU on full display while eliminating any concern of a heavy graphics card potentially damaging the motherboard. One of the notable features of the DeepCool PCIe 4.0 Vertical GPU Bracket is the EMI shielding that improves the connection stability across the PCIe cable by protecting it against electromagnetic interference. This feature ensures a seamless experience for users who demand the best performance from their graphics card. The adapter wire of the DeepCool PCIe 4.0 Vertical GPU Bracket is thin and pliable, which allows for easy adjustments to fit in your case at any angle. This flexibility makes it easy to customize the bracket to fit your specific case design and personal preferences. The DeepCool PCIe 4.0 Vertical GPU Bracket has premium gold-plated connections, which boost conductivity for better signal integrity and also provide durability and endurance. With the help of these contacts, the bracket guarantees a long-lasting, dependable connection. Many different computer cases, such as the CG540, CG540 Limited, CG560, CG560 Limited, CK500, CK500 WH, CK560, CK560 WH, CH510, and CH510 WH, are compatible with the DeepCool PCIe 4.0 Vertical GPU Bracket. As a result, it functions well with a wide range of computer configurations, making it a versatile device.</p><h2>Buy DeepCool PCIe 4.0 Vertical GPU Bracket from the best Vertical GPU Bracket Shop in Bangladesh: Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/deepcool-pcie-4-0-vertical-gpu-bracket\" target=\"\">DeepCool PCIe 4.0 Vertical GPU Bracket</a> From Star Tech. We have a large collection of the latest DeepCool <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Vertical Graphics Card Holder</a> to purchase for your <a href=\"https://www.startech.com.bd/component/graphics-card\" target=\"\">Graphics Card</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The DeepCool PCIe 4.0 Vertical GPU Bracket comes with a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: R-Vertical-GPU-Bracket-G-1</li><li>Model: PCIe 4.0 Vertical GPU Bracket</li><li>PCIE Extension cable Dimensions: 140mm(L)</li><li>Materials: PVC+PCB+LCP+GF</li><li>Gold-Plated Contacts</li><li>Flexible Cable</li></ul>",
+      "model": "PCIe 4.0 Vertical GPU Bracket",
+      "warranty": "a 01-year warranty",
+      "basePrice": 6700.0,
+      "originalPrice": 7270.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deepcool",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "R-Vertical-GPU-Bracket-G-1",
+          "price": 6700.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 6432.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "R-Vertical-GPU-Bracket-G-1",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "PCIe 4.0 Vertical GPU Bracket",
+              "position": 1
+            },
+            {
+              "label": "PCIE Extension cable Dimensions",
+              "value": "140mm(L)",
+              "position": 2
+            },
+            {
+              "label": "Materials",
+              "value": "PVC+PCB+LCP+GF",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deepcool-pcie-4-0-vertical-gpu-bracket",
+      "sourceProductCode": "27728",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "R-Vertical-GPU-Bracket-G-1",
+      "sourceKeyFeatures": [
+        "MPN: R-Vertical-GPU-Bracket-G-1",
+        "Model: PCIe 4.0 Vertical GPU Bracket",
+        "PCIE Extension cable Dimensions: 140mm(L)",
+        "Materials: PVC+PCB+LCP+GF",
+        "Gold-Plated Contacts",
+        "Flexible Cable"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/deepcool-pcie-4-0-vertical-gpu-bracket.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/deepcool-pcie-4-0-vertical-gpu-bracket.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deepcool-pcie-4-0-vertical-gpu-bracket",
+        "candidateTitle": "DeepCool PCIe 4.0 Vertical GPU Bracket",
+        "attemptStem": "deepcool-pcie-4-0-vertical-gpu-bracket"
+      }
+    },
+    {
+      "name": "DeepCool ST500 ARGB GPU Support Bracket",
+      "slug": "deepcool-st500-argb-gpu-support-bracket",
+      "type": "PHYSICAL",
+      "sku": "R-ST500-BKA1AA-G",
+      "description": "<h2 style=\"text-align: justify; \">DeepCool ST500 ARGB GPU Support Bracket</h2><p style=\"text-align: justify; \">The DeepCool ST500 ARGB GPU Support Bracket reinforces heavy graphics cards of any model to protect against GPU sag with an adjustable 3-axis design and support pillar for universal compatibility in any system build. You can easily and freely adjust the GPU support in 3 directions: horizontal, vertical, and along the bracket for ultimate compatibility. The dual-slot bracket offers additional rigidity with added pillar support in combination with the holder to easily sustain the weight of the heaviest graphics cards on the market. DeepCool ST500 ARGB GPU Support Bracket is fully ARGB-ready and it can deliver smooth and bright lighting that sync to supported RGB software for full system personalization. It comes with a 1-year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: R-ST500-BKA1AA-G</li><li>Model: ST500 ARGB</li><li>Cable length: 500mm 5v 3 pin ARGB splitter connector</li><li>3-Axis Adjustability</li><li>Universal Compatibility</li><li>LED Control: M/B with 5V ADD-RGB Header</li></ul>",
+      "model": "ST500 ARGB",
+      "warranty": "a 1-year warranty",
+      "basePrice": 1500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deepcool",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "R-ST500-BKA1AA-G",
+          "price": 1500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1440.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "R-ST500-BKA1AA-G",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "ST500 ARGB",
+              "position": 1
+            },
+            {
+              "label": "Cable length",
+              "value": "500mm 5v 3 pin ARGB splitter connector",
+              "position": 2
+            },
+            {
+              "label": "LED Control",
+              "value": "M/B with 5V ADD-RGB Header",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deepcool-st500-argb-gpu-support-bracket",
+      "sourceProductCode": "24178",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "R-ST500-BKA1AA-G",
+      "sourceKeyFeatures": [
+        "MPN: R-ST500-BKA1AA-G",
+        "Model: ST500 ARGB",
+        "Cable length: 500mm 5v 3 pin ARGB splitter connector",
+        "3-Axis Adjustability",
+        "Universal Compatibility",
+        "LED Control: M/B with 5V ADD-RGB Header"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/deepcool-st500-argb-gpu-support-bracket.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/deepcool-st500-argb-gpu-support-bracket.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deepcool-st500-argb-gpu-support-bracket",
+        "candidateTitle": "DeepCool ST500 ARGB GPU Support Bracket",
+        "attemptStem": "deepcool-st500-argb-gpu-support-bracket"
+      }
+    },
+    {
+      "name": "NZXT Vertical GPU Mounting Kit",
+      "slug": "nzxt-vertical-gpu-mounting-kit",
+      "type": "PHYSICAL",
+      "sku": "AB-RH175-W1",
+      "description": "<h2>NZXT Vertical GPU Mounting Kit</h2><p>The <span style=\"font-weight: bold;\">NZXT Vertical GPU Mounting Kit</span> is a top choice for PC builders who want to display their graphics card in a vertical position. This vertical <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" style=\"color: rgb(0, 0, 0);\" target=\"\">GPU Holder</a> is designed to fit most NZXT cases, making it easy to upgrade your PC’s look. The VGA Bracket kit includes a premium PCIe 4.0 riser cable, which supports the latest high-performance graphics cards. With the NZXT Vertical GPU Mounting Kit, you can show off your GPU’s RGB lighting and design through your case’s side panel.Installing the NZXT Vertical GPU Mounting Kit is simple. The sturdy bracket keeps your graphics card secure and helps prevent GPU sag. This vertical GPU mount also improves airflow by giving your graphics card more space, which can help lower temperatures. The NZXT Vertical GPU Mounting Kit is made from high-quality materials, ensuring durability and a clean, professional appearance.This vertical GPU mount is perfect for gaming PCs, streaming setups, and custom builds. It is compatible with most NZXT H-series cases, including the popular H510 and H710 models. The NZXT Vertical GPU Mounting Kit blends seamlessly with NZXT’s modern case designs, making your build look even better.Choose the NZXT Vertical GPU Mounting Kit if you want a reliable, stylish, and easy-to-install solution for vertical GPU mounting.</p><h2>Buy NZXT Vertical GPU Mounting Kit from Star Tech</h2><p>In Bangladesh, you can get original <strong>NZXT Vertical GPU Mounting Kit</strong> From Star Tech. We have a large collection of latest NZXT <a href=\"https://www.startech.com.bd/vertical-graphics-card-holder\" target=\"\">Vertical GPU Holder</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The NZXT Vertical GPU Mounting Kit comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: AB-RH175-W1</li><li>Model: Vertical GPU Mounting Kit</li><li>Compatibility: PCIe Gen 4 x16</li><li>Supported Graphics Cards: Any length, up to 3 slots wide</li><li>Required Slots: 7 available PCIe slots for mounting</li><li>175mm PCIe 4.0 Riser Cable, Fits perfectly with NZXT H5, H6, H7 and H9 Series</li></ul>",
+      "model": "Vertical GPU Mounting Kit",
+      "warranty": "No Warranty",
+      "basePrice": 10000.0,
+      "originalPrice": 11000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 186.8,
+        "width": 144.7,
+        "height": 150.4,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "NZXT",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "AB-RH175-W1",
+          "price": 10000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 9600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Compatibility: PCIe Gen 4 x16 Supported Graphics Cards: Any length, up to 3 slots wide Required Slots: 7 available PCIe slots for mounting",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "Height: 186.8 mm Width: 144.7 mm Depth: 150.4 mm",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/nzxt-vertical-gpu-mounting-kit",
+      "sourceProductCode": "44111",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "AB-RH175-W1",
+      "sourceKeyFeatures": [
+        "MPN: AB-RH175-W1",
+        "Model: Vertical GPU Mounting Kit",
+        "Compatibility: PCIe Gen 4 x16",
+        "Supported Graphics Cards: Any length, up to 3 slots wide",
+        "Required Slots: 7 available PCIe slots for mounting",
+        "175mm PCIe 4.0 Riser Cable, Fits perfectly with NZXT H5, H6, H7 and H9 Series"
+      ],
+      "needsReview": false,
+      "categorySlug": "vertical-gpu-holder",
+      "image": "/images/products/component/vertical-gpu-holder/nzxt-vertical-gpu-mounting-kit.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/vertical-gpu-holder/nzxt-vertical-gpu-mounting-kit.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "nzxt-vertical-gpu-mounting-kit",
+        "candidateTitle": "NZXT Vertical GPU Mounting Kit",
+        "attemptStem": "nzxt-vertical-gpu-mounting-kit"
+      }
+    }
+  ]
+}

@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/gadget",
+  "imageFolder": "/images/products/gadget/_uncategorized",
+  "groups": [
+    {
+      "name": "_direct",
+      "file": "_direct.json",
+      "status": "completed",
+      "products": 50,
+      "matched": 2,
+      "unmatched": 48
+    },
+    {
+      "name": "analog-watch",
+      "file": "analog-watch.json",
+      "status": "completed",
+      "products": 134,
+      "matched": 134,
+      "unmatched": 0
+    },
+    {
+      "name": "calculator",
+      "file": "calculator.json",
+      "status": "completed",
+      "products": 50,
+      "matched": 50,
+      "unmatched": 0
+    },
+    {
+      "name": "car-charger",
+      "file": "car-charger.json",
+      "status": "completed",
+      "products": 43,
+      "matched": 43,
+      "unmatched": 0
+    },
+    {
+      "name": "daily-lifestyle",
+      "file": "daily-lifestyle.json",
+      "status": "completed",
+      "products": 219,
+      "matched": 219,
+      "unmatched": 0
+    },
+    {
+      "name": "drones",
+      "file": "drones.json",
+      "status": "completed",
+      "products": 70,
+      "matched": 70,
+      "unmatched": 0
+    },
+    {
+      "name": "earbuds",
+      "file": "earbuds.json",
+      "status": "completed",
+      "products": 664,
+      "matched": 664,
+      "unmatched": 0
+    },
+    {
+      "name": "earphone",
+      "file": "earphone.json",
+      "status": "completed",
+      "products": 151,
+      "matched": 151,
+      "unmatched": 0
+    },
+    {
+      "name": "gimbal",
+      "file": "gimbal.json",
+      "status": "completed",
+      "products": 56,
+      "matched": 56,
+      "unmatched": 0
+    },
+    {
+      "name": "health-monitor",
+      "file": "health-monitor.json",
+      "status": "completed",
+      "products": 8,
+      "matched": 8,
+      "unmatched": 0
+    },
+    {
+      "name": "mini-fan",
+      "file": "mini-fan.json",
+      "status": "completed",
+      "products": 87,
+      "matched": 87,
+      "unmatched": 0
+    },
+    {
+      "name": "neckband",
+      "file": "neckband.json",
+      "status": "completed",
+      "products": 116,
+      "matched": 116,
+      "unmatched": 0
+    },
+    {
+      "name": "power-bank",
+      "file": "power-bank.json",
+      "status": "completed",
+      "products": 459,
+      "matched": 459,
+      "unmatched": 0
+    },
+    {
+      "name": "power-tools",
+      "file": "power-tools.json",
+      "status": "completed",
+      "products": 83,
+      "matched": 83,
+      "unmatched": 0
+    },
+    {
+      "name": "smart-band",
+      "file": "smart-band.json",
+      "status": "completed",
+      "products": 22,
+      "matched": 22,
+      "unmatched": 0
+    },
+    {
+      "name": "smart-glasses",
+      "file": "smart-glasses.json",
+      "status": "completed",
+      "products": 13,
+      "matched": 13,
+      "unmatched": 0
+    },
+    {
+      "name": "smart-ring",
+      "file": "smart-ring.json",
+      "status": "completed",
+      "products": 6,
+      "matched": 6,
+      "unmatched": 0
+    },
+    {
+      "name": "smart-watch",
+      "file": "smart-watch.json",
+      "status": "completed",
+      "products": 417,
+      "matched": 417,
+      "unmatched": 0
+    },
+    {
+      "name": "stream-deck",
+      "file": "stream-deck.json",
+      "status": "completed",
+      "products": 5,
+      "matched": 5,
+      "unmatched": 0
+    },
+    {
+      "name": "studio-equipment",
+      "file": "studio-equipment.json",
+      "status": "completed",
+      "products": 127,
+      "matched": 127,
+      "unmatched": 0
+    },
+    {
+      "name": "trimmer",
+      "file": "trimmer.json",
+      "status": "completed",
+      "products": 176,
+      "matched": 176,
+      "unmatched": 0
+    },
+    {
+      "name": "tv-box",
+      "file": "tv-box.json",
+      "status": "completed",
+      "products": 13,
+      "matched": 13,
+      "unmatched": 0
+    },
+    {
+      "name": "uncategorized",
+      "file": "uncategorized.json",
+      "status": "completed",
+      "products": 36,
+      "matched": 36,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790589349
+}

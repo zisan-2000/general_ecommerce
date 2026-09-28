@@ -1,0 +1,2072 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/office-equipment",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\office-equipment",
+    "generatedAtUnix": 1790587585,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Office Equipment",
+      "slug": "office-equipment",
+      "parentSlug": null,
+      "image": "/images/products/office-equipment/barcode-scanner/deli/deli-14952w-handheld-barcode-scanner.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Cash Drawer",
+      "slug": "cash-drawer",
+      "parentSlug": "office-equipment",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/deli-dl-405-cash-drawer.png",
+      "isActive": true,
+      "sortOrder": 3,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Deli",
+      "slug": "deli",
+      "logo": null
+    },
+    {
+      "name": "Maken",
+      "slug": "maken",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    },
+    {
+      "name": "RONGTA",
+      "slug": "rongta",
+      "logo": null
+    },
+    {
+      "name": "Yumite",
+      "slug": "yumite",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Deli DL-405 Cash Drawer",
+      "slug": "deli-dl-405-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-47718",
+      "description": "<h2>Deli DL-405 Cash Drawer</h2><p>The Deli <strong>DL-405</strong> Cash Drawer is a dependable and professional cash management system developed for retail stores, restaurants, supermarkets, and POS-based enterprises that demand secure and structured cash handling. Deli DL-405 Cash Drawer is a sturdy and practical design with compact dimensions of 420 x 405 x 100 mm, allowing it to fit conveniently under counters while facilitating daily transactions effortlessly. A retractable coin tray, six bill dividers, and a dedicated check deposit hole make the Deli Cash Drawer more user-friendly by keeping cash, notes, and documents organized. The extra-wide cheque hole enables for the speedy insertion of checks, receipts, and vouchers without opening the drawer, increasing workflow efficiency. The Deli DL-405 Cash Drawer features a secure three-position lock design that allows for manual opening, automatic opening via POS interface, and full lock mode for maximum control and safety. The Deli Cash Drawer is connected by an RJ 11 network connector, making it compatible with most POS systems for automated opening during transactions. The inside architecture allows for variable storage with 5 to 6 bill compartments and 4 to 5 coin slots, making it easy to accommodate diverse cash requirements. With a robust weight of 4.96 kg, the Deli DL-405 Cash Drawer provides secure positioning and consistent performance throughout peak working hours. Deli Cash Drawer design prioritizes durability, convenience of use, and secure cash handling for frontline employees. Deli DL-405 Cash Drawer is ideal for high-traffic areas where speed, organization, and dependability are critical.</p><h2>Buy Deli DL-405 Cash Drawer from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli DL-405 Cash Drawer</strong> From Star Tech. We have a large collection of the latest Deli <a href=\"https://www.startech.com.bd/office-equipment/CASH-DRAWER\" style=\"\" target=\"\">Cash Drawers</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Deli DL-405 Cash Drawer comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DL-405</li><li>Tray: 5-6 Bill / 4-5 Coin Slots</li><li>Lock Design: Lock, Manual Open, Auto Open by POS</li><li>Cheque Slot: Extra wide slot for Checks, Receipt</li><li>Network Connector: RJ-11</li></ul>",
+      "model": "DL-405",
+      "warranty": "no warranty",
+      "basePrice": 5000.0,
+      "originalPrice": 5500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 420.0,
+        "width": 405.0,
+        "height": 100.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47718",
+          "price": 5000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DL-405",
+              "position": 0
+            },
+            {
+              "label": "Tray",
+              "value": "5-6 Bill / 4-5 Coin Slots",
+              "position": 1
+            },
+            {
+              "label": "Lock Design",
+              "value": "Lock, Manual Open, Auto Open by POS",
+              "position": 2
+            },
+            {
+              "label": "Cheque Slot",
+              "value": "Extra wide slot for Checks, Receipt",
+              "position": 3
+            },
+            {
+              "label": "Network Connector",
+              "value": "RJ-11",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-dl-405-cash-drawer",
+      "sourceProductCode": "47718",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DL-405",
+        "Tray: 5-6 Bill / 4-5 Coin Slots",
+        "Lock Design: Lock, Manual Open, Auto Open by POS",
+        "Cheque Slot: Extra wide slot for Checks, Receipt",
+        "Network Connector: RJ-11"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/deli-dl-405-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/deli-dl-405-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-dl-405-cash-drawer",
+        "candidateTitle": "Deli DL-405 Cash Drawer",
+        "attemptStem": "deli-dl-405-cash-drawer"
+      }
+    },
+    {
+      "name": "KASROW KER-350 4B6C Economical Cash Drawer",
+      "slug": "kasrow-ker-350-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-35011",
+      "description": "<h2>KASROW KER-350 4B6C Economical Cash Drawer</h2><p>The KASROW <span style=\"font-weight: bold;\">KER-350</span> 4B6C Economical Cash Drawer is engineered for durability and security, catering to the high-volume demands of retail environments without compromising on affordability. Crafted from thick gauge cold rolled steel and SECC, it promises endurance and a sleek aesthetic that can withstand the daily rigors of use. This model stands out for its dimensions of 350mm (W) x 405mm (D) x 90mm (H), excluding rubber feet, making it an ideal solution for businesses where counter space is at a premium. Its sturdy construction is complemented by heavy-duty ball-bearing rollers for smooth operation, ensuring reliability over countless transactions. The KASROW KER-350 4B6C has a 3-position key lock for improved security against unwanted access, which is just one of its many security features. This is especially helpful in retail environments where managing cash flow is crucial. With a detachable coin tray and an adjustable money clip, the <a href=\"https://www.startech.com.bd/cash-drawer\" style=\"color: rgb(0, 0, 0);\" target=\"\">cash drawer</a> further meets the demands of businesses by enabling effective organization and customization to easily manage various currencies and transaction amounts. A solenoid unit that can accept 6V, 9V, 12V, or 24V ensures electrical compatibility and is adaptable enough to interface with a variety of point-of-sale (POS) systems. Furthermore, it provides visual adaptability in black, beige, or bespoke hues, allowing companies to match the cash drawer to their logo or interior design. An RJ11/RJ12 interface makes it possible to connect to POS systems and receipt printers, which should make setup and usage simple. The KASROW KER-350 4B6C is a long-lasting, cost-effective cash management solution for companies seeking endurance and performance. It has been tested to survive over 1,000,000 cycles. With its combination of robust construction, security measures, and useful design, it's a great option for any retail environment looking to improve its cash handling procedures.</p><h2 style=\"\">Buy KASROW KER-350 4B6C Economical Cash Drawer from the best Cash Drawer Shop in BD</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">KASROW KER-350 4B6C Economical Cash Drawer</span> From Star Tech. We have a large collection of the latest Rongta <a href=\"https://www.startech.com.bd/office-equipment/CASH-DRAWER\" style=\"\" target=\"\">Cash Drawers</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The KASROW KER-350 4B6C Economical Cash Drawer comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: KER-350</li><li>Interface: RJ11, RJ12</li><li>Tray: 4 Bill &amp; 8 Coin Slots</li><li>Lifecycle: tested to 1,000,000 c.</li><li>3-position lock/4 functions</li></ul>",
+      "model": "KER-350",
+      "warranty": "no warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 4.5,
+      "dimensions": {
+        "length": 350.0,
+        "width": 405.0,
+        "height": 90.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11, RJ12, RS232, USB, DCφ2.5/3.5Jack, custom type",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-35011",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "RJ11, RJ12, RS232, USB, DCφ2.5/3.5Jack, custom type"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "RJ11, RJ12, RS232, USB, DCφ2.5/3.5Jack, custom type",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Construction: All metal construction Finish: Textured hybrid power cost Color: Black, beige, and custom type Roller: Polyurethane for smooth operation Currency Layout: 3.4,5-Bill Metal Wire Grippers, 4,5,6.7.8 adjustable coin slots Media Slots: 1 Or 2 Lock: 3-position lock/4 functions: Locked open/closed, manual open, electronically driven Interface: RJ11, RJ12, RS232, USB, DCφ2.5/3.5Jack, custom type Micro Switch: Cash drawer status micro switch Accessories: USB trigger, Serial interface trigger",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "External Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "350(W)x405(D)x90(H) mm / 13.7(W)x15.9(D)x3.5(H) inch",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "4.5(kg)",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/kasrow-ker-350-cash-drawer",
+      "sourceProductCode": "35011",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: KER-350",
+        "Interface: RJ11, RJ12",
+        "Tray: 4 Bill & 8 Coin Slots",
+        "Lifecycle: tested to 1,000,000 c.",
+        "3-position lock/4 functions"
+      ],
+      "needsReview": true,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/kasrow-ker-350-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/kasrow-ker-350-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "kasrow-ker-350-cash-drawer",
+        "candidateTitle": "KASROW KER-350 4B6C Economical Cash Drawer",
+        "attemptStem": "kasrow-ker-350-cash-drawer"
+      }
+    },
+    {
+      "name": "Maken MK410 Cash Drawer",
+      "slug": "maken-mk410-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-35014",
+      "description": "<h2>Maken MK410 Cash Drawer</h2><p>The Maken <span style=\"font-weight: bold;\">MK410</span> Cash Drawer is a robust, multifunctional device designed to meet the demands of retail and hospitality environments. With multi-interface compatibility (supporting RJ11, RJ12, USB, RS232, and both DCΦ2.5 and DCΦ3.5 connections), this cash drawer ensures seamless communication with a wide range of point-of-sale systems and receipt printers. It also provides opportunities for customized connections. The thick gauge cold rolled steel and SECC that make up the MK410 is designed to withstand the rigors of high-volume transactions without losing their integrity over time. The textured hybrid powder finish that completes the drawer's outside may be tailored to complement or improve any business environment. It comes in beige, black, and custom colors. The Maken MK410 <a href=\"https://www.startech.com.bd/cash-drawer\" style=\"color: rgb(0, 0, 0);\" target=\"\">Cash Drawer</a> is a robust, multifunctional device designed to meet the demands of retail and hospitality environments. With multi-interface compatibility (supporting RJ11, RJ12, USB, RS232, and both DCΦ2.5 and DCΦ3.5 connections), this cash drawer ensures seamless communication with a wide range of point-of-sale systems and receipt printers. It also provides opportunities for customized connections. The thick gauge cold rolled steel and SECC that make up the MK410 is designed to withstand the rigors of high-volume transactions without losing their integrity over time. The textured hybrid powder finish that completes the drawer's outside may be tailored to complement or improve any business environment. It comes in beige, black, and custom colors. The cash drawer's durability and long-term performance are demonstrated by its lifespan of more than one million operations (MTBF). Furthermore, the integrated cash drawer status micro switch improves automated cash management systems by giving rapid feedback on the drawer's condition. A robust, adaptable, and safe cash management system is what organizations looking for may achieve with the Maken MK410 Cash Drawer.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>Maken MK410 Cash Drawer<span style=\"color: inherit; font-family: inherit;\"> from the best Cash Drawer Shop in BD</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Maken MK410 Cash Drawer</span> From Star Tech. We have a large collection of the latest Rongta <a href=\"https://www.startech.com.bd/office-equipment/CASH-DRAWER\" style=\"\" target=\"\">Cash Drawers</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Maken MK410 Cash Drawer comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MK410</li><li>Interface: RJ11, RJ12</li><li>Tray: 4 Bill &amp; 8 Coin Slots</li><li>Lifecycle: tested to 1,000,000 c.</li><li>3-position lock/4 functions</li></ul>",
+      "model": "MK410",
+      "warranty": "no warranty",
+      "basePrice": 7000.0,
+      "originalPrice": 7700.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 410.0,
+        "width": 420.0,
+        "height": 100.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Maken",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11, RJ12, USB, RS232, DCΦ2.5/3.5 Jack, custom type",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-35014",
+          "price": 7000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ11, RJ12, USB, RS232, DCΦ2.5/3.5 Jack, custom type"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 6720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "RJ11, RJ12, USB, RS232, DCΦ2.5/3.5 Jack, custom type",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Construction: Thick gauge cold rolled steel & SECC Finish: Textured hybrid powder coat Color: Black, Beige and Custom type Roller: Polyurethane for smooth operation Construction: Shatter-resistant plastic Currency Layout: 4,5,6,8-Bill with Metal wire grips, 5 Adjustable Coin Slots Media Slots: 2 Drawer Lock: 3-Position lock / 4-Functions: locked open/closed, manual open, electronically driven Interface: RJ11, RJ12, USB, RS232, DCΦ2.5/3.5 Jack, custom type Lifecycle: MTBF 1,000,000 times + Micro Switch: Cash Drawer Status Micro Switch",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "External Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "410(W) x 420(D) x 100(H) mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maken-mk410-cash-drawer",
+      "sourceProductCode": "35014",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MK410",
+        "Interface: RJ11, RJ12",
+        "Tray: 4 Bill & 8 Coin Slots",
+        "Lifecycle: tested to 1,000,000 c.",
+        "3-position lock/4 functions"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/maken-mk410-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/maken-mk410-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maken-mk410-cash-drawer",
+        "candidateTitle": "Maken MK410 Cash Drawer",
+        "attemptStem": "maken-mk410-cash-drawer"
+      }
+    },
+    {
+      "name": "Maken SK410S Cash Drawer",
+      "slug": "maken-sk410s-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-35018",
+      "description": "<h2>Maken SK410S Cash Drawer</h2><p>The Maken <span style=\"font-weight: bold;\">SK410S </span>Cash Drawer is a trustworthy and secure solution for handling cash in any retail or hospitality establishment. This cash drawer is robust and long-lasting due to its high gauge cold rolled steel construction and SECC structure. The textured hybrid powder coat finish comes in beige or black, or custom colors to match any décor. The cash drawer features a polyurethane roller for smooth operation and is constructed of shatter-resistant polycarbonate. The monetary arrangement has eight adjustable coin slots and four, five, and six-bill compartments with metal wire handles. There are also two media slots where you may store additional papers or checks. The drawer lock has four functions: manually open, electrically driven, locked open/closed, and three lock positions. RJ11, RJ12, USB, RS232, DC 2.5/3.5 Jack, and custom options are all included in the interface. The cash drawer also features an MTBF 1,000,000 times+ and a <a href=\"https://www.startech.com.bd/cash-drawer\" style=\"color: rgb(0, 0, 0);\" target=\"\">cash drawer</a> status micro switch. A few advantages of the Maken SK410S Cash Drawer include its sturdy design, many media and money slots, and safe locking system. Smooth functioning is guaranteed by the polyurethane roller, and an additional layer of protection is provided by the shatter-resistant plastic structure. A long-lasting investment is guaranteed by the MTBF 1,000,000 times+ lifespan.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>Maken SK410S Cash Drawer<span style=\"color: inherit; font-family: inherit;\"> from the best Cash Drawer Shop in BD</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Maken SK410S Cash Drawer</span> From Star Tech. We have a large collection of the latest Rongta <a href=\"https://www.startech.com.bd/office-equipment/CASH-DRAWER\" style=\"\" target=\"\">Cash Drawers</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Maken SK410S Cash Drawer comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SK410S</li><li>Interface: RJ11, RJ12, USB, RS232</li><li>Tray: 5 Note &amp; 5 coin slots</li><li>Lifecycle: tested to 1,000,000 c.</li><li>3-position lock/4 functions</li></ul>",
+      "model": "SK410S",
+      "warranty": "no warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 410.0,
+        "width": 420.0,
+        "height": 100.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Maken",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11, RJ12, USB, RS232",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-35018",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "RJ11, RJ12, USB, RS232"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "RJ11, RJ12, USB, RS232",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Construction: Thick gauge cold rolled steel & SECC Finish: Textured hybrid powder coat Color: Black, Beige and Custom type Roller: Polyurethane for smooth operation Construction: Shatter-resistant plastic Currency Layout: 4,5,6,8-Bill with Metal wire grips, 5 Adjustable Coin Slots Media Slots: 2 Drawer Lock: 3-Position lock / 4-Functions: locked open/closed, manual open, electronically driven Interface: RJ11, RJ12, USB, RS232, DCΦ2.5/3.5 Jack, custom type Lifecycle: MTBF 1,000,000 times + Micro Switch: Cash Drawer Status Micro Switch",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "External Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "410(W) x 420(D) x 100(H) mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maken-sk410s-cash-drawer",
+      "sourceProductCode": "35018",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SK410S",
+        "Interface: RJ11, RJ12, USB, RS232",
+        "Tray: 5 Note & 5 coin slots",
+        "Lifecycle: tested to 1,000,000 c.",
+        "3-position lock/4 functions"
+      ],
+      "needsReview": true,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/maken-sk410s-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/maken-sk410s-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maken-sk410s-cash-drawer",
+        "candidateTitle": "Maken SK410S Cash Drawer",
+        "attemptStem": "maken-sk410s-cash-drawer"
+      }
+    },
+    {
+      "name": "Rongta RT-335 Mini Cash Drawer",
+      "slug": "rongta-rt-335-mini-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-10091",
+      "description": "<h2>Rongta RT-335 Mini Cash Drawer</h2>\n<p>Rongta RT-335 Mini Cash Drawer is built with RJ11, RJ12 interface. In this drawer Coin Box Size is two boxes in right: 55 x 76mm, removable coin box size is 170 x 76mm with 200 unique keys and three lock positions. This Cash Drawer also has Micro switch C, NC or C, NO drawer, Microswitch C, NC or C, NO, 4 Bill &amp; 3 Coin Slots. Here it also has removable 3C, 4C, 5C, 6C, or 8C optional, the right coin box is fixed and its width is 78/71/71/64 mm, Length is 180mm; Depth is 48mm, Life Test is 1,000,000 times, Compliance with enterprise standards Dropping Test, Vibration Test is Compliance with enterprise standards with  3.5Kg  weight. It has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Rongta RT-335</li><li>Interface: RJ11, RJ12</li><li>Tray: 4 Bill &amp; 3 Coin Slots</li><li>Drawer: Microswitch C, NC or C, NO</li><li>Color: Balck</li></ul>",
+      "model": "Rongta RT-335",
+      "warranty": null,
+      "basePrice": 4100.0,
+      "originalPrice": 4180.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "RONGTA",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11, RJ12",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            {
+              "value": "Balck",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-10091",
+          "price": 4100.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ11, RJ12",
+            "Color": "Balck"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3936.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Rongta RT-335",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "RJ11, RJ12",
+              "position": 1
+            },
+            {
+              "label": "Tray",
+              "value": "4 Bill & 3 Coin Slots",
+              "position": 2
+            },
+            {
+              "label": "Drawer",
+              "value": "Microswitch C, NC or C, NO",
+              "position": 3
+            },
+            {
+              "label": "Color",
+              "value": "Balck",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/rongta-rt-335-mini-cash-drawer",
+      "sourceProductCode": "10091",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Rongta RT-335",
+        "Interface: RJ11, RJ12",
+        "Tray: 4 Bill & 3 Coin Slots",
+        "Drawer: Microswitch C, NC or C, NO",
+        "Color: Balck"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/rongta-rt-335-mini-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/rongta-rt-335-mini-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "rongta-rt-335-mini-cash-drawer",
+        "candidateTitle": "Rongta RT-335 Mini Cash Drawer",
+        "attemptStem": "rongta-rt-335-mini-cash-drawer"
+      }
+    },
+    {
+      "name": "Rongta RT410 POS Cash Drawer",
+      "slug": "rongta-rt410-pos-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-28958",
+      "description": "<h2>Rongta RT410 POS Cash Drawer</h2><p style=\"text-align: justify; \">The Rongta RT410 POS Cash Drawer is a reliable and efficient cash management solution designed for point-of-sale systems. It is equipped with various features that make cash handling convenient and secure. The cash drawer comes with multiple interface options, including RJ11 and RJ12, allowing for seamless integration with a wide range of POS systems. This ensures compatibility and easy connectivity, enabling smooth transaction processing. The tray of the RT410 cash drawer is designed to accommodate both notes and coins efficiently. It features 4 note slots that can securely hold different denominations of currency. Additionally, it has 5 coin slots, providing ample space for organizing coins of varying sizes. To ensure the safety of cash and valuables, the drawer is equipped with a microswitch mechanism. It offers two configurations: C, NC (common, normally closed) or C, NO (common, normally open). This allows businesses to choose the setup that best suits their operational needs and security requirements. The Rongta RT410 POS Cash Drawer has a length of 183mm and a depth of 59mm. This compact size makes it suitable for various retail environments where space is limited. Despite its compact design, the cash drawer offers ample storage capacity for cash, providing convenience and efficiency during transactions. The Rongta RT410 POS Cash Drawer combines functionality, security, and compatibility, making it an excellent choice for businesses seeking a reliable cash management solution for their point-of-sale operations.</p><h2>Buy Rongta RT410 POS Cash Drawer from the best Cash Drawer Shop in BD</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/rongta-rt410-pos-cash-drawer\" target=\"\">Rongta RT410 POS Cash Drawer</a> From Star Tech. We have a large collection of the latest Rongta <a href=\"https://www.startech.com.bd/office-equipment/CASH-DRAWER\" target=\"\">Cash Drawers</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Rongta RT410 POS Cash Drawer comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: RT410</li><li>Interface: RJ11, RJ12,</li><li>Tray: 4 Note &amp; 5 Coin Slots</li><li>Drawer: Microswitch C, NC or C, NO</li><li>Length: 183mm; Depth:59mm</li></ul>",
+      "model": "RT410",
+      "warranty": "no warranty",
+      "basePrice": 7000.0,
+      "originalPrice": 7480.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "RONGTA",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11, RJ12,",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-28958",
+          "price": 7000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ11, RJ12,"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 6720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "RT410",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "RJ11, RJ12,",
+              "position": 1
+            },
+            {
+              "label": "Tray",
+              "value": "4 Note & 5 Coin Slots",
+              "position": 2
+            },
+            {
+              "label": "Drawer",
+              "value": "Microswitch C, NC or C, NO",
+              "position": 3
+            },
+            {
+              "label": "Length",
+              "value": "183mm; Depth:59mm",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/rongta-rt410-pos-cash-drawer",
+      "sourceProductCode": "28958",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: RT410",
+        "Interface: RJ11, RJ12,",
+        "Tray: 4 Note & 5 Coin Slots",
+        "Drawer: Microswitch C, NC or C, NO",
+        "Length: 183mm; Depth:59mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/rongta-rt410-pos-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/rongta-rt410-pos-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "rongta-rt410-pos-cash-drawer",
+        "candidateTitle": "Rongta RT410 POS Cash Drawer",
+        "attemptStem": "rongta-rt410-pos-cash-drawer"
+      }
+    },
+    {
+      "name": "Rongta RT-410B2 Roller Cash Drawer",
+      "slug": "rongta-rt410b2-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-10094",
+      "description": "<h2>Rongta RT-410B2 Roller Cash Drawer</h2><p>Rongta RT410B2 Cash Drawer is built with RJ11, RJ12, interface where length is 183mm and depth is 59mm. In this drawer, it has 5 Bill &amp; 8 Coin Slots with 200 unique keys and three lock positions. This Cash Drawer also has Micro switch C,NC or C,NO drawer, 5 Bill &amp; 8 Coin Slots. Here is also has 68/67/67/67/68 mm 5 bills width, 183mm length, 59mm Depth, 1,000,000 times Life Test and Dropping test is Compliance with enterprise 6.5Kg weight. This Rongta cash drawer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Rongta RT410B2</li><li>Tray: 5 Bill &amp; 8 Coin Slots</li><li>Interface: RJ11, RJ12,</li><li>Drawer: Microswitch C,NC or C,NO</li><li>Length: 183mm; Depth:59mm</li></ul>",
+      "model": "Rongta RT410B2",
+      "warranty": null,
+      "basePrice": 6500.0,
+      "originalPrice": 7170.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "RONGTA",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11, RJ12,",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-10094",
+          "price": 6500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ11, RJ12,"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 6240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Rongta RT410B2",
+              "position": 0
+            },
+            {
+              "label": "Tray",
+              "value": "5 Bill & 8 Coin Slots",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "RJ11, RJ12,",
+              "position": 2
+            },
+            {
+              "label": "Drawer",
+              "value": "Microswitch C,NC or C,NO",
+              "position": 3
+            },
+            {
+              "label": "Length",
+              "value": "183mm; Depth:59mm",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/rongta-rt410b2-cash-drawer",
+      "sourceProductCode": "10094",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Rongta RT410B2",
+        "Tray: 5 Bill & 8 Coin Slots",
+        "Interface: RJ11, RJ12,",
+        "Drawer: Microswitch C,NC or C,NO",
+        "Length: 183mm; Depth:59mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/rongta-rt410b2-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/rongta-rt410b2-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "rongta-rt410b2-cash-drawer",
+        "candidateTitle": "Rongta RT-410B2 Roller Cash Drawer",
+        "attemptStem": "rongta-rt410b2-cash-drawer"
+      }
+    },
+    {
+      "name": "Rongta RT420F POS Cash Drawer",
+      "slug": "rongta-rt420f-pos-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-10095",
+      "description": "<h2>Rongta RT420F POS Cash Drawer</h2>\n<p>Rongta RT420F POS Cash Drawer is built with RJ11, RJ12, interface where length is 183mm and depth is 59mm. In this drawer, it has 5 Bill &amp; 8 Coin Slots with 200 unique keys and three lock position. This Cash Drawer also has Micro switch C,NC or C,NO drawer, 5 Bill &amp; 8 Coin Slots. Here is also has 4 bills width 85/84/84/85 mm, 5 bills width is 68/67/67/67/68 mm, 183mm length, 59mm Depth, 1,000,000 times Life Test and Dropping test is Compliance with enterprise 6.7Kg weight. This Rongta cash drawer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Rongta RT420F</li><li>Tray: 5 Bill &amp; 8 Coin Slots</li><li>Interface: RJ11, RJ12</li><li>Drawer: Microswitch C,NC or C,NO</li><li>Length: 183mm; Depth:59mm</li></ul>",
+      "model": "Rongta RT420F",
+      "warranty": null,
+      "basePrice": 7900.0,
+      "originalPrice": 8250.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "RONGTA",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11, RJ12",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-10095",
+          "price": 7900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ11, RJ12"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 7584.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Rongta RT420F",
+              "position": 0
+            },
+            {
+              "label": "Tray",
+              "value": "5 Bill & 8 Coin Slots",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "RJ11, RJ12",
+              "position": 2
+            },
+            {
+              "label": "Drawer",
+              "value": "Microswitch C,NC or C,NO",
+              "position": 3
+            },
+            {
+              "label": "Length",
+              "value": "183mm; Depth:59mm",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/rongta-rt420f-pos-cash-drawer",
+      "sourceProductCode": "10095",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Rongta RT420F",
+        "Tray: 5 Bill & 8 Coin Slots",
+        "Interface: RJ11, RJ12",
+        "Drawer: Microswitch C,NC or C,NO",
+        "Length: 183mm; Depth:59mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/rongta-rt420f-pos-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/rongta-rt420f-pos-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "rongta-rt420f-pos-cash-drawer",
+        "candidateTitle": "Rongta RT420F POS Cash Drawer",
+        "attemptStem": "rongta-rt420f-pos-cash-drawer"
+      }
+    },
+    {
+      "name": "Rongta RT-425A Roller Cash Drawer",
+      "slug": "rongta-rt425a-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-10096",
+      "description": "<h2>Rongta RT-425A Roller Cash Drawer</h2>\n<p>Rongta RT425A Bill and Coin Slot Cash Drawer is built in RJ11, RJ12 interface. This cash drawer has 5 Bill &amp; 8 Coin Slots, 12V voltage, 3 position lock,  single cheque slot with 200 unique key. It's dimension is about 425 x 460 x 105mm, 8.2 kg weight. this Rongta cash drawer provides no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Rongta RT425A</li><li>Tray: 5 Bill &amp; 8 Coin Slots</li><li>Interface: RJ11, RJ12</li><li>12V voltage</li><li>3 position lock</li></ul>",
+      "model": "Rongta RT425A",
+      "warranty": null,
+      "basePrice": 8600.0,
+      "originalPrice": 8900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 425.0,
+        "width": 460.0,
+        "height": 105.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "RONGTA",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11, RJ12",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-10096",
+          "price": 8600.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ11, RJ12"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 8256.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Rongta RT425A",
+              "position": 0
+            },
+            {
+              "label": "Tray",
+              "value": "5 Bill & 8 Coin Slots",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "RJ11, RJ12",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/rongta-rt425a-cash-drawer",
+      "sourceProductCode": "10096",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Rongta RT425A",
+        "Tray: 5 Bill & 8 Coin Slots",
+        "Interface: RJ11, RJ12",
+        "12V voltage",
+        "3 position lock"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/rongta-rt425a-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/rongta-rt425a-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "rongta-rt425a-cash-drawer",
+        "candidateTitle": "Rongta RT-425A Roller Cash Drawer",
+        "attemptStem": "rongta-rt425a-cash-drawer"
+      }
+    },
+    {
+      "name": "Xcash M330E Cash Drawer",
+      "slug": "xcash-m330e-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-46092",
+      "description": "<h2>Xcash M330E Cash Drawer</h2><p>The Xcash <strong>M330E</strong> Cash Drawer is made of heavy-duty metal. The Xcash Cash Drawer offers long-term durability and secure cash handling, making it an excellent solution for POS systems, supermarkets, restaurants, and other retail environments. The Xcash M330E <a href=\"https://www.startech.com.bd/cash-drawer\" style=\"color: rgb(0, 0, 0);\" target=\"\">Cash Drawer</a> has a well-organized tray structure with six bill slots and four coin compartments, providing for effective cash handling and quick access during hectic transactions. The Xcash M330E Cash Drawer, which features a versatile three-position lock system (lock, manual, and auto), provides increased security and versatility, ensuring that cash handling remains safe and controlled under a variety of operating scenarios. The RJ12 interface of the Xcash M330E Cash Drawer provides for smooth connectivity with most point-of-sale systems, making installation simple and user-friendly. The Xcash Cash Drawer's long-lasting structure and smooth operation make it not only a secure but also a practical solution for daily business transactions. The Xcash M330E Cash Drawer, with its smartly designed compartments and reliable locking mechanism, can help retailers and restaurateurs improve transaction efficiency while reducing the risk of errors or theft. The Xcash M330E Cash Drawer is designed to withstand high-frequency usage, guaranteeing that businesses of all sizes can rely on its functionality for years.</p><h2>Buy Xcash M330E Cash Drawer from Star Tech</h2><p>In Bangladesh, you can get original <strong>Xcash M330E Cash Drawer</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/office-equipment/CASH-DRAWER\" target=\"\">Cash Drawer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Xcash M330E Cash Drawer comes with no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: M330E</li><li>Tray: 6 Bills &amp; 4 Coins Slot</li><li>Lock: 3 Position (Lock, Manual, Auto)</li><li>Interface: RJ12, Material: Heavy Duty Metal</li><li>Suitable For POS Systems, Retail Shops, Supermarkets, Restaurants</li></ul>",
+      "model": "M330E",
+      "warranty": "no warranty",
+      "basePrice": 4500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ12, Material: Heavy Duty Metal",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-46092",
+          "price": 4500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "RJ12, Material: Heavy Duty Metal"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "M330E",
+              "position": 0
+            },
+            {
+              "label": "Tray",
+              "value": "6 Bills & 4 Coins Slot",
+              "position": 1
+            },
+            {
+              "label": "Lock",
+              "value": "3 Position (Lock, Manual, Auto)",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "RJ12, Material: Heavy Duty Metal",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/xcash-m330e-cash-drawer",
+      "sourceProductCode": "46092",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: M330E",
+        "Tray: 6 Bills & 4 Coins Slot",
+        "Lock: 3 Position (Lock, Manual, Auto)",
+        "Interface: RJ12, Material: Heavy Duty Metal",
+        "Suitable For POS Systems, Retail Shops, Supermarkets, Restaurants"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/xcash-m330e-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/xcash-m330e-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "xcash-m330e-cash-drawer",
+        "candidateTitle": "Xcash M330E Cash Drawer",
+        "attemptStem": "xcash-m330e-cash-drawer"
+      }
+    },
+    {
+      "name": "Xcash M405E Cash Drawer",
+      "slug": "xcash-m405e-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-46094",
+      "description": "<h2>Xcash M405E Cash Drawer</h2><p>The Xcash <strong>M405E</strong> Cash Drawer is a dependable and efficient cash management solution. Designed to increase efficiency in a variety of retail and hospitality sectors. The Xcash <a href=\"https://www.startech.com.bd/cash-drawer\" style=\"color: rgb(0, 0, 0);\" target=\"\">Cash Drawer</a>, made of heavy-duty metal, offers long-lasting sturdiness and dependable security, making it an excellent choice for retail stores, supermarkets, restaurants, pharmacies, and POS counters. This Xcash Cash Drawer has a well-organized tray layout with eight bill slots and two coin compartments, allowing for quick and easy access to cash during hectic transactions. The Xcash M405E Cash Drawer has a three-position lock system (lock, manual, and auto) that offers adaptable security, keeps cash safe, and gives operators complete control over drawer access. The RJ12 interface ensures smooth interoperability with most POS printers and systems that enable cash drawer connections, making installation and integration a breeze. The Xcash M405E Cash Drawer's solid build and easy functioning make it not only secure but also useful for daily company operations. Businesses can use the Xcash Cash Drawer to speed transactions, eliminate handling errors, and increase overall cashier efficiency. The Xcash Cash Drawer's design stresses both security and functionality, making it ideal for frequent use while retaining consistent performance over time. Whether in retail, hotel, or pharmacy sectors, the Xcash M405E Cash Drawer easily satisfies the demands of today's corporate situations.</p><h2>Buy Xcash M405E Cash Drawer from Star Tech</h2><p>In Bangladesh, you can get original <strong>Xcash M405E Cash Drawer</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/office-equipment/CASH-DRAWER\" target=\"\">Cash Drawer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Xcash M405E Cash Drawer comes with no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: M405E</li><li>Tray: 8 Bills &amp; 2 Coins Slot (Large capacity)</li><li>Lock: 3 Position (Lock, Manual, Auto)</li><li>Interface: RJ12, Material: Heavy Duty Metal</li><li>Suitable For POS Systems, Retail Shops, Supermarkets, Restaurants</li></ul>",
+      "model": "M405E",
+      "warranty": "no warranty",
+      "basePrice": 5000.0,
+      "originalPrice": 5400.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ12, Material: Heavy Duty Metal",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-46094",
+          "price": 5000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ12, Material: Heavy Duty Metal"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "M405E",
+              "position": 0
+            },
+            {
+              "label": "Tray",
+              "value": "8 Bills & 2 Coins Slot (Large capacity)",
+              "position": 1
+            },
+            {
+              "label": "Lock",
+              "value": "3 Position (Lock, Manual, Auto)",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "RJ12, Material: Heavy Duty Metal",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/xcash-m405e-cash-drawer",
+      "sourceProductCode": "46094",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: M405E",
+        "Tray: 8 Bills & 2 Coins Slot (Large capacity)",
+        "Lock: 3 Position (Lock, Manual, Auto)",
+        "Interface: RJ12, Material: Heavy Duty Metal",
+        "Suitable For POS Systems, Retail Shops, Supermarkets, Restaurants"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/xcash-m405e-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/xcash-m405e-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "xcash-m405e-cash-drawer",
+        "candidateTitle": "Xcash M405E Cash Drawer",
+        "attemptStem": "xcash-m405e-cash-drawer"
+      }
+    },
+    {
+      "name": "Yumite 5B-405 Cash Drawer (5 Note 8 Coin)",
+      "slug": "yumite-5b-405-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-43604",
+      "description": "<h2>Yumite 5B-405 Cash Drawer</h2><p>The Yumite <strong>5B-405</strong> cash drawer is a robust solution for streamlining point-of-sale operations and increasing transaction efficiency in retail and hospitality settings. This <a href=\"https://www.startech.com.bd/cash-drawer\" style=\"color: rgb(0, 0, 0);\" target=\"\">cash drawer</a> allows many currencies and denominations, making it ideal for high-volume use. It has five note slots and eight coin sections. The Yumite 5B-405 cash drawer has a standard RJ11 interface for easy interaction with most POS systems and receipt printers. The tray is meticulously structured inside, with eight designated grids for paper money and four grids for coins, allowing cashiers to easily access and see everything. The Yumite 5B-405 cash drawer is made of cold-rolled steel plate for security and impact resistance. ABS plastic is used in the inside drawer to reduce weight without compromising durability. The Yumite 5B-405 cash drawer features a reinforced steel wire fold mechanism that guides bills easily and securely, minimizing jams and increasing efficiency.</p><h2>Buy Yumite 5B-405 Cash Drawer from Star Tech</h2><p>In Bangladesh, you can get original <strong>Yumite 5B-405 Cash Drawer</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/office-equipment/CASH-DRAWER\" target=\"\">Cash Drawer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Yumite 5B-405 Cash Drawer comes with no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 5B-405</li><li>Interface: RJ11, Slot: 5 Note 8 Coin</li><li>Tray: 5 grids for paper money, 8 grids for coin</li><li>Material: Shell (Cold steel plate); drawer (ABS)</li><li>Cash fold: Steel wire fold</li></ul>",
+      "model": "5B-405",
+      "warranty": "no warranty",
+      "basePrice": 6500.0,
+      "originalPrice": 6900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Yumite",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11, Slot: 5 Note 8 Coin",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-43604",
+          "price": 6500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ11, Slot: 5 Note 8 Coin"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 6240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "5B-405",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "RJ11, Slot: 5 Note 8 Coin",
+              "position": 1
+            },
+            {
+              "label": "Tray",
+              "value": "5 grids for paper money, 8 grids for coin",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Shell (Cold steel plate); drawer (ABS)",
+              "position": 3
+            },
+            {
+              "label": "Cash fold",
+              "value": "Steel wire fold",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/yumite-5b-405-cash-drawer",
+      "sourceProductCode": "43604",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 5B-405",
+        "Interface: RJ11, Slot: 5 Note 8 Coin",
+        "Tray: 5 grids for paper money, 8 grids for coin",
+        "Material: Shell (Cold steel plate); drawer (ABS)",
+        "Cash fold: Steel wire fold"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/yumite-5b-405-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/yumite-5b-405-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "yumite-5b-405-cash-drawer",
+        "candidateTitle": "Yumite 5B-405 Cash Drawer (5 Note 8 Coin)",
+        "attemptStem": "yumite-5b-405-cash-drawer"
+      }
+    },
+    {
+      "name": "Yumite A-335 Cash Drawer",
+      "slug": "yumite-a-335-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-37529",
+      "description": "<h2>Yumite A-335 Cash Drawer</h2><p>The Yumite <strong>A-335</strong> <a href=\"https://www.startech.com.bd/cash-drawer\" style=\"color: rgb(0, 0, 0);\" target=\"\">Cash Drawer</a> is a dependable and long-lasting solution for improving cash management in retail contexts. It is built of high-quality components, with a cold steel plate exterior for robustness and long-lasting performance, and an ABS drawer for smooth operation. The cash drawer has a well-organized tray with five grids for paper money and two grids for coins, making it simple to distinguish and retrieve different denominations. To improve cash storage security, the drawer includes steel wire cash folds that keep bills secure even during high-traffic transactions. The Yumite A-335 also has an RJ11 interface, which allows it to be readily connected to a variety of POS (Point of Sale) systems and enables automated opening during transactions. This integration with POS systems provides a consistent experience for cashiers and consumers, lowering wait times and increasing operational efficiency. Its durable design makes it suited for a variety of retail environments, from small enterprises to huge stores, providing both ease and dependability. Whether you need a cash drawer to manage your daily transactions smoothly or a dependable solution to interact with your POS system, the Yumite A-335 Cash Drawer offers the ideal combination of durability, functionality, and security. Its tiny design makes it a great addition to any point-of-sale situation.</p><h2>Buy Yumite A-335 Cash Drawer from Star Tech</h2><p>In Bangladesh, you can get original <strong>Yumite A-335 Cash Drawer</strong> From Star Tech. We have a large collection of latest Yumite <a href=\"https://www.startech.com.bd/cash-drawer\" target=\"\">Cash Drawer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Yumite A-335 Cash Drawer comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A-335</li><li>Tray: 5 grids for paper money, 2 grids for coin</li><li>Material: Shell (Cold steel plate), drawer (ABS)</li><li>Cash fold: Steel wire fold</li><li>Interface: RJ11</li></ul>",
+      "model": "A-335",
+      "warranty": "no warranty",
+      "basePrice": 5200.0,
+      "originalPrice": 5500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Yumite",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-37529",
+          "price": 5200.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ11"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4992.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "A-335",
+              "position": 0
+            },
+            {
+              "label": "Tray",
+              "value": "5 grids for paper money, 2 grids for coin",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "Shell (Cold steel plate), drawer (ABS)",
+              "position": 2
+            },
+            {
+              "label": "Cash fold",
+              "value": "Steel wire fold",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "RJ11",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/yumite-a-335-cash-drawer",
+      "sourceProductCode": "37529",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A-335",
+        "Tray: 5 grids for paper money, 2 grids for coin",
+        "Material: Shell (Cold steel plate), drawer (ABS)",
+        "Cash fold: Steel wire fold",
+        "Interface: RJ11"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/yumite-a-335-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/yumite-a-335-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "yumite-a-335-cash-drawer",
+        "candidateTitle": "Yumite A-335 Cash Drawer",
+        "attemptStem": "yumite-a-335-cash-drawer"
+      }
+    },
+    {
+      "name": "Yumite A-350 Cash Drawer",
+      "slug": "yumite-a-350-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-17787",
+      "description": "<h2 style=\"text-align: justify; \">Yumite A-350 Cash Drawer</h2><p style=\"text-align: justify; \">The Yumite A-350 Cash Drawer comes with 5 grids for paper money, 2 grids for coin. It is made of Cold steel plate (Shell) and ABS (drawer). It features steel wire cash folds. It comes with an RJ11 interface. It has the following certification: CE; FCC; RoHS. It has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A-350</li><li>Tray: 5 grids for paper money, 2 grids for coin</li><li>Material: Shell (Cold steel plate), drawer (ABS)</li><li>Cash fold: Steel wire fold</li><li>Interface: RJ11</li></ul>",
+      "model": "A-350",
+      "warranty": "an RJ11 interface. It has the following certification: CE; FCC; RoHS. It has no warranty",
+      "basePrice": 5300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Yumite",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-17787",
+          "price": 5300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "RJ11"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 5088.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "A-350",
+              "position": 0
+            },
+            {
+              "label": "Tray",
+              "value": "5 grids for paper money, 2 grids for coin",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "Shell (Cold steel plate), drawer (ABS)",
+              "position": 2
+            },
+            {
+              "label": "Cash fold",
+              "value": "Steel wire fold",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "RJ11",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/yumite-a-350-cash-drawer",
+      "sourceProductCode": "17787",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A-350",
+        "Tray: 5 grids for paper money, 2 grids for coin",
+        "Material: Shell (Cold steel plate), drawer (ABS)",
+        "Cash fold: Steel wire fold",
+        "Interface: RJ11"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/yumite-a-350-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/yumite-a-350-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "yumite-a-350-cash-drawer",
+        "candidateTitle": "Yumite A-350 Cash Drawer",
+        "attemptStem": "yumite-a-350-cash-drawer"
+      }
+    },
+    {
+      "name": "Yumite EY-400AH Cash Drawer",
+      "slug": "yumite-ey-400ah-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-27333",
+      "description": "<h2 style=\"\">Yumite EY-400AH Cash Drawer</h2><p style=\"\">The Yumite EY-400AH Cash Drawer has 8 grids for paper money, 4 grids for coins; Three file locks. It is made of a Cold steel plate (Shell) and ABS (drawer). Pulsation amplitude is 12VDS-24VDS. Cash fold: Steel wire fold. Interface: RJ11. 2 Keys provided to lock the drawer when not in use. Suitable for supermarkets, restaurants, and all kinds of Retail Shops. Color: Black. Heavy-duty metal frame, durable for commercial use. It comes in Black, White, and Custom type. It has the following certifications: CE; FCC; and RoHS.</p><h2 style=\"\">Buy Yumite EY-400AH Cash Drawer from the best Cash Drawer Shop in Bangladesh: Star Tech</h2><p style=\"\">In Bangladesh, you can get original <span style=\"font-weight: bold;\">Yumite EY-400AH Cash Drawer</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/office-equipment/CASH-DRAWER\" target=\"\">Cash Drawer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Yumite EY-400AH Cash Drawer comes with no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: EY-400AH</li><li>Interface: RJ11</li><li>Tray: 8 grids for paper money, 4 grids for coin</li><li>Material: Shell (Cold steel plate); drawer (ABS)</li><li>Cash fold: Steel wire fold</li></ul>",
+      "model": "EY-400AH",
+      "warranty": "no warranty",
+      "basePrice": 7500.0,
+      "originalPrice": 8250.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Yumite",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-27333",
+          "price": 7500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ11"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 7200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "EY-400AH",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "RJ11",
+              "position": 1
+            },
+            {
+              "label": "Tray",
+              "value": "8 grids for paper money, 4 grids for coin",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Shell (Cold steel plate); drawer (ABS)",
+              "position": 3
+            },
+            {
+              "label": "Cash fold",
+              "value": "Steel wire fold",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/yumite-ey-400ah-cash-drawer",
+      "sourceProductCode": "27333",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: EY-400AH",
+        "Interface: RJ11",
+        "Tray: 8 grids for paper money, 4 grids for coin",
+        "Material: Shell (Cold steel plate); drawer (ABS)",
+        "Cash fold: Steel wire fold"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/yumite-ey-400ah-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/yumite-ey-400ah-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "yumite-ey-400ah-cash-drawer",
+        "candidateTitle": "Yumite EY-400AH Cash Drawer",
+        "attemptStem": "yumite-ey-400ah-cash-drawer"
+      }
+    },
+    {
+      "name": "Yumite HER-405 Cash Drawer",
+      "slug": "yumite-her-405-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-43201",
+      "description": "<h2>Yumite HER-405 Cash Drawer</h2><p>The Yumite <strong>HER-405</strong> Cash Drawer is a durable and reliable cash management solution. Designed for usage in supermarkets, restaurants, retail stores, and other commercial settings. This cash drawer, made from a combination of cold steel plate and ABS material, is designed to withstand heavy daily use and provide long-term performance. The Yumite HER-405 <a href=\"https://www.startech.com.bd/cash-drawer\" style=\"color: rgb(0, 0, 0);\" target=\"\">Cash Drawer</a> has a large internal layout with six grids for managing paper money and four grids for holding coins, which allows for effective sorting and quick access during transactions. The drawer has a three-position lock with four functional modes, providing increased security and convenience of use for cashiers and employees. With a lifecycle tested up to 1,000,000 cycles, the Yumite HER-405 Cash Drawer delivers consistent performance over time, especially in high-traffic areas. It provides a variety of interface options, including RJ11, RJ12, USB, and RS232, guaranteeing broad interoperability with various point-of-sale systems and simple integration into diverse corporate configurations. This Yumite HER-405 Cash Drawer contributes to a clean and orderly cash station, which not only increases workflow efficiency but also reduces cash-handling errors. Its durable construction and utilitarian design make it a perfect choice for organizations that need to conduct rapid, organized, and secure cash transactions throughout the day. The Yumite HER-405 Cash Drawer's choice of durable materials guarantees that it can withstand repeated opening and closing, while its clear layout promotes better money management and responsibility.</p><h2>Buy Yumite HER-405 Cash Drawer from Star Tech</h2><p>In Bangladesh, you can get original <strong>Yumite HER-405 Cash Drawer</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/office-equipment/CASH-DRAWER\" style=\"\" target=\"\">Cash Drawer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Yumite HER-405 Cash Drawer comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HER-405</li><li>Interface: RJ11, RJ12, USB, RS232</li><li>Tray: 6 Grids for Paper Money, 4 Grids for Coins</li><li>Lifecycle: Tested to 1,000,000c</li><li>3-position lock/4 functions</li></ul>",
+      "model": "HER-405",
+      "warranty": "no warranty",
+      "basePrice": 6500.0,
+      "originalPrice": 7150.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Yumite",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11, RJ12, USB, RS232",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-43201",
+          "price": 6500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ11, RJ12, USB, RS232"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 6240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "HER-405",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "RJ11, RJ12, USB, RS232",
+              "position": 1
+            },
+            {
+              "label": "Tray",
+              "value": "6 Grids for Paper Money, 4 Grids for Coins",
+              "position": 2
+            },
+            {
+              "label": "Lifecycle",
+              "value": "Tested to 1,000,000c",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/yumite-her-405-cash-drawer",
+      "sourceProductCode": "43201",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HER-405",
+        "Interface: RJ11, RJ12, USB, RS232",
+        "Tray: 6 Grids for Paper Money, 4 Grids for Coins",
+        "Lifecycle: Tested to 1,000,000c",
+        "3-position lock/4 functions"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/yumite-her-405-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/yumite-her-405-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "yumite-her-405-cash-drawer",
+        "candidateTitle": "Yumite HER-405 Cash Drawer",
+        "attemptStem": "yumite-her-405-cash-drawer"
+      }
+    },
+    {
+      "name": "Yumite LS-405 Cash Drawer",
+      "slug": "yumite-ls-405-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-18698",
+      "description": "<h2 style=\"text-align: justify; \">Yumite LS-405 Cash Drawer</h2><p style=\"text-align: justify; \">The Yumite LS-405 Cash Drawer has 6 grids for paper money, 4 grids for coins; and Three file locks. It is made of a Cold steel plate (Shell) and ABS (drawer). Pulsation amplitude is 12VDS-24VDS. Cash fold: Steel wire fold. Interface: RJ11. 2 Keys provided to lock the drawer when not in use. Suitable for supermarkets, restaurants, and all kinds of Retail Shops. Color: Black. Heavy-duty metal frame, durable for commercial use. It comes in Black, White, and Custom type. It has the following certifications: CE; FCC; and RoHS. It has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: LS-405</li><li>Interface: RJ11</li><li>Tray: 6 Grids for Paper Money, 3 Grids for coin</li><li>Material: Shell (Cold steel plate); drawer (ABS)</li><li>Cash fold: Steel wire fold</li></ul>",
+      "model": "LS-405",
+      "warranty": null,
+      "basePrice": 6500.0,
+      "originalPrice": 6700.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Yumite",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-18698",
+          "price": 6500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ11"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 6240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "LS-405",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "RJ11",
+              "position": 1
+            },
+            {
+              "label": "Tray",
+              "value": "6 Grids for Paper Money, 3 Grids for coin",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Shell (Cold steel plate); drawer (ABS)",
+              "position": 3
+            },
+            {
+              "label": "Cash fold",
+              "value": "Steel wire fold",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/yumite-ls-405-cash-drawer",
+      "sourceProductCode": "18698",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: LS-405",
+        "Interface: RJ11",
+        "Tray: 6 Grids for Paper Money, 3 Grids for coin",
+        "Material: Shell (Cold steel plate); drawer (ABS)",
+        "Cash fold: Steel wire fold"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/yumite-ls-405-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/yumite-ls-405-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "yumite-ls-405-cash-drawer",
+        "candidateTitle": "Yumite LS-405 Cash Drawer",
+        "attemptStem": "yumite-ls-405-cash-drawer"
+      }
+    },
+    {
+      "name": "Yumite YT-405 Cash Drawer",
+      "slug": "yumite-yt-405-cash-drawer",
+      "type": "PHYSICAL",
+      "sku": "ST-36607",
+      "description": "<h2>Yumite YT-405 Cash Drawer</h2><p>The Yumite <strong>YT-405</strong> <a href=\"https://www.startech.com.bd/cash-drawer\" style=\"color: rgb(0, 0, 0);\" target=\"\">Cash Drawer</a> is a crucial component for any retail or corporate setting that requires safe and efficient cash processing. This durable cash drawer offers many interfaces, including RJ11, RJ12, USB, and RS232, and is fully compatible with a variety of point-of-sale (POS) systems, making integration into current installations simple and painless. Inside the drawer has a well-organized tray with 5 note slots and 5 coin slots. This structure enables quick and simple access to cash, allowing for speedier transaction processing and better customer service. The considerable storage space also contributes to an organized cash register, lowering the likelihood of mistakes during cash handling. The Yumite YT-405 boasts exceptional durability. It has undergone rigorous testing to withstand up to 1,000,000 cycles, ensuring long-term performance even in high-traffic areas. This makes it a fantastic choice for enterprises that need a dependable cash management system that can survive regular use. The Yumite YT-405 Cash Drawer is designed for maximum security. It has a three-position lock with four different functions: locked, manual open, electrically online, and electrically off. This adds many levels of protection, guaranteeing that only authorized workers can access the cash drawer, reducing the danger of theft and illegal access. The Yumite YT-405 Cash Drawer offers comprehensive interface compatibility, organized cash storage, remarkable durability, and upgraded security features, making it an ideal choice for organizations looking for an efficient and safe cash management solution. </p><h2>Buy Yumite YT-405 Cash Drawer from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Yumite YT-405 Cash Drawer</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/office-equipment/CASH-DRAWER\" target=\"\">Cash Drawer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Yumite YT-405 Cash Drawer comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: YT-405</li><li>Interface: RJ11, RJ12, USB, RS232</li><li>Tray: 5 Note &amp; 5 coin slots</li><li>Lifecycle: Tested to 1,000,000c</li><li>3-position lock/4 functions</li></ul>",
+      "model": "YT-405",
+      "warranty": "no warranty",
+      "basePrice": 6300.0,
+      "originalPrice": 6500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Yumite",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ11, RJ12, USB, RS232",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-36607",
+          "price": 6300.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ11, RJ12, USB, RS232"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 6048.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "YT-405",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "RJ11, RJ12, USB, RS232",
+              "position": 1
+            },
+            {
+              "label": "Tray",
+              "value": "5 Note & 5 coin slots",
+              "position": 2
+            },
+            {
+              "label": "Lifecycle",
+              "value": "Tested to 1,000,000c",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/yumite-yt-405-cash-drawer",
+      "sourceProductCode": "36607",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: YT-405",
+        "Interface: RJ11, RJ12, USB, RS232",
+        "Tray: 5 Note & 5 coin slots",
+        "Lifecycle: Tested to 1,000,000c",
+        "3-position lock/4 functions"
+      ],
+      "needsReview": false,
+      "categorySlug": "cash-drawer",
+      "image": "/images/products/office-equipment/cash-drawer/_direct/yumite-yt-405-cash-drawer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cash-drawer/_direct/yumite-yt-405-cash-drawer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "yumite-yt-405-cash-drawer",
+        "candidateTitle": "Yumite YT-405 Cash Drawer",
+        "attemptStem": "yumite-yt-405-cash-drawer"
+      }
+    }
+  ]
+}

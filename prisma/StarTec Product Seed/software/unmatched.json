@@ -1,0 +1,899 @@
+[
+  {
+    "stem": "adobe-acrobat-pro-dc-for-teams-5ce010c3",
+    "images": [
+      "/images/products/software/adobe/adobe-acrobat-pro-dc-for-teams-5ce010c3.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-acrobat-pro-dc-for-teams-5ce010c3",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-acrobat-pro-dc-for-teams-5ce010c3",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-acrobat-sign-for-business-d45eba1f",
+    "images": [
+      "/images/products/software/adobe/adobe-acrobat-sign-for-business-d45eba1f.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-acrobat-sign-for-business-d45eba1f",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-acrobat-sign-for-business-d45eba1f",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-acrobat-standard-dc-for-teams-215f2369",
+    "images": [
+      "/images/products/software/adobe/adobe-acrobat-standard-dc-for-teams-215f2369.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-acrobat-standard-dc-for-teams-215f2369",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-acrobat-standard-dc-for-teams-215f2369",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-after-effects-cc-for-teams-c3169a4a",
+    "images": [
+      "/images/products/software/adobe/adobe-after-effects-cc-for-teams-c3169a4a.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-after-effects-cc-for-teams-c3169a4a",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-after-effects-cc-for-teams-c3169a4a",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-audition-cc-pro-for-teams-409a02a4",
+    "images": [
+      "/images/products/software/adobe/adobe-audition-cc-pro-for-teams-409a02a4.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-audition-cc-pro-for-teams-409a02a4",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-audition-cc-pro-for-teams-409a02a4",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-dimension-for-teams-d5222ae8",
+    "images": [
+      "/images/products/software/adobe/adobe-dimension-for-teams-d5222ae8.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-dimension-for-teams-d5222ae8",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-dimension-for-teams-d5222ae8",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-dreamweaver-cc-for-teams-16372105",
+    "images": [
+      "/images/products/software/adobe/adobe-dreamweaver-cc-for-teams-16372105.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-dreamweaver-cc-for-teams-16372105",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-dreamweaver-cc-for-teams-16372105",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-fresco-cc-for-teams-e84e3b88",
+    "images": [
+      "/images/products/software/adobe/adobe-fresco-cc-for-teams-e84e3b88.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-fresco-cc-for-teams-e84e3b88",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-fresco-cc-for-teams-e84e3b88",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-illustrator-cc-for-teams-b78e0924",
+    "images": [
+      "/images/products/software/adobe/adobe-illustrator-cc-for-teams-b78e0924.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-illustrator-cc-for-teams-b78e0924",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-illustrator-cc-for-teams-b78e0924",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-incopy-cc-for-teams-83c39d91",
+    "images": [
+      "/images/products/software/adobe/adobe-incopy-cc-for-teams-83c39d91.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-incopy-cc-for-teams-83c39d91",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-incopy-cc-for-teams-83c39d91",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-indesign-cc-for-teams-ca7bfe7a",
+    "images": [
+      "/images/products/software/adobe/adobe-indesign-cc-for-teams-ca7bfe7a.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-indesign-cc-for-teams-ca7bfe7a",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-indesign-cc-for-teams-ca7bfe7a",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-lightroom-cc-pro-for-teams-93d1e463",
+    "images": [
+      "/images/products/software/adobe/adobe-lightroom-cc-pro-for-teams-93d1e463.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-lightroom-cc-pro-for-teams-93d1e463",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-lightroom-cc-pro-for-teams-93d1e463",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-photoshop-cc-for-teams-4a450daf",
+    "images": [
+      "/images/products/software/adobe/adobe-photoshop-cc-for-teams-4a450daf.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-photoshop-cc-for-teams-4a450daf",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-photoshop-cc-for-teams-4a450daf",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-premiere-pro-for-teams-8868ec4a",
+    "images": [
+      "/images/products/software/adobe/adobe-premiere-pro-for-teams-8868ec4a.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-premiere-pro-for-teams-8868ec4a",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-premiere-pro-for-teams-8868ec4a",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "adobe-xd-cc-for-teams-9a39cbbc",
+    "images": [
+      "/images/products/software/adobe/adobe-xd-cc-for-teams-9a39cbbc.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Adobe",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "adobe-xd-cc-for-teams-9a39cbbc",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "adobe-xd-cc-for-teams-9a39cbbc",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "eset-small-business-security-server-for-10-users-d224b8dc",
+    "images": [
+      "/images/products/software/eset-small-business-security-server-for-10-users-d224b8dc.png"
+    ],
+    "categorySlug": "software",
+    "brandName": null,
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "eset-small-business-security-server-for-10-users-d224b8dc",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "eset-small-business-security-server-for-10-users-d224b8dc",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "eset-small-business-security-server-for-15-users-7c0c2bb1",
+    "images": [
+      "/images/products/software/eset-small-business-security-server-for-15-users-7c0c2bb1.png"
+    ],
+    "categorySlug": "software",
+    "brandName": null,
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "eset-small-business-security-server-for-15-users-7c0c2bb1",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "eset-small-business-security-server-for-15-users-7c0c2bb1",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "eset-small-business-security-server-for-25-users-16459939",
+    "images": [
+      "/images/products/software/eset-small-business-security-server-for-25-users-16459939.png"
+    ],
+    "categorySlug": "software",
+    "brandName": null,
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "eset-small-business-security-server-for-25-users-16459939",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "eset-small-business-security-server-for-25-users-16459939",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "microsoft-365-apps-for-business-1-year-subscription-89656261",
+    "images": [
+      "/images/products/software/Microsoft/microsoft-365-apps-for-business-1-year-subscription-89656261.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "microsoft-365-apps-for-business-1-year-subscription-89656261",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "microsoft-365-apps-for-business-1-year-subscription-89656261",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "microsoft-365-apps-for-enterprise-1-year-subscription-b2bb1403",
+    "images": [
+      "/images/products/software/Microsoft/microsoft-365-apps-for-enterprise-1-year-subscription-b2bb1403.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "microsoft-365-apps-for-enterprise-1-year-subscription-b2bb1403",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "microsoft-365-apps-for-enterprise-1-year-subscription-b2bb1403",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "microsoft-365-business-premium-1-year-subscription-9508cf09",
+    "images": [
+      "/images/products/software/Microsoft/microsoft-365-business-premium-1-year-subscription-9508cf09.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "microsoft-365-business-premium-1-year-subscription-9508cf09",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "microsoft-365-business-premium-1-year-subscription-9508cf09",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "microsoft-365-business-standard-1-year-subscription-58508179",
+    "images": [
+      "/images/products/software/Microsoft/microsoft-365-business-standard-1-year-subscription-58508179.jpeg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "microsoft-365-business-standard-1-year-subscription-58508179",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "microsoft-365-business-standard-1-year-subscription-58508179",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "microsoft-365-enterprise-e3-1-year-subscription-5a5cc7e7",
+    "images": [
+      "/images/products/software/Microsoft/microsoft-365-enterprise-e3-1-year-subscription-5a5cc7e7.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "microsoft-365-enterprise-e3-1-year-subscription-5a5cc7e7",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "microsoft-365-enterprise-e3-1-year-subscription-5a5cc7e7",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "microsoft-365-enterprise-e5-1-year-subscription-a99d1826",
+    "images": [
+      "/images/products/software/Microsoft/microsoft-365-enterprise-e5-1-year-subscription-a99d1826.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "microsoft-365-enterprise-e5-1-year-subscription-a99d1826",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "microsoft-365-enterprise-e5-1-year-subscription-a99d1826",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "microsoft-365-f3-1-year-subscription-9e6b4228",
+    "images": [
+      "/images/products/software/Microsoft/microsoft-365-f3-1-year-subscription-9e6b4228.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "microsoft-365-f3-1-year-subscription-9e6b4228",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "microsoft-365-f3-1-year-subscription-9e6b4228",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "microsoft-365-personal-for-1-user-01-year-subscription-823d425e",
+    "images": [
+      "/images/products/software/Microsoft/microsoft-365-personal-for-1-user-01-year-subscription-823d425e.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "microsoft-365-personal-for-1-user-01-year-subscription-823d425e",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "microsoft-365-personal-for-1-user-01-year-subscription-823d425e",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "microsoft-exchange-server-2019-standard-device-cal-d482030d",
+    "images": [
+      "/images/products/software/Microsoft/microsoft-exchange-server-2019-standard-device-cal-d482030d.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "microsoft-exchange-server-2019-standard-device-cal-d482030d",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "microsoft-exchange-server-2019-standard-device-cal-d482030d",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "microsoft-exchange-server-2019-standard-user-cal-12a9afb9",
+    "images": [
+      "/images/products/software/Microsoft/microsoft-exchange-server-2019-standard-user-cal-12a9afb9.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "microsoft-exchange-server-2019-standard-user-cal-12a9afb9",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "microsoft-exchange-server-2019-standard-user-cal-12a9afb9",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "microsoft-windows-11-professional-0a275b2f",
+    "images": [
+      "/images/products/software/Microsoft/microsoft-windows-11-professional-0a275b2f.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "microsoft-windows-11-professional-0a275b2f",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "microsoft-windows-11-professional-0a275b2f",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "microsoft-windows-server-2019-standard-oei-dvd-14086980",
+    "images": [
+      "/images/products/software/Microsoft/microsoft-windows-server-2019-standard-oei-dvd-14086980.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "microsoft-windows-server-2019-standard-oei-dvd-14086980",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "microsoft-windows-server-2019-standard-oei-dvd-14086980",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "microsoft-windows-server-standard-2025-2-core-license-pack-827eb678",
+    "images": [
+      "/images/products/software/Microsoft/microsoft-windows-server-standard-2025-2-core-license-pack-827eb678.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "microsoft-windows-server-standard-2025-2-core-license-pack-827eb678",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "microsoft-windows-server-standard-2025-2-core-license-pack-827eb678",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "office-365-enterprise-e1-1-year-subscription-c227223a",
+    "images": [
+      "/images/products/software/Microsoft/office-365-enterprise-e1-1-year-subscription-c227223a.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "office-365-enterprise-e1-1-year-subscription-c227223a",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "office-365-enterprise-e1-1-year-subscription-c227223a",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "office-365-enterprise-e3-1-year-subscription-59a616a9",
+    "images": [
+      "/images/products/software/Microsoft/office-365-enterprise-e3-1-year-subscription-59a616a9.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "office-365-enterprise-e3-1-year-subscription-59a616a9",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "office-365-enterprise-e3-1-year-subscription-59a616a9",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "office-365-enterprise-e5-1-year-subscription-074570c3",
+    "images": [
+      "/images/products/software/Microsoft/office-365-enterprise-e5-1-year-subscription-074570c3.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "office-365-enterprise-e5-1-year-subscription-074570c3",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "office-365-enterprise-e5-1-year-subscription-074570c3",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "office-home-and-business-2024-english-apac-em-medialess-577b01a0",
+    "images": [
+      "/images/products/software/Microsoft/office-home-and-business-2024-english-apac-em-medialess-577b01a0.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "office-home-and-business-2024-english-apac-em-medialess-577b01a0",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "office-home-and-business-2024-english-apac-em-medialess-577b01a0",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "office-ltsc-standard-2021-4f52c931",
+    "images": [
+      "/images/products/software/Microsoft/office-ltsc-standard-2021-4f52c931.jpg"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "office-ltsc-standard-2021-4f52c931",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "office-ltsc-standard-2021-4f52c931",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "visual-studio-professional-2022-d2f2e034",
+    "images": [
+      "/images/products/software/visual-studio-professional-2022-d2f2e034.png"
+    ],
+    "categorySlug": "software",
+    "brandName": null,
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "visual-studio-professional-2022-d2f2e034",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "visual-studio-professional-2022-d2f2e034",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "windows-ggwa-windows-11-professional-legalization-getgenuine-csp-perpetual-b92a6717",
+    "images": [
+      "/images/products/software/Microsoft/windows-ggwa-windows-11-professional-legalization-getgenuine-csp-perpetual-b92a6717.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "windows-ggwa-windows-11-professional-legalization-getgenuine-csp-perpetual-b92a6717",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "windows-ggwa-windows-11-professional-legalization-getgenuine-csp-perpetual-b92a6717",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "windows-server-2025-user-cal-1ad300b7",
+    "images": [
+      "/images/products/software/Microsoft/windows-server-2025-user-cal-1ad300b7.png"
+    ],
+    "categorySlug": "software",
+    "brandName": "Microsoft",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "windows-server-2025-user-cal-1ad300b7",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "windows-server-2025-user-cal-1ad300b7",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/gadget",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\gadget",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\gadget",
+  "imagesFound": 3005,
+  "uniqueProductStems": 3005,
+  "productsInJson": 3005,
+  "matchedProducts": 2957,
+  "unmatchedProducts": 48,
+  "imageCoverage": 3005,
+  "jsonGroupFiles": 23,
+  "matchMethods": {
+    "unmatched": 48,
+    "search": 2,
+    "direct-slug": 2955
+  },
+  "jsonGenerationTimeSeconds": 1715.91,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 3005,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\gadget\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\gadget\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\gadget\\unmatched.json"
+  },
+  "seedTimeSeconds": 59.74
+}

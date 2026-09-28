@@ -1,0 +1,25 @@
+[
+  {
+    "stem": "ugreen-cat-6-utp-flat-network-cable-0-5m",
+    "images": [
+      "/images/products/networking/patch-cord/ugreen-cat-6-utp-flat-network-cable-0-5m.png"
+    ],
+    "categorySlug": "networking",
+    "brandName": "Patch Cord",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "ugreen-cat-6-utp-flat-network-cable-0-5m",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "ugreen-cat-6-utp-flat-network-cable-0-5m",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  }
+]

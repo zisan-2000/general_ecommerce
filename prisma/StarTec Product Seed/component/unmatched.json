@@ -1,0 +1,911 @@
+[
+  {
+    "stem": "arctic-m2-pro-m",
+    "images": [
+      "/images/products/component/ssd cooler/Arctic M2 Pro M.png"
+    ],
+    "categorySlug": "component",
+    "brandName": "SSD Cooler",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "arctic-m2-pro-m",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.717948717948718,
+            "query": "arctic-m2-pro-m",
+            "candidates": [
+              {
+                "score": 0.7179,
+                "url": "https://www.startech.com.bd/arctic-m2-pro-ssd-cooler",
+                "title": "Arctic M2 Pro M.2 2280 SSD Cooler Black"
+              },
+              {
+                "score": 0.6087,
+                "url": "https://www.startech.com.bd/arctic-m2-pro-ssd-cooler-silver",
+                "title": "Arctic M2 Pro M.2 2280 SSD Cooler Silver"
+              }
+            ]
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "arctic-m2-pro-m-2-2280-ssd-cooler-black-9816c2e8",
+    "images": [
+      "/images/products/component/ssd cooler/arctic-m2-pro-m-2-2280-ssd-cooler-black-9816c2e8.png"
+    ],
+    "categorySlug": "component",
+    "brandName": "SSD Cooler",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "arctic-m2-pro-m-2-2280-ssd-cooler-black-9816c2e8",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "arctic-m2-pro-m-2-2280-ssd-cooler-black-9816c2e8",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "arctic-m2-pro-m-2-2280-ssd-cooler-silver-080ea8b4",
+    "images": [
+      "/images/products/component/ssd cooler/arctic-m2-pro-m-2-2280-ssd-cooler-silver-080ea8b4.png"
+    ],
+    "categorySlug": "component",
+    "brandName": "SSD Cooler",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "arctic-m2-pro-m-2-2280-ssd-cooler-silver-080ea8b4",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "arctic-m2-pro-m-2-2280-ssd-cooler-silver-080ea8b4",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "asus-ar120-argb-pwm-single-pack-casing-fan-87606f1a",
+    "images": [
+      "/images/products/component/casing-cooler/Asus/ASUS AR120 ARGB PWM Single Pack Casing Fan__87606f1a.png"
+    ],
+    "categorySlug": "casing-cooler",
+    "brandName": "Asus",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "asus-ar120-argb-pwm-single-pack-casing-fan-87606f1a",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "asus-ar120-argb-pwm-single-pack-casing-fan-87606f1a",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "asus-ar120-argb-pwm-single-pack-casing-fan-d39195b1",
+    "images": [
+      "/images/products/component/casing-cooler/Asus/asus-ar120-argb-pwm-single-pack-casing-fan-d39195b1.png"
+    ],
+    "categorySlug": "casing-cooler",
+    "brandName": "Asus",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "asus-ar120-argb-pwm-single-pack-casing-fan-d39195b1",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "asus-ar120-argb-pwm-single-pack-casing-fan-d39195b1",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "cooler-master-cf120-argb-case-fan-1e98bc0d",
+    "images": [
+      "/images/products/component/casing-cooler/CoolerMaster/cooler-master-cf120-argb-case-fan-1e98bc0d.png"
+    ],
+    "categorySlug": "casing-cooler",
+    "brandName": "CoolerMaster",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "cooler-master-cf120-argb-case-fan-1e98bc0d",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "cooler-master-cf120-argb-case-fan-1e98bc0d",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "cooler-master-masterfan-mf120-halo-case-fan-b3265d0e",
+    "images": [
+      "/images/products/component/casing-cooler/CoolerMaster/cooler-master-masterfan-mf120-halo-case-fan-b3265d0e.png"
+    ],
+    "categorySlug": "casing-cooler",
+    "brandName": "CoolerMaster",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "cooler-master-masterfan-mf120-halo-case-fan-b3265d0e",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "cooler-master-masterfan-mf120-halo-case-fan-b3265d0e",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "cooler-master-masterfan-mf120-halo-case-fan-white-8f339e96",
+    "images": [
+      "/images/products/component/casing-cooler/CoolerMaster/cooler-master-masterfan-mf120-halo-case-fan-white-8f339e96.png"
+    ],
+    "categorySlug": "casing-cooler",
+    "brandName": "CoolerMaster",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "cooler-master-masterfan-mf120-halo-case-fan-white-8f339e96",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "cooler-master-masterfan-mf120-halo-case-fan-white-8f339e96",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "pc-power-cfx-120mm-argb-case-fan-white-64005591",
+    "images": [
+      "/images/products/component/casing-cooler/PC Power/PC Power CFX 120MM ARGB Case Fan White__64005591.png"
+    ],
+    "categorySlug": "casing-cooler",
+    "brandName": "PC Power",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "pc-power-cfx-120mm-argb-case-fan-white-64005591",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "pc-power-cfx-120mm-argb-case-fan-white-64005591",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-alta-9-air-cpu-cooler-852ece84",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/DeepCool ALTA 9 Air CPU Cooler__852ece84.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-alta-9-air-cpu-cooler-852ece84",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-alta-9-air-cpu-cooler-852ece84",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-ck-11509-cpu-cooler-b60ebd55",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/Deepcool CK-11509 CPU Cooler__b60ebd55.jpg"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-ck-11509-cpu-cooler-b60ebd55",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-ck-11509-cpu-cooler-b60ebd55",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-fc120-performance-120mm-argb-pwm-case-fan-3cd838c5",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/deepcool-fc120-performance-120mm-argb-pwm-case-fan-3cd838c5.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-fc120-performance-120mm-argb-pwm-case-fan-3cd838c5",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-fc120-performance-120mm-argb-pwm-case-fan-3cd838c5",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-fc120-performance-120mm-argb-pwm-case-fan-3f4c51a9",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/DeepCool FC120 Performance 120mm ARGB PWM Case Fan__3f4c51a9.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-fc120-performance-120mm-argb-pwm-case-fan-3f4c51a9",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-fc120-performance-120mm-argb-pwm-case-fan-3f4c51a9",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-fd12-120mm-case-fan-083ed3f4",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/DeepCool FD12 120mm Case Fan__083ed3f4.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-fd12-120mm-case-fan-083ed3f4",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-fd12-120mm-case-fan-083ed3f4",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-fd12-120mm-case-fan-5a2ec242",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/deepcool-fd12-120mm-case-fan-5a2ec242.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-fd12-120mm-case-fan-5a2ec242",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-fd12-120mm-case-fan-5a2ec242",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-fd12-argb-120mm-case-fan-c905c597",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/Deepcool FD12 ARGB 120mm Case Fan__c905c597.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-fd12-argb-120mm-case-fan-c905c597",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-fd12-argb-120mm-case-fan-c905c597",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-fd12-argb-120mm-case-fan-d5b92f36",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/deepcool-fd12-argb-120mm-case-fan-d5b92f36.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-fd12-argb-120mm-case-fan-d5b92f36",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-fd12-argb-120mm-case-fan-d5b92f36",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-fd12-argb-wh-120mm-case-fan-3ecc75ec",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/Deepcool FD12 ARGB WH 120mm Case Fan__3ecc75ec.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-fd12-argb-wh-120mm-case-fan-3ecc75ec",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-fd12-argb-wh-120mm-case-fan-3ecc75ec",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-fd12-argb-wh-120mm-case-fan-5b37cf5f",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/deepcool-fd12-argb-wh-120mm-case-fan-5b37cf5f.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-fd12-argb-wh-120mm-case-fan-5b37cf5f",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-fd12-argb-wh-120mm-case-fan-5b37cf5f",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-fd12-wh-120mm-case-fan-25539b8d",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/DeepCool FD12 WH 120mm Case Fan__25539b8d.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-fd12-wh-120mm-case-fan-25539b8d",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-fd12-wh-120mm-case-fan-25539b8d",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-fd12-wh-120mm-case-fan-5658fe52",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/deepcool-fd12-wh-120mm-case-fan-5658fe52.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-fd12-wh-120mm-case-fan-5658fe52",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-fd12-wh-120mm-case-fan-5658fe52",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-ft14-wh-140mm-casing-fan-5ef972b9",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/DeepCool FT14 WH 140mm Casing Fan__5ef972b9.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-ft14-wh-140mm-casing-fan-5ef972b9",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-ft14-wh-140mm-casing-fan-5ef972b9",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-ft14-wh-140mm-casing-fan-d87f6435",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/deepcool-ft14-wh-140mm-casing-fan-d87f6435.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-ft14-wh-140mm-casing-fan-d87f6435",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-ft14-wh-140mm-casing-fan-d87f6435",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-gh-01-a-rgb-graphics-card-holder-07aef159",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/deepcool-gh-01-a-rgb-graphics-card-holder-07aef159.jpg"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-gh-01-a-rgb-graphics-card-holder-07aef159",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-gh-01-a-rgb-graphics-card-holder-07aef159",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-ice-edge-mini-fs-v2-0-cpu-air-cooler-f2b37cdb",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/deepcool-ice-edge-mini-fs-v2-0-cpu-air-cooler-f2b37cdb.jpg"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-ice-edge-mini-fs-v2-0-cpu-air-cooler-f2b37cdb",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-ice-edge-mini-fs-v2-0-cpu-air-cooler-f2b37cdb",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-rf-120-b-blue-led-case-fan-ccb82597",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/Deepcool RF 120 B Blue LED Case Fan__ccb82597.jpg"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-rf-120-b-blue-led-case-fan-ccb82597",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-rf-120-b-blue-led-case-fan-ccb82597",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-rf-120-r-red-led-case-fan-288adf46",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/Deepcool RF 120 R Red LED Case Fan__288adf46.jpg"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-rf-120-r-red-led-case-fan-288adf46",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-rf-120-r-red-led-case-fan-288adf46",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "deepcool-xfan-120-case-cooling-fan-36d5dcec",
+    "images": [
+      "/images/products/component/cpu-cooler/deepcool/Deepcool XFAN 120 Case Cooling Fan__36d5dcec.jpg"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Deepcool",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "deepcool-xfan-120-case-cooling-fan-36d5dcec",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "deepcool-xfan-120-case-cooling-fan-36d5dcec",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "value-top-glacio-x100-rgb-air-cpu-cooler-5155f1c0",
+    "images": [
+      "/images/products/component/cpu-cooler/value-top/value-top-glacio-x100-rgb-air-cpu-cooler-5155f1c0.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Value Top",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "value-top-glacio-x100-rgb-air-cpu-cooler-5155f1c0",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "value-top-glacio-x100-rgb-air-cpu-cooler-5155f1c0",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "value-top-glacio-x100-rgb-air-cpu-cooler-bdce14db",
+    "images": [
+      "/images/products/component/cpu-cooler/value-top/Value-Top GLACIO X100 RGB Air CPU Cooler__bdce14db.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Value Top",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "value-top-glacio-x100-rgb-air-cpu-cooler-bdce14db",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "value-top-glacio-x100-rgb-air-cpu-cooler-bdce14db",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "value-top-glacio-x170-rgb-air-cpu-cooler-5092bfda",
+    "images": [
+      "/images/products/component/cpu-cooler/value-top/value-top-glacio-x170-rgb-air-cpu-cooler-5092bfda.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Value Top",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "value-top-glacio-x170-rgb-air-cpu-cooler-5092bfda",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "value-top-glacio-x170-rgb-air-cpu-cooler-5092bfda",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "value-top-glacio-x170-rgb-air-cpu-cooler-bf6ff1aa",
+    "images": [
+      "/images/products/component/cpu-cooler/value-top/Value-Top GLACIO X170 RGB Air CPU Cooler__bf6ff1aa.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Value Top",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "value-top-glacio-x170-rgb-air-cpu-cooler-bf6ff1aa",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "value-top-glacio-x170-rgb-air-cpu-cooler-bf6ff1aa",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "value-top-glacio-x200w-rgb-white-air-cpu-cooler-13030e9e",
+    "images": [
+      "/images/products/component/cpu-cooler/value-top/value-top-glacio-x200w-rgb-white-air-cpu-cooler-13030e9e.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Value Top",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "value-top-glacio-x200w-rgb-white-air-cpu-cooler-13030e9e",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "value-top-glacio-x200w-rgb-white-air-cpu-cooler-13030e9e",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "value-top-glacio-x200w-rgb-white-air-cpu-cooler-260f9773",
+    "images": [
+      "/images/products/component/cpu-cooler/value-top/Value-Top GLACIO X200W RGB White Air CPU Cooler__260f9773.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Value Top",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "value-top-glacio-x200w-rgb-white-air-cpu-cooler-260f9773",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "value-top-glacio-x200w-rgb-white-air-cpu-cooler-260f9773",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "value-top-tydal-360dw-cpu-cooler",
+    "images": [
+      "/images/products/component/cpu-cooler/value-top/value-top-tydal-360dw-cpu-cooler.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Value Top",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "value-top-tydal-360dw-cpu-cooler",
+          "meta": {
+            "method": "search-invalid-page",
+            "score": 1.25,
+            "query": "value-top-tydal-360dw-cpu-cooler",
+            "candidateUrl": "https://www.startech.com.bd/value-top-tydal-360dw-cpu-cooler",
+            "candidateTitle": "Value-Top TYDAL 360DW 360mm AIO Liquid CPU Cooler With Display"
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "xtreme-xjogos-xjc100a-90w-cpu-cooler-d022a34e",
+    "images": [
+      "/images/products/component/cpu-cooler/xtreme/Xtreme XJOGOS XJC100A 90W CPU Cooler__d022a34e.png"
+    ],
+    "categorySlug": "cpu-cooler",
+    "brandName": "Xtreme",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "xtreme-xjogos-xjc100a-90w-cpu-cooler-d022a34e",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "xtreme-xjogos-xjc100a-90w-cpu-cooler-d022a34e",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "golden-field-gf500-500w-power-supply-6d4bacd2",
+    "images": [
+      "/images/products/component/power-supply/golden-field/golden-field-gf500-500w-power-supply-6d4bacd2.png"
+    ],
+    "categorySlug": "power-supply",
+    "brandName": "Golden Field",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "golden-field-gf500-500w-power-supply-6d4bacd2",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "golden-field-gf500-500w-power-supply-6d4bacd2",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "maxgreen-power-wave-230w-power-supply-69243067",
+    "images": [
+      "/images/products/component/power-supply/maxgreen/maxgreen-power-wave-230w-power-supply-69243067.png"
+    ],
+    "categorySlug": "power-supply",
+    "brandName": "Maxgreen",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "maxgreen-power-wave-230w-power-supply-69243067",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "maxgreen-power-wave-230w-power-supply-69243067",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "maxgreen-standard-series-200w-power-supply-f79600f7",
+    "images": [
+      "/images/products/component/power-supply/maxgreen/maxgreen-standard-series-200w-power-supply-f79600f7.png"
+    ],
+    "categorySlug": "power-supply",
+    "brandName": "Maxgreen",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "maxgreen-standard-series-200w-power-supply-f79600f7",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "maxgreen-standard-series-200w-power-supply-f79600f7",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  }
+]

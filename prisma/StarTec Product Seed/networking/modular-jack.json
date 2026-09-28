@@ -1,0 +1,2986 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\networking",
+    "generatedAtUnix": 1790590909,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Networking",
+      "slug": "networking",
+      "parentSlug": null,
+      "image": "/images/products/networking/firewall/sonicwall-nsa-2700-16-port-firewall.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Modular Jack",
+      "slug": "modular-jack",
+      "parentSlug": "networking",
+      "image": "/images/products/networking/modular-jack/belden-ax101069-rj45-modular-jack.png",
+      "isActive": true,
+      "sortOrder": 8,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Belden",
+      "slug": "belden",
+      "logo": null
+    },
+    {
+      "name": "CommScope",
+      "slug": "commscope",
+      "logo": null
+    },
+    {
+      "name": "Cote",
+      "slug": "cote",
+      "logo": null
+    },
+    {
+      "name": "D-Link",
+      "slug": "d-link",
+      "logo": null
+    },
+    {
+      "name": "Dintek",
+      "slug": "dintek",
+      "logo": null
+    },
+    {
+      "name": "Hikvision",
+      "slug": "hikvision",
+      "logo": null
+    },
+    {
+      "name": "R&M",
+      "slug": "r-and-m",
+      "logo": null
+    },
+    {
+      "name": "Rosenberger",
+      "slug": "rosenberger",
+      "logo": null
+    },
+    {
+      "name": "Safenet",
+      "slug": "safenet",
+      "logo": null
+    },
+    {
+      "name": "TRENDnet",
+      "slug": "trendnet",
+      "logo": null
+    },
+    {
+      "name": "Vention",
+      "slug": "vention",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Belden AX101069 CAT 6 RJ45 Modular Jack Yellow",
+      "slug": "belden-ax101069-rj45-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-47068",
+      "description": "<h2>Belden AX101069 CAT 6 RJ45 Modular Jack Yellow</h2><p>The Belden <strong>AX101069</strong> CAT 6 RJ45 Modular Jack Yellow is a high-performance networking solution designed for reliable and efficient data connectivity. This Belden AX101069 RJ45 Modular Jack supports both RJ45 and RJ11 connections and is rated for Category 6 performance, compliant with TIA 568.2-D and ISO/IEC 11801:2002 Ed 2 standards. Its front connection features a copper alloy lead frame with 50 µ inch gold over nickel plating, providing exceptional conductivity and durability for up to 1,000 mating cycles, while the rear Gas Tight IDC connection allows up to 20 reliable terminations. The Belden AX101069 Modular Jack Yellow is built with a UL940V-0 plastic connector body, ensuring mechanical strength with 20 lbs connector retention and 11.250 lbs plug retention. Fully compatible with Belden 110 Connecting Tools and MediaFlex Termination Stations, this modular jack also meets FCC Part 68, Subpart F and IEC 60603-7 standards, and is ETL-verified for Category 6 performance. Ideal for professional and enterprise installations, the Belden AX101069 Modular Jack Yellow combines durability, high-speed data transmission, and versatile compatibility.</p><h2>Buy Belden AX101069 CAT 6 RJ45 Modular Jack Yellow from Star Tech</h2><p>In Bangladesh, you can get original <strong>Belden AX101069 CAT 6 RJ45 Modular Jack Yellow</strong> From Star Tech. We have a large collection of latest Belden <a href=\"https://www.startech.com.bd/cable-connector\" style=\"\" target=\"\">Cable Connector </a>to purchase for your <a href=\"https://www.startech.com.bd/networking\" target=\"\">Networking</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Belden AX101069 CAT 6 RJ45 Modular Jack Yellow comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AX101069</li><li>Compatibility: RJ45, RJ11, Data Category: Category 6</li><li>Connection Durability: 1,000 cycles</li><li>Transmission Standards: ISO/IEC 11801:2002 Ed 2</li><li>Material: Copper Alloy with Nickel Plating</li></ul>",
+      "model": "AX101069",
+      "warranty": "no warranty",
+      "basePrice": 399.0,
+      "originalPrice": 450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Belden",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47068",
+          "price": 399.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 383.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AX101069",
+              "position": 0
+            },
+            {
+              "label": "Compatibility",
+              "value": "RJ45, RJ11, Data Category: Category 6",
+              "position": 1
+            },
+            {
+              "label": "Connection Durability",
+              "value": "1,000 cycles",
+              "position": 2
+            },
+            {
+              "label": "Transmission Standards",
+              "value": "ISO/IEC 11801:2002 Ed 2",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Copper Alloy with Nickel Plating",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/belden-ax101069-rj45-modular-jack",
+      "sourceProductCode": "47068",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AX101069",
+        "Compatibility: RJ45, RJ11, Data Category: Category 6",
+        "Connection Durability: 1,000 cycles",
+        "Transmission Standards: ISO/IEC 11801:2002 Ed 2",
+        "Material: Copper Alloy with Nickel Plating"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/belden-ax101069-rj45-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/belden-ax101069-rj45-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "belden-ax101069-rj45-modular-jack",
+        "candidateTitle": "Belden AX101069 CAT 6 RJ45 Modular Jack Yellow",
+        "attemptStem": "belden-ax101069-rj45-modular-jack"
+      }
+    },
+    {
+      "name": "Belden AX101070 CAT 6 RJ45 Modular Jack Gray",
+      "slug": "belden-ax101070-rj45-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-47069",
+      "description": "<h2>Belden AX101070 CAT 6 RJ45 Modular Jack Gray</h2><p>The Belden <strong>AX101070</strong> CAT 6 RJ45 Modular Jack Gray is a premium networking component engineered for reliable and high-speed connectivity in modern data networks. Compatible with both RJ45 and RJ11 connectors, this Belden AX101070 RJ45 Modular Jack supports Category 6 data transmission standards, fully compliant with TIA 568.2-D and ISO/IEC 11801:2002 Ed 2. Its front connection features a copper alloy lead frame with 50 µ inch gold over nickel plating, providing durable performance for up to 1,000 mating cycles, while the rear Gas Tight IDC connection allows up to 20 secure terminations. The Belden AX101070 Connector Gray is built with a UL940V-0 plastic connector body, offering robust mechanical strength with 20 lbs connector retention and 11.250 lbs plug retention. It is compatible with Belden 110 Connecting Tools and MediaFlex Termination Stations and verified by ETL for Category 6 performance, also meeting FCC Part 68, Subpart F and IEC 60603-7 standards. Ideal for professional and enterprise installations, this modular jack combines durability, precision materials, and exceptional connectivity in one reliable gray connector.</p><h2>Buy Belden AX101070 CAT 6 RJ45 Modular Jack Gray from Star Tech</h2><p>In Bangladesh, you can get original <strong>Belden AX101070 CAT 6 RJ45 Modular Jack Gray</strong> From Star Tech. We have a large collection of latest Belden <a href=\"https://www.startech.com.bd/cable-connector\" style=\"\" target=\"\">Cable Connector </a>to purchase for your <a href=\"https://www.startech.com.bd/networking\" target=\"\">Networking</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Belden AX101070 CAT 6 RJ45 Modular Jack Gray comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AX101070</li><li>Compatibility: RJ45, RJ11, Data Category: Category 6</li><li>Connection Durability: 1,000 cycles</li><li>Transmission Standards: ISO/IEC 11801:2002 Ed 2</li><li>Material: Copper Alloy with Nickel Plating</li></ul>",
+      "model": "AX101070",
+      "warranty": "no warranty",
+      "basePrice": 399.0,
+      "originalPrice": 450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Belden",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47069",
+          "price": 399.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 383.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AX101070",
+              "position": 0
+            },
+            {
+              "label": "Compatibility",
+              "value": "RJ45, RJ11, Data Category: Category 6",
+              "position": 1
+            },
+            {
+              "label": "Connection Durability",
+              "value": "1,000 cycles",
+              "position": 2
+            },
+            {
+              "label": "Transmission Standards",
+              "value": "ISO/IEC 11801:2002 Ed 2",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Copper Alloy with Nickel Plating",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/belden-ax101070-rj45-modular-jack",
+      "sourceProductCode": "47069",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AX101070",
+        "Compatibility: RJ45, RJ11, Data Category: Category 6",
+        "Connection Durability: 1,000 cycles",
+        "Transmission Standards: ISO/IEC 11801:2002 Ed 2",
+        "Material: Copper Alloy with Nickel Plating"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/belden-ax101070-rj45-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/belden-ax101070-rj45-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "belden-ax101070-rj45-modular-jack",
+        "candidateTitle": "Belden AX101070 CAT 6 RJ45 Modular Jack Gray",
+        "attemptStem": "belden-ax101070-rj45-modular-jack"
+      }
+    },
+    {
+      "name": "Belden AX101071 CAT 6 RJ45 Modular Jack Blue",
+      "slug": "belden-ax101071-rj45-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-47070",
+      "description": "<h2>Belden AX101071 CAT 6 RJ45 Modular Jack Blue</h2><p>The Belden <strong>AX101071</strong> CAT 6 RJ45 Modular Jack Blue is a premium networking solution designed for reliable, high-speed data connections. This versatile Belden AX101071 RJ45 Modular Jack supports both RJ45 and RJ11 connectors and meets Category 6 transmission standards, fully compliant with TIA 568.2-D and ISO/IEC 11801:2002 Ed 2. Its front connection features a copper alloy lead frame with 50 µ inch gold over nickel plating, providing exceptional conductivity and durability for up to 1,000 mating cycles, while the rear Gas Tight IDC connection supports 20 terminations with superior reliability. The Belden AX101071 Connector Blue is built with a durable UL940V-0 plastic connector body, offering 20 lbs connector retention and 11.250 lbs plug/connector retention, making it ideal for both commercial and enterprise installations. Fully compatible with Belden 110 Connecting Tools and MediaFlex Termination Stations, this modular jack is ETL-verified for Category 6 performance and meets FCC Part 68, Subpart F and IEC 60603-7 standards. With its high-quality materials, long-lasting durability, and broad compatibility, the Belden AX101071 CAT 6 RJ45 Modular Jack Blue is the perfect choice for professional-grade networking setups.</p><h2>Buy Belden AX101071 CAT 6 RJ45 Modular Jack Blue from Star Tech</h2><p>In Bangladesh, you can get original <strong>Belden AX101071 CAT 6 RJ45 Modular Jack Blue</strong> From Star Tech. We have a large collection of latest Belden <a href=\"https://www.startech.com.bd/cable-connector\" style=\"\" target=\"\">Cable Connector </a>to purchase for your <a href=\"https://www.startech.com.bd/networking\" target=\"\">Networking</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Belden AX101071 CAT 6 RJ45 Modular Jack Blue comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AX101071</li><li>Compatibility: RJ45, RJ11, Data Category: Category 6</li><li>Connection Durability: 1,000 cycles</li><li>Transmission Standards: ISO/IEC 11801:2002 Ed 2</li><li>Material: Copper Alloy with Nickel Plating</li></ul>",
+      "model": "AX101071",
+      "warranty": "no warranty",
+      "basePrice": 399.0,
+      "originalPrice": 450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Belden",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47070",
+          "price": 399.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 383.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AX101071",
+              "position": 0
+            },
+            {
+              "label": "Compatibility",
+              "value": "RJ45, RJ11, Data Category: Category 6",
+              "position": 1
+            },
+            {
+              "label": "Connection Durability",
+              "value": "1,000 cycles",
+              "position": 2
+            },
+            {
+              "label": "Transmission Standards",
+              "value": "ISO/IEC 11801:2002 Ed 2",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Copper Alloy with Nickel Plating",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/belden-ax101071-rj45-modular-jack",
+      "sourceProductCode": "47070",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AX101071",
+        "Compatibility: RJ45, RJ11, Data Category: Category 6",
+        "Connection Durability: 1,000 cycles",
+        "Transmission Standards: ISO/IEC 11801:2002 Ed 2",
+        "Material: Copper Alloy with Nickel Plating"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/belden-ax101071-rj45-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/belden-ax101071-rj45-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "belden-ax101071-rj45-modular-jack",
+        "candidateTitle": "Belden AX101071 CAT 6 RJ45 Modular Jack Blue",
+        "attemptStem": "belden-ax101071-rj45-modular-jack"
+      }
+    },
+    {
+      "name": "Belden AX104190 CAT6 RJ45 Modular Jack",
+      "slug": "belden-ax104190-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-46972",
+      "description": "<h2>Belden AX104190 CAT6 RJ45 Modular Jack</h2><p>The Belden <strong>AX104190</strong> CAT6 RJ45 Modular Jack is a high-performance connectivity solution engineered for modern data networks, making it a top choice for anyone seeking a reliable Belden AX104190 RJ45 Modular Jack for professional installations. Fully compatible with RJ45 and RJ11 interfaces, this jack supports robust Category 6 data performance and complies with TIA 568.2-D, ISO/IEC 11801:2002 Ed.2, FCC Part 68 Subpart F, and IEC 60603-7 standards, further reinforced through ETL-verified Category 6 certification. The Belden AX104190 RJ45 Modular design incorporates a copper alloy lead frame with 50 µ-inch gold over nickel for the front connection, paired with a nickel-plated copper alloy IDC rear termination, ensuring long-term reliability with 1,000 mated cycles and 20 gas-tight IDC terminations. It supports T568A/B wiring schemes and is fully compatible with the KeyConnect system, while allowing easy installation using the Belden 110 Connecting Tool or MediaFlex Termination Station. Built for durability, it offers 20 lbs hardware retention and 11.250 lbs plug retention, delivering secure connectivity in any setup. Electrical performance is exceptional, featuring 1,000V RMS dielectric strength, 1.500A current rating, 500 M-Ohm insulation resistance, 20 mOhm maximum contact resistance, and 2.5 mOhm termination resistance. Designed for versatile environments, it operates and installs between –10°C to +60°C, with a storage range of –40°C to +70°C. Compact and efficient, the jack measures 0.88 in height, 0.64 in width, 1.29 in depth, weighs only 0.014 lbs, and comes individually packaged in protective plastic bags with standard packs of 50 units, all enclosed in a UL94V-0 rated plastic body for superior safety and performance.</p><h2>Buy Belden AX104190 CAT6 RJ45 Modular Jack from Star Tech</h2><p>In Bangladesh, you can get original <strong>Belden AX104190 CAT6 RJ45 Modular Jack</strong> From Star Tech. We have a large collection of latest Belden <a href=\"https://www.startech.com.bd/cable-connector\" style=\"\" target=\"\">Cable Connector </a>to purchase for your <a href=\"https://www.startech.com.bd/networking\" target=\"\">Networking</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Belden AX104190 CAT6 RJ45 Modular Jack comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AX104190</li><li>Compatibility: RJ45, RJ11, Data Category: Category 6</li><li>Connection Durability: 1,000 cycles</li><li>Transmission Standards: ISO/IEC 11801:2002 Ed 2</li><li>Material: Copper Alloy with Nickel Plating</li></ul>",
+      "model": "AX104190",
+      "warranty": "no warranty",
+      "basePrice": 399.0,
+      "originalPrice": 450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Belden",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-46972",
+          "price": 399.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 383.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AX104190",
+              "position": 0
+            },
+            {
+              "label": "Compatibility",
+              "value": "RJ45, RJ11, Data Category: Category 6",
+              "position": 1
+            },
+            {
+              "label": "Connection Durability",
+              "value": "1,000 cycles",
+              "position": 2
+            },
+            {
+              "label": "Transmission Standards",
+              "value": "ISO/IEC 11801:2002 Ed 2",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Copper Alloy with Nickel Plating",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/belden-ax104190-modular-jack",
+      "sourceProductCode": "46972",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AX104190",
+        "Compatibility: RJ45, RJ11, Data Category: Category 6",
+        "Connection Durability: 1,000 cycles",
+        "Transmission Standards: ISO/IEC 11801:2002 Ed 2",
+        "Material: Copper Alloy with Nickel Plating"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/belden-ax104190-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/belden-ax104190-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "belden-ax104190-modular-jack",
+        "candidateTitle": "Belden AX104190 CAT6 RJ45 Modular Jack",
+        "attemptStem": "belden-ax104190-modular-jack"
+      }
+    },
+    {
+      "name": "Belden AX104193 CAT6 RJ45 Modular Jack",
+      "slug": "belden-ax104193-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-46975",
+      "description": "<h2>Belden AX104193 CAT6 RJ45 Modular Jack</h2>\n<p>The Belden <strong>AX104193</strong> CAT6 RJ45 Modular Jack is a premium networking solution designed for high-speed data environments, fully compatible with both RJ45 and RJ11 connections. This Belden AX104193 RJ45 Modular Jack meets strict Category 6 standards, including ISO/IEC 11801:2002 Ed.2 and ANSI/TIA 568.2-D, ensuring reliable, high-performance connectivity. Built with copper alloy and nickel plating, the Belden AX104193 RJ45 Modular provides exceptional durability, rated for 1,000 connection cycles. Its front connection uses copper alloy with 50u inch gold over nickel and a lead frame type, while the rear IDC connection is nickel-plated copper alloy, complemented by a UL94V-0 rated plastic connector body. Compact and lightweight, it measures 0.88\" height, 0.64\" width, 1.29\" depth, and weighs just 0.014 lbs, with a distinct blue color for easy identification. Supporting T568A and T568B wiring schemes, this connector is ideal for applications like IBDN System 2400, 3600, and 4800, TIA Category 6+, ISO Class E, 1000BASE-T Ethernet, and Power over Ethernet (PoE) up to 100W, including Cisco UPOE (up to 60W) and Power over HDBase-T (up to 100W). Each Belden AX104193 RJ45 Modular Jack includes a T-Bar, is individually packaged in a plastic bag, and comes in standard packs of 50 units. Operating reliably between -10°C and +60°C, it is ETL-verified for Category 6 performance, making the Belden AX104193 CAT6 RJ45 Modular Jack a trusted choice for enterprise and commercial networking installations.</p>\n<h2>Buy Belden AX104193 CAT6 RJ45 Modular Jack from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Belden AX104193 CAT6 RJ45 Modular Jack</strong> From Star Tech. We have a large collection of latest Belden <a href=\"https://www.startech.com.bd/cable-connector\" style=\"\" target=\"\">Cable Connector </a>to purchase for your <a href=\"https://www.startech.com.bd/networking\" target=\"\">Networking</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Belden AX104193 CAT6 RJ45 Modular Jack comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AX104193</li><li>Compatibility: RJ45, RJ11, Data Category: Category 6</li><li>Connection Durability: 1,000 cycles</li><li>Standards: ISO/IEC 11801:2002 Ed.2, Category 6: ANSI/TIA 568.2-D</li><li>Material: Copper Alloy with Nickel Plating</li></ul>",
+      "model": "AX104193",
+      "warranty": "no warranty",
+      "basePrice": 399.0,
+      "originalPrice": 450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Belden",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-46975",
+          "price": 399.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 383.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AX104193",
+              "position": 0
+            },
+            {
+              "label": "Compatibility",
+              "value": "RJ45, RJ11, Data Category: Category 6",
+              "position": 1
+            },
+            {
+              "label": "Connection Durability",
+              "value": "1,000 cycles",
+              "position": 2
+            },
+            {
+              "label": "Standards",
+              "value": "ISO/IEC 11801:2002 Ed.2, Category 6: ANSI/TIA 568.2-D",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Copper Alloy with Nickel Plating",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/belden-ax104193-modular-jack",
+      "sourceProductCode": "46975",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AX104193",
+        "Compatibility: RJ45, RJ11, Data Category: Category 6",
+        "Connection Durability: 1,000 cycles",
+        "Standards: ISO/IEC 11801:2002 Ed.2, Category 6: ANSI/TIA 568.2-D",
+        "Material: Copper Alloy with Nickel Plating"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/belden-ax104193-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/belden-ax104193-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "belden-ax104193-modular-jack",
+        "candidateTitle": "Belden AX104193 CAT6 RJ45 Modular Jack",
+        "attemptStem": "belden-ax104193-modular-jack"
+      }
+    },
+    {
+      "name": "CommScope 1375055-6 SL 110 Cat 6 U/UTP Information Outlet Modular jack",
+      "slug": "commscope-1375055-6-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "700206758",
+      "description": "<h2>CommScope 1375055-6 SL 110 Cat 6 U/UTP Information Outlet Modular jack</h2>\n<p>The CommScope 1375055-6 is a Cat 6 U/UTP information outlet modular jack <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(0, 0, 0);\" target=\"\">Connector </a>can deliver high-performance and stable connectivity for your network devices. It is an unshielded jack with eight copper alloy contacts that may terminate solid or stranded wires of 22 or 24 AWG. It has an IDC termination type that is compatible with T568A and T568B wiring systems. The 1375055-6 Cat 6 U/UTP Information Outlet from CommScope The modular jack is small enough to fit into standard holes and is easy to install and remove. It complies with the ANSI/TIA Category 6A standard, which means it can handle up to 10 Gbps of data transfer and has a cable length of up to 100 meters.</p>\n<h2>Buy CommScope 1375055-6 Cat 6 U/UTP Information Outlet Modular jack from Star Tech</h2>\n<p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/commscope-1375055-6-modular-jack\" target=\"\">CommScope 1375055-6 Cat 6 U/UTP Information Outlet Modular jack</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Networking Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The CommScope 1375055-6 Cat 6 U/UTP Information Outlet Modular jack comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 700206758</li><li>Model: 1375055-6</li><li>Material Type: Copper alloy, Flame Retardant, Thermoplastic</li><li>Termination Contact Plating: Nickel</li><li>Compatible Conductor Gauge: 22 AWG | 24 AWG</li><li>Insulation Resistance: 500 MOhm</li></ul>",
+      "model": "1375055-6",
+      "warranty": "no warranty",
+      "basePrice": 350.0,
+      "originalPrice": 380.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "CommScope",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "700206758",
+          "price": 350.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 336.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "700206758",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "1375055-6",
+              "position": 1
+            },
+            {
+              "label": "Material Type",
+              "value": "Copper alloy, Flame Retardant, Thermoplastic",
+              "position": 2
+            },
+            {
+              "label": "Termination Contact Plating",
+              "value": "Nickel",
+              "position": 3
+            },
+            {
+              "label": "Compatible Conductor Gauge",
+              "value": "22 AWG | 24 AWG",
+              "position": 4
+            },
+            {
+              "label": "Insulation Resistance",
+              "value": "500 MOhm",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/commscope-1375055-6-modular-jack",
+      "sourceProductCode": "29970",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "700206758",
+      "sourceKeyFeatures": [
+        "MPN: 700206758",
+        "Model: 1375055-6",
+        "Material Type: Copper alloy, Flame Retardant, Thermoplastic",
+        "Termination Contact Plating: Nickel",
+        "Compatible Conductor Gauge: 22 AWG | 24 AWG",
+        "Insulation Resistance: 500 MOhm"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/commscope-1375055-6-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/commscope-1375055-6-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "commscope-1375055-6-modular-jack",
+        "candidateTitle": "CommScope 1375055-6 SL 110 Cat 6 U/UTP Information Outlet Modular jack",
+        "attemptStem": "commscope-1375055-6-modular-jack"
+      }
+    },
+    {
+      "name": "CommScope 2153354-1 RJ45 Modular Jack",
+      "slug": "commscope-2153354-1-rj45-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-36752",
+      "description": "<h2>CommScope 2153354-1 RJ45 Modular Jack</h2><p>The CommScope <strong>2153354-1</strong> RJ45 Modular Jack is a high-performance shielded connector for Category 6A cabling systems that meets the ANSI/TIA-568.2-D and ISO/IEC 11801 Class EA transmission standards. This modular jack supports wire configurations T568A and T568B and is appropriate for both solid and stranded conductor types. Its IDC termination and standard outlet type provide dependable and simple installation. The CommScope 2153354-1 RJ45 Modular Jack is built of sturdy polycarbonate and has a beryllium copper contact base with a 1.27 µm gold plating thickness, which improves its conductivity and longevity. Compact in size, the CommScope 2153354-1 RJ45 Modular Jack measures 21.5 mm (0.846 in) in height, 17.2 mm (0.677 in) in width, and 38.3 mm (1.508 in) in depth. It accepts wires with a maximum diameter of 9 mm (0.354 in) and panels with a suggested thickness of 1.6 mm (0.063 in). The jack can handle IEEE 802.3bt Type 4 (90 W) Power over Ethernet (PoE) applications and has withstood more than 3000 plug-to-jack mating cycles, indicating its robustness. The appropriate conductor gauges are 24 AWG for stranded wires and 26 to 22 AWG for solid wires. Although the CommScope 2153354-1 RJ45 Modular Jack lacks an inbuilt dust cover, it is guaranteed to be reliable in a variety of networking situations by adhering to the IEC 60603-7 standard for plug-to-jack mating cycles. Because of its sturdy construction and materials, it offers reliable performance and long endurance, making it the perfect option for demanding applications and high-speed data transfer.</p><h2>Buy CommScope 2153354-1 RJ45 Modular Jack from Star Tech</h2><p>In Bangladesh, you can get original <strong>CommScope 2153354-1 RJ45 Modular Jack</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Networking Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The CommScope 2153354-1 RJ45 Modular Jack comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 2153354-1</li><li>ANSI/TIA Category: 6A</li><li>Compatible Cable Diameter: 9mm</li><li>Supports IEEE 802.3bt Type 4 (90 W)</li><li>Material: Beryllium Copper, Gold, Polycarbonate</li></ul>",
+      "model": "2153354-1",
+      "warranty": "no warranty",
+      "basePrice": 750.0,
+      "originalPrice": 900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "CommScope",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-36752",
+          "price": 750.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "2153354-1",
+              "position": 0
+            },
+            {
+              "label": "ANSI/TIA Category",
+              "value": "6A",
+              "position": 1
+            },
+            {
+              "label": "Compatible Cable Diameter",
+              "value": "9mm",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Beryllium Copper, Gold, Polycarbonate",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/commscope-2153354-1-rj45-modular-jack",
+      "sourceProductCode": "36752",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 2153354-1",
+        "ANSI/TIA Category: 6A",
+        "Compatible Cable Diameter: 9mm",
+        "Supports IEEE 802.3bt Type 4 (90 W)",
+        "Material: Beryllium Copper, Gold, Polycarbonate"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/commscope-2153354-1-rj45-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/commscope-2153354-1-rj45-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "commscope-2153354-1-rj45-modular-jack",
+        "candidateTitle": "CommScope 2153354-1 RJ45 Modular Jack",
+        "attemptStem": "commscope-2153354-1-rj45-modular-jack"
+      }
+    },
+    {
+      "name": "CommScope MGS600-123 Cat 6 U/UTP Information Outlet Modular jack",
+      "slug": "commscope-mgs600-123-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "700206758",
+      "description": "<h2>CommScope MGS600-123 Cat 6 U/UTP Information Outlet Modular jack</h2>\n<p>The CommScope MGS600-123 is a Cat 6 U/UTP information outlet modular jack <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(0, 0, 0);\" target=\"\">Connector </a>can deliver high-performance and stable connectivity for your network devices. Eight copper alloy contacts on an unshielded jack allow it to terminate solid or stranded 22 or 24 AWG wires. It features an IDC termination type that may accommodate wiring systems using T568A or T568B. Information Outlet, CommScope MGS600-123 Cat 6 U/UTP The modular jack is easy to install and remove and is small enough to fit into regular holes. It complies with the ANSI/TIA Category 6A standard, allowing for a cable length of up to 100 meters and a data transfer rate of up to 10 Gbps.</p>\n<h2>Buy CommScope MGS600-123 Cat 6 U/UTP Information Outlet Modular jack from Star Tech</h2>\n<p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/commscope-mgs600-123-modular-jack\" target=\"\">CommScope MGS600-123 Cat 6 U/UTP Information Outlet Modular jack</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Networking Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The CommScope MGS600-123 Cat 6 U/UTP Information Outlet Modular jack comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 700206758</li><li>Model: MGS600-123</li><li>Material Type: Copper alloy, Flame Retardant, Thermoplastic</li><li>Termination Contact Plating: Nickel</li><li>Compatible Conductor Gauge: 22 AWG | 24 AWG</li><li>Insulation Resistance: 500 MOhm</li></ul>",
+      "model": "MGS600-123",
+      "warranty": "no warranty",
+      "basePrice": 660.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "CommScope",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "700206758",
+          "price": 660.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 633.6,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "700206758",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "MGS600-123",
+              "position": 1
+            },
+            {
+              "label": "Material Type",
+              "value": "Copper alloy, Flame Retardant, Thermoplastic",
+              "position": 2
+            },
+            {
+              "label": "Termination Contact Plating",
+              "value": "Nickel",
+              "position": 3
+            },
+            {
+              "label": "Compatible Conductor Gauge",
+              "value": "22 AWG | 24 AWG",
+              "position": 4
+            },
+            {
+              "label": "Insulation Resistance",
+              "value": "500 MOhm",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/commscope-mgs600-123-modular-jack",
+      "sourceProductCode": "29973",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "700206758",
+      "sourceKeyFeatures": [
+        "MPN: 700206758",
+        "Model: MGS600-123",
+        "Material Type: Copper alloy, Flame Retardant, Thermoplastic",
+        "Termination Contact Plating: Nickel",
+        "Compatible Conductor Gauge: 22 AWG | 24 AWG",
+        "Insulation Resistance: 500 MOhm"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/commscope-mgs600-123-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/commscope-mgs600-123-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "commscope-mgs600-123-modular-jack",
+        "candidateTitle": "CommScope MGS600-123 Cat 6 U/UTP Information Outlet Modular jack",
+        "attemptStem": "commscope-mgs600-123-modular-jack"
+      }
+    },
+    {
+      "name": "CommScope SL110-6-BL Cat 6 RJ45 Modular Jack",
+      "slug": "commscope-sl110-6-bl-rj45-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "1375055-6",
+      "description": "<h2>CommScope SL110-6-BL Cat 6 RJ45 Modular Jack</h2><p>The CommScope <strong>SL110-6-BL</strong> Cat 6 RJ45 Modular Jack is a high-performance component built to withstand the harsh demands of today's networking settings. It supports unshielded cable types and complies with ANSI/TIA Category 6 requirements. The blue jack has an inverted jack face for normal outlet applications and works with solid and stranded conductors. It is flexible and adaptable to different installations because it may be installed on panels and faceplates from the SL Series. The CommScope SL110-6-BL Cat 6 RJ45 Modular Jack is compatible with T568A and T568B wire designs. An SL Termination tool is needed to perform IDC-style terminations, which are dependable for at least 200 punch downs. Additionally, it complies with ISO/IEC 11801 Class E and ANSI/TIA-568.2-D transmission requirements. A 14.78 x 20.07 mm panel cutout with a 1.6 mm panel thickness is advised for this jack. The CommScope SL110-6-BL Cat 6 RJ45 Modular Jack has small dimensions: 16.13 mm in height, 14.48 mm in width, and 30.48 mm in depth. It can accommodate insulated conductors up to 1.45 mm in diameter and cables with a maximum diameter of 5.8 mm. The 1.27 µm thick contact plating of the CommScope SL110-6-BL Cat 6 RJ45 Modular Jack allows it to work with solid wires between 24 and 22 AWG and stranded conductors between 26 and 24 AWG. It supports a current rating of 1.5 A at 20°C and guarantees low contact resistance, with a maximum fluctuation of 20 mOhm and a maximum resistance of 100 mOhm. With 1,500 Vac at 60 Hz between conductive surfaces and 1,000 Vac at 60 Hz contact-to-contact, the dielectric withstand voltage is remarkable. It has a minimum 500 MOhm insulating resistance. Even after three thousand plug-to-jack mating cycles, the CommScope SL110-6-BL Cat 6 RJ45 Modular Jack complies with IEEE 802.3bt Type 4 (90 W) requirements and fully supports remote powering and Power over Ethernet (PoE) applications. The jack has a sturdy construction with polycarbonate material type, gold contact plating, and tin termination contact plating. The safety voltage rating is 150 Vac. Following IEC 60603-7 series requirements, the CommScope SL110-6-BL Cat 6 RJ45 Modular Jack plug retention force is at least 50 N, guaranteeing dependable and consistent performance in demanding networking applications.</p><h2>Buy CommScope SL110-6-BL Cat 6 RJ45 Modular Jack from Star Tech</h2><p>In Bangladesh, you can get original <strong>CommScope SL110-6-BL Cat 6 RJ45 Modular Jack</strong> From Star Tech. We have a large collection of latest CommScope <a href=\"https://www.startech.com.bd/cable-connector\" style=\"\" target=\"\">Cable Connector </a>to purchase for your <a href=\"https://www.startech.com.bd/networking\" target=\"\">Networking</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The CommScope SL110-6-BL Cat 6 RJ45 Modular Jack comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 1375055-6</li><li>Model: SL110-6-BL</li><li>ANSI/TIA Category: 6, Conductor Type: Solid &amp; Stranded</li><li>Mounting: SL Series Faceplates and Panels</li><li>Transmission Standards : ANSI/TIA-568.2-D | ISO/IEC 11801 Class E</li><li>Material: Beryllium Copper, Gold, Polycarbonate</li></ul>",
+      "model": "SL110-6-BL",
+      "warranty": "no warranty",
+      "basePrice": 420.0,
+      "originalPrice": 450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "CommScope",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "1375055-6",
+          "price": 420.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 403.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "1375055-6",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "SL110-6-BL",
+              "position": 1
+            },
+            {
+              "label": "ANSI/TIA Category",
+              "value": "6, Conductor Type: Solid & Stranded",
+              "position": 2
+            },
+            {
+              "label": "Mounting",
+              "value": "SL Series Faceplates and Panels",
+              "position": 3
+            },
+            {
+              "label": "Transmission Standards",
+              "value": "ANSI/TIA-568.2-D | ISO/IEC 11801 Class E",
+              "position": 4
+            },
+            {
+              "label": "Material",
+              "value": "Beryllium Copper, Gold, Polycarbonate",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/commscope-sl110-6-bl-rj45-modular-jack",
+      "sourceProductCode": "36767",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "1375055-6",
+      "sourceKeyFeatures": [
+        "MPN: 1375055-6",
+        "Model: SL110-6-BL",
+        "ANSI/TIA Category: 6, Conductor Type: Solid & Stranded",
+        "Mounting: SL Series Faceplates and Panels",
+        "Transmission Standards : ANSI/TIA-568.2-D | ISO/IEC 11801 Class E",
+        "Material: Beryllium Copper, Gold, Polycarbonate"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/commscope-sl110-6-bl-rj45-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/commscope-sl110-6-bl-rj45-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "commscope-sl110-6-bl-rj45-modular-jack",
+        "candidateTitle": "CommScope SL110-6-BL Cat 6 RJ45 Modular Jack",
+        "attemptStem": "commscope-sl110-6-bl-rj45-modular-jack"
+      }
+    },
+    {
+      "name": "CommScope SL110-6-GN Cat 6 RJ45 Modular Jack",
+      "slug": "commscope-sl110-6-gn-rj45-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "1375055-9",
+      "description": "<h2>CommScope SL110-6-GN Cat 6 RJ45 Modular Jack</h2><p>The CommScope <strong>SL110-6-GN</strong> Cat 6 RJ45 Modular Jack is capable of accommodating wires that are stranded or solid. This modular jack guarantees better network performance with ISO/IEC 11801 Class E and ANSI/TIA Category 6 transmission requirements. It has an inverted jack face and a red color-coded outlet that work with panels and faceplates from the SL Series. A minimum of 200 punchdowns utilizing the IDC termination type and the SL Termination tool assist the termination process. Its sturdy design, which complies fully with IEEE 802.3bt Type 4 (90 W) applications and IEC 60512-99-002 unmating under electrical load standards, allows the CommScope SL110-6-RD Cat 6 RJ45 Modular Jack to handle remote powering and retain durability even after 3000 plug-to-jack mating cycles. The dielectric withstand voltage specifications of 1,500 Vac @ 60 Hz (conductive surface) and 1,000 Vac @ 60 Hz (contact-to-contact) are also satisfied by this CommScope SL110-6-GN Cat 6 RJ45 Modular Jack. The SL110-6-GN provides solid conductor gauges from 24 to 22 AWG and stranded from 26 to 24 AWG, with appropriate cable sizes up to 5.8 mm and insulated conductor diameters up to 1.45 mm. With a minimum insulation resistance of 500 MOhm and a maximum contact resistance of 100 mOhm with a range of 20 mOhm, it demonstrates exceptional qualities. The CommScope SL110-6-GNCat 6 RJ45 Modular Jack is made of polycarbonate and features contacts made of beryllium copper plated with 1.27 µm of gold. This construction guarantees longevity and dependable connectivity.</p><h2>Buy CommScope SL110-6-GN Cat 6 RJ45 Modular Jack from Star Tech</h2><p>In Bangladesh, you can get original <strong>CommScope SL110-6-GN Cat 6 RJ45 Modular Jack</strong> From Star Tech. We have a large collection of latest CommScope <a href=\"https://www.startech.com.bd/cable-connector\" style=\"\" target=\"\">Cable Connector </a>to purchase for your <a href=\"https://www.startech.com.bd/networking\" target=\"\">Networking</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The CommScope SL110-6-GN Cat 6 RJ45 Modular Jack comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 1375055-9</li><li>Model: SL110-6-GN</li><li>ANSI/TIA Category: 6, Conductor Type: Solid &amp; Stranded</li><li>Mounting: SL Series Faceplates and Panels</li><li>Transmission Standards: ANSI/TIA-568.2-D | ISO/IEC 11801 Class E</li><li>Material: Beryllium Copper, Gold, Polycarbonate</li></ul>",
+      "model": "SL110-6-GN",
+      "warranty": "no warranty",
+      "basePrice": 420.0,
+      "originalPrice": 450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "CommScope",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "1375055-9",
+          "price": 420.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 403.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "1375055-9",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "SL110-6-GN",
+              "position": 1
+            },
+            {
+              "label": "ANSI/TIA Category",
+              "value": "6, Conductor Type: Solid & Stranded",
+              "position": 2
+            },
+            {
+              "label": "Mounting",
+              "value": "SL Series Faceplates and Panels",
+              "position": 3
+            },
+            {
+              "label": "Transmission Standards",
+              "value": "ANSI/TIA-568.2-D | ISO/IEC 11801 Class E",
+              "position": 4
+            },
+            {
+              "label": "Material",
+              "value": "Beryllium Copper, Gold, Polycarbonate",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/commscope-sl110-6-gn-rj45-modular-jack",
+      "sourceProductCode": "36771",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "1375055-9",
+      "sourceKeyFeatures": [
+        "MPN: 1375055-9",
+        "Model: SL110-6-GN",
+        "ANSI/TIA Category: 6, Conductor Type: Solid & Stranded",
+        "Mounting: SL Series Faceplates and Panels",
+        "Transmission Standards: ANSI/TIA-568.2-D | ISO/IEC 11801 Class E",
+        "Material: Beryllium Copper, Gold, Polycarbonate"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/commscope-sl110-6-gn-rj45-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/commscope-sl110-6-gn-rj45-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "commscope-sl110-6-gn-rj45-modular-jack",
+        "candidateTitle": "CommScope SL110-6-GN Cat 6 RJ45 Modular Jack",
+        "attemptStem": "commscope-sl110-6-gn-rj45-modular-jack"
+      }
+    },
+    {
+      "name": "CommScope SL110-6-RD Cat 6 RJ45 Modular Jack",
+      "slug": "commscope-sl110-6-rd-rj45-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "1375055-7",
+      "description": "<h2>CommScope SL110-6-RD Cat 6 RJ45 Modular Jack</h2>\n<p>The CommScope <strong>SL110-6-RD</strong> Cat 6 RJ45 Modular Jack is a high-performance, adaptable connectivity solution for unshielded cable types, including solid and stranded conductors. This modular jack guarantees better network performance with ISO/IEC 11801 Class E and ANSI/TIA Category 6 transmission requirements. It has an inverted jack face and a red color-coded outlet that work with panels and faceplates from the SL Series. A minimum of 200 punchdowns utilizing the IDC termination type and the SL Termination tool assist the termination process. Its sturdy construction permits remote powering, complies completely with IEEE 802.3bt Type 4 (90 W) applications, and keeps up its durability even after 3000 plug-to-jack mating cycles. It also meets IEC 60512-99-002 criteria for unmating under electrical load conditions. The dielectric withstand voltage specifications of 1,500 Vac @ 60 Hz (conductive surface) and 1,000 Vac @ 60 Hz (contact-to-contact) are also satisfied by this CommScope SL110-6-RD Cat 6 RJ45 Modular Jack. The SL110-6-RD has solid conductor gauges ranging from 24 to 22 AWG and stranded gauges ranging from 26 to 24 AWG. Compatible cable diameters are up to 5.8 mm, while insulated conductor diameters are up to 1.45 mm. With a minimum insulation resistance of 500 MOhm and a maximum contact resistance of 100 mOhm with a range of 20 mOhm, it demonstrates exceptional qualities. The CommScope SL110-6-RD Cat 6 RJ45 Modular Jack is made of polycarbonate and features contacts made of beryllium copper plated with 1.27 µm of gold. This construction guarantees longevity and dependable connectivity.</p>\n<h2>Buy CommScope SL110-6-RD Cat 6 RJ45 Modular Jack from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>CommScope SL110-6-RD Cat 6 RJ45 Modular Jack</strong> From Star Tech. We have a large collection of latest CommScope <a href=\"https://www.startech.com.bd/cable-connector\" style=\"\" target=\"\">Cable Connector </a>to purchase for your <a href=\"https://www.startech.com.bd/networking\" target=\"\">Networking</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The CommScope SL110-6-RD Cat 6 RJ45 Modular Jack comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 1375055-7</li><li>Model: SL110-6-RD</li><li>ANSI/TIA Category: 6, Conductor Type: Solid &amp; Stranded</li><li>Mounting: SL Series Faceplates and Panels</li><li>Transmission Standards: ANSI/TIA-568.2-D | ISO/IEC 11801 Class E</li><li>Material: Beryllium Copper, Gold, Polycarbonate</li></ul>",
+      "model": "SL110-6-RD",
+      "warranty": "no warranty",
+      "basePrice": 420.0,
+      "originalPrice": 450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "CommScope",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "1375055-7",
+          "price": 420.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 403.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "1375055-7",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "SL110-6-RD",
+              "position": 1
+            },
+            {
+              "label": "ANSI/TIA Category",
+              "value": "6, Conductor Type: Solid & Stranded",
+              "position": 2
+            },
+            {
+              "label": "Mounting",
+              "value": "SL Series Faceplates and Panels",
+              "position": 3
+            },
+            {
+              "label": "Transmission Standards",
+              "value": "ANSI/TIA-568.2-D | ISO/IEC 11801 Class E",
+              "position": 4
+            },
+            {
+              "label": "Material",
+              "value": "Beryllium Copper, Gold, Polycarbonate",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/commscope-sl110-6-rd-rj45-modular-jack",
+      "sourceProductCode": "36769",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "1375055-7",
+      "sourceKeyFeatures": [
+        "MPN: 1375055-7",
+        "Model: SL110-6-RD",
+        "ANSI/TIA Category: 6, Conductor Type: Solid & Stranded",
+        "Mounting: SL Series Faceplates and Panels",
+        "Transmission Standards: ANSI/TIA-568.2-D | ISO/IEC 11801 Class E",
+        "Material: Beryllium Copper, Gold, Polycarbonate"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/commscope-sl110-6-rd-rj45-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/commscope-sl110-6-rd-rj45-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "commscope-sl110-6-rd-rj45-modular-jack",
+        "candidateTitle": "CommScope SL110-6-RD Cat 6 RJ45 Modular Jack",
+        "attemptStem": "commscope-sl110-6-rd-rj45-modular-jack"
+      }
+    },
+    {
+      "name": "CommScope SL110-6-YL Cat 6 RJ45 Modular Jack",
+      "slug": "commscope-sl110-6-yl-rj45-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "1375055-8",
+      "description": "<h2>CommScope SL110-6-YL Cat 6 RJ45 Modular Jack</h2><p>The CommScope <strong>SL110-6-YL</strong> Cat 6 RJ45 Modular Jack is capable of accommodating wires that are stranded or solid. This modular jack guarantees better network performance with ISO/IEC 11801 Class E and ANSI/TIA Category 6 transmission requirements. It has an inverted jack face and a red color-coded outlet that works with panels and faceplates from the SL Series. A minimum of 200 punch-downs utilizing the IDC termination type and the SL Termination tool assist the termination process. Its sturdy design, which complies fully with IEEE 802.3bt Type 4 (90 W) applications and IEC 60512-99-002 unmating under electrical load standards, allows the CommScope SL110-6-YL Cat 6 RJ45 Modular Jack to handle remote powering and retain durability even after 3000 plug-to-jack mating cycles. The dielectric withstand voltage specifications of 1,500 Vac @ 60 Hz (conductive surface) and 1,000 Vac @ 60 Hz (contact-to-contact) are also satisfied by this CommScope SL110-6-YL Cat 6 RJ45 Modular Jack. The SL110-6-YL provides solid conductor gauges from 24 to 22 AWG and stranded from 26 to 24 AWG, with appropriate cable sizes up to 5.8 mm and insulated conductor diameters up to 1.45 mm. With a minimum insulation resistance of 500 MOhm and a maximum contact resistance of 100 mOhm with a range of 20 mOhm, it demonstrates exceptional qualities. The CommScope SL110-6-YL Cat 6 RJ45 Modular Jack is made of polycarbonate and features contacts made of beryllium copper plated with 1.27 µm of gold. This construction guarantees longevity and dependable connectivity.</p><h2>Buy CommScope SL110-6-YL Cat 6 RJ45 Modular Jack from Star Tech</h2><p>In Bangladesh, you can get original <strong>CommScope SL110-6-YL Cat 6 RJ45 Modular Jack</strong> From Star Tech. We have a large collection of latest CommScope <a href=\"https://www.startech.com.bd/cable-connector\" style=\"\" target=\"\">Cable Connector </a>to purchase for your <a href=\"https://www.startech.com.bd/networking\" target=\"\">Networking</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The CommScope SL110-6-YL Cat 6 RJ45 Modular Jack comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 1375055-8</li><li>Model: SL110-6-YL</li><li>ANSI/TIA Category: 6, Conductor Type: Solid &amp; Stranded</li><li>Mounting: SL Series Faceplates and Panels</li><li>Transmission Standards: ANSI/TIA-568.2-D | ISO/IEC 11801 Class E</li><li>Material: Beryllium Copper, Gold, Polycarbonate</li></ul>",
+      "model": "SL110-6-YL",
+      "warranty": "no warranty",
+      "basePrice": 420.0,
+      "originalPrice": 450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "CommScope",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "1375055-8",
+          "price": 420.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 403.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "1375055-8",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "SL110-6-YL",
+              "position": 1
+            },
+            {
+              "label": "ANSI/TIA Category",
+              "value": "6, Conductor Type: Solid & Stranded",
+              "position": 2
+            },
+            {
+              "label": "Mounting",
+              "value": "SL Series Faceplates and Panels",
+              "position": 3
+            },
+            {
+              "label": "Transmission Standards",
+              "value": "ANSI/TIA-568.2-D | ISO/IEC 11801 Class E",
+              "position": 4
+            },
+            {
+              "label": "Material",
+              "value": "Beryllium Copper, Gold, Polycarbonate",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/commscope-sl110-6-yl-rj45-modular-jack",
+      "sourceProductCode": "36770",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "1375055-8",
+      "sourceKeyFeatures": [
+        "MPN: 1375055-8",
+        "Model: SL110-6-YL",
+        "ANSI/TIA Category: 6, Conductor Type: Solid & Stranded",
+        "Mounting: SL Series Faceplates and Panels",
+        "Transmission Standards: ANSI/TIA-568.2-D | ISO/IEC 11801 Class E",
+        "Material: Beryllium Copper, Gold, Polycarbonate"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/commscope-sl110-6-yl-rj45-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/commscope-sl110-6-yl-rj45-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "commscope-sl110-6-yl-rj45-modular-jack",
+        "candidateTitle": "CommScope SL110-6-YL Cat 6 RJ45 Modular Jack",
+        "attemptStem": "commscope-sl110-6-yl-rj45-modular-jack"
+      }
+    },
+    {
+      "name": "Cote CM-RJ45-2106 Cat-6 RJ-45 Modular Connector",
+      "slug": "cote-cm-rj45-2106-rj-45-modular",
+      "type": "PHYSICAL",
+      "sku": "ST-45890",
+      "description": "<h2>Cote CM-RJ45-2106 Cat-6 RJ-45 Modular Connector</h2><p>The Cote <strong>CM-RJ45-2106</strong> Cat-6 RJ-45 Modular <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(0, 0, 0);\" target=\"\">Connector</a> is a networking component that ensures quick, stable, and reliable data transfer. The Cote CM-RJ45-2106 RJ-45 Modular has 50μm gold-plated contact pins for improved conductivity and long-term endurance, with little oxidation and signal loss. The connector is made of a durable ABS housing and a PC cap material, which provides good heat resistance and mechanical strength. The phosphor bronze IDC wire post improves connection and ensures constant performance in demanding network situations. The Cote CM-RJ45-2106 Cat-6 RJ-45 Modular has 8 total pins and a 180° wire angle for convenient installation on IO wall plates and patch panels. It adheres to the IEEE T568 color coding standard, ensuring worldwide compatibility and orderly cabling. The Cote CM-RJ45-2106 provides high-speed Cat-6 performance for both home and office networks, making it a solid solution for structured cabling and professional network configurations.</p><h2>Buy Cote CM-RJ45-2106 Cat-6 RJ-45 Modular Connector from Star Tech</h2><p>In Bangladesh, you can get original <strong>Cote CM-RJ45-2106 Cat-6 RJ-45 Modular Connector</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" style=\"\" target=\"\">Cable Connector</a> to purchase. Order Online or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at lowest price. The Cote CM-RJ45-2106 Cat-6 RJ-45 Modular Connector comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CM-RJ45-2106</li><li>Contact Pins: 50μm Gold-plated</li><li>Material: ABS Housing, Cap Material PC, Phosphor Bronze</li><li>Wiring Angle: 180, Installation: IO Wall Plate/Patch Panel</li><li>Color code: IEEE T568 Standard</li></ul>",
+      "model": "CM-RJ45-2106",
+      "warranty": "no warranty",
+      "basePrice": 350.0,
+      "originalPrice": 380.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Cote",
+      "variantOptions": [
+        {
+          "name": "Color code",
+          "position": 0,
+          "values": [
+            {
+              "value": "IEEE T568 Standard",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-45890",
+          "price": 350.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color code": "IEEE T568 Standard"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 336.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "CM-RJ45-2106",
+              "position": 0
+            },
+            {
+              "label": "Contact Pins",
+              "value": "50μm Gold-plated",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "ABS Housing, Cap Material PC, Phosphor Bronze",
+              "position": 2
+            },
+            {
+              "label": "Wiring Angle",
+              "value": "180, Installation: IO Wall Plate/Patch Panel",
+              "position": 3
+            },
+            {
+              "label": "Color code",
+              "value": "IEEE T568 Standard",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cote-cm-rj45-2106-rj-45-modular",
+      "sourceProductCode": "45890",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CM-RJ45-2106",
+        "Contact Pins: 50μm Gold-plated",
+        "Material: ABS Housing, Cap Material PC, Phosphor Bronze",
+        "Wiring Angle: 180, Installation: IO Wall Plate/Patch Panel",
+        "Color code: IEEE T568 Standard"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/cote-cm-rj45-2106-rj-45-modular.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/cote-cm-rj45-2106-rj-45-modular.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cote-cm-rj45-2106-rj-45-modular",
+        "candidateTitle": "Cote CM-RJ45-2106 Cat-6 RJ-45 Modular Connector",
+        "attemptStem": "cote-cm-rj45-2106-rj-45-modular"
+      }
+    },
+    {
+      "name": "D-Link NKJ-C6WHI1B21 Cat6 UTP Keystone Jack",
+      "slug": "d-link-nkj-c6whi1b21-keystone-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-42380",
+      "description": "<h2>D-Link NKJ-C6WHI1B21 Cat6 UTP Keystone Jack</h2><p>The D-Link <strong>NKJ-C6WHI1B21</strong> Cat6 UTP Keystone Jack is an essential part for establishing reliable network connections. This RJ45 8P 8C punch-down jack is designed to accept 22-26 AWG cables and allows for the termination of four pairs of wires, ensuring optimal data transmission and communication. The D-Link NKJ-C6WHI1B21 Cat6 UTP Keystone Jack includes universal labels that are color-coded for both T568A and T568B wiring schemes, making installation easier and lowering the possibility of wiring errors. This versatility enables users to simply adapt to various wiring standards based on their individual networking requirements. The D-Link NKJ-C6WHI1B21 Cat6 UTP Keystone Jack is designed to fit into high-density keystone panels, maximizing network space efficiency while maintaining a clean, orderly appearance. Furthermore, this D-Link NKJ-C6WHI1B21 Cat6 UTP Keystone Jack is UL and ETL certified, indicating that it satisfies rigorous safety and performance criteria for quality and dependability. The jack's strong construction ensures endurance, making it suited for a wide range of applications, from residential networks to enterprise-level deployments. The D-Link NKJ-C6WHI1B21 Cat6 UTP Keystone Jack's simple punch-down design makes installation a breeze, allowing technicians and DIY enthusiasts alike to achieve professional-level results. This D-Link NKJ-C6WHI1B21 Cat6 UTP Keystone Jack is a wonderful alternative for anyone who wants to improve their network infrastructure with a durable and effective solution.</p><h2>Buy D-Link NKJ-C6WHI1B21 Cat6 Keystone Jack from Star Tech</h2><p>In Bangladesh, you can get original <strong>D-Link NKJ-C6WHI1B21 Cat6 Keystone Jack</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Networking Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The D-Link NKJ-C6WHI1B21 Cat6 Keystone Jack comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NKJ-C6WHI1B21</li><li>RJ45 8P 8C 180°C 50u Punch Down Jack</li><li>Terminating 4 pairs, 22-26 AWG Cable</li><li>Fitting high density keystone panel</li><li>Universal labels color coded for T568A and T568B wiring schemes</li></ul>",
+      "model": "NKJ-C6WHI1B21",
+      "warranty": "no warranty",
+      "basePrice": 320.0,
+      "originalPrice": 350.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "D-Link",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-42380",
+          "price": 320.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 307.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "NKJ-C6WHI1B21",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/d-link-nkj-c6whi1b21-keystone-jack",
+      "sourceProductCode": "42380",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NKJ-C6WHI1B21",
+        "RJ45 8P 8C 180°C 50u Punch Down Jack",
+        "Terminating 4 pairs, 22-26 AWG Cable",
+        "Fitting high density keystone panel",
+        "Universal labels color coded for T568A and T568B wiring schemes"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/d-link-nkj-c6whi1b21-keystone-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/d-link-nkj-c6whi1b21-keystone-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "d-link-nkj-c6whi1b21-keystone-jack",
+        "candidateTitle": "D-Link NKJ-C6WHI1B21 Cat6 UTP Keystone Jack",
+        "attemptStem": "d-link-nkj-c6whi1b21-keystone-jack"
+      }
+    },
+    {
+      "name": "Dintek 1305-04017 Cat6 Keystone E-jack",
+      "slug": "dintek-1305-04017-keystone-e-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-30456",
+      "description": "<h2>Dintek 1305-04017 Cat6 Keystone E-jack</h2><p>The Dintek <span style=\"font-weight: bold;\">1305-04017</span> Cat6 Keystone E-jack is a high-quality and simple-to-install network cable connection. It complies with the ANSI/TIA-568-C.2 Cat.6 15M short link specifications, guaranteeing excellent data transfer and low interference. It accepts 2224AWG wire, stranded or solid, and works with both T568A and T568B wiring schemes. The IDC connection on the keystone e-jack has a considerable gap between each pair to optimize crosstalk performance. Dintek 1305-04017 Cat6 Keystone E-jack also has a modular jack that complies with FCC Part 68 regulations, ensuring a dependable and secure connection. The keystone e-jack is designed to snap into any conventional keystone wall plate or patch panel.</p><h2>Buy Dintek 1305-04017 Cat6 Keystone E-jack from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Dintek 1305-04017 Cat6 Keystone E-jack </span>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Networking Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Dintek 1305-04017 Cat6 Keystone E-jack comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 1305-04017</li><li>Material Type: Copper alloy, Flame Retardant, Thermoplastic</li><li>Termination Contact Plating: Nickel</li><li>Compatible Conductor Gauge: 22 AWG | 24 AWG</li><li>Insulation Resistance: 500 MOhm</li></ul>",
+      "model": "1305-04017",
+      "warranty": "no warranty",
+      "basePrice": 420.0,
+      "originalPrice": 450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dintek",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-30456",
+          "price": 420.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 403.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "1305-04017",
+              "position": 0
+            },
+            {
+              "label": "Material Type",
+              "value": "Copper alloy, Flame Retardant, Thermoplastic",
+              "position": 1
+            },
+            {
+              "label": "Termination Contact Plating",
+              "value": "Nickel",
+              "position": 2
+            },
+            {
+              "label": "Compatible Conductor Gauge",
+              "value": "22 AWG | 24 AWG",
+              "position": 3
+            },
+            {
+              "label": "Insulation Resistance",
+              "value": "500 MOhm",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dintek-1305-04017-keystone-e-jack",
+      "sourceProductCode": "30456",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 1305-04017",
+        "Material Type: Copper alloy, Flame Retardant, Thermoplastic",
+        "Termination Contact Plating: Nickel",
+        "Compatible Conductor Gauge: 22 AWG | 24 AWG",
+        "Insulation Resistance: 500 MOhm"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/dintek-1305-04017-keystone-e-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/dintek-1305-04017-keystone-e-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dintek-1305-04017-keystone-e-jack",
+        "candidateTitle": "Dintek 1305-04017 Cat6 Keystone E-jack",
+        "attemptStem": "dintek-1305-04017-keystone-e-jack"
+      }
+    },
+    {
+      "name": "Hikvision DS-1CK6AP180N Cat6a RJ45 Keystone Jack",
+      "slug": "hikvision-ds-1ck6ap180n-keystone-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-41794",
+      "description": "<h2>Hikvision DS-1CK6AP180N Cat6a RJ45 Keystone Jack</h2><p>The Hikvision <strong>DS-1CK6AP180N</strong> Cat6a RJ45 Keystone Jack is a high-performance, shielded keystone solution. Designed for advanced networking settings that require high signal integrity, simple installation, and long-term reliability. This Hikvision DS-1CK6AP180N Cat6a Keystone Jack is engineered to meet or exceed ISO/IEC 11801 Class EA and ANSI/TIA-568.2-D Category 6A requirements, ensuring superb electrical performance at data transmission rates of up to 500MHz. Ideal for high-speed 10 Gigabit Ethernet and 4 pair Power over Ethernet (4PPoE) applications, it provides low resistance and strong connectivity with a DC resistance of 20 milliohms or less and an insulation resistance of at least 500 megaohms. The Hikvision DS-1CK6AP180N Cat6a RJ45 Keystone Jack is designed with a completely shielded housing constructed of robust zinc alloy to reduce interference, making it ideal for high-density, high-interference settings. The small, tool-free, press-fit design allows for quick and environmentally responsible installation without soldering or tinning. It supports both solid and stranded conductors in the 22 to 24 AWG range and is compatible with a variety of cable types. The Hikvision DS-1CK6AP180N Cat6a RJ45 Keystone Jack is compatible with both TIA 568A and 568B wiring schemes and is designed to fit standard faceplates and blank patch panels. Built with a phosphor bronze conductor plated with 50 microinches of gold, it offers a dependable connection over time, with over 750 plug-to-jack mating cycles. The Hikvision DS-1CK6AP180N Cat6a RJ45 Keystone Jack features fire-resistant components that satisfy UL 94 V-0 requirements for added safety.</p><h2>Buy Hikvision DS-1CK6AP180N RJ45 Keystone Jack from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hikvision DS-1CK6AP180N RJ45 Keystone Jack</strong> From Star Tech. We have a large collection of latest Hikvision <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Connector </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Hikvision DS-1CK6AP180N RJ45 Keystone Jack comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DS-1CK6AP180N</li><li>Supports Category 6A Specification up to 500MHz</li><li>Meet 4 pair Power Over Ethernet (4PPoE) Supply</li><li>Universal design and label supports both TIA 568 A &amp; B wiring</li><li>Supporting solid and stranded 22 to 24 AWG wires</li></ul>",
+      "model": "DS-1CK6AP180N",
+      "warranty": "1 year warranty",
+      "basePrice": 390.0,
+      "originalPrice": 490.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hikvision",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41794",
+          "price": 390.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 374.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DS-1CK6AP180N",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-ds-1ck6ap180n-keystone-jack",
+      "sourceProductCode": "41794",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DS-1CK6AP180N",
+        "Supports Category 6A Specification up to 500MHz",
+        "Meet 4 pair Power Over Ethernet (4PPoE) Supply",
+        "Universal design and label supports both TIA 568 A & B wiring",
+        "Supporting solid and stranded 22 to 24 AWG wires"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/hikvision-ds-1ck6ap180n-keystone-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/hikvision-ds-1ck6ap180n-keystone-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-ds-1ck6ap180n-keystone-jack",
+        "candidateTitle": "Hikvision DS-1CK6AP180N Cat6a RJ45 Keystone Jack",
+        "attemptStem": "hikvision-ds-1ck6ap180n-keystone-jack"
+      }
+    },
+    {
+      "name": "Hikvision DS-1CK6AU180T Cat6a RJ45 Keystone Jack",
+      "slug": "hikvision-ds-1ck6au180t-keystone-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-41797",
+      "description": "<h2>Hikvision DS-1CK6AU180T Cat6a RJ45 Keystone Jack</h2><p>The Hikvision <strong>DS-1CK6AU180T</strong> Cat6a RJ45 Keystone Jack is intended for sophisticated networking applications that need high signal integrity, easy installation, and long-term durability. This Hikvision DS-1CK6AU180T Cat6a Keystone Jack is designed to meet or exceed ISO/IEC 11801 Class EA and ANSI/TIA-568.2-D Category 6A standards, resulting in excellent electrical performance at data transmission rates of up to 500MHz. It is ideal for high-speed 10 Gigabit Ethernet and 4 pair Power over Ethernet (4PPoE) applications, offering low resistance and strong connectivity with a DC resistance of 20 milliohms or less and an insulation resistance of at least 500 megaohms. The Hikvision DS-1CK6AU180T Cat6a RJ45 Keystone Jack features a totally shielded housing made of durable zinc alloy to decrease interference, making it perfect for high-density, high-interference environments. The tiny, tool-free, press-fit design enables for speedy and ecologically friendly installation that does not require soldering or tinning. It can handle both solid and stranded conductors in the 22 to 24 AWG range and is suitable with a wide range of cable types. The Hikvision DS-1CK6AU180T Cat6a RJ45 Keystone Jack is compatible with both TIA 568A and 568B wiring schemes and may be installed in conventional faceplates and blank patch panels. Built with a phosphor bronze conductor plated with 50 microinches of gold, it provides a long-lasting connection with over 750 plug-to-jack mating cycles. The Hikvision DS-1CK6AU180T Cat6a RJ45 Keystone Jack includes fire-resistant components that meet UL 94 V-0 standards for additional safety.</p><h2>Buy Hikvision DS-1CK6AU180T RJ45 Keystone Jack from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hikvision DS-1CK6AU180T RJ45 Keystone Jack</strong> From Star Tech. We have a large collection of latest Hikvision <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Connector </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Hikvision DS-1CK6AU180T RJ45 Keystone Jack comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DS-1CK6AU180T</li><li>Supports Category 6A Specification up to 500MHz</li><li>Simple Termination Using Standard 110 Block Tools</li><li>Universal design and label supports both TIA 568 A &amp; B wiring</li><li>Supporting solid and stranded 22 to 24 AWG wires</li></ul>",
+      "model": "DS-1CK6AU180T",
+      "warranty": "1 year warranty",
+      "basePrice": 390.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Hikvision",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41797",
+          "price": 390.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 374.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DS-1CK6AU180T",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-ds-1ck6au180t-keystone-jack",
+      "sourceProductCode": "41797",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DS-1CK6AU180T",
+        "Supports Category 6A Specification up to 500MHz",
+        "Simple Termination Using Standard 110 Block Tools",
+        "Universal design and label supports both TIA 568 A & B wiring",
+        "Supporting solid and stranded 22 to 24 AWG wires"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/hikvision-ds-1ck6au180t-keystone-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/hikvision-ds-1ck6au180t-keystone-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-ds-1ck6au180t-keystone-jack",
+        "candidateTitle": "Hikvision DS-1CK6AU180T Cat6a RJ45 Keystone Jack",
+        "attemptStem": "hikvision-ds-1ck6au180t-keystone-jack"
+      }
+    },
+    {
+      "name": "Hikvision DS-1CK6P180N Cat6a RJ45 Keystone Jack",
+      "slug": "hikvision-ds-1ck6p180n-keystone-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-41798",
+      "description": "<h2>Hikvision DS-1CK6P180N Cat6a RJ45 Keystone Jack</h2><p>The Hikvision <strong>DS-1CK6P180N</strong> Cat6a RJ45 Keystone Jack exceeds the ISO/IEC 11801 Class E and ANSI/TIA-568.2-D Category 6 standards. It supports data transfer speeds of up to 250MHz, making it ideal for Gigabit Ethernet and 4-pair Power over Ethernet (4PPoE) applications. Its sleek, compact design is perfect for high-density patch panels and faceplates, providing compatibility with standard installations while conserving space. The Hikvision DS-1CK6P180N Cat6a RJ45 Keystone Jack has a fully shielded zinc alloy enclosure, which effectively reduces electromagnetic interference while improving signal integrity. It supports both TIA 568A and 568B wiring schemes and has a universal press-fit design that does not require soldering or tinning, making it an ecologically responsible and tool-free termination solution. This Hikvision DS-1CK6P180N Keystone Jack is designed to support both solid and stranded conductors ranging from 22 to 24 AWG, allowing for flexible installation across a variety of cable types. Internally, it employs phosphor bronze conductors plated with 50 microinches of gold for long-lasting and dependable signal transmission. It is designed to withstand over 750 plug-to-jack mating cycles, ensuring long-term use in challenging situations. The Hikvision DS-1CK6P180N Cat6a RJ45 Keystone Jack has a DC resistance of less than or equal to 20 milliohms, a current rating of 1.5A at 20°C, a dielectric withstand voltage of 1,000VAC for 60 seconds, and an insulation resistance of at least 500 megaohms.</p><h2>Buy Hikvision DS-1CK6P180N RJ45 Keystone Jack from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hikvision DS-1CK6P180N RJ45 Keystone Jack</strong> From Star Tech. We have a large collection of latest Hikvision <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Connector </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Hikvision DS-1CK6P180N RJ45 Keystone Jack comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DS-1CK6P180N</li><li>Supports Category 6A Specification up to 250MHz</li><li>Meet 4 pair Power Over Ethernet (4PPoE) Supply</li><li>Universal design and label supports both TIA 568 A &amp; B wiring</li><li>Supporting solid and stranded 22 to 24 AWG wires</li></ul>",
+      "model": "DS-1CK6P180N",
+      "warranty": "1 year warranty",
+      "basePrice": 390.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Hikvision",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41798",
+          "price": 390.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 374.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DS-1CK6P180N",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-ds-1ck6p180n-keystone-jack",
+      "sourceProductCode": "41798",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DS-1CK6P180N",
+        "Supports Category 6A Specification up to 250MHz",
+        "Meet 4 pair Power Over Ethernet (4PPoE) Supply",
+        "Universal design and label supports both TIA 568 A & B wiring",
+        "Supporting solid and stranded 22 to 24 AWG wires"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/hikvision-ds-1ck6p180n-keystone-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/hikvision-ds-1ck6p180n-keystone-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-ds-1ck6p180n-keystone-jack",
+        "candidateTitle": "Hikvision DS-1CK6P180N Cat6a RJ45 Keystone Jack",
+        "attemptStem": "hikvision-ds-1ck6p180n-keystone-jack"
+      }
+    },
+    {
+      "name": "R&M R810598 CAT6 Connection Module for Panel",
+      "slug": "r-and-m-cat6-connection-module-for-panel",
+      "type": "PHYSICAL",
+      "sku": "R810598",
+      "description": "<h2 style=\"\"><span class=\"TextRun SCXW178996862 BCX0\" data-contrast=\"auto\" lang=\"EN-US\" style='place-content: normal; place-items: normal; place-self: auto; alignment-baseline: auto; animation: 0s ease 0s 1 normal none running none; appearance: none; backdrop-filter: none; backface-visibility: visible; background-image: none; background-position: 0% 0%; background-size: auto; background-repeat: repeat; background-attachment: scroll; background-origin: padding-box; background-clip: border-box; background-blend-mode: normal; baseline-shift: 0px; block-size: auto; border-block: 0px none rgb(0, 0, 0); border: 0px none rgb(0, 0, 0); border-radius: 0px; border-collapse: separate; border-inline: 0px none rgb(0, 0, 0); inset: auto; box-shadow: none; box-sizing: content-box; break-after: auto; break-before: auto; break-inside: auto; buffered-rendering: auto; caption-side: top; caret-color: rgb(0, 0, 0); clear: none; clip: auto; clip-path: none; clip-rule: nonzero; color-interpolation: srgb; color-interpolation-filters: linearrgb; color-rendering: auto; columns: auto auto; gap: normal; column-rule: 0px none rgb(0, 0, 0); column-span: none; content: normal; cursor: text; cx: 0px; cy: 0px; d: none; direction: ltr; display: inline; dominant-baseline: auto; empty-cells: show; fill: rgb(0, 0, 0); fill-opacity: 1; fill-rule: nonzero; filter: none; flex: 0 1 auto; flex-flow: row nowrap; float: none; flood-color: rgb(0, 0, 0); flood-opacity: 1; font-kerning: none; font-optical-sizing: auto; font-stretch: 100%; font-variant-numeric: normal; font-variant-east-asian: normal; grid-auto-columns: auto; grid-auto-flow: row; grid-auto-rows: auto; grid-area: auto / auto / auto / auto; grid-template-areas: none; grid-template-columns: none; grid-template-rows: none; height: auto; hyphens: manual; image-orientation: from-image; image-rendering: auto; inline-size: auto; isolation: auto; lighting-color: rgb(255, 255, 255); line-height: 19.425px; list-style: outside none decimal; margin-block: 0px; margin: 0px; margin-inline: 0px; marker: none; mask-type: luminance; max-block-size: none; max-height: none; max-inline-size: none; max-width: none; min-block-size: 0px; min-height: 0px; min-inline-size: 0px; min-width: 0px; mix-blend-mode: normal; object-fit: fill; object-position: 50% 50%; offset: none 0px auto 0deg; opacity: 1; order: 0; outline: rgb(0, 0, 0) none 0px; outline-offset: 0px; overflow-anchor: auto; overflow-wrap: break-word; overflow: visible; overscroll-behavior-block: auto; overscroll-behavior-inline: auto; padding-block: 0px; padding: 0px; padding-inline: 0px; paint-order: normal; perspective: none; perspective-origin: 0px 0px; pointer-events: auto; position: static; r: 0px; resize: none; ruby-position: over; rx: auto; ry: auto; scroll-behavior: auto; scroll-margin-block: 0px; scroll-margin-inline: 0px; scroll-padding-block: auto; scroll-padding-inline: auto; shape-image-threshold: 0; shape-margin: 0px; shape-outside: none; shape-rendering: auto; speak: normal; stop-color: rgb(0, 0, 0); stop-opacity: 1; stroke: none; stroke-dasharray: none; stroke-dashoffset: 0px; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-opacity: 1; stroke-width: 1px; tab-size: 8; table-layout: auto; text-align: left; text-align-last: auto; text-anchor: start; text-decoration-style: solid; text-decoration-color: rgb(0, 0, 0); text-decoration-skip-ink: auto; text-overflow: clip; text-rendering: auto; text-shadow: none; text-size-adjust: auto; text-underline-position: auto; touch-action: auto; transform: none; transform-origin: 0px 0px; transform-style: flat; transition: all 0s ease 0s; unicode-bidi: normal; user-select: text; vector-effect: none; vertical-align: baseline; visibility: visible; width: auto; will-change: auto; word-break: normal; writing-mode: horizontal-tb; x: 0px; y: 0px; z-index: auto; zoom: 1; app-region: none; border-spacing: 0px; -webkit-border-image: none; -webkit-box-align: stretch; -webkit-box-decoration-break: slice; -webkit-box-direction: normal; -webkit-box-flex: 0; -webkit-box-ordinal-group: 1; -webkit-box-orient: horizontal; -webkit-box-pack: start; -webkit-font-smoothing: auto; -webkit-highlight: none; -webkit-hyphenate-character: auto; -webkit-line-break: after-white-space; -webkit-locale: \"EN-US\"; -webkit-mask-box-image-outset: 0; -webkit-mask-box-image-repeat: stretch; -webkit-mask-box-image-slice: 0 fill; -webkit-mask-box-image-source: none; -webkit-mask-box-image-width: auto; -webkit-mask: none 0% 0% / auto repeat border-box border-box; -webkit-mask-composite: source-over; -webkit-print-color-adjust: economy; -webkit-rtl-ordering: logical; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-text-combine: none; -webkit-text-emphasis: none rgb(0, 0, 0); -webkit-text-emphasis-position: over right; -webkit-text-fill-color: rgb(0, 0, 0); -webkit-text-orientation: vertical-right; -webkit-text-security: none; -webkit-text-stroke-color: rgb(0, 0, 0); -webkit-user-drag: none; -webkit-user-modify: read-write; -webkit-writing-mode: horizontal-tb;' xml:lang=\"EN-US\"><span class=\"NormalTextRun SCXW178996862 BCX0\" style=\"\">R&amp;M R810598 CAT6 Connection Module for Panel</span></span><br/></h2><p style=\"text-align: justify; \">The R&amp;M Cat 6 Tool Free Termination Jack, the connection module exceeds the minimum requirements of the IEEE 802.3 Section Four standard on 10GBASE-T performance, as well as the requirements for Class EA performance acc. to ISO/IEC 11801 and Cat. 6A performance according to TIA 568.2-D. It Exceeds Cat.6 specifications acc. to ISO/IEC 11801, EN 50173, and TIA 568.2-D in the entire admissible range Maximum reliability through special contact design without internal transfer points. This Termination Jack is Capacitive and inductive compensation.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: R810598</li><li>Model: CAT6 Connection Module for Panel</li><li>Category: 6</li><li>Connector Type: RJ45</li><li>Installation: Tool less</li><li>3P and UL certified</li></ul>",
+      "model": "CAT6 Connection Module for Panel",
+      "warranty": null,
+      "basePrice": 450.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 18.2,
+        "width": 22.7,
+        "height": 41.3,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "R&M",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Green",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "R810598",
+          "price": 450.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Green"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 432.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Connection Class",
+          "position": 0,
+          "items": [
+            {
+              "label": "Standard",
+              "value": "EN 50173-1 IEC 60603-7: Electrical Characteristics of the Telecommunication Outlets ISO/IEC 11801",
+              "position": 0
+            },
+            {
+              "label": "Connector Class",
+              "value": "Connection Module",
+              "position": 1
+            },
+            {
+              "label": "Shielding Connector",
+              "value": "Unshielded",
+              "position": 2
+            },
+            {
+              "label": "Connector Type",
+              "value": "RJ45",
+              "position": 3
+            },
+            {
+              "label": "Category Connector",
+              "value": "Cat. 6",
+              "position": 4
+            },
+            {
+              "label": "Poles",
+              "value": "8",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Physical Specs",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "18.2 mm x 22.7 mm x 41.3 mm / 0.717 in x 0.894 in x 1.626 in (W x H x D)",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "Green",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/r-and-m-cat6-connection-module-for-panel",
+      "sourceProductCode": "13801",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": "R810598",
+      "sourceKeyFeatures": [
+        "MPN: R810598",
+        "Model: CAT6 Connection Module for Panel",
+        "Category: 6",
+        "Connector Type: RJ45",
+        "Installation: Tool less",
+        "3P and UL certified"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/r-and-m-cat6-connection-module-for-panel.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/r-and-m-cat6-connection-module-for-panel.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "r-and-m-cat6-connection-module-for-panel",
+        "candidateTitle": "R&M R810598 CAT6 Connection Module for Panel",
+        "attemptStem": "r-and-m-cat6-connection-module-for-panel"
+      }
+    },
+    {
+      "name": "R&M CAT6 Connection Module for Plate",
+      "slug": "r-and-m-cat6-connection-module-for-plate",
+      "type": "PHYSICAL",
+      "sku": "R810597",
+      "description": "<h2 style=\"\"><span style=\"color: inherit;\"><span class=\"TextRun SCXW21026638 BCX0\" data-contrast=\"auto\" lang=\"EN-US\" style='place-content: normal; place-items: normal; place-self: auto; alignment-baseline: auto; animation: 0s ease 0s 1 normal none running none; appearance: none; backdrop-filter: none; backface-visibility: visible; background-image: none; background-position: 0% 0%; background-size: auto; background-repeat: repeat; background-attachment: scroll; background-origin: padding-box; background-clip: border-box; background-blend-mode: normal; baseline-shift: 0px; block-size: auto; border-block: 0px none rgb(0, 0, 0); border: 0px none rgb(0, 0, 0); border-radius: 0px; border-collapse: separate; border-inline: 0px none rgb(0, 0, 0); inset: auto; box-shadow: none; box-sizing: content-box; break-after: auto; break-before: auto; break-inside: auto; buffered-rendering: auto; caption-side: top; caret-color: rgb(0, 0, 0); clear: none; clip: auto; clip-path: none; clip-rule: nonzero; color-interpolation: srgb; color-interpolation-filters: linearrgb; color-rendering: auto; columns: auto auto; gap: normal; column-rule: 0px none rgb(0, 0, 0); column-span: none; content: normal; cursor: text; cx: 0px; cy: 0px; d: none; direction: ltr; display: inline; dominant-baseline: auto; empty-cells: show; fill: rgb(0, 0, 0); fill-opacity: 1; fill-rule: nonzero; filter: none; flex: 0 1 auto; flex-flow: row nowrap; float: none; flood-color: rgb(0, 0, 0); flood-opacity: 1; font-kerning: none; font-optical-sizing: auto; font-stretch: 100%; font-variant-numeric: normal; font-variant-east-asian: normal; grid-auto-columns: auto; grid-auto-flow: row; grid-auto-rows: auto; grid-area: auto / auto / auto / auto; grid-template-areas: none; grid-template-columns: none; grid-template-rows: none; height: auto; hyphens: manual; image-orientation: from-image; image-rendering: auto; inline-size: auto; isolation: auto; lighting-color: rgb(255, 255, 255); line-height: 19.425px; list-style: outside none decimal; margin-block: 0px; margin: 0px; margin-inline: 0px; marker: none; mask-type: luminance; max-block-size: none; max-height: none; max-inline-size: none; max-width: none; min-block-size: 0px; min-height: 0px; min-inline-size: 0px; min-width: 0px; mix-blend-mode: normal; object-fit: fill; object-position: 50% 50%; offset: none 0px auto 0deg; opacity: 1; order: 0; outline: rgb(0, 0, 0) none 0px; outline-offset: 0px; overflow-anchor: auto; overflow-wrap: break-word; overflow: visible; overscroll-behavior-block: auto; overscroll-behavior-inline: auto; padding-block: 0px; padding: 0px; padding-inline: 0px; paint-order: normal; perspective: none; perspective-origin: 0px 0px; pointer-events: auto; position: static; r: 0px; resize: none; ruby-position: over; rx: auto; ry: auto; scroll-behavior: auto; scroll-margin-block: 0px; scroll-margin-inline: 0px; scroll-padding-block: auto; scroll-padding-inline: auto; shape-image-threshold: 0; shape-margin: 0px; shape-outside: none; shape-rendering: auto; speak: normal; stop-color: rgb(0, 0, 0); stop-opacity: 1; stroke: none; stroke-dasharray: none; stroke-dashoffset: 0px; stroke-linecap: butt; stroke-linejoin: miter; stroke-miterlimit: 4; stroke-opacity: 1; stroke-width: 1px; tab-size: 8; table-layout: auto; text-align: left; text-align-last: auto; text-anchor: start; text-decoration-style: solid; text-decoration-color: rgb(0, 0, 0); text-decoration-skip-ink: auto; text-overflow: clip; text-rendering: auto; text-shadow: none; text-size-adjust: auto; text-underline-position: auto; touch-action: auto; transform: none; transform-origin: 0px 0px; transform-style: flat; transition: all 0s ease 0s; unicode-bidi: normal; user-select: text; vector-effect: none; vertical-align: baseline; visibility: visible; width: auto; will-change: auto; word-break: normal; writing-mode: horizontal-tb; x: 0px; y: 0px; z-index: auto; zoom: 1; app-region: none; border-spacing: 0px; -webkit-border-image: none; -webkit-box-align: stretch; -webkit-box-decoration-break: slice; -webkit-box-direction: normal; -webkit-box-flex: 0; -webkit-box-ordinal-group: 1; -webkit-box-orient: horizontal; -webkit-box-pack: start; -webkit-font-smoothing: auto; -webkit-highlight: none; -webkit-hyphenate-character: auto; -webkit-line-break: after-white-space; -webkit-locale: \"EN-US\"; -webkit-mask-box-image-outset: 0; -webkit-mask-box-image-repeat: stretch; -webkit-mask-box-image-slice: 0 fill; -webkit-mask-box-image-source: none; -webkit-mask-box-image-width: auto; -webkit-mask: none 0% 0% / auto repeat border-box border-box; -webkit-mask-composite: source-over; -webkit-print-color-adjust: economy; -webkit-rtl-ordering: logical; -webkit-tap-highlight-color: rgba(0, 0, 0, 0); -webkit-text-combine: none; -webkit-text-emphasis: none rgb(0, 0, 0); -webkit-text-emphasis-position: over right; -webkit-text-fill-color: rgb(0, 0, 0); -webkit-text-orientation: vertical-right; -webkit-text-security: none; -webkit-text-stroke-color: rgb(0, 0, 0); -webkit-user-drag: none; -webkit-user-modify: read-write; -webkit-writing-mode: horizontal-tb;' xml:lang=\"EN-US\"><span class=\"NormalTextRun SCXW21026638 BCX0\" style=\"\">R&amp;M CAT6 Connection Module for Plate</span></span><br/></span></h2><p style=\"\">R&amp;M Cat 6 Tool Free Termination Jack is a  part of a Cat. 6 channel, the connection module exceeds the minimum requirements of the IEEE 802.3 Section Four standard on 10GBASE-T performance, as well as the requirements for Class EA performance acc. to ISO/IEC 11801 and Cat. 6A performance according to TIA 568.2-D. This jack comes with EN 50173-1 IEC 60603-7: Electrical Characteristics of the Telecommunication Outlets ISO/IEC 11801, plastic: PC, UL 94 V-0, connection module, RJ45 type connection, Mounting plate. In this jack, the Cat.6 specifications acc. to ISO/IEC 11801, EN 50173, Capacitive and inductive compensation, 3P and UL certified and TIA 568.2-D in the entire admissible range. It is featured with Maximum reliability through special contact design without internal transfer points.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: R810597</li><li>Model: CAT6 Connection Module for Plate</li><li>Category: 6</li><li>Connector Type: RJ45</li><li>Installation: Tool less</li><li>3P and UL certified</li></ul>",
+      "model": "CAT6 Connection Module for Plate",
+      "warranty": null,
+      "basePrice": 450.0,
+      "originalPrice": 495.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 18.2,
+        "width": 22.7,
+        "height": 41.3,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "R&M",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Green",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "R810597",
+          "price": 450.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Green"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 432.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Connection Class",
+          "position": 0,
+          "items": [
+            {
+              "label": "Standard",
+              "value": "EN 50173-1 IEC 60603-7: Electrical Characteristics of the Telecommunication Outlets ISO/IEC 11801",
+              "position": 0
+            },
+            {
+              "label": "Connector Class",
+              "value": "Connection Module",
+              "position": 1
+            },
+            {
+              "label": "Shielding Connector",
+              "value": "Unshielded",
+              "position": 2
+            },
+            {
+              "label": "Connector Type",
+              "value": "RJ45",
+              "position": 3
+            },
+            {
+              "label": "Category Connector",
+              "value": "Cat. 6",
+              "position": 4
+            },
+            {
+              "label": "Holder for Connector",
+              "value": "Mounting plate",
+              "position": 5
+            },
+            {
+              "label": "Poles",
+              "value": "8",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Physical Specs",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "18.2 mm x 22.7 mm x 41.3 mm / 0.717 in x 0.894 in x 1.626 in (W x H x D)",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "Green",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/r-and-m-cat6-connection-module-for-plate",
+      "sourceProductCode": "13797",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "R810597",
+      "sourceKeyFeatures": [
+        "MPN: R810597",
+        "Model: CAT6 Connection Module for Plate",
+        "Category: 6",
+        "Connector Type: RJ45",
+        "Installation: Tool less",
+        "3P and UL certified"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/r-and-m-cat6-connection-module-for-plate.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/r-and-m-cat6-connection-module-for-plate.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "r-and-m-cat6-connection-module-for-plate",
+        "candidateTitle": "R&M CAT6 Connection Module for Plate",
+        "attemptStem": "r-and-m-cat6-connection-module-for-plate"
+      }
+    },
+    {
+      "name": "R&M R813506 CAT6 Connection Module for Face Plate",
+      "slug": "r-and-mr813506-cat6-connection-module-for-plate",
+      "type": "PHYSICAL",
+      "sku": "ST-38712",
+      "description": "<h2>R&amp;M R813506 CAT6 Connection Module for Face Plate</h2><p>The R&amp;M <span style=\"font-weight: bold;\">R813506 </span>CAT6 Connection Module for Face Plate is a high-performance solution designed to meet the rigorous demands of modern network installations. Built to comply with the Category 6A ISO component specification, it adheres to international standards such as ISO/IEC 11801, EN 50173, and TIA/EIA 568.2-D. This module exceeds IEEE 802.3an requirements for 10GBASE-T performance, making it an excellent choice for seamless data transmission in high-speed networks. Engineered for optimal efficiency, the module achieves superior transmission characteristics when paired with R&amp;Mfreenet Category 6A patch cables. It incorporates capacitive and inductive compensation to enhance signal quality and minimize interference, ensuring reliable connectivity. The gold-plated contact areas and tin-plated insulation displacement contact areas offer exceptional durability and conductivity while resisting corrosion for long-term performance. The R&amp;M R813506 module is compatible with a broad range of setups, offering full backward compatibility with Cat. 5e and Cat. 6 standards. It also supports RJ-11/12/14 interfaces and fits seamlessly into third-party outlets and patch panels with four different adapter options. Built with halogen-free materials, this module prioritizes safety and environmental compliance. Additionally, its certification for 4PPoE level 4 (90W) makes it suitable for high-power applications like PoE devices. Designed with convenience in mind, the module allows for tool-free installation of cables, accommodating AWG 22-26 and stranded cables of AWG 22/7 - 26/7. The integrated color-coded wiring chart simplifies the setup process, while the production date and serial number ensure quality tracing. Whether for enterprise networks, residential setups, or high-performance environments, the R&amp;M R813506 CAT6 Connection Module guarantees robust, high-speed connectivity with reliable performance.</p><h2 style='font-family: \"Open Sans\", sans-serif; color: rgb(102, 102, 102);'>Buy R&amp;M R813506 CAT6 Connection Module for Face Plate from Star Tech</h2><p>In Bangladesh, you can get the original <span style=\"font-weight: 700;\">R&amp;M R813506 CAT6 Connection Module for Face Plate</span> From Star Tech. We have a large collection of the latest R&amp;M <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Ethernet Connectors</a> to Purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at the lowest price. The R&amp;M R813506 CAT6 Connection Module for Face Plate no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: R813506</li><li>Category: 6</li><li>Connector Type: RJ45</li><li>Installation: Tool less</li><li>3P and UL certified</li></ul>",
+      "model": "R813506",
+      "warranty": null,
+      "basePrice": 650.0,
+      "originalPrice": 750.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "R&M",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-38712",
+          "price": 650.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 624.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Connection Class",
+          "position": 0,
+          "items": [
+            {
+              "label": "Standard",
+              "value": "UL Recognized IEC 60603-7-41: Electrical Characteristics of the Telecommunication Outlets ISO/IEC 11801 EN 50173-1",
+              "position": 0
+            },
+            {
+              "label": "Connector Class",
+              "value": "Connection Module",
+              "position": 1
+            },
+            {
+              "label": "Shielding Connector",
+              "value": "Unshielded",
+              "position": 2
+            },
+            {
+              "label": "Connector Type",
+              "value": "RJ45",
+              "position": 3
+            },
+            {
+              "label": "Category Connector",
+              "value": "Cat. 6",
+              "position": 4
+            },
+            {
+              "label": "Holder for Connector",
+              "value": "Mounting plate",
+              "position": 5
+            },
+            {
+              "label": "Poles",
+              "value": "8",
+              "position": 6
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/r-and-mr813506-cat6-connection-module-for-plate",
+      "sourceProductCode": "38712",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: R813506",
+        "Category: 6",
+        "Connector Type: RJ45",
+        "Installation: Tool less",
+        "3P and UL certified"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/r-and-mr813506-cat6-connection-module-for-plate.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/r-and-mr813506-cat6-connection-module-for-plate.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "r-and-mr813506-cat6-connection-module-for-plate",
+        "candidateTitle": "R&M R813506 CAT6 Connection Module for Face Plate",
+        "attemptStem": "r-and-mr813506-cat6-connection-module-for-plate"
+      }
+    },
+    {
+      "name": "R&M R813518 CAT6 Connection Module for Panel",
+      "slug": "r-and-r813518-cat6-connection-module-for-plate",
+      "type": "PHYSICAL",
+      "sku": "ST-38771",
+      "description": "<h2>R&amp;M R813518 CAT6 Connection Module for Panel</h2><p>The R&amp;M <span style=\"font-weight: bold;\">R813518</span> CAT6 Connection Module is a modern solution within the Freenet cabling system, designed to deliver outstanding performance for voice communication, fast data transmission, and high-bandwidth applications. Engineered for 10 Gigabit Ethernet (10GBASE-T) and future high-speed technologies up to 500 MHz, this module exceeds Cat.6A ISO component specifications, ensuring unmatched reliability and compliance with global standards such as ISO/IEC 11801, EN 50173, and TIA 568.2-D. Built for versatility, the module is fully backward-compatible with Cat 5e and Cat 6 standards, making it an ideal choice for existing infrastructure upgrades. Its robust design supports RJ-11/12/14 connections and works seamlessly with standard patch cords and cables. Thanks to advanced capacitive and inductive compensation features, the module also achieves superior transmission quality, especially when paired with R&amp;Mfreenet Cat.6A patch cables. Installation is hassle-free with its tool-free design, accommodating installation cables (AWG 22-26) and stranded cables (AWG 22/7–26/7). Parallel termination follows TIA 568 A/B standards without splitting pair 3,6, ensuring seamless connectivity. Each module is crafted for reliability and traceability, featuring an integrated production date, serial number, and a clear color wiring chart for precise configuration. This module is constructed from halogen-free, ROHS II-compliant materials and prioritizes safety and environmental sustainability. Additionally, it supports PoE (IEEE 802.3af), PoEP (IEEE 802.3at), and 4PpoE (IEEE 802.3bt) standards, ensuring compatibility with the latest power delivery protocols. Certified by 3P, UL, and DNV-GL, and with GHMT certification for its shielded version, the R&amp;M R813518 module guarantees dependable performance in demanding environments. Whether for data centers, enterprise networks, or high-performance applications, the R&amp;M R813518 CAT6 Connection Module is a future-proof, high-quality solution designed for precision, reliability, and ease of use.</p><h2>Buy R&amp;M R813518 CAT6 Connection Module for Panel from Star Tech</h2><p>In Bangladesh, you can get the original <span style=\"font-weight: 700;\">R&amp;M R813518 CAT6 Connection Module for Panel</span> From Star Tech. We have a large collection of the latest R&amp;M <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Ethernet Connectors</a> to Purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at the lowest price. The R&amp;M R813506 CAT6 Connection Module for Face Plate no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: R813518</li><li>Category: Cat. 6A ISO</li><li>Connector Type: RJ45</li><li>Installation: Tool-less</li><li>Protection class IP: IP 20</li></ul>",
+      "model": "R813518",
+      "warranty": null,
+      "basePrice": 650.0,
+      "originalPrice": 700.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "R&M",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-38771",
+          "price": 650.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 624.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Connection Class",
+          "position": 0,
+          "items": [
+            {
+              "label": "Standard",
+              "value": "UL Recognized IEC 60603-7-41: Electrical Characteristics of the Telecommunication Outlets ISO/IEC 11801 EN 50173-1",
+              "position": 0
+            },
+            {
+              "label": "Connector Class",
+              "value": "Connection Module",
+              "position": 1
+            },
+            {
+              "label": "Shielding Connector",
+              "value": "Unshielded",
+              "position": 2
+            },
+            {
+              "label": "Connector Type",
+              "value": "RJ45",
+              "position": 3
+            },
+            {
+              "label": "Category Connector",
+              "value": "Cat. 6",
+              "position": 4
+            },
+            {
+              "label": "Holder for Connector",
+              "value": "Mounting plate",
+              "position": 5
+            },
+            {
+              "label": "Poles",
+              "value": "8",
+              "position": 6
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/r-and-r813518-cat6-connection-module-for-plate",
+      "sourceProductCode": "38771",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: R813518",
+        "Category: Cat. 6A ISO",
+        "Connector Type: RJ45",
+        "Installation: Tool-less",
+        "Protection class IP: IP 20"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/r-and-r813518-cat6-connection-module-for-plate.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/r-and-r813518-cat6-connection-module-for-plate.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "r-and-r813518-cat6-connection-module-for-plate",
+        "candidateTitle": "R&M R813518 CAT6 Connection Module for Panel",
+        "attemptStem": "r-and-r813518-cat6-connection-module-for-plate"
+      }
+    },
+    {
+      "name": "Rosenberger Cat-6 UTP 90 Degree Toolless Ivory Pegasus (Module#CP31-13C-14)",
+      "slug": "rosenberger-cat-6-utp-90-degree-toolless-ivory-pegasus",
+      "type": "PHYSICAL",
+      "sku": "CP31-13C-14",
+      "description": "<h2 style=\"text-align: justify;\">Rosenberger Cat-6 UTP 90 Degree Toolless Ivory Pegasus</h2><p style=\"text-align: justify;\">Rosenberger Cat-6 UTP 90 Degree Toolless Ivory Pegasus module is a Cat.6 UTP pegasus tool-less keystone jack, 1.5 Amp Max. current rating, 150V voltage rating, 20 m-ohm contact resistance, 500M-ohm insulation resistance, 1000V AC RMS, 60Hz 1min dielectric withstand voltage. It has an 8-position and 8-wire universal module. featured with Terminating 4 pairs, 22-26 AWG Cable, Universal labels color-coded for T568A and T568B wiring schemes, Fitting high-density keystone panel, -10ËšC to 60ÌŠC (ISO/IEC 11801, ANSI/ TIA/ EIA 568 C.2) and UL, ETL certified. D-Link Category 6 keystone jacks are RJ45 8P 8C 50u jacks suitable for 22-26 AWG stranded and solid wire, compatible with both 110 &amp; Krone punch down tools. They are available in universal labels color-coded for T568A and T568B wiring schemes and fit in high-density keystone patch panels. Rosenberger Cat-6 UTP 90 Degree Toolless Ivory Pegasus offers No Warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: CP31-13C-14</li><li>Model: Cat-6 UTP 90 Degree Toolless Ivory Pegasus</li><li>Quick and easy on-site installation</li><li>Guaranteed high reliability; PRE CON-NECT copper cable</li><li>Cat.5e, Cat.6, Cat.6a and Unshielded or shielded option</li><li>CM, CMR, CMP and LSZH series fire retardant</li></ul>",
+      "model": "Cat-6 UTP 90 Degree Toolless Ivory Pegasus",
+      "warranty": null,
+      "basePrice": 450.0,
+      "originalPrice": 500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Rosenberger",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "CP31-13C-14",
+          "price": 450.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 432.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "CP31-13C-14",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Cat-6 UTP 90 Degree Toolless Ivory Pegasus",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/rosenberger-cat-6-utp-90-degree-toolless-ivory-pegasus",
+      "sourceProductCode": "22603",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "CP31-13C-14",
+      "sourceKeyFeatures": [
+        "MPN: CP31-13C-14",
+        "Model: Cat-6 UTP 90 Degree Toolless Ivory Pegasus",
+        "Quick and easy on-site installation",
+        "Guaranteed high reliability; PRE CON-NECT copper cable",
+        "Cat.5e, Cat.6, Cat.6a and Unshielded or shielded option",
+        "CM, CMR, CMP and LSZH series fire retardant"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/rosenberger-cat-6-utp-90-degree-toolless-ivory-pegasus.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/rosenberger-cat-6-utp-90-degree-toolless-ivory-pegasus.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "rosenberger-cat-6-utp-90-degree-toolless-ivory-pegasus",
+        "candidateTitle": "Rosenberger Cat-6 UTP 90 Degree Toolless Ivory Pegasus (Module#CP31-13C-14)",
+        "attemptStem": "rosenberger-cat-6-utp-90-degree-toolless-ivory-pegasus"
+      }
+    },
+    {
+      "name": "Safenet 35-3010BL Cat6 Modular Jack Blue",
+      "slug": "safenet-35-3010bl-cat6-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-29599",
+      "description": "<h2>Safenet 35-3010BL Cat6 Modular Jack Blue</h2><p>The Safenet 35-3010BL Cat6 Modular Jack Blue is a one-of-a-kind cable direction adjustment mechanism that lets you choose between 90° and 180° angles after termination, making it suitable for narrow or small situations. The Safenet 35-3010BL Cat6 Modular Jack Blue is designed with a unique structure that eliminates foreign crosstalk from surrounding connections, improving signal integrity and security. The jack is compatible with the All-in-One Keystone Jack Termination Tool, which simplifies and saves time and effort during installation. The Safenet 35-3010BL Cat6 Modular Jack Blue is constructed of long-lasting materials such as ABS, phosphor bronze, FR4, and PC. The jack also includes a clear black covering that protects the contacts from dust and damage.</p><h2>Buy Safenet 35-3010BL Cat6 Modular Jack Blue from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/safenet-35-3010bl-cat6-modular-jack\" style=\"\" target=\"\">Safenet 35-3010BL Cat6 Modular Jack Blue</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Networking Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Safenet 35-3010BL Cat6 Modular Jack Blue comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 35-3010BL</li><li>Jack Contacts: Phosphor Bronze</li><li>Jack Housing: ABS, UL94V-O</li><li>TCTL: Up to 250MHz</li><li>Cap: PC, UL94V-O</li></ul>",
+      "model": "35-3010BL",
+      "warranty": "no warranty",
+      "basePrice": 350.0,
+      "originalPrice": 385.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Safenet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29599",
+          "price": 350.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 336.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "35-3010BL",
+              "position": 0
+            },
+            {
+              "label": "Jack Contacts",
+              "value": "Phosphor Bronze",
+              "position": 1
+            },
+            {
+              "label": "Jack Housing",
+              "value": "ABS, UL94V-O",
+              "position": 2
+            },
+            {
+              "label": "TCTL",
+              "value": "Up to 250MHz",
+              "position": 3
+            },
+            {
+              "label": "Cap",
+              "value": "PC, UL94V-O",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/safenet-35-3010bl-cat6-modular-jack",
+      "sourceProductCode": "29599",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 35-3010BL",
+        "Jack Contacts: Phosphor Bronze",
+        "Jack Housing: ABS, UL94V-O",
+        "TCTL: Up to 250MHz",
+        "Cap: PC, UL94V-O"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/safenet-35-3010bl-cat6-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/safenet-35-3010bl-cat6-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "safenet-35-3010bl-cat6-modular-jack",
+        "candidateTitle": "Safenet 35-3010BL Cat6 Modular Jack Blue",
+        "attemptStem": "safenet-35-3010bl-cat6-modular-jack"
+      }
+    },
+    {
+      "name": "Safenet 35-3010WT Cat6 Modular Jack White",
+      "slug": "safenet-35-3010wt-cat6-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-29598",
+      "description": "<h2>Safenet 35-3010WT Cat6 Modular Jack White</h2><p>The Safenet 35-3010WT Cat6 Modular Jack White is a one-of-a-kind cable direction adjustment mechanism that lets you choose between 90° and 180° angles after termination, making it suitable for narrow or small situations. The Safenet 35-3010WT Cat6 Modular Jack White is designed with a unique structure that eliminates foreign crosstalk from surrounding connections, improving signal integrity and security. The jack is compatible with the All-in-One Keystone Jack Termination Tool, which simplifies and saves time and effort during installation. The Safenet 35-3010WT Cat6 Modular Jack White is constructed of long-lasting materials such as ABS, phosphor bronze, FR4, and PC. The jack also includes a clear black covering that protects the contacts from dust and damage.</p><h2>Buy Safenet 35-3010WT Cat6 Modular Jack White from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/safenet-35-3010wt-cat6-modular-jack\" target=\"\">Safenet 35-3010WT Cat6 Modular Jack White</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Networking Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Safenet 35-3010WT Cat6 Modular Jack White comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 35-3010WT</li><li>Jack Contacts: Phosphor Bronze</li><li>Jack Housing: ABS, UL94V-O</li><li>TCTL: Up to 250MHz</li><li>Cap: PC, UL94V-O</li></ul>",
+      "model": "35-3010WT",
+      "warranty": "no warranty",
+      "basePrice": 390.0,
+      "originalPrice": 429.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Safenet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29598",
+          "price": 390.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 374.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "35-3010WT",
+              "position": 0
+            },
+            {
+              "label": "Jack Contacts",
+              "value": "Phosphor Bronze",
+              "position": 1
+            },
+            {
+              "label": "Jack Housing",
+              "value": "ABS, UL94V-O",
+              "position": 2
+            },
+            {
+              "label": "TCTL",
+              "value": "Up to 250MHz",
+              "position": 3
+            },
+            {
+              "label": "Cap",
+              "value": "PC, UL94V-O",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/safenet-35-3010wt-cat6-modular-jack",
+      "sourceProductCode": "29598",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 35-3010WT",
+        "Jack Contacts: Phosphor Bronze",
+        "Jack Housing: ABS, UL94V-O",
+        "TCTL: Up to 250MHz",
+        "Cap: PC, UL94V-O"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/safenet-35-3010wt-cat6-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/safenet-35-3010wt-cat6-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "safenet-35-3010wt-cat6-modular-jack",
+        "candidateTitle": "Safenet 35-3010WT Cat6 Modular Jack White",
+        "attemptStem": "safenet-35-3010wt-cat6-modular-jack"
+      }
+    },
+    {
+      "name": "Safenet 35-3010YL Cat6 Modular Jack Yellow",
+      "slug": "safenet-35-3010yl-cat6-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-29600",
+      "description": "<h2>Safenet 35-3010YL  Cat6 Modular Jack Yellow</h2><p>The Safenet 35-3010YL Cat6 Modular Jack Yellow is a one-of-a-kind cable direction adjustment mechanism that lets you choose between 90° and 180° angles after termination, making it suitable for narrow or small situations. The Safenet 35-3010YL Cat6 Modular Jack Yellow is designed with a unique structure that eliminates foreign crosstalk from surrounding connections, improving signal integrity and security. The jack is compatible with the All-in-One Keystone Jack Termination Tool, which simplifies and saves time and effort during installation. The Safenet 35-3010YL Cat6 Modular Jack Yellow is constructed of long-lasting materials such as ABS, phosphor bronze, FR4, and PC. The jack also includes a clear black covering that protects the contacts from dust and damage.</p><h2>Buy Safenet 35-3010YL Cat6 Modular Jack Yellow from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/safenet-35-3010yl-cat6-modular-jack\" style=\"\" target=\"\">Safenet 35-3010YL Cat6 Modular Jack Yellow</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Networking Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Safenet 35-3010YL Cat6 Modular Jack Yellow comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 35-3010YL</li><li>Jack Contacts: Phosphor Bronze</li><li>Jack Housing: ABS, UL94V-O</li><li>TCTL: Up to 250MHz</li><li>Cap: PC, UL94V-O</li></ul>",
+      "model": "35-3010YL",
+      "warranty": "no warranty",
+      "basePrice": 350.0,
+      "originalPrice": 385.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Safenet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29600",
+          "price": 350.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 336.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "35-3010YL",
+              "position": 0
+            },
+            {
+              "label": "Jack Contacts",
+              "value": "Phosphor Bronze",
+              "position": 1
+            },
+            {
+              "label": "Jack Housing",
+              "value": "ABS, UL94V-O",
+              "position": 2
+            },
+            {
+              "label": "TCTL",
+              "value": "Up to 250MHz",
+              "position": 3
+            },
+            {
+              "label": "Cap",
+              "value": "PC, UL94V-O",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/safenet-35-3010yl-cat6-modular-jack",
+      "sourceProductCode": "29600",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 35-3010YL",
+        "Jack Contacts: Phosphor Bronze",
+        "Jack Housing: ABS, UL94V-O",
+        "TCTL: Up to 250MHz",
+        "Cap: PC, UL94V-O"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/safenet-35-3010yl-cat6-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/safenet-35-3010yl-cat6-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "safenet-35-3010yl-cat6-modular-jack",
+        "candidateTitle": "Safenet 35-3010YL Cat6 Modular Jack Yellow",
+        "attemptStem": "safenet-35-3010yl-cat6-modular-jack"
+      }
+    },
+    {
+      "name": "TRENDnet TC-K25C6 Cat6 Keystone Jack (25-Pack)",
+      "slug": "trendnet-tc-k25c6-keystone-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-41359",
+      "description": "<h2>TRENDnet TC-K25C6 Cat6 Keystone Jack (25-Pack)</h2><p>The TRENDnet <strong>TC-K25C6</strong> Cat6 Keystone Jack is a dependable, high-performance solution for creating or growing Ethernet networks. This 25-pack of tool-less Cat6 keystone jacks is engineered for quick installation and long-lasting sturdiness, with a 90° angle termination that makes cable management easier in compact places. These TRENDnet TC-K25C6 Keystone Jacks are designed to deliver high-speed network performance, making them perfect for copper Gigabit and 10G switches. They are also backward compatible with Cat5 and Cat5e cabling. Each jack has clear, color-coded labeling for the T568B wiring standard, which simplifies setup and reduces installation errors. The jacks' gold-plated contacts improve conductivity while preventing against corrosion, resulting in a solid and robust connection throughout time. These TRENDnet TC-K25C6 Cat6 Keystone Jacks are designed to work flawlessly with TRENDnet's TC-KP24 blank keystone patch panel (available separately), resulting in a clean and professional rackmount installation. Their tool-less design eliminates the need for punch-down equipment, saving time and making network expansion easier for both pros and DIY installers. Whether you are upgrading an office network, installing new infrastructure, or maintaining an existing system, the TRENDnet TC-K25C6 Cat6 Keystone jacks provide the performance and compatibility required for modern data transmission demands. Their sturdy housing is designed to survive extensive use and reconfiguration, and their precision engineering assures tight, secure cable fittings that maintain data integrity. These keystone jacks offer an efficient, organized, and standards-compliant networking solution that can grow with your demands. The TRENDnet TC-K25C6 keystone jacks are designed for consistent signal quality, ease of use, and versatility in installation, making them ideal for structured cabling projects that require Cat6 performance and stable communication.</p><h2>Buy TRENDnet TC-K25C6 Cat6 Keystone Jack from Star Tech</h2><p>In Bangladesh, you can get original <strong>TRENDnet TC-K25C6 Cat6 Keystone Jack</strong> From Star Tech. We have a large collection of latest TRENDnet <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Connector </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The TRENDnet TC-K25C6 Cat6 Keystone Jack comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TC-K25C6</li><li>90° Angle Termination Design</li><li>Color-Coded Labeling for T568B Wiring</li><li>Gold-Plated Contacts</li><li>Compatible with Cat5, Cat5e, and Cat6 cabling</li></ul>",
+      "model": "TC-K25C6",
+      "warranty": "1 year warranty",
+      "basePrice": 7700.0,
+      "originalPrice": 8500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TRENDnet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41359",
+          "price": 7700.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 7392.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TC-K25C6",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/trendnet-tc-k25c6-keystone-jack",
+      "sourceProductCode": "41359",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TC-K25C6",
+        "90° Angle Termination Design",
+        "Color-Coded Labeling for T568B Wiring",
+        "Gold-Plated Contacts",
+        "Compatible with Cat5, Cat5e, and Cat6 cabling"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/trendnet-tc-k25c6-keystone-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/trendnet-tc-k25c6-keystone-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "trendnet-tc-k25c6-keystone-jack",
+        "candidateTitle": "TRENDnet TC-K25C6 Cat6 Keystone Jack (25-Pack)",
+        "attemptStem": "trendnet-tc-k25c6-keystone-jack"
+      }
+    },
+    {
+      "name": "TRENDnet TC-KC06C6A Cat6A RJ45 Keystone Jack (6-Pack)",
+      "slug": "trendnet-tc-kc06c6a-keystone-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-41361",
+      "description": "<h2>TRENDnet TC-KC06C6A Cat6A RJ45 Keystone Jack (6-Pack)</h2><p>The TRENDnet <strong>TC-KC06C6A</strong> Cat6A RJ45 Keystone Jack provides a high-quality, tool-free solution for high-speed Ethernet setups. These keystone jacks are intended to handle Cat6A cabling and provide constant, high-performance connectivity to copper Gigabit and 10G switches, making them perfect for demanding data applications such as commercial networks, server rooms, and structured cabling systems. The TRENDnet TC-KC06C6A Cat6A RJ45 Keystone Jack is fully compatible with Cat5e, Cat6, and Cat6A cables, allowing for upgrades or mixed-cable configurations. These jacks include gold-plated contacts, ensuring excellent signal transmission, increased conductivity, and corrosion resistance over time. The toolless design enables for quick and easy installation without the need for a punch-down tool, simplifying the procedure and saving time during setup or maintenance. These TRENDnet TC-KC06C6A Cat6A RJ45 Keystone Jacks are designed to work flawlessly with TRENDnet blank keystone patch panels, such as models TC-KP24S, TC-KP48S, and TC-KP24SA (all offered separately), allowing for clean, professional rackmount designs. These jacks are designed to meet NDAA and TAA compliance standards, making them ideal for use in government and enterprise applications that demand reliable, regulation-ready components. The TRENDnet TC-KC06C6A Cat6A RJ45 Keystone Jack's small and sturdy design offers a secure fit and reliable performance in a variety of situations, including office networks and data centers.</p><h2>Buy TRENDnet TC-KC06C6A RJ45 Keystone Jack from Star Tech</h2><p>In Bangladesh, you can get original <strong>TRENDnet TC-KC06C6A RJ45 Keystone Jack</strong> From Star Tech. We have a large collection of latest TRENDnet <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Connector </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The TRENDnet TC-KC06C6A RJ45 Keystone Jack comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TC-KC06C6A</li><li>6-pack of Cat6A tool-less keystone jacks</li><li>Cat6A for steady connection to copper Gigabit &amp; 10G switches</li><li>Gold-plated contacts improve conductivity and corrosion resistance</li><li>Compatible with Cat5e, Cat6 and Cat6A cabling</li></ul>",
+      "model": "TC-KC06C6A",
+      "warranty": "1 year warranty",
+      "basePrice": 3900.0,
+      "originalPrice": 4250.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TRENDnet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41361",
+          "price": 3900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3744.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TC-KC06C6A",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/trendnet-tc-kc06c6a-keystone-jack",
+      "sourceProductCode": "41361",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TC-KC06C6A",
+        "6-pack of Cat6A tool-less keystone jacks",
+        "Cat6A for steady connection to copper Gigabit & 10G switches",
+        "Gold-plated contacts improve conductivity and corrosion resistance",
+        "Compatible with Cat5e, Cat6 and Cat6A cabling"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/trendnet-tc-kc06c6a-keystone-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/trendnet-tc-kc06c6a-keystone-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "trendnet-tc-kc06c6a-keystone-jack",
+        "candidateTitle": "TRENDnet TC-KC06C6A Cat6A RJ45 Keystone Jack (6-Pack)",
+        "attemptStem": "trendnet-tc-kc06c6a-keystone-jack"
+      }
+    },
+    {
+      "name": "Vention IRCW0 RJ11 Telephone Punch-down Connector",
+      "slug": "vention-ircw0-rj11-punch-down-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-48339",
+      "description": "<h2>VENTION IRCW0 RJ11 Telephone Punch-down Connector</h2><p>The <strong>Vention IRCW0 RJ11 Telephone Punch-down Connector</strong> is designed for high-performance communication systems, offering 40Gbps transmission speed with a 2000 MHz bandwidth for reliable data flow. Its multi-layer shielding ensures strong protection against interference, maintaining stable connections in demanding environments. The Vention IRCW0 RJ11 connector uses an RJ11 interface, so it is compatible with standard telephone and networking setups. Gold-plated electroplating enhances conductivity and resists corrosion, ensuring long-term durability and consistent performance. The ABS shell of Vention IRCW0 RJ11 Connector provides a lightweight yet sturdy housing, protecting internal components from physical damage. Supporting data transfer rates of 10Mbps, it balances efficiency with compatibility across various applications. The IDC headers are crafted from nickel-plated phosphor bronze, delivering excellent resilience and secure wire connections. This combination of advanced materials and engineering ensures optimal signal integrity, reduced transmission loss, and extended service life. The connector is ideal for professional installations requiring dependable performance, whether in office networks, telecommunication systems, or home setups. Its precision design simplifies punch-down operations, reducing installation time and ensuring firm cable termination. With a focus on durability, speed, and compatibility, the Vention IRCW0 RJ11 Telephone Punch-down Connector stands out as a reliable solution for modern communication needs.</p><h2>Vention IRCW0 RJ11 Telephone Punch-down Connector from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Vention </strong><strong>IRCW0 RJ11 Telephone Punch-down Connector</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/cable-connector\">Cable connectors</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Vention IRCW0 RJ11 Telephone Punch-down Connector comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IRCW0</li><li>Type: RJ11 Connector</li><li>Data transfer rates: 10Mbps</li><li>IDC headers: Nickel-Plated phosphor bronze</li><li>Electroplating process: Gold-Plated</li></ul>",
+      "model": "IRCW0",
+      "warranty": "1 year warranty",
+      "basePrice": 150.0,
+      "originalPrice": 175.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-48339",
+          "price": 150.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 144.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IRCW0",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "RJ11 Connector",
+              "position": 1
+            },
+            {
+              "label": "Data transfer rates",
+              "value": "10Mbps",
+              "position": 2
+            },
+            {
+              "label": "IDC headers",
+              "value": "Nickel-Plated phosphor bronze",
+              "position": 3
+            },
+            {
+              "label": "Electroplating process",
+              "value": "Gold-Plated",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-ircw0-rj11-punch-down-connector",
+      "sourceProductCode": "48339",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IRCW0",
+        "Type: RJ11 Connector",
+        "Data transfer rates: 10Mbps",
+        "IDC headers: Nickel-Plated phosphor bronze",
+        "Electroplating process: Gold-Plated"
+      ],
+      "needsReview": false,
+      "categorySlug": "modular-jack",
+      "image": "/images/products/networking/modular-jack/vention-ircw0-rj11-punch-down-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/modular-jack/vention-ircw0-rj11-punch-down-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-ircw0-rj11-punch-down-connector",
+        "candidateTitle": "Vention IRCW0 RJ11 Telephone Punch-down Connector",
+        "attemptStem": "vention-ircw0-rj11-punch-down-connector"
+      }
+    }
+  ]
+}

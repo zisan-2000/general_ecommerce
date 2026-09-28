@@ -1,0 +1,3065 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/office-equipment",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\office-equipment",
+    "generatedAtUnix": 1790587585,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Office Equipment",
+      "slug": "office-equipment",
+      "parentSlug": null,
+      "image": "/images/products/office-equipment/barcode-scanner/deli/deli-14952w-handheld-barcode-scanner.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Printer Paper",
+      "slug": "printer-paper",
+      "parentSlug": "office-equipment",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-100mm-150mm-for-label-printer.png",
+      "isActive": true,
+      "sortOrder": 22,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "MaxGreen",
+      "slug": "maxgreen",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "MaxGreen Paper Roll (100mm x 150mm) for Barcode Label Printer 350 sticker",
+      "slug": "maxgreen-paper-roll-100mm-150mm-for-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37672",
+      "description": "<h2>Paper Roll (100mm x 150mm) for Barcode Label Printer 350 sticker</h2><p>The MaxGreen Paper Roll 100mm x 150mm for Barcode Label Printer has been thoughtfully engineered to reliably and correctly meet your labeling needs. You will always be able to complete your labeling tasks swiftly thanks to the rolls' remarkable 50 labels per roll and their dimensions of 75 x 50 mm. Because your labels are skillfully created using premium paper that has been selected for its flexibility and durability in many settings, they will withstand the rigors of everyday usage. These stickers have a brilliant white sheen that makes a clear surface for printing your barcode and other important details. Labeling may be completed more quickly since the self-adhesive backing is simple to apply to a range of surfaces, such as product packing and shipping boxes. They are improved with characteristics that prevent fading, smearing, and scratching, guaranteeing that your labels stay readable and clear over time—even in adverse conditions. The main characteristic of our barcode label stickers is their adaptability, which makes them suitable for a variety of uses in sectors including retail, transportation, inventory control, and others. For businesses of all sizes, these labels are an essential tool for identifying items for sale, controlling inventory in a warehouse, or planning shipments for delivery because of their unmatched performance and durability. You may rely on us to reliably and precisely handle your labeling demands regularly.</p><h2>Buy MaxGreen Paper Roll (100mm x 150mm) for Barcode Label Printer 350 sticker from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">MaxGreen Paper Roll (100mm x 150mm) for Barcode Label Printer 350 sticker </span>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Paper</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll (100mm x 150mm) for Barcode Label Printer 350 sticker has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (100mm x 150mm)</li><li>350 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 100mm x 150mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (100mm x 150mm)",
+      "warranty": "No Warranty",
+      "basePrice": 1000.0,
+      "originalPrice": 1100.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37672",
+          "price": 1000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 960.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Barcode Label Printer",
+              "position": 0
+            },
+            {
+              "label": "Page Yield",
+              "value": "350 Sticker",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 100mm x 150mm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-100mm-150mm-for-label-printer",
+      "sourceProductCode": "37672",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (100mm x 150mm)",
+        "350 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 100mm x 150mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-100mm-150mm-for-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-100mm-150mm-for-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-100mm-150mm-for-label-printer",
+        "candidateTitle": "MaxGreen Paper Roll (100mm x 150mm) for Barcode Label Printer 350 sticker",
+        "attemptStem": "maxgreen-paper-roll-100mm-150mm-for-label-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (15mm x 30mm) for Barcode Label Printer 2000 sticker",
+      "slug": "maxgreen-paper-roll-15mm-30mm-for-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37677",
+      "description": "<h2>MaxGreen Paper Roll (15mm x 30mm) for Barcode Label Printer 2000 sticker</h2><p>The MaxGreen Paper Roll 15mm x 30mm Barcode Label Printer has been meticulously engineered to meet your labeling needs with accuracy and dependability. With rolls that are 75 x 50 mm in size and a substantial 2000 labels per roll, you will never run out of labels and can complete your labeling tasks swiftly. Because these labels are expertly manufactured using premium-quality paper that was selected for its durability and adaptability in a number of settings, they will withstand the rigors of everyday use. These stickers' brilliant white gloss provide a spotless surface for printing your barcode and other important details. Applying the self-adhesive backing to a variety of surfaces, such as product packaging and shipping boxes, is simple and expedites the labeling process. These labels, which are specifically made for barcode printing, provide easy inventory management and scanning, assisting you in keeping correct records and streamlining your business processes. They are strengthened with qualities that prevent fading, smearing, and scratching, guaranteeing that your labels will hold up over time and remain readable—even under difficult situations. The key characteristic of our barcode label stickers is their adaptability, which allows them to be used in a range of industries such as retail, shipping, inventory control, and more. These labels are an essential tool for businesses of all sizes, whether you're labeling products for sale, organizing shipments for delivery, or managing inventory in a warehouse.</p><h2>Buy MaxGreen Paper Roll (15mm x 30mm) for Barcode Label Printer 2000 sticker from Star Tech<br/></h2><p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (15mm x 30mm) for Barcode Label Printer 2000 sticker</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Paper</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll 15mm x 30mm for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (15mm x 30mm)</li><li>2000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 15mm x 30mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (15mm x 30mm)",
+      "warranty": "No Warranty",
+      "basePrice": 950.0,
+      "originalPrice": 1045.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37677",
+          "price": 950.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 912.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Barcode Label Printer",
+              "position": 0
+            },
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 15mm x 30mm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-15mm-30mm-for-label-printer",
+      "sourceProductCode": "37677",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (15mm x 30mm)",
+        "2000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 15mm x 30mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-15mm-30mm-for-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-15mm-30mm-for-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-15mm-30mm-for-label-printer",
+        "candidateTitle": "MaxGreen Paper Roll (15mm x 30mm) for Barcode Label Printer 2000 sticker",
+        "attemptStem": "maxgreen-paper-roll-15mm-30mm-for-label-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (38mm x 25mm) for Barcode Label Printer 1000 sticker",
+      "slug": "maxgreen-paper-roll-38mm-25mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37650",
+      "description": "<h2>MaxGreen Paper Roll (38mm x 25mm) for Barcode Label Printer 1000 sticker</h2><p>The MaxGreen Paper Roll (38mm x 25mm) for Barcode Label Printers is a practical and efficient solution for organizations seeking dependable barcode labeling. There are 1000 premium, self-adhesive white stickers on each roll, made especially for barcode printers. These 38 x 25 mm labels are perfect for many uses, including shipping, logistics, retail, and inventory management. These labels improve scanning accuracy and product tracking by keeping printed barcodes clear and readable over time thanks to their smudge-, fade-, and scratch-resistant qualities. Because these labels are designed to resist handling in a variety of corporate contexts, including warehouses, offices, and retail stores, durability is an essential attribute. Their ease of integration into current systems and compatibility with the majority of barcode label printers and standard barcode printing software ensure that the labeling process is streamlined. They are appropriate for a variety of commercial operations because they guarantee accurate scanning and dependable tracking by adhering to industry standards. For high-volume labeling activities, the MaxGreen Paper Roll is not only economical but also convenient. For companies seeking to improve their labeling operations with a robust, high-performance choice that facilitates effective product identification and asset management, these MaxGreen Paper Roll (38mm x 25mm) offer a dependable alternative.</p><h2>Buy MaxGreen Paper Roll (38mm x 25mm) for Barcode Label Printer 1000 sticker from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">MaxGreen Paper Roll (38mm x 25mm) for Barcode Label Printer 1000 sticker</span> From Star Tech. We have a large collection of latest Printer Paper to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll 38mm x 25mm for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (38mm x 25mm)</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 38mm x 25mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (38mm x 25mm)",
+      "warranty": "No Warranty",
+      "basePrice": 380.0,
+      "originalPrice": 418.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37650",
+          "price": 380.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 364.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Barcode Label Printer",
+              "position": 0
+            },
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 38mm x 25mm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-38mm-25mm-for-barcode-label-printer",
+      "sourceProductCode": "37650",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (38mm x 25mm)",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 38mm x 25mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-38mm-25mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-38mm-25mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-38mm-25mm-for-barcode-label-printer",
+        "candidateTitle": "MaxGreen Paper Roll (38mm x 25mm) for Barcode Label Printer 1000 sticker",
+        "attemptStem": "maxgreen-paper-roll-38mm-25mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (40mm x 10mm) for Barcode Label Printer 5000 sticker",
+      "slug": "maxgreen-paper-roll-40mm-10mm-for-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37675",
+      "description": "<h2>MaxGreen Paper Roll (40mm x 10mm) for Barcode Label Printer 5000 sticker</h2><p>The MaxGreen Paper Roll (40mm x 10mm) is precisely developed for Barcode Label Printers, with an exceptional capacity of 5000 stickers per roll, assuring long-term efficiency and little downtime. Each label has a clean white self-adhesive surface that is designed for easy placement on a range of surfaces. The Barcode Label Stickers are specifically intended for multipurpose barcode printing needs, measuring 40mm x 10mm and giving adequate room for encoding crucial information required for inventory control, shipping logistics, and more. These precision-crafted labels provide smudge-free, fade-resistant, and scratch-free performance, ensuring data integrity and readability even in demanding conditions. These labels' multifunctional design makes them important assets for a variety of applications, including shipping labels, box labels, asset monitoring, and more, assuring simpler operations and increased efficiency across sectors. Whether in warehouse management or retail, these labels are reliable and high-quality, providing a low-cost option for streamlined business processes.</p><h2>Buy MaxGreen Paper Roll (40mm x 10mm) for Barcode Label Printer 5000 sticker from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">MaxGreen Paper Roll (40mm x 10mm) for Barcode Label Printer 5000 sticker</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Paper</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll (40mm x 10mm) for Barcode Label Printer 5000 sticker has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (40mm x 10mm)</li><li>350 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 100mm x 150mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (40mm x 10mm)",
+      "warranty": "No Warranty",
+      "basePrice": 1600.0,
+      "originalPrice": 1760.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37675",
+          "price": 1600.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1536.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Barcode Label Printer",
+              "position": 0
+            },
+            {
+              "label": "Page Yield",
+              "value": "5000 Sticker",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 40mm x 10mm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-40mm-10mm-for-label-printer",
+      "sourceProductCode": "37675",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (40mm x 10mm)",
+        "350 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 100mm x 150mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-40mm-10mm-for-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-40mm-10mm-for-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-40mm-10mm-for-label-printer",
+        "candidateTitle": "MaxGreen Paper Roll (40mm x 10mm) for Barcode Label Printer 5000 sticker",
+        "attemptStem": "maxgreen-paper-roll-40mm-10mm-for-label-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (45mm x 35mm) for Barcode Label Printer 1000 sticker",
+      "slug": "maxgreen-paper-roll-45mm-35mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37657",
+      "description": "<h2>MaxGreen Paper Roll (45mm x 35mm) for Barcode Label Printer 1000 sticker</h2><p>The MaxGreen Paper Roll (45mm x 35mm) for Barcode Label Printer is a high-performance option designed to fulfill a variety of labeling applications. There are 1000 white, self-adhesive stickers per roll, so there is enough supply to easily manage large-scale labeling activities. Because of their exact 45 x 35 mm size, the labels can be used for a wide range of tasks, including inventory management and product packing. These high-quality paper labels are robust and dependable in a variety of settings since they are made to resist regular use. The pristine white surface of their MaxGreen Paper Roll (45 x 35 mm) makes it the perfect surface for printing barcodes and other important information, guaranteeing outstanding readability. These labels' robust self-adhesive backing makes it possible for them to be applied smoothly to a variety of surfaces, which expedites the labeling process and boosts operational effectiveness. These labels, which are specifically designed for barcode printing, enable simple scanning, improving the accuracy and efficiency of inventory management and record-keeping. The 45mm x 35mm MaxGreen Paper Roll is designed to be scratch-, fade-, and smudge-proof, so even under challenging circumstances, the printed content will stay clear and readable. They are the ideal option for retail, shipping, logistics, and inventory management because of their longevity. These flexible barcode labels provide unparalleled dependability and performance whether you're labeling goods for shipping, tracking assets in a warehouse, or organizing goods for sale. Businesses of all sizes can rely on reliable, superior labeling solutions from MaxGreen Paper Roll, which guarantee accuracy and efficiency and assist to streamline processes and boost overall productivity.</p><h2>Buy MaxGreen Paper Roll (45mm x 35mm) for Barcode Label Printer 1000 sticker from Star Tech</h2><p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (45mm x 35mm) for Barcode Label Printer 1000 sticker</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Perer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll 45mm x 35mm for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (45mm x 35mm)</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 45mm x 35mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (45mm x 35mm)",
+      "warranty": "No Warranty",
+      "basePrice": 480.0,
+      "originalPrice": 528.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37657",
+          "price": 480.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 460.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Barcode Label Printer",
+              "position": 0
+            },
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 45mm x 35mm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-45mm-35mm-for-barcode-label-printer",
+      "sourceProductCode": "37657",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (45mm x 35mm)",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 45mm x 35mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-45mm-35mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-45mm-35mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-45mm-35mm-for-barcode-label-printer",
+        "candidateTitle": "MaxGreen Paper Roll (45mm x 35mm) for Barcode Label Printer 1000 sticker",
+        "attemptStem": "maxgreen-paper-roll-45mm-35mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (50mm x 25mm) for Barcode Label Printer 1000 sticker",
+      "slug": "maxgreen-paper-roll-50mm-25mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37656",
+      "description": "<h2>MaxGreen Paper Roll (50mm x 25mm) for Barcode Label Printer 1000 sticker</h2><p>The MaxGreen Paper Roll (50mm x 25mm) for Barcode Label Printer is designed to provide dependable and efficient label printing for a variety of applications. With 1000 premium white self-adhesive stickers included on each roll, it is a flexible option for various labeling jobs and compatible with most barcode label printers. Because of their size, the MaxGreen Paper Roll (50mm x 25mm) is appropriate for use in a variety of industries, including retail, shipping, logistics, and inventory management. Clear and accurate barcode prints are ensured by their smudge-free, fade-resistant, and scratch-free design, which facilitates seamless scanning and precise tracking of assets or objects. These robust labels follow industry standards for accurate scanning and effective data management, and they're simple to use with conventional barcode printing software. The premium surface of the MaxGreen Paper Roll reduces the possibility of damage during handling, and the strong adhesive backing guarantees that the roll stays firmly in place. The MaxGreen Paper Roll, with its emphasis on dependability, affordability, and ease of use, is a great option for companies looking to reduce costs without sacrificing quality for asset management and label printing. This paper roll is a wise investment for any company in need of effective labeling solutions because it offers excellent performance and dependability whether utilized in offices, warehouses, retail locations, or other commercial settings.</p><h2>Buy MaxGreen Paper Roll (50mm x 25mm) for Barcode Label Printer 1000 sticker from Star Tech<br/></h2><p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (50mm x 25mm) for Barcode Label Printer 1000 sticker</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Paper</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll 50mm x 25mm for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (50mm x 25mm)</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 50mm x 25mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (50mm x 25mm)",
+      "warranty": "No Warranty",
+      "basePrice": 450.0,
+      "originalPrice": 495.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37656",
+          "price": 450.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 432.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Barcode Label Printer",
+              "position": 0
+            },
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 50mm x 25mm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-50mm-25mm-for-barcode-label-printer",
+      "sourceProductCode": "37656",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (50mm x 25mm)",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 50mm x 25mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-50mm-25mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-50mm-25mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-50mm-25mm-for-barcode-label-printer",
+        "candidateTitle": "MaxGreen Paper Roll (50mm x 25mm) for Barcode Label Printer 1000 sticker",
+        "attemptStem": "maxgreen-paper-roll-50mm-25mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (55mm x 30mm) for Barcode Label Printer 1000 sticker",
+      "slug": "maxgreen-paper-roll-55mm-30mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37658",
+      "description": "<h2>MaxGreen Paper Roll (55mm x 30mm) for Barcode Label Printer 1000 sticker</h2><p>The MaxGreen Paper Roll (55mm x 30mm) for Barcode Label Printer is an excellent alternative for organizations that require efficient and dependable labeling solutions. There are plenty of premium white self-adhesive stickers on each roll, with 1000 stickers total for a variety of uses. The 55 x 30 mm dimensions of these barcode label stickers offer a flexible and roomy area for printing necessary information, like barcodes and product specifications. These labels are long-lasting and resistant to smudges, fading, and scratches thanks to the superior paper that was used to create them. They are perfect for use in demanding locations where labels are subjected to extreme circumstances thanks to our MaxGreen Paper Roll (55mm x 30mm). The bright white finish makes printing readable and clear, improving the accuracy of barcode scanning and streamlining inventory management procedures. The robust self-adhesive backing of these MaxGreen Paper Rolls (55 x 30 mm) makes them simple to mount to a range of surfaces, including shipping boxes and product packaging. These labels provide fast and effective labeling, saving time and effort, which streamlines operations in retail, logistics, and warehouse inventory management. Because of their adaptability, they can be used for a variety of tasks, including as controlling stock levels in a warehouse, labeling things for sale, and organizing shipments. Because of its resistance to deterioration, the MaxGreen Paper Roll (55 x 30 mm) helps to improve efficiency and streamline corporate operations by preserving written information.</p><h2>Buy MaxGreen Paper Roll (55mm x 30mm) for Barcode Label Printer 1000 sticker from Star Tech</h2><p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (55mm x 30mm) for Barcode Label Printer 1000 sticker</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Paper</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll 55mm x 30mm for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (55mm x 30mm)</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 55mm x 30mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (55mm x 30mm)",
+      "warranty": "No Warranty",
+      "basePrice": 500.0,
+      "originalPrice": 550.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37658",
+          "price": 500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Barcode Label Printer",
+              "position": 0
+            },
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Peper Size: 55mm x 30mm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-55mm-30mm-for-barcode-label-printer",
+      "sourceProductCode": "37658",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (55mm x 30mm)",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 55mm x 30mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-55mm-30mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-55mm-30mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-55mm-30mm-for-barcode-label-printer",
+        "candidateTitle": "MaxGreen Paper Roll (55mm x 30mm) for Barcode Label Printer 1000 sticker",
+        "attemptStem": "maxgreen-paper-roll-55mm-30mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (56mm x 38m) for Thermal POS Printer",
+      "slug": "maxgreen-paper-roll-56mm-38m-for-pos-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37886",
+      "description": "<h2>MaxGreen Paper Roll (56mm x 38m) for Thermal POS Printer</h2><p>The MaxGreen Paper Roll (56mm x 38m) is a high-quality thermal paper that produces crisp, clear prints for a variety of applications, including POS systems, billing, and receipt printers. Because of its superior composition, which guarantees robust stability, longevity, and steady performance over time, it is perfect for high-traffic areas like offices, restaurants, and retail establishments. This thermal paper roll, measuring 56 mm in width and 38 mm in diameter, may be used with a range of thermal point-of-sale printers, giving users flexibility when using numerous devices. Because the paper is made to function well with thermal printing technology, there is no need for ink or toner, which drastically lowers maintenance and operational costs. The MaxGreen Paper Roll ensures that barcodes and text are printed clearly and sharply, making invoices and receipts easy to see and maintaining their quality over time. Its smooth surface also makes printing quick and jam-free, improving workflow effectiveness. Since it produces less waste and still produces excellent results, this thermal paper is also eco-friendly. For organizations that need high-performance, affordable printing solutions, the MaxGreen Paper Roll is a reliable option because of its remarkable print clarity and dependability, whether it is utilized in a small business or busy retail scenario.</p><h2>Buy MaxGreen Paper Roll (56mm x 38m) for Thermal POS Printer from Star Tech</h2><p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (56mm x 38m) for Thermal POS Printer</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Pepar</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll (56mm x 38m) for Thermal POS Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (56mm x 38m)</li><li>Premium-Quality Paper</li><li>Clear Printing and Strong Stability</li><li>Paper Size: 56mm x 38m</li><li>Compatible with Thermal POS, Billing &amp; Receipt Printer</li></ul>",
+      "model": "Paper Roll (56mm x 38m)",
+      "warranty": "No Warranty",
+      "basePrice": 120.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37886",
+          "price": 120.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 115.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Thermal POS, Billing & Receipt Printer",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 56mm x 38m",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-56mm-38m-for-pos-printer",
+      "sourceProductCode": "37886",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (56mm x 38m)",
+        "Premium-Quality Paper",
+        "Clear Printing and Strong Stability",
+        "Paper Size: 56mm x 38m",
+        "Compatible with Thermal POS, Billing & Receipt Printer"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-56mm-38m-for-pos-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-56mm-38m-for-pos-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-56mm-38m-for-pos-printer",
+        "candidateTitle": "MaxGreen Paper Roll (56mm x 38m) for Thermal POS Printer",
+        "attemptStem": "maxgreen-paper-roll-56mm-38m-for-pos-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (75mm x 100mm) for Barcode Label Printer 500 sticker",
+      "slug": "maxgreen-paper-roll-75mm-100mm-for-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37662",
+      "description": "<h2>MaxGreen Paper Roll (75mm x 100mm) for Barcode Label Printer 500 sticker</h2><p>The MaxGreen Paper Roll (75mm x 100mm) for Barcode Label Printer provides a dependable and accurate solution for organizations that want high-quality labels. Each roll has fifty sturdy, white, self-adhesive stickers that are effective for various labeling applications. These labels' roomy 75 x 100 mm dimensions allow for printing barcodes and other essential information, guaranteeing legible legibility. These labels are made from premium-grade paper and are flexible and durable, making them appropriate for various settings. The smooth white finish of the MaxGreen Paper Roll (75 x 100 mm) guarantees a spotless surface, making printed barcodes and details stand out for simple scanning and inventory monitoring. The self-adhesive backing makes application easier and saves time throughout the labeling process by sticking to a variety of surfaces, including product packing and shipping boxes. These labels, which are made especially for barcode printing, have characteristics that prevent smudging, fading, and scratching, guaranteeing that written information is preserved and readable even in challenging circumstances. The MaxGreen Paper Roll (75mm x 100mm) is ideal for a variety of industries, such as retail, logistics, and inventory control, because of its dependability. These labels offer the performance and dependability required to keep correct records and optimize corporate procedures, whether they are used for shipping preparation, maintaining warehouse stock, or labeling goods for sale. They are a flexible tool for companies of all sizes because of their flexibility to adapt to various uses. You can rely on the MaxGreen Paper Roll for Barcode Label Printers to provide consistently excellent labels that satisfy your requirements for dependability, efficiency, and accuracy each time.</p><h2>Buy MaxGreen Paper Roll (75mm x 100mm) for Barcode Label Printer 500 sticker from Star Tech</h2><p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (75mm x 100mm) for Barcode Label Printer 500 sticker</strong> From Star Tech. We have a large collection of latest Printer Paper to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll (75mm x 100mm) for Barcode Label Printer 500 sticker has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (75mm x 100mm)</li><li>500 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 75mm x 100mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (75mm x 100mm)",
+      "warranty": "No Warranty",
+      "basePrice": 650.0,
+      "originalPrice": 715.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37662",
+          "price": 650.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 624.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Barcode Label Printer",
+              "position": 0
+            },
+            {
+              "label": "Page Yield",
+              "value": "500 Sticker",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 75mm x 100mm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-75mm-100mm-for-label-printer",
+      "sourceProductCode": "37662",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (75mm x 100mm)",
+        "500 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 75mm x 100mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-75mm-100mm-for-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-75mm-100mm-for-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-75mm-100mm-for-label-printer",
+        "candidateTitle": "MaxGreen Paper Roll (75mm x 100mm) for Barcode Label Printer 500 sticker",
+        "attemptStem": "maxgreen-paper-roll-75mm-100mm-for-label-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (75mm x 50mm) for Barcode Label Printer 500 sticker",
+      "slug": "maxgreen-paper-roll-75mm-50mm-for-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37661",
+      "description": "<h2>MaxGreen Paper Roll (75mm x 50mm) for Barcode Label Printer 500 sticker</h2><p>The MaxGreen Paper Roll (75mm x 50mm) for Barcode Label Printer is a great alternative for organizations that require dependable, high-performance labels. There are 500 self-adhesive labels on each roll, which is more than enough to suit your labeling needs. These labels' 75 x 50 mm dimensions provide lots of room for writing barcodes and other important information legibly. The MaxGreen Paper Roll (75mm x 50mm) is made of high-quality paper and is intended to be durable and adaptable, meaning it can endure regular use under a variety of circumstances. The stickers' brilliant white surface guarantees outstanding print visibility, which facilitates barcode reading and scanning and improves record accuracy. This simplifies inventory management. Labeling can be done quickly and easily on a variety of surfaces, including product packaging, shipping boxes, and more, because to the MaxGreen Paper Roll's strong self-adhesive backing. These labels, which are specifically made for barcode printing, also have qualities that prevent smudging, fading, and scratching, guaranteeing that your printed information will hold up over time and remain readable under challenging conditions. Because of their adaptability to a wide range of industries, including retail, shipping, inventory management, and logistics, MaxGreen Paper Rolls (75mm x 50mm) are a vital tool for companies of all kinds. Whether you're labeling goods for sale, arranging inventory in a warehouse, or getting shipments ready for delivery, the MaxGreen Paper Roll delivers dependable, consistent performance to suit your labeling needs with accuracy and quality.</p><h2>Buy MaxGreen Paper Roll (75mm x 50mm) for Barcode Label Printer 500 sticker from Star Tech</h2><p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (75mm x 50mm) for Barcode Label Printer 500 sticker</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Paper</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll 75mm x 50mm for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (75mm x 50mm)</li><li>500 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 75mm x 50mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (75mm x 50mm)",
+      "warranty": "No Warranty",
+      "basePrice": 450.0,
+      "originalPrice": 462.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37661",
+          "price": 450.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 432.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Barcode Label Printer",
+              "position": 0
+            },
+            {
+              "label": "Page Yield",
+              "value": "500 Sticker",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Pepar Size: 75mm x 50mm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-75mm-50mm-for-label-printer",
+      "sourceProductCode": "37661",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (75mm x 50mm)",
+        "500 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 75mm x 50mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-75mm-50mm-for-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-75mm-50mm-for-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-75mm-50mm-for-label-printer",
+        "candidateTitle": "MaxGreen Paper Roll (75mm x 50mm) for Barcode Label Printer 500 sticker",
+        "attemptStem": "maxgreen-paper-roll-75mm-50mm-for-label-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (78mm x 48m) for Thermal POS Printer",
+      "slug": "maxgreen-paper-roll-78mm-48m-for-pos-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37777",
+      "description": "<h2>MaxGreen Paper Roll (78mm x 48m) for Thermal POS Printer</h2><p>The MaxGreen Paper Roll for Thermal POS Printer is a high-quality thermal paper roll measuring 78mm x 48m that is specifically intended to work with thermal POS, billing, and receipt printers. This high-performance, paper is a great option for a variety of applications, such as bills, receipts, memos, notes, and labels, since it guarantees robust stability and clear printing. Thermal paper has special heat-activated qualities that cause it to change color when it comes into contact with heat from the printer. This eliminates the need for ink or toner, which lowers operating costs and makes printing easier. The thermal POS printer's MaxGreen Paper Roll (78 x 51 mm) is designed to operate at peak efficiency, producing clear, readable prints that improve the reading of significant documents. It is an adaptable addition to any office setting due to its interoperability with a broad variety of thermal printers. Because of the roll format's ease of use, users can print numerous pages at once without having to stop frequently to change the paper. In addition to being made to endure a variety of environmental factors, this MaxGreen Paper Roll (78mm x 48m) for Thermal POS Printers also maintains its quality over time. Printed documents stay clear and undamaged for longer because of their long storage life and fade resistance. MaxGreen thermal paper not only satisfies but surpasses industry standards for quality and dependability because of its high whiteness and smooth surface. An indispensable tool for companies trying to optimize their printing procedures while maintaining high-quality results is the MaxGreen Paper Roll (78mm x 48m). It is the perfect option for anyone in need of dependable printing solutions for their everyday operations due to its compatibility with thermal printers and capacity to generate clear prints.</p><h2>Buy MaxGreen Paper Roll (78mm x 48m) for Thermal POS Printer from Star Tech</h2><p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (78mm x 48m) for Thermal POS Printer</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Pepar</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll (78mm x 48m) for Thermal POS Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (78mm x 48m)</li><li>Premium-Quality Paper</li><li>Clear Printing and Strong Stability</li><li>Paper Size: 78mm x 48m</li><li>Compatible with Thermal POS, Billing &amp; Receipt Printer</li></ul>",
+      "model": "Paper Roll (78mm x 48m)",
+      "warranty": "No Warranty",
+      "basePrice": 150.0,
+      "originalPrice": 165.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37777",
+          "price": 150.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 144.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Thermal POS, Billing & Receipt Printer",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 78mm x 48m",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-78mm-48m-for-pos-printer",
+      "sourceProductCode": "37777",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (78mm x 48m)",
+        "Premium-Quality Paper",
+        "Clear Printing and Strong Stability",
+        "Paper Size: 78mm x 48m",
+        "Compatible with Thermal POS, Billing & Receipt Printer"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-78mm-48m-for-pos-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-78mm-48m-for-pos-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-78mm-48m-for-pos-printer",
+        "candidateTitle": "MaxGreen Paper Roll (78mm x 48m) for Thermal POS Printer",
+        "attemptStem": "maxgreen-paper-roll-78mm-48m-for-pos-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (78mm x 50m) for Thermal POS Printer",
+      "slug": "maxgreen-paper-roll-78mm-50m-for-pos-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37890",
+      "description": "<h2>MaxGreen Paper Roll (78mm x 50m) for Thermal POS Printer</h2><p>The MaxGreen Paper Roll (78mm x 50m) for Thermal POS Printers is a great alternative for businesses who require high-quality thermal paper for their point-of-sale systems. This superior grade paper guarantees consistently clear and sharp printing, giving your bills, invoices, and receipts a polished appearance. Paper's robust stability and consistent performance prevent tearing or jamming, which makes it perfect for high-traffic areas like restaurants, retail stores, and other establishments where prompt and effective transactions are essential. It is compatible with a range of thermal point-of-sale (POS), billing, and receipt printers thanks to its 78mm width and 50m length, providing versatility and user-friendliness across various devices. This paper roll ensures readable, durable print quality that won't fade or smear easily, whether you're printing transaction records or client receipts. It ensures that your company logo, branding, or any other crucial information appears crisp and readable by supporting clear printing of both text and graphics. In addition, the roll is made to fit thermal printers easily, reducing downtime and increasing productivity. This paper roll, which is made of sturdy, premium materials, also guarantees less dust production, extending the life of your printer by lowering wear and tear. For companies seeking to improve their point-of-sale operations, the MaxGreen Paper Roll is an affordable option thanks to its dependable, high-performance features. It works especially well with thermal point-of-sale printers, billing software, and other receipt printers that are often used in a variety of sectors. It guarantees a seamless workflow and excellent print quality every time. For a consistent, excellent printing experience that boosts productivity and client happiness in your company, go with the MaxGreen Paper Roll.</p><h2>Buy MaxGreen Paper Roll (78mm x 50m) for Thermal POS Printer from Star Tech</h2><p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (78mm x 50m) for Thermal POS Printer</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Pepar</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll (78mm x 50m) for Thermal POS Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (78mm x 50m)</li><li>Premium-Quality Paper</li><li>Clear Printing and Strong Stability</li><li>Paper Size: 78mm x 50m</li><li>Compatible with Thermal POS, Billing &amp; Receipt Printer</li></ul>",
+      "model": "Paper Roll (78mm x 50m)",
+      "warranty": "No Warranty",
+      "basePrice": 180.0,
+      "originalPrice": 198.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37890",
+          "price": 180.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 172.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Thermal POS, Billing & Receipt Printer",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 78mm x 50m",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-78mm-50m-for-pos-printer",
+      "sourceProductCode": "37890",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (78mm x 50m)",
+        "Premium-Quality Paper",
+        "Clear Printing and Strong Stability",
+        "Paper Size: 78mm x 50m",
+        "Compatible with Thermal POS, Billing & Receipt Printer"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-78mm-50m-for-pos-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-78mm-50m-for-pos-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-78mm-50m-for-pos-printer",
+        "candidateTitle": "MaxGreen Paper Roll (78mm x 50m) for Thermal POS Printer",
+        "attemptStem": "maxgreen-paper-roll-78mm-50m-for-pos-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (78mm x 51m) for Thermal POS Printer",
+      "slug": "maxgreen-paper-roll-78mm-51m-for-pos-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37775",
+      "description": "<h2>MaxGreen Paper Roll (78mm x 51m) for Thermal POS Printer</h2><p>The MaxGreen Paper Roll for Thermal POS Printer is a high-quality thermal paper roll measuring 78mm x 51m that is specifically intended to work with thermal POS, billing, and receipt printers. This high-performance paper is a great option for a variety of applications, such as bills, receipts, memos, notes, and labels, since it guarantees robust stability and clear printing. Thermal paper has special heat-activated qualities that cause it to change color when it comes into contact with heat from the printer. This eliminates the need for ink or toner, which lowers operating costs and makes printing easier. The thermal POS printer's MaxGreen Paper Roll (78 x 51 mm) is designed to operate at peak efficiency, producing clear, readable prints that improve the reading of significant documents. It is an adaptable addition to any office setting due to its interoperability with a broad variety of thermal printers. Because of the roll format's ease of use, users can print numerous pages at once without having to stop frequently to change the paper. In addition to being made to endure a variety of environmental factors, this MaxGreen Paper Roll (78mm x 51m) for Thermal POS Printers also maintains its quality over time. Printed documents stay clear and undamaged for longer because of their long storage life and fade resistance. MaxGreen thermal paper not only satisfies but surpasses industry standards for quality and dependability because of its high whiteness and smooth surface. An indispensable tool for companies trying to optimize their printing procedures while maintaining high-quality results is the MaxGreen Paper Roll (78mm x 51m). It is the perfect option for anyone in need of dependable printing solutions for their everyday operations due to its compatibility with thermal printers and capacity to generate clear prints.</p><h2>Buy MaxGreen Paper Roll (78mm x 51m) for Thermal POS Printer from Star Tech</h2><p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (78mm x 51m) for Thermal POS Printer</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Pepar</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll (78mm x 51m) for Thermal POS Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (78mm x 51m)</li><li>Premium-Quality Paper</li><li>Clear Printing and Strong Stability</li><li>Paper Size: 78mm x 51m</li><li>Compatible with Thermal POS, Billing &amp; Receipt Printer</li></ul>",
+      "model": "Paper Roll (78mm x 51m)",
+      "warranty": "No Warranty",
+      "basePrice": 160.0,
+      "originalPrice": 176.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37775",
+          "price": 160.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 153.6,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Thermal POS, Billing & Receipt Printer",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 78mm x 51m",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-78mm-51m-for-pos-printer",
+      "sourceProductCode": "37775",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (78mm x 51m)",
+        "Premium-Quality Paper",
+        "Clear Printing and Strong Stability",
+        "Paper Size: 78mm x 51m",
+        "Compatible with Thermal POS, Billing & Receipt Printer"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-78mm-51m-for-pos-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-78mm-51m-for-pos-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-78mm-51m-for-pos-printer",
+        "candidateTitle": "MaxGreen Paper Roll (78mm x 51m) for Thermal POS Printer",
+        "attemptStem": "maxgreen-paper-roll-78mm-51m-for-pos-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (78mm x 56m) for Thermal POS Printer (10 PCS Bundle)",
+      "slug": "maxgreen-paper-roll-78mm-56m-for-pos-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37891",
+      "description": "<h2>MaxGreen Paper Roll (78mm x 56m) for Thermal POS Printer</h2>\n<p>The MaxGreen Paper Roll (78mm x 56m) for Thermal POS Printers is a great alternative for businesses who require high-quality thermal paper for their point-of-sale systems. This superior grade paper guarantees consistently clear and sharp printing, giving your bills, invoices, and receipts a polished appearance. Paper's robust stability and consistent performance prevent tearing or jamming, which makes it perfect for high-traffic areas like restaurants, retail stores, and other establishments where prompt and effective transactions are essential. It is compatible with a range of thermal point-of-sale (POS), billing, and receipt printers thanks to its 78mm width and 56m length, providing versatility and user-friendliness across various devices. This paper roll ensures readable, durable print quality that won't fade or smear easily, whether you're printing transaction records or client receipts. It ensures that your company logo, branding, or any other crucial information appears crisp and readable by supporting clear printing of both text and graphics. In addition, the roll is made to fit thermal printers easily, reducing downtime and increasing productivity. This paper roll, which is made of sturdy, premium materials, also guarantees less dust production, extending the life of your printer by lowering wear and tear. For companies seeking to improve their point-of-sale operations, the MaxGreen Paper Roll is an affordable option thanks to its dependable, high-performance features. It works especially well with thermal point-of-sale printers, billing software, and other receipt printers that are often used in a variety of sectors. It guarantees a seamless workflow and excellent print quality every time. For a consistent, excellent printing experience that boosts productivity and client happiness in your company, go with the MaxGreen Paper Roll.</p>\n<h2>Buy MaxGreen Paper Roll (78mm x 56m) for Thermal POS Printer from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (78mm x 56m) for Thermal POS Printer</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Pepar</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll (78mm x 56m) for Thermal POS Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (78mm x 56m)</li><li>Premium-Quality Paper</li><li>Clear Printing and Strong Stability</li><li>Paper Size: 78mm x 56m</li><li>Compatible with Thermal POS, Billing &amp; Receipt Printer</li></ul>",
+      "model": "Paper Roll (78mm x 56m)",
+      "warranty": "No Warranty",
+      "basePrice": 210.0,
+      "originalPrice": 231.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37891",
+          "price": 210.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 201.6,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Thermal POS, Billing & Receipt Printer",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 78mm x 56m",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-78mm-56m-for-pos-printer",
+      "sourceProductCode": "37891",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (78mm x 56m)",
+        "Premium-Quality Paper",
+        "Clear Printing and Strong Stability",
+        "Paper Size: 78mm x 56m",
+        "Compatible with Thermal POS, Billing & Receipt Printer"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-78mm-56m-for-pos-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-78mm-56m-for-pos-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-78mm-56m-for-pos-printer",
+        "candidateTitle": "MaxGreen Paper Roll (78mm x 56m) for Thermal POS Printer (10 PCS Bundle)",
+        "attemptStem": "maxgreen-paper-roll-78mm-56m-for-pos-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (78mm x 78m) for Thermal POS Printer",
+      "slug": "maxgreen-paper-roll-78mm-78m-for-pos-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37885",
+      "description": "<h2>MaxGreen Paper Roll (78mm x 78m) for Thermal POS Printer</h2><p>The MaxGreen Paper Roll for Thermal POS Printer is a high-quality thermal paper roll measuring 78mm x 78m designed exclusively for use with thermal POS, billing, and receipt printers. This high-performance paper ensures strong stability and crisp writing, making it an excellent choice for a range of applications, including invoices, receipts, memos, notes, and labels. When thermal paper comes into touch with heat from the printer, it changes color due to unique heat-activated properties. This reduces operational expenses and facilitates printing by doing away with the need for ink or toner. The MaxGreen Paper Roll (78 x 51 mm) for the thermal POS printer is made to work as efficiently as possible, giving crisp, readable prints that enhance the viewing of important papers. Because it works with a wide range of thermal printers, it is a flexible complement to any workplace environment. Users may print multiple pages at once without stopping to change the paper regularly thanks to the roll format's convenience of use. This MaxGreen Paper Roll (78mm x 78m) for Thermal POS Printers not only withstands a range of environmental conditions, but it also holds up well over time. Printed documents have a longer shelf life and resistance to fading, which helps them remain clear and unaltered for longer. MaxGreen thermal paper's excellent whiteness and smooth surface not only meet but exceed industry standards for quality and durability. The MaxGreen Paper Roll (78mm x 78m) is a vital tool for businesses looking to streamline their printing processes while preserving high-quality output. Because it works with thermal printers and can produce clear prints, it's the ideal choice for anyone in need of trustworthy printing solutions for their daily operations.</p><h2>Buy MaxGreen Paper Roll (78mm x 78m) for Thermal POS Printer from Star Tech</h2><p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (78mm x 78m) for Thermal POS Printer</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Pepar</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The MaxGreen Paper Roll (78mm x 78m) for Thermal POS Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (78mm x 78m)</li><li>Premium-Quality Paper</li><li>Clear Printing and Strong Stability</li><li>Paper Size: 78mm x 78m</li><li>Compatible with Thermal POS, Billing &amp; Receipt Printer</li></ul>",
+      "model": "Paper Roll (78mm x 78m)",
+      "warranty": "No Warranty",
+      "basePrice": 250.0,
+      "originalPrice": 275.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37885",
+          "price": 250.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Thermal POS, Billing & Receipt Printer",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 78mm x 78m",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-78mm-78m-for-pos-printer",
+      "sourceProductCode": "37885",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (78mm x 78m)",
+        "Premium-Quality Paper",
+        "Clear Printing and Strong Stability",
+        "Paper Size: 78mm x 78m",
+        "Compatible with Thermal POS, Billing & Receipt Printer"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-78mm-78m-for-pos-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-78mm-78m-for-pos-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-78mm-78m-for-pos-printer",
+        "candidateTitle": "MaxGreen Paper Roll (78mm x 78m) for Thermal POS Printer",
+        "attemptStem": "maxgreen-paper-roll-78mm-78m-for-pos-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (4\"x2\") for Barcode Label Printer 1000 sticker",
+      "slug": "maxgreen-paper-roll-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37698",
+      "description": "<h2>MaxGreen Paper Roll (4\"X2\") for Barcode Label Printer 1000 sticker</h2><p>The MaxGreen Paper Roll (4\"X2\") for Barcode Label Printer 1000 sticker resists fading and smudges. Print UPC barcode labels more sharply and in a darker color to create labels that adhere tightly to nearly any surface. These labels are great for return addresses and FBA, so you can be sure your mail will arrive safely. Use direct thermal barcode address replacement labels to create address shipping labels for parcels, envelopes, hardware, CDs or disk labels, barcode SKU labels, racking labels, or file labeling for office management.</p><h2>Buy MaxGreen Paper Roll (4\"X2\") for Barcode Label Printer 1000 sticker from Star Tech</h2><p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (4\"X2\") for Barcode Label Printer 1000 sticker</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Paper</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll (4\"X2\") for Barcode Label Printer 1000 sticker comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (4&quot;x2&quot;)</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 4 x 2 inches</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (4\"x2\")",
+      "warranty": "No Warranty",
+      "basePrice": 800.0,
+      "originalPrice": 880.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37698",
+          "price": 800.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 768.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Barcode Label Printer",
+              "position": 0
+            },
+            {
+              "label": "Page Yield",
+              "value": "1000 sticker",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 4 x 2 inches",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-for-barcode-label-printer",
+      "sourceProductCode": "37698",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (4\"x2\")",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 4 x 2 inches",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-for-barcode-label-printer",
+        "candidateTitle": "MaxGreen Paper Roll (4\"x2\") for Barcode Label Printer 1000 sticker",
+        "attemptStem": "maxgreen-paper-roll-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "MaxGreen Paper Roll (1\"x1.5\") for Barcode Label Printer 1000 sticker",
+      "slug": "maxgreen-paper-roll-for-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37699",
+      "description": "<h2>MaxGreen Paper Roll (1\"X1.5\") for Barcode Label Printer 1000 sticker</h2><p>The MaxGreen Paper Roll (1\"X1.5\") for Barcode Label Printer 1000 sticker resists fading and smudges. Print UPC barcode labels more sharply and in a darker color to create labels that adhere tightly to nearly any surface. These labels are great for return addresses and FBA, so you can be sure your mail will arrive safely. Use direct thermal barcode address replacement labels to create address shipping labels for parcels, envelopes, hardware, CDs, or disk labels, barcode SKU labels, racking labels, or file labeling for office management.</p><h2>Buy MaxGreen Paper Roll (1\"X1.5\") for Barcode Label Printer 1000 sticker from Star Tech</h2><p>In Bangladesh, you can get original <strong>MaxGreen Paper Roll (1\"X1.5\") for Barcode Label Printer 1000 sticker</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Paper</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll (1\"X1.5\") for Barcode Label Printer 1000 sticker comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (1&quot;x1.5&quot;)</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 1 x 1.5 inches</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (1\"x1.5\")",
+      "warranty": "No Warranty",
+      "basePrice": 300.0,
+      "originalPrice": 330.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37699",
+          "price": 300.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 288.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Barcode Label Printer",
+              "position": 0
+            },
+            {
+              "label": "Page Yield",
+              "value": "1000 sticker",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Paper Size: 1 x 1.5 inches",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/maxgreen-paper-roll-for-label-printer",
+      "sourceProductCode": "37699",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (1\"x1.5\")",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 1 x 1.5 inches",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-for-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/maxgreen-paper-roll-for-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "maxgreen-paper-roll-for-label-printer",
+        "candidateTitle": "MaxGreen Paper Roll (1\"x1.5\") for Barcode Label Printer 1000 sticker",
+        "attemptStem": "maxgreen-paper-roll-for-label-printer"
+      }
+    },
+    {
+      "name": "Paper Roll (100mm x 150mm) for Barcode Label Printer 350 sticker",
+      "slug": "paper-roll-100mm-150mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-34717",
+      "description": "<h2>Paper Roll (100mm x 150mm) for Barcode Label Printer 350 sticker</h2><p>The Paper Roll 100mm x 150mm for Barcode Label Printer has been precisely designed to satisfy your labeling requirements consistently and accurately. With rolls spanning 75 x 50 mm and a staggering 50 labels per roll, you'll always be able to finish your labeling jobs quickly. Your labels will survive the demands of everyday usage since they are expertly manufactured using high-quality paper that has been chosen for its flexibility and durability in a variety of settings. The dazzling white shine of these stickers creates a clean surface for printing your barcode and other vital information. The self-adhesive backing is easy to apply to a variety of surfaces, including shipping boxes and product packaging, resulting in faster labeling. They are enhanced with properties that resist fading, smearing, and scratching, ensuring that your labels remain clear and readable over time—even under unfavorable environments. Our barcode label stickers' primary feature is their versatility, which makes them suited for a broad range of applications in industries like retail, transportation, inventory management, and others. These labels provide unparalleled performance and dependability, making them an indispensable tool for businesses of all kinds, whether they are identifying things for sale, managing inventory in a warehouse, or organizing shipments for delivery. You can depend on us to consistently meet your labeling needs with unwavering quality and precision</p><h2>Buy Paper Roll (100mm x 150mm) for Barcode Label Printer 350 sticker from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Paper Roll (100mm x 150mm) for Barcode Label Printer 350 sticker</span><span style=\"font-weight: bold;\">sticker</span> From Star Tech. We have a large collection of latest Barcode stickers to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll (100mm x 150mm) for Barcode Label Printer 350 sticker has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (100mm x 150mm)</li><li>350 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 100mm x 150mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (100mm x 150mm)",
+      "warranty": "No Warranty",
+      "basePrice": 1000.0,
+      "originalPrice": 1100.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34717",
+          "price": 1000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 960.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Page Yield",
+              "value": "350 Sticker",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-100mm-150mm-for-barcode-label-printer",
+      "sourceProductCode": "34717",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (100mm x 150mm)",
+        "350 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 100mm x 150mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-100mm-150mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-100mm-150mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-100mm-150mm-for-barcode-label-printer",
+        "candidateTitle": "Paper Roll (100mm x 150mm) for Barcode Label Printer 350 sticker",
+        "attemptStem": "paper-roll-100mm-150mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "Paper Roll (15mm x 30mm) for Barcode Label Printer 2000 sticker",
+      "slug": "paper-roll-15mm-30mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-34743",
+      "description": "<h2>Paper Roll (15mm x 30mm) for Barcode Label Printer 2000 sticker</h2><p>The Paper Roll 15mm x 30mm Barcode Label Printer has been painstakingly designed to reliably and precisely fulfill your labeling requirements. With rolls that measure 75 x 50 mm and a hefty 2000 labels per roll, you will always have enough to do your labeling duties quickly. Your labels will resist the demands of daily usage thanks to the skillful manufacturing of these labels from premium-quality paper that was chosen for its adaptability and durability in a variety of conditions. The dazzling white gloss of these stickers provides a clean surface on which to print your barcode and other vital information. The self-adhesive backing is easy to apply to a range of surfaces, including shipping boxes and product packaging, which speeds up the labeling process and saves. These labels, designed especially for barcode printing, offer simple inventory management and scanning, helping you to maintain accurate records and optimize your company procedures. They are reinforced with properties that resist fading, smearing, and scratching, ensuring that your labels will remain clear and readable over time—even under challenging circumstances. Our barcode label stickers' main feature is their versatility, which makes them appropriate for a variety of uses in industries including retail, shipping, inventory control, and more. These labels provide unrivaled performance and dependability, making them a vital tool for companies of all kinds, whether you're marking goods for sale, managing inventory in a warehouse, or planning shipments for delivery. You can rely on us to consistently meet your labeling demands with unwavering quality and precision when you use our Paper Roll for Barcode Label Printer.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy Paper Roll (1</span>5mm <span style=\"color: inherit; font-family: inherit;\">x 3</span>0mm<span style=\"color: inherit; font-family: inherit;\">) for Barcode Label Printer </span>2000 <span style=\"color: inherit; font-family: inherit;\">sticker from Star Tech</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Paper Roll (1</span><span style=\"font-weight: 700;\">5mm </span><span style=\"font-weight: bold;\">x 3</span><span style=\"font-weight: 700;\">0mm</span><span style=\"font-weight: bold;\">) for Barcode Label Printer </span><span style=\"font-weight: 700;\">2000 </span><span style=\"font-weight: bold;\">sticker</span> From Star Tech. We have a large collection of latest Barcode stickers to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll 15mm x 30mm for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (15mm x 30mm)</li><li>2000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 15mm x 30mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (15mm x 30mm)",
+      "warranty": "No Warranty",
+      "basePrice": 950.0,
+      "originalPrice": 1045.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34743",
+          "price": 950.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 912.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-15mm-30mm-for-barcode-label-printer",
+      "sourceProductCode": "34743",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (15mm x 30mm)",
+        "2000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 15mm x 30mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-15mm-30mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-15mm-30mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-15mm-30mm-for-barcode-label-printer",
+        "candidateTitle": "Paper Roll (15mm x 30mm) for Barcode Label Printer 2000 sticker",
+        "attemptStem": "paper-roll-15mm-30mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "Paper Roll (30mm x 40mm) for Barcode Label Printer 1000 sticker",
+      "slug": "paper-roll-30mm-40mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-38857",
+      "description": "<h2>Paper Roll (30mm x 40mm) for Barcode Label Printer 1000 sticker</h2><p>The <strong>Paper Roll (30mm x 40mm) </strong>is precisely developed for Barcode Label Printers, with an exceptional capacity of 1000 stickers per roll, assuring long-term efficiency and little downtime. Each label has a clean white self-adhesive surface that is designed for easy placement on a range of surfaces. The Barcode Label Stickers are specifically intended for multipurpose barcode printing needs, measuring 30mm x 40mm and giving adequate room for encoding crucial information required for inventory control, shipping logistics, and more. These precision-crafted labels provide smudge-free, fade-resistant, and scratch-free performance, ensuring data integrity and readability even in demanding conditions. These labels' multifunctional design makes them important assets for a variety of applications, including shipping labels, box labels, asset monitoring, and more, assuring simpler operations and increased efficiency across sectors. Whether in warehouse management or retail, these labels are reliable and high-quality, providing a low-cost option for streamlined business processes.</p><h2>Buy Paper Roll (30mm x 40mm) for Barcode Label Printer 1000 sticker from Star Tech</h2><p>In Bangladesh, you can get original <strong>Paper Roll (30mm x 40mm) for Barcode Label Printer 1000 sticker</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\">Printer Paper</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll (30mm x 40mm) for Barcode Label Printer 1000 sticker has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (30mm x 40mm)</li><li>350 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 30mm x 40mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (30mm x 40mm)",
+      "warranty": "No Warranty",
+      "basePrice": 280.0,
+      "originalPrice": 308.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-38857",
+          "price": 280.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 268.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-30mm-40mm-for-barcode-label-printer",
+      "sourceProductCode": "38857",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (30mm x 40mm)",
+        "350 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 30mm x 40mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-30mm-40mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-30mm-40mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-30mm-40mm-for-barcode-label-printer",
+        "candidateTitle": "Paper Roll (30mm x 40mm) for Barcode Label Printer 1000 sticker",
+        "attemptStem": "paper-roll-30mm-40mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "Paper Roll (38mm x 25mm) for Barcode Label Printer 1000 sticker",
+      "slug": "paper-roll-38mm-25mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-34669",
+      "description": "<h2>Paper Roll (38mm x 25mm) for Barcode Label Printer 1000 sticker</h2><p>The Paper Roll (38mm x 25mm) for Barcode Label Printers is an indispensable tool for businesses seeking efficient and reliable label printing solutions. With each roll containing 1000 high-quality white self-adhesive stickers, specifically tailored for barcode labeling, it guarantees seamless integration with most barcode label printers. Measuring 38mm x 25mm, these labels are versatile, catering to a variety of labeling needs across industries. Crafted with durability in mind, they boast features such as smudge-free, fade-resistant, and scratch-free properties, ensuring clear and legible barcode prints. Ideal for applications in inventory management, retail, shipping, and logistics, these labels offer cost-effectiveness and convenience. Their compatibility with standard barcode printing software simplifies usage, while their compliance with industry standards assures accurate scanning and tracking of products or assets. Whether in warehouses, retail stores, offices, or other business environments, these labels stand out for their performance, efficiency, and reliability.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy Paper Roll (38mm x 25mm) for Barcode Label Printer 1000 sticker from Star Tech</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Paper Roll (38mm x 25mm) for Barcode Label Printer 1000 sticker</span> From Star Tech. We have a large collection of latest Barcode stickers to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll 38mm x 25mm for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (38mm x 25mm)</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 38mm x 25mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (38mm x 25mm)",
+      "warranty": "No Warranty",
+      "basePrice": 380.0,
+      "originalPrice": 418.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34669",
+          "price": 380.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 364.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-38mm-25mm-for-barcode-label-printer",
+      "sourceProductCode": "34669",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (38mm x 25mm)",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 38mm x 25mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-38mm-25mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-38mm-25mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-38mm-25mm-for-barcode-label-printer",
+        "candidateTitle": "Paper Roll (38mm x 25mm) for Barcode Label Printer 1000 sticker",
+        "attemptStem": "paper-roll-38mm-25mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "Paper Roll (4 x 6 Inch) for Barcode Label Printer 350 sticker",
+      "slug": "paper-roll-4-x-6-inch-for-barcode-printer-350-sticker",
+      "type": "PHYSICAL",
+      "sku": "ST-40135",
+      "description": "<h2>Paper Roll (4 x 6 Inch) for Barcode Label Printer 350 sticker</h2><p>The Paper Roll (4 x 6 Inch) for Barcode Label Printer 350 sticker is smudge-free and fade-resistant. Create UPC barcode labels that are securely attached to almost any surface by printing them darker and sharper. You may be certain that your letter will arrive securely since these labels are ideal for FBA and return addresses. To make address shipping labels for packages, envelopes, hardware, CDs or disc labels, barcode SKU labels, racking labels, or file labeling for office organization, utilize direct thermal barcode address replacement labels.</p><h2>Buy Paper Roll (4 x 6 Inch) for Barcode Label Printer 350 sticker from Star Tech</h2><p>In Bangladesh, you can get original <strong>Paper Roll (4 x 6 Inch) for Barcode Label Printer 350 sticker</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\" target=\"\">Printer Paper</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll (4 x 6 Inch) for Barcode Label Printer 350 sticker comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Barcode sticker</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker: 4 x 6 inches</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Barcode sticker",
+      "warranty": "no warranty",
+      "basePrice": 1100.0,
+      "originalPrice": 1210.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-40135",
+          "price": 1100.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1056.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Barcode sticker",
+              "position": 0
+            },
+            {
+              "label": "Barcode Label Sticker",
+              "value": "4 x 6 inches",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-4-x-6-inch-for-barcode-printer-350-sticker",
+      "sourceProductCode": "40135",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Barcode sticker",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker: 4 x 6 inches",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-4-x-6-inch-for-barcode-printer-350-sticker.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-4-x-6-inch-for-barcode-printer-350-sticker.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-4-x-6-inch-for-barcode-printer-350-sticker",
+        "candidateTitle": "Paper Roll (4 x 6 Inch) for Barcode Label Printer 350 sticker",
+        "attemptStem": "paper-roll-4-x-6-inch-for-barcode-printer-350-sticker"
+      }
+    },
+    {
+      "name": "Paper Roll (40mm x 10mm) for Barcode Label Printer 5000 sticker",
+      "slug": "paper-roll-40mm-10mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-34718",
+      "description": "<h2>Paper Roll (40mm x 10mm) for Barcode Label Printer 5000 sticker</h2><p>The Paper Roll (40mm x 10mm) is precisely developed for Barcode Label Printers, with an exceptional capacity of 5000 stickers per roll, assuring long-term efficiency and little downtime. Each label has a clean white self-adhesive surface that is designed for easy placement on a range of surfaces. The Barcode Label Stickers are specifically intended for multipurpose barcode printing needs, measuring 40mm x 10mm and giving adequate room for encoding crucial information required for inventory control, shipping logistics, and more. These precision-crafted labels provide smudge-free, fade-resistant, and scratch-free performance, ensuring data integrity and readability even in demanding conditions. These labels' multifunctional design makes them important assets for a variety of applications, including shipping labels, box labels, asset monitoring, and more, assuring simpler operations and increased efficiency across sectors. Whether in warehouse management or retail, these labels are reliable and high-quality, providing a low-cost option for streamlined business processes.</p><h2>Buy Paper Roll (40mm x 10mm) for Barcode Label Printer 5000 sticker from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Paper Roll (40mm x 10mm) for Barcode Label Printer 5000 sticker</span><span style=\"font-weight: bold;\">sticker</span> From Star Tech. We have a large collection of latest Barcode stickers to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll (40mm x 10mm) for Barcode Label Printer 5000 sticker has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (40mm x 10mm)</li><li>350 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 100mm x 150mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (40mm x 10mm)",
+      "warranty": "No Warranty",
+      "basePrice": 1600.0,
+      "originalPrice": 1760.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34718",
+          "price": 1600.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1536.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Page Yield",
+              "value": "5000 Sticker",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-40mm-10mm-for-barcode-label-printer",
+      "sourceProductCode": "34718",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (40mm x 10mm)",
+        "350 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 100mm x 150mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-40mm-10mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-40mm-10mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-40mm-10mm-for-barcode-label-printer",
+        "candidateTitle": "Paper Roll (40mm x 10mm) for Barcode Label Printer 5000 sticker",
+        "attemptStem": "paper-roll-40mm-10mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "Paper Roll (40mm x 60mm) for Barcode Label Printer 1000 sticker",
+      "slug": "paper-roll-40mm-60mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-38885",
+      "description": "<h2>Paper Roll (40mm x 60mm) for Barcode Label Printer 1000 sticker</h2>\n<p>The <strong>Paper Roll (40mm x 60mm) </strong>is precisely developed for Barcode Label Printers, with an exceptional capacity of 1000 stickers per roll, assuring long-term efficiency and little downtime. Each label has a clean white self-adhesive surface that is designed for easy placement on a range of surfaces. The Barcode Label Stickers are specifically intended for multipurpose barcode printing needs, measuring 40mm x 60mm and giving adequate room for encoding crucial information required for inventory control, shipping logistics, and more. These precision-crafted labels provide smudge-free, fade-resistant, and scratch-free performance, ensuring data integrity and readability even in demanding conditions. These labels' multifunctional design makes them important assets for a variety of applications, including shipping labels, box labels, asset monitoring, and more, assuring simpler operations and increased efficiency across sectors. Whether in warehouse management or retail, these labels are reliable and high-quality, providing a low-cost option for streamlined business processes.</p>\n<h2>Buy Paper Roll (40mm x 60mm) for Barcode Label Printer 1000 sticker from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Paper Roll (40mm x 60mm) for Barcode Label Printer 1000 sticker</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/printer-paper\">Printer Paper</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll (40mm x 60mm) for Barcode Label Printer 1000 sticker has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (40mm x 60mm)</li><li>350 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - (40mm x 60mm)</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (40mm x 60mm)",
+      "warranty": "No Warranty",
+      "basePrice": 320.0,
+      "originalPrice": 352.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-38885",
+          "price": 320.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 307.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-40mm-60mm-for-barcode-label-printer",
+      "sourceProductCode": "38885",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (40mm x 60mm)",
+        "350 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - (40mm x 60mm)",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-40mm-60mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-40mm-60mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-40mm-60mm-for-barcode-label-printer",
+        "candidateTitle": "Paper Roll (40mm x 60mm) for Barcode Label Printer 1000 sticker",
+        "attemptStem": "paper-roll-40mm-60mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "Paper Roll (45mm x 35mm) for Barcode Label Printer 1000 sticker",
+      "slug": "paper-roll-45mm-35mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-34678",
+      "description": "<h2>Paper Roll (45mm x 35mm) for Barcode Label Printer 1000 sticker</h2><p>The Paper Roll 45mm x 35mm for Barcode Label Printer is meticulously crafted to meet your labeling needs with precision and reliability. Each roll boasts dimensions of 45mm x 35mm and contains a generous supply of 1000 labels, ensuring you have an ample quantity to tackle your labeling tasks efficiently. These labels are expertly manufactured from premium-quality paper, selected for their durability and suitability for various environments, guaranteeing that your labels will withstand the rigors of everyday use. These stickers offer a clear surface for printing your barcode and other important information because of their brilliant white finish. Applying the self-adhesive backing to a variety of surfaces from product packaging to shipping boxes is a breeze, which expedites the labeling process and helps you save time and effort. These labels, which are specifically made for barcode printing, provide easy scanning and inventory management, assisting you in keeping correct records and streamlining your business processes. they are strengthened with qualities that prevent smudging, fading, and scratching, guaranteeing that your labels will stay readable and clear over time even in harsh situations. Versatility is at the core of our barcode label stickers, making them suitable for a wide range of applications including retail, logistics, inventory management, and more. Whether you're labeling products for sale, tracking inventory in a warehouse, or organizing shipments for delivery, these labels deliver unmatched performance and reliability, making them an indispensable asset for businesses of all sizes. With our Paper Roll for Barcode Label Printer, you can trust that your labeling needs are met with uncompromising quality and precision, every time.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>Paper Roll (45mm x 35mm) for Barcode Label Printer 1000 sticker<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Paper Roll (</span><span style=\"font-weight: 700;\">45mm </span><span style=\"font-weight: bold;\">x 35mm) for Barcode Label Printer 1000 sticker</span> From Star Tech. We have a large collection of latest Barcode stickers to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll 45mm x 35mm for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (45mm x 35mm)</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 45mm x 35mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (45mm x 35mm)",
+      "warranty": "No Warranty",
+      "basePrice": 480.0,
+      "originalPrice": 528.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34678",
+          "price": 480.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 460.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-45mm-35mm-for-barcode-label-printer",
+      "sourceProductCode": "34678",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (45mm x 35mm)",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 45mm x 35mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-45mm-35mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-45mm-35mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-45mm-35mm-for-barcode-label-printer",
+        "candidateTitle": "Paper Roll (45mm x 35mm) for Barcode Label Printer 1000 sticker",
+        "attemptStem": "paper-roll-45mm-35mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "Paper Roll (50mm x 25mm) for Barcode Label Printer 1000 sticker",
+      "slug": "paper-roll-50mm-25mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-34677",
+      "description": "<h2>Paper Roll (50mm x 25mm) for Barcode Label Printer 1000 sticker</h2><p>The Paper Roll (50 x 25 mm) for Barcode Label Printers is a vital tool for businesses searching for trustworthy and efficient label printing solutions. Because each roll comprises 1000 quality white self-adhesive stickers made specifically for barcode labeling, it guarantees seamless interaction with the majority of barcode label printers. These labels, which are 50 mm by 25 mm, are flexible and may be applied to a variety of labeling tasks across several industries. Their durable construction ensures clear, legible barcode prints by avoiding fading, smearing, and scratches. These labels provide affordability and ease, making them perfect for use in inventory management, retail, shipping, and logistics applications. Their adherence to industry standards ensures precise scanning and tracking of items or assets, and their interoperability with standard barcode printing software makes them easy to use. These labels are notable for their effectiveness, dependability, and performance whether they are used in offices, retail establishments, warehouses, or other commercial settings.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy Paper Roll (</span>50mm <span style=\"color: inherit; font-family: inherit;\">x 25mm) for Barcode Label Printer 1000 sticker from Star Tech</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Paper Roll (</span><span style=\"font-weight: 700;\">50mm </span><span style=\"font-weight: bold;\">x 25mm) for Barcode Label Printer 1000 sticker</span> From Star Tech. We have a large collection of latest Barcode stickers to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll 50mm x 25mm for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (50mm x 25mm)</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 50mm x 25mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (50mm x 25mm)",
+      "warranty": "No Warranty",
+      "basePrice": 450.0,
+      "originalPrice": 495.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34677",
+          "price": 450.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 432.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-50mm-25mm-for-barcode-label-printer",
+      "sourceProductCode": "34677",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (50mm x 25mm)",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 50mm x 25mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-50mm-25mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-50mm-25mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-50mm-25mm-for-barcode-label-printer",
+        "candidateTitle": "Paper Roll (50mm x 25mm) for Barcode Label Printer 1000 sticker",
+        "attemptStem": "paper-roll-50mm-25mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "Paper Roll (55mm x 30mm) for Barcode Label Printer 1000 sticker",
+      "slug": "paper-roll-55mm-30mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-34687",
+      "description": "<h2>Paper Roll (55mm x 30mm) for Barcode Label Printer 1000 sticker</h2><p>The Paper Roll 55mm x 30mm for Barcode Label Printer is meticulously crafted to meet your labeling needs with precision and reliability. Each roll boasts dimensions of 55mm x 30mm and contains a generous supply of 1000 labels, ensuring you have an ample quantity to tackle your labeling tasks efficiently. These labels are expertly manufactured from premium-quality paper, selected for their durability and suitability for various environments, guaranteeing that your labels will withstand the rigors of everyday use. These stickers offer a clear surface for printing your barcode and other important information because of their brilliant white finish. Applying the self-adhesive backing to a variety of surfaces from product packaging to shipping boxes is a breeze, which expedites the labeling process and helps you save time and effort. These labels, which are specifically made for barcode printing, provide easy scanning and inventory management, assisting you in keeping correct records and streamlining your business processes. they are strengthened with qualities that prevent smudging, fading, and scratching, guaranteeing that your labels will stay readable and clear over time even in harsh situations. Versatility is at the core of our barcode label stickers, making them suitable for a wide range of applications including retail, logistics, inventory management, and more. Whether you're labeling products for sale, tracking inventory in a warehouse, or organizing shipments for delivery, these labels deliver unmatched performance and reliability, making them an indispensable asset for businesses of all sizes. With our Paper Roll for Barcode Label Printer, you can trust that your labeling needs are met with uncompromising quality and precision, every time.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>Paper Roll (55mm x 30mm) for Barcode Label Printer 1000 sticker<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Paper Roll (</span><span style=\"font-weight: 700;\">55mm </span><span style=\"font-weight: bold;\">x </span><span style=\"font-weight: 700;\">30mm</span><span style=\"font-weight: bold;\">) for Barcode Label Printer 1000 sticker</span> From Star Tech. We have a large collection of latest Barcode stickers to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll 55mm x 30mm for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (55mm x 30mm)</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 55mm x 30mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (55mm x 30mm)",
+      "warranty": "No Warranty",
+      "basePrice": 500.0,
+      "originalPrice": 550.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34687",
+          "price": 500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-55mm-30mm-for-barcode-label-printer",
+      "sourceProductCode": "34687",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (55mm x 30mm)",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 55mm x 30mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-55mm-30mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-55mm-30mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-55mm-30mm-for-barcode-label-printer",
+        "candidateTitle": "Paper Roll (55mm x 30mm) for Barcode Label Printer 1000 sticker",
+        "attemptStem": "paper-roll-55mm-30mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "Paper Roll (75mm x 100mm) for Barcode Label Printer 500 sticker",
+      "slug": "paper-roll-75mm-100mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-34716",
+      "description": "<h2>Paper Roll (75mm x 100mm) for Barcode Label Printer 500 sticker</h2><p>The Paper Roll 75mm x 100mm for Barcode Label Printer has been meticulously crafted to meet your labeling needs consistently and accurately. With rolls measuring 75 x 50 mm and a whopping 500 labels each roll, you'll always have enough to complete your labeling tasks swiftly. Your labels will withstand the demands of everyday use owing to the expert manufacture of these labels from premium-quality paper, which was chosen for its flexibility and durability in a range of environments. The stunning white sheen of these stickers provides a clean surface for printing your barcode and other important information. The self-adhesive backing is simple to attach to a variety of surfaces, including shipping boxes and product packaging, which speeds up labeling. These labels, specifically developed for barcode printing, provide simple inventory management and scanning, allowing you to keep accurate records and streamline your business operations. They are strengthened with qualities that prevent fading, smearing, and scratching, guaranteeing that your labels stay clear and readable over time—even under adverse conditions. Our barcode label stickers' key characteristic is their adaptability, making them suitable for a wide range of applications in industries such as retail, transportation, inventory control, and more. These labels offer unsurpassed performance and dependability, making them an essential tool for businesses of all sizes, whether they are identifying items for sale, tracking inventory in a warehouse, or arranging shipments for delivery. You can count on us to constantly satisfy your labeling requirements with unshakable quality and precision.</p><h2>Buy Paper Roll (75mm x 100mm) for Barcode Label Printer 500 sticker from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Paper Roll (75mm x 100mm) for Barcode Label Printer </span><span style=\"font-weight: 700;\">500 </span><span style=\"font-weight: bold;\">sticker</span> From Star Tech. We have a large collection of latest Barcode stickers to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll (75mm x 100mm) for Barcode Label Printer 500 sticker has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (75mm x 100mm)</li><li>500 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 75mm x 100mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (75mm x 100mm)",
+      "warranty": "No Warranty",
+      "basePrice": 650.0,
+      "originalPrice": 715.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34716",
+          "price": 650.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 624.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Page Yield",
+              "value": "500 Sticker",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-75mm-100mm-for-barcode-label-printer",
+      "sourceProductCode": "34716",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (75mm x 100mm)",
+        "500 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 75mm x 100mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-75mm-100mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-75mm-100mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-75mm-100mm-for-barcode-label-printer",
+        "candidateTitle": "Paper Roll (75mm x 100mm) for Barcode Label Printer 500 sticker",
+        "attemptStem": "paper-roll-75mm-100mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "Paper Roll (75mm x 50mm) for Barcode Label Printer 1000 sticker",
+      "slug": "paper-roll-75mm-50mm-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-34691",
+      "description": "<h2>Paper Roll (75mm x 50mm) for Barcode Label Printer 1000 sticker</h2><p>The Paper Roll 75mm x 50mm for Barcode Label Printer has been painstakingly designed to reliably and precisely fulfill your labeling requirements. With rolls that measure 75 x 50 mm and a hefty 1000 labels per roll, you will always have enough to do your labeling duties quickly. Your labels will resist the demands of daily usage thanks to the skillful manufacturing of these labels from premium-quality paper that was chosen for its adaptability and durability in a variety of conditions. The dazzling white gloss of these stickers provides a clean surface on which to print your barcode and other vital information. The self-adhesive backing is easy to apply to a range of surfaces, including shipping boxes and product packaging, which speeds up the labeling process and saves. These labels, designed especially for barcode printing, offer simple inventory management and scanning, helping you to maintain accurate records and optimize your company procedures. They are reinforced with properties that resist fading, smearing, and scratching, ensuring that your labels will remain clear and readable over time—even under challenging circumstances. Our barcode label stickers' main feature is their versatility, which makes them appropriate for a variety of uses in industries including retail, shipping, inventory control, and more. These labels provide unrivaled performance and dependability, making them a vital tool for companies of all kinds, whether you're marking goods for sale, managing inventory in a warehouse, or planning shipments for delivery. You can rely on us to consistently meet your labeling demands with unwavering quality and precision when you use our Paper Roll for Barcode Label Printer.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy Paper Roll (</span>75mm <span style=\"color: inherit; font-family: inherit;\">x </span>50mm<span style=\"color: inherit; font-family: inherit;\">) for Barcode Label Printer 1000 sticker from Star Tech</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Paper Roll (</span><span style=\"font-weight: 700;\">75mm </span><span style=\"font-weight: bold;\">x </span><span style=\"font-weight: 700;\">50mm</span><span style=\"font-weight: bold;\">) for Barcode Label Printer 1000 sticker</span> From Star Tech. We have a large collection of latest Barcode stickers to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll 75mm x 50mm for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (75mm x 50mm)</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 75mm x 50mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (75mm x 50mm)",
+      "warranty": "No Warranty",
+      "basePrice": 950.0,
+      "originalPrice": 1045.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34691",
+          "price": 950.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 912.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-75mm-50mm-for-barcode-label-printer",
+      "sourceProductCode": "34691",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (75mm x 50mm)",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 75mm x 50mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-75mm-50mm-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-75mm-50mm-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-75mm-50mm-for-barcode-label-printer",
+        "candidateTitle": "Paper Roll (75mm x 50mm) for Barcode Label Printer 1000 sticker",
+        "attemptStem": "paper-roll-75mm-50mm-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "MaxGreen 80mm x 45m (3-2 inch) Thermal POS Paper Roll",
+      "slug": "paper-roll-80mm-45m-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37628",
+      "description": "<h2>MaxGreen 80mm x 45m (3-2 inch) Thermal POS Paper Roll</h2><p>The MaxGreen 80mm x 45m (3-2 inch) Thermal POS Paper Roll is vital for businesses searching for trustworthy and efficient label printing solutions. These pos paper, which are 80 mm by 45 mm, are flexible and may be applied to a variety of labeling tasks across several industries. Their durable construction ensures clear, legible barcode prints, avoiding fading, smearing, and scratches. These POS papers provide affordability and ease, making them perfect for use in inventory management, retail, shipping, and logistics applications. Their adherence to industry standards ensures precise scanning and tracking of items or assets, and their interoperability with standard barcode printing software makes them easy to use. These pos printer paper are notable for their effectiveness, dependability, and performance, whether they are used in offices, retail establishments, warehouses, or other commercial settings.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>MaxGreen 80mm x 45m (3-2 inch) Thermal POS Paper Roll<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">MaxGreen 80mm x 45m (3-2 inch) Thermal POS Paper Roll</span> From Star Tech. We have a large collection of latest Barcode stickers to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll 80mm x 45m for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (80mm x 45m)</li><li>Premium-Quality Paper</li><li>Clear Printing and Strong Stability</li><li>Paper Size: 80mm x 45m</li><li>Compatible with Thermal POS, Billing &amp; Receipt Printer</li></ul>",
+      "model": "Paper Roll (80mm x 45m)",
+      "warranty": null,
+      "basePrice": 200.0,
+      "originalPrice": 220.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MaxGreen",
+      "variantOptions": [
+        {
+          "name": "Paper Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "80mm x 45m",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-37628",
+          "price": 200.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Paper Size": "80mm x 45m"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 192.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Paper Roll (80mm x 45m)",
+              "position": 0
+            },
+            {
+              "label": "Paper Size",
+              "value": "80mm x 45m",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-80mm-45m-for-barcode-label-printer",
+      "sourceProductCode": "37628",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (80mm x 45m)",
+        "Premium-Quality Paper",
+        "Clear Printing and Strong Stability",
+        "Paper Size: 80mm x 45m",
+        "Compatible with Thermal POS, Billing & Receipt Printer"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-80mm-45m-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-80mm-45m-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-80mm-45m-for-barcode-label-printer",
+        "candidateTitle": "MaxGreen 80mm x 45m (3-2 inch) Thermal POS Paper Roll",
+        "attemptStem": "paper-roll-80mm-45m-for-barcode-label-printer"
+      }
+    },
+    {
+      "name": "Paper Roll 80mm x 45mm for Barcode Label Printer 1000 sticker",
+      "slug": "paper-roll-80mm-45mm-for-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-37644",
+      "description": "<h2>Paper Roll 80mm x 45mm for Barcode Label Printer 1000 sticker</h2><p>The Paper Roll 80mm x 45mm for Barcode Label Printer 1000 sticker is vital for businesses searching for trustworthy and efficient label printing solutions. Because each roll comprises 1000 quality white self-adhesive stickers made specifically for barcode labeling, it guarantees seamless interaction with most barcode label printers. These labels, which are 80 mm by 45 mm, are flexible and may be applied to a variety of labeling tasks across several industries. Their durable construction ensures clear, legible barcode prints, avoiding fading, smearing, and scratches. These labels provide affordability and ease, making them perfect for use in inventory management, retail, shipping, and logistics applications. Their adherence to industry standards ensures precise scanning and tracking of items or assets, and their interoperability with standard barcode printing software makes them easy to use. These labels are notable for their effectiveness, dependability, and performance whether they are used in offices, retail establishments, warehouses, or other commercial settings.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>Paper Roll 80mm x 45mm for Barcode Label Printer 1000 sticker<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Paper Roll 80mm x 45mm for Barcode Label Printer 1000 sticker</span> From Star Tech. We have a large collection of latest Barcode stickers to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll 80mm x 45mm for Barcode Label Printer has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Paper Roll (80mm x 45mm)</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 80mm x 45mm</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Paper Roll (80mm x 45mm)",
+      "warranty": "No Warranty",
+      "basePrice": 480.0,
+      "originalPrice": 528.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37644",
+          "price": 480.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 460.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Page Yield",
+              "value": "1000 Sticker",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-80mm-45mm-for-label-printer",
+      "sourceProductCode": "37644",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Paper Roll (80mm x 45mm)",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 80mm x 45mm",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-80mm-45mm-for-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-80mm-45mm-for-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-80mm-45mm-for-label-printer",
+        "candidateTitle": "Paper Roll 80mm x 45mm for Barcode Label Printer 1000 sticker",
+        "attemptStem": "paper-roll-80mm-45mm-for-label-printer"
+      }
+    },
+    {
+      "name": "Paper Roll (4\"X2\") for Barcode Label Printer 1000 sticker",
+      "slug": "paper-roll-for-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-29935",
+      "description": "<h2>Paper Roll (4\"X2\") for Barcode Label Printer 1000 sticker</h2><p>Paper Roll (4\"X2\") for Barcode Label Printer 1000 sticker is smudge-free and fade-resistant. Create UPC barcode labels that are securely attached to almost any surface by printing them darker and sharper. You may be certain that your letter will arrive securely since these labels are ideal for FBA and return addresses. To make address shipping labels for packages, envelopes, hardware, CDs or disc labels, barcode SKU labels, racking labels, or file labeling for office organization, utilize direct thermal barcode address replacement labels.</p><h2>Buy Paper Roll (4\"X2\") for Barcode Label Printer 1000 sticker from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/paper-roll-for-barcode-label-printer\" target=\"\">Paper Roll (4\"X2\") for Barcode Label Printer 1000 sticker</a> From Star Tech. We have a large collection of latest Barcode sticker to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Paper Roll (4\"X2\") for Barcode Label Printer 1000 sticker comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Barcode sticker</li><li>1000 Labels Per Roll</li><li>White Self Adhesive Sticker</li><li>Barcode Label Sticker - 4 x 2 inches</li><li>Smudge-Free, Fade-Resistant, Scratch Free</li></ul>",
+      "model": "Barcode sticker",
+      "warranty": "no warranty",
+      "basePrice": 850.0,
+      "originalPrice": 935.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29935",
+          "price": 850.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 816.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Barcode sticker",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/paper-roll-for-barcode-label-printer",
+      "sourceProductCode": "29935",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Barcode sticker",
+        "1000 Labels Per Roll",
+        "White Self Adhesive Sticker",
+        "Barcode Label Sticker - 4 x 2 inches",
+        "Smudge-Free, Fade-Resistant, Scratch Free"
+      ],
+      "needsReview": false,
+      "categorySlug": "printer-paper",
+      "image": "/images/products/office-equipment/printer-paper/_direct/paper-roll-for-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/printer-paper/_direct/paper-roll-for-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "paper-roll-for-barcode-label-printer",
+        "candidateTitle": "Paper Roll (4\"X2\") for Barcode Label Printer 1000 sticker",
+        "attemptStem": "paper-roll-for-barcode-label-printer"
+      }
+    }
+  ]
+}

@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/office-equipment",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\office-equipment",
+    "generatedAtUnix": 1790587585,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Office Equipment",
+      "slug": "office-equipment",
+      "parentSlug": null,
+      "image": "/images/products/office-equipment/barcode-scanner/deli/deli-14952w-handheld-barcode-scanner.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Digital Weight Machine",
+      "slug": "digital-weight-machine",
+      "parentSlug": "office-equipment",
+      "image": "/images/products/office-equipment/digital-weight-machine/_direct/rongta-rls1100c-electronic-weighing-scale.png",
+      "isActive": true,
+      "sortOrder": 5,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "RONGTA",
+      "slug": "rongta",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Rongta RLS1100C 30kg Electronic Weighing Scale",
+      "slug": "rongta-rls1100c-electronic-weighing-scale",
+      "type": "PHYSICAL",
+      "sku": "ST-34956",
+      "description": "<h2>Rongta RLS1100C 30kg Electronic Weighing Scale</h2><p>The Rongta <strong>RLS1100C</strong> Electronic Weighing Scale is a reliable and feature-rich solution developed to suit the different demands of organizations across sectors. With an amazing maximum capacity of 30kg and a minimum precision of 100g, this scale provides precise and trustworthy measures for a broad range of products, from small packages to large commodities. The scale's LED display shows clear and easy-to-read weight readings even in low-light conditions, increasing efficiency and accuracy during use. One of the RLS1100C's noteworthy characteristics is its enormous data storage capacity, which can hold up to 10,000 PLU (Price Look-Up) codes. This enables organizations to easily maintain and arrange product information, streamlining inventory management and pricing chores. Furthermore, the RLS1100C scale allows for the development of up to 112 hotkeys, which provide rapid access to commonly used objects or tasks, hence increasing efficiency in hectic work conditions. The RLS1100C provides numerous connectivity choices to meet a variety of integration requirements, including optional RS232 and TCP/IP interfaces. This allows for smooth connection and data transmission between the RLS1100C scale and other devices or systems, such as POS (Point of Sale) terminals or inventory management software, resulting in more effective data management and analysis. The RLS1100C, with its small dimensions (Length: 437mm, Width: 372mm, Height: 523mm) and universal power supply (AC100~240V, 50/60Hz), is ideal for a variety of situations, including retail stores and warehouses. Furthermore, the scale supports customizable paper sizes ranging from 30mm to 60mm in width, as well as variable outer and inner diameters, enabling compatibility with a wide range of printing needs. Whether you run a retail store, a logistics center, or a manufacturing facility, the Rongta RLS1100C Electronic Weighing Scale provides unrivaled performance, dependability, and customization to fulfill your business requirements. With its extensive capabilities and user-friendly design, this scale is an excellent tool for improving workflow efficiency and productivity in any workplace.</p><h2> Buy Rongta RLS1100C 30kg Electronic Weighing Scale from Star Tech</h2><p>In Bangladesh, you can get original <strong>Rongta RLS1100C 30kg Electronic Weighing Scale</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/gadget/daily-lifestyle\" target=\"\">Daily Lifestyle</a> products to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Rongta RLS1100C 30kg Electronic Weighing Scale comes with 1 year service warranty only.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: RLS1100C</li><li>Display: Two Line LCD 256*32 dot matrix</li><li>Power Supply: 110-220V(AC)</li><li>Capacity: Max 30KG, Min (100g ~40)mm</li><li>Data Storage: Store 10000PLU</li></ul>",
+      "model": "RLS1100C",
+      "warranty": "1 year service warranty only",
+      "basePrice": 48000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 437.0,
+        "width": 372.0,
+        "height": 523.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "RONGTA",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-34956",
+          "price": 48000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 46080.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Power",
+              "value": "AC100~240V,50/60Hz",
+              "position": 0
+            },
+            {
+              "label": "Operating Interface",
+              "value": "RS232 or TCP/IP optional",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Capacity: Max 30KG, Min (100g ~40)mm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "437mm*372mm*523mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year service warranty only",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/rongta-rls1100c-electronic-weighing-scale",
+      "sourceProductCode": "34956",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: RLS1100C",
+        "Display: Two Line LCD 256*32 dot matrix",
+        "Power Supply: 110-220V(AC)",
+        "Capacity: Max 30KG, Min (100g ~40)mm",
+        "Data Storage: Store 10000PLU"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-weight-machine",
+      "image": "/images/products/office-equipment/digital-weight-machine/_direct/rongta-rls1100c-electronic-weighing-scale.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/digital-weight-machine/_direct/rongta-rls1100c-electronic-weighing-scale.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "rongta-rls1100c-electronic-weighing-scale",
+        "candidateTitle": "Rongta RLS1100C 30kg Electronic Weighing Scale",
+        "attemptStem": "rongta-rls1100c-electronic-weighing-scale"
+      }
+    }
+  ]
+}

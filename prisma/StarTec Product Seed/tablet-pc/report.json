@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/tablet-pc",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\tablet-pc",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\tablet-pc",
+  "imagesFound": 110,
+  "uniqueProductStems": 110,
+  "productsInJson": 110,
+  "matchedProducts": 110,
+  "unmatchedProducts": 0,
+  "imageCoverage": 110,
+  "jsonGroupFiles": 4,
+  "matchMethods": {
+    "direct-slug": 110
+  },
+  "jsonGenerationTimeSeconds": 54.03,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 110,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\tablet-pc\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\tablet-pc\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\tablet-pc\\unmatched.json"
+  },
+  "seedTimeSeconds": 4.05
+}

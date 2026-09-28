@@ -1,0 +1,1458 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\networking",
+    "generatedAtUnix": 1790590909,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Networking",
+      "slug": "networking",
+      "parentSlug": null,
+      "image": "/images/products/networking/firewall/sonicwall-nsa-2700-16-port-firewall.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Media Converter",
+      "slug": "media-converter",
+      "parentSlug": "networking",
+      "image": "/images/products/networking/media-converter/cote/cote-cmc-ge-media-converter.png",
+      "isActive": true,
+      "sortOrder": 7,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Cote",
+      "slug": "cote",
+      "logo": null
+    },
+    {
+      "name": "D-Link",
+      "slug": "d-link",
+      "logo": null
+    },
+    {
+      "name": "TP-Link",
+      "slug": "tp-link",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "COTE CMC-GE 10/100/1000Mbps Gigabit Media Converter",
+      "slug": "cote-cmc-ge-media-converter",
+      "type": "PHYSICAL",
+      "sku": "ST-45940",
+      "description": "<h2>COTE CMC-GE 10/100/1000Mbps Gigabit Media Converter</h2><p>The COTE <strong>CMC-GE</strong> Gigabit <a href=\"https://www.startech.com.bd/media-converter\" style=\"color: rgb(0, 0, 0);\" target=\"\">Media Converter</a> is a reliable networking device that enables smooth data transmission and efficient Ethernet connection expansion. This COTE CMC-GE Media Converter features a 10/100/1000Mbps port with full and half duplex auto-negotiation, guaranteeing optimal compatibility and performance in a variety of network scenarios. It automatically detects MDI/MDI-X cross lines, eliminating the need for crossover wires and simplifying configuration. The COTE CMC-GE guarantees smooth and steady data transfer even during peak network traffic thanks to full-duplex back-pressure flow management. Its converter mode with auto-change-forward (switch) feature automatically selects the best forwarding mode for optimal performance. With a UTP RJ-45 connection interface, the COTE CMC-GE Gigabit Media Converter provides dependable and adaptable access for both residential and corporate networks. Whether you want quick data transmission, simple installation, or trustworthy performance, the COTE CMC-GE Media Converter is the best option for establishing stable and high-speed Gigabit Ethernet connections.</p><h2>Buy D-Link HTB-3100 Fiber Optic Media Converter from Star Tech</h2><p>In Bangladesh, you can get original <strong>COTE CMC-GE 10/100/1000Mbps Gigabit Media Converter</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cote-media-converter\" target=\"\">COTE Media Converter</a> to purchase. Order Online or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The COTE CMC-GE 10/100/1000Mbps Gigabit Media Converter comes with 01 Year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CMC-GE</li><li>Automatic identification of MDI/MDI-X cross line</li><li>10/100/1000Mbps port with full/half duplex auto-negotiation</li><li>Back-pressure flow control for full duplex</li><li>Converter mode with auto-change-forward (Switch) function</li></ul>",
+      "model": "CMC-GE",
+      "warranty": "01-Year",
+      "basePrice": 3550.0,
+      "originalPrice": 3650.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Cote",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "Connector: UTP RJ-45",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-45940",
+          "price": 3550.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "Connector: UTP RJ-45"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3408.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Port",
+              "value": "10/100/1000Mbps port",
+              "position": 0
+            },
+            {
+              "label": "Advanced Functions",
+              "value": "Automatic identification of MDI/MDI-X cross line 10/100/1000Mbps port with full/half duplex auto-negotiation Back-pressure flow control for full duplex Converter mode with auto-change-forward (Switch) function",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "Connector: UTP RJ-45",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cote-cmc-ge-media-converter",
+      "sourceProductCode": "45940",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CMC-GE",
+        "Automatic identification of MDI/MDI-X cross line",
+        "10/100/1000Mbps port with full/half duplex auto-negotiation",
+        "Back-pressure flow control for full duplex",
+        "Converter mode with auto-change-forward (Switch) function"
+      ],
+      "needsReview": false,
+      "categorySlug": "media-converter",
+      "image": "/images/products/networking/media-converter/cote/cote-cmc-ge-media-converter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/media-converter/cote/cote-cmc-ge-media-converter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cote-cmc-ge-media-converter",
+        "candidateTitle": "COTE CMC-GE 10/100/1000Mbps Gigabit Media Converter",
+        "attemptStem": "cote-cmc-ge-media-converter"
+      }
+    },
+    {
+      "name": "COTE CMCC-14 MC Chassis",
+      "slug": "cote-cmcc-14-mc-chassis",
+      "type": "PHYSICAL",
+      "sku": "ST-49887",
+      "description": "<h2>COTE CMCC-14 MC Chassis</h2><p>The <strong>COTE CMCC-14 MC chassis</strong> is designed for structured media converter management in professional environments. COTE CMCC-14 MC features a 14-slot configuration, supporting multiple converters with seamless plug-and-play installation. COTE CMCC-14 MC is built with a high-quality 19\" rack-mountable design, ensuring secure placement in data centers. Two integrated fans provide effective cooling, maintaining hardware performance under continuous operation. The chassis supplies both converters and power modules, simplifying integration and reducing downtime. Its black finish adds a sleek look while supporting easy monitoring and placement. COTE CMCC-14 MC delivers reliable performance for demanding networking setups. The COTE CMCC-14 MC offers strong functionality for organizations requiring scalable media conversion solutions. The chassis supports efficient airflow and consistent energy distribution, ensuring long-term stability. Its rack-mountable design saves space while maintaining accessibility. The plug-and-play capability reduces installation complexity, supporting quick deployment in enterprise networks. Built-in cooling enhances durability, protecting sensitive components during extended use. The chassis is crafted for professional environments where structured connectivity is essential. With its streamlined design and robust build, COTE CMCC-14 MC ensures smooth integration into modern IT infrastructures, supporting growth and adaptability in networking operations.</p><h2>Buy D-Link HTB-3100 Fiber Optic Media Converter from Star Tech</h2><p>In Bangladesh, you can get original <strong>COTE CMC-GE 10/100/1000Mbps Gigabit Media Converter</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cote-media-converter\" target=\"\">COTE Media Converter</a> to purchase. Order Online or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The COTE CMC-GE 10/100/1000Mbps Gigabit Media Converter comes with 01 Year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CMCC-14 MC</li><li>14-Slot Media Converter Chassis</li><li>High-quality 19&quot; Rack-mountable chassis installation</li><li>Two fans are built-in for hardware cooling</li><li>Supplies the converters and Power modules to be plugged and played</li></ul>",
+      "model": "CMCC-14 MC",
+      "warranty": "No",
+      "basePrice": 15500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Cote",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-49887",
+          "price": 15500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 14880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Port",
+              "value": "14-Slot Media Converter Chassis",
+              "position": 0
+            },
+            {
+              "label": "Advanced Functions",
+              "value": "High-quality 19\" Rack-mountable chassis installation Two fans are built-in for hardware cooling Supplies the converters and Power modules to be plugged and played",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Color: Black Easy Placement and Monitoring",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cote-cmcc-14-mc-chassis",
+      "sourceProductCode": "49887",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CMCC-14 MC",
+        "14-Slot Media Converter Chassis",
+        "High-quality 19\" Rack-mountable chassis installation",
+        "Two fans are built-in for hardware cooling",
+        "Supplies the converters and Power modules to be plugged and played"
+      ],
+      "needsReview": false,
+      "categorySlug": "media-converter",
+      "image": "/images/products/networking/media-converter/cote/cote-cmcc-14-mc-chassis.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/media-converter/cote/cote-cmcc-14-mc-chassis.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cote-cmcc-14-mc-chassis",
+        "candidateTitle": "COTE CMCC-14 MC Chassis",
+        "attemptStem": "cote-cmcc-14-mc-chassis"
+      }
+    },
+    {
+      "name": "D-Link HTB-3100 (A+B) Fiber Optic Media Converter (Bundle With Full Set)",
+      "slug": "d-link-htb-3100-fiber-optic-media-converter",
+      "type": "PHYSICAL",
+      "sku": "ST-22340",
+      "description": "<h2 style=\"\">D-Link HTB-3100 (A+B) Fiber Optic Media Converter</h2><p>The D-Link HTB-3100 Fiber Optic Media Converter is a 10/100M single-mode single-fiber converter that is the conversion equipment of Ethernet optical-electronic signals between the 10/100M UTP interface (TX) and the 100M fiber interface (FX). The traditional 10/100M Fast Ethernet can be extended to a distance of 90 km through a single optical fiber link. The performance and quality of the products are excellent because of adopting the latest IC from Taiwan. It must be used in pairs because the transmitted optical differs from the received optical in wavelength. 6. Group LED indicator lights could fully monitor the working conditions of converters. It is easy for end-users to observe the conditions of the network. This product is specially designed for network end-users. The transmission of a channel optical signal can be completed by a single fiber. It has doubled in the quantity of fiber data transmission compared with the twin fiber type. The auto-negotiation function allows the UTP port to auto-select 10M or 100M and full duplex or half duplex. The UTP port supports MDI/MDI-X auto crossover with supporting flow control and a 1552-byte packet. It also has an internal circuit of prevented thunder that could greatly reduce the damage to the converter caused by thunderbolt induction. Design of internal or external power supply for selection by users.</p><h2>Buy D-Link HTB-3100 Fiber Optic Media Converter from Star Tech</h2><p>In Bangladesh, you can get original <strong>D-Link HTB-3100 Fiber Optic Media Converter</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/d-link-media-converter\" target=\"\">D-Link Media Converter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The D-Link HTB-3100 Fiber Optic Media Converter comes with 01 Year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HTB-3100 (A+B)</li><li>Auto-negotiation function</li><li>MDI / MDI-X auto crossover UTP port support</li><li>MAC address table: 1K</li><li>Connector: UTP RJ-45 10/100Mbps;Fiber SC 100Mbps</li></ul>",
+      "model": "HTB-3100 (A+B)",
+      "warranty": "01 Year",
+      "basePrice": 1850.0,
+      "originalPrice": 2000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 94.5,
+        "width": 73.0,
+        "height": 27.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "D-Link",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-22340",
+          "price": 1850.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1776.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Media Converter",
+              "position": 0
+            },
+            {
+              "label": "Port",
+              "value": "UTP: RJ-45 10/100Mbps; Fiber: SC 100Mbps",
+              "position": 1
+            },
+            {
+              "label": "Network Standard",
+              "value": "Operating standards: IEEE802.3u, 10/100Base-TX and 100Base-FX MAC address table: 1K",
+              "position": 2
+            },
+            {
+              "label": "Transmission Method",
+              "value": "single fiber",
+              "position": 3
+            },
+            {
+              "label": "Environment",
+              "value": "Operating Temperature: 0℃~40℃ (32℉~104℉) Storage Temperature: -40℃~70℃ (-40℉~158℉) Operating Humidity: 10%~90% non-condensing Storage Humidity: 5%~90% non-condensing",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "LED",
+              "value": "Power, FX 100, FX Link/Act, TX 100, TX FDX, TX Link/Act.",
+              "position": 0
+            },
+            {
+              "label": "Power Supply",
+              "value": "External Power Adapter Max Power Consumption: 5.5W",
+              "position": 1
+            },
+            {
+              "label": "Dimensions",
+              "value": "94.5 x 73.0 x 27.0 mm",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/d-link-htb-3100-fiber-optic-media-converter",
+      "sourceProductCode": "22340",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HTB-3100 (A+B)",
+        "Auto-negotiation function",
+        "MDI / MDI-X auto crossover UTP port support",
+        "MAC address table: 1K",
+        "Connector: UTP RJ-45 10/100Mbps;Fiber SC 100Mbps"
+      ],
+      "needsReview": false,
+      "categorySlug": "media-converter",
+      "image": "/images/products/networking/media-converter/d-link/d-link-htb-3100-fiber-optic-media-converter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/media-converter/d-link/d-link-htb-3100-fiber-optic-media-converter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "d-link-htb-3100-fiber-optic-media-converter",
+        "candidateTitle": "D-Link HTB-3100 (A+B) Fiber Optic Media Converter (Bundle With Full Set)",
+        "attemptStem": "d-link-htb-3100-fiber-optic-media-converter"
+      }
+    },
+    {
+      "name": "TP-Link MC111CS 10/100Mbps WDM Media Converter",
+      "slug": "tp-link-mc111cs-media-converter",
+      "type": "PHYSICAL",
+      "sku": "ST-24581",
+      "description": "<h2>TP-Link MC111CS 10/100Mbps WDM Media Converter</h2><p style=\"text-align: justify; \">The TP-Link MC111CS is a media converter intended to convert 10/100Base-TX copper media to or from the 100BASE-FX fiber. The MC111CS uses WDM technology, using only one fiber cable for data transmission and reception, saving you 50% on cabling expenses. The MC111CS is designed for use with single-mode fiber cable using the SC-Type connector and adheres to IEEE 802.3u 100Base-TX and 100Base-FX standards. At full wire speed forwarding rate, the MC111CS implements the longwave (LX) laser standard. It operates at 1550 nm for data transmission and 1310 nm for data reception. To function with the MC111CS, the opposite end device must transmit data at 1310nm and receive data at 1550nm. One example of a TP-LINK media converter that works with the MC111CS is the MC112CS. Front panel status LEDs, automatic MDI/MDI-X for the TX port, and automatic duplex mode negotiation. The MC111CS can communicate across longer fiber optic distances of up to 20 kilometers using single-mode fiber (12.5 miles). The TP-Link MC111CS 10/100Mbps WDM Media Converter comes with a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MC111CS</li><li>Complies with 802.3u 10/100Base-TX, 100Base-FX standards</li><li>Auto-negotiation of Half-Duplex / Full-Duplex transfer mode</li><li>Work with MC112CS WDM single fiber media converter</li><li>Extends fiber distance up to 20km (12.5 miles)</li></ul>",
+      "model": "MC111CS",
+      "warranty": "01-Year",
+      "basePrice": 2079.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 3.7,
+        "width": 2.9,
+        "height": 1.1,
+        "unit": "in"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "TP-Link",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-24581",
+          "price": 2079.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1995.84,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Port",
+              "value": "1 x 100M SC/UPC port 1 x 10/100M RJ45 port (Auto MDI/MDIX)",
+              "position": 0
+            },
+            {
+              "label": "Network Standard",
+              "value": "IEEE 802.3, IEEE 802.3u",
+              "position": 1
+            },
+            {
+              "label": "Advanced Functions",
+              "value": "Adopts WDM technology Half/Full-Duplex transfer mode for FX port minimize the loss caused by link failure timely Extends fiber distance up to 20km (12.5 miles)",
+              "position": 2
+            },
+            {
+              "label": "Environment",
+              "value": "Operating Temperature: 0℃~40℃ (32℉~104℉) Storage Temperature: -40℃~70℃ (-40℉~158℉) Operating Humidity: 10%~90% non-condensing Storage Humidity: 5%~90% non-condensing",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "LED",
+              "value": "PWR, Link/Act",
+              "position": 0
+            },
+            {
+              "label": "Power Supply",
+              "value": "Power Supply: External Power Adapter Max Power Consumption: 2.49W",
+              "position": 1
+            },
+            {
+              "label": "Dimensions",
+              "value": "3.7 x 2.9 x 1.1 in. (95 x 73 x 27 mm)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-mc111cs-media-converter",
+      "sourceProductCode": "24581",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MC111CS",
+        "Complies with 802.3u 10/100Base-TX, 100Base-FX standards",
+        "Auto-negotiation of Half-Duplex / Full-Duplex transfer mode",
+        "Work with MC112CS WDM single fiber media converter",
+        "Extends fiber distance up to 20km (12.5 miles)"
+      ],
+      "needsReview": false,
+      "categorySlug": "media-converter",
+      "image": "/images/products/networking/media-converter/tp-link/tp-link-mc111cs-media-converter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/media-converter/tp-link/tp-link-mc111cs-media-converter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-mc111cs-media-converter",
+        "candidateTitle": "TP-Link MC111CS 10/100Mbps WDM Media Converter",
+        "attemptStem": "tp-link-mc111cs-media-converter"
+      }
+    },
+    {
+      "name": "TP-Link MC112CS 10/100Mbps WDM Media Converter",
+      "slug": "tp-link-mc112cs-wdm-media-converter",
+      "type": "PHYSICAL",
+      "sku": "ST-24560",
+      "description": "<h2>TP-Link MC112CS 10/100Mbps WDM Media Converter</h2><p style=\"text-align: justify; \">The TP-Link MC112CS is a media converter intended to convert 10/100Base-TX copper media to and from the 100BASE-FX fiber. WDM technology allows the MC112CS to transmit and receive data using just one fiber cable, saving you 50% on cabling expenses. The MC112CS is designed for use with single-mode fiber cable using the SC-Type connector and is compliant with IEEE 802.3u 100Base-TX and 100Base-FX standards. At full wire speed forwarding rate, the MC112CS implements the longwave (LX) laser standard. It operates at 1310nm for data transmission and 1550nm for data reception. To function with the MC112CS, the opposite end device must transmit data at 1550 nm and receive data at 1310 nm. One example of a TP-Link media converter that works with the MC112CS is the MC111CS. Automatic MDI/MDI-X for the TX port, as well as automatic duplex mode negotiation. The MC112CS can communicate across longer fiber optic distances of up to 20 kilometers using single-mode fiber (12.5 miles). The TP-Link MC112CS 10/100Mbps WDM Media Converter comes with a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MC112CS</li><li>Complies with 802.3u 10/100Base-TX, 100Base-FX standards</li><li>Auto-negotiation of Half-Duplex / Full-Duplex transfer mode</li><li>Adopts WDM technology, transmitting and receiving data on one single fiber</li><li>Extends fiber distance up to 20km (12.5 miles)</li></ul>",
+      "model": "MC112CS",
+      "warranty": "01-Year",
+      "basePrice": 2079.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 3.7,
+        "width": 2.9,
+        "height": 1.1,
+        "unit": "in"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "TP-Link",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-24560",
+          "price": 2079.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1995.84,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Port",
+              "value": "1 x 100M SC/UPC port 1 x 10/100M RJ45 port (Auto MDI/MDIX)",
+              "position": 0
+            },
+            {
+              "label": "Network Standard",
+              "value": "IEEE 802.3, IEEE 802.3u",
+              "position": 1
+            },
+            {
+              "label": "Advanced Functions",
+              "value": "Adopts WDM technology Half/Full-Duplex transfer mode for FX port minimize the loss caused by link failure timely Extends fiber distance up to 20km",
+              "position": 2
+            },
+            {
+              "label": "Environment",
+              "value": "Operating Temperature: 0℃~40℃ (32℉~104℉) Storage Temperature: -40℃~70℃ (-40℉~158℉) Operating Humidity: 10%~90% non-condensing Storage Humidity: 5%~90% non-condensing",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "LED",
+              "value": "PWR, Link/Act",
+              "position": 0
+            },
+            {
+              "label": "Power Supply",
+              "value": "Power Supply: External Power Adapter (9VDC/ 0.6A) Max Power Consumption: 2.41W",
+              "position": 1
+            },
+            {
+              "label": "Dimensions (L x W x H)",
+              "value": "3.7 x 2.9 x 1.1 in. (95 x 73 x 27 mm)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-mc112cs-wdm-media-converter",
+      "sourceProductCode": "24560",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MC112CS",
+        "Complies with 802.3u 10/100Base-TX, 100Base-FX standards",
+        "Auto-negotiation of Half-Duplex / Full-Duplex transfer mode",
+        "Adopts WDM technology, transmitting and receiving data on one single fiber",
+        "Extends fiber distance up to 20km (12.5 miles)"
+      ],
+      "needsReview": false,
+      "categorySlug": "media-converter",
+      "image": "/images/products/networking/media-converter/tp-link/tp-link-mc112cs-wdm-media-converter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/media-converter/tp-link/tp-link-mc112cs-wdm-media-converter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-mc112cs-wdm-media-converter",
+        "candidateTitle": "TP-Link MC112CS 10/100Mbps WDM Media Converter",
+        "attemptStem": "tp-link-mc112cs-wdm-media-converter"
+      }
+    },
+    {
+      "name": "TP-Link TL-FC111A-20 10/100 Mbps WDM Media Converter",
+      "slug": "tp-link-tl-fc111a-20-media-converter",
+      "type": "PHYSICAL",
+      "sku": "ST-24584",
+      "description": "<h2>TP-Link TL-FC111A-20 10/100 Mbps WDM Media Converter</h2><p style=\"text-align: justify; \">The TP-Link TL-FC111A-20 is a 100M media converter that includes a 100M RJ-45 connection as well as a 100M SC fiber connector for converting electrical and optical communications. Furthermore, long-distance data transfer using optical fiber may be used in commercial applications such as park security monitoring and wireless networking. The TP-Link TL-FC111A-20 uses WDM (wavelength division multiplexing) technology to deliver and receive data across a distance of up to 20km (12.4 miles) using only one fiber, saving clients half the cost of cable deployment. On optical fiber, the TL-FC111A-20 transmits data at 1550nm and receives data at 1310nm. The TL-FC111A-20 operates as a pair on the opposite end, receiving data at 1550nm and transmitting data at 1310nm. The TP-Link TL-FC111A-20 10/100 Mbps WDM Media Converter comes with a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TL-FC111A-20</li><li>Complies with 802.3u 10/100Base-TX, 100Base-FX standards</li><li>Auto-negotiation of Half-Duplex/Full-Duplex transfer mode</li><li>9/125 μm SMF (Single-Mode Fiber), Ranges up to 20km (12.4 miles)</li><li>Bidirectional WDM communication on a single fiber</li></ul>",
+      "model": "TL-FC111A-20",
+      "warranty": "01-Year",
+      "basePrice": 1499.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 94.5,
+        "width": 73.0,
+        "height": 27.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "TP-Link",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "1× 100 Mbps SC Fiber Port 1× 10/100 Mbps RJ45 Port (Auto MDI/MDIX)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-24584",
+          "price": 1499.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "1× 100 Mbps SC Fiber Port 1× 10/100 Mbps RJ45 Port (Auto MDI/MDIX)"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1439.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Port",
+              "value": "1x 100M single SC/UPC port 1x 10/100M RJ45 port (Auto MDI/MDIX)",
+              "position": 0
+            },
+            {
+              "label": "Network Standard",
+              "value": "IEEE802.3, IEEE802.3i, IEEE802.3u",
+              "position": 1
+            },
+            {
+              "label": "Advanced Functions",
+              "value": "Auto-negotiation of half-duplex / full-duplex transfer mode Full-duplex flow control (IEEE 802.3x) Half-duplex flow control (Backpressure) Extends fiber distance up to 20km (12.4 miles)",
+              "position": 2
+            },
+            {
+              "label": "Environment",
+              "value": "Operating Temperature 0˚C to 50˚C (32˚F to 122˚F) Storage Temperature -40˚C to 70˚C (-40˚F to 158˚F) Operating Humidity 10% to 90% RH non-condensing Storage Humidity 5% to 90% RH non-condensing",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "1× 100 Mbps SC Fiber Port 1× 10/100 Mbps RJ45 Port (Auto MDI/MDIX)",
+              "position": 0
+            },
+            {
+              "label": "LED",
+              "value": "PWR, Link/Act",
+              "position": 1
+            },
+            {
+              "label": "Power Supply",
+              "value": "External Power Adapter: 5 V/0.6 A",
+              "position": 2
+            },
+            {
+              "label": "Dimensions (L x W x H)",
+              "value": "94.5*73*27 mm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-tl-fc111a-20-media-converter",
+      "sourceProductCode": "24584",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TL-FC111A-20",
+        "Complies with 802.3u 10/100Base-TX, 100Base-FX standards",
+        "Auto-negotiation of Half-Duplex/Full-Duplex transfer mode",
+        "9/125 μm SMF (Single-Mode Fiber), Ranges up to 20km (12.4 miles)",
+        "Bidirectional WDM communication on a single fiber"
+      ],
+      "needsReview": false,
+      "categorySlug": "media-converter",
+      "image": "/images/products/networking/media-converter/tp-link/tp-link-tl-fc111a-20-media-converter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/media-converter/tp-link/tp-link-tl-fc111a-20-media-converter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-tl-fc111a-20-media-converter",
+        "candidateTitle": "TP-Link TL-FC111A-20 10/100 Mbps WDM Media Converter",
+        "attemptStem": "tp-link-tl-fc111a-20-media-converter"
+      }
+    },
+    {
+      "name": "TP-Link TL-FC111B-20 10/100 Mbps WDM Media Converter",
+      "slug": "tp-link-tl-fc111b-20-media-converter",
+      "type": "PHYSICAL",
+      "sku": "ST-24585",
+      "description": "<h2>TP-Link TL-FC111B-20 10/100 Mbps WDM Media Converter</h2><p style=\"text-align: justify; \">The TP-Link TL-FC111B-20 is a 100M media converter with a 100M RJ-45 connection and a 100M SC fiber port that can convert between electrical and optical data. Long-distance data transfer through optical fiber may also be used in business settings such as park security monitoring and wireless networking. The TL-FC111B-20 uses WDM (wavelength division multiplexing) technology to deliver and receive data across a distance of up to 20km (12.4 miles) using only one fiber, saving clients half the cost of cable deployment. On optical fiber, the TL-FC111B-20 sends data at 1310nm and receives data at 1550nm. The TL-FC111A-20 operates as a pair on the opposite end, receiving data at 1310nm and transmitting data at 1550nm. The TP-Link TL-FC111B-20 10/100 Mbps WDM Media Converter comes with a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TL-FC111B-20</li><li>Complies with 802.3u 10/100Base-TX, 100Base-FX standards</li><li>Auto-negotiation of Half-Duplex/Full-Duplex transfer mode</li><li>9/125 μm SMF (Single-Mode Fiber)</li><li>Ranges up to 20km (12.4 miles), Work with TL-FC111B-20 as a pair</li></ul>",
+      "model": "TL-FC111B-20",
+      "warranty": "01-Year",
+      "basePrice": 1499.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 3.7,
+        "width": 2.9,
+        "height": 1.1,
+        "unit": "in"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "TP-Link",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "1× 100 Mbps SC Fiber Port 1× 10/100 Mbps RJ45 Port (Auto MDI/MDIX)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-24585",
+          "price": 1499.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "1× 100 Mbps SC Fiber Port 1× 10/100 Mbps RJ45 Port (Auto MDI/MDIX)"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1439.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Port",
+              "value": "1x 100M single SC/UPC port 1x 10/100M RJ45 port (Auto MDI/MDIX)",
+              "position": 0
+            },
+            {
+              "label": "Network Standard",
+              "value": "IEEE 802.3, IEEE 802.3i, IEEE802.3u",
+              "position": 1
+            },
+            {
+              "label": "Advanced Functions",
+              "value": "Auto-negotiation of half-duplex / full-duplex transfer mode Full-duplex flow control (IEEE 802.3x) Half-duplex flow control (Backpressure) Extends fiber distance up to 20km (12.4 miles)",
+              "position": 2
+            },
+            {
+              "label": "Environment",
+              "value": "Operating Temperature 0˚C to 50˚C (32˚F to 122˚F) Storage Temperature -40˚C to 70˚C (-40˚F to 158˚F) Operating Humidity 10% to 90% RH non-condensing Storage Humidity 5% to 90% RH non-condensing",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "1× 100 Mbps SC Fiber Port 1× 10/100 Mbps RJ45 Port (Auto MDI/MDIX)",
+              "position": 0
+            },
+            {
+              "label": "LED",
+              "value": "PWR, Link/Act",
+              "position": 1
+            },
+            {
+              "label": "Power Supply",
+              "value": "External Power Adapter: 5 V/0.6 A",
+              "position": 2
+            },
+            {
+              "label": "Dimensions (L x W x H)",
+              "value": "3.7 × 2.9 × 1.1 in. (95 × 73 × 27 mm)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-tl-fc111b-20-media-converter",
+      "sourceProductCode": "24585",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TL-FC111B-20",
+        "Complies with 802.3u 10/100Base-TX, 100Base-FX standards",
+        "Auto-negotiation of Half-Duplex/Full-Duplex transfer mode",
+        "9/125 μm SMF (Single-Mode Fiber)",
+        "Ranges up to 20km (12.4 miles), Work with TL-FC111B-20 as a pair"
+      ],
+      "needsReview": false,
+      "categorySlug": "media-converter",
+      "image": "/images/products/networking/media-converter/tp-link/tp-link-tl-fc111b-20-media-converter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/media-converter/tp-link/tp-link-tl-fc111b-20-media-converter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-tl-fc111b-20-media-converter",
+        "candidateTitle": "TP-Link TL-FC111B-20 10/100 Mbps WDM Media Converter",
+        "attemptStem": "tp-link-tl-fc111b-20-media-converter"
+      }
+    },
+    {
+      "name": "TP-Link TL-FC1420 14-Slot Rackmount Chassis for Media Converter Modules",
+      "slug": "tp-link-tl-fc1420-14-slot-rackmount-chassis",
+      "type": "PHYSICAL",
+      "sku": "ST-24587",
+      "description": "<h2>TP-Link TL-FC1420 14-Slot Rackmount Chassis for Media Converter Modules</h2><p style=\"text-align: justify; \">The TP-Link TL-FC1420 14-Slot Rackmount Chassis is particularly designed to accept 14 TP-Link Media Converters for central power supply, reducing space and power cables. Because the continuous operation is critical in fiber communication, the chassis has an optional redundant power supply and a Hot-Swapping capability that allows the converter to be installed and removed without turning off the chassis. Furthermore, two cooling fans are added internally to stabilize performance and increase lifespan. Together with the FC series Gigabit / Fast Ethernet media converters, the TL-FC1420 is the right choice for your media conversion network. The TP-Link TL-FC1420 14-Slot Rackmount Chassis comes with a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TL-FC1420</li><li>14 bays to house up to 14 media converters</li><li>Optional redundant power supply to ensure non-stop reliable operation</li><li>Hot-Swappable; easy &amp; quick replacement of converter</li><li>Mounted two cooling fans for better ventilation</li></ul>",
+      "model": "TL-FC1420",
+      "warranty": "01-Year",
+      "basePrice": 16290.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 19.0,
+        "width": 12.2,
+        "height": 3.4,
+        "unit": "inch"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "TP-Link",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-24587",
+          "price": 16290.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 15638.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Environment",
+              "value": "Operating Temperature: 0℃~50℃ (32℉~122℉) Storage Temperature: -40℃~70℃ (-40℉~158℉) Operating Humidity: 10%~90% non-condensing Storage Humidity:5%~90% non-condensing",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "AC Power Supply: 100-240VAC, 50/60Hz Power Output: 14× 5VDC/0.6A Fan Quantity: 2",
+              "position": 0
+            },
+            {
+              "label": "Dimensions (L x W x H)",
+              "value": "19.0*12.2*3.4in.(482*309*86) Standard 19-Inch, 2U height",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-tl-fc1420-14-slot-rackmount-chassis",
+      "sourceProductCode": "24587",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TL-FC1420",
+        "14 bays to house up to 14 media converters",
+        "Optional redundant power supply to ensure non-stop reliable operation",
+        "Hot-Swappable; easy & quick replacement of converter",
+        "Mounted two cooling fans for better ventilation"
+      ],
+      "needsReview": false,
+      "categorySlug": "media-converter",
+      "image": "/images/products/networking/media-converter/tp-link/tp-link-tl-fc1420-14-slot-rackmount-chassis.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/media-converter/tp-link/tp-link-tl-fc1420-14-slot-rackmount-chassis.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-tl-fc1420-14-slot-rackmount-chassis",
+        "candidateTitle": "TP-Link TL-FC1420 14-Slot Rackmount Chassis for Media Converter Modules",
+        "attemptStem": "tp-link-tl-fc1420-14-slot-rackmount-chassis"
+      }
+    },
+    {
+      "name": "TP-Link TL-FC311A-20 Gigabit WDM Media Converter",
+      "slug": "tp-link-tl-fc311a-20-media-converter",
+      "type": "PHYSICAL",
+      "sku": "ST-24582",
+      "description": "<h2>TP-Link TL-FC311A-20 Gigabit WDM Media Converter</h2><p style=\"text-align: justify; \">The TP-Link TL-FC311A-20 is a gigabit media converter that includes a gigabit RJ-45 connector as well as a gigabit SC fiber interface for converting electrical and optical communications. Furthermore, long-distance data transfer using optical fiber may be used in commercial applications such as park security monitoring and wireless networking. The TL-FC311A-20 uses WDM (wavelength division multiplexing) technology to deliver and receive data across distances of up to 20 km using only a single-mode fiber, saving clients half the cost of cable deployment. On optical fiber, the TL-FC311A-20 transmits data at 1550 nm and receives data at 1310 nm. As a result, the terminal device used in combination with the TL-FC311A-20 should send data at 1310 nm and receive data at 1550 nm. Another media converter from TP-Link One of the items that can work with TL-FC311A-20 is TL-FC311B-20. Furthermore, this media converter may be utilized as a solo device (no rack required) or in conjunction with TP-TL-FC1420 Link's rack for auto MDI/MDI-X in the TX port where duplex mode is automatically negotiated. The TP-Link TL-FC311A-20 Gigabit WDM Media Converter comes with a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TL-FC311A-20</li><li>1× 10/100/1000Mbps Auto-Negotiation RJ45 port supports Auto-MDI/MDIX</li><li>Auto-negotiation of Half-Duplex/Full-Duplex transfer mode</li><li>Adopts WDM technology, transmitting and receiving data on one single fiber</li><li>Extends fiber distance up to 20 km</li></ul>",
+      "model": "TL-FC311A-20",
+      "warranty": "01-Year",
+      "basePrice": 2209.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 3.7,
+        "width": 2.9,
+        "height": 1.1,
+        "unit": "in"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "TP-Link",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "1× Gigabit SC Fiber Port 1× 10/100/1000 Mbps RJ45 Port (Auto MDI/MDIX)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-24582",
+          "price": 2209.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "1× Gigabit SC Fiber Port 1× 10/100/1000 Mbps RJ45 Port (Auto MDI/MDIX)"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2120.64,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Network Standard",
+              "value": "IEEE 802.3, IEEE 802.3i, IEEE 802.3u, IEEE 802.3ab, IEEE 802.3x, IEEE 802.3z",
+              "position": 0
+            },
+            {
+              "label": "Environment",
+              "value": "Operating Temperature 0˚C to 50˚C (32˚F to 122˚F) Storage Temperature -40˚C to 70˚C (-40˚F to 158˚F) Operating Humidity 10% to 90% RH non-condensing Storage Humidity 5% to 90% RH non-condensing",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "1× Gigabit SC Fiber Port 1× 10/100/1000 Mbps RJ45 Port (Auto MDI/MDIX)",
+              "position": 0
+            },
+            {
+              "label": "LED",
+              "value": "PWR, Link/Act",
+              "position": 1
+            },
+            {
+              "label": "Power Supply",
+              "value": "External Power Adapter: 5 V/0.6 A",
+              "position": 2
+            },
+            {
+              "label": "Dimensions (L x W x H)",
+              "value": "3.7 × 2.9 × 1.1 in (95 × 73 × 27 mm)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-tl-fc311a-20-media-converter",
+      "sourceProductCode": "24582",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TL-FC311A-20",
+        "1× 10/100/1000Mbps Auto-Negotiation RJ45 port supports Auto-MDI/MDIX",
+        "Auto-negotiation of Half-Duplex/Full-Duplex transfer mode",
+        "Adopts WDM technology, transmitting and receiving data on one single fiber",
+        "Extends fiber distance up to 20 km"
+      ],
+      "needsReview": false,
+      "categorySlug": "media-converter",
+      "image": "/images/products/networking/media-converter/tp-link/tp-link-tl-fc311a-20-media-converter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/media-converter/tp-link/tp-link-tl-fc311a-20-media-converter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-tl-fc311a-20-media-converter",
+        "candidateTitle": "TP-Link TL-FC311A-20 Gigabit WDM Media Converter",
+        "attemptStem": "tp-link-tl-fc311a-20-media-converter"
+      }
+    },
+    {
+      "name": "TP-Link TL-FC311B-20 Gigabit WDM Media Converter",
+      "slug": "tp-link-tl-fc311b-20-media-converter",
+      "type": "PHYSICAL",
+      "sku": "ST-24583",
+      "description": "<h2>TP-Link TL-FC311B-20 Gigabit WDM Media Converter</h2><p style=\"text-align: justify; \">The TP-Link TL-FC311B-20 is a gigabit media converter with a gigabit RJ-45 connector and a gigabit SC fiber interface that can convert between electrical and optical data. Long-distance data transfer through optical fiber may also be used in business settings such as park security monitoring and wireless networking. The TL-FC311B-20 uses WDM (wavelength division multiplexing) technology to deliver and receive data across distances of up to 20 km using only a single-mode fiber, saving clients half the cost of cable deployment. On optical fiber, the TL-FC311B-20 sends data at 1310 nm and receives data at 1550 nm. As a result, the terminal device used in combination with the TL-FC311B-20 should send data at 1550 nm and receive data at 1310 nm. Another media converter from TP-Link One of the items that can work with TL-FC311B-20 is TL-FC311A-20. This media converter can be used as a stand-alone device (no rack required) or in conjunction with TP-TL-FC1420 Link's rack for auto MDI/MDI-X in the TX port, where duplex mode is automatically negotiated. The TP-Link TL-FC311B-20 Gigabit WDM Media Converter comes with a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TL-FC311B-20</li><li>1× 10/100/1000Mbps Auto-Negotiation RJ45 port supports Auto-MDI/MDIX</li><li>Auto-negotiation of Half-Duplex/Full-Duplex transfer mode</li><li>Adopts WDM technology, transmitting and receiving data on one single fiber</li><li>Extends fiber distance up to 20 km</li></ul>",
+      "model": "TL-FC311B-20",
+      "warranty": "01-Year",
+      "basePrice": 2209.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 3.7,
+        "width": 2.9,
+        "height": 1.1,
+        "unit": "in"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "TP-Link",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "1× Gigabit SC Fiber Port 1× 10/100/1000 Mbps RJ45 Port (Auto MDI/MDIX)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-24583",
+          "price": 2209.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "1× Gigabit SC Fiber Port 1× 10/100/1000 Mbps RJ45 Port (Auto MDI/MDIX)"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2120.64,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Network Standard",
+              "value": "IEEE 802.3, IEEE 802.3i, IEEE 802.3u, IEEE 802.3ab, IEEE 802.3x, IEEE 802.3z",
+              "position": 0
+            },
+            {
+              "label": "Environment",
+              "value": "Operating Temperature 0˚C to 50˚C (32˚F to 122˚F) Storage Temperature -40˚C to 70˚C (-40˚F to 158˚F) Operating Humidity 10% to 90% RH non-condensing Storage Humidity 5% to 90% RH non-condensing",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "1× Gigabit SC Fiber Port 1× 10/100/1000 Mbps RJ45 Port (Auto MDI/MDIX)",
+              "position": 0
+            },
+            {
+              "label": "LED",
+              "value": "PWR, Link/Act",
+              "position": 1
+            },
+            {
+              "label": "Power Supply",
+              "value": "External Power Adapter: 5 V/0.6 A",
+              "position": 2
+            },
+            {
+              "label": "Dimensions (L x W x H)",
+              "value": "3.7 × 2.9 × 1.1 in (95 × 73 × 27 mm)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-tl-fc311b-20-media-converter",
+      "sourceProductCode": "24583",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TL-FC311B-20",
+        "1× 10/100/1000Mbps Auto-Negotiation RJ45 port supports Auto-MDI/MDIX",
+        "Auto-negotiation of Half-Duplex/Full-Duplex transfer mode",
+        "Adopts WDM technology, transmitting and receiving data on one single fiber",
+        "Extends fiber distance up to 20 km"
+      ],
+      "needsReview": false,
+      "categorySlug": "media-converter",
+      "image": "/images/products/networking/media-converter/tp-link/tp-link-tl-fc311b-20-media-converter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/media-converter/tp-link/tp-link-tl-fc311b-20-media-converter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-tl-fc311b-20-media-converter",
+        "candidateTitle": "TP-Link TL-FC311B-20 Gigabit WDM Media Converter",
+        "attemptStem": "tp-link-tl-fc311b-20-media-converter"
+      }
+    },
+    {
+      "name": "TP-Link TL-MC1400 14-Slot Rackmount Chassis For Media Conversion Network",
+      "slug": "tp-link-tl-mc1400-rackmount-chassis",
+      "type": "PHYSICAL",
+      "sku": "ST-18222",
+      "description": "<h2>TP-Link TL-MC1400 14-Slot Rackmount Chassis For Media Conversion Network</h2>\n<p>The TP-Link TL-MC1400 14-Slot Rackmount Chassis For Media Conversion Network is specially designed to accommodate 14 tp-linkâ€˜s Media Converters for central power supply, saving space and power cables. Continuous operation is of great importance to fiber communication, so the chassis is equipped with optional redundant power supply and Hot-Swapping function which allows installing/removing the converter without powering off the chassis. Moreover, to stabilize the performance and extend the lifetime, two cooling fans are installed internally. Together with MC series Gigabit/ Fast Ethernet media converters, TP-Link TL-MC1400 Media Conversion is the ideal solution for your media conversion network. It has a 1 year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TL-MC1400</li><li>Standard 19-Inch, 2U Height</li><li>Power Supply: 100-240VAC</li><li>Power Output: 14x 9VDC</li><li>Fan Quantity: 2</li></ul>",
+      "model": "TL-MC1400",
+      "warranty": null,
+      "basePrice": 18790.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "TP-Link",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-18222",
+          "price": 18790.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 18038.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TL-MC1400",
+              "position": 0
+            },
+            {
+              "label": "Power Supply",
+              "value": "100-240VAC",
+              "position": 1
+            },
+            {
+              "label": "Power Output",
+              "value": "14x 9VDC",
+              "position": 2
+            },
+            {
+              "label": "Fan Quantity",
+              "value": "2",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-tl-mc1400-rackmount-chassis",
+      "sourceProductCode": "18222",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TL-MC1400",
+        "Standard 19-Inch, 2U Height",
+        "Power Supply: 100-240VAC",
+        "Power Output: 14x 9VDC",
+        "Fan Quantity: 2"
+      ],
+      "needsReview": false,
+      "categorySlug": "media-converter",
+      "image": "/images/products/networking/media-converter/tp-link/tp-link-tl-mc1400-rackmount-chassis.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/media-converter/tp-link/tp-link-tl-mc1400-rackmount-chassis.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-tl-mc1400-rackmount-chassis",
+        "candidateTitle": "TP-Link TL-MC1400 14-Slot Rackmount Chassis For Media Conversion Network",
+        "attemptStem": "tp-link-tl-mc1400-rackmount-chassis"
+      }
+    }
+  ]
+}

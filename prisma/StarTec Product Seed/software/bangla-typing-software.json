@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/software",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\software",
+    "generatedAtUnix": 1790589365,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Software",
+      "slug": "software",
+      "parentSlug": null,
+      "image": "/images/products/software/adobe/adobe-acrobat-pro-dc-for-teams.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Bangla Typing Software",
+      "slug": "bangla-typing-software",
+      "parentSlug": "software",
+      "image": "/images/products/software/bangla-typing-software/bijoy-bayanno-2026-bangla-software.png",
+      "isActive": true,
+      "sortOrder": 1,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Bijoy",
+      "slug": "bijoy",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Bijoy Bayanno 2026 Bangla Typing Software For Windows",
+      "slug": "bijoy-bayanno-2026-bangla-software",
+      "type": "PHYSICAL",
+      "sku": "ST-30832",
+      "description": "<h2>Bijoy Bayanno 2026 Bangla Typing Software For Windows</h2><p>Bijoy <strong>Bayanno 2026 </strong>is a Bangla typing software. Writing in Bangla with Bijoy Bayanno 2026 on computers offers several advantages. It is simple to use and features a user-friendly interface. It supports a variety of keyboard layouts, including the national standard Bijoy Keyboard Layout (BDS 1738:2018) and the Bijoy Coding System (BDS 1935:2018). Bijoy Bayanno 2026 Bangla includes a spell checker and a font converter to assist users in avoiding mistakes and improving the quality of their Bangla writings. It supports translation from Bangla to major international languages such as English, Hindu, Arabic, Nepali, French, Urdu, and Malayalam. Its small size and low power consumption make Bijoy Bayanno 2026 Bangla appropriate for a wide range of devices and platforms.</p><h2>Buy Bijoy Bayanno 2026 Bangla Software from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Bijoy Bayanno 2026 Bangla Software</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/software\">Software </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at lowest price. The Bijoy Bayanno 2026 Bangla Software comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Bijoy Bayanno 2026</li><li>Software Type: Bangla Typing</li><li>Font Converter, Spell Checker</li><li>Many Keyboard Layouts</li><li>Operating System: Windows</li></ul>",
+      "model": "Bijoy Bayanno 2026",
+      "warranty": "no warranty",
+      "basePrice": 500.0,
+      "originalPrice": 550.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Bijoy",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-30832",
+          "price": 500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Bijoy Bayanno 2026",
+              "position": 0
+            },
+            {
+              "label": "Software Type",
+              "value": "Bangla Typing",
+              "position": 1
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bijoy-bayanno-2026-bangla-software",
+      "sourceProductCode": "30832",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Bijoy Bayanno 2026",
+        "Software Type: Bangla Typing",
+        "Font Converter, Spell Checker",
+        "Many Keyboard Layouts",
+        "Operating System: Windows"
+      ],
+      "needsReview": false,
+      "categorySlug": "bangla-typing-software",
+      "image": "/images/products/software/bangla-typing-software/bijoy-bayanno-2026-bangla-software.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/bangla-typing-software/bijoy-bayanno-2026-bangla-software.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bijoy-bayanno-2026-bangla-software",
+        "candidateTitle": "Bijoy Bayanno 2026 Bangla Typing Software For Windows",
+        "attemptStem": "bijoy-bayanno-2026-bangla-software"
+      }
+    },
+    {
+      "name": "Bijoy Ekattor For Mac Bangla Software",
+      "slug": "bijoy-ekattor-for-mac-bangla-software",
+      "type": "PHYSICAL",
+      "sku": "ST-30833",
+      "description": "<h2>Bijoy Ekattor For Mac Bangla Software</h2><p>Bijoy <span style=\"font-weight: bold;\">Ekattor For Mac</span> Bangla Software is software that allows you to write in Bangla on your Mac computer. It is compatible with a variety of Mac devices, including the Hackintosh, MacBook Air, MacBook Pro, iMac, iMac Pro, and Mac Mini. It supports many keyboard layouts, including the national standard Bijoy Keyboard Layout (BDS 1738:2018) and Bijoy Coding System (BDS 1935:2018) for Bangla script writing in Bangladesh. It also includes a spell checker and a font converter to assist you in creating error-free and high-quality Bangla documents. Bijoy Ekattor For Mac Bangla Software allows you to generate emails, blogs, websites, books, and other documents in Bangla. Ekattor Bijoy For Mac Bangla program is a famous and dependable Bangla typing program.</p><h2>Buy Bijoy Ekattor For Mac Bangla Software from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Bijoy Ekattor For Mac Bangla Software</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/software\" target=\"\">Software </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Bijoy Ekattor For Mac Bangla Software comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Bijoy Ekattor For Mac</li><li>Software Type: Bangla Typing</li><li>Font Converter, Spell Checker</li><li>Many Keyboard Layouts</li><li>Compatible Devices: MacBook Air, MacBook Pro, iMac, iMac Pro, and Mac Mini</li></ul>",
+      "model": "Bijoy Ekattor For Mac",
+      "warranty": "no warranty",
+      "basePrice": 5000.0,
+      "originalPrice": 5400.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Bijoy",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-30833",
+          "price": 5000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Operating System",
+              "value": "Hakintosh, Mac Mini, Mac Book Air, Mac Book, Mac Book Pro, iMac and Mac Pro",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bijoy-ekattor-for-mac-bangla-software",
+      "sourceProductCode": "30833",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Bijoy Ekattor For Mac",
+        "Software Type: Bangla Typing",
+        "Font Converter, Spell Checker",
+        "Many Keyboard Layouts",
+        "Compatible Devices: MacBook Air, MacBook Pro, iMac, iMac Pro, and Mac Mini"
+      ],
+      "needsReview": false,
+      "categorySlug": "bangla-typing-software",
+      "image": "/images/products/software/bangla-typing-software/bijoy-ekattor-for-mac-bangla-software.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/bangla-typing-software/bijoy-ekattor-for-mac-bangla-software.png",
+        "/images/products/software/bijoy-ekattor-for-mac-bangla-software.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bijoy-ekattor-for-mac-bangla-software",
+        "candidateTitle": "Bijoy Ekattor For Mac Bangla Software",
+        "attemptStem": "bijoy-ekattor-for-mac-bangla-software"
+      }
+    }
+  ]
+}

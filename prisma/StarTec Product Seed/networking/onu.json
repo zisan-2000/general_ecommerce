@@ -1,0 +1,2745 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\networking",
+    "generatedAtUnix": 1790590909,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Networking",
+      "slug": "networking",
+      "parentSlug": null,
+      "image": "/images/products/networking/firewall/sonicwall-nsa-2700-16-port-firewall.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "ONU",
+      "slug": "onu",
+      "parentSlug": "networking",
+      "image": "/images/products/networking/onu/aptech-x25-xpon-onu.png",
+      "isActive": true,
+      "sortOrder": 12,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Aptech",
+      "slug": "aptech",
+      "logo": null
+    },
+    {
+      "name": "BDCOM",
+      "slug": "bdcom",
+      "logo": null
+    },
+    {
+      "name": "C-Data",
+      "slug": "c-data",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    },
+    {
+      "name": "Phyhome",
+      "slug": "phyhome",
+      "logo": null
+    },
+    {
+      "name": "Solitine",
+      "slug": "solitine",
+      "logo": null
+    },
+    {
+      "name": "Tenda",
+      "slug": "tenda",
+      "logo": null
+    },
+    {
+      "name": "TP-Link",
+      "slug": "tp-link",
+      "logo": null
+    },
+    {
+      "name": "VSOL",
+      "slug": "vsol",
+      "logo": null
+    },
+    {
+      "name": "Xtreme",
+      "slug": "xtreme",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Aptech X25 XPON ONU",
+      "slug": "aptech-x25-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-51806",
+      "description": "<h2>Aptech X25 XPON ONU</h2><p>The Aptech<strong> X25 XPON ONU</strong> is a high‑performance optical network unit designed to deliver fast, stable, and efficient broadband connectivity. With advanced receiving sensitivity of XPON: -28dBm, it ensures reliable signal reception even in challenging network environments. Supporting third‑party OLT compatibility, it offers seamless integration into diverse network infrastructures. Engineered for speed, the Aptech X25 XPON ONU provides downstream throughput of 2.488Gbps and upstream throughput of 1.244Gbps, ensuring smooth data transmission for streaming, gaming, and enterprise applications. Its Ethernet port supports up to 1000Mbps, making it ideal for high‑bandwidth usage across multiple devices. Versatile in operation, this ONU supports both EPON and XPON modes, offering flexibility for different deployment scenarios. Powered by a DC 12V/0.5A supply, it delivers efficient performance with low power consumption, making it a reliable choice for modern broadband solutions. Compact, durable, and easy to install, the Aptech X25 XPON ONU is the perfect solution for ISPs and users seeking stable gigabit connectivity with advanced compatibility and long‑term reliability.</p><h2>Buy Aptech X25 XPON ONU from Star Tech</h2><p>In Bangladesh, you can get original <strong>Aptech X25 XPON ONU</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/onu\">ONU</a> to purchase for your <a href=\"https://www.startech.com.bd/networking/router\">Router</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Aptech X25 XPON ONU Comes with 2 Years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: X25</li><li>Data Transmission: Up to 1000Mbps (Ethernet)</li><li>Receiving sensitivity: XPON: -28dBm;Epon: -27dBm</li><li>EPON and XPON Mode Supported</li><li>Third-party OLT support</li></ul>",
+      "model": "X25",
+      "warranty": "2 Years",
+      "basePrice": 1250.0,
+      "originalPrice": 1300.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Aptech",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-51806",
+          "price": 1250.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Receiving sensitivity: XPON: -28dBm;Epon: -27dBm third-party OLT support Data Transmission PON Throughput Downstream 2.488Gbit/s, Upstream 1.244Gbit/s Data Transmission Ethernet: 1000Mbps",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Power Source",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Mode",
+              "value": "EPON and XPON Both Mode Support DC Power Supply: 12V/0.5A",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacturer warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 Years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/aptech-x25-xpon-onu",
+      "sourceProductCode": "51806",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: X25",
+        "Data Transmission: Up to 1000Mbps (Ethernet)",
+        "Receiving sensitivity: XPON: -28dBm;Epon: -27dBm",
+        "EPON and XPON Mode Supported",
+        "Third-party OLT support"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/aptech-x25-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/aptech-x25-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "aptech-x25-xpon-onu",
+        "candidateTitle": "Aptech X25 XPON ONU",
+        "attemptStem": "aptech-x25-xpon-onu"
+      }
+    },
+    {
+      "name": "BDCOM GP1702-1G Single Port GPON ONU",
+      "slug": "bdcom-gp1702-1g-gpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-30758",
+      "description": "<h2>BDCOM GP1702-1G Single Port GPON ONU</h2><p>The BDCOM <strong>GP1702-1G GPON ONU</strong> is designed to deliver high-performance networking solutions. This ONU is equipped with a single SC/UPC PON port that supports both GPON and EPON upstream connections, providing versatile compatibility. BDCOM GP1702-1G GPON ONU also offers a single Gigabit Ethernet (GE) UNI port, allowing seamless integration into various network setups. With an input range of 100-240V AC and an output of 12V/0.5A, the ONU efficiently manages power consumption, with a maximum usage of 6 watts. This BDCOM GP1702-1G GPON ONU is designed as an XPON HGU, sporting an elegant appearance and versatile functionality. Its SC/UPC PON port, combined with the Gigabit Ethernet LAN port, supports routing and bridge modes, catering to diverse networking needs. It allows for easy WAN port connection through PPPOE/IPOE and serves as a DHCP server, facilitating plug-and-play functionality for downstream computers and home routers. This ensures a seamless user experience, making network setup hassle-free.<br/></p><h2>Buy BDCOM GP1702-1G GPON ONU from Star Tech</h2><p>In Bangladesh, you can get original <strong>BDCOM GP1702-1G Single Port GPON ONU</strong> From Star Tech. We have a large collection of latest BDCOM ONU to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at lowest price. The BDCOM GP1702-1G GPON ONU comes with 2 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GP1702-1G</li><li>PON Ports: 1 SC/UPC</li><li>UNI Ports: 1 GE</li><li>Input: 100-240V AC</li><li>Output: 12V/0.5A</li></ul>",
+      "model": "GP1702-1G",
+      "warranty": "2 year warranty",
+      "basePrice": 1240.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-30758",
+          "price": 1240.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1190.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "GP1702-1G",
+              "position": 0
+            },
+            {
+              "label": "PON Ports",
+              "value": "1 SC/UPC",
+              "position": 1
+            },
+            {
+              "label": "UNI Ports",
+              "value": "1 GE",
+              "position": 2
+            },
+            {
+              "label": "Input",
+              "value": "100-240V AC",
+              "position": 3
+            },
+            {
+              "label": "Output",
+              "value": "12V/0.5A",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bdcom-gp1702-1g-gpon-onu",
+      "sourceProductCode": "30758",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GP1702-1G",
+        "PON Ports: 1 SC/UPC",
+        "UNI Ports: 1 GE",
+        "Input: 100-240V AC",
+        "Output: 12V/0.5A"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/bdcom-gp1702-1g-gpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/bdcom-gp1702-1g-gpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bdcom-gp1702-1g-gpon-onu",
+        "candidateTitle": "BDCOM GP1702-1G Single Port GPON ONU",
+        "attemptStem": "bdcom-gp1702-1g-gpon-onu"
+      }
+    },
+    {
+      "name": "BDCOM GP1704-2F-E Dual Port WiFi XPON ONU",
+      "slug": "bdcom-gp1704-2f-e-wifi-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-35397",
+      "description": "<h2>BDCOM GP1704-2F-E Dual Port WiFi XPON ONU</h2><p>The BDCOM <strong>GP1704-2F-E</strong> Dual Port WiFi XPON <a href=\"https://www.startech.com.bd/onu\" style=\"color: rgb(0, 0, 0);\" target=\"\">ONU </a>has a GPON transmission rate of 2.5Gbps downlink and 1.25Gbps uplink, providing fast and reliable connectivity for home and small business applications. With two 2x2 MIMO antennas and one GPON/EPON interface, the XPON ONU offers strong wireless coverage and enables smooth connectivity for several devices. For wired connectivity, it also has one 100M RJ45 port and one gigabit RJ45 port. With support for 4K VLAN and a Wi-Fi speed of 300Mbps (Single Band Wireless), it provides effective and safe network segmentation. The device ensures compatibility and interoperability by adhering to many standards, such as IEEE 802.3ah, IEEE 802.1Q VLAN, and ITU-T G.984/G.988. Effective traffic management and prioritization are made possible by the QoS capabilities of the BDCOM GP1704-2F-E Dual Port WiFi XPON ONU, which include IEEE 802.3x flow control, backpressure flow control, and four priority queues per port. Device administration is straightforward and adaptable, with choices including CLI, HTTP, SNMP, TR069, and TELNET. Features like port protection, MAC address filtering, and multicast group limitation improve network security. Stable and continuous functioning is guaranteed by reliability features like TX/RX optical power alerts, dying-gasp functionality, and loop detection. With support for 802.11 b/g/n standards, 2x2 MIMO technology, multiple SSIDs, SSID encryption, and programmable wireless channels, the BDCOM GP1704-2F-E Dual Port WiFi XPON ONU offers dependable and safe wireless access.</p><h2>Buy BDCOM GP1704-2F-E Dual Port WiFi XPON ONU from Star Tech</h2><p>In Bangladesh, you can get original <strong>BDCOM GP1704-2F-E Dual Port WiFi XPON ONU</strong> From Star Tech. We have a large collection of latest BDCOM <a href=\"https://www.startech.com.bd/onu\" target=\"\">ONU </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The BDCOM GP1704-2F-E Dual Port WiFi XPON ONU comes with 1 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GP1704-2F-E</li><li>PON Transmission Rate: Downlink 2.5Gbps/Uplink 1.25Gbps</li><li>PON Ports: 1x GPON/EPON, 2x2 MIMO Antenna</li><li>UNI Ports: 1x Gigabit RJ45, 1x 100M RJ45 Ports</li><li>Wi-Fi Speed: 300Mbps (Single Band Wireless), 4K VLAN</li></ul>",
+      "model": "GP1704-2F-E",
+      "warranty": "1 years warranty",
+      "basePrice": 2100.0,
+      "originalPrice": 2310.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "BDCOM",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-35397",
+          "price": 2100.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2016.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "GP1704-2F-E",
+              "position": 0
+            },
+            {
+              "label": "PON Transmission Rate",
+              "value": "Downlink 2.5Gbps/Uplink 1.25Gbps",
+              "position": 1
+            },
+            {
+              "label": "PON Ports",
+              "value": "1x GPON/EPON, 2x2 MIMO Antenna",
+              "position": 2
+            },
+            {
+              "label": "UNI Ports",
+              "value": "1x Gigabit RJ45, 1x 100M RJ45 Ports",
+              "position": 3
+            },
+            {
+              "label": "Wi-Fi Speed",
+              "value": "300Mbps (Single Band Wireless), 4K VLAN",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bdcom-gp1704-2f-e-wifi-xpon-onu",
+      "sourceProductCode": "35397",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GP1704-2F-E",
+        "PON Transmission Rate: Downlink 2.5Gbps/Uplink 1.25Gbps",
+        "PON Ports: 1x GPON/EPON, 2x2 MIMO Antenna",
+        "UNI Ports: 1x Gigabit RJ45, 1x 100M RJ45 Ports",
+        "Wi-Fi Speed: 300Mbps (Single Band Wireless), 4K VLAN"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/bdcom-gp1704-2f-e-wifi-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/bdcom-gp1704-2f-e-wifi-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bdcom-gp1704-2f-e-wifi-xpon-onu",
+        "candidateTitle": "BDCOM GP1704-2F-E Dual Port WiFi XPON ONU",
+        "attemptStem": "bdcom-gp1704-2f-e-wifi-xpon-onu"
+      }
+    },
+    {
+      "name": "BDCOM GP1705-2G Dual Port WiFi XPON ONU",
+      "slug": "bdcom-gp1705-2g-wifi-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-35398",
+      "description": "<h2>BDCOM GP1705-2G Dual Port WiFi XPON ONU</h2><p>The BDCOM <strong>GP1705-2G</strong> Dual Port WiFi XPON <a href=\"https://www.startech.com.bd/onu\" style=\"color: rgb(0, 0, 0);\" target=\"\">ONU </a>is a powerful and versatile device intended for high-speed fiber broadband networks. PON transmission rates of 1.25Gbps uplink and 2.5Gbps downstream guarantee dependable and quick connectivity for a range of applications. Its four 2x2 MIMO antennas and one GPON/EPON connection allow it to deliver a Wi-Fi throughput of 1200Mbps (Dual Band Wireless), making it perfect for homes and small businesses with several connected devices. It also offers strong wireless coverage. For wired connectivity, the BDCOM GP1705-2G WiFi XPON ONU also has a Gigabit RJ45 port and a 100M RJ45 port. Compatibility and interoperability are guaranteed by its adherence to many standards, such as IEEE 802.3ah, IEEE 802.1Q VLAN, and ITU-T G.984/G.988. Support for VLANs, such as IEEE 802.1Q VLAN, port-based VLAN, and 4K VLAN, allows for effective network segmentation and management. QoS features that guarantee optimal traffic management and prioritization include IEEE 802.3x flow control, backpressure flow control, and four priority queues per port. Device management is made flexible by the availability of CLI, HTTP, SNMP, TR069, and TELNET as management options. In addition, the BDCOM GP1705-2G WiFi XPON ONU provides local or server syslog for improved monitoring and troubleshooting, and supports software upgrades via TFTP, WEB, OMCI, etc. Data protection is improved by network security features including multicast group limitation, port protection, and MAC address filtering. Loop detection, dying-gasp capability, and TX/RX optical power alerts are examples of reliability characteristics that guarantee steady and continuous operation. With support for 802.11b/g/n/ac standards, 2x2 MIMO technology, multiple SSIDs, SSID encryption, and programmable wireless channels, the BDCOM GP1705-2G Dual Port WiFi XPON ONU offers dependable and safe wireless access.</p><h2>Buy BDCOM GP1705-2G Dual Port WiFi XPON ONU from Star Tech</h2><p>In Bangladesh, you can get original <strong>BDCOM GP1705-2G Dual Port WiFi XPON ONU</strong> From Star Tech. We have a large collection of latest BDCOM <a href=\"https://www.startech.com.bd/onu\" target=\"\">ONU </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The BDCOM GP1705-2G Dual Port WiFi XPON ONU comes with 1 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GP1705-2G</li><li>PON Transmission Rate: Downlink 2.5Gbps/Uplink 1.25Gbps</li><li>PON Ports: 1x GPON/EPON, 4x 2x2 MIMO Antenna</li><li>UNI Ports: 1x Gigabit RJ45, 1x 100M RJ45 Ports</li><li>Wi-Fi Speed: 1200Mbps (Dual Band Wireless), 4K VLAN</li></ul>",
+      "model": "GP1705-2G",
+      "warranty": "1 years warranty",
+      "basePrice": 3050.0,
+      "originalPrice": 3450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "BDCOM",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-35398",
+          "price": 3050.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2928.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "GP1705-2G",
+              "position": 0
+            },
+            {
+              "label": "PON Transmission Rate",
+              "value": "Downlink 2.5Gbps/Uplink 1.25Gbps",
+              "position": 1
+            },
+            {
+              "label": "PON Ports",
+              "value": "1x GPON/EPON, 4x 2x2 MIMO Antenna",
+              "position": 2
+            },
+            {
+              "label": "UNI Ports",
+              "value": "1x Gigabit RJ45, 1x 100M RJ45 Ports",
+              "position": 3
+            },
+            {
+              "label": "Wi-Fi Speed",
+              "value": "1200Mbps (Dual Band Wireless), 4K VLAN",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bdcom-gp1705-2g-wifi-xpon-onu",
+      "sourceProductCode": "35398",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GP1705-2G",
+        "PON Transmission Rate: Downlink 2.5Gbps/Uplink 1.25Gbps",
+        "PON Ports: 1x GPON/EPON, 4x 2x2 MIMO Antenna",
+        "UNI Ports: 1x Gigabit RJ45, 1x 100M RJ45 Ports",
+        "Wi-Fi Speed: 1200Mbps (Dual Band Wireless), 4K VLAN"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/bdcom-gp1705-2g-wifi-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/bdcom-gp1705-2g-wifi-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bdcom-gp1705-2g-wifi-xpon-onu",
+        "candidateTitle": "BDCOM GP1705-2G Dual Port WiFi XPON ONU",
+        "attemptStem": "bdcom-gp1705-2g-wifi-xpon-onu"
+      }
+    },
+    {
+      "name": "BDCOM P1501DS 1-Port EPON ONU",
+      "slug": "bdcom-p1501ds-epon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-35394",
+      "description": "<h2>BDCOM P1501DS 1-Port EPON ONU</h2><p>The BDCOM <strong>P1501DS</strong> 1-Port EPON <a href=\"https://www.startech.com.bd/onu\" style=\"color: rgb(0, 0, 0);\" target=\"\">ONU </a>is a powerful and efficient solution for Fiber to the Home/Office (FTTH/O) deployments. It offers dependable broadband access with one GE TX port and one EPON interface. It is made of premium plastic hull material, which guarantees durability without sacrificing design lightness. Interoperability and compliance are guaranteed by the BDCOM P1501DS 1-Port EPON ONU's compatibility with multiple industry standards, such as IEEE802.3ah and PRC Community Industry Standard (YD/T 1475-2006). IEEE 802.1Q and CTC2.1/3.0 specified VLANs are supported by VLAN, allowing for effective network segmentation and management. MAC ACL and IP ACL improve network security, while QoS features like backpressure flow control and IEEE 802.3x flow control guarantee optimal traffic handling. For effective management of multicast traffic, multicast support comprises IGMP-Snooping and MLD-Snooping. Additional reliability features like dying-gasp functionality and loop detection are built into the BDCOM P1501DS 1-Port EPON ONU to guarantee steady and continuous operation. High-performance FTTH/O networks with improved security and dependability can be deployed with ease thanks to the BDCOM P1501DS 1-Port EPON ONU's extensive feature set and small design. </p><h2>Buy BDCOM P1501DS 1-Port EPON ONU from Star Tech</h2><p>In Bangladesh, you can get original <strong>BDCOM P1501DS 1-Port EPON ONU</strong> From Star Tech. We have a large collection of latest BDCOM <a href=\"https://www.startech.com.bd\" target=\"\">ONU </a>to purchase. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The BDCOM P1501DS 1-Port EPON ONU comes with 1 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: P1501DS</li><li>ONU Type: FTTH/O ONU, EPON Interface: 1 (SC/UPC)</li><li>FTTH/O ONU with 1 EPON interface and 1 GE TX port</li><li>QoS with multiple priority queues and flow control</li><li>Loop detection and optical power alarms</li></ul>",
+      "model": "P1501DS",
+      "warranty": "1 years warranty",
+      "basePrice": 1180.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "BDCOM",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-35394",
+          "price": 1180.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1132.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "P1501DS",
+              "position": 0
+            },
+            {
+              "label": "ONU Type",
+              "value": "FTTH/O ONU, EPON Interface: 1 (SC/UPC)",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bdcom-p1501ds-epon-onu",
+      "sourceProductCode": "35394",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: P1501DS",
+        "ONU Type: FTTH/O ONU, EPON Interface: 1 (SC/UPC)",
+        "FTTH/O ONU with 1 EPON interface and 1 GE TX port",
+        "QoS with multiple priority queues and flow control",
+        "Loop detection and optical power alarms"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/bdcom-p1501ds-epon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/bdcom-p1501ds-epon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bdcom-p1501ds-epon-onu",
+        "candidateTitle": "BDCOM P1501DS 1-Port EPON ONU",
+        "attemptStem": "bdcom-p1501ds-epon-onu"
+      }
+    },
+    {
+      "name": "C-Data FD504G-X-R410 4 Port XPON ONU",
+      "slug": "c-data-fd504g-x-r410-4-port-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-21504",
+      "description": "<h2 style=\"text-align: justify;\">C-Data FD504G-X-R410 4 Port XPON ONU</h2><p style=\"text-align: justify;\">C-Data FD504G-X-R410 4 Port XPON ONU is a 4 port Optical Network Unit. It is powered by a DC power supply adapter of 12V/0.5A. It is one of the GPON optical network unit design to meet the requirement of the broadband access network. It apply in FTTH/FTTO to provide the data and video service based on the GPON network. This ONU works in compliant with ITU T G.984Standard, adapting GPON upstream alongside ONU auto-discovery, Link detection, remote upgrade of software,SNand LOID, Password multiple registration methods, port VLAN configuration, mac-address learning, port-based rate limitation and bandwidth control, port flow-control,broadcasting storm resistance function, igmp transparent/snooping/proxy mode, remote management configuration,Dynamic Bandwidth Allocation (DBA). It also has three layer routing function alongside EMS network management based on SNMP which is convenient for maintenance and power-off alarm function and easy link problem detection. The FD504G-G-R410 provides four 10,100 and1000 MBps auto-adapting Ethernet ports. The FD504G-G-R410 ONU features high-performance forwarding capabilities to ensure excellent experience with Internet and HD video services. Therefore, the FD504G-G-R410 provides a perfect terminal solution and future-oriented service supporting capabilities for FTTH deployment. It also comes with a good third-party compatibility to work with various third party OLTs, such as Huawei, ZTE, Fiberhome, Alcatel-Lucent etc.C-Data FD504G-X-R410 4 Port XPON ONU offers 2 Years of Warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD504G-X-R410</li><li>4 auto-adapting Ethernet ports</li><li>Support port VLAN configuration</li><li>Third party OLT Compatibility</li><li>Support mac-address learning</li></ul>",
+      "model": "FD504G-X-R410",
+      "warranty": "a good third-party compatibility to work with various third party OLTs, such as Huawei, ZTE, Fiberhome, Alcatel-Lucent etc.C-Data FD504G-X-R410 4 Port XPON ONU offers 2 Years of Warranty",
+      "basePrice": 3150.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-21504",
+          "price": 3150.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3024.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD504G-X-R410",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd504g-x-r410-4-port-xpon-onu",
+      "sourceProductCode": "21504",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD504G-X-R410",
+        "4 auto-adapting Ethernet ports",
+        "Support port VLAN configuration",
+        "Third party OLT Compatibility",
+        "Support mac-address learning"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/c-data-fd504g-x-r410-4-port-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/c-data-fd504g-x-r410-4-port-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd504g-x-r410-4-port-xpon-onu",
+        "candidateTitle": "C-Data FD504G-X-R410 4 Port XPON ONU",
+        "attemptStem": "c-data-fd504g-x-r410-4-port-xpon-onu"
+      }
+    },
+    {
+      "name": "C-Data FD504G-X-R411 4 Port XPON ONU",
+      "slug": "c-data-fd504g-x-r411-4-port-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-29013",
+      "description": "<h2 style=\"\">C-Data FD504G-X-R411 4 Port XPON ONU</h2><p style=\"\">The C-Data FD504G-X-R411 XPON ONU is a passive optical network terminal designed for the broadband access market that uses EPON and GPON technology. It is used in conjunction with EPON OLT and GPON OLT to provide a complete broadband access solution.Support ONU auto-discovery/Link detection/remote software upgrade; Support port VLAN configuration, 4*10/100/1000M Ethernet interface, 1 XPON interface, plastic casing, external power supply adapter.</p><h2 style=\"\">Buy C-Data FD504G-X-R411 4 Port XPON ONU from Star Tech</h2><p style=\"\">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/c-data-fd504g-x-r411-4-port-xpon-onu\" target=\"\">C-Data FD504G-X-R411 4 Port XPON ONU</a> From Star Tech. We have a large collection of latest C-Data <a href=\"https://www.startech.com.bd/onu\" target=\"\">ONU</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The C-Data FD504G-X-R411 XPON ONU comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD504G-X-R411</li><li>4*10/100/1000M Ethernet Interface</li><li>PON Throughput: Downstream 2.488Gbit/s; Upstream 1.244Gbit/s</li><li>Support port VLAN configuration</li><li>Support mac-address learning</li></ul>",
+      "model": "FD504G-X-R411",
+      "warranty": "1 year warranty",
+      "basePrice": 3300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29013",
+          "price": 3300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3168.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD504G-X-R411",
+              "position": 0
+            },
+            {
+              "label": "PON Throughput",
+              "value": "Downstream 2.488Gbit/s; Upstream 1.244Gbit/s",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd504g-x-r411-4-port-xpon-onu",
+      "sourceProductCode": "29013",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD504G-X-R411",
+        "4*10/100/1000M Ethernet Interface",
+        "PON Throughput: Downstream 2.488Gbit/s; Upstream 1.244Gbit/s",
+        "Support port VLAN configuration",
+        "Support mac-address learning"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/c-data-fd504g-x-r411-4-port-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/c-data-fd504g-x-r411-4-port-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd504g-x-r411-4-port-xpon-onu",
+        "candidateTitle": "C-Data FD504G-X-R411 4 Port XPON ONU",
+        "attemptStem": "c-data-fd504g-x-r411-4-port-xpon-onu"
+      }
+    },
+    {
+      "name": "C-Data FD511G-E-F361 Single Port EPON ONU",
+      "slug": "c-data-fd511g-e-f361-epon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-26097",
+      "description": "<h2>C-data FD511G-E-F361 Single Port EPON ONU</h2><p>The C-data FD511G-E-F361 Single Port EPON ONU designed EPON optical network unit. The ONU provides 10/100/1000Mbps auto-adapting data transmission speed. The FD511G-E-F361 comes with 1GE Auto-negotiation RJ45 ports and the receiving sensitivity is -27dBn for EPON. This ONU is fully compatible with IEEE802.3ah is the standard protocol of EPON. The ONU is a perfect transmission solution and future-oriented service-supporting capabilities for FTTH deployment. It has good third-party compatibility to work with third-party OLT, such as Huawei/Tenda/TP-Link/ZTE and others ONU. It is powered by a DC power adapter supply of 12V/0.5A and 3W power consumption.</p><h3>High-Performance Capabilities</h3><p>The FD511G-E-F361 ONU features high-performance capabilities to ensure an excellent experience with Internet and Full HD video service. It has to good transmission rate 1000Mbps distance of about 100 meters. This PON interface has to meet 1000BASE-PX20+ standard and symmetric 1.25Gbps upstream/downstream and a PON transmission distance of 20 Kilometers. This ONU has a 1:64 split ratio.</p><h2>Buy C-Data FD511G-E-F361 Single Port EPON ONU from Star Tech</h2><p>In Bangladesh, you can get the original <a href=\"https://www.startech.com.bd/c-data-fd511g-e-f361-epon-onu\" target=\"\">C-Data FD511G-E-F361 Single Port EPON ONU</a> From Star Tech. We have a large collection of the latest C-Data <a href=\"https://www.startech.com.bd/onu\" target=\"\">ONU</a> to purchase for your<a href=\"https://www.startech.com.bd/networking/router\" target=\"\"> router</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The C-Data FD511G-E-F361 EPON ONU comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD511G-E-F361</li><li>Receiving sensitivity: Epon: -27dBm</li><li>Data Transmission: Ethernet 10/100/1000Mbps</li><li>PON Throughput: Downstream 980Mbps - Upstream 950Mbps</li><li>DC Power Supply: 12V/0.5A</li></ul>",
+      "model": "FD511G-E-F361",
+      "warranty": "a 1-year warranty",
+      "basePrice": 1199.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-26097",
+          "price": 1199.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1151.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD511G-E-F361",
+              "position": 0
+            },
+            {
+              "label": "Receiving sensitivity",
+              "value": "Epon: -27dBm",
+              "position": 1
+            },
+            {
+              "label": "Data Transmission",
+              "value": "Ethernet 10/100/1000Mbps",
+              "position": 2
+            },
+            {
+              "label": "PON Throughput",
+              "value": "Downstream 980Mbps - Upstream 950Mbps",
+              "position": 3
+            },
+            {
+              "label": "DC Power Supply",
+              "value": "12V/0.5A",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd511g-e-f361-epon-onu",
+      "sourceProductCode": "26097",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD511G-E-F361",
+        "Receiving sensitivity: Epon: -27dBm",
+        "Data Transmission: Ethernet 10/100/1000Mbps",
+        "PON Throughput: Downstream 980Mbps - Upstream 950Mbps",
+        "DC Power Supply: 12V/0.5A"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/c-data-fd511g-e-f361-epon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/c-data-fd511g-e-f361-epon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd511g-e-f361-epon-onu",
+        "candidateTitle": "C-Data FD511G-E-F361 Single Port EPON ONU",
+        "attemptStem": "c-data-fd511g-e-f361-epon-onu"
+      }
+    },
+    {
+      "name": "C-Data FD511G-E-F680 Single Port EPON ONU",
+      "slug": "c-data-fd511g-e-f680-epon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-28329",
+      "description": "<h2>C-data FD511G-E-F680 Single Port EPON ONU</h2><p>The C-data FD511G-E-F680 Single Port EPON ONU designed EPON optical network unit. The ONU supports auto-adapting data transmission speeds of 10/100/1000Mbps. The FD511G-E-F680 has 1GE Auto-negotiation RJ45 ports and an EPON receiving sensitivity of -27dBn. This ONU is fully IEEE802 compliant.EPON's standard protocol is 3ah. The ONU is an ideal transmission solution with service-supporting capabilities for FTTH deployment. It works well with third-party OLTs such as Huawei/Tenda/TP-Link/ZTE and others. It is powered by a 12V/0.5A DC power adapter with a 3W power consumption.</p><h3>High-Performance Capabilities</h3><p>The C-Data FD511G-E-F680 ONU has high-performance capabilities to ensure an excellent Internet and Full HD video service experience. It must have a good transmission rate of 1000Mbps over a distance of approximately 100 meters. This PON interface must comply with the 1000BASE-PX20+ standard, have symmetric 1.25Gbps upstream/downstream bandwidth, and have a PON transmission distance of 20 kilometers. This ONU has a split ratio of 1:64.</p><h2>Buy C-Data FD511G-E-F680 Single Port EPON ONU from Star Tech</h2><p>In Bangladesh, you can get the original <a href=\"https://www.startech.com.bd/c-data-fd511g-e-f680-epon-onu\" target=\"\">C-Data FD511G-E-F680 Single Port EPON ONU</a> From Star Tech. We have a large collection of the latest C-Data <a href=\"https://www.startech.com.bd/onu\" target=\"\">ONU</a> to purchase for your<a href=\"https://www.startech.com.bd/networking/router\" target=\"\"> router</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The C-Data FD511G-E-F680 EPON ONU comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD511G-E-F680</li><li>Receiving sensitivity: Epon: -27dBm</li><li>Data Transmission: Ethernet 1000Mbps</li><li>PON Throughput: Downstream 980Mbps - Upstream 950Mbps</li><li>DC Power Supply: 12V/0.5A</li></ul>",
+      "model": "FD511G-E-F680",
+      "warranty": "a 1-year warranty",
+      "basePrice": 1100.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-28329",
+          "price": 1100.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1056.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD511G-E-F680",
+              "position": 0
+            },
+            {
+              "label": "Receiving sensitivity",
+              "value": "Epon: -27dBm",
+              "position": 1
+            },
+            {
+              "label": "Data Transmission",
+              "value": "Ethernet 1000Mbps",
+              "position": 2
+            },
+            {
+              "label": "PON Throughput",
+              "value": "Downstream 980Mbps - Upstream 950Mbps",
+              "position": 3
+            },
+            {
+              "label": "DC Power Supply",
+              "value": "12V/0.5A",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd511g-e-f680-epon-onu",
+      "sourceProductCode": "28329",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD511G-E-F680",
+        "Receiving sensitivity: Epon: -27dBm",
+        "Data Transmission: Ethernet 1000Mbps",
+        "PON Throughput: Downstream 980Mbps - Upstream 950Mbps",
+        "DC Power Supply: 12V/0.5A"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/c-data-fd511g-e-f680-epon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/c-data-fd511g-e-f680-epon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd511g-e-f680-epon-onu",
+        "candidateTitle": "C-Data FD511G-E-F680 Single Port EPON ONU",
+        "attemptStem": "c-data-fd511g-e-f680-epon-onu"
+      }
+    },
+    {
+      "name": "C-Data FD511G-G-F361 Single Port G-PON ONU",
+      "slug": "c-data-fd511g-g-f361-single-port-g-pon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-29012",
+      "description": "<h2>C-Data FD511G-G-F361 Single Port G-PON ONU</h2><p>The C-Data FD511G-G-F361 Single Port G-PON ONU has one auto-adapting 10/100/1000Mbps Ethernet port. The FD511G-G-F361 has high-performance forwarding capabilities to ensure an excellent Internet and HD video experience. It has good third-party compatibility with third-party OLTs like Huawei/ZTE/BDCOM/Vi-sol. Support for ONU auto-discovery/Link detection/remote software upgrade, 1*GE RJ45 auto-negotiation, PON Downstream throughput is 2.488Gbit/s, while upstream throughput is 1.244Gbit/s. 1000Mbps Ethernet, 12V/0.5A DC power supply adapter.</p><h2>Buy C-Data FD511G-G-F361 Single Port G-PON ONU from Star Tech</h2><p>In Bangladesh, you can get the original <a href=\"https://www.startech.com.bd/c-data-fd511g-g-f361-single-port-g-pon-onu\" target=\"\">C-Data FD511G-G-F361 Single Port G-PON ONU</a> From Star Tech. We have a large collection of the latest C-Data <a href=\"https://www.startech.com.bd/onu\" target=\"\">ONU</a> to purchase for your<a href=\"https://www.startech.com.bd/networking/router\" target=\"\"> router</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The C-Data FD511G-G-F361 Single Port G-PON ONU comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD511G-G-F361</li><li>1*GE Auto-negotiation RJ45 ports</li><li>PON Throughput: Downstream 2.488Gbit/s; Upstream 1.244Gbit/s</li><li>Ethernet: 1000Mbps</li><li>12V/0.5A DC power supply adapter</li></ul>",
+      "model": "FD511G-G-F361",
+      "warranty": "a 1-year warranty",
+      "basePrice": 1230.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29012",
+          "price": 1230.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1180.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD511G-G-F361",
+              "position": 0
+            },
+            {
+              "label": "PON Throughput",
+              "value": "Downstream 2.488Gbit/s; Upstream 1.244Gbit/s",
+              "position": 1
+            },
+            {
+              "label": "Ethernet",
+              "value": "1000Mbps",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd511g-g-f361-single-port-g-pon-onu",
+      "sourceProductCode": "29012",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD511G-G-F361",
+        "1*GE Auto-negotiation RJ45 ports",
+        "PON Throughput: Downstream 2.488Gbit/s; Upstream 1.244Gbit/s",
+        "Ethernet: 1000Mbps",
+        "12V/0.5A DC power supply adapter"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/c-data-fd511g-g-f361-single-port-g-pon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/c-data-fd511g-g-f361-single-port-g-pon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd511g-g-f361-single-port-g-pon-onu",
+        "candidateTitle": "C-Data FD511G-G-F361 Single Port G-PON ONU",
+        "attemptStem": "c-data-fd511g-g-f361-single-port-g-pon-onu"
+      }
+    },
+    {
+      "name": "C-Data FD511G-G-F680 Single Port G-PON ONU",
+      "slug": "c-data-fd511g-g-f680-single-port-g-pon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-29010",
+      "description": "<h2 style=\"\">C-Data FD511G-G-F680 Single Port G-PON ONU</h2><p style=\"\">The C-Data FD511G-G-F680 Single Port G-PON ONU has one auto-adapting 10/100/1000Mbps Ethernet port. The FD511G-E-F680 has high-performance forwarding capabilities to ensure an excellent Internet and HD video experience. It has good third-party compatibility with third-party OLTs like Huawei/ZTE/BDCOM/Vi-sol. Help ONU auto-discovery link detection/remote software upgrade, 1*GE Auto-negotiation RJ45 ports, PON Downstream throughput is 2.488Gbit/s, while upstream throughput is 1.244Gbit/s. 1000Mbps Ethernet, 12V/0.5A DC power supply adapter.</p><h2 style=\"\">Buy C-Data FD511G-G-F680 Single Port G-PON ONU from Star Tech</h2><p style=\"\">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/c-data-fd511g-g-f680-single-port-g-pon-onu\" target=\"\">C-Data FD511G-G-F680 Single Port G-PON ONU</a> From Star Tech. We have a large collection of latest C-Data <a href=\"https://www.startech.com.bd/onu\" target=\"\">ONU</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The C-Data FD511G-G-F680 Single Port G-PON ONU comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD511G-G-F680</li><li>1*GE Auto-negotiation RJ45 ports</li><li>PON Throughput: Downstream 2.488Gbit/s; Upstream 1.244Gbit/s</li><li>Ethernet: 1000Mbps</li><li>12V/0.5A DC power supply adapter</li></ul>",
+      "model": "FD511G-G-F680",
+      "warranty": "1 year warranty",
+      "basePrice": 1210.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29010",
+          "price": 1210.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1161.6,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD511G-G-F680",
+              "position": 0
+            },
+            {
+              "label": "PON Throughput",
+              "value": "Downstream 2.488Gbit/s; Upstream 1.244Gbit/s",
+              "position": 1
+            },
+            {
+              "label": "Ethernet",
+              "value": "1000Mbps",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd511g-g-f680-single-port-g-pon-onu",
+      "sourceProductCode": "29010",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD511G-G-F680",
+        "1*GE Auto-negotiation RJ45 ports",
+        "PON Throughput: Downstream 2.488Gbit/s; Upstream 1.244Gbit/s",
+        "Ethernet: 1000Mbps",
+        "12V/0.5A DC power supply adapter"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/c-data-fd511g-g-f680-single-port-g-pon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/c-data-fd511g-g-f680-single-port-g-pon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd511g-g-f680-single-port-g-pon-onu",
+        "candidateTitle": "C-Data FD511G-G-F680 Single Port G-PON ONU",
+        "attemptStem": "c-data-fd511g-g-f680-single-port-g-pon-onu"
+      }
+    },
+    {
+      "name": "C-Data FD511G-X-F361 Single Port XPON ONU",
+      "slug": "c-data-fd511g-x-f361-single-port-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-21590",
+      "description": "<div style=\"text-align: justify;\"><h2>C-Data FD511G-X-F361 Single Port XPON ONU</h2>C-Data FD511G-X-F361 Single Port XPON ONU is a dual mode Optical Network Unit supporting both EPON and XPON modes access. The ONU automatically switches into the corresponding PON mode by identifying the local OLT mode to complete xpon or EPON adaptive access. The FD511G-X-F680 dual-mode ONU supports both EPON and xpon two modes of access. The ONU automatically switches into the corresponding PON mode by identifying the local OLT mode to complete xpon or EPON adaptive access. It has good third-party compatibility to work with the third-party OLT, such as Huawei,ZTE,BDCOM and Vi-sol. It also support ONU auto-discovery,Link detectiona and remote upgrade of the firmware software. It comes with 1GE Auto-negotiation RJ45 ports and the receiving sensitivity is  -28dBm for XPON and -27dBm for EPON. It is powered by a DC power supply adapter of 12V/0.5A. C-Data FD511G-X-F361 Single Port XPON ONU offers 2 Years of Warranty.<br/></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD511G-X-F361</li><li>EPON and XPON two modes access</li><li>Receiving sensitivity: XPON: -28dBm;Epon: -27dBm</li><li>DC Power Supply: 12V/0.5A</li><li>Third-party OLT support</li></ul>",
+      "model": "FD511G-X-F361",
+      "warranty": "1GE Auto-negotiation RJ45 ports and the receiving sensitivity is -28dBm for XPON and -27dBm for EPON. It is powered by a DC power supply adapter of 12V/0.5A. C-Data FD511G-X-F361 Single Port XPON ONU offers 2 Years of Warranty",
+      "basePrice": 1399.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-21590",
+          "price": 1399.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1343.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD511G-X-F361",
+              "position": 0
+            },
+            {
+              "label": "Receiving sensitivity",
+              "value": "XPON: -28dBm;Epon: -27dBm",
+              "position": 1
+            },
+            {
+              "label": "DC Power Supply",
+              "value": "12V/0.5A",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd511g-x-f361-single-port-xpon-onu",
+      "sourceProductCode": "21590",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD511G-X-F361",
+        "EPON and XPON two modes access",
+        "Receiving sensitivity: XPON: -28dBm;Epon: -27dBm",
+        "DC Power Supply: 12V/0.5A",
+        "Third-party OLT support"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/c-data-fd511g-x-f361-single-port-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/c-data-fd511g-x-f361-single-port-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd511g-x-f361-single-port-xpon-onu",
+        "candidateTitle": "C-Data FD511G-X-F361 Single Port XPON ONU",
+        "attemptStem": "c-data-fd511g-x-f361-single-port-xpon-onu"
+      }
+    },
+    {
+      "name": "C-Data FD511G-X-F680 Single Port XPON ONU",
+      "slug": "c-data-fd511g-x-f680-single-port-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-21501",
+      "description": "<h2 style=\"text-align: justify;\">C-Data FD511G-X-F680 Single Port XPON ONU</h2><p style=\"text-align: justify;\">C-Data FD511G-X-F680 Single Port XPON ONU is a dual mode Optical Network Unit supporting both EPON and XPON modes access. The ONU automatically switches into the corresponding PON mode by identifying the local OLT mode to complete xpon or EPON adaptive access. The FD511G-X-F680 dual-mode ONU supports both EPON and xpon two modes of access. The ONU automatically switches into the corresponding PON mode by identifying the local OLT mode to complete xpon or EPON adaptive access. It has good third-party compatibility to work with the third-party OLT, such as Huawei,ZTE,BDCOM/Vi-sol. It also support ONU auto-discovery,Link detectiona and remote upgrade of the firmware software. It comes with 1GE Auto-negotiation RJ45 ports and the receiving sensitivity is  -28dBm for XPON and -27dBm for EPON. It is powered by a DC power supply adapter of 12V/0.5A. C-Data FD511G-X-F680 Single Port XPON ONU offers With 2 Years of Warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD511G-X-F680</li><li>EPON and XPON two modes access</li><li>Receiving sensitivity: XPON: -28dBm;Epon: -27dBm</li><li>DC Power Supply: 12V/0.5A</li><li>third-party OLT support</li></ul>",
+      "model": "FD511G-X-F680",
+      "warranty": null,
+      "basePrice": 1240.0,
+      "originalPrice": 1350.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-21501",
+          "price": 1240.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1190.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD511G-X-F680",
+              "position": 0
+            },
+            {
+              "label": "Receiving sensitivity",
+              "value": "XPON: -28dBm;Epon: -27dBm",
+              "position": 1
+            },
+            {
+              "label": "DC Power Supply",
+              "value": "12V/0.5A",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd511g-x-f680-single-port-xpon-onu",
+      "sourceProductCode": "21501",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD511G-X-F680",
+        "EPON and XPON two modes access",
+        "Receiving sensitivity: XPON: -28dBm;Epon: -27dBm",
+        "DC Power Supply: 12V/0.5A",
+        "third-party OLT support"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/c-data-fd511g-x-f680-single-port-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/c-data-fd511g-x-f680-single-port-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd511g-x-f680-single-port-xpon-onu",
+        "candidateTitle": "C-Data FD511G-X-F680 Single Port XPON ONU",
+        "attemptStem": "c-data-fd511g-x-f680-single-port-xpon-onu"
+      }
+    },
+    {
+      "name": "C-Data FD514GB-PFX-R410 4 Port POE XPON ONU",
+      "slug": "c-data-fd514gb-pfx-r410-4-port-poe-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-29014",
+      "description": "<h2 style=\"\">C-Data FD514GB-PFX-R410 4 Port POE XPON ONU</h2><p style=\"\">The C-Data FD514GB-PFX-R410 dual-mode ONU is an XPON optical network unit designed to meet broadband access network requirements. The product includes 4 GE ports with PoE/PoE+ functions that can not only transmit data but also connect to terminal devices such as cameras to supply power, making networking more flexible. The EPON interface complies with the 1000BASE-PX20+ symmetric standard, while the GPON interface adheres to the FSAN G.984.2 standard, Class B+. The downstream and upstream data rates vary depending on the network type, with GPON supporting 2.488Gbps downstream and 1.244Gbps upstream, and EPON supporting 1.25Gbps in both directions. The device operates at different wavelengths for transmission and reception, with GPON using 1490nm for reception and EPON using 1310nm for transmission and 1490nm for reception. The user Ethernet interface consists of four auto-negotiation ports that support speeds of 10/100/1000Mbps and can operate in full or half-duplex mode. These ports utilize RJ45 connectors and feature auto MDI/MDI-X functionality. Additionally, the device supports POE (Power over Ethernet) and POE+ functionality, allowing it to provide power to connected devices over the Ethernet cables. In terms of business capabilities, the device supports layer 2 wire-speed switching and various features such as VLAN tagging and translation, port-based speed limitation, priority classification, and storm control for broadcast traffic. It also incorporates management functions like status monitoring, configuration management, alarm management, and log management, which can be accessed through different management modes including OMCI, WEB, Telnet, and OAM. The device is equipped with power supply capabilities and supports POE feed (PSE) with a voltage output of 48V DC. The maximum output power for the entire device is 56W, with a maximum output power of 30W per port.<br/></p><h2 style=\"\">Buy C-Data FD514GB-PFX-R410 4 Port POE XPON ONU from Star Tech</h2><p style=\"\">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/c-data-fd514gb-pfx-r410-4-port-poe-xpon-onu\" target=\"\">C-Data FD514GB-PFX-R410 4 Port POE XPON ONU</a> From Star Tech. We have a large collection of latest C-Data <a href=\"https://www.startech.com.bd/onu\" target=\"\">ONU</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The C-Data FD514GB-PFX-R410 4 Port POE XPON ONU comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FD514GB-PFX-R410</li><li>In compliant with ITU – T G.984 ,3ah Standard</li><li>Support POE, POE+ function</li><li>Support port VLAN configuration</li><li>Support mac-address learning</li></ul>",
+      "model": "FD514GB-PFX-R410",
+      "warranty": "1 year warranty",
+      "basePrice": 5500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "C-Data",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29014",
+          "price": 5500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 5280.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FD514GB-PFX-R410",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/c-data-fd514gb-pfx-r410-4-port-poe-xpon-onu",
+      "sourceProductCode": "29014",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FD514GB-PFX-R410",
+        "In compliant with ITU – T G.984 ,3ah Standard",
+        "Support POE, POE+ function",
+        "Support port VLAN configuration",
+        "Support mac-address learning"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/c-data-fd514gb-pfx-r410-4-port-poe-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/c-data-fd514gb-pfx-r410-4-port-poe-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "c-data-fd514gb-pfx-r410-4-port-poe-xpon-onu",
+        "candidateTitle": "C-Data FD514GB-PFX-R410 4 Port POE XPON ONU",
+        "attemptStem": "c-data-fd514gb-pfx-r410-4-port-poe-xpon-onu"
+      }
+    },
+    {
+      "name": "DBC 1GE FTTH XPON ONU",
+      "slug": "dbc-1ge-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-45603",
+      "description": "<h2>DBC 1GE FTTH XPON ONU</h2><p>The DBC 1GE FTTH XPON ONU is intended to provide dependable, high-speed connectivity for modern fiber-to-the-home networks, assuring flawless internet performance for both residential and small business users. The DBC 1GE FTTH XPON ONU, which features a SC/UPC optical interface, delivers reliable optical connections with a receiving sensitivity of 28dBm and transmitting optical power ranging from 0 to +4dBm, ensuring constant signal quality across a variety of network conditions. Its interface type consists of one 10/100/1000Mbps auto-adaptive Ethernet port with full and half-duplex capability via an RJ45 connector, making it compatible with a variety of devices. The DBC 1GE XPON ONU assures that customers may experience seamless streaming, quick downloads, and uninterrupted video calls without experiencing connectivity issues. For further security, the DBC XPON ONU includes an integrated firewall with DDOS protection and comprehensive filtering settings based on ACL, MAC, and URL. This security-focused architecture ensures safer browsing and eliminates unwanted intrusions, making the DBC ONU a reliable solution for securing online access. Furthermore, the device uses a 12V 0.5A power supply, ensuring energy-efficient performance while being stable for extended periods of time. The DBC 1GE FTTH XPON ONU is compact and simple to set up and administer, making it ideal for homes, offices, and small businesses that want dependable fiber access. </p><h2>Buy DBC 1GE FTTH XPON ONU From Star Tech</h2><p>In Bangladesh, you can get original <strong>DBC 1GE FTTH XPON ONU</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/onu\" target=\"_blank\">ONU</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. The DBC 1GE FTTH XPON ONU comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DBC 1GE FTTH XPON ONU</li><li>Data Rate: 10/100/1000mbps</li><li>Interface: 1x Gigabit Ethernet Port</li><li>Optical Interface: SC / UPC Connector</li><li>Compatible with most FTTH networks and setups</li></ul>",
+      "model": "DBC 1GE FTTH XPON ONU",
+      "warranty": "1 year warranty",
+      "basePrice": 1050.0,
+      "originalPrice": 1100.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "1x Gigabit Ethernet Port",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-45603",
+          "price": 1050.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "1x Gigabit Ethernet Port"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1008.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DBC 1GE FTTH XPON ONU",
+              "position": 0
+            },
+            {
+              "label": "Data Rate",
+              "value": "10/100/1000mbps",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "1x Gigabit Ethernet Port",
+              "position": 2
+            },
+            {
+              "label": "Optical Interface",
+              "value": "SC / UPC Connector",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dbc-1ge-xpon-onu",
+      "sourceProductCode": "45603",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DBC 1GE FTTH XPON ONU",
+        "Data Rate: 10/100/1000mbps",
+        "Interface: 1x Gigabit Ethernet Port",
+        "Optical Interface: SC / UPC Connector",
+        "Compatible with most FTTH networks and setups"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/dbc-1ge-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/dbc-1ge-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dbc-1ge-xpon-onu",
+        "candidateTitle": "DBC 1GE FTTH XPON ONU",
+        "attemptStem": "dbc-1ge-xpon-onu"
+      }
+    },
+    {
+      "name": "Fiber-link JHHL-E801ZB Single Port EPON ONU",
+      "slug": "fiber-link-jhhl-e801zb-single-port-epon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-29113",
+      "description": "<h2 style=\"\">Fiber-link JHHL-E801ZB Single Port EPON ONU</h2><p>The Fiber-link JHHL-E801ZB Single Port EPON ONU is a high-performance optical network unit designed for broadband access networks. It is specifically used in FTTH/FTTO deployments to provide data and video services based on EPON (Ethernet Passive Optical Network) technology. The EPON ONU is equipped with a ZTE chipset, ensuring reliable and efficient performance. With its 1 GE adaptive Ethernet port, the EPON ONU supports both bridge and routing modes, allowing for flexible network configurations. It is fully compatible with IEEE802.3ah standards and offers features such as port-based rate limitation, bandwidth control, and data encryption. The EPON ONU supports up to 20KM transmission distance and features dynamic bandwidth allocation (DBA) for optimized network resource utilization. The features of the EPON ONU include ONU auto-discovery, link detection, remote software upgrade, VLAN division, and user separation to prevent broadcast storms. It also supports power-off alarm function for easy detection of link problems and has built-in broadcasting storm resistance. The ONU supports port isolation between different ports, three-layer routing functions, ACL (Access Control List), and SNMP (Simple Network Management Protocol) for flexible data packet filtering and configuration.</p><h2 style=\"\">Buy Fiber-link JHHL-E801ZB Single Port EPON ONU from Star Tech</h2><p style=\"\">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/fiber-link-jhhl-e801zb-single-port-epon-onu\" target=\"\">Fiber-link JHHL-E801ZB Single Port EPON ONU</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/onu\" target=\"\">ONU</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Fiber-link JHHL-E801ZB Single Port EPON ONU comes with 6 month warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: JHHL-E801ZB</li><li>1x EPON port (PX20+)</li><li>Wavelength:Tx1310nm,Rx 1490nm</li><li>Transmission distance: 20KM</li><li>1x 10/100/1000M Full/Half, RJ45 connector</li></ul>",
+      "model": "JHHL-E801ZB",
+      "warranty": "6 month warranty",
+      "basePrice": 1150.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29113",
+          "price": 1150.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1104.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "JHHL-E801ZB",
+              "position": 0
+            },
+            {
+              "label": "Wavelength",
+              "value": "Tx1310nm,Rx 1490nm",
+              "position": 1
+            },
+            {
+              "label": "Transmission distance",
+              "value": "20KM",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fiber-link-jhhl-e801zb-single-port-epon-onu",
+      "sourceProductCode": "29113",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: JHHL-E801ZB",
+        "1x EPON port (PX20+)",
+        "Wavelength:Tx1310nm,Rx 1490nm",
+        "Transmission distance: 20KM",
+        "1x 10/100/1000M Full/Half, RJ45 connector"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/fiber-link-jhhl-e801zb-single-port-epon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/fiber-link-jhhl-e801zb-single-port-epon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fiber-link-jhhl-e801zb-single-port-epon-onu",
+        "candidateTitle": "Fiber-link JHHL-E801ZB Single Port EPON ONU",
+        "attemptStem": "fiber-link-jhhl-e801zb-single-port-epon-onu"
+      }
+    },
+    {
+      "name": "Phyhome FHR1100GZB EPON 1G ONU",
+      "slug": "phyhome-fhr1100gzb-epon-1g-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-28370",
+      "description": "<h2>Phyhome FHR1100GZB EPON 1G ONU</h2><p>The Phyhome FHR1100GZB EPON 1G <a href=\"https://www.startech.com.bd/onu\" style=\"color: rgb(0, 0, 0);\" target=\"_blank\">ONU</a><span style=\"color: rgb(0, 0, 0);\"> </span>is for FTTH and networking service providers. Based on Gigabit EPON technology, FH-net Optoelectronics created the FHR1100GZB, which has a high cost performance. Phyhome FHR1100GZB provides a multi-service QoS quality guarantee and is highly stable and simple to maintain. Also, Phyhome FHR1100GZB EPON 1G ONU complies fully with technical standards like IEEE802.3ah and the technical specifications for EPON Equipment (version 2.1 and higher) from China Telecom and China Unicom.</p><h2>Buy Phyhome FHR1100GZB EPON 1G ONU from the best ONU Shop in Bangladesh: Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/phyhome-fhr1100gzb-epon-1g-onu\" target=\"_blank\">Phyhome FHR1100GZB EPON 1G ONU</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/onu\" target=\"_blank\">ONU</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. The Phyhome FHR1100GZB EPON 1G ONU comes with 2 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FHR1100GZB</li><li>1.25G/ 1.25G Speed</li><li>2048 MAC address table</li><li>4KV ESD Ethernet protection</li><li>ZTE Chipset</li></ul>",
+      "model": "FHR1100GZB",
+      "warranty": "2 years warranty",
+      "basePrice": 1050.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Phyhome",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-28370",
+          "price": 1050.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1008.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FHR1100GZB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/phyhome-fhr1100gzb-epon-1g-onu",
+      "sourceProductCode": "28370",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FHR1100GZB",
+        "1.25G/ 1.25G Speed",
+        "2048 MAC address table",
+        "4KV ESD Ethernet protection",
+        "ZTE Chipset"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/phyhome-fhr1100gzb-epon-1g-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/phyhome-fhr1100gzb-epon-1g-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "phyhome-fhr1100gzb-epon-1g-onu",
+        "candidateTitle": "Phyhome FHR1100GZB EPON 1G ONU",
+        "attemptStem": "phyhome-fhr1100gzb-epon-1g-onu"
+      }
+    },
+    {
+      "name": "Phyhome P3 Single Port Gigabit Xpon/Gpon Onu",
+      "slug": "phyhome-p3-1ge-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-29804",
+      "description": "<h2>Phyhome P3 Single Port Gigabit Xpon/Gpon Onu</h2><p>The Phyhome P3 1GE XPON <a href=\"https://www.startech.com.bd/onu\" style=\"color: rgb(0, 0, 0);\" target=\"\">ONU</a> has a downstream speed of 1.25G and an upstream speed of 1.25G. This sophisticated optical network device, powered by the cutting-edge ZTE Chipset, is meant to transform your online experience. Phyhome P3 1GE XPON ONU Support for NAT, Static Route, DHCP, PPPoE, and Static IP allows you the flexibility and agility required for any network setup. With the Web Management interface, you can easily control your network. Manage and tweak your settings with ease to meet your individual needs. The 10/100/1000M LAN port offers high-speed connectivity for all of your devices, allowing for smooth surfing, streaming, and gaming. With a huge MAC address table of 2048 and ESD Ethernet protection of 4KV. Phyhome P3 1GE XPON ONU's cutting-edge MIPS34KC 650MHz control switch offers maximum performance and stability.</p><h2>Buy Phyhome P3 1GE XPON ONU From Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/phyhome-p3-1ge-xpon-onu\" target=\"\">Phyhome P3 1GE XPON ONU</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/onu\" target=\"_blank\">ONU</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. The Phyhome P3 1GE XPON ONU comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: P3</li><li>1x 10/100/1000Mbps Ethernet Port</li><li>Downstream Rate 1.25 Gbps</li><li>Upstream rate 1.25 Gbps</li><li>Support Any Brand OLT</li></ul>",
+      "model": "P3",
+      "warranty": "1 year warranty",
+      "basePrice": 1199.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Phyhome",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29804",
+          "price": 1199.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1151.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "P3",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/phyhome-p3-1ge-xpon-onu",
+      "sourceProductCode": "29804",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: P3",
+        "1x 10/100/1000Mbps Ethernet Port",
+        "Downstream Rate 1.25 Gbps",
+        "Upstream rate 1.25 Gbps",
+        "Support Any Brand OLT"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/phyhome-p3-1ge-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/phyhome-p3-1ge-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "phyhome-p3-1ge-xpon-onu",
+        "candidateTitle": "Phyhome P3 Single Port Gigabit Xpon/Gpon Onu",
+        "attemptStem": "phyhome-p3-1ge-xpon-onu"
+      }
+    },
+    {
+      "name": "Solitine SOL-XP01 Gigabit XPON ONU",
+      "slug": "solitine-sol-xp01-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-48214",
+      "description": "<h2>Solitine SOL-XP01 Gigabit XPON ONU</h2><p>The Solitine <strong>SOL-XP01</strong> Gigabit XPON ONU delivers high-speed fiber connectivity for modern FTTH deployments and triple-play services, including Internet and IPTV support. The Solitine ONU supports upstream data rates of 1.25Gbps and downstream speeds up to 2.5Gbps for smooth streaming and browsing. It features a single fiber WDM optical interface with an SC connector and Class B+ optical module. The Solitine SOL-XP01 ONU supports a maximum transmission distance of 20 kilometers for extended network coverage. PON RX sensitivity is rated below -28dBm at 1490nm, while PON TX power ranges from 1 to 5dBm at 1310nm. Solitine XPON ONU complies with ITU-T G.984.x standards, ensuring stable and standardized XPON performance. The Solitine ONU includes one SC/UPC fiber port and one 10/100/1000Mbps RJ45 Gigabit LAN port. Solitine SOL-XP01 ONU supports WAN connection modes such as PPPoE, Dynamic IP, Static IP, and Bridge configuration. Advanced software features include DHCP server, client, client list, address reservation, and DHCP relay. Diagnostic tools like Ping, Ping6, Tracert, and Tracert6 help administrators monitor network status effectively. Firewall functions include ALG, IP filter, MAC filter, URL filter, port filter, port forwarding, and DMZ. The Solitine SOL-XP01 Gigabit XPON ONU supports IPv4 and IPv6 with Radvd, DHCPv6, MLD proxy, and MLD snooping. VLAN capability supports 802.1Q tag VLAN with up to 4094 VLAN IDs for flexible segmentation. Additional services include Dynamic DNS and DHCP configuration for business Internet use. The unit uses passive ventilated cooling and operates on DC12V/1A power supply. LED indicators display Power, LOS, PON, and LAN status for quick troubleshooting. Rear ports include reset and power buttons, power jack, RJ45, and PON port. Solitine SOL-XP01 XPON ONU meets CE and RoHS certifications and complies with IEEE 802.3 EPON MAC and RFC4837 standards.</p><h2>Buy Solitine SOL-XP01 Gigabit XPON ONU From Star Tech</h2><p>In Bangladesh, you can get original <strong>Solitine SOL-XP01 Gigabit XPON ONU</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/onu\" target=\"_blank\">ONU</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. The Solitine SOL-XP01 Gigabit XPON ONU comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SOL-XP01</li><li>Upstream Rate: 1.25Gbps, Downstream Rate: 2.5Gbps</li><li>Interface: 1x Gigabit RJ45 port, Fiber Port: 1 x SC/UPC</li><li>Connector Type: Single fiber WDM (SC connector)</li><li>Max Transmission Distance 20 km</li></ul>",
+      "model": "SOL-XP01",
+      "warranty": "1 year warranty",
+      "basePrice": 1000.0,
+      "originalPrice": 1200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Solitine",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "1x Gigabit RJ45 port, Fiber Port: 1 x SC/UPC",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-48214",
+          "price": 1000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "1x Gigabit RJ45 port, Fiber Port: 1 x SC/UPC"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 960.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "SOL-XP01",
+              "position": 0
+            },
+            {
+              "label": "Upstream Rate",
+              "value": "1.25Gbps, Downstream Rate: 2.5Gbps",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "1x Gigabit RJ45 port, Fiber Port: 1 x SC/UPC",
+              "position": 2
+            },
+            {
+              "label": "Connector Type",
+              "value": "Single fiber WDM (SC connector)",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/solitine-sol-xp01-xpon-onu",
+      "sourceProductCode": "48214",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SOL-XP01",
+        "Upstream Rate: 1.25Gbps, Downstream Rate: 2.5Gbps",
+        "Interface: 1x Gigabit RJ45 port, Fiber Port: 1 x SC/UPC",
+        "Connector Type: Single fiber WDM (SC connector)",
+        "Max Transmission Distance 20 km"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/solitine-sol-xp01-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/solitine-sol-xp01-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "solitine-sol-xp01-xpon-onu",
+        "candidateTitle": "Solitine SOL-XP01 Gigabit XPON ONU",
+        "attemptStem": "solitine-sol-xp01-xpon-onu"
+      }
+    },
+    {
+      "name": "Tenda G103 Gpon 1 Port Gigabit Optical Network Terminal (ONU)",
+      "slug": "tenda-g103-1-port-network-terminal",
+      "type": "PHYSICAL",
+      "sku": "ST-11029",
+      "description": "<h2>Tenda G103 Gpon 1 Port Gigabit Optical Network Terminal (ONU)</h2><div style=\"text-align: justify;\">Compliant with ITU-T G.984 standard, G103 is widely compatible with global ISP and OLT. 1 gigabit wired RJ45 port is provided by G103 to bring ultra-fast data transfer. Plug and play, G103 supports OMCI remote management without onsite configuration as well .G103 is an ideal FTTH device with simple and easy design. With upstream rate up to 1.25Gbps, downstream rate up to 2.5Gbps and transmission distance up to 20Km, G103 can bring freewheeling internet access.</div><p><span style=\"font-weight: bold;\">Specification</span></p><p></p><ul><li>Compliant with ITU-T G.984 standard. </li><li>Upstream rate up to 1.25Gbps, downstream rate up to 2.5Gbps and transmission distance up to 20Km.</li><li>Gigabit LAN port ensures ultra-fast data transfer. </li><li>OMCI remote management without onsite configuration. </li><li>WEB management and optical power monitor. </li><li>Low power consumption ensures greenlumi. </li><li>Brand-new interface ensures simple and easy installation. </li><li>Compatible with most ISP. </li></ul><p></p><span style=\"font-weight: bold;\">This device comes with 02 years of warranty.</span>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Tenda G103</li><li>Compliant with ITU-T G.984 standard</li><li>Upstream rate up to 1.25Gbps</li><li>Downstream rate up to 2.5Gbps</li><li>Transmission distance up to 20Km</li></ul>",
+      "model": "Tenda G103",
+      "warranty": "02 years of warranty",
+      "basePrice": 1600.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Tenda",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-11029",
+          "price": 1600.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1536.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Tenda G103",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tenda-g103-1-port-network-terminal",
+      "sourceProductCode": "11029",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Tenda G103",
+        "Compliant with ITU-T G.984 standard",
+        "Upstream rate up to 1.25Gbps",
+        "Downstream rate up to 2.5Gbps",
+        "Transmission distance up to 20Km"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/tenda-g103-1-port-network-terminal.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/tenda-g103-1-port-network-terminal.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tenda-g103-1-port-network-terminal",
+        "candidateTitle": "Tenda G103 Gpon 1 Port Gigabit Optical Network Terminal (ONU)",
+        "attemptStem": "tenda-g103-1-port-network-terminal"
+      }
+    },
+    {
+      "name": "Tenda HG1 Gpon Single Port Gigabit Optical Network Terminal (ONU)",
+      "slug": "tenda-hg1-gpon-single-port-network-terminal",
+      "type": "PHYSICAL",
+      "sku": "ST-22610",
+      "description": "<h2>Tenda HG1 Gpon Single Port Gigabit Optical Network Terminal (ONU)</h2><p>The HG1 is a Gigabit Passive Optical Network (GPON) terminal designed for residential fiber systems. It is also an all-in-one device that provides a seamless terminal solution and future-oriented service support capabilities for FTTH implementation and access to high-speed Internet connections through GPON ports. Its Coverage is 20Km and 1xGE, 1x Power-in ports.</p><h3>Comprehensive GPON network compatibility!</h3><p>The HG1 comes with ITU G.984.1, G.984.2, G.984.3, and G.984.4, enabling broad GPON network compatibility, and enabling OMCI remote management for bandwidth management and bulk remote management, which allows complete remote control without user participation via OMCI (G.984.4 and G.988).</p><h3>Extremely high speed</h3><p>Extremely fast access speeds of up to 2488Gbps receive and 1244Gbps transmit, Gigabit LAN port high-speed forwarding with a transmission distance of 20km, giving a full network solution</p><p>It Supports OMCI and TR069 remote management, no field configuration is required, and is simple to install and operate. The Tenda HG1 Gpon ONU comes with a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HG1</li><li>Compliant with ITU-T G.984 standard</li><li>Upstream Rate: up to 1.25Gbps</li><li>Downstream Rate: up to 2.5Gbps</li><li>Transmission distance: 20km Max</li></ul>",
+      "model": "HG1",
+      "warranty": "a 01-year warranty",
+      "basePrice": 1150.0,
+      "originalPrice": 1275.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Tenda",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-22610",
+          "price": 1150.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1104.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "HG1",
+              "position": 0
+            },
+            {
+              "label": "Upstream Rate",
+              "value": "up to 1.25Gbps",
+              "position": 1
+            },
+            {
+              "label": "Downstream Rate",
+              "value": "up to 2.5Gbps",
+              "position": 2
+            },
+            {
+              "label": "Transmission distance",
+              "value": "20km Max",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tenda-hg1-gpon-single-port-network-terminal",
+      "sourceProductCode": "22610",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HG1",
+        "Compliant with ITU-T G.984 standard",
+        "Upstream Rate: up to 1.25Gbps",
+        "Downstream Rate: up to 2.5Gbps",
+        "Transmission distance: 20km Max"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/tenda-hg1-gpon-single-port-network-terminal.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/tenda-hg1-gpon-single-port-network-terminal.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tenda-hg1-gpon-single-port-network-terminal",
+        "candidateTitle": "Tenda HG1 Gpon Single Port Gigabit Optical Network Terminal (ONU)",
+        "attemptStem": "tenda-hg1-gpon-single-port-network-terminal"
+      }
+    },
+    {
+      "name": "TP-Link TX-6610 1-Port Gigabit GPON Terminal",
+      "slug": "tp-link-tx-6610-gigabit-gpon-terminal",
+      "type": "PHYSICAL",
+      "sku": "ST-11250",
+      "description": "<h2>TP-Link TX-6610 1-Port Gigabit GPON Terminal</h2>\n<p>TP-LINKâ€™s TX-6610 is a next-generation Gigabit Passive Optical Network (GPON) terminal, ideal for Fiber to The Home solution. Itâ€™s an incredibly robust device allowing users to access high-speed internet connections via its GPON port and share it with a Gigabit Ethernet port. With the transmission rates of up to 2.488Gbps, one GPON port and one Gigabit Ethernet port, the TX-6610 provides high-performance forwarding capabilities to ensure smooth VoIP, HD video streaming experiences.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TP-Link TX-6610</li><li>Interface: 1 * 10/100/1000Mbps LAN</li><li>Distance: 0~ 20Km Max</li><li>Power Supply: 9VDC/0.6A</li><li>Security: AES Encryption</li></ul>",
+      "model": "TP-Link TX-6610",
+      "warranty": "1 Year",
+      "basePrice": 1219.0,
+      "originalPrice": 1340.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 4.0,
+        "width": 1.5,
+        "height": 4.2,
+        "unit": "in"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TP-Link",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 10/100/1000Mbps RJ45 Ports 1 SC/APC Port",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-11250",
+          "price": 1219.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "1 10/100/1000Mbps RJ45 Ports 1 SC/APC Port",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1170.24,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Data Rate",
+              "value": "Upstream:1.244Gbps Downstream:2.488Gbps",
+              "position": 0
+            },
+            {
+              "label": "Button",
+              "value": "1 Power On/Off Button 1 RESET Button",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "1 10/100/1000Mbps RJ45 Ports 1 SC/APC Port",
+              "position": 2
+            },
+            {
+              "label": "Network Standard",
+              "value": "IEEE 802.3, 802.3u, 802.1Q, 802.1p",
+              "position": 3
+            },
+            {
+              "label": "Encryption",
+              "value": "AES Encryption Packet Filter based on VLAN",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Distance: 0~ 20Km Max GPON Standards: ITU-T G.984.1, G.984.2, G.984.3, G.984.4 Advanced Features: Upstream and Downstream FEC Dynamic Bandwidth Allocation(DBA) support NSR/SR Up to 16 T-CONTs and 256 GEM Ports Optical power detection, Dying Gasp Terminal Silent mechanism 802.3az EEE Energy Conservation",
+              "position": 5
+            },
+            {
+              "label": "Operating System Support",
+              "value": "Microsoft® Windows® 98SE, NT, 2000, XP, Vista™ or Windows 7, Windows 8, MAC® OS, NetWare®, UNIX® or Linux.",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Power Source",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Mode",
+              "value": "External Power Supply: 9VDC/0.6A",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Dimension",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "4.0*1.5*4.2 in.（102.7 x 37.9 x 106.9mm）",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacturer warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-tx-6610-gigabit-gpon-terminal",
+      "sourceProductCode": "11250",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TP-Link TX-6610",
+        "Interface: 1 * 10/100/1000Mbps LAN",
+        "Distance: 0~ 20Km Max",
+        "Power Supply: 9VDC/0.6A",
+        "Security: AES Encryption"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/tp-link-tx-6610-gigabit-gpon-terminal.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/tp-link-tx-6610-gigabit-gpon-terminal.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-tx-6610-gigabit-gpon-terminal",
+        "candidateTitle": "TP-Link TX-6610 1-Port Gigabit GPON Terminal",
+        "attemptStem": "tp-link-tx-6610-gigabit-gpon-terminal"
+      }
+    },
+    {
+      "name": "TP-Link XZ000-G7 1 Port Gigabit XPON ONU",
+      "slug": "tp-link-xz000-g7-xpon-terminal",
+      "type": "PHYSICAL",
+      "sku": "ST-35077",
+      "description": "<h2>TP-Link XZ000-G7 1 Port Gigabit XPON ONU</h2><p>The TP-Link <strong>XZ000-G7</strong> 1 Port Gigabit XPON ONU delivers reliable fiber-to-the-home connectivity for modern broadband needs. This Gigabit ONU combines GPON and EPON support in one flexible terminal. High-speed data rates, remote management, and strong security protect daily internet performance. With OMCI protocol support and intelligent power-saving, this TP-Link XZ000-G7 XPON ONU suits both home and ISP-managed installations.</p><h3>Dual GPON and EPON Support</h3><p>This TP-Link XZ000-G7 ONU combines GPON and EPON technology in one flexible device. This dual-mode design offers greater flexibility for fiber internet access across different ISP infrastructures. It supports ITU-T G.984 GPON standards, ensuring broad compatibility with existing fiber networks. This flexibility makes the XZ000-G7 a genuinely adaptable solution for various fiber-to-the-home deployments.</p><h3>High-Speed GPON Performance</h3><p>This TP-Link XPON Terminal supports maximum downstream speeds of 2.488 Gbps on GPON. Upstream speeds reach 1.244 Gbps, ensuring fast data transfer in both directions. EPON mode delivers 1.25 Gbps in both downstream and upstream directions. This TP-Link XZ000-G7 1 Port XPON ONU high-speed performance supports smooth HD video streaming and fast data transfers for demanding households.</p><h3>Gigabit Internet Access</h3><p>This TP-Link XZ000-G7 1 Port ONU includes one PON port and one Gigabit Ethernet port. This combination ensures high-performance forwarding for fast, reliable data transfer. Users connect directly to a router or device through the Gigabit LAN port. This setup delivers consistent, high-speed internet access suited for streaming, gaming, and daily browsing.</p><h3>Remote Management via OMCI</h3><p>This TP-Link ONU supports the OMCI protocol for centralized configuration and management. Internet service providers can remotely configure and monitor the device without physical access. This remote management capability streamlines maintenance and troubleshooting significantly. ISPs benefit from reduced technician visits, while customers experience fewer service interruptions overall.</p><h3>Advanced Network Features</h3><p>This <strong>TP-Link XZ000-G7</strong> Gigabit XPON Terminal supports Dynamic Bandwidth Allocation with NSR and SR modes. Up to 16 T-CONTs and 256 GEM ports allow flexible bandwidth management. Upstream and downstream FEC improves signal integrity over long fiber distances. Optical power detection and Dying Gasp add further reliability during unexpected power events.</p><h3>Comprehensive VLAN Support</h3><p>This TP-Link XPON ONU supports 802.1Q tag VLAN across transparent, translation, and trunk modes. Authentication based on serial number and password adds an extra security layer. VLAN Auto Detect simplifies network configuration for service providers managing multiple subscribers. This flexible VLAN support suits both residential and small business fiber deployments.</p><h3>Strong Security Protection</h3><p>This TP-Link XZ000-G7 uses AES encryption to protect data transmitted over the fiber connection. Packet filtering based on VLAN adds another layer of network security. These protections keep both service provider infrastructure and end-user data genuinely secure. Strong encryption standards ensure fiber connections stay protected against unauthorized access attempts.</p><h3>Extended Fiber Distance Support</h3><p>This TP-Link XZ000-G7 XPON ONU supports fiber connections up to 20 kilometers in distance. Upstream wavelength operates at 1310nm, while downstream operates at 1490nm. This extended range suits both urban and semi-rural fiber deployments across Bangladesh. Long-distance support ensures reliable connectivity even for customers located farther from central distribution points.</p><h3>Easy Installation and Management</h3><p>This TP-Link Gigabit ONU offers quick, hassle-free installation for both technicians and end users. Local management through WebGUI and Telnet supports direct configuration when needed. This combination of local and remote management options adds genuine flexibility for different deployment scenarios. This TP-Link XZ000-G7 ONU straightforward setup reduces installation time and simplifies ongoing network maintenance tasks.</p><h2>Why Choose TP-Link XZ000-G7 Gigabit XPON ONU</h2><p>The TP-Link XZ000-G7 1 Port Gigabit XPON ONU suits internet service providers and households needing dependable fiber connectivity. Its dual GPON and EPON support offers genuine flexibility across different fiber network infrastructures. Anyone comparing ONU price in Bangladesh will find strong value in this TP-Link ONU. Its remote management capabilities also make it a practical choice for ISPs managing large subscriber bases.</p><h2>Buy TP-Link XZ000-G7 Gigabit XPON ONU from Star Tech</h2><p>In Bangladesh, you can get original <strong>TP-Link XZ000-G7 Gigabit XPON ONU</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/onu\" target=\"\">ONU</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" style=\"\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The TP-Link XZ000-G7 1 Port Gigabit XPON ONU comes with 2 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: XZ000-G7</li><li>Downstream Speeds: 2.488 Gbps (GPON), 1.25 Gbps (EPON)</li><li>Upstream Speeds: 1.244 Gbps (GPON), 1.25 Gbps (EPON)</li><li>Wave Length: Upstream: 1310 nm, Downstream: 1490 nm</li><li>Interface: 1x PON, 1x 10/100/1000 Mbps RJ45</li></ul>",
+      "model": "XZ000-G7",
+      "warranty": "2 years warranty",
+      "basePrice": 1290.0,
+      "originalPrice": 1400.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TP-Link",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "1x PON, 1x 10/100/1000 Mbps RJ45",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-35077",
+          "price": 1290.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "1x PON, 1x 10/100/1000 Mbps RJ45"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1238.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "XZ000-G7",
+              "position": 0
+            },
+            {
+              "label": "Downstream Speeds",
+              "value": "2.488 Gbps (GPON), 1.25 Gbps (EPON)",
+              "position": 1
+            },
+            {
+              "label": "Upstream Speeds",
+              "value": "1.244 Gbps (GPON), 1.25 Gbps (EPON)",
+              "position": 2
+            },
+            {
+              "label": "Wave Length",
+              "value": "Upstream: 1310 nm, Downstream: 1490 nm",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "1x PON, 1x 10/100/1000 Mbps RJ45",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-xz000-g7-xpon-terminal",
+      "sourceProductCode": "35077",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: XZ000-G7",
+        "Downstream Speeds: 2.488 Gbps (GPON), 1.25 Gbps (EPON)",
+        "Upstream Speeds: 1.244 Gbps (GPON), 1.25 Gbps (EPON)",
+        "Wave Length: Upstream: 1310 nm, Downstream: 1490 nm",
+        "Interface: 1x PON, 1x 10/100/1000 Mbps RJ45"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/tp-link-xz000-g7-xpon-terminal.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/tp-link-xz000-g7-xpon-terminal.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-xz000-g7-xpon-terminal",
+        "candidateTitle": "TP-Link XZ000-G7 1 Port Gigabit XPON ONU",
+        "attemptStem": "tp-link-xz000-g7-xpon-terminal"
+      }
+    },
+    {
+      "name": "VSOL V2801RD Single Port XPON ONU",
+      "slug": "vsol-v2801rd-single-port-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-35345",
+      "description": "<h2>VSOL V2801RD Single Port XPON ONU</h2><p>The Vsol <span style=\"font-weight: bold;\">V2801RD</span> XPON Single Port ONU is a robust and adaptable networking device for efficient communication in fiber-optic networks. Its ability to operate in two modes makes it suitable for a variety of network infrastructures, including those from well-known providers such as HW and ZTE. It can be effortlessly integrated with both GPON and EPON OLTs. This ONU has a striking industrial appearance with a focus on dependability and durability to meet the demands of many deployment scenarios. It offers versatility in its operation since it supports both the Routing and Bridging modes to satisfy different network topologies and requirements. With its improved security capabilities, the V2801RD is a very strong option for network defense. To avoid and lessen network disturbances, it has features such as loop identification, flow and storm control techniques, and the ability to detect rogue ONUs. Strong firewall features that guard against harmful attacks and unauthorized access include DDOS prevention and ACL, MAC, and URL filtering. The ONU offers many operation and maintenance methods for effective management and upkeep. These provide administrators with a variety of choices for activities related to monitoring, configuration, and troubleshooting. These include WEB, TELNET, OAM (OMCI), and TR069. The Vsol V2801RD XPON Single Port ONU is the perfect choice for establishing high-performance fiber-optic networks with strong security and administration features because of its extensive feature set.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy VSOL V2801SG Single Port XPON ONU from Star Tech</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">VSOL V2801SG Single Port XPON ONU</span> From Star Tech. We have a large collection of latest VSOL ONU to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The VSOL V2801RD Single Port XPON ONU comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: V2801RD</li><li>1 XPON port(EPON PX20+ and GPON Class B+)</li><li>1 x GE, Auto-negotiation RJ45 connectors</li><li>Detecting Rogue ONU, Hardware Dying Gasp</li><li>Transmission distance: 20KM</li></ul>",
+      "model": "V2801RD",
+      "warranty": "1 year warranty",
+      "basePrice": 1500.0,
+      "originalPrice": 1650.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-35345",
+          "price": 1500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1440.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "V2801RD",
+              "position": 0
+            },
+            {
+              "label": "Transmission distance",
+              "value": "20KM",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vsol-v2801rd-single-port-xpon-onu",
+      "sourceProductCode": "35345",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: V2801RD",
+        "1 XPON port(EPON PX20+ and GPON Class B+)",
+        "1 x GE, Auto-negotiation RJ45 connectors",
+        "Detecting Rogue ONU, Hardware Dying Gasp",
+        "Transmission distance: 20KM"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/vsol-v2801rd-single-port-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/vsol-v2801rd-single-port-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vsol-v2801rd-single-port-xpon-onu",
+        "candidateTitle": "VSOL V2801RD Single Port XPON ONU",
+        "attemptStem": "vsol-v2801rd-single-port-xpon-onu"
+      }
+    },
+    {
+      "name": "VSOL V2801RE Single Port EPON ONU",
+      "slug": "vsol-v2801re-single-port-epon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-30672",
+      "description": "<h2>VSOL V2801RE Single Port EPON ONU</h2><p>The VSOL V2801RE Single Port EPON ONU (Optical Network Unit) is a versatile and efficient solution designed to cater to the diverse needs of telecom operators. With a focus on providing seamless fiber optic access, this ONU is suitable for various applications, including FTTO (office), FTTD (desktop), FTTH (home), SOHO broadband access, and video surveillance. The ONU is powered by cutting-edge chip technology, enabling it to support Layer 2 and Layer 3 functions, ensuring carrier-grade FTTH data services. It comes equipped with a powerful firewall, making it easy to manage and maintain. The ONU also ensures Quality of Service (QoS) for different services, delivering a reliable and efficient broadband experience.<br/></p><h2>Buy VSOL V2801RE Single Port EPON ONU from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">VSOL V2801RE Single Port EPON ONU</span> From Star Tech. We have a large collection of latest VSOL ONU to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The VSOL V2801RE Single Port EPON ONU comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: V2801RE</li><li>1 XPON port(EPON PX20+ and GPON Class B+)</li><li>1 x GE, Auto-negotiation RJ45 connectors</li><li>Detecting Rogue ONU, Hardware Dying Gasp</li><li>Transmission distance: 20KM</li></ul>",
+      "model": "V2801RE",
+      "warranty": "1 year warranty",
+      "basePrice": 1250.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-30672",
+          "price": 1250.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "V2801RE",
+              "position": 0
+            },
+            {
+              "label": "Transmission distance",
+              "value": "20KM",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vsol-v2801re-single-port-epon-onu",
+      "sourceProductCode": "30672",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: V2801RE",
+        "1 XPON port(EPON PX20+ and GPON Class B+)",
+        "1 x GE, Auto-negotiation RJ45 connectors",
+        "Detecting Rogue ONU, Hardware Dying Gasp",
+        "Transmission distance: 20KM"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/vsol-v2801re-single-port-epon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/vsol-v2801re-single-port-epon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vsol-v2801re-single-port-epon-onu",
+        "candidateTitle": "VSOL V2801RE Single Port EPON ONU",
+        "attemptStem": "vsol-v2801re-single-port-epon-onu"
+      }
+    },
+    {
+      "name": "Vsol V2801SE 1GE Secure EPON ONU",
+      "slug": "vsol-v2801se-1ge-secure-epon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-36029",
+      "description": "<h2>Vsol V2801SE 1GE Secure EPON ONU</h2><p>The Vsol <strong>V2801SE</strong> 1GE Secure EPON <a href=\"https://www.startech.com.bd/onu\" style=\"color: rgb(0, 0, 0);\" target=\"\">ONU </a>has a single EPON port (EPON PX20+) with an SC single mode, SC/UPC connector. It can sustain an overload optical power of -3dBm and has TX optical power ranging from 0 to +4dBm and RX sensitivity down to -27dBm. This guarantees a dependable transmission range of up to 20 kilometers at TX 1310nm and RX 1490nm wavelengths. One Gigabit Ethernet port with auto-negotiation RJ45 connectors, enabling both bridging and routing uplink modes, is part of the LAN interface. The gadget has indicators for registration (REG), link/activity (LINK/ACT), and system status (SYS). Vsol V2801SE 1GE Secure EPON ONU is made to improve both security and performance. It features hardware dying gasp protection and can identify rogue ONUs. ACL/MAC/URL filtering and DDOS defense are two of its firewall's features. Additionally, it offers DBA bandwidth, Triple Churning, several authentication methods (MAC/Loid/Mac+Loid), MPCP discovery, and automatic detection, configuration, and firmware upgrades. Dying gasp, port loop detection, and Ethernet port loss are examples of alarm features. The LAN interface can be used for port rate limitation, loop detection, flow control, and storm management when using Vsol V2801SE 1GE Secure EPON ONU. Tag mode, transparent mode, 1:1 translation mode, auto VLAN detection, and trunk mode (supporting up to 8 VLANs) are examples of VLAN capabilities. With up to 64 multicast groups, IGMP v1/v2/Snooping, and a maximum of 8 multicast VLANs, multicast support is strong. Four queues that support 802.1P, SP, and WRR are used to control quality of service (QoS). IPv4, DHCP, PPPoE, Static IP, Static Routes, and NAT are supported for Layer 3. A wide range of management solutions are available, such as CTC OAM 2.0 and 2.1, TELNET, WEB interface, and CLI. The Vsol V2801SE 1GE Secure EPON ONU runs effectively with a power source of less than or equal to 4W when powered by an external AC-DC power adapter (DC 12V, 0.5A).</p><h2>Buy Vsol V2801SE 1GE Secure EPON ONU from Star Tech</h2><p>In Bangladesh, you can get original <strong>Vsol V2801SE 1GE Secure EPON ONU</strong> From Star Tech. We have a large collection of latest Vsol <a href=\"https://www.startech.com.bd\" target=\"\">ONU </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Vsol V2801SE 1GE Secure EPON ONU comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: V2801SE</li><li>PON Interface: 1x EPON port (EPON PX20+)</li><li>LAN Interface: 1x GE, Auto-negotiation RJ45</li><li>Wavelength: TX 1310nm, RX 1490nm</li><li>Firewall: DDOS, Filtering Based on ACL/MAC/URL</li></ul>",
+      "model": "V2801SE",
+      "warranty": "1-year warranty",
+      "basePrice": 1200.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "VSOL",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-36029",
+          "price": 1200.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1152.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "V2801SE",
+              "position": 0
+            },
+            {
+              "label": "PON Interface",
+              "value": "1x EPON port (EPON PX20+)",
+              "position": 1
+            },
+            {
+              "label": "LAN Interface",
+              "value": "1x GE, Auto-negotiation RJ45",
+              "position": 2
+            },
+            {
+              "label": "Wavelength",
+              "value": "TX 1310nm, RX 1490nm",
+              "position": 3
+            },
+            {
+              "label": "Firewall",
+              "value": "DDOS, Filtering Based on ACL/MAC/URL",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vsol-v2801se-1ge-secure-epon-onu",
+      "sourceProductCode": "36029",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: V2801SE",
+        "PON Interface: 1x EPON port (EPON PX20+)",
+        "LAN Interface: 1x GE, Auto-negotiation RJ45",
+        "Wavelength: TX 1310nm, RX 1490nm",
+        "Firewall: DDOS, Filtering Based on ACL/MAC/URL"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/vsol-v2801se-1ge-secure-epon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/vsol-v2801se-1ge-secure-epon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vsol-v2801se-1ge-secure-epon-onu",
+        "candidateTitle": "Vsol V2801SE 1GE Secure EPON ONU",
+        "attemptStem": "vsol-v2801se-1ge-secure-epon-onu"
+      }
+    },
+    {
+      "name": "Vsol V2801SG XPON (G/Epon) Single Port ONU",
+      "slug": "vsol-v2801sg-single-port-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-29951",
+      "description": "<h2>Vsol V2801SG XPON (G/Epon) Single Port ONU</h2><p>The VSOL V2801SG Single Port XPON ONU (Optical Network Unit) is a versatile and efficient solution designed to cater to the diverse needs of telecom operators. With a focus on providing seamless fiber optic access, this ONU is suitable for various applications, including FTTO (office), FTTD (desktop), FTTH (home), SOHO broadband access, and video surveillance. The ONU is powered by cutting-edge chip technology, enabling it to support Layer 2 and Layer 3 functions, ensuring carrier-grade FTTH data services. It comes equipped with a powerful firewall, making it easy to manage and maintain. The ONU also ensures Quality of Service (QoS) for different services, delivering a reliable and efficient broadband experience. Complying with international technical standards such as IEEE802.3ah and ITU-T G.984, the VSOL V2801SG Single Port XPON ONU ensures compatibility and interoperability in modern fiber optic networks.<br/></p><h2>Buy VSOL V2801SG Single Port XPON ONU from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/vsol-v2801sg-single-port-xpon-onu\" target=\"\">VSOL V2801SG Single Port XPON ONU</a> From Star Tech. We have a large collection of latest VSOL ONU to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The VSOL V2801SG Single Port XPON ONU comes with 2 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: V2801SG</li><li>1 XPON port(EPON PX20+ and GPON Class B+)</li><li>1 x GE, Auto-negotiation RJ45 connectors</li><li>Detecting Rogue ONU, Hardware Dying Gasp</li><li>Transmission distance: 20KM</li></ul>",
+      "model": "V2801SG",
+      "warranty": "2 year warranty",
+      "basePrice": 1400.0,
+      "originalPrice": 1530.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29951",
+          "price": 1400.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1344.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "V2801SG",
+              "position": 0
+            },
+            {
+              "label": "Transmission distance",
+              "value": "20KM",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vsol-v2801sg-single-port-xpon-onu",
+      "sourceProductCode": "29951",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: V2801SG",
+        "1 XPON port(EPON PX20+ and GPON Class B+)",
+        "1 x GE, Auto-negotiation RJ45 connectors",
+        "Detecting Rogue ONU, Hardware Dying Gasp",
+        "Transmission distance: 20KM"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/vsol-v2801sg-single-port-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/vsol-v2801sg-single-port-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vsol-v2801sg-single-port-xpon-onu",
+        "candidateTitle": "Vsol V2801SG XPON (G/Epon) Single Port ONU",
+        "attemptStem": "vsol-v2801sg-single-port-xpon-onu"
+      }
+    },
+    {
+      "name": "Xtreme XT1GE-XP-A 1G XPON ONU",
+      "slug": "xtreme-xt1ge-xp-a-1g-xpon-onu",
+      "type": "PHYSICAL",
+      "sku": "ST-50896",
+      "description": "<h2>Xtreme XT1GE-XP-A 1G XPON ONU</h2>The <strong>Xtreme XT1GE-XP-A 1G XPON ONU</strong> is a compact networking device designed for smooth fiber connectivity. It supports a 1G X-PON interface, ensuring strong performance for modern internet needs. Its SC/UPC port type enhances connection stability, while the 1000Mbps RJ45 LAN port delivers fast wired access. This ONU offers efficient management options, including OMCI, WEB, and Telnet. These features allow users to control and monitor network settings with ease. The device is lightweight at only 0.125 kg, making installation simple and hassle-free. Its small size of 95 x 95 x 30mm ensures it fits neatly in limited spaces. The Xtreme XT1GE-XP-A is a reliable solution for households and offices seeking consistent fiber connectivity. Its design emphasizes practicality, combining speed and control in one device. With advanced management tools, users can maintain smooth operations without technical complications. Overall, this ONU is a smart choice for anyone seeking steady fiber internet access. It balances performance, compact design, and user-friendly management. Whether for home or office, it provides a trustworthy way to stay connected daily.<h2>Buy Xtreme XT1GE-XP-A 1G XPON ONU From Star Tech</h2><p>In Bangladesh, you can get original <strong>Xtreme XT1GE-XP-A 1G XPON ONU</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/onu\" target=\"_blank\">ONU</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. The Xtreme XT1GE-XP-A 1G XPON ONU comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: XT1GE-XP-A</li><li>PON Interface: 1G X-PON</li><li>Interface Type: SC/UPC</li><li>Ethernet Interface: 1000Mbps RJ45 LAN</li><li>OMCI, WEB, Telnet</li></ul>",
+      "model": "XT1GE-XP-A",
+      "warranty": "1 year warranty",
+      "basePrice": 1400.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 95.0,
+        "width": 95.0,
+        "height": 30.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Xtreme",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-50896",
+          "price": 1400.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1344.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "XT1GE-XP-A",
+              "position": 0
+            },
+            {
+              "label": "PON Interface",
+              "value": "1G X-PON",
+              "position": 1
+            },
+            {
+              "label": "Interface Type",
+              "value": "SC/UPC",
+              "position": 2
+            },
+            {
+              "label": "Ethernet Interface",
+              "value": "1000Mbps RJ45 LAN",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/xtreme-xt1ge-xp-a-1g-xpon-onu",
+      "sourceProductCode": "50896",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: XT1GE-XP-A",
+        "PON Interface: 1G X-PON",
+        "Interface Type: SC/UPC",
+        "Ethernet Interface: 1000Mbps RJ45 LAN",
+        "OMCI, WEB, Telnet"
+      ],
+      "needsReview": false,
+      "categorySlug": "onu",
+      "image": "/images/products/networking/onu/xtreme-xt1ge-xp-a-1g-xpon-onu.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/onu/xtreme-xt1ge-xp-a-1g-xpon-onu.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "xtreme-xt1ge-xp-a-1g-xpon-onu",
+        "candidateTitle": "Xtreme XT1GE-XP-A 1G XPON ONU",
+        "attemptStem": "xtreme-xt1ge-xp-a-1g-xpon-onu"
+      }
+    }
+  ]
+}

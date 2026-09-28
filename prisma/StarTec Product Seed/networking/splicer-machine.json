@@ -1,0 +1,642 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\networking",
+    "generatedAtUnix": 1790590909,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Networking",
+      "slug": "networking",
+      "parentSlug": null,
+      "image": "/images/products/networking/firewall/sonicwall-nsa-2700-16-port-firewall.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Splicer Machine",
+      "slug": "splicer-machine",
+      "parentSlug": "networking",
+      "image": "/images/products/networking/splicer-machine/ac-net-f-95x-optical-fiber-splicer-machine.png",
+      "isActive": true,
+      "sortOrder": 18,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "FiberFox",
+      "slug": "fiberfox",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    },
+    {
+      "name": "Tumtec",
+      "slug": "tumtec",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "AC Net F-95X Optical Fiber ARC Splicer Machine",
+      "slug": "ac-net-f-95x-optical-fiber-splicer-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-31027",
+      "description": "<h2>AC Net F-95X Optical Fiber ARC Splicer Machine</h2><p style=\"text-align: justify; \">The AC Net <span style=\"font-weight: bold;\">F-95X</span> Optical Fiber ARC Splicer Machine is an advanced solution designed to revolutionize the world of fiber optic splicing. This state-of-the-art device offers a myriad of features that ensure top-notch performance and reliability for all your fiber optic needs. The AC Net F-95X has unparalleled precision and accuracy. With this splicer, you can expect a 100% true loss report display after each splicing operation. This means you can trust that your optical fibers will maintain their integrity and deliver the highest quality data transmission possible. Versatility is key, and the AC Net F-95X doesn't disappoint. This remarkable <a href=\"https://www.startech.com.bd/splicer-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Splicer Machine</a> is engineered to support both FTTH (Fiber to the Home) installations and cable TV digital systems. Whether you're working on residential broadband connections or enhancing cable television networks, this machine has you covered. The AC Net F-95X boasts an impressive splicing capacity of up to 400 splices, making it ideal for large-scale projects and continuous splicing tasks. Say goodbye to frequent interruptions and hello to increased efficiency. Power is essential in the field, and the AC Net F-95X is designed to keep you going. With a robust battery capacity of 7800 mAh, you can rely on this splicer to work tirelessly throughout the day, ensuring that your projects are completed on time and with precision. The AC Net F-95X Optical Fiber ARC Splicer Machine is a game-changer in the world of fiber optic technology. Its unwavering accuracy, versatility, high splicing capacity, and long-lasting battery make it an indispensable tool for professionals in the field. Trust in the AC Net F-95X to elevate your fiber optic splicing projects to new heights of efficiency and reliability.</p><h2>Buy AC Net F-95X Optical Fiber ARC Splicer Machine from the best Splicer Machine Shop in BD</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">AC Net F-95X Optical Fiber ARC Splicer Machine</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/splicer-machine\" target=\"\">Splicer Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The AC Net F-95X Optical Fiber Splicer Machine comes with 1 year of warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: F-95X</li><li>Splicing Capacity: 400 Nos Splicing</li><li>Battery Capacity: 7800 mAh</li><li>100% true loss report display after splicing</li><li>Supports FTTH and cable TV digital system</li></ul>",
+      "model": "F-95X",
+      "warranty": "1 year of warranty",
+      "basePrice": 108000.0,
+      "originalPrice": 116000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Splicing Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "400 Nos Splicing",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Battery Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "7800 mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-31027",
+          "price": 108000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Splicing Capacity": "400 Nos Splicing",
+            "Battery Capacity": "7800 mAh"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 103680.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "F-95X",
+              "position": 0
+            },
+            {
+              "label": "Splicing Capacity",
+              "value": "400 Nos Splicing",
+              "position": 1
+            },
+            {
+              "label": "Battery Capacity",
+              "value": "7800 mAh",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ac-net-f-95x-optical-fiber-splicer-machine",
+      "sourceProductCode": "31027",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: F-95X",
+        "Splicing Capacity: 400 Nos Splicing",
+        "Battery Capacity: 7800 mAh",
+        "100% true loss report display after splicing",
+        "Supports FTTH and cable TV digital system"
+      ],
+      "needsReview": false,
+      "categorySlug": "splicer-machine",
+      "image": "/images/products/networking/splicer-machine/ac-net-f-95x-optical-fiber-splicer-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/splicer-machine/ac-net-f-95x-optical-fiber-splicer-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ac-net-f-95x-optical-fiber-splicer-machine",
+        "candidateTitle": "AC Net F-95X Optical Fiber ARC Splicer Machine",
+        "attemptStem": "ac-net-f-95x-optical-fiber-splicer-machine"
+      }
+    },
+    {
+      "name": "FiberFox Mini 3S Active V-Groov Clade Splicer Machine",
+      "slug": "fiberfox-mini-3s-splicer-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-15224",
+      "description": "<h2>FiberFox Mini 3S Active V-Groove Clade Splicer Machine<br/></h2><p style=\"text-align: justify; \">The FiberFox Mini 3S Active V-Groov Clade Splicer Machine is an Active Alignment (DAA: Digitalized Active Alignment) splicer machine. The machine has an average loss of SM(0.03dB) / MM(0.02dB) / DS(0.05dB) / NZDS(0.05dB) with a splicing time of SM Mode: 8 Sec. It has 139 (Pre-set: 11 / User set-up: 128) splicing modes with an attenuation range of 0.1 ~ 20 dB. The fiber types that can be used in this machine are SM(ITU-T G652 &amp; G.657)/ MM(ITU-T G.651) / DS(ITU-T G.653) / NZDS(ITU-T G.655) with a diameter coating of 100 to 3,000um. The average heating time is 18 seconds and there are 37 (Pre-set: 5 / User set-up: 32) heating modes that are available. The electrode life span is&gt;3,500arcs. The machine can store up to 10,000/ 20,000 images. To detect the fiber, the machine uses a Dual CCD camera with LED emitting system and illuminates the area with an LED Spot light. The machine has a Color 4.3\" LCD monitor, with Touch Screen (Tempered Glass) display that allows you to see all the functions and features. The battery used here is Li-ion 11.1V 3000mAh, 200 cycles (Splicing &amp; Heating) with a power supply ability of AC 100-240V input or DC 12.6V 1.8A. <br/></p><p style=\"text-align: justify; \"><span style=\"font-weight: bold;\">The FiberFox Mini 3S Active V-Groov Clade Splicer Machine provides you with 1 Year Warranty.</span></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FiberFox Mini 3S</li><li>Weight: 1.1Kg</li><li>Splicing Mode: 139</li><li>Average Loss: 0.03 dB</li><li>Splicing Time: 8.0 sec</li></ul>",
+      "model": "FiberFox Mini 3S",
+      "warranty": null,
+      "basePrice": 142000.0,
+      "originalPrice": 143500.0,
+      "currency": "BDT",
+      "weight": 1.1,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "FiberFox",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-15224",
+          "price": 142000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 136320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FiberFox Mini 3S",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "1.1Kg",
+              "position": 1
+            },
+            {
+              "label": "Splicing Mode",
+              "value": "139",
+              "position": 2
+            },
+            {
+              "label": "Average Loss",
+              "value": "0.03 dB",
+              "position": 3
+            },
+            {
+              "label": "Splicing Time",
+              "value": "8.0 sec",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fiberfox-mini-3s-splicer-machine",
+      "sourceProductCode": "15224",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FiberFox Mini 3S",
+        "Weight: 1.1Kg",
+        "Splicing Mode: 139",
+        "Average Loss: 0.03 dB",
+        "Splicing Time: 8.0 sec"
+      ],
+      "needsReview": false,
+      "categorySlug": "splicer-machine",
+      "image": "/images/products/networking/splicer-machine/fiberfox-mini-3s-splicer-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/splicer-machine/fiberfox-mini-3s-splicer-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fiberfox-mini-3s-splicer-machine",
+        "candidateTitle": "FiberFox Mini 3S Active V-Groov Clade Splicer Machine",
+        "attemptStem": "fiberfox-mini-3s-splicer-machine"
+      }
+    },
+    {
+      "name": "FiberFox Mini 4S+ Active V-Groov Clade Splicer Machine",
+      "slug": "fiberfox-mini-4s-plus-splicer-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-15235",
+      "description": "<h2>FiberFox Mini 4S+ Active V-Groov Clade Splicer Machine<br/></h2><p>The FiberFox Mini 4S+ Active V-Groov Clade Splicer Machine is an Active Alignment (DAA: Digitalized Active Alignment) splicer machine. The machine has an average loss of SM(0.02dB) / MM(0.01dB) / DS(0.05dB) / NZDS(0.05dB) / G.657(0.02dB) with a splicing time of 12s average SM / SM 7s Quick mode. It has 78+ 8 user modes, User installable mode : 70+ splicing programs with attenuation range of 0.1dB ~ 20dB (0.1dB step). The fiber types that can be used in this machine are SM(ITU-T G.652, MM(ITU-T G.651), DS(ITU-T G.653), NZDS(ITU-T G.655), IT-G657A, IT-G657B, 0.25mm, 0.9mm, 2.0mm, 2.4mm, 3.0mm, FLAT(indoor cable). The average heating time is 18 second and there are 26 (Factory installed mode : 3, User installable mode : 23) heating modes that are available. The machine can store up to 2000 records. To detect the fiber, the machine uses 2 CCD camera system with Color 4.3\" LCD monitor, with Touch Screen (Tempered Glass) monitor which allows you to see all the functions and features clearly. The battery used here typical 200 Cycles (Splice &amp; Heat) / single battery &lt;2 Batteries Standard&gt; with a power supply ability of AC 100-240V input or DC 9~14V. The max wind speed resistance of this splicer machine is 15m/s.<br/></p><p><span style=\"font-weight: bold;\">The </span><span style=\"font-weight: 700;\">FiberFox Mini 4S+ Active V-Groov Clade Splicer Machine</span><span style=\"font-weight: bold;\"> has 1 Year Warranty.</span><br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FiberFox Mini 4S+</li><li>Smallest and the Lightest Active Alignment Fiber Fusion Splicer</li><li>SOC Compatible</li><li>Stability and Splicing Performance</li><li>Waterproof, Anti-shock, Dustproof</li></ul>",
+      "model": "FiberFox Mini 4S+",
+      "warranty": null,
+      "basePrice": 237000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "FiberFox",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-15235",
+          "price": 237000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 227520.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FiberFox Mini 4S+",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fiberfox-mini-4s-plus-splicer-machine",
+      "sourceProductCode": "15235",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FiberFox Mini 4S+",
+        "Smallest and the Lightest Active Alignment Fiber Fusion Splicer",
+        "SOC Compatible",
+        "Stability and Splicing Performance",
+        "Waterproof, Anti-shock, Dustproof"
+      ],
+      "needsReview": false,
+      "categorySlug": "splicer-machine",
+      "image": "/images/products/networking/splicer-machine/fiberfox-mini-4s-plus-splicer-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/splicer-machine/fiberfox-mini-4s-plus-splicer-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fiberfox-mini-4s-plus-splicer-machine",
+        "candidateTitle": "FiberFox Mini 4S+ Active V-Groov Clade Splicer Machine",
+        "attemptStem": "fiberfox-mini-4s-plus-splicer-machine"
+      }
+    },
+    {
+      "name": "FiberFox Mini 5C+ Core to Core 6 Motors Set Splicer Machine",
+      "slug": "fiberfox-mini-5c-plus-splicer-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-15261",
+      "description": "<h2>FiberFox Mini 5C+ Core to Core 6 Motors Set Splicer Machine<br/></h2><p>The FiberFox Mini 5C+ Core to Core 6 Motors Set Splicer Machine uses the \tCore Alignment DCID (Digitized Core Image Detecting) System method for splicing. The machine has an average loss of \tSM(0.02dB) / MM(0.01dB) / DS(0.04dB) / NZDS(0.04dB) / G.657(0.02dB). It has  Factory Installed : 12 user modes, User installable mode : 128 splicing programs. The fiber types that can be used in this machine are SM(ITU-T G.652, MM(ITU-T G.651), DS(ITU-T G.653), NZDS(ITU-T G.655), IT-G657A, IT-G657B, 0.25mm, 0.9mm, 2.0mm, 2.4mm, 3.0mm, FLAT(indoor cable). The average heating time is \tTypical 10s (60mm sleeve) and 5 Sec (Micro Sleeve). There are 36 (Factory installed mode : 4, User installable mode : 32) heating modes that are available. To detect the fiber, the machine uses 2 CCD camera system with Color 4.3\" LCD monitor, with Touch Screen (Tempered Glass) monitor which allows you to see all the functions and features clearly. The battery used here typical 200 Cycles (Splice &amp; Heat) / single battery, 2 Batteries Standard with a power supply ability of AC 100-240V input or DC 9~14V. The max wind speed resistance of this splicer machine is 15m/s.<br/></p><p><span style=\"font-weight: bold;\">The FiberFox Mini 5C+ Core to Core 6 Motors Set Splicer Machine has 1 Year Warranty.</span><br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FiberFox Mini 5C+</li><li>Heating Time: 15sec with 60mm sleeve</li><li>Universial Holder</li><li>LED Injection System</li><li>The Fast Splicing Time</li></ul>",
+      "model": "FiberFox Mini 5C+",
+      "warranty": null,
+      "basePrice": 270000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "FiberFox",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-15261",
+          "price": 270000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 259200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FiberFox Mini 5C+",
+              "position": 0
+            },
+            {
+              "label": "Heating Time",
+              "value": "15sec with 60mm sleeve",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fiberfox-mini-5c-plus-splicer-machine",
+      "sourceProductCode": "15261",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FiberFox Mini 5C+",
+        "Heating Time: 15sec with 60mm sleeve",
+        "Universial Holder",
+        "LED Injection System",
+        "The Fast Splicing Time"
+      ],
+      "needsReview": false,
+      "categorySlug": "splicer-machine",
+      "image": "/images/products/networking/splicer-machine/fiberfox-mini-5c-plus-splicer-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/splicer-machine/fiberfox-mini-5c-plus-splicer-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fiberfox-mini-5c-plus-splicer-machine",
+        "candidateTitle": "FiberFox Mini 5C+ Core to Core 6 Motors Set Splicer Machine",
+        "attemptStem": "fiberfox-mini-5c-plus-splicer-machine"
+      }
+    },
+    {
+      "name": "FiberFox Mini 6SI+ Core to Core 6 Motors Set Splicer Machine",
+      "slug": "fiberfox-mini-6si-plus-splicer-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-15258",
+      "description": "<h2>FiberFox Mini 6SI+ Core to Core 6 Motors Set Splicer Machine<br/></h2><p>The Mini 6S+ comes with the same excellent specification as the Mini 6s Core Alignment Fusion Splicer but with extra enhancements so that users spend even less time on each termination.  This unit is still the same compact size for convenient transportation and storage &amp; comes with a full range of accessories and spares. The FiberFox Mini 6SI+ Core to Core 6 Motors Set Splicer Machine uses the Core Alignment AOCAT(Automatic Optical Core Analysis &amp; Tracking System) method for splicing. The machine has an average loss of SM(0.02dB) / MM(0.01dB) / DS(0.04dB) / NZDS(0.04dB) / G.657(0.02dB) with a splicing time of 10s average SM / SM 7s Quick mode. It has Factory installed mode: 33, User installable mode: 70+ splicing programs with an attenuation range of 0.1dB ~ 20dB (0.1dB step). The fiber types that can be used in this machine are SM(ITU-T G.652, MM(ITU-T G.651), DS(ITU-T G.653), NZDS(ITU-T G.655), IT-G657A, IT-G657B, 0.25mm, 0.9mm, 2.0mm, 2.4mm, 3.0mm, FLAT(indoor cable). The average heating time is 15 seconds and there are 34 (Factory installed mode: 11, User installable mode: 23) heating modes that are available. To detect the fiber, the machine uses a 2 CCD camera system with a Color 4.3\" LCD monitor, with Touch Screen (Tempered Glass) monitor which allows you to see all the functions and features. The battery used here is typically 200 Cycles (Splice &amp; Heat) / single battery, 2 Batteries Standard with a power supply ability of AC 100-240V input or DC 9-14V. The max wind speed resistance of this splicer machine is 15m/s.<br/></p><p><span style=\"font-weight: bold;\">The FiberFox Mini 6SI+ Core to Core 6 Motors Set Splicer Machine has 1 Year Warranty.</span></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FiberFox Mini 6SI+</li><li>Heating Time: 15sec with 60mm sleeve</li><li>Universial Holder</li><li>LED Injection System</li><li>The Fast Splicing Time</li></ul>",
+      "model": "FiberFox Mini 6SI+",
+      "warranty": null,
+      "basePrice": 285000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "FiberFox",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-15258",
+          "price": 285000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 273600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "FiberFox Mini 6SI+",
+              "position": 0
+            },
+            {
+              "label": "Heating Time",
+              "value": "15sec with 60mm sleeve",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fiberfox-mini-6si-plus-splicer-machine",
+      "sourceProductCode": "15258",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FiberFox Mini 6SI+",
+        "Heating Time: 15sec with 60mm sleeve",
+        "Universial Holder",
+        "LED Injection System",
+        "The Fast Splicing Time"
+      ],
+      "needsReview": false,
+      "categorySlug": "splicer-machine",
+      "image": "/images/products/networking/splicer-machine/fiberfox-mini-6si-plus-splicer-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/splicer-machine/fiberfox-mini-6si-plus-splicer-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fiberfox-mini-6si-plus-splicer-machine",
+        "candidateTitle": "FiberFox Mini 6SI+ Core to Core 6 Motors Set Splicer Machine",
+        "attemptStem": "fiberfox-mini-6si-plus-splicer-machine"
+      }
+    },
+    {
+      "name": "Tumtec V9 mini Core to Core 6 Splicer Machine",
+      "slug": "tumtec-v9-mini-splicer-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-15223",
+      "description": "<h2>Tumtec V9 mini Core to Core 6 Splicer Machine<br/></h2><p>V9mini uses industrial-grade Euquadrinuclear CPU (main frequency 1.4 GHz)ï¼Œ low power consumptionï¼›high performance, has 4.3 inch 480*272 color high-resolution capacitive touch screenï¼Œ double-click can achieve 500 times the focus amplification effect, three high-power LED lights. At the same time, it has 6800 mA batteries with super endurance, 340 times more typical welding heating time, super durability, self-adaptive discharge, and automatic adjustment according to air pressure and external temperature. V9mini adopts single core alignment, six motors and fully automatic welding procedure, which brings great convenience to user's operation. The display can be adjusted to the optimum angle for easy operation. It runs fast with 3 seconds start-up, 6 seconds welding and 15 seconds heating. It has a 4.3 inch 480*272 color high resolution capacitive touch screen with double-click focusing more than 500 times. Users can realize the optical fiber amplification function by double-clicking the screen. Then they can observe the weld marks on the LCD screen and judge whether the weld status is good or not. The single core fiber core alignment, six motor and fully automatic welding procedure, bring great convenience to the user operation.<br/></p><p><span style=\"font-weight: bold;\">The Tumtec V9 mini Core to Core 6 Splicer Machine provides you with 1 Year Warranty period. </span><br/></p><div class=\"video-wrapper\"></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: V9 mini</li><li>Results Storage: 1000 Latest Records</li><li>Electrode Life: 3000ARCs</li><li>Splicing Length: 20-60mm</li><li>Battery Capacity: 5200mAh</li></ul>",
+      "model": "V9 mini",
+      "warranty": null,
+      "basePrice": 149500.0,
+      "originalPrice": 155000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Tumtec",
+      "variantOptions": [
+        {
+          "name": "Results Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "1000 Latest Records",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Battery Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "5200mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-15223",
+          "price": 149500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Results Storage": "1000 Latest Records",
+            "Battery Capacity": "5200mAh"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 143520.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "V9 mini",
+              "position": 0
+            },
+            {
+              "label": "Results Storage",
+              "value": "1000 Latest Records",
+              "position": 1
+            },
+            {
+              "label": "Electrode Life",
+              "value": "3000ARCs",
+              "position": 2
+            },
+            {
+              "label": "Splicing Length",
+              "value": "20-60mm",
+              "position": 3
+            },
+            {
+              "label": "Battery Capacity",
+              "value": "5200mAh",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tumtec-v9-mini-splicer-machine",
+      "sourceProductCode": "15223",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: V9 mini",
+        "Results Storage: 1000 Latest Records",
+        "Electrode Life: 3000ARCs",
+        "Splicing Length: 20-60mm",
+        "Battery Capacity: 5200mAh"
+      ],
+      "needsReview": false,
+      "categorySlug": "splicer-machine",
+      "image": "/images/products/networking/splicer-machine/tumtec-v9-mini-splicer-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/splicer-machine/tumtec-v9-mini-splicer-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tumtec-v9-mini-splicer-machine",
+        "candidateTitle": "Tumtec V9 mini Core to Core 6 Splicer Machine",
+        "attemptStem": "tumtec-v9-mini-splicer-machine"
+      }
+    }
+  ]
+}

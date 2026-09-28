@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/server-networking",
+  "imageFolder": "/images/products/server-networking/das-storage",
+  "groups": [
+    {
+      "name": "_direct",
+      "file": "_direct.json",
+      "status": "completed",
+      "products": 39,
+      "matched": 0,
+      "unmatched": 39
+    },
+    {
+      "name": "das-storage",
+      "file": "das-storage.json",
+      "status": "completed",
+      "products": 2,
+      "matched": 2,
+      "unmatched": 0
+    },
+    {
+      "name": "gpu-server",
+      "file": "gpu-server.json",
+      "status": "completed",
+      "products": 16,
+      "matched": 16,
+      "unmatched": 0
+    },
+    {
+      "name": "nas-storage",
+      "file": "nas-storage.json",
+      "status": "completed",
+      "products": 40,
+      "matched": 40,
+      "unmatched": 0
+    },
+    {
+      "name": "san-storage",
+      "file": "san-storage.json",
+      "status": "completed",
+      "products": 20,
+      "matched": 20,
+      "unmatched": 0
+    },
+    {
+      "name": "server",
+      "file": "server.json",
+      "status": "completed",
+      "products": 59,
+      "matched": 59,
+      "unmatched": 0
+    },
+    {
+      "name": "server-and-storage",
+      "file": "server-and-storage.json",
+      "status": "completed",
+      "products": 12,
+      "matched": 12,
+      "unmatched": 0
+    },
+    {
+      "name": "server-hdd",
+      "file": "server-hdd.json",
+      "status": "completed",
+      "products": 31,
+      "matched": 31,
+      "unmatched": 0
+    },
+    {
+      "name": "server-hdd-bay",
+      "file": "server-hdd-bay.json",
+      "status": "completed",
+      "products": 2,
+      "matched": 2,
+      "unmatched": 0
+    },
+    {
+      "name": "server-rack",
+      "file": "server-rack.json",
+      "status": "completed",
+      "products": 78,
+      "matched": 78,
+      "unmatched": 0
+    },
+    {
+      "name": "server-ram",
+      "file": "server-ram.json",
+      "status": "completed",
+      "products": 1,
+      "matched": 1,
+      "unmatched": 0
+    },
+    {
+      "name": "server-ssd",
+      "file": "server-ssd.json",
+      "status": "completed",
+      "products": 6,
+      "matched": 6,
+      "unmatched": 0
+    },
+    {
+      "name": "workstation",
+      "file": "workstation.json",
+      "status": "completed",
+      "products": 36,
+      "matched": 36,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790588978
+}

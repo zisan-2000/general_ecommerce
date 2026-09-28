@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/software",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\software",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\software",
+  "imagesFound": 137,
+  "uniqueProductStems": 134,
+  "productsInJson": 134,
+  "matchedProducts": 95,
+  "unmatchedProducts": 39,
+  "imageCoverage": 137,
+  "jsonGroupFiles": 7,
+  "matchMethods": {
+    "direct-slug": 87,
+    "unmatched": 39,
+    "search": 8
+  },
+  "jsonGenerationTimeSeconds": 252.45,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 134,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\software\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\software\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\software\\unmatched.json"
+  },
+  "seedTimeSeconds": 3.82
+}

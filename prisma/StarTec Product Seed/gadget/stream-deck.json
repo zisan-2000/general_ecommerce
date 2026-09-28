@@ -1,0 +1,478 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/gadget",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\gadget",
+    "generatedAtUnix": 1790589343,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Gadget",
+      "slug": "gadget",
+      "parentSlug": null,
+      "image": "/images/products/gadget/charg-dm-e64-3-5mm-wired-earphone-4bf02bf3.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Stream Deck",
+      "slug": "stream-deck",
+      "parentSlug": "gadget",
+      "image": "/images/products/gadget/stream-deck/elgato-stream-deck.jpg",
+      "isActive": true,
+      "sortOrder": 17,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Elgato",
+      "slug": "elgato",
+      "logo": null
+    },
+    {
+      "name": "Loupedeck",
+      "slug": "loupedeck",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Elgato Stream Deck Live Content Creation Controller",
+      "slug": "elgato-stream-deck",
+      "type": "PHYSICAL",
+      "sku": "10GAA9901",
+      "description": "<h2 style=\"\">Elgato Stream Deck Live Content Creation Controller</h2><p style=\"\">If you're an online streamer who broadcasts using Elgato Game Capture, OBS, Twitch, Twitter, TipeeeStream, XSplit, YouTube, Mixer, and more, streamline your streaming setup using the Stream Deck from Elgato Systems. The Stream Deck integrates your tools and helps to automatically detect scenes, media, and audio sources, enabling them to be controlled with the tap of a key. 15 LCD keys can be programmed to launch an array of actions, while a one-touch, tactile operation allows you to switch scenes, launch media, adjust audio, and more. Streams can also be personalized with GIFs, images, videos, audio clips, and intro and outro graphics. The Stream Deck is compatible with macOS 10.11 and later, as well as Windows 10 (64-bit). Connectivity with your host system is accomplished using an integrated USB 2.0 cable. Finally, an adjustable stand is included to keep the Stream Deck within easy reach. You're creating quality content backed by strong tech, but you want to do more. With the Stream Deck, unleash your creativity make waves across Twitch and YouTube, all while focusing on what matters most: your audience. Fifteen LCD keys poised to launch unlimited actions help eliminate the need to map and memorize keyboard shortcuts. One-touch, tactile operation lets you switch scenes, launch media, adjust audio, and more, while visual feedback confirms your commands. Stream Deck integrates your tools and automatically detects your scenes, media, and audio sources, enabling you to control them with a quick tap of a key. Compatible platforms include Elgato Game Capture, OBS, Twitch, Twitter, TipeeeStream, XSplit, YouTube, Mixer, and more. Automated alerts help make life easier, but between thanking donors and welcoming new subscribers, there's ample opportunity for self-expression. Employ Stream Deck to level up your onscreen antics with GIFs, images, videos, and audio clips. While you're at it, apply lower thirds and bookend your content with signature intro and outro graphics. Your options are vast, so explore and experiment. Do what you must to sharpen your creative edge, and do it with a personal touch. Customizing Stream Deck is user-friendly. Simply drag and drop actions onto keys and make them your own with custom icons. Need more actions? Nest folders within folders to amass more actions. Better yet, save unique key configurations as dedicated profiles for different games and apps, switch between them on the fly, and share them with fellow creators. Gone are the days of navigating a myriad of windows to trigger an action, and relying solely on automated plug-ins to expand your production value. Now, you hold the power to pioneer an era of content creation and lead your audience to frontiers of inspiration. The Elgato Stream Deck Live Content Creation Controller has 2 years of warranty.<br/></p><div class=\"video-wrapper\"></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 10GAA9901</li><li>Model: Stream Deck</li><li>Adjust Audio</li><li>15 Programmable LCD Keys</li><li>Switch Scenes and Launch Media</li><li>Visual Feedback Confirms Commands</li></ul>",
+      "model": "Stream Deck",
+      "warranty": null,
+      "basePrice": 15900.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Elgato",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "10GAA9901",
+          "price": 15900.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 15264.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "10GAA9901",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Stream Deck",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/elgato-stream-deck",
+      "sourceProductCode": "13915",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "10GAA9901",
+      "sourceKeyFeatures": [
+        "MPN: 10GAA9901",
+        "Model: Stream Deck",
+        "Adjust Audio",
+        "15 Programmable LCD Keys",
+        "Switch Scenes and Launch Media",
+        "Visual Feedback Confirms Commands"
+      ],
+      "needsReview": false,
+      "categorySlug": "stream-deck",
+      "image": "/images/products/gadget/stream-deck/elgato-stream-deck.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gadget/stream-deck/elgato-stream-deck.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "elgato-stream-deck",
+        "candidateTitle": "Elgato Stream Deck Live Content Creation Controller",
+        "attemptStem": "elgato-stream-deck"
+      }
+    },
+    {
+      "name": "Elgato Stream Deck Neo",
+      "slug": "elgato-stream-deck-neo",
+      "type": "PHYSICAL",
+      "sku": "10GBJ9901",
+      "description": "<h2>Elgato Stream Deck Neo</h2><p>The <strong>Elgato Stream Deck Neo</strong> is an innovative, fully customizable controller designed to enhance productivity and streamline workflows. Featuring eight programmable LCD keys, it allows users to automate tasks and manage applications effortlessly. The Infobar, positioned between two Touch Points, enables quick switching between different key layouts with a simple tap. Ideal for managing meetings, music, live streams, slides, or voice chats, the Stream Deck Neo ensures seamless control even when apps are minimized or running in the background. Real-time updates for notifications, time zones, viewer counts, stock prices, and mic status are visible at a glance. Customization is easy with the intuitive Stream Deck software, supporting both Windows and macOS and offering drag-and-drop functionality and preloaded profiles. Perfect for gamers, content creators, and professionals, the Elgato Stream Deck Neo redefines efficiency and creativity in digital workflows.</p><h2>Buy Elgato Stream Deck MK2 from Star Tech</h2><p>In Bangladesh, you can get original <strong>Elgato Stream Deck MK2</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/stream-deck\">Stream Deck</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at the lowest price. The Elgato Stream Deck MK2 comes with 2 years of warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 10GBJ9901</li><li>Model: Stream Deck Neo</li><li>Adjust Audio</li><li>8 Programmable LCD Keys</li><li>2 Touch Points</li><li>Connectivity: USB 2.0 Type C</li></ul>",
+      "model": "Stream Deck Neo",
+      "warranty": "2 years of warranty",
+      "basePrice": 12500.0,
+      "originalPrice": 13500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Elgato",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "10GBJ9901",
+          "price": 12500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 12000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "10GBJ9901",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Stream Deck Neo",
+              "position": 1
+            },
+            {
+              "label": "Connectivity",
+              "value": "USB 2.0 Type C",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/elgato-stream-deck-neo",
+      "sourceProductCode": "37790",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "10GBJ9901",
+      "sourceKeyFeatures": [
+        "MPN: 10GBJ9901",
+        "Model: Stream Deck Neo",
+        "Adjust Audio",
+        "8 Programmable LCD Keys",
+        "2 Touch Points",
+        "Connectivity: USB 2.0 Type C"
+      ],
+      "needsReview": false,
+      "categorySlug": "stream-deck",
+      "image": "/images/products/gadget/stream-deck/elgato-stream-deck-neo.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gadget/stream-deck/elgato-stream-deck-neo.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "elgato-stream-deck-neo",
+        "candidateTitle": "Elgato Stream Deck Neo",
+        "attemptStem": "elgato-stream-deck-neo"
+      }
+    },
+    {
+      "name": "Loupedeck CT Custom Editing Console for Photo Video Music and Design",
+      "slug": "loupedeck-ct-editing-console",
+      "type": "PHYSICAL",
+      "sku": "LDD-1903",
+      "description": "<h2>Loupedeck CT Custom Editing Console for Photo Video Music and Design<br/></h2>\n<p>When it comes to creative work, the freer you are to focus on your craft, the better. Editing is a highly personalized process â€“ everyone has their own favorite tools, software and shortcuts. Loupedeck CT puts the tools you use right at your fingertips with buttons, dials, and touchscreens you can completely customize and organize to your own personal way of working. Loupedeck CT is ready to go right out of the box with a vast set of integrations with your favorite software, letting you move between and work freely in Premiere, Final Cut Pro, Photoshop, Lightroom, Ableton Live and soon more â€“ all from one sleek user interface. Made to work with your mouse and keyboard â€“ Loupedeck CT takes your workstation to a whole new level. Loupedeck CT comes with set of preset workspaces dedicated to every step of the editing process, with commonly used functions like colour grading, retouching, editing and more. You can use those, or you can create your own custom workspaces with all the tools and functions you use to edit. With colour coordinated customizable buttons, dials and touchscreens, you can create as many workspaces as you need. You can break them down by editing stage, project type, or however you like. With Loupedeck CT, all your tools are neatly organized and youâ€™re always in complete control. Feel every change with Loupedeck CTâ€™s tactile dials. Control everything with one hand and edit things like contrast, clarity and exposure in precise increments, giving you total control of your work. Loupedeck CT is a pro tool thatâ€™s designed to deliver a premium editing experience in every way. With its high-quality aluminium cover and dials, touchscreens, LED backlighting, machine-quality ball bearings and more, Loupedeck CT is a powerful and beautiful addition to your workstation. When it comes to portability, size matters and smaller is better. Loupedeck CT is easy to transport and comes with a removable USB cable, making it easy to move and use wherever you are. Use the tools and functions from all your favorite software from one consistent user interface. Loupdeck CT is fully adaptable to almost all creative environments and can even help you manage and control your operating system. Edit wherever and whenever you like. Loupedeck CT is ready to go right out of the box with an ever-growing set of native integrations with your favorite industry software. Move freely between Premiere, Final Cut Pro, Photoshop, Lightroom, After Effects, Audition, Ableton Live and soon more â€“ all from one sleek user interface. Loupedeckâ€™s Custom Profiles are a powerful addition to the Loupedeck Software, further expanding the functionality of your Loupedeck CT. Custom Profiles allow you to create your own profiles for any of your installed software. Custom Profiles contain a set of recorded User Actions and User Adjustments and a mapping of selected actions and adjustments. Custom Profiles can be created using the Loupedeck Profile Creator within Software version 3.2 and above, for both native integrations and 3rd party software.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: LDD-1903</li><li>Model: Loupedeck CT Editing</li><li>Custom Editing Console for Photo, Video, Music and Design</li><li>Customizable Software</li><li>Ready to go right out of the box</li><li>Create your own Custom Profiles</li></ul>",
+      "model": "Loupedeck CT Editing",
+      "warranty": null,
+      "basePrice": 52000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Loupedeck",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "LDD-1903",
+          "price": 52000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 49920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "LDD-1903",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Loupedeck CT Editing",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/loupedeck-ct-editing-console",
+      "sourceProductCode": "14615",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "LDD-1903",
+      "sourceKeyFeatures": [
+        "MPN: LDD-1903",
+        "Model: Loupedeck CT Editing",
+        "Custom Editing Console for Photo, Video, Music and Design",
+        "Customizable Software",
+        "Ready to go right out of the box",
+        "Create your own Custom Profiles"
+      ],
+      "needsReview": false,
+      "categorySlug": "stream-deck",
+      "image": "/images/products/gadget/stream-deck/loupedeck-ct-editing-console.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gadget/stream-deck/loupedeck-ct-editing-console.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "loupedeck-ct-editing-console",
+        "candidateTitle": "Loupedeck CT Custom Editing Console for Photo Video Music and Design",
+        "attemptStem": "loupedeck-ct-editing-console"
+      }
+    },
+    {
+      "name": "Loupedeck Live Console for Content Creators & Streamers",
+      "slug": "loupedeck-live-console",
+      "type": "PHYSICAL",
+      "sku": "ST-20814",
+      "description": "<h2 style=\"text-align: justify; \">Loupedeck Live Console for Content Creators &amp; Streamers</h2><p style=\"text-align: justify; \">The Loupedeck Live is a customizable desktop console that lets you switch between the tools you need to either edit photos/videos/audio, control live streams, or browse the Web. It works alongside keyboard, mouse, editing, and streaming tools. It is very compact, ideal for any desk setup, even on the go. It features native integration with many applications, such as Adobe After Effects, OBS Studio, and Spotify (see below), and is also compatible with many others. It features haptic analog dials, customizable buttons, LED backlighting, and more. It offers a USB-C connection and works with macOS 10.14 and Windows 10 systems. The Loupedeck Live comes with no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Loupedeck Live</li><li>Works alongside keyboard, mouse, editing, and streaming tools</li><li>Supports major creative software and streaming apps</li><li>Profiles available for popular creative apps</li><li>Touchscreen LCD, Dials &amp; Buttons</li></ul>",
+      "model": "Loupedeck Live",
+      "warranty": "no warranty",
+      "basePrice": 27000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Loupedeck",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-20814",
+          "price": 27000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 25920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Loupedeck Live",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/loupedeck-live-console",
+      "sourceProductCode": "20814",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Loupedeck Live",
+        "Works alongside keyboard, mouse, editing, and streaming tools",
+        "Supports major creative software and streaming apps",
+        "Profiles available for popular creative apps",
+        "Touchscreen LCD, Dials & Buttons"
+      ],
+      "needsReview": false,
+      "categorySlug": "stream-deck",
+      "image": "/images/products/gadget/stream-deck/loupedeck-live-console.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gadget/stream-deck/loupedeck-live-console.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "loupedeck-live-console",
+        "candidateTitle": "Loupedeck Live Console for Content Creators & Streamers",
+        "attemptStem": "loupedeck-live-console"
+      }
+    },
+    {
+      "name": "Loupedeck+ The Photo and Video Editing Console",
+      "slug": "loupedeck-photo-and-video-editing-console",
+      "type": "PHYSICAL",
+      "sku": "ST-12493",
+      "description": "<h2 style=\"text-align: justify; \"><span style=\"font-weight: bold;\">Loupedeck+ The Photo and Video Editing Console</span></h2><p style=\"text-align: justify;\">Loupedeck+ The Photo and Video Editing Console is compatible for Adobe Lightroom Classic, Lightroom 6, Photoshop CC with Camera Raw, Premiere Pro CC, After Effects CC, Audition CC, Final Cut Pro X and Skylum Aurora HDR. Beta integration with Capture One.It ergonomics enable you to edit your photos and videos without breaking your flow. Loupedeck+ lets your eyes stay on the screen and your hands on the console. You can edit thousands of photos and video clips with this ease. Command multiple editing functions at the same time. This exclusive Console designed with 39,5 x 15 x 4 cm dimension and 0.67kg weight. Focus on your image and video with Full Screen editing. You can Quickly and Easily set up this Console. Take charge of your editing. Get your photos and video just the way you want it with a plethora of customization options. This Console will support in Windows 10, Mac OS 10.12 or later version and USB 2.0 A port is available here.</p><div class=\"video-wrapper\"></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Loupedeck+</li><li>For Lightroom Classic, Premiere Pro, Final Cut Pro, Photoshop</li><li>intuitive buttons, dials &amp; sliders</li><li>Faster Editing. Enhanced Workflow</li><li>Customize &amp; Control</li></ul>",
+      "model": "Loupedeck+",
+      "warranty": null,
+      "basePrice": 24500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 5.0,
+        "width": 15.0,
+        "height": 4.0,
+        "unit": "cm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Loupedeck",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-12493",
+          "price": 24500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 23520.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Loupedeck+",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/loupedeck-photo-and-video-editing-console",
+      "sourceProductCode": "12493",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Loupedeck+",
+        "For Lightroom Classic, Premiere Pro, Final Cut Pro, Photoshop",
+        "intuitive buttons, dials & sliders",
+        "Faster Editing. Enhanced Workflow",
+        "Customize & Control"
+      ],
+      "needsReview": false,
+      "categorySlug": "stream-deck",
+      "image": "/images/products/gadget/stream-deck/loupedeck-photo-and-video-editing-console.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gadget/stream-deck/loupedeck-photo-and-video-editing-console.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "loupedeck-photo-and-video-editing-console",
+        "candidateTitle": "Loupedeck+ The Photo and Video Editing Console",
+        "attemptStem": "loupedeck-photo-and-video-editing-console"
+      }
+    }
+  ]
+}

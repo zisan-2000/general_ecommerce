@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/gaming",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\gaming",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\gaming",
+  "imagesFound": 1484,
+  "uniqueProductStems": 1484,
+  "productsInJson": 1484,
+  "matchedProducts": 1484,
+  "unmatchedProducts": 0,
+  "imageCoverage": 1484,
+  "jsonGroupFiles": 12,
+  "matchMethods": {
+    "direct-slug": 1484
+  },
+  "jsonGenerationTimeSeconds": 765.69,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 1484,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\gaming\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\gaming\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\gaming\\unmatched.json"
+  },
+  "seedTimeSeconds": 27.39
+}

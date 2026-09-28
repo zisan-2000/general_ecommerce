@@ -1,0 +1,2267 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/server-networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\server-networking",
+    "generatedAtUnix": 1790588977,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Server Networking",
+      "slug": "server-networking",
+      "parentSlug": null,
+      "image": "/images/products/server-networking/server-and-storage/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Server And Storage",
+      "slug": "server-and-storage",
+      "logo": null
+    },
+    {
+      "name": "Server HDD",
+      "slug": "server-hdd",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": true,
+      "name": "Cote 12u 600 X 600mm Server Rack C2f0ea67",
+      "slug": "cote-12u-600-x-600mm-server-rack-c2f0ea67",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-D670BEC66699A3A1259739C0",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "cote-12u-600-x-600mm-server-rack-c2f0ea67",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "cote-12u-600-x-600mm-server-rack-c2f0ea67",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/cote-12u-600-x-600mm-server-rack-c2f0ea67.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Cote 15u 600 X 600mm Server Rack 8d382023",
+      "slug": "cote-15u-600-x-600mm-server-rack-8d382023",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-10FFF947FE53A7456E95FB95",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/cote-15u-600-x-600mm-server-rack-8d382023.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "cote-15u-600-x-600mm-server-rack-8d382023",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "cote-15u-600-x-600mm-server-rack-8d382023",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/cote-15u-600-x-600mm-server-rack-8d382023.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Cote 22u 600 X 1000mm Server Rack 89377b1d",
+      "slug": "cote-22u-600-x-1000mm-server-rack-89377b1d",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-85D5529CE06BA19470400FE2",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/cote-22u-600-x-1000mm-server-rack-89377b1d.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "cote-22u-600-x-1000mm-server-rack-89377b1d",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "cote-22u-600-x-1000mm-server-rack-89377b1d",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/cote-22u-600-x-1000mm-server-rack-89377b1d.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Cote Gcw 6406 6u 600 X 450mm Server Rack 7087af55",
+      "slug": "cote-gcw-6406-6u-600-x-450mm-server-rack-7087af55",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-A1F1123EF99E7801EAF5542B",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/cote-gcw-6406-6u-600-x-450mm-server-rack-7087af55.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "cote-gcw-6406-6u-600-x-450mm-server-rack-7087af55",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "cote-gcw-6406-6u-600-x-450mm-server-rack-7087af55",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/cote-gcw-6406-6u-600-x-450mm-server-rack-7087af55.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Cote Gcw 6409 9u 600 X 450mm Server Rack A3e2e2f7",
+      "slug": "cote-gcw-6409-9u-600-x-450mm-server-rack-a3e2e2f7",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-90B1145B44B1A016DC0D3A55",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/cote-gcw-6409-9u-600-x-450mm-server-rack-a3e2e2f7.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "cote-gcw-6409-9u-600-x-450mm-server-rack-a3e2e2f7",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "cote-gcw-6409-9u-600-x-450mm-server-rack-a3e2e2f7",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/cote-gcw-6409-9u-600-x-450mm-server-rack-a3e2e2f7.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Cote Gcw 6606 6u 600 X 600mm Server Rack 90d2c1d9",
+      "slug": "cote-gcw-6606-6u-600-x-600mm-server-rack-90d2c1d9",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-BA976B5D3221258E4935CE77",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/cote-gcw-6606-6u-600-x-600mm-server-rack-90d2c1d9.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "cote-gcw-6606-6u-600-x-600mm-server-rack-90d2c1d9",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "cote-gcw-6606-6u-600-x-600mm-server-rack-90d2c1d9",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/cote-gcw-6606-6u-600-x-600mm-server-rack-90d2c1d9.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Cote Gcw 6609 9u 600 X 600mm Server Rack Bec5fb1a",
+      "slug": "cote-gcw-6609-9u-600-x-600mm-server-rack-bec5fb1a",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-9C627C76005C58729B43B7E8",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/cote-gcw-6609-9u-600-x-600mm-server-rack-bec5fb1a.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "cote-gcw-6609-9u-600-x-600mm-server-rack-bec5fb1a",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "cote-gcw-6609-9u-600-x-600mm-server-rack-bec5fb1a",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/cote-gcw-6609-9u-600-x-600mm-server-rack-bec5fb1a.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Dateup 15u Server Rack 600x450x855 F19af198",
+      "slug": "dateup-15u-server-rack-600x450x855-f19af198",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-A8D4939F6A7504E7268C6C82",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/dateup-15u-server-rack-600x450x855-f19af198.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "dateup-15u-server-rack-600x450x855-f19af198",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "dateup-15u-server-rack-600x450x855-f19af198",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/dateup-15u-server-rack-600x450x855-f19af198.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Dateup 15u Server Rack 600x600x855 15058e86",
+      "slug": "dateup-15u-server-rack-600x600x855-15058e86",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-B2CDDF7D51345337DA3545B0",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/dateup-15u-server-rack-600x600x855-15058e86.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "dateup-15u-server-rack-600x600x855-15058e86",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "dateup-15u-server-rack-600x600x855-15058e86",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/dateup-15u-server-rack-600x600x855-15058e86.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Dateup 42u Glass Door Server Rack 600x1000x2055 2eb04dfa",
+      "slug": "dateup-42u-glass-door-server-rack-600x1000x2055-2eb04dfa",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-430A87262CCBDBF650677A0F",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/dateup-42u-glass-door-server-rack-600x1000x2055-2eb04dfa.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "dateup-42u-glass-door-server-rack-600x1000x2055-2eb04dfa",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "dateup-42u-glass-door-server-rack-600x1000x2055-2eb04dfa",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/dateup-42u-glass-door-server-rack-600x1000x2055-2eb04dfa.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Dateup 42u Glass Door Server Rack 600x800x2055 E22cf77c",
+      "slug": "dateup-42u-glass-door-server-rack-600x800x2055-e22cf77c",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-4FB6494B891451C6ACABF136",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/dateup-42u-glass-door-server-rack-600x800x2055-e22cf77c.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "dateup-42u-glass-door-server-rack-600x800x2055-e22cf77c",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "dateup-42u-glass-door-server-rack-600x800x2055-e22cf77c",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/dateup-42u-glass-door-server-rack-600x800x2055-e22cf77c.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Dateup 9u Server Rack 600x450x501 2b155a22",
+      "slug": "dateup-9u-server-rack-600x450x501-2b155a22",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-F462AEA024A9076B147BC89E",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/dateup-9u-server-rack-600x450x501-2b155a22.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "dateup-9u-server-rack-600x450x501-2b155a22",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "dateup-9u-server-rack-600x450x501-2b155a22",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/dateup-9u-server-rack-600x450x501-2b155a22.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Dateup 9u Server Rack 600x600x501 97b86ae2",
+      "slug": "dateup-9u-server-rack-600x600x501-97b86ae2",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-838F805AF3DEABC42BDA8AAB",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/dateup-9u-server-rack-600x600x501-97b86ae2.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "dateup-9u-server-rack-600x600x501-97b86ae2",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "dateup-9u-server-rack-600x600x501-97b86ae2",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/dateup-9u-server-rack-600x600x501-97b86ae2.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "HP Server 1 2tb Server HDD",
+      "slug": "hp-server-1-2tb-server-hdd",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-7C508C136B7CBA71D3D6FDD8",
+      "categorySlug": "server-networking",
+      "brandName": "Server HDD",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-hdd/hp-server-1-2tb-server-hdd.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "hp-server-1-2tb-server-hdd",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "hp-server-1-2tb-server-hdd",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/hp-server-1-2tb-server-hdd.jpg"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Orico Metabox Pro 2 Bay NAS Storage 6a13f40c",
+      "slug": "orico-metabox-pro-2-bay-nas-storage-6a13f40c",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-7D25E7B8412839046AB4E73C",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/orico-metabox-pro-2-bay-nas-storage-6a13f40c.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "orico-metabox-pro-2-bay-nas-storage-6a13f40c",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "orico-metabox-pro-2-bay-nas-storage-6a13f40c",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/orico-metabox-pro-2-bay-nas-storage-6a13f40c.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qnap Ts 233 2 Bays NAS Storage F8b31a3c",
+      "slug": "qnap-ts-233-2-bays-nas-storage-f8b31a3c",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-029FFACDD3F9D1E5387F8246",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/qnap-ts-233-2-bays-nas-storage-f8b31a3c.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qnap-ts-233-2-bays-nas-storage-f8b31a3c",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qnap-ts-233-2-bays-nas-storage-f8b31a3c",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/qnap-ts-233-2-bays-nas-storage-f8b31a3c.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Safenet 12u Wall Mount Network Cabinet With Pdu C50604f4",
+      "slug": "safenet-12u-wall-mount-network-cabinet-with-pdu-c50604f4",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-D137C45A9B0894444123E045",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/safenet-12u-wall-mount-network-cabinet-with-pdu-c50604f4.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "safenet-12u-wall-mount-network-cabinet-with-pdu-c50604f4",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "safenet-12u-wall-mount-network-cabinet-with-pdu-c50604f4",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/safenet-12u-wall-mount-network-cabinet-with-pdu-c50604f4.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Safenet 15u Wall Mount Network Cabinet With Pdu A87f9cc2",
+      "slug": "safenet-15u-wall-mount-network-cabinet-with-pdu-a87f9cc2",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-7AC777FA245E41E736D9C698",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/safenet-15u-wall-mount-network-cabinet-with-pdu-a87f9cc2.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "safenet-15u-wall-mount-network-cabinet-with-pdu-a87f9cc2",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "safenet-15u-wall-mount-network-cabinet-with-pdu-a87f9cc2",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/safenet-15u-wall-mount-network-cabinet-with-pdu-a87f9cc2.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Safenet 6u Wall Mount Network Cabinet With Pdu 1e7b6762",
+      "slug": "safenet-6u-wall-mount-network-cabinet-with-pdu-1e7b6762",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-2BA55F3D9F6381859C0DA6FD",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/safenet-6u-wall-mount-network-cabinet-with-pdu-1e7b6762.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "safenet-6u-wall-mount-network-cabinet-with-pdu-1e7b6762",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "safenet-6u-wall-mount-network-cabinet-with-pdu-1e7b6762",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/safenet-6u-wall-mount-network-cabinet-with-pdu-1e7b6762.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Safenet 9u Wall Mount Network Cabinet With Pdu 42e3b934",
+      "slug": "safenet-9u-wall-mount-network-cabinet-with-pdu-42e3b934",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-61ED20AD76635761EF25FD81",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/safenet-9u-wall-mount-network-cabinet-with-pdu-42e3b934.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "safenet-9u-wall-mount-network-cabinet-with-pdu-42e3b934",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "safenet-9u-wall-mount-network-cabinet-with-pdu-42e3b934",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/safenet-9u-wall-mount-network-cabinet-with-pdu-42e3b934.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Solitine Sol 26100 22u 22u Server Rack Afcf4673",
+      "slug": "solitine-sol-26100-22u-22u-server-rack-afcf4673",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-102CF38243AF51F6E57DD1C5",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/solitine-sol-26100-22u-22u-server-rack-afcf4673.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "solitine-sol-26100-22u-22u-server-rack-afcf4673",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "solitine-sol-26100-22u-22u-server-rack-afcf4673",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/solitine-sol-26100-22u-22u-server-rack-afcf4673.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Solitine Sol 26100 32u 32u Server Rack 2dd08411",
+      "slug": "solitine-sol-26100-32u-32u-server-rack-2dd08411",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-A27D69B30FC49C63E2E46A55",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/solitine-sol-26100-32u-32u-server-rack-2dd08411.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "solitine-sol-26100-32u-32u-server-rack-2dd08411",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "solitine-sol-26100-32u-32u-server-rack-2dd08411",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/solitine-sol-26100-32u-32u-server-rack-2dd08411.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Solitine Sol 265 12u 12u Server Rack 1ba413d4",
+      "slug": "solitine-sol-265-12u-12u-server-rack-1ba413d4",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-FBE126E458E77A4F40BCD3CD",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/solitine-sol-265-12u-12u-server-rack-1ba413d4.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "solitine-sol-265-12u-12u-server-rack-1ba413d4",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "solitine-sol-265-12u-12u-server-rack-1ba413d4",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/solitine-sol-265-12u-12u-server-rack-1ba413d4.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Solitine Sol 265 15u 15u Server Rack 4c57accf",
+      "slug": "solitine-sol-265-15u-15u-server-rack-4c57accf",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-B82BEDF6AC887D89FC68DDCA",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/solitine-sol-265-15u-15u-server-rack-4c57accf.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "solitine-sol-265-15u-15u-server-rack-4c57accf",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "solitine-sol-265-15u-15u-server-rack-4c57accf",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/solitine-sol-265-15u-15u-server-rack-4c57accf.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Solitine Sol 266 12u 12u Server Rack 1273767e",
+      "slug": "solitine-sol-266-12u-12u-server-rack-1273767e",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-79DC408875AB81CF7C989E28",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/solitine-sol-266-12u-12u-server-rack-1273767e.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "solitine-sol-266-12u-12u-server-rack-1273767e",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "solitine-sol-266-12u-12u-server-rack-1273767e",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/solitine-sol-266-12u-12u-server-rack-1273767e.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Solitine Sol 266 9u 9u Server Rack 2584cc73",
+      "slug": "solitine-sol-266-9u-9u-server-rack-2584cc73",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-50D2AADF7AF046222DB6814E",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/solitine-sol-266-9u-9u-server-rack-2584cc73.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "solitine-sol-266-9u-9u-server-rack-2584cc73",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "solitine-sol-266-9u-9u-server-rack-2584cc73",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/solitine-sol-266-9u-9u-server-rack-2584cc73.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Synology Diskstation Ds124 1 Bay NAS Enclosure 2b43cc0b",
+      "slug": "synology-diskstation-ds124-1-bay-nas-enclosure-2b43cc0b",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-B78A11F47BA5C43548A6DAA3",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/synology-diskstation-ds124-1-bay-nas-enclosure-2b43cc0b.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "synology-diskstation-ds124-1-bay-nas-enclosure-2b43cc0b",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "synology-diskstation-ds124-1-bay-nas-enclosure-2b43cc0b",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/synology-diskstation-ds124-1-bay-nas-enclosure-2b43cc0b.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Synology Diskstation Ds223 2 Bays NAS Enclosure 84037f7b",
+      "slug": "synology-diskstation-ds223-2-bays-nas-enclosure-84037f7b",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-333B319E5A5F46DBD391DF36",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/synology-diskstation-ds223-2-bays-nas-enclosure-84037f7b.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "synology-diskstation-ds223-2-bays-nas-enclosure-84037f7b",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "synology-diskstation-ds223-2-bays-nas-enclosure-84037f7b",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/synology-diskstation-ds223-2-bays-nas-enclosure-84037f7b.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Synology Diskstation Ds223j 2 Bays NAS Enclosure 4e3a62e4",
+      "slug": "synology-diskstation-ds223j-2-bays-nas-enclosure-4e3a62e4",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-661B1130FBBF97A56607D35D",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/synology-diskstation-ds223j-2-bays-nas-enclosure-4e3a62e4.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "synology-diskstation-ds223j-2-bays-nas-enclosure-4e3a62e4",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "synology-diskstation-ds223j-2-bays-nas-enclosure-4e3a62e4",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/synology-diskstation-ds223j-2-bays-nas-enclosure-4e3a62e4.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Toten 12u 600 X 450mm Server Rack Dc824865",
+      "slug": "toten-12u-600-x-450mm-server-rack-dc824865",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-34DE53AB4523FB408E36CC33",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/toten-12u-600-x-450mm-server-rack-dc824865.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "toten-12u-600-x-450mm-server-rack-dc824865",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "toten-12u-600-x-450mm-server-rack-dc824865",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/toten-12u-600-x-450mm-server-rack-dc824865.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Toten 12u 600 X 600mm Server Rack 9f674ff3",
+      "slug": "toten-12u-600-x-600mm-server-rack-9f674ff3",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-34B40B945EC50A0ED3280351",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/toten-12u-600-x-600mm-server-rack-9f674ff3.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "toten-12u-600-x-600mm-server-rack-9f674ff3",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "toten-12u-600-x-600mm-server-rack-9f674ff3",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/toten-12u-600-x-600mm-server-rack-9f674ff3.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Toten 15u 600 X 600mm Server Rack F7ab4dda",
+      "slug": "toten-15u-600-x-600mm-server-rack-f7ab4dda",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-28932AFD6D900838CCDC89FB",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/toten-15u-600-x-600mm-server-rack-f7ab4dda.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "toten-15u-600-x-600mm-server-rack-f7ab4dda",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "toten-15u-600-x-600mm-server-rack-f7ab4dda",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/toten-15u-600-x-600mm-server-rack-f7ab4dda.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Toten 22u 600 X 1000mm Server Rack 545f8d26",
+      "slug": "toten-22u-600-x-1000mm-server-rack-545f8d26",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-0338DB5955CFEC86D5CD2710",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/toten-22u-600-x-1000mm-server-rack-545f8d26.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "toten-22u-600-x-1000mm-server-rack-545f8d26",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "toten-22u-600-x-1000mm-server-rack-545f8d26",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/toten-22u-600-x-1000mm-server-rack-545f8d26.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Toten 22u 600 X 600mm Server Rack 3217850a",
+      "slug": "toten-22u-600-x-600mm-server-rack-3217850a",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-0D1BEE0584A6E0BB7E608B6B",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/toten-22u-600-x-600mm-server-rack-3217850a.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "toten-22u-600-x-600mm-server-rack-3217850a",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "toten-22u-600-x-600mm-server-rack-3217850a",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/toten-22u-600-x-600mm-server-rack-3217850a.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Toten 32u 600 X 1000mm Server Rack 51a65338",
+      "slug": "toten-32u-600-x-1000mm-server-rack-51a65338",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-C0456E22C1236A9701B0DE64",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/toten-32u-600-x-1000mm-server-rack-51a65338.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "toten-32u-600-x-1000mm-server-rack-51a65338",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "toten-32u-600-x-1000mm-server-rack-51a65338",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/toten-32u-600-x-1000mm-server-rack-51a65338.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Toten 32u 600 X 600mm Server Rack C8ec7011",
+      "slug": "toten-32u-600-x-600mm-server-rack-c8ec7011",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-0E0A1923C276D09DA8ECE847",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/toten-32u-600-x-600mm-server-rack-c8ec7011.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "toten-32u-600-x-600mm-server-rack-c8ec7011",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "toten-32u-600-x-600mm-server-rack-c8ec7011",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/toten-32u-600-x-600mm-server-rack-c8ec7011.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Toten 6u 600 X 600mm Server Rack D2598f43",
+      "slug": "toten-6u-600-x-600mm-server-rack-d2598f43",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-A68586CA4E6EF4FAE066B486",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/toten-6u-600-x-600mm-server-rack-d2598f43.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "toten-6u-600-x-600mm-server-rack-d2598f43",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "toten-6u-600-x-600mm-server-rack-d2598f43",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/toten-6u-600-x-600mm-server-rack-d2598f43.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Toten 9u 600 X 450mm Server Rack 4681e467",
+      "slug": "toten-9u-600-x-450mm-server-rack-4681e467",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-AAB0925B85E6B9D6BC95ACCD",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/toten-9u-600-x-450mm-server-rack-4681e467.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "toten-9u-600-x-450mm-server-rack-4681e467",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "toten-9u-600-x-450mm-server-rack-4681e467",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/toten-9u-600-x-450mm-server-rack-4681e467.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Toten 9u 600 X 600mm Server Rack C24ca5a4",
+      "slug": "toten-9u-600-x-600mm-server-rack-c24ca5a4",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-AC31E604E99853233E485104",
+      "categorySlug": "server-networking",
+      "brandName": "Server And Storage",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/server-networking/server-and-storage/toten-9u-600-x-600mm-server-rack-c24ca5a4.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "toten-9u-600-x-600mm-server-rack-c24ca5a4",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "toten-9u-600-x-600mm-server-rack-c24ca5a4",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/server-networking/server-and-storage/toten-9u-600-x-600mm-server-rack-c24ca5a4.png"
+      ]
+    }
+  ]
+}

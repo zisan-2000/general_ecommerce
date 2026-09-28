@@ -1,0 +1,41 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/tablet-pc",
+  "imageFolder": "/images/products/tablet-pc/amazon",
+  "groups": [
+    {
+      "name": "_direct",
+      "file": "_direct.json",
+      "status": "completed",
+      "products": 93,
+      "matched": 93,
+      "unmatched": 0
+    },
+    {
+      "name": "ipad",
+      "file": "ipad.json",
+      "status": "completed",
+      "products": 13,
+      "matched": 13,
+      "unmatched": 0
+    },
+    {
+      "name": "kids-tablet",
+      "file": "kids-tablet.json",
+      "status": "completed",
+      "products": 3,
+      "matched": 3,
+      "unmatched": 0
+    },
+    {
+      "name": "oneplus",
+      "file": "oneplus.json",
+      "status": "completed",
+      "products": 1,
+      "matched": 1,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790589576
+}

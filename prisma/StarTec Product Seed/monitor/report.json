@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/monitor",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\monitor",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\monitor",
+  "imagesFound": 937,
+  "uniqueProductStems": 937,
+  "productsInJson": 937,
+  "matchedProducts": 937,
+  "unmatchedProducts": 0,
+  "imageCoverage": 937,
+  "jsonGroupFiles": 1,
+  "matchMethods": {
+    "direct-slug": 937
+  },
+  "jsonGenerationTimeSeconds": 519.06,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 937,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\monitor\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\monitor\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\monitor\\unmatched.json"
+  },
+  "seedTimeSeconds": 25.51
+}

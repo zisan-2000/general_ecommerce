@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/accessories",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\accessories",
+    "generatedAtUnix": 1790591006,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "parentSlug": null,
+      "image": "/images/products/accessories/keyboard/bajeal/bajeal-k100-mechanical-keyboard.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Hohem",
+      "slug": "hohem",
+      "parentSlug": "accessories",
+      "image": "/images/products/accessories/microphone/hohem/hohem-mic-01-1tx-1rx-microphone.png",
+      "isActive": true,
+      "sortOrder": 11,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Key Features Model: MIC-01 Microphone Direction: Omni-Directional, Wireless Noise Cancellation: DSP 3-Level, shutter remote control Charging Case: 850mAh, Built-in TF Card Runtime: 7.5hrs(Up to 20hrs with the Charging Case), Apple MFi Certified View More Info Payment Options 5,700৳ 7,000৳ Cash Discount",
+      "slug": "key-features-model-mic-01-microphone-direction-omni-directional-wireless-noise-cancellation-dsp-3-level-shutter-remote-control-charging-case-850mah-built-in-tf-card-runtime-7-5hrs-up-to-20hrs-with-the-charging-case-apple-mfi-certified-view-more-info-payment-options-5-700-7-000-cash-discount",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Hohem MIC-01 (1TX + 1RX) Wireless Microphone",
+      "slug": "hohem-mic-01-1tx-1rx-microphone",
+      "type": "PHYSICAL",
+      "sku": "ST-40189",
+      "description": "<h2>Hohem MIC-01 (1TX + 1RX) Wireless Microphone</h2><p>The Hohem <strong>MIC-01</strong> (1TX + 1RX) Wireless <a href=\"https://www.startech.com.bd/accessories/microphone\" style=\"color: rgb(0, 0, 0);\" target=\"\">Microphone</a> is a flexible option for creators who want clean, consistent sound. This microphone is designed to function effortlessly with Android smartphones, tablets, and computers. Simply connect in the RX receiver and you're ready to record, making it great for video professionals who want rapid setup and versatility across numerous platforms. The Hohem MIC-01 Wireless Mic also supports smartphone shutter control, which allows you to capture images and movies without having to reach for your device. The Hohem Microphone has powerful DSP noise suppression to deliver clear audio in a variety of scenarios. Choose from three noise cancellation settings to customize the microphone's effectiveness for your recording requirements. Whether you're in a busy environment or a quiet studio, the Wireless Microphone provides continuous sound quality, helping you capture every detail. The Hohem MIC-01's plug-and-play architecture makes setup easy and quick. Connect the RX receiver to begin recording immediately. This Hohem MIC-01 Microphone is designed for long-term usage, allowing you to record without worrying about battery life or setup time. With this seamless connection, you may create balanced audio-visual recordings that satisfy professional standards. The Hohem MIC-01 (1TX plus1RX) Microphone for Android is a vital tool for producers who want adaptable, high-quality audio on the road. </p><h2>Buy Hohem MIC-01 Wireless Microphone from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hohem MIC-01 Wireless Microphone</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/accessories/microphone\" target=\"\">Microphone</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Hohem MIC-01 Wireless Microphone comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MIC-01</li><li>Microphone Direction: Omni-Directional, Wireless</li><li>Noise Cancellation: DSP 3-Level, shutter remote control</li><li>Charging Case: 850mAh, Built-in TF Card</li><li>Runtime: 7.5hrs(Up to 20hrs with the Charging Case), Apple MFi Certified</li></ul>",
+      "model": "MIC-01",
+      "warranty": "1 year",
+      "basePrice": 5700.0,
+      "originalPrice": 7000.0,
+      "currency": "BDT",
+      "weight": 0.0149,
+      "dimensions": {
+        "length": 50.2,
+        "width": 20.6,
+        "height": 20.6,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Key Features Model: MIC-01 Microphone Direction: Omni-Directional, Wireless Noise Cancellation: DSP 3-Level, shutter remote control Charging Case: 850mAh, Built-in TF Card Runtime: 7.5hrs(Up to 20hrs with the Charging Case), Apple MFi Certified View More Info Payment Options 5,700৳ 7,000৳ Cash Discount",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-40189",
+          "price": 5700.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 5472.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Switch",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Noise/Signal",
+              "value": "64dB",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Main Specs",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency Range",
+              "value": "20Hz - 20KHz",
+              "position": 0
+            },
+            {
+              "label": "Sensitivity",
+              "value": "-38 dBFS",
+              "position": 1
+            },
+            {
+              "label": "Dimension",
+              "value": "50.2 x 20.6 x 20.6mm (Transmitter), 46 x 23.5 x 9.1mm (Receiver), 80 x 64 x 30.6mm (Charging Case)",
+              "position": 2
+            },
+            {
+              "label": "Weight",
+              "value": "0.0149 kg (Transmitter), 0.005 kg (Receiver), 0.076 kg (Charging Case)",
+              "position": 3
+            },
+            {
+              "label": "Polar pattern",
+              "value": "Omni-Directional",
+              "position": 4
+            },
+            {
+              "label": "Battery",
+              "value": "150mAh (Transmitter & Receiver), 850mAh (Charging Case)",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Compatibility",
+          "position": 2,
+          "items": [
+            {
+              "label": "Audio recorders",
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hohem-mic-01-1tx-1rx-microphone",
+      "sourceProductCode": "40189",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MIC-01",
+        "Microphone Direction: Omni-Directional, Wireless",
+        "Noise Cancellation: DSP 3-Level, shutter remote control",
+        "Charging Case: 850mAh, Built-in TF Card",
+        "Runtime: 7.5hrs(Up to 20hrs with the Charging Case), Apple MFi Certified"
+      ],
+      "needsReview": false,
+      "categorySlug": "hohem",
+      "image": "/images/products/accessories/microphone/hohem/hohem-mic-01-1tx-1rx-microphone.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/accessories/microphone/hohem/hohem-mic-01-1tx-1rx-microphone.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hohem-mic-01-1tx-1rx-microphone",
+        "candidateTitle": "Hohem MIC-01 (1TX + 1RX) Wireless Microphone",
+        "attemptStem": "hohem-mic-01-1tx-1rx-microphone"
+      }
+    }
+  ]
+}

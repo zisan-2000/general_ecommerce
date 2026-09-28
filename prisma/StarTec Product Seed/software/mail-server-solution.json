@@ -1,0 +1,610 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/software",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\software",
+    "generatedAtUnix": 1790589365,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Software",
+      "slug": "software",
+      "parentSlug": null,
+      "image": "/images/products/software/adobe/adobe-acrobat-pro-dc-for-teams.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Mail Server Solution",
+      "slug": "mail-server-solution",
+      "parentSlug": "software",
+      "image": "/images/products/software/mail-server-solution/microsoft-exchange-server-2019-enterprise.jpg",
+      "isActive": true,
+      "sortOrder": 3,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Microsoft",
+      "slug": "microsoft",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Microsoft Exchange Server 2019 Enterprise",
+      "slug": "microsoft-exchange-server-2019-enterprise",
+      "type": "PHYSICAL",
+      "sku": "ST-19114",
+      "description": "<h2 style=\"text-align: justify; \">Microsoft Exchange Server 2019 Enterprise<br/></h2><p style=\"text-align: justify; \">Microsoft's mail server Exchange Server 2019 is aimed at companies and self-employed persons who want to optimize the exchange of messages by e-mail internally and externally. It is important that users have a uniform e-mail address and that security-relevant points are set up, such as the maximum number of e-mails to be received and sent per user. Also adjustable are folders and their permissions for Outlook. With the Exchange Server 2019 Enterprise, Microsoft is primarily targeting small and medium-sized companies. The additional support of all common output devices such as smartphones and tablets gives companies and freelancers an unbeatable competitive advantage in the field of communication, which is otherwise reserved for corporations. With a planned configuration there is no need for permanent maintenance. Exchange is designed for continuous operation. The versions from Exchange 2008 and 2010 onwards have proven that this works reliably.</p><h3 style=\"text-align: justify; \">Exchange Server 2019 Installation</h3><p style=\"text-align: justify; \">The installation of Exchange 2019, like all previous versions, takes a long time. Depending on the server equipment, the installation time is between 30 and 120 minutes.</p><h3 style=\"text-align: justify; \">Exchange Server 2019 Configuration</h3><p style=\"text-align: justify; \">The configuration of Exchange can take a long time, depending on the number of mailboxes to be created. Exchange Server needs above all: enough disk space, a correctly created Active Directory, the IPV6 protocol, a correctly working DNS, the definition of an internally used mail extension @xyz.net/com/en, etc.</p><div><h3 style=\"text-align: justify; \">Exchange Server 2019 System Requirements</h3><div style=\"text-align: justify; \">In order to run an Exchange Server 2019 cleanly, it's no use to spill the beans. Microsoft makes this clear with its system requirements. This is due to the experience of the past decades when Exchange was used on server machines that were much too small.</div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Exchange Server 2019 Enterprise</li><li>Supports 1 Admin User/ 1 Server</li><li>Open Business Licensing</li><li>Licensed for Home and Commercial Use</li><li>Runs On Windows</li></ul>",
+      "model": "Exchange Server 2019 Enterprise",
+      "warranty": null,
+      "basePrice": 532000.0,
+      "originalPrice": 585200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "4 GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "6 GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-19114",
+          "price": 532000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "4 GB",
+            "Storage": "6 GB"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 510720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2.0 GHz or higher",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "4 GB",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "6 GB",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Linux Docker",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "E-License",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 2,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "USERS SUPPORTED: 1 Admin User DEVICES SUPPORTED: 1 Server",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-exchange-server-2019-enterprise",
+      "sourceProductCode": "19114",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Exchange Server 2019 Enterprise",
+        "Supports 1 Admin User/ 1 Server",
+        "Open Business Licensing",
+        "Licensed for Home and Commercial Use",
+        "Runs On Windows"
+      ],
+      "needsReview": false,
+      "categorySlug": "mail-server-solution",
+      "image": "/images/products/software/mail-server-solution/microsoft-exchange-server-2019-enterprise.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/mail-server-solution/microsoft-exchange-server-2019-enterprise.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-exchange-server-2019-enterprise",
+        "candidateTitle": "Microsoft Exchange Server 2019 Enterprise",
+        "attemptStem": "microsoft-exchange-server-2019-enterprise"
+      }
+    },
+    {
+      "name": "Microsoft Exchange Server 2019 Standard",
+      "slug": "microsoft-exchange-server-2019-standard",
+      "type": "PHYSICAL",
+      "sku": "ST-19112",
+      "description": "<h2 style=\"text-align: justify; \">Microsoft Exchange Server 2019 Standard<br/></h2><p style=\"text-align: justify; \">Microsoft's mail server Exchange Server 2019 is aimed at companies and self-employed persons who want to optimize the exchange of messages by e-mail internally and externally. It is important that users have a uniform e-mail address and that security-relevant points are set up, such as the maximum number of e-mails to be received and sent per user. Also adjustable are folders and their permissions for Outlook. With the Exchange Server 2019 Standard, Microsoft is primarily targeting small and medium-sized companies. The additional support of all common output devices such as smartphones and tablets gives companies and freelancers an unbeatable competitive advantage in the field of communication, which is otherwise reserved for corporations. With a planned configuration there is no need for permanent maintenance. Exchange is designed for continuous operation. The versions from Exchange 2008 and 2010 onwards have proven that this works reliably.</p><h3 style=\"text-align: justify; \">Exchange Server 2019 Installation</h3><p style=\"text-align: justify; \">The installation of Exchange 2019, like all previous versions, takes a long time. Depending on the server equipment, the installation time is between 30 and 120 minutes.</p><h3 style=\"text-align: justify; \">Exchange Server 2019 Configuration</h3><p style=\"text-align: justify; \">The configuration of Exchange can take a long time, depending on the number of mailboxes to be created. Exchange Server needs above all: enough disk space, a correctly created Active Directory, the IPV6 protocol, a correctly working DNS, the definition of an internally used mail extension @xyz.net/com/en, etc.</p><div><h3 style=\"text-align: justify; \">Exchange Server 2019 System Requirements</h3><div style=\"text-align: justify; \">In order to run an Exchange Server 2019 cleanly, it's no use to spill the beans. Microsoft makes this clear with its system requirements. This is due to the experience of the past decades when Exchange was used on server machines that were much too small.</div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Exchange Server 2019 Standard</li><li>Supports 1 Admin User/ 1 Server</li><li>Open Business Licensing</li><li>Licensed for Home and Commercial Use</li><li>Runs On Windows</li></ul>",
+      "model": "Exchange Server 2019 Standard",
+      "warranty": null,
+      "basePrice": 106740.0,
+      "originalPrice": 117414.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "4 GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "6 GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-19112",
+          "price": 106740.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "4 GB",
+            "Storage": "6 GB"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 102470.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2.0 GHz or higher",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "4 GB",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "6 GB",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Linux Docker",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "E-License",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 2,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "USERS SUPPORTED: 1 Admin User DEVICES SUPPORTED: 1 Server",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-exchange-server-2019-standard",
+      "sourceProductCode": "19112",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Exchange Server 2019 Standard",
+        "Supports 1 Admin User/ 1 Server",
+        "Open Business Licensing",
+        "Licensed for Home and Commercial Use",
+        "Runs On Windows"
+      ],
+      "needsReview": false,
+      "categorySlug": "mail-server-solution",
+      "image": "/images/products/software/mail-server-solution/microsoft-exchange-server-2019-standard.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/mail-server-solution/microsoft-exchange-server-2019-standard.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-exchange-server-2019-standard",
+        "candidateTitle": "Microsoft Exchange Server 2019 Standard",
+        "attemptStem": "microsoft-exchange-server-2019-standard"
+      }
+    },
+    {
+      "name": "Microsoft Exchange Server 2019 Standard Device CAL",
+      "slug": "microsoft-exchange-server-2019-standard-device-cal",
+      "type": "PHYSICAL",
+      "sku": "ST-19110",
+      "description": "<h2>Microsoft Exchange Server 2019 Standard Device CAL<br/></h2><p style=\"text-align: justify;\">Microsoft Exchange 2019 Standard Device CAL Open License Client Access Licenses (CALs) serve as a safety measure to prevent unauthorized access to servers. These licenses are assigned to one person and each person on your team will need one to use Exchange. The open license nature of this device CAL means it is part of the Microsoft Volume Licensing program. The program is designed for businesses with between two and 250 that purchase licenses on an as-needed basis as opposed to buying in bulk. This version of exchange has the latest security measures in place to make communication a very safe endeavor, especially since more people are using tablets, laptops, and cell phones to send emails as opposed to exclusively sending them while working on a PC. Exchange 2019 has data loss prevention with more sensitive information types and enhanced auditing for better reporting and easier integration with third-party apps.</p><h3 style='font-family: \"Open Sans\", sans-serif; color: rgb(102, 102, 102); text-align: justify;'>Latest security measures</h3><p style=\"text-align: justify;\">This version of exchange has the latest security measures in place to make communication a very safe endeavor, especially since more people are using tablets, laptops, and cell phones to send emails as opposed to exclusively sending them while working on a PC.</p><h3 style='font-family: \"Open Sans\", sans-serif; color: rgb(102, 102, 102); text-align: justify;'>Easier integration</h3><p style=\"text-align: justify;\">Exchange 2019 has enhanced auditing for better reporting and easier integration with third-party apps.</p><h3 style='font-family: \"Open Sans\", sans-serif; color: rgb(102, 102, 102); text-align: justify;'>Exchange Mailbox</h3><p style=\"text-align: justify;\">The Mailbox server handles all activity for the active mailboxes on that server. Mailbox services include all the traditional server components found in the Exchange 2019 Mailbox server role: The Client Access protocols, Transport service, Mailbox databases, Unified Messaging.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Exchange Server 2019 Standard Device CAL</li><li>Supports 1 Admin User/ 1 Server</li><li>Open Business Licensing</li><li>Licensed for Home and Commercial Use</li><li>Runs On Windows</li></ul>",
+      "model": "Exchange Server 2019 Standard Device CAL",
+      "warranty": null,
+      "basePrice": 9565.0,
+      "originalPrice": 10522.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "4 GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "6 GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-19110",
+          "price": 9565.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "4 GB",
+            "Storage": "6 GB"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 9182.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2.0 GHz or higher",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "4 GB",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "6 GB",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Linux Docker",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "E-License",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 2,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "USERS SUPPORTED: 1 Admin User DEVICES SUPPORTED: 1 Server",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-exchange-server-2019-standard-device-cal",
+      "sourceProductCode": "19110",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Exchange Server 2019 Standard Device CAL",
+        "Supports 1 Admin User/ 1 Server",
+        "Open Business Licensing",
+        "Licensed for Home and Commercial Use",
+        "Runs On Windows"
+      ],
+      "needsReview": false,
+      "categorySlug": "mail-server-solution",
+      "image": "/images/products/software/mail-server-solution/microsoft-exchange-server-2019-standard-device-cal.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/mail-server-solution/microsoft-exchange-server-2019-standard-device-cal.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-exchange-server-2019-standard-device-cal",
+        "candidateTitle": "Microsoft Exchange Server 2019 Standard Device CAL",
+        "attemptStem": "microsoft-exchange-server-2019-standard-device-cal"
+      }
+    },
+    {
+      "name": "Microsoft Exchange Server 2019 Standard User CAL",
+      "slug": "microsoft-exchange-server-2019-standard-user-cal",
+      "type": "PHYSICAL",
+      "sku": "ST-19109",
+      "description": "<h2 style=\"text-align: justify; \">Microsoft Exchange Server 2019 Standard User CAL<br/></h2><p style=\"text-align: justify; \">Microsoft Exchange 2019 Standard User CAL Open License Client Access Licenses (CALs) serve as a safety measure to prevent unauthorized access to servers. These licenses are assigned to one person and each person on your team will need one to use Exchange. The open license nature of this user CAL means it is part of the Microsoft Volume Licensing program. The program is designed for businesses with between two and 250 that purchase licenses on an as-needed basis as opposed to buying in bulk. This version of exchange has the latest security measures in place to make communication a very safe endeavor, especially since more people are using tablets, laptops, and cell phones to send emails as opposed to exclusively sending them while working on a PC. Exchange 2019 has data loss prevention with more sensitive information types and enhanced auditing for better reporting and easier integration with third-party apps.</p><h3 style=\"text-align: justify; \">Latest security measures</h3><p style=\"text-align: justify; \">This version of exchange has the latest security measures in place to make communication a very safe endeavor, especially since more people are using tablets, laptops and cell phones to send emails as opposed to exclusively sending them while working on a PC.</p><h3 style=\"text-align: justify; \">Easier integration</h3><p style=\"text-align: justify; \">Exchange 2019 has enhanced auditing for better reporting and easier integration with third-party apps.</p><h3 style=\"text-align: justify; \">Exchange Mailbox</h3><p style=\"text-align: justify; \">The Mailbox server handles all activity for the active mailboxes on that server. Mailbox services include all the traditional server components found in the Exchange 2019 Mailbox server role: The Client Access protocols, Transport service, Mailbox databases, Unified Messaging.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Exchange Server 2019 Standard User CAL</li><li>Supports 1 Admin User/ 1 Server</li><li>Open Business Licensing</li><li>Licensed for Home and Commercial Use</li><li>Runs On Windows</li></ul>",
+      "model": "Exchange Server 2019 Standard User CAL",
+      "warranty": null,
+      "basePrice": 12370.0,
+      "originalPrice": 13607.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "4 GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "6 GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-19109",
+          "price": 12370.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "4 GB",
+            "Storage": "6 GB"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 11875.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2.0 GHz or higher",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "4 GB",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "6 GB",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Linux Docker",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "E-License",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 2,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "USERS SUPPORTED: 1 Admin User DEVICES SUPPORTED: 1 Server",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-exchange-server-2019-standard-user-cal",
+      "sourceProductCode": "19109",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Exchange Server 2019 Standard User CAL",
+        "Supports 1 Admin User/ 1 Server",
+        "Open Business Licensing",
+        "Licensed for Home and Commercial Use",
+        "Runs On Windows"
+      ],
+      "needsReview": false,
+      "categorySlug": "mail-server-solution",
+      "image": "/images/products/software/mail-server-solution/microsoft-exchange-server-2019-standard-user-cal.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/mail-server-solution/microsoft-exchange-server-2019-standard-user-cal.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-exchange-server-2019-standard-user-cal",
+        "candidateTitle": "Microsoft Exchange Server 2019 Standard User CAL",
+        "attemptStem": "microsoft-exchange-server-2019-standard-user-cal"
+      }
+    }
+  ]
+}

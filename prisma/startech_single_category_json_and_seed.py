@@ -55,6 +55,7 @@ import re
 import shutil
 import subprocess
 import sys
+import tempfile
 import threading
 import time
 from collections import Counter, defaultdict
@@ -136,9 +137,28 @@ def log(message: str) -> None:
 
 def atomic_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    tmp = path.with_suffix(path.suffix + ".tmp")
-    tmp.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
-    tmp.replace(path)
+    payload = json.dumps(value, ensure_ascii=False, indent=2) + "\n"
+    # Use a separate file per write, in the same directory for atomic replacement.
+    # Close it before replacing: Windows cannot rename an open temporary file.
+    with tempfile.NamedTemporaryFile(
+        mode="w", encoding="utf-8", dir=path.parent,
+        prefix=path.name + ".", suffix=".tmp", delete=False,
+    ) as handle:
+        tmp = Path(handle.name)
+        handle.write(payload)
+
+    for attempt in range(10):
+        try:
+            tmp.replace(path)
+            return
+        except OSError as exc:
+            # Editors, indexers and antivirus can briefly lock files on Windows.
+            transient_lock = os.name == "nt" and getattr(exc, "winerror", None) in {5, 32, 33}
+            if not transient_lock or attempt == 9:
+                # Keep the completed JSON available for recovery on lasting errors.
+                exc.add_note(f"Unsaved JSON retained at: {tmp}")
+                raise
+            time.sleep(min(0.1 * (2 ** attempt), 2.0))
 
 
 def clean_slug(value: str) -> str:

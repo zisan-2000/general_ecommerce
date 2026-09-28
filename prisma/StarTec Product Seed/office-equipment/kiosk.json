@@ -1,0 +1,2905 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/office-equipment",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\office-equipment",
+    "generatedAtUnix": 1790587585,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Office Equipment",
+      "slug": "office-equipment",
+      "parentSlug": null,
+      "image": "/images/products/office-equipment/barcode-scanner/deli/deli-14952w-handheld-barcode-scanner.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Kiosk",
+      "slug": "kiosk",
+      "parentSlug": "office-equipment",
+      "image": "/images/products/office-equipment/kiosk/armor/armor-antsd-a430-43-inch-android-kiosk.png",
+      "isActive": true,
+      "sortOrder": 10,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "ARMOR",
+      "slug": "armor",
+      "logo": null
+    },
+    {
+      "name": "HDFocus",
+      "slug": "hdfocus",
+      "logo": null
+    },
+    {
+      "name": "Hikvision",
+      "slug": "hikvision",
+      "logo": null
+    },
+    {
+      "name": "Innovtech",
+      "slug": "innovtech",
+      "logo": null
+    },
+    {
+      "name": "Viewsonic",
+      "slug": "viewsonic",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Armor ANTSD-A430 43\" Android Floor Standing Kiosk",
+      "slug": "armor-antsd-a430-43-inch-android-kiosk",
+      "type": "PHYSICAL",
+      "sku": "ST-20096",
+      "description": "<h2 style=\"text-align: justify; \">Armor ANTSD-A430 43\" Android Floor Standing Kiosk</h2><p style=\"text-align: justify; \">The Armor ANTSD-A430 is a 43\" Floor Standing Android Kiosk. It is made of High-Quality Metal, Tempered glass, Hit paint, Doc paint. It features 1920x1080 resolution and 350.0 cd/m2 of brightness. This signage supports 16.7m colors. It has a 60Hz refresh rate. The Armor ANTSD-A430 is loaded with a 1.7GHz Quad-core processor, 4GB RAM, and 64GB of ROM. It runs on Android 8. It features 2xUSB, 1xHDMI,1xSD,1xLAN Port. The ANTSD-A430 is equipped with a 10W *2 speaker. It comes with a 1-year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ANTSD-A430</li><li>43&quot; (1920 x 1080) LED Display</li><li>1.7GHz Quad-core Processor</li><li>RAM: 4GB, ROM: 64GB</li><li>Speaker: 10W *2</li></ul>",
+      "model": "ANTSD-A430",
+      "warranty": "1 year",
+      "basePrice": 150000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 1850.0,
+        "width": 805.0,
+        "height": 80.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "ARMOR",
+      "variantOptions": [
+        {
+          "name": "Panel Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "43″ (diagonal) Commercial LCD Tempered Glass Display",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Display color",
+          "position": 1,
+          "values": [
+            {
+              "value": "16.7m",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 2,
+          "values": [
+            {
+              "value": "4GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 3,
+          "values": [
+            {
+              "value": "2x USB 1x HDMI 1x SD 1x LAN Port",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-20096",
+          "price": 150000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Panel Size": "43″ (diagonal) Commercial LCD Tempered Glass Display",
+            "Display color": "16.7m",
+            "Memory": "4GB",
+            "Interface": "2x USB 1x HDMI 1x SD 1x LAN Port"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 144000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Panel Size",
+              "value": "43″ (diagonal) Commercial LCD Tempered Glass Display",
+              "position": 0
+            },
+            {
+              "label": "Resolution",
+              "value": "1920 x 1080",
+              "position": 1
+            },
+            {
+              "label": "Refresh Rate",
+              "value": "60Hz",
+              "position": 2
+            },
+            {
+              "label": "Response time",
+              "value": "Maximum 8ms",
+              "position": 3
+            },
+            {
+              "label": "Brightness",
+              "value": "350.0 cd/m2",
+              "position": 4
+            },
+            {
+              "label": "Contrast Ratio",
+              "value": "4000:1",
+              "position": 5
+            },
+            {
+              "label": "Aspect ratio",
+              "value": "09:16 Widescreen",
+              "position": 6
+            },
+            {
+              "label": "Display color",
+              "value": "16.7m",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Computer Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "CPU",
+              "value": "CPU: Quad-core Clock Speed: 1.7GHz",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "4GB",
+              "position": 1
+            },
+            {
+              "label": "Hard Disk",
+              "value": "64GB",
+              "position": 2
+            },
+            {
+              "label": "Operating system",
+              "value": "Android 8",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "2x USB 1x HDMI 1x SD 1x LAN Port",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "1850 x 805 x 80 mm",
+              "position": 0
+            },
+            {
+              "label": "Power",
+              "value": "<85W",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/armor-antsd-a430-43-inch-android-kiosk",
+      "sourceProductCode": "20096",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ANTSD-A430",
+        "43\" (1920 x 1080) LED Display",
+        "1.7GHz Quad-core Processor",
+        "RAM: 4GB, ROM: 64GB",
+        "Speaker: 10W *2"
+      ],
+      "needsReview": false,
+      "categorySlug": "kiosk",
+      "image": "/images/products/office-equipment/kiosk/armor/armor-antsd-a430-43-inch-android-kiosk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/kiosk/armor/armor-antsd-a430-43-inch-android-kiosk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "armor-antsd-a430-43-inch-android-kiosk",
+        "candidateTitle": "Armor ANTSD-A430 43\" Android Floor Standing Kiosk",
+        "attemptStem": "armor-antsd-a430-43-inch-android-kiosk"
+      }
+    },
+    {
+      "name": "Armor ATFSD-A430 43\" Android Floor Standing Touch Kiosk",
+      "slug": "armor-atfsd-a430-43-inch-android-touch-kiosk",
+      "type": "PHYSICAL",
+      "sku": "ST-20060",
+      "description": "<h2 style=\"text-align: justify; \">Armor ATFSD-A430 43\" Android Floor Standing Touch Kiosk</h2><p style=\"text-align: justify; \">The Armor ATFSD-A430 is a 43\" Floor Standing Android Kiosk. It is made of High-Quality Metal, Tempered glass, Hit paint, Doc paint. It features 1920x1080 resolution and 350.0 cd/m2 of brightness. This signage supports 16.7m colors. It has a 60Hz refresh rate. The Armor ATFSD-A430 is loaded with a 1.7GHz Quad-core processor, 4GB RAM, and 64GB of ROM. It runs on Android 8. It features 2xUSB, 1xHDMI,1xSD,1xLAN Port. The ATFSD-A430 is equipped with a 10W *2 speaker. It comes with a 1-year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ATFSD-A430</li><li>43&quot; (1920 x 1080) LED Touch Display</li><li>1.7GHz Quad-core Processor</li><li>RAM: 4GB, ROM: 64GB</li><li>Speaker: 10W *2</li></ul>",
+      "model": "ATFSD-A430",
+      "warranty": "1 year",
+      "basePrice": 150000.0,
+      "originalPrice": 155000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 1850.0,
+        "width": 805.0,
+        "height": 80.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "ARMOR",
+      "variantOptions": [
+        {
+          "name": "Panel Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "43″ (diagonal) Commercial LCD Tempered Glass Touch Display",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Display color",
+          "position": 1,
+          "values": [
+            {
+              "value": "16.7m",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 2,
+          "values": [
+            {
+              "value": "4GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 3,
+          "values": [
+            {
+              "value": "2x USB 1x HDMI 1x SD 1x LAN Port",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-20060",
+          "price": 150000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Panel Size": "43″ (diagonal) Commercial LCD Tempered Glass Touch Display",
+            "Display color": "16.7m",
+            "Memory": "4GB",
+            "Interface": "2x USB 1x HDMI 1x SD 1x LAN Port"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 144000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Panel Size",
+              "value": "43″ (diagonal) Commercial LCD Tempered Glass Touch Display",
+              "position": 0
+            },
+            {
+              "label": "Resolution",
+              "value": "1920 x 1080",
+              "position": 1
+            },
+            {
+              "label": "Refresh Rate",
+              "value": "60Hz",
+              "position": 2
+            },
+            {
+              "label": "Response time",
+              "value": "Maximum 8ms",
+              "position": 3
+            },
+            {
+              "label": "Brightness",
+              "value": "350.0 cd/m2",
+              "position": 4
+            },
+            {
+              "label": "Contrast Ratio",
+              "value": "4000:1",
+              "position": 5
+            },
+            {
+              "label": "Aspect ratio",
+              "value": "09:16 Widescreen",
+              "position": 6
+            },
+            {
+              "label": "Display color",
+              "value": "16.7m",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Computer Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "CPU",
+              "value": "CPU: Quad-core Clock Speed: 1.7GHz",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "4GB",
+              "position": 1
+            },
+            {
+              "label": "Hard Disk",
+              "value": "64GB",
+              "position": 2
+            },
+            {
+              "label": "Operating system",
+              "value": "Android 8",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "2x USB 1x HDMI 1x SD 1x LAN Port",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "1850 x 805 x 80 mm",
+              "position": 0
+            },
+            {
+              "label": "Power",
+              "value": "<85W",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/armor-atfsd-a430-43-inch-android-touch-kiosk",
+      "sourceProductCode": "20060",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ATFSD-A430",
+        "43\" (1920 x 1080) LED Touch Display",
+        "1.7GHz Quad-core Processor",
+        "RAM: 4GB, ROM: 64GB",
+        "Speaker: 10W *2"
+      ],
+      "needsReview": false,
+      "categorySlug": "kiosk",
+      "image": "/images/products/office-equipment/kiosk/armor/armor-atfsd-a430-43-inch-android-touch-kiosk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/kiosk/armor/armor-atfsd-a430-43-inch-android-touch-kiosk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "armor-atfsd-a430-43-inch-android-touch-kiosk",
+        "candidateTitle": "Armor ATFSD-A430 43\" Android Floor Standing Touch Kiosk",
+        "attemptStem": "armor-atfsd-a430-43-inch-android-touch-kiosk"
+      }
+    },
+    {
+      "name": "Armor ATFSD-A550 55\" Android Floor Standing Touch Kiosk",
+      "slug": "armor-atfsd-a550-55-inch-android-touch-kiosk",
+      "type": "PHYSICAL",
+      "sku": "ST-20061",
+      "description": "<h2 style=\"\">Armor ATFSD-A550 55\" Android Floor Standing Touch Kiosk</h2><p style=\"\">The Armor ATFSD-A550 is a 55\" Floor Standing Android Kiosk. It is made of High-Quality Metal, Tempered glass, Hit paint, and Doc paint. It features 1920x1080 resolution and 350.0 cd/m² of brightness. This signage supports 16.7m colors. It has a 60 Hz refresh rate. The Armor ATFSD-A550 is loaded with an RK3288 processor, 4GB of RAM, and 64GB of ROM. It runs on Android 6.0. It features 2xUSB, 1xHDMI,1xSD,1xLAN Port. The ATFSD-A550 is equipped with a 10W *2 speaker. It comes with a 1-year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ATFSD-A550</li><li>55&quot; (1920 x 1080) LED Touch Display</li><li>CPU: RK3288</li><li>RAM: 4GB, ROM: 64GB</li><li>Speaker: 5W *2</li></ul>",
+      "model": "ATFSD-A550",
+      "warranty": "1 year",
+      "basePrice": 195000.0,
+      "originalPrice": 200000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 186.0,
+        "width": 79.6,
+        "height": 5.0,
+        "unit": "cm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "ARMOR",
+      "variantOptions": [
+        {
+          "name": "Panel Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "55″ (diagonal) Commercial LCD Tempered Glass Touch Display",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Display color",
+          "position": 1,
+          "values": [
+            {
+              "value": "16.7m",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 2,
+          "values": [
+            {
+              "value": "4GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 3,
+          "values": [
+            {
+              "value": "2x USB 1x HDMI 1x SD 1x LAN Port",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-20061",
+          "price": 195000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Panel Size": "55″ (diagonal) Commercial LCD Tempered Glass Touch Display",
+            "Display color": "16.7m",
+            "Memory": "4GB",
+            "Interface": "2x USB 1x HDMI 1x SD 1x LAN Port"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 187200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Panel Size",
+              "value": "55″ (diagonal) Commercial LCD Tempered Glass Touch Display",
+              "position": 0
+            },
+            {
+              "label": "Resolution",
+              "value": "1920 x 1080",
+              "position": 1
+            },
+            {
+              "label": "Refresh Rate",
+              "value": "60Hz",
+              "position": 2
+            },
+            {
+              "label": "Response time",
+              "value": "Maximum 8ms",
+              "position": 3
+            },
+            {
+              "label": "Brightness",
+              "value": "350.0 cd/m2",
+              "position": 4
+            },
+            {
+              "label": "Contrast Ratio",
+              "value": "3000:1",
+              "position": 5
+            },
+            {
+              "label": "Aspect ratio",
+              "value": "09:16 Widescreen",
+              "position": 6
+            },
+            {
+              "label": "Display color",
+              "value": "16.7m",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Computer Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "CPU",
+              "value": "CPU: Quad-core Clock Speed: 1.7GHz",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "4GB",
+              "position": 1
+            },
+            {
+              "label": "Hard Disk",
+              "value": "64GB",
+              "position": 2
+            },
+            {
+              "label": "Operating system",
+              "value": "Android 13",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "2x USB 1x HDMI 1x SD 1x LAN Port",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "L186 x W79.6 x H5.0 cm",
+              "position": 0
+            },
+            {
+              "label": "Power",
+              "value": "135W",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/armor-atfsd-a550-55-inch-android-touch-kiosk",
+      "sourceProductCode": "20061",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ATFSD-A550",
+        "55\" (1920 x 1080) LED Touch Display",
+        "CPU: RK3288",
+        "RAM: 4GB, ROM: 64GB",
+        "Speaker: 5W *2"
+      ],
+      "needsReview": false,
+      "categorySlug": "kiosk",
+      "image": "/images/products/office-equipment/kiosk/armor/armor-atfsd-a550-55-inch-android-touch-kiosk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/kiosk/armor/armor-atfsd-a550-55-inch-android-touch-kiosk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "armor-atfsd-a550-55-inch-android-touch-kiosk",
+        "candidateTitle": "Armor ATFSD-A550 55\" Android Floor Standing Touch Kiosk",
+        "attemptStem": "armor-atfsd-a550-55-inch-android-touch-kiosk"
+      }
+    },
+    {
+      "name": "Armor ATFSD-A650 65\" Android Floor Standing Touch Kiosk",
+      "slug": "armor-atfsd-a650-65-inch-android-touch-kiosk",
+      "type": "PHYSICAL",
+      "sku": "ST-20064",
+      "description": "<h2 style=\"text-align: justify; \">Armor ATFSD-A650 65\" Android Floor Standing Touch Kiosk</h2><p style=\"text-align: justify; \">The Armor ATFSD-A650 is a 65\" Floor Standing Android Kiosk. It is made of High-Quality Metal, Tempered glass, Hit paint, Doc paint. It features 1920x1080 resolution and 350.0 cd/m2 of brightness. This signage supports 16.7m colors. It has a 60Hz refresh rate. The Armor ATFSD-A650 is loaded with an RK3288 processor, 2GB RAM, and 16GB of ROM. It runs on Android 6.0. It features 2xUSB, 1xHDMI,1xSD,1xLAN Port. The ATFSD-A650 is equipped with a 10W *2 speaker. It comes with a 1-year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ATFSD-A650</li><li>65&quot; (1920 x 1080) LED Touch Display</li><li>CPU: RK3288</li><li>RAM: 2GB, ROM: 16GB</li><li>Speaker: 5W *2</li></ul>",
+      "model": "ATFSD-A650",
+      "warranty": "1 year",
+      "basePrice": 200000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "ARMOR",
+      "variantOptions": [
+        {
+          "name": "Panel Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "65″ (diagonal) Commercial LCD Tempered Glass Touch Display",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Display color",
+          "position": 1,
+          "values": [
+            {
+              "value": "16.7m",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 2,
+          "values": [
+            {
+              "value": "2GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 3,
+          "values": [
+            {
+              "value": "2x USB 1x HDMI 1x SD 1x LAN Port",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-20064",
+          "price": 200000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Panel Size": "65″ (diagonal) Commercial LCD Tempered Glass Touch Display",
+            "Display color": "16.7m",
+            "Memory": "2GB",
+            "Interface": "2x USB 1x HDMI 1x SD 1x LAN Port"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 192000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Panel Size",
+              "value": "65″ (diagonal) Commercial LCD Tempered Glass Touch Display",
+              "position": 0
+            },
+            {
+              "label": "Resolution",
+              "value": "1920 x 1080",
+              "position": 1
+            },
+            {
+              "label": "Refresh Rate",
+              "value": "60Hz",
+              "position": 2
+            },
+            {
+              "label": "Response time",
+              "value": "Maximum 8ms",
+              "position": 3
+            },
+            {
+              "label": "Brightness",
+              "value": "350.0 cd/m2",
+              "position": 4
+            },
+            {
+              "label": "Contrast Ratio",
+              "value": "3000:1",
+              "position": 5
+            },
+            {
+              "label": "Aspect ratio",
+              "value": "09:16 Widescreen",
+              "position": 6
+            },
+            {
+              "label": "Display color",
+              "value": "16.7m",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Computer Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "CPU",
+              "value": "CPU: Quad-core Clock Speed: 1.7GHz",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "2GB",
+              "position": 1
+            },
+            {
+              "label": "Hard Disk",
+              "value": "16GB",
+              "position": 2
+            },
+            {
+              "label": "Operating system",
+              "value": "Android 6.0",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "2x USB 1x HDMI 1x SD 1x LAN Port",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Power",
+              "value": "135W",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/armor-atfsd-a650-65-inch-android-touch-kiosk",
+      "sourceProductCode": "20064",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ATFSD-A650",
+        "65\" (1920 x 1080) LED Touch Display",
+        "CPU: RK3288",
+        "RAM: 2GB, ROM: 16GB",
+        "Speaker: 5W *2"
+      ],
+      "needsReview": false,
+      "categorySlug": "kiosk",
+      "image": "/images/products/office-equipment/kiosk/armor/armor-atfsd-a650-65-inch-android-touch-kiosk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/kiosk/armor/armor-atfsd-a650-65-inch-android-touch-kiosk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "armor-atfsd-a650-65-inch-android-touch-kiosk",
+        "candidateTitle": "Armor ATFSD-A650 65\" Android Floor Standing Touch Kiosk",
+        "attemptStem": "armor-atfsd-a650-65-inch-android-touch-kiosk"
+      }
+    },
+    {
+      "name": "Armor ATFSD-W550 55\" Windows Floor Standing Touch Kiosk",
+      "slug": "armor-atfsd-w550-windows-kiosk",
+      "type": "PHYSICAL",
+      "sku": "ST-21728",
+      "description": "<h2 style=\"text-align: justify; \">Armor ATFSD-W550 55\" Windows Floor Standing Touch Kiosk</h2><p style=\"text-align: justify; \">The Armor ATFSD-W550 is a 55\" Floor Standing Windows Kiosk. It is made of High-Quality Metal, Tempered glass, Hit paint, Doc paint. It features 1920x1080 resolution and 350.0 cd/m2 of brightness. This signage supports 16.7m colors. It has a 60Hz refresh rate. The Armor ATFSD-W550 is loaded with an RK3288 processor, 2GB RAM, and 16GB of ROM. It runs on Windows 6.0. It features 2xUSB, 1xHDMI,1xSD,1xLAN Port. The ATFSD-W550 is equipped with a 10W x2 speaker. It comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ATFSD-A550</li><li>55&quot; (1920 x 1080) LED Touch Display</li><li>CPU: RK3288</li><li>RAM: 2GB, ROM: 16GB</li><li>Speaker: 5W *2</li></ul>",
+      "model": "ATFSD-A550",
+      "warranty": "1 year",
+      "basePrice": 200000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 186.0,
+        "width": 79.6,
+        "height": 5.0,
+        "unit": "cm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "ARMOR",
+      "variantOptions": [
+        {
+          "name": "Panel Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "55″ (diagonal) Commercial LCD Tempered Glass Touch Display",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Display color",
+          "position": 1,
+          "values": [
+            {
+              "value": "16.7m",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 2,
+          "values": [
+            {
+              "value": "2GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 3,
+          "values": [
+            {
+              "value": "2x USB 1x HDMI 1x SD 1x LAN Port",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-21728",
+          "price": 200000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Panel Size": "55″ (diagonal) Commercial LCD Tempered Glass Touch Display",
+            "Display color": "16.7m",
+            "Memory": "2GB",
+            "Interface": "2x USB 1x HDMI 1x SD 1x LAN Port"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 192000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Panel Size",
+              "value": "55″ (diagonal) Commercial LCD Tempered Glass Touch Display",
+              "position": 0
+            },
+            {
+              "label": "Resolution",
+              "value": "1920 x 1080",
+              "position": 1
+            },
+            {
+              "label": "Refresh Rate",
+              "value": "60Hz",
+              "position": 2
+            },
+            {
+              "label": "Response time",
+              "value": "Maximum 8ms",
+              "position": 3
+            },
+            {
+              "label": "Brightness",
+              "value": "350.0 cd/m2",
+              "position": 4
+            },
+            {
+              "label": "Contrast Ratio",
+              "value": "3000:1",
+              "position": 5
+            },
+            {
+              "label": "Aspect ratio",
+              "value": "09:16 Widescreen",
+              "position": 6
+            },
+            {
+              "label": "Display color",
+              "value": "16.7m",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Computer Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "CPU",
+              "value": "CPU: Quad-core Clock Speed: 1.7GHz",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "2GB",
+              "position": 1
+            },
+            {
+              "label": "Hard Disk",
+              "value": "16GB",
+              "position": 2
+            },
+            {
+              "label": "Operating system",
+              "value": "Windows",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "2x USB 1x HDMI 1x SD 1x LAN Port",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "L186 x W79.6 x H5.0 cm",
+              "position": 0
+            },
+            {
+              "label": "Power",
+              "value": "135W",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/armor-atfsd-w550-windows-kiosk",
+      "sourceProductCode": "21728",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ATFSD-A550",
+        "55\" (1920 x 1080) LED Touch Display",
+        "CPU: RK3288",
+        "RAM: 2GB, ROM: 16GB",
+        "Speaker: 5W *2"
+      ],
+      "needsReview": false,
+      "categorySlug": "kiosk",
+      "image": "/images/products/office-equipment/kiosk/armor/armor-atfsd-w550-windows-kiosk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/kiosk/armor/armor-atfsd-w550-windows-kiosk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "armor-atfsd-w550-windows-kiosk",
+        "candidateTitle": "Armor ATFSD-W550 55\" Windows Floor Standing Touch Kiosk",
+        "attemptStem": "armor-atfsd-w550-windows-kiosk"
+      }
+    },
+    {
+      "name": "HDFocus HD-55F 55\" Digital Display Floor Standing Touch Kiosk",
+      "slug": "hdfocus-hd-55f-55-inch-kiosk",
+      "type": "PHYSICAL",
+      "sku": "ST-48408",
+      "description": "<h2>HDFocus HD-55F 55\" Digital Display Floor Standing Touch Kiosk</h2><p>The HDFocus<strong> HD-55F</strong> 55 inch Kiosk is a premium interactive solution designed for businesses, retail environments, and public spaces that demand high-quality digital engagement. Featuring a 55-inch LG TFT-LCD screen with LED backlight, 4K resolution (3840x2160), and a wide 178° viewing angle, this HDFocus Digital Display delivers sharp visuals, vibrant colors, and smooth performance with a fast response time under 5ms. Built to last with a display life of over 50,000 hours, it ensures reliable operation for long-term use.</p><h3>Powerful Performance &amp; Interactive Touch</h3><p>The HDFocus 55 inch Kiosk is powered by anQuad core Cortex-A55, RK3568 Processor, 4GB DDR3 RAM, and a 32GB SSD for smooth multitasking and reliable performance. Running on androidOS, this HDFocus Floor Standing Touch Kiosk is ideal for interactive presentations, customer engagement, and digital signage. Its advanced infra-red 10-point touch technology with tempered glass cover ensures fast response times under 5ms, precise accuracy, and durability for over 60 million touches, making it a robust HDFocus Digital Display solution.</p><h3>Connectivity &amp; Versatile Applications</h3><p>The HDFocus Kiosk offers extensive connectivity options including USB, HDMI, RJ45, Wi-Fi, audio input/output, and OTG support, making it versatile for multiple business applications. With its sleek floor-standing design, industrial-grade components, and a long-lasting 55-inch LG TFT-LCD screen, the HDFocus Digital Display delivers sharp visuals, vibrant colors, and wide 178° viewing angles. Perfect for retail, corporate, and public environments, the HDFocus 55 inch Kiosk combines style, durability, and functionality to enhance customer interaction and digital experiences.</p><h2>Buy HDFocus HD-55F 55\" Digital Display Floor Standing Touch Kiosk from Star Tech</h2><p>In Bangladesh, you can get original <strong>HDFocus HD-55F 55\" Digital Display Floor Standing Touch Kiosk</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/hdfocus-kiosk\">HDFocus Kiosk</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at lowest price. The HDFocus HD-55F 55\" Digital Display Floor Standing Touch Kiosk Comes with 01 Year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HD-55F</li><li>Display: 55&quot; TFT-LCD with LED backlight</li><li>CPU: Quad core Cortex-A55, RK3568, 2.0GHz</li><li>RAM: 4GB, ROM: EMMC 32GB</li><li>Display Life Time: Over 50,000hrs</li></ul>",
+      "model": "HD-55F",
+      "warranty": "1 year",
+      "basePrice": 185000.0,
+      "originalPrice": 195000.0,
+      "currency": "BDT",
+      "weight": 58.0,
+      "dimensions": {
+        "length": 1.0,
+        "width": 960.0,
+        "height": 757.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "HDFocus",
+      "variantOptions": [
+        {
+          "name": "Panel Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "55\" TFT-LCD with LED backlight",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Display color",
+          "position": 1,
+          "values": [
+            {
+              "value": "16.77M color",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 2,
+          "values": [
+            {
+              "value": "DDR3 4G",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 3,
+          "values": [
+            {
+              "value": "USB2.0 x 2 HDMI x 1 MIC Audio x 1 Line x 1 RJ45 x 1 SIM card slotx1 TF cardx1 WIFI*1, support 802.11 b/g/nx1",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-48408",
+          "price": 185000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Panel Size": "55\" TFT-LCD with LED backlight",
+            "Display color": "16.77M color",
+            "Memory": "DDR3 4G",
+            "Interface": "USB2.0 x 2 HDMI x 1 MIC Audio x 1 Line x 1 RJ45 x 1 SIM card slotx1 TF cardx1 WIFI*1, support 802.11 b/g/nx1"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 177600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Panel Size",
+              "value": "55\" TFT-LCD with LED backlight",
+              "position": 0
+            },
+            {
+              "label": "Resolution",
+              "value": "3840x2160",
+              "position": 1
+            },
+            {
+              "label": "Refresh Rate",
+              "value": "60Hz",
+              "position": 2
+            },
+            {
+              "label": "Viewing Angle",
+              "value": "178° left and right, up and down",
+              "position": 3
+            },
+            {
+              "label": "Response time",
+              "value": "Less than 5ms",
+              "position": 4
+            },
+            {
+              "label": "Brightness",
+              "value": "450cd/m2",
+              "position": 5
+            },
+            {
+              "label": "Contrast Ratio",
+              "value": "4000:01:00",
+              "position": 6
+            },
+            {
+              "label": "Aspect ratio",
+              "value": "16:9",
+              "position": 7
+            },
+            {
+              "label": "Display color",
+              "value": "16.77M color",
+              "position": 8
+            },
+            {
+              "label": "Frequency",
+              "value": "2.0GHz",
+              "position": 9
+            },
+            {
+              "label": "Multi-touch",
+              "value": "10 points",
+              "position": 10
+            },
+            {
+              "label": "Speaker",
+              "value": "10W*2",
+              "position": 11
+            },
+            {
+              "label": "Others",
+              "value": "USB to play content directly Support Ethernet and WIFI connection; Free digital signage software Cloud management With Wheels",
+              "position": 12
+            }
+          ]
+        },
+        {
+          "name": "Computer Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "CPU",
+              "value": "CPU- Quad core Cortex-A55, RK3568 Clock Speed: 2.0GHz GPU- ARM G52 2EE",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "DDR3 4G",
+              "position": 1
+            },
+            {
+              "label": "Hard Disk",
+              "value": "EMMC 32G (can expand )",
+              "position": 2
+            },
+            {
+              "label": "Operating system",
+              "value": "Android OS 14.0",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "USB2.0 x 2 HDMI x 1 MIC Audio x 1 Line x 1 RJ45 x 1 SIM card slotx1 TF cardx1 WIFI*1, support 802.11 b/g/nx1",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Android specifications",
+          "position": 2,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Android OS 14.0",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 3,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "1,960 *757*30mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "58KG",
+              "position": 1
+            },
+            {
+              "label": "Power",
+              "value": "≤ 100W",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hdfocus-hd-55f-55-inch-kiosk",
+      "sourceProductCode": "48408",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HD-55F",
+        "Display: 55\" TFT-LCD with LED backlight",
+        "CPU: Quad core Cortex-A55, RK3568, 2.0GHz",
+        "RAM: 4GB, ROM: EMMC 32GB",
+        "Display Life Time: Over 50,000hrs"
+      ],
+      "needsReview": false,
+      "categorySlug": "kiosk",
+      "image": "/images/products/office-equipment/kiosk/_direct/hdfocus-hd-55f-55-inch-kiosk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/kiosk/_direct/hdfocus-hd-55f-55-inch-kiosk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hdfocus-hd-55f-55-inch-kiosk",
+        "candidateTitle": "HDFocus HD-55F 55\" Digital Display Floor Standing Touch Kiosk",
+        "attemptStem": "hdfocus-hd-55f-55-inch-kiosk"
+      }
+    },
+    {
+      "name": "Hikvision DS-D6055UL-B/S 55\" 4K UHD Floor Standing Kiosk",
+      "slug": "hikvision-ds-d6055ul-b-s-4k-floor-standing-digital-kiosk",
+      "type": "PHYSICAL",
+      "sku": "ST-38264",
+      "description": "<h2>Hikvision DS-D6055UL-B/S 55\" 4K UHD Floor Standing Kiosk</h2><p>The Hikvision <strong>DS-D6055UL-B/S</strong> 55\" 4K UHD Floor Standing <a href=\"https://www.startech.com.bd/kiosk\" style=\"color: rgb(0, 0, 0);\" target=\"\">Kiosk </a>is a sleek, high-performance display solution that offers breathtaking graphics and a smooth user experience. With a 54.6-inch screen and 4K UHD quality (3840 × 2160), this kiosk is perfect for digital signage, public information displays, and commercial advertising since it delivers vivid colors and clear images. Its broad horizontal and vertical viewing angles of 178° offer the best vision from any angle, and its brightness of 500 cd/m² and 72% NTSC color gamut guarantee bright, lively, and vivid images. The display's performance is further improved by its fast 6.5 ms response time and 5700:1 contrast ratio, which produce vivid whites, deep blacks, and fluid images. The Android 8.1.0 operating system powers the Hikvision DS-D6055UL-B/S 55\" 4K UHD Floor Standing Digital Kiosk, which also has a Cortex-A17 quad-core 1.6 GHz CPU, 2 GB of RAM, and 16 GB of internal storage. Two HDMI inputs, one VGA input, an audio input and output, two USB ports, and a TF card slot are just a few of the many connectivity choices it provides. High-quality audio for multimedia presentations is provided by the kiosk's integrated dual 5W speakers. Connecting and controlling the device from a distance is made simple by the network interface's compatibility for LAN, Wi-Fi, and Bluetooth 4.2. The Hikvision DS-D6055UL-B/S 55\" 4K UHD Floor Standing Digital Kiosk's sturdy design enables it to function in a variety of settings, withstanding humidity levels ranging from 0% to 90%. With its contemporary floor-standing design and measurements of 1962.7 x 738 x 450 mm (H x V), this digital kiosk blends nicely with a variety of environments. With a power consumption of less than 150W and an operating voltage of 100-240VAC, it ensures energy efficiency. This non-touch variant offers remarkable performance with low power consumption, making it perfect for dynamic advertising and public information systems.</p><h2>Buy Hikvision DS-D6055UL-B/S 55\" 4K UHD Floor Standing Kiosk from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hikvision DS-D6055UL-B/S 55\" 4K UHD Floor Standing Kiosk</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/hikvision-kiosk\" target=\"\">Hikvision Kiosk</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Hikvision DS-D6055UL-B/S 55\" 4K UHD Floor Standing Kiosk comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DS-D6055UL-B/S</li><li>Display Size: 54.6 inch, D-LED Backlight</li><li>Resolution: 4K UHD (3840 × 2160)</li><li>Memory: 2GB, Storage: 16GB EMMC</li><li>Loudspeaker: 2× built-in speaker, 8 Ω 5 W</li></ul>",
+      "model": "DS-D6055UL-B/S",
+      "warranty": "1 year",
+      "basePrice": 185000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 138.23,
+      "dimensions": {
+        "length": 1962.7,
+        "width": 738.0,
+        "height": 450.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Hikvision",
+      "variantOptions": [
+        {
+          "name": "Panel Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "54.6 inch",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 1,
+          "values": [
+            {
+              "value": "2GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "Video & Audio Input: AUDIO IN × 1，HDMI IN × 2，VGA IN × 1 Video & Audio Output: AUDIO OUT × 1 Network Interface: 1 x LAN, Wi-Fi, BT 4.2 Data Transmission Interface: 2 x USB, 1 x TF Card",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-38264",
+          "price": 185000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Panel Size": "54.6 inch",
+            "Memory": "2GB",
+            "Interface": "Video & Audio Input: AUDIO IN × 1，HDMI IN × 2，VGA IN × 1 Video & Audio Output: AUDIO OUT × 1 Network Interface: 1 x LAN, Wi-Fi, BT 4.2 Data Transmission Interface: 2 x USB, 1 x TF Card"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 177600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Panel Size",
+              "value": "54.6 inch",
+              "position": 0
+            },
+            {
+              "label": "Resolution",
+              "value": "4K (3840 × 2160)",
+              "position": 1
+            },
+            {
+              "label": "Refresh Rate",
+              "value": "60 Hz",
+              "position": 2
+            },
+            {
+              "label": "Viewing Angle",
+              "value": "Horizontal: 178°, Vertical: 178°",
+              "position": 3
+            },
+            {
+              "label": "Response time",
+              "value": "6.5 ms",
+              "position": 4
+            },
+            {
+              "label": "Brightness",
+              "value": "500 cd/m²",
+              "position": 5
+            },
+            {
+              "label": "Contrast Ratio",
+              "value": "5700 : 1",
+              "position": 6
+            },
+            {
+              "label": "Multi-touch",
+              "value": "Non-Touch",
+              "position": 7
+            },
+            {
+              "label": "Speaker",
+              "value": "2 × built-in speaker, 8 Ω 5 W",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Computer Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "CPU",
+              "value": "Cortex-A17, 4-core, 1.6 GHz",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "2GB",
+              "position": 1
+            },
+            {
+              "label": "Hard Disk",
+              "value": "Storage: 16GB EMMC",
+              "position": 2
+            },
+            {
+              "label": "Operating system",
+              "value": "Android 8.1.0",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "Video & Audio Input: AUDIO IN × 1，HDMI IN × 2，VGA IN × 1 Video & Audio Output: AUDIO OUT × 1 Network Interface: 1 x LAN, Wi-Fi, BT 4.2 Data Transmission Interface: 2 x USB, 1 x TF Card",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "1962.7 (H) x 738 (V) x 450 (D) mm (77.27'' x 29.06'' x 17.72'' )",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "138.23 lbs/62.7 kg",
+              "position": 1
+            },
+            {
+              "label": "Power",
+              "value": "Power Supply: 100 to 240VAC, 50/60 Hz Power Consumption: ≤ 150 W Standby Consumption: <0.5W",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-ds-d6055ul-b-s-4k-floor-standing-digital-kiosk",
+      "sourceProductCode": "38264",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DS-D6055UL-B/S",
+        "Display Size: 54.6 inch, D-LED Backlight",
+        "Resolution: 4K UHD (3840 × 2160)",
+        "Memory: 2GB, Storage: 16GB EMMC",
+        "Loudspeaker: 2× built-in speaker, 8 Ω 5 W"
+      ],
+      "needsReview": false,
+      "categorySlug": "kiosk",
+      "image": "/images/products/office-equipment/kiosk/hikvision/hikvision-ds-d6055ul-b-s-4k-floor-standing-digital-kiosk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/kiosk/hikvision/hikvision-ds-d6055ul-b-s-4k-floor-standing-digital-kiosk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-ds-d6055ul-b-s-4k-floor-standing-digital-kiosk",
+        "candidateTitle": "Hikvision DS-D6055UL-B/S 55\" 4K UHD Floor Standing Kiosk",
+        "attemptStem": "hikvision-ds-d6055ul-b-s-4k-floor-standing-digital-kiosk"
+      }
+    },
+    {
+      "name": "Hikvision DS-D6055UN-D/S 55\" 4K UHD Android Floor Standing Digital Signage Display",
+      "slug": "hikvision-ds-d6055un-d-s-signage-display",
+      "type": "PHYSICAL",
+      "sku": "ST-49054",
+      "description": "<h2>Hikvision DS-D6055UN-D/S 55\" 4K UHD Android Floor Standing Digital Signage Display</h2><p>The Hikvision <strong>DS-D6055UN-D/S</strong> 55 inch 4K Android Floor Standing Digital <a href=\"https://www.startech.com.bd/office-equipment/signage\" style=\"color: rgb(0, 0, 0);\" target=\"\">Signage </a>features an industrial A plus IPS panel with auto coloring and image enhancement engine. Hikvision Signage Display includes frosted anti glare glass for clearer visuals and wide 178 degree viewing angles. Hikvision DS-D6055UN-D/S 4K Floor Standing Digital Signage Display supports 3840 by 2160 resolution with 500 cd per square meter brightness and 1200 to 1 contrast. Hikvision DS-D6055UN-D/S Floor Standing Digital Signage Display offers 10 bit color depth 72 percent NTSC gamut and 8 ms response time. Hikvision Floor Standing Digital Signage supports continuous 7 by 24 hour operation ensuring reliable performance in commercial environments. Hikvision Android Signage runs on Android 13 with a Cortex A55 quad core processor clocked at 1.92 GHz. Hikvision Signage includes 4GB RAM and 32GB EMMC storage for smooth media playback and content management. Hikvision DS-D6055UN-D/S 55 inch 4K UHD Android Floor Standing Digital Signage Display supports video formats like AV1 H265 H264 and MPEG. Hikvision Floor Standing Digital Signage supports multiple audio formats including AAC FLAC OGG and APE. Hikvision 4K Signage Display allows flexible scheduling with daily weekly loop and custom play modes. Hikvision DS-D6055UN-D/S 4K Floor Standing Digital Signage Display supports centralized remote management and USB based local program updates. Hikvision Digital Signage Display ensures security with multi level permissions encrypted data and password protection. Hikvision Floor Standing Digital Signage includes HDMI LAN WiFi Bluetooth USB and RS232 connectivity options.</p><h2>Buy Hikvision DS-D6055UN-D/S 55\" 4K Floor Standing Signage Display from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hikvision DS-D6055UN-D/S 55\" 4K Floor Standing Signage Display</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/hikvision-signage\" target=\"\">Hikvision Signage</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Hikvision DS-D6055UN-D/S 55\" 4K Floor Standing Signage Display comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DS-D6055UN-D/S</li><li>Display: 55&quot; 4K UHD (2160 × 3840), 60Hz, IPS</li><li>RAM: 4GB, Built-in Storage: 32 GB EMMC</li><li>Android 13 OS, Built-in 2x 8Ω 5W Speaker</li><li>Ports: 1x HDMI, 1x RJ45, 2x USB, Wi-Fi, BT 5.4</li></ul>",
+      "model": "DS-D6055UN-D/S",
+      "warranty": "3 Years (Transportation or Conveyance bill will be added for outside Dhaka customers for each service including installation or any warranty issue)",
+      "basePrice": 190000.0,
+      "originalPrice": 209000.0,
+      "currency": "BDT",
+      "weight": 46.5,
+      "dimensions": {
+        "length": 740.0,
+        "width": 1886.0,
+        "height": 480.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hikvision",
+      "variantOptions": [
+        {
+          "name": "Display Colors",
+          "position": 0,
+          "values": [
+            {
+              "value": "10 bit (8 bit + FRC)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "System Version",
+          "position": 1,
+          "values": [
+            {
+              "value": "Android 13",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "RAM",
+          "position": 2,
+          "values": [
+            {
+              "value": "4GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Active Screen Size",
+          "position": 3,
+          "values": [
+            {
+              "value": "55\"",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-49054",
+          "price": 190000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Display Colors": "10 bit (8 bit + FRC)",
+            "System Version": "Android 13",
+            "RAM": "4GB",
+            "Active Screen Size": "55\""
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 182400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Display Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Native Resolution",
+              "value": "4K Ultra HD 2160 × 3840",
+              "position": 0
+            },
+            {
+              "label": "Panel Type",
+              "value": "IPS",
+              "position": 1
+            },
+            {
+              "label": "Aspect Ratio",
+              "value": "9 : 16",
+              "position": 2
+            },
+            {
+              "label": "Picture Response Time",
+              "value": "8 ms",
+              "position": 3
+            },
+            {
+              "label": "Refresh Frequency",
+              "value": "60Hz",
+              "position": 4
+            },
+            {
+              "label": "Pixel Pitch",
+              "value": "0.315 (H) mm × 0.315 (V) mm",
+              "position": 5
+            },
+            {
+              "label": "Display Colors",
+              "value": "10 bit (8 bit + FRC)",
+              "position": 6
+            },
+            {
+              "label": "Brightness (typical)",
+              "value": "500 cd/m²",
+              "position": 7
+            },
+            {
+              "label": "Contrast Ratio",
+              "value": "1200:1",
+              "position": 8
+            },
+            {
+              "label": "Viewing Angle",
+              "value": "178°(H)/178°(V)",
+              "position": 9
+            },
+            {
+              "label": "Others",
+              "value": "Surface Haze: 25%Haze Color Gamut: 72% NTSC",
+              "position": 10
+            }
+          ]
+        },
+        {
+          "name": "Operating System",
+          "position": 1,
+          "items": [
+            {
+              "label": "System Version",
+              "value": "Android 13",
+              "position": 0
+            },
+            {
+              "label": "CPU",
+              "value": "Cortex-A55, 4-core, main frequency 1.92 GHz",
+              "position": 1
+            },
+            {
+              "label": "RAM",
+              "value": "4GB",
+              "position": 2
+            },
+            {
+              "label": "ROM",
+              "value": "32 GB EMMC",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Connectivity",
+          "position": 2,
+          "items": [
+            {
+              "label": "HDMI",
+              "value": "HDMI 2.0 (HDCP 2.2) × 1",
+              "position": 0
+            },
+            {
+              "label": "LAN",
+              "value": "RJ45 × 1",
+              "position": 1
+            },
+            {
+              "label": "USB",
+              "value": "USB 2.0 × 1, USB 3.0 × 1",
+              "position": 2
+            },
+            {
+              "label": "RS232",
+              "value": "RS232 in × 1, RS232 out × 1",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Wi-Fi (2.4G/5G, 802.11 a/b/g/n/ac/ax) BT 5.4",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 3,
+          "items": [
+            {
+              "label": "Active Screen Size",
+              "value": "55\"",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "740 (W) mm × 1886 (H) mm × 480 (D) mm（With Stand） 727 (W) mm × 1776 (H) mm × 63.8 (D) mm（Without Stand）",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "46.5 kg",
+              "position": 2
+            },
+            {
+              "label": "Power",
+              "value": "100 to 240 VAC, 50/60 Hz",
+              "position": 3
+            },
+            {
+              "label": "Standby Power",
+              "value": "≤ 0.5 W",
+              "position": 4
+            },
+            {
+              "label": "Power Requirements",
+              "value": "108 W (typ), 155 W (max)",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "Working humidity: 20% to 80% RH",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 Years (Transportation or Conveyance bill will be added for outside Dhaka customers for each service including installation or any warranty issue)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-ds-d6055un-d-s-signage-display",
+      "sourceProductCode": "49054",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DS-D6055UN-D/S",
+        "Display: 55\" 4K UHD (2160 × 3840), 60Hz, IPS",
+        "RAM: 4GB, Built-in Storage: 32 GB EMMC",
+        "Android 13 OS, Built-in 2x 8Ω 5W Speaker",
+        "Ports: 1x HDMI, 1x RJ45, 2x USB, Wi-Fi, BT 5.4"
+      ],
+      "needsReview": false,
+      "categorySlug": "kiosk",
+      "image": "/images/products/office-equipment/kiosk/hikvision/hikvision-ds-d6055un-d-s-signage-display.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/kiosk/hikvision/hikvision-ds-d6055un-d-s-signage-display.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-ds-d6055un-d-s-signage-display",
+        "candidateTitle": "Hikvision DS-D6055UN-D/S 55\" 4K UHD Android Floor Standing Digital Signage Display",
+        "attemptStem": "hikvision-ds-d6055un-d-s-signage-display"
+      }
+    },
+    {
+      "name": "Hikvision DS-D6055UT-D/S 55\" 4K UHD Touch Android Floor Standing Digital Signage Display",
+      "slug": "hikvision-ds-d6055ut-d-s-signage-display",
+      "type": "PHYSICAL",
+      "sku": "ST-49119",
+      "description": "<h2>Hikvision DS-D6055UT-D/S 55\" 4K UHD Touch Android Floor Standing Digital Signage Display</h2><p>The Hikvision <strong>DS-D6055UT-D/S</strong> 55 inch 4K Android Floor Standing Digital <a href=\"https://www.startech.com.bd/office-equipment/signage\" style=\"color: rgb(0, 0, 0);\" target=\"\">Signage </a>features an industrial A plus IPS panel with auto coloring and image enhancement engine. Hikvision Touch Signage Display includes frosted anti glare glass for clearer visuals and wide 178 degree viewing angles. Hikvision DS-D6055UT-D/S 4K Floor Standing Digital Signage Display supports 3840 by 2160 resolution with 500 cd per square meter brightness and 1200 to 1 contrast. Hikvision DS-D6055UT-D/S Floor Standing Touch Signage Display offers 10 bit color depth 72 percent NTSC gamut and 8 ms response time. Hikvision Floor Standing Digital Signage supports continuous 7 by 24 hour operation ensuring reliable performance in commercial environments. Hikvision Android Signage runs on Android 13 with a Cortex A55 quad core processor clocked at 1.92 GHz. Hikvision Signage includes 4GB RAM and 32GB EMMC storage for smooth media playback and content management. Hikvision DS-D6055UT-D/S 55 inch 4K UHD Android Floor Standing Digital Signage Display supports video formats like AV1 H265 H264 and MPEG. Hikvision Floor Standing Digital Signage supports multiple audio formats including AAC FLAC OGG and APE. Hikvision 4K Signage Display allows flexible scheduling with daily weekly loop and custom play modes. Hikvision DS-D6055UT-D/S 4K Floor Standing Digital Signage Display supports centralized remote management and USB based local program updates. Hikvision Digital Signage Display ensures security with multi level permissions encrypted data and password protection. Hikvision Floor Standing Digital Signage includes HDMI LAN WiFi Bluetooth USB and RS232 connectivity options.</p><h2>Buy Hikvision DS-D6055UT-D/S 55\" 4K Touch Floor Standing Signage Display from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hikvision DS-D6055UT-D/S 55\" 4K Touch Floor Standing Signage Display</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/hikvision-signage\" target=\"\">Hikvision Signage</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Hikvision DS-D6055UT-D/S 55\" 4K Touch Floor Standing Signage Display comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DS-D6055UT-D/S</li><li>Display: 55&quot; 4K UHD (2160 × 3840), 60Hz, IPS, Touch</li><li>RAM: 4GB, Built-in Storage: 32 GB EMMC</li><li>Android 13 OS, Built-in 2x 8Ω 5W Speaker</li><li>Ports: 1x HDMI, 1x RJ45, 2x USB, Wi-Fi, BT 5.4</li></ul>",
+      "model": "DS-D6055UT-D/S",
+      "warranty": "3 Years (Transportation or Conveyance bill will be added for outside Dhaka customers for each service including installation or any warranty issue)",
+      "basePrice": 230000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 46.5,
+      "dimensions": {
+        "length": 740.0,
+        "width": 1886.0,
+        "height": 480.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Hikvision",
+      "variantOptions": [
+        {
+          "name": "Display Colors",
+          "position": 0,
+          "values": [
+            {
+              "value": "10 bit (8 bit + FRC)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "System Version",
+          "position": 1,
+          "values": [
+            {
+              "value": "Android 13",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "RAM",
+          "position": 2,
+          "values": [
+            {
+              "value": "4GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Active Screen Size",
+          "position": 3,
+          "values": [
+            {
+              "value": "55\"",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-49119",
+          "price": 230000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Display Colors": "10 bit (8 bit + FRC)",
+            "System Version": "Android 13",
+            "RAM": "4GB",
+            "Active Screen Size": "55\""
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 220800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Display Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Native Resolution",
+              "value": "4K Ultra HD 3840 × 2160",
+              "position": 0
+            },
+            {
+              "label": "Panel Type",
+              "value": "IPS",
+              "position": 1
+            },
+            {
+              "label": "Aspect Ratio",
+              "value": "9 : 16",
+              "position": 2
+            },
+            {
+              "label": "Picture Response Time",
+              "value": "8 ms",
+              "position": 3
+            },
+            {
+              "label": "Refresh Frequency",
+              "value": "60Hz",
+              "position": 4
+            },
+            {
+              "label": "Pixel Pitch",
+              "value": "0.315 (H) mm × 0.315 (V) mm",
+              "position": 5
+            },
+            {
+              "label": "Display Colors",
+              "value": "10 bit (8 bit + FRC)",
+              "position": 6
+            },
+            {
+              "label": "Brightness (typical)",
+              "value": "500 cd/m²",
+              "position": 7
+            },
+            {
+              "label": "Contrast Ratio",
+              "value": "1200:1",
+              "position": 8
+            },
+            {
+              "label": "Viewing Angle",
+              "value": "178°(H)/178°(V)",
+              "position": 9
+            },
+            {
+              "label": "Others",
+              "value": "Surface Haze: 25%Haze Color Gamut: 72% NTSC",
+              "position": 10
+            }
+          ]
+        },
+        {
+          "name": "Touch System",
+          "position": 1,
+          "items": [
+            {
+              "label": "Touch Point",
+              "value": "10",
+              "position": 0
+            },
+            {
+              "label": "Touch Tool",
+              "value": "Capacitive Touch (G+G)",
+              "position": 1
+            },
+            {
+              "label": "Touch Response Time",
+              "value": "＜25 ms",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Touch Precision: ± 2 mm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Operating System",
+          "position": 2,
+          "items": [
+            {
+              "label": "System Version",
+              "value": "Android 13",
+              "position": 0
+            },
+            {
+              "label": "CPU",
+              "value": "Cortex-A55, 4-core, main frequency 1.92 GHz",
+              "position": 1
+            },
+            {
+              "label": "RAM",
+              "value": "4GB",
+              "position": 2
+            },
+            {
+              "label": "ROM",
+              "value": "32 GB EMMC",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Connectivity",
+          "position": 3,
+          "items": [
+            {
+              "label": "HDMI",
+              "value": "HDMI 2.0 (HDCP 2.2) × 1",
+              "position": 0
+            },
+            {
+              "label": "LAN",
+              "value": "RJ45 × 1",
+              "position": 1
+            },
+            {
+              "label": "USB",
+              "value": "USB 2.0 × 1, USB 3.0 × 1",
+              "position": 2
+            },
+            {
+              "label": "RS232",
+              "value": "RS232 in × 1, RS232 out × 1",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Wi-Fi (2.4G/5G, 802.11 a/b/g/n/ac/ax) BT 5.4",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 4,
+          "items": [
+            {
+              "label": "Active Screen Size",
+              "value": "55\"",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "740 (W) mm × 1886 (H) mm × 480 (D) mm（With Stand） 727 (W) mm × 1776 (H) mm × 63.8 (D) mm（Without Stand）",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "46.5 kg",
+              "position": 2
+            },
+            {
+              "label": "Power",
+              "value": "100 to 240 VAC, 50/60 Hz",
+              "position": 3
+            },
+            {
+              "label": "Standby Power",
+              "value": "≤ 0.5 W",
+              "position": 4
+            },
+            {
+              "label": "Power Requirements",
+              "value": "108 W (typ), 155 W (max)",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "Working humidity: 20% to 80% RH",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 5,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 Years (Transportation or Conveyance bill will be added for outside Dhaka customers for each service including installation or any warranty issue)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-ds-d6055ut-d-s-signage-display",
+      "sourceProductCode": "49119",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DS-D6055UT-D/S",
+        "Display: 55\" 4K UHD (2160 × 3840), 60Hz, IPS, Touch",
+        "RAM: 4GB, Built-in Storage: 32 GB EMMC",
+        "Android 13 OS, Built-in 2x 8Ω 5W Speaker",
+        "Ports: 1x HDMI, 1x RJ45, 2x USB, Wi-Fi, BT 5.4"
+      ],
+      "needsReview": false,
+      "categorySlug": "kiosk",
+      "image": "/images/products/office-equipment/kiosk/hikvision/hikvision-ds-d6055ut-d-s-signage-display.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/kiosk/hikvision/hikvision-ds-d6055ut-d-s-signage-display.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-ds-d6055ut-d-s-signage-display",
+        "candidateTitle": "Hikvision DS-D6055UT-D/S 55\" 4K UHD Touch Android Floor Standing Digital Signage Display",
+        "attemptStem": "hikvision-ds-d6055ut-d-s-signage-display"
+      }
+    },
+    {
+      "name": "Innovtech 43 inch E-Poster Non-Touch Floor Standing Kiosk",
+      "slug": "innovtech-43-inch-e-poster-non-touch-kiosk",
+      "type": "PHYSICAL",
+      "sku": "KS-43E",
+      "description": "<h2 style=\"text-align: justify; \">Innovtech 43-inch E-Poster Non-Touch Floor Standing Kiosk</h2><p style=\"text-align: justify; \">The Innovtech 43-inch E-Poster Non-Touch Kiosk comes with a 43\" display that has a resolution of 1920*1080 and a viewing angle of 178/178 Degrees. The Kiosk supports 16.7M color and it offers a brightness of 350cd/m2. The Innovtech 43-inch E-Poster Non-Touch Kiosk comes with a response time of 8ms. It has a contrast ratio of 4000:1. The kiosk delivers an ultra-high-fidelity sound and pleasant stereo sound. It comes with a free-standing design. It offers an excellent visual effect. The Innovtech 43-inch E-Poster Non-Touch Kiosk has a lock and anti-theft function. The Innovtech 43-inch E-Poster Non-Touch Kiosk comes with a 01-year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: KS-43E</li><li>Model: E-Poster</li><li>Display: 43&quot; FHD (1920x1080) Non-Touch</li><li>Ultra-high-fidelity stereo sound</li><li>Lock &amp; anti-theft functions</li><li>RAM: 4GB, Storage: 32GB, OS: Android</li></ul>",
+      "model": "E-Poster",
+      "warranty": "01-Year Warranty",
+      "basePrice": 125000.0,
+      "originalPrice": 150000.0,
+      "currency": "BDT",
+      "weight": 32.0,
+      "dimensions": {
+        "length": 1720.0,
+        "width": 635.0,
+        "height": 72.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Innovtech",
+      "variantOptions": [
+        {
+          "name": "Panel Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "43”",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Display color",
+          "position": 1,
+          "values": [
+            {
+              "value": "16.7M",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 2,
+          "values": [
+            {
+              "value": "RAM: 4GB, Storage: 32GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 3,
+          "values": [
+            {
+              "value": "USB 2.0*2 TF Card Slot*1 Stereo Mini Jack*1 RJ45 Lan*1",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "KS-43E",
+          "price": 125000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Panel Size": "43”",
+            "Display color": "16.7M",
+            "Memory": "RAM: 4GB, Storage: 32GB",
+            "Interface": "USB 2.0*2 TF Card Slot*1 Stereo Mini Jack*1 RJ45 Lan*1"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 120000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Panel Size",
+              "value": "43”",
+              "position": 0
+            },
+            {
+              "label": "Resolution",
+              "value": "1920*1080",
+              "position": 1
+            },
+            {
+              "label": "Viewing Angle",
+              "value": "178/178 Degree",
+              "position": 2
+            },
+            {
+              "label": "Response time",
+              "value": "8ms",
+              "position": 3
+            },
+            {
+              "label": "Brightness",
+              "value": "350cd/m2",
+              "position": 4
+            },
+            {
+              "label": "Contrast Ratio",
+              "value": "4000:1",
+              "position": 5
+            },
+            {
+              "label": "Display color",
+              "value": "16.7M",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Computer Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Memory",
+              "value": "RAM: 4GB, Storage: 32GB",
+              "position": 0
+            },
+            {
+              "label": "Operating system",
+              "value": "Android",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "USB 2.0*2 TF Card Slot*1 Stereo Mini Jack*1 RJ45 Lan*1",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "1720*635*72mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "32KG",
+              "position": 1
+            },
+            {
+              "label": "Power",
+              "value": "82W",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-Year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/innovtech-43-inch-e-poster-non-touch-kiosk",
+      "sourceProductCode": "23468",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "KS-43E",
+      "sourceKeyFeatures": [
+        "MPN: KS-43E",
+        "Model: E-Poster",
+        "Display: 43\" FHD (1920x1080) Non-Touch",
+        "Ultra-high-fidelity stereo sound",
+        "Lock & anti-theft functions",
+        "RAM: 4GB, Storage: 32GB, OS: Android"
+      ],
+      "needsReview": false,
+      "categorySlug": "kiosk",
+      "image": "/images/products/office-equipment/kiosk/innovtech/innovtech-43-inch-e-poster-non-touch-kiosk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/kiosk/innovtech/innovtech-43-inch-e-poster-non-touch-kiosk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "innovtech-43-inch-e-poster-non-touch-kiosk",
+        "candidateTitle": "Innovtech 43 inch E-Poster Non-Touch Floor Standing Kiosk",
+        "attemptStem": "innovtech-43-inch-e-poster-non-touch-kiosk"
+      }
+    },
+    {
+      "name": "Innovtech 55-inch E-Poster Non-Touch Floor Standing Kiosk",
+      "slug": "innovtech-55-inch-e-poster-non-touch-kiosk",
+      "type": "PHYSICAL",
+      "sku": "KS-55E",
+      "description": "<h2 style=\"text-align: justify; \">Innovtech 55-inch E-Poster Non-Touch Floor Standing Kiosk</h2>\n<p style=\"text-align: justify; \">The Innovtech 55-inch E-Poster Non-Touch Kiosk comes with a 55\" display that has a resolution of 1920*1080 and a viewing angle of 178/178 Degrees. The Kiosk supports 16.7M color and it offers a brightness of 350cd/m2. The Innovtech 55-inch E-Poster Non-Touch Kiosk comes with a response time of 8ms. It has a contrast ratio of 4000:1. The kiosk delivers an ultra-high-fidelity sound and pleasant stereo sound. It comes with a free-standing design. It offers an excellent visual effect. The Innovtech 55-inch E-Poster Non-Touch Kiosk has a lock and anti-theft function. The Innovtech 55-inch E-Poster Non-Touch Kiosk comes with a 01-Year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: KS-55E</li><li>Model: E-Poster</li><li>Display: 55&quot; FHD (1920x1080) Non-Touch</li><li>Ultra-high-fidelity stereo sound</li><li>Lock &amp; anti-theft functions</li><li>RAM: 4GB, Storage: 32GB, OS: Android</li></ul>",
+      "model": "E-Poster",
+      "warranty": "01-Year Warranty",
+      "basePrice": 145000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 55.0,
+      "dimensions": {
+        "length": 1900.0,
+        "width": 810.0,
+        "height": 72.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Innovtech",
+      "variantOptions": [
+        {
+          "name": "Panel Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "55”",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Display color",
+          "position": 1,
+          "values": [
+            {
+              "value": "16.7M",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Memory",
+          "position": 2,
+          "values": [
+            {
+              "value": "RAM: 4GB, Storage: 32GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 3,
+          "values": [
+            {
+              "value": "USB 2.0*2 TF Card Slot*1 Stereo Mini Jack*1 RJ45 Lan*1",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "KS-55E",
+          "price": 145000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Panel Size": "55”",
+            "Display color": "16.7M",
+            "Memory": "RAM: 4GB, Storage: 32GB",
+            "Interface": "USB 2.0*2 TF Card Slot*1 Stereo Mini Jack*1 RJ45 Lan*1"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 139200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Panel Size",
+              "value": "55”",
+              "position": 0
+            },
+            {
+              "label": "Resolution",
+              "value": "1920*1080",
+              "position": 1
+            },
+            {
+              "label": "Viewing Angle",
+              "value": "178/178 Degree",
+              "position": 2
+            },
+            {
+              "label": "Response time",
+              "value": "8ms",
+              "position": 3
+            },
+            {
+              "label": "Brightness",
+              "value": "350cd/m2",
+              "position": 4
+            },
+            {
+              "label": "Contrast Ratio",
+              "value": "4000:1",
+              "position": 5
+            },
+            {
+              "label": "Display color",
+              "value": "16.7M",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Computer Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Memory",
+              "value": "RAM: 4GB, Storage: 32GB",
+              "position": 0
+            },
+            {
+              "label": "Operating system",
+              "value": "Android",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "USB 2.0*2 TF Card Slot*1 Stereo Mini Jack*1 RJ45 Lan*1",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "1900*810*72mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "55KG",
+              "position": 1
+            },
+            {
+              "label": "Power",
+              "value": "110W",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-Year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/innovtech-55-inch-e-poster-non-touch-kiosk",
+      "sourceProductCode": "23474",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": "KS-55E",
+      "sourceKeyFeatures": [
+        "MPN: KS-55E",
+        "Model: E-Poster",
+        "Display: 55\" FHD (1920x1080) Non-Touch",
+        "Ultra-high-fidelity stereo sound",
+        "Lock & anti-theft functions",
+        "RAM: 4GB, Storage: 32GB, OS: Android"
+      ],
+      "needsReview": false,
+      "categorySlug": "kiosk",
+      "image": "/images/products/office-equipment/kiosk/innovtech/innovtech-55-inch-e-poster-non-touch-kiosk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/kiosk/innovtech/innovtech-55-inch-e-poster-non-touch-kiosk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "innovtech-55-inch-e-poster-non-touch-kiosk",
+        "candidateTitle": "Innovtech 55-inch E-Poster Non-Touch Floor Standing Kiosk",
+        "attemptStem": "innovtech-55-inch-e-poster-non-touch-kiosk"
+      }
+    },
+    {
+      "name": "ViewSonic EP5542T 55\" 4K Multi-Touch Digital ePoster Kiosk",
+      "slug": "viewsonic-ep5542t-55-inch-multi-touch-digital-eposter-kiosk",
+      "type": "PHYSICAL",
+      "sku": "ST-27904",
+      "description": "<h2>ViewSonic EP5542T 55\" 4K Multi-Touch Digital ePoster Kiosk<br/></h2><p>The ViewSonic EP5542T is a free-standing, 10-point interactive 55\" digital ePoster kiosk with a sleek, slim design. The EP5542T is ideal for attracting attention in busy, high-traffic areas, and it comes with a scratch-resistant tempered glass faceplate for added durability. The EP5542T delivers vivid multimedia messaging with 4K resolution, 178°/178° wide-angle viewing, and dual 10W stereo speakers. Photo and video files can be played back using the embedded ARM media player and 16GB of internal memory, or you can use the convenient media player cradle inside the lockable security door to add your own media player. Its built-in media playback software and compatibility with ProAV control systems allow for the simple management of multiple displays.</p><h3>4K UHD Resolution</h3><p>ViewSonic EP5542T 55\" Kiosk comes with four times the resolution of Full HD, this Ultra HD 3840x2160 display delivers a breathtaking viewing experience with immersive images that are vibrant, clear, and as large as life.</p><h3>Dual 10W Speakers</h3><p>ViewSonic EP5542T 55\" 4K Multi-Touch Digital ePoster Kiosk has been designed with dual integrated speakers. This display combines incredible screen performance with stereo sound for an immersive multimedia experience.<br/></p><h2>Buy  ViewSonic EP5542T 55\" 4K Multi-Touch Digital ePoster Kiosk from Star Tech</h2><p>In Bangladesh, you can get original  <a href=\"https://www.startech.com.bd/viewsonic-ep5542t-55-inch-multi-touch-digital-eposter-kiosk\" target=\"\">ViewSonic EP5542T 55\" 4K Multi-Touch Digital ePoster Kiosk</a> From Star Tech. We have a large collection of latest  ViewSonic Kiosk to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The  ViewSonic EP5542T 55\" 4K Multi-Touch Digital ePoster Kiosk comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: EP5542T</li><li>3840 x 2160 4K resolution</li><li>Infrared 10-point touch</li><li>Embedded media player and 16GB storage</li><li>USB multimedia playback</li></ul>",
+      "model": "EP5542T",
+      "warranty": "3 year",
+      "basePrice": 310000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 138.23,
+      "dimensions": {
+        "length": 30.26,
+        "width": 73.62,
+        "height": 17.72,
+        "unit": "in"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Viewsonic",
+      "variantOptions": [
+        {
+          "name": "Panel Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "55\"",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Display color",
+          "position": 1,
+          "values": [
+            {
+              "value": "1.07B",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 2,
+          "values": [
+            {
+              "value": "16GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-27904",
+          "price": 310000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Panel Size": "55\"",
+            "Display color": "1.07B",
+            "Storage": "16GB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 297600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Panel Size",
+              "value": "55\"",
+              "position": 0
+            },
+            {
+              "label": "Resolution",
+              "value": "4K (2160 x 3840)",
+              "position": 1
+            },
+            {
+              "label": "Viewing Angle",
+              "value": "H = 178, V = 178 typ.",
+              "position": 2
+            },
+            {
+              "label": "Response time",
+              "value": "9 ms (typ. G to G)",
+              "position": 3
+            },
+            {
+              "label": "Brightness",
+              "value": "450 nits (typ.)",
+              "position": 4
+            },
+            {
+              "label": "Contrast Ratio",
+              "value": "1300:1 (typ.)",
+              "position": 5
+            },
+            {
+              "label": "Aspect ratio",
+              "value": "9:16",
+              "position": 6
+            },
+            {
+              "label": "Display color",
+              "value": "1.07B",
+              "position": 7
+            },
+            {
+              "label": "Multi-touch",
+              "value": "10 Points",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Android specifications",
+          "position": 1,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Android 8.0",
+              "position": 0
+            },
+            {
+              "label": "Storage",
+              "value": "16GB",
+              "position": 1
+            },
+            {
+              "label": "CPU",
+              "value": "Quad-core SoC USB Supported internal media player",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "30.26 x 73.62 x 17.72 in/768.5 x 1870 x 450 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "138.23 lbs/62.7 kg",
+              "position": 1
+            },
+            {
+              "label": "Power",
+              "value": "Voltage: 100-240VAC +/- 10% Wide Range Consumption: Normal 126 W, Max 149 W (max.), < 0.5W (Off)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/viewsonic-ep5542t-55-inch-multi-touch-digital-eposter-kiosk",
+      "sourceProductCode": "27904",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: EP5542T",
+        "3840 x 2160 4K resolution",
+        "Infrared 10-point touch",
+        "Embedded media player and 16GB storage",
+        "USB multimedia playback"
+      ],
+      "needsReview": false,
+      "categorySlug": "kiosk",
+      "image": "/images/products/office-equipment/kiosk/viewsonic/viewsonic-ep5542t-55-inch-multi-touch-digital-eposter-kiosk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/kiosk/viewsonic/viewsonic-ep5542t-55-inch-multi-touch-digital-eposter-kiosk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "viewsonic-ep5542t-55-inch-multi-touch-digital-eposter-kiosk",
+        "candidateTitle": "ViewSonic EP5542T 55\" 4K Multi-Touch Digital ePoster Kiosk",
+        "attemptStem": "viewsonic-ep5542t-55-inch-multi-touch-digital-eposter-kiosk"
+      }
+    }
+  ]
+}

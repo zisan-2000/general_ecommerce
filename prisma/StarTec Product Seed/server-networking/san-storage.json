@@ -1,0 +1,2483 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/server-networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\server-networking",
+    "generatedAtUnix": 1790588977,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Server Networking",
+      "slug": "server-networking",
+      "parentSlug": null,
+      "image": "/images/products/server-networking/server-and-storage/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "SAN Storage",
+      "slug": "san-storage",
+      "parentSlug": "server-networking",
+      "image": "/images/products/server-networking/san-storage/dell-emc-me4024-storage-array.jpg",
+      "isActive": true,
+      "sortOrder": 3,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Dell",
+      "slug": "dell",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Dell EMC ME4024 Storage Array",
+      "slug": "dell-emc-me4024-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-10630",
+      "description": "<p><span style=\"font-weight: bold;\">Dell EMC ME4024 Storage Array</span><br/></p>\n<ul>\n<li>1 x 10Gb iSCSI BaseT 8 Port Dual Controller</li>\n<li>12 x Hard Drive Filler 2.5in, Single Blank</li>\n<li>12 x 1.2T HDD 10K SAS12 2.5</li>\n<li>Rack Rails 2U</li>\n<li>Power Supply, 580W, Redundant, Flex</li>\n<li>2 x Long Jumper Cord, C13-C14,4m,10a (APCC except ANZ)</li>\n</ul>\n<span style=\"font-weight: bold;\">03 Years Warranty</span><p></p>\n<div class=\"video-wrapper\"></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dell EMC ME4024</li><li>1 x 10Gb iSCSI BaseT 8 Port Dual Controller</li><li>12 x Hard Drive Filler 2.5in, Single Blank</li><li>12 x 1.2T HDD 10K SAS12 2.5</li><li>Rack Rails Rack Rails 2U</li></ul>",
+      "model": "Dell EMC ME4024",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-10630",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Dell EMC ME4024",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-emc-me4024-storage-array",
+      "sourceProductCode": "10630",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dell EMC ME4024",
+        "1 x 10Gb iSCSI BaseT 8 Port Dual Controller",
+        "12 x Hard Drive Filler 2.5in, Single Blank",
+        "12 x 1.2T HDD 10K SAS12 2.5",
+        "Rack Rails Rack Rails 2U"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-emc-me4024-storage-array.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-emc-me4024-storage-array.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-emc-me4024-storage-array",
+        "candidateTitle": "Dell EMC ME4024 Storage Array",
+        "attemptStem": "dell-emc-me4024-storage-array"
+      }
+    },
+    {
+      "name": "Dell EMC PowerStore 1000T Storage Array",
+      "slug": "dell-emc-powerstore-1000t-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41637",
+      "description": "<h2>Dell EMC PowerStore 1000T Storage Array</h2><p>The Dell <strong>EMC PowerStore 1000T</strong> Storage Array is powered by an Intel 12-core 2.2GHz processor and includes 384GB of appliance memory (192GB per node). This Dell SAN Storage System provides the computing power required for demanding data center workloads, virtualization, and hybrid cloud deployments. The dynamic RAID controller optimizes data security and efficiency by offering intelligent and adaptable RAID configurations that balance performance and resiliency. The Dell EMC PowerStore 1000T Storage Array has 25 front-facing 2.5-inch drive bays, providing high-density storage with various configuration choices to suit expanding data requirements. Its dual 1800W power supply, which operate at 200-240V, integrate C13/C14 power cords and provide redundancy to enhance system availability and dependability. This fault-tolerant power configuration reduces downtime while supporting key processes with highest uptime guarantee. The Dell EMC PowerStore 1000T Storage Array provides a variety of connectivity options via embedded and add-in I/O modules. The Dell PowerStore 1000T Storage Array includes 25/10/1 GbE or 10/1 GbE Base-T embedded adapters and may be expanded with optional add-in modules that offer 32/16/8 Gb/s Fibre Channel or 25/10/1 GbE networking. This extensive I/O capability enables the system to seamlessly integrate into a variety of network contexts, offering the bandwidth and flexibility required for high-performance applications and data-intensive workloads. The Dell PowerStore 1000T Storage Array is designed for environments that require high-performance storage infrastructure paired with intelligent data management.</p><h2>Buy Dell EMC PowerStore 1000T Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell EMC PowerStore 1000T Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell EMC PowerStore 1000T Storage Array has 3 years of ProSupport.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: EMC PowerStore 1000T</li><li>Processor: Intel 12-Core 2.2GHz</li><li>Max Drives: 1.92TB NVMe SSD</li><li>Memory Capacity: 384GB Appliance DIMM (192GB Per Node)</li><li>PowerStore Field Install Kit</li></ul>",
+      "model": "EMC PowerStore 1000T",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "384GB Appliance DIMM (192GB Per Node)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41637",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "384GB Appliance DIMM (192GB Per Node)"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel 12-Core 2.2GHz",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "384GB Appliance DIMM (192GB Per Node)",
+              "position": 1
+            },
+            {
+              "label": "Hard Disk",
+              "value": "10x3.84TB SSD SAS",
+              "position": 2
+            },
+            {
+              "label": "RAID Controller",
+              "value": "Dynamic RAID",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "Mellanox ConnectX-5 Dual Port 10/25GbE SFP28 Adapte",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "Dual 1800W (200-240V) Power Supply, includes C13/C14 Power Cords",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "25 x 2.5” drive bays",
+              "position": 1
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Select Embedded IO Adapter: 25/10/1 GbE or 10/1 GbE BaseT Add-in IO Modules: 32/16/8 Gb/s FC, 25/10 GbE, 10/1 GbE BaseT",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-emc-powerstore-1000t-storage-array",
+      "sourceProductCode": "41637",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: EMC PowerStore 1000T",
+        "Processor: Intel 12-Core 2.2GHz",
+        "Max Drives: 1.92TB NVMe SSD",
+        "Memory Capacity: 384GB Appliance DIMM (192GB Per Node)",
+        "PowerStore Field Install Kit"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-emc-powerstore-1000t-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-emc-powerstore-1000t-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-emc-powerstore-1000t-storage-array",
+        "candidateTitle": "Dell EMC PowerStore 1000T Storage Array",
+        "attemptStem": "dell-emc-powerstore-1000t-storage-array"
+      }
+    },
+    {
+      "name": "Dell EMC PowerStore 1200T Storage Array",
+      "slug": "dell-emc-powerstore-1200t-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41638",
+      "description": "<h2>Dell EMC PowerStore 1200T Storage Array</h2><p>The Dell <strong>EMC PowerStore 1200T</strong> Storage Array features an Intel 12-core 2.2GHz processor and 384GB of appliance memory (192GB per node). This Dell SAN Storage System has the compute capability needed for heavy data center workloads, virtualization, and hybrid cloud deployments. The dynamic RAID controller improves data security and efficiency by providing intelligent and flexible RAID configurations that strike a balance between performance and resiliency. The Dell EMC PowerStore 1200T Storage Array offers 25 front-facing 2.5-inch drive bays, offering high-density storage with a variety of configuration options to meet growing data needs. Its twin 1800W power supply operates at 200-240V, includes C13/C14 power cords, and provides redundancy to improve system availability and dependability. This fault-tolerant power setup minimizes downtime while providing critical processes with the greatest uptime guarantee. The Dell EMC PowerStore 1200T Storage Array offers a number of connectivity options, including embedded and add-in I/O modules. The Dell PowerStore 1200T Storage Array comes with 25/10/1 GbE or 10/1 GbE Base-T embedded adapters, and it can be upgraded with optional add-in modules that provide 32/16/8 Gb/s Fibre Channel or 25/10/1 GbE networking. This substantial I/O capacity allows the system to integrate effortlessly into a wide range of network contexts, providing the bandwidth and flexibility needed for high-performance applications and data-intensive workloads. The Dell PowerStore 1200T Storage Array is intended for environments that require a high-performance storage infrastructure combined with intelligent data management.</p><h2>Buy Dell EMC PowerStore 1200T Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell EMC PowerStore 1200T Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell EMC PowerStore 1200T Storage Array has 3 years of ProSupport.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: EMC PowerStore 1200T</li><li>Processor: Intel 12-Core 2.2GHz</li><li>Max Drives: 1.92TB NVMe SSD</li><li>Memory Capacity: 384GB Appliance DIMM (192GB Per Node)</li><li>PowerStore Field Install Kit</li></ul>",
+      "model": "EMC PowerStore 1200T",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "384GB Appliance DIMM (192GB Per Node)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41638",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "384GB Appliance DIMM (192GB Per Node)"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel 12-Core 2.2GHz",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "384GB Appliance DIMM (192GB Per Node)",
+              "position": 1
+            },
+            {
+              "label": "Hard Disk",
+              "value": "1.92TB NVMe SSD",
+              "position": 2
+            },
+            {
+              "label": "RAID Controller",
+              "value": "Dynamic RAID",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "Mellanox ConnectX-5 Dual Port 10/25GbE SFP28 Adapter",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "Dual 1800W (200-240V) Power Supply, includes C13/C14 Power Cords",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "25 x 2.5” drive bays",
+              "position": 1
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Select Embedded IO Adapter: 25/10/1 GbE or 10/1 GbE BaseT Add-in IO Modules: 32/16/8 Gb/s FC, 25/10 GbE, 10/1 GbE BaseT",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-emc-powerstore-1200t-storage-array",
+      "sourceProductCode": "41638",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: EMC PowerStore 1200T",
+        "Processor: Intel 12-Core 2.2GHz",
+        "Max Drives: 1.92TB NVMe SSD",
+        "Memory Capacity: 384GB Appliance DIMM (192GB Per Node)",
+        "PowerStore Field Install Kit"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-emc-powerstore-1200t-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-emc-powerstore-1200t-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-emc-powerstore-1200t-storage-array",
+        "candidateTitle": "Dell EMC PowerStore 1200T Storage Array",
+        "attemptStem": "dell-emc-powerstore-1200t-storage-array"
+      }
+    },
+    {
+      "name": "Dell EMC PowerStore 3000T Storage",
+      "slug": "dell-emc-powerstore-3000t-storage",
+      "type": "PHYSICAL",
+      "sku": "ST-16538",
+      "description": "<h2>Dell EMC PowerStore 3000T Storage<br/></h2><p>The Dell EMC PowerStore 3000T Storage provide organizations with all the benefits of a unified storage platform for block, file and vVol data, while enabling flexible growth with the intelligent scale-up and scale-out capability of appliance clusters. In addition, automated management of resources across the cluster results in superior storage utilization and simplified administration. Designed for the modern data center, PowerStoreâ€™s data-centric design with NVMe and hardware-enabled Advanced Data Reduction and 4:1 DRR deliver critical performance and storage efficiency for both traditional and modern applications. Dive into the management interface for the PowerStore Family platform and explore the ease of use and navigation as well as discovering the wide feature set available. Dell Technologies On Demand delivers the industry's broadest end-to-end portfolio of consumption-based and as-a-service solutions ideally suited for the way on-premises infrastructure and services are consumed in the on-demand economy. </p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: EMC PowerStore 3000T</li><li>Max Drives: 96 Drives</li><li>Raw Capacity: 11.5 TB</li><li>ReadyRails Sliding Rails</li><li>Memory per Appliance: 768 GB</li></ul>",
+      "model": "EMC PowerStore 3000T",
+      "warranty": "3Yr ProSupport:Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "768 GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-16538",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "768 GB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "4 x Intel CPUs, 48 cores per Array, 2.1 GHz",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "768 GB",
+              "position": 1
+            },
+            {
+              "label": "Hard Disk",
+              "value": "Min/Max Drives: Min 6 Drives Max 96 Drives Raw Capacity (Min/Max): 11.5 TB/ 3.59 PBs per Cluster",
+              "position": 2
+            },
+            {
+              "label": "RAID Controller",
+              "value": "Dynamic RAID",
+              "position": 3
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Storage Servers 2016 Standard Edition",
+              "position": 4
+            },
+            {
+              "label": "Peripherals",
+              "value": "4 x 4 lane 12Gb/s SAS ports for back end connection",
+              "position": 5
+            },
+            {
+              "label": "Embedded System Management",
+              "value": "PowerStore Manager CloudIQ: Cloud-based storage analytics Thin Provisioning Dynamic RAID Data Reduction: Zero Detect/Deduplication/Compression Proactive Assist: Configure remote support, online chat, open a service request, etc. Quality of Service (Block and vVols) Block: FC, iSCSI and VMware Virtual Volumes (vVols) 2.0File: NFSv3, NFSv4, NFSv4.1; CIFS (SMB 1), SMB 2, SMB 3.0, SMB 3.02, and SMB 3.1.1; FTP and SFTP",
+              "position": 6
+            },
+            {
+              "label": "Fans",
+              "value": "6 Performance Fans forR740/740XD",
+              "position": 7
+            },
+            {
+              "label": "Mount",
+              "value": "ReadyRails Sliding Rails With Cable Management Arm",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "PowerStore appliances are powered by 2 redundant power supplies (PS) per enclosure.",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "Min 6 Drives Max 96 Drives",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport:Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-emc-powerstore-3000t-storage",
+      "sourceProductCode": "16538",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: EMC PowerStore 3000T",
+        "Max Drives: 96 Drives",
+        "Raw Capacity: 11.5 TB",
+        "ReadyRails Sliding Rails",
+        "Memory per Appliance: 768 GB"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-emc-powerstore-3000t-storage.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-emc-powerstore-3000t-storage.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-emc-powerstore-3000t-storage",
+        "candidateTitle": "Dell EMC PowerStore 3000T Storage",
+        "attemptStem": "dell-emc-powerstore-3000t-storage"
+      }
+    },
+    {
+      "name": "Dell EMC PowerStore 500T Storage",
+      "slug": "dell-emc-powerstore-500t-storage",
+      "type": "PHYSICAL",
+      "sku": "ST-33524",
+      "description": "<h2>Dell EMC PowerStore 500T Storage</h2><p>The Dell <strong>EMC PowerStore 500T Storage</strong> all-flash array is uniquely capable of meeting your organization's full range of storage requirements, from block and vVol data to multi-platform file storage that allows interchange and collaboration. PowerStore 500T quickly consolidates your data by providing a slew of powerful enterprise-level capabilities without the associated complexity or cost. PowerStore 500T combines the benefits of cutting-edge storage hardware with the flexibility and simplicity of current software design, giving you unmatched freedom to expand your IT while keeping up with a fast-changing world. PowerStore 500T enables enterprises to combine all of their application and user data in one dependable platform with a comprehensive set of robust management and data security features. The Dell EMC PowerStore 500T Storage uses business technologies and features to improve application performance and scalability while keeping costs under control. PowerStore's innovative, container-based software design provides a full collection of data management and protection solutions in one integrated package.</p><h2>Buy Dell EMC PowerStore 500T Storage from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell EMC PowerStore 500T Storage</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell EMC PowerStore 500T Storage comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: EMC PowerStore 5000T</li><li>Processor: Intel 12-Core 2.2GHz</li><li>Max Drives: 1.92TB NVMe SSD</li><li>Drive Bays: 25 x 2.5” drive bays</li><li>Memory Capacity: 192GB Appliance DIMM 96GB Per Node</li></ul>",
+      "model": "EMC PowerStore 5000T",
+      "warranty": "3Yr ProSupport:Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Capacity: 192GB Appliance DIMM 96GB Per Node",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-33524",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "Capacity: 192GB Appliance DIMM 96GB Per Node"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel 12-Core 2.2GHz",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Capacity: 192GB Appliance DIMM 96GB Per Node",
+              "position": 1
+            },
+            {
+              "label": "Hard Disk",
+              "value": "Max Drives: 1.92TB NVMe SSD",
+              "position": 2
+            },
+            {
+              "label": "RAID Controller",
+              "value": "Dynamic RAID",
+              "position": 3
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Storage Servers 2016 Standard Edition",
+              "position": 4
+            },
+            {
+              "label": "Peripherals",
+              "value": "4 x 4 lane 12Gb/s SAS ports for back end connection",
+              "position": 5
+            },
+            {
+              "label": "Embedded System Management",
+              "value": "PowerStore Manager CloudIQ: Cloud-based storage analytics Thin Provisioning Dynamic RAID Data Reduction: Zero Detect, Deduplication, Compression Proactive Assist: Configure remote support, online chat, open service request Quality of Service (Block and vVols)",
+              "position": 6
+            },
+            {
+              "label": "Mount",
+              "value": "ReadyRails Sliding Rails With Cable Management Arm",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "PowerStore appliances are powered by 2 redundant power supplies (PS) per enclosure.",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "25 x 2.5” drive bays",
+              "position": 1
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Select Embedded IO Adapter: 25/10/1 GbE or 10/1 GbE BaseT Add-in IO Modules: 32/16/8 Gb/s FC, 25/10 GbE, 10/1 GbE BaseT",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport:Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-emc-powerstore-500t-storage",
+      "sourceProductCode": "33524",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: EMC PowerStore 5000T",
+        "Processor: Intel 12-Core 2.2GHz",
+        "Max Drives: 1.92TB NVMe SSD",
+        "Drive Bays: 25 x 2.5” drive bays",
+        "Memory Capacity: 192GB Appliance DIMM 96GB Per Node"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-emc-powerstore-500t-storage.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-emc-powerstore-500t-storage.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-emc-powerstore-500t-storage",
+        "candidateTitle": "Dell EMC PowerStore 500T Storage",
+        "attemptStem": "dell-emc-powerstore-500t-storage"
+      }
+    },
+    {
+      "name": "Dell EMC Unity XT 380 Hybrid Flash Storage Array",
+      "slug": "dell-emc-unity-xt-380-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41591",
+      "description": "<h2>Dell EMC Unity XT 380 Hybrid Flash Storage Array</h2><p>The Dell <strong>EMC Unity XT 380</strong> Hybrid Flash Storage Array is an advanced data storage solution that delivers remarkable performance. It supports unified block, file, and VMware VVols, resulting in smooth data management and integration across multiple workloads. With a maximum raw capacity of 2.4PB, the Dell EMC Unity XT 380 Storage Array provides scalable storage, making it ideal for enterprises that require big data storage capacities. It improves efficiency by optimizing storage utilization and minimizing redundant data in all-flash pools, resulting in better overall performance. This Dell EMC Unity XT 380 Hybrid Flash Storage Array is designed to handle demanding workloads, delivering rapid, consistent access to essential data with low latency. Its combination of flash and traditional storage enables enterprises to maintain high-speed operations while taking advantage of cost-effective storage solutions. The Dell EMC Unity XT 380 Storage Array is designed for simplicity and fits smoothly into IT settings, reducing management complexity and increasing dependability. Enterprises benefit from strong support for numerous storage types, which allows them to launch apps without worrying about compatibility. The Dell EMC Unity XT 380 Hybrid Flash Storage Array's inline data reduction capability maximizes storage efficiency without sacrificing speed or functionality. The Future-Proof Program ensures long-term value, enabling organizations to keep ahead of technological changes without incurring new costs. The Dell EMC Unity XT 380 Hybrid Flash Storage Array, which is designed for scalability, efficiency, and durability, is an excellent choice for enterprises looking for high-performance storage that adapts to their changing needs.</p><h2>Buy Dell EMC Unity XT 380 Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell EMC Unity XT 380 Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell EMC Unity XT 380 Storage Array has 3 years of ProSupport.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: EMC Unity XT 380</li><li>Unified block, file, and VMware VVols support</li><li>Delivers up to 2.4PB max raw capacity</li><li>Includes inline data reduction (all flash pools)</li><li>Protects investment with the Future-Proof Program</li></ul>",
+      "model": "EMC Unity XT 380",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41591",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Hard Disk",
+              "value": "up to 2.4PB max capacity",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Unified block, file, and VMware VVols support Includes inline data reduction (all flash pools) Protects investment with the Future-Proof Program",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-emc-unity-xt-380-storage-array",
+      "sourceProductCode": "41591",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: EMC Unity XT 380",
+        "Unified block, file, and VMware VVols support",
+        "Delivers up to 2.4PB max raw capacity",
+        "Includes inline data reduction (all flash pools)",
+        "Protects investment with the Future-Proof Program"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-emc-unity-xt-380-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-emc-unity-xt-380-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-emc-unity-xt-380-storage-array",
+        "candidateTitle": "Dell EMC Unity XT 380 Hybrid Flash Storage Array",
+        "attemptStem": "dell-emc-unity-xt-380-storage-array"
+      }
+    },
+    {
+      "name": "Dell EMC Unity XT 380F Hybrid Flash Storage Array",
+      "slug": "dell-emc-unity-xt-380f-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41595",
+      "description": "<h2>Dell EMC Unity XT 380F Hybrid Flash Storage Array</h2><p>The Dell <strong>EMC Unity XT 380F</strong> Hybrid Flash Storage Array is an advanced data storage solution that delivers remarkable performance. It supports unified block, file, and VMware VVols, resulting in smooth data management and integration across multiple workloads. With a maximum raw capacity of 2.4PB, the Dell EMC Unity XT 380F Storage Array provides scalable storage, making it ideal for enterprises that require big data storage capacities. It improves efficiency by optimizing storage utilization and minimizing redundant data in all-flash pools, resulting in better overall performance. This Dell EMC Unity XT 380F Hybrid Flash Storage Array is designed to handle demanding workloads, delivering rapid, consistent access to essential data with low latency. Its combination of flash and traditional storage enables enterprises to maintain high-speed operations while taking advantage of cost-effective storage solutions. The Dell EMC Unity XT 380F Storage Array is designed for simplicity and fits smoothly into IT settings, reducing management complexity and increasing dependability. Enterprises benefit from strong support for numerous storage types, which allows them to launch apps without worrying about compatibility. The Dell EMC Unity XT 380F Hybrid Flash Storage Array's inline data reduction capability maximizes storage efficiency without sacrificing speed or functionality. The Future-Proof Program ensures long-term value, enabling organizations to keep ahead of technological changes without incurring new costs. The Dell EMC Unity XT 380F Hybrid Flash Storage Array, which is designed for scalability, efficiency, and durability, is an excellent choice for enterprises looking for high-performance storage that adapts to their changing needs.</p><h2>Buy Dell EMC Unity XT 380F Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell EMC Unity XT 380F Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell EMC Unity XT 380F Storage Array has 3 years of ProSupport.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: EMC Unity XT 380F</li><li>Unified block, file, and VMware VVols support</li><li>Delivers up to 2.4PB max raw capacity</li><li>Includes inline data reduction (all flash pools)</li><li>Protects investment with the Future-Proof Program</li></ul>",
+      "model": "EMC Unity XT 380F",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41595",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Hard Disk",
+              "value": "up to 2.4PB max capacity",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Unified block, file, and VMware VVols support Includes inline data reduction (all flash pools) Protects investment with the Future-Proof Program",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-emc-unity-xt-380f-storage-array",
+      "sourceProductCode": "41595",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: EMC Unity XT 380F",
+        "Unified block, file, and VMware VVols support",
+        "Delivers up to 2.4PB max raw capacity",
+        "Includes inline data reduction (all flash pools)",
+        "Protects investment with the Future-Proof Program"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-emc-unity-xt-380f-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-emc-unity-xt-380f-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-emc-unity-xt-380f-storage-array",
+        "candidateTitle": "Dell EMC Unity XT 380F Hybrid Flash Storage Array",
+        "attemptStem": "dell-emc-unity-xt-380f-storage-array"
+      }
+    },
+    {
+      "name": "Dell EMC Unity XT 480 Hybrid Flash Storage Array",
+      "slug": "dell-emc-unity-xt-480-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41629",
+      "description": "<h2>Dell EMC Unity XT 480 Hybrid Flash Storage Array</h2><p>The Dell <strong>EMC Unity XT 480</strong> Hybrid Flash Storage Array is an advanced data storage solution that delivers remarkable performance. It supports unified block, file, and VMware VVols, resulting in smooth data management and integration across multiple workloads. With a maximum raw capacity of 2.4PB, the Dell EMC Unity XT 480 Storage Array provides scalable storage, making it ideal for enterprises that require big data storage capacities. It improves efficiency by optimizing storage utilization and minimizing redundant data in all-flash pools, resulting in better overall performance. This Dell EMC Unity XT 480 Hybrid Flash Storage Array is designed to handle demanding workloads, delivering rapid, consistent access to essential data with low latency. Its combination of flash and traditional storage enables enterprises to maintain high-speed operations while taking advantage of cost-effective storage solutions. The Dell EMC Unity XT 480 Storage Array is designed for simplicity and fits smoothly into IT settings, reducing management complexity and increasing dependability. Enterprises benefit from strong support for numerous storage types, which allows them to launch apps without worrying about compatibility. The Dell EMC Unity XT 480 Hybrid Flash Storage Array's inline data reduction capability maximizes storage efficiency without sacrificing speed or functionality. The Future-Proof Program ensures long-term value, enabling organizations to keep ahead of technological changes without incurring new costs. The Dell EMC Unity XT 480 Hybrid Flash Storage Array, which is designed for scalability, efficiency, and durability, is an excellent choice for enterprises looking for high-performance storage that adapts to their changing needs.</p><h2>Buy Dell EMC Unity XT 480 Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell EMC Unity XT 480 Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell EMC Unity XT 480 Storage Array has 3 years of ProSupport.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: EMC Unity XT 480</li><li>Unified block, file, and VMware VVols support</li><li>Delivers up to 4.0PB max raw capacity</li><li>NVMe-ready</li><li>Unified data reduction (all flash pools)</li></ul>",
+      "model": "EMC Unity XT 480",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41629",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Hard Disk",
+              "value": "up to 2.4PB max capacity",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Unified block, file, and VMware VVols support NVMe-ready Unified data reduction (all flash pools)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-emc-unity-xt-480-storage-array",
+      "sourceProductCode": "41629",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: EMC Unity XT 480",
+        "Unified block, file, and VMware VVols support",
+        "Delivers up to 4.0PB max raw capacity",
+        "NVMe-ready",
+        "Unified data reduction (all flash pools)"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-emc-unity-xt-480-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-emc-unity-xt-480-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-emc-unity-xt-480-storage-array",
+        "candidateTitle": "Dell EMC Unity XT 480 Hybrid Flash Storage Array",
+        "attemptStem": "dell-emc-unity-xt-480-storage-array"
+      }
+    },
+    {
+      "name": "Dell EMC Unity XT 480F All-Flash Storage",
+      "slug": "dell-emc-unity-xt-480f-storage",
+      "type": "PHYSICAL",
+      "sku": "ST-16542",
+      "description": "<h2>Dell EMC Unity XT 480F All-Flash Storage</h2><p>The Dell EMC Unity XT 480F Storage deliver consistent high performance for midrange workloads. This unified storage platform is designed for performance and is NVMe-ready to deliver high-speed access to business data with the ability to simultaneously run mixed application workloads, process inline data reduction, and provide data services with no performance overhead. Dell EMC has redesigned its highly successful Unity storage arrays with a new hardware architecture (not just a controller upgrade) that delivers better performance and efficiency. The new Unity XT storage family includes the same option for all-flash or hybrid, the same all-inclusive software, and the same simplicity of operations, but with a new architecture and full multi-cloud functionality. All Unity XT models offer active/active dual storage processors but add CPU, memory, and drives in a small footprint. Configurations are available as either all-flash models (380F/480F/680F/880F) or as hybrid models (380/480/680/880). The 380/380F models retain the Broadwell chip and single-socket design to ensure optimal cost/performance but add advanced deduplication. The 480/480F, 680/680F, and 880/880F models have been upgraded to dual-socket Intel Skylake CPUs and are NVMe-ready. All models offer expanded asynchronous replication for file data and an option for 25GbE optical connectivity. The hybrid models also now offer 12TB nearline SAS drives. The Unity XT retains its flagship ease of deployment and management. ESG has previously validated the ability to get Unity installed and configured to full operations in 25 minutes using Unisphereâ€™s simple, powerful, intuitive interface, as well as the wide range of included software.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: EMC Unity XT 480F</li><li>Max Drives: 750 Drives</li><li>Raw Capacity: 4.0 PBs</li><li>ReadyRails Sliding Rails</li><li>Memory per Appliance: 192 GB</li></ul>",
+      "model": "EMC Unity XT 480F",
+      "warranty": "3Yr ProSupport:Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "192 GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-16542",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "192 GB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2 x dual-socket Intel CPUs, 32 cores per Array, 1.8GHz",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "192 GB",
+              "position": 1
+            },
+            {
+              "label": "Hard Disk",
+              "value": "Min/Max Drives: Min 6 Drives Max 750 Drives Raw Capacity (Min/Max): 4.0 PBs All-Flash (F) models support 2.5” drives in 2U twenty five drive and 3U eighty drive trays. Hybrid models support 2.5“ drives in 2U twenty five drive and 3U eighty drive trays; and 3.5” drives in 3U fifteen drive trays.",
+              "position": 2
+            },
+            {
+              "label": "RAID Controller",
+              "value": "Dynamic RAID",
+              "position": 3
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows Storage Servers 2016 Standard Edition",
+              "position": 4
+            },
+            {
+              "label": "Peripherals",
+              "value": "4 x 4 lane 12Gb/s SAS ports for back end connection",
+              "position": 5
+            },
+            {
+              "label": "Embedded System Management",
+              "value": "Management Software: Unisphere: Element Manager Unisphere Central: Consolidated dashboard and alerting CloudIQ: Cloud-based storage analytics Thin Provisioning Dynamic Pools - All-Flash Arrays (AFA) only Data Reduction: Zero Detect/Deduplication/Compression (AFA and All-Flash Pools in Hybrid Arrays, Block & File) Proactive Assist: Configure remote support, online chat, open a service request, etc Quality of Service (Block and VVols) Dell EMC Storage Analytics Adapter for VMware vRealize File & Block Tiering / Archiving to Public/Private Cloud (Cloud Tiering Appliance) File-Level Retention (FLR-E & FLR-C) Native Asynchronous Block & File Replication Native Synchronous Block & File Replication MetroSync Manager (optional software to automate synchronous file replication sessions) Snapshot Shipping Dell EMC RecoverPoint Basic",
+              "position": 6
+            },
+            {
+              "label": "Fans",
+              "value": "6 Performance Fans forR740/740XD",
+              "position": 7
+            },
+            {
+              "label": "Mount",
+              "value": "ReadyRails Sliding Rails With Cable Management Arm",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "Dell EMC Unity systems are powered by 2 power supplies (PS) per DPE/DAE. Each power supply can provide power to the entire module if the peer PS has been removed or is faulted. DPE power during a power failure is provided by a Battery Back Up (BBU) module. BBU is located within the SP enclosure and provides power to a single module (power zone)",
+              "position": 0
+            },
+            {
+              "label": "Drive Bays",
+              "value": "Min 6 Drives Max 750 Drives",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport:Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-emc-unity-xt-480f-storage",
+      "sourceProductCode": "16542",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: EMC Unity XT 480F",
+        "Max Drives: 750 Drives",
+        "Raw Capacity: 4.0 PBs",
+        "ReadyRails Sliding Rails",
+        "Memory per Appliance: 192 GB"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-emc-unity-xt-480f-storage.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-emc-unity-xt-480f-storage.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-emc-unity-xt-480f-storage",
+        "candidateTitle": "Dell EMC Unity XT 480F All-Flash Storage",
+        "attemptStem": "dell-emc-unity-xt-480f-storage"
+      }
+    },
+    {
+      "name": "Dell Powerflex Appliance R650 HCI Storage Array",
+      "slug": "dell-powerflex-appliance-r650-hci-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41635",
+      "description": "<h2>Dell Powerflex Appliance R650 HCI Storage Array</h2><p>The Dell <strong>PowerFlex Appliance R650</strong> Storage Array is a high-performance, enterprise-grade solution designed to satisfy the demands of modern data centers and software-defined storage. This storage device, designed for dependability and scalability, is driven by dual Intel Gold 5318Y 2.1GHz processors that provide excellent multi-core performance suitable for data-intensive workloads, virtualization, and high-throughput applications. The Dell Powerflex Appliance R650 Storage Array has a Mellanox ConnectX-5 Dual Port 10/25GbE SFP28 Adapter, PCIe low profile V2, which enables ultra-fast and low-latency networking and is ideal for hyper-converged infrastructure and large-scale deployments. The Dell Powerflex Appliance R650 Storage Array was designed with high availability in mind, and it contains dual, hot-plug, fully redundant 1400W power supplies in a 1+1 configuration that allow mixed mode NAF to ensure uninterrupted operation even if a power module fails. The hot-plug capability enables power components to be replaced or serviced without disrupting system operations, hence increasing uptime and operating efficiency. The Dell Powerflex Appliance R650 Storage Array which improves power flexibility and simplicity of integration into a variety of data center configurations. The Dell PowerFlex R650 is compact yet powerful, and it is designed to work with Dell's PowerFlex software-defined storage architecture, providing agility and scale to meet expanding business demands. This appliance is intended to provide continuous high performance, smooth data access, and reliable infrastructure support for mission-critical operations. The Dell Powerflex Appliance R650 Storage Array strikes a mix between processing power, network speed, and infrastructure resilience, making it an excellent option for businesses looking to upgrade their IT infrastructure.</p><h2>Buy Dell Powerflex Appliance R650 Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell Powerflex Appliance R650 Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell Powerflex Appliance R650 Storage Array has 3 years of ProSupport.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Powerflex Appliance R650</li><li>Mellanox ConnectX-5 Dual Port 10/25GbE SFP28 Adapte</li><li>2x Gold 5318Y 2.1GHz</li><li>Dual, Hot-plug, Power Supply Fully Redundant (1+1), 1400W</li><li>10x3.84TB SSD SAS</li></ul>",
+      "model": "Powerflex Appliance R650",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41635",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2x Gold 5318Y 2.1GHz",
+              "position": 0
+            },
+            {
+              "label": "Hard Disk",
+              "value": "10x3.84TB SSD SAS",
+              "position": 1
+            },
+            {
+              "label": "Network",
+              "value": "Mellanox ConnectX-5 Dual Port 10/25GbE SFP28 Adapte",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "Dual, Hot-plug, Power Supply Fully Redundant (1+1), 1400W, Mixed Mode, NAF",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-powerflex-appliance-r650-hci-storage-array",
+      "sourceProductCode": "41635",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Powerflex Appliance R650",
+        "Mellanox ConnectX-5 Dual Port 10/25GbE SFP28 Adapte",
+        "2x Gold 5318Y 2.1GHz",
+        "Dual, Hot-plug, Power Supply Fully Redundant (1+1), 1400W",
+        "10x3.84TB SSD SAS"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-powerflex-appliance-r650-hci-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-powerflex-appliance-r650-hci-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-powerflex-appliance-r650-hci-storage-array",
+        "candidateTitle": "Dell Powerflex Appliance R650 HCI Storage Array",
+        "attemptStem": "dell-powerflex-appliance-r650-hci-storage-array"
+      }
+    },
+    {
+      "name": "Dell Powerflex Appliance R650 Storage Array With Jumper Cord",
+      "slug": "dell-powerflex-appliance-r650-storage",
+      "type": "PHYSICAL",
+      "sku": "ST-41634",
+      "description": "<h2>Dell Powerflex Appliance R650 Storage Array With Jumper Cord</h2><p>The Dell <strong>PowerFlex Appliance R650</strong> Storage Array is a high-performance, enterprise-grade solution designed to satisfy the demands of modern data centers and software-defined storage. This storage device, designed for dependability and scalability, is driven by dual Intel Gold 5318Y 2.1GHz processors that provide excellent multi-core performance suitable for data-intensive workloads, virtualization, and high-throughput applications. The Dell Powerflex Appliance R650 Storage Array has a Mellanox ConnectX-5 Dual Port 10/25GbE SFP28 Adapter, PCIe low profile V2, which enables ultra-fast and low-latency networking and is ideal for hyper-converged infrastructure and large-scale deployments. The Dell Powerflex Appliance R650 Storage Array was designed with high availability in mind, and it contains dual, hot-plug, fully redundant 1400W power supplies in a 1+1 configuration that allow mixed mode NAF to ensure uninterrupted operation even if a power module fails. The hot-plug capability enables power components to be replaced or serviced without disrupting system operations, hence increasing uptime and operating efficiency. The Dell Powerflex Appliance R650 Storage Array includes a jumper cord, which improves power flexibility and simplicity of integration into a variety of data center configurations. The Dell PowerFlex R650 is compact yet powerful, and it is designed to work with Dell's PowerFlex software-defined storage architecture, providing agility and scale to meet expanding business demands. This appliance is intended to provide continuous high performance, smooth data access, and reliable infrastructure support for mission-critical operations. The Dell Powerflex Appliance R650 Storage Array strikes a mix between processing power, network speed, and infrastructure resilience, making it an excellent option for businesses looking to upgrade their IT infrastructure.</p><h2>Buy Dell Powerflex Appliance R650 Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell Powerflex Appliance R650 Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell Powerflex Appliance R650 Storage Array has 3 years of ProSupport.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Powerflex Appliance R650</li><li>Mellanox ConnectX-5 Dual Port 10/25GbE SFP28 Adapter</li><li>2xGold 5318Y 2.1GHz</li><li>Dual, Hot-plug, Power Supply Fully Redundant (1+1), 1400W</li><li>Jumper Cord, PCIe Low Profile, V2</li></ul>",
+      "model": "Powerflex Appliance R650",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41634",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2x Gold 5318Y 2.1GHz",
+              "position": 0
+            },
+            {
+              "label": "Network",
+              "value": "Mellanox ConnectX-5 Dual Port 10/25GbE SFP28 Adapter, PCIe Low Profile, V2",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "Dual, Hot-plug, Power Supply Fully Redundant (1+1), 1400W, Mixed Mode, NAF Jumper Cord",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-powerflex-appliance-r650-storage",
+      "sourceProductCode": "41634",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Powerflex Appliance R650",
+        "Mellanox ConnectX-5 Dual Port 10/25GbE SFP28 Adapter",
+        "2xGold 5318Y 2.1GHz",
+        "Dual, Hot-plug, Power Supply Fully Redundant (1+1), 1400W",
+        "Jumper Cord, PCIe Low Profile, V2"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-powerflex-appliance-r650-storage.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-powerflex-appliance-r650-storage.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-powerflex-appliance-r650-storage",
+        "candidateTitle": "Dell Powerflex Appliance R650 Storage Array With Jumper Cord",
+        "attemptStem": "dell-powerflex-appliance-r650-storage"
+      }
+    },
+    {
+      "name": "Dell Powerflex Appliance R650 Storage Array",
+      "slug": "dell-powerflex-appliance-r650-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41633",
+      "description": "<h2>Dell Powerflex Appliance R650 Storage Array</h2><p>The Dell <strong>PowerFlex Appliance R650</strong> Storage Array is powered by dual Intel Gold 5318Y 2.1GHz processors, which provide dependable multi-core performance for intensive workloads, database operations, and high-throughput computing. This system is designed for reliability and efficiency, with a fully redundant 1+1 power supply arrangement with 1400W mixed mode NAF support, ensuring uninterrupted operation and protection against power outages. The Dell PowerFlex Appliance R650 Storage Array includes ten high-capacity 3.84TB SAS SSDs, providing a total of 38.4TB of fast, dependable storage suitable for high IOPS applications, virtualization, and intense data processing operations. The Dell PowerFlex Appliance R650 Storage Array comes equipped with a Mellanox ConnectX-5 dual-port 10/25GbE SFP28 adapter for fast network access. This allows for seamless, low-latency data transmission across current enterprise networks, resulting in scalable performance for data-intensive applications and hyper-converged infrastructure setups. The Dell PowerFlex Appliance R650 Storage Array is designed to support the PowerFlex software-defined storage architecture, which combines computing and storage resources to provide maximum flexibility, scalability, and performance in private and hybrid cloud deployments. This Dell PowerFlex Appliance R650 Storage Array is designed specifically for enterprises wishing to streamline their IT infrastructure, improve storage efficiency, and ensure data integrity under high loads. Its compact form factor and powerful architecture make it ideal for large-scale enterprise operations that require high availability and fault tolerance. The PowerFlex Appliance R650 provides constant and responsive storage capabilities while reducing latency and increasing throughput, ensuring mission-critical data is always accessible and secure.</p><h2>Buy Dell Powerflex Appliance R650 Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell Powerflex Appliance R650 Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell Powerflex Appliance R650 Storage Array has 3 years of ProSupport.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Powerflex Appliance R650</li><li>Mellanox ConnectX-5 Dual Port 10/25GbE SFP28 Adapter</li><li>Processor: 2x Gold 5318Y 2.1GHz</li><li>Power Supply Fully Redundant (1+1), 1400W, Mixed Mode, NAF</li><li>10x 3.84TB SSD SAS</li></ul>",
+      "model": "Powerflex Appliance R650",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41633",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "2x Gold 5318Y 2.1GHz",
+              "position": 0
+            },
+            {
+              "label": "Hard Disk",
+              "value": "10x 3.84TB SSD SAS",
+              "position": 1
+            },
+            {
+              "label": "Network",
+              "value": "Mellanox ConnectX-5 Dual Port 10/25GbE SFP28 Adapter",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "Power Supply Fully Redundant (1+1), 1400W, Mixed Mode, NAF",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-powerflex-appliance-r650-storage-array",
+      "sourceProductCode": "41633",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Powerflex Appliance R650",
+        "Mellanox ConnectX-5 Dual Port 10/25GbE SFP28 Adapter",
+        "Processor: 2x Gold 5318Y 2.1GHz",
+        "Power Supply Fully Redundant (1+1), 1400W, Mixed Mode, NAF",
+        "10x 3.84TB SSD SAS"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-powerflex-appliance-r650-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-powerflex-appliance-r650-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-powerflex-appliance-r650-storage-array",
+        "candidateTitle": "Dell Powerflex Appliance R650 Storage Array",
+        "attemptStem": "dell-powerflex-appliance-r650-storage-array"
+      }
+    },
+    {
+      "name": "Dell PowerStore 500T SAS Storage Array",
+      "slug": "dell-powerstore-500t-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41656",
+      "description": "<h2>Dell PowerStore 500T SAS Storage Array</h2><p>The Dell <strong>PowerStore 500T</strong> SAS Storage Array is a powerful storage solution intended for modern IT settings that require great performance, scalability, and efficiency. The Dell Storage Array, powered by an Intel 12-core 2.2GHz processor and featuring 192GB of appliance memory (96GB per node), provides the computing power required to support virtualization, data-intensive applications, and cloud-ready operations. The Dell PowerStore 500T SAS Storage Array incorporates dynamic RAID technology, which dynamically optimizes data distribution to improve redundancy and performance while increasing storage efficiency. The Dell PowerStore 500T Storage Array offers up to 25 x 2.5-inch drive bays, providing flexible storage expansion and enabling enterprises to scale as their data needs grow. With dual 1450W high-line only power supplies working at 200-240V and C13/C14 power cords, the equipment provides dependable, uninterrupted operation with built-in redundancy to protect against power outages. The PowerStore 500T provides enterprise-level resilience and energy efficiency, making it ideal for use in data centers and mission-critical environments. Networking capabilities are highly adaptable, with selectable embedded IO adapters providing 25/10/1 GbE or 10/1 GbE Base-T connectivity, as well as support for add-in IO modules such as 32/16/8 Gb/s Fibre Channel, 25/10 GbE, and 10/1 GbE Base-T. This Dell PowerStore 500T SAS Storage Array's adaptability enables smooth integration into a variety of IT infrastructures and meets a wide range of connection requirements.</p><h2>Buy Dell PowerStore 500T SAS Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell PowerStore 500T SAS Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell PowerStore 500T SAS Storage Array has 3 years of pro support.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PowerStore 500T</li><li>Processor: Intel 12-Core 2.2GHz</li><li>Max Drives: 1.92TB NVMe SSD</li><li>Memory Capacity: 192GB Appliance DIMM 96GB Per Node</li><li>PowerStore Field Install Kit</li></ul>",
+      "model": "PowerStore 500T",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "192GB Appliance DIMM 96GB Per Node",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41656",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "192GB Appliance DIMM 96GB Per Node"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel 12-Core 2.2GHz",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "192GB Appliance DIMM 96GB Per Node",
+              "position": 1
+            },
+            {
+              "label": "Hard Disk",
+              "value": "Max. Drives 1.92TB NVMe SSD",
+              "position": 2
+            },
+            {
+              "label": "RAID Controller",
+              "value": "Dynamic RAID",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "Dual 1450W (200-240V) High Line Only Power Supply, includes C13/C14 Power Cords",
+              "position": 0
+            },
+            {
+              "label": "I/O Slots",
+              "value": "Select Embedded IO Adapter: 25/10/1 GbE or 10/1 GbE BaseT Add-in IO Modules: 32/16/8 Gb/s FC, 25/10 GbE, 10/1 GbE BaseT",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-powerstore-500t-storage-array",
+      "sourceProductCode": "41656",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PowerStore 500T",
+        "Processor: Intel 12-Core 2.2GHz",
+        "Max Drives: 1.92TB NVMe SSD",
+        "Memory Capacity: 192GB Appliance DIMM 96GB Per Node",
+        "PowerStore Field Install Kit"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-powerstore-500t-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-powerstore-500t-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-powerstore-500t-storage-array",
+        "candidateTitle": "Dell PowerStore 500T SAS Storage Array",
+        "attemptStem": "dell-powerstore-500t-storage-array"
+      }
+    },
+    {
+      "name": "Dell PowerVault ME5012 12Gb SAS 8 Port Dual Controller Storage Array",
+      "slug": "dell-powervault-me5012-12gb-sas-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41655",
+      "description": "<h2>Dell PowerVault ME5012 12Gb SAS 8 Port Dual Controller Storage Array</h2><p>The Dell <strong>PowerVault ME5012</strong> 12Gb SAS 8 Port Dual Controller Storage Array is a powerful, scalable storage system designed for high-performance enterprise settings. This Dell Storage Array is designed to accommodate expanding data needs while remaining reliable and flexible. It has two controllers and 12Gb SAS connectivity over 8 ports, allowing for high-speed data transmission and seamless integration into current infrastructures. It comes pre-configured with three SAS hard drives and nine HDD fillers, allowing for easy future expansion to suit expanded storage needs. The Dell PowerVault ME5012 Storage Array is powered by two 580W redundant power sources, ensuring uninterrupted uptime and fault tolerance during mission-critical operations. The ME5012, which supports simultaneous multiprotocol access via Fibre Channel and iSCSI, provides extensive networking capabilities for hybrid and tiered storage environments. Its integrated system management is performed via a user-friendly HTML5 interface, which eliminates the need for software installation and simplifies configuration. The Dell PowerVault ME5012 12Gb SAS 8 Port Dual Controller Storage Array interacts with Unisphere for SC for single-array management and Unisphere Central for SC for controlling multiple arrays from a single client interface, providing centralized control and visibility. Dell Storage Manager also supports complex, multi-site, and cross-platform management, including PS Series arrays. The Dell PowerVault ME5012 Storage Array supports cloud-based monitoring via CloudIQ, which provides real-time analytics and health checks, allowing IT professionals to handle performance and capacity concerns proactively. The Dell PowerVault ME5012 12Gb SAS 8 Port Dual Controller Storage Array, designed with performance and management in mind, is suitable for virtualization, backup and recovery, and database storage applications.</p><h2>Buy Dell PowerVault ME5012 12Gb SAS 8 Port Dual Controller Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell PowerVault ME5012 12Gb SAS 8 Port Dual Controller Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell PowerVault ME5012 12Gb SAS 8 Port Dual Controller Storage Array has 3 years of pro support.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PowerVault ME5012</li><li>12Gb SAS 8 Port Dual Controller</li><li>3xHDDB HDD SAS + 9xHDD Filler</li><li>Power Supply, 580W, Redundant, WW</li><li>Advanced Features</li></ul>",
+      "model": "PowerVault ME5012",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41655",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Hard Disk",
+              "value": "3xHDDB HDD SAS + 9xHDD Filler",
+              "position": 0
+            },
+            {
+              "label": "RAID Controller",
+              "value": "12Gb SAS 8 Port Dual Controller",
+              "position": 1
+            },
+            {
+              "label": "Network",
+              "value": "FC, iSCSI (supports simultaneous multiprotocol)",
+              "position": 2
+            },
+            {
+              "label": "Embedded System Management",
+              "value": "Browser-based (HTML 5) CloudIQ(cloud-based storage monitoring and analytics) Unisphere for SC (single-array element manager, no software installation required) Unisphere Central for SC (multi-array management)Client application Dell Storage Manager–Advanced multi-array, multi-site and cross-platform (PS Series)management",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "Power Supply, 580W, Redundant, WW",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-powervault-me5012-12gb-sas-storage-array",
+      "sourceProductCode": "41655",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PowerVault ME5012",
+        "12Gb SAS 8 Port Dual Controller",
+        "3xHDDB HDD SAS + 9xHDD Filler",
+        "Power Supply, 580W, Redundant, WW",
+        "Advanced Features"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-powervault-me5012-12gb-sas-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-powervault-me5012-12gb-sas-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-powervault-me5012-12gb-sas-storage-array",
+        "candidateTitle": "Dell PowerVault ME5012 12Gb SAS 8 Port Dual Controller Storage Array",
+        "attemptStem": "dell-powervault-me5012-12gb-sas-storage-array"
+      }
+    },
+    {
+      "name": "Dell PowerVault ME5012 25Gb iSCSI 8 Port Dual Controller Storage Array",
+      "slug": "dell-powervault-me5012-25gb-iscsi-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41590",
+      "description": "<h2>Dell PowerVault ME5012 25Gb iSCSI 8 Port Dual Controller Storage Array</h2><p>The Dell <strong>PowerVault ME5012</strong> 25Gb iSCSI 8 Port Dual Controller Storage Array is a high-performance, enterprise-grade storage solution for enterprises that need scalable, dependable, and rapid data access. With dual controllers and a 25Gb Fibre Channel Type-B 8-port architecture, it provides high availability, load balancing, and optimal throughput for demanding workloads. This Dell PowerVault ME5012 Storage Array comes with six SAS hard disk drives for immediate storage capacity and performance, as well as six extra HDD fillers pre-installed to facilitate future expansion without impacting airflow or system integrity. The Dell PowerVault ME5012 25Gb iSCSI 8 Port Dual Controller Storage Array's use of redundant 580W power supply ensures continuous power delivery, lowering the risk of downtime and improving system stability across global operations. This configuration maintains business continuity and protects mission-critical applications in data centers or enterprise environments. The Dell PowerVault ME5012 Storage Array is designed for scalability and versatility, and it offers hybrid storage configurations that allow for a mix of HDDs and SSDs as needed. Its extensive feature set is intended to increase overall system performance and efficiency, and includes intelligent management tools and automation for easier operation. The twin controller configuration is appropriate for settings that require redundant paths to storage resources, ensuring high availability while minimizing single points of failure. Furthermore, the Dell PowerVault ME5012 25Gb iSCSI 8 Port Dual Controller Storage Array's compact form factor and low power consumption make it ideal for expanding enterprises looking to save rack space without losing performance. Its 25Gbps Fibre Channel interface allows for quick data transfer rates, making it perfect for high-speed, latency-sensitive workloads including virtualization, database management, and backup solutions. This Dell PowerVault ME5012 Storage Array also seamlessly integrates into existing IT infrastructure, allowing for rapid deployment and scaling as company data requirements change.</p><h2>Buy Dell PowerVault ME5012 25Gb iSCSI Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell PowerVault ME5012 25Gb iSCSI Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell PowerVault ME5012 25Gb iSCSI Storage Array has 3 years of pro support.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PowerVault ME5012</li><li>25Gb iSCSI 8 Port Dual Controller</li><li>6xHDD Filler + 6x2TB HDD NLSAS</li><li>Power Supply, 580W, Redundant, WW</li><li>Advanced Features</li></ul>",
+      "model": "PowerVault ME5012",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41590",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Hard Disk",
+              "value": "6xHDD Filler + 6x2TB HDD NLSAS",
+              "position": 0
+            },
+            {
+              "label": "RAID Controller",
+              "value": "25Gb iSCSI 8 Port Dual Controller",
+              "position": 1
+            },
+            {
+              "label": "Network",
+              "value": "FC, iSCSI (supports simultaneous multiprotocol)",
+              "position": 2
+            },
+            {
+              "label": "Embedded System Management",
+              "value": "Browser-based (HTML 5) CloudIQ(cloud-based storage monitoring and analytics) Unisphere for SC (single-array element manager, no software installation required) Unisphere Central for SC (multi-array management)Client application Dell Storage Manager–Advanced multi-array, multi-site and cross-platform (PS Series)management",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "Power Supply, 580W, Redundant, WW",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-powervault-me5012-25gb-iscsi-storage-array",
+      "sourceProductCode": "41590",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PowerVault ME5012",
+        "25Gb iSCSI 8 Port Dual Controller",
+        "6xHDD Filler + 6x2TB HDD NLSAS",
+        "Power Supply, 580W, Redundant, WW",
+        "Advanced Features"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-powervault-me5012-25gb-iscsi-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-powervault-me5012-25gb-iscsi-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-powervault-me5012-25gb-iscsi-storage-array",
+        "candidateTitle": "Dell PowerVault ME5012 25Gb iSCSI 8 Port Dual Controller Storage Array",
+        "attemptStem": "dell-powervault-me5012-25gb-iscsi-storage-array"
+      }
+    },
+    {
+      "name": "Dell PowerVault ME5012 32Gb FC Type-B 8 Port Dual Controller Storage Array",
+      "slug": "dell-powervault-me5012-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41532",
+      "description": "<h2>Dell PowerVault ME5012 32Gb FC Type-B 8 Port Dual Controller Storage Array</h2><p>The Dell <strong>PowerVault ME5012</strong> 32Gb FC Type-B 8 Port Dual Controller Storage Array is a high-performance, enterprise-grade storage solution for enterprises that need scalable, dependable, and rapid data access. With dual controllers and a 32Gb Fibre Channel Type-B 8-port architecture, it provides high availability, load balancing, and optimal throughput for demanding workloads. This Dell PowerVault ME5012 Storage Array comes with six SAS hard disk drives for immediate storage capacity and performance, as well as six extra HDD fillers pre-installed to facilitate future expansion without impacting airflow or system integrity. The Dell PowerVault ME5012 32Gb FC Type-B 8 Port Dual Controller Storage Array's use of redundant 580W power supply ensures continuous power delivery, lowering the risk of downtime and improving system stability across global operations. This configuration maintains business continuity and protects mission-critical applications in data centers or enterprise environments. The Dell PowerVault ME5012 Storage Array is designed for scalability and versatility, and it offers hybrid storage configurations that allow for a mix of HDDs and SSDs as needed. Its extensive feature set is intended to increase overall system performance and efficiency, and includes intelligent management tools and automation for easier operation. The twin controller configuration is appropriate for settings that require redundant paths to storage resources, ensuring high availability while minimizing single points of failure. Furthermore, the Dell PowerVault ME5012 32Gb FC Type-B 8 Port Dual Controller Storage Array's compact form factor and low power consumption make it ideal for expanding enterprises looking to save rack space without losing performance. Its 32Gbps Fibre Channel interface allows for quick data transfer rates, making it perfect for high-speed, latency-sensitive workloads including virtualization, database management, and backup solutions. This Dell PowerVault ME5012 Storage Array also seamlessly integrates into existing IT infrastructure, allowing for rapid deployment and scaling as company data requirements change.</p><h2>Buy Dell PowerVault ME5012 Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell PowerVault ME5012 Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell PowerVault ME5012 Storage Array has 3 years of pro support.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PowerVault ME5012</li><li>32Gb FC Type-B 8 Port Dual Controller</li><li>6xHDDB HDD SAS + 6xHDD Filler</li><li>Power Supply, 580W, Redundant, WW</li><li>Advanced Features</li></ul>",
+      "model": "PowerVault ME5012",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41532",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Hard Disk",
+              "value": "6xHDDB HDD SAS + 6xHDD Filler",
+              "position": 0
+            },
+            {
+              "label": "RAID Controller",
+              "value": "32Gb FC Type-B 8 Port Dual Controller",
+              "position": 1
+            },
+            {
+              "label": "Network",
+              "value": "FC, iSCSI (supports simultaneous multiprotocol)",
+              "position": 2
+            },
+            {
+              "label": "Embedded System Management",
+              "value": "Browser-based (HTML 5) CloudIQ(cloud-based storage monitoring and analytics) Unisphere for SC (single-array element manager, no software installation required) Unisphere Central for SC (multi-array management)Client application Dell Storage Manager–Advanced multi-array, multi-site and cross-platform (PS Series)management",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "Power Supply, 580W, Redundant, WW",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-powervault-me5012-storage-array",
+      "sourceProductCode": "41532",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PowerVault ME5012",
+        "32Gb FC Type-B 8 Port Dual Controller",
+        "6xHDDB HDD SAS + 6xHDD Filler",
+        "Power Supply, 580W, Redundant, WW",
+        "Advanced Features"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-powervault-me5012-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-powervault-me5012-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-powervault-me5012-storage-array",
+        "candidateTitle": "Dell PowerVault ME5012 32Gb FC Type-B 8 Port Dual Controller Storage Array",
+        "attemptStem": "dell-powervault-me5012-storage-array"
+      }
+    },
+    {
+      "name": "Dell PowerVault ME5024 12Gb SAS 8 Port Dual Controller Storage Array",
+      "slug": "dell-powervault-me5024-12gb-sas-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41487",
+      "description": "<h2>Dell PowerVault ME5024 12Gb SAS 8 Port Dual Controller Storage Array</h2><p>The Dell <strong>PowerVault ME5024</strong> 12Gb SAS Storage Array is a high-performance, scalable storage solution designed specifically for demanding enterprise situations. This Dell SAN Storage has a dual-controller setup with eight 12Gb SAS ports, ensuring high throughput and redundancy for uninterrupted data availability. It is pre-installed with three high-capacity SAS hard drives and 21 HDD fillers, allowing for easy future storage expansion as company requirements change. The Dell PowerVault ME5024 12Gb SAS Storage Array's dual-controller architecture provides failover protection and optimal performance, making it suitable for virtualization, backup, and database-intensive applications. The ME5024 is equipped with a 580W redundant power supply and is designed for continuous operation. Its worldwide-compatible power components provide global reliability. Dell PowerVault ME5024 Storage Array architecture includes advanced storage capabilities like as automatic tiering, data snapshots, replication, and thin provisioning, allowing for efficient data management and operational flexibility. This Dell PowerVault ME5024 12Gb SAS Storage Array enterprise-class storage array delivers high-density configurations in a small footprint, allowing businesses to maximize rack space while maintaining performance and reliability. With a focus on high availability, redundant components and intelligent hardware management help to reduce downtime and simplify maintenance. The Dell PowerVault ME5024 12Gb SAS Storage Array works smoothly with Dell PowerEdge servers and supports a variety of operating systems, including VMware, Microsoft Hyper-V, and Linux.</p><h2>Buy Dell PowerVault ME5024 12Gb SAS Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell PowerVault ME5024 12Gb SAS Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell PowerVault ME5024 12Gb SAS Storage Array has 3 years of pro support.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PowerVault ME5024</li><li>12Gb SAS 8 Port Dual Controller</li><li>21xHDD Filler + 3xHDDB HDD SAS</li><li>Power Supply, 580W, Redundant, WW</li><li>Advanced Features</li></ul>",
+      "model": "PowerVault ME5024",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41487",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Hard Disk",
+              "value": "21xHDD Filler + 3xHDDB HDD SAS",
+              "position": 0
+            },
+            {
+              "label": "RAID Controller",
+              "value": "12Gb SAS 8 Port Dual Controller",
+              "position": 1
+            },
+            {
+              "label": "Network",
+              "value": "FC, iSCSI (supports simultaneous multiprotocol)",
+              "position": 2
+            },
+            {
+              "label": "Embedded System Management",
+              "value": "Browser-based (HTML 5) CloudIQ(cloud-based storage monitoring and analytics) Unisphere for SC (single-array element manager, no software installation required) Unisphere Central for SC (multi-array management)Client application Dell Storage Manager–Advanced multi-array, multi-site and cross-platform (PS Series)management",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "Power Supply, 580W, Redundant, WW",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-powervault-me5024-12gb-sas-storage-array",
+      "sourceProductCode": "41487",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PowerVault ME5024",
+        "12Gb SAS 8 Port Dual Controller",
+        "21xHDD Filler + 3xHDDB HDD SAS",
+        "Power Supply, 580W, Redundant, WW",
+        "Advanced Features"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-powervault-me5024-12gb-sas-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-powervault-me5024-12gb-sas-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-powervault-me5024-12gb-sas-storage-array",
+        "candidateTitle": "Dell PowerVault ME5024 12Gb SAS 8 Port Dual Controller Storage Array",
+        "attemptStem": "dell-powervault-me5024-12gb-sas-storage-array"
+      }
+    },
+    {
+      "name": "Dell PowerVault ME5024 32Gb FC Type-B 8 Port Dual Controller Storage Array",
+      "slug": "dell-powervault-me5024-32gb-fc-type-b-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41490",
+      "description": "<h2>Dell PowerVault ME5024 32Gb FC Type-B 8 Port Dual Controller Storage Array</h2><p>The Dell <strong>PowerVault ME5024</strong> 32Gb FC Type-B Storage Array is a high-performance, scalable storage solution intended for demanding enterprise environments. This Dell <a href=\"https://www.startech.com.bd/san-storage\" style=\"color: rgb(0, 0, 0);\" target=\"\">SAN Storage</a> features a dual-controller architecture and eight 32Gb FC Type-B ports, ensuring excellent throughput and redundancy for continuous data availability. It is pre-installed with three high-capacity FC Type-B hard drives and 14 HDD + 18 HDD fillers, providing for simple future storage expansion as business needs change. The Dell PowerVault ME5024 32Gb FC Type-B Storage Array's dual-controller architecture ensures failover and excellent performance, making it ideal for virtualization, backup, and database-intensive applications. The ME5024 is outfitted with a 580W redundant power supply and is intended for continuous use. Its power components are internationally interoperable, ensuring global reliability. The Dell PowerVault ME5024 Storage Array architecture features advanced storage capabilities like as automatic tiering, data snapshots, replication, and thin provisioning, which enable efficient data management and operational flexibility. This Dell PowerVault ME5024 32Gb FC Type-B Storage Array is an enterprise-class storage array that offers high-density configurations in a small footprint, allowing businesses to maximize rack space while maintaining performance and durability. With a focus on high availability, redundant components and intelligent hardware management help to reduce downtime and make maintenance easier. The Dell PowerVault ME5024 32Gb FC Type-B Storage Array integrates seamlessly with Dell PowerEdge servers and supports a wide range of operating systems, including VMware, Microsoft Hyper-V, and Linux.</p><h2>Buy Dell PowerVault ME5024 32Gb FC Type-B Storage Array from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell PowerVault ME5024 32Gb FC Type-B Storage Array</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-san-storage\" target=\"\">Dell SAN Storage </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Dell PowerVault ME5024 32Gb FC Type-B Storage Array has 3 years of pro support.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PowerVault ME5024</li><li>32Gb FC Type-B 8 Port Dual Controller</li><li>14xHDD Filler + 18xHDD Filler</li><li>Power Supply, 580W, Redundant, WW</li><li>Advanced Features</li></ul>",
+      "model": "PowerVault ME5024",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41490",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Hard Disk",
+              "value": "14xHDD Filler + 18xHDD Filler",
+              "position": 0
+            },
+            {
+              "label": "RAID Controller",
+              "value": "32Gb FC Type-B 8 Port Dual Controller",
+              "position": 1
+            },
+            {
+              "label": "Network",
+              "value": "FC, iSCSI (supports simultaneous multiprotocol)",
+              "position": 2
+            },
+            {
+              "label": "Embedded System Management",
+              "value": "Browser-based (HTML 5) CloudIQ(cloud-based storage monitoring and analytics) Unisphere for SC (single-array element manager, no software installation required) Unisphere Central for SC (multi-array management)Client application Dell Storage Manager–Advanced multi-array, multi-site and cross-platform (PS Series)management",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply and Cable",
+              "value": "Power Supply, 580W, Redundant, WW",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-powervault-me5024-32gb-fc-type-b-storage-array",
+      "sourceProductCode": "41490",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PowerVault ME5024",
+        "32Gb FC Type-B 8 Port Dual Controller",
+        "14xHDD Filler + 18xHDD Filler",
+        "Power Supply, 580W, Redundant, WW",
+        "Advanced Features"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-powervault-me5024-32gb-fc-type-b-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-powervault-me5024-32gb-fc-type-b-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-powervault-me5024-32gb-fc-type-b-storage-array",
+        "candidateTitle": "Dell PowerVault ME5024 32Gb FC Type-B 8 Port Dual Controller Storage Array",
+        "attemptStem": "dell-powervault-me5024-32gb-fc-type-b-storage-array"
+      }
+    },
+    {
+      "name": "Dell PowerVault ME5024 25Gb iSCSI Dual Controller Storage Array",
+      "slug": "dell-powervault-me5024-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-41310",
+      "description": "<h2>Dell PowerVault ME5024 25Gb iSCSI Dual Controller Storage Array</h2><p>The Dell <strong>PowerVault ME5024</strong> 25Gb iSCSI Dual Controller Storage Array is a high-performance, scalable enterprise storage solution designed for modern data centers and mission-critical applications; it harnesses advanced 25Gb iSCSI connectivity to deliver rapid data transfers and minimal latency, ensuring that even the most demanding mixed workloads—from intensive transactional databases to virtualized environments—receive the speed and throughput necessary to maintain optimal operations, while its dual controller architecture guarantees enhanced processing power, effective load balancing, and built-in redundancy for continuous uptime and robust failover capabilities that secure business continuity; additionally, this storage array supports a versatile range of storage media including SAS, NL-SAS, and SSDs, allowing for flexible scalability of raw capacity up to 184TB, and is complemented by comprehensive management tools such as the PowerVault Manager HTML5 GUI and CLI interfaces with seamless VMware vCenter integration, which collectively streamline configuration, monitoring, and optimization tasks, making the ME5024 not only an exceptional value proposition in terms of cost and power efficiency but also a future-proof investment that confidently meets the evolving needs of dynamic IT</p><h2>Buy Dell PowerVault ME5024 25Gb iSCSI Dual Controller Storage Array Monitor from Star Tech</h2><p>In Bangladesh, you can get original <strong>Dell PowerVault ME5024 25Gb iSCSI Dual Controller Storage Array</strong> From <a href=\"https://www.startech.com.bd\">Star Tech</a>. We have a large collection of latest Dell <a href=\"https://www.startech.com.bd/server-networking\">Server and Storage</a> to purchase. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PowerVault ME5024</li><li>25Gb iSCSI 8 Port Dual Controller</li><li>14xHDD Filler + 10x2.4TB HDD SAS</li><li>Power Supply, 580W, Redundant, WW</li><li>Advanced Features</li></ul>",
+      "model": "PowerVault ME5024",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41310",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Hard Disk",
+              "value": "14xHDD Filler + 10x2.4TB HDD SAS",
+              "position": 0
+            },
+            {
+              "label": "RAID Controller",
+              "value": "25Gb iSCSI 8 Port Dual Controller",
+              "position": 1
+            },
+            {
+              "label": "Network",
+              "value": "FC, iSCSI (supports simultaneous multiprotocol)",
+              "position": 2
+            },
+            {
+              "label": "Embedded System Management",
+              "value": "Browser-based (HTML 5) CloudIQ(cloud-based storage monitoring and analytics) Unisphere for SC (single-array element manager, no software installation required) Unisphere Central for SC (multi-array management)Client application Dell Storage Manager–Advanced multi-array, multi-site and cross-platform (PS Series)management",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-powervault-me5024-storage-array",
+      "sourceProductCode": "41310",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PowerVault ME5024",
+        "25Gb iSCSI 8 Port Dual Controller",
+        "14xHDD Filler + 10x2.4TB HDD SAS",
+        "Power Supply, 580W, Redundant, WW",
+        "Advanced Features"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-powervault-me5024-storage-array.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-powervault-me5024-storage-array.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-powervault-me5024-storage-array",
+        "candidateTitle": "Dell PowerVault ME5024 25Gb iSCSI Dual Controller Storage Array",
+        "attemptStem": "dell-powervault-me5024-storage-array"
+      }
+    },
+    {
+      "name": "Dell SCv3020 Storage Array",
+      "slug": "dell-scv3020-storage-array",
+      "type": "PHYSICAL",
+      "sku": "ST-16625",
+      "description": "<h2 style=\"text-align: justify; \">Dell SCv3020 Storage Array</h2><p style=\"text-align: justify; \">Dell SCv3020 Storage Array features great hybrid performance. It offers â€œ0-100% Flashâ€� architecture powers over 270,000 max IOPS, &gt;19,000 MB/sec bandwidth, and 2.16PB raw capacity per array. It has a Self-optimizing architecture. Multi-tier Data Progression, RAID tiering and Intelligent Compression actively reduce both initial and lifecycle costs. It offers 50% more IOPS, 50% more capacity, 3X more bandwidth, 2X the snapshots. The base array is available in two 3U â€œall-in-oneâ€� configurations. It includes dual controllers with 6-core Intel processors, 64GB per controller, 128GB per array.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SCv3020</li><li>64GB per controller, 128GB per array</li><li>Maximum drive count 222</li><li>Max raw capacity: 2.16PB</li><li>2 Management ports per array</li></ul>",
+      "model": "SCv3020",
+      "warranty": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "64GB per controller 128GB per array",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-16625",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "64GB per controller 128GB per array"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "1 per controller Intel Xeon E5-2630v3, 2.4GHz, 8 cores",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "64GB per controller 128GB per array",
+              "position": 1
+            },
+            {
+              "label": "RAID Controller",
+              "value": "Dynamic RAID",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "SCOS 7.2 or higher",
+              "position": 3
+            },
+            {
+              "label": "Network",
+              "value": "FC, iSCSI (supports simultaneous multiprotocol)",
+              "position": 4
+            },
+            {
+              "label": "Embedded System Management",
+              "value": "Browser-based (HTML 5) CloudIQ(cloud-based storage monitoring and analytics) Unisphere for SC (single-array element manager, no software installation required) Unisphere Central for SC (multi-array management)Client application Dell Storage Manager–Advanced multi-array, multi-site and cross-platform (PS Series)management",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Additional Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Drive Bays",
+              "value": "30 x 2.5” drive bays",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3Yr ProSupport: Next Business Day Onsite Service-Emerging DBS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-scv3020-storage-array",
+      "sourceProductCode": "16625",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SCv3020",
+        "64GB per controller, 128GB per array",
+        "Maximum drive count 222",
+        "Max raw capacity: 2.16PB",
+        "2 Management ports per array"
+      ],
+      "needsReview": true,
+      "categorySlug": "san-storage",
+      "image": "/images/products/server-networking/san-storage/dell-scv3020-storage-array.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/san-storage/dell-scv3020-storage-array.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-scv3020-storage-array",
+        "candidateTitle": "Dell SCv3020 Storage Array",
+        "attemptStem": "dell-scv3020-storage-array"
+      }
+    }
+  ]
+}

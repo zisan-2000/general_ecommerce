@@ -1,0 +1,3711 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\networking",
+    "generatedAtUnix": 1790590909,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Networking",
+      "slug": "networking",
+      "parentSlug": null,
+      "image": "/images/products/networking/firewall/sonicwall-nsa-2700-16-port-firewall.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Connector",
+      "slug": "connector",
+      "parentSlug": "networking",
+      "image": "/images/products/networking/connector/belden-ax101068-rj45-modular-jack.png",
+      "isActive": true,
+      "sortOrder": 2,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Belden",
+      "slug": "belden",
+      "logo": null
+    },
+    {
+      "name": "Cote",
+      "slug": "cote",
+      "logo": null
+    },
+    {
+      "name": "D-Link",
+      "slug": "d-link",
+      "logo": null
+    },
+    {
+      "name": "Hikvision",
+      "slug": "hikvision",
+      "logo": null
+    },
+    {
+      "name": "Micronet",
+      "slug": "micronet",
+      "logo": null
+    },
+    {
+      "name": "Onten",
+      "slug": "onten",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    },
+    {
+      "name": "Safenet",
+      "slug": "safenet",
+      "logo": null
+    },
+    {
+      "name": "Schneider Electric",
+      "slug": "schneider-electric",
+      "logo": null
+    },
+    {
+      "name": "UGREEN",
+      "slug": "ugreen",
+      "logo": null
+    },
+    {
+      "name": "Vention",
+      "slug": "vention",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Belden AX101068 CAT 6 RJ45 Modular Jack Red",
+      "slug": "belden-ax101068-rj45-modular-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-47067",
+      "description": "<h2>Belden AX101068 CAT 6 RJ45 Modular Jack Red</h2><p>The Belden <strong>AX101068</strong> CAT 6 RJ45 Modular Jack Red is a premium networking solution designed for reliable, high-speed data connectivity. This Belden AX101068 RJ45 Modular Jack is compatible with both RJ45 and RJ11 connectors and supports Category 6 data transmission standards, fully compliant with TIA 568.2-D and ISO/IEC 11801:2002 Ed 2. Featuring a copper alloy lead frame with 50 µ inch gold over nickel plating at the front connection, it ensures excellent conductivity and durability for up to 1,000 mating cycles, while the rear Gas Tight IDC connection allows up to 20 secure terminations. The Belden AX101068 Modular Jack Red comes with a durable UL940V-0 plastic connector body, offering 20 lbs connector/hardware retention and 11.250 lbs plug/connector retention. Fully compatible with Belden 110 Connecting Tools and MediaFlex Termination Stations, it is ETL verified for Category 6 performance and meets FCC Part 68, Subpart F and IEC 60603-7 standards. Ideal for professional and enterprise-grade installations, this modular jack combines durability, performance, and ease of installation in one compact red package.</p><h2>Buy Belden AX101068 CAT 6 RJ45 Modular Jack Red from Star Tech</h2><p>In Bangladesh, you can get original <strong>Belden AX101068 CAT 6 RJ45 Modular Jack Red</strong> From Star Tech. We have a large collection of latest Belden <a href=\"https://www.startech.com.bd/cable-connector\" style=\"\" target=\"\">Cable Connector </a>to purchase for your <a href=\"https://www.startech.com.bd/networking\" target=\"\">Networking</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Belden AX101068 CAT 6 RJ45 Modular Jack Red comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: AX101068</li><li>Compatibility: RJ45, RJ11, Data Category: Category 6</li><li>Connection Durability: 1,000 cycles</li><li>Transmission Standards: ISO/IEC 11801:2002 Ed 2</li><li>Material: Copper Alloy with Nickel Plating</li></ul>",
+      "model": "AX101068",
+      "warranty": "no warranty",
+      "basePrice": 399.0,
+      "originalPrice": 450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Belden",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47067",
+          "price": 399.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 383.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "AX101068",
+              "position": 0
+            },
+            {
+              "label": "Compatibility",
+              "value": "RJ45, RJ11, Data Category: Category 6",
+              "position": 1
+            },
+            {
+              "label": "Connection Durability",
+              "value": "1,000 cycles",
+              "position": 2
+            },
+            {
+              "label": "Transmission Standards",
+              "value": "ISO/IEC 11801:2002 Ed 2",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Copper Alloy with Nickel Plating",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/belden-ax101068-rj45-modular-jack",
+      "sourceProductCode": "47067",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: AX101068",
+        "Compatibility: RJ45, RJ11, Data Category: Category 6",
+        "Connection Durability: 1,000 cycles",
+        "Transmission Standards: ISO/IEC 11801:2002 Ed 2",
+        "Material: Copper Alloy with Nickel Plating"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/belden-ax101068-rj45-modular-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/belden-ax101068-rj45-modular-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "belden-ax101068-rj45-modular-jack",
+        "candidateTitle": "Belden AX101068 CAT 6 RJ45 Modular Jack Red",
+        "attemptStem": "belden-ax101068-rj45-modular-jack"
+      }
+    },
+    {
+      "name": "Cote CC-0611 Cat6 RJ45 Connector (100 Pcs)",
+      "slug": "cote-cc-0611-rj45-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-45857",
+      "description": "<h2>Cote CC-0611 Cat6 RJ45 Connector</h2><p>The Cote <strong>CC-0611</strong> Cat6 RJ45 <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(0, 0, 0);\" target=\"\">Connector</a> is a high-performance networking solution designed to deliver fast and stable data transmission. This premium Cote CC-0611 RJ45 Connector supports Cat 6 standards, ensuring superior network speed and bandwidth for both home and office environments. Made from high-quality material, the Cote CC-0611 offers exceptional durability and long-lasting performance, making it an ideal choice for professional network installations. Its high-quality RJ45 plugs are specifically engineered to maintain strong signal integrity and consistent high bandwidth, ensuring smooth performance for gigabit Ethernet and other high-speed applications. The connector’s easy-to-fit modular design allows quick and secure attachment to cables, saving time during installation while maintaining a stable connection. Featuring a sleek white color and precision build, the Cote CC-0611 Cat6 RJ45 Connector combines reliability, performance, and professional aesthetics, making it the perfect choice for anyone looking to upgrade their network setup.</p><h2>Buy Cote CC-0611 Cat6 RJ45 Connector from Star Tech</h2><p>In Bangladesh, you can get original <strong>Cote CC-0611 Cat6 RJ45 Connector</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" style=\"\" target=\"\">Cable Connector</a> to purchase. Order Online or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at lowest price. The Cote CC-0611 Cat6 RJ45 Connector comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CC-0611</li><li>Type: RJ45 Connector, 100 Pcs Box</li><li>High-Quality RJ45 Plugs</li><li>Easy to Fit with Cable, Modular</li><li>High-Quality Material</li></ul>",
+      "model": "CC-0611",
+      "warranty": "no warranty",
+      "basePrice": 2100.0,
+      "originalPrice": 2210.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Cote",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45857",
+          "price": 2100.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2016.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "CC-0611",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "RJ45 Connector, 100 Pcs Box",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cote-cc-0611-rj45-connector",
+      "sourceProductCode": "45857",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CC-0611",
+        "Type: RJ45 Connector, 100 Pcs Box",
+        "High-Quality RJ45 Plugs",
+        "Easy to Fit with Cable, Modular",
+        "High-Quality Material"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/cote-cc-0611-rj45-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/cote-cc-0611-rj45-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cote-cc-0611-rj45-connector",
+        "candidateTitle": "Cote CC-0611 Cat6 RJ45 Connector (100 Pcs)",
+        "attemptStem": "cote-cc-0611-rj45-connector"
+      }
+    },
+    {
+      "name": "D-Link Cat 6 Original Connector Pack of 100 Pieces for Full Box Sales",
+      "slug": "d-link-cat-6-connector-full-box",
+      "type": "PHYSICAL",
+      "sku": "NPG-C61BR0502-100",
+      "description": "<h2>D-Link Cat 6 Original Connector Pack of 100 Pieces for Full Box Sales</h2><p>D-Link Cat6 UTP Modular Plug is 8-position, 8-contact (8P8C), frequently used for Ethernet networking. The RJ45 Connectors having 50U\" gold plating and used with 23-26AWG cat6 UTP stranded or solid cable. It features Cat6 unshielded RJ45 modular plug supports 4 twisted pairs.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: NPG-C61BR0502-100</li><li>Model: D-Link Cat-6 Connector</li><li>Cat6 unshielded RJ45 modular plug supports 4 twisted pairs</li><li>Housing: PC, UL94V-2, transparent brown color</li><li>Contact Terminal: Copper Alloy</li><li>Finished: 50U&quot; gold plating</li></ul>",
+      "model": "D-Link Cat-6 Connector",
+      "warranty": null,
+      "basePrice": 2100.0,
+      "originalPrice": 2250.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "D-Link",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "NPG-C61BR0502-100",
+          "price": 2100.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2016.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "NPG-C61BR0502-100",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "D-Link Cat-6 Connector",
+              "position": 1
+            },
+            {
+              "label": "Housing",
+              "value": "PC, UL94V-2, transparent brown color",
+              "position": 2
+            },
+            {
+              "label": "Contact Terminal",
+              "value": "Copper Alloy",
+              "position": 3
+            },
+            {
+              "label": "Finished",
+              "value": "50U\" gold plating",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/d-link-cat-6-connector-full-box",
+      "sourceProductCode": "5960",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "NPG-C61BR0502-100",
+      "sourceKeyFeatures": [
+        "MPN: NPG-C61BR0502-100",
+        "Model: D-Link Cat-6 Connector",
+        "Cat6 unshielded RJ45 modular plug supports 4 twisted pairs",
+        "Housing: PC, UL94V-2, transparent brown color",
+        "Contact Terminal: Copper Alloy",
+        "Finished: 50U\" gold plating"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/d-link-cat-6-connector-full-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/d-link-cat-6-connector-full-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "d-link-cat-6-connector-full-box",
+        "candidateTitle": "D-Link Cat 6 Original Connector Pack of 100 Pieces for Full Box Sales",
+        "attemptStem": "d-link-cat-6-connector-full-box"
+      }
+    },
+    {
+      "name": "D-Link Cat5e Gold Plated UTP Connector Pack of 100 Pieces (Original)",
+      "slug": "d-link-cat-6-rj45-cable-connector",
+      "type": "PHYSICAL",
+      "sku": "NPG-5E1BRO031-100",
+      "description": "<h2><span style=\"font-weight: 700;\">D-Link Cat5e Gold Plated UTP Connector Pack of 100 Pieces (Original)</span></h2><div><div><ul><li>RJ45 modular plug supports 4 twisted pairs, meet wiring scheme <br/></li><li>Housing: polycarbonate, 94V-2, transparent color <br/></li><li>Contact terminal: phosphor bronze <br/></li><li>Finished: 50 micro-inch gold plating, over 50 micro inch Nickel plated on contact area <br/></li><li>Operating temperature: -40°C to 80°C <br/></li><li>Cable to plug tensile strength: 7.7 kgs <br/></li><li>Terminates 24-26 AWG stranded wires, wiring scheme T568A/T568B<br/></li></ul></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: NPG-5E1BRO031-100</li><li>Model: Cat5e Gold Plated UTP Connector Pack</li><li>Polycarbonate, 94V-2</li><li>50 micro-inch gold plating</li><li>50 micro inch Nickel plated</li><li>Color: White, Brown</li></ul>",
+      "model": "Cat5e Gold Plated UTP Connector Pack",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "D-Link",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White, Brown",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "NPG-5E1BRO031-100",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White, Brown"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "NPG-5E1BRO031-100",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Cat5e Gold Plated UTP Connector Pack",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "White, Brown",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/d-link-cat-6-rj45-cable-connector",
+      "sourceProductCode": "5930",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "NPG-5E1BRO031-100",
+      "sourceKeyFeatures": [
+        "MPN: NPG-5E1BRO031-100",
+        "Model: Cat5e Gold Plated UTP Connector Pack",
+        "Polycarbonate, 94V-2",
+        "50 micro-inch gold plating",
+        "50 micro inch Nickel plated",
+        "Color: White, Brown"
+      ],
+      "needsReview": true,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/d-link-cat-6-rj45-cable-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/d-link-cat-6-rj45-cable-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "d-link-cat-6-rj45-cable-connector",
+        "candidateTitle": "D-Link Cat5e Gold Plated UTP Connector Pack of 100 Pieces (Original)",
+        "attemptStem": "d-link-cat-6-rj45-cable-connector"
+      }
+    },
+    {
+      "name": "TJ Box/ Fiber Joint Box (4 Way)",
+      "slug": "fiber-jont-box",
+      "type": "PHYSICAL",
+      "sku": "ST-9258",
+      "description": "<p>TJ Box/ Fiber Joint Box (4 Way).Optical Fiber Terminal Joint Box .Plastic body<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TJ Box/ Fiber Joint Box (4 Way)</li><li>Optical Fiber Terminal Joint Box</li><li>4 way</li><li>plastic body</li></ul>",
+      "model": "TJ Box/ Fiber Joint Box (4 Way)",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-9258",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TJ Box/ Fiber Joint Box (4 Way)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fiber-jont-box",
+      "sourceProductCode": "9258",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TJ Box/ Fiber Joint Box (4 Way)",
+        "Optical Fiber Terminal Joint Box",
+        "4 way",
+        "plastic body"
+      ],
+      "needsReview": true,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/fiber-jont-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/fiber-jont-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fiber-jont-box",
+        "candidateTitle": "TJ Box/ Fiber Joint Box (4 Way)",
+        "attemptStem": "fiber-jont-box"
+      }
+    },
+    {
+      "name": "Hikvision DS-1M02 Cat6 RJ45 UTP Connector Jack (100 Pcs)",
+      "slug": "hikvision-ds-1m02-rj45-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-43167",
+      "description": "<h2>Hikvision DS-1M02 Cat6 RJ45 UTP Connector Jack </h2><p>The Hikvision <strong>DS-1M02</strong> Cat6 RJ45 UTP <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(0, 0, 0);\" target=\"\">Connector</a> Jack (100 Pcs) is a premium networking solution engineered for high-speed and stable Ethernet connections. This Hikvision DS-1M02 RJ45 Jack features 15u or 30u inch gold-plated contacts that ensure superior conductivity and long-lasting corrosion resistance. Built with metal shielding for robust anti-interference performance, it’s ideal for demanding installations requiring signal clarity. Supporting 1000 Base-T Ethernet, the Hikvision DS-1M02 Cat6 RJ45 Connector Jack is compatible with Cat6 cabling, making it perfect for high-performance network environments. Designed with a polycarbonate plug housing (UL94V-2 rated) and a copper alloy conductor with 15u inch gold plating, this connector jack offers excellent durability and flame resistance. It handles a maximum current of 1.5A @25°C, a voltage rating up to 150VAC, and a withstand voltage of 1KV AC RMS. It also provides high electrical reliability with an insulation resistance ≥1000MΩ @100V DC and contact resistance ≤20 mΩ. Mechanically, this Hikvision DS-1M02 RJ45 Jack excels with a tensile strength of 50N for 60±5 seconds and an insert/extraction life of ≥750 cycles. Engineered for tough conditions, the Hikvision DS-1M02 Cat6 RJ45 UTP Connector Jack operates effectively within a temperature range of -25°C to 55°C and can be stored between -10°C and 40°C at humidity levels under 80%. Packaged in a convenient set of 100 pieces, the Hikvision DS-1M02 Cat6 RJ45 Connector Jack offers a reliable, high-quality option for professional and large-scale networking installations.</p><h2>Buy Hikvision DS-1M02 Cat6 RJ45 UTP Connector Jack from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hikvision DS-1M02 Cat6 RJ45 UTP Connector Jack</strong> From Star Tech. We have a large collection of latest Hikvision <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Connector </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Hikvision DS-1M02 Cat6 RJ45 UTP Connector Jack comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DS-1M02</li><li>Type: RJ45 Connector</li><li>15u/30u inch gold-plated contacts</li><li>Material: Metal Shielding Anti-interference</li><li>Support 1000 Base-T Ethernet</li></ul>",
+      "model": "DS-1M02",
+      "warranty": "1 year warranty",
+      "basePrice": 1900.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Hikvision",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-43167",
+          "price": 1900.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1824.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DS-1M02",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "RJ45 Connector",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "Metal Shielding Anti-interference",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-ds-1m02-rj45-jack",
+      "sourceProductCode": "43167",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DS-1M02",
+        "Type: RJ45 Connector",
+        "15u/30u inch gold-plated contacts",
+        "Material: Metal Shielding Anti-interference",
+        "Support 1000 Base-T Ethernet"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/hikvision-ds-1m02-rj45-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/hikvision-ds-1m02-rj45-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-ds-1m02-rj45-jack",
+        "candidateTitle": "Hikvision DS-1M02 Cat6 RJ45 UTP Connector Jack (100 Pcs)",
+        "attemptStem": "hikvision-ds-1m02-rj45-jack"
+      }
+    },
+    {
+      "name": "Micronet Cat 6 RJ45 Cable Connector-Pack Of 20 Pieces",
+      "slug": "micronet-cat-6-rj45-cable-connector",
+      "type": "PHYSICAL",
+      "sku": "SP1113",
+      "description": "<div><span style=\"font-weight: bold;\">Micronet Cat 6 RJ45 Cable Connector-Pack Of 20 Pieces</span></div><div><div><ul><li>Micronet high-quality RJ45 plugs, SP1113, are perfect for use with 10Base-T, 100Base-T, and Gigabit Ethernet network environment. <br/></li><li>The plug maintains high bandwidth and maximum data signal with its connection cables. <br/></li><li>SP1113 is also designed in snag-less moldings for easy installation, so that the user can quickly configure it with its belonging cable into straight-through or cross-over cable with the minimum workforce and reduce much of network infrastructure building time<br/></li></ul></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SP1113</li><li>Model: Micronet Cat 6 RJ45 Cable Connector</li><li>Micronet high-quality RJ45 plugs</li><li>Gigabit Ethernet network</li><li>Plug maintains high bandwidth</li></ul>",
+      "model": "Micronet Cat 6 RJ45 Cable Connector",
+      "warranty": null,
+      "basePrice": 670.0,
+      "originalPrice": 715.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Micronet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "SP1113",
+          "price": 670.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 643.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "SP1113",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Micronet Cat 6 RJ45 Cable Connector",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/micronet-cat-6-rj45-cable-connector",
+      "sourceProductCode": "5945",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "SP1113",
+      "sourceKeyFeatures": [
+        "MPN: SP1113",
+        "Model: Micronet Cat 6 RJ45 Cable Connector",
+        "Micronet high-quality RJ45 plugs",
+        "Gigabit Ethernet network",
+        "Plug maintains high bandwidth"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/micronet-cat-6-rj45-cable-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/micronet-cat-6-rj45-cable-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "micronet-cat-6-rj45-cable-connector",
+        "candidateTitle": "Micronet Cat 6 RJ45 Cable Connector-Pack Of 20 Pieces",
+        "attemptStem": "micronet-cat-6-rj45-cable-connector"
+      }
+    },
+    {
+      "name": "Onten OTN-E661+ Cat-6A RJ45 Connector (100 Pcs)",
+      "slug": "onten-otn-e661-plus-rj45-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-48575",
+      "description": "<h2>Onten OTN-E661+ Cat-6A RJ45 Connector</h2><p>The Onten <span style=\"font-weight: bold;\">OTN‑E661+</span> Cat‑6A Shielded RJ45 <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(0, 0, 0);\" target=\"\">Connector</a> is engineered for high‑performance networking, delivering secure, stable connections for professional and home setups. Built with Cat‑6A shielding technology, it minimizes interference and ensures reliable data transmission at ultra‑fast speeds, making it ideal for gigabit and 10‑gigabit Ethernet applications. Its precision‑crafted design provides a snug fit for RJ45 cables, reducing signal loss and enhancing durability. Perfect for structured cabling, patch panels, and custom network installations, this connector supports seamless connectivity for servers, routers, switches, and other networking devices. The OTN‑E661+ combines robust build quality with easy installation, ensuring long‑lasting performance in demanding environments. Whether you’re upgrading your office network or setting up a high‑speed home connection, this shielded RJ45 connector delivers consistent speed, reduced crosstalk, and superior reliability. Choose Onten for dependable networking solutions that keep your data flowing smoothly.</p><h2>Buy Onten OTN-E661+ Cat-6A RJ45 Connector from Star Tech</h2><p>In Bangladesh, you can get original <strong>Onten OTN-E661+ Cat-6A RJ45 Connector</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Cable Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Onten OTN-E661+ Cat-6A RJ45 Connector comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-E661+</li><li>Cat‑6A Shielding Technology</li><li>RJ45 Compatibility, 100 Pcs Pack</li><li>High‑Speed Performance</li><li>Durable Build Quality</li></ul>",
+      "model": "OTN-E661+",
+      "warranty": "no warranty",
+      "basePrice": 2300.0,
+      "originalPrice": 2530.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-48575",
+          "price": 2300.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2208.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "OTN-E661+",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-e661-plus-rj45-connector",
+      "sourceProductCode": "48575",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-E661+",
+        "Cat‑6A Shielding Technology",
+        "RJ45 Compatibility, 100 Pcs Pack",
+        "High‑Speed Performance",
+        "Durable Build Quality"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/onten-otn-e661-plus-rj45-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/onten-otn-e661-plus-rj45-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-e661-plus-rj45-connector",
+        "candidateTitle": "Onten OTN-E661+ Cat-6A RJ45 Connector (100 Pcs)",
+        "attemptStem": "onten-otn-e661-plus-rj45-connector"
+      }
+    },
+    {
+      "name": "Safenet 36-3000WT-CE Cat6 8P8C RJ45 Connector (50 Pcs)",
+      "slug": "safenet-36-3000wt-ce-rj45-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-47182",
+      "description": "<h2>Safenet 36-3000WT-CE Cat6 8P8C RJ45 Connector (50 Pcs)</h2><p>The Safenet <strong>36-3000WT-CE</strong> Cat6 8P8C RJ45 <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(0, 0, 0);\" target=\"\">Connector</a> is a dependable networking solution designed to ensure consistent data transmission. The Safenet 36-3000WT-CE Cat6 RJ45 Connector has complete Cat6 compatibility and supports high-speed Ethernet performance, making it ideal for modern networks that require consistent signal quality and little interference. This Safenet 36-3000WT-CE RJ45 Connector has a standard 8P8C layout, which ensures compatibility with Cat6 Ethernet cables and typical networking devices like routers, switches, patch panels, and network interface cards. The Safenet RJ45 Connector's transparent design allows users to easily verify wire alignment before crimping, reducing installation errors and increasing overall connection dependability. The Safenet Connector's clear shell makes it a practical alternative for technicians who value precision and efficiency when terminating cables. The Safenet 36-3000WT-CE Cat6 8P8C RJ45 Connector is designed with close-end protection to keep internal wires free of dust, debris, and physical damage, assuring long-term reliability and continuous network performance. The close-end structure also facilitates precise conductor alignment, resulting in improved signal integrity and reliable data flow.</p><h2>Buy Safenet 36-3000WT-CE Cat6 8P8C RJ45 Connector from Star Tech</h2><p>In Bangladesh, you can get original <strong>Safenet 36-3000WT-CE Cat6 8P8C RJ45 Connector</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\">Cable Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at lowest price. The Safenet 36-3000WT-CE Cat6 8P8C RJ45 Connector comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 36-3000WT-CE</li><li>Cat6 Compatibility</li><li>Transparent Design</li><li>Standard 8P8C Compatibility</li><li>Pack of 50 pieces</li></ul>",
+      "model": "36-3000WT-CE",
+      "warranty": "no warranty",
+      "basePrice": 925.0,
+      "originalPrice": 1050.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Safenet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47182",
+          "price": 925.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 888.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "36-3000WT-CE",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/safenet-36-3000wt-ce-rj45-connector",
+      "sourceProductCode": "47182",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 36-3000WT-CE",
+        "Cat6 Compatibility",
+        "Transparent Design",
+        "Standard 8P8C Compatibility",
+        "Pack of 50 pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/safenet-36-3000wt-ce-rj45-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/safenet-36-3000wt-ce-rj45-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "safenet-36-3000wt-ce-rj45-connector",
+        "candidateTitle": "Safenet 36-3000WT-CE Cat6 8P8C RJ45 Connector (50 Pcs)",
+        "attemptStem": "safenet-36-3000wt-ce-rj45-connector"
+      }
+    },
+    {
+      "name": "Schneider Electric DCEJRJ45X100 Cat5e RJ45 Connector (100 Pcs Box)",
+      "slug": "schneider-electric-dcejrj45x100-cat5e-rj45-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-31174",
+      "description": "<h2>Schneider Electric DCEJRJ45X100 Cat5e RJ45 Connector (100 Pcs Box)</h2><p>The Schneider Electric <span style=\"font-weight: bold;\">DCEJRJ45X100 </span>Cat5e RJ45 <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(0, 0, 0);\" target=\"\">Connector </a>is a reliable and high-quality connector suitable for various communication network applications. It supports data transmission speeds of up to 1000 Mbps (1 Gbps) and frequencies of up to 100 MHz, and is compatible with Ethernet, Fast Ethernet, and Gigabit Ethernet standards. The connector has an RJ45 connector type, with eight pins arranged in a specific order, making it easy to insert and remove from network devices. It also features a locking mechanism to prevent accidental disconnection. The Schneider Electric DCEJRJ45X100 Cat5e RJ45 Connector is compatible with stranded cables with an AWG size of 26 to 22, which are more flexible and durable than solid cables. The connector is made of PC (polycarbonate) FR material, a flame retardant plastic, and phosphor bronze with 50 micron-inches of gold-plated contacts, providing high strength, elasticity, and conductivity. The connector is a flexible and durable choice for those seeking a reliable and efficient connector for their network needs.</p><h2>Buy Schneider Electric DCEJRJ45X100 Cat5e RJ45 Connector (100 Pcs Box) from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Schneider Electric DCEJRJ45X100 Cat5e RJ45 Connector (100 Pcs Box)</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Connector </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Schneider Electric DCEJRJ45X100 Cat5e RJ45 Connector (100 Pcs Box) comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DCEJRJ45X100</li><li>Connector Type: RJ45</li><li>Category: 5e</li><li>Termination Contact Plating: Gold</li><li>Compatible Conductor Gauge: 22 AWG | 26 AWG</li></ul>",
+      "model": "DCEJRJ45X100",
+      "warranty": "no warranty",
+      "basePrice": 1800.0,
+      "originalPrice": 2150.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Schneider Electric",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-31174",
+          "price": 1800.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1728.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DCEJRJ45X100",
+              "position": 0
+            },
+            {
+              "label": "Connector Type",
+              "value": "RJ45",
+              "position": 1
+            },
+            {
+              "label": "Category",
+              "value": "5e",
+              "position": 2
+            },
+            {
+              "label": "Termination Contact Plating",
+              "value": "Gold",
+              "position": 3
+            },
+            {
+              "label": "Compatible Conductor Gauge",
+              "value": "22 AWG | 26 AWG",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/schneider-electric-dcejrj45x100-cat5e-rj45-connector",
+      "sourceProductCode": "31174",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DCEJRJ45X100",
+        "Connector Type: RJ45",
+        "Category: 5e",
+        "Termination Contact Plating: Gold",
+        "Compatible Conductor Gauge: 22 AWG | 26 AWG"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/schneider-electric-dcejrj45x100-cat5e-rj45-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/schneider-electric-dcejrj45x100-cat5e-rj45-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "schneider-electric-dcejrj45x100-cat5e-rj45-connector",
+        "candidateTitle": "Schneider Electric DCEJRJ45X100 Cat5e RJ45 Connector (100 Pcs Box)",
+        "attemptStem": "schneider-electric-dcejrj45x100-cat5e-rj45-connector"
+      }
+    },
+    {
+      "name": "UGREEN NW111 Cat6 Shielded Crystal Head RJ45 Network Connector 10 Pack #20333",
+      "slug": "ugreen-nw111-cat6-network-connector-10-pack",
+      "type": "PHYSICAL",
+      "sku": "20333",
+      "description": "<h2 style=\"\">UGREEN NW111 Cat6 Shielded Crystal Head RJ45 Network Connector 10 Pack #20333</h2>\n<p>The UGREEN NW111 Cat6 Shielded Crystal Head RJ45 Network Connector 10 Pack is designed with high-quality materials to ensure reliable signal transmission for cat6 and cat6e network cables. The connectors feature 24K gold-plated pure copper pins with 50 micrometer thick plating, as well as high-grade stainless steel-coated plastic material for added durability. This high-end RJ45 network switch comes in a pack of 10, compatible with various cat6 and cat6e cables, and is designed to limit breakage during the wire pressing process, reducing wastage for projects and works.<br/></p><h2>Buy UGREEN NW111 Cat6 Shielded Crystal Head RJ45 Network Connector 10 Pack #20333 from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/ugreen-nw111-cat6-network-connector-10-pack\" target=\"\">UGREEN NW111 Cat6 Shielded Crystal Head RJ45 Network Connector 10 Pack #20333</a> From Star Tech. We have a large collection of latest UGREEN Network Connector to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The UGREEN NW111 Cat6 Network Connector 10 Pack #20333 comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 20333</li><li>Model: NW111</li><li>Compatible: RJ45 cat6, cat6e</li><li>Material: Pure copper pins, 24K gold plated</li><li>Plastic cover High-grade aluminum anti-broken</li><li>Bag of 10 pieces</li></ul>",
+      "model": "NW111",
+      "warranty": "1 year warranty",
+      "basePrice": 150.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "20333",
+          "price": 150.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 144.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "20333",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "NW111",
+              "position": 1
+            },
+            {
+              "label": "Compatible",
+              "value": "RJ45 cat6, cat6e",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Pure copper pins, 24K gold plated",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-nw111-cat6-network-connector-10-pack",
+      "sourceProductCode": "30082",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "20333",
+      "sourceKeyFeatures": [
+        "MPN: 20333",
+        "Model: NW111",
+        "Compatible: RJ45 cat6, cat6e",
+        "Material: Pure copper pins, 24K gold plated",
+        "Plastic cover High-grade aluminum anti-broken",
+        "Bag of 10 pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/ugreen-nw111-cat6-network-connector-10-pack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/ugreen-nw111-cat6-network-connector-10-pack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-nw111-cat6-network-connector-10-pack",
+        "candidateTitle": "UGREEN NW111 Cat6 Shielded Crystal Head RJ45 Network Connector 10 Pack #20333",
+        "attemptStem": "ugreen-nw111-cat6-network-connector-10-pack"
+      }
+    },
+    {
+      "name": "UGREEN NW114 RJ45 Ethernet Connector #20390",
+      "slug": "ugreen-nw114-rj45-ethernet-connector",
+      "type": "PHYSICAL",
+      "sku": "20390",
+      "description": "<h2>UGREEN NW114 RJ45 Ethernet Connector #20390</h2><p>The UGREEN <span style=\"font-weight: bold;\">NW114</span> CAT-7 RJ45 Network <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(0, 0, 0);\" target=\"\">Coupler</a> #20390 is a high-performance Ethernet connection that allows you to extend your wired network quickly, reliably, and easily. This female-to-female RJ45 coupler can transmit data at speeds of up to 10Gbps and is compatible with Cat7, Cat6, Cat5e, and Cat5 LAN connections. Whether you're connecting a PC, smart TV, game console, or router, its nickel-plated contacts and interior metal shielding prevent interference and protect signal integrity. The coupler is made of robust ABS plastic and has a strong snap-in retention clip, making it both reliable and easy to install. Its compact size (1.65 by 0.98 by 0.9 inches) makes it excellent for home offices, professional installations, and gaming venues. With Plug-and-Play functionality, no configuration is required—just connect and go. Whether you're upgrading your network or solving cable length limitations, the UGREEN NW114 RJ45 Ethernet Connector delivers a fast, efficient, and cost-effective solution for modern connectivity needs. </p><h2>Buy UGREEN NW114 RJ45 Ethernet Connector #20390 from Star Tech</h2><p>In Bangladesh, you can get original <strong>UGREEN NW114 RJ45 Ethernet Connector #20390</strong> From Star Tech. We have a large collection of latest UGREEN <a href=\"https://www.startech.com.bd/cable-connector\">Ethernet Connector</a> to Purchase . Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at lowest price. The UGREEN NW114 RJ45 Ethernet Connector #20390 comes with no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 20390</li><li>Model: NW114</li><li>RJ45 CAT6 Shield Coupler</li><li>Ideal Extender</li><li>Stable and Secure</li><li>Up to 10 GBPS Fast Speed</li></ul>",
+      "model": "NW114",
+      "warranty": "no Warranty",
+      "basePrice": 250.0,
+      "originalPrice": 275.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "20390",
+          "price": 250.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "20390",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "NW114",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-nw114-rj45-ethernet-connector",
+      "sourceProductCode": "44524",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "20390",
+      "sourceKeyFeatures": [
+        "MPN: 20390",
+        "Model: NW114",
+        "RJ45 CAT6 Shield Coupler",
+        "Ideal Extender",
+        "Stable and Secure",
+        "Up to 10 GBPS Fast Speed"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/ugreen-nw114-rj45-ethernet-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/ugreen-nw114-rj45-ethernet-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-nw114-rj45-ethernet-connector",
+        "candidateTitle": "UGREEN NW114 RJ45 Ethernet Connector #20390",
+        "attemptStem": "ugreen-nw114-rj45-ethernet-connector"
+      }
+    },
+    {
+      "name": "UGREEN NW116 Anti-thunder RJ45 Ethernet Connector #30837",
+      "slug": "ugreen-nw116-anti-thunder-rj45-ethernet-connector",
+      "type": "PHYSICAL",
+      "sku": "30837",
+      "description": "<h2 style=\"\">UGREEN NW116 Anti-thunder RJ45 Ethernet Connector #30837</h2>\n<p>The UGREEN NW116 Anti-thunder RJ45 Ethernet Connector is a reliable solution for extending wired internet connections with data transmission speeds of up to 10Gbps. Its modern and compact design features a high-grade PVC shell, and it comes equipped with a lightning protection IC, safeguarding network devices like modems and routers from potential damage caused by lightning strikes. It is built with high-quality materials such as a copper core and 24K gold-plated contact pins. The UGREEN NW116 network connector ensures stable and rapid signal transmission. Its construction provides excellent resistance to environmental factors like oxidation, color fading, rain, and wind, guaranteeing long-lasting performance.<br/></p><h2>Buy UGREEN NW116 Anti-thunder RJ45 Ethernet Connector #30837 from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/ugreen-nw116-anti-thunder-rj45-ethernet-connector\" target=\"\">UGREEN NW116 Anti-thunder RJ45 Ethernet Connector #30837</a> From Star Tech. We have a large collection of latest UGREEN <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The UGREEN NW116 Anti-thunder RJ45 Ethernet Connector comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 30837</li><li>Model: NW116</li><li>Shell material: High-quality PVC</li><li>Material core: Copper - 24K gold-plated pins</li><li>Supported signal transmission speed: 10Gbps</li><li>Cable standard: Lan RJ45</li></ul>",
+      "model": "NW116",
+      "warranty": "1 year warranty",
+      "basePrice": 345.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "30837",
+          "price": 345.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 331.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "30837",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "NW116",
+              "position": 1
+            },
+            {
+              "label": "Shell material",
+              "value": "High-quality PVC",
+              "position": 2
+            },
+            {
+              "label": "Material core",
+              "value": "Copper - 24K gold-plated pins",
+              "position": 3
+            },
+            {
+              "label": "Supported signal transmission speed",
+              "value": "10Gbps",
+              "position": 4
+            },
+            {
+              "label": "Cable standard",
+              "value": "Lan RJ45",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-nw116-anti-thunder-rj45-ethernet-connector",
+      "sourceProductCode": "30054",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "30837",
+      "sourceKeyFeatures": [
+        "MPN: 30837",
+        "Model: NW116",
+        "Shell material: High-quality PVC",
+        "Material core: Copper - 24K gold-plated pins",
+        "Supported signal transmission speed: 10Gbps",
+        "Cable standard: Lan RJ45"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/ugreen-nw116-anti-thunder-rj45-ethernet-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/ugreen-nw116-anti-thunder-rj45-ethernet-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-nw116-anti-thunder-rj45-ethernet-connector",
+        "candidateTitle": "UGREEN NW116 Anti-thunder RJ45 Ethernet Connector #30837",
+        "attemptStem": "ugreen-nw116-anti-thunder-rj45-ethernet-connector"
+      }
+    },
+    {
+      "name": "UGREEN NW116 RJ45 Ethernet Connector #20391",
+      "slug": "ugreen-nw116-rj45-ethernet-connector",
+      "type": "PHYSICAL",
+      "sku": "20391",
+      "description": "<h2>UGREEN NW116 RJ45 Ethernet Connector #20391</h2><p>The UGREEN <strong>NW116</strong> RJ45 Ethernet Connector #20391 is a high-performance networking accessory designed to extend and enhance your wired internet connections. This RJ45 CAT7 shield coupler ensures a stable and secure connection, supporting data transmission speeds of up to 10 Gbps, making it ideal for high-speed LAN environments. The connector features a female-to-female design, allowing you to easily extend two short network cables. Built with a high-quality PVC shell and 24K gold-plated pins, it offers excellent durability and corrosion resistance, ensuring long-lasting performance. Additionally, the integrated lightning protection IC safeguards your network devices from damage caused by lightning strikes. Compact and easy to use, the UGREEN NW116 is perfect for both home and office setups, providing a reliable and fast connection for all your networking needs. With its robust construction and advanced features, this Ethernet connector is a must-have for anyone looking to maintain a high-speed, stable network.</p><h2>Buy UGREEN NW116 RJ45 Ethernet Connector #20391 from Star Tech</h2><p>In Bangladesh, you can get original <strong>UGREEN NW116 RJ45 Ethernet Connector #20391</strong> From Star Tech. We have a large collection of latest UGREEN <a href=\"https://www.startech.com.bd/cable-connector\">Ethernet Connector</a> to Purchase . Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at lowest price. The UGREEN NW116 RJ45 Ethernet Connector comes with 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 20391</li><li>Model: NW116</li><li>RJ45 CAT7 Shield Coupler</li><li>Ideal Extender</li><li>Stable and Secure</li><li>Up to 10 GBPS Fast Speed</li></ul>",
+      "model": "NW116",
+      "warranty": "1 year Warranty",
+      "basePrice": 450.0,
+      "originalPrice": 550.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "20391",
+          "price": 450.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 432.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "20391",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "NW116",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-nw116-rj45-ethernet-connector",
+      "sourceProductCode": "38448",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "20391",
+      "sourceKeyFeatures": [
+        "MPN: 20391",
+        "Model: NW116",
+        "RJ45 CAT7 Shield Coupler",
+        "Ideal Extender",
+        "Stable and Secure",
+        "Up to 10 GBPS Fast Speed"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/ugreen-nw116-rj45-ethernet-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/ugreen-nw116-rj45-ethernet-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-nw116-rj45-ethernet-connector",
+        "candidateTitle": "UGREEN NW116 RJ45 Ethernet Connector #20391",
+        "attemptStem": "ugreen-nw116-rj45-ethernet-connector"
+      }
+    },
+    {
+      "name": "UGREEN NW120 Cat6 Unshielded RJ45 Modular Plug Network Connector 10 Pack #50961",
+      "slug": "ugreen-nw120-cat6-rj45-modular-plug-network-connector-10-pack",
+      "type": "PHYSICAL",
+      "sku": "50961",
+      "description": "<h2 style=\"\">UGREEN NW120 Cat6 Unshielded RJ45 Modular Plug Network Connector 10 Pack #50961</h2>\n<p>The UGREEN NW120 Cat6 Unshielded RJ45 Modular Plug Network Connector 10 Pack features a set of high-quality RJ45 network switches designed to provide superior connectivity for cat6 and cat6e network cables. Manufactured with pure copper pins that are 24K gold plated and a durable clear plastic shell, these network connectors ensure excellent conductivity and reliable signal transmission. The pack contains 10 high-end network connectors, making it compatible with various cat6 and cat6e cables. With its high-quality materials, the UGREEN NW120 network connectors are resistant to breakage during the wire pressing process, minimizing wastage and making them ideal for projects and works requiring reliable and efficient networking solutions.<br/></p><h2>Buy UGREEN NW120 Cat6 Unshielded RJ45 Modular Plug Network Connector 10 Pack #50961 from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/ugreen-nw120-cat6-rj45-modular-plug-network-connector-10-pack\" target=\"\">UGREEN NW120 Cat6 Unshielded RJ45 Modular Plug Network Connector 10 Pack #50961</a> From Star Tech. We have a large collection of latest UGREEN <a href=\"https://www.startech.com.bd/cable\" target=\"\">Cable</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The UGREEN NW120 Cat6 RJ45 Network Connector 10 Pack comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 50961</li><li>Model: NW120</li><li>Compatible: RJ45 cat6, cat6e</li><li>Material: Pure copper pins, 24K gold plated</li><li>High-quality clear plastic shell, anti-breakage</li><li>Bag of 10 pieces</li></ul>",
+      "model": "NW120",
+      "warranty": "1 year warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "50961",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "50961",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "NW120",
+              "position": 1
+            },
+            {
+              "label": "Compatible",
+              "value": "RJ45 cat6, cat6e",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Pure copper pins, 24K gold plated",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-nw120-cat6-rj45-modular-plug-network-connector-10-pack",
+      "sourceProductCode": "30052",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": "50961",
+      "sourceKeyFeatures": [
+        "MPN: 50961",
+        "Model: NW120",
+        "Compatible: RJ45 cat6, cat6e",
+        "Material: Pure copper pins, 24K gold plated",
+        "High-quality clear plastic shell, anti-breakage",
+        "Bag of 10 pieces"
+      ],
+      "needsReview": true,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/ugreen-nw120-cat6-rj45-modular-plug-network-connector-10-pack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/ugreen-nw120-cat6-rj45-modular-plug-network-connector-10-pack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-nw120-cat6-rj45-modular-plug-network-connector-10-pack",
+        "candidateTitle": "UGREEN NW120 Cat6 Unshielded RJ45 Modular Plug Network Connector 10 Pack #50961",
+        "attemptStem": "ugreen-nw120-cat6-rj45-modular-plug-network-connector-10-pack"
+      }
+    },
+    {
+      "name": "UGREEN NW120 Cat6 Unshielded RJ45 Modular Plug Network Connector 50 Pack #50962",
+      "slug": "ugreen-nw120-cat6-rj45-modular-plug-network-connector-50-pack",
+      "type": "PHYSICAL",
+      "sku": "50962",
+      "description": "<h2 style=\"\">UGREEN NW120 Cat6 Unshielded RJ45 Modular Plug Network Connector 50 Pack #50962</h2>\n<p>The UGREEN NW120 Cat6 Unshielded RJ45 Modular Plug Network Connector 50 Pack features a set of high-quality RJ45 network switches designed to provide superior connectivity for cat6 and cat6e network cables. Manufactured with pure copper pins that are 24K gold plated and a durable clear plastic shell, these network connectors ensure excellent conductivity and reliable signal transmission. The pack contains 50 high-end network connectors, making it compatible with various cat6 and cat6e cables. With its high-quality materials, the UGREEN NW120 network connectors are resistant to breakage during the wire pressing process, minimizing wastage and making them ideal for projects and works requiring reliable and efficient networking solutions.<br/></p><h2>Buy UGREEN NW120 Cat6 Unshielded RJ45 Modular Plug Network Connector 50 Pack #50962 from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/ugreen-nw120-cat6-rj45-modular-plug-network-connector-50-pack\" target=\"\">UGREEN NW120 Cat6 Unshielded RJ45 Modular Plug Network Connector 50 Pack #50962</a> From Star Tech. We have a large collection of latest UGREEN <a href=\"https://www.startech.com.bd/cable\" target=\"\">Cable</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The UGREEN NW120 Cat6 RJ45 Network Connector 50 Pack comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 50962</li><li>Model: NW120</li><li>Compatible: RJ45 cat6, cat6e</li><li>Material: Pure copper pins, 24K gold plated</li><li>High-quality clear plastic shell, anti-breakage</li><li>Bag of 50 pieces</li></ul>",
+      "model": "NW120",
+      "warranty": "1 year warranty",
+      "basePrice": 550.0,
+      "originalPrice": 650.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "50962",
+          "price": 550.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 528.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "50962",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "NW120",
+              "position": 1
+            },
+            {
+              "label": "Compatible",
+              "value": "RJ45 cat6, cat6e",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Pure copper pins, 24K gold plated",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-nw120-cat6-rj45-modular-plug-network-connector-50-pack",
+      "sourceProductCode": "30053",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "50962",
+      "sourceKeyFeatures": [
+        "MPN: 50962",
+        "Model: NW120",
+        "Compatible: RJ45 cat6, cat6e",
+        "Material: Pure copper pins, 24K gold plated",
+        "High-quality clear plastic shell, anti-breakage",
+        "Bag of 50 pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/ugreen-nw120-cat6-rj45-modular-plug-network-connector-50-pack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/ugreen-nw120-cat6-rj45-modular-plug-network-connector-50-pack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-nw120-cat6-rj45-modular-plug-network-connector-50-pack",
+        "candidateTitle": "UGREEN NW120 Cat6 Unshielded RJ45 Modular Plug Network Connector 50 Pack #50962",
+        "attemptStem": "ugreen-nw120-cat6-rj45-modular-plug-network-connector-50-pack"
+      }
+    },
+    {
+      "name": "UGREEN NW120 Cat6 UTP RJ45 Connector 100 Pcs #60558",
+      "slug": "ugreen-nw120-rj45-connector-100-pcs",
+      "type": "PHYSICAL",
+      "sku": "60558",
+      "description": "<h2>UGREEN NW120 Cat6 UTP RJ45 Connector 100 Pcs #60558</h2><p>The UGREEN <strong>NW120</strong> Cat6 UTP RJ45 <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(0, 0, 0);\" target=\"\">Connector </a>is a necessary tool for maintaining dependable and efficient network connections. 100 pieces of Cat6 RJ45 8P8C modular plugs are included in this set; they are made especially for Cat 6 UTP cables, which can support speeds of up to 1000Mbps. Gold-plated contacts on every connector ensure flawless data flow and excellent conductivity. Long-lasting performance and increased durability are guaranteed by the 3U gold plating. With a diameter of 1.1±0.02mm, these UGREEN NW120 Cat6 UTP RJ45 connectors can handle single-strand and multi-strand conductors, making them adaptable to a range of cabling requirements. Your home or office network will have safe and reliable connections thanks to the modular plugs, which are ideal for expert network installations. With their sturdy construction and premium materials, the UGREEN NW120 Cat6 UTP RJ45 Connectors are a great addition to any networking toolset since they consistently provide dependable performance.</p><h2>Buy UGREEN NW120 Cat6 UTP RJ45 Connector 100 Pcs #60558 from Star Tech</h2><p>In Bangladesh, you can get original <strong>UGREEN NW120 Cat6 UTP RJ45 Connector 100 Pcs #60558</strong> From Star Tech. We have a large collection of latest UGREEN <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(74, 123, 140);\" target=\"\">Connector </a>to purchase for your <a href=\"https://www.startech.com.bd/utp-cable-and-accessories\" target=\"\">UTP Cable</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The UGREEN NW120 Cat6 UTP RJ45 Connector 100 Pcs #60558 comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 60558</li><li>Model: NW120</li><li>Designed for Cat 6 UTP cable (1000Mbps)</li><li>Gold-plated contacts for error-free data transfer</li><li>High-quality clear plastic shell, anti-breakage</li><li>Pack of 100 pieces</li></ul>",
+      "model": "NW120",
+      "warranty": "no warranty",
+      "basePrice": 650.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "60558",
+          "price": 650.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 624.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "60558",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "NW120",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-nw120-rj45-connector-100-pcs",
+      "sourceProductCode": "39691",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "60558",
+      "sourceKeyFeatures": [
+        "MPN: 60558",
+        "Model: NW120",
+        "Designed for Cat 6 UTP cable (1000Mbps)",
+        "Gold-plated contacts for error-free data transfer",
+        "High-quality clear plastic shell, anti-breakage",
+        "Pack of 100 pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/ugreen-nw120-rj45-connector-100-pcs.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/ugreen-nw120-rj45-connector-100-pcs.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-nw120-rj45-connector-100-pcs",
+        "candidateTitle": "UGREEN NW120 Cat6 UTP RJ45 Connector 100 Pcs #60558",
+        "attemptStem": "ugreen-nw120-rj45-connector-100-pcs"
+      }
+    },
+    {
+      "name": "UGREEN NW123 Cat-6a/Cat-7 RJ45 Network Connector 10 Pack #70316",
+      "slug": "ugreen-nw123-rj45-network-connector",
+      "type": "PHYSICAL",
+      "sku": "70316",
+      "description": "<h2>UGREEN NW123 Cat-6a/Cat-7 RJ45 Network Connector</h2><p style=\"text-align: justify; \">The UGREEN NW123 Cat-6a/Cat-7 RJ45 Network Connector is a high-quality solution for creating reliable and high-speed Ethernet connections. Whether you're assembling shielded network cables or installation cables, this RJ45 connector from UGREEN is designed to meet your networking needs with exceptional performance and ease of use. This <span style=\"font-weight: bold;\">UGREEN NW123</span> RJ45 connector is designed for use with shielded network cables or installation cables, allowing you to construct RJ45 Cat6a/Cat7 network cables. It's suitable for inner wires within the range of 1.1mm to 1.5mm, ensuring compatibility with various cable types. Featuring a robust metal housing, this 8P8C RJ45 wire <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(0, 0, 0);\" target=\"\">connector</a> offers superior shielding that enables fast speeds of up to 10Gbps. This shielded design results in better data transfer rates and higher signal strength compared to unshielded connectors. Your network connections will be more reliable and stable. UGREEN includes a wire insert loading bar with the connector, simplifying the installation process. This loading bar allows you to easily verify the wire sequence, ensuring correct wiring according to either T568A or T568B standards. With this feature, you can avoid wiring mistakes and achieve optimal connectivity effortlessly. The UGREEN NW123 RJ45 connector is designed with a special tail that serves to secure and tighten the cable. This design is particularly useful for accommodating large-diameter network cables, ensuring a stable and snug fit. The thick gold-plated contacts not only enhance network transmission performance but also provide excellent oxidation resistance, extending the connector's lifespan. This UGREEN NW123 RJ45 network connector offers wide-ranging compatibility, making it suitable for various devices including PCs, laptops, modems, set-top boxes, TV boxes, network printers, switches, routers, hubs, and ADSL connections. Whether in a home or professional networking environment, this connector is versatile and reliable. The UGREEN NW123 Cat-6a/Cat-7 RJ45 Network Connector combines a shielded design, simple installation, durability, and universal compatibility to provide an excellent solution for constructing high-speed Ethernet connections. Whether you're a tech enthusiast or a networking professional, this connector offers the reliability and performance you need for seamless data transmission.</p><h2 style=\"text-align: justify; \"><span style=\"color: inherit; font-family: inherit;\">Buy </span>UGREEN NW123 Cat-6a/Cat-7 RJ45 Network Connector 10 Pack #70316<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">UGREEN NW123 Cat-6a/Cat-7 RJ45 Network Connector 10 Pack #70316</span> From Star Tech. We have a large collection of latest UGREEN Network Connector to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The UGREEN NW123 Cat-6a/Cat-7 RJ45 Network Connector comes with 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 70316</li><li>Model: NW123</li><li>Compatible: RJ45 cat6a, cat7</li><li>RJ45 head-shielded metal</li><li>Material: Durable oxygen-free plastic and copper pins</li><li>1bag/10pcs</li></ul>",
+      "model": "NW123",
+      "warranty": "01-year warranty",
+      "basePrice": 549.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "70316",
+          "price": 549.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 527.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "70316",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "NW123",
+              "position": 1
+            },
+            {
+              "label": "Compatible",
+              "value": "RJ45 cat6a, cat7",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Durable oxygen-free plastic and copper pins",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-nw123-rj45-network-connector",
+      "sourceProductCode": "30679",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "70316",
+      "sourceKeyFeatures": [
+        "MPN: 70316",
+        "Model: NW123",
+        "Compatible: RJ45 cat6a, cat7",
+        "RJ45 head-shielded metal",
+        "Material: Durable oxygen-free plastic and copper pins",
+        "1bag/10pcs"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/ugreen-nw123-rj45-network-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/ugreen-nw123-rj45-network-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-nw123-rj45-network-connector",
+        "candidateTitle": "UGREEN NW123 Cat-6a/Cat-7 RJ45 Network Connector 10 Pack #70316",
+        "attemptStem": "ugreen-nw123-rj45-network-connector"
+      }
+    },
+    {
+      "name": "UGREEN NW193 Cat-7 Gold-Plated Shielded RJ45 Connector (10 Pcs)",
+      "slug": "ugreen-nw193-cat-7-rj45-connector",
+      "type": "PHYSICAL",
+      "sku": "50634",
+      "description": "<h2>UGREEN NW193 Cat-7 Gold-Plated Shielded RJ45 Connector (10 Pcs)</h2><p>The UGREEN <strong>NW193</strong> Cat-7 Gold-Plated Shielded RJ45 <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(0, 0, 0);\" target=\"\">Connector </a>is a high-performance networking solution for Cat 7 cables, with data transmission speeds of up to 10Gbps. The durable metal copper shielded housing of this RJ45 connection offers superior protection against electromagnetic interference, preserving signal integrity and improving overall network performance. 50U gold-plated crimp pins, which provide excellent conductivity and corrosion resistance, are included with the UGREEN NW193 Cat-7 RJ45 Connector to ensure long-term durability and dependable connections. With a diameter of 1.3 ± 0.02mm, the CAT-7 connections can handle both single-strand and multi-strand conductors, which makes them adaptable and appropriate for a variety of networking purposes. These RJ45 connectors come in packs of ten, carefully wrapped in aluminum foil bags to prevent environmental deterioration while being stored and transported. Additionally, to guarantee that they fulfill strict requirements and offer reliable performance, Fluke, a top supplier of network testing tools, put these connections through a thorough testing process. With its Cat7 RJ45 8P/8C modular plugs, the UGREEN NW193 RJ45 Connector is a great option for anyone building or upgrading their network infrastructure as it offers a dependable and effective means of high-speed data transmission.</p><img alt=\"UGREEN NW193 Cat-7 Gold-Plated RJ45 Connector\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/networking/connector/ugreen/nw193/nw193-04.webp\" width=\"920\"/><h2>Buy UGREEN NW193 Cat-7 Gold-Plated Shielded RJ45 Connector (10 Pcs) from Star Tech</h2><p>In Bangladesh, you can get original <strong>UGREEN NW193 Cat-7 Gold-Plated Shielded RJ45 Connector (10 Pcs)</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Cable Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The UGREEN NW193 Cat-7 Gold-Plated Shielded RJ45 Connector comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 50634</li><li>Model: NW193</li><li>Diameter: 1.3 ± 0.02mm</li><li>Cable Crimp Pin: 50U Gold Plated</li><li>Shielded metal copper sheath</li><li>Designed for Cat 7 cable (10Gbps)</li></ul>",
+      "model": "NW193",
+      "warranty": "no warranty",
+      "basePrice": 525.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "50634",
+          "price": 525.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 504.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "50634",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "NW193",
+              "position": 1
+            },
+            {
+              "label": "Diameter",
+              "value": "1.3 ± 0.02mm",
+              "position": 2
+            },
+            {
+              "label": "Cable Crimp Pin",
+              "value": "50U Gold Plated",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-nw193-cat-7-rj45-connector",
+      "sourceProductCode": "36428",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "50634",
+      "sourceKeyFeatures": [
+        "MPN: 50634",
+        "Model: NW193",
+        "Diameter: 1.3 ± 0.02mm",
+        "Cable Crimp Pin: 50U Gold Plated",
+        "Shielded metal copper sheath",
+        "Designed for Cat 7 cable (10Gbps)"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/ugreen-nw193-cat-7-rj45-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/ugreen-nw193-cat-7-rj45-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-nw193-cat-7-rj45-connector",
+        "candidateTitle": "UGREEN NW193 Cat-7 Gold-Plated Shielded RJ45 Connector (10 Pcs)",
+        "attemptStem": "ugreen-nw193-cat-7-rj45-connector"
+      }
+    },
+    {
+      "name": "UGREEN NW261 RJ45 Ethernet Connector #15117",
+      "slug": "ugreen-nw261-rj45-connector",
+      "type": "PHYSICAL",
+      "sku": "15117",
+      "description": "<h2>UGREEN NW261 RJ45 Ethernet Connector #15117</h2><p>The UGREEN <strong>NW261</strong> RJ45 Ethernet Connector is a high-performance networking accessory. Designed to provide fast, reliable, and secure wired internet connections. This UGREEN 15117 RJ45 Connector is designed for current needs and supports up to 10Gbps super-fast data transfer, ensuring seamless performance for gaming, streaming, and professional applications. With backward compatibility for 1000Mbps, 100Mbps, and even 10Mbps, the UGREEN NW261 RJ45 Connector easily adapts to various networking configurations. One of its main advantages is its ability to maintain stable transmission over extended distances, allowing for up to 328 feet (100 meters) of extension without sacrificing reliability. The UGREEN RJ45 Connector is made of a durable aluminum alloy shell that not only increases longevity but also protects against wear and tear from daily use. Inside, the UGREEN NW261 RJ45 Connector contact points are gold-plated copper, which provides good conductivity and corrosion resistance, ensuring reliable signal transmission. This UGREEN Ethernet Connector is fully compatible with Cat8, Cat7, Cat6A, Cat6, Cat5e, and Cat5 cables, making it ideal for a variety of settings including businesses, homes, and data centers. Whether you are extending cables for a gaming setup, an office workstation, or a home network, the UGREEN NW261 RJ45 Ethernet Connector #15117 is an efficient solution that offers secure connections and low signal loss. The UGREEN 15117 RJ45 Connector stands out as a solid solution for anyone who appreciates high-quality networking accessories because to its combination of speed, compatibility, and reliability. With the UGREEN RJ45 Ethernet Connector, you can confidently extend your network without sacrificing performance or stability.</p><h2>Buy UGREEN NW261 RJ45 Connector from Star Tech</h2><p>In Bangladesh, you can get original <strong>UGREEN NW261 RJ45 Connector</strong> From Star Tech. We have a large collection of latest UGREEN <a href=\"https://www.startech.com.bd/cable-connector\" style=\"\">Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at lowest price. The UGREEN NW261 RJ45 Connector comes with 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 15117</li><li>Model: NW261</li><li>Type: RJ45 Ethernet Coupler (Female to Female)</li><li>10 Gbps Super-Speed Support, Durable Aluminum Alloy Design</li><li>Transmission Distance: Up to 328ft (100 meters)</li><li>Compatibility: Cat8, Cat7, Cat6A, Cat6, Cat5e, Cat5 cables</li></ul>",
+      "model": "NW261",
+      "warranty": "1 year Warranty",
+      "basePrice": 450.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "15117",
+          "price": 450.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 432.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "15117",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "NW261",
+              "position": 1
+            },
+            {
+              "label": "Type",
+              "value": "RJ45 Ethernet Coupler (Female to Female)",
+              "position": 2
+            },
+            {
+              "label": "Transmission Distance",
+              "value": "Up to 328ft (100 meters)",
+              "position": 3
+            },
+            {
+              "label": "Compatibility",
+              "value": "Cat8, Cat7, Cat6A, Cat6, Cat5e, Cat5 cables",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-nw261-rj45-connector",
+      "sourceProductCode": "45692",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "15117",
+      "sourceKeyFeatures": [
+        "MPN: 15117",
+        "Model: NW261",
+        "Type: RJ45 Ethernet Coupler (Female to Female)",
+        "10 Gbps Super-Speed Support, Durable Aluminum Alloy Design",
+        "Transmission Distance: Up to 328ft (100 meters)",
+        "Compatibility: Cat8, Cat7, Cat6A, Cat6, Cat5e, Cat5 cables"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/ugreen-nw261-rj45-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/ugreen-nw261-rj45-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-nw261-rj45-connector",
+        "candidateTitle": "UGREEN NW261 RJ45 Ethernet Connector #15117",
+        "attemptStem": "ugreen-nw261-rj45-connector"
+      }
+    },
+    {
+      "name": "Ugreen RJ45 Cat6 FTP Modular Plugs Shielding Crystal Head 100 Pcs (1Pack) #50248",
+      "slug": "ugreen-rj45-cat6-ftp-modular-plugs-shielding-crystal-head",
+      "type": "PHYSICAL",
+      "sku": "50248",
+      "description": "<h2 style=\"text-align: justify;\">Ugreen RJ45 Cat6 FTP Modular Plugs Shielding Crystal Head 100 Pcs (1Pack) #50248</h2><p style=\"text-align: justify;\">Ugreen 50248 is RJ45 Cat6 FTP Modular Plugs Shielding Crystal Head. Here Include 100 ethernet connectors in the package, which perfectly meets the daily demands. Its 24k gold-plated design provides maximum conductivity and durability and gives superior protection on the product interior. This Shieled RJ45 Crimp Connectors for CAT5E, CAT5 Network Cable, STP 8P8C 50 micron Gold Plating Connectors for better data transmitting. In this  Shielding Crystal Connector, Max cable jacket OD is 0.26 inches and max conductor OD is 0.40 inches and also Max cable jacket OD is 0.26 inches, and max conductor OD is 0.40 inches. The Network Connector is compatible with Cat5 Cat5e and Cat5 Ethernet cable. This new Ugreen RJ45 Cat6 FTP Modular plug has 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 50248</li><li>Model: RJ45 Cat6 FTP</li><li>Cat-6 Shielding Crystal Head</li><li>RJ45 network adapter</li><li>Compatible: RJ45 cat6, cat6e</li><li>24K gold plated</li></ul>",
+      "model": "RJ45 Cat6 FTP",
+      "warranty": null,
+      "basePrice": 790.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "UGREEN",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "50248",
+          "price": 790.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 758.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "50248",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "RJ45 Cat6 FTP",
+              "position": 1
+            },
+            {
+              "label": "Compatible",
+              "value": "RJ45 cat6, cat6e",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ugreen-rj45-cat6-ftp-modular-plugs-shielding-crystal-head",
+      "sourceProductCode": "20003",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "50248",
+      "sourceKeyFeatures": [
+        "MPN: 50248",
+        "Model: RJ45 Cat6 FTP",
+        "Cat-6 Shielding Crystal Head",
+        "RJ45 network adapter",
+        "Compatible: RJ45 cat6, cat6e",
+        "24K gold plated"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/ugreen-rj45-cat6-ftp-modular-plugs-shielding-crystal-head.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/ugreen-rj45-cat6-ftp-modular-plugs-shielding-crystal-head.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ugreen-rj45-cat6-ftp-modular-plugs-shielding-crystal-head",
+        "candidateTitle": "Ugreen RJ45 Cat6 FTP Modular Plugs Shielding Crystal Head 100 Pcs (1Pack) #50248",
+        "attemptStem": "ugreen-rj45-cat6-ftp-modular-plugs-shielding-crystal-head"
+      }
+    },
+    {
+      "name": "Vention IDDR0-10 Cat6 UTP RJ45 Transparent Connector (10 Pack)",
+      "slug": "vention-iddr0-10-cat6-rj45-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-38162",
+      "description": "<h2>Vention IDDR0-10 Cat6 UTP RJ45 Transparent Connector (10 Pack)</h2><p></p><p>The Vention <span style=\"font-weight: bold;\">IDDR0-10</span> Cat6 UTP RJ45 Transparent Connector (10 Pack) offers a reliable and high-performance solution for fast and stable networking. These connectors are designed with a three-pronged chip that ensures full-contact transmission by tightly combining the contacts with the cable’s core. This results in fast and stable data transfers, reducing the risk of errors during transmission. Whether for home or professional use, these connectors provide an easy-to-install option for achieving high-speed network connections. This connectors is their gold-plated terminals, which are designed to resist rust and ensure long-term stability. The thick gold plating helps maintain a stable network speed over time, making these connectors ideal for environments where long-lasting, reliable performance is required. This gold-plated design not only ensures excellent connectivity but also helps prevent corrosion, keeping the connectors functioning efficiently even after prolonged use. Made from high-quality polycarbonate (PC) material, these <a href=\"https://www.startech.com.bd/cable-connector\" style=\"color: rgb(0, 0, 0);\" target=\"\">connectors</a> are both tough and corrosion-resistant, ensuring durability in various conditions. The robust construction makes them perfect for users who need a reliable networking solution that will stand the test of time. This 10-pack provides a practical and cost-effective option for those looking to upgrade or replace their current Cat6 UTP Ethernet connectors.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>Vention IDDR0-10 Cat6 UTP RJ45 Transparent Connector (10 Pack)<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2><p>In Bangladesh, you can get the original <span style=\"font-weight: 700;\">Vention IDDR0-10 Cat6 UTP RJ45 Transparent Connector (10 Pack)</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Cable connectors</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Vention IDDR0-10 Cat6 RJ45 Connector comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IDDR0-10</li><li>Type: RJ45 Connector</li><li>Color: Transparent</li><li>Material: High-quality PC</li><li>Bag of 10 pieces</li></ul>",
+      "model": "IDDR0-10",
+      "warranty": "no warranty",
+      "basePrice": 150.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Vention",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Transparent",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-38162",
+          "price": 150.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Transparent"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 144.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IDDR0-10",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "RJ45 Connector",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Transparent",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "High-quality PC",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-iddr0-10-cat6-rj45-connector",
+      "sourceProductCode": "38162",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IDDR0-10",
+        "Type: RJ45 Connector",
+        "Color: Transparent",
+        "Material: High-quality PC",
+        "Bag of 10 pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-iddr0-10-cat6-rj45-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-iddr0-10-cat6-rj45-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-iddr0-10-cat6-rj45-connector",
+        "candidateTitle": "Vention IDDR0-10 Cat6 UTP RJ45 Transparent Connector (10 Pack)",
+        "attemptStem": "vention-iddr0-10-cat6-rj45-connector"
+      }
+    },
+    {
+      "name": "Vention IDDR0-100 Cat6 UTP RJ45 Transparent Connector (100 Pcs)",
+      "slug": "vention-iddr0-100-cat6-rj45-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-32027",
+      "description": "<h2>Vention IDDR0-100 Cat6 UTP RJ45 Transparent Connector (100 Pcs)</h2><p>The Vention IDDR0-100 Cat6 UTP RJ45 Transparent Connector (100 Pcs) features a full contact transmission speed that can ensure a stable and secure connection between the cable and the device. The Vention Cable connector features a three-pronged chip, which makes the contacts tightly combine with the core of the cable. This can prevent loose or poor contact and improve the signal quality. The Vention IDDR0-100 RJ45 Connector also features gold-plated contacts, which do not rust and have high conductivity. The RJ45 connector has thick gold-plated terminals, which can maintain the network speed for a long time without degradation. The gold plating also protects the contacts from corrosion and oxidation. The Vention IDDR0-100 Cable Connector comes with high-quality PC material, which is corrosion-resistant and tough. The network cable connector has a transparent color, which helps you see the wiring clearly and avoid mistakes. The connector has a standard size and shape, which makes it easy to install and use.</p><h2>Buy Vention IDDR0-100 Cat6 UTP RJ45 Transparent Connector from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/vention-iddr0-100-cat6-rj45-connector\" target=\"\">Vention IDDR0-100 Cat6 UTP RJ45 Transparent Connector</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Cable Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Vention IDDR0-100 Cat6 RJ45 Connector comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Vention IDDR0-100</li><li>Gold-plated contacts do not rust</li><li>Corrosion-resistant and tough</li><li>Material: High-quality PC</li><li>Bag of 100 pieces</li></ul>",
+      "model": "Vention IDDR0-100",
+      "warranty": "no warranty",
+      "basePrice": 1300.0,
+      "originalPrice": 1450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-32027",
+          "price": 1300.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1248.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Vention IDDR0-100",
+              "position": 0
+            },
+            {
+              "label": "Material",
+              "value": "High-quality PC",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-iddr0-100-cat6-rj45-connector",
+      "sourceProductCode": "32027",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Vention IDDR0-100",
+        "Gold-plated contacts do not rust",
+        "Corrosion-resistant and tough",
+        "Material: High-quality PC",
+        "Bag of 100 pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-iddr0-100-cat6-rj45-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-iddr0-100-cat6-rj45-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-iddr0-100-cat6-rj45-connector",
+        "candidateTitle": "Vention IDDR0-100 Cat6 UTP RJ45 Transparent Connector (100 Pcs)",
+        "attemptStem": "vention-iddr0-100-cat6-rj45-connector"
+      }
+    },
+    {
+      "name": "Vention IDDR0-50 Cat6 UTP RJ45 Transparent Connector (50 Pcs)",
+      "slug": "vention-iddr0-50-cat6-rj45-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-32028",
+      "description": "<h2>Vention IDDR0-50 Cat6 UTP RJ45 Transparent Connector (50 Pcs)</h2><p>The Vention IDDR0-50 Cat6 UTP RJ45 Transparent Connector (50 Pcs) features a full contact transmission speed that can ensure a stable and secure connection between the cable and the device. The Vention Cable connector features a three-pronged chip, which makes the contacts tightly combine with the core of the cable. This can prevent loose or poor contact and improve the signal quality. The Vention IDDR0-50 RJ45 Connector also features gold-plated contacts, which do not rust and have high conductivity. The RJ45 connector has thick gold-plated terminals, which can maintain the network speed for a long time without degradation. The gold plating also protects the contacts from corrosion and oxidation. The Vention IDDR0-50 Cable Connector comes with high-quality PC material, which is corrosion-resistant and tough. The network cable connector has a transparent color, which helps you see the wiring clearly and avoid mistakes. The connector has a standard size and shape, which makes it easy to install and use.</p><h2>Buy Vention IDDR0-50 Cat6 UTP RJ45 Transparent Connector from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/vention-iddr0-50-cat6-rj45-connector\" target=\"\">Vention IDDR0-50 Cat6 UTP RJ45 Transparent Connector</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Cable Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Vention IDDR0-50 Cat6 RJ45 Connector comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Vention IDDR0-50</li><li>Gold-plated contacts do not rust</li><li>Corrosion-resistant and tough</li><li>Material: High-quality PC</li><li>Bag of 50 pieces</li></ul>",
+      "model": "Vention IDDR0-50",
+      "warranty": "no warranty",
+      "basePrice": 650.0,
+      "originalPrice": 850.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-32028",
+          "price": 650.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 624.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Vention IDDR0-50",
+              "position": 0
+            },
+            {
+              "label": "Material",
+              "value": "High-quality PC",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-iddr0-50-cat6-rj45-connector",
+      "sourceProductCode": "32028",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Vention IDDR0-50",
+        "Gold-plated contacts do not rust",
+        "Corrosion-resistant and tough",
+        "Material: High-quality PC",
+        "Bag of 50 pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-iddr0-50-cat6-rj45-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-iddr0-50-cat6-rj45-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-iddr0-50-cat6-rj45-connector",
+        "candidateTitle": "Vention IDDR0-50 Cat6 UTP RJ45 Transparent Connector (50 Pcs)",
+        "attemptStem": "vention-iddr0-50-cat6-rj45-connector"
+      }
+    },
+    {
+      "name": "Vention IDER0-10 Cat7 FTP RJ45 Transparent Connector (10 Pcs)",
+      "slug": "vention-ider0-10-cat7-rj45-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-32029",
+      "description": "<h2>Vention IDER0-10 Cat7 FTP RJ45 Transparent Connector (10 Pcs)</h2><p>The Vention IDER0-10 Cat7 FTP RJ45 Transparent Connector (10 Pcs) features a full contact transmission speed that can ensure a stable and secure connection between the cable and the device. The Vention RJ45 cable connector has a three-pronged chip that contacts tightly with the core of the cable. This can prevent loose or poor contact and improve the signal quality. The Vention IDER0-10 Cat7 RJ45 Connector also features gold-plated contacts, which do not rust and have high conductivity. The Cat7 cable connector has thick gold-plated terminals that help maintain the network speed for a long time without degradation. The gold plating also protects the contacts from corrosion and oxidation. The Vention IDER0-10 Cat7 FTP RJ45 Connector also features a metal shielding anti-interference feature. This feature has a metal-shielded shell that can reduce interference from external sources and ensure a more stable transmission. The metal shielding also enhances the durability and strength of the connector. The Cat7 FTP RJ45 Connector also features an oversized wire hole for easy wiring, and it has a transparent bracket that can accommodate larger wires, making it easy to see the wire sequence and ensure accurate wiring. The transparent bracket also allows you to check the wiring status and troubleshoot any problems.</p><h2>Buy Vention IDER0-10 Cat7 FTP RJ45 Transparent Connector from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/vention-ider0-10-cat7-rj45-connector\" target=\"\">Vention IDER0-10 Cat7 FTP RJ45 Transparent Connector</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Cable Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Vention IDER0-10 Cat7 RJ45 Connector comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Vention IDER0-10</li><li>Gold-plated contacts do not rust</li><li>Metal Shielding Anti-interference</li><li>Material: High-quality PC</li><li>Bag of 10 pieces</li></ul>",
+      "model": "Vention IDER0-10",
+      "warranty": "no warranty",
+      "basePrice": 950.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-32029",
+          "price": 950.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 912.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Vention IDER0-10",
+              "position": 0
+            },
+            {
+              "label": "Material",
+              "value": "High-quality PC",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-ider0-10-cat7-rj45-connector",
+      "sourceProductCode": "32029",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Vention IDER0-10",
+        "Gold-plated contacts do not rust",
+        "Metal Shielding Anti-interference",
+        "Material: High-quality PC",
+        "Bag of 10 pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-ider0-10-cat7-rj45-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-ider0-10-cat7-rj45-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-ider0-10-cat7-rj45-connector",
+        "candidateTitle": "Vention IDER0-10 Cat7 FTP RJ45 Transparent Connector (10 Pcs)",
+        "attemptStem": "vention-ider0-10-cat7-rj45-connector"
+      }
+    },
+    {
+      "name": "Vention IDFR0-10 Cat6A UTP RJ45 Connector (10 Pack)",
+      "slug": "vention-idfr0-10-cat6-rj45-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-38858",
+      "description": "<h2>Vention IDFR0-10 Cat6A UTP RJ45 Connector (10 Pack)</h2><p>VENTION <strong>IDFR0-10</strong> Cat.6A FTP RJ45 Modular Plug - 10 Pack is designed to ensure a proper LAN connection and stability. The three-fold gold-plated contacts provide a tight and secure connection; the thick gold-plating also guarantees that the networks remain rust-free, resulting in long-lasting contacts. These plugs are made of durable and anti-corrosive PC material, ensuring long-lasting durability.The metal insulated shell's design reduces the impact of interference, hence improving data transfer, making it ideal for gaming and other intensive applications. The wiring accommodation is completely unaffected, thanks to the large wire holes and visible bracket. The plugs are intended for use with the RJ45 network cable interface equipment and have  been tested for reliability with the FLUKE test.</p><h2>Vention IDFR0-10 Cat6A UTP RJ45 Connector (10 Pack) from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Vention IDFR0-10 Cat6A UTP RJ45 Connector (10 Pack)</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/cable-connector\">Cable connectors</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Vention IDFR0-10 Cat6A UTP RJ45 Connector (10 Pack) comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IDFR0-10</li><li>Type: RJ45 Connector</li><li>Gold-plated contacts</li><li>Material: Metal Shielding Anti-interference</li><li>Bag of 10 pieces</li></ul>",
+      "model": "IDFR0-10",
+      "warranty": "1 year warranty",
+      "basePrice": 250.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-38858",
+          "price": 250.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IDFR0-10",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "RJ45 Connector",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "Metal Shielding Anti-interference",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-idfr0-10-cat6-rj45-connector",
+      "sourceProductCode": "38858",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IDFR0-10",
+        "Type: RJ45 Connector",
+        "Gold-plated contacts",
+        "Material: Metal Shielding Anti-interference",
+        "Bag of 10 pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-idfr0-10-cat6-rj45-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-idfr0-10-cat6-rj45-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-idfr0-10-cat6-rj45-connector",
+        "candidateTitle": "Vention IDFR0-10 Cat6A UTP RJ45 Connector (10 Pack)",
+        "attemptStem": "vention-idfr0-10-cat6-rj45-connector"
+      }
+    },
+    {
+      "name": "Vention IDFR0-50 CAT-6A RJ45 Transparert FTP Connector (50 pcs)",
+      "slug": "vention-idfr0-50-cat-6a-rj45-ftp-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-36939",
+      "description": "<h2>Vention IDFR0-50 CAT-6A RJ45 Transparent FTP Connector (50 pcs)</h2><p>The Vention <strong>IDFR0-50</strong> CAT-6A RJ45 Transparent FTP Connector is a professional-grade networking component designed for high-performance Ethernet connections. This package includes 50 individual connectors, making it an ideal choice for network installers, IT professionals, and businesses requiring multiple high-quality network terminations. These CAT-6A connectors are engineered to support the latest high-speed network standards, ensuring reliable and efficient data transmission in various networking environments.</p><h3>High-Performance Network Connectivity</h3><p>These RJ45 connectors comply with the CAT-6A (Augmented Category 6) standard, supporting data transmission speeds of up to 10 Gigabits per second over distances up to 100 meters. This makes them suitable for demanding network applications, including high-definition video streaming, large file transfers, and data center operations. The Vention IDFR0-50 CAT-6A RJ45 Transparent FTP Connectors represent a professional-grade solution for modern network cabling needs. Their combination of high-speed capability, reliable shielding, and durable construction makes them an excellent choice for any network infrastructure requiring top-tier performance and reliability. Whether you're setting up a new network or upgrading an existing one, these connectors provide the quality and performance needed for today's data-intensive applications.</p><h3>FTP (Foiled Twisted Pair) Design</h3><p>The FTP construction of these connectors provides enhanced shielding against electromagnetic interference (EMI) and radio frequency interference (RFI). This shielding is crucial in environments with high electrical noise, ensuring consistent and reliable network performance.</p><h3>Transparent Housing</h3><p>The transparent design of the connector housing allows for easy visual inspection of the wire arrangement and termination quality. This feature is particularly useful for network technicians during installation and troubleshooting processes.</p><h3>Durability and Reliability</h3><p>Constructed with high-quality materials, these connectors are built to withstand repeated use and maintain signal integrity over time. The gold-plated contacts ensure excellent conductivity and resistance to corrosion, contributing to the longevity of the network connection.</p><h3>Versatile Application</h3><p>Suitable for use in various networking scenarios, including office buildings, data centers, industrial environments, and home networks. The connectors are compatible with both solid and stranded copper cables, offering flexibility in cable choice.</p><h3>Easy Installation</h3><p>Designed for straightforward termination, these connectors can be easily installed using standard network crimping tools. The clear markings and color coding facilitate proper wire alignment, reducing the likelihood of installation errors.</p><h2>Buy Vention IDFR0-50 CAT-6A RJ45 Transparent FTP Connector (50 pcs) from Star Tech</h2><p>In Bangladesh, you can get original <strong>Vention IDFR0-50 CAT-6A RJ45 Transparent FTP Connector (50 pcs)</strong> From Star Tech. We have a large collection of latest Vention Networking <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Connectors </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Vention IDFR0-50 CAT-6A RJ45 Transparent FTP Connector (50 pcs) has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IDFR0-50</li><li>Full contact transmission fast</li><li>Metal Shielding Anti-interference</li><li>Shell: Iron+PC</li><li>Pack: 50 Pieces</li></ul>",
+      "model": "IDFR0-50",
+      "warranty": null,
+      "basePrice": 900.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-36939",
+          "price": 900.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 864.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IDFR0-50",
+              "position": 0
+            },
+            {
+              "label": "Shell",
+              "value": "Iron+PC",
+              "position": 1
+            },
+            {
+              "label": "Pack",
+              "value": "50 Pieces",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-idfr0-50-cat-6a-rj45-ftp-connector",
+      "sourceProductCode": "36939",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IDFR0-50",
+        "Full contact transmission fast",
+        "Metal Shielding Anti-interference",
+        "Shell: Iron+PC",
+        "Pack: 50 Pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-idfr0-50-cat-6a-rj45-ftp-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-idfr0-50-cat-6a-rj45-ftp-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-idfr0-50-cat-6a-rj45-ftp-connector",
+        "candidateTitle": "Vention IDFR0-50 CAT-6A RJ45 Transparert FTP Connector (50 pcs)",
+        "attemptStem": "vention-idfr0-50-cat-6a-rj45-ftp-connector"
+      }
+    },
+    {
+      "name": "Vention IDGR0-50 Cat6A RJ45 Transparent Connector (50 Pcs)",
+      "slug": "vention-idgr0-50-rj45-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-40338",
+      "description": "<h2>Vention IDGR0-50 Cat6A RJ45 Transparent Connector (50 Pcs)</h2><p>The Vention <strong>IDGR0-50</strong> Cat6A RJ45 Transparent Connector is a high-performance networking component intended for use in demanding network environments. This Vention Connector has a transparent appearance with gold-plated contacts that resist corrosion and provide dependable, long-lasting connections, making it suitable for both professional and household networking setups. The Vention Ethernet Connector supports Cat6A network rates of up to 10Gbps, ensuring fast and reliable data transmission for high-bandwidth applications like as streaming, gaming, and huge file transfers. Also, Vention IDGR0-50 RJ45 Transparent Connector's backward compatibility with Cat5 and Cat5e cables ensures flexibility and ease of integration into existing network infrastructures. The Vention RJ45 Connector reduces signal loss and interference, resulting in increased overall network performance. This RJ45 connector is a fantastic solution for anyone wishing to enhance their network to accommodate higher speeds and increased dependability without sacrificing quality or durability. Whether you're starting a new network or upgrading an existing one, the Vention IDGR0-50 Cat6A RJ45 Transparent Connector provides superior performance and reliability.</p><h2>Buy Vention IDGR0-50 Cat6A RJ45 Transparent Connector from Star Tech<p></p></h2><p>In Bangladesh, you can get original <strong>Vention IDGR0-50 Cat6A RJ45 Transparent Connector</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/cable-connector\">Cable Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at lowest price. The Vention IDGR0-50 RJ45 Connector comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IDGR0-50</li><li>Three-pronged Gold-plated 1U Chip</li><li>Corrosion-resistant and tough</li><li>Material: High-quality PC</li><li>Pack of 50 pieces</li></ul>",
+      "model": "IDGR0-50",
+      "warranty": "1 year warranty",
+      "basePrice": 850.0,
+      "originalPrice": 950.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-40338",
+          "price": 850.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 816.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IDGR0-50",
+              "position": 0
+            },
+            {
+              "label": "Material",
+              "value": "High-quality PC",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-idgr0-50-rj45-connector",
+      "sourceProductCode": "40338",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IDGR0-50",
+        "Three-pronged Gold-plated 1U Chip",
+        "Corrosion-resistant and tough",
+        "Material: High-quality PC",
+        "Pack of 50 pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-idgr0-50-rj45-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-idgr0-50-rj45-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-idgr0-50-rj45-connector",
+        "candidateTitle": "Vention IDGR0-50 Cat6A RJ45 Transparent Connector (50 Pcs)",
+        "attemptStem": "vention-idgr0-50-rj45-connector"
+      }
+    },
+    {
+      "name": "Vention IDIH0 Cat6A FTP RJ45 Toolless Connector",
+      "slug": "vention-idih0-cat6a-ftp-rj45-toolless-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-48337",
+      "description": "<h2>Vention IDIH0 Cat6A FTP RJ45 Toolless Connector</h2><p>The <strong>Vention IDIH0 Cat6A FTP RJ45 Toolless Connector</strong> delivers a reliable 10Gbps transmission rate for high-speed data transfer. Its toolless installation design ensures quick and effortless setup without specialized equipment. Built with premium anti-interference ability, it maintains stable performance even in demanding environments. Gold-plated contact points enhance conductivity and durability, reducing signal loss over time. The Vention IDIH0 connector allows custom cable lengths, offering flexibility for different networking needs. Vention IDIH0 connector's gray color provides a sleek, professional appearance suitable for modern setups. Featuring an RJ45 interface, it is compatible with standard Ethernet applications. The zinc alloy interface technics add strength and resistance to wear, ensuring long-term reliability. A gold-plated trident 1U contact chip further improves signal stability and connection quality. The zinc alloy shell offers robust protection against physical damage and electromagnetic interference. This combination of advanced materials and thoughtful design makes the connector ideal for enterprise networks, data centers, and home installations. It balances performance, durability, and convenience in one compact solution. With its premium build and user-friendly features, the Vention IDIH0 Cat6A FTP RJ45 Toolless Connector stands out as a reliable option for modern networking requirements.</p><h2>Vention IDIH0 Cat6A FTP RJ45 Toolless Connector from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Vention IDIH0 Cat6A FTP RJ45 Toolless Connector</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/cable-connector\">Cable connectors</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Vention IDIH0 Cat6A FTP RJ45 Toolless Connector comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IDIH0</li><li>Type: RJ45 Connector</li><li>Toolless Installation</li><li>Material: Metal Shielding Anti-interference</li><li>Contact Chip Technics: Gold-plated Trident 1U</li></ul>",
+      "model": "IDIH0",
+      "warranty": "1 year warranty",
+      "basePrice": 375.0,
+      "originalPrice": 425.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-48337",
+          "price": 375.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IDIH0",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "RJ45 Connector",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "Metal Shielding Anti-interference",
+              "position": 2
+            },
+            {
+              "label": "Contact Chip Technics",
+              "value": "Gold-plated Trident 1U",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-idih0-cat6a-ftp-rj45-toolless-connector",
+      "sourceProductCode": "48337",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IDIH0",
+        "Type: RJ45 Connector",
+        "Toolless Installation",
+        "Material: Metal Shielding Anti-interference",
+        "Contact Chip Technics: Gold-plated Trident 1U"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-idih0-cat6a-ftp-rj45-toolless-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-idih0-cat6a-ftp-rj45-toolless-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-idih0-cat6a-ftp-rj45-toolless-connector",
+        "candidateTitle": "Vention IDIH0 Cat6A FTP RJ45 Toolless Connector",
+        "attemptStem": "vention-idih0-cat6a-ftp-rj45-toolless-connector"
+      }
+    },
+    {
+      "name": "VENTION IDLR0-100 Cat-6A RJ45 FTP Transparert Connector (100 Pcs)",
+      "slug": "vention-idlr0-100-ftp-connector-100-pcs",
+      "type": "PHYSICAL",
+      "sku": "ST-48326",
+      "description": "<h2>VENTION IDLR0-100 Cat-6A RJ45 FTP Transparert Connector (100 Pcs)</h2><p>The <strong>VENTION IDLR0-100</strong> Cat-6A RJ45 FTP Transparent Connector (100 Pcs) is a professional-grade networking accessory designed for assembling Cat-6A shielded Ethernet cables, supporting up to 10Gbps transmission speeds. Each connector features a durable transparent polycarbonate housing with gold-plated contacts that ensure excellent conductivity, corrosion resistance, and long-term stability. Its FTP (Foiled Twisted Pair) design helps minimize electromagnetic interference, making it ideal for high-performance networks in offices, data centers, and home setups. With 100 pieces included, this pack provides a reliable and cost-effective solution for bulk cable terminations, offering both durability and precision for structured cabling projects.</p><h2>Buy VENTION IDLR0-100 Cat-6A RJ45 FTP Transparert Connector (100 Pcs) from Star Tech</h2><p>In Bangladesh, you can get original <strong>VENTION IDLR0-100 Cat-6A RJ45 FTP Transparert Connector (100 Pcs)</strong> From Star Tech. We have a large collection of latest Vention Networking <a href=\"https://www.startech.com.bd/cable-connector\" target=\"\">Connectors </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The VENTION IDLR0-100 Cat-6A RJ45 FTP Transparert Connector (100 Pcs) has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IDLR0-100</li><li>Full contact transmission fast</li><li>Metal Shielding Anti-interference</li><li>Shell: Iron+PC</li><li>Pack: 100 Pieces</li></ul>",
+      "model": "IDLR0-100",
+      "warranty": null,
+      "basePrice": 1350.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-48326",
+          "price": 1350.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1296.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IDLR0-100",
+              "position": 0
+            },
+            {
+              "label": "Shell",
+              "value": "Iron+PC",
+              "position": 1
+            },
+            {
+              "label": "Pack",
+              "value": "100 Pieces",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-idlr0-100-ftp-connector-100-pcs",
+      "sourceProductCode": "48326",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IDLR0-100",
+        "Full contact transmission fast",
+        "Metal Shielding Anti-interference",
+        "Shell: Iron+PC",
+        "Pack: 100 Pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-idlr0-100-ftp-connector-100-pcs.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-idlr0-100-ftp-connector-100-pcs.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-idlr0-100-ftp-connector-100-pcs",
+        "candidateTitle": "VENTION IDLR0-100 Cat-6A RJ45 FTP Transparert Connector (100 Pcs)",
+        "attemptStem": "vention-idlr0-100-ftp-connector-100-pcs"
+      }
+    },
+    {
+      "name": "Vention IODB0-50 RJ45 Strain Relief Boots",
+      "slug": "vention-iodb0-50-rj45-strain-relief-boots",
+      "type": "PHYSICAL",
+      "sku": "ST-40273",
+      "description": "<h2>Vention IODB0-50 RJ45 Strain Relief Boots</h2><p>The Vention <strong>IODB0-50</strong> RJ45 Strain Relief Boots are designed to protect and extend the life of network connections. These boots are made of sturdy PVC and have an outer diameter of 6.5mm. They are waterproof and dustproof, preventing dust and water from entering the RJ45 plug. They provide stable connections by preventing breakage and shielding the exposed insulation from damage. The adaptable form enables simple installation and quick rebound, making wiring operations more efficient. The Vention IODB0-50 RJ45 Strain Relief Boots are ideal for both residential and professional use, ensuring the integrity and performance of your network connections.</p><h2>Buy Vention IODB0-50 RJ45 Strain Relief Boots from Star Tech</h2><p>In Bangladesh, you can get original <strong>Vention IODB0-50 RJ45 Strain Relief Boots</strong> From Star Tech. We have a large collection of latest Vention <a href=\"https://www.startech.com.bd/cable-connector\">Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Vention IODB0-50 RJ45 Strain Relief Boots has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IODB0-50</li><li>OD Support：6.5mm</li><li>Waterproof and dustproof</li><li>Shell Type: PVC</li><li>Quantity: 50 Pieces</li></ul>",
+      "model": "IODB0-50",
+      "warranty": null,
+      "basePrice": 300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-40273",
+          "price": 300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 288.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IODB0-50",
+              "position": 0
+            },
+            {
+              "label": "Shell Type",
+              "value": "PVC",
+              "position": 1
+            },
+            {
+              "label": "Quantity",
+              "value": "50 Pieces",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-iodb0-50-rj45-strain-relief-boots",
+      "sourceProductCode": "40273",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IODB0-50",
+        "OD Support：6.5mm",
+        "Waterproof and dustproof",
+        "Shell Type: PVC",
+        "Quantity: 50 Pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-iodb0-50-rj45-strain-relief-boots.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-iodb0-50-rj45-strain-relief-boots.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-iodb0-50-rj45-strain-relief-boots",
+        "candidateTitle": "Vention IODB0-50 RJ45 Strain Relief Boots",
+        "attemptStem": "vention-iodb0-50-rj45-strain-relief-boots"
+      }
+    },
+    {
+      "name": "Vention IODH0-50 RJ45 Strain Relief Boots",
+      "slug": "vention-iodh0-50-rj45-strain-relief-boots",
+      "type": "PHYSICAL",
+      "sku": "ST-40276",
+      "description": "<h2>Vention IODH0-50 RJ45 Strain Relief Boots</h2><p>The Vention <strong>IODH0-50</strong> RJ45 Strain Relief Boots are designed to protect and extend the life of network connections. These boots are made of sturdy PVC and have an outer diameter of 6.5mm. They are waterproof and dustproof, preventing dust and water from entering the RJ45 plug. They provide stable connections by preventing breakage and shielding the exposed insulation from damage. The adaptable form enables simple installation and quick rebound, making wiring operations more efficient. The Vention IODH0-50 RJ45 Strain Relief Boots are ideal for both residential and professional use, ensuring the integrity and performance of your network connections.</p><h2>Buy Vention IODH0-50 RJ45 Strain Relief Boots from Star Tech</h2><p>In Bangladesh, you can get original <strong>Vention IODH0-50 RJ45 Strain Relief Boots</strong> From Star Tech. We have a large collection of latest Vention <a href=\"https://www.startech.com.bd/cable-connector\">Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Vention IODH0-50 RJ45 Strain Relief Boots has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IODH0-50</li><li>OD Support：6.5mm</li><li>Waterproof and dustproof</li><li>Shell Type: PVC</li><li>Quantity: 50 Pieces</li></ul>",
+      "model": "IODH0-50",
+      "warranty": null,
+      "basePrice": 350.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-40276",
+          "price": 350.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 336.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IODH0-50",
+              "position": 0
+            },
+            {
+              "label": "Shell Type",
+              "value": "PVC",
+              "position": 1
+            },
+            {
+              "label": "Quantity",
+              "value": "50 Pieces",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-iodh0-50-rj45-strain-relief-boots",
+      "sourceProductCode": "40276",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IODH0-50",
+        "OD Support：6.5mm",
+        "Waterproof and dustproof",
+        "Shell Type: PVC",
+        "Quantity: 50 Pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-iodh0-50-rj45-strain-relief-boots.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-iodh0-50-rj45-strain-relief-boots.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-iodh0-50-rj45-strain-relief-boots",
+        "candidateTitle": "Vention IODH0-50 RJ45 Strain Relief Boots",
+        "attemptStem": "vention-iodh0-50-rj45-strain-relief-boots"
+      }
+    },
+    {
+      "name": "Vention IODL0-50 RJ45 Strain Relief Boots Blue (50 Pcs)",
+      "slug": "vention-iodl0-50-rj45-strain-relief-boots",
+      "type": "PHYSICAL",
+      "sku": "ST-40277",
+      "description": "<h2>Vention IODL0-50 RJ45 Strain Relief Boots</h2><p>The Vention <strong>IODL0-50</strong> RJ45 Strain Relief Boots are designed to protect and extend the life of network connections. These boots are made of sturdy PVC and have an outer diameter of 6.5mm. They are waterproof and dustproof, preventing dust and water from entering the RJ45 plug. They provide stable connections by preventing breakage and shielding the exposed insulation from damage. The adaptable form enables simple installation and quick rebound, making wiring operations more efficient. The Vention IODL0-50 RJ45 Strain Relief Boots are ideal for both residential and professional use, ensuring the integrity and performance of your network connections.</p><h2>Buy Vention IODL0-50 RJ45 Strain Relief Boots from Star Tech</h2><p>In Bangladesh, you can get original <strong>Vention IODL0-50 RJ45 Strain Relief Boots</strong> From Star Tech. We have a large collection of latest Vention <a href=\"https://www.startech.com.bd/cable-connector\">Connector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The Vention IODL0-50 RJ45 Strain Relief Boots has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IODH0-50</li><li>OD Support：6.5mm</li><li>Waterproof and dustproof</li><li>Shell Type: PVC</li><li>Quantity: 50 Pieces</li></ul>",
+      "model": "IODH0-50",
+      "warranty": null,
+      "basePrice": 350.0,
+      "originalPrice": 380.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-40277",
+          "price": 350.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 336.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IODH0-50",
+              "position": 0
+            },
+            {
+              "label": "Shell Type",
+              "value": "PVC",
+              "position": 1
+            },
+            {
+              "label": "Quantity",
+              "value": "50 Pieces",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-iodl0-50-rj45-strain-relief-boots",
+      "sourceProductCode": "40277",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IODH0-50",
+        "OD Support：6.5mm",
+        "Waterproof and dustproof",
+        "Shell Type: PVC",
+        "Quantity: 50 Pieces"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-iodl0-50-rj45-strain-relief-boots.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-iodl0-50-rj45-strain-relief-boots.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-iodl0-50-rj45-strain-relief-boots",
+        "candidateTitle": "Vention IODL0-50 RJ45 Strain Relief Boots Blue (50 Pcs)",
+        "attemptStem": "vention-iodl0-50-rj45-strain-relief-boots"
+      }
+    },
+    {
+      "name": "Vention IPGB0-5 Cat6 RJ45 Jack Coupler Connector (5 Pack)",
+      "slug": "vention-ipgb0-5-cat6-rj45-coupler",
+      "type": "PHYSICAL",
+      "sku": "ST-52633",
+      "description": "<h2>Vention IPGB0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack)</h2><p>The <strong>Vention IPGB0-5 Cat6 RJ45 Jack Coupler</strong> Connector 5 Pack provides a reliable solution for extending Ethernet connections. Its RJ45 interface supports fast and stable network signal transmission. Full contact transmission helps maintain efficient data flow across connected cables. Gold-plated contacts resist rust and support long-term connection performance. The connector uses environment-friendly ABS material for a durable and lightweight shell. Its black finish provides a clean appearance for different networking setups. This Cat6 RJ45 coupler supports both T568A and T568B wiring standards. It works with 22~26AWG network wires for flexible installation options. The connector supports at least 1,000 insertion and removal cycles. This helps provide lasting performance during repeated cable connections. Its operating temperature range spans from -20°C to +60°C. The Vention IPGB0-5 is suitable for home networks, offices, server rooms, and structured cabling projects. This five-pack offers multiple connectors for network upgrades, cable extensions, and Ethernet maintenance tasks.</p><h2>Buy Vention IPGB0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack) from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Vention IPGB0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack)</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/cable-connector\">Cable Connectors</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Vention IPGB0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack) comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IPGB0-5</li><li>Type: RJ45 Keystone Jack Coupler</li><li>Gold-plated phosphor Bronze Pins</li><li>Interface: RJ45</li><li>Insertions and removals lifespan: ≥ 1000 times</li></ul>",
+      "model": "IPGB0-5",
+      "warranty": "1 year warranty",
+      "basePrice": 800.0,
+      "originalPrice": 900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Vention",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ45",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52633",
+          "price": 800.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ45"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 768.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IPGB0-5",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "RJ45 Keystone Jack Coupler",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "RJ45",
+              "position": 2
+            },
+            {
+              "label": "Insertions and removals lifespan",
+              "value": "≥ 1000 times",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-ipgb0-5-cat6-rj45-coupler",
+      "sourceProductCode": "52633",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IPGB0-5",
+        "Type: RJ45 Keystone Jack Coupler",
+        "Gold-plated phosphor Bronze Pins",
+        "Interface: RJ45",
+        "Insertions and removals lifespan: ≥ 1000 times"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-ipgb0-5-cat6-rj45-coupler.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-ipgb0-5-cat6-rj45-coupler.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-ipgb0-5-cat6-rj45-coupler",
+        "candidateTitle": "Vention IPGB0-5 Cat6 RJ45 Jack Coupler Connector (5 Pack)",
+        "attemptStem": "vention-ipgb0-5-cat6-rj45-coupler"
+      }
+    },
+    {
+      "name": "Vention IPGW0-5 Cat6 RJ45 Jack Coupler Connector (5 Pack)",
+      "slug": "vention-ipgw0-5-cat6-rj45-coupler",
+      "type": "PHYSICAL",
+      "sku": "ST-52634",
+      "description": "<h2>Vention IPGW0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack)</h2><p>The <strong>Vention IPGW0-5 Cat6 RJ45 Jack Coupler Connector</strong> provides a quick solution for extending Ethernet cable connections. This 5-pack features RJ45 interfaces for stable network connectivity and efficient data transmission. Gold-plated contacts resist rust and support consistent signal transfer during use. The connector uses environment-friendly ABS material for its protective shell and durable construction. It supports both T568A and T568B wiring standards for broad networking compatibility. Designed for 22~26AWG wire gauges, this Cat6 RJ45 coupler suits various compatible Ethernet cables. Its insertion and removal lifespan reaches at least 1000 cycles, supporting repeated connections. The white finish offers a clean appearance for home, office, and networking setups. It operates reliably across temperatures from -20℃ to +60℃. Choose the Vention IPGW0-5 RJ45 Coupler for Ethernet cable extension, network maintenance, and convenient connection management.</p><h2>Buy Vention IPGW0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack) from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Vention IPGW0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack)</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/cable-connector\">Cable Connectors</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Vention IPGW0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack) comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IPGW0-5</li><li>Type: RJ45 Keystone Jack Coupler</li><li>Gold-plated phosphor Bronze Pins</li><li>Interface: RJ45</li><li>Insertions and removals lifespan: ≥ 1000 times</li></ul>",
+      "model": "IPGW0-5",
+      "warranty": "1 year warranty",
+      "basePrice": 800.0,
+      "originalPrice": 900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Vention",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ45",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52634",
+          "price": 800.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ45"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 768.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IPGW0-5",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "RJ45 Keystone Jack Coupler",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "RJ45",
+              "position": 2
+            },
+            {
+              "label": "Insertions and removals lifespan",
+              "value": "≥ 1000 times",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-ipgw0-5-cat6-rj45-coupler",
+      "sourceProductCode": "52634",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IPGW0-5",
+        "Type: RJ45 Keystone Jack Coupler",
+        "Gold-plated phosphor Bronze Pins",
+        "Interface: RJ45",
+        "Insertions and removals lifespan: ≥ 1000 times"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-ipgw0-5-cat6-rj45-coupler.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-ipgw0-5-cat6-rj45-coupler.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-ipgw0-5-cat6-rj45-coupler",
+        "candidateTitle": "Vention IPGW0-5 Cat6 RJ45 Jack Coupler Connector (5 Pack)",
+        "attemptStem": "vention-ipgw0-5-cat6-rj45-coupler"
+      }
+    },
+    {
+      "name": "Vention IPVB0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack)",
+      "slug": "vention-ipvb0-5-cat6-coupler-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-50385",
+      "description": "<h2>Vention IPVB0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack)</h2>\n<p>The Vention <strong>IPVB0-5</strong> CAT6 RJ45 Jack Coupler Connector 5 Pack is a practical networking accessory designed to extend Ethernet connections with ease. Built for CAT6 Ethernet cables, these RJ45 couplers ensure high speed data transfer and stable connectivity, making them suitable for LAN networks, office setups, and home internet extensions. Each connector features durable construction with gold plated contacts to reduce signal loss and provide reliable performance. The compact plug and play design allows quick installation, while the 5 pack offers excellent value for multiple cable management needs. Ideal for LAN cable extensions, network upgrades, and professional IT environments, this set guarantees seamless and secure connections</p>\n<h2>Buy Vention IPVB0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack) from Star Tech</h2>\n<p>In Bangladesh, you can get the original <strong>Vention IPVB0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack)</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/cable-connector\">Cable Connectors</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Vention IPVB0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack) comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IPVB0-5</li><li>Type: RJ45 Keystone Jack Coupler</li><li>Gold-plated phosphor Bronze Pins</li><li>Interface: Cat.6/RJ45</li><li>Shield Shell: Nickel-plated Iron Shell</li></ul>",
+      "model": "IPVB0-5",
+      "warranty": "1 year warranty",
+      "basePrice": 950.0,
+      "originalPrice": 1050.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Vention",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "Cat.6/RJ45",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-50385",
+          "price": 950.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "Cat.6/RJ45"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 912.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IPVB0-5",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "RJ45 Keystone Jack Coupler",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "Cat.6/RJ45",
+              "position": 2
+            },
+            {
+              "label": "Shield Shell",
+              "value": "Nickel-plated Iron Shell",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-ipvb0-5-cat6-coupler-connector",
+      "sourceProductCode": "50385",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IPVB0-5",
+        "Type: RJ45 Keystone Jack Coupler",
+        "Gold-plated phosphor Bronze Pins",
+        "Interface: Cat.6/RJ45",
+        "Shield Shell: Nickel-plated Iron Shell"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-ipvb0-5-cat6-coupler-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-ipvb0-5-cat6-coupler-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-ipvb0-5-cat6-coupler-connector",
+        "candidateTitle": "Vention IPVB0-5 CAT6 RJ45 Jack Coupler Connector (5 Pack)",
+        "attemptStem": "vention-ipvb0-5-cat6-coupler-connector"
+      }
+    },
+    {
+      "name": "Vention IPWB0 Cat.7 FTP Keystone Jack Coupler",
+      "slug": "vention-ipwb0-keystone-jack-coupler",
+      "type": "PHYSICAL",
+      "sku": "ST-52624",
+      "description": "<h2>Vention IPWB0 Cat.7 FTP Keystone Jack Coupler</h2>The <strong>Vention IPWB0 Cat.7 FTP Keystone Jack Coupler</strong> provides a reliable connection solution for high-speed Ethernet networking applications. This RJ45 Keystone Jack Coupler supports Cat.7 interfaces for efficient data transmission and network connectivity. Its gold-plated electroplating process helps improve contact performance and supports stable signal transfer. The connector uses nickel-plated copper for enhanced conductivity and consistent electrical performance. A PVC shell provides insulation and helps protect the internal connection components during installation. The Vention IPWB0 Cat.7/RJ45 interface supports compatibility with suitable Ethernet cables and networking setups. Its Keystone-style design allows convenient integration with compatible wall plates, patch panels, and network modules. This coupler suits structured cabling systems in homes, offices, server rooms, and other network environments. The Vention IPWB0 Cat.7 FTP Keystone Jack Coupler offers a compact option for extending or connecting Ethernet cables. It supports organized installations where secure RJ45 connectivity and Cat.7 network performance are required.<h2>Buy Vention IPWB0 Cat.7 FTP Keystone Jack Coupler from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Vention IPWB0 Cat.7 FTP Keystone Jack Coupler</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/cable-connector\">Cable Connectors</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Vention IPWB0 Cat.7 FTP Keystone Jack Coupler comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: IPWB0</li><li>Type: RJ45 Keystone Jack Coupler</li><li>Electroplating process: Gold-Plated</li><li>Interface: RJ45</li><li>Material: Nickel-plated copper, Shell: PVC</li></ul>",
+      "model": "IPWB0",
+      "warranty": "1 year warranty",
+      "basePrice": 425.0,
+      "originalPrice": 550.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Vention",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "RJ45",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52624",
+          "price": 425.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "RJ45"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 408.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "IPWB0",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "RJ45 Keystone Jack Coupler",
+              "position": 1
+            },
+            {
+              "label": "Electroplating process",
+              "value": "Gold-Plated",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "RJ45",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Nickel-plated copper, Shell: PVC",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-ipwb0-keystone-jack-coupler",
+      "sourceProductCode": "52624",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: IPWB0",
+        "Type: RJ45 Keystone Jack Coupler",
+        "Electroplating process: Gold-Plated",
+        "Interface: RJ45",
+        "Material: Nickel-plated copper, Shell: PVC"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-ipwb0-keystone-jack-coupler.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-ipwb0-keystone-jack-coupler.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-ipwb0-keystone-jack-coupler",
+        "candidateTitle": "Vention IPWB0 Cat.7 FTP Keystone Jack Coupler",
+        "attemptStem": "vention-ipwb0-keystone-jack-coupler"
+      }
+    },
+    {
+      "name": "Vention VAM650 CAT6 RJ45 Network Connector",
+      "slug": "vention-vam650-cat6-rj45-network-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-48355",
+      "description": "<h2>Vention VAM650 CAT6 RJ45 Network Connector</h2><p>The <strong>Vention VAM650 CAT6 RJ45 Network Connector</strong> is a high-quality coupler designed to deliver reliable and stable network performance. Manufactured by Vention, this model features gold-plated pins that enhance conductivity and resist corrosion, ensuring long-lasting durability. Its thick PCB board construction provides structural strength, while the safe plug design guarantees secure connections during frequent use. The connector supports a lifespan of at least 1000 insertions and removals, making it suitable for demanding environments where consistent connectivity is required. Operating within a wide temperature range of -20 ℃ to +60 ℃, it adapts effectively to varied conditions without compromising efficiency. The electroplating process further improves resilience, while the ABS material ensures lightweight handling and robust protection. Certified by FLUKE engineering tests, the VAM650 meets professional standards for signal integrity and performance. With a grey finish and RJ45 interface, it is fully compatible with CAT6 cables, offering seamless extension without signal loss. This makes it an excellent choice for offices, homes, and data centers where dependable networking is essential. By combining advanced materials, precise engineering, and rigorous testing, the Vention VAM650 provides a practical solution for extending network cables while maintaining high-speed, lossless transmission. Its thoughtful design and proven reliability make it a trusted accessory for users seeking secure and efficient connectivity across multiple applications.</p><h2>Vention VAM650 CAT6 RJ45 Network Connector from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Vention VAM650 CAT6 RJ45 Network Connector</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/cable-connector\">Cable Connectors</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Vention VAM650 CAT6 RJ45 Network Connector comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: VAM650</li><li>Type: RJ45 Network Coupler</li><li>Gold-plated pins</li><li>Material: ABS</li><li>Insertions and removals lifespan: ≥ 1000 times</li></ul>",
+      "model": "VAM650",
+      "warranty": "1 year warranty",
+      "basePrice": 250.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-48355",
+          "price": 250.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "VAM650",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "RJ45 Network Coupler",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "ABS",
+              "position": 2
+            },
+            {
+              "label": "Insertions and removals lifespan",
+              "value": "≥ 1000 times",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-vam650-cat6-rj45-network-connector",
+      "sourceProductCode": "48355",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: VAM650",
+        "Type: RJ45 Network Coupler",
+        "Gold-plated pins",
+        "Material: ABS",
+        "Insertions and removals lifespan: ≥ 1000 times"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-vam650-cat6-rj45-network-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-vam650-cat6-rj45-network-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-vam650-cat6-rj45-network-connector",
+        "candidateTitle": "Vention VAM650 CAT6 RJ45 Network Connector",
+        "attemptStem": "vention-vam650-cat6-rj45-network-connector"
+      }
+    },
+    {
+      "name": "Vention VDD-B11-W Cat 5E UTP Keystone Jack Connector",
+      "slug": "vention-vdd-b11-w-cat-5e-utp-connector",
+      "type": "PHYSICAL",
+      "sku": "ST-48358",
+      "description": "<h2>Vention VDD-B11-W Cat 5E UTP Keystone Jack Connector</h2><p>The <strong>Vention VDD-B11-W Cat 5E UTP Keystone Jack Connector</strong> is a reliable networking component designed for efficient data transmission and long-term durability. Manufactured by Vention, this model features a white ABS shell that ensures strength and resilience under regular use. Vention VDD-B11-W supports Cat.5e/RJ45 interface connections, making it suitable for structured cabling systems in homes, offices, and data centers. The connector is equipped with gold-plated phosphor bronze pins, which enhance conductivity and reduce signal loss during operation. Vention VDD-B11-W offers a service life of at least 1000 insertions, ensuring consistent performance over time. Additionally, it supports retermination up to 250 times, providing flexibility for repeated installations or adjustments. The connector accepts 22–26 AWG cables, making it compatible with standard wiring sizes. It follows both T568A and T568B termination sequences, allowing multiple installation options. Operating within a temperature range of -20°C to +60°C, it is suitable for varied environments. The compact dimensions of 32.7mm length, 14.6mm width, and 16.2mm height make it easy to fit into patch panels or wall plates. Packaged in a PE bag, the product is protected during storage and transport. Overall, the Vention VDD-B11-W Keystone Jack Connector combines durability, compatibility, and efficiency, making it a practical choice for reliable Ethernet connections.</p><h2>Vention VDD-B11-W Cat 5E UTP Keystone Jack Connector from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Vention VDD-B11-W Cat 5E UTP Keystone Jack Connector</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/cable-connector\">Cable Connectors</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Vention VDD-B11-W Cat 5E UTP Keystone Jack Connector comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: VDD-B11-W</li><li>Type: Cat.5e/RJ45 Coupler</li><li>Premium Gold-Plated Pins</li><li>Material: ABS</li><li>Service Life: ≥1000 Insertions</li></ul>",
+      "model": "VDD-B11-W",
+      "warranty": "1 year warranty",
+      "basePrice": 900.0,
+      "originalPrice": 950.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Vention",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-48358",
+          "price": 900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 864.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "VDD-B11-W",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "Cat.5e/RJ45 Coupler",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "ABS",
+              "position": 2
+            },
+            {
+              "label": "Service Life",
+              "value": "≥1000 Insertions",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/vention-vdd-b11-w-cat-5e-utp-connector",
+      "sourceProductCode": "48358",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: VDD-B11-W",
+        "Type: Cat.5e/RJ45 Coupler",
+        "Premium Gold-Plated Pins",
+        "Material: ABS",
+        "Service Life: ≥1000 Insertions"
+      ],
+      "needsReview": false,
+      "categorySlug": "connector",
+      "image": "/images/products/networking/connector/vention-vdd-b11-w-cat-5e-utp-connector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/connector/vention-vdd-b11-w-cat-5e-utp-connector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "vention-vdd-b11-w-cat-5e-utp-connector",
+        "candidateTitle": "Vention VDD-B11-W Cat 5E UTP Keystone Jack Connector",
+        "attemptStem": "vention-vdd-b11-w-cat-5e-utp-connector"
+      }
+    }
+  ]
+}

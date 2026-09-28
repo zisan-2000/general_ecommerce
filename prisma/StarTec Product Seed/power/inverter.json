@@ -1,0 +1,2221 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/power",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\power",
+    "generatedAtUnix": 1790589998,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Power",
+      "slug": "power",
+      "parentSlug": null,
+      "image": "/images/products/power/inverter/gospower-1-6kw-hybrid-solar-inveter.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Inverter",
+      "slug": "inverter",
+      "parentSlug": "power",
+      "image": "/images/products/power/inverter/gospower-1-6kw-hybrid-solar-inveter.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Gospower",
+      "slug": "gospower",
+      "logo": null
+    },
+    {
+      "name": "MARSRIVA",
+      "slug": "marsriva",
+      "logo": null
+    },
+    {
+      "name": "Must",
+      "slug": "must",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Gospower 1.6kW Hybrid Solar Inveter",
+      "slug": "gospower-1-6kw-hybrid-solar-inveter",
+      "type": "PHYSICAL",
+      "sku": "ST-51935",
+      "description": "<h2>Gospower 1.6kW Hybrid Solar Inveter</h2><p>The <strong>Gospower 1.6kW</strong> Hybrid Solar Inverter is a versatile and efficient energy solution designed to integrate solar power with grid backup for reliable performance. Supporting 12V DC batteries, including both LiFePO4 and lead‑acid types, this Gospower Hybrid Solar Inverter delivers a rated AC output of 1600W / 2000VA with surge capacity up to 3200VA for 2 seconds. This makes the Gospower Off Grid Solar Inverter ideal for powering essential household appliances, office equipment, and small business setups. With IP54 protection grade and smart fan cooling, the Gospower Inverter ensures safe operation and durability in diverse environments.</p><p>Engineered for high efficiency, the GosPower PV Inverter achieves up to 92% peak conversion, maximizing energy utilization from solar panels. It supports a maximum charge/discharge current of 80A / 140A with advanced BMS communication via RS485, enabling intelligent battery management and extending battery life. The integrated LCD display with RS232/RS485 ports provides clear monitoring and easy connectivity, making system control simple and user‑friendly.</p><p>On the solar input side, the Gospower 1.6kW Hybrid Solar Inverter supports up to 3200W PV array power with a maximum voltage of 500V and an MPPT range of 35V–450V. This wide MPPT range allows flexible solar panel configurations while optimizing energy harvesting. Compact yet powerful, the Gospower Hybrid Solar Inverter is designed for households and small businesses seeking dependable renewable energy solutions with advanced protection, smart monitoring, and efficient performance.</p><p>Combining robust build quality, intelligent features, and high efficiency, the Gospower 1.6kW Hybrid Solar Inverter stands out as a reliable choice for sustainable energy systems. Whether you are looking to reduce electricity costs, ensure backup power, or maximize solar output, this Gospower Inverter provides the perfect balance of innovation, safety, and long‑term reliability.</p><h2>Buy Gospower 1.6kW Hybrid Solar Inveter from Star Tech</h2><p>In Bangladesh, you can get original <strong>Gospower 1.6kW Hybrid Solar Inveter</strong> From Star Tech. We have a large collection of latest Gospower <a href=\"https://www.startech.com.bd/inverter\">Inverter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Gospower 1.6kW Hybrid Solar Inveter comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GPEO-1K6L1-4V1</li><li>Rated Power: 1600W/2000VA</li><li>Surge Power: 3200VA, 2s</li><li>Max Charge/ Discharge Current: 80A / 140A</li><li>IP54 Protection Grade; 92% Peak Efficiency</li></ul>",
+      "model": "GPEO-1K6L1-4V1",
+      "warranty": "3 years",
+      "basePrice": 27500.0,
+      "originalPrice": 28500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Gospower",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-51935",
+          "price": 27500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 26400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Battery Type",
+              "value": "12V DC (Supports LiFePO4 and Lead-Acid Batteries).",
+              "position": 0
+            },
+            {
+              "label": "Rated AC Output Power",
+              "value": "1600W / 2000VA",
+              "position": 1
+            },
+            {
+              "label": "AC Peak/ Surge Output Power",
+              "value": "Surge Power: 3200VA 2s",
+              "position": 2
+            },
+            {
+              "label": "Protection",
+              "value": "IP54 Protection Grade with Smart Fan Cooling.",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Max Charge/Discharge Current: 80A / 140A (BMS Communication: RS485). 92% Peak Efficiency LCD Display with RS232/RS485 Ports.",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Input (Charging)",
+          "position": 1,
+          "items": [
+            {
+              "label": "Solar Input",
+              "value": "Max. PV Input Power & Voltage: 3200W Max PV Array 500V Max Voc (MPPT Range: 35V–450V)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/gospower-1-6kw-hybrid-solar-inveter",
+      "sourceProductCode": "51935",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GPEO-1K6L1-4V1",
+        "Rated Power: 1600W/2000VA",
+        "Surge Power: 3200VA, 2s",
+        "Max Charge/ Discharge Current: 80A / 140A",
+        "IP54 Protection Grade; 92% Peak Efficiency"
+      ],
+      "needsReview": false,
+      "categorySlug": "inverter",
+      "image": "/images/products/power/inverter/gospower-1-6kw-hybrid-solar-inveter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/inverter/gospower-1-6kw-hybrid-solar-inveter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "gospower-1-6kw-hybrid-solar-inveter",
+        "candidateTitle": "Gospower 1.6kW Hybrid Solar Inveter",
+        "attemptStem": "gospower-1-6kw-hybrid-solar-inveter"
+      }
+    },
+    {
+      "name": "Gospower 12kW Hybrid Solar Inveter",
+      "slug": "gospower-12kw-hybrid-solar-inveter",
+      "type": "PHYSICAL",
+      "sku": "ST-51942",
+      "description": "<h2>Gospower 12kW Hybrid Solar Inveter</h2><p>The<strong> Gospower 12kW </strong>Hybrid Solar Inverter (GPEX‑12KH2) is a high‑capacity renewable energy solution engineered for households, businesses, and commercial setups that demand powerful performance and reliable solar integration. Supporting LiFePO4 batteries with a voltage range of 75–480V DC, this Gospower Hybrid Solar Inverter delivers a rated AC output of 12kW / 50A, ensuring stable power delivery for heavy loads. With surge handling up to 20kW and advanced protections including PV reverse connection, battery reverse connection, output short‑circuit protection, insulation impedance detection, residual current detection, and anti‑island protection, the Gospower Off Grid Solar Inverter guarantees safe and efficient operation in diverse environments.</p><p>Engineered for maximum efficiency, the GosPower PV Inverter achieves up to 97% peak efficiency, 99.9% MPPT efficiency, and 96% battery charging/discharging efficiency, making it one of the most advanced hybrid inverters in its class. It supports a recommended PV input power of 20kW with four MPPTs, each capable of handling up to 5kW input power. With a maximum input current of 27A per MPPT and short‑circuit current of 40A, the Gospower 12kW Hybrid Solar Inverter ensures optimal solar harvesting across multiple panel configurations, providing flexibility and scalability for large installations.</p><p>Connectivity and smart control are at the core of this Gospower Inverter. Equipped with Wi‑Fi, Bluetooth, RS485, and CAN communication, it allows seamless integration with battery management systems and smart monitoring apps. The LCD display provides real‑time performance data, while app control enables remote management for convenience and efficiency. With a switching time of just 10ms, the inverter ensures smooth transitions between on‑grid and off‑grid modes, maintaining uninterrupted power supply.</p><p>Designed for durability, the Gospower 12kW Hybrid Solar Inverter features a Type 4X enclosure, natural cooling system, and reliable performance across extreme temperatures ranging from –22°F to +140°F, with no derating below 113°F. Combining robust build quality, advanced safety protections, and high efficiency, this inverter is the perfect solution for households and businesses aiming to reduce electricity costs, ensure backup power, and maximize solar output. Whether you need a Gospower Off Grid Solar Inverter or a smart GosPower PV Inverter, the GPEX‑12KH2 delivers innovation, sustainability, and long‑term reliability for modern energy systems.</p><h2>Buy Gospower 12kW Hybrid Solar Inveter from Star Tech</h2><p>In Bangladesh, you can get original <strong>Gospower 12kW Hybrid Solar Inveter</strong> From Star Tech. We have a large collection of latest Gospower <a href=\"https://www.startech.com.bd/inverter\">Inverter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Gospower 12kW Hybrid Solar Inveter comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GPEX-12KH2</li><li>Rated Power: 12kW</li><li>Rated Output Current: 50A</li><li>Max Charge/ Discharge Current: 75A</li><li>Connectivity: WiFi, Bluetooth</li></ul>",
+      "model": "GPEX-12KH2",
+      "warranty": "3 years",
+      "basePrice": 115750.0,
+      "originalPrice": 118500.0,
+      "currency": "BDT",
+      "weight": 58.5,
+      "dimensions": {
+        "length": 840.0,
+        "width": 680.0,
+        "height": 200.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Gospower",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-51942",
+          "price": 115750.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 111120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Battery Type",
+              "value": "LiFePO4",
+              "position": 0
+            },
+            {
+              "label": "Rated AC Output Power",
+              "value": "12kW",
+              "position": 1
+            },
+            {
+              "label": "Connectivity",
+              "value": "Wi-Fi; Bluetooth",
+              "position": 2
+            },
+            {
+              "label": "App Control",
+              "value": "Yes",
+              "position": 3
+            },
+            {
+              "label": "Protection",
+              "value": "IP65 Protection Grade DC switch PV reverse connection protection Battery reverse connection protection Output short-circuit protection Output overvoltage protection Insulation impedance detection Residual current detection Anti-island protection",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Max Charge/Discharge Current: 75A Battery charging/discharging efficiency: 96% Peak Efficiency LCD Display.",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Physical Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "840*680*200",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "Net Weight: 58.5KG Gross Weight: 71KG",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/gospower-12kw-hybrid-solar-inveter",
+      "sourceProductCode": "51942",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GPEX-12KH2",
+        "Rated Power: 12kW",
+        "Rated Output Current: 50A",
+        "Max Charge/ Discharge Current: 75A",
+        "Connectivity: WiFi, Bluetooth"
+      ],
+      "needsReview": false,
+      "categorySlug": "inverter",
+      "image": "/images/products/power/inverter/gospower-12kw-hybrid-solar-inveter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/inverter/gospower-12kw-hybrid-solar-inveter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "gospower-12kw-hybrid-solar-inveter",
+        "candidateTitle": "Gospower 12kW Hybrid Solar Inveter",
+        "attemptStem": "gospower-12kw-hybrid-solar-inveter"
+      }
+    },
+    {
+      "name": "Gospower 3.6kW Hybrid Solar Inveter",
+      "slug": "gospower-3-6kw-hybrid-solar-inveter",
+      "type": "PHYSICAL",
+      "sku": "ST-51938",
+      "description": "<h2>Gospower 3.6kW Hybrid Solar Inveter</h2><p>The <strong>Gospower 3.6kW</strong> Hybrid Solar Inverter is a powerful and intelligent energy solution designed for households and businesses that demand efficiency, reliability, and smart connectivity. Supporting 48V DC batteries, including advanced LiFePO4 and lead‑acid options, this Gospower Hybrid Solar Inverter delivers a rated AC output of 3600W / 3600VA with surge capacity up to 5400VA for 1 second. Built with IP65 protection grade and advanced cooling, the Gospower Off Grid Solar Inverter ensures safe operation even in challenging environments, making it a dependable choice for sustainable energy systems.</p><p>Engineered for maximum efficiency, the GosPower PV Inverter achieves up to 94% peak battery charging/discharging efficiency, helping users optimize energy usage while extending battery life. With a maximum charge/discharge current of 50A, seamless switching time under 10ms, and THDv below 3%, the Gospower Inverter guarantees stable and clean power delivery. Equipped with Wi‑Fi, RS485, CAN, and GPRS connectivity, along with app control, this hybrid inverter allows real‑time monitoring and remote management, giving users complete control over their energy system.</p><p>On the solar input side, the Gospower 3.6kW Hybrid Solar Inverter supports up to 4800W PV input power with a maximum voltage of 580V and an MPPT operating range of 120–550V. With advanced MPPT tracking, it ensures efficient energy harvesting from solar panels across different configurations. Compact yet powerful, this Gospower Hybrid Solar Inverter is designed to deliver consistent performance with a rated output current of 15.7A at 230V (L,N,PE) and frequency support for both 50Hz and 60Hz systems.</p><p>Built to withstand extreme conditions, the Gospower 3.6kW Hybrid Solar Inverter operates reliably within a wide temperature range of –25°C to 60°C. Combining robust build quality, smart connectivity, and high efficiency, this inverter is the perfect solution for households and businesses looking to reduce electricity costs, ensure backup power, and maximize solar output. Whether you need a Gospower Off Grid Solar Inverter or a smart GosPower PV Inverter, this model delivers innovation, safety, and long‑term reliability.</p><h2>Buy Gospower 3.6kW Hybrid Solar Inveter from Star Tech</h2><p>In Bangladesh, you can get original <strong>Gospower 3.6kW Hybrid Solar Inveter</strong> From Star Tech. We have a large collection of latest Gospower <a href=\"https://www.startech.com.bd/inverter\">Inverter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Gospower 3.6kW Hybrid Solar Inveter comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GPEX-3K6L1</li><li>Rated Power: 3600W/3600VA</li><li>Surge Power: Up to 5400VA, 1s</li><li>Max Charge/ Discharge Current: 50A</li><li>IP65 Protection Grade; 94% Peak Efficiency</li></ul>",
+      "model": "GPEX-3K6L1",
+      "warranty": "3 years",
+      "basePrice": 38750.0,
+      "originalPrice": 40000.0,
+      "currency": "BDT",
+      "weight": 27.5,
+      "dimensions": {
+        "length": 535.0,
+        "width": 485.0,
+        "height": 198.5,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Gospower",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-51938",
+          "price": 38750.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 37200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Battery Type",
+              "value": "48VDC",
+              "position": 0
+            },
+            {
+              "label": "Rated AC Output Power",
+              "value": "3600W/3600VA",
+              "position": 1
+            },
+            {
+              "label": "AC Peak/ Surge Output Power",
+              "value": "Surge Power: 3780VA,10min, 4500VA,1min 5400VA,1s",
+              "position": 2
+            },
+            {
+              "label": "Connectivity",
+              "value": "Wi-Fi; R485; CAN; GPRS",
+              "position": 3
+            },
+            {
+              "label": "App Control",
+              "value": "Yes",
+              "position": 4
+            },
+            {
+              "label": "Protection",
+              "value": "IP65 Protection Grade",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "Max Charge/Discharge Current: 50A Battery charging/discharging efficiency: 94% Peak Efficiency LCD Display.",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Output",
+          "position": 1,
+          "items": [
+            {
+              "label": "AC Output",
+              "value": "Rated output power: 3600W/3600VA Rated output current: 15.7A Rated output voltage: 230V(L,N,PE)50/60Hz THDv(@linear load): < 3% switching time: <10ms",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Input (Charging)",
+          "position": 2,
+          "items": [
+            {
+              "label": "DC Input",
+              "value": "Recommended max. PV input power: 4800W Max.input voltage(Voc): 580V MPPT operating voltage range: 120-550V Number of MPPT: 1 Max.number of input string perr MPPT: 1 Max.input current per MPPT: 13A Max.short-circuit current per MPPT: 20A",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Environment",
+          "position": 3,
+          "items": [
+            {
+              "label": "Operating Temperature",
+              "value": "-25~60℃",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Information",
+          "position": 4,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "535*485*198.5",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "Net Weight: 27.5KG Gross Weight: 31.5KG",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 5,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/gospower-3-6kw-hybrid-solar-inveter",
+      "sourceProductCode": "51938",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GPEX-3K6L1",
+        "Rated Power: 3600W/3600VA",
+        "Surge Power: Up to 5400VA, 1s",
+        "Max Charge/ Discharge Current: 50A",
+        "IP65 Protection Grade; 94% Peak Efficiency"
+      ],
+      "needsReview": false,
+      "categorySlug": "inverter",
+      "image": "/images/products/power/inverter/gospower-3-6kw-hybrid-solar-inveter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/inverter/gospower-3-6kw-hybrid-solar-inveter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "gospower-3-6kw-hybrid-solar-inveter",
+        "candidateTitle": "Gospower 3.6kW Hybrid Solar Inveter",
+        "attemptStem": "gospower-3-6kw-hybrid-solar-inveter"
+      }
+    },
+    {
+      "name": "Gospower 6kW Hybrid Solar Inveter",
+      "slug": "gospower-6kw-hybrid-solar-inveter",
+      "type": "PHYSICAL",
+      "sku": "ST-51939",
+      "description": "<h2>Gospower 6kW Hybrid Solar Inveter</h2><p>The <strong>Gospower 6kW</strong> Hybrid Solar Inverter is a high‑capacity renewable energy solution engineered for households and businesses that require reliable backup and efficient solar integration. Supporting 48V DC SLA and LiFePO4 batteries, this Gospower Hybrid Solar Inverter delivers a rated AC output of 6000W / 6000VA with surge capacity up to 9000VA for 1 second, ensuring stable performance even during heavy loads. With IP65 protection grade, DC switch, and multiple safety features including PV reverse connection protection, battery reverse connection protection, output short‑circuit protection, and anti‑island protection, the Gospower Off Grid Solar Inverter guarantees safe and durable operation in diverse environments.</p><p>Built for efficiency, the GosPower PV Inverter achieves up to 94% peak battery charging/discharging efficiency, helping maximize energy utilization while extending battery life. It supports a maximum charge/discharge current of 100A and delivers clean power with THDv under 3% and switching time below 10ms. The inverter provides a rated output current of 26.1A at 230V (L,N,PE) with frequency support for both 50Hz and 60Hz systems. Equipped with Wi‑Fi, RS485, CAN, and GPRS connectivity, along with app control and LCD display, the Gospower Inverter offers real‑time monitoring, smart management, and remote access for complete control over your energy system.</p><p>On the solar input side, the Gospower 6kW Hybrid Solar Inverter supports up to 8000W PV input power with a maximum voltage of 580V and an MPPT operating range of 120–550V. With dual MPPTs, each supporting up to 13A input current and 20A short‑circuit current, it ensures efficient solar harvesting across multiple panel configurations. This advanced design allows flexible installation while optimizing energy output, making it ideal for large residential and commercial setups.</p><p>Designed to withstand extreme conditions, the Gospower 6kW Hybrid Solar Inverter operates reliably within a wide temperature range of –25°C to 60°C. Combining robust build quality, advanced safety protections, and high efficiency, this inverter is the perfect solution for households and businesses looking to reduce electricity costs, ensure backup power, and maximize solar output. Whether you need a Gospower Off Grid Solar Inverter or a smart GosPower PV Inverter, this model delivers innovation, safety, and long‑term reliability for sustainable energy systems.</p><h2>Buy Gospower 6kW Hybrid Solar Inveter from Star Tech</h2><p>In Bangladesh, you can get original <strong>Gospower 6kW Hybrid Solar Inveter</strong> From Star Tech. We have a large collection of latest Gospower <a href=\"https://www.startech.com.bd/inverter\">Inverter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Gospower 6kW Hybrid Solar Inveter comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GPEX-6KL1</li><li>Rated Power: 6000W/6000VA</li><li>Surge Power: Up to 9000VA, 1s</li><li>Max Charge/ Discharge Current: 100A</li><li>IP65 Protection Grade; 94% Peak Efficiency</li></ul>",
+      "model": "GPEX-6KL1",
+      "warranty": "3 years",
+      "basePrice": 58500.0,
+      "originalPrice": 62500.0,
+      "currency": "BDT",
+      "weight": 27.0,
+      "dimensions": {
+        "length": 535.0,
+        "width": 485.0,
+        "height": 198.5,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Gospower",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-51939",
+          "price": 58500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 56160.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Battery Type",
+              "value": "48VDC SLA &LiFePO4",
+              "position": 0
+            },
+            {
+              "label": "Rated AC Output Power",
+              "value": "3600W/3600VA",
+              "position": 1
+            },
+            {
+              "label": "AC Peak/ Surge Output Power",
+              "value": "Surge Power: 6300VA,10min, 7500VA,1min 9000VA,1s",
+              "position": 2
+            },
+            {
+              "label": "Connectivity",
+              "value": "Wi-Fi; R485; CAN; GPRS",
+              "position": 3
+            },
+            {
+              "label": "App Control",
+              "value": "Yes",
+              "position": 4
+            },
+            {
+              "label": "Protection",
+              "value": "IP65 Protection Grade DC switch PV reverse connection protection Battery reverse connection protection Output short-circuit protection Output overvoltage protection Insulation impedance detection Residual current detection Anti-island protection",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "Max Charge/Discharge Current: 100A Battery charging/discharging efficiency: 94% Peak Efficiency LCD Display.",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Output",
+          "position": 1,
+          "items": [
+            {
+              "label": "AC Output",
+              "value": "Rated output power: 6000W/6000VA Rated output current: 26.1A Rated output voltage: 230V(L,N,PE)50/60Hz THDv(@linear load): < 3% switching time: <10ms",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Input (Charging)",
+          "position": 2,
+          "items": [
+            {
+              "label": "DC Input",
+              "value": "Recommended max. PV input power: 8000W Max.input voltage(Voc): 580V MPPT operating voltage range: 120-550V Number of MPPT: 2 Max.number of input string perr MPPT: 1 Max.input current per MPPT: 13/13A Max.short-circuit current per MPPT: 20A",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Environment",
+          "position": 3,
+          "items": [
+            {
+              "label": "Operating Temperature",
+              "value": "-25~60℃",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Information",
+          "position": 4,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "535*485*198.5",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "Net Weight: 27KG Gross Weight: 34.5KG",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 5,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/gospower-6kw-hybrid-solar-inveter",
+      "sourceProductCode": "51939",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GPEX-6KL1",
+        "Rated Power: 6000W/6000VA",
+        "Surge Power: Up to 9000VA, 1s",
+        "Max Charge/ Discharge Current: 100A",
+        "IP65 Protection Grade; 94% Peak Efficiency"
+      ],
+      "needsReview": false,
+      "categorySlug": "inverter",
+      "image": "/images/products/power/inverter/gospower-6kw-hybrid-solar-inveter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/inverter/gospower-6kw-hybrid-solar-inveter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "gospower-6kw-hybrid-solar-inveter",
+        "candidateTitle": "Gospower 6kW Hybrid Solar Inveter",
+        "attemptStem": "gospower-6kw-hybrid-solar-inveter"
+      }
+    },
+    {
+      "name": "Gospower 8kW Hybrid Solar Inveter",
+      "slug": "gospower-8kw-hybrid-solar-inveter",
+      "type": "PHYSICAL",
+      "sku": "ST-51941",
+      "description": "<h2>Gospower 8kW Hybrid Solar Inveter</h2><p>The <strong>Gospower 8kW</strong> Hybrid Solar Inverter is a high‑capacity, advanced energy solution designed for households and businesses that require reliable backup power and efficient solar integration. Supporting LiFePO4 batteries with a voltage range of 75–480V DC, this Gospower Hybrid Solar Inverter delivers a rated bidirectional AC output of 8kW with a current of 33.3A, ensuring stable performance even under heavy loads. With surge capacity up to 9000VA and a maximum continuous AC input power of 20kW, the Gospower Off Grid Solar Inverter is engineered to handle demanding energy requirements with ease.</p><p>Built for efficiency, the GosPower PV Inverter achieves up to 97% peak efficiency and an impressive 99.9% MPPT efficiency, ensuring maximum energy harvesting from solar panels. It supports a recommended PV input power of 14.4kW with four MPPTs, each capable of handling up to 3.6kW input power. With advanced protections including PV reverse connection, battery reverse connection, output short‑circuit protection, insulation impedance detection, residual current detection, and anti‑island protection, the Gospower Inverter guarantees safe and reliable operation in diverse environments. Its Type 4X enclosure and IP65 protection grade further enhance durability, making it suitable for both residential and commercial installations.</p><p>Equipped with modern connectivity options such as Wi‑Fi and Bluetooth, along with RS485 and CAN for BMS communication, the Gospower 8kW Hybrid Solar Inverter allows seamless monitoring and smart control. App integration provides real‑time performance tracking, while its natural cooling system ensures efficient operation without noise. With a switching time of just 10ms, the inverter delivers smooth transitions between on‑grid and off‑grid modes, maintaining uninterrupted power supply.</p><p>Designed to perform in extreme conditions, the Gospower 8kW Hybrid Solar Inverter operates reliably within a wide temperature range of –22°F to +140°F, with no derating below 113°F. Combining robust build quality, advanced safety protections, and high efficiency, this inverter is the perfect solution for households and businesses looking to reduce electricity costs, ensure backup power, and maximize solar output. Whether you need a Gospower Off Grid Solar Inverter or a smart GosPower PV Inverter, this model delivers innovation, sustainability, and long‑term reliability for modern energy systems.</p><h2>Buy Gospower 8kW Hybrid Solar Inveter from Star Tech</h2><p>In Bangladesh, you can get original <strong>Gospower 8kW Hybrid Solar Inveter</strong> From Star Tech. We have a large collection of latest Gospower <a href=\"https://www.startech.com.bd/inverter\">Inverter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Gospower 8kW Hybrid Solar Inveter comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GPEX-8KH2</li><li>Rated Power: 8kW</li><li>Rated Output Current: 33.3A</li><li>Max Charge/ Discharge Current: 75A</li><li>Connectivity: WiFi, Bluetooth</li></ul>",
+      "model": "GPEX-8KH2",
+      "warranty": "3 years",
+      "basePrice": 85000.0,
+      "originalPrice": 88000.0,
+      "currency": "BDT",
+      "weight": 58.5,
+      "dimensions": {
+        "length": 840.0,
+        "width": 680.0,
+        "height": 200.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Gospower",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-51941",
+          "price": 85000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 81600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Battery Type",
+              "value": "LiFePO4",
+              "position": 0
+            },
+            {
+              "label": "Rated AC Output Power",
+              "value": "8kW",
+              "position": 1
+            },
+            {
+              "label": "Connectivity",
+              "value": "Wi-Fi; Bluetooth",
+              "position": 2
+            },
+            {
+              "label": "App Control",
+              "value": "Yes",
+              "position": 3
+            },
+            {
+              "label": "Protection",
+              "value": "IP65 Protection Grade DC switch PV reverse connection protection Battery reverse connection protection Output short-circuit protection Output overvoltage protection Insulation impedance detection Residual current detection Anti-island protection",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Max Charge/Discharge Current: 75A Battery charging/discharging efficiency: 96% Peak Efficiency LCD Display.",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Physical Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "840*680*200",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "Net Weight: 58.5KG Gross Weight: 71KG",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/gospower-8kw-hybrid-solar-inveter",
+      "sourceProductCode": "51941",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GPEX-8KH2",
+        "Rated Power: 8kW",
+        "Rated Output Current: 33.3A",
+        "Max Charge/ Discharge Current: 75A",
+        "Connectivity: WiFi, Bluetooth"
+      ],
+      "needsReview": false,
+      "categorySlug": "inverter",
+      "image": "/images/products/power/inverter/gospower-8kw-hybrid-solar-inveter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/inverter/gospower-8kw-hybrid-solar-inveter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "gospower-8kw-hybrid-solar-inveter",
+        "candidateTitle": "Gospower 8kW Hybrid Solar Inveter",
+        "attemptStem": "gospower-8kw-hybrid-solar-inveter"
+      }
+    },
+    {
+      "name": "Marsriva MR-SPF12K-LP1-TL20E 12kW Hybrid Solar Inveter",
+      "slug": "marsriva-mr-spf12k-lp1-tl20e-12kw-hybrid-solar-inveter",
+      "type": "PHYSICAL",
+      "sku": "ST-51835",
+      "description": "<h2>Marsriva MR-SPF12K-LP1-TL20E 12kW Hybrid Solar Inveter</h2><p>The Marsriva <strong>MR-SPF12K-LP1-TL20E</strong> 12kW Hybrid Solar Inveter suitable for larger installations. It features a single-phase, high-frequency design with IP20 protection rating included. The Marsriva Hybrid Solar Inveter supports dual outputs, enabling smart load management across connected devices. Maximum PV input current reaches 27A, ensuring efficient solar energy conversion capacity. </p><p>This Marsriva 12kW Hybrid Solar Inveter includes built-in Wi-Fi for convenient mobile monitoring through dedicated apps. RGB status lights provide clear, at-a-glance system status indication for users. The Marsriva Solar Inveter supports USB On-the-Go functionality alongside reserved BMS communication ports. It works with RS485, CAN-BUS, or RS232 protocols for flexible battery management. </p><p>This inverter features a replaceable fan design, simplifying long-term maintenance and servicing tasks. Battery independent design allows flexible configuration across different battery types and setups. The Marsriva MR-SPF12K-LP1-TL20E 12kW Solar Inveter offers selectable high power charging current options. It remains compatible with utility mains or generator input for backup flexibility. </p><p>Built-in anti-dust protection extends the unit's operational lifespan in demanding environments. Optional DC output supports DC fans, LED bulbs, and similar low-power devices. This Marsriva MR-SPF12K-LP1-TL20E 12kW Hybrid Solar Inveter supports parallel operation with up to six units simultaneously. Output voltage regulates at 230VAC with pure sine wave output for stability. </p><p>Peak efficiency reaches 95% in line mode and 93% in inverter mode. Battery nominal voltage runs at 48VDC, with overcharge protection at 63VDC. Maximum PV array power reaches 15000W, supporting substantial solar panel configurations effectively. This Marsriva 12kW Solar Inveter suits residential and commercial solar installations requiring dependable performance.</p><h2>Buy Marsriva MR-SPF12K-LP1-TL20E 12kW Hybrid Solar Inveter from Star Tech</h2><p>In Bangladesh, you can get original <strong>Marsriva MR-SPF12K-LP1-TL20E 12kW Hybrid Solar Inveter</strong> From Star Tech. We have a large collection of latest Marsriva <a href=\"https://www.startech.com.bd/inverter\" target=\"\">Inverter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Marsriva MR-SPF12K-LP1-TL20E 12kW Hybrid Solar Inveter comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MR-SPF12K-LP1-TL20E</li><li>Rated Power: 12kVA / 12kW</li><li>MPPT ranges 60V~450V, 500Voc</li><li>Parallel operation with 6 units, Built-in Wi-Fi</li><li>Interface: BMS (RS485, CAN-BUS or RS232)</li></ul>",
+      "model": "MR-SPF12K-LP1-TL20E",
+      "warranty": "2 years",
+      "basePrice": 140000.0,
+      "originalPrice": 154000.0,
+      "currency": "BDT",
+      "weight": 18.4,
+      "dimensions": {
+        "length": 147.4,
+        "width": 432.5,
+        "height": 553.6,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MARSRIVA",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-51835",
+          "price": 140000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 134400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Battery Type",
+              "value": "Lead-acid / Lithium / User-defined",
+              "position": 0
+            },
+            {
+              "label": "Rated AC Output Power",
+              "value": "12kVA / 12kW",
+              "position": 1
+            },
+            {
+              "label": "AC Peak/ Surge Output Power",
+              "value": "24000VA",
+              "position": 2
+            },
+            {
+              "label": "UPS Transfer Time",
+              "value": "10ms (For PC); 20ms (For Home Appliances)",
+              "position": 3
+            },
+            {
+              "label": "Connectivity",
+              "value": "USB, RS232, BMS(485,CAN), WiFi Module, Dry-contact",
+              "position": 4
+            },
+            {
+              "label": "Protection",
+              "value": "63VDC Overcharge Protection",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "Dual outputs, for smart load management ​​​​​​​Status indication with RGB lights ​​​​​​​Built-in Wi-Fi for mobile monitoring (Android/iOS App available) ​​​​​​​Supports USB On-the-Go function ​​​​​​​Replaceable fan design for ease of maintenance ​​​​​​​Battery independent design ​​​​​​​Selectable high power charging current ​​​​​​​Compatible to Utility Mains or generator input ​​​​​​​Built-in anti-dust kit ​​​​​​​Optional DC output for DC fan, LED bulb and so on Parallel operation with 6 units",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Output",
+          "position": 1,
+          "items": [
+            {
+              "label": "AC Output",
+              "value": "230VAC ± 5% Nominal Output Frequency: 50Hz / 60Hz",
+              "position": 0
+            },
+            {
+              "label": "DC Output",
+              "value": "12VDC ± 5%, 100W",
+              "position": 1
+            },
+            {
+              "label": "Output Waveform",
+              "value": "Pure sine wave",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Surge Power: 2 times of rated power Peak Efficiency: 95% at Line mode, 93% at Inverter mode",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Input (Charging)",
+          "position": 2,
+          "items": [
+            {
+              "label": "AC Input",
+              "value": "230VAC (Nominal) 170 – 280VAC (For PC); 90 – 280VAC (For Home Appliances) (Selectable)",
+              "position": 0
+            },
+            {
+              "label": "Solar Input",
+              "value": "Max. PV Array Open Circuit Voltage: 500VDC Max. PV Input Current: 27A*2 (MAX. 45A)",
+              "position": 1
+            },
+            {
+              "label": "Grid/ Wall Input",
+              "value": "200A",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "147.4 × 432.5 × 553.6mm (W x H x D)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "18.4 kg",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-spf12k-lp1-tl20e-12kw-hybrid-solar-inveter",
+      "sourceProductCode": "51835",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MR-SPF12K-LP1-TL20E",
+        "Rated Power: 12kVA / 12kW",
+        "MPPT ranges 60V~450V, 500Voc",
+        "Parallel operation with 6 units, Built-in Wi-Fi",
+        "Interface: BMS (RS485, CAN-BUS or RS232)"
+      ],
+      "needsReview": false,
+      "categorySlug": "inverter",
+      "image": "/images/products/power/inverter/marsriva-mr-spf12k-lp1-tl20e-12kw-hybrid-solar-inveter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/inverter/marsriva-mr-spf12k-lp1-tl20e-12kw-hybrid-solar-inveter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "marsriva-mr-spf12k-lp1-tl20e-12kw-hybrid-solar-inveter",
+        "candidateTitle": "Marsriva MR-SPF12K-LP1-TL20E 12kW Hybrid Solar Inveter",
+        "attemptStem": "marsriva-mr-spf12k-lp1-tl20e-12kw-hybrid-solar-inveter"
+      }
+    },
+    {
+      "name": "Marsriva MR-SPF2K-LP1-TL20E 2kW Hybrid Solar Inveter",
+      "slug": "marsriva-mr-spf2k-lp1-tl20e-2kw-solar-inveter",
+      "type": "PHYSICAL",
+      "sku": "ST-51788",
+      "description": "<h2>Marsriva MR-SPF2K-LP1-TL20E 2kW Hybrid Solar Inveter</h2><p>The Marsriva <strong>MR-SPF2K-LP1-TL20E</strong> 2kW Hybrid Solar Inverter delivers compact, efficient solar energy management for small homes and off-grid applications. This Marsriva 2kW Solar Inverter provides 2kVA rated power with a power factor of 1 for maximum energy conversion efficiency. Pure sine wave AC output ensures clean, stable power delivery to all connected loads and sensitive electrical equipment. </p><p>This Marsriva MR-SPF2K-LP1-TL20E 2kW Solar Inverter achieves up to 91% maximum efficiency in battery mode for optimized daily energy performance. Rated output power reaches 2kW standard and 1.56kW when running on battery only without grid or solar input. Surge power reaches twice the rated capacity for handling sudden load demands without system interruption. </p><p>Transfer time stays within 10ms across UPS, APP, and generator modes for near-seamless power source switching. Solar and utility grid sources power loads simultaneously for flexible hybrid energy management throughout every day. This Marsriva Hybrid Solar Inverter accepts nominal input voltage across 208, 220, 230, and 240VAC ranges with L, N, and PE connections. </p><p>Voltage range covers 170 to 264VAC in UPS mode and 90 to 280VAC in APP or generator mode. Auto-sensing frequency detection supports both 50Hz and 60Hz inputs without any manual configuration requirements. The Marsriva MR-SPF2K-LP1-TL20E 2kW Solar Inveter has MPPT solar charger supports a voltage range of 30 to 400VDC with 450VDC maximum open circuit voltage. </p><p>Maximum PV input power reaches 3000W with a maximum PV input current of 18A. Maximum solar, AC, and hybrid charging currents all reach 100A for fast, flexible battery replenishment. This Marsriva Solar Inverter supports 12VDC nominal battery voltage across a 10 to 15VDC operating range. </p><p>This Marsriva MR-SPF2K-LP1-TL20E 2kW Solar Inveter Lead-acid and lithium battery types both integrate seamlessly with this compact inverter system. CAN, RS485, and RS232 communication interfaces enable comprehensive BMS integration and system monitoring. A built-in WiFi module supports convenient remote monitoring and real-time performance management. Feed-in to grid functionality and batteryless operation capability expand deployment flexibility significantly.</p><h2>Buy Marsriva MR-SPF2K-LP1-TL20E 2kW Hybrid Solar Inveter from Star Tech</h2><p>In Bangladesh, you can get original <strong>Marsriva MR-SPF2K-LP1-TL20E 2kW Hybrid Solar Inveter</strong> From Star Tech. We have a large collection of latest Marsriva <a href=\"https://www.startech.com.bd/inverter\" target=\"\">Inverter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Marsriva MR-SPF2K-LP1-TL20E 2kW Hybrid Solar Inveter comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MR-SPF2K-LP1-TL20E</li><li>Rated Power: 2kW, power factor 1</li><li>MPPT ranges 30V~400V, 450Voc</li><li>Solar &amp; Grid Power Loads at Same Time</li><li>IP20 Protection, WIFl module for monitoring</li></ul>",
+      "model": "MR-SPF2K-LP1-TL20E",
+      "warranty": "2 years",
+      "basePrice": 26000.0,
+      "originalPrice": 28500.0,
+      "currency": "BDT",
+      "weight": 4.5,
+      "dimensions": {
+        "length": 331.0,
+        "width": 270.0,
+        "height": 100.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MARSRIVA",
+      "variantOptions": [
+        {
+          "name": "Storage Temperature",
+          "position": 0,
+          "values": [
+            {
+              "value": "-15°C to 60°C",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51788",
+          "price": 26000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage Temperature": "-15°C to 60°C"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 24960.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Battery Type",
+              "value": "Lead-acid / Lithium / User-defined",
+              "position": 0
+            },
+            {
+              "label": "Rated AC Output Power",
+              "value": "2kVA / 2kW",
+              "position": 1
+            },
+            {
+              "label": "AC Peak/ Surge Output Power",
+              "value": "2 times of rated power",
+              "position": 2
+            },
+            {
+              "label": "UPS Transfer Time",
+              "value": "10ms (UPS/APP/GEN Mode)",
+              "position": 3
+            },
+            {
+              "label": "Connectivity",
+              "value": "RS485 / CAN / RS232",
+              "position": 4
+            },
+            {
+              "label": "Protection",
+              "value": "IP20 Protection",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "High frequency inverter with small size and light weight Solar and utility grid can power loads at the same time With the ability to work without battery Feed-in to grid function",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Output",
+          "position": 1,
+          "items": [
+            {
+              "label": "AC Output",
+              "value": "208 / 220 / 230 / 240VAC ± 5% Nominal Output Frequency: 50 / 60Hz ± 0.1% (Batt. Mode)",
+              "position": 0
+            },
+            {
+              "label": "Output Waveform",
+              "value": "Pure sine wave AC output",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Input (Charging)",
+          "position": 2,
+          "items": [
+            {
+              "label": "AC Input",
+              "value": "30 – 400VDC (Min. 60VDC without battery connected)",
+              "position": 0
+            },
+            {
+              "label": "Solar Input",
+              "value": "Solar Charger Type: MPPT Max. PV Input Power: 3000W Max. PV Input Current: 18A Max. PV Open Circuit Voltage: 450VDC Max. Solar Charging Current: 100A",
+              "position": 1
+            },
+            {
+              "label": "Grid/ Wall Input",
+              "value": "100A",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Environment",
+          "position": 3,
+          "items": [
+            {
+              "label": "Operating Temperature",
+              "value": "-10°C to 60°C",
+              "position": 0
+            },
+            {
+              "label": "Storage Temperature",
+              "value": "-15°C to 60°C",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Information",
+          "position": 4,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "331 × 270 × 100mm (W x H x D)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "4.5kg",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 5,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-spf2k-lp1-tl20e-2kw-solar-inveter",
+      "sourceProductCode": "51788",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MR-SPF2K-LP1-TL20E",
+        "Rated Power: 2kW, power factor 1",
+        "MPPT ranges 30V~400V, 450Voc",
+        "Solar & Grid Power Loads at Same Time",
+        "IP20 Protection, WIFl module for monitoring"
+      ],
+      "needsReview": false,
+      "categorySlug": "inverter",
+      "image": "/images/products/power/inverter/marsriva-mr-spf2k-lp1-tl20e-2kw-solar-inveter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/inverter/marsriva-mr-spf2k-lp1-tl20e-2kw-solar-inveter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "marsriva-mr-spf2k-lp1-tl20e-2kw-solar-inveter",
+        "candidateTitle": "Marsriva MR-SPF2K-LP1-TL20E 2kW Hybrid Solar Inveter",
+        "attemptStem": "marsriva-mr-spf2k-lp1-tl20e-2kw-solar-inveter"
+      }
+    },
+    {
+      "name": "Marsriva MR-SPF3.6K-LP1-TL20E 3.6kW Hybrid Solar Inveter",
+      "slug": "marsriva-mr-spf3-6k-lp1-tl20e-3-6kw-solar-inveter",
+      "type": "PHYSICAL",
+      "sku": "ST-51785",
+      "description": "<h2>Marsriva MR-SPF3.6K-LP1-TL20E 3.6kW Hybrid Solar Inveter</h2><p>The Marsriva <strong>MR-SPF3.6K-LP1-TL20E</strong> 3.6kW Off Grid Solar Inverter delivers reliable, efficient solar energy management for residential and small commercial off-grid installations. This Marsriva 3.6kW Solar Inverter provides 3.6kVA rated power with a power factor of 1 for maximum energy conversion efficiency. Pure sine wave AC output ensures clean, stable power delivery to all connected loads and sensitive electrical equipment. </p><p>This Marsriva MR-SPF3.6K-LP1-TL20E 3.6kW Solar Inverter achieves up to 92% maximum efficiency in battery mode for optimized daily energy use. Surge power reaches twice the rated output capacity for handling sudden load demands without system interruption. Transfer time stays within 10ms in UPS and APP mode and 20ms in generator mode for near-seamless switching. </p><p>Solar and utility grid sources power loads simultaneously for flexible hybrid energy management throughout the day. This Marsriva Solar Inverter accepts nominal input voltage across 208, 220, 230, and 240VAC ranges for broad global compatibility. Voltage range covers 170 to 264VAC in UPS mode and 90 to 280VAC in APP or generator mode. </p><p>This Marsriva MR-SPF3.6K-LP1-TL20E 3.6kW Solar Inveter has auto-sensing frequency detection supports both 50Hz and 60Hz inputs without manual configuration. The MPPT solar charger supports a voltage range of 40 to 450VDC with 500VDC maximum open circuit voltage. Maximum PV input power reaches 5000W with a maximum PV input current of 18A. </p><p>Maximum solar, AC, and hybrid charging currents all reach 100A for flexible, fast battery replenishment. This Marsriva Hybrid Solar Inverter supports 24VDC nominal battery voltage across a 20 to 30.5VDC operating range. Lead-acid, lithium, and user-defined battery types all integrate seamlessly with this versatile inverter system. </p><p>CAN and RS485 BMS communication ports alongside dry-contact support enable advanced battery management integration. This Marsriva MR-SPF3.6K-LP1-TL20E 3.6kW Solar Inveter has a built-in WiFi module supports convenient remote monitoring and real-time system performance management. Feed-in to grid functionality expands deployment flexibility for net metering and energy export configurations.</p><h2>Buy Marsriva MR-SPF3.6K-LP1-TL20E 3.6kW Solar Inveter from Star Tech</h2><p>In Bangladesh, you can get original <strong>Marsriva MR-SPF3.6K-LP1-TL20E 3.6kW Solar Inveter</strong> From Star Tech. We have a large collection of latest Marsriva <a href=\"https://www.startech.com.bd/inverter\" target=\"\">Inverter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Marsriva MR-SPF3.6K-LP1-TL20E 3.6kW Solar Inveter comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MR-SPF3.6K-LP1-TL20E</li><li>Rated Power: 3.6kW, power factor 1</li><li>MPPT ranges 40V~450V, 500Voc</li><li>Solar &amp; Grid Power Loads at Same Time</li><li>IP20 Protection, WIFl module for monitoring</li></ul>",
+      "model": "MR-SPF3.6K-LP1-TL20E",
+      "warranty": "2 years",
+      "basePrice": 32000.0,
+      "originalPrice": 35200.0,
+      "currency": "BDT",
+      "weight": 6.4,
+      "dimensions": {
+        "length": 284.0,
+        "width": 420.0,
+        "height": 104.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MARSRIVA",
+      "variantOptions": [
+        {
+          "name": "Storage Temperature",
+          "position": 0,
+          "values": [
+            {
+              "value": "-15°C to 60°C",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51785",
+          "price": 32000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage Temperature": "-15°C to 60°C"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 30720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Battery Type",
+              "value": "Lead-acid / Lithium / User-defined",
+              "position": 0
+            },
+            {
+              "label": "Rated AC Output Power",
+              "value": "3.6kVA / 3.6kW",
+              "position": 1
+            },
+            {
+              "label": "AC Peak/ Surge Output Power",
+              "value": "2 times of rated power",
+              "position": 2
+            },
+            {
+              "label": "UPS Transfer Time",
+              "value": "10ms (UPS/APP Mode); 20ms (GEN Mode)",
+              "position": 3
+            },
+            {
+              "label": "Connectivity",
+              "value": "BMS(485/CAN), Dry-contact, WiFi Module",
+              "position": 4
+            },
+            {
+              "label": "Protection",
+              "value": "IP20 Protection",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "High frequency inverter with small size and light weight Solar and utility grid can power loads at the same time With the ability to work without battery Feed-in to grid function",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Output",
+          "position": 1,
+          "items": [
+            {
+              "label": "AC Output",
+              "value": "208 / 220 / 230 / 240VAC ± 5% Nominal Output Frequency: 50 / 60Hz ± 0.1% (Batt. Mode)",
+              "position": 0
+            },
+            {
+              "label": "Output Waveform",
+              "value": "Pure sine wave AC output",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Input (Charging)",
+          "position": 2,
+          "items": [
+            {
+              "label": "AC Input",
+              "value": "40 – 450VDC (Min. 60VDC without battery connected)",
+              "position": 0
+            },
+            {
+              "label": "Solar Input",
+              "value": "Solar Charger Type: MPPT Max. PV Input Power: 5000W Max. PV Input Current: 18A Max. PV Open Circuit Voltage: 500VDC Max. Solar Charging Current: 100A",
+              "position": 1
+            },
+            {
+              "label": "Grid/ Wall Input",
+              "value": "100A",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Environment",
+          "position": 3,
+          "items": [
+            {
+              "label": "Operating Temperature",
+              "value": "-10°C to 50°C",
+              "position": 0
+            },
+            {
+              "label": "Storage Temperature",
+              "value": "-15°C to 60°C",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Information",
+          "position": 4,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "284 × 420 × 104mm (W x H x D)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "6.4 kg",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 5,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-spf3-6k-lp1-tl20e-3-6kw-solar-inveter",
+      "sourceProductCode": "51785",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MR-SPF3.6K-LP1-TL20E",
+        "Rated Power: 3.6kW, power factor 1",
+        "MPPT ranges 40V~450V, 500Voc",
+        "Solar & Grid Power Loads at Same Time",
+        "IP20 Protection, WIFl module for monitoring"
+      ],
+      "needsReview": false,
+      "categorySlug": "inverter",
+      "image": "/images/products/power/inverter/marsriva-mr-spf3-6k-lp1-tl20e-3-6kw-solar-inveter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/inverter/marsriva-mr-spf3-6k-lp1-tl20e-3-6kw-solar-inveter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "marsriva-mr-spf3-6k-lp1-tl20e-3-6kw-solar-inveter",
+        "candidateTitle": "Marsriva MR-SPF3.6K-LP1-TL20E 3.6kW Hybrid Solar Inveter",
+        "attemptStem": "marsriva-mr-spf3-6k-lp1-tl20e-3-6kw-solar-inveter"
+      }
+    },
+    {
+      "name": "Marsriva MR-SPF6.5K-LP1-TL20E 6.5kW Hybrid Solar Inveter",
+      "slug": "marsriva-mr-spf6-5k-lp1-tl20e-6-5kw-solar-inveter",
+      "type": "PHYSICAL",
+      "sku": "ST-51783",
+      "description": "<h2>Marsriva MR-SPF6.5K-LP1-TL20E 6.5kW Hybrid Solar Inveter</h2>\n<p>The Marsriva <strong>MR-SPF6.5K-LP1-TL20E</strong> 6.5kW Hybrid Solar Inverter delivers powerful, efficient solar energy management for homes and commercial off-grid installations. This Marsriva 6.5kW Solar Inverter provides 6.5kVA rated power with a power factor of 1 for maximum energy efficiency. Pure sine wave AC output ensures clean, stable power delivery to all connected loads and sensitive electrical equipment. </p>\n<p>This Marsriva MR-SPF6.5K-LP1-TL20E 6.5kW Solar Inverter achieves up to 94% maximum efficiency in battery mode for optimized energy use. Nominal output power reaches 6kW standard and 6.5kW when combining PV and battery power simultaneously. Surge power reaches twice the rated capacity for handling sudden load demands reliably. </p>\n<p>Transfer time stays within 10ms in UPS and APP mode and 20ms in generator mode. Solar and utility grid sources power loads simultaneously for flexible, hybrid energy management throughout the day. This Marsriva Solar Inverter accepts nominal input voltage across 208, 220, 230, and 240VAC ranges. Voltage range covers 170 to 264VAC in UPS mode and 90 to 280VAC in APP or generator mode. </p>\n<p>This Marsriva MR-SPF6.5K-LP1-TL20E 6.5kW Solar Inveter has auto-sensing frequency detection covers both 50Hz and 60Hz inputs for broad global compatibility. The MPPT solar charger supports a voltage range of 60 to 450VDC with 500VDC maximum open circuit voltage. Maximum PV input power reaches 9000W with maximum PV input current at 27A. Maximum solar, AC, and hybrid charging currents all reach 120A for fast, flexible battery replenishment. This Marsriva Hybrid Solar Inverter supports 48VDC nominal battery voltage across a 40 to 61VDC operating range. </p>\n<p>Lead-acid, lithium, and user-defined battery types all integrate seamlessly with this system. CAN and RS485 BMS communication ports enable advanced battery management system integration. This Marsriva MR-SPF6.5K-LP1-TL20E 6.5kW Solar Inveter has a built-in WiFi module supports convenient remote monitoring and system management. Dual AC output and feed-in to grid function expand deployment flexibility.</p>\n<h2>Buy Marsriva MR-SPF6.5K-LP1-TL20E 6.5kW Solar Inveter from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Marsriva MR-SPF6.5K-LP1-TL20E 6.5kW Solar Inveter</strong> From Star Tech. We have a large collection of latest Marsriva <a href=\"https://www.startech.com.bd/inverter\" target=\"\">Inverter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Marsriva MR-SPF6.5K-LP1-TL20E 6.5kW Solar Inveter comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MR-SPF6.5K-LP1-TL20E</li><li>Rated Power: 6.5kW, power factor 1</li><li>MPPT ranges 60V~450V, 500Voc</li><li>Solar &amp; Grid Power Loads at Same Time</li><li>IP20 Protection, WIFl module for monitoring</li></ul>",
+      "model": "MR-SPF6.5K-LP1-TL20E",
+      "warranty": "2 years",
+      "basePrice": 52000.0,
+      "originalPrice": 57200.0,
+      "currency": "BDT",
+      "weight": 10.0,
+      "dimensions": {
+        "length": 336.0,
+        "width": 410.0,
+        "height": 110.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MARSRIVA",
+      "variantOptions": [
+        {
+          "name": "Storage Temperature",
+          "position": 0,
+          "values": [
+            {
+              "value": "-15°C to 60°C",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51783",
+          "price": 52000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage Temperature": "-15°C to 60°C"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 49920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Battery Type",
+              "value": "Lead-acid / Lithium / User-defined",
+              "position": 0
+            },
+            {
+              "label": "Rated AC Output Power",
+              "value": "6.5kVA / 6.5kW",
+              "position": 1
+            },
+            {
+              "label": "AC Peak/ Surge Output Power",
+              "value": "2 times of rated power",
+              "position": 2
+            },
+            {
+              "label": "UPS Transfer Time",
+              "value": "10ms (UPS/APP Mode); 20ms (GEN Mode)",
+              "position": 3
+            },
+            {
+              "label": "Connectivity",
+              "value": "BMS(485/CAN), WiFi Module",
+              "position": 4
+            },
+            {
+              "label": "Protection",
+              "value": "IP20 Protection",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "High frequency inverter with small size and light weight Solar and utility grid can power loads at the same time With the ability to work without battery Dual AC output Feed-in to grid function",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Output",
+          "position": 1,
+          "items": [
+            {
+              "label": "AC Output",
+              "value": "208 / 220 / 230 / 240VAC ± 5% Nominal Output Frequency: 50 / 60Hz ± 0.1% (Batt. Mode)",
+              "position": 0
+            },
+            {
+              "label": "Output Waveform",
+              "value": "Pure sine wave AC output",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Input (Charging)",
+          "position": 2,
+          "items": [
+            {
+              "label": "AC Input",
+              "value": "60 – 450VDC (Min. 80VDC without battery connected)",
+              "position": 0
+            },
+            {
+              "label": "Solar Input",
+              "value": "Solar Charger Type: MPPT Max. PV Input Power: 9000W Max. PV Input Current: 27A Max. PV Open Circuit Voltage: 500VDC Max. Solar Charging Current: 120A",
+              "position": 1
+            },
+            {
+              "label": "Grid/ Wall Input",
+              "value": "120A",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Environment",
+          "position": 3,
+          "items": [
+            {
+              "label": "Operating Temperature",
+              "value": "-10°C to 50°C",
+              "position": 0
+            },
+            {
+              "label": "Storage Temperature",
+              "value": "-15°C to 60°C",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Information",
+          "position": 4,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "336 × 410 × 110mm (W x H x D)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "10 kg",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 5,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-spf6-5k-lp1-tl20e-6-5kw-solar-inveter",
+      "sourceProductCode": "51783",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MR-SPF6.5K-LP1-TL20E",
+        "Rated Power: 6.5kW, power factor 1",
+        "MPPT ranges 60V~450V, 500Voc",
+        "Solar & Grid Power Loads at Same Time",
+        "IP20 Protection, WIFl module for monitoring"
+      ],
+      "needsReview": false,
+      "categorySlug": "inverter",
+      "image": "/images/products/power/inverter/marsriva-mr-spf6-5k-lp1-tl20e-6-5kw-solar-inveter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/inverter/marsriva-mr-spf6-5k-lp1-tl20e-6-5kw-solar-inveter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "marsriva-mr-spf6-5k-lp1-tl20e-6-5kw-solar-inveter",
+        "candidateTitle": "Marsriva MR-SPF6.5K-LP1-TL20E 6.5kW Hybrid Solar Inveter",
+        "attemptStem": "marsriva-mr-spf6-5k-lp1-tl20e-6-5kw-solar-inveter"
+      }
+    },
+    {
+      "name": "Marsriva MR-SPF6.5K-LP1-TL54E 6.5kW Hybrid Solar Inveter",
+      "slug": "marsriva-mr-spf6-5k-lp1-tl54e-6-5kw-solar-inveter",
+      "type": "PHYSICAL",
+      "sku": "ST-51779",
+      "description": "<h2>Marsriva MR-SPF6.5K-LP1-TL54E 6.5kW Hybrid Solar Inveter</h2>\n<p>The Marsriva <strong>MR-SPF6.5K-LP1-TL54E</strong> 6.5kW Hybrid Solar Inverter delivers powerful, flexible solar energy management for homes and commercial installations. This Marsriva 6.5kW Solar Inverter provides 6.5kVA rated power with a power factor of 1 for maximum efficiency. Pure sine wave AC output ensures clean, stable power delivery to all connected loads and sensitive equipment. </p>\n<p>This Marsriva MR-SPF6.5K-LP1-TL54E 6.5kW Solar Inverter operates at up to 94% maximum efficiency for optimal energy utilization. Surge power reaches twice the rated output capacity for handling sudden load spikes reliably. Transfer time stays within 10ms for near-seamless switching between power sources during outages. Solar and utility grid sources can power loads simultaneously for flexible hybrid energy management. </p>\n<p>This Marsriva Solar Inverter accepts nominal input voltage across 208, 220, 230, and 240VAC ranges. Voltage range spans 170 to 264VAC in UPS mode and 90 to 280VAC in APP or GEN mode. This Marsriva MR-SPF6.5K-LP1-TL54E 6.5kW Solar Inveter has frequency auto-sensing covers both 50Hz and 60Hz inputs for global compatibility. </p>\n<p>The MPPT solar charger supports a voltage range of 60 to 450VDC with 500VDC maximum open circuit voltage. Maximum PV input power reaches 9000W with a maximum solar charging current of 120A. Maximum AC and hybrid charging currents both reach 120A for rapid battery replenishment. </p>\n<p>This Marsriva Hybrid Solar Inverter supports 48VDC nominal battery voltage across a 40 to 61VDC operating range. This Marsriva MR-SPF6.5K-LP1-TL54E 6.5kW Solar Inveter has Lead-acid, lithium, and user-defined battery types all work with this flexible system. CAN and RS485 communication ports enable full BMS integration for advanced battery management. </p>\n<p>A built-in WiFi module supports remote monitoring and system management from any connected device. Dual AC output and feed-in to grid function expand installation flexibility for diverse energy setups. IP54 protection rating ensures reliable outdoor operation against dust and water spray.</p>\n<h2>Buy Marsriva MR-SPF6.5K-LP1-TL54E 6.5kW Solar Inveter from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Marsriva MR-SPF6.5K-LP1-TL54E 6.5kW Solar Inveter</strong> From Star Tech. We have a large collection of latest Marsriva <a href=\"https://www.startech.com.bd/inverter\" target=\"\">Inverter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Marsriva MR-SPF6.5K-LP1-TL54E 6.5kW Solar Inveter comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MR-SPF6.5K-LP1-TL54E</li><li>Rated Power: 6.5kW, power factor 1</li><li>MPPT ranges 60V~450V, 500Voc</li><li>Solar &amp; Grid Power Loads at Same Time</li><li>IP54 Protection, WIFl module for monitoring</li></ul>",
+      "model": "MR-SPF6.5K-LP1-TL54E",
+      "warranty": "2 years",
+      "basePrice": 56000.0,
+      "originalPrice": 61600.0,
+      "currency": "BDT",
+      "weight": 8.8,
+      "dimensions": {
+        "length": 336.0,
+        "width": 394.0,
+        "height": 110.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "MARSRIVA",
+      "variantOptions": [
+        {
+          "name": "Storage Temperature",
+          "position": 0,
+          "values": [
+            {
+              "value": "-15°C to 60°C",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51779",
+          "price": 56000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage Temperature": "-15°C to 60°C"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 53760.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Battery Type",
+              "value": "Lead-acid / Lithium / User-defined",
+              "position": 0
+            },
+            {
+              "label": "Rated AC Output Power",
+              "value": "6.5kVA / 6.5kW",
+              "position": 1
+            },
+            {
+              "label": "AC Peak/ Surge Output Power",
+              "value": "2 times of rated power",
+              "position": 2
+            },
+            {
+              "label": "UPS Transfer Time",
+              "value": "10ms",
+              "position": 3
+            },
+            {
+              "label": "Connectivity",
+              "value": "BMS(485/CAN), WiFi Module",
+              "position": 4
+            },
+            {
+              "label": "Protection",
+              "value": "IP54 Protection",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "High frequency inverter with small size and light weight Solar and utility grid can power loads at the same time With the ability to work without battery Dual AC output Feed-in to grid function",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Output",
+          "position": 1,
+          "items": [
+            {
+              "label": "AC Output",
+              "value": "208 / 220 / 230 / 240VAC ± 5% Nominal Output Frequency: 50 / 60Hz ± 0.1% (Batt. Mode)",
+              "position": 0
+            },
+            {
+              "label": "Output Waveform",
+              "value": "Pure sine wave AC output",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Surge Power: 2 times of rated power",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Input (Charging)",
+          "position": 2,
+          "items": [
+            {
+              "label": "AC Input",
+              "value": "60 – 450VDC (Min. 80VDC without battery connected)",
+              "position": 0
+            },
+            {
+              "label": "Solar Input",
+              "value": "Solar Charger Type: MPPT Max. PV Input Power: 9000W Max. PV Input Current: 27A Max. PV Open Circuit Voltage: 500VDC Max. Solar Charging Current: 120A",
+              "position": 1
+            },
+            {
+              "label": "Grid/ Wall Input",
+              "value": "120A",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Environment",
+          "position": 3,
+          "items": [
+            {
+              "label": "Operating Temperature",
+              "value": "-10°C to 60°C",
+              "position": 0
+            },
+            {
+              "label": "Storage Temperature",
+              "value": "-15°C to 60°C",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Information",
+          "position": 4,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "336 × 394 × 110mm (W x H x D)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "8.8 kg",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 5,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-spf6-5k-lp1-tl54e-6-5kw-solar-inveter",
+      "sourceProductCode": "51779",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MR-SPF6.5K-LP1-TL54E",
+        "Rated Power: 6.5kW, power factor 1",
+        "MPPT ranges 60V~450V, 500Voc",
+        "Solar & Grid Power Loads at Same Time",
+        "IP54 Protection, WIFl module for monitoring"
+      ],
+      "needsReview": false,
+      "categorySlug": "inverter",
+      "image": "/images/products/power/inverter/marsriva-mr-spf6-5k-lp1-tl54e-6-5kw-solar-inveter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/inverter/marsriva-mr-spf6-5k-lp1-tl54e-6-5kw-solar-inveter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "marsriva-mr-spf6-5k-lp1-tl54e-6-5kw-solar-inveter",
+        "candidateTitle": "Marsriva MR-SPF6.5K-LP1-TL54E 6.5kW Hybrid Solar Inveter",
+        "attemptStem": "marsriva-mr-spf6-5k-lp1-tl54e-6-5kw-solar-inveter"
+      }
+    },
+    {
+      "name": "Marsriva MR-UT1200 1200VA Pure Sine Wave SOHO Inverter (Without Battery)",
+      "slug": "marsriva-mr-ut1200-inverter",
+      "type": "PHYSICAL",
+      "sku": "ST-48122",
+      "description": "<h2>Marsriva MR-UT1200 1200VA Pure Sine Wave SOHO Inverter</h2><p> The Marsriva <strong>MR-UT1200</strong> 1200VA SOHO Inverter features pure sine wave output, ensuring safe operation for sensitive electronics and modern appliances. With a rated capacity of 1200VA or 1000W, the Marsriva SOHO Inverter handles computers, networking devices, and essential equipment efficiently. Marsriva MR-UT1200 Inverter uses a microprocessor based design to maintain precise voltage regulation and consistent output performance. In UPS mode, output voltage ranges from 203–238VAC ±5VAC, while inverter mode supports 150–255VAC ±5VAC. During battery mode, the Marsriva Inverter supplies stable 220VAC ±5VAC with 50Hz ±0.5Hz frequency. A fast transfer time of less than 10ms ensures uninterrupted operation during sudden power failures. The Marsriva MR-UT1200 1200VA Pure Sine Wave SOHO Inverter operates on a 12VDC nominal battery system. Input voltage range supports 145–270VAC ±5VAC in UPS mode and 100–290VAC ±5VAC in inverter mode. The input frequency range of 45Hz to 65Hz enhances compatibility with varying utility conditions. Smart charging technology optimizes battery health, while selectable 10A or 20A maximum charging current offers flexible charging control. Real time auto-detection continuously monitors battery condition for reliable and safe performance. Speed control for the cooling fan reduces noise and improves thermal efficiency. The Marsriva MR-UT1200 SOHO Inverter includes protection against overload, short circuit, and over temperature risks. Isolation between battery and AC utility enhances safety and equipment longevity. Outstanding dynamic performance ensures consistent output under fluctuating loads. Designed for operating temperatures between 0℃ and 40℃, the Marsriva MR-UT1200 Inverter performs reliably in demanding environments. With humidity tolerance from 20% to 90% non-condensing, the Marsriva Inverter offers durable and efficient power backup solutions.</p><h2>Buy Marsriva MR-UT1200 1200VA SOHO Inverter from Star Tech</h2><p>In Bangladesh, you can get original <strong>Marsriva MR-UT1200 1200VA SOHO Inverter</strong> From Star Tech. We have a large collection of latest Marsriva <a href=\"https://www.startech.com.bd/inverter\" target=\"\">Inverter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Marsriva MR-UT1200 1200VA SOHO Inverter comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MR-UT1200</li><li>Rated Power: 1200VA /1000W, Pure Sine Wave Output</li><li>Microprocessor-Based Design, Isolation Between Battery and AC Utility</li><li>Smart Charging, Real-Time Auto-Detection for Battery Condition</li><li>Protection for Overload, Short Circuit, &amp; Over Temp</li></ul>",
+      "model": "MR-UT1200",
+      "warranty": "1 year",
+      "basePrice": 15500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 290.0,
+        "width": 257.0,
+        "height": 123.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "MARSRIVA",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1200VA",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Load Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "1000W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-48122",
+          "price": 15500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "1200VA",
+            "Load Capacity": "1000W"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 14880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "1200VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "Smart LCD display",
+              "position": 1
+            },
+            {
+              "label": "Load Capacity",
+              "value": "1000W",
+              "position": 2
+            },
+            {
+              "label": "Input Voltage",
+              "value": "230VAC",
+              "position": 3
+            },
+            {
+              "label": "Output Voltage",
+              "value": "UPS mode: 203–238VAC±5VAC INV mode: 150–255VAC±5VAC (AC Mode) 220VAC ± 5VAC (Battery Mode)",
+              "position": 4
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "50Hz ± 0.5Hz",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "Microprocessor based design. Smart charging. Speed control for cooling fan. Real time auto-detection for battery condition. Protection for overload, short circuit, & over temp. Isolation between battery and AC utility. Outstanding dynamic performance.",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "45Hz - 65Hz",
+              "position": 0
+            },
+            {
+              "label": "Voltage Range",
+              "value": "UPS mode: 145–270VAC±5VAC INV mode: 100–290VAC±5VAC",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "UPS mode: 203–238VAC±5VAC INV mode: 150–255VAC±5VAC (AC Mode) 220VAC ± 5VAC (Battery Mode)",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 1
+            },
+            {
+              "label": "Transfer Time",
+              "value": "＜10ms",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 3,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "290 x 257 x 123 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/marsriva-mr-ut1200-inverter",
+      "sourceProductCode": "48122",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MR-UT1200",
+        "Rated Power: 1200VA /1000W, Pure Sine Wave Output",
+        "Microprocessor-Based Design, Isolation Between Battery and AC Utility",
+        "Smart Charging, Real-Time Auto-Detection for Battery Condition",
+        "Protection for Overload, Short Circuit, & Over Temp"
+      ],
+      "needsReview": false,
+      "categorySlug": "inverter",
+      "image": "/images/products/power/inverter/marsriva-mr-ut1200-inverter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/inverter/marsriva-mr-ut1200-inverter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "marsriva-mr-ut1200-inverter",
+        "candidateTitle": "Marsriva MR-UT1200 1200VA Pure Sine Wave SOHO Inverter (Without Battery)",
+        "attemptStem": "marsriva-mr-ut1200-inverter"
+      }
+    },
+    {
+      "name": "Must PV18-3024 ECO 3000VA Pure Sine Wave Solar Inverter",
+      "slug": "must-pv18-3024-eco-3000va-solar-inverter",
+      "type": "PHYSICAL",
+      "sku": "ST-46024",
+      "description": "<h2>Must PV18-3024 ECO 3000VA Pure Sine Wave Solar Inverter</h2><p>The Must <strong>PV18-3024 ECO</strong> 3000VA Pure Sine Wave Solar Inverter is ideal for modern households, small enterprises, and off-grid applications. This Must Solar Inverter is built with modern technology and produces a rated power output of 3000VA/3000W. It also has a pure sine wave output for stable and clean electricity, ensuring the safe operation of sensitive electronics and appliances. With a surge power output of 6000W, it can readily handle high start-up loads, and its peak inverter efficiency surpasses 90%, providing optimal energy conversion and low power loss. This Must PV18-3024 ECO Solar <a href=\"https://www.startech.com.bd/ips\" style=\"color: rgb(0, 0, 0);\" target=\"\">IPS</a> combines solar, AC utility, and battery power sources to ensure continuous power delivery even during outages, making it ideal for both residential and commercial applications. The Must PV18-3024 ECO 3000VA IPS is designed with versatility in mind, supporting a 24VDC battery system and featuring a smart LCD that allows users to alter essential settings such as charging voltage, working modes, and charging current. Its built-in MPPT solar charge controller maximizes power generation from solar panels, with an MPPT voltage range of 30-320VDC and a maximum solar input power of 4000W. The Must PV18-3024 ECO 3000VA Pure Sine Wave Solar Inverter enables up to 100A solar charging and 60A AC charging, for a total maximum charging current of 100A, providing powerful and efficient energy management. The Must Solar Inverter also includes advanced protective features, including overload, short-circuit, and deep discharge prevention, which ensure long-term reliability. It communicates via RS-485 and CAN ports, enabling integration with lithium batteries and remote monitoring for intelligent energy management. With dual output channels for smart load control, cold start capability, and a wide AC input voltage range of 170-280VAC, the Must PV18-3024 ECO 3000VA Pure Sine Wave Solar Inverter provides consistent performance.</p><h2>Buy Must PV18-3024 ECO 3000VA Pure Sine Wave Solar Inverter from Star Tech</h2><p>In Bangladesh, you can get original <strong>Must PV18-3024 ECO 3000VA Pure Sine Wave Solar Inverter</strong> From Star Tech. We have a large collection of latest Must <a href=\"https://www.startech.com.bd/inverter\" target=\"\">Inverter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Must PV18-3024 ECO 3000VA Pure Sine Wave Solar Inverter comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PV18-3024 ECO</li><li>Rated Power: 3000VA/3000W, Waveform: Pure Sine Wave</li><li>Support RS485, CAN Monitoring Function, Cold Start Function</li><li>Built-in MPPT Solar Charge Controller, Smart LCD Display</li><li>Overload, Short Circuit, &amp; Deep Discharge Protection</li></ul>",
+      "model": "PV18-3024 ECO",
+      "warranty": "1 year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 6.7,
+      "dimensions": {
+        "length": 290.0,
+        "width": 367.0,
+        "height": 111.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Must",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "3000VA",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Load Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "3000W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-46024",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "3000VA",
+            "Load Capacity": "3000W"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "3000VA",
+              "position": 0
+            },
+            {
+              "label": "Display Type",
+              "value": "Smart LCD display",
+              "position": 1
+            },
+            {
+              "label": "Load Capacity",
+              "value": "3000W",
+              "position": 2
+            },
+            {
+              "label": "Input Voltage",
+              "value": "230VAC",
+              "position": 3
+            },
+            {
+              "label": "Output Voltage",
+              "value": "230VAC±5%(Setting)",
+              "position": 4
+            },
+            {
+              "label": "Frequency (Battery Mode)",
+              "value": "50Hz / 60Hz (Auto sensing)",
+              "position": 5
+            },
+            {
+              "label": "Battery",
+              "value": "Normal voltage: 24VDC Floating Charge Voltage: 27.4VDC Overcharge Protection: 30VDC",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Input Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Frequency",
+              "value": "50Hz / 60Hz (Auto sensing)",
+              "position": 0
+            },
+            {
+              "label": "Voltage Range",
+              "value": "170~280VAC(UPS) / 90~280VAC(APL) / 184~253VAC(VDE)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Output Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Voltage Range",
+              "value": "230VAC±5%(Setting)",
+              "position": 0
+            },
+            {
+              "label": "Type of Wave",
+              "value": "Pure sine wave",
+              "position": 1
+            },
+            {
+              "label": "Transfer Time",
+              "value": "Typical < 10ms , 20ms max",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 3,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "290*367*111mm (W*H*D)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "6.7 Kg",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 4,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/must-pv18-3024-eco-3000va-solar-inverter",
+      "sourceProductCode": "46024",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PV18-3024 ECO",
+        "Rated Power: 3000VA/3000W, Waveform: Pure Sine Wave",
+        "Support RS485, CAN Monitoring Function, Cold Start Function",
+        "Built-in MPPT Solar Charge Controller, Smart LCD Display",
+        "Overload, Short Circuit, & Deep Discharge Protection"
+      ],
+      "needsReview": true,
+      "categorySlug": "inverter",
+      "image": "/images/products/power/inverter/must-pv18-3024-eco-3000va-solar-inverter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/power/inverter/must-pv18-3024-eco-3000va-solar-inverter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "must-pv18-3024-eco-3000va-solar-inverter",
+        "candidateTitle": "Must PV18-3024 ECO 3000VA Pure Sine Wave Solar Inverter",
+        "attemptStem": "must-pv18-3024-eco-3000va-solar-inverter"
+      }
+    }
+  ]
+}

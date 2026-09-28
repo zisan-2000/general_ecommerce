@@ -1,0 +1,1392 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/security-camera",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\security-camera",
+    "generatedAtUnix": 1790590169,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Security Camera",
+      "slug": "security-camera",
+      "parentSlug": null,
+      "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1201aef-fingerprint-reader.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "KVM Switch",
+      "slug": "kvm-switch",
+      "parentSlug": "security-camera",
+      "image": "/images/products/security-camera/kvm-switch/cote-kvm-0819m-8-port-kvm-switch.png",
+      "isActive": true,
+      "sortOrder": 10,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Cote",
+      "slug": "cote",
+      "logo": null
+    },
+    {
+      "name": "Onten",
+      "slug": "onten",
+      "logo": null
+    },
+    {
+      "name": "Safenet",
+      "slug": "safenet",
+      "logo": null
+    },
+    {
+      "name": "TRENDnet",
+      "slug": "trendnet",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "COTE KVM-0819M 8 Port KVM Switch with 19\" Console",
+      "slug": "cote-kvm-0819m-8-port-kvm-switch",
+      "type": "PHYSICAL",
+      "sku": "ST-39674",
+      "description": "<h2>COTE KVM-0819M 8 Port KVM Switch with 19\" Console</h2><p>The COTE <strong>KVM-0819M 8 Port KVM Switch</strong> with 19\" Console is a great choice for easily controlling multiple servers. This versatile switch allows you to directly handle up to 8 servers, with the option to expand to 128 servers. The KVM console has a wide-screen 18.51\" LCD display with a 16:9 ratio, giving clear images with an AHVA TFT-LCD and LED backlight. The 100-key detachable keyboard and touchscreen mouse provide intuitive control, while the 1.8m cable allows for convenient and efficient server operations. Whether you're in a server room or a huge data center, the COTE KVM-0819M offers smooth operations and reliable performance.</p><h2>Buy COTE KVM-0819M 8 Port KVM Switch with 19\" Console from Star Tech</h2><p>In Bangladesh, you can get original <strong>COTE KVM-0819M 8 Port KVM Switch with 19\" Console</strong> From Star Tech. We have a large collection of latest COTE <a href=\"https://www.startech.com.bd/kvm-switch\">KVM Switch</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The COTE KVM-0819M 8 Port KVM Switch with 19\" Console has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: KVM-0819M</li><li>8 Port Combo KVM Switch</li><li>19&quot; Console</li><li>Keyboard Type: 100Keys</li><li>Cable Length: 1.8m</li></ul>",
+      "model": "KVM-0819M",
+      "warranty": "1 year Warranty",
+      "basePrice": 160000.0,
+      "originalPrice": 175000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Cote",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39674",
+          "price": 160000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 153600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Port",
+              "value": "Direct Connects 8 (Up to 64 & 128)",
+              "position": 0
+            },
+            {
+              "label": "Advanced Functions",
+              "value": "Monitor Type: Wide-Screen LCD Console Monitor Ratio: 18.51” Screen, 16:9 Monitor Back Light: LED Video Visibility: Wide AHVA TFT-LCD Keyboard Type: 100Keys, detachable/ demountable design Keyboard Compatible Touch Screen Cable: 1.8m",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cote-kvm-0819m-8-port-kvm-switch",
+      "sourceProductCode": "39674",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: KVM-0819M",
+        "8 Port Combo KVM Switch",
+        "19\" Console",
+        "Keyboard Type: 100Keys",
+        "Cable Length: 1.8m"
+      ],
+      "needsReview": false,
+      "categorySlug": "kvm-switch",
+      "image": "/images/products/security-camera/kvm-switch/cote-kvm-0819m-8-port-kvm-switch.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/kvm-switch/cote-kvm-0819m-8-port-kvm-switch.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cote-kvm-0819m-8-port-kvm-switch",
+        "candidateTitle": "COTE KVM-0819M 8 Port KVM Switch with 19\" Console",
+        "attemptStem": "cote-kvm-0819m-8-port-kvm-switch"
+      }
+    },
+    {
+      "name": "COTE KVM-1619M 16 Port KVM Switch with 19\" Console",
+      "slug": "cote-kvm-1619m-16-port-kvm-switch",
+      "type": "PHYSICAL",
+      "sku": "ST-39675",
+      "description": "<h2>COTE KVM-1619M 16 Port KVM Switch with 19\" Console</h2><p>The COTE<strong> KVM-1619M 16 Port KVM Switch</strong> with 19\" Console is a great choice for easily controlling multiple servers. This versatile switch allows you to directly handle up to 16 servers, with the option to expand to 256 servers. The KVM console has a wide-screen 18.51\" LCD display with a 16:9 ratio, giving clear images with an AHVA TFT-LCD and LED backlight. The 100-key detachable keyboard and touchscreen mouse provide intuitive control, while the 1.8m cable allows for convenient and efficient server operations. Whether you're in a server room or a huge data center, the COTE KVM-1619M offers smooth operations and reliable performance.</p><h2>Buy COTE KVM-1619M 16 Port KVM Switch with 19\" Console from Star Tech</h2><p>In Bangladesh, you can get original <strong>COTE KVM-1619M 16 Port KVM Switch with 19\" Console</strong> From Star Tech. We have a large collection of latest COTE <a href=\"https://www.startech.com.bd/kvm-switch\">KVM Switch</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The COTE KVM-1619M 16 Port KVM Switch with 19\" Console has 1 year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: KVM-1619M</li><li>16 Port Combo KVM Switch</li><li>19&quot; Console</li><li>Keyboard Type: 100Keys</li><li>Cable Length: 1.8m</li></ul>",
+      "model": "KVM-1619M",
+      "warranty": "1 year Warranty",
+      "basePrice": 195000.0,
+      "originalPrice": 205000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Cote",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39675",
+          "price": 195000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 187200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Port",
+              "value": "Direct Connects 16 (Up to 64 & 128)",
+              "position": 0
+            },
+            {
+              "label": "Advanced Functions",
+              "value": "Monitor Type: Wide-Screen LCD Console Monitor Ratio: 18.51” Screen, 16:9 Monitor Back Light: LED Video Visibility: Wide AHVA TFT-LCD Keyboard Type: 100Keys, detachable/ demountable design Keyboard Compatible Touch Screen Cable: 1.8m",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cote-kvm-1619m-16-port-kvm-switch",
+      "sourceProductCode": "39675",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: KVM-1619M",
+        "16 Port Combo KVM Switch",
+        "19\" Console",
+        "Keyboard Type: 100Keys",
+        "Cable Length: 1.8m"
+      ],
+      "needsReview": false,
+      "categorySlug": "kvm-switch",
+      "image": "/images/products/security-camera/kvm-switch/cote-kvm-1619m-16-port-kvm-switch.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/kvm-switch/cote-kvm-1619m-16-port-kvm-switch.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cote-kvm-1619m-16-port-kvm-switch",
+        "candidateTitle": "COTE KVM-1619M 16 Port KVM Switch with 19\" Console",
+        "attemptStem": "cote-kvm-1619m-16-port-kvm-switch"
+      }
+    },
+    {
+      "name": "Onten OTN-KVM100 7 Port KVM Switch",
+      "slug": "onten-otn-kvm100-kvm-switch",
+      "type": "PHYSICAL",
+      "sku": "ST-51429",
+      "description": "<h2>Onten OTN-KVM100 7 Port KVM Switch</h2><p>The <strong>Onten OTN-KVM100 7 Port KVM Switch</strong> offers a practical way to manage two computers with a single set of USB devices. It features a total of seven ports and supports USB 3.2 Gen 1 technology for fast and stable data transfer. The switch includes 2 input ports and 4 output ports, allowing users to connect multiple peripherals while switching between up to two PCs or laptops. With transfer speeds of up to 5Gbps, it helps move files quickly and supports high-performance USB accessories. This KVM USB switch is suitable for home offices, workstations, content creators, and professionals who frequently use multiple systems. It reduces cable clutter and simplifies device sharing without reconnecting keyboards, mice, storage drives, or other USB equipment. The compact design fits neatly on a desk while providing convenient access to connected devices. Built for reliable performance, the Onten OTN-KVM100 ensures stable communication between computers and USB peripherals. Its plug-and-play functionality allows quick installation without complicated software, saving valuable time during setup. Whether you need to switch between office and personal computers or manage dual-system workflows, this USB switch delivers fast connectivity and efficient control in a compact solution.</p><h2>Buy Onten OTN-KVM100 7 Port KVM Switch from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Onten OTN-KVM100 7 Port KVM Switch</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kvm-switch\" target=\"\">KVM Switch</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Onten OTN-KVM100 7 Port KVM Switch comes with 2 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-KVM100</li><li>Number of Total Port - 7 Port</li><li>Transfer Speed: 5Gbps</li><li>USB: USB 3.2 Gen 1</li><li>Control Two Computers with One Set of Console</li></ul>",
+      "model": "OTN-KVM100",
+      "warranty": "1 year",
+      "basePrice": 3099.0,
+      "originalPrice": 3310.0,
+      "currency": "BDT",
+      "weight": 0.096,
+      "dimensions": {
+        "length": 95.0,
+        "width": 63.0,
+        "height": 24.0,
+        "unit": "in"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "USB A, Type-C",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51429",
+          "price": 3099.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "USB A, Type-C"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2975.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "KVM Switch",
+              "position": 0
+            },
+            {
+              "label": "Port",
+              "value": "7 Port",
+              "position": 1
+            },
+            {
+              "label": "Data Transmission Rate",
+              "value": "5Gbps",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "USB A, Type-C",
+              "position": 0
+            },
+            {
+              "label": "Power Supply",
+              "value": "Usb3.2 Gen 1 2 In 4 Out (Support Max 2 Computer)",
+              "position": 1
+            },
+            {
+              "label": "Dimensions",
+              "value": "95 x 63 x 24mm (3.74 x 2.48 x 0.95 in.)",
+              "position": 2
+            },
+            {
+              "label": "Weight",
+              "value": "96g (3.4 oz.)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-kvm100-kvm-switch",
+      "sourceProductCode": "51429",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-KVM100",
+        "Number of Total Port - 7 Port",
+        "Transfer Speed: 5Gbps",
+        "USB: USB 3.2 Gen 1",
+        "Control Two Computers with One Set of Console"
+      ],
+      "needsReview": false,
+      "categorySlug": "kvm-switch",
+      "image": "/images/products/security-camera/kvm-switch/onten-otn-kvm100-kvm-switch.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/kvm-switch/onten-otn-kvm100-kvm-switch.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-kvm100-kvm-switch",
+        "candidateTitle": "Onten OTN-KVM100 7 Port KVM Switch",
+        "attemptStem": "onten-otn-kvm100-kvm-switch"
+      }
+    },
+    {
+      "name": "Onten OTN-KVM200 7 Port KVM Switch",
+      "slug": "onten-otn-kvm200-kvm-switch",
+      "type": "PHYSICAL",
+      "sku": "ST-51443",
+      "description": "<h2>Onten OTN-KVM200 7 Port KVM Switch</h2><p>The <strong>Onten OTN-KVM200 7 Port KVM Switch</strong> is a practical USB switch selector for users who need to connect two computers with shared USB devices. It supports two USB-C uplink connections, allowing quick switching between a PC and a laptop. This USB switcher helps reduce cable clutter while keeping connected peripherals accessible from both systems. The device includes three USB-A 3.2 Gen 2 ports and one USB-C 3.2 Gen 2 port, delivering data transfer speeds up to 10 Gbps. These high-speed ports support external storage drives, keyboards, mice, printers, and other compatible USB accessories. The Onten OTN-KVM200 allows two computers to share four USB peripherals without reconnecting cables. It features a dedicated USB-C power input that provides stable power during operation. The compact design fits neatly on office desks, workstations, and home setups without taking much space. This USB switch selector is suitable for professionals, content creators, programmers, and users working with multiple computers. Its USB 3.2 Gen 2 interface helps maintain fast file transfers while connected devices remain available for either computer. The Onten OTN-KVM200 7 Port KVM Switch offers a convenient way to manage shared USB peripherals with reliable performance and simple operation.</p><h2>Buy Onten OTN-KVM200 7 Port KVM Switch from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Onten OTN-KVM100 7 Port KVM Switch</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kvm-switch\" target=\"\">KVM Switch</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Onten OTN-KVM200 7 Port KVM Switch comes with 2 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-KVM200</li><li>Number of Total Port - 7 Port</li><li>Transfer Speed: 10 Gbps</li><li>USB: USB 3.2 Gen 2</li><li>Control Two Computers with One Set of Console</li></ul>",
+      "model": "OTN-KVM200",
+      "warranty": "1 year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.096,
+      "dimensions": {
+        "length": 95.0,
+        "width": 63.0,
+        "height": 24.0,
+        "unit": "in"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Onten",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "Uplink Interfaces: USB-C ×2 (for connecting 2 computers) Downlink Interfaces: USB-A 3.2 Gen 2 (10 Gbps) ×3 USB-C 3.2 Gen 2 (10 Gbps) ×1 USB-C (5V Power Input) ×1",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51443",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Interface": "Uplink Interfaces: USB-C ×2 (for connecting 2 computers) Downlink Interfaces: USB-A 3.2 Gen 2 (10 Gbps) ×3 USB-C 3.2 Gen 2 (10 Gbps) ×1 USB-C (5V Power Input) ×1"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "KVM Switch",
+              "position": 0
+            },
+            {
+              "label": "Port",
+              "value": "7 Port",
+              "position": 1
+            },
+            {
+              "label": "Advanced Functions",
+              "value": "Supports 2 computers sharing 4 USB peripherals",
+              "position": 2
+            },
+            {
+              "label": "Data Transmission Rate",
+              "value": "10 Gbps",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "Uplink Interfaces: USB-C ×2 (for connecting 2 computers) Downlink Interfaces: USB-A 3.2 Gen 2 (10 Gbps) ×3 USB-C 3.2 Gen 2 (10 Gbps) ×1 USB-C (5V Power Input) ×1",
+              "position": 0
+            },
+            {
+              "label": "Power Supply",
+              "value": "Support Max 2 Computer",
+              "position": 1
+            },
+            {
+              "label": "Dimensions",
+              "value": "95 x 63 x 24mm (3.74 x 2.48 x 0.95 in.)",
+              "position": 2
+            },
+            {
+              "label": "Weight",
+              "value": "96g (3.4 oz.)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-kvm200-kvm-switch",
+      "sourceProductCode": "51443",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-KVM200",
+        "Number of Total Port - 7 Port",
+        "Transfer Speed: 10 Gbps",
+        "USB: USB 3.2 Gen 2",
+        "Control Two Computers with One Set of Console"
+      ],
+      "needsReview": true,
+      "categorySlug": "kvm-switch",
+      "image": "/images/products/security-camera/kvm-switch/onten-otn-kvm200-kvm-switch.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/kvm-switch/onten-otn-kvm200-kvm-switch.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-kvm200-kvm-switch",
+        "candidateTitle": "Onten OTN-KVM200 7 Port KVM Switch",
+        "attemptStem": "onten-otn-kvm200-kvm-switch"
+      }
+    },
+    {
+      "name": "Safenet SN-KC6808S 8-Port Stacking VGA KVM",
+      "slug": "safenet-sn-kc6808s-8-port-stacking-vga-kvm",
+      "type": "PHYSICAL",
+      "sku": "ST-30406",
+      "description": "<h2>Safenet SN-KC6808S 8-Port Stacking VGA KVM</h2><p>The Safenet <span style=\"font-weight: bold;\">SN-KC6808S</span> 8-Port Stacking VGA <a href=\"https://www.startech.com.bd/kvm-switch\" style=\"color: rgb(0, 0, 0);\" target=\"\">KVM </a>is a versatile device that lets you control up to eight PCs from a single interface. It includes a full-size keyboard with 99 keys and an integrated number pad, a built-in touchpad with trackball, and a high-resolution VGA display. Using the front panel LEDs, a keyboard hotkey combination, or the on-screen display (OSD), you may effortlessly switch between PCs. You may also name the servers or enter their SN numbers for rapid selection. The device offers two levels of password protection, allowing you to grant separate levels of access to users and administrators. You may also utilize the broadcast mode to conduct keyboard actions on all machines specified at the same time. The Safenet SN-KC6808S 8-Port Stacking VGA KVM enables hot plugging and is compatible with Windows, Sun, Unix, and Linux operating systems. The Safenet SN-KC6808S KVM also contains an OSD customization option, which allows you to change the on-screen picture, as well as auto adjust, exit, power on/off, brightness, menu, and a power indicator. The Safenet SN-KC6808S 8-Port Stacking VGA KVM is an excellent choice for anyone who wants to control many PCs from a single console while working in a small area.</p><h2>Buy Safenet SN-KC6808S 8-Port Stacking VGA KVM from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Safenet SN-KC6808S 8-Port Stacking VGA KVM </span>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kvm-switch\" target=\"\">KVM </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Safenet SN-KC6808S 8-Port Stacking VGA KVM comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SN-KC6808S</li><li>99 Keys Keyboard</li><li>Auto scan feature</li><li>Supports two level passwords</li><li>Built-in Touchpad with Trackball</li></ul>",
+      "model": "SN-KC6808S",
+      "warranty": "no warranty",
+      "basePrice": 143000.0,
+      "originalPrice": 154000.0,
+      "currency": "BDT",
+      "weight": 11.4,
+      "dimensions": {
+        "length": 448.0,
+        "width": 560.0,
+        "height": 42.5,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Safenet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-30406",
+          "price": 143000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 137280.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "KVM SWITCH",
+          "position": 0,
+          "items": [
+            {
+              "label": "Computer Connections",
+              "value": "Direct 8 or 16 Maximum by Cascading 256",
+              "position": 0
+            },
+            {
+              "label": "Installation Type",
+              "value": "Desktop",
+              "position": 1
+            },
+            {
+              "label": "Auto Scan Interval",
+              "value": "5~100 secs",
+              "position": 2
+            },
+            {
+              "label": "VGA Resolution",
+              "value": "1920×1080",
+              "position": 3
+            },
+            {
+              "label": "Console Connector",
+              "value": "Video: HDB-15(Female) II Keyboard: PS/2 II Mouse: PS/2 II",
+              "position": 4
+            },
+            {
+              "label": "Compatible OS",
+              "value": "Windows, Sun, Unix and Linux",
+              "position": 5
+            },
+            {
+              "label": "Operating Temperature",
+              "value": "0 °C ~ 50 °C",
+              "position": 6
+            },
+            {
+              "label": "Dimension (mm)",
+              "value": "448mm×560mm×42.5mm",
+              "position": 7
+            },
+            {
+              "label": "Weight (kg)",
+              "value": "11.4kg",
+              "position": 8
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/safenet-sn-kc6808s-8-port-stacking-vga-kvm",
+      "sourceProductCode": "30406",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SN-KC6808S",
+        "99 Keys Keyboard",
+        "Auto scan feature",
+        "Supports two level passwords",
+        "Built-in Touchpad with Trackball"
+      ],
+      "needsReview": false,
+      "categorySlug": "kvm-switch",
+      "image": "/images/products/security-camera/kvm-switch/safenet-sn-kc6808s-8-port-stacking-vga-kvm.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/kvm-switch/safenet-sn-kc6808s-8-port-stacking-vga-kvm.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "safenet-sn-kc6808s-8-port-stacking-vga-kvm",
+        "candidateTitle": "Safenet SN-KC6808S 8-Port Stacking VGA KVM",
+        "attemptStem": "safenet-sn-kc6808s-8-port-stacking-vga-kvm"
+      }
+    },
+    {
+      "name": "Safenet SN-KC6816S 16-Port Stacking VGA KVM",
+      "slug": "safenet-sn-kc6816s-stacking-vga-kvm",
+      "type": "PHYSICAL",
+      "sku": "ST-30407",
+      "description": "<h2>Safenet SN-KC6816S 16-Port Stacking VGA KVM</h2><p>The Safenet <span style=\"font-weight: bold;\">SN-KC6816S</span> 16-Port Stacking VGA KVM is a flexible device that lets you control up to 16 machines from a single interface. It includes a widescreen 18.5\" LED LCD display with a resolution of 1920x1080@60Hz Full HD, allowing you to see your laptops clearly and clearly. Using the front panel LEDs, a keyboard hotkey combination, or the on-screen display (OSD), you may effortlessly switch between PCs. You may also name the servers or enter their SN numbers for rapid selection. The device provides two-level password security, allowing you to grant separate levels of access to users and administrators. You may also use the auto-scan option to monitor the machines that you choose. The Safenet SN-KC6816S 16-Port Stacking VGA KVM allows hot plugging, which means you may add or remove computers without having to turn off the switch. The device also offers an OSD customization function that allows you to change the on-screen picture, including auto adjust, exit, power on/off, brightness, menu, and a power indicator. The device has a full-size 99-key keyboard with an integrated number pad and a built-in touchpad with trackball, eliminating the need for an external mouse. The device is compatible with Windows, Sun, Unix, and Linux operating systems. The device may also be layered with additional devices to control up to 256 PCs.</p><h2>Buy Safenet SN-KC6816S 16-Port Stacking VGA KVM from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Safenet SN-KC6816S 16-Port Stacking VGA KVM </span>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kvm-switch\" target=\"\">KVM </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Safenet SN-KC6816S 16-Port Stacking VGA KVM comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SN-KC6816S</li><li>99 Keys Keyboard</li><li>Auto scan feature</li><li>Supports two level passwords</li><li>Built-in Touchpad with Trackball</li></ul>",
+      "model": "SN-KC6816S",
+      "warranty": "no warranty",
+      "basePrice": 155000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 11.4,
+      "dimensions": {
+        "length": 448.0,
+        "width": 560.0,
+        "height": 42.5,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Safenet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-30407",
+          "price": 155000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 148800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "KVM SWITCH",
+          "position": 0,
+          "items": [
+            {
+              "label": "Computer Connections",
+              "value": "Direct 8 or 16 Maximum by Cascading 256",
+              "position": 0
+            },
+            {
+              "label": "Installation Type",
+              "value": "Desktop",
+              "position": 1
+            },
+            {
+              "label": "Auto Scan Interval",
+              "value": "5~100 secs",
+              "position": 2
+            },
+            {
+              "label": "VGA Resolution",
+              "value": "1920×1080",
+              "position": 3
+            },
+            {
+              "label": "Console Connector",
+              "value": "Video: HDB-15(Female) II Keyboard: PS/2 II Mouse: PS/2 II",
+              "position": 4
+            },
+            {
+              "label": "Compatible OS",
+              "value": "Windows, Sun, Unix and Linux",
+              "position": 5
+            },
+            {
+              "label": "Operating Temperature",
+              "value": "0 °C ~ 50 °C",
+              "position": 6
+            },
+            {
+              "label": "Dimension (mm)",
+              "value": "448mm×560mm×42.5mm",
+              "position": 7
+            },
+            {
+              "label": "Weight (kg)",
+              "value": "11.4kg",
+              "position": 8
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/safenet-sn-kc6816s-stacking-vga-kvm",
+      "sourceProductCode": "30407",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SN-KC6816S",
+        "99 Keys Keyboard",
+        "Auto scan feature",
+        "Supports two level passwords",
+        "Built-in Touchpad with Trackball"
+      ],
+      "needsReview": false,
+      "categorySlug": "kvm-switch",
+      "image": "/images/products/security-camera/kvm-switch/safenet-sn-kc6816s-stacking-vga-kvm.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/kvm-switch/safenet-sn-kc6816s-stacking-vga-kvm.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "safenet-sn-kc6816s-stacking-vga-kvm",
+        "candidateTitle": "Safenet SN-KC6816S 16-Port Stacking VGA KVM",
+        "attemptStem": "safenet-sn-kc6816s-stacking-vga-kvm"
+      }
+    },
+    {
+      "name": "Safenet SN-KC7808S 8-Port TP KVM",
+      "slug": "safenet-sn-kc7808s-tp-kvm",
+      "type": "PHYSICAL",
+      "sku": "ST-30408",
+      "description": "<h2>Safenet SN-KC7808S 8-Port TP KVM</h2><p>The Safenet <span style=\"font-weight: bold;\">SN-KC7808S</span> 8-Port TP KVM is a versatile device designed to facilitate server connectivity. It supports various server ports such as VGA, DVI, HDMI, and DP, enabling seamless connections. Users can access servers simultaneously in port sharing mode, providing both local and remote access. It is compatible with multiple operating systems like Windows, Linux, Unix, Mac, Solaris (Sun), Redhat, and Ubuntu. The KVM features video synchronization with the local console and supports EDID information for optimized video resolution. Emulation for keyboard and mouse ensures smooth booting, while auto scanning allows monitoring of user-selected computers. The Safenet SN-KC7808S 8-Port TP KVM supports hot plugging, enabling the addition or removal of computers without power interruption. It offers adaptive LAN ports with speeds of 10/100/1000 Mbps. BIOS-level access and firmware upgrade support are provided. The Safenet SN-KC7808S 8-Port TP KVM allows adjustment of video quality and tolerance to optimize data transfer speeds up to 30 FPS. It offers full screen or scalable video display options and enables remote and local users to control the same server/computer simultaneously. Security features include AES/DES/3DES encryption and strong password support, along with an audit function for device monitoring. Exit Macros support is available, and user and group permissions can be configured for server access and control. The KVM also automatically synchronizes mouse movements between local and remote connections.</p><h2>Buy Safenet SN-KC7808S 8-Port TP KVM from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Safenet SN-KC7808S 8-Port TP KVM</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kvm-switch\" target=\"\">KVM </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Safenet SN-KC7808S 8-Port TP KVM comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SN-KC7808S</li><li>99 Keys Keyboard</li><li>Auto scan feature</li><li>Resolution: 1920×1080</li><li>Support VGA, DVI, HDMI, DP Port</li></ul>",
+      "model": "SN-KC7808S",
+      "warranty": "no warranty",
+      "basePrice": 204500.0,
+      "originalPrice": 209000.0,
+      "currency": "BDT",
+      "weight": 13.4,
+      "dimensions": {
+        "length": 448.0,
+        "width": 560.0,
+        "height": 42.5,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Safenet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-30408",
+          "price": 204500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 196320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "KVM SWITCH",
+          "position": 0,
+          "items": [
+            {
+              "label": "Computer Connections",
+              "value": "Direct 8 or 16 Maximum by Cascading 256",
+              "position": 0
+            },
+            {
+              "label": "Installation Type",
+              "value": "Desktop",
+              "position": 1
+            },
+            {
+              "label": "Auto Scan Interval",
+              "value": "5~100 secs",
+              "position": 2
+            },
+            {
+              "label": "VGA Resolution",
+              "value": "1920×1080",
+              "position": 3
+            },
+            {
+              "label": "Console Connector",
+              "value": "Video: HDB-15(Female) II Keyboard: PS/2 II Mouse: PS/2 II",
+              "position": 4
+            },
+            {
+              "label": "Compatible OS",
+              "value": "Windows, Sun, Unix and Linux",
+              "position": 5
+            },
+            {
+              "label": "Operating Temperature",
+              "value": "0 °C ~ 50 °C",
+              "position": 6
+            },
+            {
+              "label": "Dimension (mm)",
+              "value": "448mm×560mm×42.5mm",
+              "position": 7
+            },
+            {
+              "label": "Weight (kg)",
+              "value": "13.4kg",
+              "position": 8
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/safenet-sn-kc7808s-tp-kvm",
+      "sourceProductCode": "30408",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SN-KC7808S",
+        "99 Keys Keyboard",
+        "Auto scan feature",
+        "Resolution: 1920×1080",
+        "Support VGA, DVI, HDMI, DP Port"
+      ],
+      "needsReview": false,
+      "categorySlug": "kvm-switch",
+      "image": "/images/products/security-camera/kvm-switch/safenet-sn-kc7808s-tp-kvm.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/kvm-switch/safenet-sn-kc7808s-tp-kvm.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "safenet-sn-kc7808s-tp-kvm",
+        "candidateTitle": "Safenet SN-KC7808S 8-Port TP KVM",
+        "attemptStem": "safenet-sn-kc7808s-tp-kvm"
+      }
+    },
+    {
+      "name": "Safenet SN-KC7816S 16-Port TP KVM",
+      "slug": "safenet-sn-kc7816s-tp-kvm",
+      "type": "PHYSICAL",
+      "sku": "ST-30409",
+      "description": "<h2>Safenet SN-KC7816S 16-Port TP KVM</h2><p>The Safenet <span style=\"font-weight: bold;\">SN-KC7816S </span>16-Port TP KVM Solution attempts to solve cable difficulties in high-density business server rooms and data centers by using readily managed Twisted Pair Cable (Cat 5e, Cat6, Cat7 cables) instead of heavy KVM combo cables, which may save considerable space and drastically minimize cable waste. To accommodate longer distance needs, the cabling extension distance may be increased to 100M and even more at a resolution of 1920x1080. A control device in a 1U Rack-Mountable enclosure with an integrated 18.5′′ LED-backlit widescreen LCD Monitor, keyboard, and touchpad offers safe access to the linked servers from a single KVM console. Two USB ports and one VGA port are built onto the back to allow for extra keyboard/mouse and external display connectivity.</p><h2>Buy Safenet SN-KC7816S 16-Port TP KVM from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Safenet SN-KC7816S 16-Port TP KVM </span>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kvm-switch\" target=\"\">KVM </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Safenet SN-KC7816S 16-Port TP KVM comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SN-KC7816S</li><li>99 Keys Keyboard</li><li>Resolution: 1920×1080</li><li>18.5″ LED-backlit widescreen</li><li>Support Trackball Function</li></ul>",
+      "model": "SN-KC7816S",
+      "warranty": "no warranty",
+      "basePrice": 258500.0,
+      "originalPrice": 263000.0,
+      "currency": "BDT",
+      "weight": 13.4,
+      "dimensions": {
+        "length": 448.0,
+        "width": 560.0,
+        "height": 42.5,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Safenet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-30409",
+          "price": 258500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 248160.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "KVM SWITCH",
+          "position": 0,
+          "items": [
+            {
+              "label": "Computer Connections",
+              "value": "Direct 8 or 16 Maximum by Cascading 256",
+              "position": 0
+            },
+            {
+              "label": "Installation Type",
+              "value": "Desktop",
+              "position": 1
+            },
+            {
+              "label": "Auto Scan Interval",
+              "value": "5~100 secs",
+              "position": 2
+            },
+            {
+              "label": "VGA Resolution",
+              "value": "1920×1080",
+              "position": 3
+            },
+            {
+              "label": "Console Connector",
+              "value": "Video: HDB-15(Female) II Keyboard: PS/2 II Mouse: PS/2 II",
+              "position": 4
+            },
+            {
+              "label": "Compatible OS",
+              "value": "Windows, Sun, Unix and Linux",
+              "position": 5
+            },
+            {
+              "label": "Operating Temperature",
+              "value": "0 °C ~ 50 °C",
+              "position": 6
+            },
+            {
+              "label": "Dimension (mm)",
+              "value": "448mm×560mm×42.5mm",
+              "position": 7
+            },
+            {
+              "label": "Weight (kg)",
+              "value": "13.4kg",
+              "position": 8
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/safenet-sn-kc7816s-tp-kvm",
+      "sourceProductCode": "30409",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SN-KC7816S",
+        "99 Keys Keyboard",
+        "Resolution: 1920×1080",
+        "18.5″ LED-backlit widescreen",
+        "Support Trackball Function"
+      ],
+      "needsReview": false,
+      "categorySlug": "kvm-switch",
+      "image": "/images/products/security-camera/kvm-switch/safenet-sn-kc7816s-tp-kvm.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/kvm-switch/safenet-sn-kc7816s-tp-kvm.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "safenet-sn-kc7816s-tp-kvm",
+        "candidateTitle": "Safenet SN-KC7816S 16-Port TP KVM",
+        "attemptStem": "safenet-sn-kc7816s-tp-kvm"
+      }
+    },
+    {
+      "name": "TRENDnet TK-207K 2-Port USB KVM Switch Kit",
+      "slug": "trendnet-tk-207k-2-port-usb-kvm-switch",
+      "type": "PHYSICAL",
+      "sku": "ST-31383",
+      "description": "<h2 style=\"\">TRENDnet TK-207K 2-Port USB KVM Switch</h2><p>The TRENDnet TK-207K 2-Port USB KVM Switch offers a convenient solution for managing two computers with a single set of peripherals. This device enables users to control two PCs with ease, using a single keyboard, monitor, and mouse. Switching between the connected computers is as simple as pressing a button, allowing for efficient multitasking and device management. This KVM Switch supports high-quality video output with a resolution of 2048 x 1536, ensuring a crisp and clear display. It is compatible with a wide range of operating systems and supports advanced mouse designs, making it versatile for various computing setups. With features like Hot Key operations for quick access to switching between computers and auto-scanning, the TRENDnet TK-207K enhances user convenience. It also offers hot-plug functionality and audible feedback, making it an excellent choice for efficiently managing multiple PCs without the hassle of constantly swapping peripherals or using additional power adapters.</p><h2>Buy TRENDnet TK-207K 2-Port USB KVM Switch from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">TRENDnet TK-207K 2-Port USB KVM Switch</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/trendnet-network-switch\" target=\"\">TRENDnet Network Switch</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The TRENDnet TK-207K 2-Port USB KVM Switch comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TK-207K</li><li>2-Port KVM switch with VGA and USB connections to computers</li><li>Device monitoring with Auto-Scan and audible feedback</li><li>High quality 2048 x 1536 resolution for a crisp display</li><li>Control two computers with one set of console controls</li></ul>",
+      "model": "TK-207K",
+      "warranty": "1 year",
+      "basePrice": 4700.0,
+      "originalPrice": 4900.0,
+      "currency": "BDT",
+      "weight": 0.096,
+      "dimensions": {
+        "length": 95.0,
+        "width": 63.0,
+        "height": 24.0,
+        "unit": "in"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TRENDnet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-31383",
+          "price": 4700.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4512.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Port",
+              "value": "1 x VGA /SVGA HDB 15-pin (Female) 2 x USB ports (Keyboard / Mouse)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "USB powered Max. consumption: 0.7W",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "95 x 63 x 24mm (3.74 x 2.48 x 0.95 in.)",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "96g (3.4 oz.)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/trendnet-tk-207k-2-port-usb-kvm-switch",
+      "sourceProductCode": "31383",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TK-207K",
+        "2-Port KVM switch with VGA and USB connections to computers",
+        "Device monitoring with Auto-Scan and audible feedback",
+        "High quality 2048 x 1536 resolution for a crisp display",
+        "Control two computers with one set of console controls"
+      ],
+      "needsReview": false,
+      "categorySlug": "kvm-switch",
+      "image": "/images/products/security-camera/kvm-switch/trendnet-tk-207k-2-port-usb-kvm-switch.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/kvm-switch/trendnet-tk-207k-2-port-usb-kvm-switch.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "trendnet-tk-207k-2-port-usb-kvm-switch",
+        "candidateTitle": "TRENDnet TK-207K 2-Port USB KVM Switch Kit",
+        "attemptStem": "trendnet-tk-207k-2-port-usb-kvm-switch"
+      }
+    },
+    {
+      "name": "TRENDnet TK-407K 4-Port USB KVM Switch Kit",
+      "slug": "trendnet-tk-407k-4-port-usb-kvm-switch",
+      "type": "PHYSICAL",
+      "sku": "ST-31385",
+      "description": "<h2 style=\"\">TRENDnet TK-407K 4-Port USB KVM Switch</h2><p>The TRENDnet TK-407K 4-Port USB KVM Switch is designed for managing four different PCs using just one set of keyboard, monitor, and mouse. This device allows users to effortlessly switch between these four computers with a simple press of a button, streamlining the process of managing multiple systems. The TRENDnet TK-407K 4-Port USB KVM Switch supports high-quality video output with a resolution of up to 2048 x 1536 VGA, delivering sharp and clear visuals. It is compatible with various operating systems, including Windows, Linux, and Mac OS, enhancing its compatibility with different computer setups. Features like Auto-Scan and LED display make computer monitoring a breeze, while the keyboard status is seamlessly restored when switching between computers. Users can select their preferred computer using front panel push buttons, keyboard hot key commands, or Windows-based client switching software. The TRENDnet TK-407K 4-Port USB KVM Switch is hot-pluggable and offers USB interface power, simplifying installation and usability.</p><h2>Buy TRENDnet TK-407K 4-Port USB KVM Switch from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-size: 12px; font-weight: 700;\">TRENDnet TK-407K 4-Port USB KVM Switch</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/trendnet-network-switch\" target=\"\">TRENDnet Network Switch</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The TRENDnet TK-407K 4-Port USB KVM Switch comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TK-407K</li><li>4-Port KVM switch with VGA and USB connections to computers</li><li>Device monitoring with Auto-Scan and audible feedback</li><li>High quality 2048 x 1536 resolution for a crisp display</li><li>Supports most operating systems and advanced mouse designs</li></ul>",
+      "model": "TK-407K",
+      "warranty": "1 year",
+      "basePrice": 8900.0,
+      "originalPrice": 9500.0,
+      "currency": "BDT",
+      "weight": 0.159,
+      "dimensions": {
+        "length": 167.0,
+        "width": 80.0,
+        "height": 28.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TRENDnet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-31385",
+          "price": 8900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 8544.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Port",
+              "value": "2 x USB keyboard/mouse (type A) 1 x VGA/SVGA 15-pin HDB (female)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "USB interface power",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "167 x 80 x 28 mm (6.6 x 3.2x 1.1 in.)",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "159 g (5.6 oz.)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/trendnet-tk-407k-4-port-usb-kvm-switch",
+      "sourceProductCode": "31385",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TK-407K",
+        "4-Port KVM switch with VGA and USB connections to computers",
+        "Device monitoring with Auto-Scan and audible feedback",
+        "High quality 2048 x 1536 resolution for a crisp display",
+        "Supports most operating systems and advanced mouse designs"
+      ],
+      "needsReview": false,
+      "categorySlug": "kvm-switch",
+      "image": "/images/products/security-camera/kvm-switch/trendnet-tk-407k-4-port-usb-kvm-switch.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/kvm-switch/trendnet-tk-407k-4-port-usb-kvm-switch.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "trendnet-tk-407k-4-port-usb-kvm-switch",
+        "candidateTitle": "TRENDnet TK-407K 4-Port USB KVM Switch Kit",
+        "attemptStem": "trendnet-tk-407k-4-port-usb-kvm-switch"
+      }
+    },
+    {
+      "name": "TRENDnet TK-803R 8-Port Rack Mount KVM Switch",
+      "slug": "trendnet-tk-803r-8-port-rack-mount-kvm-switch",
+      "type": "PHYSICAL",
+      "sku": "ST-31387",
+      "description": "<h2 style=\"\">TRENDnet TK-803R 8-Port Rack Mount KVM Switch</h2><p>The TRENDnet TK-803R 8-Port Rack Mount KVM Switch offers a robust solution for efficiently managing multiple computers or servers using a single set of keyboard, monitor, and mouse. This rack-mounted device supports both USB and PS/2 interfaces on the console side, along with USB connectivity on the PC side, ensuring broad compatibility with various hardware platforms, including PC, Linux, and Mac. Users can easily switch between connected PCs through convenient hot-key commands or push-button controls, providing flexibility and ease of management. The TRENDnet TK-803R KVM Switch supports hot-plugging of PCs, allowing for on-the-fly connections and disconnections without downtime, making it a practical choice for dynamic environments. The TRENDnet TK-803R KVM Switch delivers high video quality with support for resolutions of up to 2048 x 1536 VGA, ensuring crisp and clear visuals during operation. Firmware upgrades can be performed via the PC port, allowing users to keep the device up to date with the latest features and improvements.<br/></p><h2>Buy TRENDnet TK-803R 8-Port Rack Mount KVM Switch from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-size: 12px; font-weight: 700;\">TRENDnet TK-803R 8-Port Rack Mount KVM Switch</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/trendnet-network-switch\" target=\"\">TRENDnet Network Switch</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The TRENDnet TK-803R 8-Port Rack Mount KVM Switch comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TK-803R</li><li>Controls up to 8 computers or servers.</li><li>Supports both USB and PS/2 Interface for console port</li><li>Supports Windows, Linux, Mac OS and more</li><li>High video quality, up to 2048 x 1536 VGA resolution</li></ul>",
+      "model": "TK-803R",
+      "warranty": "1 year",
+      "basePrice": 24500.0,
+      "originalPrice": 25500.0,
+      "currency": "BDT",
+      "weight": 1.83,
+      "dimensions": {
+        "length": 407.0,
+        "width": 165.0,
+        "height": 45.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TRENDnet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-31387",
+          "price": 24500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 23520.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Port",
+              "value": "1 x USB (Type A)/PS/2 (6-pin mini-DIN) mouse 1 x USB (Type A)/PS/2 (6-pin mini-DIN) keyboard 1 x VGA HDB 15-pin (female)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "Input: 100 ~ 240 V AC 50~60 Hz Output: 9 V DC 1 A external power adapter",
+              "position": 0
+            },
+            {
+              "label": "Dimensions (L x W x H)",
+              "value": "407 x 165 x 45 mm (16.0 x 6.5 x 1.8 in.)",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "1.83 kg (4.0 lb)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/trendnet-tk-803r-8-port-rack-mount-kvm-switch",
+      "sourceProductCode": "31387",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TK-803R",
+        "Controls up to 8 computers or servers.",
+        "Supports both USB and PS/2 Interface for console port",
+        "Supports Windows, Linux, Mac OS and more",
+        "High video quality, up to 2048 x 1536 VGA resolution"
+      ],
+      "needsReview": false,
+      "categorySlug": "kvm-switch",
+      "image": "/images/products/security-camera/kvm-switch/trendnet-tk-803r-8-port-rack-mount-kvm-switch.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/kvm-switch/trendnet-tk-803r-8-port-rack-mount-kvm-switch.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "trendnet-tk-803r-8-port-rack-mount-kvm-switch",
+        "candidateTitle": "TRENDnet TK-803R 8-Port Rack Mount KVM Switch",
+        "attemptStem": "trendnet-tk-803r-8-port-rack-mount-kvm-switch"
+      }
+    }
+  ]
+}

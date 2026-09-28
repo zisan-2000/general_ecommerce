@@ -1,0 +1,978 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/gaming",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\gaming",
+    "generatedAtUnix": 1790588490,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Gaming",
+      "slug": "gaming",
+      "parentSlug": null,
+      "image": "/images/products/gaming/games/007-first-light-for-ps5.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Gaming Desk",
+      "slug": "gaming-desk",
+      "parentSlug": "gaming",
+      "image": "/images/products/gaming/gaming-desk/cougar-e-star-140-gaming-desk.png",
+      "isActive": true,
+      "sortOrder": 4,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Cougar",
+      "slug": "cougar",
+      "logo": null
+    },
+    {
+      "name": "Fantech",
+      "slug": "fantech",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Cougar E-STAR 140 Gaming Desk",
+      "slug": "cougar-e-star-140-gaming-desk",
+      "type": "PHYSICAL",
+      "sku": "ST-44203",
+      "description": "<h2>Cougar E-STAR 140 Gaming Desk</h2><p> The Cougar <span style=\"font-weight: bold;\">E-STAR 140</span> Electric <a href=\"https://www.startech.com.bd/gaming-desk\" style=\"color: rgb(0, 0, 0);\" target=\"\">Gaming Desk</a> is a meticulously designed workspace that combines functionality with ergonomic benefits. With features tailored to gamers, this desk ensures that you can focus on your game without any distractions.One standout feature of the Cougar E-STAR 140 is its independent monitor stand, which elevates your display while maximizing the desk's functional space. By utilizing vertical space effectively, you can keep your gaming essentials organized without cluttering your desktop. The built-in cable management tray and headset hanger further enhance this design, allowing for a clean and streamlined setup. This not only keeps your gaming station tidy but also enhances your overall gaming experience.</p><h3>Personalized Comfort with Electric Height Adjustment</h3><p>Comfort is key during long gaming sessions, and the Cougar E-STAR 140 rises to the occasion with its electric height adjustment feature. With a height range of 720 to 1170 mm, this desk accommodates various preferences and facilitates easy transitions between sitting and standing positions. The added benefit of two memory presets means you can quickly find and save your ideal height settings. This adaptability promotes better posture and minimizes fatigue, ensuring you're always at your best when it’s time for your next round. And don't forget the handy break reminder feature, which encourages you to take much-needed breaks.</p><h3>Durability Meets Style</h3><p>The surface of the Cougar E-STAR 140 is crafted from carbon fiber-textured laminate, lending it a modern aesthetic while enhancing durability. This robust material is designed to withstand the rigors of daily use, so you can concentrate on your gameplay rather than worrying about wear and tear. Complementing this durability is a full desk mousepad that covers the entire surface, offering a smooth area for your mouse movements. The water-resistant properties of the mouse pad also protect against spills, keeping your desk looking pristine.</p><h3>Ergonomics and Functionality Combined</h3><p>With a weight capacity of 60 kg, the Cougar E-STAR 140 is robust enough to support all your gaming gear – from multiple monitors to heavy gaming peripherals. The thoughtful inclusion of accessories like a headset hook and monitor stand further elevates this desk's functionality. The sleek and elegant control panel adds a touch of sophistication, making adjustments simple and intuitive.The Cougar E-STAR 140 Electric Gaming Desk merges style, comfort, and functionality into a single cohesive unit. Whether you’re an avid gamer or someone who spends long hours at a desk, this electric gaming desk is designed with your needs in mind. Elevate your gaming experience today and enjoy a workspace that not only looks great but also supports your gaming lifestyle like never before.</p><img alt=\"Cougar E-STAR 140 Gaming Desk\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/gaming-desk/cougar/e-star-140/estar.webp\" width=\"920\"/><h2>Buy Cougar E-STAR 140 Gaming Desk from Star Tech</h2><p>In Bangladesh, you can get original <strong>Cougar E-STAR 140 Gaming Desk</strong> From Star Tech. We have a large collection of the latest Cougar <a href=\"https://www.startech.com.bd/gaming-desk\" target=\"\">Gaming Desk</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Cougar E-STAR 140 Gaming Desk comes with no warranty</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: E-STAR 140</li><li>Dimension: 1400 x 600 x 15mm</li><li>Weight Capacity: 60 kg</li><li>Headset stand &amp; Cup holder</li><li>Carbon fiber board</li></ul>",
+      "model": "E-STAR 140",
+      "warranty": "No Warranty",
+      "basePrice": 34000.0,
+      "originalPrice": 37400.0,
+      "currency": "BDT",
+      "weight": 60.0,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Cougar",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-44203",
+          "price": 34000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 32640.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Gaming Desk",
+              "position": 0
+            },
+            {
+              "label": "Material",
+              "value": "Carbon fiber",
+              "position": 1
+            },
+            {
+              "label": "Height",
+              "value": "720~1170 mm",
+              "position": 2
+            },
+            {
+              "label": "Weight",
+              "value": "60kg",
+              "position": 3
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Complete Mouse Pad Textured Laminate Maximum Usable Space Dimension: 1400 x 600 x 15 mm",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cougar-e-star-140-gaming-desk",
+      "sourceProductCode": "44203",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: E-STAR 140",
+        "Dimension: 1400 x 600 x 15mm",
+        "Weight Capacity: 60 kg",
+        "Headset stand & Cup holder",
+        "Carbon fiber board"
+      ],
+      "needsReview": false,
+      "categorySlug": "gaming-desk",
+      "image": "/images/products/gaming/gaming-desk/cougar-e-star-140-gaming-desk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/gaming-desk/cougar-e-star-140-gaming-desk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cougar-e-star-140-gaming-desk",
+        "candidateTitle": "Cougar E-STAR 140 Gaming Desk",
+        "attemptStem": "cougar-e-star-140-gaming-desk"
+      }
+    },
+    {
+      "name": "Fantech GD914 Height Adjustable Rising Gaming Desk Table",
+      "slug": "fantech-gd914-gaming-desk",
+      "type": "PHYSICAL",
+      "sku": "ST-34591",
+      "description": "<h2>Fantech GD914 Height Adjustable Rising Gaming Desk</h2><p>The Fantech <strong>GD914</strong> Height Adjustable Rising Gaming Desk is a must-have for any gaming or office setup. Premium and long-lasting materials were used in the construction of this expert gaming table, guaranteeing a strong structure and enduring performance. The steel frame will look great in any workspace thanks to its contemporary surface design and smooth carbon fiber texture. With its quick and simple height adjustment system, the table can be swiftly and easily adjusted to your ideal height, providing a comfortable and practical solution for all your gaming and work needs. The Fantech GD914 Height Adjustable Gaming Table is a comprehensive solution for your gaming or work setup, featuring a headset holder, compact cable management, and a cup holder for enhanced convenience and organization. With its sturdy steel frame construction and robust motor, the Fantech GD914 Height Adjustable Gaming Desk can easily and steadily support up to 80kg of peripherals. For all-day comfort, the Fantech Height Adjustable Gaming Desk has integrated cable management, simple controls, a swivel headset, and a cup folder.</p><h2>Buy Fantech GD914 Height Adjustable Rising Gaming Desk from Star Tech</h2><p>In Bangladesh, you can get original <strong>Fantech GD914 Height Adjustable Rising Gaming Desk</strong> From Star Tech. We have a large collection of latest Fantech <a href=\"https://www.startech.com.bd/gaming-desk\" target=\"\">Gaming Desk</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Fantech GD914 Height Adjustable Rising Gaming Desk has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GD914</li><li>Desk Space: 140 x 60cm, height: 74 to 119cm</li><li>3-Step Cable Management, Steel Frame</li><li>Foldable Cup &amp; Headset Holder</li><li>Powerful Stable Motor, Easy-to-use Controller</li></ul>",
+      "model": "GD914",
+      "warranty": "No warranty",
+      "basePrice": 44500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Fantech",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34591",
+          "price": 44500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 42720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Motorized Height Adjustable Gaming Desk",
+              "position": 0
+            },
+            {
+              "label": "Material",
+              "value": "Steel Freme",
+              "position": 1
+            },
+            {
+              "label": "Length",
+              "value": "60cm",
+              "position": 2
+            },
+            {
+              "label": "Width",
+              "value": "140cm",
+              "position": 3
+            },
+            {
+              "label": "Height",
+              "value": "74 cm to 119 cm",
+              "position": 4
+            },
+            {
+              "label": "Load",
+              "value": "80kg",
+              "position": 5
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 6
+            },
+            {
+              "label": "Others",
+              "value": "3-Step Cable Management Foldable Headset & Cup Holder",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fantech-gd914-gaming-desk",
+      "sourceProductCode": "34591",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GD914",
+        "Desk Space: 140 x 60cm, height: 74 to 119cm",
+        "3-Step Cable Management, Steel Frame",
+        "Foldable Cup & Headset Holder",
+        "Powerful Stable Motor, Easy-to-use Controller"
+      ],
+      "needsReview": false,
+      "categorySlug": "gaming-desk",
+      "image": "/images/products/gaming/gaming-desk/fantech-gd914-gaming-desk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/gaming-desk/fantech-gd914-gaming-desk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fantech-gd914-gaming-desk",
+        "candidateTitle": "Fantech GD914 Height Adjustable Rising Gaming Desk Table",
+        "attemptStem": "fantech-gd914-gaming-desk"
+      }
+    },
+    {
+      "name": "Fantech GD914 Height Adjustable Rising White Gaming Desk Table",
+      "slug": "fantech-gd914-gaming-desk-white",
+      "type": "PHYSICAL",
+      "sku": "ST-34592",
+      "description": "<h2>Fantech GD914 Height Adjustable Rising Gaming Desk White</h2><p>The Fantech <strong>GD914</strong> Height Adjustable Rising Gaming Desk white was built with high-quality, long-lasting materials, ensuring a sturdy frame and enduring performance. The steel frame's sleek carbon fiber texture and modern surface design will make it appear fantastic in any workspace. The table can be quickly and easily adjusted to your preferred height thanks to its easy-to-use height adjustment system, offering a comfortable and useful solution for all of your gaming and work demands. For improved convenience and organization, the Fantech GD914 Height Adjustable Gaming Desk has a headset holder, small cable management, and a cup holder as part of its all-inclusive configuration for gaming or work. The Fantech GD914 White Height Adjustable Gaming Desk can effortlessly and steadily support up to 80kg of peripherals thanks to its strong steel frame structure and powerful motor. The Fantech Height Adjustable Gaming Desk boasts a swivel headset, easy-to-use controls, integrated cable management, and a cup folder for comfortable use all day.</p><h2>Buy Fantech GD914 Height Adjustable Rising Gaming Desk White from Star Tech</h2><p>In Bangladesh, you can get original <strong>Fantech GD914 Height Adjustable Rising Gaming Desk </strong><span style=\"font-size: 12px; font-weight: 700;\">White </span>From Star Tech. We have a large collection of latest Fantech <a href=\"https://www.startech.com.bd/gaming-desk\" style=\"background-color: rgb(255, 255, 255);\" target=\"\">Gaming Desk</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" style=\"background-color: rgb(255, 255, 255);\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" style=\"background-color: rgb(255, 255, 255);\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Fantech GD914 Height Adjustable Rising Gaming Desk White has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GD914</li><li>Desk Space: 140 x 60cm, height: 74 to 119cm</li><li>3-Step Cable Management, Steel Frame</li><li>Foldable Cup &amp; Headset Holder</li><li>Powerful Stable Motor, Easy-to-use Controller</li></ul>",
+      "model": "GD914",
+      "warranty": "No warranty",
+      "basePrice": 44500.0,
+      "originalPrice": 49000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Fantech",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34592",
+          "price": 44500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 42720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Motorized Height Adjustable Gaming Desk",
+              "position": 0
+            },
+            {
+              "label": "Material",
+              "value": "Steel Freme",
+              "position": 1
+            },
+            {
+              "label": "Length",
+              "value": "60cm",
+              "position": 2
+            },
+            {
+              "label": "Width",
+              "value": "140cm",
+              "position": 3
+            },
+            {
+              "label": "Height",
+              "value": "74 cm to 119 cm",
+              "position": 4
+            },
+            {
+              "label": "Load",
+              "value": "80kg",
+              "position": 5
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 6
+            },
+            {
+              "label": "Others",
+              "value": "3-Step Cable Management Foldable Headset & Cup Holder",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fantech-gd914-gaming-desk-white",
+      "sourceProductCode": "34592",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GD914",
+        "Desk Space: 140 x 60cm, height: 74 to 119cm",
+        "3-Step Cable Management, Steel Frame",
+        "Foldable Cup & Headset Holder",
+        "Powerful Stable Motor, Easy-to-use Controller"
+      ],
+      "needsReview": false,
+      "categorySlug": "gaming-desk",
+      "image": "/images/products/gaming/gaming-desk/fantech-gd914-gaming-desk-white.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/gaming-desk/fantech-gd914-gaming-desk-white.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fantech-gd914-gaming-desk-white",
+        "candidateTitle": "Fantech GD914 Height Adjustable Rising White Gaming Desk Table",
+        "attemptStem": "fantech-gd914-gaming-desk-white"
+      }
+    },
+    {
+      "name": "Fantech TIGRIS GD210 RGB Gaming Desk Table",
+      "slug": "fantech-tigris-gd210-gaming-desk",
+      "type": "PHYSICAL",
+      "sku": "ST-34597",
+      "description": "<h2>Fantech TIGRIS GD210 RGB Gaming Desk</h2><p>The Fantech <strong>TIGRIS GD210</strong> RGB Gaming Desk is designed with gamers in mind, combining functionality and flair. With a large desk area measuring 100 x 60 cm and a 75 cm height, it offers enough room for gaming setups without sacrificing ergonomics. The RGB lighting system of the Fantech TIGRIS GD210 RGB Gaming Desk is its most notable feature. It has 360 LED modes, including a dynamic running RGB mode that improves the gaming environment. The Fantech TIGRIS GD210 RGB Gaming Desk is made of a steel frame and carbon fiber surface, giving it a stylish and long-lasting appearance that is also easy to maintain. It also resists scratches and water damage. With its 3-step cable management system that includes desk grommets and a strong steel bracket, the RGB Gaming Table also puts an emphasis on organization, guaranteeing a clutter-free gaming area. It also has handy cup and headset holders to keep necessary equipment close at hand. For gamers who want both functionality and style, the Fantech TIGRIS GD210 RGB Gaming Desk is a great option because of its strong construction and high-quality materials, which are intended to deliver a stable and immersive gaming experience.</p><h2>Buy Fantech TIGRIS GD210 RGB Gaming Desk from Star Tech</h2><p>In Bangladesh, you can get original <strong>Fantech TIGRIS GD210 RGB Gaming Desk</strong> From Star Tech. We have a large collection of latest Fantech <a href=\"https://www.startech.com.bd/gaming-desk\" target=\"\">Gaming Desk</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Fantech TIGRIS GD210 RGB Gaming Desk has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TIGRIS GD210</li><li>Desk space: 100 x 60cm, Height: 75cm</li><li>Lighting: RGB Lighting with 360 LED Mode</li><li>Steel Frame, 3-Step Cable Management</li><li>Cup &amp; Headset Holder, Carbon Fiber Surface</li></ul>",
+      "model": "TIGRIS GD210",
+      "warranty": "No warranty",
+      "basePrice": 22000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Fantech",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34597",
+          "price": 22000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 21120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "RGB Gaming Desk",
+              "position": 0
+            },
+            {
+              "label": "Material",
+              "value": "Steel Freme",
+              "position": 1
+            },
+            {
+              "label": "Length",
+              "value": "60cm",
+              "position": 2
+            },
+            {
+              "label": "Width",
+              "value": "100cm",
+              "position": 3
+            },
+            {
+              "label": "Height",
+              "value": "75cm",
+              "position": 4
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "RGB Lighting Carbon Fiber Texture Powerful Cable Management Sturdy Structure Cup and Headset Holder",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fantech-tigris-gd210-gaming-desk",
+      "sourceProductCode": "34597",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TIGRIS GD210",
+        "Desk space: 100 x 60cm, Height: 75cm",
+        "Lighting: RGB Lighting with 360 LED Mode",
+        "Steel Frame, 3-Step Cable Management",
+        "Cup & Headset Holder, Carbon Fiber Surface"
+      ],
+      "needsReview": false,
+      "categorySlug": "gaming-desk",
+      "image": "/images/products/gaming/gaming-desk/fantech-tigris-gd210-gaming-desk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/gaming-desk/fantech-tigris-gd210-gaming-desk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fantech-tigris-gd210-gaming-desk",
+        "candidateTitle": "Fantech TIGRIS GD210 RGB Gaming Desk Table",
+        "attemptStem": "fantech-tigris-gd210-gaming-desk"
+      }
+    },
+    {
+      "name": "Fantech TIGRIS GD214 RGB Gaming Desk Table",
+      "slug": "fantech-tigris-gd214-gaming-desk",
+      "type": "PHYSICAL",
+      "sku": "ST-34600",
+      "description": "<h2>Fantech TIGRIS GD214 RGB Gaming Desk</h2><p>The Fantech <strong>TIGRIS GD214</strong> RGB Gaming Desk was designed with gamers in mind. Measuring 140 x 60 cm and rising to a height of 75 cm, it provides ample space for gaming setups without compromising ergonomics. The Fantech TIGRIS GD214 RGB Gaming Desk's most noteworthy feature is its RGB lighting system. It offers 360 LED settings, one of which is a dynamic running RGB mode that enhances the visuals for gaming. With its steel frame and carbon fiber top, the Fantech TIGRIS GD214 RGB Gaming Desk has an attractive, long-lasting look that is also simple to maintain. It also withstands water damage and scrapes. The RGB Gaming Table prioritizes organization with its 3-step cable management system, which incorporates desk grommets and a sturdy steel bracket, ensuring a clutter-free gaming area. In order to keep important equipment close at hand, it also features convenient cup and headset holders. The Fantech TIGRIS GD214 RGB Gaming Desk is a fantastic choice for gamers who desire both style and usefulness because of its sturdy design and premium components, which are meant to provide a steady and engaging gaming experience.</p><h2>Buy Fantech TIGRIS GD214 RGB Gaming Desk from Star Tech</h2><p>In Bangladesh, you can get original <strong>Fantech TIGRIS GD214 RGB Gaming Desk</strong> From Star Tech. We have a large collection of latest Fantech <a href=\"https://www.startech.com.bd/gaming-desk\" target=\"\">Gaming Desk</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Fantech TIGRIS GD214 RGB Gaming Desk has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TIGRIS GD214</li><li>Desk space: 140 x 60cm, Height: 75cm</li><li>Lighting: RGB Lighting with 360 LED Mode</li><li>Steel Frame, 3-Step Cable Management</li><li>Cup &amp; Headset Holder, Carbon Fiber Surface</li></ul>",
+      "model": "TIGRIS GD214",
+      "warranty": "No warranty",
+      "basePrice": 22500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Fantech",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34600",
+          "price": 22500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 21600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "RGB Gaming Desk",
+              "position": 0
+            },
+            {
+              "label": "Material",
+              "value": "Steel Freme",
+              "position": 1
+            },
+            {
+              "label": "Length",
+              "value": "60cm",
+              "position": 2
+            },
+            {
+              "label": "Width",
+              "value": "140cm",
+              "position": 3
+            },
+            {
+              "label": "Height",
+              "value": "75cm",
+              "position": 4
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "RGB Lighting Carbon Fiber Texture Powerful Cable Management Sturdy Structure Cup and Headset Holder",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fantech-tigris-gd214-gaming-desk",
+      "sourceProductCode": "34600",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TIGRIS GD214",
+        "Desk space: 140 x 60cm, Height: 75cm",
+        "Lighting: RGB Lighting with 360 LED Mode",
+        "Steel Frame, 3-Step Cable Management",
+        "Cup & Headset Holder, Carbon Fiber Surface"
+      ],
+      "needsReview": false,
+      "categorySlug": "gaming-desk",
+      "image": "/images/products/gaming/gaming-desk/fantech-tigris-gd214-gaming-desk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/gaming-desk/fantech-tigris-gd214-gaming-desk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fantech-tigris-gd214-gaming-desk",
+        "candidateTitle": "Fantech TIGRIS GD214 RGB Gaming Desk Table",
+        "attemptStem": "fantech-tigris-gd214-gaming-desk"
+      }
+    },
+    {
+      "name": "Fantech WS414 Height Adjustable Rising Gaming Desk Table",
+      "slug": "fantech-ws414-gaming-desk",
+      "type": "PHYSICAL",
+      "sku": "ST-34599",
+      "description": "<h2>Fantech WS414 Height Adjustable Rising Gaming Desk</h2><p>The Fantech <strong>WS414</strong> Height Adjustable Rising Gaming Desk is a versatile solution that can be used for both work and gaming purposes. Its large 140 x 70cm desk area and its height-adjustable range of 74 to 118cm provide plenty of space for different configurations and enable users to transition between sitting and standing with ease, improving posture and decreasing tiredness. Even with several peripherals attached, the strong steel frame of the Fantech WS414 Height Adjustable Rising Gaming Table ensures stability. Weights up to 80 kg may be supported. With its handy cup and headset holders and cable management capabilities, it contributes to keeping a tidy and orderly workstation. The sedentary reminder integrated into the Rising Table encourages users to take breaks and maintain an active lifestyle when working or playing games. The Fantech WS414 Height Adjustable Rising Gaming Desk is a multipurpose, long-lasting gaming desk with a sleek, contemporary surface design that complements any decor.</p><h2>Buy Fantech WS414 Height Adjustable Rising Gaming Desk from Star Tech</h2><p>In Bangladesh, you can get original <strong>Fantech WS414 Height Adjustable Rising Gaming Desk</strong> From Star Tech. We have a large collection of latest Fantech <a href=\"https://www.startech.com.bd/gaming-desk\" target=\"\">Gaming Desk</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Fantech WS414 Height Adjustable Rising Gaming Desk has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: WS414</li><li>Desk space: 140 x 70cm, Height: 74 to 118cm</li><li>Weight Capacity: 80 kg, Steel Frame</li><li>Cup &amp; Headset Holder, Cable Management</li><li>Built-In Sedentary Reminder, Modern Surface</li></ul>",
+      "model": "WS414",
+      "warranty": "No warranty",
+      "basePrice": 33000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Fantech",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34599",
+          "price": 33000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 31680.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Height Adjustable Rising Gaming Desk",
+              "position": 0
+            },
+            {
+              "label": "Material",
+              "value": "Steel Freme",
+              "position": 1
+            },
+            {
+              "label": "Length",
+              "value": "70cm",
+              "position": 2
+            },
+            {
+              "label": "Width",
+              "value": "140cm",
+              "position": 3
+            },
+            {
+              "label": "Height",
+              "value": "74 to 118 cm",
+              "position": 4
+            },
+            {
+              "label": "Load",
+              "value": "80 kg",
+              "position": 5
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 6
+            },
+            {
+              "label": "Others",
+              "value": "Electric Adjustable Height Powerful Cable Management Cup and Headset Holder Sleek & Modern surface design Built-in sedentary reminder",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fantech-ws414-gaming-desk",
+      "sourceProductCode": "34599",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: WS414",
+        "Desk space: 140 x 70cm, Height: 74 to 118cm",
+        "Weight Capacity: 80 kg, Steel Frame",
+        "Cup & Headset Holder, Cable Management",
+        "Built-In Sedentary Reminder, Modern Surface"
+      ],
+      "needsReview": false,
+      "categorySlug": "gaming-desk",
+      "image": "/images/products/gaming/gaming-desk/fantech-ws414-gaming-desk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/gaming-desk/fantech-ws414-gaming-desk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fantech-ws414-gaming-desk",
+        "candidateTitle": "Fantech WS414 Height Adjustable Rising Gaming Desk Table",
+        "attemptStem": "fantech-ws414-gaming-desk"
+      }
+    },
+    {
+      "name": "FURGLE ET Series Gaming Desk Table",
+      "slug": "furgle-et-series-gaming-desk",
+      "type": "PHYSICAL",
+      "sku": "ST-26930",
+      "description": "<h2 style=\"text-align: justify; \">FURGLE ET Series Gaming Desk</h2><p style=\"text-align: justify;\">The FURGLE  ET Series Gaming Desk is an essential component of every gamer's setup. This desk is intended to support 2-3 monitors at the same time and has dimensions of 140x75x60cm, providing an immersive gaming experience.</p><h3 style=\"text-align: justify;\">Thoughtful Design</h3><p style=\"text-align: justify;\">The creative design of the FURGLE ET Series Gaming Desk features a cup holder, a headphone hanging, and two cable management holes, ensuring that your gaming station is orderly and clutter-free. The desk also has a dedicated holder for the power strip, allowing you to keep all of your gadgets charged and ready to go. This desk is further enhanced by the accompanying bespoke non-slip mouse pad.</p><h3 style=\"text-align: justify;\">Carbon fiber construction</h3><p style=\"text-align: justify;\">The FURGLE ET Series Gaming Desk made of E1 grade eco-friendly panels, is odorless and waterproof, making it simple to clean and maintain. The carbon fiber texture finish is inspired by motorsport, giving the workstation a sleek and futuristic appearance.</p><h3 style=\"text-align: justify;\">Super load-bearing</h3><p style=\"text-align: justify;\">The FURGLE ET Series Gaming Desk legs are 1.5mm thick steel with a high-temperature lacquer finish, making them corrosion and rust-resistant. This desk is constructed to last and can take up to 150 kg, allowing you to utilize all of your gaming equipment comfortably and safely.</p><h3 style=\"text-align: justify; \">Experience the Joy of Gaming</h3><p style=\"text-align: justify;\">The FURGLE ET Series Gaming Desk is a high-end gaming workstation with intelligent design, high-quality manufacturing, and usefulness. It's an excellent pick for gamers looking to take their gameplay to the next level.</p><h2>Buy FURGLE ET Series Gaming Desk from the best Gaming Desk Shop in BD</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/furgle-et-series-gaming-desk\" target=\"\">FURGLE ET Series Gaming Desk</a> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/gaming-desk\" target=\"\">Gaming Desk</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The FURGLE ET Series Gaming Desk has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET Series</li><li>Large Surface</li><li>Thoughtful Design</li><li>Carbon fiber construction</li><li>Super load-bearing</li></ul>",
+      "model": "ET Series",
+      "warranty": "No Warranty",
+      "basePrice": 22000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 140.0,
+        "width": 75.0,
+        "height": 60.0,
+        "unit": "cm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Fantech",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-26930",
+          "price": 22000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 21120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Gaming Desk",
+              "position": 0
+            },
+            {
+              "label": "Length",
+              "value": "140cm",
+              "position": 1
+            },
+            {
+              "label": "Width",
+              "value": "75cm",
+              "position": 2
+            },
+            {
+              "label": "Height",
+              "value": "60cm",
+              "position": 3
+            },
+            {
+              "label": "Load",
+              "value": "maximum Capacity 150 kg",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/furgle-et-series-gaming-desk",
+      "sourceProductCode": "26930",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET Series",
+        "Large Surface",
+        "Thoughtful Design",
+        "Carbon fiber construction",
+        "Super load-bearing"
+      ],
+      "needsReview": false,
+      "categorySlug": "gaming-desk",
+      "image": "/images/products/gaming/gaming-desk/furgle-et-series-gaming-desk.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/gaming-desk/furgle-et-series-gaming-desk.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "furgle-et-series-gaming-desk",
+        "candidateTitle": "FURGLE ET Series Gaming Desk Table",
+        "attemptStem": "furgle-et-series-gaming-desk"
+      }
+    }
+  ]
+}

@@ -1,0 +1,4369 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/server-networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\server-networking",
+    "generatedAtUnix": 1790588977,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Server Networking",
+      "slug": "server-networking",
+      "parentSlug": null,
+      "image": "/images/products/server-networking/server-and-storage/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Server HDD",
+      "slug": "server-hdd",
+      "parentSlug": "server-networking",
+      "image": "/images/products/server-networking/server-hdd/dell-12tb-10k-rpm.jpg",
+      "isActive": true,
+      "sortOrder": 6,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Dell",
+      "slug": "dell",
+      "logo": null
+    },
+    {
+      "name": "HP",
+      "slug": "hp",
+      "logo": null
+    },
+    {
+      "name": "Synology",
+      "slug": "synology",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Dell 1.2TB 10K RPM SAS 12Gbps 2.5in Hot-plug Drive 3.5in Hybrid Carrier",
+      "slug": "dell-12tb-10k-rpm",
+      "type": "PHYSICAL",
+      "sku": "ST-8784",
+      "description": "<div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\">Increase the storage capacity of your system with the 1.2TB Hard Drive from Dell. Offering a rotational speed of 10K RPM, this drive provides fast disk access. Featuring SAS interface, this hard drive delivers enhanced data transfer speeds. <br/></div><div><br/></div></div></div></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hot-plug hard drive</li><li>Interface: SAS 12Gb/s</li><li>Capacity: 1.2 TB</li><li>Form Factor: 2.5&quot;</li><li>RPM: 10K RPM</li></ul>",
+      "model": "Hot-plug hard drive",
+      "warranty": "1 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.2 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SAS 12Gb/s",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8784",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "1.2 TB",
+            "Interface": "SAS 12Gb/s"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Hard drive - hot-swap",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1.2 TB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "SAS 12Gb/s",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "10000 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-12tb-10k-rpm",
+      "sourceProductCode": "8784",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hot-plug hard drive",
+        "Interface: SAS 12Gb/s",
+        "Capacity: 1.2 TB",
+        "Form Factor: 2.5\"",
+        "RPM: 10K RPM"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-12tb-10k-rpm.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-12tb-10k-rpm.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-12tb-10k-rpm",
+        "candidateTitle": "Dell 1.2TB 10K RPM SAS 12Gbps 2.5in Hot-plug Drive 3.5in Hybrid Carrier",
+        "attemptStem": "dell-12tb-10k-rpm"
+      }
+    },
+    {
+      "name": "Dell 1.8TB 10K RPM SAS 12Gbps 2.5in Hot-plug Drive 3.5in Hybrid Carrier",
+      "slug": "dell-18tb-10k-rpm",
+      "type": "PHYSICAL",
+      "sku": "ST-8786",
+      "description": "<h2>Dell 1.8TB 10K RPM SAS 12Gbps 2.5in Hot-plug Drive 3.5in Hybrid Carrier</h2><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\">Increase the storage capacity of your system with the 1.8TB Hard Drive from Dell. Offering a rotational speed of 10K RPM, this drive provides fast disk access. Featuring a SAS interface, this hard drive delivers enhanced data transfer speeds. <br/></div></div></div></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hot-plug hard drive</li><li>Interface: SAS 12Gb/s</li><li>Capacity: 1.8 TB</li><li>Form Factor: 2.5&quot;</li><li>RPM: 10K RPM</li></ul>",
+      "model": "Hot-plug hard drive",
+      "warranty": "1 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.8 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SAS 12Gb/s",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8786",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "1.8 TB",
+            "Interface": "SAS 12Gb/s"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Hard drive - hot-swap",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1.8 TB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "SAS 12Gb/s",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "10000 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-18tb-10k-rpm",
+      "sourceProductCode": "8786",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hot-plug hard drive",
+        "Interface: SAS 12Gb/s",
+        "Capacity: 1.8 TB",
+        "Form Factor: 2.5\"",
+        "RPM: 10K RPM"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-18tb-10k-rpm.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-18tb-10k-rpm.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-18tb-10k-rpm",
+        "candidateTitle": "Dell 1.8TB 10K RPM SAS 12Gbps 2.5in Hot-plug Drive 3.5in Hybrid Carrier",
+        "attemptStem": "dell-18tb-10k-rpm"
+      }
+    },
+    {
+      "name": "Dell 1TB 7.2K RPM Near-Line SAS 512n 3.5\" Hot Plug Hard Drive, CusKit",
+      "slug": "dell-1tb-hot-plug-hard-drive-cuskit",
+      "type": "PHYSICAL",
+      "sku": "ST-8777",
+      "description": "<div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><span style=\"color: rgb(68, 68, 68); font-family: roboto, Arial, Helvetica, sans-serif; font-size: 14px;\">Increase the storage capacity of your system with the 1 TB Hard Drive from Dell. Offering a rotational speed of 7,200 RPM, this drive provides fast disk access. Featuring SAS interface, this hard drive delivers enhanced data transfer speeds.</span><br/></div></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hot Plug Hard Drive, CusKit</li><li>Interface: SATA 6Gb/s</li><li>Capacity: 1 TB</li><li>Form Factor: 3.5&quot;</li><li>RPM: 7.2K RPM</li></ul>",
+      "model": "Hot Plug Hard Drive, CusKit",
+      "warranty": "1 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "1 x SAS 12 Gb/s",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8777",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "1 TB",
+            "Interface": "1 x SAS 12 Gb/s"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Hard drive - hot-swap - nearline",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1 TB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "1 x SAS 12 Gb/s",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7200 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-1tb-hot-plug-hard-drive-cuskit",
+      "sourceProductCode": "8777",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hot Plug Hard Drive, CusKit",
+        "Interface: SATA 6Gb/s",
+        "Capacity: 1 TB",
+        "Form Factor: 3.5\"",
+        "RPM: 7.2K RPM"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-1tb-hot-plug-hard-drive-cuskit.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-1tb-hot-plug-hard-drive-cuskit.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-1tb-hot-plug-hard-drive-cuskit",
+        "candidateTitle": "Dell 1TB 7.2K RPM Near-Line SAS 512n 3.5\" Hot Plug Hard Drive, CusKit",
+        "attemptStem": "dell-1tb-hot-plug-hard-drive-cuskit"
+      }
+    },
+    {
+      "name": "Dell 2TB 7.2K RPM Near-Line SAS 512n 3.5\" Hot Plug Hard Drive, CusKit",
+      "slug": "dell-2tb-hot-plug-hard-drive-cuskit",
+      "type": "PHYSICAL",
+      "sku": "ST-8779",
+      "description": "<div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><span style=\"color: rgb(68, 68, 68); font-family: roboto, Arial, Helvetica, sans-serif; font-size: 14px;\">Increase the storage capacity of your system with the 2 TB Hard Drive from Dell. Offering a rotational speed of 7,200 RPM, this drive provides fast disk access. Featuring SAS interface, this hard drive delivers enhanced data transfer speeds.</span><br/></div></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hot Plug Hard Drive, CusKit</li><li>Interface: SATA 6Gb/s</li><li>Capacity: 2 TB</li><li>Form Factor: 3.5&quot;</li><li>RPM: 7200 rpm</li></ul>",
+      "model": "Hot Plug Hard Drive, CusKit",
+      "warranty": "1 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "1 x SAS 12 Gb/s",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8779",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "2 TB",
+            "Interface": "1 x SAS 12 Gb/s"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Hard drive - hot-swap - nearline",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "2 TB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "1 x SAS 12 Gb/s",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7200 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-2tb-hot-plug-hard-drive-cuskit",
+      "sourceProductCode": "8779",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hot Plug Hard Drive, CusKit",
+        "Interface: SATA 6Gb/s",
+        "Capacity: 2 TB",
+        "Form Factor: 3.5\"",
+        "RPM: 7200 rpm"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-2tb-hot-plug-hard-drive-cuskit.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-2tb-hot-plug-hard-drive-cuskit.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-2tb-hot-plug-hard-drive-cuskit",
+        "candidateTitle": "Dell 2TB 7.2K RPM Near-Line SAS 512n 3.5\" Hot Plug Hard Drive, CusKit",
+        "attemptStem": "dell-2tb-hot-plug-hard-drive-cuskit"
+      }
+    },
+    {
+      "name": "Dell 300GB 15K RPM SAS 12Gbps 2.5in Hot-plug Drive",
+      "slug": "dell-300gb-15k-rpm",
+      "type": "PHYSICAL",
+      "sku": "ST-8787",
+      "description": "<h2>Dell 300GB 15K RPM SAS 12Gbps 2.5in Hot-plug Drive</h2><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\">Increase the storage capacity of your system with the 300GB Hard Drive from Dell. Offering a rotational speed of 15K RPM, this drive provides fast disk access. Featuring an SAS interface, this hard drive delivers enhanced data transfer speeds. </div><div><br/></div></div></div></div></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hot-plug hard drive</li><li>Interface: SAS 12Gb/s</li><li>Capacity: 300 GB</li><li>Form Factor: 2.5&quot;</li><li>RPM: 15K RPM</li></ul>",
+      "model": "Hot-plug hard drive",
+      "warranty": "1 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "300 GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SAS 12Gb/s",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8787",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "300 GB",
+            "Interface": "SAS 12Gb/s"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Hard drive - hot-swap",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "300 GB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "SAS 12Gb/s",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "15000 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-300gb-15k-rpm",
+      "sourceProductCode": "8787",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hot-plug hard drive",
+        "Interface: SAS 12Gb/s",
+        "Capacity: 300 GB",
+        "Form Factor: 2.5\"",
+        "RPM: 15K RPM"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-300gb-15k-rpm.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-300gb-15k-rpm.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-300gb-15k-rpm",
+        "candidateTitle": "Dell 300GB 15K RPM SAS 12Gbps 2.5in Hot-plug Drive",
+        "attemptStem": "dell-300gb-15k-rpm"
+      }
+    },
+    {
+      "name": "Dell 300GB 10K RPM SAS 12Gbps 2.5in Hot-plug hard drive",
+      "slug": "dell-300gb-hot-plug-hard-drive",
+      "type": "PHYSICAL",
+      "sku": "ST-8782",
+      "description": "<div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\">Increase the storage capacity of your system with the 300GB Hard Drive from Dell. Offering a rotational speed of 10K RPM, this drive provides fast disk access. Featuring SAS interface, this hard drive delivers enhanced data transfer speeds. </div><div><br/></div></div></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hot-plug hard drive</li><li>Interface: 1 x SAS</li><li>Capacity: 300GB</li><li>Form Factor: 2.5&quot;</li><li>RPM: 10K RPM</li></ul>",
+      "model": "Hot-plug hard drive",
+      "warranty": "1 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "300GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "1 x SAS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8782",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "300GB",
+            "Interface": "1 x SAS"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Hard drive - hot-swap",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "300GB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "1 x SAS",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "10000 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-300gb-hot-plug-hard-drive",
+      "sourceProductCode": "8782",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hot-plug hard drive",
+        "Interface: 1 x SAS",
+        "Capacity: 300GB",
+        "Form Factor: 2.5\"",
+        "RPM: 10K RPM"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-300gb-hot-plug-hard-drive.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-300gb-hot-plug-hard-drive.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-300gb-hot-plug-hard-drive",
+        "candidateTitle": "Dell 300GB 10K RPM SAS 12Gbps 2.5in Hot-plug hard drive",
+        "attemptStem": "dell-300gb-hot-plug-hard-drive"
+      }
+    },
+    {
+      "name": "Dell 4TB 7.2K RPM Near-Line SAS 512n 3.5\" Hot Plug Hard Drive, CusKit",
+      "slug": "dell-4tb-hot-plug-hard-drive-cuskit",
+      "type": "PHYSICAL",
+      "sku": "ST-8780",
+      "description": "<div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><h2 style=\"margin: 0px;\">Dell 4TB 7.2K RPM Near-Line SAS 512n 3.5\" Hot Plug Hard Drive, CusKit</h2><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\">Increase the storage capacity of your system with the 4 TB Hard Drive from Dell. Offering a rotational speed of 7,200 RPM, this drive provides fast disk access. Featuring a SAS interface, this hard drive delivers enhanced data transfer speeds.<br/></div></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hot Plug Hard Drive, CusKit</li><li>Interface: SATA 6Gb/s</li><li>Capacity: 4 TB</li><li>Form Factor: 3.5&quot;</li><li>RPM: 7.2K RPM</li></ul>",
+      "model": "Hot Plug Hard Drive, CusKit",
+      "warranty": "1 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "4 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "1 x SAS 12 Gb/s",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8780",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "4 TB",
+            "Interface": "1 x SAS 12 Gb/s"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Hard drive - hot-swap - nearline",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "4 TB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "1 x SAS 12 Gb/s",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7200 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-4tb-hot-plug-hard-drive-cuskit",
+      "sourceProductCode": "8780",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hot Plug Hard Drive, CusKit",
+        "Interface: SATA 6Gb/s",
+        "Capacity: 4 TB",
+        "Form Factor: 3.5\"",
+        "RPM: 7.2K RPM"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-4tb-hot-plug-hard-drive-cuskit.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-4tb-hot-plug-hard-drive-cuskit.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-4tb-hot-plug-hard-drive-cuskit",
+        "candidateTitle": "Dell 4TB 7.2K RPM Near-Line SAS 512n 3.5\" Hot Plug Hard Drive, CusKit",
+        "attemptStem": "dell-4tb-hot-plug-hard-drive-cuskit"
+      }
+    },
+    {
+      "name": "Dell 600GB 15K RPM SAS 12Gbps 2.5in Hot-plug Drive",
+      "slug": "dell-600gb-15k-rpm",
+      "type": "PHYSICAL",
+      "sku": "ST-8788",
+      "description": "<div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\">Increase the storage capacity of your system with the 600GB Hard Drive from Dell. Offering a rotational speed of 15K RPM, this drive provides fast disk access. Featuring SAS interface, this hard drive delivers enhanced data transfer speeds. </div><div><br/></div></div></div></div></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hot-plug hard drive</li><li>Interface: SAS 12Gb/s</li><li>Capacity: 600 GB</li><li>Form Factor: 2.5&quot;</li><li>RPM: 15000 rpm</li></ul>",
+      "model": "Hot-plug hard drive",
+      "warranty": "1 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "600 GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SAS 12Gb/s",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8788",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "600 GB",
+            "Interface": "SAS 12Gb/s"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Hard drive - hot-swap",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "600 GB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "SAS 12Gb/s",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "15000 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-600gb-15k-rpm",
+      "sourceProductCode": "8788",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hot-plug hard drive",
+        "Interface: SAS 12Gb/s",
+        "Capacity: 600 GB",
+        "Form Factor: 2.5\"",
+        "RPM: 15000 rpm"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-600gb-15k-rpm.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-600gb-15k-rpm.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-600gb-15k-rpm",
+        "candidateTitle": "Dell 600GB 15K RPM SAS 12Gbps 2.5in Hot-plug Drive",
+        "attemptStem": "dell-600gb-15k-rpm"
+      }
+    },
+    {
+      "name": "Dell 600GB 10K RPM SAS 12Gbps 2.5in Hot-plug hard drive",
+      "slug": "dell-600gb-hot-plug-hard-drive",
+      "type": "PHYSICAL",
+      "sku": "ST-8783",
+      "description": "<h2>Dell 600GB 10K RPM SAS 12Gbps 2.5in Hot-plug hard drive</h2><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\">Increase the storage capacity of your system with the 600GB Hard Drive from Dell. Offering a rotational speed of 10K RPM, this drive provides fast disk access. Featuring a SAS interface, this hard drive delivers enhanced data transfer speeds. </div></div></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hot-plug hard drive</li><li>Interface: 1 x SAS</li><li>Capacity: 600GB</li><li>Form Factor: 2.5&quot;</li><li>RPM: 10K RPM</li></ul>",
+      "model": "Hot-plug hard drive",
+      "warranty": "1 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "600GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "1 x SAS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8783",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "600GB",
+            "Interface": "1 x SAS"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Hard drive - hot-swap",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "600GB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "1 x SAS",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "10000 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-600gb-hot-plug-hard-drive",
+      "sourceProductCode": "8783",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hot-plug hard drive",
+        "Interface: 1 x SAS",
+        "Capacity: 600GB",
+        "Form Factor: 2.5\"",
+        "RPM: 10K RPM"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-600gb-hot-plug-hard-drive.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-600gb-hot-plug-hard-drive.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-600gb-hot-plug-hard-drive",
+        "candidateTitle": "Dell 600GB 10K RPM SAS 12Gbps 2.5in Hot-plug hard drive",
+        "attemptStem": "dell-600gb-hot-plug-hard-drive"
+      }
+    },
+    {
+      "name": "Dell 8TB 7.2K RPM Near-Line SAS 512n 3.5\" Hot Plug Hard Drive, CusKit",
+      "slug": "dell-8tb-hot-plug-hard-drive-cuskit",
+      "type": "PHYSICAL",
+      "sku": "ST-8781",
+      "description": "<div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><span style=\"color: rgb(68, 68, 68); font-family: roboto, Arial, Helvetica, sans-serif; font-size: 14px;\">Increase the storage capacity of your system with the 8 TB Hard Drive from Dell. Offering a rotational speed of 7,200 RPM, this drive provides fast disk access. Featuring SAS interface, this hard drive delivers enhanced data transfer speeds.</span><br/></div></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hot Plug Hard Drive, CusKit</li><li>Interface: SATA 6Gb/s</li><li>Capacity: 8 TB</li><li>Form Factor: 3.5&quot;</li><li>RPM: 7.2K RPM</li></ul>",
+      "model": "Hot Plug Hard Drive, CusKit",
+      "warranty": "1 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "8 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "1 x SAS 12 Gb/s",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8781",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "8 TB",
+            "Interface": "1 x SAS 12 Gb/s"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Hard drive - hot-swap - nearline",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "8 TB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "1 x SAS 12 Gb/s",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7200 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-8tb-hot-plug-hard-drive-cuskit",
+      "sourceProductCode": "8781",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hot Plug Hard Drive, CusKit",
+        "Interface: SATA 6Gb/s",
+        "Capacity: 8 TB",
+        "Form Factor: 3.5\"",
+        "RPM: 7.2K RPM"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-8tb-hot-plug-hard-drive-cuskit.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-8tb-hot-plug-hard-drive-cuskit.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-8tb-hot-plug-hard-drive-cuskit",
+        "candidateTitle": "Dell 8TB 7.2K RPM Near-Line SAS 512n 3.5\" Hot Plug Hard Drive, CusKit",
+        "attemptStem": "dell-8tb-hot-plug-hard-drive-cuskit"
+      }
+    },
+    {
+      "name": "Dell Server 2.5'' 2.4TB 10000 Rpm HDD SAS",
+      "slug": "dell-server-2-poinnt-5-inch-2-point-4-tb-hdd",
+      "type": "PHYSICAL",
+      "sku": "400-AVBO",
+      "description": "<h2>Dell Server 2.5'' 2.4TB 10000 Rpm HDD SAS </h2><p>With the Dell 2.4TB Hard Drive, your system's storage capacity can be increased. With a 10K RPM rotational speed, this drive offers quick disk access. This hard disk has an SAS interface, which allows for faster data transfers. This hard disk has an SAS interface, which allows for faster data transfers. Strong, constructed using superior manufacturing techniques, and extensively tested for optimal dependability are Dell drives. Fast data transfer rates are provided by the SAS interface. A spindle speed of 10K RPM guarantees superior performance.</p><h2>Buy Dell Server 2.5'' 2.4TB 10000 Rpm HDD SAS from Star Tech</h2><p>In Bangladesh, you can get the original <span style=\"font-weight: bold;\">Dell Server 2.5'' 2.4TB 10000 Rpm HDD SAS</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/dell-server-2-point-5-inch-300gb-hdd\" target=\"\">Dell HDD</a><a href=\"https://www.startech.com.bd/dahua-nvr\" style=\"background-color: rgb(255, 255, 255);\" target=\"\"> </a>to purchase for your <a href=\"https://www.startech.com.bd/server-networking\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Dell Server 2.5'' 2.4TB 10000 Rpm HDD SAS comes with 1 year of warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 400-AVBO</li><li>Model: 2.5&#x27;&#x27; 2.4TB HDD</li><li>Interface: SAS 12Gb/s</li><li>Capacity: 2.4 TB</li><li>Spindle Speed: 10000 rpm</li><li>Drive Transfer Rate: 1.2 GBps (external)</li></ul>",
+      "model": "2.5'' 2.4TB HDD",
+      "warranty": "1 year",
+      "basePrice": 35000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "2.4 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SAS 12Gb/s",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "400-AVBO",
+          "price": 35000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "2.4 TB",
+            "Interface": "SAS 12Gb/s"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 33600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Hard drive - hot-swap",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "2.4 TB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "SAS 12Gb/s",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "10000",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Drive Transfer Rate: 1.2 GBps (external) Form Factor: 2.5\" Encryption Algorithm: FIPS 140-2 Hardware Encryption: Yes",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-server-2-poinnt-5-inch-2-point-4-tb-hdd",
+      "sourceProductCode": "32070",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "400-AVBO",
+      "sourceKeyFeatures": [
+        "MPN: 400-AVBO",
+        "Model: 2.5'' 2.4TB HDD",
+        "Interface: SAS 12Gb/s",
+        "Capacity: 2.4 TB",
+        "Spindle Speed: 10000 rpm",
+        "Drive Transfer Rate: 1.2 GBps (external)"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-server-2-poinnt-5-inch-2-point-4-tb-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-server-2-poinnt-5-inch-2-point-4-tb-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-server-2-poinnt-5-inch-2-point-4-tb-hdd",
+        "candidateTitle": "Dell Server 2.5'' 2.4TB 10000 Rpm HDD SAS",
+        "attemptStem": "dell-server-2-poinnt-5-inch-2-point-4-tb-hdd"
+      }
+    },
+    {
+      "name": "Dell Server 2.5\" 300 GB 10000 Rpm HDD SAS",
+      "slug": "dell-server-2-point-5-inch-300gb-hdd",
+      "type": "PHYSICAL",
+      "sku": "ST-7967",
+      "description": "<h2>Dell Server 2.5\" 300 GB 10000 Rpm HDD SAS</h2>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dell Server 2.5&quot; 300 GB HDD</li><li>Form Factor: 2.5 Inch</li><li>RPM: 10000 RPM</li><li>Capacity: 300GB</li><li>Interface: SAS</li></ul>",
+      "model": "Dell Server 2.5\" 300 GB HDD",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Form Factor",
+          "position": 0,
+          "values": [
+            {
+              "value": "2.5 Inch",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "300GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "SAS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-7967",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Form Factor": "2.5 Inch",
+            "Capacity": "300GB",
+            "Interface": "SAS"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Dell Server 2.5\" 300 GB HDD",
+              "position": 0
+            },
+            {
+              "label": "Form Factor",
+              "value": "2.5 Inch",
+              "position": 1
+            },
+            {
+              "label": "RPM",
+              "value": "10000 RPM",
+              "position": 2
+            },
+            {
+              "label": "Capacity",
+              "value": "300GB",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "SAS",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-server-2-point-5-inch-300gb-hdd",
+      "sourceProductCode": "7967",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dell Server 2.5\" 300 GB HDD",
+        "Form Factor: 2.5 Inch",
+        "RPM: 10000 RPM",
+        "Capacity: 300GB",
+        "Interface: SAS"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-server-2-point-5-inch-300gb-hdd.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-server-2-point-5-inch-300gb-hdd.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-server-2-point-5-inch-300gb-hdd",
+        "candidateTitle": "Dell Server 2.5\" 300 GB 10000 Rpm HDD SAS",
+        "attemptStem": "dell-server-2-point-5-inch-300gb-hdd"
+      }
+    },
+    {
+      "name": "Dell Server 2.5\" 600 GB 15000 Rpm HDD SAS",
+      "slug": "dell-server-2-point-5-inch-600gb-hdd",
+      "type": "PHYSICAL",
+      "sku": "ST-7968",
+      "description": "<h2>Dell Server 2.5\" 600 GB 15000 Rpm HDD SAS</h2>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dell Server 2.5&quot; 600 GB HDD</li><li>Form Factor: 2.5 Inch</li><li>RPM: 15000 RPM</li><li>Capacity: 600GB</li><li>Interface: SAS</li></ul>",
+      "model": "Dell Server 2.5\" 600 GB HDD",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Form Factor",
+          "position": 0,
+          "values": [
+            {
+              "value": "2.5 Inch",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "600GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "SAS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-7968",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Form Factor": "2.5 Inch",
+            "Capacity": "600GB",
+            "Interface": "SAS"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Dell Server 2.5\" 600 GB HDD",
+              "position": 0
+            },
+            {
+              "label": "Form Factor",
+              "value": "2.5 Inch",
+              "position": 1
+            },
+            {
+              "label": "RPM",
+              "value": "15000 RPM",
+              "position": 2
+            },
+            {
+              "label": "Capacity",
+              "value": "600GB",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "SAS",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-server-2-point-5-inch-600gb-hdd",
+      "sourceProductCode": "7968",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dell Server 2.5\" 600 GB HDD",
+        "Form Factor: 2.5 Inch",
+        "RPM: 15000 RPM",
+        "Capacity: 600GB",
+        "Interface: SAS"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-server-2-point-5-inch-600gb-hdd.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-server-2-point-5-inch-600gb-hdd.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-server-2-point-5-inch-600gb-hdd",
+        "candidateTitle": "Dell Server 2.5\" 600 GB 15000 Rpm HDD SAS",
+        "attemptStem": "dell-server-2-point-5-inch-600gb-hdd"
+      }
+    },
+    {
+      "name": "Dell Server 300 GB 3.5\" 10000 Rpm HDD SAS",
+      "slug": "dell-server-300-gb-3-point-5-inch-hdd",
+      "type": "PHYSICAL",
+      "sku": "ST-7969",
+      "description": "<h2>Dell Server 300 GB 3.5\" 10000 Rpm HDD SAS</h2>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dell Server 300 GB 3.5&quot;</li><li>Form Factor: 3.5 Inch</li><li>RPM: 10000 RPM</li><li>Capacity: 300GB</li><li>Interface: SAS</li></ul>",
+      "model": "Dell Server 300 GB 3.5\"",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Form Factor",
+          "position": 0,
+          "values": [
+            {
+              "value": "3.5 Inch",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "300GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "SAS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-7969",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Form Factor": "3.5 Inch",
+            "Capacity": "300GB",
+            "Interface": "SAS"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Dell Server 300 GB 3.5\"",
+              "position": 0
+            },
+            {
+              "label": "Form Factor",
+              "value": "3.5 Inch",
+              "position": 1
+            },
+            {
+              "label": "RPM",
+              "value": "10000 RPM",
+              "position": 2
+            },
+            {
+              "label": "Capacity",
+              "value": "300GB",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "SAS",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-server-300-gb-3-point-5-inch-hdd",
+      "sourceProductCode": "7969",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dell Server 300 GB 3.5\"",
+        "Form Factor: 3.5 Inch",
+        "RPM: 10000 RPM",
+        "Capacity: 300GB",
+        "Interface: SAS"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-server-300-gb-3-point-5-inch-hdd.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-server-300-gb-3-point-5-inch-hdd.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-server-300-gb-3-point-5-inch-hdd",
+        "candidateTitle": "Dell Server 300 GB 3.5\" 10000 Rpm HDD SAS",
+        "attemptStem": "dell-server-300-gb-3-point-5-inch-hdd"
+      }
+    },
+    {
+      "name": "Dell Server 600 GB 3.5\" 15000 Rpm HDD SAS",
+      "slug": "dell-server-600gb-3-point-5-inch-hdd",
+      "type": "PHYSICAL",
+      "sku": "ST-7970",
+      "description": "<h2>Dell Server 600 GB 3.5\" 15000 Rpm HDD SAS</h2>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dell Server 600 GB 3.5&quot;</li><li>Form Factor: 3.5 Inch</li><li>RPM: 15000 RPM</li><li>Capacity: 600GB</li><li>Interface: SAS</li></ul>",
+      "model": "Dell Server 600 GB 3.5\"",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Form Factor",
+          "position": 0,
+          "values": [
+            {
+              "value": "3.5 Inch",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "600GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "SAS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-7970",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Form Factor": "3.5 Inch",
+            "Capacity": "600GB",
+            "Interface": "SAS"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Dell Server 600 GB 3.5\"",
+              "position": 0
+            },
+            {
+              "label": "Form Factor",
+              "value": "3.5 Inch",
+              "position": 1
+            },
+            {
+              "label": "RPM",
+              "value": "15000 RPM",
+              "position": 2
+            },
+            {
+              "label": "Capacity",
+              "value": "600GB",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "SAS",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-server-600gb-3-point-5-inch-hdd",
+      "sourceProductCode": "7970",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dell Server 600 GB 3.5\"",
+        "Form Factor: 3.5 Inch",
+        "RPM: 15000 RPM",
+        "Capacity: 600GB",
+        "Interface: SAS"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/dell-server-600gb-3-point-5-inch-hdd.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/dell-server-600gb-3-point-5-inch-hdd.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-server-600gb-3-point-5-inch-hdd",
+        "candidateTitle": "Dell Server 600 GB 3.5\" 15000 Rpm HDD SAS",
+        "attemptStem": "dell-server-600gb-3-point-5-inch-hdd"
+      }
+    },
+    {
+      "name": "HP Server 600 GB 2.5\" 10000 Rpm G8 And G9 HDD SAS",
+      "slug": "hp-server-600-gb-g8-g9-sas",
+      "type": "PHYSICAL",
+      "sku": "ST-7971",
+      "description": "<h2>HP Server 600 GB 2.5\" 10000 Rpm G8 And G9 HDD SAS</h2><p><br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HP G8 And G9</li><li>Form Factor: 2.5 Inch</li><li>RPM: 10000 RPM</li><li>Capacity: 600GB</li><li>Interface: SAS</li></ul>",
+      "model": "HP G8 And G9",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "HP",
+      "variantOptions": [
+        {
+          "name": "Form Factor",
+          "position": 0,
+          "values": [
+            {
+              "value": "2.5 Inch",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "600GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "SAS",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-7971",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Form Factor": "2.5 Inch",
+            "Capacity": "600GB",
+            "Interface": "SAS"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "HP G8 And G9",
+              "position": 0
+            },
+            {
+              "label": "Form Factor",
+              "value": "2.5 Inch",
+              "position": 1
+            },
+            {
+              "label": "RPM",
+              "value": "10000 RPM",
+              "position": 2
+            },
+            {
+              "label": "Capacity",
+              "value": "600GB",
+              "position": 3
+            },
+            {
+              "label": "Interface",
+              "value": "SAS",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hp-server-600-gb-g8-g9-sas",
+      "sourceProductCode": "7971",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HP G8 And G9",
+        "Form Factor: 2.5 Inch",
+        "RPM: 10000 RPM",
+        "Capacity: 600GB",
+        "Interface: SAS"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/hp-server-600-gb-g8-g9-sas.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/hp-server-600-gb-g8-g9-sas.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hp-server-600-gb-g8-g9-sas",
+        "candidateTitle": "HP Server 600 GB 2.5\" 10000 Rpm G8 And G9 HDD SAS",
+        "attemptStem": "hp-server-600-gb-g8-g9-sas"
+      }
+    },
+    {
+      "name": "Synology HAS5300 12TB SAS 3.5\" Enterprise HDD",
+      "slug": "synology-has5300-12tb-enterprise-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAS5300-12T",
+      "description": "<h2>Synology HAS5300 12TB SAS 3.5\" Enterprise HDD</h2><p>The Synology <span style=\"font-weight: bold;\">HAS5300</span> 12TB SAS 3.5\" Enterprise HDD is an excellent choice for demanding commercial environments because of its exceptional performance and unparalleled durability. Fast and dependable data transfers at up to 242 MB/s are ensured by the HDD's robust 12TB storage capacity and SAS-3 12 Gb/s interface, which is supported by a 256MB cache and a 7200 rpm rotational speed. It underwent over 200,000 hours of rigorous testing on Synology systems before achieving an outstanding Mean Time to Failure (MTTF) of 2.5 million hours. This enables it to maintain a substantial 550 TB annual workload. The HAS5300 is designed with firmware optimized for critical workloads that enhance the performance and efficiency of Synology systems. This specialized firmware allows for faster RAID array repairs, improving reconstruction times by up to 27% compared to similar drives. The integration of drive firmware updates with DSM updates simplifies maintenance tasks for IT teams, ensuring the <a href=\"https://www.startech.com.bd/server-hdd\" style=\"color: rgb(0, 0, 0);\" target=\"\">HDD</a> operates on the latest firmware without additional management overhead. The drive's reliability is underscored by rigorous testing and compatibility verification with Synology systems, ensuring it performs optimally even under extreme workload conditions. Its capability to handle up to 550TB of data per year and persistent write cache technology further safeguard data integrity, making the Synology HAS5300 a dependable and efficient solution for enterprise storage needs. This HDD is not just about storage capacity; it is about delivering performance, reliability, and ease of maintenance—all crucial for modern business operations.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span><span style=\"color: inherit; font-family: inherit;\">Synology HAS5300 12TB SAS 3.5\" Enterprise HDD </span><span style=\"color: inherit; font-family: inherit;\">from Star Tech</span><br/></h2><p>In Bangladesh, you can get the original <span style=\"font-weight: 700;\">Synology HAS5300 12TB SAS 3.5\" Enterprise HDD</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAS5300 12TB SAS 3.5\" Enterprise HDD comes with 5 years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAS5300-12T</li><li>Model: HAS5300</li><li>Capacity: 12TB</li><li>Form Factor: 3.5&quot;</li><li>Interface: SAS 12 Gb/s</li><li>Rotational Speed: 7,200 rpm</li></ul>",
+      "model": "HAS5300",
+      "warranty": "05-year Warranty",
+      "basePrice": 72500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "12 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SAS 12 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "512e",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAS5300-12T",
+          "price": 72500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "12 TB",
+            "Interface": "SAS 12 Gb/s",
+            "Size": "512e"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 69600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "12 TB",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "SAS 12 Gb/s",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "512e",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7,200 rpm",
+              "position": 3
+            },
+            {
+              "label": "Read/Write Speed",
+              "value": "242 MiB/s",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Form Factor: 3.5\"",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "05-year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-has5300-12tb-enterprise-hdd",
+      "sourceProductCode": "35195",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAS5300-12T",
+      "sourceKeyFeatures": [
+        "MPN: HAS5300-12T",
+        "Model: HAS5300",
+        "Capacity: 12TB",
+        "Form Factor: 3.5\"",
+        "Interface: SAS 12 Gb/s",
+        "Rotational Speed: 7,200 rpm"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-has5300-12tb-enterprise-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-has5300-12tb-enterprise-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-has5300-12tb-enterprise-hdd",
+        "candidateTitle": "Synology HAS5300 12TB SAS 3.5\" Enterprise HDD",
+        "attemptStem": "synology-has5300-12tb-enterprise-hdd"
+      }
+    },
+    {
+      "name": "Synology HAS5300 16TB SAS 3.5\" Enterprise HDD",
+      "slug": "synology-has5300-16tb-enterprise-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAS5300-16T",
+      "description": "<h2>Synology HAS5300 16TB SAS 3.5\" Enterprise HDD</h2><p>The Synology <span style=\"font-weight: bold;\">HAS5300 </span>16TB SAS 3.5\" Enterprise HDD is engineered for optimal performance and dependability. It is intended to work with DSM and Synology gear to provide enhanced performance in corporate installations. The HAS5300 has a Mean Time to Failure (MTTF) rating of 2.5 million hours, a yearly workload rating of 550TB, and has passed 200,000 hours of testing on Synology hardware. A 16TB storage capacity, a SAS-3 12 Gb/s interface, a 512MB cache, and a 7200 rpm rotational speed are also included. These features work together to guarantee continuous data transfers at sustained speeds of up to 262 MB/s. Synology HAS5300 <a href=\"https://www.startech.com.bd/server-hdd\" style=\"color: rgb(0, 0, 0);\" target=\"\">HDD</a>, based on two decades of storage experience, is powered by firmware tailored for important applications. Compared to equivalent class and capacity drives, they enable Synology systems to rebuild damaged RAID arrays up to 27% more quickly. Even under the most demanding workloads, Synology systems are guaranteed maximum reliability thanks to rigorous testing and compatibility verification. DSM updates and drive firmware upgrades come packaged together to save the workload for IT staff and guarantee that your drives are always running the most recent firmware versions.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>Synology HAS5300 16TB SAS 3.5\" Enterprise HDD <span style=\"color: inherit; font-family: inherit;\">from Star Tech</span><br/></h2><p>In Bangladesh, you can get the original <span style=\"font-weight: bold;\">Synology HAS5300 16TB SAS 3.5\" Enterprise HDD</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAS5300 16TB SAS 3.5\" Enterprise HDD comes with 5 years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAS5300-16T</li><li>Model: HAS5300</li><li>Capacity: 16TB</li><li>Form Factor: 3.5&quot;</li><li>Interface: SAS 12 Gb/s</li><li>Rotational Speed: 7,200 rpm</li></ul>",
+      "model": "HAS5300",
+      "warranty": "05 Years Warranty",
+      "basePrice": 96000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "16 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SAS 12 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "512e",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAS5300-16T",
+          "price": 96000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "16 TB",
+            "Interface": "SAS 12 Gb/s",
+            "Size": "512e"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 92160.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "16 TB",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "SAS 12 Gb/s",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "512e",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7,200 rpm",
+              "position": 3
+            },
+            {
+              "label": "Read/Write Speed",
+              "value": "262 MiB/s",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Form Factor: 3.5\"",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "05 Years Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-has5300-16tb-enterprise-hdd",
+      "sourceProductCode": "35194",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAS5300-16T",
+      "sourceKeyFeatures": [
+        "MPN: HAS5300-16T",
+        "Model: HAS5300",
+        "Capacity: 16TB",
+        "Form Factor: 3.5\"",
+        "Interface: SAS 12 Gb/s",
+        "Rotational Speed: 7,200 rpm"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-has5300-16tb-enterprise-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-has5300-16tb-enterprise-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-has5300-16tb-enterprise-hdd",
+        "candidateTitle": "Synology HAS5300 16TB SAS 3.5\" Enterprise HDD",
+        "attemptStem": "synology-has5300-16tb-enterprise-hdd"
+      }
+    },
+    {
+      "name": "Synology HAS5300 8TB SAS 3.5\" Enterprise HDD",
+      "slug": "synology-has5300-8tb-enterprise-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAS5300-8T",
+      "description": "<h2>Synology HAS5300 8TB SAS 3.5\" Enterprise HDD</h2><p>The Synology <span style=\"font-weight: bold;\">HAS5300</span> 8TB SAS 3.5\" Enterprise HDD is an excellent choice for demanding commercial environments because of its exceptional performance and unparalleled durability. Fast and dependable data transfers at up to 242 MB/s are ensured by the HDD's robust 8TB storage capacity and SAS-3 12 Gb/s interface, which is supported by a 256MB cache and a 7200 rpm rotational speed. It underwent over 200,000 hours of rigorous testing on Synology systems before achieving an outstanding Mean Time to Failure (MTTF) of 2.5 million hours. This enables it to maintain a substantial 550 TB annual workload. The HAS5300 is designed with firmware optimized for critical workloads that enhance the performance and efficiency of Synology systems. This specialized firmware allows for faster RAID array repairs, improving reconstruction times by up to 27% compared to similar drives. The integration of drive firmware updates with DSM updates simplifies maintenance tasks for IT teams, ensuring the <a href=\"https://www.startech.com.bd/server-hdd\" style=\"color: rgb(0, 0, 0);\" target=\"\">HDD</a> operates on the latest firmware without additional management overhead. The drive's reliability is underscored by rigorous testing and compatibility verification with Synology systems, ensuring it performs optimally even under extreme workload conditions. Its capability to handle up to 550TB of data per year and persistent write cache technology further safeguard data integrity, making the Synology HAS5300 a dependable and efficient solution for enterprise storage needs. This HDD is not just about storage capacity; it is about delivering performance, reliability, and ease of maintenance—all crucial for modern business operations.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span><span style=\"color: inherit; font-family: inherit;\">Synology HAS5300 8TB SAS 3.5\" Enterprise HDD </span><span style=\"color: inherit; font-family: inherit;\">from Star Tech</span><br/></h2><p>In Bangladesh, you can get the original <span style=\"font-weight: 700;\">Synology HAS5300 8TB SAS 3.5\" Enterprise HDD</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAS5300 8TB SAS 3.5\" Enterprise HDD comes with 5 years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAS5300-8T</li><li>Model: HAS5300</li><li>Capacity: 8TB</li><li>Form Factor: 3.5&quot;</li><li>Interface: SAS 12 Gb/s</li><li>Rotational Speed: 7,200 rpm</li></ul>",
+      "model": "HAS5300",
+      "warranty": "05-year Warranty",
+      "basePrice": 51000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "8 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SAS 12 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "512e",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAS5300-8T",
+          "price": 51000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "8 TB",
+            "Interface": "SAS 12 Gb/s",
+            "Size": "512e"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 48960.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "8 TB",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "SAS 12 Gb/s",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "512e",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7,200 rpm",
+              "position": 3
+            },
+            {
+              "label": "Read/Write Speed",
+              "value": "230 MiB/s",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Form Factor: 3.5\"",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "05-year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-has5300-8tb-enterprise-hdd",
+      "sourceProductCode": "35196",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAS5300-8T",
+      "sourceKeyFeatures": [
+        "MPN: HAS5300-8T",
+        "Model: HAS5300",
+        "Capacity: 8TB",
+        "Form Factor: 3.5\"",
+        "Interface: SAS 12 Gb/s",
+        "Rotational Speed: 7,200 rpm"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-has5300-8tb-enterprise-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-has5300-8tb-enterprise-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-has5300-8tb-enterprise-hdd",
+        "candidateTitle": "Synology HAS5300 8TB SAS 3.5\" Enterprise HDD",
+        "attemptStem": "synology-has5300-8tb-enterprise-hdd"
+      }
+    },
+    {
+      "name": "Synology HAT3300 Plus Series 4TB SATA III 3.5\" Internal HDD",
+      "slug": "synology-hat3300-plus-series-4tb-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAT3300-4T",
+      "description": "<h2>Synology HAT3300 Plus Series 4TB SATA III 3.5\" Internal HDD</h2><p>The Synology <span style=\"font-weight: bold;\">HAT3300</span> Plus Series 4TB 5400 RPM Internal NAS Server <a href=\"https://www.startech.com.bd/server-hdd\" style=\"color: rgb(0, 0, 0);\" target=\"\">HDD</a> is a purpose-built hard drive designed for reliable, quiet, and energy-efficient storage in home and small office NAS systems. With a generous 4TB capacity, this 3.5-inch SATA III 6Gb/s HDD offers smooth performance and low noise operation at 5400 RPM, making it ideal for 24/7 environments. It features Conventional Magnetic Recording (CMR) for consistent data integrity and a 256MB cache that supports up to 202MB/s sustained transfer speed, perfect for backups, media streaming, and file sharing. Engineered specifically for Synology NAS devices, it integrates seamlessly with DiskStation Manager (DSM) for automatic firmware updates and optimized performance. The drive is rated for 180TB/year workload and boasts a 1 million-hour MTBF, ensuring long-term durability and dependable operation. With low power consumption (idle at 3.96W, active at 4.85W), it helps reduce energy costs while maintaining high efficiency. The Synology HAT3300 Plus 4TB HDD is a smart choice for users seeking scalable, secure, and quiet storage that’s built to last.</p><h2>Buy Synology HAT3300 Plus Series 4TB SATA III 3.5\" Internal HDD from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Synology HAT3300 Plus Series 4TB SATA III 3.5\" Internal HDD</strong> From Star Tech. We have a large collection of the latest Synology <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAT3300 Plus Series 4TB SATA III 3.5\" Internal HDD comes with 2 years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAT3300-4T</li><li>Model: HAT3300</li><li>Form Factor: 3.5&quot;</li><li>Interface: SATA 6 Gb/s</li><li>Rotational Speed: 5400 rpm</li><li>Storage: 4TB</li></ul>",
+      "model": "HAT3300",
+      "warranty": "3 years warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "4TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA 6 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "Dimension 146.99 x 101.75 x 26.11mm Weight 610 gm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAT3300-4T",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "4TB",
+            "Interface": "SATA 6 Gb/s",
+            "Size": "Dimension 146.99 x 101.75 x 26.11mm Weight 610 gm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Non Hot Plug Server HDD",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "4TB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6 Gb/s",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "Dimension 146.99 x 101.75 x 26.11mm Weight 610 gm",
+              "position": 3
+            },
+            {
+              "label": "RPM Class",
+              "value": "5400 rpm",
+              "position": 4
+            },
+            {
+              "label": "Read/Write Speed",
+              "value": "Read Speed (Max.) 202MB/s Write Speed (Max.) 202MB/s",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "Color Silver Approx. Power Consumption 15W Form Factor (Inch) 3.5 Inch 256MB Cache",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "3 years warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-hat3300-plus-series-4tb-hdd",
+      "sourceProductCode": "44136",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAT3300-4T",
+      "sourceKeyFeatures": [
+        "MPN: HAT3300-4T",
+        "Model: HAT3300",
+        "Form Factor: 3.5\"",
+        "Interface: SATA 6 Gb/s",
+        "Rotational Speed: 5400 rpm",
+        "Storage: 4TB"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-hat3300-plus-series-4tb-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-hat3300-plus-series-4tb-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-hat3300-plus-series-4tb-hdd",
+        "candidateTitle": "Synology HAT3300 Plus Series 4TB SATA III 3.5\" Internal HDD",
+        "attemptStem": "synology-hat3300-plus-series-4tb-hdd"
+      }
+    },
+    {
+      "name": "Synology HAT3300 Plus Series 6TB SATA III 3.5\" Internal HDD",
+      "slug": "synology-hat3300-plus-series-6tb-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAT3300-6T",
+      "description": "<h2>Synology HAT3300 Plus Series 6TB SATA III 3.5\" Internal HDD</h2><p>The Synology <span style=\"font-weight: bold;\">HAT3300</span> Plus Series 6TB SATA III 3.5\" Internal <a href=\"https://www.startech.com.bd/server-hdd\" style=\"color: rgb(0, 0, 0);\" target=\"\">Server HDD</a> is a powerful and reliable storage solution for NAS systems. This Synology hard drive offers a large 6TB capacity, perfect for storing photos, videos, documents, and backups. The SATA III interface delivers fast data transfer speeds, making it ideal for home and small business users who need efficient and secure storage. The 3.5-inch form factor fits easily into most NAS enclosures and desktop computers.The Synology HAT3300 Plus Series is designed for 24/7 operation, supporting continuous workloads up to 180TB per year. This makes it a great choice for users who need dependable performance and long-term durability. Advanced vibration and noise reduction technology ensures quiet operation, even during heavy use. The drive is optimized for Synology NAS, ensuring seamless compatibility and easy integration.With the Synology HAT3300 Plus Series 6TB HDD, you get trusted Synology quality and peace of mind for your data. It is perfect for data backup, media streaming, file sharing, and expanding your NAS storage. The drive also features advanced error recovery and protection, keeping your files safe and accessible.Choose the Synology HAT3300 Plus Series 6TB SATA III 3.5\" Internal NAS HDD for your next storage upgrade.</p><h2>Buy Synology HAT3300 Plus Series 6TB SATA III 3.5\" Internal HDD from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Synology HAT3300 Plus Series 6TB SATA III 3.5\" Internal HDD</strong> From Star Tech. We have a large collection of the latest Synology <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAT3300 Plus Series 6TB SATA III 3.5\" Internal HDD comes with 3 years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAT3300-6T</li><li>Model: HAT3300</li><li>Form Factor: 3.5&quot;</li><li>Interface: SATA 6 Gb/s</li><li>Rotational Speed: 5400 rpm</li><li>Storage: 6TB</li></ul>",
+      "model": "HAT3300",
+      "warranty": "3 years warranty",
+      "basePrice": 30500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "6TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA 6 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "Dimension 146.99 x 101.75 x 26.11mm Weight 610 gm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAT3300-6T",
+          "price": 30500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "6TB",
+            "Interface": "SATA 6 Gb/s",
+            "Size": "Dimension 146.99 x 101.75 x 26.11mm Weight 610 gm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 29280.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Non Hot Plug Server HDD",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "6TB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6 Gb/s",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "Dimension 146.99 x 101.75 x 26.11mm Weight 610 gm",
+              "position": 3
+            },
+            {
+              "label": "RPM Class",
+              "value": "5400 rpm",
+              "position": 4
+            },
+            {
+              "label": "Read/Write Speed",
+              "value": "Read Speed (Max.) 202MB/s Write Speed (Max.) 202MB/s",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "Color Black & Green Approx. Power Consumption 15W Form Factor (Inch) 3.5 Inch 256MB Cache",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "3 years warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-hat3300-plus-series-6tb-hdd",
+      "sourceProductCode": "44113",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAT3300-6T",
+      "sourceKeyFeatures": [
+        "MPN: HAT3300-6T",
+        "Model: HAT3300",
+        "Form Factor: 3.5\"",
+        "Interface: SATA 6 Gb/s",
+        "Rotational Speed: 5400 rpm",
+        "Storage: 6TB"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-hat3300-plus-series-6tb-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-hat3300-plus-series-6tb-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-hat3300-plus-series-6tb-hdd",
+        "candidateTitle": "Synology HAT3300 Plus Series 6TB SATA III 3.5\" Internal HDD",
+        "attemptStem": "synology-hat3300-plus-series-6tb-hdd"
+      }
+    },
+    {
+      "name": "Synology HAT3310 Plus Series 12TB SATA III 3.5\" Internal HDD",
+      "slug": "synology-hat3310-plus-series-12tb-internal-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAT3310-12T",
+      "description": "<h2>Synology HAT3310 Plus Series 12TB SATA III 3.5\" Internal HDD</h2><p>The Synology <span style=\"font-weight: bold;\">HAT3310 Plus Series</span> 12TB SATA III 3.5\" Internal HDD is designed with great care to meet the performance, durability, and dependability requirements of storage systems that are used around the clock, especially in small and medium-sized enterprises. This HDD guarantees continuous performance in high-uptime and multi-user scenarios thanks to its NAS-class dependability. With a 12TB storage capacity, 512MB cache, SATA III 6 Gb/s interface, and 7200 rpm rotational speed, it guarantees continuous data transfers at sustained speeds of up to 281 MB/s. It ensures dependable always-on operation with a Mean Time Between Failure (MTBF) rating of 1.2 million hours and an annual workload rating of 180TB. This Synology HAT3310 Plus Series <a href=\"https://www.startech.com.bd/server-hdd\" style=\"color: rgb(0, 0, 0);\" target=\"\">HDD</a> provides longer life and better performance since it is filled with helium rather than ordinary air. This Hard Drive is engineered to satisfy the rigorous storage demands of contemporary commercial environments, with convenient maintenance tools, rigorous testing, and seamless firmware upgrades from within Synology DiskStation Manager (DSM).</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>Synology HAT3310 Plus Series 12TB SATA III 3.5\" Internal HDD<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2><p>In Bangladesh, you can get the original <span style=\"font-weight: 700;\">Synology HAT3310 Plus Series 12TB SATA III 3.5\" Internal HDD</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAT3310 Plus Series 12TB SATA III 3.5\" Internal HDD comes with 2-year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAT3310-12T</li><li>Model: HAT3310 Plus Series</li><li>Capacity: 12 TB</li><li>Form Factor: 3.5&quot;</li><li>Interface: SATA 6 Gb/s</li><li>Up to 281 MB/s Sustained Transfer Rate</li></ul>",
+      "model": "HAT3310 Plus Series",
+      "warranty": "2-year Warranty",
+      "basePrice": 47500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "12 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA 6 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "512e",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAT3310-12T",
+          "price": 47500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "12 TB",
+            "Interface": "SATA 6 Gb/s",
+            "Size": "512e"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 45600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "12 TB",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6 Gb/s",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "512e",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7,200 rpm",
+              "position": 3
+            },
+            {
+              "label": "Read/Write Speed",
+              "value": "281 MB/s",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Buffer: 512 MB",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "2-year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-hat3310-plus-series-12tb-internal-hdd",
+      "sourceProductCode": "35198",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAT3310-12T",
+      "sourceKeyFeatures": [
+        "MPN: HAT3310-12T",
+        "Model: HAT3310 Plus Series",
+        "Capacity: 12 TB",
+        "Form Factor: 3.5\"",
+        "Interface: SATA 6 Gb/s",
+        "Up to 281 MB/s Sustained Transfer Rate"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-hat3310-plus-series-12tb-internal-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-hat3310-plus-series-12tb-internal-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-hat3310-plus-series-12tb-internal-hdd",
+        "candidateTitle": "Synology HAT3310 Plus Series 12TB SATA III 3.5\" Internal HDD",
+        "attemptStem": "synology-hat3310-plus-series-12tb-internal-hdd"
+      }
+    },
+    {
+      "name": "Synology HAT3310 Plus Series 16TB SATA III 3.5\" Internal HDD",
+      "slug": "synology-hat3310-plus-series-16tb-internal-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAT3310-16T",
+      "description": "<h2>Synology HAT3310 Plus Series 16TB SATA III 3.5\" Internal HDD</h2><p>The Synology <strong>HAT3310 Plus Series</strong> 16TB SATA III 3.5\" Internal HDD is a high-capacity storage solution designed for demanding data settings. This drive is perfect for large-scale data storage demands because it has a 3.5-inch form factor and a whopping 16TB of storage. With a 512MB cache and 7200 rpm speed, it offers a fast and dependable SATA III 6 Gb/s interface that guarantees seamless operation and rapid file access. With a sustained transfer rate of up to 281 MB/s, the drive is appropriate for jobs requiring rapid read and write speeds. Its remarkable 1.2 million hours MTBF (Mean Time Between Failures) and 180TB annual workload rating, which improves its performance in scenarios with heavy usage, demonstrate its long-term dependability engineering. Helium sealing of the HAT3310 ensures durability while lowering friction and energy consumption. Its optimized power draw balances performance and energy efficiency, using 7.48W in active mode and just 4.14W in idle mode. For applications that require a lot of data, the drive's endurance—rated at 180TB of total bytes written—ensures sustained performance. With an operational temperature range of 41 to 140°F (5 to 60°C) and a storage temperature range of -40 to 158°F (-40 to 70°C), it can withstand a wide range of environmental conditions, making it durable for both use and storage. For those looking for dependable, high-performance storage with cutting-edge capabilities designed for business or professional use, the Synology HAT3310 is a great option.</p><h2>Buy Synology HAT3310 Plus Series 16TB SATA III 3.5\" Internal HDD from Star Tech</h2><p>In Bangladesh, you can get the original <span style=\"font-weight: 700;\">Synology HAT3310 Plus Series 16TB SATA III 3.5\" Internal HDD</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAT3310 Plus Series 16TB SATA III 3.5\" Internal HDD comes with 2-year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAT3310-16T</li><li>Model: HAT3310 Plus Series</li><li>Capacity: 16TB</li><li>Form Factor: 3.5&quot;</li><li>Interface: SATA 6 Gb/s</li><li>Up to 281 MB/s Sustained Transfer Rate</li></ul>",
+      "model": "HAT3310 Plus Series",
+      "warranty": "2-year Warranty",
+      "basePrice": 54500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "16TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA 6 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "3.5\"",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAT3310-16T",
+          "price": 54500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "16TB",
+            "Interface": "SATA 6 Gb/s",
+            "Size": "3.5\""
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 52320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "16TB",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6 Gb/s",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "3.5\"",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7,200 rpm",
+              "position": 3
+            },
+            {
+              "label": "Read/Write Speed",
+              "value": "281 MB/s",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Buffer: 512 MB",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "2-year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-hat3310-plus-series-16tb-internal-hdd",
+      "sourceProductCode": "37554",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAT3310-16T",
+      "sourceKeyFeatures": [
+        "MPN: HAT3310-16T",
+        "Model: HAT3310 Plus Series",
+        "Capacity: 16TB",
+        "Form Factor: 3.5\"",
+        "Interface: SATA 6 Gb/s",
+        "Up to 281 MB/s Sustained Transfer Rate"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-hat3310-plus-series-16tb-internal-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-hat3310-plus-series-16tb-internal-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-hat3310-plus-series-16tb-internal-hdd",
+        "candidateTitle": "Synology HAT3310 Plus Series 16TB SATA III 3.5\" Internal HDD",
+        "attemptStem": "synology-hat3310-plus-series-16tb-internal-hdd"
+      }
+    },
+    {
+      "name": "Synology HAT3310 Plus Series 8TB SATA III 3.5\" Internal HDD",
+      "slug": "synology-hat3310-plus-series-8tb-internal-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAT3310-8T",
+      "description": "<h2>Synology HAT3310 Plus Series 8TB SATA III 3.5\" Internal HDD</h2><p>The Synology <span style=\"font-weight: bold;\">HAT3310 Plus Series</span> 8TB SATA III 3.5\" Internal HDD is designed with great care to meet the performance, durability, and dependability requirements of storage systems that are used around the clock, especially in small and medium-sized enterprises. This HDD guarantees continuous performance in high-uptime and multi-user scenarios thanks to its NAS-class dependability. With an 8TB storage capacity, 256MB cache, SATA III 6 Gb/s interface, and 7200 rpm rotational speed, it guarantees continuous data transfers at sustained speeds of up to 260 MB/s. It ensures dependable always-on operation with a Mean Time Between Failure (MTBF) rating of 1 million hours and an annual workload rating of 180TB. This Synology HAT3310 Plus Series <a href=\"https://www.startech.com.bd/server-hdd\" style=\"color: rgb(0, 0, 0);\" target=\"\">HDD</a> provides longer life and better performance since it is filled with helium rather than ordinary air. This Hard Drive is engineered to satisfy the rigorous storage demands of contemporary commercial environments, with convenient maintenance tools, rigorous testing, and seamless firmware upgrades from within Synology DiskStation Manager (DSM).</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>Synology HAT3310 Plus Series 8TB SATA III 3.5\" Internal HDD<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2><p>In Bangladesh, you can get the original <span style=\"font-weight: 700;\">Synology HAT3310 Plus Series 8TB SATA III 3.5\" Internal HDD</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAT3310 Plus Series 8TB SATA III 3.5\" Internal HDD comes with 3-year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAT3310-8T</li><li>Model: HAT3310 Plus Series</li><li>Capacity: 8TB</li><li>Form Factor: 3.5&quot;</li><li>Interface: SATA 6 Gb/s</li><li>Up to 260 MB/s Sustained Transfer Rate</li></ul>",
+      "model": "HAT3310 Plus Series",
+      "warranty": "03-year Warranty",
+      "basePrice": 36500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "8 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA 6 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "512e",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAT3310-8T",
+          "price": 36500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "8 TB",
+            "Interface": "SATA 6 Gb/s",
+            "Size": "512e"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 35040.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "8 TB",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6 Gb/s",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "512e",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7,200 rpm",
+              "position": 3
+            },
+            {
+              "label": "Read/Write Speed",
+              "value": "260 MB/s",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Buffer: 256 MB",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "03-year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-hat3310-plus-series-8tb-internal-hdd",
+      "sourceProductCode": "35199",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAT3310-8T",
+      "sourceKeyFeatures": [
+        "MPN: HAT3310-8T",
+        "Model: HAT3310 Plus Series",
+        "Capacity: 8TB",
+        "Form Factor: 3.5\"",
+        "Interface: SATA 6 Gb/s",
+        "Up to 260 MB/s Sustained Transfer Rate"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-hat3310-plus-series-8tb-internal-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-hat3310-plus-series-8tb-internal-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-hat3310-plus-series-8tb-internal-hdd",
+        "candidateTitle": "Synology HAT3310 Plus Series 8TB SATA III 3.5\" Internal HDD",
+        "attemptStem": "synology-hat3310-plus-series-8tb-internal-hdd"
+      }
+    },
+    {
+      "name": "Synology HAT5300 12TB SATA III 3.5\" Enterprise HDD",
+      "slug": "synology-hat5300-12tb-enterprise-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAT5300-12T",
+      "description": "<h2>Synology HAT5300 12TB SATA III 3.5\" Enterprise HDD</h2><p style=\"\">The Synology HAT5300 12TB SATA III 3.5\" Enterprise HDD has been optimized for their storage solutions and enables a high sequential throughput to help maximize the number of clients a system can support. It is built to handle demanding, high-volume workloads in 24/7 environments. The HAT5300 was designed to be more dependable; it has a Mean Time to Failure (MTTF) rating of 2.5 million hours and a 550TB annual workload rating. Additionally offered are a 12TB storage capacity, a SATA III 6 Gb/s interface, a 512MB cache, and a 7200 rpm rotational speed, all of which work together to guarantee continuous data transfers at sustained speeds of up to 242 MB/s.<br/></p><h2 style=\"\">Buy Synology HAT5300 12TB SATA III 3.5\" Enterprise HDD from Star Tech</h2><p>In Bangladesh, you can get the original <a href=\"https://www.startech.com.bd/synology-hat5300-12tb-enterprise-hdd\" target=\"\">Synology HAT5300 12TB SATA III 3.5\" Enterprise HDD</a> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAT5300 12TB SATA III 3.5\" Enterprise HDD comes with 5 years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAT5300-12T</li><li>Model: HAT5300</li><li>Form Factor: 3.5&quot;</li><li>Interface: SATA 6 Gb/s</li><li>Rotational Speed: 7,200 rpm</li><li>Interface Speed: 6.0 Gb/s, 3.0 Gb/s, 1.5 Gb/s</li></ul>",
+      "model": "HAT5300",
+      "warranty": "No Warranty",
+      "basePrice": 64500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "12 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA 6 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "512e",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAT5300-12T",
+          "price": 64500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "12 TB",
+            "Interface": "SATA 6 Gb/s",
+            "Size": "512e"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 61920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "12 TB",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6 Gb/s",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "512e",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7,200 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-hat5300-12tb-enterprise-hdd",
+      "sourceProductCode": "28939",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAT5300-12T",
+      "sourceKeyFeatures": [
+        "MPN: HAT5300-12T",
+        "Model: HAT5300",
+        "Form Factor: 3.5\"",
+        "Interface: SATA 6 Gb/s",
+        "Rotational Speed: 7,200 rpm",
+        "Interface Speed: 6.0 Gb/s, 3.0 Gb/s, 1.5 Gb/s"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-hat5300-12tb-enterprise-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-hat5300-12tb-enterprise-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-hat5300-12tb-enterprise-hdd",
+        "candidateTitle": "Synology HAT5300 12TB SATA III 3.5\" Enterprise HDD",
+        "attemptStem": "synology-hat5300-12tb-enterprise-hdd"
+      }
+    },
+    {
+      "name": "Synology HAT5300 16TB SATA III 3.5\" Enterprise HDD",
+      "slug": "synology-hat5300-16tb-enterprise-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAT5300-16T",
+      "description": "<h2>Synology HAT5300 16TB SATA III 3.5\" Enterprise HDD</h2><p style=\"\">The Synology HAT5300 16TB SATA III 3.5\" Enterprise HDD has been optimized for their storage solutions and enables a high sequential throughput to help maximize the number of clients a system can support. It is built to handle demanding, high-volume workloads in 24/7 environments. The HAT5300 was designed to be more dependable; it has a Mean Time to Failure (MTTF) rating of 2.5 million hours and a 550TB annual workload rating. Additionally offered are a 16TB storage capacity, a SATA III 6 Gb/s interface, a 512MB cache, and a 7200 rpm rotational speed, all of which work together to guarantee continuous data transfers at sustained speeds of up to 262 MB/s.<br/></p><h2 style=\"\">Buy Synology HAT5300 16TB SATA III 3.5\" Enterprise HDD from Star Tech</h2><p>In Bangladesh, you can get the original <a href=\"https://www.startech.com.bd/synology-hat5300-16tb-enterprise-hdd\" target=\"\">Synology HAT5300 16TB SATA III 3.5\" Enterprise HDD</a> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAT5300 16TB SATA III 3.5\" Enterprise HDD comes with 5 years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAT5300-16T</li><li>Model: HAT5300</li><li>Form Factor: 3.5&quot;</li><li>Interface: SATA 6 Gb/s</li><li>Rotational Speed: 7,200 rpm</li><li>Interface Speed: 6.0 Gb/s, 3.0 Gb/s, 1.5 Gb/s</li></ul>",
+      "model": "HAT5300",
+      "warranty": "05-year Warranty",
+      "basePrice": 92500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "16 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA 6 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "512e",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAT5300-16T",
+          "price": 92500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "16 TB",
+            "Interface": "SATA 6 Gb/s",
+            "Size": "512e"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 88800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "16 TB",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6 Gb/s",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "512e",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7,200 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "05-year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-hat5300-16tb-enterprise-hdd",
+      "sourceProductCode": "28410",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAT5300-16T",
+      "sourceKeyFeatures": [
+        "MPN: HAT5300-16T",
+        "Model: HAT5300",
+        "Form Factor: 3.5\"",
+        "Interface: SATA 6 Gb/s",
+        "Rotational Speed: 7,200 rpm",
+        "Interface Speed: 6.0 Gb/s, 3.0 Gb/s, 1.5 Gb/s"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-hat5300-16tb-enterprise-hdd.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-hat5300-16tb-enterprise-hdd.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-hat5300-16tb-enterprise-hdd",
+        "candidateTitle": "Synology HAT5300 16TB SATA III 3.5\" Enterprise HDD",
+        "attemptStem": "synology-hat5300-16tb-enterprise-hdd"
+      }
+    },
+    {
+      "name": "Synology HAT5300 4TB SATA III 3.5\" Enterprise HDD",
+      "slug": "synology-hat5300-4tb-enterprise-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAT5300-4T",
+      "description": "<h2>Synology HAT5300 4TB SATA III 3.5\" Enterprise HDD</h2><p style=\"\">The Synology HAT5300 4TB SATA III 3.5\" Enterprise HDD has been optimized for their storage solutions and enables a high sequential throughput to help maximize the number of clients a system can support. It is built to handle demanding, high-volume workloads in 24/7 environments. The HAT5300 was designed to be more dependable; it has a Mean Time to Failure (MTTF) rating of 2.5 million hours and a 550TB annual workload rating. Additionally offered are a 4TB storage capacity, a SATA III 6 Gb/s interface, a 512MB cache, and a 7200 rpm rotational speed, all of which work together to guarantee continuous data transfers at sustained speeds of up to 243 MB/s.<br/></p><h2 style=\"\">Buy Synology HAT5300 4TB SATA III 3.5\" Enterprise HDD from Star Tech</h2><p>In Bangladesh, you can get the original <a href=\"https://www.startech.com.bd/synology-hat5300-12tb-enterprise-hdd\" target=\"\">Synology HAT5300 4TB SATA III 3.5\" Enterprise HDD</a> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAT5300 4TB SATA III 3.5\" Enterprise HDD comes with 5 years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAT5300-4T</li><li>Model: HAT5300</li><li>Form Factor: 3.5&quot;</li><li>Interface: SATA 6 Gb/s</li><li>Rotational Speed: 7,200 rpm</li><li>Interface Speed: 6.0 Gb/s, 3.0 Gb/s, 1.5 Gb/s</li></ul>",
+      "model": "HAT5300",
+      "warranty": "No Warranty",
+      "basePrice": 29500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "4 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA 6 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "512e",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAT5300-4T",
+          "price": 29500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "4 TB",
+            "Interface": "SATA 6 Gb/s",
+            "Size": "512e"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 28320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "4 TB",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6 Gb/s",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "512e",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7,200 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-hat5300-4tb-enterprise-hdd",
+      "sourceProductCode": "28941",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAT5300-4T",
+      "sourceKeyFeatures": [
+        "MPN: HAT5300-4T",
+        "Model: HAT5300",
+        "Form Factor: 3.5\"",
+        "Interface: SATA 6 Gb/s",
+        "Rotational Speed: 7,200 rpm",
+        "Interface Speed: 6.0 Gb/s, 3.0 Gb/s, 1.5 Gb/s"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-hat5300-4tb-enterprise-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-hat5300-4tb-enterprise-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-hat5300-4tb-enterprise-hdd",
+        "candidateTitle": "Synology HAT5300 4TB SATA III 3.5\" Enterprise HDD",
+        "attemptStem": "synology-hat5300-4tb-enterprise-hdd"
+      }
+    },
+    {
+      "name": "Synology HAT5300 8TB SATA III 3.5\" Enterprise HDD",
+      "slug": "synology-hat5300-8tb-enterprise-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAT5310-8T",
+      "description": "<h2>Synology HAT5300 8TB SATA III 3.5\" Enterprise HDD</h2><p>The Synology <span style=\"font-weight: bold;\">HAT5300</span> 8TB SATA III 3.5\" Enterprise HDD is meticulously crafted to meet the rigorous demands of high-volume workloads in 24/7 operational environments. Engineered specifically for integration with Synology storage solutions, this enterprise-grade HDD boasts optimized performance features tailored to maximize system efficiency and client support. With a Mean Time to Failure (MTTF) rating of 2.5 million hours and a yearly workload rating of 550TB, the HAT5300 is engineered to withstand the demands of continuous operation in demanding environments. Its robust design ensures dependable performance even under extreme workloads, while Persistent Write Cache Technology safeguards against data loss in the event of sudden power interruptions. Synergizing firmware enhancements with DiskStation Manager (DSM) optimizations, the HAT5300 achieves up to a 23% improvement in multi-client sequential read performance, ensuring superior system performance and efficiency. Maintenance processes are streamlined with automatic firmware updates delivered alongside DSM updates, reducing the need for separate maintenance sessions and enhancing system reliability and service availability. Synology's commitment to quality is exemplified through rigorous validation processes, including up to 300,000 hours of testing, validating the HAT5300's reliability and performance, and instilling confidence in Synology's storage solutions. With features like scale-up confidence, endurance, reliability, and simplified maintenance, the Synology HAT5300 8TB SATA III 3.5\" Enterprise <a href=\"https://www.startech.com.bd/server-hdd\" style=\"color: rgb(0, 0, 0);\" target=\"\">HDD</a> is an ideal choice for businesses seeking to address demanding storage requirements while benefiting from enhanced performance, reliability, and simplified maintenance procedures.</p><h2><span style=\"color: inherit; font-family: inherit;\">Buy </span>Synology HAT5300 8TB SATA III 3.5\" Enterprise HDD<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2><p>In Bangladesh, you can get the original <span style=\"font-weight: 700;\">Synology HAT5300 8TB SATA III 3.5\" Enterprise HDD</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAT5300 8TB SATA III 3.5\" Enterprise HDD comes with 5 years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAT5310-8T</li><li>Model: HAT5300</li><li>Capacity: 8 TB</li><li>Form Factor: 3.5&quot;</li><li>Interface: SATA 6 Gb/s</li><li>Up to 260 MB/s Sustained Transfer Rate</li></ul>",
+      "model": "HAT5300",
+      "warranty": "05-year Warranty",
+      "basePrice": 48000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "8 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA 6 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "512e",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAT5310-8T",
+          "price": 48000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "8 TB",
+            "Interface": "SATA 6 Gb/s",
+            "Size": "512e"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 46080.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "8 TB",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6 Gb/s",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "512e",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7,200 rpm",
+              "position": 3
+            },
+            {
+              "label": "Read/Write Speed",
+              "value": "260 MB/s",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "05-year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-hat5300-8tb-enterprise-hdd",
+      "sourceProductCode": "35197",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAT5310-8T",
+      "sourceKeyFeatures": [
+        "MPN: HAT5310-8T",
+        "Model: HAT5300",
+        "Capacity: 8 TB",
+        "Form Factor: 3.5\"",
+        "Interface: SATA 6 Gb/s",
+        "Up to 260 MB/s Sustained Transfer Rate"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-hat5300-8tb-enterprise-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-hat5300-8tb-enterprise-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-hat5300-8tb-enterprise-hdd",
+        "candidateTitle": "Synology HAT5300 8TB SATA III 3.5\" Enterprise HDD",
+        "attemptStem": "synology-hat5300-8tb-enterprise-hdd"
+      }
+    },
+    {
+      "name": "Synology HAT5310 18TB SATA III 3.5\" Enterprise HDD",
+      "slug": "synology-hat5310-18tb-enterprise-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAT5310-18T",
+      "description": "<h2>Synology HAT5310 18TB SATA III 3.5\" Enterprise HDD</h2><p style=\"\">The Synology HAT5310 18TB SATA III 3.5\" Enterprise HDD has been optimized for their storage solutions and enables a high sequential throughput to help maximize the number of clients a system can support. It is built to handle demanding, high-volume workloads in 24/7 environments. The HAT5310 was designed to be more dependable; it has a Mean Time to Failure (MTTF) rating of 2.5 million hours and a 550TB annual workload rating. Additionally offered are a 18TB storage capacity, a SATA III 6 Gb/s interface, a 512MB cache, and a 7200 rpm rotational speed, all of which work together to guarantee continuous data transfers at sustained speeds of up to 262 MB/s.<br/></p><h2 style=\"\">Buy Synology HAT5310 18TB SATA III 3.5\" Enterprise HDD from Star Tech</h2><p>In Bangladesh, you can get the original <a href=\"https://www.startech.com.bd/synology-hat5300-16tb-enterprise-hdd\" target=\"\">Synology HAT5310 18TB SATA III 3.5\" Enterprise HDD</a> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAT5310 18TB SATA III 3.5\" Enterprise HDD comes with 5 years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAT5310-18T</li><li>Model: HAT5310</li><li>Form Factor: 3.5&quot;</li><li>Interface: SATA 6 Gb/s</li><li>Rotational Speed: 7,200 rpm</li><li>Interface Speed: 6.0 Gb/s, 3.0 Gb/s, 1.5 Gb/s</li></ul>",
+      "model": "HAT5310",
+      "warranty": "5 years warranty",
+      "basePrice": 99000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "18 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA 6 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "512e",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAT5310-18T",
+          "price": 99000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "18 TB",
+            "Interface": "SATA 6 Gb/s",
+            "Size": "512e"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 95040.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "18 TB",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6 Gb/s",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "512e",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7,200 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "5 years warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-hat5310-18tb-enterprise-hdd",
+      "sourceProductCode": "28942",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAT5310-18T",
+      "sourceKeyFeatures": [
+        "MPN: HAT5310-18T",
+        "Model: HAT5310",
+        "Form Factor: 3.5\"",
+        "Interface: SATA 6 Gb/s",
+        "Rotational Speed: 7,200 rpm",
+        "Interface Speed: 6.0 Gb/s, 3.0 Gb/s, 1.5 Gb/s"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-hat5310-18tb-enterprise-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-hat5310-18tb-enterprise-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-hat5310-18tb-enterprise-hdd",
+        "candidateTitle": "Synology HAT5310 18TB SATA III 3.5\" Enterprise HDD",
+        "attemptStem": "synology-hat5310-18tb-enterprise-hdd"
+      }
+    },
+    {
+      "name": "Synology HAT5310 20TB SATA III 3.5\" Enterprise HDD",
+      "slug": "synology-hat5310-20tb-enterprise-hdd",
+      "type": "PHYSICAL",
+      "sku": "HAT5310-20T",
+      "description": "<h2>Synology HAT5310 20TB SATA III 3.5\" Enterprise HDD</h2><p>The Synology <strong>HAT5310</strong> 20TB SATA III 3.5\" Enterprise HDD is a high-capacity, enterprise-grade hard drive designed to provide great performance and reliability in demanding storage situations. With a colossal 20TB capacity, the Synology HAT5310 20TB <a href=\"https://www.startech.com.bd/server-hdd\" style=\"color: rgb(0, 0, 0);\" target=\"\">Server HDD</a> is ideal for data-intensive operations, large-scale backups, and high-volume file storage. Its typical 3.5-inch form factor and SATA 6 Gb/s interface allow for simple connection with Synology NAS systems. It has an impressive maximum sustained data transfer speed of up to 281 MB/s, allowing for speedy and efficient read/write performance across a wide range of workloads. The Synology HAT5310 20TB SATA III 3.5\" Enterprise HDD runs at a steady 7200 RPM, increasing data throughput while keeping the system stable. The operational temperature range of 5°C to 60°C ensures constant performance in a variety of settings. The Synology HAT5310 20TB SATA III 3.5\" Hard Drive is designed for continuous 24/7 operation and has a strong Mean Time Between Failures (MTBF) rating of 2.5 million hours, making it perfect for mission-critical corporate applications. It enables heavy read and write operations and can handle up to 550 TB of data per year, making it ideal for enterprise use. The Synology Server HDD includes advanced technologies like as enterprise-grade vibration sensors and firmware technology, which help to maintain data integrity and reduce the danger of data loss during prolonged operation. The Synology HAT5310 20TB SATA III 3.5\" Enterprise HDD has been thoroughly tested and confirmed for interoperability with Synology's DiskStation Manager (DSM), enabling for easy deployment and dependable performance in Synology systems.</p><h2>Buy Synology HAT5310 20TB SATA III 3.5\" Enterprise HDD from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Synology HAT5310 20TB SATA III 3.5\" Enterprise HDD</strong> From Star Tech. We have a large collection of the latest Synology <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\" target=\"\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAT5310 20TB SATA III 3.5\" Enterprise HDD comes with 5 years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: HAT5310-20T</li><li>Model: HAT5310</li><li>Form Factor: 3.5&quot;</li><li>Interface: SATA 6 Gb/s</li><li>Rotational Speed: 7,200 rpm</li><li>Interface Speed: 6.0 Gb/s, 3.0 Gb/s, 1.5 Gb/s</li></ul>",
+      "model": "HAT5310",
+      "warranty": "5 years warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "20 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA 6 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "512e",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "HAT5310-20T",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "20 TB",
+            "Interface": "SATA 6 Gb/s",
+            "Size": "512e"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "20 TB",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6 Gb/s",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "512e",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7,200 rpm",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "5 years warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-hat5310-20tb-enterprise-hdd",
+      "sourceProductCode": "43770",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "HAT5310-20T",
+      "sourceKeyFeatures": [
+        "MPN: HAT5310-20T",
+        "Model: HAT5310",
+        "Form Factor: 3.5\"",
+        "Interface: SATA 6 Gb/s",
+        "Rotational Speed: 7,200 rpm",
+        "Interface Speed: 6.0 Gb/s, 3.0 Gb/s, 1.5 Gb/s"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-hat5310-20tb-enterprise-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-hat5310-20tb-enterprise-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-hat5310-20tb-enterprise-hdd",
+        "candidateTitle": "Synology HAT5310 20TB SATA III 3.5\" Enterprise HDD",
+        "attemptStem": "synology-hat5310-20tb-enterprise-hdd"
+      }
+    },
+    {
+      "name": "Synology HAT5320 8TB SATA III 3.5\" Enterprise HDD",
+      "slug": "synology-hat5320-8tb-enterprise-hdd",
+      "type": "PHYSICAL",
+      "sku": "ST-47289",
+      "description": "<h2>Synology HAT5320 8TB SATA III 3.5\" Enterprise HDD</h2><p>The Synology <strong>HAT5320</strong> 8TB SATA III 3.5\" Enterprise HDD is meticulously crafted to meet the rigorous demands of high-volume workloads in 24/7 operational environments. Engineered specifically for integration with Synology storage solutions, this enterprise-grade HDD boasts optimized performance features tailored to maximize system efficiency and client support. With a Mean Time to Failure (MTTF) rating of 2.5 million hours and a yearly workload rating of 550TB, the HAT5320 is engineered to withstand the demands of continuous operation in demanding environments. Its robust design ensures dependable performance even under extreme workloads, while Persistent Write Cache Technology safeguards against data loss in the event of sudden power interruptions. Synergizing firmware enhancements with DiskStation Manager (DSM) optimizations, the HAT5320 achieves up to a 23% improvement in multi-client sequential read performance, ensuring superior system performance and efficiency. Maintenance processes are streamlined with automatic firmware updates delivered alongside DSM updates, reducing the need for separate maintenance sessions and enhancing system reliability and service availability. Synology's commitment to quality is exemplified through rigorous validation processes, including up to 300,000 hours of testing, validating the HAT5320's reliability and performance, and instilling confidence in Synology's storage solutions. With features like scale-up confidence, endurance, reliability, and simplified maintenance, the Synology HAT5320 8TB SATA III 3.5\" Enterprise <a href=\"https://www.startech.com.bd/server-hdd\" style=\"color: rgb(0, 0, 0);\">HDD</a> is an ideal choice for businesses seeking to address demanding storage requirements while benefiting from enhanced performance, reliability, and simplified maintenance procedures.</p><h2>Buy Synology HAT5320 8TB SATA III 3.5\" Enterprise HDD from Star Tech<br/></h2><p>In Bangladesh, you can get the original <strong>Synology HAT5320 8TB SATA III 3.5\" Enterprise HDD</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-networking/server-accessories/server-hdd\">Server HDD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at the lowest price. The Synology HAT5320 8TB SATA III 3.5\" Enterprise HDD comes with 5 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HAT5320</li><li>Capacity: 8 TB</li><li>Form Factor: 3.5&quot;</li><li>Interface: SATA 6 Gb/s</li><li>Up to 260 MB/s Sustained Transfer Rate</li></ul>",
+      "model": "HAT5320",
+      "warranty": "05-year Warranty",
+      "basePrice": 48000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "8 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA 6 Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Size",
+          "position": 2,
+          "values": [
+            {
+              "value": "512e",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47289",
+          "price": 48000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "8 TB",
+            "Interface": "SATA 6 Gb/s",
+            "Size": "512e"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 46080.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "8 TB",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6 Gb/s",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "512e",
+              "position": 2
+            },
+            {
+              "label": "RPM Class",
+              "value": "7,200 rpm",
+              "position": 3
+            },
+            {
+              "label": "Read/Write Speed",
+              "value": "Up to 281 MB/s",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "05-year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-hat5320-8tb-enterprise-hdd",
+      "sourceProductCode": "47289",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HAT5320",
+        "Capacity: 8 TB",
+        "Form Factor: 3.5\"",
+        "Interface: SATA 6 Gb/s",
+        "Up to 260 MB/s Sustained Transfer Rate"
+      ],
+      "needsReview": false,
+      "categorySlug": "server-hdd",
+      "image": "/images/products/server-networking/server-hdd/synology-hat5320-8tb-enterprise-hdd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd/synology-hat5320-8tb-enterprise-hdd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-hat5320-8tb-enterprise-hdd",
+        "candidateTitle": "Synology HAT5320 8TB SATA III 3.5\" Enterprise HDD",
+        "attemptStem": "synology-hat5320-8tb-enterprise-hdd"
+      }
+    }
+  ]
+}

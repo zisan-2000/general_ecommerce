@@ -1,0 +1,1501 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/security-camera",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\security-camera",
+    "generatedAtUnix": 1790590169,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Security Camera",
+      "slug": "security-camera",
+      "parentSlug": null,
+      "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1201aef-fingerprint-reader.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Cc Camera Package",
+      "slug": "cc-camera-package",
+      "parentSlug": "security-camera",
+      "image": "/images/products/security-camera/cc-camera-package/Dahua/dahua-16unit-cc-camera-package.png",
+      "isActive": true,
+      "sortOrder": 3,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Dahua",
+      "slug": "dahua",
+      "logo": null
+    },
+    {
+      "name": "Hikvision",
+      "slug": "hikvision",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Dahua 16 unit Cc camera package",
+      "slug": "dahua-16unit-cc-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-8748",
+      "description": "<div>Dahua 16 unit 1080P night vision security cc camera With Dahua 16 Channel  720p Recording XVR, 1TB Hard Disk Drive. 16 unit power adapter good quality. 16 unit video balun  Good  quality. 300m. Cat6 &amp; Power cable N/A.</div><div><br/></div><div><br/></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dahua 16 unit Cc camera package</li><li>Dahua 16 unit 1080P night vision security</li><li>Dahua16 Channel XVR</li><li>1TB Hard Disk Drive</li><li>300m. Cat6 &amp; Power Cable N/A.</li></ul>",
+      "model": "Dahua 16 unit Cc camera package",
+      "warranty": null,
+      "basePrice": 42000.0,
+      "originalPrice": 50500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dahua",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "1TB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "16 unit video balun Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8748",
+          "price": 42000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "1TB Hard Disk Drive",
+            "Connector": "16 unit video balun Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 40320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Dahua 16 unit 1080P night vision security cc camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "Dahua 16 Channel 720p Recording XVR",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "1TB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "16 unit power adapter good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "16 unit video balun Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "300m. Cat6 & Power Cable N/A.",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dahua-16unit-cc-camera-package",
+      "sourceProductCode": "8748",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dahua 16 unit Cc camera package",
+        "Dahua 16 unit 1080P night vision security",
+        "Dahua16 Channel XVR",
+        "1TB Hard Disk Drive",
+        "300m. Cat6 & Power Cable N/A."
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-package",
+      "image": "/images/products/security-camera/cc-camera-package/Dahua/dahua-16unit-cc-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-package/Dahua/dahua-16unit-cc-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dahua-16unit-cc-camera-package",
+        "candidateTitle": "Dahua 16 unit Cc camera package",
+        "attemptStem": "dahua-16unit-cc-camera-package"
+      }
+    },
+    {
+      "name": "Dahua 2 unit CC camera package",
+      "slug": "dahua-2-unit-cc-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-8742",
+      "description": "<div>Dahua 2 unit 1080p night vision security cc camera With Dahua 4 Channel  720p Recording XVR,500GB Hard Disk Drive.2 unit power adapter good quality. 2 unit video balun  Good  quality. 25m. Cat6 &amp; Power cable.</div><div><br/></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dahua 2 unit Cc camera package</li><li>Dahua 2 unit 1080p night vision security</li><li>Dahua 4 Channel XVR</li><li>500GB Hard Disk Drive</li></ul>",
+      "model": "Dahua 2 unit Cc camera package",
+      "warranty": null,
+      "basePrice": 9900.0,
+      "originalPrice": 13500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dahua",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "500GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "2 unit video balun Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8742",
+          "price": 9900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "500GB Hard Disk Drive",
+            "Connector": "2 unit video balun Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 9504.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Dahua 2 unit 1080p night vision security cc camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "Dahua 4 Channel 720p Recording XVR",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "500GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "2 unit power adapter good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "2 unit video balun Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "25M Cat6 Cable",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dahua-2-unit-cc-camera-package",
+      "sourceProductCode": "8742",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dahua 2 unit Cc camera package",
+        "Dahua 2 unit 1080p night vision security",
+        "Dahua 4 Channel XVR",
+        "500GB Hard Disk Drive"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-package",
+      "image": "/images/products/security-camera/cc-camera-package/Dahua/dahua-2-unit-cc-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-package/Dahua/dahua-2-unit-cc-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dahua-2-unit-cc-camera-package",
+        "candidateTitle": "Dahua 2 unit CC camera package",
+        "attemptStem": "dahua-2-unit-cc-camera-package"
+      }
+    },
+    {
+      "name": "Dahua 3 unit Cc camera package",
+      "slug": "dahua-3unit-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-8743",
+      "description": "<div>Dahua 3-unit 1080p night vision security cc camera with Dahua 4 Channel  720p Recording XVR, 500GB Hard Disk Drive, 3-unit power adapter, good quality. 3-unit video balun, Good quality. 50m Cat6 &amp; Power cable N/A.</div><div><br/></div><div><br/></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dahua 3 unit Cc camera package</li><li>Dahua 3 unit 1080p night vision security</li><li>Dahua 4 Channel XVR</li><li>500GB Hard Disk Drive</li><li>Cable 50m. Cat6 &amp; Power cable N/A</li></ul>",
+      "model": "Dahua 3 unit Cc camera package",
+      "warranty": null,
+      "basePrice": 10590.0,
+      "originalPrice": 15500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dahua",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "500GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "3 unit video balun Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8743",
+          "price": 10590.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "500GB Hard Disk Drive",
+            "Connector": "3 unit video balun Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 10166.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Dahua 3 unit 1080p night vision security cc camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "Dahua 4 Channel 720p Recording XVR",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "500GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "3 unit power adapter good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "3 unit video balun Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "Cable 50m. Cat6 & Power cable N/A",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dahua-3unit-camera-package",
+      "sourceProductCode": "8743",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dahua 3 unit Cc camera package",
+        "Dahua 3 unit 1080p night vision security",
+        "Dahua 4 Channel XVR",
+        "500GB Hard Disk Drive",
+        "Cable 50m. Cat6 & Power cable N/A"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-package",
+      "image": "/images/products/security-camera/cc-camera-package/Dahua/dahua-3unit-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-package/Dahua/dahua-3unit-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dahua-3unit-camera-package",
+        "candidateTitle": "Dahua 3 unit Cc camera package",
+        "attemptStem": "dahua-3unit-camera-package"
+      }
+    },
+    {
+      "name": "Dahua 4 unit CC camera package",
+      "slug": "dahua-4unit-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-8744",
+      "description": "<h2>Dahua 4 unit CC camera package</h2><div>Dahua 4 unit 1080P night vision security cc camera With Dahua 4 Channel  720p Recording XVR,500GB Hard Disk Drive. 4 unit power adapter good quality. 4 unit video balun  Good  quality. 50m. Cat6 &amp; Power cable N/A. </div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dahua 4 unit CC camera package</li><li>Dahua 4 unit 1080P night vision security</li><li>Dahua 4 Channel XVR</li><li>500GB Hard Disk Drive</li><li>Cable: cat6 50m, Power cable N/A.</li></ul>",
+      "model": "Dahua 4 unit CC camera package",
+      "warranty": null,
+      "basePrice": 12999.0,
+      "originalPrice": 14000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dahua",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "500GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "4 unit video balun Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8744",
+          "price": 12999.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "500GB Hard Disk Drive",
+            "Connector": "4 unit video balun Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 12479.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Dahua 4 unit 1080P night vision security cc camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "Dahua 4 Channel 720p Recording XVR",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "500GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "4 unit power adapter good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "4 unit video balun Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "Cable: cat6 50m , power cable N/A",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dahua-4unit-camera-package",
+      "sourceProductCode": "8744",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dahua 4 unit CC camera package",
+        "Dahua 4 unit 1080P night vision security",
+        "Dahua 4 Channel XVR",
+        "500GB Hard Disk Drive",
+        "Cable: cat6 50m, Power cable N/A."
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-package",
+      "image": "/images/products/security-camera/cc-camera-package/Dahua/dahua-4unit-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-package/Dahua/dahua-4unit-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dahua-4unit-camera-package",
+        "candidateTitle": "Dahua 4 unit CC camera package",
+        "attemptStem": "dahua-4unit-camera-package"
+      }
+    },
+    {
+      "name": "Dahua 5 unit CC camera package",
+      "slug": "dahua-5unit-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-8745",
+      "description": "<div>Dahua 5 unit 1080P night vision security cc camera With Dahua 8 Channel  720p Recording XVR,1000GB Hard Disk Drive. 5 unit power adapter good quality. 5unit video balun  Good  quality. 100m. Cat6 &amp; Power cable N/A.</div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dahua 5 unit CC camera package</li><li>Dahua 5 unit 1080P night vision security</li><li>Dahua 8 Channel XVR</li><li>1000GB Hard Disk Drive</li><li>Cable: 100m Cat6 &amp; Power cable N/A</li></ul>",
+      "model": "Dahua 5 unit CC camera package",
+      "warranty": null,
+      "basePrice": 16990.0,
+      "originalPrice": 21500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dahua",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "1000GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "5 unit video balun Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8745",
+          "price": 16990.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "1000GB Hard Disk Drive",
+            "Connector": "5 unit video balun Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 16310.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Dahua 5 unit 1080P night vision security cc camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "Dahua 8 Channel 720p Recording XVR",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "1000GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "5 unit power adapter good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "5 unit video balun Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "100m. Cat6 & Power cable N/A.",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dahua-5unit-camera-package",
+      "sourceProductCode": "8745",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dahua 5 unit CC camera package",
+        "Dahua 5 unit 1080P night vision security",
+        "Dahua 8 Channel XVR",
+        "1000GB Hard Disk Drive",
+        "Cable: 100m Cat6 & Power cable N/A"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-package",
+      "image": "/images/products/security-camera/cc-camera-package/Dahua/dahua-5unit-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-package/Dahua/dahua-5unit-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dahua-5unit-camera-package",
+        "candidateTitle": "Dahua 5 unit CC camera package",
+        "attemptStem": "dahua-5unit-camera-package"
+      }
+    },
+    {
+      "name": "Dahua 6 unit Cc camera package",
+      "slug": "dahua-6unit-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-8746",
+      "description": "<div>Dahua 6 unit 1080P night vision security cc camera With Dahua 8 Channel  720p Recording XVR,1000GB Hard Disk Drive. 6 unit power adapter good quality. 6 unit video balun  Good  quality. 100m. Cat6 &amp; Power cable.</div><div><br/></div><div><br/></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dahua 6 unit Cc camera package</li><li>Dahua 6 unit 1080P night vision security</li><li>Dahua 8 Channel XVR</li><li>1000GB Hard Disk Drive</li><li>100m. Cat6</li></ul>",
+      "model": "Dahua 6 unit Cc camera package",
+      "warranty": null,
+      "basePrice": 19500.0,
+      "originalPrice": 24000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dahua",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "1000GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "6 unit video balun Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8746",
+          "price": 19500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "1000GB Hard Disk Drive",
+            "Connector": "6 unit video balun Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 18720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Dahua 6 unit 1080P night vision security cc camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "Dahua 8 Channel 720p Recording XVR",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "1000GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "6 unit power adapter good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "6 unit video balun Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "100m. Cat6 & Power cable: N/A",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dahua-6unit-camera-package",
+      "sourceProductCode": "8746",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dahua 6 unit Cc camera package",
+        "Dahua 6 unit 1080P night vision security",
+        "Dahua 8 Channel XVR",
+        "1000GB Hard Disk Drive",
+        "100m. Cat6"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-package",
+      "image": "/images/products/security-camera/cc-camera-package/Dahua/dahua-6unit-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-package/Dahua/dahua-6unit-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dahua-6unit-camera-package",
+        "candidateTitle": "Dahua 6 unit Cc camera package",
+        "attemptStem": "dahua-6unit-camera-package"
+      }
+    },
+    {
+      "name": "Dahua 8 unit Cc camera package",
+      "slug": "dahua-8-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-8747",
+      "description": "<div>Dahua 8 unit 1080P night vision security cc camera With Dahua 8 Channel  720p Recording XVR,1000GB Hard Disk Drive. 8 unit power adapter good quality. 8 unit video balun  Good  quality. 100m Cat6 &amp; Power Cable N/A.</div><div><br/></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dahua 8 unit Cc camera package</li><li>Dahua 8 unit 1080P night vision security</li><li>Dahua 8 Channel XVR</li><li>1000GB Hard Disk Drive</li><li>Cable: 100m Cat6 &amp; Power Cable N/A</li></ul>",
+      "model": "Dahua 8 unit Cc camera package",
+      "warranty": null,
+      "basePrice": 22499.0,
+      "originalPrice": 29000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dahua",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "1000GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "8 unit video balun Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8747",
+          "price": 22499.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "1000GB Hard Disk Drive",
+            "Connector": "8 unit video balun Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 21599.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Dahua 8 unit 1080P night vision security cc camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "Dahua 8 Channel 720p Recording XVR",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "1000GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "8 unit power adapter good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "8 unit video balun Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "100m. Cat6 & Power cable: N/A",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dahua-8-camera-package",
+      "sourceProductCode": "8747",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dahua 8 unit Cc camera package",
+        "Dahua 8 unit 1080P night vision security",
+        "Dahua 8 Channel XVR",
+        "1000GB Hard Disk Drive",
+        "Cable: 100m Cat6 & Power Cable N/A"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-package",
+      "image": "/images/products/security-camera/cc-camera-package/Dahua/dahua-8-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-package/Dahua/dahua-8-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dahua-8-camera-package",
+        "candidateTitle": "Dahua 8 unit Cc camera package",
+        "attemptStem": "dahua-8-camera-package"
+      }
+    },
+    {
+      "name": "HIKVISION 2 unit 1080P night vision security cc camera Package",
+      "slug": "hikvision-2-unit-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-9546",
+      "description": "<p><span style=\"font-weight: bold;\">HIKVISION 2 unit 1080P night vision security cc camera Package</span><br/></p><ul><li>CAMERA: HIKVISION  2 unit 1080P night vision security cc camera</li><li>DVR: HIKVISION 04 PORT 1080P RECORDING DVR. </li><li>HDD: 500GB 3.5-inch HARD DISK DRIVE.</li><li>MONITOR: NO</li><li>25m. Cat6 &amp; Power cable N/A<br/></li><li>ADAPTER: 02 UNIT POWER ADAPTER GOOD QUALITY.</li><li>CONNECTOR: 02 UNIT VIDEO BALUN GOOD QUALITY.</li></ul><span style=\"font-weight: bold;\">No warranty</span><p></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hikvision 2 unit Camera Package</li><li>HIKVISION 2MP 1080P night vision Camera</li><li>HIKVISION 4 Channel DVR</li><li>500GB 3.5-inch HDD</li><li>25m. Cat6 &amp; Power cable N/A</li></ul>",
+      "model": "Hikvision 2 unit Camera Package",
+      "warranty": null,
+      "basePrice": 9990.0,
+      "originalPrice": 13000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hikvision",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-9546",
+          "price": 9990.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 9590.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Hikvision 2 unit Camera Package",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-2-unit-camera-package",
+      "sourceProductCode": "9546",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hikvision 2 unit Camera Package",
+        "HIKVISION 2MP 1080P night vision Camera",
+        "HIKVISION 4 Channel DVR",
+        "500GB 3.5-inch HDD",
+        "25m. Cat6 & Power cable N/A"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-package",
+      "image": "/images/products/security-camera/cc-camera-package/Hikvision/hikvision-2-unit-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-package/Hikvision/hikvision-2-unit-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-2-unit-camera-package",
+        "candidateTitle": "HIKVISION 2 unit 1080P night vision security cc camera Package",
+        "attemptStem": "hikvision-2-unit-camera-package"
+      }
+    },
+    {
+      "name": "HIKVISION 3 unit 1080P night vision security cc camera Package",
+      "slug": "hikvision-3unit-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-9547",
+      "description": "<p><span style=\"font-weight: bold;\">HIKVISION 3 unit 1080P night vision security cc camera Package</span><br/></p><ul><li>CAMERA: HIKVISION  3 unit 1080P night vision security cc camera</li><li>DVR: HIKVISION 04 PORT 1080P RECORDING DVR. </li><li>HDD: 500GB 3.5-inch HARD DISK DRIVE.</li><li>MONITOR: NO</li><li>50m. Cat6 &amp; Power cable N/A.</li><li>ADAPTER: 03 UNIT POWER ADAPTER GOOD QUALITY.</li><li>CONNECTOR: 03 UNIT VIDEO BALUN GOOD QUALITY.</li></ul><p></p><div><span style=\"font-weight: bold;\">No Warranty</span></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hikvision 3 unit Camera Package</li><li>HIKVISION 2MP 1080P night vision Camera</li><li>HIKVISION 4 Channel DVR</li><li>500GB 3.5-inch HDD</li><li>50m. Cat6 &amp; Power cable N/A.</li></ul>",
+      "model": "Hikvision 3 unit Camera Package",
+      "warranty": null,
+      "basePrice": 10800.0,
+      "originalPrice": 12300.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hikvision",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-9547",
+          "price": 10800.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 10368.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Hikvision 3 unit Camera Package",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-3unit-camera-package",
+      "sourceProductCode": "9547",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hikvision 3 unit Camera Package",
+        "HIKVISION 2MP 1080P night vision Camera",
+        "HIKVISION 4 Channel DVR",
+        "500GB 3.5-inch HDD",
+        "50m. Cat6 & Power cable N/A."
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-package",
+      "image": "/images/products/security-camera/cc-camera-package/Hikvision/hikvision-3unit-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-package/Hikvision/hikvision-3unit-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-3unit-camera-package",
+        "candidateTitle": "HIKVISION 3 unit 1080P night vision security cc camera Package",
+        "attemptStem": "hikvision-3unit-camera-package"
+      }
+    },
+    {
+      "name": "HIKVISION 4 unit 1080P night vision security cc camera Package",
+      "slug": "hikvision-4-unit-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-9548",
+      "description": "<p><span style=\"font-weight: bold;\">HIKVISION 4 unit 1080P night vision security cc camera Package</span><br/></p><ul><li>CAMERA: HIKVISION  4 unit 1080P night vision security cc camera</li><li>DVR: HIKVISION 04 PORT 1080P RECORDING DVR. </li><li>HDD: 500GB 3.5-inch HARD DISK DRIVE.</li><li>MONITOR: NO</li><li>50m. Cat6 &amp; power cable N/A<br/></li><li>ADAPTER: 04 UNIT POWER ADAPTER GOOD QUALITY.</li><li>CONNECTOR: 04 UNIT VIDEO BALUN GOOD QUALITY.</li></ul><p></p><div><span style=\"font-weight: bold;\">No Warranty</span></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hikvision 4 unit Camera Package</li><li>HIKVISION 2MP 1080P night vision Camera</li><li>HIKVISION 4 Channel DVR</li><li>500GB 3.5-inch HDD</li><li>50m. Cat6 &amp; power cable N/A</li></ul>",
+      "model": "Hikvision 4 unit Camera Package",
+      "warranty": null,
+      "basePrice": 12150.0,
+      "originalPrice": 13900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hikvision",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-9548",
+          "price": 12150.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 11664.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Hikvision 4 unit Camera Package",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-4-unit-camera-package",
+      "sourceProductCode": "9548",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hikvision 4 unit Camera Package",
+        "HIKVISION 2MP 1080P night vision Camera",
+        "HIKVISION 4 Channel DVR",
+        "500GB 3.5-inch HDD",
+        "50m. Cat6 & power cable N/A"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-package",
+      "image": "/images/products/security-camera/cc-camera-package/Hikvision/hikvision-4-unit-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-package/Hikvision/hikvision-4-unit-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-4-unit-camera-package",
+        "candidateTitle": "HIKVISION 4 unit 1080P night vision security cc camera Package",
+        "attemptStem": "hikvision-4-unit-camera-package"
+      }
+    },
+    {
+      "name": "HIKVISION 5 unit 1080P night vision security cc camera Package",
+      "slug": "hikvision-5unit-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-9549",
+      "description": "<div><span style=\"font-weight: bold;\">HIKVISION 5 unit </span><span style=\"font-weight: 700;\">1080P </span><span style=\"font-weight: bold;\">night vision security cc camera Package</span><br/><ul><li>CAMERA: HIKVISION  5 unit 1080P night vision security cc camera</li><li>DVR: HIKVISION 08 PORT 1080P RECORDING DVR. </li><li>HDD: 1000GB 3.5-inch HARD DISK DRIVE.</li><li>MONITOR: NO</li><li>50m. Cat6 &amp; Power Cable N/A.</li><li>ADAPTER: 05 UNIT POWER ADAPTER GOOD QUALITY.</li><li>CONNECTOR: 05 UNIT VIDEO BALUN GOOD QUALITY.</li></ul></div><div><span style=\"font-weight: bold;\">No Warranty</span> </div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hikvision 5 unit Camera Package</li><li>HIKVISION 5-unit 1080P night vision Camera</li><li>HIKVISION 8 Channel DVR</li><li>1000GB 3.5-inch HDD</li><li>50m. Cat6 &amp; Power Cable N/A.</li></ul>",
+      "model": "Hikvision 5 unit Camera Package",
+      "warranty": null,
+      "basePrice": 16500.0,
+      "originalPrice": 21500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hikvision",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-9549",
+          "price": 16500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 15840.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Hikvision 5 unit Camera Package",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-5unit-camera-package",
+      "sourceProductCode": "9549",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hikvision 5 unit Camera Package",
+        "HIKVISION 5-unit 1080P night vision Camera",
+        "HIKVISION 8 Channel DVR",
+        "1000GB 3.5-inch HDD",
+        "50m. Cat6 & Power Cable N/A."
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-package",
+      "image": "/images/products/security-camera/cc-camera-package/Hikvision/hikvision-5unit-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-package/Hikvision/hikvision-5unit-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-5unit-camera-package",
+        "candidateTitle": "HIKVISION 5 unit 1080P night vision security cc camera Package",
+        "attemptStem": "hikvision-5unit-camera-package"
+      }
+    },
+    {
+      "name": "HIKVISION 6 unit 1080P night vision security cc camera Package",
+      "slug": "hikvision-6unit-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-9551",
+      "description": "<div><span style=\"font-weight: bold;\">HIKVISION 6 unit </span><span style=\"font-weight: 700;\">1080P </span><span style=\"font-weight: bold;\">night vision security cc camera Package</span><br/><ul><li>CAMERA: HIKVISION  6 unit 1080P night vision security cc camera</li><li>DVR: HIKVISION 08 PORT 1080P RECORDING DVR. </li><li>HDD: 1000GB 3.5-inch HARD DISK DRIVE.</li><li>MONITOR: NO</li><li>50m. Cat6 &amp; Power cable N/A.<br/></li><li>ADAPTER: 06 UNIT POWER ADAPTER GOOD QUALITY.</li><li>CONNECTOR: 06 UNIT VIDEO BALUN GOOD QUALITY.</li></ul></div><div><span style=\"font-weight: bold;\">No Warranty</span></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hikvision 6 unit Camera Package</li><li>HIKVISION 6 unit 1080P night vision Camera</li><li>HIKVISION 8 Channel DVR</li><li>1000GB 3.5-inch HDD</li><li>50m. Cat6 &amp; Power cable N/A.</li></ul>",
+      "model": "Hikvision 6 unit Camera Package",
+      "warranty": null,
+      "basePrice": 18750.0,
+      "originalPrice": 24500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hikvision",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-9551",
+          "price": 18750.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 18000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Hikvision 6 unit Camera Package",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-6unit-camera-package",
+      "sourceProductCode": "9551",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hikvision 6 unit Camera Package",
+        "HIKVISION 6 unit 1080P night vision Camera",
+        "HIKVISION 8 Channel DVR",
+        "1000GB 3.5-inch HDD",
+        "50m. Cat6 & Power cable N/A."
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-package",
+      "image": "/images/products/security-camera/cc-camera-package/Hikvision/hikvision-6unit-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-package/Hikvision/hikvision-6unit-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-6unit-camera-package",
+        "candidateTitle": "HIKVISION 6 unit 1080P night vision security cc camera Package",
+        "attemptStem": "hikvision-6unit-camera-package"
+      }
+    },
+    {
+      "name": "HIKVISION 8 unit 1080P night vision security cc camera Package",
+      "slug": "hikvision-8-unit-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-9550",
+      "description": "<p><span style=\"font-weight: bold;\">HIKVISION 8 unit 1080P night vision security cc camera Package<br/></span></p><p></p><ul><li>CAMERA: HIKVISION  8 unit 1080P night vision security cc camera</li><li>DVR: HIKVISION 08 PORT 1080P RECORDING DVR. </li><li>HDD: 1000GB 3.5-inch HARD DISK DRIVE.</li><li>MONITOR: NO</li><li>100m. Cat6 &amp; Power cable N/A</li><li>ADAPTER: 08 UNIT POWER ADAPTER GOOD QUALITY.</li><li>CONNECTOR: 08 UNIT VIDEO BALUN GOOD QUALITY.</li></ul><p></p><p></p><div><span style=\"font-weight: bold;\">No Warranty</span></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Hikvision 8 unit Camera Package</li><li>HIKVISION 8 unit 1080P night vision Camera</li><li>HIKVISION 8 Channel DVR</li><li>1000GB 3.5-inch HDD</li><li>100m. Cat6 &amp; Power cable N/A</li></ul>",
+      "model": "Hikvision 8 unit Camera Package",
+      "warranty": null,
+      "basePrice": 22750.0,
+      "originalPrice": 23700.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hikvision",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-9550",
+          "price": 22750.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 21840.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Hikvision 8 unit Camera Package",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-8-unit-camera-package",
+      "sourceProductCode": "9550",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Hikvision 8 unit Camera Package",
+        "HIKVISION 8 unit 1080P night vision Camera",
+        "HIKVISION 8 Channel DVR",
+        "1000GB 3.5-inch HDD",
+        "100m. Cat6 & Power cable N/A"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-package",
+      "image": "/images/products/security-camera/cc-camera-package/Hikvision/hikvision-8-unit-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-package/Hikvision/hikvision-8-unit-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-8-unit-camera-package",
+        "candidateTitle": "HIKVISION 8 unit 1080P night vision security cc camera Package",
+        "attemptStem": "hikvision-8-unit-camera-package"
+      }
+    }
+  ]
+}

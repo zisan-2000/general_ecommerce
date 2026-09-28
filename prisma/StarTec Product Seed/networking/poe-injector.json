@@ -1,0 +1,1168 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\networking",
+    "generatedAtUnix": 1790590909,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Networking",
+      "slug": "networking",
+      "parentSlug": null,
+      "image": "/images/products/networking/firewall/sonicwall-nsa-2700-16-port-firewall.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "PoE Injector",
+      "slug": "poe-injector",
+      "parentSlug": "networking",
+      "image": "/images/products/networking/poe-injector/tenda-poe-30g-at-injector.png",
+      "isActive": true,
+      "sortOrder": 16,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Tenda",
+      "slug": "tenda",
+      "logo": null
+    },
+    {
+      "name": "TP-Link",
+      "slug": "tp-link",
+      "logo": null
+    },
+    {
+      "name": "TRENDnet",
+      "slug": "trendnet",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Tenda PoE30G-AT PoE Injector",
+      "slug": "tenda-poe-30g-at-injector",
+      "type": "PHYSICAL",
+      "sku": "ST-10536",
+      "description": "<h2>Tenda PoE30G-AT PoE Injector</h2><p>The Tenda PoE30G-AT is the IEEE802.3 AT Gigabit PoE injector, which fully conforms to the standard of wtih 802.3, transmitting power through Ethernet cable, the maximum transmission distance can reach 100 meters. The PoE injector has two Ethernet gigabit data ports and an output port combination of data and power. In addition, the device can be used for Ethernet device IEEE802.3af/ compatible PoE power applications such as wireless AP, VoIP phone and web CAM. The power supply of Ethernet cable not only provides system reliability, traditional power grid expansion, but also simplifies the deployment of power lines. The Tenda PoE30G-AT is the IEEE802.3 AT Gigabit PoE injector, which fully conforms to the standard of wtih 802.3, transmitting power through Ethernet cable, the maximum transmission distance can reach 100 meters. The PoE injector has two Ethernet gigabit data ports and an output port combination of data and power. In addition, the device can be used for Ethernet device IEEE802.3af/ compatible PoE power applications such as wireless AP, VoIP phone and web CAM. The power supply of Ethernet cable not only provides system reliability, traditional power grid expansion, but also simplifies the deployment of power lines. The standard catâ€™s power distance can be extended to 100 meters. The device can extend the range of PoE power over long distances, and simplify the deployment of power lines so that PD equipment can supply power. 10/100M/1000Mbps autosensing RJ45 port provides fast data delivery, supports wire speed forwarding and MDI/MDIX, plug and play. Adopts new chips solution, brings new performance experience, powerful data transfer and power. </p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Tenda PoE30G-AT</li><li>Plug and play</li><li>Stable performance</li><li>Gigabit blazing-fast delivery</li><li>Power supply distance extension</li></ul>",
+      "model": "Tenda PoE30G-AT",
+      "warranty": "1 Year",
+      "basePrice": 2050.0,
+      "originalPrice": 2100.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 131.0,
+        "width": 60.0,
+        "height": 33.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Tenda",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 GE port 1 data&power output port supporting PoE",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-10536",
+          "price": 2050.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "1 GE port 1 data&power output port supporting PoE"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1968.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Injector",
+              "position": 0
+            },
+            {
+              "label": "Port",
+              "value": "1 GE port 1 data&power output port supporting PoE",
+              "position": 1
+            },
+            {
+              "label": "Network Standard",
+              "value": "Compatible with IEEE802.3, IEEE802.3u, IEEE802.3ab, IEEE802.3af , IEEE802.3atStandard CSMA/CD, TCP/IP",
+              "position": 2
+            },
+            {
+              "label": "Advanced Functions",
+              "value": "Support the powered devices compatible with IEEE802.3af、IEEE802.3at Standard Transmission range up to 100M Plug and play",
+              "position": 3
+            },
+            {
+              "label": "Transmission Method",
+              "value": "Wired",
+              "position": 4
+            },
+            {
+              "label": "Environment",
+              "value": "Operation Temperature: 0℃~40℃ Storage Temperature: -40℃~70℃ Operating Humidity: 10%~90% (noncondensing) Storage Humidity: 5%~90% (noncondensing)",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "1 GE port 1 data&power output port supporting PoE",
+              "position": 0
+            },
+            {
+              "label": "LED",
+              "value": "PWR, PoE",
+              "position": 1
+            },
+            {
+              "label": "Power Supply",
+              "value": "Power Output: 30W",
+              "position": 2
+            },
+            {
+              "label": "Dimensions (L x W x H)",
+              "value": "131 x 60 x 33 mm ( W x D x H )",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tenda-poe-30g-at-injector",
+      "sourceProductCode": "10536",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Tenda PoE30G-AT",
+        "Plug and play",
+        "Stable performance",
+        "Gigabit blazing-fast delivery",
+        "Power supply distance extension"
+      ],
+      "needsReview": false,
+      "categorySlug": "poe-injector",
+      "image": "/images/products/networking/poe-injector/tenda-poe-30g-at-injector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/poe-injector/tenda-poe-30g-at-injector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tenda-poe-30g-at-injector",
+        "candidateTitle": "Tenda PoE30G-AT PoE Injector",
+        "attemptStem": "tenda-poe-30g-at-injector"
+      }
+    },
+    {
+      "name": "Tenda POE15F 10/100Mbps PoE Injector",
+      "slug": "tenda-poe15f",
+      "type": "PHYSICAL",
+      "sku": "ST-5582",
+      "description": "<h2>Tenda POE15F 10/100Mbps PoE Injector</h2><p>The Tenda <strong>POE15F</strong> 10/100Mbps PoE Injector is a reliable and cost-effective solution for extending power and data connectivity in network environments. Designed to support IEEE 802.3af-compliant powered devices, it efficiently delivers both electricity and network data through a single Ethernet cable, eliminating the need for additional power adapters and reducing cable clutter. With a maximum power output of 15W, it is ideal for various applications, including wireless access points, IP cameras, and VoIP phones, ensuring stable performance and enhanced flexibility in deployment. Its compact and durable design allows it to seamlessly integrate into different setups, while the plug-and-play functionality ensures effortless installation without requiring complex configurations. Additionally, it supports a transmission distance of up to 100 meters, enabling network expansion in locations where direct power sources might not be readily available. Whether used in home, office, or commercial settings, the Tenda POE15F provides a convenient and efficient way to power and connect devices while maintaining a streamlined infrastructure.</p><h2>Buy Tenda POE15F 10/100Mbps PoE Injector from Star Tech</h2><p>In Bangladesh, you can get original <strong>Tenda POE15F 10/100Mbps PoE Injector</strong> From Star Tech. We have a large collection of latest Tenda <a href=\"https://www.startech.com.bd/poe-injector\">PoE Injector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Tenda POE15F 10/100Mbps PoE Injector comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Tenda POE15F</li><li>Interfaces: 1*10/100 Base-TX (Data/PoE), 1*10/100 Base-TX (Data)</li><li>Transmission Rate: 100Mbps</li><li>Power Consumption: 15W</li><li>Transmission Distance: Up to 100m</li></ul>",
+      "model": "Tenda POE15F",
+      "warranty": "1 year warranty",
+      "basePrice": 1950.0,
+      "originalPrice": 2050.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Tenda",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-5582",
+          "price": 1950.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1872.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Tenda POE15F",
+              "position": 0
+            },
+            {
+              "label": "Interfaces",
+              "value": "1*10/100 Base-TX (Data/PoE), 1*10/100 Base-TX (Data)",
+              "position": 1
+            },
+            {
+              "label": "Transmission Rate",
+              "value": "100Mbps",
+              "position": 2
+            },
+            {
+              "label": "Power Consumption",
+              "value": "15W",
+              "position": 3
+            },
+            {
+              "label": "Transmission Distance",
+              "value": "Up to 100m",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tenda-poe15f",
+      "sourceProductCode": "5582",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Tenda POE15F",
+        "Interfaces: 1*10/100 Base-TX (Data/PoE), 1*10/100 Base-TX (Data)",
+        "Transmission Rate: 100Mbps",
+        "Power Consumption: 15W",
+        "Transmission Distance: Up to 100m"
+      ],
+      "needsReview": false,
+      "categorySlug": "poe-injector",
+      "image": "/images/products/networking/poe-injector/tenda-poe15f.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/poe-injector/tenda-poe15f.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tenda-poe15f",
+        "candidateTitle": "Tenda POE15F 10/100Mbps PoE Injector",
+        "attemptStem": "tenda-poe15f"
+      }
+    },
+    {
+      "name": "TP-Linik Omada TL-POE150S Gigabit PoE Injector Adapter",
+      "slug": "tp-linik-omada-tl-poe150s-poe-injector",
+      "type": "PHYSICAL",
+      "sku": "ST-48019",
+      "description": "<h2>TP-Linik Omada TL-POE150S Gigabit PoE Injector Adapter</h2><p>The TP-Link <strong>Omada TL-POE150S</strong> Gigabit PoE Injector Adapter is a compact and efficient networking accessory that delivers both data and power through a single Ethernet cable, simplifying installation and reducing the need for extra wiring. Supporting Gigabit speeds, this TP-Link PoE Injector Adapter ensures fast and stable data transmission while providing up to 15.4W of power for PoE-enabled devices such as access points, IP cameras, and VoIP phones. With automatic detection and intelligent power management, the TP-Link Omada TL-POE150S guarantees safe operation and reliable performance. Its plug-and-play design makes integration effortless, offering a cost-effective solution for expanding connectivity in business, office, and home networks. This TP-Link Gigabit PoE Injector is ideal for users seeking dependable power delivery, seamless networking, and enhanced flexibility in a compact form factor.</p><h2>Buy TP-Linik Omada TL-POE150S Gigabit PoE Injector Adapter from Star Tech</h2><p>In Bangladesh, you can get original <strong>TP-Linik Omada TL-POE150S Gigabit PoE Injector Adapter</strong> From Star Tech. We have a large collection of latest TP-Link <a href=\"https://www.startech.com.bd/poe-injector\">PoE Injector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at lowest price. The TP-Linik Omada TL-POE150S Gigabit PoE Injector Adapter Comes with 1 Year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Omada TL-POE150S</li><li>Ports: 2x Gigabit RJ45 Port</li><li>Input: 100-240 V, 50/60 Hz</li><li>Output: Auto-determine (max. 30 W)</li><li>Auto-Sensing Algorithm</li></ul>",
+      "model": "Omada TL-POE150S",
+      "warranty": "01-Year",
+      "basePrice": 2250.0,
+      "originalPrice": 2450.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 3.2,
+        "width": 2.1,
+        "height": 0.9,
+        "unit": "in"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TP-Link",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 10/100/1000Mbps RJ45 Port AUTO Negotiation/AUTO MDI/MDIX 1 48VDC POWER INPUT PORT",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-48019",
+          "price": 2250.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "2 10/100/1000Mbps RJ45 Port AUTO Negotiation/AUTO MDI/MDIX 1 48VDC POWER INPUT PORT"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2160.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "POE Injector",
+              "position": 0
+            },
+            {
+              "label": "Port",
+              "value": "2 10/100/1000Mbps RJ45 Port AUTO Negotiation/AUTO MDI/MDIX 1 48VDC POWER INPUT PORT",
+              "position": 1
+            },
+            {
+              "label": "Advanced Functions",
+              "value": "Basic Functions: Auto-Sensing Algorithm enables providing power with 802.3af/at PD Auto-determine the necessary power requirements Wall-mounting and desktop installation supported Plug-and-Play Compatible With IEEE 802.3af Compliant PDs Delivers Power Up To 100 Meters Auto-Determine The Necessary Power Requirements",
+              "position": 2
+            },
+            {
+              "label": "Environment",
+              "value": "Operating Temperature: 0℃~40℃ (32℉~104℉) Storage Temperature: -40℃~70℃ (-40℉~158℉) Operating Humidity: 10%~90% non-condensing Storage Humidity: 5%~90% non-condensing",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Network Media: 10BASE-T: UTP category 3, 4, 5 cable (Max 100m) EIA/TIA-568 100Ω STP (Max 100m) 100BASE-TX: UTP category 5, 5e cable (Max 100m) EIA/TIA-568 100Ω STP (Max 100m) 1000BASE-T: UTP category 5, 5e, 6 cable (Max 100m) System Requirements: Microsoft Windows 98SE, NT, 2000, XP, Vista or Windows 7, MAC OS, NetWare, UNIX or Linux.",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "2 10/100/1000Mbps RJ45 Port AUTO Negotiation/AUTO MDI/MDIX 1 48VDC POWER INPUT PORT",
+              "position": 0
+            },
+            {
+              "label": "LED",
+              "value": "PWR",
+              "position": 1
+            },
+            {
+              "label": "Power Supply",
+              "value": "15.4W (Max. 48VDC)",
+              "position": 2
+            },
+            {
+              "label": "Dimensions",
+              "value": "3.2*2.1*0.9 in.(80.8*54*24 mm)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-linik-omada-tl-poe150s-poe-injector",
+      "sourceProductCode": "48019",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Omada TL-POE150S",
+        "Ports: 2x Gigabit RJ45 Port",
+        "Input: 100-240 V, 50/60 Hz",
+        "Output: Auto-determine (max. 30 W)",
+        "Auto-Sensing Algorithm"
+      ],
+      "needsReview": false,
+      "categorySlug": "poe-injector",
+      "image": "/images/products/networking/poe-injector/tp-linik-omada-tl-poe150s-poe-injector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/poe-injector/tp-linik-omada-tl-poe150s-poe-injector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-linik-omada-tl-poe150s-poe-injector",
+        "candidateTitle": "TP-Linik Omada TL-POE150S Gigabit PoE Injector Adapter",
+        "attemptStem": "tp-linik-omada-tl-poe150s-poe-injector"
+      }
+    },
+    {
+      "name": "TP-Linik Omada TL-POE160S Gigabit PoE Injector Adapter",
+      "slug": "tp-linik-omada-tl-poe160s-poe-injector",
+      "type": "PHYSICAL",
+      "sku": "ST-48016",
+      "description": "<h2>TP-Link TL-POE150S PoE Injector</h2><p>The TP-Link <strong>Omada TL-POE160S</strong> Gigabit PoE Injector Adapter  is a high-performance networking solution designed to deliver both data and power through a single Ethernet cable, simplifying installation and reducing the need for additional wiring. Supporting Gigabit speeds, this TP-Link PoE Injector Adapter ensures fast and stable data transmission while providing up to 30W of power for PoE-enabled devices such as access points, IP cameras, and VoIP phones. With intelligent detection and safe power management, the TP-Link Omada TL-POE160S guarantees reliable operation and protects connected devices. Its compact design makes it easy to integrate into any network setup, offering a cost-effective and efficient way to expand connectivity. Ideal for business, office, and home networks, the TP-Link Gigabit PoE Injector delivers seamless performance, dependable power delivery, and enhanced flexibility for modern networking environments.</p><h2>Buy TP-Linik Omada TL-POE160S Gigabit PoE Injector Adapter from Star Tech</h2><p>In Bangladesh, you can get original <strong>TP-Linik Omada TL-POE160S Gigabit PoE Injector Adapter</strong> From Star Tech. We have a large collection of latest TP-Link <a href=\"https://www.startech.com.bd/poe-injector\">PoE Injector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at lowest price. The TP-Linik Omada TL-POE160S Gigabit PoE Injector Adapter Comes with 1 Year Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Omada TL-POE160S</li><li>Ports: 2x Gigabit RJ45 Port</li><li>Input: 100-240 V, 50/60 Hz</li><li>Output: Auto-determine (max. 30 W)</li><li>Auto-Sensing Algorithm</li></ul>",
+      "model": "Omada TL-POE160S",
+      "warranty": "01-Year",
+      "basePrice": 3450.0,
+      "originalPrice": 3750.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 4.9,
+        "width": 2.3,
+        "height": 1.4,
+        "unit": "in"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TP-Link",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 10/100/1000Mbps RJ45 Port AUTO Negotiation/AUTO MDI/MDIX 1 48VDC POWER INPUT PORT",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-48016",
+          "price": 3450.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "2 10/100/1000Mbps RJ45 Port AUTO Negotiation/AUTO MDI/MDIX 1 48VDC POWER INPUT PORT"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3312.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "POE Injector",
+              "position": 0
+            },
+            {
+              "label": "Port",
+              "value": "1 x 10/100/1000Mbps RJ45 data-in port 1 x 10/100/1000Mbps RJ45 power+data-out port",
+              "position": 1
+            },
+            {
+              "label": "Network Standard",
+              "value": "IEEE802.3i, IEEE802.3u, IEEE802.3ab, IEEE802.3af, IEEE802.3at",
+              "position": 2
+            },
+            {
+              "label": "Advanced Functions",
+              "value": "Basic Functions: Auto-Sensing Algorithm enables providing power with 802.3af/at PD Auto-determine the necessary power requirements Wall-mounting and desktop installation supported Plug-and-Play Compatible With IEEE 802.3af Compliant PDs Delivers Power Up To 100 Meters Auto-Determine The Necessary Power Requirements",
+              "position": 3
+            },
+            {
+              "label": "Environment",
+              "value": "Operating Temperature: 0°C to 40°C (32°F to 104°F) Storage Temperature: -40°C to 70°C (-40°F to 158°F) Operating Humidity: 10% to 90%RH non-condensing Storage Humidity: 5% to 90%RH non-condensing",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Network Media: 10BASE-T: UTP category 3, 4, 5 cable (maximum 100 m) EIA/TIA-568 100Ω STP (maximum 100 m) 100BASE-TX: UTP category 5, 5e cable (maximum 100 m) EIA/TIA-568 100Ω STP (maximum 100 m) 1000BASE-T: UTP category 5, 5e, 6 cable(maximum 100 m)",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "2 10/100/1000Mbps RJ45 Port AUTO Negotiation/AUTO MDI/MDIX 1 48VDC POWER INPUT PORT",
+              "position": 0
+            },
+            {
+              "label": "LED",
+              "value": "ON: Supplying power normally OFF: No power supply",
+              "position": 1
+            },
+            {
+              "label": "Power Supply",
+              "value": "Input: 100-240 V, 50/60 Hz Output: Auto-determine the necessary power requirements (max. 30 W)",
+              "position": 2
+            },
+            {
+              "label": "Dimensions",
+              "value": "4.9 x 2.3 x 1.4 in (125 x 59 x 37 mm)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-linik-omada-tl-poe160s-poe-injector",
+      "sourceProductCode": "48016",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Omada TL-POE160S",
+        "Ports: 2x Gigabit RJ45 Port",
+        "Input: 100-240 V, 50/60 Hz",
+        "Output: Auto-determine (max. 30 W)",
+        "Auto-Sensing Algorithm"
+      ],
+      "needsReview": false,
+      "categorySlug": "poe-injector",
+      "image": "/images/products/networking/poe-injector/tp-linik-omada-tl-poe160s-poe-injector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/poe-injector/tp-linik-omada-tl-poe160s-poe-injector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-linik-omada-tl-poe160s-poe-injector",
+        "candidateTitle": "TP-Linik Omada TL-POE160S Gigabit PoE Injector Adapter",
+        "attemptStem": "tp-linik-omada-tl-poe160s-poe-injector"
+      }
+    },
+    {
+      "name": "Tplink TL-POE150S Gigabit PoE Injector",
+      "slug": "tp-link-tl-poe150s-poe-injector",
+      "type": "PHYSICAL",
+      "sku": "ST-24557",
+      "description": "<h2>TP-Link TL-POE150S PoE Injector</h2><p style=\"text-align: justify; \">The TP-Link TL-POE150S PoE Injector fully complies with the IEEE 802.3af standard and can work with all IEEE 802.3af PoE compliant PDs (Powered Devices) or PoE Receiver Adapters, such as TP-TL-POE10R, LINK's or other equivalent product, to expand your network to where there are no power lines or outlets, where you want to fix device such as an AP, IP Camera, IP Phone. The TP-Link TL-POE150S PoE Injector comes with a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TL-POE150S</li><li>IEEE 802.3af Compliant</li><li>Auto-Determine the Necessary Power Requirements</li><li>Gigabit Speed Support</li><li>Plug-and-Play, Requires No Configuration</li></ul>",
+      "model": "TL-POE150S",
+      "warranty": "01-Year",
+      "basePrice": 1850.0,
+      "originalPrice": 1950.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 3.2,
+        "width": 2.1,
+        "height": 0.9,
+        "unit": "in"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TP-Link",
+      "variantOptions": [
+        {
+          "name": "Interface",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 10/100/1000Mbps RJ45 Port AUTO Negotiation/AUTO MDI/MDIX 1 48VDC POWER INPUT PORT",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-24557",
+          "price": 1850.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Interface": "2 10/100/1000Mbps RJ45 Port AUTO Negotiation/AUTO MDI/MDIX 1 48VDC POWER INPUT PORT"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1776.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Port",
+              "value": "8 Port",
+              "position": 0
+            },
+            {
+              "label": "Network Standard",
+              "value": "10BASE-T: UTP category 3, 4, 5 cable (Max 100m) EIA/TIA-568 100Ω STP (Max 100m) 100BASE-TX: UTP category 5, 5e cable (Max 100m) EIA/TIA-568 100Ω STP (Max 100m) 1000BASE-T: UTP category 5, 5e, 6 cable (Max 100m)",
+              "position": 1
+            },
+            {
+              "label": "Advanced Functions",
+              "value": "Compatible With IEEE 802.3af Compliant PDs Delivers Power Up To 100 Meters Auto-Determine The Necessary Power Requirements",
+              "position": 2
+            },
+            {
+              "label": "Environment",
+              "value": "Operating Temperature: 0℃~40℃ (32℉~104℉) Storage Temperature: -40℃~70℃ (-40℉~158℉) Operating Humidity: 10%~90% non-condensing Storage Humidity: 5%~90% non-condensing",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Interface",
+              "value": "2 10/100/1000Mbps RJ45 Port AUTO Negotiation/AUTO MDI/MDIX 1 48VDC POWER INPUT PORT",
+              "position": 0
+            },
+            {
+              "label": "Power Supply",
+              "value": "15.4W (Max. 48VDC)",
+              "position": 1
+            },
+            {
+              "label": "Dimensions",
+              "value": "3.2*2.1*0.9 in.(80.8*54*24 mm)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01-Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-tl-poe150s-poe-injector",
+      "sourceProductCode": "24557",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TL-POE150S",
+        "IEEE 802.3af Compliant",
+        "Auto-Determine the Necessary Power Requirements",
+        "Gigabit Speed Support",
+        "Plug-and-Play, Requires No Configuration"
+      ],
+      "needsReview": false,
+      "categorySlug": "poe-injector",
+      "image": "/images/products/networking/poe-injector/tp-link-tl-poe150s-poe-injector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/poe-injector/tp-link-tl-poe150s-poe-injector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-tl-poe150s-poe-injector",
+        "candidateTitle": "Tplink TL-POE150S Gigabit PoE Injector",
+        "attemptStem": "tp-link-tl-poe150s-poe-injector"
+      }
+    },
+    {
+      "name": "TRENDnet TPE-113GI Gigabit PoE Injector",
+      "slug": "trendnet-tpe-113gi-poe-injector",
+      "type": "PHYSICAL",
+      "sku": "ST-41126",
+      "description": "<h2>TRENDnet TPE-113GI Gigabit PoE Injector</h2><p>The TRENDnet <strong>TPE-113GI</strong> Gigabit <a href=\"https://www.startech.com.bd/poe-injector\" style=\"color: rgb(0, 0, 0);\" target=\"\">PoE Injector</a> is a dependable and affordable solution for incorporating Power over Ethernet (PoE) into your network. This TRENDnet PoE Injector, designed for use with non-PoE switches, allows PoE devices to be connected up to 100 meters (328 feet) away, eliminating the need for additional power outlets and lowering installation costs. It supports full-duplex Gigabit speeds, resulting in quick and consistent data transmission, making it suitable for IP cameras, VoIP phones, access points, and other PoE-enabled devices. The TRENDnet TPE-113GI PoE Injector is compliant with IEEE 802.3af PoE and IEEE 802.3ab Gigabit Ethernet standards, offering easy compatibility with a diverse range of networking devices. This TRENDnet TPE-113GI PoE Injector has one 10/100/1000 Mbps Auto-MDIX Data In port and one 10/100/1000 Mbps PoE Auto-MDIX Data Out port, allowing it to supply both power and data over a single Ethernet connection. It delivers up to 15.4 watts of power, allowing PoE devices to be installed in situations where there are no adjacent power sources. The TRENDnet TPE-113GI PoE Injector includes built-in short circuit protection to protect connected devices, assuring network dependability and safety. The lightweight and compact design, along with wall-mounting points, enables simple and flexible installation in remote or difficult-to-reach locations. The TRENDnet TPE-113GI Gigabit PoE Injector supports a wide range of network media types, including Cat 5, Cat 5e, and Cat 6 cables, ensuring robust connections over extended distances. This TRENDnet Gigabit PoE Injector's plug-and-play setup makes PoE deployment simple, allowing users to immediately power and network PoE devices without requiring any further setups.</p><h2>Buy TRENDnet TPE-113GI PoE Injector from Star Tech</h2><p>In Bangladesh, you can get original <strong>TRENDnet TPE-113GI PoE Injector</strong> From Star Tech. We have a large collection of latest TRENDnet <a href=\"https://www.startech.com.bd/poe-injector\" target=\"\">PoE Injector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The TRENDnet TPE-113GI PoE Injector comes with 2 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TPE-113GI</li><li>Full Duplex Gigabit speeds supported</li><li>PoE devices at distances of up to 100 meters (328 feet)</li><li>Save on installation and equipment costs</li><li>Create an integrated PoE and non-PoE Gigabit network</li></ul>",
+      "model": "TPE-113GI",
+      "warranty": "2 Year",
+      "basePrice": 3000.0,
+      "originalPrice": 3300.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 70.0,
+        "width": 45.0,
+        "height": 25.0,
+        "unit": "in"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TRENDnet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41126",
+          "price": 3000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "PoE Injector",
+              "position": 0
+            },
+            {
+              "label": "Port",
+              "value": "1 x 10/100/1000 Mbps DATA-IN (Data only) 1 x 10/100/1000 Mbps PWR+DATA OUT (Data + Power)",
+              "position": 1
+            },
+            {
+              "label": "Network Standard",
+              "value": "IEEE 802.3 10Base-T IEEE 802.3u 100Base-TX IEEE 802.3ab Gigabit Ethernet IEEE 802.3af Power over Ethernet",
+              "position": 2
+            },
+            {
+              "label": "Transmission Method",
+              "value": "10 Mbps: UTP/STP Cat. 5 and 5e up to 100 Meters 100 Mbps: UTP/STP Cat. 5, and 5e up to 100 Meters Gigabit: UTP/STP Cat 5e and 6 up to 100 meters",
+              "position": 3
+            },
+            {
+              "label": "Environment",
+              "value": "Operation: 0°C~50°C (32°F~ 122°F) Storage: -20°C~60°C (-4°F~140 °F)",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "Input: 100~240V, 50~60Hz, 0.4A max. Output: 48V DC, 0.4A 18W max.",
+              "position": 0
+            },
+            {
+              "label": "Dimensions (L x W x H)",
+              "value": "70 x 45 x 25mm (2.75 x 1.8 x 1 in.) ( W x D x H )",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/trendnet-tpe-113gi-poe-injector",
+      "sourceProductCode": "41126",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TPE-113GI",
+        "Full Duplex Gigabit speeds supported",
+        "PoE devices at distances of up to 100 meters (328 feet)",
+        "Save on installation and equipment costs",
+        "Create an integrated PoE and non-PoE Gigabit network"
+      ],
+      "needsReview": false,
+      "categorySlug": "poe-injector",
+      "image": "/images/products/networking/poe-injector/trendnet-tpe-113gi-poe-injector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/poe-injector/trendnet-tpe-113gi-poe-injector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "trendnet-tpe-113gi-poe-injector",
+        "candidateTitle": "TRENDnet TPE-113GI Gigabit PoE Injector",
+        "attemptStem": "trendnet-tpe-113gi-poe-injector"
+      }
+    },
+    {
+      "name": "TRENDnet TPE-115GI Gigabit PoE Injector",
+      "slug": "trendnet-tpe-115gi-poe-injector",
+      "type": "PHYSICAL",
+      "sku": "ST-41128",
+      "description": "<h2>TRENDnet TPE-115GI Gigabit PoE Injector</h2><p>The TRENDnet <strong>TPE-115GI</strong> Gigabit <a href=\"https://www.startech.com.bd/poe-injector\" style=\"color: rgb(0, 0, 0);\" target=\"\">PoE Injector</a> is a strong and efficient option for adding Power over Ethernet (PoE+) to a non-PoE network. It supports full-duplex Gigabit rates, ensuring fast data transmission while providing up to 30 watts of power for PoE+ devices and 15 watts for conventional PoE devices. This TRENDnet TPE-115GI PoE Injector is compliant with IEEE 802.3at PoE+ and backward compatible with IEEE 802.3af PoE. It intelligently adjusts power output to meet device requirements, making it excellent for IP cameras, wireless access points, VoIP phones, and other network devices. The TRENDnet TPE-115GI PoE Injector's integrated power supply eliminates the need for additional adapters, simplifying installation. It extends network distances of up to 100 meters (328 feet), allowing PoE devices to be deployed in areas without power outlets. The TRENDnet PoE Injector has a 10/100/1000 Mbps Auto-MDIX Data In port and a 10/100/1000 Mbps PoE+ Auto-MDIX Data Out port, allowing for consistent and efficient power and data transmission over a single Ethernet connection. A power LED indication displays a quick visual confirmation of the device's working state. This TRENDnet TPE-115GI Gigabit PoE Injector is straightforward to deploy and saves money on installation and network equipment while preserving network stability. Built-in short circuit protection protects connected devices, assuring consistent performance in any environment.</p><h2>Buy TRENDnet TPE-115GI PoE Injector from Star Tech</h2><p>In Bangladesh, you can get original <strong>TRENDnet TPE-115GI PoE Injector</strong> From Star Tech. We have a large collection of latest TRENDnet <a href=\"https://www.startech.com.bd/poe-injector\" target=\"\">PoE Injector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The TRENDnet TPE-115GI PoE Injector comes with 2 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TPE-115GI</li><li>Full Duplex Gigabit speeds</li><li>Integrated power supply</li><li>Network distances of up to 100 meters (328 feet)</li><li>Converts a non-PoE Gigabit port to a PoE+ or PoE Gigabit port</li></ul>",
+      "model": "TPE-115GI",
+      "warranty": "2 Year",
+      "basePrice": 4200.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 133.0,
+        "width": 63.0,
+        "height": 35.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "TRENDnet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41128",
+          "price": 4200.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4032.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "PoE Injector",
+              "position": 0
+            },
+            {
+              "label": "Port",
+              "value": "1 x 10/100/1000 Mbps Data-In (Data only) 1 x 10/100/1000 Mbps PWR+Data out (Data + Power)",
+              "position": 1
+            },
+            {
+              "label": "Network Standard",
+              "value": "IEEE 802.3 10Base-T IEEE 802.3u 100Base-TX IEEE 802.3ab Gigabit Ethernet IEEE 802.3af Power over Ethernet IEEE 802.3at Power over Ethernet Plus (PoE+)",
+              "position": 2
+            },
+            {
+              "label": "Transmission Method",
+              "value": "10 Mbps: UTP/STP Cat. 5 and 5e up to 100 meters 100 Mbps: UTP/STP Cat. 5 and 5e up to 100 meters Gigabit: UTP/STP Cat 5e and 6 up to 100 meters",
+              "position": 3
+            },
+            {
+              "label": "Environment",
+              "value": "Operation: -10°C~45°C (14°F~ 113°F) Storage: -20°C~60°C (-4°F~140°F)",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "Input: 100~240 V, 50~60 Hz, 0.65 A max.",
+              "position": 0
+            },
+            {
+              "label": "Dimensions (L x W x H)",
+              "value": "133 x 63 x 35 mm (5.2 x 2.5 x 1.4 in.)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/trendnet-tpe-115gi-poe-injector",
+      "sourceProductCode": "41128",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TPE-115GI",
+        "Full Duplex Gigabit speeds",
+        "Integrated power supply",
+        "Network distances of up to 100 meters (328 feet)",
+        "Converts a non-PoE Gigabit port to a PoE+ or PoE Gigabit port"
+      ],
+      "needsReview": false,
+      "categorySlug": "poe-injector",
+      "image": "/images/products/networking/poe-injector/trendnet-tpe-115gi-poe-injector.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/poe-injector/trendnet-tpe-115gi-poe-injector.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "trendnet-tpe-115gi-poe-injector",
+        "candidateTitle": "TRENDnet TPE-115GI Gigabit PoE Injector",
+        "attemptStem": "trendnet-tpe-115gi-poe-injector"
+      }
+    },
+    {
+      "name": "TRENDnet TPE-E100 Gigabit PoE+ Repeater",
+      "slug": "trendnet-tpe-e100-poe-repeater",
+      "type": "PHYSICAL",
+      "sku": "ST-41131",
+      "description": "<h2>TRENDnet TPE-E100 Gigabit PoE+ Repeater</h2><p>The TRENDnet <strong>TPE-E100</strong> Gigabit PoE+ Repeater extends PoE and PoE+ network connections beyond the typical 100-meter range. This repeater, designed to offer smooth power and data transfer, increases network distances by 100 meters (656 feet), giving it a total reach of up to 200 meters. For even more coverage, two TRENDnet TPE-E100 PoE Repeater repeaters may be daisy-chained to extend the PoE+ network connection up to 300 meters (980 feet), making it suitable for bigger installations like security camera systems, wireless access points, and other PoE-enabled devices. This plug-and-play gadget does not require an additional power supply, making installation easier and lowering equipment costs. The TRENDnet TPE-E100 PoE Repeater has a durable metal casing and LED indicators for simple monitoring of network status. It has one Gigabit PoE/PoE+ in port and one Gigabit PoE/PoE+ out port, which allows for high-speed data transfer at up to 2000 Mbps full-duplex. The TRENDnet PoE Repeater is compliant with the IEEE 802.3af and IEEE 802.3at standards, ensuring compatibility with a wide variety of PoE devices. The TRENDnet TPE-E100 PoE Repeater is built for dependability, with a 96 KB SRAM buffer and a 2K MAC address table for effective data management. Its maximum packet length support of 1.5 KB provides smooth data transmission and lowers network latency.</p><h2>Buy TRENDnet TPE-E100 PoE Repeater from Star Tech</h2><p>In Bangladesh, you can get original <strong>TRENDnet TPE-E100 PoE Repeater</strong> From Star Tech. We have a large collection of latest TRENDnet <a href=\"https://www.startech.com.bd/poe-injector\" target=\"\">PoE Injector</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The TRENDnet TPE-E100 PoE Repeater comes with 2 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TPE-E100</li><li>Total Distance of up to 200 meters (656 ft.)</li><li>Daisy chain two for PoE+ network extension of 300 m (980 ft.)</li><li>Wall mountable, LED indicators</li><li>Rugged metal housing, No external power required</li></ul>",
+      "model": "TPE-E100",
+      "warranty": "2 Year",
+      "basePrice": 5500.0,
+      "originalPrice": 6050.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 75.0,
+        "width": 100.0,
+        "height": 22.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TRENDnet",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-41131",
+          "price": 5500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 5280.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "PoE Injector",
+              "position": 0
+            },
+            {
+              "label": "Port",
+              "value": "1 x Gigabit PoE/PoE+ in port 1 x Gigabit PoE/PoE+ out port 1 x Power port (optional power adapter is not included) LED indicators Installation mounting points",
+              "position": 1
+            },
+            {
+              "label": "Network Standard",
+              "value": "IEEE 802.3 IEEE 802.3u IEEE 802.3x IEEE 802.3ab IEEE 802.3af IEEE 802.3at",
+              "position": 2
+            },
+            {
+              "label": "Transmission Method",
+              "value": "Ethernet: 10 Mbps (half duplex), 20 Mbps (full duplex) Fast Ethernet: 100 Mbps (half duplex), 200 Mbps (full duplex) Gigabit: 2000 Mbps (full duplex)",
+              "position": 3
+            },
+            {
+              "label": "Environment",
+              "value": "Operation: -10°C~45°C (14°F~ 113°F) Storage: -20°C~60°C (-4°F~140°F)",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Hardware Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "Input: 100-240 V 50/60 Hz 0.75 A Output: 48 VDC, 0.75 A Consumption: 36 Watts (max. with use of power adapter sold separately)",
+              "position": 0
+            },
+            {
+              "label": "Dimensions (L x W x H)",
+              "value": "75 x 100 x 22 mm (3.0 x 3.9 x 0.9 in.)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacture Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/trendnet-tpe-e100-poe-repeater",
+      "sourceProductCode": "41131",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TPE-E100",
+        "Total Distance of up to 200 meters (656 ft.)",
+        "Daisy chain two for PoE+ network extension of 300 m (980 ft.)",
+        "Wall mountable, LED indicators",
+        "Rugged metal housing, No external power required"
+      ],
+      "needsReview": false,
+      "categorySlug": "poe-injector",
+      "image": "/images/products/networking/poe-injector/trendnet-tpe-e100-poe-repeater.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/networking/poe-injector/trendnet-tpe-e100-poe-repeater.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "trendnet-tpe-e100-poe-repeater",
+        "candidateTitle": "TRENDnet TPE-E100 Gigabit PoE+ Repeater",
+        "attemptStem": "trendnet-tpe-e100-poe-repeater"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2978 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/gadget",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\gadget",
+    "generatedAtUnix": 1790589343,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Gadget",
+      "slug": "gadget",
+      "parentSlug": null,
+      "image": "/images/products/gadget/charg-dm-e64-3-5mm-wired-earphone-4bf02bf3.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Hoco",
+      "slug": "hoco",
+      "logo": null
+    },
+    {
+      "name": "XO",
+      "slug": "xo",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": true,
+      "name": "Charg Dm E64 3 5mm Wired Earphone 4bf02bf3",
+      "slug": "charg-dm-e64-3-5mm-wired-earphone-4bf02bf3",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-F45527F9D3F2F58DE60A5564",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/charg-dm-e64-3-5mm-wired-earphone-4bf02bf3.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "charg-dm-e64-3-5mm-wired-earphone-4bf02bf3",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "charg-dm-e64-3-5mm-wired-earphone-4bf02bf3",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/charg-dm-e64-3-5mm-wired-earphone-4bf02bf3.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Charg Dm E66 3 5mm Wired Earphone 87d305b9",
+      "slug": "charg-dm-e66-3-5mm-wired-earphone-87d305b9",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-ED99BBBF1BA5F06841CC9185",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/charg-dm-e66-3-5mm-wired-earphone-87d305b9.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "charg-dm-e66-3-5mm-wired-earphone-87d305b9",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "charg-dm-e66-3-5mm-wired-earphone-87d305b9",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/charg-dm-e66-3-5mm-wired-earphone-87d305b9.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Charg Dm E67 Type C Wired Earphone A2b1bcad",
+      "slug": "charg-dm-e67-type-c-wired-earphone-a2b1bcad",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-BFA3DE9D49F9A176D6FA70E9",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/charg-dm-e67-type-c-wired-earphone-a2b1bcad.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "charg-dm-e67-type-c-wired-earphone-a2b1bcad",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "charg-dm-e67-type-c-wired-earphone-a2b1bcad",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/charg-dm-e67-type-c-wired-earphone-a2b1bcad.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Charg Dme62 3 5mm Wired Earphone",
+      "slug": "charg-dme62-3-5mm-wired-earphone",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-63D3FCC7525097F26F523C87",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/charg-dme62-3-5mm-wired-earphone.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "charg-dme62-3-5mm-wired-earphone",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "charg-dme62-3-5mm-wired-earphone",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/charg-dme62-3-5mm-wired-earphone.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Charg Dme63 3 5mm Wired Earphone",
+      "slug": "charg-dme63-3-5mm-wired-earphone",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-EB80D0F8C40D4729319242E2",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/charg-dme63-3-5mm-wired-earphone.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "charg-dme63-3-5mm-wired-earphone",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "charg-dme63-3-5mm-wired-earphone",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/charg-dme63-3-5mm-wired-earphone.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Foneng Ep200 3 5mm In Ear Wired Earphone Aabafee9",
+      "slug": "foneng-ep200-3-5mm-in-ear-wired-earphone-aabafee9",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-04CA449AAFAAA9F43CE6BBFF",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/foneng-ep200-3-5mm-in-ear-wired-earphone-aabafee9.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "foneng-ep200-3-5mm-in-ear-wired-earphone-aabafee9",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "foneng-ep200-3-5mm-in-ear-wired-earphone-aabafee9",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/foneng-ep200-3-5mm-in-ear-wired-earphone-aabafee9.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Foneng T15 Half In Ear 3 5mm Heavy Bass Earphone Ead6f888",
+      "slug": "foneng-t15-half-in-ear-3-5mm-heavy-bass-earphone-ead6f888",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-783CD01428AAEBBBB16AF80C",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/foneng-t15-half-in-ear-3-5mm-heavy-bass-earphone-ead6f888.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "foneng-t15-half-in-ear-3-5mm-heavy-bass-earphone-ead6f888",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "foneng-t15-half-in-ear-3-5mm-heavy-bass-earphone-ead6f888",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/foneng-t15-half-in-ear-3-5mm-heavy-bass-earphone-ead6f888.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Foneng T67 3 5mm In Ear Wired Earphone D2b85795",
+      "slug": "foneng-t67-3-5mm-in-ear-wired-earphone-d2b85795",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-AE0D57EB3C0FD13AD1FB1371",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/foneng-t67-3-5mm-in-ear-wired-earphone-d2b85795.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "foneng-t67-3-5mm-in-ear-wired-earphone-d2b85795",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "foneng-t67-3-5mm-in-ear-wired-earphone-d2b85795",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/foneng-t67-3-5mm-in-ear-wired-earphone-d2b85795.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Foneng T67 Type C Wired Earphone D48c75a7",
+      "slug": "foneng-t67-type-c-wired-earphone-d48c75a7",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-092ACB163944D5B010872829",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/foneng-t67-type-c-wired-earphone-d48c75a7.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "foneng-t67-type-c-wired-earphone-d48c75a7",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "foneng-t67-type-c-wired-earphone-d48c75a7",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/foneng-t67-type-c-wired-earphone-d48c75a7.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Foneng T68 Type C In Ear Earphone 21b64097",
+      "slug": "foneng-t68-type-c-in-ear-earphone-21b64097",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-B3ADAD4795D386BD2477086E",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/foneng-t68-type-c-in-ear-earphone-21b64097.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "foneng-t68-type-c-in-ear-earphone-21b64097",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "foneng-t68-type-c-in-ear-earphone-21b64097",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/foneng-t68-type-c-in-ear-earphone-21b64097.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Hoco M101 Max Type C Wired Earphone Ff7ea0d1",
+      "slug": "hoco-m101-max-type-c-wired-earphone-ff7ea0d1",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-EAC81558C2DC256A37DC6D84",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/hoco-m101-max-type-c-wired-earphone-ff7ea0d1.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "hoco-m101-max-type-c-wired-earphone-ff7ea0d1",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "hoco-m101-max-type-c-wired-earphone-ff7ea0d1",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/hoco-m101-max-type-c-wired-earphone-ff7ea0d1.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Hoco M101 Type C Wired Earphone 4343a40a",
+      "slug": "hoco-m101-type-c-wired-earphone-4343a40a",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-CB458650420559E0281AC6F9",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/hoco-m101-type-c-wired-earphone-4343a40a.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "hoco-m101-type-c-wired-earphone-4343a40a",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "hoco-m101-type-c-wired-earphone-4343a40a",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/hoco-m101-type-c-wired-earphone-4343a40a.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Hoco M83 Type C Wired Earphone A6e8642b",
+      "slug": "hoco-m83-type-c-wired-earphone-a6e8642b",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-2E0C76765B7EBE24C8AEBAA3",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/hoco-m83-type-c-wired-earphone-a6e8642b.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "hoco-m83-type-c-wired-earphone-a6e8642b",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "hoco-m83-type-c-wired-earphone-a6e8642b",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/hoco-m83-type-c-wired-earphone-a6e8642b.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Hoco M98 3 5mm Wired Earphone C20f8e83",
+      "slug": "hoco-m98-3-5mm-wired-earphone-c20f8e83",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-1086F6586F187E1D747FE0D4",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/hoco-m98-3-5mm-wired-earphone-c20f8e83.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "hoco-m98-3-5mm-wired-earphone-c20f8e83",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "hoco-m98-3-5mm-wired-earphone-c20f8e83",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/hoco-m98-3-5mm-wired-earphone-c20f8e83.png"
+      ]
+    },
+    {
+      "name": "Hoco Z49A Level Single Port 18W Car Charger With Type-C Cable",
+      "slug": "hoco-z49a-18w-car-charger",
+      "type": "PHYSICAL",
+      "sku": "ST-37418",
+      "description": "<h2>Hoco Z49A Level Single Port 18W Car Charger With Type-C Cable</h2><p>The Hoco <strong>Z49A</strong> Level Car Charger allows you to stay charged while you're on the go. No matter where your travels take you, this dependable and effective car charger is made to keep your gadgets, mobile phones, and tablets charged and ready to go. Its fast 18W output allows you to quickly charge compatible devices, keeping you connected and productive at all times. The Hoco Z49A Level Car Charger is appropriate for a variety of mobile phones and tablets since it supports multiple fast-charging protocols, such as QC3.0, QC2.0, AFC, and FCP. Its elegant and lightweight design makes it comfortable to carry, and its sturdy build guarantees long-term use.</p><h2>Buy Hoco Z49A Level Single Port 18W Car Charger With Type-C Cable from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hoco Z49A Level Single Port 18W Car Charger With Type-C Cable</strong> From Star Tech. We have a large collection of latest Hoco <a href=\"https://www.startech.com.bd/mobile-phone-charger-adapter\">Charger Adapter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Hoco Z49A Level Single Port 18W Car Charger With Type-C Cable comes with 3 Month Warranty (Must Claim With Box &amp; All Accessories).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Z49A</li><li>Material: aluminum alloy + ABS</li><li>Output: 1 × USB-A – 5V / 3A, 9V / 2A, 12V / 1.5A – 18W (Max)</li><li>charging protocol support: for QC3.0 / QC2.0 / AFC / FCP</li><li>weight: 41g</li></ul>",
+      "model": "Z49A",
+      "warranty": "3 Month Warranty",
+      "basePrice": 410.0,
+      "originalPrice": 451.0,
+      "currency": "BDT",
+      "weight": 0.041,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hoco",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-37418",
+          "price": 410.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 393.6,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Z49A",
+              "position": 0
+            },
+            {
+              "label": "Material",
+              "value": "aluminum alloy + ABS",
+              "position": 1
+            },
+            {
+              "label": "Output",
+              "value": "1 × USB-A – 5V / 3A, 9V / 2A, 12V / 1.5A – 18W (Max)",
+              "position": 2
+            },
+            {
+              "label": "charging protocol support",
+              "value": "for QC3.0 / QC2.0 / AFC / FCP",
+              "position": 3
+            },
+            {
+              "label": "weight",
+              "value": "41g",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hoco-z49a-18w-car-charger",
+      "sourceProductCode": "37418",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Z49A",
+        "Material: aluminum alloy + ABS",
+        "Output: 1 × USB-A – 5V / 3A, 9V / 2A, 12V / 1.5A – 18W (Max)",
+        "charging protocol support: for QC3.0 / QC2.0 / AFC / FCP",
+        "weight: 41g"
+      ],
+      "needsReview": false,
+      "categorySlug": "gadget",
+      "image": "/images/products/gadget/hoco-z49a-level-single-port-18w-car-charger-with-type-c-cable-9133f50d.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gadget/hoco-z49a-level-single-port-18w-car-charger-with-type-c-cable-9133f50d.png"
+      ],
+      "match": {
+        "method": "search",
+        "score": 0.9313,
+        "query": "hoco-z49a-level-single-port-18w-car-charger-with-type-c-cable-9133f50d",
+        "candidateTitle": "Hoco Z49A Level Single Port 18W Car Charger With Type-C Cable",
+        "attemptStem": "hoco-z49a-level-single-port-18w-car-charger-with-type-c-cable-9133f50d"
+      }
+    },
+    {
+      "unmatched": true,
+      "name": "Jiayou Bass 5 Wired 3 5mm Earphone",
+      "slug": "jiayou-bass-5-wired-3-5mm-earphone",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-AAD604BF8E77B701CFE3224B",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/jiayou-bass-5-wired-3-5mm-earphone.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "jiayou-bass-5-wired-3-5mm-earphone",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "jiayou-bass-5-wired-3-5mm-earphone",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/jiayou-bass-5-wired-3-5mm-earphone.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Jiayou Bass 6 Wired 3 5mm Earphone",
+      "slug": "jiayou-bass-6-wired-3-5mm-earphone",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-9FC098FFEC8F08F8BD7298B0",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/jiayou-bass-6-wired-3-5mm-earphone.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "jiayou-bass-6-wired-3-5mm-earphone",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "jiayou-bass-6-wired-3-5mm-earphone",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/jiayou-bass-6-wired-3-5mm-earphone.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Jiayou Melody 9 61559020",
+      "slug": "jiayou-melody-9-61559020",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-68F662B08AA1A4AC7A515484",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/jiayou-melody-9-61559020.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "jiayou-melody-9-61559020",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "jiayou-melody-9-61559020",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/jiayou-melody-9-61559020.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Jiayou Vibe 7 Type C Wired Earphone A2d00548",
+      "slug": "jiayou-vibe-7-type-c-wired-earphone-a2d00548",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-2E0463DAB95FBE103BD7C8AD",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/jiayou-vibe-7-type-c-wired-earphone-a2d00548.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "jiayou-vibe-7-type-c-wired-earphone-a2d00548",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "jiayou-vibe-7-type-c-wired-earphone-a2d00548",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/jiayou-vibe-7-type-c-wired-earphone-a2d00548.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Oraimo Conch 2c In Ear Type C Wired Earphone E70c54cb",
+      "slug": "oraimo-conch-2c-in-ear-type-c-wired-earphone-e70c54cb",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-9553AE9529B3D8C02586567F",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/oraimo-conch-2c-in-ear-type-c-wired-earphone-e70c54cb.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "oraimo-conch-2c-in-ear-type-c-wired-earphone-e70c54cb",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "oraimo-conch-2c-in-ear-type-c-wired-earphone-e70c54cb",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/oraimo-conch-2c-in-ear-type-c-wired-earphone-e70c54cb.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Oraimo Halo 2s Oep E21p In Ear Earphone 6f2014b8",
+      "slug": "oraimo-halo-2s-oep-e21p-in-ear-earphone-6f2014b8",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-BE3F0E8680A889D18A6AF13B",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/oraimo-halo-2s-oep-e21p-in-ear-earphone-6f2014b8.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "oraimo-halo-2s-oep-e21p-in-ear-earphone-6f2014b8",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "oraimo-halo-2s-oep-e21p-in-ear-earphone-6f2014b8",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/oraimo-halo-2s-oep-e21p-in-ear-earphone-6f2014b8.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Oraimo Halo Airy Oep 650 Type C Earphone 63539a7d",
+      "slug": "oraimo-halo-airy-oep-650-type-c-earphone-63539a7d",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-2A52A56B8238759A104B0375",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/oraimo-halo-airy-oep-650-type-c-earphone-63539a7d.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "oraimo-halo-airy-oep-650-type-c-earphone-63539a7d",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "oraimo-halo-airy-oep-650-type-c-earphone-63539a7d",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/oraimo-halo-airy-oep-650-type-c-earphone-63539a7d.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Oraimo Highway 15 15 5w Car Charger Ec2f6e8f",
+      "slug": "oraimo-highway-15-15-5w-car-charger-ec2f6e8f",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-FA5ABE6E6EAD157137E4A7B2",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/oraimo-highway-15-15-5w-car-charger-ec2f6e8f.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "oraimo-highway-15-15-5w-car-charger-ec2f6e8f",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "oraimo-highway-15-15-5w-car-charger-ec2f6e8f",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/oraimo-highway-15-15-5w-car-charger-ec2f6e8f.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Oraimo Trumpet 3 Oep E40 Earphone 0a2b1973",
+      "slug": "oraimo-trumpet-3-oep-e40-earphone-0a2b1973",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-B3040E1BE27BE086F0EA9435",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/oraimo-trumpet-3-oep-e40-earphone-0a2b1973.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "oraimo-trumpet-3-oep-e40-earphone-0a2b1973",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "oraimo-trumpet-3-oep-e40-earphone-0a2b1973",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/oraimo-trumpet-3-oep-e40-earphone-0a2b1973.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Recci Rep L15 3 5mm Wired Earphone 3b8a4b80",
+      "slug": "recci-rep-l15-3-5mm-wired-earphone-3b8a4b80",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-9B24AEF34C2ED31C2AC037A0",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/recci-rep-l15-3-5mm-wired-earphone-3b8a4b80.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "recci-rep-l15-3-5mm-wired-earphone-3b8a4b80",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "recci-rep-l15-3-5mm-wired-earphone-3b8a4b80",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/recci-rep-l15-3-5mm-wired-earphone-3b8a4b80.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Recci Rep L35 3 5mm Wired Earphone E4a7eb2c",
+      "slug": "recci-rep-l35-3-5mm-wired-earphone-e4a7eb2c",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-95CCCF8BF359E22E5E58D7A7",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/recci-rep-l35-3-5mm-wired-earphone-e4a7eb2c.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "recci-rep-l35-3-5mm-wired-earphone-e4a7eb2c",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "recci-rep-l35-3-5mm-wired-earphone-e4a7eb2c",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/recci-rep-l35-3-5mm-wired-earphone-e4a7eb2c.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Riversong Ea204 Bass L Wired Earphone 894b766d",
+      "slug": "riversong-ea204-bass-l-wired-earphone-894b766d",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-99274DD3377BD1194AE91EA1",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/riversong-ea204-bass-l-wired-earphone-894b766d.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "riversong-ea204-bass-l-wired-earphone-894b766d",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "riversong-ea204-bass-l-wired-earphone-894b766d",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/riversong-ea204-bass-l-wired-earphone-894b766d.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Riversong Seed Ea64 Wired Earphone 5a15124d",
+      "slug": "riversong-seed-ea64-wired-earphone-5a15124d",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-0D032B93C6DD4B65AF688868",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/riversong-seed-ea64-wired-earphone-5a15124d.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "riversong-seed-ea64-wired-earphone-5a15124d",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "riversong-seed-ea64-wired-earphone-5a15124d",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/riversong-seed-ea64-wired-earphone-5a15124d.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Tecno Ew 31c Wired 3 5mm Earphone 8b6cf9dc",
+      "slug": "tecno-ew-31c-wired-3-5mm-earphone-8b6cf9dc",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-0E68AFEC50B05C05ADDE65AE",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/tecno-ew-31c-wired-3-5mm-earphone-8b6cf9dc.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "tecno-ew-31c-wired-3-5mm-earphone-8b6cf9dc",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "tecno-ew-31c-wired-3-5mm-earphone-8b6cf9dc",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/tecno-ew-31c-wired-3-5mm-earphone-8b6cf9dc.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Vention Kbkb0 Storage Case 41066bd6",
+      "slug": "vention-kbkb0-storage-case-41066bd6",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-934E31780703E8DA8C38324C",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/vention-kbkb0-storage-case-41066bd6.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "vention-kbkb0-storage-case-41066bd6",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "vention-kbkb0-storage-case-41066bd6",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/vention-kbkb0-storage-case-41066bd6.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Xiaomi Ddq02wm 3 5mm In Ear Wired Earphone Cn Edition 2bd5102f",
+      "slug": "xiaomi-ddq02wm-3-5mm-in-ear-wired-earphone-cn-edition-2bd5102f",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-B57880EFE079C93386D75584",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/xiaomi-ddq02wm-3-5mm-in-ear-wired-earphone-cn-edition-2bd5102f.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "xiaomi-ddq02wm-3-5mm-in-ear-wired-earphone-cn-edition-2bd5102f",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "xiaomi-ddq02wm-3-5mm-in-ear-wired-earphone-cn-edition-2bd5102f",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/xiaomi-ddq02wm-3-5mm-in-ear-wired-earphone-cn-edition-2bd5102f.png"
+      ]
+    },
+    {
+      "name": "XO CC67 Dual USB Port Car Charger with Type-C Cable",
+      "slug": "xo-cc67-usb-port-car-charger-with-type-c-cable",
+      "type": "PHYSICAL",
+      "sku": "ST-50582",
+      "description": "<h2>XO CC67 Dual USB Port Car Charger with Type-C Cable</h2><p>The <strong>XO CC67 Dual USB Port Car Charger</strong> with Type-C Cable is designed for smooth charging performance. With dual USB outputs, it powers two devices simultaneously. Its universal compatibility ensures it works with most smartphones, offering convenience for drivers and passengers. The compact and lightweight build makes it simple to carry, while the ABS material adds durability. It supports stable power delivery with 12-24V input voltage and a maximum 12W output. It includes fast charge protocols like Apple 2.4A, Samsung 5V 2.4A, and DCP 1.5A. Measuring 48.5 × 27 mm and weighing only 12g, XO CC67 is a practical solution for safe charging on the move.</p><p>XO CC67 provides reliable charging for multiple devices without compromising safety. Its dual USB ports deliver consistent 5V/2.4A output, ensuring smooth performance. The charger is compact, portable, and crafted for convenience during travel. This Car Charger maintains steady power flow, protecting devices from fluctuations. Its lightweight design makes it effortless to store in small spaces.</p><p>This Charger is a smart choice for drivers seeking efficient charging. It supports fast charge protocols for Apple and Samsung devices, ensuring quick power delivery. The ABS material enhances durability, while the compact size ensures easy portability. XO CC67 combines safety, efficiency, and practicality, offering a trusted charging solution for modern users.</p><h2>Buy XO CC67 Dual USB Port Car Charger with Type-C Cable from Star Tech</h2><p>In Bangladesh, you can get original <strong>XO CC67 Dual USB Port Car Charger with Type-C Cable</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/mobile-phone-charger-adapter\">Charger Adapter</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The XO CC67 Dual USB Port Car Charger with Type-C Cable comes with 6 Month Warranty (Must Claim With Box &amp; All Accessories).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CC67</li><li>Input Voltage: 12–24V</li><li>Output USB1: 5V/2.4A (12W Max)</li><li>Output USB2: 5V/2.4A (12W Max)</li><li>Material: aluminum alloy + ABS</li></ul>",
+      "model": "CC67",
+      "warranty": "6 Month Warranty",
+      "basePrice": 285.0,
+      "originalPrice": 310.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "XO",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-50582",
+          "price": 285.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 273.6,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "CC67",
+              "position": 0
+            },
+            {
+              "label": "Input Voltage",
+              "value": "12–24V",
+              "position": 1
+            },
+            {
+              "label": "Output USB1",
+              "value": "5V/2.4A (12W Max)",
+              "position": 2
+            },
+            {
+              "label": "Output USB2",
+              "value": "5V/2.4A (12W Max)",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "aluminum alloy + ABS",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/xo-cc67-usb-port-car-charger-with-type-c-cable",
+      "sourceProductCode": "50582",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CC67",
+        "Input Voltage: 12–24V",
+        "Output USB1: 5V/2.4A (12W Max)",
+        "Output USB2: 5V/2.4A (12W Max)",
+        "Material: aluminum alloy + ABS"
+      ],
+      "needsReview": false,
+      "categorySlug": "gadget",
+      "image": "/images/products/gadget/xo-cc67-dual-usb-port-car-charger-with-type-c-cable-53b60188.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gadget/xo-cc67-dual-usb-port-car-charger-with-type-c-cable-53b60188.png"
+      ],
+      "match": {
+        "method": "search",
+        "score": 0.9189,
+        "query": "xo-cc67-dual-usb-port-car-charger-with-type-c-cable-53b60188",
+        "candidateTitle": "XO CC67 Dual USB Port Car Charger with Type-C Cable",
+        "attemptStem": "xo-cc67-dual-usb-port-car-charger-with-type-c-cable-53b60188"
+      }
+    },
+    {
+      "unmatched": true,
+      "name": "Xo Cc68 18w USB Car Charger 1a5e47b6",
+      "slug": "xo-cc68-18w-usb-car-charger-1a5e47b6",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-3739DEBF3C623A50ADB10018",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/xo-cc68-18w-usb-car-charger-1a5e47b6.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "xo-cc68-18w-usb-car-charger-1a5e47b6",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "xo-cc68-18w-usb-car-charger-1a5e47b6",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/xo-cc68-18w-usb-car-charger-1a5e47b6.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Xo Cc70 30w USB Type C Car Charger Dca3b914",
+      "slug": "xo-cc70-30w-usb-type-c-car-charger-dca3b914",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-1AE3DF0A521959C3C3E2AA1E",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/xo-cc70-30w-usb-type-c-car-charger-dca3b914.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "xo-cc70-30w-usb-type-c-car-charger-dca3b914",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "xo-cc70-30w-usb-type-c-car-charger-dca3b914",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/xo-cc70-30w-usb-type-c-car-charger-dca3b914.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Xo Ep20 Wired 3 5mm Earphone Dab3afe6",
+      "slug": "xo-ep20-wired-3-5mm-earphone-dab3afe6",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-78C20C4449362CAD27DE94D5",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/xo-ep20-wired-3-5mm-earphone-dab3afe6.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "xo-ep20-wired-3-5mm-earphone-dab3afe6",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "xo-ep20-wired-3-5mm-earphone-dab3afe6",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/xo-ep20-wired-3-5mm-earphone-dab3afe6.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Xo Ep22 Wired 3 5mm Earphone 4a3f41e1",
+      "slug": "xo-ep22-wired-3-5mm-earphone-4a3f41e1",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-C894CF9BDE0BD1F6F1181BCA",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/xo-ep22-wired-3-5mm-earphone-4a3f41e1.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "xo-ep22-wired-3-5mm-earphone-4a3f41e1",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "xo-ep22-wired-3-5mm-earphone-4a3f41e1",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/xo-ep22-wired-3-5mm-earphone-4a3f41e1.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Xo Ep31 Wired 3 5mm Earphone",
+      "slug": "xo-ep31-wired-3-5mm-earphone",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-B14D9F1F8535C5D3C6E94BE0",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/xo-ep31-wired-3-5mm-earphone.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "xo-ep31-wired-3-5mm-earphone",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "xo-ep31-wired-3-5mm-earphone",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/xo-ep31-wired-3-5mm-earphone.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Xo Ep37 Wired 3 5mm Earphone",
+      "slug": "xo-ep37-wired-3-5mm-earphone",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-E3B88B2AB1E8A431F6F04A3E",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/xo-ep37-wired-3-5mm-earphone.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "xo-ep37-wired-3-5mm-earphone",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "xo-ep37-wired-3-5mm-earphone",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/xo-ep37-wired-3-5mm-earphone.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Xo Ep39 Wired 3 5mm Earphone",
+      "slug": "xo-ep39-wired-3-5mm-earphone",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-E27AD3965714E2EACDCB2F03",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/xo-ep39-wired-3-5mm-earphone.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "xo-ep39-wired-3-5mm-earphone",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "xo-ep39-wired-3-5mm-earphone",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/xo-ep39-wired-3-5mm-earphone.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Xo Ep57 Wired 3 5mm Earphone",
+      "slug": "xo-ep57-wired-3-5mm-earphone",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-BA0E9ABC151E0266AD6AFEF6",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/xo-ep57-wired-3-5mm-earphone.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "xo-ep57-wired-3-5mm-earphone",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "xo-ep57-wired-3-5mm-earphone",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/xo-ep57-wired-3-5mm-earphone.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Xo Ep74 Wired USB Type C Earphone 7ecf798a",
+      "slug": "xo-ep74-wired-usb-type-c-earphone-7ecf798a",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-0328C5CA34A697019D4F021B",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/xo-ep74-wired-usb-type-c-earphone-7ecf798a.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "xo-ep74-wired-usb-type-c-earphone-7ecf798a",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "xo-ep74-wired-usb-type-c-earphone-7ecf798a",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/xo-ep74-wired-usb-type-c-earphone-7ecf798a.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Xo Ep81 Wired USB Type C Earphone Bb92c941",
+      "slug": "xo-ep81-wired-usb-type-c-earphone-bb92c941",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-3E7CC66A0E65017A44558459",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/xo-ep81-wired-usb-type-c-earphone-bb92c941.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "xo-ep81-wired-usb-type-c-earphone-bb92c941",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "xo-ep81-wired-usb-type-c-earphone-bb92c941",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/xo-ep81-wired-usb-type-c-earphone-bb92c941.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Yison Celebrat D5 In Ear Wired Earphone E8bfc779",
+      "slug": "yison-celebrat-d5-in-ear-wired-earphone-e8bfc779",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-3C0463AC6DC4F02E91DC1E5A",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/yison-celebrat-d5-in-ear-wired-earphone-e8bfc779.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "yison-celebrat-d5-in-ear-wired-earphone-e8bfc779",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "yison-celebrat-d5-in-ear-wired-earphone-e8bfc779",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/yison-celebrat-d5-in-ear-wired-earphone-e8bfc779.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Yison Celebrat F6 Portable Fan 7e7fd8b1",
+      "slug": "yison-celebrat-f6-portable-fan-7e7fd8b1",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-CB4C5E4F86E161C20D066493",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/yison-celebrat-f6-portable-fan-7e7fd8b1.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "yison-celebrat-f6-portable-fan-7e7fd8b1",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "yison-celebrat-f6-portable-fan-7e7fd8b1",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/yison-celebrat-f6-portable-fan-7e7fd8b1.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Yison Celebrat Fly 1 In Ear Wired Earphone 025de630",
+      "slug": "yison-celebrat-fly-1-in-ear-wired-earphone-025de630",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-1E384FFFD2C4110FB1C5B466",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/yison-celebrat-fly-1-in-ear-wired-earphone-025de630.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "yison-celebrat-fly-1-in-ear-wired-earphone-025de630",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "yison-celebrat-fly-1-in-ear-wired-earphone-025de630",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/yison-celebrat-fly-1-in-ear-wired-earphone-025de630.jpg"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Yison Celebrat G2 Wired 3 5mm Earphone 561d7ab1",
+      "slug": "yison-celebrat-g2-wired-3-5mm-earphone-561d7ab1",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-ECA207CB8CC11D02280BCE9C",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/yison-celebrat-g2-wired-3-5mm-earphone-561d7ab1.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "yison-celebrat-g2-wired-3-5mm-earphone-561d7ab1",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "yison-celebrat-g2-wired-3-5mm-earphone-561d7ab1",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/yison-celebrat-g2-wired-3-5mm-earphone-561d7ab1.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Yison Celebrat G26 3 5mm Wired Earphone",
+      "slug": "yison-celebrat-g26-3-5mm-wired-earphone",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-28856C61CA26A18378952BE6",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/yison-celebrat-g26-3-5mm-wired-earphone.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "yison-celebrat-g26-3-5mm-wired-earphone",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "yison-celebrat-g26-3-5mm-wired-earphone",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/yison-celebrat-g26-3-5mm-wired-earphone.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Yison Celebrat G3 3 5mm Wired Earphone",
+      "slug": "yison-celebrat-g3-3-5mm-wired-earphone",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-F0DD161D72E0919623C44081",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/yison-celebrat-g3-3-5mm-wired-earphone.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "yison-celebrat-g3-3-5mm-wired-earphone",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "yison-celebrat-g3-3-5mm-wired-earphone",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/yison-celebrat-g3-3-5mm-wired-earphone.jpg"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Yison Celebrat G9 Wired 3 5mm Earphone 487c0d77",
+      "slug": "yison-celebrat-g9-wired-3-5mm-earphone-487c0d77",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-0A638BF192CE528FF97F89C3",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/yison-celebrat-g9-wired-3-5mm-earphone-487c0d77.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "yison-celebrat-g9-wired-3-5mm-earphone-487c0d77",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "yison-celebrat-g9-wired-3-5mm-earphone-487c0d77",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/yison-celebrat-g9-wired-3-5mm-earphone-487c0d77.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Yison Cx620 In Ear Wired Earphone Adfc4f33",
+      "slug": "yison-cx620-in-ear-wired-earphone-adfc4f33",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-6B7CD43A6318C4C565EB3BE5",
+      "categorySlug": "gadget",
+      "brandName": null,
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/gadget/yison-cx620-in-ear-wired-earphone-adfc4f33.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "yison-cx620-in-ear-wired-earphone-adfc4f33",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "yison-cx620-in-ear-wired-earphone-adfc4f33",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/gadget/yison-cx620-in-ear-wired-earphone-adfc4f33.png"
+      ]
+    }
+  ]
+}

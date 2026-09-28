@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/security-camera",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\security-camera",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\security-camera",
+  "imagesFound": 1026,
+  "uniqueProductStems": 1024,
+  "productsInJson": 1024,
+  "matchedProducts": 1024,
+  "unmatchedProducts": 0,
+  "imageCoverage": 1026,
+  "jsonGroupFiles": 16,
+  "matchMethods": {
+    "direct-slug": 1024
+  },
+  "jsonGenerationTimeSeconds": 541.34,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 1024,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\security-camera\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\security-camera\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\security-camera\\unmatched.json"
+  },
+  "seedTimeSeconds": 26.44
+}

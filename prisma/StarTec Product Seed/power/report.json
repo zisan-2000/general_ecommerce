@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/power",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\power",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\power",
+  "imagesFound": 391,
+  "uniqueProductStems": 391,
+  "productsInJson": 391,
+  "matchedProducts": 357,
+  "unmatchedProducts": 34,
+  "imageCoverage": 391,
+  "jsonGroupFiles": 8,
+  "matchMethods": {
+    "direct-slug": 352,
+    "unmatched": 34,
+    "search": 5
+  },
+  "jsonGenerationTimeSeconds": 336.45,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 391,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\power\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\power\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\power\\unmatched.json"
+  },
+  "seedTimeSeconds": 9.26
+}

@@ -1,0 +1,386 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/gaming",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\gaming",
+    "generatedAtUnix": 1790588490,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Gaming",
+      "slug": "gaming",
+      "parentSlug": null,
+      "image": "/images/products/gaming/games/007-first-light-for-ps5.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Games",
+      "slug": "games",
+      "parentSlug": "gaming",
+      "image": "/images/products/gaming/games/mafia-definitive-edition.jpg",
+      "isActive": true,
+      "sortOrder": 1,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Sony",
+      "slug": "sony",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Mafia: Definitive Edition for PlayStation 5",
+      "slug": "mafia-definitive-edition",
+      "type": "PHYSICAL",
+      "sku": "ST-18207",
+      "description": "<h2>Mafia: Definitive Edition for PlayStation 5<br/></h2>\n<p>The Mafia: Definitive Edition for PlayStation 5 is based on Mafia crime saga in the year 1930s. The location of the game takes place in Lost heaven Illinois. The full game is re-made from the base up to improve graphics, game engine and more. Rise through the ranks of the Mafia during the Prohibition era of organized crime. After a run-in with the mob, cab driver Tommy Angelo is thrust into a deadly underworld. Initially uneasy about falling in with the Salieri crime family, Tommy soon finds that the rewards are too big to ignore. Live the life of a Prohibition-era gangster and rise through the ranks of the Mafia in this game. The game is recreated 1930's cityscape, filled with interwar architecture, cars and culture to see, hear and interact with. Faithfully recreated, with expanded story, gameplay and original score. This is the Mafia you remembered and much more.<br/></p>\n<p>To play this game on PS5, your system may need to be updated to the latest system software. Although this game is playable on PS5, some features available on PS4 may be absent. Online features require an account and are subject to terms of service and applicable privacy policy. <br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Mafia Definitive Edition</li><li>Multi-Character Gameplay</li><li>Compatible with PS 5</li><li>Dynamic 4K and HDR</li><li>Action Game</li></ul>",
+      "model": "Mafia Definitive Edition",
+      "warranty": null,
+      "basePrice": 5500.0,
+      "originalPrice": 5640.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Sony",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-18207",
+          "price": 5500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 5280.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Mafia Definitive Edition",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/mafia-definitive-edition",
+      "sourceProductCode": "18207",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Mafia Definitive Edition",
+        "Multi-Character Gameplay",
+        "Compatible with PS 5",
+        "Dynamic 4K and HDR",
+        "Action Game"
+      ],
+      "needsReview": false,
+      "categorySlug": "games",
+      "image": "/images/products/gaming/games/mafia-definitive-edition.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/games/mafia-definitive-edition.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "mafia-definitive-edition",
+        "candidateTitle": "Mafia: Definitive Edition for PlayStation 5",
+        "attemptStem": "mafia-definitive-edition"
+      }
+    },
+    {
+      "name": "Mafia: The Old Country for PlayStation 5",
+      "slug": "mafia-the-old-country",
+      "type": "PHYSICAL",
+      "sku": "ST-50427",
+      "description": "<h2>Mafia: The Old Country for PlayStation 5</h2><p><strong>Mafia: The Old Country </strong>for PlayStation 5 is a cinematic action-adventure game set in early 1900s Sicily. Players step into the role of Enzo Favara, a young man escaping the sulfur mines and drawn into the violent Torrisi crime family. This prequel to the Mafia series explores loyalty, betrayal, and survival, offering a gritty look at the origins of organized crime.</p><p>Enhanced for PlayStation 5, Mafia: The Old Country delivers sharper visuals, immersive DualSense haptic feedback, and authentic period detail. Gameplay includes knife duels, stealth missions, and firefights with weapons like lupara shotguns and pistols. Players can explore Sicily through horseback riding, early automobiles, vineyards, ruins, and opera houses.</p><p>The game is available in Standard Edition with good soundtrack, and visuals. The Free Ride update adds high-stakes races, stealth challenges, first-person driving, and classic difficulty modes. With PS Plus Premium support for cloud streaming and a one-hour trial, Mafia: The Old Country PS5 game is accessible to both new players and long-time fans.</p><p>Praised for its narrative and Sicilian setting, though critiqued for repetitive combat, Mafia: The Old Country continues to expand with the upcoming Man of Honor DLC. For fans of mob dramas and cinematic storytelling, Mafia: The Old Country PlayStation 5 game is a must-play, offering an authentic journey into the roots of the Mafia.</p><h2>Buy Mafia: The Old Country for PlayStation 5 from Star Tech</h2><p>In Bangladesh, you can get original <strong>Mafia: The Old Country for PlayStation 5</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/ps4-n-x-box-one-games\">Console Games</a> to purchase for your <a href=\"https://www.startech.com.bd/gaming-console\">Gaming Console</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Mafia: The Old Country for PlayStation 5 Comes with No Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Mafia: The Old Country</li><li>Developer: Hangar 13; Published By 2K</li><li>Game Engine: Unreal Engine 5</li><li>Supported Console: Playstation 5</li><li>Genre: Action-adventure; Mode: Single Player</li></ul>",
+      "model": "Mafia: The Old Country",
+      "warranty": "No Warranty",
+      "basePrice": 5499.0,
+      "originalPrice": 6500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Sony",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-50427",
+          "price": 5499.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 5279.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Mafia: The Old Country",
+              "position": 0
+            },
+            {
+              "label": "Developer",
+              "value": "Hangar 13; Published By 2K",
+              "position": 1
+            },
+            {
+              "label": "Game Engine",
+              "value": "Unreal Engine 5",
+              "position": 2
+            },
+            {
+              "label": "Supported Console",
+              "value": "Playstation 5",
+              "position": 3
+            },
+            {
+              "label": "Genre",
+              "value": "Action-adventure; Mode: Single Player",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/mafia-the-old-country",
+      "sourceProductCode": "50427",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Mafia: The Old Country",
+        "Developer: Hangar 13; Published By 2K",
+        "Game Engine: Unreal Engine 5",
+        "Supported Console: Playstation 5",
+        "Genre: Action-adventure; Mode: Single Player"
+      ],
+      "needsReview": false,
+      "categorySlug": "games",
+      "image": "/images/products/gaming/games/mafia-the-old-country.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/games/mafia-the-old-country.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "mafia-the-old-country",
+        "candidateTitle": "Mafia: The Old Country for PlayStation 5",
+        "attemptStem": "mafia-the-old-country"
+      }
+    },
+    {
+      "name": "Sony Marvel's Spider-Man: Miles Morales for PlayStation 4 & 5 Gaming CD",
+      "slug": "sony-marvels-spider-man-miles-morales-gaming-cd",
+      "type": "PHYSICAL",
+      "sku": "ST-16534",
+      "description": "<h2>Sony Marvel's Spider-Man: Miles Morales for PlayStation 4 &amp; 5 Gaming CD<br/></h2><p>The all new Sony Marvel's Spider-Man: Miles Morales Gaming CD is a high flying, adrenaline pumping action game that has a fluid storyline. You can the campaign of The Rise of Miles Morales go through all his experience and endeavors first hand. The power packed game gives all the Spider Man fans an in-depth for the comic story line. The graphics is also outstanding as every inch of details can be seen and felt throughout the entire game. Meet your favorite Spider Man characters in game like Rio Morales, Peter Parker, Ganke Lee and more. Enjoy all the different storylines and play as you with to as it is an open world game that lets you complete tasks to your desire. The Sony Marvel's Spider-Man: Miles Morales for PlayStation 4 &amp; 5 Gaming CD has No Warranty. <br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Marvel&#x27;s Spider-Man: Miles Morales</li><li>Multi-Character Gameplay</li><li>Compatible with PS4 &amp; 5</li><li>Dynamic 4K and HDR</li><li>Action Game</li></ul>",
+      "model": "Marvel's Spider-Man: Miles Morales",
+      "warranty": null,
+      "basePrice": 5000.0,
+      "originalPrice": 5500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Sony",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-16534",
+          "price": 5000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Marvel's Spider-Man: Miles Morales",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/sony-marvels-spider-man-miles-morales-gaming-cd",
+      "sourceProductCode": "16534",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Marvel's Spider-Man: Miles Morales",
+        "Multi-Character Gameplay",
+        "Compatible with PS4 & 5",
+        "Dynamic 4K and HDR",
+        "Action Game"
+      ],
+      "needsReview": false,
+      "categorySlug": "games",
+      "image": "/images/products/gaming/games/sony-marvels-spider-man-miles-morales-gaming-cd.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/games/sony-marvels-spider-man-miles-morales-gaming-cd.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "sony-marvels-spider-man-miles-morales-gaming-cd",
+        "candidateTitle": "Sony Marvel's Spider-Man: Miles Morales for PlayStation 4 & 5 Gaming CD",
+        "attemptStem": "sony-marvels-spider-man-miles-morales-gaming-cd"
+      }
+    },
+    {
+      "name": "Uncharted 4 A Thief's End for PlayStation 4",
+      "slug": "uncharted-4-a-thiefs-end",
+      "type": "PHYSICAL",
+      "sku": "ST-18208",
+      "description": "<h2>Uncharted 4 A Thief's End for PlayStation 4<br/></h2><p>The Uncharted 4 A Thief's End for PlayStation 4 is played several years after his last adventure, retired fortune hunter, Nathan Drake, is forced back into the world of thieves. With the stakes much more personal, Drake embarks on a globe-trotting journey in pursuit of a historical conspiracy behind a fabled pirate treasure. His greatest adventure will test his physical limits, his resolve, and ultimately what he is willing to sacrifice to save the ones he loves.<br/></p><p>To play this game on PS5, your system may need to be updated to the latest system software. Although this game is playable on PS5, some features available on PS4 may be absent. Online features require an account and are subject to terms of service and applicable privacy policy. <br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Uncharted 4 A Thief’s End</li><li>PS4 Pro HD</li><li>Deep Shadows</li><li>High Fidelity Assets</li><li>Greater Draw Distance</li></ul>",
+      "model": "Uncharted 4 A Thief’s End",
+      "warranty": null,
+      "basePrice": 3100.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Sony",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-18208",
+          "price": 3100.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2976.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Uncharted 4 A Thief’s End",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/uncharted-4-a-thiefs-end",
+      "sourceProductCode": "18208",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Uncharted 4 A Thief’s End",
+        "PS4 Pro HD",
+        "Deep Shadows",
+        "High Fidelity Assets",
+        "Greater Draw Distance"
+      ],
+      "needsReview": false,
+      "categorySlug": "games",
+      "image": "/images/products/gaming/games/uncharted-4-a-thiefs-end.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/gaming/games/uncharted-4-a-thiefs-end.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "uncharted-4-a-thiefs-end",
+        "candidateTitle": "Uncharted 4 A Thief's End for PlayStation 4",
+        "attemptStem": "uncharted-4-a-thiefs-end"
+      }
+    }
+  ]
+}

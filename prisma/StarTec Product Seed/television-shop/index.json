@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/television-shop",
+  "imageFolder": "/images/products/television-shop/4k-tv/beko",
+  "groups": [
+    {
+      "name": "_direct",
+      "file": "_direct.json",
+      "status": "completed",
+      "products": 1,
+      "matched": 1,
+      "unmatched": 0
+    },
+    {
+      "name": "all-tv",
+      "file": "all-tv.json",
+      "status": "completed",
+      "products": 11,
+      "matched": 11,
+      "unmatched": 0
+    },
+    {
+      "name": "android-tv",
+      "file": "android-tv.json",
+      "status": "completed",
+      "products": 1,
+      "matched": 1,
+      "unmatched": 0
+    },
+    {
+      "name": "smart-tv",
+      "file": "smart-tv.json",
+      "status": "completed",
+      "products": 151,
+      "matched": 151,
+      "unmatched": 0
+    },
+    {
+      "name": "tv-box",
+      "file": "tv-box.json",
+      "status": "completed",
+      "products": 13,
+      "matched": 13,
+      "unmatched": 0
+    },
+    {
+      "name": "tv-stand-wall-mount",
+      "file": "tv-stand-wall-mount.json",
+      "status": "completed",
+      "products": 8,
+      "matched": 8,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790589618
+}

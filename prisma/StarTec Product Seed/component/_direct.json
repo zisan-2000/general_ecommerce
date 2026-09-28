@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/component",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\component",
+    "generatedAtUnix": 1790589891,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Component",
+      "slug": "component",
+      "parentSlug": null,
+      "image": "/images/products/component/ssd cooler/Arctic M2 Pro M.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "SSD Cooler",
+      "slug": "ssd-cooler",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": true,
+      "name": "Arctic M2 Pro M",
+      "slug": "arctic-m2-pro-m",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-8C2A466DB9FDA50AB7F3D530",
+      "categorySlug": "component",
+      "brandName": "SSD Cooler",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/component/ssd cooler/Arctic M2 Pro M.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "arctic-m2-pro-m",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.717948717948718,
+              "query": "arctic-m2-pro-m",
+              "candidates": [
+                {
+                  "score": 0.7179,
+                  "url": "https://www.startech.com.bd/arctic-m2-pro-ssd-cooler",
+                  "title": "Arctic M2 Pro M.2 2280 SSD Cooler Black"
+                },
+                {
+                  "score": 0.6087,
+                  "url": "https://www.startech.com.bd/arctic-m2-pro-ssd-cooler-silver",
+                  "title": "Arctic M2 Pro M.2 2280 SSD Cooler Silver"
+                }
+              ]
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/component/ssd cooler/Arctic M2 Pro M.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Arctic M2 Pro M 2 2280 SSD Cooler Black 9816c2e8",
+      "slug": "arctic-m2-pro-m-2-2280-ssd-cooler-black-9816c2e8",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-55BDE31DCE2A6825811A8A68",
+      "categorySlug": "component",
+      "brandName": "SSD Cooler",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/component/ssd cooler/arctic-m2-pro-m-2-2280-ssd-cooler-black-9816c2e8.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "arctic-m2-pro-m-2-2280-ssd-cooler-black-9816c2e8",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "arctic-m2-pro-m-2-2280-ssd-cooler-black-9816c2e8",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/component/ssd cooler/arctic-m2-pro-m-2-2280-ssd-cooler-black-9816c2e8.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Arctic M2 Pro M 2 2280 SSD Cooler Silver 080ea8b4",
+      "slug": "arctic-m2-pro-m-2-2280-ssd-cooler-silver-080ea8b4",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-85043518A03283F88BFCBB22",
+      "categorySlug": "component",
+      "brandName": "SSD Cooler",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/component/ssd cooler/arctic-m2-pro-m-2-2280-ssd-cooler-silver-080ea8b4.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "arctic-m2-pro-m-2-2280-ssd-cooler-silver-080ea8b4",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "arctic-m2-pro-m-2-2280-ssd-cooler-silver-080ea8b4",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/component/ssd cooler/arctic-m2-pro-m-2-2280-ssd-cooler-silver-080ea8b4.png"
+      ]
+    }
+  ]
+}

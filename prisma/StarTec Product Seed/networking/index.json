@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/networking",
+  "imageFolder": "/images/products/networking/access-point/bdcom",
+  "groups": [
+    {
+      "name": "_direct",
+      "file": "_direct.json",
+      "status": "completed",
+      "products": 6,
+      "matched": 5,
+      "unmatched": 1
+    },
+    {
+      "name": "access-point",
+      "file": "access-point.json",
+      "status": "completed",
+      "products": 138,
+      "matched": 138,
+      "unmatched": 0
+    },
+    {
+      "name": "cable-tester",
+      "file": "cable-tester.json",
+      "status": "completed",
+      "products": 13,
+      "matched": 13,
+      "unmatched": 0
+    },
+    {
+      "name": "connector",
+      "file": "connector.json",
+      "status": "completed",
+      "products": 39,
+      "matched": 39,
+      "unmatched": 0
+    },
+    {
+      "name": "crimping-tool",
+      "file": "crimping-tool.json",
+      "status": "completed",
+      "products": 23,
+      "matched": 23,
+      "unmatched": 0
+    },
+    {
+      "name": "faceplate",
+      "file": "faceplate.json",
+      "status": "completed",
+      "products": 19,
+      "matched": 19,
+      "unmatched": 0
+    },
+    {
+      "name": "firewall",
+      "file": "firewall.json",
+      "status": "completed",
+      "products": 5,
+      "matched": 5,
+      "unmatched": 0
+    },
+    {
+      "name": "lan-card",
+      "file": "lan-card.json",
+      "status": "completed",
+      "products": 37,
+      "matched": 37,
+      "unmatched": 0
+    },
+    {
+      "name": "media-converter",
+      "file": "media-converter.json",
+      "status": "completed",
+      "products": 11,
+      "matched": 11,
+      "unmatched": 0
+    },
+    {
+      "name": "modular-jack",
+      "file": "modular-jack.json",
+      "status": "completed",
+      "products": 29,
+      "matched": 29,
+      "unmatched": 0
+    },
+    {
+      "name": "network-switch",
+      "file": "network-switch.json",
+      "status": "completed",
+      "products": 464,
+      "matched": 464,
+      "unmatched": 0
+    },
+    {
+      "name": "network-transceivers",
+      "file": "network-transceivers.json",
+      "status": "completed",
+      "products": 37,
+      "matched": 37,
+      "unmatched": 0
+    },
+    {
+      "name": "networking-cable",
+      "file": "networking-cable.json",
+      "status": "completed",
+      "products": 112,
+      "matched": 112,
+      "unmatched": 0
+    },
+    {
+      "name": "olt",
+      "file": "olt.json",
+      "status": "completed",
+      "products": 28,
+      "matched": 28,
+      "unmatched": 0
+    },
+    {
+      "name": "onu",
+      "file": "onu.json",
+      "status": "completed",
+      "products": 28,
+      "matched": 28,
+      "unmatched": 0
+    },
+    {
+      "name": "patch-cord",
+      "file": "patch-cord.json",
+      "status": "completed",
+      "products": 278,
+      "matched": 278,
+      "unmatched": 0
+    },
+    {
+      "name": "patch-panel",
+      "file": "patch-panel.json",
+      "status": "completed",
+      "products": 38,
+      "matched": 38,
+      "unmatched": 0
+    },
+    {
+      "name": "pocket-router",
+      "file": "pocket-router.json",
+      "status": "completed",
+      "products": 10,
+      "matched": 10,
+      "unmatched": 0
+    },
+    {
+      "name": "poe-injector",
+      "file": "poe-injector.json",
+      "status": "completed",
+      "products": 8,
+      "matched": 8,
+      "unmatched": 0
+    },
+    {
+      "name": "router",
+      "file": "router.json",
+      "status": "completed",
+      "products": 360,
+      "matched": 360,
+      "unmatched": 0
+    },
+    {
+      "name": "splicer-machine",
+      "file": "splicer-machine.json",
+      "status": "completed",
+      "products": 6,
+      "matched": 6,
+      "unmatched": 0
+    },
+    {
+      "name": "starlink",
+      "file": "starlink.json",
+      "status": "completed",
+      "products": 21,
+      "matched": 21,
+      "unmatched": 0
+    },
+    {
+      "name": "wifi-adapter",
+      "file": "wifi-adapter.json",
+      "status": "completed",
+      "products": 56,
+      "matched": 56,
+      "unmatched": 0
+    },
+    {
+      "name": "wifi-range-extender",
+      "file": "wifi-range-extender.json",
+      "status": "completed",
+      "products": 32,
+      "matched": 32,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790590912
+}

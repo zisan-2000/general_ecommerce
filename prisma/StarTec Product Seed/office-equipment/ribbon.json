@@ -1,0 +1,1164 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/office-equipment",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\office-equipment",
+    "generatedAtUnix": 1790587585,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Office Equipment",
+      "slug": "office-equipment",
+      "parentSlug": null,
+      "image": "/images/products/office-equipment/barcode-scanner/deli/deli-14952w-handheld-barcode-scanner.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Ribbon",
+      "slug": "ribbon",
+      "parentSlug": "office-equipment",
+      "image": "/images/products/office-equipment/ribbon/_direct/brother-tze-221-black-on-white-labelling-tape-cartridge.png",
+      "isActive": true,
+      "sortOrder": 24,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Brother",
+      "slug": "brother",
+      "logo": null
+    },
+    {
+      "name": "EPSON",
+      "slug": "epson",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    },
+    {
+      "name": "Zebra",
+      "slug": "zebra",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Brother TZe-221 Black on White Labelling Tape Cartridge",
+      "slug": "brother-tze-221-black-on-white-labelling-tape-cartridge",
+      "type": "PHYSICAL",
+      "sku": "ST-21468",
+      "description": "<h2>Brother TZe-221 Black on White Labelling Tape Cartridge</h2><p style=\"text-align: justify; \">The Brother TZe-221 Cartridge is 9mm wide and 8m long. This is perfect for all of your basic labeling needs in the office, business, or at home. The flexible Brother TZe-221 labeling tape is compatible with a broad range of our P-touch printers and is quick and easy to install. The Brother TZe-221 Black on White Labelling Tape Cartridge has a normal adhesive and an innovative laminated label tape method. This product is ideal for everyday use. These labels will remain put in regular indoor and outdoor conditions, including hot and cold temperatures. Smooth, flat surfaces are ideal. This Brother TZe-221 Cartridge has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TZe-221</li><li>Compatible with PT-E100VP, PT-E110VP</li><li>9mm wide, 8m long</li><li>Ensure durable, easily readable results</li><li>Type: Ribbon</li></ul>",
+      "model": "TZe-221",
+      "warranty": null,
+      "basePrice": 2000.0,
+      "originalPrice": 2200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Brother",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-21468",
+          "price": 2000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TZe-221",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "Ribbon",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/brother-tze-221-black-on-white-labelling-tape-cartridge",
+      "sourceProductCode": "21468",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TZe-221",
+        "Compatible with PT-E100VP, PT-E110VP",
+        "9mm wide, 8m long",
+        "Ensure durable, easily readable results",
+        "Type: Ribbon"
+      ],
+      "needsReview": false,
+      "categorySlug": "ribbon",
+      "image": "/images/products/office-equipment/ribbon/_direct/brother-tze-221-black-on-white-labelling-tape-cartridge.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/cartridge/_direct/brother-tze-221-black-on-white-labelling-tape-cartridge.png",
+        "/images/products/office-equipment/ribbon/_direct/brother-tze-221-black-on-white-labelling-tape-cartridge.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "brother-tze-221-black-on-white-labelling-tape-cartridge",
+        "candidateTitle": "Brother TZe-221 Black on White Labelling Tape Cartridge",
+        "attemptStem": "brother-tze-221-black-on-white-labelling-tape-cartridge"
+      }
+    },
+    {
+      "name": "Brother TZe-231 Black on White Tape Cartridge",
+      "slug": "brother-tze-231-black-on-white-tape-cartridge",
+      "type": "PHYSICAL",
+      "sku": "ST-21464",
+      "description": "<h2>Brother TZe-231 Black on White Tape Cartridge</h2><p style=\"text-align: justify; \">The Brother TZE-231 Black on White Tape Cartridge is 12mm in width. The tape measures 8 meters in length. The Brother TZE-231 Black on White Tape Cartridge is Guaranteed to provide you with labels that are bright, sharp, and easy to read for a long time. Its equally useful in the home, office, or business for identifying the contents of everything from file folders and shelves to USB flash drives, cables, and other equipment. These self-adhesive laminated labels are resistant to chemicals, abrasion, sunlight, and submersion in water, making them excellent for both indoor and outdoor usage. Genuine Brother TZe-231 Black on White Tap Cartridge is simple to install and comes in a variety of label widths, colors, and materials to ensure that your P-touch machine can handle all of your labeling demands. This Brother TZE-231 Cartridge has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TZe-231</li><li>Compatible with PT-E100VP, PT-E110VP.</li><li>12mm wide, 8m long</li><li>Ensure durable, easily readable results</li><li>For use with P-touch Label Makers</li></ul>",
+      "model": "TZe-231",
+      "warranty": null,
+      "basePrice": 2000.0,
+      "originalPrice": 2200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Brother",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-21464",
+          "price": 2000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TZe-231",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/brother-tze-231-black-on-white-tape-cartridge",
+      "sourceProductCode": "21464",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TZe-231",
+        "Compatible with PT-E100VP, PT-E110VP.",
+        "12mm wide, 8m long",
+        "Ensure durable, easily readable results",
+        "For use with P-touch Label Makers"
+      ],
+      "needsReview": false,
+      "categorySlug": "ribbon",
+      "image": "/images/products/office-equipment/ribbon/_direct/brother-tze-231-black-on-white-tape-cartridge.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/ribbon/_direct/brother-tze-231-black-on-white-tape-cartridge.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "brother-tze-231-black-on-white-tape-cartridge",
+        "candidateTitle": "Brother TZe-231 Black on White Tape Cartridge",
+        "attemptStem": "brother-tze-231-black-on-white-tape-cartridge"
+      }
+    },
+    {
+      "name": "Brother TZe-621 Black on Yellow Tape Cartridge",
+      "slug": "brother-tze-621-black-on-yellow-tape-cartridge",
+      "type": "PHYSICAL",
+      "sku": "ST-21467",
+      "description": "<h2>Brother TZe-621 Black on Yellow Tape Cartridge</h2><p style=\"text-align: justify; \">The Brother TZe-621 Black on Yellow Tape Cartridge is compatible with a variety of Brother P-touch label printers. Its easy-to-read black and yellow hues make it incredibly adaptable. As a result, it is quite beneficial at home or work. It's 9mm wide and 8 meters long. Brother's proprietary technology is perfect for asset tags, warning and H&amp;S labels, file and folders, shelving, and culinary usage in the workplace, at home, and outdoors. This is high-quality, genuine brother tape. The Brother TZe-621 Black on Yellow Tape Cartridge is durable and has easy-to-read labels. Brother TZe-621 Cartridge has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TZe-621</li><li>Compatible with PT-E100VP, PT-E110VP</li><li>9mm wide, 8m long</li><li>Ensure durable, easily readable results</li><li>Ribbon Type</li></ul>",
+      "model": "TZe-621",
+      "warranty": null,
+      "basePrice": 2000.0,
+      "originalPrice": 2200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Brother",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-21467",
+          "price": 2000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TZe-621",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/brother-tze-621-black-on-yellow-tape-cartridge",
+      "sourceProductCode": "21467",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TZe-621",
+        "Compatible with PT-E100VP, PT-E110VP",
+        "9mm wide, 8m long",
+        "Ensure durable, easily readable results",
+        "Ribbon Type"
+      ],
+      "needsReview": false,
+      "categorySlug": "ribbon",
+      "image": "/images/products/office-equipment/ribbon/_direct/brother-tze-621-black-on-yellow-tape-cartridge.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/ribbon/_direct/brother-tze-621-black-on-yellow-tape-cartridge.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "brother-tze-621-black-on-yellow-tape-cartridge",
+        "candidateTitle": "Brother TZe-621 Black on Yellow Tape Cartridge",
+        "attemptStem": "brother-tze-621-black-on-yellow-tape-cartridge"
+      }
+    },
+    {
+      "name": "Brother TZe-631 Black on Yellow Tape Cartridge",
+      "slug": "brother-tze-631-black-on-yellow-tape-cartridge",
+      "type": "PHYSICAL",
+      "sku": "ST-21469",
+      "description": "<h2>Brother TZe-631 Black on Yellow Tape Cartridge</h2><p style=\"text-align: justify; \">The Brother TZe-631 Cartridge will give you clear, bright, and readily visible labels that will last. This laminated black on yellow TZe-631 labeling tape, which is equally useful in the home, office, or business, may be used to identify the contents of everything from file folders and shelves to USB sticks, cables, and other equipment. These incredibly adaptable self-adhesive laminated labels have been designed to endure temperature extremes and are resistant to chemicals, abrasion, sunlight, and submersion in water, making them appropriate for indoor and outdoor usage. Brother TZe-631 Black on Yellow Labelling Tape is 12mm wide and 8m long. TZe tape cassettes are quick and simple to install, and they are available in a variety of label sizes, colors, and materials, ensuring that your P-touch machine satisfies all of your labeling requirements. This tape has a distinctive laminated tape technology as well as standard adhesive. Ideal for general-purpose use. These labels remain in place under regular indoor and outdoor conditions, including hot and cold temperatures. Ideal for smooth, flat surfaces. The Brother TZe-631  Cartridge has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: TZe-631</li><li>Compatible with PT-E100VP, PT-E110VP</li><li>12mm wide, 8m long</li><li>Ensure durable, easily readable results</li><li>Ribbon Type</li></ul>",
+      "model": "TZe-631",
+      "warranty": null,
+      "basePrice": 2000.0,
+      "originalPrice": 2200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Brother",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-21469",
+          "price": 2000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "TZe-631",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/brother-tze-631-black-on-yellow-tape-cartridge",
+      "sourceProductCode": "21469",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: TZe-631",
+        "Compatible with PT-E100VP, PT-E110VP",
+        "12mm wide, 8m long",
+        "Ensure durable, easily readable results",
+        "Ribbon Type"
+      ],
+      "needsReview": false,
+      "categorySlug": "ribbon",
+      "image": "/images/products/office-equipment/ribbon/_direct/brother-tze-631-black-on-yellow-tape-cartridge.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/ribbon/_direct/brother-tze-631-black-on-yellow-tape-cartridge.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "brother-tze-631-black-on-yellow-tape-cartridge",
+        "candidateTitle": "Brother TZe-631 Black on Yellow Tape Cartridge",
+        "attemptStem": "brother-tze-631-black-on-yellow-tape-cartridge"
+      }
+    },
+    {
+      "name": "Epson 7753 Ribbon (C13S015506 )",
+      "slug": "epson-7753-ribbon",
+      "type": "PHYSICAL",
+      "sku": "C13S015506",
+      "description": "This Ribbon supports LQ-310.",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: C13S015506</li><li>Model: Epson 7753</li><li>Type: Ribbon Cartridge</li><li>Color: Black</li><li>Length: 10 meters / 32.8 Feet</li><li>Compatible with LQ-300/300+/300+II/LQ-570+/580/870</li></ul>",
+      "model": "Epson 7753",
+      "warranty": null,
+      "basePrice": 500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EPSON",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "C13S015506",
+          "price": 500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "C13S015506",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Epson 7753",
+              "position": 1
+            },
+            {
+              "label": "Type",
+              "value": "Ribbon Cartridge",
+              "position": 2
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 3
+            },
+            {
+              "label": "Length",
+              "value": "10 meters / 32.8 Feet",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/epson-7753-ribbon",
+      "sourceProductCode": "11765",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "C13S015506",
+      "sourceKeyFeatures": [
+        "MPN: C13S015506",
+        "Model: Epson 7753",
+        "Type: Ribbon Cartridge",
+        "Color: Black",
+        "Length: 10 meters / 32.8 Feet",
+        "Compatible with LQ-300/300+/300+II/LQ-570+/580/870"
+      ],
+      "needsReview": false,
+      "categorySlug": "ribbon",
+      "image": "/images/products/office-equipment/ribbon/_direct/epson-7753-ribbon.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/ribbon/_direct/epson-7753-ribbon.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "epson-7753-ribbon",
+        "candidateTitle": "Epson 7753 Ribbon (C13S015506 )",
+        "attemptStem": "epson-7753-ribbon"
+      }
+    },
+    {
+      "name": "Epson S015086 Ribbon (C13S015531)",
+      "slug": "epson-s015086-ribbon",
+      "type": "PHYSICAL",
+      "sku": "C13S015531",
+      "description": "<h2>Epson S015086 Ribbon (C13S015531)</h2><p style=\"text-align: justify; \">The Epson S015086 Ribbon Cartridge is intended for use with certain impact printers and has a yield of 12 million characters at 14 dots per character with the FX-2180 or 8 million characters at 48 dots per character with the S015086. It also contains lubricating chemicals in the ink, which will help to increase the life of the print head.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: C13S015531</li><li>Model: S015086</li><li>Type: Ribbon Cartridge</li><li>Color: Black</li><li>Length: 60 meters</li><li>Compatible with LQ-2080/2170/ 2180/2190</li></ul>",
+      "model": "S015086",
+      "warranty": null,
+      "basePrice": 1600.0,
+      "originalPrice": 1700.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "EPSON",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "C13S015531",
+          "price": 1600.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1536.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "C13S015531",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "S015086",
+              "position": 1
+            },
+            {
+              "label": "Type",
+              "value": "Ribbon Cartridge",
+              "position": 2
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 3
+            },
+            {
+              "label": "Length",
+              "value": "60 meters",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/epson-s015086-ribbon",
+      "sourceProductCode": "11762",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "C13S015531",
+      "sourceKeyFeatures": [
+        "MPN: C13S015531",
+        "Model: S015086",
+        "Type: Ribbon Cartridge",
+        "Color: Black",
+        "Length: 60 meters",
+        "Compatible with LQ-2080/2170/ 2180/2190"
+      ],
+      "needsReview": false,
+      "categorySlug": "ribbon",
+      "image": "/images/products/office-equipment/ribbon/_direct/epson-s015086-ribbon.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/ribbon/_direct/epson-s015086-ribbon.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "epson-s015086-ribbon",
+        "candidateTitle": "Epson S015086 Ribbon (C13S015531)",
+        "attemptStem": "epson-s015086-ribbon"
+      }
+    },
+    {
+      "name": "Epson S015337 Ribbon (C13S015589)",
+      "slug": "epson-s015337-ribbon",
+      "type": "PHYSICAL",
+      "sku": "C13S015589",
+      "description": "<h2>Epson S015337 Ribbon (C13S015589)</h2><p>The Epson <strong>S015337 Ribbon (C13S015589)</strong> is a high-quality, authentic Epson ribbon cartridge designed for dot matrix printers, specifically models such as the Epson LQ-590, LQ-590II, and LQ-590IIN, to offer outstanding, crisp, and readable print outputs in high-volume business applications. Featuring a 17m long black ribbon with a yield of approximately 3.4 million characters, this cost-effective consumable is optimized for extended print longevity and minimal downtime, making it an ideal choice for impact printers used in tasks such as invoice processing, report generation, and various office documentation needs, and it stands as a testament to Epson's commitment to reliable, durable printing solutions that ensure maximum compatibility, superior performance.</p><h2>Buy Epson S015337 Ribbon (C13S015589) from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Epson S015337 Ribbon (C13S015589)</strong>From Star Tech. We have a large collection of the latest Printer <a href=\"https://www.startech.com.bd/ribbon\">Ribbon</a> to purchase for your <a href=\"https://www.startech.com.bd/printer\">Printer</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at the lowest price. The Epson S015337 Ribbon (C13S015589) has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: C13S015589</li><li>Model: Epson S015337</li><li>Type: Ribbon Cartridge</li><li>Color: Black</li><li>Length: 17 meter</li><li>Compatible with LQ-590/590II/590IIN</li></ul>",
+      "model": "Epson S015337",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EPSON",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "C13S015589",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "C13S015589",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Epson S015337",
+              "position": 1
+            },
+            {
+              "label": "Type",
+              "value": "Ribbon Cartridge",
+              "position": 2
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 3
+            },
+            {
+              "label": "Length",
+              "value": "17 meter",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/epson-s015337-ribbon",
+      "sourceProductCode": "11763",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "C13S015589",
+      "sourceKeyFeatures": [
+        "MPN: C13S015589",
+        "Model: Epson S015337",
+        "Type: Ribbon Cartridge",
+        "Color: Black",
+        "Length: 17 meter",
+        "Compatible with LQ-590/590II/590IIN"
+      ],
+      "needsReview": true,
+      "categorySlug": "ribbon",
+      "image": "/images/products/office-equipment/ribbon/_direct/epson-s015337-ribbon.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/ribbon/_direct/epson-s015337-ribbon.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "epson-s015337-ribbon",
+        "candidateTitle": "Epson S015337 Ribbon (C13S015589)",
+        "attemptStem": "epson-s015337-ribbon"
+      }
+    },
+    {
+      "name": "Epson S015639/S015634 Ribbon For LQ-310 Printer",
+      "slug": "epson-s015634-ribbon",
+      "type": "PHYSICAL",
+      "sku": "C13S015639",
+      "description": "<h2 style=\"text-align: justify; \">Epson S015639/S015634 Ribbon For LQ-310 Printer</h2><p style=\"text-align: justify; \">The Epson S015634 Ribbon Cartridge is Compatible with LQ - 310 /500 / 550 / 570 / 570+ / 580 / 800 / 850 / 850+ / 870 printers. It has a Duty Cycle of 2 million. The Epson ribbons provide longer life and better character definition. Designed and engineered to meet the demands of Epson's fast, high-performance impact printers. Epson Genuine Ribbon Fabric protects your assets and prolongs your printer lifespan. It increases business productivity by minimizing breakdown time. The Epson Fabric Ribbon Cartridge comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: C13S015639</li><li>Model: Epson S015634</li><li>Compatible Printers: LQ - 310 /500 / 550 / 570 / 570+ / 580 / 800 / 850 / 850+ / 870</li><li>Duty Cycle: 2 million</li><li>Color: Black</li><li>Length: 10m</li></ul>",
+      "model": "Epson S015634",
+      "warranty": "No warranty",
+      "basePrice": 450.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "EPSON",
+      "variantOptions": [
+        {
+          "name": "Printing Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "C13S015639",
+          "price": 450.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Printing Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 432.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Printing Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Supported Printer",
+              "value": "LQ - 310 /500 / 550 / 570 / 570+ / 580 / 800 / 850 / 850+ / 870",
+              "position": 1
+            },
+            {
+              "label": "Page Yield",
+              "value": "2 million",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Length: 10 m",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/epson-s015634-ribbon",
+      "sourceProductCode": "11760",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "C13S015639",
+      "sourceKeyFeatures": [
+        "MPN: C13S015639",
+        "Model: Epson S015634",
+        "Compatible Printers: LQ - 310 /500 / 550 / 570 / 570+ / 580 / 800 / 850 / 850+ / 870",
+        "Duty Cycle: 2 million",
+        "Color: Black",
+        "Length: 10m"
+      ],
+      "needsReview": false,
+      "categorySlug": "ribbon",
+      "image": "/images/products/office-equipment/ribbon/_direct/epson-s015634-ribbon.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/ribbon/_direct/epson-s015634-ribbon.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "epson-s015634-ribbon",
+        "candidateTitle": "Epson S015639/S015634 Ribbon For LQ-310 Printer",
+        "attemptStem": "epson-s015634-ribbon"
+      }
+    },
+    {
+      "name": "Ribbon for Xprinter TT424B Barcode Label Printer",
+      "slug": "ribbon-for-xprinter-tt424b-barcode-label-printer",
+      "type": "PHYSICAL",
+      "sku": "ST-29934",
+      "description": "<h2>Ribbon for Xprinter TT424B Barcode Label Printer</h2><p>The Ribbon for Xprinter TT424B Barcode Label Printer is an indispensable accessory tailored specifically for use with the Xprinter TT424B model. Crafted with precision and durability in mind, this high-quality ribbon ensures seamless printing of barcodes, labels, and crucial information. Its compatibility is exclusively designed for the Xprinter TT424B Barcode Label Printer, guaranteeing optimal integration and performance. With a robust duty cycle of 2 million, this ribbon efficiently handles high-volume printing tasks, making it ideal for various industrial and commercial applications that demand continuous printing capabilities. Moreover, the ribbon boasts an impressive length of up to 90 meters, providing extended coverage for printing tasks without the inconvenience of frequent replacements. This extended length not only enhances productivity but also minimizes downtime by reducing the need for ribbon changes, thus contributing to smoother printing operations.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Ribbon for Xprinter TT424B Barcode Label Printer</li><li>Compatible Printers: Xprinter TT424B</li><li>Duty Cycle: 2 million</li><li>Length: Up to 90m</li><li>Performance and Reliability</li></ul>",
+      "model": "Ribbon for Xprinter TT424B Barcode Label Printer",
+      "warranty": "No warranty",
+      "basePrice": 650.0,
+      "originalPrice": 715.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-29934",
+          "price": 650.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 624.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Supported Printer",
+              "value": "Xprinter TT424B Barcode Label Printer",
+              "position": 0
+            },
+            {
+              "label": "Page Yield",
+              "value": "2 million",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Length: up to 90 m",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ribbon-for-xprinter-tt424b-barcode-label-printer",
+      "sourceProductCode": "29934",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Ribbon for Xprinter TT424B Barcode Label Printer",
+        "Compatible Printers: Xprinter TT424B",
+        "Duty Cycle: 2 million",
+        "Length: Up to 90m",
+        "Performance and Reliability"
+      ],
+      "needsReview": false,
+      "categorySlug": "ribbon",
+      "image": "/images/products/office-equipment/ribbon/_direct/ribbon-for-xprinter-tt424b-barcode-label-printer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/ribbon/_direct/ribbon-for-xprinter-tt424b-barcode-label-printer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ribbon-for-xprinter-tt424b-barcode-label-printer",
+        "candidateTitle": "Ribbon for Xprinter TT424B Barcode Label Printer",
+        "attemptStem": "ribbon-for-xprinter-tt424b-barcode-label-printer"
+      }
+    },
+    {
+      "name": "Zebra GK888T Resin Ribbon",
+      "slug": "zebra-gk888t-ribbon",
+      "type": "PHYSICAL",
+      "sku": "ST-43656",
+      "description": "<h2>Zebra GK888T Resin Ribbon</h2><p>The Zebra <strong>GK888T</strong> <a href=\"https://www.startech.com.bd/ribbon\" style=\"color: rgb(0, 0, 0);\" target=\"\">ribbon</a> is a premium-quality wax/resin thermal transfer ribbon engineered for long-lasting, high-precision label printing. Measuring 110mm in width and 74 meters in length, this ribbon delivers extended print runs, reducing the need for frequent replacements, making it a practical choice for high-volume environments. It is specifically designed for Zebra GK888T and compatible desktop thermal transfer printers using a 25mm (1-inch) core, ensuring smooth, consistent feeding during operations. With its resin-enhanced ink formulation, the Zebra GK888T ribbon achieves exceptional print clarity, sharp barcodes, and crisp text on a wide range of label materials. Whether used on coated paper or durable synthetic labels like polypropylene or polyester, it guarantees superior adhesion and legibility. The wax/resin blend provides enhanced resistance to smudging, scratching, chemical exposure, moisture, and moderate heat, making it highly suitable for demanding conditions. This ribbon supports high-speed printing without compromising quality and delivers clean edge definition, which is critical for scannable barcodes and fine text. It is ideal for applications that demand both durability and cost-efficiency.</p><h2>Buy Zebra GK888T Resin Ribbon from Star Tech</h2><p>In Bangladesh, you can get original <strong>Zebra GK888T Resin Ribbon</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/ribbon\" target=\"\">Ribbon </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Zebra GK888T Resin Ribbon comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GK888T</li><li>Ribbon Type: Wax/Resin</li><li>Compatible Printers: GK888T/B3600/GT800</li><li>Size: 110/74m, 25mm core, Chemical/scratch-proof</li><li>Printing Method: Thermal Transfer</li></ul>",
+      "model": "GK888T",
+      "warranty": "no warranty",
+      "basePrice": 900.0,
+      "originalPrice": 990.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Zebra",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "110/74m, 25mm core, Chemical/scratch-proof",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-43656",
+          "price": 900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "110/74m, 25mm core, Chemical/scratch-proof"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 864.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "GK888T",
+              "position": 0
+            },
+            {
+              "label": "Ribbon Type",
+              "value": "Wax/Resin",
+              "position": 1
+            },
+            {
+              "label": "Compatible Printers",
+              "value": "GK888T/B3600/GT800",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "110/74m, 25mm core, Chemical/scratch-proof",
+              "position": 3
+            },
+            {
+              "label": "Printing Method",
+              "value": "Thermal Transfer",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zebra-gk888t-ribbon",
+      "sourceProductCode": "43656",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GK888T",
+        "Ribbon Type: Wax/Resin",
+        "Compatible Printers: GK888T/B3600/GT800",
+        "Size: 110/74m, 25mm core, Chemical/scratch-proof",
+        "Printing Method: Thermal Transfer"
+      ],
+      "needsReview": false,
+      "categorySlug": "ribbon",
+      "image": "/images/products/office-equipment/ribbon/_direct/zebra-gk888t-ribbon.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/ribbon/_direct/zebra-gk888t-ribbon.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zebra-gk888t-ribbon",
+        "candidateTitle": "Zebra GK888T Resin Ribbon",
+        "attemptStem": "zebra-gk888t-ribbon"
+      }
+    },
+    {
+      "name": "Zebra ZC100/ZC300 YMCKO Color Ribbon (300 Print)",
+      "slug": "zebra-zc100-zc300-color-ribbon",
+      "type": "PHYSICAL",
+      "sku": "ST-32021",
+      "description": "<h2>Zebra ZC100/ZC300 YMCKO Color Ribbon (200 Print)</h2><p>The Zebra ZC100/ZC300 YMCKO Color Ribbon is a type of ribbon that combines the four primary colors (yellow, magenta, cyan, and black) with an overlay panel (O). The overlay panel provides a protective layer for the printed cards, making them more durable and resistant to fading, scratching, and tampering. The Zebra ZC100/ZC300 YMCKO color ribbon can create vivid and vibrant images, texts, logos, and barcodes on your cards using the dye-sublimation printing process. The dye-sublimation printing process is a method of transferring the color from the ribbon to the card's surface using heat and pressure. </p><h2>Buy Zebra ZC100/ZC300 YMCKO Color Ribbon from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/zebra-zc100-zc300-color-ribbon\" target=\"\">Zebra ZC100/ZC300 YMCKO Color Ribbon</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/ribbon\" target=\"\">Ribbon </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Zebra ZC100/ZC300 YMCKO Color Ribbon comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ZC100/ZC300</li><li>Type: Color Ribbon</li><li>Capacity: 200 Print</li><li>Compatible: Zebra ZC100/ZC300 Series Printers</li><li>Combines the four primary colors (yellow, magenta, cyan, and black)</li></ul>",
+      "model": "ZC100/ZC300",
+      "warranty": "no warranty",
+      "basePrice": 3900.0,
+      "originalPrice": 4000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Zebra",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "200 Print",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-32021",
+          "price": 3900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "200 Print"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3744.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ZC100/ZC300",
+              "position": 0
+            },
+            {
+              "label": "Type",
+              "value": "Color Ribbon",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "200 Print",
+              "position": 2
+            },
+            {
+              "label": "Compatible",
+              "value": "Zebra ZC100/ZC300 Series Printers",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zebra-zc100-zc300-color-ribbon",
+      "sourceProductCode": "32021",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ZC100/ZC300",
+        "Type: Color Ribbon",
+        "Capacity: 200 Print",
+        "Compatible: Zebra ZC100/ZC300 Series Printers",
+        "Combines the four primary colors (yellow, magenta, cyan, and black)"
+      ],
+      "needsReview": false,
+      "categorySlug": "ribbon",
+      "image": "/images/products/office-equipment/ribbon/_direct/zebra-zc100-zc300-color-ribbon.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/office-equipment/ribbon/_direct/zebra-zc100-zc300-color-ribbon.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zebra-zc100-zc300-color-ribbon",
+        "candidateTitle": "Zebra ZC100/ZC300 YMCKO Color Ribbon (300 Print)",
+        "attemptStem": "zebra-zc100-zc300-color-ribbon"
+      }
+    }
+  ]
+}

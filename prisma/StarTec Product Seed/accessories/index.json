@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/accessories",
+  "imageFolder": "/images/products/accessories/bluetooth-adapter/baseus",
+  "groups": [
+    {
+      "name": "_direct",
+      "file": "_direct.json",
+      "status": "completed",
+      "products": 1,
+      "matched": 1,
+      "unmatched": 0
+    },
+    {
+      "name": "bluetooth-adapter",
+      "file": "bluetooth-adapter.json",
+      "status": "completed",
+      "products": 53,
+      "matched": 53,
+      "unmatched": 0
+    },
+    {
+      "name": "bluetooth-headphone",
+      "file": "bluetooth-headphone.json",
+      "status": "completed",
+      "products": 7,
+      "matched": 7,
+      "unmatched": 0
+    },
+    {
+      "name": "bluetooth-speaker",
+      "file": "bluetooth-speaker.json",
+      "status": "completed",
+      "products": 417,
+      "matched": 363,
+      "unmatched": 54
+    },
+    {
+      "name": "cable",
+      "file": "cable.json",
+      "status": "completed",
+      "products": 587,
+      "matched": 584,
+      "unmatched": 3
+    },
+    {
+      "name": "capture-card",
+      "file": "capture-card.json",
+      "status": "completed",
+      "products": 14,
+      "matched": 14,
+      "unmatched": 0
+    },
+    {
+      "name": "card-reader",
+      "file": "card-reader.json",
+      "status": "completed",
+      "products": 33,
+      "matched": 33,
+      "unmatched": 0
+    },
+    {
+      "name": "converter",
+      "file": "converter.json",
+      "status": "completed",
+      "products": 280,
+      "matched": 278,
+      "unmatched": 2
+    },
+    {
+      "name": "digital-voice-recorder",
+      "file": "digital-voice-recorder.json",
+      "status": "completed",
+      "products": 21,
+      "matched": 21,
+      "unmatched": 0
+    },
+    {
+      "name": "hdd-ssd-enclosure",
+      "file": "hdd-ssd-enclosure.json",
+      "status": "completed",
+      "products": 89,
+      "matched": 89,
+      "unmatched": 0
+    },
+    {
+      "name": "headphone",
+      "file": "headphone.json",
+      "status": "completed",
+      "products": 747,
+      "matched": 747,
+      "unmatched": 0
+    },
+    {
+      "name": "headphone-stand",
+      "file": "headphone-stand.json",
+      "status": "completed",
+      "products": 8,
+      "matched": 8,
+      "unmatched": 0
+    },
+    {
+      "name": "hohem",
+      "file": "hohem.json",
+      "status": "completed",
+      "products": 1,
+      "matched": 1,
+      "unmatched": 0
+    },
+    {
+      "name": "hubs-docks",
+      "file": "hubs-docks.json",
+      "status": "completed",
+      "products": 370,
+      "matched": 369,
+      "unmatched": 1
+    },
+    {
+      "name": "keyboard",
+      "file": "keyboard.json",
+      "status": "completed",
+      "products": 946,
+      "matched": 946,
+      "unmatched": 0
+    },
+    {
+      "name": "memory-card",
+      "file": "memory-card.json",
+      "status": "completed",
+      "products": 150,
+      "matched": 150,
+      "unmatched": 0
+    },
+    {
+      "name": "microphone",
+      "file": "microphone.json",
+      "status": "completed",
+      "products": 354,
+      "matched": 354,
+      "unmatched": 0
+    },
+    {
+      "name": "mouse",
+      "file": "mouse.json",
+      "status": "completed",
+      "products": 757,
+      "matched": 757,
+      "unmatched": 0
+    },
+    {
+      "name": "mouse-pad",
+      "file": "mouse-pad.json",
+      "status": "completed",
+      "products": 170,
+      "matched": 170,
+      "unmatched": 0
+    },
+    {
+      "name": "pen-drive",
+      "file": "pen-drive.json",
+      "status": "completed",
+      "products": 206,
+      "matched": 206,
+      "unmatched": 0
+    },
+    {
+      "name": "power-strip",
+      "file": "power-strip.json",
+      "status": "completed",
+      "products": 61,
+      "matched": 61,
+      "unmatched": 0
+    },
+    {
+      "name": "presenter",
+      "file": "presenter.json",
+      "status": "completed",
+      "products": 21,
+      "matched": 21,
+      "unmatched": 0
+    },
+    {
+      "name": "sound-card",
+      "file": "sound-card.json",
+      "status": "completed",
+      "products": 2,
+      "matched": 2,
+      "unmatched": 0
+    },
+    {
+      "name": "soundbar",
+      "file": "soundbar.json",
+      "status": "completed",
+      "products": 36,
+      "matched": 36,
+      "unmatched": 0
+    },
+    {
+      "name": "speaker-home-theater",
+      "file": "speaker-home-theater.json",
+      "status": "completed",
+      "products": 392,
+      "matched": 392,
+      "unmatched": 0
+    },
+    {
+      "name": "thermal-paste",
+      "file": "thermal-paste.json",
+      "status": "completed",
+      "products": 54,
+      "matched": 54,
+      "unmatched": 0
+    },
+    {
+      "name": "webcam",
+      "file": "webcam.json",
+      "status": "completed",
+      "products": 44,
+      "matched": 44,
+      "unmatched": 0
+    },
+    {
+      "name": "wrist-rest",
+      "file": "wrist-rest.json",
+      "status": "completed",
+      "products": 8,
+      "matched": 8,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790591018
+}

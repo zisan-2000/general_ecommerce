@@ -1,0 +1,1932 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/security-camera",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\security-camera",
+    "generatedAtUnix": 1790590169,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Security Camera",
+      "slug": "security-camera",
+      "parentSlug": null,
+      "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1201aef-fingerprint-reader.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "IP Camera Package",
+      "slug": "ip-camera-package",
+      "parentSlug": "security-camera",
+      "image": "/images/products/security-camera/ip-camera-package/Dahua/dahua-2-unit-ip-camera-package.png",
+      "isActive": true,
+      "sortOrder": 9,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Dahua",
+      "slug": "dahua",
+      "logo": null
+    },
+    {
+      "name": "Hikvision",
+      "slug": "hikvision",
+      "logo": null
+    },
+    {
+      "name": "TP-Link",
+      "slug": "tp-link",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Dahua DH-IPC-HFW1230TL2-S5 2 Unit IP Camera With Package",
+      "slug": "dahua-2-unit-ip-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-8702",
+      "description": "<p>Dahua 2 unit 1080P night vision security ip camera With Dahua 4 Channel 1080p Recording NVR. It has Included 500GB Hard Disk Drive,2 unit power adapter good quality, 6 unit Rj45 connector  Good  quality, 50m Cat6 &amp; Power cable N/A.,05 port Networking switch</p><p><br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dahua DH-IPC-HFW1230TL2-S5 2 Unit IP Camera</li><li>Dahua 2 unit 1080P night vision security ip camera</li><li>Dahua 4 Channel 1080p Recording NVR</li><li>500GB Hard Disk Drive</li><li>05 port Networking switch</li></ul>",
+      "model": "Dahua DH-IPC-HFW1230TL2-S5 2 Unit IP Camera",
+      "warranty": null,
+      "basePrice": 15500.0,
+      "originalPrice": 19500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dahua",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "500GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "6 unit Rj45 connector Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8702",
+          "price": 15500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "500GB Hard Disk Drive",
+            "Connector": "6 unit Rj45 connector Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 14880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Dahua 2 unit 1080P night vision security ip camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "Dahua 4 Channel 1080p Recording",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "500GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "2 unit power adapter good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "6 unit Rj45 connector Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "50m Cat6 & Power cable N/A",
+              "position": 2
+            },
+            {
+              "label": "Networking Switch",
+              "value": "05 port Networking switch",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dahua-2-unit-ip-camera-package",
+      "sourceProductCode": "8702",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dahua DH-IPC-HFW1230TL2-S5 2 Unit IP Camera",
+        "Dahua 2 unit 1080P night vision security ip camera",
+        "Dahua 4 Channel 1080p Recording NVR",
+        "500GB Hard Disk Drive",
+        "05 port Networking switch"
+      ],
+      "needsReview": false,
+      "categorySlug": "ip-camera-package",
+      "image": "/images/products/security-camera/ip-camera-package/Dahua/dahua-2-unit-ip-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/ip-camera-package/Dahua/dahua-2-unit-ip-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dahua-2-unit-ip-camera-package",
+        "candidateTitle": "Dahua DH-IPC-HFW1230TL2-S5 2 Unit IP Camera With Package",
+        "attemptStem": "dahua-2-unit-ip-camera-package"
+      }
+    },
+    {
+      "name": "Dahua DH-IPC-HFW1230TL2-S5 3 Unit IP Camera With Package",
+      "slug": "dahua-3unit-ip-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-8703",
+      "description": "<p>Dahua 3-unit 1080P night vision security IP camera with Dahua 4-channel 1080p recording NVR. It has included a 500GB hard disk drive, 3 high-quality unit power adapters, 8 unit RJ45 connectors, and a 50 m cable. Cat6 &amp; Power cable N/A, 05-port networking switch.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dahua DH-IPC-HFW1230TL2-S5 3 Unit IP Camera</li><li>Dahua 3 unit 1080P night vision security ip camera</li><li>Dahua 4 Channel 1080p Recording NVR</li><li>500GB Hard Disk Drive</li><li>05 port Networking switch</li></ul>",
+      "model": "Dahua DH-IPC-HFW1230TL2-S5 3 Unit IP Camera",
+      "warranty": null,
+      "basePrice": 18500.0,
+      "originalPrice": 24000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dahua",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "500GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "8 unit Rj45 connector Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8703",
+          "price": 18500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "500GB Hard Disk Drive",
+            "Connector": "8 unit Rj45 connector Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 17760.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Dahua 3 unit 1080P night vision security ip camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "Dahua 4 Channel 1080p Recording",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "500GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "3 unit power adapter good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "8 unit Rj45 connector Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "Cable 50m. Cat6 & Power cable N/A",
+              "position": 2
+            },
+            {
+              "label": "Networking Switch",
+              "value": "05 port Networking switch",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dahua-3unit-ip-camera-package",
+      "sourceProductCode": "8703",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dahua DH-IPC-HFW1230TL2-S5 3 Unit IP Camera",
+        "Dahua 3 unit 1080P night vision security ip camera",
+        "Dahua 4 Channel 1080p Recording NVR",
+        "500GB Hard Disk Drive",
+        "05 port Networking switch"
+      ],
+      "needsReview": false,
+      "categorySlug": "ip-camera-package",
+      "image": "/images/products/security-camera/ip-camera-package/Dahua/dahua-3unit-ip-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/ip-camera-package/Dahua/dahua-3unit-ip-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dahua-3unit-ip-camera-package",
+        "candidateTitle": "Dahua DH-IPC-HFW1230TL2-S5 3 Unit IP Camera With Package",
+        "attemptStem": "dahua-3unit-ip-camera-package"
+      }
+    },
+    {
+      "name": "Dahua DH-IPC-HFW1230TL2-S5 4 Unit IP Camera With Package",
+      "slug": "dahua-4-unit-ip-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-8705",
+      "description": "<p>Dahua 4unit 1080P night vision security ip camera With Dahua 4 Channel 1080p Recording NVR. It has Included 500GB Hard Disk Drive, 4 unit power adapter good quality, 10 unit Rj45 connector Good  quality, 100m Cat6 &amp; Power cable N/A.,8 port Networking switch</p><p><br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dahua DH-IPC-HFW1230TL2-S5 4 Unit IP Camera</li><li>Dahua 4 unit 1080P night vision security ip camera</li><li>Dahua 4 Channel 1080p Recording NVR</li><li>500GB Hard Disk Drive</li><li>8 port Networking switch</li></ul>",
+      "model": "Dahua DH-IPC-HFW1230TL2-S5 4 Unit IP Camera",
+      "warranty": null,
+      "basePrice": 21500.0,
+      "originalPrice": 29000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dahua",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "500GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "10 unit Rj45 connector Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8705",
+          "price": 21500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "500GB Hard Disk Drive",
+            "Connector": "10 unit Rj45 connector Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 20640.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Dahua 4 unit 1080P night vision security ip camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "Dahua 4 Channel 1080p Recording",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "500GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "4 unit power adapter good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "10 unit Rj45 connector Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "100m. Cat6 & Power cable N/A.",
+              "position": 2
+            },
+            {
+              "label": "Networking Switch",
+              "value": "08 port Networking switch",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dahua-4-unit-ip-camera-package",
+      "sourceProductCode": "8705",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dahua DH-IPC-HFW1230TL2-S5 4 Unit IP Camera",
+        "Dahua 4 unit 1080P night vision security ip camera",
+        "Dahua 4 Channel 1080p Recording NVR",
+        "500GB Hard Disk Drive",
+        "8 port Networking switch"
+      ],
+      "needsReview": false,
+      "categorySlug": "ip-camera-package",
+      "image": "/images/products/security-camera/ip-camera-package/Dahua/dahua-4-unit-ip-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/ip-camera-package/Dahua/dahua-4-unit-ip-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dahua-4-unit-ip-camera-package",
+        "candidateTitle": "Dahua DH-IPC-HFW1230TL2-S5 4 Unit IP Camera With Package",
+        "attemptStem": "dahua-4-unit-ip-camera-package"
+      }
+    },
+    {
+      "name": "Dahua DH-IPC-HFW1230TL2-S5 5 Unit IP Camera With Package",
+      "slug": "dahua-5-unit-ip-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-8707",
+      "description": "<p>Dahua 4-unit 1080P night vision security IP camera with Dahua 8-channel 1080p recording NVR. It has included a 1000 GB hard disk drive, 5 unit power adapters of good quality, 12 unit RJ45 connectors, and a 100 m cable. Cat6 &amp; Power cable N/A, 08-port Networking switch</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dahua DH-IPC-HFW1230TL2-S5 5 Unit IP Camera</li><li>Dahua 5 unit 1080P night vision security ip camera</li><li>Dahua 8 Channel 1080p Recording NVR</li><li>1000GB Hard Disk Drive</li><li>08 port Networking switch</li></ul>",
+      "model": "Dahua DH-IPC-HFW1230TL2-S5 5 Unit IP Camera",
+      "warranty": null,
+      "basePrice": 28500.0,
+      "originalPrice": 35000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dahua",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "1000GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "12 unit Rj45 connector Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8707",
+          "price": 28500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "1000GB Hard Disk Drive",
+            "Connector": "12 unit Rj45 connector Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 27360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Dahua 5 unit 1080P night vision security ip camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "Dahua 8 Channel 1080p Recording",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "1000GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "5 unit power adapter good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "12 unit Rj45 connector Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "Cable 100m. Cat6 & Power cable N/A",
+              "position": 2
+            },
+            {
+              "label": "Networking Switch",
+              "value": "08 port Networking switch",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dahua-5-unit-ip-camera-package",
+      "sourceProductCode": "8707",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dahua DH-IPC-HFW1230TL2-S5 5 Unit IP Camera",
+        "Dahua 5 unit 1080P night vision security ip camera",
+        "Dahua 8 Channel 1080p Recording NVR",
+        "1000GB Hard Disk Drive",
+        "08 port Networking switch"
+      ],
+      "needsReview": false,
+      "categorySlug": "ip-camera-package",
+      "image": "/images/products/security-camera/ip-camera-package/Dahua/dahua-5-unit-ip-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/ip-camera-package/Dahua/dahua-5-unit-ip-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dahua-5-unit-ip-camera-package",
+        "candidateTitle": "Dahua DH-IPC-HFW1230TL2-S5 5 Unit IP Camera With Package",
+        "attemptStem": "dahua-5-unit-ip-camera-package"
+      }
+    },
+    {
+      "name": "Dahua DH-IPC-HFW1230TL2-S5 6 Unit IP Camera With Package",
+      "slug": "dahua-6-unit-ip-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-8708",
+      "description": "<p>Dahua 6-unit 1080P night vision security IP camera with Dahua 8-channel 1080p recording NVR. It has included a 1000GB Hard Disk Drive, 6 unit power adapters of good quality, 14 unit connectors.  Good  quality, Cable 100m. Cat6 &amp; Power Cable N/A, 08-port Networking Switch.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dahua DH-IPC-HFW1230TL2-S5 6 Unit IP Camera</li><li>Dahua 6 unit 1080P night vision security ip camera</li><li>Dahua 8 Channel 1080p Recording NVR</li><li>1000GB Hard Disk Drive</li><li>08 port Networking switch</li></ul>",
+      "model": "Dahua DH-IPC-HFW1230TL2-S5 6 Unit IP Camera",
+      "warranty": null,
+      "basePrice": 31990.0,
+      "originalPrice": 40000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dahua",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "1000GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "14 unit Rj45 connector Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8708",
+          "price": 31990.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "1000GB Hard Disk Drive",
+            "Connector": "14 unit Rj45 connector Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 30710.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Dahua 6 unit 1080P night vision security ip camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "Dahua 8 Channel 1080p Recording",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "1000GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "6 unit power adapter good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "14 unit Rj45 connector Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "Cable 100m. Cat6 & Power cable N/A",
+              "position": 2
+            },
+            {
+              "label": "Networking Switch",
+              "value": "08 port Networking switch",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dahua-6-unit-ip-camera-package",
+      "sourceProductCode": "8708",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dahua DH-IPC-HFW1230TL2-S5 6 Unit IP Camera",
+        "Dahua 6 unit 1080P night vision security ip camera",
+        "Dahua 8 Channel 1080p Recording NVR",
+        "1000GB Hard Disk Drive",
+        "08 port Networking switch"
+      ],
+      "needsReview": false,
+      "categorySlug": "ip-camera-package",
+      "image": "/images/products/security-camera/ip-camera-package/Dahua/dahua-6-unit-ip-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/ip-camera-package/Dahua/dahua-6-unit-ip-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dahua-6-unit-ip-camera-package",
+        "candidateTitle": "Dahua DH-IPC-HFW1230TL2-S5 6 Unit IP Camera With Package",
+        "attemptStem": "dahua-6-unit-ip-camera-package"
+      }
+    },
+    {
+      "name": "Hikvision 2 Unit IP Camera Package",
+      "slug": "hikvision-2-unit-ip-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-31102",
+      "description": "<h2>Hikvision 2 Unit IP Camera Package</h2><p>The Hikvision 2 Unit IP Camera Package is a comprehensive surveillance solution designed to meet your security needs. This package includes two high-performance Hikvision DS-2CD1T23G0-I IP cameras with great video quality and coverage. This Hikvision 2 Unit IP Camera Package features a 4-channel Network Video Recorder (NVR) equipped with a 500GB Hard Disk Drive. It comes with two top-quality power adapters and six RJ45 connectors to power and connect your devices seamlessly. The package also has 50 meters of Cat6 Networking Cable and a 5-port Networking Switch for a reliable network infrastructure. The Hikvision 2 Unit IP Camera Package enhances your security setup with ease and confidence.<br/></p><h2>Buy Hikvision 2 Unit IP Camera Package from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Hikvision 2 Unit IP Camera Package</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/hikvision-ip-camera-package\" target=\"\">Hikvision IP Camera Package</a> to purchase for your home <a href=\"https://www.startech.com.bd/Security-Camera\" target=\"\">security</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 2 Unit IP Camera Package</li><li>Camera: Hikvision DS-2CD1T23G0-I 2 Unit IP Camera</li><li>NVR: 4 Channel Video Recorder (NVR)</li><li>Storage: 500GB Hard Disk Drive</li><li>Cable: 50m. Cat6 Networking Cable</li></ul>",
+      "model": "2 Unit IP Camera Package",
+      "warranty": null,
+      "basePrice": 18500.0,
+      "originalPrice": 19250.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hikvision",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "500GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "6 unit Rj45 connector Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-31102",
+          "price": 18500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "500GB Hard Disk Drive",
+            "Connector": "6 unit Rj45 connector Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 17760.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Hikvision DS-2CD1T23G0-I 2 Unit IP Camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "4 Channel Video Recorder (NVR)",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "500GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "2 unit power adapter of good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "6 unit Rj45 connector Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "50m. Cat6 Networking Cable",
+              "position": 2
+            },
+            {
+              "label": "Networking Switch",
+              "value": "05 port Networking switch",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-2-unit-ip-camera-package",
+      "sourceProductCode": "31102",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 2 Unit IP Camera Package",
+        "Camera: Hikvision DS-2CD1T23G0-I 2 Unit IP Camera",
+        "NVR: 4 Channel Video Recorder (NVR)",
+        "Storage: 500GB Hard Disk Drive",
+        "Cable: 50m. Cat6 Networking Cable"
+      ],
+      "needsReview": false,
+      "categorySlug": "ip-camera-package",
+      "image": "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-2-unit-ip-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-2-unit-ip-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-2-unit-ip-camera-package",
+        "candidateTitle": "Hikvision 2 Unit IP Camera Package",
+        "attemptStem": "hikvision-2-unit-ip-camera-package"
+      }
+    },
+    {
+      "name": "Hikvision 3 Unit IP Camera Package",
+      "slug": "hikvision-3-unit-ip-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-31106",
+      "description": "<h2>Hikvision 3 Unit IP Camera Package</h2><p>The Hikvision 3 Unit IP Camera Package is a comprehensive surveillance solution designed to meet your security needs. This package includes 3 unit high-performance Hikvision DS-2CD1T23G0-I IP cameras with great video quality and coverage. This Hikvision 3 Unit IP Camera Package features a 4-channel Network Video Recorder (NVR) equipped with a 500GB Hard Disk Drive. It comes with 3 unit top-quality power adapters and 8 unit RJ45 connectors to power and connect your devices seamlessly. The package also has 75 meters of Cat6 Networking Cable and a 5-port Networking Switch for a reliable network infrastructure. The Hikvision 3 Unit IP Camera Package enhances your security setup with ease and confidence.<br/></p><h2>Buy Hikvision 3 Unit IP Camera Package from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Hikvision 3 Unit IP Camera Package</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/hikvision-ip-camera-package\" target=\"\">Hikvision IP Camera Package</a> to purchase for your home <a href=\"https://www.startech.com.bd/Security-Camera\" target=\"\">security</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 3 Unit IP Camera Package</li><li>Camera: Hikvision DS-2CD1T23G0-I 3 Unit IP Camera</li><li>NVR: 4 Channel Video Recorder (NVR)</li><li>Storage: 500GB Hard Disk Drive</li><li>Cable: 75m. Cat6 Networking Cable</li></ul>",
+      "model": "3 Unit IP Camera Package",
+      "warranty": null,
+      "basePrice": 19500.0,
+      "originalPrice": 23500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hikvision",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "500GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "8 unit Rj45 connector Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-31106",
+          "price": 19500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "500GB Hard Disk Drive",
+            "Connector": "8 unit Rj45 connector Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 18720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Hikvision DS-2CD1T23G0-I 3 Unit IP Camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "4 Channel Video Recorder (NVR)",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "500GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "3 unit power adapter of good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "8 unit Rj45 connector Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "75m. Cat6 Networking Cable",
+              "position": 2
+            },
+            {
+              "label": "Networking Switch",
+              "value": "05 port Networking switch",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-3-unit-ip-camera-package",
+      "sourceProductCode": "31106",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 3 Unit IP Camera Package",
+        "Camera: Hikvision DS-2CD1T23G0-I 3 Unit IP Camera",
+        "NVR: 4 Channel Video Recorder (NVR)",
+        "Storage: 500GB Hard Disk Drive",
+        "Cable: 75m. Cat6 Networking Cable"
+      ],
+      "needsReview": false,
+      "categorySlug": "ip-camera-package",
+      "image": "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-3-unit-ip-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-3-unit-ip-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-3-unit-ip-camera-package",
+        "candidateTitle": "Hikvision 3 Unit IP Camera Package",
+        "attemptStem": "hikvision-3-unit-ip-camera-package"
+      }
+    },
+    {
+      "name": "Hikvision 4 Unit IP Camera Package",
+      "slug": "hikvision-4-unit-ip-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-31107",
+      "description": "<h2>Hikvision 4 Unit IP Camera Package</h2><p>The Hikvision 4 Unit IP Camera Package is a comprehensive surveillance solution designed to meet your security needs. This package includes 4 unit high-performance Hikvision DS-2CD1T23G0-I IP cameras with great video quality and coverage. This Hikvision 4 Unit IP Camera Package features a 4-channel Network Video Recorder (NVR) equipped with a 500GB Hard Disk Drive. It comes with 4 unit top-quality power adapters and 10 unit RJ45 connectors to power and connect your devices seamlessly. The package also has 100 meters of Cat6 Networking Cable and a 8-port Networking Switch for a reliable network infrastructure. The Hikvision 4 Unit IP Camera Package enhances your security setup with ease and confidence.<br/></p><h2>Buy Hikvision 4 Unit IP Camera Package from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Hikvision 4 Unit IP Camera Package</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/hikvision-ip-camera-package\" target=\"\">Hikvision IP Camera Package</a> to purchase for your home <a href=\"https://www.startech.com.bd/Security-Camera\" target=\"\">security</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 4 Unit IP Camera Package</li><li>Camera: Hikvision DS-2CD1T23G0-I 4 Unit IP Camera</li><li>NVR: 4 Channel Video Recorder (NVR)</li><li>Storage: 500GB Hard Disk Drive</li><li>Cable: 100m. Cat6 Networking Cable</li></ul>",
+      "model": "4 Unit IP Camera Package",
+      "warranty": null,
+      "basePrice": 21990.0,
+      "originalPrice": 28000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hikvision",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "500GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "10 unit Rj45 connector Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-31107",
+          "price": 21990.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Storage": "500GB Hard Disk Drive",
+            "Connector": "10 unit Rj45 connector Good quality"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 21110.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Hikvision DS-2CD1T23G0-I 4 Unit IP Camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "4 Channel Video Recorder (NVR)",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "500GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "4 unit power adapter of good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "10 unit Rj45 connector Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "100m. Cat6 Networking Cable",
+              "position": 2
+            },
+            {
+              "label": "Networking Switch",
+              "value": "08 port Networking switch",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-4-unit-ip-camera-package",
+      "sourceProductCode": "31107",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 4 Unit IP Camera Package",
+        "Camera: Hikvision DS-2CD1T23G0-I 4 Unit IP Camera",
+        "NVR: 4 Channel Video Recorder (NVR)",
+        "Storage: 500GB Hard Disk Drive",
+        "Cable: 100m. Cat6 Networking Cable"
+      ],
+      "needsReview": false,
+      "categorySlug": "ip-camera-package",
+      "image": "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-4-unit-ip-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-4-unit-ip-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-4-unit-ip-camera-package",
+        "candidateTitle": "Hikvision 4 Unit IP Camera Package",
+        "attemptStem": "hikvision-4-unit-ip-camera-package"
+      }
+    },
+    {
+      "name": "Hikvision 5 Unit IP Camera Package",
+      "slug": "hikvision-5-unit-ip-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-31108",
+      "description": "<h2>Hikvision 5 Unit IP Camera Package</h2><p>The Hikvision 5 Unit IP Camera Package is a comprehensive surveillance solution designed to meet your security needs. This package includes 5 unit high-performance Hikvision DS-2CD1T23G0-I IP cameras with great video quality and coverage. This Hikvision 5 Unit IP Camera Package features an 8-channel Network Video Recorder (NVR) equipped with a 1000GB Hard Disk Drive. It comes with 5 unit top-quality power adapters and 12 unit RJ45 connectors to power and connect your devices seamlessly. The package also has 100 meters of Cat6 Networking Cable and a 8-port Networking Switch for a reliable network infrastructure. The Hikvision 5 Unit IP Camera Package enhances your security setup with ease and confidence.<br/></p><h2>Buy Hikvision 5 Unit IP Camera Package from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Hikvision 5 Unit IP Camera Package</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/hikvision-ip-camera-package\" target=\"\">Hikvision IP Camera Package</a> to purchase for your home <a href=\"https://www.startech.com.bd/Security-Camera\" target=\"\">security</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 5 Unit IP Camera Package</li><li>Camera: Hikvision DS-2CD1T23G0-I 5 Unit IP Camera</li><li>NVR: 8 Channel Video Recorder (NVR)</li><li>Storage: 1000GB Hard Disk Drive</li><li>Cable: 100m. Cat6 Networking Cable</li></ul>",
+      "model": "5 Unit IP Camera Package",
+      "warranty": null,
+      "basePrice": 25500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Hikvision",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "1000GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "12 unit Rj45 connector Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-31108",
+          "price": 25500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Storage": "1000GB Hard Disk Drive",
+            "Connector": "12 unit Rj45 connector Good quality"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 24480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Hikvision DS-2CD1T23G0-I 5 Unit IP Camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "8 Channel Video Recorder (NVR)",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "1000GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "5 unit power adapter of good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "12 unit Rj45 connector Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "100m. Cat6 Networking Cable",
+              "position": 2
+            },
+            {
+              "label": "Networking Switch",
+              "value": "08 port Networking switch",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-5-unit-ip-camera-package",
+      "sourceProductCode": "31108",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 5 Unit IP Camera Package",
+        "Camera: Hikvision DS-2CD1T23G0-I 5 Unit IP Camera",
+        "NVR: 8 Channel Video Recorder (NVR)",
+        "Storage: 1000GB Hard Disk Drive",
+        "Cable: 100m. Cat6 Networking Cable"
+      ],
+      "needsReview": false,
+      "categorySlug": "ip-camera-package",
+      "image": "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-5-unit-ip-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-5-unit-ip-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-5-unit-ip-camera-package",
+        "candidateTitle": "Hikvision 5 Unit IP Camera Package",
+        "attemptStem": "hikvision-5-unit-ip-camera-package"
+      }
+    },
+    {
+      "name": "Hikvision 6 Unit IP Camera Package",
+      "slug": "hikvision-6-unit-ip-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-31109",
+      "description": "<h2>Hikvision 6 Unit IP Camera Package</h2><p>The Hikvision 6 Unit IP Camera Package is a comprehensive surveillance solution designed to meet your security needs. This package includes 6 unit high-performance Hikvision DS-2CD1T23G0-I IP cameras with great video quality and coverage. This Hikvision 6 Unit IP Camera Package features a 8-channel Network Video Recorder (NVR) equipped with a 1000GB Hard Disk Drive. It comes with 6 unit top-quality power adapters and 14 unit RJ45 connectors to power and connect your devices seamlessly. The package also has 100 meters of Cat6 Networking Cable and a 8-port Networking Switch for a reliable network infrastructure. The Hikvision 6 Unit IP Camera Package enhances your security setup with ease and confidence.<br/></p><h2>Buy Hikvision 6 Unit IP Camera Package from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Hikvision 6 Unit IP Camera Package</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/hikvision-ip-camera-package\" target=\"\">Hikvision IP Camera Package</a> to purchase for your home <a href=\"https://www.startech.com.bd/Security-Camera\" target=\"\">security</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 6 Unit IP Camera Package</li><li>Camera: Hikvision DS-2CD1T23G0-I 6 Unit IP Camera</li><li>NVR: 8 Channel Video Recorder (NVR)</li><li>Storage: 1000GB Hard Disk Drive</li><li>Cable: 100m. Cat6 Networking Cable</li></ul>",
+      "model": "6 Unit IP Camera Package",
+      "warranty": null,
+      "basePrice": 29000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Hikvision",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "1000GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "14 unit Rj45 connector Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-31109",
+          "price": 29000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Storage": "1000GB Hard Disk Drive",
+            "Connector": "14 unit Rj45 connector Good quality"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 27840.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "Hikvision DS-2CD1T23G0-I 6 Unit IP Camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "8 Channel Video Recorder (NVR)",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "1000GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "No",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "6 unit power adapter of good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "14 unit Rj45 connector Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "100m. Cat6 Networking Cable",
+              "position": 2
+            },
+            {
+              "label": "Networking Switch",
+              "value": "08 port Networking switch",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-6-unit-ip-camera-package",
+      "sourceProductCode": "31109",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 6 Unit IP Camera Package",
+        "Camera: Hikvision DS-2CD1T23G0-I 6 Unit IP Camera",
+        "NVR: 8 Channel Video Recorder (NVR)",
+        "Storage: 1000GB Hard Disk Drive",
+        "Cable: 100m. Cat6 Networking Cable"
+      ],
+      "needsReview": false,
+      "categorySlug": "ip-camera-package",
+      "image": "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-6-unit-ip-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/ip-camera-package/Hikvision/hikvision-6-unit-ip-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-6-unit-ip-camera-package",
+        "candidateTitle": "Hikvision 6 Unit IP Camera Package",
+        "attemptStem": "hikvision-6-unit-ip-camera-package"
+      }
+    },
+    {
+      "name": "TP-Link 2 Unit IP Camera Package",
+      "slug": "tp-link-2-unit-ip-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-39338",
+      "description": "<h2>TP-Link 2 Unit IP Camera Package</h2><p>The TP-Link 2 Unit <a href=\"https://www.startech.com.bd/tp-link-ip-camera-package\" style=\"color: rgb(0, 0, 0);\" target=\"\">IP Camera Package</a> is an exceptional surveillance option. This IP camera package comprises two high-performance TP-Link IP cameras that provide crisp and clear video quality, ensuring full security coverage for both residential and business applications. When combined with a 4-channel Network Video Recorder (NVR), the system enables continuous recording and playback, making it easier to manage your surveillance data. The TP-Link 2 Unit IP Camera Package includes a 1000GB hard drive, which provides enough storage for long recording sessions without sacrificing video quality. The TP-Link IP Camera Package includes four high-quality power adapters to ensure that each camera functions smoothly and without interruption. Six durable RJ45 connectors are included for easy connectivity, allowing the cameras and NVR to connect securely and reliably. The camera package also includes a 50-meter Cat6 networking cable, ensuring reliable and high-speed data transmission over long distances. This TP-Link 2 Unit IP Camera Package ensures optimal system performance, even in larger configurations. A 5-port networking switch is also included, allowing you to expand your network as needed and connect additional devices seamlessly. The TP-Link 2 Unit IP Camera Package is designed to meet the requirements of modern surveillance systems with its comprehensive set of components. It is simple to install, has excellent video quality, and provides dependable data storage, making it an ideal choice for those looking for a low-cost, dependable security solution.</p><h2>Buy TP-Link 2 Unit IP Camera Package from Star Tech</h2><p>In Bangladesh, you can get original <strong>TP-Link 2 Unit IP Camera Package</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/tp-link-ip-camera-package\" target=\"\">TP-Link IP Camera Package</a> to purchase for your <a href=\"https://www.startech.com.bd/Security-Camera\" target=\"\">security</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 2 Unit IP Camera Package</li><li>Camera: TP-Link 2 Unit IP Camera</li><li>NVR: 4 Channel Network Video Recorder (NVR)</li><li>Storage: 1000GB Hard Disk Drive</li><li>50m Cat6 &amp; Electric Cable</li></ul>",
+      "model": "2 Unit IP Camera Package",
+      "warranty": null,
+      "basePrice": 19500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "TP-Link",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "1000GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "6 unit Rj45 connector Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39338",
+          "price": 19500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Storage": "1000GB Hard Disk Drive",
+            "Connector": "6 unit Rj45 connector Good quality"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 18720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "TP-Link 2 Unit IP Camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "4 Channel Video Recorder (NVR)",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "1000GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "N/A",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "2 unit power adapter of good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "6 unit Rj45 connector Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "50m Cat6 & Electric Cable",
+              "position": 2
+            },
+            {
+              "label": "Networking Switch",
+              "value": "5 port Networking switch",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-2-unit-ip-camera-package",
+      "sourceProductCode": "39338",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 2 Unit IP Camera Package",
+        "Camera: TP-Link 2 Unit IP Camera",
+        "NVR: 4 Channel Network Video Recorder (NVR)",
+        "Storage: 1000GB Hard Disk Drive",
+        "50m Cat6 & Electric Cable"
+      ],
+      "needsReview": false,
+      "categorySlug": "ip-camera-package",
+      "image": "/images/products/security-camera/ip-camera-package/Tp-Link/tp-link-2-unit-ip-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/ip-camera-package/Tp-Link/tp-link-2-unit-ip-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-2-unit-ip-camera-package",
+        "candidateTitle": "TP-Link 2 Unit IP Camera Package",
+        "attemptStem": "tp-link-2-unit-ip-camera-package"
+      }
+    },
+    {
+      "name": "TP-Link 4 Unit IP Camera Package",
+      "slug": "tp-link-4-unit-ip-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-39374",
+      "description": "<h2>TP-Link 4 Unit IP Camera Package</h2><p>The TP-Link 4 Unit <a href=\"https://www.startech.com.bd/ip-camera-package\" style=\"color: rgb(0, 0, 0);\" target=\"\">IP Camera Package</a> is a complete security solution for homes and offices. This package includes four high-quality TP-Link IP cameras that provide exceptional video clarity and reliability, making it an excellent choice for detailed surveillance. These cameras are connected to a 4-channel Network Video Recorder (NVR), which allows for seamless recording and playback of footage, ensuring that all critical moments are captured and easily accessible. The TP-Link 4 Unit IP Camera Package has a 1000GB hard disk drive, which provides ample storage capacity for long-term recording without sacrificing video quality. The IP Camera Package includes four reliable power adapters, each designed to keep the cameras running smoothly. It includes ten high-quality RJ45 connectors for secure and robust network connections. The 100-meter Cat6 networking cable is another necessary component, allowing for fast and stable data transmission over long distances. This TP-Link 4 Unit IP Camera Package ensures that the cameras and NVR function properly, even in larger setups. Additionally, an 8-port networking switch is included, allowing for the easy expansion and integration of multiple devices into your surveillance network. This TP-Link IP Camera Package is designed for ease of installation and operation, making it ideal for both professionals and first-time users. Its high-quality components ensure long-term durability and consistent performance, making it a reliable security solution. The TP-Link 4 Unit IP Camera Package combines innovative technology with user-friendly features to provide 24/7 surveillance and peace of mind.</p><h2>Buy TP-Link 4 Unit IP Camera Package from Star Tech</h2><p>In Bangladesh, you can get original <strong>TP-Link 4 Unit IP Camera Package</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/tp-link-ip-camera-package\" target=\"\">TP-Link IP Camera Package</a> to purchase for your <a href=\"https://www.startech.com.bd/Security-Camera\" target=\"\">security</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 4 Unit IP Camera Package</li><li>Camera: TP-Link 4 Unit IP Camera</li><li>NVR: 4 Channel Network Video Recorder (NVR)</li><li>Storage: 1000GB Hard Disk Drive</li><li>100m Cat6 &amp; Electric Cable</li></ul>",
+      "model": "4 Unit IP Camera Package",
+      "warranty": null,
+      "basePrice": 29000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "TP-Link",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "1000GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "10 unit Rj45 connector Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39374",
+          "price": 29000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Storage": "1000GB Hard Disk Drive",
+            "Connector": "10 unit Rj45 connector Good quality"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 27840.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "TP-Link 4 Unit IP Camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "4 Channel Video Recorder (NVR)",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "1000GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "N/A",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "4 unit power adapter of good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "10 unit Rj45 connector Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "100m Cat6 & Electric Cable",
+              "position": 2
+            },
+            {
+              "label": "Networking Switch",
+              "value": "8 port Networking switch",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-4-unit-ip-camera-package",
+      "sourceProductCode": "39374",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 4 Unit IP Camera Package",
+        "Camera: TP-Link 4 Unit IP Camera",
+        "NVR: 4 Channel Network Video Recorder (NVR)",
+        "Storage: 1000GB Hard Disk Drive",
+        "100m Cat6 & Electric Cable"
+      ],
+      "needsReview": false,
+      "categorySlug": "ip-camera-package",
+      "image": "/images/products/security-camera/ip-camera-package/Tp-Link/tp-link-4-unit-ip-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/ip-camera-package/Tp-Link/tp-link-4-unit-ip-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-4-unit-ip-camera-package",
+        "candidateTitle": "TP-Link 4 Unit IP Camera Package",
+        "attemptStem": "tp-link-4-unit-ip-camera-package"
+      }
+    },
+    {
+      "name": "TP-Link 6 Unit IP Camera Package",
+      "slug": "tp-link-6-unit-ip-camera-package",
+      "type": "PHYSICAL",
+      "sku": "ST-39376",
+      "description": "<h2>TP-Link 6 Unit IP Camera Package</h2><p>The TP-Link 6 Unit <a href=\"https://www.startech.com.bd/ip-camera-package\" style=\"color: rgb(0, 0, 0);\" target=\"\">IP Camera Package</a> is a complete security solution for homes and offices. This package includes six high-quality TP-Link IP cameras that provide exceptional video clarity and reliability, making it an excellent choice for detailed surveillance. These cameras are connected to a 8-channel Network Video Recorder (NVR), which allows for seamless recording and playback of footage, ensuring that all critical moments are captured and easily accessible. The TP-Link 6 Unit IP Camera Package has a 1000GB hard disk drive, which provides ample storage capacity for long-term recording without sacrificing video quality. The IP Camera Package includes four reliable power adapters, each designed to keep the cameras running smoothly. It includes 14 high-quality RJ45 connectors for secure and robust network connections. The 150-meter Cat6 networking cable is another necessary component, allowing for fast and stable data transmission over long distances. This TP-Link 6 Unit IP Camera Package ensures that the cameras and NVR function properly, even in larger setups. Additionally, a 12-port networking switch is included, allowing for the easy expansion and integration of multiple devices into your surveillance network. This TP-Link IP Camera Package is designed for ease of installation and operation, making it ideal for both professionals and first-time users. Its high-quality components ensure long-term durability and consistent performance, making it a reliable security solution. The TP-Link 6 Unit IP Camera Package combines innovative technology with user-friendly features to provide 24/7 surveillance and peace of mind.</p><h2>Buy TP-Link 6 Unit IP Camera Package from Star Tech</h2><p>In Bangladesh, you can get original <strong>TP-Link 6 Unit IP Camera Package</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/tp-link-ip-camera-package\" target=\"\">TP-Link IP Camera Package</a> to purchase for your <a href=\"https://www.startech.com.bd/Security-Camera\" target=\"\">security</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 6 Unit IP Camera Package</li><li>Camera: TP-Link 6 Unit IP Camera</li><li>NVR: 8 Channel Network Video Recorder (NVR)</li><li>Storage: 1000GB Hard Disk Drive</li><li>150m Cat6 &amp; Electric Cable</li></ul>",
+      "model": "6 Unit IP Camera Package",
+      "warranty": null,
+      "basePrice": 40000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "TP-Link",
+      "variantOptions": [
+        {
+          "name": "Storage",
+          "position": 0,
+          "values": [
+            {
+              "value": "1000GB Hard Disk Drive",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Connector",
+          "position": 1,
+          "values": [
+            {
+              "value": "14 unit Rj45 connector Good quality",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39376",
+          "price": 40000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Storage": "1000GB Hard Disk Drive",
+            "Connector": "14 unit Rj45 connector Good quality"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 38400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Camera",
+              "value": "TP-Link 6 Unit IP Camera",
+              "position": 0
+            },
+            {
+              "label": "NVR/XVR",
+              "value": "8 Channel Video Recorder (NVR)",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "1000GB Hard Disk Drive",
+              "position": 2
+            },
+            {
+              "label": "Monitor",
+              "value": "N/A",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Others",
+          "position": 1,
+          "items": [
+            {
+              "label": "Adapter",
+              "value": "6 unit power adapter of good quality",
+              "position": 0
+            },
+            {
+              "label": "Connector",
+              "value": "14 unit Rj45 connector Good quality",
+              "position": 1
+            },
+            {
+              "label": "Cable",
+              "value": "150m Cat6 & Electric Cable",
+              "position": 2
+            },
+            {
+              "label": "Networking Switch",
+              "value": "12 port Networking switch",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tp-link-6-unit-ip-camera-package",
+      "sourceProductCode": "39376",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 6 Unit IP Camera Package",
+        "Camera: TP-Link 6 Unit IP Camera",
+        "NVR: 8 Channel Network Video Recorder (NVR)",
+        "Storage: 1000GB Hard Disk Drive",
+        "150m Cat6 & Electric Cable"
+      ],
+      "needsReview": false,
+      "categorySlug": "ip-camera-package",
+      "image": "/images/products/security-camera/ip-camera-package/Tp-Link/tp-link-6-unit-ip-camera-package.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/ip-camera-package/Tp-Link/tp-link-6-unit-ip-camera-package.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tp-link-6-unit-ip-camera-package",
+        "candidateTitle": "TP-Link 6 Unit IP Camera Package",
+        "attemptStem": "tp-link-6-unit-ip-camera-package"
+      }
+    }
+  ]
+}

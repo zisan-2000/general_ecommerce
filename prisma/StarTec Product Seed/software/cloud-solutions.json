@@ -1,0 +1,1721 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/software",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\software",
+    "generatedAtUnix": 1790589365,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Software",
+      "slug": "software",
+      "parentSlug": null,
+      "image": "/images/products/software/adobe/adobe-acrobat-pro-dc-for-teams.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Cloud Solutions",
+      "slug": "cloud-solutions",
+      "parentSlug": "software",
+      "image": "/images/products/software/cloud-solutions/microsoft-365-apps-for-enterprise.jpg",
+      "isActive": true,
+      "sortOrder": 2,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Microsoft",
+      "slug": "microsoft",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Microsoft 365 Apps for Enterprise (1 Year Subscription)",
+      "slug": "microsoft-365-apps-for-enterprise",
+      "type": "PHYSICAL",
+      "sku": "ST-19141",
+      "description": "<h2 style=\"\">Microsoft 365 Apps for Enterprise</h2><div>Features: </div><div><ul><li>Always have the latest versions of word, Excel, PowerPoint, Outlook, OneNote, Publisher (Pc only), OneDrive for Business, Access (Pc only).<br/></li><li>Fully installed Office experience across PCs, Macs, Windows tablets, iPad and Android tablets and most mobile devices.<br/></li><li>Each user can install Office on 5 PCs pc or Macs, 5 tablets (Windows, iPad and Android), and 5 phones.<br/></li><li>File storage and sharing with 1 TB of One Drive storage</li></ul></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Microsoft 365 Apps for Enterprise</li><li>Built for teamwork, Work together across apps</li><li>Stay connected and work from anywhere</li><li>Harness the power of AI</li><li>Ensure compatibility and protect your data</li></ul>",
+      "model": "Microsoft 365 Apps for Enterprise",
+      "warranty": null,
+      "basePrice": 15080.0,
+      "originalPrice": 16588.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-19141",
+          "price": 15080.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 14476.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "License",
+          "position": 0,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "CSP",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 1,
+          "items": [
+            {
+              "label": "Duration",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-apps-for-enterprise",
+      "sourceProductCode": "19141",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Microsoft 365 Apps for Enterprise",
+        "Built for teamwork, Work together across apps",
+        "Stay connected and work from anywhere",
+        "Harness the power of AI",
+        "Ensure compatibility and protect your data"
+      ],
+      "needsReview": false,
+      "categorySlug": "cloud-solutions",
+      "image": "/images/products/software/cloud-solutions/microsoft-365-apps-for-enterprise.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/cloud-solutions/microsoft-365-apps-for-enterprise.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-365-apps-for-enterprise",
+        "candidateTitle": "Microsoft 365 Apps for Enterprise (1 Year Subscription)",
+        "attemptStem": "microsoft-365-apps-for-enterprise"
+      }
+    },
+    {
+      "name": "Microsoft 365 Business Standard (1 Year Subscription)",
+      "slug": "microsoft-365-business-standard",
+      "type": "PHYSICAL",
+      "sku": "ST-19140",
+      "description": "<h2 style=\"\">Microsoft 365 Business Standard (1 Year Subscription)</h2><p style=\"\">Best for businesses that need full remote work and collaboration tools including Microsoft Teams, secure cloud storage, business email, and premium Office applications across devices<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Microsoft 365 Business Standard</li><li>Teamwork and communication</li><li>Web and mobile versions of Office apps</li><li>Tools to build and manage your business</li><li>Desktop versions of Office apps for PC and Mac</li></ul>",
+      "model": "Microsoft 365 Business Standard",
+      "warranty": null,
+      "basePrice": 18499.0,
+      "originalPrice": 20444.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "PC: 1 GB RAM (32-bit); 2 GB RAM (64-bit) OSX: 4 GB RAM Android: 1 GB iOS: N/A",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "PC: 3 GB of available disk space OSX: 6 GB HFS+ hard disk format Android: N/A iOS: N/A",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-19140",
+          "price": 18499.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "PC: 1 GB RAM (32-bit); 2 GB RAM (64-bit) OSX: 4 GB RAM Android: 1 GB iOS: N/A",
+            "Storage": "PC: 3 GB of available disk space OSX: 6 GB HFS+ hard disk format Android: N/A iOS: N/A"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 17759.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "PC: 1 gigahertz (GHz) or faster x86- or x64-bit processor with SSE2 Mac: Intel processor Android: Android KitKat 4.4 or later version and have an ARM-based or Intel x86 processor. iOS: N/A",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "PC: 1 GB RAM (32-bit); 2 GB RAM (64-bit) OSX: 4 GB RAM Android: 1 GB iOS: N/A",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "PC: 3 GB of available disk space OSX: 6 GB HFS+ hard disk format Android: N/A iOS: N/A",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "PC: Windows 7 Service Pack 1, Windows 8.1, Windows 10, Windows 10 Server, Windows Server 2012 R2, Windows Server 2008 R2, or Windows Server 2012 OSX: macOS Android: OS version: KitKat (4.4.X) or above iOS: Office for iPad and iPhone requires iOS 10.0 or later. Office for iPad Pro™ requires iOS 10.0 or later.",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Display: PC: 1024 x 768 resolution OSX: 1280 x 800 resolution Android: N/A iOS: N/A",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "CSP",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 2,
+          "items": [
+            {
+              "label": "Duration",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-business-standard",
+      "sourceProductCode": "19140",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Microsoft 365 Business Standard",
+        "Teamwork and communication",
+        "Web and mobile versions of Office apps",
+        "Tools to build and manage your business",
+        "Desktop versions of Office apps for PC and Mac"
+      ],
+      "needsReview": false,
+      "categorySlug": "cloud-solutions",
+      "image": "/images/products/software/cloud-solutions/microsoft-365-business-standard.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/cloud-solutions/microsoft-365-business-standard.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-365-business-standard",
+        "candidateTitle": "Microsoft 365 Business Standard (1 Year Subscription)",
+        "attemptStem": "microsoft-365-business-standard"
+      }
+    },
+    {
+      "name": "Microsoft 365 Enterprise E3 (1 Year Subscription)",
+      "slug": "microsoft-365-enterprise-e3",
+      "type": "PHYSICAL",
+      "sku": "ST-17979",
+      "description": "<h2 style=\"text-align: justify; \">Microsoft 365 Enterprise E3 (1 Year Subscription)</h2><div><div style=\"text-align: justify;\"><span style='font-family: \"Segoe UI\", system-ui, \"Apple Color Emoji\", \"Segoe UI Emoji\", sans-serif; font-size: 14px;'>Microsoft 365 E3 combines best-in-class productivity apps with core security and compliance capabilities. Improve productivity and foster a culture of collaboration with connected experiences. Transform how you manage your business and enhance customer relationships with integrated workflows. Proactively protect your employees, data, and customer information with intelligent security. Microsoft 365 combines best-in-class productivity apps with intelligent cloud services to transform the way you work. Experience the most powerful operating system with built-in security, manageability, and productivity features. The Office for mobile combines Word, Excel, and PowerPoint with exclusive features to make it your go-to productivity app. Connect and stay organized with email, calendar, and contacts all in one place with Outlook. Deploy software, protect data, monitor health, and enforce compliance across all devices in your organization within a unified management console. It comes with a 1-year subscription.</span><br/></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Microsoft 365 Enterprise E3</li><li>Email and calendars</li><li>File storage and sharing</li><li>Hub for teamwork</li></ul>",
+      "model": "Microsoft 365 Enterprise E3",
+      "warranty": null,
+      "basePrice": 58000.0,
+      "originalPrice": 63999.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-17979",
+          "price": 58000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+            "Storage": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time."
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 55680.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Windows OS: 1.6 GHz or faster, 2-core. 2 GHz or greater recommended for Skype for Business macOS: Intel processor",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time.",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows OS: Windows 10 SAC, Windows 8.1, Windows Server 2019 or Windows Server 2016. Please note Microsoft 365 Apps for enterprise will be supported on Windows Server 2019 or Windows Server 2016 through October 2025. macOS: One of the three most recent versions of macOS. When a new version of macOS is released, the macOS requirement becomes one of the then-current three most recent versions: the new version of macOS and the previous two versions.",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Windows OS: Graphics hardware acceleration requires DirectX 9 or later, with WDDM 2.0 or higher for Windows 10 (or WDDM 1.3 or higher for Windows 10 Fall Creators Update). Skype for Business requires DirectX 9 or later, 128 MB graphics memory, and 32-bits-per-pixel-capable format. macOS: No graphics requirements.",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "CSP",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 2,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "1 user",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-enterprise-e3",
+      "sourceProductCode": "17979",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Microsoft 365 Enterprise E3",
+        "Email and calendars",
+        "File storage and sharing",
+        "Hub for teamwork"
+      ],
+      "needsReview": false,
+      "categorySlug": "cloud-solutions",
+      "image": "/images/products/software/cloud-solutions/microsoft-365-enterprise-e3.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/cloud-solutions/microsoft-365-enterprise-e3.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-365-enterprise-e3",
+        "candidateTitle": "Microsoft 365 Enterprise E3 (1 Year Subscription)",
+        "attemptStem": "microsoft-365-enterprise-e3"
+      }
+    },
+    {
+      "name": "Microsoft 365 Enterprise E5 (1 Year Subscription)",
+      "slug": "microsoft-365-enterprise-e5",
+      "type": "PHYSICAL",
+      "sku": "ST-19199",
+      "description": "<h2 style=\"text-align: justify; \">Microsoft 365 Enterprise E5 (1 Year Subscription)</h2><div><div style=\"text-align: justify; \">Microsoft 365 E5 combines best-in-class productivity apps with core security and compliance capabilities. Improve productivity and foster a culture of collaboration with connected experiences. Transform how you manage your business and enhance customer relationships with integrated workflows. Proactively protect your employees, data, and customer information with intelligent security. Microsoft 365 combines best-in-class productivity apps with intelligent cloud services to transform the way you work. Experience the most powerful operating system with built-in security, manageability, and productivity features. The Office for mobile combines Word, Excel, and PowerPoint with exclusive features to make it your go-to productivity app. Connect and stay organized with email, calendar, and contacts all in one place with Outlook. Deploy software, protect data, monitor health, and enforce compliance across all devices in your organization within a unified management console. It comes with a 1-year subscription.<br/></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Microsoft 365 Enterprise E5</li><li>Microsoft 365 Apps</li><li>Meetings and voice</li><li>Email and calendars</li><li>Threat protection</li></ul>",
+      "model": "Microsoft 365 Enterprise E5",
+      "warranty": null,
+      "basePrice": 72230.0,
+      "originalPrice": 79453.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-19199",
+          "price": 72230.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+            "Storage": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time."
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 69340.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Windows OS: 1.6 GHz or faster, 2-core. 2 GHz or greater recommended for Skype for Business macOS: Intel processor",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time.",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows OS: Windows 10 SAC, Windows 8.1, Windows Server 2019 or Windows Server 2016. Please note Microsoft 365 Apps for enterprise will be supported on Windows Server 2019 or Windows Server 2016 through October 2025. macOS: One of the three most recent versions of macOS. When a new version of macOS is released, the macOS requirement becomes one of the then-current three most recent versions: the new version of macOS and the previous two versions.",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Windows OS: Graphics hardware acceleration requires DirectX 9 or later, with WDDM 2.0 or higher for Windows 10 (or WDDM 1.3 or higher for Windows 10 Fall Creators Update). Skype for Business requires DirectX 9 or later, 128 MB graphics memory, and 32-bits-per-pixel-capable format. macOS: No graphics requirements.",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "CSP",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 2,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "1 user",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-enterprise-e5",
+      "sourceProductCode": "19199",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Microsoft 365 Enterprise E5",
+        "Microsoft 365 Apps",
+        "Meetings and voice",
+        "Email and calendars",
+        "Threat protection"
+      ],
+      "needsReview": false,
+      "categorySlug": "cloud-solutions",
+      "image": "/images/products/software/cloud-solutions/microsoft-365-enterprise-e5.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/cloud-solutions/microsoft-365-enterprise-e5.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-365-enterprise-e5",
+        "candidateTitle": "Microsoft 365 Enterprise E5 (1 Year Subscription)",
+        "attemptStem": "microsoft-365-enterprise-e5"
+      }
+    },
+    {
+      "name": "Microsoft 365 F1 (1 Year Subscription)",
+      "slug": "microsoft-365-f1",
+      "type": "PHYSICAL",
+      "sku": "ST-19208",
+      "description": "<h2 style=\"text-align: justify; \">Microsoft 365 F1 (1 Year Subscription)</h2><div><p style=\"text-align: justify; \">Microsoft 365 F1 combines best-in-class productivity apps with core security and compliance capabilities. Improve productivity and foster a culture of collaboration with connected experiences. Transform how you manage your business and enhance customer relationships with integrated workflows. Proactively protect your employees, data, and customer information with intelligent security. Microsoft 365 combines best-in-class productivity apps with intelligent cloud services to transform the way you work. Experience the most powerful operating system with built-in security, manageability, and productivity features. The Office for mobile combines Word, Excel, and PowerPoint with exclusive features to make it your go-to productivity app. Connect and stay organized with email, calendar, and contacts all in one place with Outlook. Deploy software, protect data, monitor health, and enforce compliance across all devices in your organization within a unified management console. It comes with a 1-year subscription.</p></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Microsoft 365 F1</li><li>Connect your workforce</li><li>Social and intranet</li><li>Meetings and voice</li><li>Security management</li></ul>",
+      "model": "Microsoft 365 F1",
+      "warranty": null,
+      "basePrice": 4200.0,
+      "originalPrice": 4650.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "Windows: 4GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "Windows: 4.0 GB of available disk space macOS: 10 GB of available disk space. HFS+ hard disk format (also known as macOS Extended or APFS)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-19208",
+          "price": 4200.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "Windows: 4GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+            "Storage": "Windows: 4.0 GB of available disk space macOS: 10 GB of available disk space. HFS+ hard disk format (also known as macOS Extended or APFS)"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4032.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Windows: 1.6 gigahertz (GHz) or faster, 2-core macOS: Intel processor",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "Windows: 4GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "Windows: 4.0 GB of available disk space macOS: 10 GB of available disk space. HFS+ hard disk format (also known as macOS Extended or APFS)",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows: Windows 10 SAC, Windows 10 LTSB 2016, Windows 10 LTSB 2015, Windows 8.1, Windows 7 Service Pack 1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2. Please note Microsoft 365 Apps for enterprise will not be supported on Windows 10 LTSC 2019 at release. Microsoft 365 Apps for enterprise will not be supported on any Windows 10 LTSC/LTSB version or on Windows Server 2012 R2 or older after January 2020. Microsoft 365 Apps for enterprise will be supported on Windows Server 2016 through October 2025. macOS: Office for Mac is supported on the three most recent versions of macOS. When a new version of macOS is released, the Office for Mac Operating System requirement becomes the then-current three most recent versions: the new version of macOS and the previous versions.",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Windows OS: Graphics hardware acceleration requires DirectX 9 or later, with WDDM 2.0 or higher for Windows 10 (or WDDM 1.3 or higher for Windows 10 Fall Creators Update). Skype for Business requires DirectX 9 or later, 128 MB graphics memory, and 32-bits-per-pixel-capable format. macOS: No graphics requirements.",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "CSP",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 2,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "1 user",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-f1",
+      "sourceProductCode": "19208",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Microsoft 365 F1",
+        "Connect your workforce",
+        "Social and intranet",
+        "Meetings and voice",
+        "Security management"
+      ],
+      "needsReview": false,
+      "categorySlug": "cloud-solutions",
+      "image": "/images/products/software/cloud-solutions/microsoft-365-f1.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/cloud-solutions/microsoft-365-f1.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-365-f1",
+        "candidateTitle": "Microsoft 365 F1 (1 Year Subscription)",
+        "attemptStem": "microsoft-365-f1"
+      }
+    },
+    {
+      "name": "Microsoft 365 F3 (1 Year Subscription)",
+      "slug": "microsoft-365-f3",
+      "type": "PHYSICAL",
+      "sku": "ST-19206",
+      "description": "<h2 style=\"text-align: justify; \">Microsoft 365 F3 (1 Year Subscription)</h2><div><p style=\"text-align: justify; \">Microsoft 365 F3 combines best-in-class productivity apps with core security and compliance capabilities. Improve productivity and foster a culture of collaboration with connected experiences. Transform how you manage your business and enhance customer relationships with integrated workflows. Proactively protect your employees, data, and customer information with intelligent security. Microsoft 365 combines best-in-class productivity apps with intelligent cloud services to transform the way you work. Experience the most powerful operating system with built-in security, manageability, and productivity features. The Office for mobile combines Word, Excel, and PowerPoint with exclusive features to make it your go-to productivity app. Connect and stay organized with email, calendar, and contacts all in one place with Outlook. Deploy software, protect data, monitor health, and enforce compliance across all devices in your organization within a unified management console. It comes with a 1-year subscription.</p></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Microsoft 365 F3</li><li>Connect your workforce</li><li>Empower with devices</li><li>Protect your organization</li><li>Work management</li></ul>",
+      "model": "Microsoft 365 F3",
+      "warranty": null,
+      "basePrice": 10390.0,
+      "originalPrice": 11429.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "Windows: 4GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "Windows: 4.0 GB of available disk space macOS: 10 GB of available disk space. HFS+ hard disk format (also known as macOS Extended or APFS)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-19206",
+          "price": 10390.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "Windows: 4GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+            "Storage": "Windows: 4.0 GB of available disk space macOS: 10 GB of available disk space. HFS+ hard disk format (also known as macOS Extended or APFS)"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 9974.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Windows: 1.6 gigahertz (GHz) or faster, 2-core macOS: Intel processor",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "Windows: 4GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "Windows: 4.0 GB of available disk space macOS: 10 GB of available disk space. HFS+ hard disk format (also known as macOS Extended or APFS)",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows: Windows 10 SAC, Windows 10 LTSB 2016, Windows 10 LTSB 2015, Windows 8.1, Windows 7 Service Pack 1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2. Please note Microsoft 365 Apps for enterprise will not be supported on Windows 10 LTSC 2019 at release. Microsoft 365 Apps for enterprise will not be supported on any Windows 10 LTSC/LTSB version or on Windows Server 2012 R2 or older after January 2020. Microsoft 365 Apps for enterprise will be supported on Windows Server 2016 through October 2025. macOS: Office for Mac is supported on the three most recent versions of macOS. When a new version of macOS is released, the Office for Mac Operating System requirement becomes the then-current three most recent versions: the new version of macOS and the previous versions.",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Windows OS: Graphics hardware acceleration requires DirectX 9 or later, with WDDM 2.0 or higher for Windows 10 (or WDDM 1.3 or higher for Windows 10 Fall Creators Update). Skype for Business requires DirectX 9 or later, 128 MB graphics memory, and 32-bits-per-pixel-capable format. macOS: No graphics requirements.",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "CSP",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 2,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "1 user",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-f3",
+      "sourceProductCode": "19206",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Microsoft 365 F3",
+        "Connect your workforce",
+        "Empower with devices",
+        "Protect your organization",
+        "Work management"
+      ],
+      "needsReview": false,
+      "categorySlug": "cloud-solutions",
+      "image": "/images/products/software/cloud-solutions/microsoft-365-f3.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/cloud-solutions/microsoft-365-f3.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-365-f3",
+        "candidateTitle": "Microsoft 365 F3 (1 Year Subscription)",
+        "attemptStem": "microsoft-365-f3"
+      }
+    },
+    {
+      "name": "Office 365 Enterprise E1 (1 Year Subscription)",
+      "slug": "microsoft-office-365-enterprise-e1",
+      "type": "PHYSICAL",
+      "sku": "ST-19200",
+      "description": "<h2 style=\"text-align: justify; \">Office 365 Enterprise E1 (1 Year Subscription)</h2><div><p style=\"text-align: justify; \">The Office 365 E1 combines best-in-class productivity apps with core security and compliance capabilities. Improve productivity and foster a culture of collaboration with connected experiences. Transform how you manage your business and enhance customer relationships with integrated workflows. Proactively protect your employees, data, and customer information with intelligent security. Microsoft 365 combines best-in-class productivity apps with intelligent cloud services to transform the way you work. Experience the most powerful operating system with built-in security, manageability, and productivity features. The Office for mobile combines Word, Excel, and PowerPoint with exclusive features to make it your go-to productivity app. Connect and stay organized with email, calendar, and contacts all in one place with Outlook. Deploy software, protect data, monitor health, and enforce compliance across all devices in your organization within a unified management console. It comes with a 1-year subscription.</p></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Office 365 Enterprise E1</li><li>Email, file storage, and sharing</li><li>Office on the web</li><li>Meetings and IM</li><li>Work management</li></ul>",
+      "model": "Office 365 Enterprise E1",
+      "warranty": null,
+      "basePrice": 14055.0,
+      "originalPrice": 15462.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-19200",
+          "price": 14055.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+            "Storage": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time."
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 13492.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Windows OS: 1.6 GHz or faster, 2-core. 2 GHz or greater recommended for Skype for Business macOS: Intel processor",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time.",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows OS: Windows 10 SAC, Windows 8.1, Windows Server 2019 or Windows Server 2016. Please note Microsoft 365 Apps for enterprise will be supported on Windows Server 2019 or Windows Server 2016 through October 2025. macOS: One of the three most recent versions of macOS. When a new version of macOS is released, the macOS requirement becomes one of the then-current three most recent versions: the new version of macOS and the previous two versions.",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Windows OS: Graphics hardware acceleration requires DirectX 9 or later, with WDDM 2.0 or higher for Windows 10 (or WDDM 1.3 or higher for Windows 10 Fall Creators Update). Skype for Business requires DirectX 9 or later, 128 MB graphics memory, and 32-bits-per-pixel-capable format. macOS: No graphics requirements.",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "CSP",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 2,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "1 user",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-365-enterprise-e1",
+      "sourceProductCode": "19200",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Office 365 Enterprise E1",
+        "Email, file storage, and sharing",
+        "Office on the web",
+        "Meetings and IM",
+        "Work management"
+      ],
+      "needsReview": false,
+      "categorySlug": "cloud-solutions",
+      "image": "/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e1.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e1.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-office-365-enterprise-e1",
+        "candidateTitle": "Office 365 Enterprise E1 (1 Year Subscription)",
+        "attemptStem": "microsoft-office-365-enterprise-e1"
+      }
+    },
+    {
+      "name": "Office 365 Enterprise E3 (1 Year Subscription)",
+      "slug": "microsoft-office-365-enterprise-e3",
+      "type": "PHYSICAL",
+      "sku": "ST-19202",
+      "description": "<h2 style=\"text-align: justify; \">Office 365 Enterprise E3 (1 Year Subscription)</h2><div><p style=\"text-align: justify; \">Office 365 E3 combines best-in-class productivity apps with core security and compliance capabilities. Improve productivity and foster a culture of collaboration with connected experiences. Transform how you manage your business and enhance customer relationships with integrated workflows. Proactively protect your employees, data, and customer information with intelligent security. Microsoft 365 combines best-in-class productivity apps with intelligent cloud services to transform the way you work. Experience the most powerful operating system with built-in security, manageability, and productivity features. The Office for mobile combines Word, Excel, and PowerPoint with exclusive features to make it your go-to productivity app. Connect and stay organized with email, calendar, and contacts all in one place with Outlook. Deploy software, protect data, monitor health, and enforce compliance across all devices in your organization within a unified management console. It comes with a 1-year subscription.</p></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Office 365 Enterprise E3</li><li>All features of Microsoft 365 Apps for enterprise and Office 365 E1</li><li>Email, file storage, and sharing</li><li>Office on the web</li><li>Security and compliance</li></ul>",
+      "model": "Office 365 Enterprise E3",
+      "warranty": null,
+      "basePrice": 39599.0,
+      "originalPrice": 43799.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-19202",
+          "price": 39599.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+            "Storage": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time."
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 38015.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Windows OS: 1.6 GHz or faster, 2-core. 2 GHz or greater recommended for Skype for Business macOS: Intel processor",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time.",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows OS: Windows 10 SAC, Windows 8.1, Windows Server 2019 or Windows Server 2016. Please note Microsoft 365 Apps for enterprise will be supported on Windows Server 2019 or Windows Server 2016 through October 2025. macOS: One of the three most recent versions of macOS. When a new version of macOS is released, the macOS requirement becomes one of the then-current three most recent versions: the new version of macOS and the previous two versions.",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Windows OS: Graphics hardware acceleration requires DirectX 9 or later, with WDDM 2.0 or higher for Windows 10 (or WDDM 1.3 or higher for Windows 10 Fall Creators Update). Skype for Business requires DirectX 9 or later, 128 MB graphics memory, and 32-bits-per-pixel-capable format. macOS: No graphics requirements.",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "CSP",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 2,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "1 user",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-365-enterprise-e3",
+      "sourceProductCode": "19202",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Office 365 Enterprise E3",
+        "All features of Microsoft 365 Apps for enterprise and Office 365 E1",
+        "Email, file storage, and sharing",
+        "Office on the web",
+        "Security and compliance"
+      ],
+      "needsReview": false,
+      "categorySlug": "cloud-solutions",
+      "image": "/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e3.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e3.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-office-365-enterprise-e3",
+        "candidateTitle": "Office 365 Enterprise E3 (1 Year Subscription)",
+        "attemptStem": "microsoft-office-365-enterprise-e3"
+      }
+    },
+    {
+      "name": "Office 365 Enterprise E5 (1 Year Subscription)",
+      "slug": "microsoft-office-365-enterprise-e5",
+      "type": "PHYSICAL",
+      "sku": "ST-19203",
+      "description": "<h2 style=\"text-align: justify; \">Office 365 Enterprise E5 (1 Year Subscription)</h2><div><p style=\"text-align: justify; \">The Office 365 E5 combines best-in-class productivity apps with core security and compliance capabilities. Improve productivity and foster a culture of collaboration with connected experiences. Transform how you manage your business and enhance customer relationships with integrated workflows. Proactively protect your employees, data, and customer information with intelligent security. Microsoft 365 combines best-in-class productivity apps with intelligent cloud services to transform the way you work. Experience the most powerful operating system with built-in security, manageability, and productivity features. The Office for mobile combines Word, Excel, and PowerPoint with exclusive features to make it your go-to productivity app. Connect and stay organized with email, calendar, and contacts all in one place with Outlook. Deploy software, protect data, monitor health, and enforce compliance across all devices in your organization within a unified management console. It comes with a 1-year subscription.</p></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Office 365 Enterprise E5</li><li>All the features of Office 365 E3</li><li>Advanced security</li><li>Analytics</li><li>Voice capabilities</li></ul>",
+      "model": "Office 365 Enterprise E5",
+      "warranty": null,
+      "basePrice": 52500.0,
+      "originalPrice": 57750.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-19203",
+          "price": 52500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+            "Storage": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time."
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 50400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Windows OS: 1.6 GHz or faster, 2-core. 2 GHz or greater recommended for Skype for Business macOS: Intel processor",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "Windows OS: 4 GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "Windows OS: 4 GB of available disk space macOS: 10 GB of available disk space; HFS+ hard disk format (also known as macOS Extended) or APFS Updates may require additional storage over time.",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows OS: Windows 10 SAC, Windows 8.1, Windows Server 2019 or Windows Server 2016. Please note Microsoft 365 Apps for enterprise will be supported on Windows Server 2019 or Windows Server 2016 through October 2025. macOS: One of the three most recent versions of macOS. When a new version of macOS is released, the macOS requirement becomes one of the then-current three most recent versions: the new version of macOS and the previous two versions.",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Windows OS: Graphics hardware acceleration requires DirectX 9 or later, with WDDM 2.0 or higher for Windows 10 (or WDDM 1.3 or higher for Windows 10 Fall Creators Update). Skype for Business requires DirectX 9 or later, 128 MB graphics memory, and 32-bits-per-pixel-capable format. macOS: No graphics requirements.",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "CSP",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 2,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "1 user",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-365-enterprise-e5",
+      "sourceProductCode": "19203",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Office 365 Enterprise E5",
+        "All the features of Office 365 E3",
+        "Advanced security",
+        "Analytics",
+        "Voice capabilities"
+      ],
+      "needsReview": false,
+      "categorySlug": "cloud-solutions",
+      "image": "/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e5.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/cloud-solutions/microsoft-office-365-enterprise-e5.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-office-365-enterprise-e5",
+        "candidateTitle": "Office 365 Enterprise E5 (1 Year Subscription)",
+        "attemptStem": "microsoft-office-365-enterprise-e5"
+      }
+    },
+    {
+      "name": "Office 365 F3 (1 Year Subscription)",
+      "slug": "microsoft-office-365-f3",
+      "type": "PHYSICAL",
+      "sku": "ST-19204",
+      "description": "<h2 style=\"text-align: justify; \">Office 365 F3 (1 Year Subscription)</h2><div><p style=\"text-align: justify; \">The Office 365 F3 combines best-in-class productivity apps with core security and compliance capabilities. Improve productivity and foster a culture of collaboration with connected experiences. Transform how you manage your business and enhance customer relationships with integrated workflows. Proactively protect your employees, data, and customer information with intelligent security. Microsoft 365 combines best-in-class productivity apps with intelligent cloud services to transform the way you work. Experience the most powerful operating system with built-in security, manageability, and productivity features. The Office for mobile combines Word, Excel, and PowerPoint with exclusive features to make it your go-to productivity app. Connect and stay organized with email, calendar, and contacts all in one place with Outlook. Deploy software, protect data, monitor health, and enforce compliance across all devices in your organization within a unified management console. It comes with a 1-year subscription.</p></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Office 365 F3</li><li>Office web and mobile apps</li><li>One hub for teamwork with Microsoft Teams</li><li>Business class-email</li><li>Five layers of security and monitoring</li></ul>",
+      "model": "Office 365 F3",
+      "warranty": null,
+      "basePrice": 5250.0,
+      "originalPrice": 5775.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "Windows: 4GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "Windows: 4.0 GB of available disk space macOS: 10 GB of available disk space. HFS+ hard disk format (also known as macOS Extended or APFS)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-19204",
+          "price": 5250.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "Windows: 4GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+            "Storage": "Windows: 4.0 GB of available disk space macOS: 10 GB of available disk space. HFS+ hard disk format (also known as macOS Extended or APFS)"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 5040.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Requirements",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Windows: 1.6 gigahertz (GHz) or faster, 2-core macOS: Intel processor",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "Windows: 4GB RAM; 2 GB RAM (32-bit) macOS: 4 GB RAM",
+              "position": 1
+            },
+            {
+              "label": "Storage",
+              "value": "Windows: 4.0 GB of available disk space macOS: 10 GB of available disk space. HFS+ hard disk format (also known as macOS Extended or APFS)",
+              "position": 2
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows: Windows 10 SAC, Windows 10 LTSB 2016, Windows 10 LTSB 2015, Windows 8.1, Windows 7 Service Pack 1, Windows Server 2016, Windows Server 2012 R2, Windows Server 2012, or Windows Server 2008 R2. Please note Microsoft 365 Apps for enterprise will not be supported on Windows 10 LTSC 2019 at release. Microsoft 365 Apps for enterprise will not be supported on any Windows 10 LTSC/LTSB version or on Windows Server 2012 R2 or older after January 2020. Microsoft 365 Apps for enterprise will be supported on Windows Server 2016 through October 2025. macOS: Office for Mac is supported on the three most recent versions of macOS. When a new version of macOS is released, the Office for Mac Operating System requirement becomes the then-current three most recent versions: the new version of macOS and the previous versions.",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Windows OS: Graphics hardware acceleration requires DirectX 9 or later, with WDDM 2.0 or higher for Windows 10 (or WDDM 1.3 or higher for Windows 10 Fall Creators Update). Skype for Business requires DirectX 9 or later, 128 MB graphics memory, and 32-bits-per-pixel-capable format. macOS: No graphics requirements.",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "License",
+          "position": 1,
+          "items": [
+            {
+              "label": "License Type",
+              "value": "CSP",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Subscription",
+          "position": 2,
+          "items": [
+            {
+              "label": "Number of User",
+              "value": "1 user",
+              "position": 0
+            },
+            {
+              "label": "Duration",
+              "value": "1 year",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-365-f3",
+      "sourceProductCode": "19204",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Office 365 F3",
+        "Office web and mobile apps",
+        "One hub for teamwork with Microsoft Teams",
+        "Business class-email",
+        "Five layers of security and monitoring"
+      ],
+      "needsReview": false,
+      "categorySlug": "cloud-solutions",
+      "image": "/images/products/software/cloud-solutions/microsoft-office-365-f3.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/cloud-solutions/microsoft-office-365-f3.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "microsoft-office-365-f3",
+        "candidateTitle": "Office 365 F3 (1 Year Subscription)",
+        "attemptStem": "microsoft-office-365-f3"
+      }
+    },
+    {
+      "name": "Microsoft 365 Apps for Business (1 Year Subscription)",
+      "slug": "ms-office-365",
+      "type": "PHYSICAL",
+      "sku": "ST-7706",
+      "description": "<h2 style=\"\">Microsoft 365 Apps for Business</h2><div>Features: </div><div><ul><li>Always have the latest versions of word, Excel, PowerPoint, Outlook, OneNote, Publisher (Pc only), OneDrive for Business, Access (Pc only).<br/></li><li>Fully installed Office experience across PCs, Macs, Windows tablets, iPad and Android tablets and most mobile devices.<br/></li><li>Each user can install Office on 5 PCs pc or Macs, 5 tablets (Windows, iPad and Android), and 5 phones.<br/></li><li>File storage and sharing with 1 TB of One Drive storage</li></ul></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Microsoft 365 Apps for business</li><li>Word</li><li>Excel</li><li>PowerPoint</li><li>Outlook</li></ul>",
+      "model": "Microsoft 365 Apps for business",
+      "warranty": null,
+      "basePrice": 14500.0,
+      "originalPrice": 15950.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-7706",
+          "price": 14500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 13920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Microsoft 365 Apps for business",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ms-office-365",
+      "sourceProductCode": "7706",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Microsoft 365 Apps for business",
+        "Word",
+        "Excel",
+        "PowerPoint",
+        "Outlook"
+      ],
+      "needsReview": false,
+      "categorySlug": "cloud-solutions",
+      "image": "/images/products/software/cloud-solutions/ms-office-365.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/cloud-solutions/ms-office-365.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ms-office-365",
+        "candidateTitle": "Microsoft 365 Apps for Business (1 Year Subscription)",
+        "attemptStem": "ms-office-365"
+      }
+    },
+    {
+      "name": "Microsoft 365 Business Premium (1 Year Subscription)",
+      "slug": "ms-office-365-business-premium",
+      "type": "PHYSICAL",
+      "sku": "ST-7707",
+      "description": "<div class=\"video-wrapper\"><span style=\"color: inherit; font-family: inherit; font-size: 25px;\">Microsoft 365 Business Premium </span></div><span style=\"font-weight: 700;\">Feature:<br/></span><div><ul><li>Email hosting with 50 GB mailbox and custom email domain address<br/></li><li>Desktop versions of Office 2016 applications: Outlook, Word, Excel, PowerPoint, OneNote, plus Access and Publisher for PC only<br/></li><li>Web versions of Word, Excel, and PowerPoint<br/></li><li>One license covers 5 phones, 5 tablets, and 5 PCs or Macs<br/></li><li>File storage and sharing with 1 TB of OneDrive storage<br/></li><li>Wide intranet and team sites with SharePoint<br/></li><li>Host online and video conferencing meetings for up to 250 people Tooltip about Skype for Business compatibility<br/></li><li>Get a hub for teamwork with Microsoft Teams<br/></li><li>Let customers schedule appointments online with Microsoft Bookings<br/></li><li>Collaborate across departments and locations with Yammer<br/></li><li>Manage tasks and teamwork with Microsoft Planner<br/></li><li>Manage schedules and daily staff work tasks with Microsoft StaffHub.<br/></li></ul></div><div><br/></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Microsoft 365 Business Premium</li><li>Teamwork and communication</li><li>Web and mobile versions of Office apps</li><li>Advanced threat protection</li><li>PC and mobile device management</li></ul>",
+      "model": "Microsoft 365 Business Premium",
+      "warranty": null,
+      "basePrice": 31365.0,
+      "originalPrice": 32933.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-7707",
+          "price": 31365.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 30110.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Microsoft 365 Business Premium",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ms-office-365-business-premium",
+      "sourceProductCode": "7707",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Microsoft 365 Business Premium",
+        "Teamwork and communication",
+        "Web and mobile versions of Office apps",
+        "Advanced threat protection",
+        "PC and mobile device management"
+      ],
+      "needsReview": false,
+      "categorySlug": "cloud-solutions",
+      "image": "/images/products/software/cloud-solutions/ms-office-365-business-premium.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/cloud-solutions/ms-office-365-business-premium.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ms-office-365-business-premium",
+        "candidateTitle": "Microsoft 365 Business Premium (1 Year Subscription)",
+        "attemptStem": "ms-office-365-business-premium"
+      }
+    },
+    {
+      "name": "Microsoft 365 Business Basic (1 Year Subscription)",
+      "slug": "office-365-business-essential",
+      "type": "PHYSICAL",
+      "sku": "ST-7708",
+      "description": "<div><h2 style=\"\">Microsoft 365 Business Basic</h2><span style=\"font-weight: 700;\">Features:</span></div><div><div style=\"\"><ul><li>Email hosting with 50 GB mailbox and custom email domain address<br/></li><li>Desktop versions of applications not included<br/></li><li>File storage and sharing with 1 TB of One Drive storage<br/></li><li>Wide intranet and team sites with SharePoint<br/></li><li>Host online and video conferencing meetings for up to 250 people<br/></li><li>Get a hub for teamwork with Microsoft Teams<br/></li><li>Collaborate across departments and locations with Yammer<br/></li><li>Manage tasks and teamwork with Microsoft Planner<br/></li></ul></div><div style=\"font-weight: 700;\"><br/></div><br/></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Microsoft 365 Business Basic</li><li>Web and mobile versions of Office apps</li><li>Email and calendaring</li><li>File storage and sharing</li><li>Security and compliance</li></ul>",
+      "model": "Microsoft 365 Business Basic",
+      "warranty": null,
+      "basePrice": 5200.0,
+      "originalPrice": 5750.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Microsoft",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-7708",
+          "price": 5200.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4992.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Microsoft 365 Business Basic",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/office-365-business-essential",
+      "sourceProductCode": "7708",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Microsoft 365 Business Basic",
+        "Web and mobile versions of Office apps",
+        "Email and calendaring",
+        "File storage and sharing",
+        "Security and compliance"
+      ],
+      "needsReview": false,
+      "categorySlug": "cloud-solutions",
+      "image": "/images/products/software/cloud-solutions/office-365-business-essential.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/software/cloud-solutions/office-365-business-essential.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "office-365-business-essential",
+        "candidateTitle": "Microsoft 365 Business Basic (1 Year Subscription)",
+        "attemptStem": "office-365-business-essential"
+      }
+    }
+  ]
+}

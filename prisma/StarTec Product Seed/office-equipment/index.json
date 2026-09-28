@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/office-equipment",
+  "imageFolder": "/images/products/office-equipment/barcode-scanner/_direct",
+  "groups": [
+    {
+      "name": "barcode-scanner",
+      "file": "barcode-scanner.json",
+      "status": "completed",
+      "products": 67,
+      "matched": 67,
+      "unmatched": 0
+    },
+    {
+      "name": "binding-machine",
+      "file": "binding-machine.json",
+      "status": "completed",
+      "products": 7,
+      "matched": 7,
+      "unmatched": 0
+    },
+    {
+      "name": "cartridge",
+      "file": "cartridge.json",
+      "status": "completed",
+      "products": 53,
+      "matched": 53,
+      "unmatched": 0
+    },
+    {
+      "name": "cash-drawer",
+      "file": "cash-drawer.json",
+      "status": "completed",
+      "products": 18,
+      "matched": 18,
+      "unmatched": 0
+    },
+    {
+      "name": "conference-system",
+      "file": "conference-system.json",
+      "status": "completed",
+      "products": 111,
+      "matched": 111,
+      "unmatched": 0
+    },
+    {
+      "name": "digital-weight-machine",
+      "file": "digital-weight-machine.json",
+      "status": "completed",
+      "products": 1,
+      "matched": 1,
+      "unmatched": 0
+    },
+    {
+      "name": "id-card-printer",
+      "file": "id-card-printer.json",
+      "status": "completed",
+      "products": 10,
+      "matched": 10,
+      "unmatched": 0
+    },
+    {
+      "name": "ink-bottle",
+      "file": "ink-bottle.json",
+      "status": "completed",
+      "products": 70,
+      "matched": 70,
+      "unmatched": 0
+    },
+    {
+      "name": "interactive-flat-panel",
+      "file": "interactive-flat-panel.json",
+      "status": "completed",
+      "products": 169,
+      "matched": 169,
+      "unmatched": 0
+    },
+    {
+      "name": "ip-phone",
+      "file": "ip-phone.json",
+      "status": "completed",
+      "products": 141,
+      "matched": 141,
+      "unmatched": 0
+    },
+    {
+      "name": "kiosk",
+      "file": "kiosk.json",
+      "status": "completed",
+      "products": 12,
+      "matched": 12,
+      "unmatched": 0
+    },
+    {
+      "name": "label-printer",
+      "file": "label-printer.json",
+      "status": "completed",
+      "products": 57,
+      "matched": 57,
+      "unmatched": 0
+    },
+    {
+      "name": "laminating-machine",
+      "file": "laminating-machine.json",
+      "status": "completed",
+      "products": 16,
+      "matched": 16,
+      "unmatched": 0
+    },
+    {
+      "name": "large-format-printer",
+      "file": "large-format-printer.json",
+      "status": "completed",
+      "products": 5,
+      "matched": 5,
+      "unmatched": 0
+    },
+    {
+      "name": "money-counting-machine",
+      "file": "money-counting-machine.json",
+      "status": "completed",
+      "products": 35,
+      "matched": 35,
+      "unmatched": 0
+    },
+    {
+      "name": "pa-system",
+      "file": "pa-system.json",
+      "status": "completed",
+      "products": 33,
+      "matched": 33,
+      "unmatched": 0
+    },
+    {
+      "name": "pabx-system",
+      "file": "pabx-system.json",
+      "status": "completed",
+      "products": 36,
+      "matched": 36,
+      "unmatched": 0
+    },
+    {
+      "name": "paper-shredder",
+      "file": "paper-shredder.json",
+      "status": "completed",
+      "products": 32,
+      "matched": 32,
+      "unmatched": 0
+    },
+    {
+      "name": "photocopier",
+      "file": "photocopier.json",
+      "status": "completed",
+      "products": 79,
+      "matched": 79,
+      "unmatched": 0
+    },
+    {
+      "name": "pos-printer",
+      "file": "pos-printer.json",
+      "status": "completed",
+      "products": 96,
+      "matched": 96,
+      "unmatched": 0
+    },
+    {
+      "name": "printer",
+      "file": "printer.json",
+      "status": "completed",
+      "products": 302,
+      "matched": 302,
+      "unmatched": 0
+    },
+    {
+      "name": "printer-drum",
+      "file": "printer-drum.json",
+      "status": "completed",
+      "products": 11,
+      "matched": 11,
+      "unmatched": 0
+    },
+    {
+      "name": "printer-paper",
+      "file": "printer-paper.json",
+      "status": "completed",
+      "products": 32,
+      "matched": 32,
+      "unmatched": 0
+    },
+    {
+      "name": "projector",
+      "file": "projector.json",
+      "status": "completed",
+      "products": 219,
+      "matched": 219,
+      "unmatched": 0
+    },
+    {
+      "name": "ribbon",
+      "file": "ribbon.json",
+      "status": "completed",
+      "products": 11,
+      "matched": 11,
+      "unmatched": 0
+    },
+    {
+      "name": "scanner",
+      "file": "scanner.json",
+      "status": "completed",
+      "products": 83,
+      "matched": 83,
+      "unmatched": 0
+    },
+    {
+      "name": "signage",
+      "file": "signage.json",
+      "status": "completed",
+      "products": 21,
+      "matched": 21,
+      "unmatched": 0
+    },
+    {
+      "name": "telephone-set",
+      "file": "telephone-set.json",
+      "status": "completed",
+      "products": 5,
+      "matched": 5,
+      "unmatched": 0
+    },
+    {
+      "name": "toner",
+      "file": "toner.json",
+      "status": "completed",
+      "products": 399,
+      "matched": 399,
+      "unmatched": 0
+    },
+    {
+      "name": "video-wall",
+      "file": "video-wall.json",
+      "status": "completed",
+      "products": 1,
+      "matched": 1,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790587592
+}

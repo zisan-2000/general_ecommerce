@@ -1,0 +1,336 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/tablet-pc",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\tablet-pc",
+    "generatedAtUnix": 1790589576,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Tablet PC",
+      "slug": "tablet-pc",
+      "parentSlug": null,
+      "image": "/images/products/tablet-pc/amazon/amazon-kindle-colorsoft-signature-edition.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "OnePlus",
+      "slug": "oneplus",
+      "parentSlug": "tablet-pc",
+      "image": "/images/products/tablet-pc/OnePlus/oppo-pad-3.png",
+      "isActive": true,
+      "sortOrder": 2,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "OPPO",
+      "slug": "oppo",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "OPPO Pad 3",
+      "slug": "oppo-pad-3",
+      "type": "PHYSICAL",
+      "sku": "ST-49083",
+      "description": "<h2>OPPO Pad 3 Matte Display Edition</h2><p>The<strong> OPPO Pad 3</strong> is a premium tablet designed to deliver powerful performance, immersive visuals, and long‑lasting battery life. With its sleek design, advanced hardware, and modern software, it’s built to be the perfect companion for entertainment, study, and everyday use.</p><img alt=\"OPPO Pad 3 Matte Display Edition\" src=\"https://www.startech.com.bd/image/catalog/tablet-pc/oppo/pad-3/oppo-pad-3-01.webp\" width=\"920\"  height=\"450\"/><h3>Immersive 11‑Inch Display</h3><p>The OPPO Pad 3 features an 11.61‑inch IPS LCD display with a sharp 2800 × 2000 resolution and ~296 PPI pixel density. Supporting 1 billion colors, 96% NTSC coverage, and 97.4% DCI‑P3, it ensures vibrant and accurate visuals. With adaptive refresh rates up to 144Hz and brightness up to 700 nits, the OPPO 11 inch Tab is perfect for streaming, browsing, and creative work in any environment. For users who prefer reduced glare and enhanced readability, the OPPO Pad 3 also offers a Matte Display Edition, designed to minimize reflections and provide a paper‑like viewing experience, ideal for reading and productivity.</p><h3>Powerful Performance &amp; Storage</h3><p>Powered by the Mediatek Dimensity 8350 (4nm) chipset and Mali G615‑MC6 GPU, the OPPO Pad 3 Tablet delivers smooth multitasking and efficient performance. Its octa‑core CPU architecture, combined with 8GB LPDDR5x RAM and 256GB UFS 4.0 storage, ensures fast app launches and ample space for files, photos, and videos. Running on Android 15 with ColorOS 15, it offers a modern, intuitive interface with enhanced productivity features.</p><h3>Audio &amp; Entertainment</h3><p>The OPPO Tab comes equipped with quad stereo speakers, delivering immersive sound for movies, music, and video calls. Supporting SBC, AAC, LHDC, and LDAC codecs, it ensures high‑quality audio across devices. Combined with its vivid display, the OPPO Pad 3 is ideal for entertainment and multimedia experiences.</p><h3>Camera &amp; Video Recording</h3><p>The OPPO Pad 3 includes an 8MP rear camera with autofocus and support for 4K video recording at 30fps, along with zoom and EIS stabilization. The front 8MP camera is optimized for video calls and selfies, supporting 1080p recording with retouch mode enabled by default. Whether for casual photography or professional meetings, the cameras deliver clarity and convenience.</p><h3>Battery &amp; Fast Charging</h3><p>With a massive 9520mAh battery, the OPPO Pad 3 offers reliable all‑day usage. Fast charging is supported via 67W SuperVOOC 2.0, delivering a full day’s power in just 10 minutes. This makes the OPPO Pad 3 Tablet one of the best options for users who need dependable performance without frequent charging.</p><h3>Connectivity &amp; Features</h3><p>The OPPO Pad 3 supports Wi‑Fi 6 dual‑band, Bluetooth 5.4, and USB Type‑C 3.2 for fast and stable connections. It includes sensors such as accelerometer, gyroscope, geomagnetic sensor, and step counter, enhancing usability for fitness and productivity. With its slim 6.29mm profile, lightweight 536g body, and stylish silver finish, it’s designed for portability and elegance.</p><h3>Why Choose OPPO Pad 3</h3><p>The OPPO Pad 3 stands out as a high‑performance tablet with a 144Hz display, Dimensity 8350 processor, quad speakers, and long battery life. Whether you’re looking for an OPPO Tab for entertainment, an OPPO Pad 3 Tablet for work and study, or an OPPO 11 inch Tab for everyday use, it delivers exceptional value and versatility.</p><h2>Buy OPPO Pad 3 Tablet from Star Tech</h2><p>In Bangladesh, you can get original <strong>OPPO Pad 3 Tablet</strong> From Star Tech. We have a large collection of latest OPPO <a href=\"https://www.startech.com.bd/tablet-pc\">Tablet PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at lowest price. The OPPO Pad 3 comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Pad 3</li><li>Display: 11.61&quot; (2800 x 2000) 144Hz 500nits (HBM 700 nits)</li><li>Processor: Mediatek Dimensity 8350 (4 nm)</li><li>RAM: 8GB LPDDR5X, Internal Storage: 256GB UFS 4.0</li><li>Battery: 9230 mAh, 67W Wired Charging</li></ul>",
+      "model": "Pad 3",
+      "warranty": "1 Year Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.536,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "OPPO",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "11.61 inches",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "RAM",
+          "position": 1,
+          "values": [
+            {
+              "value": "8GB LPDDR5x",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 2,
+          "values": [
+            {
+              "value": "256GB UFS 4.0",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 3,
+          "values": [
+            {
+              "value": "Silver",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 4,
+          "values": [
+            {
+              "value": "9230mAh/36.09Wh (Rated) 9520mAh/37.23Wh (Typical)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-49083",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "11.61 inches",
+            "RAM": "8GB LPDDR5x",
+            "Storage": "256GB UFS 4.0",
+            "Color": "Silver",
+            "Capacity": "9230mAh/36.09Wh (Rated) 9520mAh/37.23Wh (Typical)"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Main Feature",
+          "position": 0,
+          "items": [
+            {
+              "label": "Display Type",
+              "value": "IPS LCD",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "11.61 inches",
+              "position": 1
+            },
+            {
+              "label": "Resolution",
+              "value": "2800 x 2000 pixels",
+              "position": 2
+            },
+            {
+              "label": "Processor",
+              "value": "Mediatek Dimensity 8350 (4 nm) Octa-core (1x3.35 GHz Cortex-A715 & 3x3.20 GHz Cortex-A715 & 4x2.20 GHz Cortex-A510) GPU: Mali G615-MC6",
+              "position": 3
+            },
+            {
+              "label": "RAM",
+              "value": "8GB LPDDR5x",
+              "position": 4
+            },
+            {
+              "label": "Storage",
+              "value": "256GB UFS 4.0",
+              "position": 5
+            },
+            {
+              "label": "Connectivity",
+              "value": "Wi-Fi 802.11 a/b/g/n/ac/6, dual-band Bluetooth 5.4",
+              "position": 6
+            },
+            {
+              "label": "Operating System",
+              "value": "Android 15, ColorOS 15",
+              "position": 7
+            },
+            {
+              "label": "Audio",
+              "value": "Yes, with stereo speakers (4 speakers) SBC, AAC, LHDC, and LDAC supported",
+              "position": 8
+            },
+            {
+              "label": "Others",
+              "value": "Screen-to-body ratio: 88% Pixel Density: ~296 ppi Color Support: 1B colors Colour Gamut: NTSC coverage: 96%, DCI-P3 coverage: 97.4%, DeltaE<1, 10bits (8bits + 2bits) Brightness: 500 nits (typ), 700 nits (HBM) Refresh Rate: Max: 144Hz (Adaptive: 30/48/50/60/90/120/144Hz)",
+              "position": 9
+            }
+          ]
+        },
+        {
+          "name": "Physical Spec",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "Width: about 189.11mm Thickness: about 6.29mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "about 536g",
+              "position": 1
+            },
+            {
+              "label": "SIM",
+              "value": "No",
+              "position": 2
+            },
+            {
+              "label": "Color",
+              "value": "Silver",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Camera",
+          "position": 2,
+          "items": [
+            {
+              "label": "Rear",
+              "value": "8MP (f/2.0); FOV 77.2°; 4P lens; AF supported",
+              "position": 0
+            },
+            {
+              "label": "Front",
+              "value": "8MP (f/2.0); FOV 78.1°; 4P lens; FF supported",
+              "position": 1
+            },
+            {
+              "label": "Video",
+              "value": "Rear: 720P@30fps 1080P@30fps 4K@30fps Zoom and EIS supported Front: 1080P/720P@30fps; Default: 1080P@30fps (Retouch mode turned on by default)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Battery",
+          "position": 3,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "9230mAh/36.09Wh (Rated) 9520mAh/37.23Wh (Typical)",
+              "position": 0
+            },
+            {
+              "label": "Charging",
+              "value": "67W wired, SuperVOOC 2.0, VOOC 3.0",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 4,
+          "items": [
+            {
+              "label": "Bluetooth",
+              "value": "Bluetooth 5.4 and BLE, TWS supported",
+              "position": 0
+            },
+            {
+              "label": "GPS",
+              "value": "No",
+              "position": 1
+            },
+            {
+              "label": "Sensors",
+              "value": "Geomagnetic sensor Light sensor Accelerometer Gravity sensor Gyroscope Color temperature sensor Hall effect sensor Step counting functio",
+              "position": 2
+            },
+            {
+              "label": "USB",
+              "value": "USB Type-C 3.2",
+              "position": 3
+            },
+            {
+              "label": "WLAN",
+              "value": "Wi-Fi 6 (802.11ax), Wi-Fi 5 (802.11ac), 802.11a/b/g/n/ WLAN 2.4G/WLAN 5.1G/WLAN 5.8G supported",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 5,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/oppo-pad-3",
+      "sourceProductCode": "49083",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Pad 3",
+        "Display: 11.61\" (2800 x 2000) 144Hz 500nits (HBM 700 nits)",
+        "Processor: Mediatek Dimensity 8350 (4 nm)",
+        "RAM: 8GB LPDDR5X, Internal Storage: 256GB UFS 4.0",
+        "Battery: 9230 mAh, 67W Wired Charging"
+      ],
+      "needsReview": true,
+      "categorySlug": "oneplus",
+      "image": "/images/products/tablet-pc/OnePlus/oppo-pad-3.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/tablet-pc/OnePlus/oppo-pad-3.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "oppo-pad-3",
+        "candidateTitle": "OPPO Pad 3",
+        "attemptStem": "oppo-pad-3"
+      }
+    }
+  ]
+}

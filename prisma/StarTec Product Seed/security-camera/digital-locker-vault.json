@@ -1,0 +1,3684 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/security-camera",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\security-camera",
+    "generatedAtUnix": 1790590169,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Security Camera",
+      "slug": "security-camera",
+      "parentSlug": null,
+      "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1201aef-fingerprint-reader.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Digital Locker Vault",
+      "slug": "digital-locker-vault",
+      "parentSlug": "security-camera",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-4042-digital-safe.jpg",
+      "isActive": true,
+      "sortOrder": 4,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Deli",
+      "slug": "deli",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Deli 4042 Digital Safe Box / Locker / Vault",
+      "slug": "deli-4042-digital-safe",
+      "type": "PHYSICAL",
+      "sku": "ST-14897",
+      "description": "<h2 style=\"text-align: justify; \"><span style=\"font-weight: 700;\">Deli 4042 Digital Safe Box / Locker / Vault</span><br/></h2>\n<p style=\"text-align: justify; \">The Deli 4042 Digital Safe comes with Key, Handle and PIN Code options. It has a dimension of H450 x W380 x D340mm and 8 / 4mm. It weighs 47kg. It has an alarm function. This Digital safe is very helpful for security. This Deli 4042 Digital Safe has a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 4042</li><li>Key + Handle, 8 / 4mm</li><li>PIN Code + Handle, Alarm Function</li><li>Size: H450 x W380 x D340 mm</li><li>Weight: 47kg, Color: Gray /Black</li></ul>",
+      "model": "4042",
+      "warranty": null,
+      "basePrice": 36000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 47.0,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H450 x W380 x D340 mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-14897",
+          "price": 36000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H450 x W380 x D340 mm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 34560.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "4042",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "H450 x W380 x D340 mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "47kg, Color: Gray /Black",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-4042-digital-safe",
+      "sourceProductCode": "14897",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 4042",
+        "Key + Handle, 8 / 4mm",
+        "PIN Code + Handle, Alarm Function",
+        "Size: H450 x W380 x D340 mm",
+        "Weight: 47kg, Color: Gray /Black"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-4042-digital-safe.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-4042-digital-safe.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-4042-digital-safe",
+        "candidateTitle": "Deli 4042 Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-4042-digital-safe"
+      }
+    },
+    {
+      "name": "Deli 4116G Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-4116-fingerprint-and-digital-safe",
+      "type": "PHYSICAL",
+      "sku": "ST-14896",
+      "description": "<h2>Deli 4116G Fingerprint Password Digital Safe Box / Locker / Vault</h2><p>The Deli <strong>4116G</strong> Fingerprint Password <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> is a premium security solution built for uncompromising protection and seamless user convenience. Built from heavy-duty carbon steel and weighing an impressive 73.2 kg, this Deli 4116G digital safe box locker is ideal for safeguarding high-value assets in both residential and commercial settings. It features a reinforced 6 mm-thick door and box structure, offering exceptional resistance against physical attacks. Measuring H61 x W41 x D36 cm, it provides ample internal space for storing documents, cash, jewelry, or electronics securely. What sets the Deli 4116G apart is its advanced four-mode unlocking system—including password, fingerprint, key, and a hybrid password + fingerprint option—ensuring flexible yet secure access tailored to user preferences. The integrated multifunctional touch panel streamlines user interaction with modern aesthetics and intuitive controls. For added reliability, the digital safe includes an external battery box, preventing lockouts in case of internal power loss. It also features a smart alarm system that triggers alerts on incorrect password attempts or suspicious vibrations, providing a proactive layer of defense. Finished in sleek black, the Deli 4116G Fingerprint Password Digital Safe Box/Locker/Vault is not only a fortress for your valuables but also a professional addition to your space. Whether you need a digital safe box, a fingerprint-protected locker, or a high-end vault, the digital locker delivers unmatched security and functionality in one compact powerhouse.</p><h2>Buy Deli 4116G Fingerprint Password Digital Safe Box / Locker / Vault from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli 4116G Fingerprint Password Digital Safe Box / Locker / Vault</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Deli 4116G Fingerprint Password Digital Safe Box / Locker / Vault comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 4116G</li><li>Multifunctional Integrated Touch Panel</li><li>Unlock Method: Password, Finger, Finger Print + Password + Key</li><li>Alarm: Wrong password &amp; Vibrate, Heavy Duty Carbon Steel</li><li>Size: H61 x W41 x D36 cm, Weight: 70 KG</li></ul>",
+      "model": "4116G",
+      "warranty": "1 year warranty",
+      "basePrice": 61000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H61 x W41 x D36 cm, Weight: 70 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-14896",
+          "price": 61000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H61 x W41 x D36 cm, Weight: 70 KG"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 58560.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "4116G",
+              "position": 0
+            },
+            {
+              "label": "Unlock Method",
+              "value": "Password, Finger, Finger Print + Password + Key",
+              "position": 1
+            },
+            {
+              "label": "Alarm",
+              "value": "Wrong password & Vibrate, Heavy Duty Carbon Steel",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H61 x W41 x D36 cm, Weight: 70 KG",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-4116-fingerprint-and-digital-safe",
+      "sourceProductCode": "14896",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 4116G",
+        "Multifunctional Integrated Touch Panel",
+        "Unlock Method: Password, Finger, Finger Print + Password + Key",
+        "Alarm: Wrong password & Vibrate, Heavy Duty Carbon Steel",
+        "Size: H61 x W41 x D36 cm, Weight: 70 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-4116-fingerprint-and-digital-safe.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-4116-fingerprint-and-digital-safe.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-4116-fingerprint-and-digital-safe",
+        "candidateTitle": "Deli 4116G Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-4116-fingerprint-and-digital-safe"
+      }
+    },
+    {
+      "name": "Deli 4117G Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-4117g-digital-safe",
+      "type": "PHYSICAL",
+      "sku": "ST-42827",
+      "description": "<h2>Deli 4117G Fingerprint Password Digital Safe Box / Locker / Vault</h2><p>Deli <strong>4117G</strong> Heavy Weight <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> is built for superior security and durability, making it the ideal storage solution for valuables. Designed with a multifunctional integrated touch panel, this high-strength safe offers four unlock modes: password, fingerprint, password + fingerprint, and key access, ensuring versatile and secure entry options.Constructed from heavy-duty carbon steel, this Deli 4117G digital safe features a robust door and box thickness of 6mm, reinforcing protection against unauthorized access. The external battery box ensures continued operation even in case of internal power depletion, while Deli 4117G smart alarm system triggers alerts for wrong password attempts and vibrations, enhancing security monitoring. With a size of H71 x W43 x D40 cm and a substantial weight of 85.5 KG, the Deli 4117G digital locker guarantees stability and resistance against forced entry. Whether safeguarding sensitive documents, jewelry, or cash, this fireproof and anti-theft vault is engineered for modern security needs, ensuring maximum protection and convenience.</p><h2>Buy Deli 4117G Fingerprint Password Digital Safe Box / Locker / Vault from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli 4117G Fingerprint Password Digital Safe Box / Locker / Vault</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli 4117G Fingerprint Password Digital Safe Box / Locker / Vault comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 4117G</li><li>Multifunctional Integrated Touch Panel</li><li>Unlock Method: Password, Finger, Finger Print + Password + Key</li><li>Alarm: Wrong password &amp; Vibrate, Heavy Duty Carbon Steel</li><li>Size: H71 x W43 x D40 cm, Weight: 86 KG</li></ul>",
+      "model": "4117G",
+      "warranty": "1 year warranty",
+      "basePrice": 72000.0,
+      "originalPrice": 79200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H71 x W43 x D40 cm, Weight: 86 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-42827",
+          "price": 72000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "H71 x W43 x D40 cm, Weight: 86 KG"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 69120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "4117G",
+              "position": 0
+            },
+            {
+              "label": "Unlock Method",
+              "value": "Password, Finger, Finger Print + Password + Key",
+              "position": 1
+            },
+            {
+              "label": "Alarm",
+              "value": "Wrong password & Vibrate, Heavy Duty Carbon Steel",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H71 x W43 x D40 cm, Weight: 86 KG",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-4117g-digital-safe",
+      "sourceProductCode": "42827",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 4117G",
+        "Multifunctional Integrated Touch Panel",
+        "Unlock Method: Password, Finger, Finger Print + Password + Key",
+        "Alarm: Wrong password & Vibrate, Heavy Duty Carbon Steel",
+        "Size: H71 x W43 x D40 cm, Weight: 86 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-4117g-digital-safe.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-4117g-digital-safe.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-4117g-digital-safe",
+        "candidateTitle": "Deli 4117G Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-4117g-digital-safe"
+      }
+    },
+    {
+      "name": "Deli 4118G Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-4118g-digital-safe",
+      "type": "PHYSICAL",
+      "sku": "ST-42830",
+      "description": "<h2>Deli 4118G Fingerprint Password Digital Safe Box / Locker / Vault</h2><p>The DELI <strong>4118G</strong> Heavy Weight <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> is a secure and durable storage solution designed for homes and businesses. Made from heavy-duty carbon steel, it provides strong resistance against forced entry. The six-millimeter-thick door and body add extra strength to protect valuables. This Digital Safe Box offers four unlock modes—users can access it using a password, fingerprint, a combination of both, or a traditional key, ensuring flexible security options. Its integrated touch panel simplifies operation, allowing effortless control and quick access to settings. For enhanced protection, the Deli 4118G Fingerprint Password Digital Safe Box features an alarm system that activates when an incorrect password is entered or when vibrations are detected, preventing unauthorized access. The external battery box ensures reliable power backup, making sure the safe remains functional even if the main battery runs low . With its spacious dimensions (H81 x W45 x D44 cm) and substantial weight (100.5 KG), the Deli 4118G Digital Safe Vault provides ample storage while remaining highly resistant to tampering. The sleek black finish offers a modern, professional look that complements various spaces. Whether for personal or business use, the DELI 4118G Digital Safe Locker ensures strong protection and convenient access, keeping your valuables safe at all times.</p><h2>Buy Deli 4118G Fingerprint Password Digital Safe Box / Locker / Vault from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli 4118G Fingerprint Password Digital Safe Box / Locker / Vault</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli 4118G Fingerprint Password Digital Safe Box / Locker / Vault comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 4118G</li><li>Multifunctional Integrated Touch Panel</li><li>Unlock Method: Password, Finger, Finger Print + Password + Key</li><li>Alarm: Wrong password &amp; Vibrate, Heavy Duty Carbon Steel</li><li>Size: H81 x W45 x D44 cm, Weight: 101 KG</li></ul>",
+      "model": "4118G",
+      "warranty": "1 year warranty",
+      "basePrice": 83000.0,
+      "originalPrice": 91300.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H81 x W45 x D44 cm, Weight: 101 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-42830",
+          "price": 83000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "H81 x W45 x D44 cm, Weight: 101 KG"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 79680.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "4118G",
+              "position": 0
+            },
+            {
+              "label": "Unlock Method",
+              "value": "Password, Finger, Finger Print + Password + Key",
+              "position": 1
+            },
+            {
+              "label": "Alarm",
+              "value": "Wrong password & Vibrate, Heavy Duty Carbon Steel",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H81 x W45 x D44 cm, Weight: 101 KG",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-4118g-digital-safe",
+      "sourceProductCode": "42830",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 4118G",
+        "Multifunctional Integrated Touch Panel",
+        "Unlock Method: Password, Finger, Finger Print + Password + Key",
+        "Alarm: Wrong password & Vibrate, Heavy Duty Carbon Steel",
+        "Size: H81 x W45 x D44 cm, Weight: 101 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-4118g-digital-safe.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-4118g-digital-safe.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-4118g-digital-safe",
+        "candidateTitle": "Deli 4118G Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-4118g-digital-safe"
+      }
+    },
+    {
+      "name": "Deli 4121 Fingerprint & Digital Safe Box / Locker / Vault",
+      "slug": "deli-4121-fingerprint-and-digital-safe",
+      "type": "PHYSICAL",
+      "sku": "ST-14900",
+      "description": "<h2 style=\"text-align: justify; \">Deli 4121 Fingerprint &amp; Digital Safe Box / Locker / Vault<br/></h2>\n<p style=\"text-align: justify; \">Deli 4121 Fingerprint &amp; Digital Safe comes with PIN Code, Fingerprint, and Main Key. This Digital Safe also has Emergency Key with Main Key. It is featured with 4mm / 2mm.  Its weight is 24kg. It has an alarm function.  The new 4121 Digital Safe has a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 4121</li><li>PIN Code + Fingerprint + Main Key</li><li>Emergency Key + Main Key, Alarm Function</li><li>Size: H460 x W380 x D320mm</li><li>Weight: 24kg, Color: Golden</li></ul>",
+      "model": "4121",
+      "warranty": "PIN Code, Fingerprint, and Main Key. This Digital Safe also has Emergency Key with Main Key. It is featured with 4mm / 2mm. Its weight is 24kg. It has an alarm function. The new 4121 Digital Safe has a 01-year warranty",
+      "basePrice": 30000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 24.0,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H460 x W380 x D320mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-14900",
+          "price": 30000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H460 x W380 x D320mm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 28800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "4121",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "H460 x W380 x D320mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "24kg, Color: Golden",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-4121-fingerprint-and-digital-safe",
+      "sourceProductCode": "14900",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 4121",
+        "PIN Code + Fingerprint + Main Key",
+        "Emergency Key + Main Key, Alarm Function",
+        "Size: H460 x W380 x D320mm",
+        "Weight: 24kg, Color: Golden"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-4121-fingerprint-and-digital-safe.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-4121-fingerprint-and-digital-safe.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-4121-fingerprint-and-digital-safe",
+        "candidateTitle": "Deli 4121 Fingerprint & Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-4121-fingerprint-and-digital-safe"
+      }
+    },
+    {
+      "name": "Deli 4122 Fingerprint & Digital Safe Box / Locker / Vault",
+      "slug": "deli-4122-fingerprint-and-digital-safe",
+      "type": "PHYSICAL",
+      "sku": "ST-14901",
+      "description": "<h2 style=\"text-align: justify; \"><span style=\"font-weight: bold;\">Deli 4122 Fingerprint &amp; Digital Safe</span><span style=\"font-weight: 700;\"> Box / Locker / Vault</span></h2>\n<p style=\"text-align: justify; \">Deli 4122 Fingerprint &amp; Digital Safe comes with PIN Code, Fingerprint, and Main Key. This Digital Safe also has Emergency Key with Main Key. It is featured with 4mm / 2mm. It weighs 32kg. It has an alarm function. The new 4122 Digital Safe has a 01-year warranty. </p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 4122</li><li>PIN Code + Fingerprint + Main Key</li><li>Emergency Key + Main Key, Alarm Function</li><li>Size: H610 x W380 x D360mm</li><li>Weight: 32kg, Color: Golden</li></ul>",
+      "model": "4122",
+      "warranty": "PIN Code, Fingerprint, and Main Key. This Digital Safe also has Emergency Key with Main Key. It is featured with 4mm / 2mm. It weighs 32kg. It has an alarm function. The new 4122 Digital Safe has a 01-year warranty",
+      "basePrice": 33500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 32.0,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H610 x W380 x D360mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-14901",
+          "price": 33500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H610 x W380 x D360mm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 32160.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "4122",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "H610 x W380 x D360mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "32kg, Color: Golden",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-4122-fingerprint-and-digital-safe",
+      "sourceProductCode": "14901",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 4122",
+        "PIN Code + Fingerprint + Main Key",
+        "Emergency Key + Main Key, Alarm Function",
+        "Size: H610 x W380 x D360mm",
+        "Weight: 32kg, Color: Golden"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-4122-fingerprint-and-digital-safe.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-4122-fingerprint-and-digital-safe.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-4122-fingerprint-and-digital-safe",
+        "candidateTitle": "Deli 4122 Fingerprint & Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-4122-fingerprint-and-digital-safe"
+      }
+    },
+    {
+      "name": "Deli ET520 Digital Safe Box / Locker / Vault",
+      "slug": "deli-et520-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-35042",
+      "description": "<h2>Deli ET520 Digital Safe Box / Locker / Vault</h2><p>The Deli<strong> ET520</strong> <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Safe</a> Box is a multipurpose and ultra-secure option for protecting your most important things. This safe has both a PIN Code and a Main Key access mechanism, providing dual-layer protection to guarantee your possessions are always safe. The user-friendly interface includes a panel with film buttons and indicator cues, making it straightforward and intuitive to use, even for first-timers. With substantial dimensions of H20 x W31 x D20 cm and a sturdy thickness of 1/3 mm, this Deli ET520 digital safe locker can hold a wide range of valuables, including critical papers and cash, as well as jewelry and electrical gadgets. The Deli ET520 is built from reinforced solid steel, ensuring longevity and resistance to tampering or forced entry attempts. Its sleek black finish gives a sense of elegance to any setting, integrating perfectly with your existing home or workplace décor. Whether you need to protect assets at home or at business, the Deli ET520 Digital Safe Box provides unsurpassed peace of mind and protection. </p><h2>Buy Deli ET520 Digital Safe Box / Locker / Vault from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET520 Digital Safe Box / Locker / Vault</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET520 Digital Safe Box / Locker / Vault comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET520</li><li>PIN Code + Main Key</li><li>Panel type: film buttons, indicator prompts</li><li>Size: H20 x W31 x D20 cm</li><li>Material: Reinforced Solid steel</li></ul>",
+      "model": "ET520",
+      "warranty": "1 year warranty",
+      "basePrice": 17800.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H20 x W31 x D20 cm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-35042",
+          "price": 17800.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H20 x W31 x D20 cm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 17088.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET520",
+              "position": 0
+            },
+            {
+              "label": "Panel type",
+              "value": "film buttons, indicator prompts",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "H20 x W31 x D20 cm",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Reinforced Solid steel",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et520-digital-safe-box",
+      "sourceProductCode": "35042",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET520",
+        "PIN Code + Main Key",
+        "Panel type: film buttons, indicator prompts",
+        "Size: H20 x W31 x D20 cm",
+        "Material: Reinforced Solid steel"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et520-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et520-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et520-digital-safe-box",
+        "candidateTitle": "Deli ET520 Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et520-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET522 Digital Safe Box / Locker / Vault",
+      "slug": "deli-et522-black-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-35043",
+      "description": "<h2>Deli ET522 Digital Safe Box / Locker / Vault</h2><p>The Deli <strong>ET522</strong> Black <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Safe</a> Box is the pinnacle of security and functionality for protecting your most valuable belongings. With a clever dual-lock system that includes a PIN Code and a Main Key, this safe provides strong security against illegal entry, giving you peace of mind. The user-friendly interface, which includes film buttons and indication prompts, guarantees simple operation and complete management over your valuables. With enormous dimensions of H20 x W43 x D35 cm and a strong thickness of 1/3 mm, the Deli ET522 can hold a wide range of valuables, including essential papers, cash, jewels, and gadgets. This safe, made of reinforced solid steel, is designed to withstand tampering and forced entry attempts, ensuring long-term durability and dependability. Its sleek black finish not only improves its visual appeal, but also helps it to blend in with any home or business setting. Whether you need to protect your possessions at home or in the workplace, the Deli ET522 Digital Safe Box provides unrivaled security and peace of mind.</p><h2>Buy Deli ET522 Digital Safe Box / Locker / Vault from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET522 Digital Safe Box / Locker / Vault</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET522 Digital Safe Box / Locker / Vault comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET522</li><li>PIN Code + Main Key</li><li>Panel type: film buttons, indicator prompts</li><li>Size: H20 x W43 x D35 cm</li><li>Material: Reinforced Solid steel</li></ul>",
+      "model": "ET522",
+      "warranty": "1 year warranty",
+      "basePrice": 20500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H20 x W43 x D35 cm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-35043",
+          "price": 20500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H20 x W43 x D35 cm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 19680.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET522",
+              "position": 0
+            },
+            {
+              "label": "Panel type",
+              "value": "film buttons, indicator prompts",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "H20 x W43 x D35 cm",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Reinforced Solid steel",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et522-black-digital-safe-box",
+      "sourceProductCode": "35043",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET522",
+        "PIN Code + Main Key",
+        "Panel type: film buttons, indicator prompts",
+        "Size: H20 x W43 x D35 cm",
+        "Material: Reinforced Solid steel"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et522-black-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et522-black-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et522-black-digital-safe-box",
+        "candidateTitle": "Deli ET522 Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et522-black-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET551 Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et551-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-39714",
+      "description": "<h2>Deli ET551 Digital Safe Box</h2><p>The Deli <strong>ET551</strong> <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> is a safe solution for safeguarding your most valuable possessions. The Digital Safe Box is a robust and reliable security solution designed to protect your most valuable items—whether it’s cash, jewelry, documents, or personal belongings. Featuring a dual-layer security system, this Deli ET551 Password electronic safe offers both key and digital password unlock options, adding an extra layer of protection against unauthorized access. Equipped with an intuitive LCD interface and electronic keypad, the Deli ET551 Digital Safe Box Locker ensures smooth and secure operation. Its external battery box is a smart feature that allows access even if the internal battery is depleted—perfect for emergency scenarios. For added safety, the Deli Digital Locker includes a built-in alarm system that activates upon incorrect password entries or physical tampering through vibration, giving you real-time alerts. Built to last, the Deli ET551 Digital Safe Box / Locker / Vault is constructed from durable carbon steel and high-quality plastic, offering a solid 3.5 mm door and box thickness with additional 1.5 mm reinforcement for maximum strength. The sleek black finish gives it a professional, modern look that complements any home or office interior . With dimensions of H45 x W38 x D32 cm and a sturdy 23 kg weight, this digital locker provides generous internal space to store passports, laptops, legal papers, and other essentials. Whether mounted or kept freestanding, it delivers unbeatable security and peace of mind.</p><h2>Buy Deli ET551 Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET551 Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET551 Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET551</li><li>Unlock mode: Key, Password</li><li>Panel type: Electronic buttons, LCD screen,</li><li>Size: H45 x W38 x D32 cm</li><li>Material: Heavy-duty carbon steel &amp; Plastic</li></ul>",
+      "model": "ET551",
+      "warranty": "1 year warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H45 x W38 x D32 cm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39714",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H45 x W38 x D32 cm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET551",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Key, Password",
+              "position": 1
+            },
+            {
+              "label": "Panel type",
+              "value": "Electronic buttons, LCD screen,",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H45 x W38 x D32 cm",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel & Plastic",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et551-digital-safe-box",
+      "sourceProductCode": "39714",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET551",
+        "Unlock mode: Key, Password",
+        "Panel type: Electronic buttons, LCD screen,",
+        "Size: H45 x W38 x D32 cm",
+        "Material: Heavy-duty carbon steel & Plastic"
+      ],
+      "needsReview": true,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et551-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et551-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et551-digital-safe-box",
+        "candidateTitle": "Deli ET551 Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et551-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET552 Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et552-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-39718",
+      "description": "<h2>Deli ET552 Digital Safe Box</h2><p>The Deli <strong>ET552</strong> Electronic Password  <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> is the best option for protecting your priceless belongings. The Deli ET552 Electronic Password Digital Safe is a reliable and sophisticated solution for safeguarding your valuables. Featuring a dual-layer security system, it combines key and password access to ensure robust protection against unauthorized entry. The user-friendly panel includes electronic buttons, an LCD screen, and an external battery box, making operation intuitive and convenient. An intelligent alarm system activates if the wrong password is entered repeatedly or if the safe experiences vibration, adding a proactive layer of security. Constructed from durable carbon steel and plastic, this sleek black Deli ET552 digital locker vault boasts a solid structure with a 3.5 mm-thick door and 1.5 mm-thick body, offering strong resistance against tampering. With generous dimensions of H60 x W38 x D36 cm and a weight of 29 kg, it offers ample space for securing cash, documents, jewelry, and other valuables. Emergency power access is available via a Type-C port, ensuring you're never locked out due to battery failure. The Deli ET552 Digital Safe Box / Locker / Vault remains a perfect choice for both home and office use, delivering dependable protection and peace of mind.</p><h2>Buy Deli ET552 Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET552 Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET552 Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET552</li><li>Unlock mode: Key, Password</li><li>Panel type: Electronic buttons, LCD screen,</li><li>Size: H60 x W38 x D36 cm</li><li>Material: Heavy-duty carbon steel &amp; Plastic</li></ul>",
+      "model": "ET552",
+      "warranty": "1 year warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H60 x W38 x D36 cm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39718",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H60 x W38 x D36 cm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET552",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Key, Password",
+              "position": 1
+            },
+            {
+              "label": "Panel type",
+              "value": "Electronic buttons, LCD screen,",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H60 x W38 x D36 cm",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel & Plastic",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et552-digital-safe-box",
+      "sourceProductCode": "39718",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET552",
+        "Unlock mode: Key, Password",
+        "Panel type: Electronic buttons, LCD screen,",
+        "Size: H60 x W38 x D36 cm",
+        "Material: Heavy-duty carbon steel & Plastic"
+      ],
+      "needsReview": true,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et552-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et552-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et552-digital-safe-box",
+        "candidateTitle": "Deli ET552 Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et552-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET553 Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et553-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-39724",
+      "description": "<h2>Deli ET553 Digital Safe Box</h2><p>The Deli <strong>ET553</strong> <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> is a reliable and secure storage option for your possessions. The Deli ET553 Password Digital Safe Box is a robust solution for safeguarding your valuables with modern convenience and high-level security. Crafted from durable carbon steel and high-quality plastic, this digital safe box boasts a sleek black finish that complements its resilient construction. Its design not only delivers aesthetic appeal but also ensures superior protection against tampering and unauthorized access. With dimensions of 80 cm in height, 48 cm in width, and 42 cm in depth, and a substantial weight of 49.5 kg, it offers ample storage space while maintaining structural integrity. The 3.5 mm-thick door and 1.5 mm-thick body provide a reinforced barrier, making it difficult for intruders to breach. Security features on the Deli ET553 Digital locker are multifaceted, combining digital innovation with practical backup options. The dual unlocking mechanism allows you to access the safe using either a traditional key or a programmable password, offering both flexibility and peace of mind. Its user-friendly interface includes clearly labeled electronic buttons and a backlit LCD screen for easy operation, even in low-light environments. For added reliability, it comes with an external battery box, ensuring you can still access your belongings in the event of internal power failure. Adding to its protection capabilities, the Deli ET553 Digital Safe locker is equipped with a sensitive alarm system that activates when incorrect passwords are repeatedly entered or if it detects physical vibrations, such as during attempted tampering or forced entry. This feature acts as a deterrent and alert mechanism, enhancing the safe’s overall security. Whether you need to store documents, jewelry, cash, or digital media, the Deli ET553 Digital Safe Box / Locker / Vault offers a dependable and elegant solution designed to meet both residential and professional storage needs.</p><h2>Buy Deli ET553 Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET553 Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET553 Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET553</li><li>Unlock mode: Key, Password</li><li>Panel type: Electronic buttons, LCD screen,</li><li>Size: H80 x W48 x D42 cm</li><li>Material: Heavy-duty carbon steel &amp; Plastic</li></ul>",
+      "model": "ET553",
+      "warranty": "1 year warranty",
+      "basePrice": 31000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H80 x W48 x D42 cm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39724",
+          "price": 31000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H80 x W48 x D42 cm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 29760.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET553",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Key, Password",
+              "position": 1
+            },
+            {
+              "label": "Panel type",
+              "value": "Electronic buttons, LCD screen,",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H80 x W48 x D42 cm",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel & Plastic",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et553-digital-safe-box",
+      "sourceProductCode": "39724",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET553",
+        "Unlock mode: Key, Password",
+        "Panel type: Electronic buttons, LCD screen,",
+        "Size: H80 x W48 x D42 cm",
+        "Material: Heavy-duty carbon steel & Plastic"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et553-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et553-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et553-digital-safe-box",
+        "candidateTitle": "Deli ET553 Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et553-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET570 Fingerprint & Digital Safe Box / Locker / Vault",
+      "slug": "deli-et570-fingerprint-and-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-35046",
+      "description": "<h2>Deli ET570 Fingerprint &amp; Digital Safe Box / Locker / Vault</h2><p>The Deli <strong>ET570</strong> Fingerprint &amp; Digital Safe Box is an innovative security solution designed to protect your belongings with cutting-edge technology and durable construction. This ET570 safe offers two unlock modes - password +handle and key + handle - for flexible access choices to meet your tastes and needs. The user-friendly control panel, which includes film buttons and indication cues, offers easy operation and smooth navigation, making it simple to store your possessions safely. The Deli ET570 has vast dimensions of H30 x W38 x D29 cm and a significant thickness of 1.5/4 millimeters, providing enough storage capacity for a wide range of objects, including vital papers, cash, jewels, and electronics. This safe, made of reinforced solid steel, is designed to defy tampering and forced entry attempts, assuring unrivaled durability and dependability. Its sleek black finish not only improves its visual appeal but also helps it to blend in with any home or business setting. Whether you choose the ease of fingerprint entry or the dependability of a digital password, the Deli ET570 ensures top-notch security for your stuff, giving you peace of mind and trust in your assets' safety.</p><h2>Buy Deli ET570 Fingerprint &amp; Digital Safe Box / Locker / Vault from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET570 Fingerprint &amp; Digital Safe Box / Locker / Vault</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET570 Fingerprint &amp; Digital Safe Box / Locker / Vault comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET570</li><li>Unlock mode: Password + Handle Key + Handle</li><li>Panel type: Film Buttons, Indicator Prompts</li><li>Size: H30 x W38 x D29 cm</li><li>Thickness: 1.5/4 (mm) Color: Black</li></ul>",
+      "model": "ET570",
+      "warranty": "1 year warranty",
+      "basePrice": 23500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H30 x W38 x D29 cm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-35046",
+          "price": 23500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H30 x W38 x D29 cm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 22560.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET570",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Password + Handle Key + Handle",
+              "position": 1
+            },
+            {
+              "label": "Panel type",
+              "value": "Film Buttons, Indicator Prompts",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H30 x W38 x D29 cm",
+              "position": 3
+            },
+            {
+              "label": "Thickness",
+              "value": "1.5/4 (mm) Color: Black",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et570-fingerprint-and-digital-safe-box",
+      "sourceProductCode": "35046",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET570",
+        "Unlock mode: Password + Handle Key + Handle",
+        "Panel type: Film Buttons, Indicator Prompts",
+        "Size: H30 x W38 x D29 cm",
+        "Thickness: 1.5/4 (mm) Color: Black"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et570-fingerprint-and-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et570-fingerprint-and-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et570-fingerprint-and-digital-safe-box",
+        "candidateTitle": "Deli ET570 Fingerprint & Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et570-fingerprint-and-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET580 Fireproof Digital Safe Box / Locker / Vault",
+      "slug": "deli-et580-fireproof-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-35047",
+      "description": "<h2>Deli ET580 Fireproof Digital Safe Box / Locker / Vault</h2><p>The Deli <strong>ET580</strong> Fireproof <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> is a superior security solution that was precisely designed to protect your belongings even in the face of adversity. The Fireproof Digital Safe Box is a robust and reliable security solution designed to safeguard your most valuable possessions against both theft and fire. Crafted from heavy-duty carbon steel with a solid 2/4 mm thickness, this Deli ET580 Fireproof Digital Safe Box / Locker / Vault offers exceptional durability and resistance to tampering. Its sleek black finish and compact dimensions (H30 x W38 x D30 cm) make it a discreet yet stylish addition to any home or office. The Deli ET580 digital locker features dual unlocking modes—password with handle and key with handle—providing flexible access options tailored to your preference. A user-friendly control panel with electronic buttons and an LCD display ensures intuitive operation, while the inclusion of an external battery box guarantees uninterrupted functionality even during power outages. Inside, the spacious compartment is ideal for storing important documents, jewelry, cash, and electronic devices. Fireproof and heat-insulated, the Deli ET580 Digital Safe Box Locker offers peace of mind by protecting your belongings even in extreme conditions. Whether you're securing personal items or sensitive business materials, this digital safe box delivers dependable protection with a modern touch. </p> <h2>Buy Deli ET580 Fireproof Digital Safe Box / Locker / Vault from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET580 Fireproof Digital Safe Box / Locker / Vault</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET580 Fireproof Digital Safe Box / Locker / Vault comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET580</li><li>Panel type: Electronic Buttons, LCD Display Screen,</li><li>Thickness: 2/4 (mm) Color: Black</li><li>Material: Heavy-duty carbon steel</li><li>Size: H30 x W38 x D30 cm, Weight: 21.8 KG</li></ul>",
+      "model": "ET580",
+      "warranty": "1 year warranty",
+      "basePrice": 26000.0,
+      "originalPrice": 28600.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H30 x W38 x D30 cm, Weight: 21.8 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-35047",
+          "price": 26000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "H30 x W38 x D30 cm, Weight: 21.8 KG"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 24960.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET580",
+              "position": 0
+            },
+            {
+              "label": "Panel type",
+              "value": "Electronic Buttons, LCD Display Screen,",
+              "position": 1
+            },
+            {
+              "label": "Thickness",
+              "value": "2/4 (mm) Color: Black",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel",
+              "position": 3
+            },
+            {
+              "label": "Size",
+              "value": "H30 x W38 x D30 cm, Weight: 21.8 KG",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et580-fireproof-digital-safe-box",
+      "sourceProductCode": "35047",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET580",
+        "Panel type: Electronic Buttons, LCD Display Screen,",
+        "Thickness: 2/4 (mm) Color: Black",
+        "Material: Heavy-duty carbon steel",
+        "Size: H30 x W38 x D30 cm, Weight: 21.8 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et580-fireproof-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et580-fireproof-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et580-fireproof-digital-safe-box",
+        "candidateTitle": "Deli ET580 Fireproof Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et580-fireproof-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET581 Fireproof Digital Safe Box / Locker / Vault",
+      "slug": "deli-et581-fireproof-digital-safe",
+      "type": "PHYSICAL",
+      "sku": "ST-39782",
+      "description": "<h2>Deli ET581 Fireproof Digital Safe Box</h2><p>The Deli <strong>ET581</strong> Fireproof <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> is a dependable and secure alternative for protecting your belongings. The Fireproof Digital Safe Box is built for those who value both security and convenience. Designed with dual unlocking options—password + handle and key + handle—it offers flexible access to suit your preferences. The intuitive electronic control panel features tactile buttons and a clear LCD, making operation straightforward even in low light. An external battery box ensures uninterrupted access, even during power outages. Security is further enhanced by an intelligent alarm system that activates after multiple incorrect password attempts, deterring unauthorized access. Built with heavy-duty carbon steel, the Deli ET581 Digital Safe boasts a 2 mm-thick door and 4 mm-thick body, providing robust resistance against tampering and forced entry. Measuring 42 cm (H) x 38 cm (W) x 30 cm (D) and weighing 26.4 kg, the Deli ET581 Digital Safe Box / Locker / Vault strikes a perfect balance between compactness and strength. Its sleek black finish complements modern interiors, making it ideal for both home and office use. Fire resistance is a standout feature—this digital safe box locker is designed to withstand high temperatures, protecting your valuables such as documents, jewelry, and digital media from fire damage. The 2-bolt locking mechanism adds another layer of security, ensuring the door stays firmly sealed under pressure.Whether you're safeguarding personal items or sensitive business materials, the Deli ET581 Digital Locker delivers peace of mind with its durable construction, smart features, and elegant design</p><h2>Buy Deli ET581 Fireproof Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET581 Fireproof Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET581 Fireproof Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET581</li><li>Advanced Security, Fireproof Technology</li><li>Spacious Interior, Stylish Design</li><li>Digital Lock, Durable Construction</li><li>Size: H42 x W38 x D30 cm, Weight: 26.4 KG</li></ul>",
+      "model": "ET581",
+      "warranty": "1 year warranty",
+      "basePrice": 29000.0,
+      "originalPrice": 31900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H42 x W38 x D30 cm, Weight: 26.4 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39782",
+          "price": 29000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "H42 x W38 x D30 cm, Weight: 26.4 KG"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 27840.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET581",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "H42 x W38 x D30 cm, Weight: 26.4 KG",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et581-fireproof-digital-safe",
+      "sourceProductCode": "39782",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET581",
+        "Advanced Security, Fireproof Technology",
+        "Spacious Interior, Stylish Design",
+        "Digital Lock, Durable Construction",
+        "Size: H42 x W38 x D30 cm, Weight: 26.4 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et581-fireproof-digital-safe.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et581-fireproof-digital-safe.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et581-fireproof-digital-safe",
+        "candidateTitle": "Deli ET581 Fireproof Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et581-fireproof-digital-safe"
+      }
+    },
+    {
+      "name": "Deli ET592 Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et592-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-42820",
+      "description": "<h2>Deli ET592 Fingerprint Password Digital Safe Box / Locker / Vault</h2><p>The Deli <strong>ET592</strong> Fingerprint Password <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> gives high-level security with a durable, heavy-duty carbon steel construction, ensuring reliable protection for valuables like important documents, cash, and jewelry. The automatic door system allows seamless access using fingerprint recognition, password authentication, and key access. With an electronic touch panel display, users can operate the safe effortlessly while benefiting from advanced security features. An integrated alarm system provides immediate alerts if an incorrect password is entered or if there is unexpected movement, preventing unauthorized access. The Type-C emergency power support keeps the Safe Box / Locker / Vault functional during power outages, ensuring continuous security. Inside, the leather-lined interior adds an elegant touch while safeguarding stored items from scratches.D esigned with a sturdy 4mm door thickness and a 2.5mm box thickness, the Deli ET592 Digital Safe Box Locker reinforces its ability to withstand tampering. The external dimensions measure H31 x W38 x D29 cm, including foot pads for stability, while the inner space of H29 x W37 x D22 cm provides ample storage. With a weight of 18.5 kg, this Deli ET592 Digital Safe Box maintains its position securely without shifting. Finished in a sleek black color, the Deli ET592 Fingerprint Password Digital Safe Box Locker blends seamlessly into home or office environments, offering a perfect balance of advanced security and modern aesthetics. Its compact yet spacious design makes it ideal for safeguarding valuables while complementing professional and personal spaces with a sophisticated look.</p><h2>Buy Deli ET592 Fingerprint Password Digital Safe Box / Locker / Vault from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET592 Fingerprint Password Digital Safe Box / Locker / Vault</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET592 Fingerprint Password Digital Safe Box / Locker / Vault comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET592</li><li>Automatic Door Opening Function</li><li>Unlock Method: Finger Print + Password + Kye</li><li>Electronic Touch Panel Display, Spacious Storage Capacity</li><li>Size: H31 x W38 x D29 cm, Weight: 18.5 KG</li></ul>",
+      "model": "ET592",
+      "warranty": "1 year warranty",
+      "basePrice": 29000.0,
+      "originalPrice": 31900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H31 x W38 x D29 cm, Weight: 18.5 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-42820",
+          "price": 29000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "H31 x W38 x D29 cm, Weight: 18.5 KG"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 27840.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET592",
+              "position": 0
+            },
+            {
+              "label": "Unlock Method",
+              "value": "Finger Print + Password + Kye",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "H31 x W38 x D29 cm, Weight: 18.5 KG",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et592-digital-safe-box",
+      "sourceProductCode": "42820",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET592",
+        "Automatic Door Opening Function",
+        "Unlock Method: Finger Print + Password + Kye",
+        "Electronic Touch Panel Display, Spacious Storage Capacity",
+        "Size: H31 x W38 x D29 cm, Weight: 18.5 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et592-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et592-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et592-digital-safe-box",
+        "candidateTitle": "Deli ET592 Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et592-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET593 Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et593-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-42823",
+      "description": "<h2>Deli ET593 Fingerprint Password Digital Safe Box / Locker / Vault</h2><p>The Deli <strong>ET593</strong> Fingerprint Password <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> is designed for advanced security and seamless access, making it an ideal choice for safeguarding valuables. This Automatic Door Safe combines modern technology with robust construction, ensuring maximum protection while offering convenience. Crafted from heavy-duty carbon steel, the Deli ET593 Digital safe vault delivers exceptional durability with a 4 mm-thick door and 2.5 mm-thick box walls, providing resistance against forced entry. Its sleek black finish complements various settings, whether at home or in the office. Unlocking the Digital Locker is effortless with its multi-method access system, featuring fingerprint recognition, password entry, and a backup key option. The electronic touch panel display ensures smooth operation, while the Type-C emergency power support guarantees accessibility even during power failures. Security is further enhanced with an alarm system that activates upon incorrect password attempts or physical vibrations, deterring unauthorized access. Inside, the Deli ET593 Digital Safe boasts a premium leather-lined interior, protecting stored items from scratches while adding a refined touch. With an outer dimension of H46 x W38 x D32 cm and an inner space of H36.5 x W37.5 x D26.5 cm, the safe accommodates important documents, jewelry, and electronic devices. Its 26.5 kg weight reinforces stability, ensuring secure placement. For those seeking a reliable, high-tech safe with fingerprint authentication, the Deli ET593 Digital Safe Box Locker offers unmatched security, convenience, and style—ideal for protecting your most valuable assets.</p><h2>Buy Deli ET593 Fingerprint Password Digital Safe Box / Locker / Vault from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET593 Fingerprint Password Digital Safe Box / Locker / Vault</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET593 Fingerprint Password Digital Safe Box / Locker / Vault comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET593</li><li>Automatic Door Opening Function</li><li>Unlock Method: Finger Print + Password + Kye</li><li>Electronic Touch Panel Display, Spacious Storage Capacity</li><li>Size: H46 x W38 x D32 cm, Weight: 26.5 KG</li></ul>",
+      "model": "ET593",
+      "warranty": "1 year warranty",
+      "basePrice": 37000.0,
+      "originalPrice": 40700.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H46 x W38 x D32 cm, Weight: 26.5 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-42823",
+          "price": 37000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "H46 x W38 x D32 cm, Weight: 26.5 KG"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 35520.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET593",
+              "position": 0
+            },
+            {
+              "label": "Unlock Method",
+              "value": "Finger Print + Password + Kye",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "H46 x W38 x D32 cm, Weight: 26.5 KG",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et593-digital-safe-box",
+      "sourceProductCode": "42823",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET593",
+        "Automatic Door Opening Function",
+        "Unlock Method: Finger Print + Password + Kye",
+        "Electronic Touch Panel Display, Spacious Storage Capacity",
+        "Size: H46 x W38 x D32 cm, Weight: 26.5 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et593-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et593-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et593-digital-safe-box",
+        "candidateTitle": "Deli ET593 Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et593-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET594 Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et594-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-42824",
+      "description": "<h2>Deli ET594 Fingerprint Password Digital Safe Box / Locker / Vault</h2><p>The Deli <strong>ET594</strong> <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> is an automatic door safe designed for those who prioritize security and convenience. Equipped with advanced fingerprint recognition, password access, and emergency key unlocking, this electronic safe ensures quality protection for valuables. Its electronic touch panel display offers seamless operation, while the Type-C emergency power support guarantees uninterrupted access even during power failures. Built to withstand external threats, the Deli ET594 Fingerprint Password Digital Safe Box features a heavy-duty carbon steel construction with a 4 mm-thick door and 2.5mm box thickness, reinforcing its durability. The Deli ET594 Digital safe is further enhanced with a vibration and incorrect password alarm system, alerting users to unauthorized access attempts. Inside, the leather-lined interior provides a premium feel while safeguarding delicate items from scratches. With an external height of 61 cm, width of 38 cm, and depth of 36 cm, including foot pads, this compact yet spacious vault offers ample storage. Its inner compartment measures H52.6 x W37.5 x D20.5 cm, catering to various storage needs while maintaining a sleek, modern black finish. At 34 kg, the Digital Locker is solid and resistant to tampering, making it ideal for both home and office security. The Deli ET594 Digital Safe Box locker vault combines technology, durability, and ease of use, ensuring reliable asset protection for essential documents, jewelry, and valuable electronics. Whether for personal or professional use, this high-performance security Vault is engineered for long-lasting protection with seamless functionality.</p><h2>Buy Deli ET594 Fingerprint Password Digital Safe Box / Locker / Vault from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET594 Fingerprint Password Digital Safe Box / Locker / Vault</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET594 Fingerprint Password Digital Safe Box / Locker / Vault comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET594</li><li>Automatic Door Opening Function</li><li>Unlock Method: Finger Print + Password + Kye</li><li>Electronic Touch Panel Display, Spacious Storage Capacity</li><li>Size: H61 x W38 x D36 cm, Weight: 34 KG</li></ul>",
+      "model": "ET594",
+      "warranty": "1 year warranty",
+      "basePrice": 43000.0,
+      "originalPrice": 47300.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H61 x W38 x D36 cm, Weight: 34 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-42824",
+          "price": 43000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "H61 x W38 x D36 cm, Weight: 34 KG"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 41280.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET594",
+              "position": 0
+            },
+            {
+              "label": "Unlock Method",
+              "value": "Finger Print + Password + Kye",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "H61 x W38 x D36 cm, Weight: 34 KG",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et594-digital-safe-box",
+      "sourceProductCode": "42824",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET594",
+        "Automatic Door Opening Function",
+        "Unlock Method: Finger Print + Password + Kye",
+        "Electronic Touch Panel Display, Spacious Storage Capacity",
+        "Size: H61 x W38 x D36 cm, Weight: 34 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et594-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et594-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et594-digital-safe-box",
+        "candidateTitle": "Deli ET594 Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et594-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET595 Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et595-fingerprint-password-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-39755",
+      "description": "<h2>Deli ET595 Fingerprint Password Digital Safe Box</h2><p>The Deli <strong>ET595</strong> Fingerprint Password  <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> is designed to provide strong security for your valuable items. The Deli ET595 Fingerprint Digital Safe offers a perfect blend of robust security and modern design, tailored to protect your valuable items with confidence. Constructed from heavy-duty carbon steel and finished in sleek black, this Digital Safe Box / Locker / Vault not only delivers superior protection but also complements contemporary interiors. It supports four convenient unlock modes—password, fingerprint, a combination of both, and a mechanical key—giving users flexible and secure access options. The front panel features a digital touchscreen button interface, offering intuitive control and easy setup. For added security, the Deli ET595 digital safe locker includes an intelligent alarm system that activates if the wrong password is entered repeatedly or if the unit is subjected to vibrations, effectively deterring tampering attempts. With dimensions of H45 x W38 x D32 cm and a weight of 19.3 kg, the ET595 provides a compact yet spacious interior for storing documents, electronics, jewelry, and other personal belongings. The reinforced door is 11.5mm thick, while the body maintains a 1.5mm thickness, ensuring enhanced resistance against forced entry. Whether used at home or in the office, the Deli ET595 Digital Safe Box combines perfect access control with dependable construction to deliver peace of mind and long-lasting performance.</p><h2>Buy Deli ET595 Fingerprint Password Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET595 Fingerprint Password Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET595 Fingerprint Password Digital Safe Box comes with 1 year warranty.</p><div style=\"text-align: justify;\"></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET595</li><li>Unlock mode: Password, Finger, Password + Finger, key</li><li>Panel type: Digital touchscreen button</li><li>Size: H45 x W38 x D32 cm, Weight: 19.3 KG</li><li>Material: Heavy-duty carbon steel</li></ul>",
+      "model": "ET595",
+      "warranty": "1 year warranty",
+      "basePrice": 31000.0,
+      "originalPrice": 34100.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H45 x W38 x D32 cm, Weight: 19.3 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39755",
+          "price": 31000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "H45 x W38 x D32 cm, Weight: 19.3 KG"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 29760.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET595",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Password, Finger, Password + Finger, key",
+              "position": 1
+            },
+            {
+              "label": "Panel type",
+              "value": "Digital touchscreen button",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H45 x W38 x D32 cm, Weight: 19.3 KG",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et595-fingerprint-password-digital-safe-box",
+      "sourceProductCode": "39755",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET595",
+        "Unlock mode: Password, Finger, Password + Finger, key",
+        "Panel type: Digital touchscreen button",
+        "Size: H45 x W38 x D32 cm, Weight: 19.3 KG",
+        "Material: Heavy-duty carbon steel"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et595-fingerprint-password-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et595-fingerprint-password-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et595-fingerprint-password-digital-safe-box",
+        "candidateTitle": "Deli ET595 Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et595-fingerprint-password-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET596 Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et596-fingerprint-password-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-39759",
+      "description": "<h2>Deli ET596 Fingerprint Password Digital Safe Box</h2><p>The Deli <strong>ET596</strong> Fingerprint Password <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> is an advanced security solution designed to protect your valuables with multiple access options. This Fingerprint Digital Safe features four unlock modes: Password, Fingerprint, Password + Fingerprint, and Key, providing versatile and secure access methods. The digital touch screen button panel ensures user-friendly operation, while the alarm system activates in case of a wrong password or vibration, offering enhanced security. The Deli ET596 Digital Locker comes with dimensions of H60 x W38 x D36 cm and a weight of 24.3 kg. This electronic security safe provides enough storage space and strong protection. The door and box thickness of 11.5mm and 1.5mm ensures durability and security. Available in sleek black, the Deli ET596 Password Vault is constructed from heavy-duty carbon steel, guaranteeing long-lasting performance. The Deli ET596 Fingerprint Password Digital Safe Box is the perfect choice for safeguarding your valuable items. Whether you're searching for a digital vault, a home security safe, or a fingerprint-enabled locker, the Deli ET596 delivers a perfect blend of modern aesthetics, advanced technology, and dependable security.</p><h2>Buy Deli ET596 Fingerprint Password Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET596 Fingerprint Password Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET596 Fingerprint Password Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET596</li><li>Advanced fingerprint unlocking system.</li><li>Durable carbon steel construction.</li><li>Multiple unlocking methods, Carpeted interior with LED lighting</li><li>Size: H60 x W38 x D36 cm, Weight: 24.3 KG</li></ul>",
+      "model": "ET596",
+      "warranty": "1 year warranty",
+      "basePrice": 36000.0,
+      "originalPrice": 39600.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H60 x W38 x D36 cm, Weight: 24.3 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39759",
+          "price": 36000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "H60 x W38 x D36 cm, Weight: 24.3 KG"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 34560.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET596",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "H60 x W38 x D36 cm, Weight: 24.3 KG",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et596-fingerprint-password-digital-safe-box",
+      "sourceProductCode": "39759",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET596",
+        "Advanced fingerprint unlocking system.",
+        "Durable carbon steel construction.",
+        "Multiple unlocking methods, Carpeted interior with LED lighting",
+        "Size: H60 x W38 x D36 cm, Weight: 24.3 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et596-fingerprint-password-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et596-fingerprint-password-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et596-fingerprint-password-digital-safe-box",
+        "candidateTitle": "Deli ET596 Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et596-fingerprint-password-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET597 Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et597-fingerprint-password-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-39775",
+      "description": "<h2>Deli ET597 Fingerprint Password Digital Safe Box</h2><p>The Deli <strong>ET597</strong> Fingerprint Password <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> is a flexible and secure digital locker suitable for both home and workplace usage. This Deli electronic fingerprint digital safe has four unlock options: password, fingerprint, password + fingerprint, and key, ensuring numerous levels of protection. The Deli ET597 has a digital touchscreen button panel, making it user-friendly, and the alarm mechanism provides safety by triggering in the event of incorrect password attempts or vibrations. This ET597 Portable Safe, which measures H80 x W48 x D42 cm and weighs 39.4 kg, is both large and durable. This Deli ET597 has an 11.5mm door thickness and a 1.5mm box thickness, providing further security against unwanted access. The Deli Digital safe's black color and elegant form make it an attractive addition to any environment. This digital security vault is built from heavy-duty carbon steel.Whether you're protecting your corporate files or family antiques, the Deli ET597 provides peace of mind with robust, intelligent security. The Deli ET597 Fingerprint Password Digital Safe is durable and resistant to tampering, ensuring your valuables are well-protected. Its multi-layered access and solid construction make it a reliable choice for safeguarding documents, jewelry, or electronics.</p><h2>Buy Deli ET597 Fingerprint Password Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET597 Fingerprint Password Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET597 Fingerprint Password Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET597</li><li>Surface treatment wrinkle spraying</li><li>keypad type Touch digital button, Unlocking Method Password + knob handle</li><li>Treatment: wrinkle spraying keypad Type: T</li><li>Size: H80 x W48 x D42 cm, Weight: 39.4 KG</li></ul>",
+      "model": "ET597",
+      "warranty": "1 year warranty",
+      "basePrice": 42000.0,
+      "originalPrice": 46200.0,
+      "currency": "BDT",
+      "weight": 39.4,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H80 x W48 x D42 cm, Weight: 39.4 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39775",
+          "price": 42000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "H80 x W48 x D42 cm, Weight: 39.4 KG"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 40320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET597",
+              "position": 0
+            },
+            {
+              "label": "Treatment",
+              "value": "wrinkle spraying keypad Type: T",
+              "position": 1
+            },
+            {
+              "label": "Size",
+              "value": "H80 x W48 x D42 cm, Weight: 39.4 KG",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et597-fingerprint-password-digital-safe-box",
+      "sourceProductCode": "39775",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET597",
+        "Surface treatment wrinkle spraying",
+        "keypad type Touch digital button, Unlocking Method Password + knob handle",
+        "Treatment: wrinkle spraying keypad Type: T",
+        "Size: H80 x W48 x D42 cm, Weight: 39.4 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et597-fingerprint-password-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et597-fingerprint-password-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et597-fingerprint-password-digital-safe-box",
+        "candidateTitle": "Deli ET597 Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et597-fingerprint-password-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET600 Fireproof Digital Safe Box / Locker / Vault",
+      "slug": "deli-et600-fireproof-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-42813",
+      "description": "<h2>Deli ET600 Fireproof Digital Safe Box / Locker / Vault</h2><p>The Deli <strong>ET600</strong> Fireproof Digital Safe Box offers advanced protection for your valuables with its dual-layer fireproof plaster, ensuring enhanced resistance against extreme temperatures. Engineered for maximum security, this Deli ET600 safe features a heavy-duty carbon steel body with a 6 mm-thick door and 4 mm-thick box, providing robust defense against unauthorized access. The 190° wide door opening offers convenient access, while the secure locking system allows entry through either a password and handle combination or a key and handle mechanism. Designed for ease of use, the electronic control panel boasts LCD screen functionality, ensuring clear visibility of settings. The external emergency power box allows continued operation even when the internal battery runs low. For added security, the Deli ET600 safe features an alarm system, which triggers an alert upon wrong password entry or vibration detection, ensuring real-time protection against tampering. The Deli ET600 Safe Locker offers ample storage space while maintaining a sleek, professional aesthetic in a classic black finish. Whether safeguarding important documents, jewelry, cash, or digital assets, this <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> delivers peace of mind through its best fireproof technology and dependable security measures. Perfect for home, office, or commercial use, it stands out as a perfect vault solution built for resilience and reliability.</p><h2>Buy Deli ET600 Fireproof Digital Safe Box / Locker / Vault from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET600 Fireproof Digital Safe Box / Locker / Vault</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET600 Fireproof Digital Safe Box / Locker / Vault comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET600</li><li>Panel type: Electronic buttons, LCD display screen</li><li>Unlock mode: Password+handle, key+handle</li><li>Material: Heavy-duty carbon steel</li><li>Dimensions: H50 x W36 x D35 cm, Weight: 38 KG</li></ul>",
+      "model": "ET600",
+      "warranty": "1 year warranty",
+      "basePrice": 44000.0,
+      "originalPrice": 48400.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 50.0,
+        "width": 36.0,
+        "height": 35.0,
+        "unit": "cm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-42813",
+          "price": 44000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 42240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET600",
+              "position": 0
+            },
+            {
+              "label": "Panel type",
+              "value": "Electronic buttons, LCD display screen",
+              "position": 1
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Password+handle, key+handle",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel",
+              "position": 3
+            },
+            {
+              "label": "Dimensions",
+              "value": "H50 x W36 x D35 cm, Weight: 38 KG",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et600-fireproof-digital-safe-box",
+      "sourceProductCode": "42813",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET600",
+        "Panel type: Electronic buttons, LCD display screen",
+        "Unlock mode: Password+handle, key+handle",
+        "Material: Heavy-duty carbon steel",
+        "Dimensions: H50 x W36 x D35 cm, Weight: 38 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et600-fireproof-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et600-fireproof-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et600-fireproof-digital-safe-box",
+        "candidateTitle": "Deli ET600 Fireproof Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et600-fireproof-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET601 Fireproof Digital Safe Box / Locker / Vault",
+      "slug": "deli-et601-fireproof-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-42816",
+      "description": "<h2>Deli ET601 Fireproof Digital Safe Box / Locker / Vault</h2><p>The Deli <strong>ET601</strong> Fireproof Digital Safe Box offers reliable security with its double-layer fireproof protection, ensuring valuables remain safe even in extreme heat. It is built with 32 mm x 2 fireproof plasters, which provide enhanced resistance against fire, making it ideal for safeguarding important documents, electronics, and valuables. Constructed from heavy-duty carbon steel, this Deli ET601 <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> features a 6 mm-thick door and a 4 mm-thick body, adding strength against unauthorized access. The electronic button panel with an LCD screen offers a simple and modern way to unlock the safe using a password + handle or an emergency key + handle method. An external battery box provides backup power, ensuring accessibility even during power failures. Security is reinforced with an alarm system that alerts users when an incorrect password is entered or if the safe experiences sudden movements. The 190° door opening allows for convenient access, while its sleek black finish makes it a stylish addition to both home and office spaces. With dimensions of H60 x W45 x D40 cm and a weight of 50.5 KG, the Deli ET601 safe box is designed for practicality and peace of mind. Whether used for securing jewelry, confidential files, or financial assets, this Deli ET601 fireproof digital locker combines advanced security features with ease of use, making it a reliable choice for personal and professional protection.</p><h2>Buy Deli ET601 Fireproof Digital Safe Box / Locker / Vault from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET601 Fireproof Digital Safe Box / Locker / Vault</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET601 Fireproof Digital Safe Box / Locker / Vault comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET601</li><li>Panel type: Electronic buttons, LCD Display screen</li><li>Unlock mode: Password+handle, key+handle</li><li>Material: Heavy-duty carbon steel</li><li>Dimensions: 600x450x400mm, Weight: 50.5 KG</li></ul>",
+      "model": "ET601",
+      "warranty": "1 year warranty",
+      "basePrice": 50000.0,
+      "originalPrice": 55000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 600.0,
+        "width": 450.0,
+        "height": 400.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-42816",
+          "price": 50000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 48000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET601",
+              "position": 0
+            },
+            {
+              "label": "Panel type",
+              "value": "Electronic buttons, LCD Display screen",
+              "position": 1
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Password+handle, key+handle",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel",
+              "position": 3
+            },
+            {
+              "label": "Dimensions",
+              "value": "600x450x400mm, Weight: 50.5 KG",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et601-fireproof-digital-safe-box",
+      "sourceProductCode": "42816",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET601",
+        "Panel type: Electronic buttons, LCD Display screen",
+        "Unlock mode: Password+handle, key+handle",
+        "Material: Heavy-duty carbon steel",
+        "Dimensions: 600x450x400mm, Weight: 50.5 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et601-fireproof-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et601-fireproof-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et601-fireproof-digital-safe-box",
+        "candidateTitle": "Deli ET601 Fireproof Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et601-fireproof-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET602 Fireproof Digital Safe Box / Locker / Vault",
+      "slug": "deli-et602-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-42818",
+      "description": "<h2>Deli ET602 Fireproof Digital Safe Box / Locker / Vault</h2><p>The Deli <strong>ET602</strong> Fireproof <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Locker &amp; Vault</a> provides superior security and protection for your valuables. Engineered with 32mm double-layer fireproof plasters, it delivers enhanced fire-resistant shielding, ensuring maximum safety during emergencies. The safe features a 190° wide-opening door, providing convenient access to stored items. For flexible security, the Deli ET602 Digital Safe Box Vault supports dual unlock modes: password + handle or key + handle, accommodating different user preferences. The electronic panel is equipped with intuitive buttons and an LCD, ensuring seamless operation. The external emergency battery box guarantees uninterrupted access, even if internal power fails. To prevent unauthorized access, the Fireproof Digital safe incorporates a security alarm system, which activates upon incorrect password attempts or vibrations. Crafted from heavy-duty carbon steel, it boasts a durable black finish that complements modern interiors. With a robust door thickness of 6mm and a box thickness of 4mm, the Deli ET602 Digital Safe Box Locker is designed to withstand forceful impacts. Measuring H86 x W51 x D52 cm and weighing 68 KG, it ensures stability and reliability for long-term use. Whether securing important documents, cash, or valuables, the Deli ET602 Fireproof Digital Safe Box is an excellent choice for home or office security, combining advanced fire protection with powerful technology.</p><h2>Buy Deli ET602 Fireproof Digital Safe Box / Locker / Vault from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET602 Fireproof Digital Safe Box / Locker / Vault</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET602 Fireproof Digital Safe Box / Locker / Vault comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET602</li><li>Panel type: Electronic buttons, LCD Display Screen</li><li>Unlock mode: Password+handle, key+handle</li><li>Material: Heavy-duty carbon steel</li><li>Dimensions: 800x450x400 mm, Weight: 68 KG</li></ul>",
+      "model": "ET602",
+      "warranty": "1 year warranty",
+      "basePrice": 58000.0,
+      "originalPrice": 63800.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 800.0,
+        "width": 450.0,
+        "height": 400.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-42818",
+          "price": 58000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 55680.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET602",
+              "position": 0
+            },
+            {
+              "label": "Panel type",
+              "value": "Electronic buttons, LCD Display Screen",
+              "position": 1
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Password+handle, key+handle",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel",
+              "position": 3
+            },
+            {
+              "label": "Dimensions",
+              "value": "800x450x400 mm, Weight: 68 KG",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et602-digital-safe-box",
+      "sourceProductCode": "42818",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET602",
+        "Panel type: Electronic buttons, LCD Display Screen",
+        "Unlock mode: Password+handle, key+handle",
+        "Material: Heavy-duty carbon steel",
+        "Dimensions: 800x450x400 mm, Weight: 68 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et602-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et602-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et602-digital-safe-box",
+        "candidateTitle": "Deli ET602 Fireproof Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et602-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET621 Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et621-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-47714",
+      "description": "<h2>Deli ET621 Password Digital Safe Box / Locker / Vault</h2><p>The Deli <strong>ET621</strong> Password Digital Safe Box is a strong security solution for households, offices, and businesses who demand dependable protection for valuables and documents. The Deli ET621 Digital Safe Box has a robust size of H595 x W410 x D340 mm, providing ample internal capacity while being compact. The Deli ET621 Locker is made of heavy-duty carbon steel with a robust 10/2 mm steel thickness for the door and body, reinforced with four solid locking bolts for further strength. Deli Digital Safe Box security is enhanced with a dual lock design that permits numerous unlocking ways, including key and password combinations such as Password plus Master Key plus Handle, or Master Key plus Emergency Key plus Handle. The electronic button panel with clear display enables for simple password entry, while incorrect password attempts or vibration activate a built-in alert for enhanced security. An external emergency power supply system employing an external battery box improves the utility of the Deli Locker, allowing access even when power is lost. The Deli ET621 Digital Safe Box is powered by four AA dry batteries and comes with five anchor points for safe wall or floor mounting. Inside, the velvet felt inside protects stored things from scratches and damage, while one inner box organizes smaller valuables. With a net weight of 28 kg, the Deli ET621 Locker is both stable and tamper-resistant. Decorative coatings, anti-corrosion coatings, and anti-rust coatings all provide long-term durability and an appealing appearance.</p><h2>Buy Deli ET621 Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET621 Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET621 Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET621</li><li>Unlock mode: Key+Key, Password+Key</li><li>Steel Thickness: 10/2mm, Dual Locks design</li><li>8-Layer Enclosure, Laser Micro Seam, Smart Alarm</li><li>Size: H595*W410*D340mm, Weight: 28 KG</li></ul>",
+      "model": "ET621",
+      "warranty": "1 year warranty",
+      "basePrice": 31000.0,
+      "originalPrice": 34100.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H595*W410*D340mm, Weight: 28 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47714",
+          "price": 31000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "H595*W410*D340mm, Weight: 28 KG"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 29760.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET621",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Key+Key, Password+Key",
+              "position": 1
+            },
+            {
+              "label": "Steel Thickness",
+              "value": "10/2mm, Dual Locks design",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H595*W410*D340mm, Weight: 28 KG",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et621-digital-safe-box",
+      "sourceProductCode": "47714",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET621",
+        "Unlock mode: Key+Key, Password+Key",
+        "Steel Thickness: 10/2mm, Dual Locks design",
+        "8-Layer Enclosure, Laser Micro Seam, Smart Alarm",
+        "Size: H595*W410*D340mm, Weight: 28 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et621-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et621-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et621-digital-safe-box",
+        "candidateTitle": "Deli ET621 Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et621-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET622 Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et622-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-47716",
+      "description": "<h2>Deli ET622 Password Digital Safe Box / Locker / Vault</h2><p>The Deli <strong>ET622</strong> Password Digital Safe Box is a powerful security solution for homes, offices, and organizations that require dependable protection for valuables and documents. The Deli ET622 Digital Safe Box measures H695 x W430 x D380 mm and offers considerable internal space while being compact. The Deli ET622 Locker is constructed of heavy-duty carbon steel with a robust 10/2 mm steel thickness for the door and body, reinforced with four solid locking bolts for further robustness. Deli Digital Safe Box security is reinforced by a dual lock design that allows for a variety of unlocking methods, including key and password combinations such as Password plus Master Key plus Handle, or Master Key plus Emergency Key plus Handle. The electronic button panel with a clear display allows for easy password entry, while incorrect password attempts or vibration trigger a built-in alarm for added security. An external emergency power supply system, which includes an external battery box, increases the usability of the Deli Locker by providing access even when power is unavailable. The Deli ET622 Digital Safe Box is powered by four AA dry batteries and features five anchor points for secure wall or floor attachment. Inside, velvet felt protects stored items from scratches and damage, while one inside compartment collects smaller valuables. The Deli ET622 Locker is both stable and tamper-resistant, weighing in at 33 kg net. Decorative, anti-corrosion, and anti-rust coatings all offer long-term durability and a pleasing appearance.</p><h2>Buy Deli ET622 Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET622 Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET622 Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET622</li><li>Unlock mode: Key+Key, Password+Key</li><li>Steel Thickness: 10/2mm, Dual Locks design</li><li>8-Layer Enclosure, Laser Micro Seam, Smart Alarm</li><li>Size: H695*W430*D380mm, Weight: 33 KG</li></ul>",
+      "model": "ET622",
+      "warranty": "1 year warranty",
+      "basePrice": 36000.0,
+      "originalPrice": 39600.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H695*W430*D380mm, Weight: 33 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47716",
+          "price": 36000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "H695*W430*D380mm, Weight: 33 KG"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 34560.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET622",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Key+Key, Password+Key",
+              "position": 1
+            },
+            {
+              "label": "Steel Thickness",
+              "value": "10/2mm, Dual Locks design",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H695*W430*D380mm, Weight: 33 KG",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et622-digital-safe-box",
+      "sourceProductCode": "47716",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET622",
+        "Unlock mode: Key+Key, Password+Key",
+        "Steel Thickness: 10/2mm, Dual Locks design",
+        "8-Layer Enclosure, Laser Micro Seam, Smart Alarm",
+        "Size: H695*W430*D380mm, Weight: 33 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et622-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et622-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et622-digital-safe-box",
+        "candidateTitle": "Deli ET622 Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et622-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET623 Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et623-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-47717",
+      "description": "<h2>Deli ET623 Password Digital Safe Box / Locker / Vault</h2><p>The Deli <strong>ET623</strong> Password Digital Safe Box / Locker / Vault is a heavy-duty security solution for homes, workplaces, and commercial areas that demand dependable protection for valuable objects and sensitive data. Deli ET623 Digital Safe Box has a sturdy outside size of H795 x W480 x D400 mm and a spacious inside size of H660 x W410 x D320 mm, allowing ample storage while keeping a professional appearance. Deli ET623 Locker has a reinforced steel thickness of 10/2 mm for both the door and the body, ensuring robust resistance and long-lasting sturdiness. The Deli Digital Safe Box is finished in a traditional black hue that integrates well with modern decor. Deli ET623 Password Digital Safe Box / Locker / Vault is a secure dual lock design with numerous unlocking methods, including Key plus Key and Password plus Key access for further security. The electronic locking system, powered by four AA dry batteries, provides dependable daily operation without requiring sophisticated cabling. Six anchorages for robust wall or floor fastening serve to ensure the stability of the Deli Locker and prevent illegal removal. With a net weight of 41 kg, the Deli ET623 Digital Safe Box strikes an ideal compromise between strength and placement convenience. Inside, the felt-lined inside protects valuables from scratches, and one inner box provides for better organization of minor goods. The Deli ET623 Locker is great for storing cash, jewels, documents, and digital devices safely. The easy password system and key backup provide access in an emergency while providing solid security.</p><h2>Buy Deli ET623 Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET623 Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET623 Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET623</li><li>Unlock mode: Key+Key, Password+Key</li><li>Steel Thickness: 10/2mm, Dual Locks design</li><li>8-Layer Enclosure, Laser Micro Seam, Smart Alarm</li><li>Size: H795*W480*D400mm, Weight: 41 KG</li></ul>",
+      "model": "ET623",
+      "warranty": "1 year warranty",
+      "basePrice": 40000.0,
+      "originalPrice": 44000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H795*W480*D400mm, Weight: 41 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47717",
+          "price": 40000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "H795*W480*D400mm, Weight: 41 KG"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 38400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET623",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Key+Key, Password+Key",
+              "position": 1
+            },
+            {
+              "label": "Steel Thickness",
+              "value": "10/2mm, Dual Locks design",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H795*W480*D400mm, Weight: 41 KG",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et623-digital-safe-box",
+      "sourceProductCode": "47717",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET623",
+        "Unlock mode: Key+Key, Password+Key",
+        "Steel Thickness: 10/2mm, Dual Locks design",
+        "8-Layer Enclosure, Laser Micro Seam, Smart Alarm",
+        "Size: H795*W480*D400mm, Weight: 41 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et623-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et623-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et623-digital-safe-box",
+        "candidateTitle": "Deli ET623 Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et623-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET630 Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et630-fingerprint-password-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-39725",
+      "description": "<h2>Deli ET630 Fingerprint Password Digital Safe Box</h2><p>The Deli <strong>ET630</strong> Fingerprint Password <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Safe</a> Box is a reliable and adaptable security solution for safeguarding your belongings. This Vault has four unlock modes: fingerprint + knob handle, password + knob handle, key + knob handle, and a combination of fingerprint + password + knob handle, which ensures great security and versatility. The Deli ET630 Digital Safe Box has electronic buttons and an exterior battery compartment, making it simple to use and maintain. The alarm system triggers when an erroneous password is entered or when there is a vibration, hence increasing security. The Deli ET630 Electronic Locker measures H25 x W35 x D25 cm and weighs 9 kg, making it small but strong. The Deli ET630 Fingerprint Password Safe Box is constructed of heavy-duty carbon steel and plastic and features a sleek black appearance, making it both robust and elegant for use at home or in the workplace. </p><h2>Buy Deli ET630 Fingerprint Password Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET630 Fingerprint Password Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET630 Fingerprint Password Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET630</li><li>Unlock mode: Fingerprint, Knob, Password, Key</li><li>Panel type: Electronic buttons</li><li>Size: H25 x W35 x D25 cm</li><li>Material: Heavy-duty carbon steel &amp; Plastic</li></ul>",
+      "model": "ET630",
+      "warranty": "1 year warranty",
+      "basePrice": 15500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 9.0,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H25 x W35 x D25 cm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39725",
+          "price": 15500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H25 x W35 x D25 cm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 14880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET630",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Fingerprint, Knob, Password, Key",
+              "position": 1
+            },
+            {
+              "label": "Panel type",
+              "value": "Electronic buttons",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H25 x W35 x D25 cm",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel & Plastic",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et630-fingerprint-password-digital-safe-box",
+      "sourceProductCode": "39725",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET630",
+        "Unlock mode: Fingerprint, Knob, Password, Key",
+        "Panel type: Electronic buttons",
+        "Size: H25 x W35 x D25 cm",
+        "Material: Heavy-duty carbon steel & Plastic"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et630-fingerprint-password-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et630-fingerprint-password-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et630-fingerprint-password-digital-safe-box",
+        "candidateTitle": "Deli ET630 Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et630-fingerprint-password-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET631 Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et631-fingerprint-password-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-39733",
+      "description": "<h2>Deli ET631 Fingerprint Password Digital Safe Box</h2><p>The Deli <strong>ET631</strong> Fingerprint Password <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Safe</a> Box is a durable and easy-to-use storage option for safeguarding your belongings. The Deli ET631 Locker has four different unlock modes: fingerprint plus knob handle, password plus knob handle, key plus knob handle, and a combination of fingerprint and password with knob handle, providing maximum security. The  Deli ET631 Vault has electronic buttons and an external battery compartment for further convenience. This electronic digital locker has an alarm system triggered upon incorrect password entering or vibration, adding an added degree of protection. This digital safe measures H45 x W38 x D32 cm and weighs 20 kg, making it both small and robust. The Deli ET631 Fingerprint Password Digital Safe Box is made of heavy-duty carbon steel and plastic, and it comes in a sleek black style, making it both elegant and sturdy for home or office use.</p><h2>Buy Deli ET631 Fingerprint Password Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET631 Fingerprint Password Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET631 Fingerprint Password Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET631</li><li>Unlock mode: Fingerprint, Knob, Password, Key</li><li>Panel type: Electronic buttons</li><li>Size: H45 x W38 x D32 cm</li><li>Material: Heavy-duty carbon steel &amp; Plastic</li></ul>",
+      "model": "ET631",
+      "warranty": "1 year warranty",
+      "basePrice": 22000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 20.0,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H45 x W38 x D32 cm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39733",
+          "price": 22000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H45 x W38 x D32 cm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 21120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET631",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Fingerprint, Knob, Password, Key",
+              "position": 1
+            },
+            {
+              "label": "Panel type",
+              "value": "Electronic buttons",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H45 x W38 x D32 cm",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel & Plastic",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et631-fingerprint-password-digital-safe-box",
+      "sourceProductCode": "39733",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET631",
+        "Unlock mode: Fingerprint, Knob, Password, Key",
+        "Panel type: Electronic buttons",
+        "Size: H45 x W38 x D32 cm",
+        "Material: Heavy-duty carbon steel & Plastic"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et631-fingerprint-password-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et631-fingerprint-password-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et631-fingerprint-password-digital-safe-box",
+        "candidateTitle": "Deli ET631 Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et631-fingerprint-password-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET632 Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et632-fingerprint-password-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-39747",
+      "description": "<h2>Deli ET632 Fingerprint Password Digital Safe Box</h2><p>The Deli <strong>ET632</strong> Fingerprint Password <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Safe</a> Box / Locker / Vault is the greatest protection option for your valuables. This Electronic Finger &amp; Password Digital Safe has four unlock options for your convenience: Finger Print + Knob Handle, Password + Knob Handle, Key + Knob Handle, and Finger Print + Password + Knob Handle. The Deli ET632  Digital Safe has an electronic button panel that allows for simple operation, while the external battery box improves reliability. The Deli ET632 Digital Safe Box has an alarm system that activates when an erroneous password is entered or there is a vibration. The Deli ET632 portable safe comes with dimensions of H55.5 x W34.5 x D30 cm and a weight of 26 kg. This High-security small Vault offers plenty of room and durable protection. This Digital Locker comes in black and is composed of heavy-duty carbon steel and plastic, providing durability and longevity. Protect your belongings with the Deli ET632 Fingerprint Password Digital Safe Box.</p><h2>Buy Deli ET632 Fingerprint Password Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET632 Fingerprint Password Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET632 Fingerprint Password Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET632</li><li>Unlock mode: Fingerprint, Knob, Password, Key</li><li>Panel type: Electronic buttons</li><li>Size: H55.5 x W34.5 x D30 cm</li><li>Material: Heavy-duty carbon steel &amp; Plastic</li></ul>",
+      "model": "ET632",
+      "warranty": "1 year warranty",
+      "basePrice": 25000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H55.5 x W34.5 x D30 cm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39747",
+          "price": 25000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H55.5 x W34.5 x D30 cm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 24000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET632",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Fingerprint, Knob, Password, Key",
+              "position": 1
+            },
+            {
+              "label": "Panel type",
+              "value": "Electronic buttons",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H55.5 x W34.5 x D30 cm",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel & Plastic",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et632-fingerprint-password-digital-safe-box",
+      "sourceProductCode": "39747",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET632",
+        "Unlock mode: Fingerprint, Knob, Password, Key",
+        "Panel type: Electronic buttons",
+        "Size: H55.5 x W34.5 x D30 cm",
+        "Material: Heavy-duty carbon steel & Plastic"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et632-fingerprint-password-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et632-fingerprint-password-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et632-fingerprint-password-digital-safe-box",
+        "candidateTitle": "Deli ET632 Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et632-fingerprint-password-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET633 Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et633-fingerprint-password-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-39730",
+      "description": "<h2>Deli ET633 Fingerprint Password Digital Safe Box</h2><p>The Deli <strong>ET633</strong> Fingerprint Password <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Safe</a> Box is a durable and secure alternative for protecting valuables. The Deli ET633 Locker provides high-level security through four adaptable unlock modes: fingerprint plus knob handle, password plus knob handle, key plus knob handle, and a combination of fingerprint and password with knob handle. The electronic button panel and external battery box improve use and convenience. The Deli ET633 Vault has an alarm mechanism that activates upon erroneous password entering or vibration, adding an added degree of protection. This compact electronic digital safe measures H25 x W35 x D25 cm and weighs 9 kg. This Digital Safe is made of heavy-duty carbon steel and plastic and comes in a beautiful white appearance. The Deli ET633 digital locker is ideal for home and business use. The Deli ET633 Fingerprint Password Digital Safe Box offers reliable protection for important documents and valuables.</p><h2>Buy Deli ET633 Fingerprint Password Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET633 Fingerprint Password Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET633 Fingerprint Password Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET633</li><li>Unlock mode: Fingerprint, Knob, Password, Key</li><li>Panel type: Electronic buttons</li><li>Size: H25 x W35 x D25 cm</li><li>Material: Heavy-duty carbon steel &amp; Plastic</li></ul>",
+      "model": "ET633",
+      "warranty": "1 year warranty",
+      "basePrice": 17000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 9.0,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H25 x W35 x D25 cm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39730",
+          "price": 17000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H25 x W35 x D25 cm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 16320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET633",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Fingerprint, Knob, Password, Key",
+              "position": 1
+            },
+            {
+              "label": "Panel type",
+              "value": "Electronic buttons",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H25 x W35 x D25 cm",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel & Plastic",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et633-fingerprint-password-digital-safe-box",
+      "sourceProductCode": "39730",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET633",
+        "Unlock mode: Fingerprint, Knob, Password, Key",
+        "Panel type: Electronic buttons",
+        "Size: H25 x W35 x D25 cm",
+        "Material: Heavy-duty carbon steel & Plastic"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et633-fingerprint-password-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et633-fingerprint-password-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et633-fingerprint-password-digital-safe-box",
+        "candidateTitle": "Deli ET633 Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et633-fingerprint-password-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET634 Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et634-fingerprint-password-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-39736",
+      "description": "<h2>Deli ET634 Fingerprint Password Digital Safe Box</h2><p>The Deli <strong>ET634</strong> Fingerprint Password <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Safe</a> Box is a secure and adaptable storage solution ideal for safeguarding your belongings. The Deli ET634 Locker has four unlock modes: fingerprint plus knob handle, password plus knob handle, key plus knob handle, and a combination of fingerprint and password with knob handle, which ensures maximum security. The electronic button panel and external battery box increase user convenience. The Deli ET634 Vault alarm system starts when an incorrect password is entered or there is a vibration, adding an added degree of security. With dimensions of H45 x W38 x D32 cm and a weight of 20 kg, this electronic digital locker is strong and dependable. The Deli ET634 Fingerprint Password Digital Safe Box is made of heavy-duty carbon steel and plastic and comes in a sleek white style. It blends durability with modern aesthetics, making it ideal for both home and office use.</p><h2>Buy Deli ET634 Fingerprint Password Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET634 Fingerprint Password Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET634 Fingerprint Password Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET634</li><li>Unlock mode: Fingerprint, Knob, Password, Key</li><li>Panel type: Electronic buttons</li><li>Size: H45 x W38 x D32 cm</li><li>Material: Heavy-duty carbon steel &amp; Plastic</li></ul>",
+      "model": "ET634",
+      "warranty": "1 year warranty",
+      "basePrice": 26000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H45 x W38 x D32 cm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39736",
+          "price": 26000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H45 x W38 x D32 cm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 24960.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET634",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Fingerprint, Knob, Password, Key",
+              "position": 1
+            },
+            {
+              "label": "Panel type",
+              "value": "Electronic buttons",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H45 x W38 x D32 cm",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel & Plastic",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et634-fingerprint-password-digital-safe-box",
+      "sourceProductCode": "39736",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET634",
+        "Unlock mode: Fingerprint, Knob, Password, Key",
+        "Panel type: Electronic buttons",
+        "Size: H45 x W38 x D32 cm",
+        "Material: Heavy-duty carbon steel & Plastic"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et634-fingerprint-password-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et634-fingerprint-password-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et634-fingerprint-password-digital-safe-box",
+        "candidateTitle": "Deli ET634 Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et634-fingerprint-password-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli ET635 Fingerprint Password Digital Safe Box / Locker / Vault",
+      "slug": "deli-et635-fingerprint-password-digital-safe-box",
+      "type": "PHYSICAL",
+      "sku": "ST-39750",
+      "description": "<h2>Deli ET635 Fingerprint Password Digital Safe Box</h2><p>The DELI <strong>ET635</strong> Fingerprint Password <a href=\"https://www.startech.com.bd/digital-locker\" style=\"color: rgb(0, 0, 0);\" target=\"\">Digital Safe</a> Box is a strong security solution designed to protect your belongings. The DELI ET635 Digital Locker comes With four unlock modes—Fingerprint + Knob Handle, Password + Knob Handle, Key + Knob Handle, and Fingerprint + Password + Knob Handle—this Digital safe provides customizable access choices. The electronic button panel makes it easy to operate, and the exterior battery box maintains dependability. This electronic security Vault has an alarm mechanism that triggers when an erroneous password is entered or if there is any vibration. The DELI ET635 Digital Safe measuring H55.5 x W34.5 x D30 cm and weighing 26 kg, provides considerable storage capacity in a strong design. The DELI ET635 safe comes in sleek white and is made of heavy-duty carbon steel and plastic, guaranteeing long-term security for your possessions. Whether at home or in the office, the DELI ET635 Fingerprint Password Digital Safe Box is the ideal choice for secure storage.</p><h2>Buy Deli ET635 Fingerprint Password Digital Safe Box from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli ET635 Fingerprint Password Digital Safe Box</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli ET635 Fingerprint Password Digital Safe Box comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ET635</li><li>Unlock mode: Fingerprint, Knob, Password, Key</li><li>Panel type: Electronic buttons</li><li>Size: H55.5 x W34.5 x D30 cm</li><li>Material: Heavy-duty carbon steel &amp; Plastic</li></ul>",
+      "model": "ET635",
+      "warranty": "1 year warranty",
+      "basePrice": 28000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H55.5 x W34.5 x D30 cm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39750",
+          "price": 28000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H55.5 x W34.5 x D30 cm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 26880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ET635",
+              "position": 0
+            },
+            {
+              "label": "Unlock mode",
+              "value": "Fingerprint, Knob, Password, Key",
+              "position": 1
+            },
+            {
+              "label": "Panel type",
+              "value": "Electronic buttons",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H55.5 x W34.5 x D30 cm",
+              "position": 3
+            },
+            {
+              "label": "Material",
+              "value": "Heavy-duty carbon steel & Plastic",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-et635-fingerprint-password-digital-safe-box",
+      "sourceProductCode": "39750",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ET635",
+        "Unlock mode: Fingerprint, Knob, Password, Key",
+        "Panel type: Electronic buttons",
+        "Size: H55.5 x W34.5 x D30 cm",
+        "Material: Heavy-duty carbon steel & Plastic"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-et635-fingerprint-password-digital-safe-box.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-et635-fingerprint-password-digital-safe-box.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-et635-fingerprint-password-digital-safe-box",
+        "candidateTitle": "Deli ET635 Fingerprint Password Digital Safe Box / Locker / Vault",
+        "attemptStem": "deli-et635-fingerprint-password-digital-safe-box"
+      }
+    },
+    {
+      "name": "Deli VS4529-BK Fingerprint Digital Safe",
+      "slug": "deli-vs4529-bk-fingerprint-digital-safe",
+      "type": "PHYSICAL",
+      "sku": "ST-50746",
+      "description": "<h2>Deli VS4529-BK Fingerprint Digital Safe</h2><p>The Deli <strong>VS4529-BK</strong> Fingerprint Digital Safe is a compact, intelligently designed security solution. This Digital Safe measures H250×W360×D250mm. Offering a discreet, space-efficient footprint that fits neatly in bedrooms, offices, and living spaces without drawing attention. Three unlocking methods including fingerprint recognition, password entry, and a physical key give users flexible, reliable access options for every situation. </p><p>The Deli Digital Safe features a minimalist touch-sensitive panel with an integrated design that illuminates instantly upon touch for effortless nighttime access. The Deli VS4529-BK Fingerprint Digital Safe has automatic door opening mechanism unlocks and swings the door open immediately after successful verification without any manual pulling required. Closing the Deli Fingerprint Safe is equally simple just push the door lightly and it locks securely in place every time. </p><p>The 5-layer reinforced solid steel body uses multiple strengthening processes and precision laser cutting from a single steel piece for superior structural integrity. A main body steel thickness of 1.8mm and door steel thickness of 1.2mm provide strong resistance against forced entry attempts. An 8mm narrow metal bezel keeps the overall design sleek and visually unobtrusive across various home and office placement scenarios. </p><p>The Deli VS4529-BK Fingerprint Digital Safe features a premium black matte exterior finish that looks professional and blends naturally into any interior décor style. A soft velvet interior lining protects jewelry, documents, cash, and other valuables from scratches and surface damage inside the safe. </p><p>One anchoring point allows secure wall or floor mounting to prevent unauthorized removal of the entire safe unit. The Deli Digital Safe runs on four AA dry batteries, making it completely independent of wall power outlets for flexible placement anywhere. A gross weight of 7kg gives the Deli VS4529-BK Digital Safe reassuring physical solidity without being impractically heavy for home installation.</p><h2>Buy Deli VS4529-BK Fingerprint Digital Safe from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli VS4529-BK Fingerprint Digital Safe</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" style=\"\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli VS4529-BK Fingerprint Digital Safe comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: VS4529-BK</li><li>Unlocking method: Fingerprint, Key, Password</li><li>Touch panel, Automatic door opening</li><li>Black Matte Finish, Interior: Velvet</li><li>Size: H250 x W360 x D250 mm, Weight: 7 KG</li></ul>",
+      "model": "VS4529-BK",
+      "warranty": "1 year warranty",
+      "basePrice": 16000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H250 x W360 x D250 mm, Weight: 7 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-50746",
+          "price": 16000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H250 x W360 x D250 mm, Weight: 7 KG"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 15360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "VS4529-BK",
+              "position": 0
+            },
+            {
+              "label": "Unlocking method",
+              "value": "Fingerprint, Key, Password",
+              "position": 1
+            },
+            {
+              "label": "Black Matte Finish, Interior",
+              "value": "Velvet",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H250 x W360 x D250 mm, Weight: 7 KG",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-vs4529-bk-fingerprint-digital-safe",
+      "sourceProductCode": "50746",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: VS4529-BK",
+        "Unlocking method: Fingerprint, Key, Password",
+        "Touch panel, Automatic door opening",
+        "Black Matte Finish, Interior: Velvet",
+        "Size: H250 x W360 x D250 mm, Weight: 7 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-vs4529-bk-fingerprint-digital-safe.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-vs4529-bk-fingerprint-digital-safe.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-vs4529-bk-fingerprint-digital-safe",
+        "candidateTitle": "Deli VS4529-BK Fingerprint Digital Safe",
+        "attemptStem": "deli-vs4529-bk-fingerprint-digital-safe"
+      }
+    },
+    {
+      "name": "Deli VS4529-WH Fingerprint Digital Safe",
+      "slug": "deli-vs4529-wh-fingerprint-digital-safe",
+      "type": "PHYSICAL",
+      "sku": "ST-50748",
+      "description": "<h2>Deli VS4529-WH Fingerprint Digital Safe</h2><p>The Deli <strong>VS4529-WH</strong> Fingerprint Digital Safe is a compact, intelligently designed security solution. This Digital Safe measures H250×W360×D250mm. Offering a discreet, space-efficient footprint that fits neatly in bedrooms, offices, and living spaces without drawing attention. Three unlocking methods including fingerprint recognition, password entry, and a physical key give users flexible, reliable access options for every situation. </p><p>The Deli Digital Safe features a minimalist touch-sensitive panel with an integrated design that illuminates instantly upon touch for effortless nighttime access. The Deli VS4529-WH Fingerprint Digital Safe has automatic door opening mechanism unlocks and swings the door open immediately after successful verification without any manual pulling required. Closing the Deli Fingerprint Safe is equally simple just push the door lightly and it locks securely in place every time. </p><p>The 5-layer reinforced solid steel body uses multiple strengthening processes and precision laser cutting from a single steel piece for superior structural integrity. A main body steel thickness of 1.8mm and door steel thickness of 1.2mm provide strong resistance against forced entry attempts. An 8mm narrow metal bezel keeps the overall design sleek and visually unobtrusive across various home and office placement scenarios. </p><p>The Deli VS4529-WH Fingerprint Digital Safe features a premium white glossy exterior finish that looks professional and blends naturally into any interior décor style. A soft velvet interior lining protects jewelry, documents, cash, and other valuables from scratches and surface damage inside the safe. </p><p>One anchoring point allows secure wall or floor mounting to prevent unauthorized removal of the entire safe unit. The Deli Digital Safe runs on four AA dry batteries, making it completely independent of wall power outlets for flexible placement anywhere. A gross weight of 7kg gives the Deli VS4529-WH Digital Safe reassuring physical solidity without being impractically heavy for home installation.</p><h2>Buy Deli VS4529-WH Fingerprint Digital Safe from Star Tech</h2><p>In Bangladesh, you can get original <strong>Deli VS4529-WH Fingerprint Digital Safe</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/digital-locker\" style=\"\" target=\"\">Digital Locker &amp; Vault</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Deli VS4529-WH Fingerprint Digital Safe comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: VS4529-WH</li><li>Unlocking method: Fingerprint, Key, Password</li><li>Touch panel, Automatic door opening</li><li>White Glossy Finish, Interior: Velvet</li><li>Size: H250 x W360 x D250 mm, Weight: 7 KG</li></ul>",
+      "model": "VS4529-WH",
+      "warranty": "1 year warranty",
+      "basePrice": 16000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Deli",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "H250 x W360 x D250 mm, Weight: 7 KG",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-50748",
+          "price": 16000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "H250 x W360 x D250 mm, Weight: 7 KG"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 15360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "VS4529-WH",
+              "position": 0
+            },
+            {
+              "label": "Unlocking method",
+              "value": "Fingerprint, Key, Password",
+              "position": 1
+            },
+            {
+              "label": "White Glossy Finish, Interior",
+              "value": "Velvet",
+              "position": 2
+            },
+            {
+              "label": "Size",
+              "value": "H250 x W360 x D250 mm, Weight: 7 KG",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/deli-vs4529-wh-fingerprint-digital-safe",
+      "sourceProductCode": "50748",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: VS4529-WH",
+        "Unlocking method: Fingerprint, Key, Password",
+        "Touch panel, Automatic door opening",
+        "White Glossy Finish, Interior: Velvet",
+        "Size: H250 x W360 x D250 mm, Weight: 7 KG"
+      ],
+      "needsReview": false,
+      "categorySlug": "digital-locker-vault",
+      "image": "/images/products/security-camera/digital-locker-vault/deli-vs4529-wh-fingerprint-digital-safe.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/digital-locker-vault/deli-vs4529-wh-fingerprint-digital-safe.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "deli-vs4529-wh-fingerprint-digital-safe",
+        "candidateTitle": "Deli VS4529-WH Fingerprint Digital Safe",
+        "attemptStem": "deli-vs4529-wh-fingerprint-digital-safe"
+      }
+    }
+  ]
+}

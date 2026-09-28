@@ -1,0 +1,1044 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/server-networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\server-networking",
+    "generatedAtUnix": 1790588977,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Server Networking",
+      "slug": "server-networking",
+      "parentSlug": null,
+      "image": "/images/products/server-networking/server-and-storage/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Server SSD",
+      "slug": "server-ssd",
+      "parentSlug": "server-networking",
+      "image": "/images/products/server-networking/server-ssd/dell-1-point-92-tb-ssd-sas.jpg",
+      "isActive": true,
+      "sortOrder": 10,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Dell",
+      "slug": "dell",
+      "logo": null
+    },
+    {
+      "name": "Synology",
+      "slug": "synology",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Dell 1.92TB SSD SAS Read Intensive 24Gbps 512e 2.5inch Drive",
+      "slug": "dell-1-point-92-tb-ssd-sas",
+      "type": "PHYSICAL",
+      "sku": "400-BBQP",
+      "description": "<h2>Dell 1.92TB SSD SAS Read Intensive 24Gbps 512e 2.5inch Drive </h2><p>With the Dell 2.4TB Hard Drive, your system's storage capacity can be increased. With a 10K RPM rotational speed, this drive offers quick disk access. This hard disk has an SAS interface, which allows for faster data transfers. This hard disk has an SAS interface, which allows for faster data transfers. Strong, constructed using superior manufacturing techniques, and extensively tested for optimal dependability are Dell drives. Fast data transfer rates are provided by the SAS interface. A spindle speed of 10K RPM guarantees superior performance.</p><h2>Buy Dell 1.92TB SSD SAS Read Intensive 24Gbps 512e 2.5inch Drive from Star Tech</h2><p>In Bangladesh, you can get the original <span style=\"font-weight: 700;\">Dell 1.92TB SSD SAS Read Intensive 24Gbps 512e 2.5inch Drive</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/server-ssd\" target=\"\">SSD </a>to purchase for your <a href=\"https://www.startech.com.bd/server-networking\" style=\"background-color: rgb(255, 255, 255);\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" style=\"background-color: rgb(255, 255, 255);\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Dell 1.92TB SSD SAS Read Intensive 24Gbps 512e 2.5inch Drive comes with 1 year of warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 400-BBQP</li><li>Model: 2.5&#x27;&#x27; 1.92TB SSD</li><li>Interface: SAS 24Gb/s</li><li>Capacity: 1.92TB</li><li>Form Factor: 2.5&quot;</li></ul>",
+      "model": "2.5'' 1.92TB SSD",
+      "warranty": "1 year",
+      "basePrice": 82000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.92 TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SAS 24Gb/s",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "400-BBQP",
+          "price": 82000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "1.92 TB",
+            "Interface": "SAS 24Gb/s"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 78720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Solid state drive - hot-swap",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1.92 TB",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "SAS 24Gb/s",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Drive Transfer Rate: 1.2 GBps (external) Form Factor: 2.5\" Read-Intensive Endurance, 512 emulation ( 512e ) Hardware Encryption: Yes",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-1-point-92-tb-ssd-sas",
+      "sourceProductCode": "32072",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "400-BBQP",
+      "sourceKeyFeatures": [
+        "MPN: 400-BBQP",
+        "Model: 2.5'' 1.92TB SSD",
+        "Interface: SAS 24Gb/s",
+        "Capacity: 1.92TB",
+        "Form Factor: 2.5\""
+      ],
+      "needsReview": false,
+      "categorySlug": "server-ssd",
+      "image": "/images/products/server-networking/server-ssd/dell-1-point-92-tb-ssd-sas.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-ssd/dell-1-point-92-tb-ssd-sas.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-1-point-92-tb-ssd-sas",
+        "candidateTitle": "Dell 1.92TB SSD SAS Read Intensive 24Gbps 512e 2.5inch Drive",
+        "attemptStem": "dell-1-point-92-tb-ssd-sas"
+      }
+    },
+    {
+      "name": "Dell 240GB SSD SATA Mix Use TLC 6Gbps 512e 2.5in Drive S4600",
+      "slug": "server-ssd-240-gb",
+      "type": "PHYSICAL",
+      "sku": "ST-8772",
+      "description": "<h2>Dell 240GB SSD SATA Mix Use TLC 6Gbps 512e 2.5in Drive S4600</h2><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\">Increase the storage capacity of your Dell System with 240GB Solid State Drive from Dell. It boasts a storage capacity of up to 240GB, enabling users to store large amounts of data. This drive delivers enhanced data transfer speed of up to 6Gbps . Offers up to 240GB storage capacity.Equipped with SATA interface which delivers high data transfer rate. Solid State design offers ruggedness and fast data access</div><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><br/></div><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\">Benefits of SSD over spin drives:</div><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\">Feature a non-mechanical design of NAND flash mounted on circuit boards, and are more shock resistant which is More Durable. Faster data access, boot ups, file transfers, and an overall quicker computing experience than hard drives. Run at near silent operation unlike loud, whirring hard disc drives. Flash-based SSDs weigh considerably less. SSDs require little power to operate, resulting in less heat output by your system. Consume less power at peak load.</div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dell 240GB SSD SATA Mix</li><li>Interface: SATA 6Gb/s</li><li>Capacity: 240 GB</li><li>Form Factor: 2.5&quot;</li></ul>",
+      "model": "Dell 240GB SSD SATA Mix",
+      "warranty": "1 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "240 GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "2.5\"",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "SATA 6Gb/s",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8772",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "240 GB",
+            "Form Factor": "2.5\"",
+            "Interface": "SATA 6Gb/s"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "240 GB",
+              "position": 0
+            },
+            {
+              "label": "Form Factor",
+              "value": "2.5\"",
+              "position": 1
+            },
+            {
+              "label": "Flash Type",
+              "value": "Multi-level cell (MLC)",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6Gb/s",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/server-ssd-240-gb",
+      "sourceProductCode": "8772",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dell 240GB SSD SATA Mix",
+        "Interface: SATA 6Gb/s",
+        "Capacity: 240 GB",
+        "Form Factor: 2.5\""
+      ],
+      "needsReview": true,
+      "categorySlug": "server-ssd",
+      "image": "/images/products/server-networking/server-ssd/server-ssd-240-gb.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-ssd/server-ssd-240-gb.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "server-ssd-240-gb",
+        "candidateTitle": "Dell 240GB SSD SATA Mix Use TLC 6Gbps 512e 2.5in Drive S4600",
+        "attemptStem": "server-ssd-240-gb"
+      }
+    },
+    {
+      "name": "Dell 400GB SSD SATA, Mix Use MLC 6Gbps 2.5in Drive, THNSF8",
+      "slug": "server-ssd-400-gb",
+      "type": "PHYSICAL",
+      "sku": "ST-8773",
+      "description": "<div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><span style=\"color: rgb(68, 68, 68); font-family: roboto, Arial, Helvetica, sans-serif; font-size: 14px;\">Increase the storage capacity of your Dell System with 400GB Solid State Drive from Dell. It boasts a storage capacity of up to 400GB, enabling users to store large amounts of data. This drive delivers enhanced data transfer speed of up to 6Gbps . Offers up to 400GB storage capacity.Equipped with SATA interface which delivers high data transfer rate. Solid State design offers ruggedness and fast data access</span></div><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><span style=\"color: rgb(68, 68, 68); font-family: roboto, Arial, Helvetica, sans-serif; font-size: 14px;\">Benefits of SSD over spin drives:</span></div><div class=\"row xs-pad-offset-15\" style=\"margin: 0px;\"><span style=\"color: rgb(68, 68, 68); font-family: roboto, Arial, Helvetica, sans-serif; font-size: 14px;\">Feature a non-mechanical design of NAND flash mounted on circuit boards, and are more shock resistant which is More Durable. </span><span style=\"color: rgb(68, 68, 68); font-family: roboto, Arial, Helvetica, sans-serif; font-size: 14px;\">Faster data access, boot ups, file transfers, and an overall quicker computing experience than hard drives. </span><span style=\"color: rgb(68, 68, 68); font-family: roboto, Arial, Helvetica, sans-serif; font-size: 14px;\">Run at near silent operation unlike loud, whirring hard disc drives. </span><span style=\"color: rgb(68, 68, 68); font-family: roboto, Arial, Helvetica, sans-serif; font-size: 14px;\">Flash-based SSDs weigh considerably less. </span><span style=\"color: rgb(68, 68, 68); font-family: roboto, Arial, Helvetica, sans-serif; font-size: 14px;\">SSDs require little power to operate, resulting in less heat output by your system. </span><span style=\"color: rgb(68, 68, 68); font-family: roboto, Arial, Helvetica, sans-serif; font-size: 14px;\">Consume less power at peak load.</span></div></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dell 400GB SSD SATA Mix</li><li>Interface: SATA 6Gb/s</li><li>Capacity: 400 GB</li><li>Form Factor: 2.5&quot;</li></ul>",
+      "model": "Dell 400GB SSD SATA Mix",
+      "warranty": "1 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "400GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "2.5\"",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "SATA 6Gb/s",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-8773",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "400GB",
+            "Form Factor": "2.5\"",
+            "Interface": "SATA 6Gb/s"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "400GB",
+              "position": 0
+            },
+            {
+              "label": "Form Factor",
+              "value": "2.5\"",
+              "position": 1
+            },
+            {
+              "label": "Flash Type",
+              "value": "Multi-level cell (MLC)",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6Gb/s",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 Year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/server-ssd-400-gb",
+      "sourceProductCode": "8773",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dell 400GB SSD SATA Mix",
+        "Interface: SATA 6Gb/s",
+        "Capacity: 400 GB",
+        "Form Factor: 2.5\""
+      ],
+      "needsReview": true,
+      "categorySlug": "server-ssd",
+      "image": "/images/products/server-networking/server-ssd/server-ssd-400-gb.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-ssd/server-ssd-400-gb.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "server-ssd-400-gb",
+        "candidateTitle": "Dell 400GB SSD SATA, Mix Use MLC 6Gbps 2.5in Drive, THNSF8",
+        "attemptStem": "server-ssd-400-gb"
+      }
+    },
+    {
+      "name": "Synology SAT5210 960GB 2.5” Enterprise SATA SSD",
+      "slug": "synology-sat5210-960gb-enterprise-sata-ssd",
+      "type": "PHYSICAL",
+      "sku": "SAT5210-960G",
+      "description": "<h2>Synology SAT5210 960GB 2.5” Enterprise SATA SSD</h2><p style=\"text-align: justify; \">The Synology SAT5200 2.5-inch SATA SSD provides consistent I/O performance while lowering latency for mission-critical applications and services. It is intended to manage varied and intensive workloads 24 hours a day, seven days a week without sacrificing resilience, delivering an optimum storage experience on Synology devices with minimum service disruptions. The <span style=\"font-weight: bold;\">SAT5200</span> is designed to increase the speed and responsiveness of bandwidth-intensive applications such as music creation, video editing, online transaction processing (OLTP) databases, and virtualization deployments. It enables enterprises to upgrade their existing storage infrastructure while improving performance at a cheap cost per unit. Easy monitoring enables you to make the best use of each <a href=\"https://www.startech.com.bd/server-ssd\" style=\"color: rgb(0, 0, 0);\" target=\"\">SSD</a>. You'll be notified of possible concerns in real-time, allowing you to prepare ahead for consistent performance and lifespan.</p><h2 style=\"text-align: justify;\">Buy Synology SAT5210 960GB 2.5” Enterprise SATA SSD from the best Server SSD Shop in Bangladesh: Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Synology SAT5210 960GB 2.5” Enterprise SATA SSD</span> From Star Tech. We have a large collection of the latest Synology <a href=\"https://www.startech.com.bd/server-ssd\" target=\"\">Server SSDs</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology SAT5210 960GB 2.5” Enterprise SATA SSD comes with 01-year of warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SAT5210-960G</li><li>Model: SAT5210</li><li>Capacity: 960GB</li><li>Interface: SATA 6Gb/s</li><li>Form Factor: 2.5&quot;</li><li>Read: 530 MB/s, Write: 500 MB/s</li></ul>",
+      "model": "SAT5210",
+      "warranty": "01-Year warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 7.0,
+        "width": 69.85,
+        "height": 100.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "960GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "2.5\"",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "SATA 6Gb/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage Temperature",
+          "position": 3,
+          "values": [
+            {
+              "value": "-40°C to 85°C (-40°F to 185°F)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SAT5210-960G",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "960GB",
+            "Form Factor": "2.5\"",
+            "Interface": "SATA 6Gb/s",
+            "Storage Temperature": "-40°C to 85°C (-40°F to 185°F)"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "960GB",
+              "position": 0
+            },
+            {
+              "label": "Form Factor",
+              "value": "2.5\"",
+              "position": 1
+            },
+            {
+              "label": "Flash Type",
+              "value": "Multi-level cell (MLC)",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "SATA 6Gb/s",
+              "position": 3
+            },
+            {
+              "label": "Sequential R/W",
+              "value": "Read: 530 MB/s, Write: 500 MB/s",
+              "position": 4
+            },
+            {
+              "label": "MTBF",
+              "value": "1.5 million hours",
+              "position": 5
+            },
+            {
+              "label": "TBW",
+              "value": "2,194 TB",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "7.0 mm x 69.85 mm x 100 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Temperature",
+          "position": 2,
+          "items": [
+            {
+              "label": "Operating Temperature",
+              "value": "0°C to 70°C (32°F to 158°F)",
+              "position": 0
+            },
+            {
+              "label": "Storage Temperature",
+              "value": "-40°C to 85°C (-40°F to 185°F)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "01-Year warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-sat5210-960gb-enterprise-sata-ssd",
+      "sourceProductCode": "30851",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "SAT5210-960G",
+      "sourceKeyFeatures": [
+        "MPN: SAT5210-960G",
+        "Model: SAT5210",
+        "Capacity: 960GB",
+        "Interface: SATA 6Gb/s",
+        "Form Factor: 2.5\"",
+        "Read: 530 MB/s, Write: 500 MB/s"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-ssd",
+      "image": "/images/products/server-networking/server-ssd/synology-sat5210-960gb-enterprise-sata-ssd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-ssd/synology-sat5210-960gb-enterprise-sata-ssd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-sat5210-960gb-enterprise-sata-ssd",
+        "candidateTitle": "Synology SAT5210 960GB 2.5” Enterprise SATA SSD",
+        "attemptStem": "synology-sat5210-960gb-enterprise-sata-ssd"
+      }
+    },
+    {
+      "name": "Synology SNV3410 400GB M.2 2280 NVMe PCIe SSD",
+      "slug": "synology-snv3410-400gb-nvme-ssd",
+      "type": "PHYSICAL",
+      "sku": "SNV3410-400G",
+      "description": "<h2>Synology SNV3410 400GB M.2 2280 NVMe PCIe SSD</h2><p style=\"\">The Synology SNV3410 400GB M.2 2280 NVMe PCIe SSD is an enterprise-class solid-state drive built primarily for server storage upgrades. Its 400GB size provides plenty of storage space for data needs. The M.2 2280 form factor of the SNV3410-400G version ensures interoperability with a wide range of devices. This SSD supports high-speed data transfer rates and efficient data processing by utilizing the NVMe PCIe 3.0 x4 interface.</p><h3 style=\"\">Consistently Fast Caching for 24/7 Environments</h3><p style=\"\">The SNV3410-400G SSD has a Terabytes Written (TBW) rating of 491 TB, ensuring long-term durability and endurance. It also includes power loss protection, which protects against data loss during power outages. with sustained sequential read speeds of up to 3,000 MB/s and sustained sequential write speeds of up to 750 MB/s. It achieves up to 225,000 IOPS for read operations and up to 45,000 IOPS for write operations for random operations.<br/></p><h3 style=\"\">Purpose-built for Synology NAS</h3><p style=\"\">The Synology SNV3410 400GB M.2 2280 NVMe PCIe SSD has been thoroughly tested. Each piece of firmware and component is strictly monitored.<br/></p><h2 style=\"\">Buy Synology SNV3410 400GB M.2 2280 NVMe PCIe SSD from the best SSD Shop in BD</h2><p>In Bangladesh, you can get the original <a href=\"https://www.startech.com.bd/synology-snv3410-400gb-nvme-ssd\" target=\"\">Synology SNV3410 400GB M.2 2280 NVMe PCIe SSD</a> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-ssd\" target=\"\">Server SSD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology SNV3410 400GB M.2 2280 NVMe PCIe SSD comes with 5 years warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SNV3410-400G</li><li>Model: SNV3410</li><li>Form Factor: M.2 2280</li><li>Interface: NVMe PCIe 3.0 x4</li><li>Sequential read: 3,000 MB/s</li><li>Sequential write: 750 MB/s</li></ul>",
+      "model": "SNV3410",
+      "warranty": "No Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 3.15,
+        "width": 0.87,
+        "height": 0.14,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "400 GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "M.2 2280",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "NVMe PCIe 3.0 x4",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage Temperature",
+          "position": 3,
+          "values": [
+            {
+              "value": "-40°C to 85°C (-40°F to 185°F)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SNV3410-400G",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "400 GB",
+            "Form Factor": "M.2 2280",
+            "Interface": "NVMe PCIe 3.0 x4",
+            "Storage Temperature": "-40°C to 85°C (-40°F to 185°F)"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "400 GB",
+              "position": 0
+            },
+            {
+              "label": "Form Factor",
+              "value": "M.2 2280",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "NVMe PCIe 3.0 x4",
+              "position": 2
+            },
+            {
+              "label": "Sequential R/W",
+              "value": "Sequential Read: 3,000 MB/s Sequential Write: 750 MB/s",
+              "position": 3
+            },
+            {
+              "label": "TBW",
+              "value": "491 TB",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "3.15 x 0.87 x 0.14\" / 80 x 22 x 3.5 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Temperature",
+          "position": 2,
+          "items": [
+            {
+              "label": "Operating Temperature",
+              "value": "0°C to 70°C (32°F to 158°F)",
+              "position": 0
+            },
+            {
+              "label": "Storage Temperature",
+              "value": "-40°C to 85°C (-40°F to 185°F)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-snv3410-400gb-nvme-ssd",
+      "sourceProductCode": "28407",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "SNV3410-400G",
+      "sourceKeyFeatures": [
+        "MPN: SNV3410-400G",
+        "Model: SNV3410",
+        "Form Factor: M.2 2280",
+        "Interface: NVMe PCIe 3.0 x4",
+        "Sequential read: 3,000 MB/s",
+        "Sequential write: 750 MB/s"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-ssd",
+      "image": "/images/products/server-networking/server-ssd/synology-snv3410-400gb-nvme-ssd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-ssd/synology-snv3410-400gb-nvme-ssd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-snv3410-400gb-nvme-ssd",
+        "candidateTitle": "Synology SNV3410 400GB M.2 2280 NVMe PCIe SSD",
+        "attemptStem": "synology-snv3410-400gb-nvme-ssd"
+      }
+    },
+    {
+      "name": "Synology SNV3410 800GB M.2 2280 NVMe PCIe 3.0 x4 Server SSD",
+      "slug": "synology-snv3410-800gb-ssd",
+      "type": "PHYSICAL",
+      "sku": "SNV3410-800G",
+      "description": "<h2>Synology SNV3410 800GB M.2 2280 NVMe PCIe 3.0 x4 Server SSD</h2><p>The Synology <strong>SNV3410</strong> 800GB M.2 NVMe <a href=\"https://www.startech.com.bd/server-ssd\" style=\"color: rgb(0, 0, 0);\" target=\"\">Server SSD</a>, which comes in the M.2 2280 form factor, has a PCIe 3.0 x4 interface that provides quick and consistent data access for caching and intensive workloads. With a substantial 800GB storage capacity, the Synology SNV3410 800GB Server SSD enhances system responsiveness while maintaining stability during heavy multitasking. The Synology SNV3410 Server SSD boasts impressive performance, with sequential read speeds of up to 3100 MB/s and sequential write speeds of up to 1000 MB/s. In real-world server usage, it also provides excellent random performance, with up to 400,000 IOPS for random reads and 70,000 IOPS for random writes, ensuring seamless operation of virtual machines, databases, and shared workloads. As a Synology Server SSD, it is designed for long-term dependability, with an exceptional mean time between failures of 1.8 million hours. Durability is another significant feature of the Synology SNV3410 800GB M.2 2280 NVMe PCIe 3.0 x4 Server SSD, with endurance rated up to 1022 terabytes written, making it suited for continuous operation and write-intensive activities. This level of durability enables steady performance over long periods of time, which reduces downtime and maintenance issues. The Synology SNV3410 800GB M.2 NVMe Server SSD is designed to interact smoothly with Synology systems, ensuring optimal compatibility and stable operation.</p><h2>Buy Synology SNV3410 800GB M.2 2280 NVMe PCIe 3.0 x4 Server SSD from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Synology SNV3410 800GB M.2 2280 NVMe PCIe 3.0 x4 Server SSD</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/server-ssd\" target=\"\">Server SSD</a> to purchase for your <a href=\"https://www.startech.com.bd/server-networking/server\" target=\"\">Server</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Synology SNV3410 800GB M.2 2280 NVMe PCIe 3.0 x4 Server SSD comes with a 2-year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SNV3410-800G</li><li>Model: SNV3410 Series</li><li>Form Factor: M.2 2280</li><li>Interface: NVMe PCIe 3.0 x4</li><li>Up to 1000 MB/s Sequential Write Speed</li><li>Up to 3100 MB/s Sequential Read Speed</li></ul>",
+      "model": "SNV3410 Series",
+      "warranty": "2 Years Warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 3.1,
+        "width": 0.9,
+        "height": 0.1,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Synology",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "800GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Form Factor",
+          "position": 1,
+          "values": [
+            {
+              "value": "M.2 2280",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 2,
+          "values": [
+            {
+              "value": "NVMe PCIe 3.0 x4",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage Temperature",
+          "position": 3,
+          "values": [
+            {
+              "value": "-40 to 185°F / -40 to 85°C",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SNV3410-800G",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "800GB",
+            "Form Factor": "M.2 2280",
+            "Interface": "NVMe PCIe 3.0 x4",
+            "Storage Temperature": "-40 to 185°F / -40 to 85°C"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "800GB",
+              "position": 0
+            },
+            {
+              "label": "Form Factor",
+              "value": "M.2 2280",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "NVMe PCIe 3.0 x4",
+              "position": 2
+            },
+            {
+              "label": "Sequential R/W",
+              "value": "Up to 1000 MB/s Sequential Write Speed Up to 3100 MB/s Sequential Read Speed",
+              "position": 3
+            },
+            {
+              "label": "MTBF",
+              "value": "1.8 Million Hours MTBF",
+              "position": 4
+            },
+            {
+              "label": "TBW",
+              "value": "Endurance up to 1022 Terabytes Written",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "3.1 x 0.9 x 0.1\" / 80 x 22 x 3.5 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Temperature",
+          "position": 2,
+          "items": [
+            {
+              "label": "Operating Temperature",
+              "value": "32 to 158°F / 0 to 70°C",
+              "position": 0
+            },
+            {
+              "label": "Storage Temperature",
+              "value": "-40 to 185°F / -40 to 85°C",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "2 Years Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/synology-snv3410-800gb-ssd",
+      "sourceProductCode": "47292",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": "SNV3410-800G",
+      "sourceKeyFeatures": [
+        "MPN: SNV3410-800G",
+        "Model: SNV3410 Series",
+        "Form Factor: M.2 2280",
+        "Interface: NVMe PCIe 3.0 x4",
+        "Up to 1000 MB/s Sequential Write Speed",
+        "Up to 3100 MB/s Sequential Read Speed"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-ssd",
+      "image": "/images/products/server-networking/server-ssd/synology-snv3410-800gb-ssd.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-ssd/synology-snv3410-800gb-ssd.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "synology-snv3410-800gb-ssd",
+        "candidateTitle": "Synology SNV3410 800GB M.2 2280 NVMe PCIe 3.0 x4 Server SSD",
+        "attemptStem": "synology-snv3410-800gb-ssd"
+      }
+    }
+  ]
+}

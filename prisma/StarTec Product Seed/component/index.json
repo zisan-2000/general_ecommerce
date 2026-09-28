@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/component",
+  "imageFolder": "/images/products/component/casing",
+  "groups": [
+    {
+      "name": "_direct",
+      "file": "_direct.json",
+      "status": "completed",
+      "products": 3,
+      "matched": 0,
+      "unmatched": 3
+    },
+    {
+      "name": "casing",
+      "file": "casing.json",
+      "status": "completed",
+      "products": 537,
+      "matched": 537,
+      "unmatched": 0
+    },
+    {
+      "name": "casing-cooler",
+      "file": "casing-cooler.json",
+      "status": "completed",
+      "products": 173,
+      "matched": 167,
+      "unmatched": 6
+    },
+    {
+      "name": "cpu-cooler",
+      "file": "cpu-cooler.json",
+      "status": "completed",
+      "products": 553,
+      "matched": 526,
+      "unmatched": 27
+    },
+    {
+      "name": "graphics-card",
+      "file": "graphics-card.json",
+      "status": "completed",
+      "products": 498,
+      "matched": 498,
+      "unmatched": 0
+    },
+    {
+      "name": "hard-disk-drive",
+      "file": "hard-disk-drive.json",
+      "status": "completed",
+      "products": 119,
+      "matched": 119,
+      "unmatched": 0
+    },
+    {
+      "name": "motherboard",
+      "file": "motherboard.json",
+      "status": "completed",
+      "products": 512,
+      "matched": 512,
+      "unmatched": 0
+    },
+    {
+      "name": "optical-disk-drive",
+      "file": "optical-disk-drive.json",
+      "status": "completed",
+      "products": 13,
+      "matched": 13,
+      "unmatched": 0
+    },
+    {
+      "name": "portable-hard-disk-drive",
+      "file": "portable-hard-disk-drive.json",
+      "status": "completed",
+      "products": 56,
+      "matched": 56,
+      "unmatched": 0
+    },
+    {
+      "name": "portable-ssd",
+      "file": "portable-ssd.json",
+      "status": "completed",
+      "products": 70,
+      "matched": 70,
+      "unmatched": 0
+    },
+    {
+      "name": "power-supply",
+      "file": "power-supply.json",
+      "status": "completed",
+      "products": 369,
+      "matched": 366,
+      "unmatched": 3
+    },
+    {
+      "name": "processor",
+      "file": "processor.json",
+      "status": "completed",
+      "products": 119,
+      "matched": 119,
+      "unmatched": 0
+    },
+    {
+      "name": "ram-desktop",
+      "file": "ram-desktop.json",
+      "status": "completed",
+      "products": 530,
+      "matched": 530,
+      "unmatched": 0
+    },
+    {
+      "name": "ram-laptop",
+      "file": "ram-laptop.json",
+      "status": "completed",
+      "products": 159,
+      "matched": 159,
+      "unmatched": 0
+    },
+    {
+      "name": "ssd",
+      "file": "ssd.json",
+      "status": "completed",
+      "products": 286,
+      "matched": 286,
+      "unmatched": 0
+    },
+    {
+      "name": "vertical-gpu-holder",
+      "file": "vertical-gpu-holder.json",
+      "status": "completed",
+      "products": 24,
+      "matched": 24,
+      "unmatched": 0
+    },
+    {
+      "name": "water-liquid-cooling",
+      "file": "water-liquid-cooling.json",
+      "status": "completed",
+      "products": 28,
+      "matched": 28,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790589899
+}

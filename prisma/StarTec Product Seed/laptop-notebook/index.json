@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/laptop-notebook",
+  "imageFolder": "/images/products/laptop/all-laptop/acer",
+  "groups": [
+    {
+      "name": "all-laptop",
+      "file": "all-laptop.json",
+      "status": "completed",
+      "products": 301,
+      "matched": 301,
+      "unmatched": 0
+    },
+    {
+      "name": "gaming-laptop",
+      "file": "gaming-laptop.json",
+      "status": "completed",
+      "products": 114,
+      "matched": 114,
+      "unmatched": 0
+    },
+    {
+      "name": "laptop-accessories",
+      "file": "laptop-accessories.json",
+      "status": "completed",
+      "products": 1025,
+      "matched": 1022,
+      "unmatched": 3
+    },
+    {
+      "name": "laptop-bag",
+      "file": "laptop-bag.json",
+      "status": "completed",
+      "products": 51,
+      "matched": 51,
+      "unmatched": 0
+    },
+    {
+      "name": "premium-ultrabook",
+      "file": "premium-ultrabook.json",
+      "status": "completed",
+      "products": 67,
+      "matched": 67,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790590680
+}

@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/component",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\component",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\component",
+  "imagesFound": 4053,
+  "uniqueProductStems": 4049,
+  "productsInJson": 4049,
+  "matchedProducts": 4010,
+  "unmatchedProducts": 39,
+  "imageCoverage": 4053,
+  "jsonGroupFiles": 17,
+  "matchMethods": {
+    "unmatched": 39,
+    "direct-slug": 4001,
+    "search": 9
+  },
+  "jsonGenerationTimeSeconds": 2162.06,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 4049,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\component\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\component\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\component\\unmatched.json"
+  },
+  "seedTimeSeconds": 88.26
+}

@@ -1,0 +1,1352 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/security-camera",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\security-camera",
+    "generatedAtUnix": 1790590169,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Security Camera",
+      "slug": "security-camera",
+      "parentSlug": null,
+      "image": "/images/products/security-camera/access-control/Hikvision/hikvision-ds-k1201aef-fingerprint-reader.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Cc Camera Accessories",
+      "slug": "cc-camera-accessories",
+      "parentSlug": "security-camera",
+      "image": "/images/products/security-camera/cc-camera-accessories/12v-2a-box-cctv-power-adapter.png",
+      "isActive": true,
+      "sortOrder": 2,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Aptech",
+      "slug": "aptech",
+      "logo": null
+    },
+    {
+      "name": "Dahua",
+      "slug": "dahua",
+      "logo": null
+    },
+    {
+      "name": "DTECH",
+      "slug": "dtech",
+      "logo": null
+    },
+    {
+      "name": "Hikvision",
+      "slug": "hikvision",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "12V 2A Box waterproof AC/DC Power Adapter for CCTV Camera",
+      "slug": "12v-2a-box-cctv-power-adapter",
+      "type": "PHYSICAL",
+      "sku": "ST-25425",
+      "description": "<h2 style=\"text-align: justify; \">12V 2A Box waterproof AC/DC Power Adapter for CCTV Camera</h2><p style=\"text-align: justify;\">The 12V 2A Box waterproof AC/DC Power Adapter is a convenient plug-in power source for your security cameras! This AC/DC power supply provides 12 volts and 2 amps. The CCTV Camera Adapter is a CCTV power supply with multiple output channels that are commonly used for home and small business camera systems. Use another hand to grab the concealing wire box cover and pull it downward with a specific force, separating the hiding wire box cover from the main section of the power adaptor. Repair the major portion of the wall. Keep in mind that the wiring terminal side is always on the bottom. After wiring, replace the cover over the main portion. It simply plugs into a single 120V-240V AC outlet and supplies regulated 12V AC/DC to four cameras. The adapter output has standard 2.1mm barrel connectors, center positive, and can be hooked into CCTV power and video cables or directly into a CCTV camera's power harness. This <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera-accessories\" style=\"color: rgb(0, 0, 0);\" target=\"_blank\">Power Adapter</a> enables the central powering of several cameras while maintaining camera sync and simplifying installation. The 12V 2A Box AC/DC Power Adapter for CCTV Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 12V 2A Box</li><li>Input Voltage:AC 100 - 240V</li><li>Input Frequency: 50 / 60Hz</li><li>Output Voltage: DC 12V</li><li>Output Current: 2A</li></ul>",
+      "model": "12V 2A Box",
+      "warranty": "No Warranty",
+      "basePrice": 300.0,
+      "originalPrice": 400.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 9.0,
+        "width": 5.0,
+        "height": 4.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-25425",
+          "price": 300.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 288.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Power",
+              "value": "24W",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "AC Input Voltage: 100 AC - 240 AC ( 50HZ - 60HZ ) Output Voltage (V) / Current (A) :12V 2A Performance : High Stability and Efficiency, waterproof",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "9x5x4cm",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/12v-2a-box-cctv-power-adapter",
+      "sourceProductCode": "25425",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 12V 2A Box",
+        "Input Voltage:AC 100 - 240V",
+        "Input Frequency: 50 / 60Hz",
+        "Output Voltage: DC 12V",
+        "Output Current: 2A"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-accessories",
+      "image": "/images/products/security-camera/cc-camera-accessories/12v-2a-box-cctv-power-adapter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-accessories/12v-2a-box-cctv-power-adapter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "12v-2a-box-cctv-power-adapter",
+        "candidateTitle": "12V 2A Box waterproof AC/DC Power Adapter for CCTV Camera",
+        "attemptStem": "12v-2a-box-cctv-power-adapter"
+      }
+    },
+    {
+      "name": "12V 2A Outdoor Waterproof AC/DC Power Adapter for CCTV Camera",
+      "slug": "12v-2a-cctv-power-adapter",
+      "type": "PHYSICAL",
+      "sku": "ST-25424",
+      "description": "<h2 style=\"text-align: justify; \">12V 2A Outdoor Waterproof AC/DC Power Adapter for CCTV Camera</h2><p style=\"text-align: justify;\">The 12V 2A Outdoor Waterproof AC/DC Power Adapter is a plug-in power source that easily powers your security cameras! This AC/DC power source can deliver 12 volts and 2 amps. The CCTV <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera-accessories\" style=\"background-color: rgb(255, 255, 255); color: rgb(0, 0, 0);\" target=\"_blank\">Camera Adapter</a> is a CCTV power supply with multiple output channels that is popular for residential and small business camera systems. It simply connects to a single 120V AC socket and provides regulated 12V DC to four cameras. The adapter output includes standard 2.1mm barrel connectors, center positive, and can be plugged into CCTV power and video cables or straight into the power harness of a CCTV camera. This Adapter allows numerous cameras to be powered centrally while maintaining camera sync and simplifying installation. The 12V 2A Outdoor Waterproof AC/DC Power Adapter for CCTV Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: 12V 2A</li><li>Size: 9x5x4cm</li><li>Power Output(Watt) :24W</li><li>Output Voltage (V)/Current (A): 12V 2A</li><li>AC Input Voltage: 100 AC-240 AC (50HZ-60HZ)</li></ul>",
+      "model": "12V 2A",
+      "warranty": "No Warranty",
+      "basePrice": 500.0,
+      "originalPrice": 600.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 9.0,
+        "width": 5.0,
+        "height": 4.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-25424",
+          "price": 500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Power",
+              "value": "24W",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "AC Input Voltage: 100 AC - 240 AC ( 50HZ - 60HZ ) Output Voltage (V) / Current (A):12V 2A Power Output(Watt) :24W Performance: High Stability and Efficiency, waterproof Output Plug:5.5*2.1(compatible 5.5*2.5)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "9x5x4cm",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/12v-2a-cctv-power-adapter",
+      "sourceProductCode": "25424",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: 12V 2A",
+        "Size: 9x5x4cm",
+        "Power Output(Watt) :24W",
+        "Output Voltage (V)/Current (A): 12V 2A",
+        "AC Input Voltage: 100 AC-240 AC (50HZ-60HZ)"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-accessories",
+      "image": "/images/products/security-camera/cc-camera-accessories/12v-2a-cctv-power-adapter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-accessories/12v-2a-cctv-power-adapter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "12v-2a-cctv-power-adapter",
+        "candidateTitle": "12V 2A Outdoor Waterproof AC/DC Power Adapter for CCTV Camera",
+        "attemptStem": "12v-2a-cctv-power-adapter"
+      }
+    },
+    {
+      "name": "AHD/CVI/TVI 720P/1080P (2MP) Video Balun for CC Camera",
+      "slug": "ahd-cvi-tvi-720p-1080p-2mp-video-balun-for-cc-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-27702",
+      "description": "<h2 style=\"text-align: justify; \">AHD/CVI/TVI 720P/1080P (2MP) Video Balun for CC Camera</h2><p style=\"text-align: justify; \">The AHD/CVI/TVI 720P/1080P (2MP) Video Balun is a device that functions as a connector for cameras or DVRs. This video balun comes in black and can transmit a single channel of the video signal. It is compatible with various formats such as AHD, HDCVI, HDTVI, and CVBS, and can support a resolution range of 720P, 960P, 1080P, 3MP, 4MP, 5MP, and 8MP. This device is designed to provide excellent anti-interference capability with over 60 dB. It has a coaxial video connector with BNC-M and a twisted-pair video connector with a screw terminal. The transmission distance for AHD/CVI is 400m (max) while for TVI it is 200m (max). This video balun is compatible with UTP CAT5/5E/6 category-type cables. It has a coaxial cable connector with 2KV (common code) and a UTP cable connector with 2KV (different code) or 4KV (common code), as per the IEC61000-4-5 standards. The BNC male connector has a resistance of 75 Ohms, while the UTP connector has a resistance of 100 Ohms.</p><h2 style=\"text-align: justify;\">Buy AHD/CVI/TVI 720P/1080P (2MP) Video Balun for CC Camera from the best CC Camera Accessories Shop in BD</h2><p style=\"text-align: justify;\">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/ahd-cvi-tvi-720p-1080p-2mp-video-balun-for-cc-camera\" target=\"\">AHD/CVI/TVI 720P/1080P (2MP) Video Balun for CC Camera</a> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera-accessories\" target=\"\">CC Camera Accessories</a> to purchase for your <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera\" target=\"\">CC Camera</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The AHD/CVI/TVI 720P/1080P (2MP) Video Balun for CC Camera has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Video Balun for CC Camera</li><li>Video Baluns connector</li><li>Use For - Camera or DVR</li><li>Transmission signal: 1 channel</li><li>Coaxial video connector: BNC-M</li></ul>",
+      "model": "Video Balun for CC Camera",
+      "warranty": "No Warranty",
+      "basePrice": 250.0,
+      "originalPrice": 275.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-27702",
+          "price": 250.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Transmission signal: 1 channel Transmission distance: AHD/CVI:400m(max) / TVI: 200m(max) Category Type: UTP CAT5/5E/6 Coaxial video connector: BNC-M Twisted-pair video connector: Screw-terminal Compatible Format: AHD / HDCVI /HDTVI/CVBS Resolution: 720P/960P/1080P/3MP/4MP/5MP/8MP Anti-interference: >60dB ESD: 1a contact discharge electricity level 3 / 1b air discharge electricity level 3 / Per: IEC61000-4-5, Coaxial cable connector: 2KV(common-code) Per: IEC61000-4-5 UTP Cable Connector: 2KV(different code) 4KV(common-code)Per: IEC61000-4-5 BNC male: 75 Ohms UTP: 100 Ohms",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ahd-cvi-tvi-720p-1080p-2mp-video-balun-for-cc-camera",
+      "sourceProductCode": "27702",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Video Balun for CC Camera",
+        "Video Baluns connector",
+        "Use For - Camera or DVR",
+        "Transmission signal: 1 channel",
+        "Coaxial video connector: BNC-M"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-accessories",
+      "image": "/images/products/security-camera/cc-camera-accessories/ahd-cvi-tvi-720p-1080p-2mp-video-balun-for-cc-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-accessories/ahd-cvi-tvi-720p-1080p-2mp-video-balun-for-cc-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ahd-cvi-tvi-720p-1080p-2mp-video-balun-for-cc-camera",
+        "candidateTitle": "AHD/CVI/TVI 720P/1080P (2MP) Video Balun for CC Camera",
+        "attemptStem": "ahd-cvi-tvi-720p-1080p-2mp-video-balun-for-cc-camera"
+      }
+    },
+    {
+      "name": "Aptech PA100 Pro 12V 2A CCTV Camera Adapter",
+      "slug": "aptech-pa100-pro-12v-2a-cctv-camera-adapter",
+      "type": "PHYSICAL",
+      "sku": "ST-51831",
+      "description": "<h2>Aptech PA100 Pro 12V 2A CCTV Camera Adapter </h2><p>The Aptech <strong>PA100 Pro </strong>12V 2A CCTV Camera Adapter is a premium outdoor power solution designed to deliver stable and efficient performance for surveillance systems. Built with high‑efficiency circuitry, it ensures consistent 12V DC output at 2A, providing reliable power for CCTV cameras, DVRs, and other security devices. Supporting a wide input voltage range of AC 100–240V at 50/60Hz, the Aptech PA100 Pro is compatible with global power standards, making it suitable for diverse installation environments. Its outdoor‑ready design offers durability and protection, ensuring uninterrupted operation even in challenging conditions. Compact yet robust, this adapter is engineered for long‑lasting performance and easy integration into professional security setups. Whether used in residential, commercial, or industrial surveillance systems, the Aptech PA100 Pro 12V 2A CCTV Camera Adapter guarantees dependable power delivery with enhanced efficiency and reliability.</p><h2>Buy Aptech PA100 Pro 12V 2A CCTV Camera Adapter from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Aptech PA100 Pro 12V 2A CCTV Camera Adapter</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera-accessories\">CC Camera Accessories</a> to purchase for your <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera\">CC Camera</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Aptech PA100 Pro 12V 2A CCTV Camera Adapter comes with a No Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PA100 Pro</li><li>Input Plug Type: Standard AC Plug</li><li>Output Voltage : 12V DC</li><li>Input Voltage: AC 100-240V</li><li>Compatible with CCTV Cameras, DVRs</li></ul>",
+      "model": "PA100 Pro",
+      "warranty": "No Warranty",
+      "basePrice": 350.0,
+      "originalPrice": 400.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Aptech",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51831",
+          "price": 350.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 336.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Power",
+              "value": "12V DC",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Type: Outdoor CCTV Power Adapter Input Voltage: AC 100–240V Input Frequency: 50/60Hz Power Efficiency: High Efficiency",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/aptech-pa100-pro-12v-2a-cctv-camera-adapter",
+      "sourceProductCode": "51831",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PA100 Pro",
+        "Input Plug Type: Standard AC Plug",
+        "Output Voltage : 12V DC",
+        "Input Voltage: AC 100-240V",
+        "Compatible with CCTV Cameras, DVRs"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-accessories",
+      "image": "/images/products/security-camera/cc-camera-accessories/aptech-pa100-pro-12v-2a-cctv-camera-adapter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-accessories/aptech-pa100-pro-12v-2a-cctv-camera-adapter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "aptech-pa100-pro-12v-2a-cctv-camera-adapter",
+        "candidateTitle": "Aptech PA100 Pro 12V 2A CCTV Camera Adapter",
+        "attemptStem": "aptech-pa100-pro-12v-2a-cctv-camera-adapter"
+      }
+    },
+    {
+      "name": "Aptech PA30 12V 2A CCTV Camera Adapter",
+      "slug": "aptech-pa30-12v-2a-cctv-camera-adapter",
+      "type": "PHYSICAL",
+      "sku": "ST-51830",
+      "description": "<h2>Aptech PA30 12V 2A CCTV Camera Adapter </h2><p>The Aptech <strong>PA30</strong> 12V 2A CCTV Camera Adapter is a reliable power solution designed to ensure stable performance for surveillance systems. Featuring a standard AC input plug, it supports input voltage from AC 100–240V, making it suitable for global use across different power environments. With an output of 12V DC and 2A current, it provides consistent power delivery for CCTV cameras, DVRs, and other compatible security devices. Engineered for durability and efficiency, the Aptech PA30 adapter helps maintain uninterrupted operation of your security setup. Its compact design allows easy installation, while the robust build ensures long‑lasting performance. Whether used in home security systems, office surveillance, or professional monitoring setups, this CC Camera adapter offers dependable power support for continuous protection. With wide compatibility and stable output, the Aptech PA30 12V 2A CCTV Camera Adapter is the perfect choice for powering modern surveillance equipment, ensuring smooth operation and reliable connectivity at all times.</p><h2>Buy Aptech PA30 12V 2A CCTV Camera Adapter from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Aptech PA30 12V 2A CCTV Camera Adapter</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera-accessories\">CC Camera Accessories</a> to purchase for your <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera\">CC Camera</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Aptech PA30 12V 2A CCTV Camera Adapter comes with a No Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PA30</li><li>Input Plug Type: Standard AC Plug</li><li>Output Voltage : 12V DC</li><li>Input Voltage: AC 100-240V</li><li>Compatible with CCTV Cameras, DVRs</li></ul>",
+      "model": "PA30",
+      "warranty": "No Warranty",
+      "basePrice": 250.0,
+      "originalPrice": 300.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Aptech",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51830",
+          "price": 250.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Power",
+              "value": "12V DC",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Type: Switching Power Adapter Input Voltage: AC 100-240V Input Frequency: 50/60Hz Input Plug Type: Standard AC Plug",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/aptech-pa30-12v-2a-cctv-camera-adapter",
+      "sourceProductCode": "51830",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PA30",
+        "Input Plug Type: Standard AC Plug",
+        "Output Voltage : 12V DC",
+        "Input Voltage: AC 100-240V",
+        "Compatible with CCTV Cameras, DVRs"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-accessories",
+      "image": "/images/products/security-camera/cc-camera-accessories/aptech-pa30-12v-2a-cctv-camera-adapter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-accessories/aptech-pa30-12v-2a-cctv-camera-adapter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "aptech-pa30-12v-2a-cctv-camera-adapter",
+        "candidateTitle": "Aptech PA30 12V 2A CCTV Camera Adapter",
+        "attemptStem": "aptech-pa30-12v-2a-cctv-camera-adapter"
+      }
+    },
+    {
+      "name": "Aptech PA60 CCTV Camera Adapter",
+      "slug": "aptech-pa60-cctv-camera-adapter",
+      "type": "PHYSICAL",
+      "sku": "ST-51832",
+      "description": "<h2>Aptech PA60 CCTV Camera Adapter </h2><p>The Aptech <strong>PA60</strong> CCTV Camera Adapter is a dependable AC to DC power solution designed to deliver stable and efficient performance for surveillance systems. With a maximum output power of 24W, it ensures consistent energy supply to CCTV cameras and DVRs, supporting uninterrupted monitoring and security operations. Supporting a wide input voltage range of AC 100–240V at 50/60Hz, the Aptech PA60 adapter is compatible with global power standards, making it suitable for diverse installation environments. Its high‑efficiency design minimizes energy loss while providing reliable 12V DC output, ensuring smooth operation of connected devices. Compact and durable, this adapter is engineered for long‑lasting performance and easy integration into professional security setups. Whether used in residential, commercial, or industrial surveillance systems, the Aptech PA60 CCTV Camera Adapter guarantees dependable power delivery with enhanced efficiency and reliability.</p><h2>Buy Aptech PA60 CCTV Camera Adapter from Star Tech</h2><p>In Bangladesh, you can get the original <strong>Aptech PA60 CCTV Camera Adapter</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera-accessories\">CC Camera Accessories</a> to purchase for your <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera\">CC Camera</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Aptech PA60 CCTV Camera Adapter comes with a No Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PA60</li><li>Type: AC to DC Power Adapter</li><li>Output Power: 24W</li><li>Input Voltage: AC 100-240V</li><li>Compatible with CCTV cameras, DVRs, NVRs, routers</li></ul>",
+      "model": "PA60",
+      "warranty": "No Warranty",
+      "basePrice": 350.0,
+      "originalPrice": 400.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Aptech",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-51832",
+          "price": 350.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 336.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Power",
+              "value": "Maximum Output Power: 24W",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Type: AC to DC Power Adapter Input Voltage: AC 100–240V Input Frequency: 50/60Hz",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/aptech-pa60-cctv-camera-adapter",
+      "sourceProductCode": "51832",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PA60",
+        "Type: AC to DC Power Adapter",
+        "Output Power: 24W",
+        "Input Voltage: AC 100-240V",
+        "Compatible with CCTV cameras, DVRs, NVRs, routers"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-accessories",
+      "image": "/images/products/security-camera/cc-camera-accessories/aptech-pa60-cctv-camera-adapter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-accessories/aptech-pa60-cctv-camera-adapter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "aptech-pa60-cctv-camera-adapter",
+        "candidateTitle": "Aptech PA60 CCTV Camera Adapter",
+        "attemptStem": "aptech-pa60-cctv-camera-adapter"
+      }
+    },
+    {
+      "name": "BNC JACK",
+      "slug": "bnc-jack",
+      "type": "PHYSICAL",
+      "sku": "ST-2636",
+      "description": "<p><span style=\"color: rgb(51, 51, 51); font-family: Arial, Verdana, Helvetica, sans-serif; line-height: normal;\">50 Ohm BNC coaxial plug connectors with bayonet coupling and a cable clamp termination. These 50 Ohm BNC straight coax cable clamp plugs have a nickel plated body, gold plated centre contact and are for use with a variety RF coaxial cable types</span><br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: BNC JACK</li><li>50 Ohm BNC coaxial plug connectors</li><li>With bayonet coupling and a cable clamp termination</li><li>Nickel plated body</li><li>Gold plated centre contact</li></ul>",
+      "model": "BNC JACK",
+      "warranty": null,
+      "basePrice": 70.0,
+      "originalPrice": 74.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-2636",
+          "price": 70.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 67.2,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "BNC JACK",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bnc-jack",
+      "sourceProductCode": "2636",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: BNC JACK",
+        "50 Ohm BNC coaxial plug connectors",
+        "With bayonet coupling and a cable clamp termination",
+        "Nickel plated body",
+        "Gold plated centre contact"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-accessories",
+      "image": "/images/products/security-camera/cc-camera-accessories/bnc-jack.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-accessories/bnc-jack.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bnc-jack",
+        "candidateTitle": "BNC JACK",
+        "attemptStem": "bnc-jack"
+      }
+    },
+    {
+      "name": "CC Camera Stand 10\" For IP Camera",
+      "slug": "cc-camera-stand",
+      "type": "PHYSICAL",
+      "sku": "ST-30386",
+      "description": "<h2>CC Camera Stand 10\" For IP Camera</h2><p style=\"text-align: justify; \">The CC Camera Stand 10\" is a versatile and robust camera mounting solution designed specifically for IP cameras. Its innovative design allows for seamless integration with a wide range of surveillance setups, offering exceptional flexibility and reliability. Crafted to ensure optimal performance and longevity, this camera stand delivers a comprehensive array of features that cater to various monitoring needs. The camera stand boasts a full 360-degree swivel angle, providing unparalleled coverage and the ability to monitor extensive areas without any blind spots. With a tilt angle of 90 degrees, the camera stand offers versatile vertical adjustment, enabling users to position the camera precisely to capture the desired field of view. This camera stand is specifically designed for compatibility with both Box and Bullet IP cameras, ensuring seamless integration with a variety of camera types commonly used in surveillance applications. The package includes a sturdy camera bracket that facilitates easy installation and secure attachment of the IP camera to the stand. This ensures stability and reliable performance even in demanding environments. The <span style=\"font-weight: bold;\">CC Camera Stand</span> 10\" operates via a corded electric power source, ensuring a continuous and reliable supply of power to the connected IP camera. This eliminates the need for frequent battery replacements and ensures uninterrupted monitoring. The camera stand offers two flexible mounting options – wall mount and ceiling mount. This adaptability allows users to choose the most suitable installation method based on their specific surveillance requirements and the layout of the monitored area. The CC Camera Stand 10\" is a must-have accessory for IP camera installations, offering exceptional swivel and tilt capabilities, broad device compatibility, and versatile mounting options. Whether you're setting up a comprehensive security system for a residential or commercial space, this camera stand provides the foundation for effective and reliable surveillance. Its durable construction, combined with its wide range of adjustable angles and mounting choices, makes it an essential component for achieving optimal monitoring coverage.</p><h2 style=\"text-align: justify; \"><span style=\"color: inherit; font-family: inherit;\">Buy </span>CC Camera Stand 10\" For IP Camera<span style=\"color: inherit; font-family: inherit;\"> from the best CC Camera Accessories Shop in BD</span><br/></h2><p style=\"text-align: justify;\">In Bangladesh, you can get original <span style=\"font-weight: bold;\">CC Camera Stand 10\" For IP Camera</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera-accessories\" target=\"\">CC Camera Accessories</a> to purchase for your <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera\" target=\"\">CC Camera</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The CC Camera Stand 10\" For IP Camera has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CC Camera Stand</li><li>Swivel Angle:360°</li><li>Tilt Angle:90°</li><li>Mounting Type: Wall Mount, Ceiling Mount</li><li>Compatible Devices: Box &amp; Bullet Camera</li></ul>",
+      "model": "CC Camera Stand",
+      "warranty": "No Warranty",
+      "basePrice": 350.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-30386",
+          "price": 350.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 336.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Manufacturing Warranty",
+          "position": 0,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cc-camera-stand",
+      "sourceProductCode": "30386",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CC Camera Stand",
+        "Swivel Angle:360°",
+        "Tilt Angle:90°",
+        "Mounting Type: Wall Mount, Ceiling Mount",
+        "Compatible Devices: Box & Bullet Camera"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-accessories",
+      "image": "/images/products/security-camera/cc-camera-accessories/cc-camera-stand.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-accessories/cc-camera-stand.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cc-camera-stand",
+        "candidateTitle": "CC Camera Stand 10\" For IP Camera",
+        "attemptStem": "cc-camera-stand"
+      }
+    },
+    {
+      "name": "Dahua DH-PFM3250D-1210BS 12V 1A Power Adapter",
+      "slug": "dahua-dh-pfm325d-1210bs-power-adapter",
+      "type": "PHYSICAL",
+      "sku": "ST-44810",
+      "description": "<h2>Dahua DH-PFM3250D-1210BS 12V 1A Power Adapter</h2><p>The Dahua <span style=\"font-weight: bold;\">DH-PFM3250D-1210BS</span> 12V 1A Power Adapter is a compact, high-efficiency power solution engineered for reliable performance across a wide range of low-voltage devices, including IP cameras, routers, and smart electronics. Featuring a desktop-mount design and a British Standard 3-pin plug, it offers plug-and-play convenience for both residential and commercial setups. With an output of 12V ±5% at 1A and a rated power of 12W, this adapter ensures stable voltage delivery while maintaining ultra-low idle consumption (≤0.1W). Built to meet Level VI energy efficiency standards, it boasts ≥82.96% conversion efficiency and includes a green LED indicator for quick power status checks. Safety is paramount, with V-0 flame-resistant casing and multi-layer protection against overcurrent, overvoltage, short circuits, and surge events (up to ±2kV). Its robust structure, CE certification, and wide operating temperature range (–20°C to +50°C) make it ideal for demanding environments. Whether you're upgrading your surveillance system or powering essential tech, the  Dahua DH-PFM3250D-1210BS delivers dependable, energy-conscious performance.</p><h2>Buy Dahua DH-PFM3250D-1210BS 12V 1A Power Adapter from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Dahua DH-PFM3250D-1210BS 12V 1A Power Adapter</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera-accessories\" target=\"\">CC Camera Accessories</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Dahua DH-PFM3250D-1210BS 12V 1A Power Adapter comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PFM325D-1210BS</li><li>Input Port: 3-pin plug</li><li>Rated Output Current: 1 A</li><li>Rated Power: 12 W</li><li>Input Voltage: 100–240 VAC</li></ul>",
+      "model": "PFM325D-1210BS",
+      "warranty": "no warranty",
+      "basePrice": 380.0,
+      "originalPrice": 405.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Dahua",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-44810",
+          "price": 380.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 364.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "PFM325D-1210BS",
+              "position": 0
+            },
+            {
+              "label": "Input Port",
+              "value": "3-pin plug",
+              "position": 1
+            },
+            {
+              "label": "Rated Output Current",
+              "value": "1 A",
+              "position": 2
+            },
+            {
+              "label": "Rated Power",
+              "value": "12 W",
+              "position": 3
+            },
+            {
+              "label": "Input Voltage",
+              "value": "100–240 VAC",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dahua-dh-pfm325d-1210bs-power-adapter",
+      "sourceProductCode": "44810",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PFM325D-1210BS",
+        "Input Port: 3-pin plug",
+        "Rated Output Current: 1 A",
+        "Rated Power: 12 W",
+        "Input Voltage: 100–240 VAC"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-accessories",
+      "image": "/images/products/security-camera/cc-camera-accessories/dahua-dh-pfm325d-1210bs-power-adapter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-accessories/dahua-dh-pfm325d-1210bs-power-adapter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dahua-dh-pfm325d-1210bs-power-adapter",
+        "candidateTitle": "Dahua DH-PFM3250D-1210BS 12V 1A Power Adapter",
+        "attemptStem": "dahua-dh-pfm325d-1210bs-power-adapter"
+      }
+    },
+    {
+      "name": "Dtech DT-7104 4 Port BNC Splitter",
+      "slug": "dtech-dt-7104-bnc-splitter",
+      "type": "PHYSICAL",
+      "sku": "ST-45566",
+      "description": "<h2>Dtech DT-7104 4 Port BNC Splitter</h2><p>The Dtech <span style=\"font-weight: bold;\">DT-7104</span> BNC Splitter is a high-performance video distribution device designed to seamlessly transmit one HDMI input signal to four HDMI output displays simultaneously, making it an ideal solution for conference rooms, classrooms, digital signage, and home entertainment setups. Engineered with precision, this splitter supports input and output impedance of VS 0.8 - 1.0VP-P / 75Ω and operates across a bandwidth range of 50Hz to 5.5MHz, ensuring crystal-clear video transmission without signal degradation. Housed in a durable metal shell measuring 130mm x 75mm x 45mm, the Dtech DT-7104 offers robust protection and long-lasting reliability. Powered by a DC 5V / 1A adapter, it delivers stable performance across all connected devices. Whether you're extending your display across multiple monitors or enhancing your multimedia presentation, the DTECH DT-7104 Splitter guarantees efficient signal distribution with uncompromised quality. Its plug-and-play functionality ensures easy installation, making it a user-friendly choice for both professionals and tech enthusiasts. With its compact design and powerful capabilities, this splitter is a must-have accessory for anyone seeking seamless connectivity across multiple screens.</p><h2>Buy Dtech DT-7104 4 Port BNC Splitter from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Dtech DT-7104 4 Port BNC Splitter</span> From Star Tech. We have a large collection of latest  <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera-accessories\" target=\"\">CC Camera Accessories</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. The Dtech DT-7104 4 Port BNC Splitter comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DT-7104</li><li>Use For CC Camera</li><li>Compact Size</li><li>4-Port Expansion</li><li>High Signal Integrity</li></ul>",
+      "model": "DT-7104",
+      "warranty": "1 year warranty",
+      "basePrice": 1350.0,
+      "originalPrice": 1458.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 130.0,
+        "width": 75.0,
+        "height": 45.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "DTECH",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45566",
+          "price": 1350.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1296.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DT-7104",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dtech-dt-7104-bnc-splitter",
+      "sourceProductCode": "45566",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DT-7104",
+        "Use For CC Camera",
+        "Compact Size",
+        "4-Port Expansion",
+        "High Signal Integrity"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-accessories",
+      "image": "/images/products/security-camera/cc-camera-accessories/dtech-dt-7104-bnc-splitter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-accessories/dtech-dt-7104-bnc-splitter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dtech-dt-7104-bnc-splitter",
+        "candidateTitle": "Dtech DT-7104 4 Port BNC Splitter",
+        "attemptStem": "dtech-dt-7104-bnc-splitter"
+      }
+    },
+    {
+      "name": "Dtech DT-7108 8 Port BNC Splitter",
+      "slug": "dtech-dt-7108-bnc-splitter",
+      "type": "PHYSICAL",
+      "sku": "ST-45565",
+      "description": "<h2>Dtech DT-7108 8 Port BNC Splitter</h2><p>The Dtech <span style=\"font-weight: bold;\">DT-7108</span> 8-Port BNC Splitter is a high-performance video distribution device designed to deliver seamless signal replication across multiple outputs, making it an ideal solution for CCTV surveillance systems, broadcasting setups, and multimedia environments. Engineered with precision, this splitter supports 8 BNC output ports from a single BNC input, ensuring zero signal degradation and real-time transmission across all connected devices. Its metallic shielded casing enhances durability and minimizes electromagnetic interference, while the plug-and-play functionality allows for effortless installation without the need for software or configuration. The Dtech DT-7108 is compatible with analog video formats, including PAL, NTSC, and SECAM, and supports long-distance transmission with stable output, making it perfect for large-scale monitoring systems. Whether you're managing a security network in a commercial building or distributing video feeds in a control room, the Dtech DT-7108 offers reliable performance, compact design, and scalability. With its wide voltage input range and low power consumption, this BNC splitter is a trusted choice for professionals seeking efficient video signal distribution.</p><h2>Buy Dtech DT-7108 8 Port BNC Splitter from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: 700;\">Dtech DT-7108 8 Port BNC Splitter</span> From Star Tech. We have a large collection of latest  <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera-accessories\" target=\"\">CC Camera Accessories</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. The Dtech DT-7108 8 Port BNC Splitter comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DT-7108</li><li>Use For CC Camera</li><li>Compact Size</li><li>8-Port Expansion</li><li>High Signal Integrity</li></ul>",
+      "model": "DT-7108",
+      "warranty": "1 year warranty",
+      "basePrice": 1450.0,
+      "originalPrice": 1566.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "DTECH",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45565",
+          "price": 1450.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1392.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DT-7108",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dtech-dt-7108-bnc-splitter",
+      "sourceProductCode": "45565",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DT-7108",
+        "Use For CC Camera",
+        "Compact Size",
+        "8-Port Expansion",
+        "High Signal Integrity"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-accessories",
+      "image": "/images/products/security-camera/cc-camera-accessories/dtech-dt-7108-bnc-splitter.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-accessories/dtech-dt-7108-bnc-splitter.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dtech-dt-7108-bnc-splitter",
+        "candidateTitle": "Dtech DT-7108 8 Port BNC Splitter",
+        "attemptStem": "dtech-dt-7108-bnc-splitter"
+      }
+    },
+    {
+      "name": "High Quality RJ-6 PER MITER",
+      "slug": "high-quality-rj-6-per-miter",
+      "type": "PHYSICAL",
+      "sku": "ST-2635",
+      "description": "<div class=\"summary\" style=\"font-family: 'Helvetica neue', Helvetica, Arial, sans-serif; font-size: 14px; margin: 0px 0px 15px; padding: 0px; border: 0px; line-height: 17px; color: rgb(85, 85, 85); width: 601.797px;\">High Quality RJ-6 Cable. For Internet, Cable TV, Satellite, HDTV, Cable Modem , CC TV. These are UAD  SHIELD Cables !! QUAD SHIELD CABLE: Two layers of Foil and Two layers of Braided Shielding.</div><div><br/></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: High Quality RJ-6 PER MITER</li><li>18AWG, 60% Aluminum braid</li><li>Dual Shielding. Fully Sweep</li><li>Tested to 3000MHz, 75 Ohm.</li></ul>",
+      "model": "High Quality RJ-6 PER MITER",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-2635",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "High Quality RJ-6 PER MITER",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/high-quality-rj-6-per-miter",
+      "sourceProductCode": "2635",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: High Quality RJ-6 PER MITER",
+        "18AWG, 60% Aluminum braid",
+        "Dual Shielding. Fully Sweep",
+        "Tested to 3000MHz, 75 Ohm."
+      ],
+      "needsReview": true,
+      "categorySlug": "cc-camera-accessories",
+      "image": "/images/products/security-camera/cc-camera-accessories/high-quality-rj-6-per-miter.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-accessories/high-quality-rj-6-per-miter.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "high-quality-rj-6-per-miter",
+        "candidateTitle": "High Quality RJ-6 PER MITER",
+        "attemptStem": "high-quality-rj-6-per-miter"
+      }
+    },
+    {
+      "name": "Hikvision DS-1H18-A 1080P 2MP Video Balun for CC Camera",
+      "slug": "hikvision-ds-1h18-a-video-balun",
+      "type": "PHYSICAL",
+      "sku": "ST-44807",
+      "description": "<h2>Hikvision DS-1H18-A 1080P 2MP Video Balun for CC Camera</h2><p>The Hikvision <span style=\"font-weight: bold;\">DS-1H18-A</span> Video Balun is a robust, high-efficiency transmission accessory designed for analog CCTV systems, delivering real-time video over UTP CAT5e/6 cables with exceptional clarity and stability. Supporting a wide range of resolutions from 720P to 8MP, it’s fully compatible with HD-TVI, TVI, AHD, and CVBS formats—making it a versatile choice for modern surveillance setups. Engineered for interference rejection with &gt;60dB anti-noise performance, it features an advanced wave filter and anti-static design, plus built-in ESD protection rated at level 3 for both contact and air discharge (IEC61000-4-2). Surge protection is reinforced with 2KV common-code shielding on both coaxial and UTP connectors (IEC61000-4-5), ensuring reliable operation in harsh environments. The balun’s BNC male connector offers 75-ohm impedance, while the UTP interface maintains 100-ohm balance for optimal signal integrity. Housed in durable ABS engineering plastic, the compact black shell weighs just 39g and supports a mean time between failures (MTBF) of over 10,000 hours. With an operating temperature range of -20ºC to 55ºC and humidity tolerance up to 95% (non-condensing), it’s built for long-term stability in diverse conditions. Whether you're upgrading a legacy system or deploying high-resolution analog cameras, the Hikvision DS-1H18-A Video Balun ensures seamless, interference-free video transmission.</p><h2>Buy Hikvision DS-1H18-A 1080P 2MP Video Balun for CC Camera from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Hikvision DS-1H18-A 1080P 2MP Video Balun for CC Camera</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/Security-Camera/cc-camera-accessories\" target=\"\">CC Camera Accessories</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Hikvision DS-1H18-A 1080P 2MP Video Balun for CC Camera comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DS-1H18-A</li><li>Compatible with all HD-TVI/CVI/AHD/CVBS analog camera</li><li>Wave Filter Design, Anti-Static Design</li><li>Built-in solid state TVS, 60 dB crosstalk</li><li>Real-time transmission over UTP cat5e/6</li></ul>",
+      "model": "DS-1H18-A",
+      "warranty": "no warranty",
+      "basePrice": 250.0,
+      "originalPrice": 270.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hikvision",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-44807",
+          "price": 250.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DS-1H18-A",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hikvision-ds-1h18-a-video-balun",
+      "sourceProductCode": "44807",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DS-1H18-A",
+        "Compatible with all HD-TVI/CVI/AHD/CVBS analog camera",
+        "Wave Filter Design, Anti-Static Design",
+        "Built-in solid state TVS, 60 dB crosstalk",
+        "Real-time transmission over UTP cat5e/6"
+      ],
+      "needsReview": false,
+      "categorySlug": "cc-camera-accessories",
+      "image": "/images/products/security-camera/cc-camera-accessories/hikvision-ds-1h18-a-video-balun.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/security-camera/cc-camera-accessories/hikvision-ds-1h18-a-video-balun.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hikvision-ds-1h18-a-video-balun",
+        "candidateTitle": "Hikvision DS-1H18-A 1080P 2MP Video Balun for CC Camera",
+        "attemptStem": "hikvision-ds-1h18-a-video-balun"
+      }
+    }
+  ]
+}

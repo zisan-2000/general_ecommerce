@@ -1,0 +1,2664 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/component",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\component",
+    "generatedAtUnix": 1790589891,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Component",
+      "slug": "component",
+      "parentSlug": null,
+      "image": "/images/products/component/ssd cooler/Arctic M2 Pro M.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Water Liquid Cooling",
+      "slug": "water-liquid-cooling",
+      "parentSlug": "component",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-6-pack-hdc-12-ek-quantum-torque.jpg",
+      "isActive": true,
+      "sortOrder": 14,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "EKWB",
+      "slug": "ekwb",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "EKWB 6-Pack HDC 12 EK-Quantum Torque",
+      "slug": "ekwb-6-pack-hdc-12-ek-quantum-torque",
+      "type": "PHYSICAL",
+      "sku": "3831109824443",
+      "description": "<h2 style=\"text-align: justify; \">EKWB 6-Pack HDC 12 EK-Quantum Torque</h2>\n<p style=\"text-align: justify; \">EKWB 6-Pack HDC 12 EK-Quantum Torque is a fitting multipack containing six EK-Quantum Torque HDC fittings. It is designed for use with solid tubing such as Acrylic and PETG. With a non-intrusive, yet striking look, and with NO added branding at all. The locking ring prevents the solid tube from being pulled out of the fitting by compressing the rubber gasket underneath the ring. This Torque featured with G1/4\" BSP; 4.5mm male thread length, 20mm outer diameter of a fitting, 15mm Installed height. They can be complemented by interchangeable aesthetic color rings, and are an ideal choice for anyone and a perfect match with EK-Quantum series products. To make sure they are undamaged in transport, they are packed in a box cushioned in black foam. The grooves on the outside allow for easier hand tightening. The compression ring has cutouts in the EK Quantum signature shape allowing for the colored aesthetic ring to be shown. The colored rings are available in many colors and are screwed onto the fitting before the compression locking ring. The EKWB 6-Pack HDC 12 EK-Quantum Torque compatible with solid tubing: Acrylic, PETG, Copper, Brass, Stainless Steel and comes with 02 years warranty.\n\n</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109824443</li><li>Model: 6-Pack HDC 12 EK-Quantum</li><li>Thread: G1/4&quot; BSP; 4.5mm male thread length for Hard Tubing</li><li>The outer diameter of a fitting: 20mm</li><li>Supported tube: 12mm OD</li><li>Installed height: 15mm</li></ul>",
+      "model": "6-Pack HDC 12 EK-Quantum",
+      "warranty": "02 years warranty",
+      "basePrice": 1999.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109824443",
+          "price": 1999.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1919.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109824443",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "6-Pack HDC 12 EK-Quantum",
+              "position": 1
+            },
+            {
+              "label": "Thread",
+              "value": "G1/4\" BSP; 4.5mm male thread length for Hard Tubing",
+              "position": 2
+            },
+            {
+              "label": "The outer diameter of a fitting",
+              "value": "20mm",
+              "position": 3
+            },
+            {
+              "label": "Supported tube",
+              "value": "12mm OD",
+              "position": 4
+            },
+            {
+              "label": "Installed height",
+              "value": "15mm",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-6-pack-hdc-12-ek-quantum-torque",
+      "sourceProductCode": "15629",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109824443",
+      "sourceKeyFeatures": [
+        "MPN: 3831109824443",
+        "Model: 6-Pack HDC 12 EK-Quantum",
+        "Thread: G1/4\" BSP; 4.5mm male thread length for Hard Tubing",
+        "The outer diameter of a fitting: 20mm",
+        "Supported tube: 12mm OD",
+        "Installed height: 15mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-6-pack-hdc-12-ek-quantum-torque.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-6-pack-hdc-12-ek-quantum-torque.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-6-pack-hdc-12-ek-quantum-torque",
+        "candidateTitle": "EKWB 6-Pack HDC 12 EK-Quantum Torque",
+        "attemptStem": "ekwb-6-pack-hdc-12-ek-quantum-torque"
+      }
+    },
+    {
+      "name": "EKWB EK-Classic 260 SPC PWM D-RGB Pump Reservoir Combo",
+      "slug": "ekwb-ek-classic-260-pump-reservoir-combo",
+      "type": "PHYSICAL",
+      "sku": "3831109818534",
+      "description": "<h2>EKWB EK-Classic 260 SPC PWM D-RGB Pump Reservoir Combo</h2>\n<div><br/></div>\n<div><div>The EKWB EK-Classic Pump Reservoir 260 SPC PWM D-RGB (incl. pump) is a value-oriented water cooling pump-reservoir combo. It has been designed to be an entry-class combo solution that is able to offer great hydraulic performance complemented with addressable RGB LEDs for modern aesthetics. The combo unit comes with a 120mm fan mount holder included.</div>\n<div><br/></div>\n</div>\n<img alt=\"EKWB EK-Classic 260 SPC PWM D-RGB Pump Reservoir Combo\" height=\"350\" src=\"https://www.startech.com.bd/image/catalog/water-liquid-cooling/ekwb/ekwb-ek-classic-260-pump/ek-classic-260-5.jpg\" weight=\"900\"/><p><br/></p>\n<p>The core of the unit is the EK-SPC 60 water pump that uses only a 4-pin PWM FAN header for operation. No other additional connector is required! Full PWM support will allow you to set automatic pump speed regulation depending on your temperatures. Full performance on demand or whisper-quiet operation in idle mode! With a maximum head pressure of 2.2m (7.2ft), and a maximum flow of 250L/h in a very compact form.</p>\n<p>EK-Classic Reservoir Combo 260 SPC PWM D-RGB series pump-reservoir combo comes with a pre-installed anti-cyclone insert.<br/></p>\n<div class=\"video-wrapper\"></div>\n<p>The main body features two G1/4â€œ threaded ports of which one is an inlet (in the reservoir) and one is an outlet (from the pump). The reservoir tube is made of quality cast acrylic material.</p>\n<p><br/></p>\n<p>Technical specifications: Reservoir diameter: 60mm, Reservoir free volume: 405mL, Overall unit height: 270mm, Mounting hole pattern: 50x50, Dimensions: 270mm x 68mm x 64mm</p>\n<p><br/></p>\n<p>Pump electrical and mechanical properties: Motor: Electronically commuted motor, Rated voltage: 12V DC, Power consumption: 6W, Maximum pressure head: 2.2m, Maximum flow: 250L/h, Maximum system temperature: 50Â°C, Materials: PPS-GF30, EPDM O-rings, Aluminium oxide, graphite, Power connector: 4-Pin PWM FAN connector, D-RGB connector: 3-pin 5V (+5V, Data, Blocked, Ground), </p>\n<p>Operational regime: PWM duty cycle: ~ 20-100%, Default behavior: Runs at 100% duty cycle when no PWM feedback signal is present</p>\n<p>Enclosed: Pump reservoir combo unit, 120mm fan hole pattern mounting frame<br/></p>\n<p><br/></p>\n<p>The EK-Classic 260 Pump Reservoir Combo comes with 2 years of warranty</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109818534</li><li>Model: EK-Classic 260</li><li>High-static pressure / low noise profile</li><li>High-quality motor and bearing assembly</li><li>Standard D-RGB connection</li><li>0db regime</li></ul>",
+      "model": "EK-Classic 260",
+      "warranty": "2 years of warranty",
+      "basePrice": 4999.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 270.0,
+        "width": 68.0,
+        "height": 64.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109818534",
+          "price": 4999.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4799.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109818534",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-Classic 260",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-classic-260-pump-reservoir-combo",
+      "sourceProductCode": "15583",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109818534",
+      "sourceKeyFeatures": [
+        "MPN: 3831109818534",
+        "Model: EK-Classic 260",
+        "High-static pressure / low noise profile",
+        "High-quality motor and bearing assembly",
+        "Standard D-RGB connection",
+        "0db regime"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-classic-260-pump-reservoir-combo.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-classic-260-pump-reservoir-combo.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-classic-260-pump-reservoir-combo",
+        "candidateTitle": "EKWB EK-Classic 260 SPC PWM D-RGB Pump Reservoir Combo",
+        "attemptStem": "ekwb-ek-classic-260-pump-reservoir-combo"
+      }
+    },
+    {
+      "name": "EKWB EK-Classic Nickel Edition P360 D-RGB Kit",
+      "slug": "ekwb-ek-classic-nickel-edition-p360-kit",
+      "type": "PHYSICAL",
+      "sku": "3831109834169",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-Classic Nickel Edition P360 D-RGB Kit</h2>\n<p style=\"text-align: justify; \">EKWB EK-Classic Nickel Edition P360 D-RGB Kit provides high-performance D-RGB liquid cooling kit that comes with many accessories that help with building the loop. With it's low noise emissions, it is ready to be expanded with a GPU water block, and also enables overclocking and efficient cooling of any mainstream Intel or AMD CPU on the market. This Designed  liquid cooling kit for ATX and larger cases, the P kits are a great way to enter the world of custom liquid cooling with a high-performing cooling solution that will easily cool an overclocked CPU and a GPU if you add a block to your custom loop. The kit now comes with 8 fittings in total. </p>\n<p style=\"text-align: justify; \">\n\nThe kit brings all the hardware that are importanty for  assemble your first custom loop. But, it also brings useful tools to build it Tube Cutter, Foldable Filling Bottle, 4-in-1 Allen Key, and more. Also, this kit can easily be expanded with a GPU block to liquid cool your entire system, but EK recommends adding at least one more 120mm radiator to achieve great temperatures and a silent system. This new EKWB EK-Classic Nickel Edition P360 D-RGB Kit ia also featured with Universal CPU water block: EK-Classic CPU Water Block 115x/20xx/AM4 D-RGB (incl. thermal paste), Radiator: EK-CoolStream Classic PE 360 (Medium Triple, Radiator size: 393 x 120 x 45mm (L x W x H), ,Radiator fan: EK-Vardar S 120ER D-RGB (500-2200rpm) (3pcs), Water pump-reservoir combo: EK-Classic Pump Reservoir 160 SPC PWM D-RGB (incl. pump), Tubing: EK-DuraClear 9,5/12,7mm (3/8'' - 1/2'') (2 meters). This is also featured with Compression fittings: EK-STC Classic 10/13 (3/8'' - 1/2'') - G1/4 Black Nickel (8 pcs), Angled adapter: EK-AF Classic Angled 90Â° - Black Nickel (2pcs), Coolant concentrate: EK-CryoFuel Clear rev.2 (100mL; for 1L of coolant), Combo mounting: EK-Loop UNI Pump Bracket - 120mm, EK-RES X3 - Holder 60mm, Y-cable splitter: EK-Cable Y-Splitter 3-Fan PWM (10cm), EK-Cable Pump testing adapter, ATX Bridging Plug, D-RGB 6-Way Splitter Cable, EK-Loop Multi Allen Key, EK-Loop Soft Tube Cutter and Foldable Filling Bottle. \n\n</p>\n<p style=\"text-align: justify; \">All products in this kit use 3-pin 5V D-RGB headers and are compatible with popular RGB sync technologies from all major motherboard manufacturers. This water cooling kit is compatible with the following CPU sockets Intel LGA-1200, Intel LGA-1150/1151/1155/1156, Intel LGA-2011(-3), Intel LGA-2066 and AMD Socket AM4. This new EKWB EK-Classic Nickel Edition P360 D-RGB Kit has 02 years warranty</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109834169</li><li>Model: EK-Classic Nickel Edition P360</li><li>high-performance D-RGB liquid cooling kit</li><li>enables overclocking</li><li>Designed for ATX and larger cases</li><li>3-pin 5V D-RGB headers</li></ul>",
+      "model": "EK-Classic Nickel Edition P360",
+      "warranty": null,
+      "basePrice": 31500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 393.0,
+        "width": 120.0,
+        "height": 45.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109834169",
+          "price": 31500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 30240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109834169",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-Classic Nickel Edition P360",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-classic-nickel-edition-p360-kit",
+      "sourceProductCode": "15584",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109834169",
+      "sourceKeyFeatures": [
+        "MPN: 3831109834169",
+        "Model: EK-Classic Nickel Edition P360",
+        "high-performance D-RGB liquid cooling kit",
+        "enables overclocking",
+        "Designed for ATX and larger cases",
+        "3-pin 5V D-RGB headers"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-classic-nickel-edition-p360-kit.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-classic-nickel-edition-p360-kit.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-classic-nickel-edition-p360-kit",
+        "candidateTitle": "EKWB EK-Classic Nickel Edition P360 D-RGB Kit",
+        "attemptStem": "ekwb-ek-classic-nickel-edition-p360-kit"
+      }
+    },
+    {
+      "name": "EKWB EK-Classic Nickel Edition P240 D-RGB Kit",
+      "slug": "ekwb-ek-classic-nickel-p240-d-rgb-kit",
+      "type": "PHYSICAL",
+      "sku": "3831109834527",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-Classic Nickel Edition P240 D-RGB Kit</h2><p style=\"text-align: justify; \">EKWB EK-Classic Nickel Edition P240 D-RGB Kit comes with many accessories that help with building the loop. In this  Kit featured with low noise emissions, it is ready to be expanded with a GPU water block, and also enables overclocking and efficient cooling of any mainstream Intel or AMD CPU on the market. This kit is Designed for ATX and larger cases, the P kits are a great way to enter the world of custom liquid cooling with a high-performing cooling solution that will easily cool an overclocked CPU. The kit now comes with 8 fittings in total, meaning that it's ready for a GPU water block to be added right away. The kit brings all the hardware for assemble to first custom loop. But, it also brings useful tools to build it - Tube Cutter, Foldable Filling Bottle, 4-in-1 Allen Key, and more and also, this kit can easily be expanded with a GPU block to liquid cool your entire system, but EK recommends adding at least one more 120mm radiator to achieve great temperatures and a silent system. All products in this kit use 3-pin 5V D-RGB headers and are compatible with popular RGB sync technologies from all major motherboard manufacturers. This EKWB EK-Classic Nickel Edition P240 D-RGB Kit comes with EK-Classic CPU Water Block 115x/20xx/AM4 D-RGB, EK-CoolStream Classic PE 240 radiator, EK-Vardar S 120ER D-RGB (500-2200rpm), EK-Classic Pump Reservoir 160 SPC PWM D-RGB, EK-DuraClear, EK-CryoFuel Clear Concentrate (100ml), EK-STC Classic 10/13 - Black Nickel, EK-AF Classic Angled 90Â° - Black Nickel, EK-Loop Soft Tube Cutter, EK-D-RGB 6-Way Splitter Cable, Foldable Filling Bottle and EK-Loop Multi Allen Key. Here Describe some of them. This EKWB EK-Classic Nickel Edition P240 D-RGB Kit has 02 year of warranty</p><div style=\"text-align: justify;\"><img alt=\"EKWB EK-Classic Nickel Edition P240 D-RGB Kit\" height=\"350\" src=\"https://www.startech.com.bd/image/catalog/water-liquid-cooling/ekwb/p240/p240-1050.jpg\" weight=\"950\"/></div><h3 style=\"text-align: justify; \">EK-Classic CPU Water Block 115x/20xx/AM4 D-RGB: </h3><p style=\"text-align: justify; \">This block comes with a pre-installed Intel mounting system while the AMD AM4 mounting system is in the packaging and needs to be installed if needed. In this kit a high-end, nickel-plated copper CPU water block for modern Intel and AMD processors and also uses addressable RGB LEDs to light up CPU area. It features a classic, market-proven design that will perfectly fit the needs of core enthusiasts and demanding users as well. The tool-less mounting system makes the installation process a breeze even for beginners. </p><h3 style=\"text-align: justify; \">EK-CoolStream Classic PE 240 Radiator: </h3><p style=\"text-align: justify; \"> It's 45mm thick design allows for lower fin density while allowing great cooling potential due to increased thickness. This 240mm long radiator can easily cool off overclocked CPU and a GPU. Built for EK-Vardar 120mm high static pressure fans, these radiators are optimized for maximum heat dissipation across the entire fan operational range thus delivering exceptional performance at both low and high airflow operation.</p><h3 style=\"text-align: justify; \">EK-Vardar S 120ER D-RGB (500-2200rpm): </h3><p style=\"text-align: justify; \">This kit is designed and built primarily for highest-performance computer liquid cooling systems. Here, high-static pressure computer cooling fan enriched by addressable RGB LEDs</p><h3 style=\"text-align: justify; \">EK-Classic Pump Reservoir 160 SPC PWM D-RGB:</h3><p style=\"text-align: justify; \">It is a value-oriented water cooling pump reservoir combo. Here, PWM control allows for automatic pump speed regulation which is depending on your CPU temperature. Full performance on demand or whisper-quiet operation in idle mode and on top of that rich D-RGB illumination. This is also comes with both vertical and horizontal mounting kits.</p><h3 style=\"text-align: justify; \">EK-CryoFuel Clear Concentrate (100ml)</h3><p style=\"text-align: justify; \">EK-CryoFuel Clear is a pure, non-toxic coolant based on the patent-pending chemical formula, which prevents the creation of any sediments in the liquid cooling loop. The 100mL concentrate is to be mixed with distilled water in ratio 1:9 to form 1L of ready-to-use coolant. the concentrate with distilled easier, EK recommends the use of foldable filling bottle (included) that is also designed to make a loop filling process much easier.</p><div class=\"video-wrapper\" style=\"text-align: justify; \"></div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109834527</li><li>Model: EK-Classic Nickel Edition P240</li><li>EK-CoolStream Classic PE 240 (Dual)</li><li>Universal CPU water block</li><li>EK-Vardar S 120ER D-RGB</li><li>Water pump-reservoir combo</li></ul>",
+      "model": "EK-Classic Nickel Edition P240",
+      "warranty": null,
+      "basePrice": 29000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109834527",
+          "price": 29000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 27840.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109834527",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-Classic Nickel Edition P240",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-classic-nickel-p240-d-rgb-kit",
+      "sourceProductCode": "15591",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109834527",
+      "sourceKeyFeatures": [
+        "MPN: 3831109834527",
+        "Model: EK-Classic Nickel Edition P240",
+        "EK-CoolStream Classic PE 240 (Dual)",
+        "Universal CPU water block",
+        "EK-Vardar S 120ER D-RGB",
+        "Water pump-reservoir combo"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-classic-nickel-p240-d-rgb-kit.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-classic-nickel-p240-d-rgb-kit.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-classic-nickel-p240-d-rgb-kit",
+        "candidateTitle": "EKWB EK-Classic Nickel Edition P240 D-RGB Kit",
+        "attemptStem": "ekwb-ek-classic-nickel-p240-d-rgb-kit"
+      }
+    },
+    {
+      "name": "EKWB EK-CoolStream PE 360 Radiator (Triple)",
+      "slug": "ekwb-ek-coolstream-pe-360-radiator",
+      "type": "PHYSICAL",
+      "sku": "3831109860274",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-CoolStream PE 360 Radiator (Triple)</h2>\n<p style=\"text-align: justify; \">EK-CoolStream PE provides a high-performance computer water-cooling radiator which is combine with EK's unique CSQ design with latest radiator core engine. The EKWB EK-CoolStream PE 360 Radiator (Triple) built for EK-Vardar 120mm high static pressure fans, these radiators are optimized for maximum heat dissipation across entire fan operational range thus delivering exceptional performance at both low- and high airflow operation. It is featured with 90% copper tubing (H90), Copper fins, Brass chambers and Aluminum housing, two recessed G1/4 threaded ports with pre-installed extenders to allow any G1/4 threaded fitting to be used. EK recommends EK-ACF series compression fittings. The EK assured quality level, optimal price-performance ratio and unique minimalistic design make these EK-CoolStream PE series radiators a perfect choice for any computer water cooled system. This new offers best cooling capacity in the 40mm thick radiator class: Double stack copper fins provide massive surface area while the parallel flow cooling chambers reduce hydraulic flow resistance to a minimum and also this Radiator shrouds are tapped with UNC 6-32 threads on both sides to enable push-pull fan installation to even further increase the cooling performance. It is compatible with any standard size 120x120x25mm fan; UNC 6-32 thread tapping.The new EKWB EK-CoolStream PE 360 Radiator (Triple) has 02 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109860274</li><li>Model: EK-CoolStream PE 360</li><li>90% copper tubing (H90)</li><li>Copper fins</li><li>Brass chambers</li><li>Aluminum housing</li></ul>",
+      "model": "EK-CoolStream PE 360",
+      "warranty": null,
+      "basePrice": 10000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 120.0,
+        "width": 120.0,
+        "height": 25.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109860274",
+          "price": 10000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 9600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109860274",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-CoolStream PE 360",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-coolstream-pe-360-radiator",
+      "sourceProductCode": "15628",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109860274",
+      "sourceKeyFeatures": [
+        "MPN: 3831109860274",
+        "Model: EK-CoolStream PE 360",
+        "90% copper tubing (H90)",
+        "Copper fins",
+        "Brass chambers",
+        "Aluminum housing"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-coolstream-pe-360-radiator.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-coolstream-pe-360-radiator.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-coolstream-pe-360-radiator",
+        "candidateTitle": "EKWB EK-CoolStream PE 360 Radiator (Triple)",
+        "attemptStem": "ekwb-ek-coolstream-pe-360-radiator"
+      }
+    },
+    {
+      "name": "EKWB EK-CryoFuel Solid Concentrate Coolant 250mL Cloud White",
+      "slug": "ekwb-ek-cryofuel-cloud-white-coolant",
+      "type": "PHYSICAL",
+      "sku": "3831109880234",
+      "description": "<h2>EKWB EK-CryoFuel Solid Concentrate Coolant 250mL Cloud White</h2><br/><p>The EK-CryoFuel Solid Cloud White non-transparent 250mL coolants are all based on a new patent-pending formula with vivid, long-lasting color stability. The coolant contains everything a high-end liquid cooling system requires for efficient thermal performance and providing the necessary protection for your water blocks. It carries the essential synergistic corrosion inhibitors and biological inhibitors - thus promoting long and safe operational life for your liquid cooling products and high thermal efficiency.</p><br/><img alt=\"EKWB EK-CryoFuel Solid Coolant Cloud White\" height=\"422\" src=\"https://www.startech.com.bd/image/catalog/water-liquid-cooling/ekwb/ek-cryofuel-cloud-white/ek-cryofuel-solid-coolant-cloud-white-4.jpg\" width=\"900\"/><h3><br/></h3><h3>Characteristics of EK-CryoFuel Solid Concentrate Cloud White Coolant : </h3><p> The UV reactive EK-CryoFuel Solid Concentrate Cloud White Coolant contains corrosion and scale inhibitors and also contains biological growth inhibitors. The coolant has good heat transfer characteristics also the colour pigments don't leave a residue. EK-CryoFuel is high specific heat and chemically stable which has low viscosity and it is also non-toxic.</p><br/><img alt=\"EKWB EK-CryoFuel Solid Coolant Cloud White\" height=\"580\" src=\"https://www.startech.com.bd/image/catalog/water-liquid-cooling/ekwb/ek-cryofuel-cloud-white/ek-cryofuel-solid-coolant-cloud-white-5.jpg\" width=\"900\"/><br/><p><br/></p><p>EK-CryoFuel contains synergistic corrosion inhibitors to protect metals commonly found in computer liquid cooling systems. It has been tested in accordance with BS5117 (ASTM D1384) and found to meet corrosion standards for copper, brass, and stainless steel. This coolant also contains scale and biological inhibitors to help prevent fouling â€“ thus promoting long operational life and high thermal efficiency, providing best value/performance ratio. The Cloud White EK-CryoFuel Coolant comes without warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109880234</li><li>Model: EK-CryoFuel Solid</li><li>Contains corrosion and scale inhibitors</li><li>Vontains biological growth inhibitors</li><li>Good heat transfer characteristics</li><li>Color pigments don&#x27;t leave residue</li></ul>",
+      "model": "EK-CryoFuel Solid",
+      "warranty": null,
+      "basePrice": 1550.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109880234",
+          "price": 1550.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1488.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109880234",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-CryoFuel Solid",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-cryofuel-cloud-white-coolant",
+      "sourceProductCode": "15572",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109880234",
+      "sourceKeyFeatures": [
+        "MPN: 3831109880234",
+        "Model: EK-CryoFuel Solid",
+        "Contains corrosion and scale inhibitors",
+        "Vontains biological growth inhibitors",
+        "Good heat transfer characteristics",
+        "Color pigments don't leave residue"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-cloud-white-coolant.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-cloud-white-coolant.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-cryofuel-cloud-white-coolant",
+        "candidateTitle": "EKWB EK-CryoFuel Solid Concentrate Coolant 250mL Cloud White",
+        "attemptStem": "ekwb-ek-cryofuel-cloud-white-coolant"
+      }
+    },
+    {
+      "name": "EKWB EK-CryoFuel Dye Pack",
+      "slug": "ekwb-ek-cryofuel-dye-pack",
+      "type": "PHYSICAL",
+      "sku": "3830046994363",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-CryoFuel Dye Pack</h2><p style=\"text-align: justify; \">This small EKWB EK-CryoFuel Dye Pack will allow you to transform clear or white EK-CryoFuel coolants into beautiful, one-off and personalized colors. EK has made sure the EK-Dye Pack will follow the success path of EK-CryoFuel coolants, and also backed up by rigorous testing.</p><p style=\"text-align: justify; \">This EK-CryoFuel Dye Pack consists of Red, Yellow and Blue dye bottles that you apply to your base coolant either EK-Cryofuel Solid Cloud White or EK-Cryofuel Clear, depending on the preference for transparent or solid coolant. One Dye Pack bottle on average contains roughly 340 drops, but it also vary depending on the dosage. If you want more intense shade, increase the dye quantity with appropriate mixing ratios. EKWB EK-CryoFuel Dye Pack made some color recipes as a basis, but in this time, the manual is more like a guideline. You can made color as you want, Ultimately, it also allows you to swap the color of your coolant if you get bored. Here, two main roads picking the EK-CryoFuel Solid Cloud White as a base to get the solid coolant or opting for the transparent variant by having the foundation in EK-CryoFuel Clear. The mixing ratios in the tables are given as drops for one liter of coolant and are just informative. It is the only guidelines for mixing your color and shade. The final tone can deviate from charted instructions and also It is mandatory to use specifically engineered coolants as a base that contain corrosion, scale, and biological inhibitors, in order to prevent damage to your nickel, plated water block. In case of using EK-CryoFuel Clear and EK-CryoFuel Solid Cloud White concentrates, you have to first prepare Premix and then start mixing the dyes. This EKWB EK-CryoFuel Dye Pack comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3830046994363</li><li>Model: EK-CryoFuel</li><li>Beautiful, Personalized, One-off colors</li><li>Avg. contains roughly 340 drops</li><li>Red, Yellow&amp; Blue dye bottles</li><li>No Warranty</li></ul>",
+      "model": "EK-CryoFuel",
+      "warranty": "no warranty",
+      "basePrice": 1700.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3830046994363",
+          "price": 1700.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1632.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3830046994363",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-CryoFuel",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-cryofuel-dye-pack",
+      "sourceProductCode": "15663",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3830046994363",
+      "sourceKeyFeatures": [
+        "MPN: 3830046994363",
+        "Model: EK-CryoFuel",
+        "Beautiful, Personalized, One-off colors",
+        "Avg. contains roughly 340 drops",
+        "Red, Yellow& Blue dye bottles",
+        "No Warranty"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-dye-pack.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-dye-pack.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-cryofuel-dye-pack",
+        "candidateTitle": "EKWB EK-CryoFuel Dye Pack",
+        "attemptStem": "ekwb-ek-cryofuel-dye-pack"
+      }
+    },
+    {
+      "name": "EKWB EK-CryoFuel Mystic Fog Concentrate 250mL Coolant",
+      "slug": "ekwb-ek-cryofuel-mystic-fog-concentrate-250ml-coolant",
+      "type": "PHYSICAL",
+      "sku": "3831109829929",
+      "description": "<h2>EKWB EK-CryoFuel Mystic Fog Concentrate 250mL Coolant</h2><p>EKWB EK-CryoFuel Mystic Fog Concentrate 250mL Coolant offers a unique and mesmerizing experience for your liquid cooling system. This semi-transparent coolant is built on a new formula, providing long-lasting stability and vivid addressable D-RGB reactivity. Specifically designed for PC liquid cooling products, EK-CryoFuel Mystic Fog brings the best light dispersion, creating stunning visual effects in your custom loop. EK-CryoFuel Mystic Fog stands out as one of the most chemically stable coolants available, ensuring optimal performance and thermal efficiency for enthusiasts. Its distinctive feature lies in the perfect ratio of suspended particles to the clear coolant base, allowing it to disperse light effectively. This paves the way for captivating addressable D-RGB effects within your liquid cooling system, elevating its aesthetics to a whole new level.</p><h3>Consistent performance</h3><p>The EKWB EK-CryoFuel Mystic Fog Concentrate Coolant doesn't sediment, even after prolonged inactivity of the cooling loop, guaranteeing consistent performance. EK-CryoFuel Mystic Fog boasts a 2-year shelf life from the bottling date, ensuring its reliability and freshness. For the best light dispersion effects, it is recommended to replace the coolant every six months.</p><h3>Contains corrosion and scale inhibitors</h3><p>This 250mL concentrate can be easily mixed with 750mL of distilled water, resulting in 1L of ready-to-use coolant. EK-CryoFuel Mystic Fog contains essential corrosion and scale inhibitors, facilitating efficient heat transfer while leaving no color residue. It is chemically stable, low in viscosity, and completely non-toxic, providing the perfect blend of functionality and safety.</p><h3>Wide Compatibility</h3><p>EKWB EK-CryoFuel Mystic Fog Concentrate Coolant is compatible with various materials such as Acrylic, PETG, POM Acetal, and Rubber (NBR, EPDM, and Norprene). The EK-CryoFuel Mystic Fog offers flexibility in your liquid cooling setup. It is also eco-friendly, being 90% biodegradable in just 10 days and complies with REACH regulations.</p><h3>Low electrical conductivity</h3><p>EKWB EK-CryoFuel Mystic Fog has low electrical conductivity, ensuring electrical safety in your liquid cooling system. It undergoes thorough testing in accordance with the BS5117 (ASTM D1384) standard, assuring corrosion protection for copper, brass, and stainless steel.</p><h2>Buy EKWB EK-CryoFuel Mystic Fog Concentrate 250mL Coolant from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/ekwb-ek-cryofuel-mystic-fog-concentrate-250ml-coolant\" target=\"\">EKWB EK-CryoFuel Mystic Fog Concentrate 250mL Coolant</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/ekwb-water-or-liquid-cooling\" target=\"\">EKWB Water Cooling</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The EKWB EK-CryoFuel Mystic Fog Concentrate 250mL Coolant comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109829929</li><li>Model: EK-CryoFuel</li><li>Contains corrosion and scale inhibitors</li><li>Good heat transfer characteristics</li><li>Color pigments don&#x27;t leave residue</li><li>High specific heat, Chemically stable</li></ul>",
+      "model": "EK-CryoFuel",
+      "warranty": "no warranty",
+      "basePrice": 2000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109829929",
+          "price": 2000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109829929",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-CryoFuel",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-cryofuel-mystic-fog-concentrate-250ml-coolant",
+      "sourceProductCode": "30224",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109829929",
+      "sourceKeyFeatures": [
+        "MPN: 3831109829929",
+        "Model: EK-CryoFuel",
+        "Contains corrosion and scale inhibitors",
+        "Good heat transfer characteristics",
+        "Color pigments don't leave residue",
+        "High specific heat, Chemically stable"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-mystic-fog-concentrate-250ml-coolant.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-mystic-fog-concentrate-250ml-coolant.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-cryofuel-mystic-fog-concentrate-250ml-coolant",
+        "candidateTitle": "EKWB EK-CryoFuel Mystic Fog Concentrate 250mL Coolant",
+        "attemptStem": "ekwb-ek-cryofuel-mystic-fog-concentrate-250ml-coolant"
+      }
+    },
+    {
+      "name": "EKWB EK-CryoFuel Solid Concentrate Coolant 250mL Neon Green",
+      "slug": "ekwb-ek-cryofuel-solid-coolant",
+      "type": "PHYSICAL",
+      "sku": "3831109880296",
+      "description": "<h2>EKWB EK-CryoFuel Solid Concentrate Coolant 250mL Neon Green</h2>\n<br/><p>The EK-CryoFuel Solid non-transparent 250mL coolants are all based on a new patent-pending formula with vivid, long-lasting color stability. The coolant contains everything a high-end liquid cooling system requires for efficient thermal performance and providing the necessary protection for your water blocks. It carries the essential synergistic corrosion inhibitors and biological inhibitors - thus promoting long and safe operational life for your liquid cooling products and high thermal efficiency.</p>\n<br/><img alt=\"EKWB EK-CryoFuel Solid Coolant\" height=\"422\" src=\"https://www.startech.com.bd/image/catalog/water-liquid-cooling/ekwb/ek-cryofuel-solid/ek-cryofuel-solid-coolant-neon-Green.jpg\" width=\"900\"/><h3><br/></h3>\n<h3>Characteristics of EK-CryoFuel Solid Concentrate Coolant : </h3>\n<p> The UV reactive EK-CryoFuel Solid Concentrate Coolant contains corrosion and scale inhibitors and also contains biological growth inhibitors. The coolant has good heat transfer characteristics also the colour pigments don't leave a residue. EK-CryoFuel is high specific heat and chemically stable which has low viscosity and it is also non-toxic.</p>\n<p>EK-CryoFuel contains synergistic corrosion inhibitors to protect metals commonly found in computer liquid cooling systems. It has been tested in accordance with BS5117 (ASTM D1384) and found to meet corrosion standards for copper, brass, and stainless steel. This coolant also contains scale and biological inhibitors to help prevent fouling â€“ thus promoting long operational life and high thermal efficiency, providing best value/performance ratio. The EK-CryoFuel Coolant comes without warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109880296</li><li>Model: EK-CryoFuel Solid</li><li>Contains corrosion and scale inhibitors</li><li>Vontains biological growth inhibitors</li><li>Good heat transfer characteristics</li><li>Color pigments don&#x27;t leave residue</li></ul>",
+      "model": "EK-CryoFuel Solid",
+      "warranty": null,
+      "basePrice": 1700.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109880296",
+          "price": 1700.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1632.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109880296",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-CryoFuel Solid",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-cryofuel-solid-coolant",
+      "sourceProductCode": "15570",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109880296",
+      "sourceKeyFeatures": [
+        "MPN: 3831109880296",
+        "Model: EK-CryoFuel Solid",
+        "Contains corrosion and scale inhibitors",
+        "Vontains biological growth inhibitors",
+        "Good heat transfer characteristics",
+        "Color pigments don't leave residue"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-solid-coolant.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-solid-coolant.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-cryofuel-solid-coolant",
+        "candidateTitle": "EKWB EK-CryoFuel Solid Concentrate Coolant 250mL Neon Green",
+        "attemptStem": "ekwb-ek-cryofuel-solid-coolant"
+      }
+    },
+    {
+      "name": "EKWB EK-CryoFuel Solid Electric Purple Concentrate 250mL Coolant",
+      "slug": "ekwb-ek-cryofuel-solid-electric-purple-concentrate-250ml-coolant",
+      "type": "PHYSICAL",
+      "sku": "3831109880272",
+      "description": "<h2>EKWB EK-CryoFuel Solid Electric Purple Concentrate 250mL Coolant</h2><p>EKWB EK-CryoFuel Solid Electric Purple Concentrate 250mL Coolant is the ultimate choice for high-end liquid cooling systems, offering both outstanding thermal performance and vibrant, long-lasting color stability. Formulated with a patent-pending formula, this non-transparent coolant contains all the essential ingredients for efficient thermal management and protection of water blocks. It boasts synergistic corrosion inhibitors, ensuring a prolonged and safe operational life for your liquid cooling components while maintaining excellent thermal efficiency.</p><h3>Chemically stable</h3><p>EK-CryoFuel Solid Electric Purple undergoes extensive real-life scenario testing, making it the most chemically stable coolant available. Unlike other coolants, it does not sediment even after prolonged periods of inactivity in the cooling loop. Designed specifically for computer liquid cooling systems, EK-CryoFuel offers a 2-year shelf life from the bottling date, ensuring freshness and reliability.</p><h3>Good heat transfer characteristics</h3><p>EKWB EK-CryoFuel Solid Electric Purple Concentrate Coolant can be easily mixed with 750mL of distilled water to create 1L of ready-to-use coolant. It contains corrosion and scale inhibitors, offers excellent heat transfer characteristics, and leaves no color residue. With its low viscosity and high specific heat, the EK-CryoFuel guarantees efficient cooling performance while being entirely non-toxic.</p><h3>Eco-friendly</h3><p>EKWB EK-CryoFuel Solid Electric Purple Concentrate Coolant is 90% biodegradable in just 10 days and complies with REACH regulations. It also passes corrosion protection standards for copper, brass, and stainless steel as per BS5117 (ASTM D1384) testing. Moreover, it has low electrical conductivity, ensuring electrical safety for your liquid cooling setup.</p><h2>Buy EKWB EK-CryoFuel Solid Electric Purple Concentrate 250mL Coolant from Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/ekwb-ek-cryofuel-solid-electric-purple-concentrate-250ml-coolant\" target=\"\">EKWB EK-CryoFuel Solid Electric Purple Concentrate 250mL Coolant</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/ekwb-water-or-liquid-cooling\" target=\"\">EKWB Water Cooling</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The EKWB EK-CryoFuel Solid Electric Purple Concentrate 250mL Coolant comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109880272</li><li>Model: EK-CryoFuel</li><li>Contains corrosion and scale inhibitors</li><li>Good heat transfer characteristics</li><li>Color pigments don&#x27;t leave residue</li><li>High specific heat, Chemically stable</li></ul>",
+      "model": "EK-CryoFuel",
+      "warranty": "no warranty",
+      "basePrice": 2000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109880272",
+          "price": 2000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109880272",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-CryoFuel",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-cryofuel-solid-electric-purple-concentrate-250ml-coolant",
+      "sourceProductCode": "30223",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109880272",
+      "sourceKeyFeatures": [
+        "MPN: 3831109880272",
+        "Model: EK-CryoFuel",
+        "Contains corrosion and scale inhibitors",
+        "Good heat transfer characteristics",
+        "Color pigments don't leave residue",
+        "High specific heat, Chemically stable"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-solid-electric-purple-concentrate-250ml-coolant.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-solid-electric-purple-concentrate-250ml-coolant.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-cryofuel-solid-electric-purple-concentrate-250ml-coolant",
+        "candidateTitle": "EKWB EK-CryoFuel Solid Electric Purple Concentrate 250mL Coolant",
+        "attemptStem": "ekwb-ek-cryofuel-solid-electric-purple-concentrate-250ml-coolant"
+      }
+    },
+    {
+      "name": "EKWB EK-CryoFuel Solid Scarlet RED 250ml (Conc.) Non-transparent Coolants",
+      "slug": "ekwb-ek-cryofuel-solid-scarlet-red-coolants",
+      "type": "PHYSICAL",
+      "sku": "3831109880265",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-CryoFuel Solid Scarlet RED 250ml (Conc.) Non-transparent Coolants</h2>\n<p style=\"text-align: justify; \">EKWB EK-CryoFuel Solid Scarlet RED 250ml (Conc.) Non-transparent Coolants contains corrosion and scale inhibitors, biological growth inhibitors, good heat transfer characteristics, high specific heat, chemically stable, low viscosity, non-toxic and also it's color pigments don't leave residue. The key feature of the new coolant formula is that it is not sedimenting after long hours of inactivity of the cooling loop. EK-CryoFuel Solid Scarlet RED non-transparent coolants are all based on a new patent-pending formula with vivid, long-lasting color stability. The coolant contains everything a high-end liquid cooling system requires for efficient thermal performance and providing the necessary protection for your water blocks. It carries the essential synergistic corrosion inhibitors and biological inhibitors - thus promoting long and it provides safe operational life for your liquid cooling products and high thermal efficiency. EK-CryoFuel Solid is the most chemically stable coolant that provides enthusiasts with the best possible level of performance and thermal efficiency with emphasis on color stability, with countless hours of in-house and third-party real-life scenario testing. This EKWB EK-CryoFuel Solid Scarlet RED 250ml (Conc.) Non-transparent Coolants is designed specifically for computer liquid cooling systems, the EK-CryoFuel offers 01 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109880265</li><li>Model: EK-CryoFuel</li><li>Contains corrosion and scale inhibitors</li><li>High specific heat, chemically stable</li><li>Biological growth inhibitors</li><li>Low viscosity, non-toxic</li></ul>",
+      "model": "EK-CryoFuel",
+      "warranty": null,
+      "basePrice": 799.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109880265",
+          "price": 799.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 767.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109880265",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-CryoFuel",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-cryofuel-solid-scarlet-red-coolants",
+      "sourceProductCode": "15927",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109880265",
+      "sourceKeyFeatures": [
+        "MPN: 3831109880265",
+        "Model: EK-CryoFuel",
+        "Contains corrosion and scale inhibitors",
+        "High specific heat, chemically stable",
+        "Biological growth inhibitors",
+        "Low viscosity, non-toxic"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-solid-scarlet-red-coolants.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-cryofuel-solid-scarlet-red-coolants.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-cryofuel-solid-scarlet-red-coolants",
+        "candidateTitle": "EKWB EK-CryoFuel Solid Scarlet RED 250ml (Conc.) Non-transparent Coolants",
+        "attemptStem": "ekwb-ek-cryofuel-solid-scarlet-red-coolants"
+      }
+    },
+    {
+      "name": "EKWB EK-D-RGB 6-Way Splitter Cable",
+      "slug": "ekwb-ek-d-rgb-6-way-splitter-cable",
+      "type": "PHYSICAL",
+      "sku": "3831109821879",
+      "description": "<h2 style=\"text-align: justify; \"><span style=\"font-weight: bold;\">EKWB EK-D-RGB 6-Way Splitter Cable</span></h2>\n<p style=\"text-align: justify; \">EKWB EK-D-RGB 6-Way Splitter Cable allows you to connect up to six digitally addressable RGB products to a single D-RGB (addressable) motherboard or controller header so that they can synchronize all their D-RGB products. This EKWB EK-D-RGB 6-Way Splitter Cable features standard 3-pin D-RGB headers and the male-male connector pins are also included in the packaging. The splitter cable can be used with any standard 3-pin 5V D-RGB controller or any of the popular RGB sync technologies from all major motherboard manufacturers. This EKWB EK-D-RGB 6-Way Splitter Cable featured with Maximum total cable length: 300mm +/- 5mm and 135mm +/- 5mm Length of split cables. The arrow marking on the 3-pin LED connector is to be aligned with the +5V marking on the D-RGB (addressable) header. This EKWB EK-D-RGB 6-Way Splitter Cable has 02 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109821879</li><li>Model: EK-D-RGB 6-Way</li><li>Length of split cables: 135mm +/- 5mm</li><li>total cable length: 300mm +/- 5mm</li><li>RGB connector classic 3-pin</li><li>3-pin D-RGB header</li></ul>",
+      "model": "EK-D-RGB 6-Way",
+      "warranty": null,
+      "basePrice": 1300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109821879",
+          "price": 1300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1248.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109821879",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-D-RGB 6-Way",
+              "position": 1
+            },
+            {
+              "label": "Length of split cables",
+              "value": "135mm +/- 5mm",
+              "position": 2
+            },
+            {
+              "label": "total cable length",
+              "value": "300mm +/- 5mm",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-d-rgb-6-way-splitter-cable",
+      "sourceProductCode": "15580",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109821879",
+      "sourceKeyFeatures": [
+        "MPN: 3831109821879",
+        "Model: EK-D-RGB 6-Way",
+        "Length of split cables: 135mm +/- 5mm",
+        "total cable length: 300mm +/- 5mm",
+        "RGB connector classic 3-pin",
+        "3-pin D-RGB header"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-d-rgb-6-way-splitter-cable.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-d-rgb-6-way-splitter-cable.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-d-rgb-6-way-splitter-cable",
+        "candidateTitle": "EKWB EK-D-RGB 6-Way Splitter Cable",
+        "attemptStem": "ekwb-ek-d-rgb-6-way-splitter-cable"
+      }
+    },
+    {
+      "name": "EKWB EK-DuraClear 11,1/15,9mm 3M Retail",
+      "slug": "ekwb-ek-dura-clear-3m-retail",
+      "type": "PHYSICAL",
+      "sku": "3831109850985",
+      "description": "<h2 style=\"text-align: justify; \"><span style=\"font-weight: bold;\">EKWB EK-DuraClear 11,1/15,9mm 3M Retail</span></h2><p style=\"text-align: justify; \">EKWB EK-DuraClear 11,1/15,9mm 3M Retail featured with Highly durable, Transparent, UV Resistant, Logo Free (no print on tube), Inner Wall resilience, Environmentally responsible, safe and non-toxic product. One of the most important features of this product is that the soft tube should have is the flexibility and good bend ratio without kinks. EK-DuraClear has one of the best bend ratios on the market. Doing a tight turn in your liquid cooling build has never been easie. EK-DuraClear is the most advanced liquid cooling tubing, designed and manufactured, that is built for the most demanding customers, who want to use soft tubing in their builds.</p><div style=\"text-align: justify;\"><img alt=\"EKWB EK-DuraClear 11,1/15,9mm 3M Retail\" height=\"327\" src=\"https://www.startech.com.bd/image/catalog/water-liquid-cooling/ekwb/ek-dura/ek-dura-03.jpg\" weight=\"1045\"/></div><p style=\"text-align: justify; \"> The EK-DuraClear structure is formulated to enable it to perform in a wide range of closed loop cooling systems, making it the top choice for every liquid cooling enthusiast. This product is designed with Material: PVC, Color: Clear, not UV-reactive (resistant to UVA &amp; UVB), Length: 3 meters and Operating temperature range: -20Â°C to 80Â°C.The prevention of bacterial growth on the tubing wall is the main priority during the development of this tube. To eliminate this problem, EK-DuraClear has very smooth inner walls that prevent any kind of bacterial adhesion also. The EK-DuraClear is guaranteed to withstand far worse conditions that would ever appear in the everyday use, which is tested in the most extreme environments. This 3M Retail is also DEHP Free, Phthalate Free, Californiaâ€™s Prop 65 compliant, FDA Approved ingredients and ROHS Compliant PVC. This new EKWB EK-DuraClear 11,1/15,9mm 3M Retail has 02 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109850985</li><li>Model: EK-DuraClear</li><li>Highly durable, Transparent, UV Resistant</li><li>Inner Wall Resilience</li><li>Environmentally Responsible</li><li>Safe and Non-Toxic Product</li></ul>",
+      "model": "EK-DuraClear",
+      "warranty": null,
+      "basePrice": 899.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109850985",
+          "price": 899.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 863.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109850985",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-DuraClear",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-dura-clear-3m-retail",
+      "sourceProductCode": "15596",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109850985",
+      "sourceKeyFeatures": [
+        "MPN: 3831109850985",
+        "Model: EK-DuraClear",
+        "Highly durable, Transparent, UV Resistant",
+        "Inner Wall Resilience",
+        "Environmentally Responsible",
+        "Safe and Non-Toxic Product"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-dura-clear-3m-retail.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-dura-clear-3m-retail.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-dura-clear-3m-retail",
+        "candidateTitle": "EKWB EK-DuraClear 11,1/15,9mm 3M Retail",
+        "attemptStem": "ekwb-ek-dura-clear-3m-retail"
+      }
+    },
+    {
+      "name": "EKWB EK-HD PETG 10/12mm 500mm Tube",
+      "slug": "ekwb-ek-hd-petg-tube",
+      "type": "PHYSICAL",
+      "sku": "3831109841396",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-HD PETG 10/12mm 500mm Tube</h2>\n<p style=\"text-align: justify; \">EKWB EK-HD PETG Tube comes with EK-HD push-in adapters and EK-HDC series compression fittings. This tubing may be heat treated to achieve certain bends. For expert users only. This tube is designed with PETG materials, 10 mm Inner diameter, 12 mm Outer diameter with 500 mm (19.5\") Length. The EKWB EK-HD PETG 10/12mm 500mm Tube has 02 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109841396</li><li>Model: EK-HD PETG</li><li>PETG tubing intended</li><li>Inner diameter: 10 mm</li><li>Outer diameter: 12 mm</li><li>Length: 500 mm (19.5&quot;)</li></ul>",
+      "model": "EK-HD PETG",
+      "warranty": null,
+      "basePrice": 900.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109841396",
+          "price": 900.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 864.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109841396",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-HD PETG",
+              "position": 1
+            },
+            {
+              "label": "Inner diameter",
+              "value": "10 mm",
+              "position": 2
+            },
+            {
+              "label": "Outer diameter",
+              "value": "12 mm",
+              "position": 3
+            },
+            {
+              "label": "Length",
+              "value": "500 mm (19.5\")",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-hd-petg-tube",
+      "sourceProductCode": "15576",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109841396",
+      "sourceKeyFeatures": [
+        "MPN: 3831109841396",
+        "Model: EK-HD PETG",
+        "PETG tubing intended",
+        "Inner diameter: 10 mm",
+        "Outer diameter: 12 mm",
+        "Length: 500 mm (19.5\")"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-hd-petg-tube.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-hd-petg-tube.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-hd-petg-tube",
+        "candidateTitle": "EKWB EK-HD PETG 10/12mm 500mm Tube",
+        "attemptStem": "ekwb-ek-hd-petg-tube"
+      }
+    },
+    {
+      "name": "EKWB EK-HD 10/12mm 500mm Tube",
+      "slug": "ekwb-ek-hd-tube",
+      "type": "PHYSICAL",
+      "sku": "3831109841273",
+      "description": "<h2 style=\"text-align: justify; \"><span style=\"font-weight: bold;\">EKWB EK-HD 10/12mm 500mm Tube</span></h2>\n<p style=\"text-align: justify; \">EKWB EK-HD PETG Tube comes with EK-HD push-in adapters and EK-HDC series compression fittings. This tubing may be heat treated to achieve certain bends. For expert users only. This tube is designed with Extruded acrylic materials, 10 mm Inner diameter, 12 mm Outer diameter with 500 mm (19.5\") Length. The EKWB EK-HD 10/12mm 500mm Tube has 02 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109841273</li><li>Model: EK-HD</li><li>Extruded Acrylic Material</li><li>Inner diameter: 10 mm</li><li>Outer diameter: 12 mm</li><li>Length: 500 mm (19.5&quot;)</li></ul>",
+      "model": "EK-HD",
+      "warranty": null,
+      "basePrice": 1100.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109841273",
+          "price": 1100.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 1056.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109841273",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-HD",
+              "position": 1
+            },
+            {
+              "label": "Inner diameter",
+              "value": "10 mm",
+              "position": 2
+            },
+            {
+              "label": "Outer diameter",
+              "value": "12 mm",
+              "position": 3
+            },
+            {
+              "label": "Length",
+              "value": "500 mm (19.5\")",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-hd-tube",
+      "sourceProductCode": "15578",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109841273",
+      "sourceKeyFeatures": [
+        "MPN: 3831109841273",
+        "Model: EK-HD",
+        "Extruded Acrylic Material",
+        "Inner diameter: 10 mm",
+        "Outer diameter: 12 mm",
+        "Length: 500 mm (19.5\")"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-hd-tube.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-hd-tube.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-hd-tube",
+        "candidateTitle": "EKWB EK-HD 10/12mm 500mm Tube",
+        "attemptStem": "ekwb-ek-hd-tube"
+      }
+    },
+    {
+      "name": "EKWB EK-HD Tube D.I.Y. Kit (10 & 12mm)",
+      "slug": "ekwb-ek-hd-tube-diy-kit",
+      "type": "PHYSICAL",
+      "sku": "3831109841297",
+      "description": "<h2>EKWB EK-HD Tube D.I.Y. Kit (10 &amp; 12mm)</h2>\n<br/><p>The EK-HD Tube D.I.Y. Kit 10&amp;12mm is a Do-It-Yourself modification kit for solid Acrylic and PETG tubing with 10- and 12mm in inner diameter.\n\n\n\nUsing a heat gun and the enclosed silicone cord (rod) it is possible to make customized pieces of solid tubing. Use the hacksaw to cut pieces to length and sandpaper to chamfer and smooth out the edges. For a perfect chamfer, EK recommends the use of the EK-HD Tube Reamer tool.\n\n\n\nEKWB EK-HD Tube D.I.Y. Kit is Enclosed with 1x hacksaw, 1x sandpaper (P220 grit), 1x silicone cord 9.4mm (L=33cm), 1x silicone cord 11.0mm (L=33cm)\n\n\n\nEK-HD Tube D.I.Y. Kit comes with 2 years of warranty\n\n</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109841297</li><li>Model: EK-HD Tube</li><li>Modification kit for solid Acrylic &amp; PETG tubing</li><li>For 10- and 12mm</li></ul>",
+      "model": "EK-HD Tube",
+      "warranty": "2 years of warranty",
+      "basePrice": 2100.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109841297",
+          "price": 2100.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2016.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109841297",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-HD Tube",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-hd-tube-diy-kit",
+      "sourceProductCode": "15574",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109841297",
+      "sourceKeyFeatures": [
+        "MPN: 3831109841297",
+        "Model: EK-HD Tube",
+        "Modification kit for solid Acrylic & PETG tubing",
+        "For 10- and 12mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-hd-tube-diy-kit.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-hd-tube-diy-kit.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-hd-tube-diy-kit",
+        "candidateTitle": "EKWB EK-HD Tube D.I.Y. Kit (10 & 12mm)",
+        "attemptStem": "ekwb-ek-hd-tube-diy-kit"
+      }
+    },
+    {
+      "name": "EKWB EK-HD Tube Reamer",
+      "slug": "ekwb-ek-hd-tube-reamer",
+      "type": "PHYSICAL",
+      "sku": "3830046994585",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-HD Tube Reamer</h2>\n<p style=\"text-align: justify; \">EKWB EK-HD Tube Reamer is one kind of external and internal tube reamer. The Tube Reamer is used to remove the remains of freshly cut Acrylic, aluminum, brass, PETG, copper, carbon fiber, etc. tubing. This new EKWB EK-HD Tube Reamer is suitable for tubes with a minimum inner diameter of 5mm and maximum outer diameter of 30mm. The Tube Reamer comes with 02 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3830046994585</li><li>Model: EK-HD</li><li>Maximum tubing OD: 30mm</li><li>Minimum tubing ID: 5mm</li><li>Plastic body</li><li>Steel blades</li></ul>",
+      "model": "EK-HD",
+      "warranty": "02 years warranty",
+      "basePrice": 600.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3830046994585",
+          "price": 600.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 576.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3830046994585",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-HD",
+              "position": 1
+            },
+            {
+              "label": "Maximum tubing OD",
+              "value": "30mm",
+              "position": 2
+            },
+            {
+              "label": "Minimum tubing ID",
+              "value": "5mm",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-hd-tube-reamer",
+      "sourceProductCode": "15623",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3830046994585",
+      "sourceKeyFeatures": [
+        "MPN: 3830046994585",
+        "Model: EK-HD",
+        "Maximum tubing OD: 30mm",
+        "Minimum tubing ID: 5mm",
+        "Plastic body",
+        "Steel blades"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-hd-tube-reamer.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-hd-tube-reamer.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-hd-tube-reamer",
+        "candidateTitle": "EKWB EK-HD Tube Reamer",
+        "attemptStem": "ekwb-ek-hd-tube-reamer"
+      }
+    },
+    {
+      "name": "EKWB EK-Loop Modulus Hard Tube Bending Tool",
+      "slug": "ekwb-ek-loop-modulus-tube-bending-tool",
+      "type": "PHYSICAL",
+      "sku": "ST-15622",
+      "description": "<h2 style=\"text-align: justify; \"><span style=\"font-weight: bold;\">EKWB EK-Loop Modulus Hard Tube Bending Tool</span></h2>\n<p style=\"text-align: justify; \">EKWB EK-Loop Modulus Hard Tube Bending Tool comes with 12mm is the EK approach to an easy and straight forward way of bending hardline acrylic and PETG tubing of 12mm OD. The EKWB EK-Loop Modulus Hard Tube Bending Tool act as a mold which helps the you to form the tubing in the desired shape and also it is made to be timeless and sturdy, as they are machined out of a solid piece of black POM acetal. This tools comes in 3 variants depending on the outer diameter (OD) of the tubing. Available models are for tube size of 12mm, 14mm, and 16mm and also it has 02 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: EK-Loop</li><li>Supports 12mm, 14mm, and 16mm Tube</li><li>A Solid Piece of Black POM Acetal</li><li>PETG tubing of 12mm OD</li><li>Act as a Mold</li></ul>",
+      "model": "EK-Loop",
+      "warranty": null,
+      "basePrice": 3500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-15622",
+          "price": 3500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "EK-Loop",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-loop-modulus-tube-bending-tool",
+      "sourceProductCode": "15622",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: EK-Loop",
+        "Supports 12mm, 14mm, and 16mm Tube",
+        "A Solid Piece of Black POM Acetal",
+        "PETG tubing of 12mm OD",
+        "Act as a Mold"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-loop-modulus-tube-bending-tool.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-loop-modulus-tube-bending-tool.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-loop-modulus-tube-bending-tool",
+        "candidateTitle": "EKWB EK-Loop Modulus Hard Tube Bending Tool",
+        "attemptStem": "ekwb-ek-loop-modulus-tube-bending-tool"
+      }
+    },
+    {
+      "name": "EKWB EK-Loop Multi Allen Key",
+      "slug": "ekwb-ek-loop-multi-allen-key",
+      "type": "PHYSICAL",
+      "sku": "3830046996213",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-Loop Multi Allen Key</h2><div style=\"text-align: justify; \">The EKWB EK-Loop Multi Allen Key Multi is a multi-purpose tool that replaces the standard 6mm, 8mm, and 9mm Allen key, this allen key can also be used to operate acetal plugs (with the line style groove). The key does not only replace all of the crucial Allen key formats used for building a liquid-cooled PC but also helps protect your liquid cooling gear.</div><img alt=\"EKWB EK-Loop Multi Allen Key\" height=\"533\" src=\"https://www.startech.com.bd/image/catalog/water-liquid-cooling/ekwb/ek-loop/ek-loop-04.jpg\" weight=\"800\"/><div>As the Allen key will snap when too much force is applied, the issue of overtightened fittings and cracked plexi parts is reduced and it's much easier to replace a highly affordable EK-Loop Multi Allen Key than a plexi water block top. The 6mm ending is mostly used for brass G1/4\" plugs and also 8mm and 9mm Allen keys are mostly used for securing fittings and extenders. Here, the line style ending is used to operate acetal plugs. This new EKWB EK-Loop Multi Allen Key comes with 02 years of warranty.</div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3830046996213</li><li>Model: EK-Loop</li><li>Allen key sizes: 6mm, 8mm, 9mm</li><li>Material: ABS Plastic</li><li>Protect Liquid Cooling Gear</li><li>Color: Black</li></ul>",
+      "model": "EK-Loop",
+      "warranty": "02 years of warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [
+        {
+          "name": "Allen key sizes",
+          "position": 0,
+          "values": [
+            {
+              "value": "6mm, 8mm, 9mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "3830046996213",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Allen key sizes": "6mm, 8mm, 9mm",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3830046996213",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-Loop",
+              "position": 1
+            },
+            {
+              "label": "Allen key sizes",
+              "value": "6mm, 8mm, 9mm",
+              "position": 2
+            },
+            {
+              "label": "Material",
+              "value": "ABS Plastic",
+              "position": 3
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-loop-multi-allen-key",
+      "sourceProductCode": "15621",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3830046996213",
+      "sourceKeyFeatures": [
+        "MPN: 3830046996213",
+        "Model: EK-Loop",
+        "Allen key sizes: 6mm, 8mm, 9mm",
+        "Material: ABS Plastic",
+        "Protect Liquid Cooling Gear",
+        "Color: Black"
+      ],
+      "needsReview": true,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-loop-multi-allen-key.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-loop-multi-allen-key.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-loop-multi-allen-key",
+        "candidateTitle": "EKWB EK-Loop Multi Allen Key",
+        "attemptStem": "ekwb-ek-loop-multi-allen-key"
+      }
+    },
+    {
+      "name": "EKWB EK-Loop Soft 12/16mm 3mm Tube",
+      "slug": "ekwb-ek-loop-soft-12-16mm-3mm-tube",
+      "type": "PHYSICAL",
+      "sku": "3831109895948",
+      "description": "<h2>EKWB EK-Loop Soft 12/16mm 3mm Tube</h2><p style=\"text-align: justify; \">The EKWB EK-Loop Soft 12/16mm 3mm Tube is the clear soft tubing from EK that has the best clarity. Due to its significant UV-Type A and UV-Type B transmissibility, it is compatible with UV-reactive coolants. Additionally, the coolant has restricted transmissibility to UV-Type C, which prevents it from degrading and changing color. Designed especially for the most discriminating customers who need improved functionality and supply tubing. High resistance to leaching was one of the key aims while developing this tube. EK-Loop Soft Tube uses a plasticizer that is free of phthalates. It is resistant to degradation and discoloration from Beta, UV, and Gamma rays. All components used in manufacture are US FDA sanctioned for food applications and meet USP Class VI for use in the medical industry. Exposure to sunlight through the tube wall is one of the primary causes of colored coolant deterioration. EK-Loop Soft Tube efficiently addresses this issue by using unique materials that make it extremely UV-Type C resistant. One of the most important considerations while manufacturing this tube was the high resistance to leaching. The plasticizer used by EK-Loop Soft Tube is non-phthalate. It is not easily degraded or stained by beta, UV, or gamma radiation. Every component used in production is approved by the US FDA for use in food applications and complies with USP Class VI for use in the medical sector.</p><h2 style=\"text-align: justify; \"><span style=\"color: inherit; font-family: inherit;\">Buy </span>EKWB EK-Loop Soft 12/16mm 3mm Tube<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span><br/></h2><p style=\"\">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/ekwb-ek-loop-soft-12-16mm-3mm-tube\" target=\"\">EKWB EK-Loop Soft 12/16mm 3mm Tube</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/ekwb-water-or-liquid-cooling\" target=\"\">EKWB Water Cooling </a>to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The EKWB EK-Loop Soft 12/16mm 3mm Tube comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109895948</li><li>Model: EK-Loop Soft</li><li>Material: PVC</li><li>Inner diameter: 12 mm</li><li>Outer diameter: 16 mm</li><li>Length: 3 meters</li></ul>",
+      "model": "EK-Loop Soft",
+      "warranty": "no warranty",
+      "basePrice": 3600.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109895948",
+          "price": 3600.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3456.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109895948",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-Loop Soft",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "PVC",
+              "position": 2
+            },
+            {
+              "label": "Inner diameter",
+              "value": "12 mm",
+              "position": 3
+            },
+            {
+              "label": "Outer diameter",
+              "value": "16 mm",
+              "position": 4
+            },
+            {
+              "label": "Length",
+              "value": "3 meters",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-loop-soft-12-16mm-3mm-tube",
+      "sourceProductCode": "30217",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109895948",
+      "sourceKeyFeatures": [
+        "MPN: 3831109895948",
+        "Model: EK-Loop Soft",
+        "Material: PVC",
+        "Inner diameter: 12 mm",
+        "Outer diameter: 16 mm",
+        "Length: 3 meters"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-loop-soft-12-16mm-3mm-tube.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-loop-soft-12-16mm-3mm-tube.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-loop-soft-12-16mm-3mm-tube",
+        "candidateTitle": "EKWB EK-Loop Soft 12/16mm 3mm Tube",
+        "attemptStem": "ekwb-ek-loop-soft-12-16mm-3mm-tube"
+      }
+    },
+    {
+      "name": "EKWB EK-Quantum 90Â° Torque Rotary",
+      "slug": "ekwb-ek-quantum-90-degree-torque-rotary",
+      "type": "PHYSICAL",
+      "sku": "831109814475",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-Quantum 90Â° Torque Rotary</h2>\n<p style=\"text-align: justify; \">EKWB EK-Quantum 90Â° Torque Rotary is a revolvable angled (90Â°) adapter fitting, that comes with G1/4\" threads. In the form of a cylinder, it is very sturdy and there are zero movements in the revolvable joint. The new Quantum Line adapter is made out of CNC machined brass with high-quality Satin Black finish while the seal is made by quality rubber O-rings. This EK-Quantum Torque series fittings are intentionally not painted on the inside to reduce the level of possible pollutants in the loop.  This EKWB EK-Quantum 90Â° Torque Rotary is extremely secure and sturdy piece that will last for many future builds. The latest EKWB EK-Quantum 90Â° Torque Rotary has 02 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 831109814475</li><li>Model: EK-Quantum</li><li>Material: made of nickel plated brass</li><li>The outer diameter: 23mm</li><li>Installed height: 31,5mm</li><li>Sealed with high-quality NBR o-ring</li></ul>",
+      "model": "EK-Quantum",
+      "warranty": null,
+      "basePrice": 1000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "831109814475",
+          "price": 1000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 960.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "831109814475",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-Quantum",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "made of nickel plated brass",
+              "position": 2
+            },
+            {
+              "label": "The outer diameter",
+              "value": "23mm",
+              "position": 3
+            },
+            {
+              "label": "Installed height",
+              "value": "31,5mm",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-quantum-90-degree-torque-rotary",
+      "sourceProductCode": "15744",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "831109814475",
+      "sourceKeyFeatures": [
+        "MPN: 831109814475",
+        "Model: EK-Quantum",
+        "Material: made of nickel plated brass",
+        "The outer diameter: 23mm",
+        "Installed height: 31,5mm",
+        "Sealed with high-quality NBR o-ring"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-90-degree-torque-rotary.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-90-degree-torque-rotary.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-quantum-90-degree-torque-rotary",
+        "candidateTitle": "EKWB EK-Quantum 90Â° Torque Rotary",
+        "attemptStem": "ekwb-ek-quantum-90-degree-torque-rotary"
+      }
+    },
+    {
+      "name": "EKWB EK-Quantum D-RGB P360 Power Kit",
+      "slug": "ekwb-ek-quantum-d-rgb-p360-power-kit",
+      "type": "PHYSICAL",
+      "sku": "3831109818404",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-Quantum D-RGB P360 Power Kit</h2><p style=\"text-align: justify; \">The EKWB EK-Quantum D-RGB P360 Power Kit comes with ultimate fully addressable D-RGB customizable liquid cooling kit. Decked out with all-Quantum Line liquid cooling parts products that share the same design language and full D-RGB illumination. This EKWB EK-Quantum D-RGB P360 Power Kit will make the loop building experience easier and also it's extra accessories like the foldable filling bottle, tube cuter, and multi Allen key tools, and also the additional benefits also come from the included dye pack for creating own coolant color, two 90-degree Torque angled adapters, versatile mounting bracket, and reservoir tube clamps for alternative mounting options. This water cooling kit is compatible with the following CPU sockets- Intel LGA-1200, Intel LGA-1150/1151/1155/1156, Intel LGA-2011(-3), Intel LGA-2066 and AMD Socket AM4. The EKWB EK-Quantum D-RGB P360 Power Kit has 02 years warranty. This kit brings the following components, selected from our wide range of quality products:</p><h3 style=\"text-align: justify; \">EK-Velocity D-RGB - Nickel + Plexi: </h3><p style=\"text-align: justify; \">This is Universal CPU water block that fits all modern CPU sockets with a universal mounting mechanism that offers error-preventing, tool-less installation. It will provides you perfect performance every time. Low hydraulic flow restriction enables this product to be used with lower pump speeds for added silent operation, while still achieving top performance.</p><h3 style=\"text-align: justify; \">EK-CoolStream PE 360 radiator:</h3><p style=\"text-align: justify; \">This tools offers best cooling capacity in the 38mm thick radiator class: Double stack copper fins provide massive surface area while the parallel flow cooling chambers reduce hydraulic flow resistance to a minimum. It is built for EK-Vardar 120mm high static pressure fans, these radiators are optimized for maximum heat dissipation across the entire fan operational range thus delivering exceptional performance at both low- and high airflow operation.</p><h3 style=\"text-align: justify; \">EK-Vardar EVO 120ER D-RGB: </h3><p style=\"text-align: justify; \">The Tool comes with Ultra-bright addressable RGB high-static pressure computer cooling fan, designed and built primarily for highest-performance computer liquid cooling systems. EK-Vardar EVO D-RGB is simply the best choice for computer radiator cooling as it provides unmatched performance throughout the entire operating range and also featurted with a special Start-Stop function that brings a true 0dB experience for the absolute silent fan operation.</p><h3 style=\"text-align: justify; \">EK-Quantum Kinetic TBE 200 D5 PWM D-RGB - Plexi:</h3><p style=\"text-align: justify; \">The core of the combo unit is the market-proven Xylem D5 PWM water pump. The unit features a fully rounded design thus offering greater usability, allowing installation at any angle within 360Â° of rotation. It is also used to de-couple the main pump body from the mounting clip for silent operation, free of vibration-induced noise.</p><h3 style=\"text-align: justify; \">EK-Torque STC-10/16:</h3><p style=\"text-align: justify; \">Advanced Compression Fittings are comes with 10/16mm (3/8\" - 5/8\") soft-tube compression fittings designed for use with flexible soft tubing with a high-quality finish, the EK-ACF Fittings are an aesthetically appealing and secure option for your cooling loop.</p><h3 style=\"text-align: justify; \">EK-Torque Angled 90Â°:</h3><p style=\"text-align: justify; \">Revolvable angled (90Â°) adapter fitting with G1/4\" threads. In the form of a cylinder. This Quantum Line adapter is made out of CNC machined brass with high-quality Satin Black finish while the seal is made by quality rubber O-rings.</p><img alt=\"EKWB EK-Quantum D-RGB P360 Power Kit\" height=\"800\" src=\"https://www.startech.com.bd/image/catalog/water-liquid-cooling/ekwb/ek-quantum-d-rgb-p360/ek-quantum-d-rgb-p360-123.jpg\" weight=\"1200\"/><h3 style=\"text-align: justify; \">EK-CryoFuel Clear Concentrate:</h3><p style=\"text-align: justify; \">EK-CryoFuel Clear is a pure, non-toxic coolant based on the patent-pending chemical formula, which prevents the creation of any sediments in the liquid cooling loop. </p><h3 style=\"text-align: justify; \">EK-CryoFuel Dye Pack:</h3><p style=\"text-align: justify; \">This package consists of Red, Yellow, and Blue dye bottles that you apply to your base coolant - EK-Cryofuel Clear.</p><h3 style=\"text-align: justify; \">EK-DuraClear: </h3><p style=\"text-align: justify; \">It comes with 2 meters of EK-DuraClear 9,5mm (3/8\") / 15,9mm (5/8\") premium-quality transparent PVC tubing with long-lasting clarity.</p><h3 style=\"text-align: justify; \">EK-Loop Multi Allen Key (6mm, 8mm, 9mm):</h3><p style=\"text-align: justify; \">The key does not only replace all of the crucial Allen key formats used for building a liquid-cooled PC but also helps protect your liquid cooling gear. It can also be used to operate acetal plugs (with the line style groove). </p><h3 style=\"text-align: justify; \">EK-Loop Soft Tube Cutter:</h3><p style=\"text-align: justify; \">It is a simple tool used to make a straight tube cut. Safe and easy to use.</p><h3 style=\"text-align: justify; \">Foldable Filling Bottle:</h3><p style=\"text-align: justify; \">The Foldable Filling Bottle is very convenient for mixing the EK-CryoFuel concentrates with distilled water. The telescopic tube of the filling bottle can reach even the most remote and crammed fill ports.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109818404</li><li>Model: EK-Quantum D-RGB P360</li><li>EK-Velocity D-RGB - Nickel + Plexi</li><li>EK-CoolStream PE 360 radiator</li><li>EK-Vardar EVO 120ER D-RGB</li><li>EK-Torque STC-10/16</li></ul>",
+      "model": "EK-Quantum D-RGB P360",
+      "warranty": null,
+      "basePrice": 55500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109818404",
+          "price": 55500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 53280.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109818404",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-Quantum D-RGB P360",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-quantum-d-rgb-p360-power-kit",
+      "sourceProductCode": "15625",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109818404",
+      "sourceKeyFeatures": [
+        "MPN: 3831109818404",
+        "Model: EK-Quantum D-RGB P360",
+        "EK-Velocity D-RGB - Nickel + Plexi",
+        "EK-CoolStream PE 360 radiator",
+        "EK-Vardar EVO 120ER D-RGB",
+        "EK-Torque STC-10/16"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-d-rgb-p360-power-kit.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-d-rgb-p360-power-kit.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-quantum-d-rgb-p360-power-kit",
+        "candidateTitle": "EKWB EK-Quantum D-RGB P360 Power Kit",
+        "attemptStem": "ekwb-ek-quantum-d-rgb-p360-power-kit"
+      }
+    },
+    {
+      "name": "EKWB EK-Quantum Inertia D5 PWM D-RGB Plexi",
+      "slug": "ekwb-ek-quantum-inertia-d5-pwm-plexi",
+      "type": "PHYSICAL",
+      "sku": "3831109821930",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-Quantum Inertia D5 PWM D-RGB Plexi</h2>\n<p style=\"text-align: justify; \">EKWB EK-Quantum Inertia D5 PWM D-RGB Plexi comes with Electronically commuted spherical motor. This EKWB EK-Quantum Inertia D5 PWM D-RGB Plexi featured with Rated voltage: 12V DC, Power consumption: 23W, Maximum pressure head: 3.9m, Maximum flow: 1500L/h and Maximum system temperature: 60Â°C. This Mpotor built in Stainless steel, PPS-GF40, EPDM O-rings, Aluminium oxide, hard coal Materials. Here, 4-Pin Molex 50cm cable length Power connector, Signal cable: 4-Pin PWM FAN connector 60cm cable length, D-RGB cable length: 50cm and D-RGB connector standard 3-pin (+5V, Data, Blocked, Ground). This pump is compatible for PC and other electronics water cooling and also equipped with an electronically commutated spherical motor. In a pump with a spherical motor, the only moving part is a spherically shaped rotor which in this pump is held in place by a bearing ball made of ultra-hard and wear-resistant ceramic. It is rated for 50.000 hrs MTBF at 25Â°C ambient. This D-RGB Plexi also featured with PWM duty cycle: ~ 20-100%, Default behavior: Runs at 100% duty cycle when no PWM feedback signal is present. The new Quantum Inertia D5 pump volute/body system features a fully rounded design thus offering greater usability, allowing installation at any angle within 360Â° of rotation. In this EKWB EK-Quantum Inertia D5 PWM D-RGB Plexi, It has a special rubber shock absorber is used to de-couple the main pump body from the mounting clip for silent operation, free of vibration-induced noise. Additionally, horizontal and vertical positioning is supported for easier tube routing possibilities. This new EKWB EK-Quantum Inertia D5 PWM D-RGB Plexi has 02 years warranty.\n\n</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109821930</li><li>Model: EK-Quantum Inertia D5 PWM</li><li>Electronically commuted spherical motor</li><li>Max. Pressure Head: 3.9m</li><li>Rated Voltage: 12V DC</li><li>Power Consumption: 23W</li></ul>",
+      "model": "EK-Quantum Inertia D5 PWM",
+      "warranty": null,
+      "basePrice": 15000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109821930",
+          "price": 15000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 14400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109821930",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-Quantum Inertia D5 PWM",
+              "position": 1
+            },
+            {
+              "label": "Max. Pressure Head",
+              "value": "3.9m",
+              "position": 2
+            },
+            {
+              "label": "Rated Voltage",
+              "value": "12V DC",
+              "position": 3
+            },
+            {
+              "label": "Power Consumption",
+              "value": "23W",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-quantum-inertia-d5-pwm-plexi",
+      "sourceProductCode": "15632",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109821930",
+      "sourceKeyFeatures": [
+        "MPN: 3831109821930",
+        "Model: EK-Quantum Inertia D5 PWM",
+        "Electronically commuted spherical motor",
+        "Max. Pressure Head: 3.9m",
+        "Rated Voltage: 12V DC",
+        "Power Consumption: 23W"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-inertia-d5-pwm-plexi.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-inertia-d5-pwm-plexi.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-quantum-inertia-d5-pwm-plexi",
+        "candidateTitle": "EKWB EK-Quantum Inertia D5 PWM D-RGB Plexi",
+        "attemptStem": "ekwb-ek-quantum-inertia-d5-pwm-plexi"
+      }
+    },
+    {
+      "name": "EKWB EK-Quantum Torque HDC 12 Black",
+      "slug": "ekwb-ek-quantum-torque-hdc",
+      "type": "PHYSICAL",
+      "sku": "3831109814413",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-Quantum Torque HDC 12 Black</h2>\n<p style=\"text-align: justify; \">The latest EKWB EK-Quantum Torque HDC 12 Black are EK's new minimalistic 12mm hard-tube compression fittings that's are designed for use with solid tubing such as Acrylic and PETG. It is featured with a non-intrusive, yet striking look, and with NO added branding at all. The locking ring prevents solid tube to be pulled out of the fitting by compressing the rubber gasket underneath the ring. The grooves on the outside allow for easier hand tightening. The compression ring has cutouts in EK Quantum signature shape allowing for the colored aesthetic ring to be shown. In this torque, the colored rings are available in many colors and are screwed onto the fitting before the compression locking ring. The aesthetic rings are sold separately. It is featured with Finish: Satin black, Thread: G1/4\" BSP; 4.5mm male thread length that Supported tube: 12mm OD. Here, the outer diameter of a fitting 20mm and Installed height: 15mm. It's Compatible solid tubing are- Acrylic, PETG, Copper, Brass, Stainless Steel. Here,the fitting barb and the compression rings are covered with a unique, high-quality satin black finish and also both are made of CNC machined brass and the seal is made quality rubber O-rings. Black EK-QuantumTorque series fittings are intentionally not painted on the inside to reduce the level of possible pollutants in the loop. The smooth base fitting surface has no adequate gripping surface, but the inside of the barb is socketed with a 9mm hex Allen key pattern. This is highly recommended to use an Allen Key 9mm (purchased separately) to prevent skin damage to the fingertips while installing the fitting. The new EKWB EK-Quantum Torque HDC 12 Black has 02 years warranty.\n\n</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109814413</li><li>Model: EK-Quantum Torque HDC 12</li><li>Thread: G1/4&quot; BSP; 4.5mm male thread length</li><li>Supported tube: 12mm OD</li><li>20mm outer diameter of a fitting</li><li>Installed height: 15mm</li></ul>",
+      "model": "EK-Quantum Torque HDC 12",
+      "warranty": null,
+      "basePrice": 300.0,
+      "originalPrice": 799.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109814413",
+          "price": 300.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 288.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109814413",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-Quantum Torque HDC 12",
+              "position": 1
+            },
+            {
+              "label": "Thread",
+              "value": "G1/4\" BSP; 4.5mm male thread length",
+              "position": 2
+            },
+            {
+              "label": "Supported tube",
+              "value": "12mm OD",
+              "position": 3
+            },
+            {
+              "label": "Installed height",
+              "value": "15mm",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-quantum-torque-hdc",
+      "sourceProductCode": "15746",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "3831109814413",
+      "sourceKeyFeatures": [
+        "MPN: 3831109814413",
+        "Model: EK-Quantum Torque HDC 12",
+        "Thread: G1/4\" BSP; 4.5mm male thread length",
+        "Supported tube: 12mm OD",
+        "20mm outer diameter of a fitting",
+        "Installed height: 15mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-torque-hdc.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-quantum-torque-hdc.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-quantum-torque-hdc",
+        "candidateTitle": "EKWB EK-Quantum Torque HDC 12 Black",
+        "attemptStem": "ekwb-ek-quantum-torque-hdc"
+      }
+    },
+    {
+      "name": "EKWB EK-RES X3 250 Reservoir",
+      "slug": "ekwb-ek-res-x3-250-reservoir",
+      "type": "PHYSICAL",
+      "sku": "3831109841020",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-RES X3 250 Reservoir</h2>\n<p style=\"text-align: justify; \">The new EK-RES X3 reservoir comes from EK CSQ design line is an improved version of renown EK-Multioption RES X2 reservoirs which is released three years ago. It is configuration for easier and more straightforward fitting configuration and tube routing. Improvements have been made on the reservoir's bottom terminal which has been optimized for best flow. This Reservoir is manufactured of premium quality 60mm acrylic tube and POM Acetal end caps. The sealing is performed by quality EPDM rubber washers. It is configured with Installation height: 250mm, Diameter: 60mm, Capacity: ~440ml and Weight (netto): 370g. Vortex ouccurance has also been diminished by the use of enclosed anti-cyclone as well as additional PE foam. This latest RES X3 comes with a pair of EK design reservoir holders using adjustable fastening force controlled by enclosed Allen key. The EKWB EK-RES X3 250 Reservoir has 02 years of warranty.\n\n</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109841020</li><li>Model: EK-RES X3 250</li><li>Installation height: 250mm</li><li>Diameter: 60mm</li><li>Capacity: ~440ml</li><li>Weight (netto): 370g</li></ul>",
+      "model": "EK-RES X3 250",
+      "warranty": "a pair of EK design reservoir holders using adjustable fastening force controlled by enclosed Allen key. The EKWB EK-RES X3 250 Reservoir has 02 years of warranty",
+      "basePrice": 6500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.37,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "~440ml",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "3831109841020",
+          "price": 6500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "~440ml"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 6240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109841020",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-RES X3 250",
+              "position": 1
+            },
+            {
+              "label": "Installation height",
+              "value": "250mm",
+              "position": 2
+            },
+            {
+              "label": "Diameter",
+              "value": "60mm",
+              "position": 3
+            },
+            {
+              "label": "Capacity",
+              "value": "~440ml",
+              "position": 4
+            },
+            {
+              "label": "Weight (netto)",
+              "value": "370g",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-res-x3-250-reservoir",
+      "sourceProductCode": "15791",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109841020",
+      "sourceKeyFeatures": [
+        "MPN: 3831109841020",
+        "Model: EK-RES X3 250",
+        "Installation height: 250mm",
+        "Diameter: 60mm",
+        "Capacity: ~440ml",
+        "Weight (netto): 370g"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-res-x3-250-reservoir.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-res-x3-250-reservoir.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-res-x3-250-reservoir",
+        "candidateTitle": "EKWB EK-RES X3 250 Reservoir",
+        "attemptStem": "ekwb-ek-res-x3-250-reservoir"
+      }
+    },
+    {
+      "name": "EKWB EK-XTOP DDC 3.2 PWM Elite Plexi",
+      "slug": "ekwb-ek-xtop-ddc-elite-plexi",
+      "type": "PHYSICAL",
+      "sku": "3831109843147",
+      "description": "<h2 style=\"text-align: justify; \">EKWB EK-XTOP DDC 3.2 PWM Elite Plexi</h2><p style=\"text-align: justify; \">EKWB EK-XTOP DDC 3.2 PWM Elite Plexi comes with High-Performance water cooling pump. The core of the unit is the market-proven EK-DDC 3.2 PWM water pump (4-pin PWM FAN header). This unit offers increased hydraulic performance (up to 15 %) compared to original factory top. It's PWM control allows for automatic pump speed regulation depending on your CPU temperature. This top features two G1/4 threaded ports of which one is an inlet on top and one is an outlet on the side of the unit. EK recommends EK-ACF series compression fittings.This EKWB EK-XTOP DDC 3.2 PWM Elite Plexi featured with Rated voltage: 12 V DC, Power consumption: 18 W, Maximum head pressure: up to 5.2m, Maximum flow rate: up to 1000 L/h, Maximum liquid temperature: 60 Â°C, Materials: Stainless steel, PPS-GF40, EPDM O-rings, Aluminium oxide, hard coal, Power connector:  4-Pin Molex- and 4-Pin PWM FAN connector. Despite a remarkably small footprint of 2.4\" square, the pump features an astounding 7m of head to provide superior flow rates in today's most complex liquid cooled systems. The pump is also a high reliability, high-pressure industrial pump, featuring a 50,000 hour MTBF (5 year lifetime). This new EK-DDC Heatsink Housing is made from cast ZAMAK (zinc, aluminum, magnesium, copper) alloy and features nickel plated finish. This product also features vibration-dampening rubber mounting system which effectively de-couples the water pump from the rest of the computer chassis. The new EKWB EK-XTOP DDC 3.2 PWM Elite Plexi has 02 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109843147</li><li>Model: EK-XTOP DDC 3.2</li><li>Electronically commuted ball bearing motor</li><li>Maximum head pressure: up to 5.2m</li><li>Rated Voltage: 12 V DC</li><li>Power Consumption: 18 W</li></ul>",
+      "model": "EK-XTOP DDC 3.2",
+      "warranty": null,
+      "basePrice": 6000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109843147",
+          "price": 6000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 5760.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109843147",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "EK-XTOP DDC 3.2",
+              "position": 1
+            },
+            {
+              "label": "Maximum head pressure",
+              "value": "up to 5.2m",
+              "position": 2
+            },
+            {
+              "label": "Rated Voltage",
+              "value": "12 V DC",
+              "position": 3
+            },
+            {
+              "label": "Power Consumption",
+              "value": "18 W",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-ek-xtop-ddc-elite-plexi",
+      "sourceProductCode": "15796",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109843147",
+      "sourceKeyFeatures": [
+        "MPN: 3831109843147",
+        "Model: EK-XTOP DDC 3.2",
+        "Electronically commuted ball bearing motor",
+        "Maximum head pressure: up to 5.2m",
+        "Rated Voltage: 12 V DC",
+        "Power Consumption: 18 W"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-ek-xtop-ddc-elite-plexi.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-ek-xtop-ddc-elite-plexi.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-ek-xtop-ddc-elite-plexi",
+        "candidateTitle": "EKWB EK-XTOP DDC 3.2 PWM Elite Plexi",
+        "attemptStem": "ekwb-ek-xtop-ddc-elite-plexi"
+      }
+    },
+    {
+      "name": "EKWB Filling 1000mL Bottle",
+      "slug": "ekwb-filling-1000ml-bottle",
+      "type": "PHYSICAL",
+      "sku": "3831109869796",
+      "description": "<h2 style=\"text-align: justify; \"><span style=\"font-weight: bold;\">EKWB Filling 1000mL Bottle</span></h2>\n<p style=\"text-align: justify; \">The new EKWB Filling 1000mL Bottle designed to make your loop filling process much easier. It is very convenient for mixing the EK-CryoFuel concentrates with distilled water and also the telescopic tube of the filling bottle can reach even the most remote and crammed fill ports. This EKWB squeeze bottle can also be used to suck the coolant out of reservoir making system draining an easy task as well. The new EKWB Filling 1000mL Bottle has 12 months warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3831109869796</li><li>Model: Filling 1000mL Bottle</li><li>Designed to make loop filling process</li><li>Convenient for mixing EK-CryoFuel</li><li>used to suck the coolant out</li><li>Contains: 1000mL</li></ul>",
+      "model": "Filling 1000mL Bottle",
+      "warranty": null,
+      "basePrice": 899.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3831109869796",
+          "price": 899.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 863.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3831109869796",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Filling 1000mL Bottle",
+              "position": 1
+            },
+            {
+              "label": "Contains",
+              "value": "1000mL",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-filling-1000ml-bottle",
+      "sourceProductCode": "15743",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3831109869796",
+      "sourceKeyFeatures": [
+        "MPN: 3831109869796",
+        "Model: Filling 1000mL Bottle",
+        "Designed to make loop filling process",
+        "Convenient for mixing EK-CryoFuel",
+        "used to suck the coolant out",
+        "Contains: 1000mL"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-filling-1000ml-bottle.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-filling-1000ml-bottle.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-filling-1000ml-bottle",
+        "candidateTitle": "EKWB Filling 1000mL Bottle",
+        "attemptStem": "ekwb-filling-1000ml-bottle"
+      }
+    },
+    {
+      "name": "EKWB PVC 10-12mm Tube Clamp",
+      "slug": "ekwb-pvc-tube-clamp",
+      "type": "PHYSICAL",
+      "sku": "3830046998521",
+      "description": "<h2 style=\"text-align: justify; \"><span style=\"font-weight: bold;\">EKWB PVC 10-12mm Tube Clamp</span></h2>\n<p style=\"text-align: justify; \">EKWB PVC 10 - 12mm Tube Clamp have been designed for fast and easy clamping to ensure that no leak ever touches your Liquid Cooling System system. The Tube clamps are made from a very strong plastic, which are highly durable. Each Tube clamp has a high degree of adjustability in the clamping diameter via the interlocking teeth mechanism. Most importantly, Tubing Clamps are completely reusable and can be removed with ease. To remove a clamp, simply twist the two interlocking teeth sections so that they no longer line up and the clamp will unlock itself. This EKWB PVC 10 - 12mm Tube Clamp is a simple but highly effective way to ensure a leak-proof Liquid Cooling System and also this EKWB PVC Tube Clamp has 02 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: 3830046998521</li><li>Model: PVC Tube Clamp</li><li>Fast and Easy Clamping to Ensure</li><li>Very Strong Plastic Materials</li><li>Highly Durable</li><li>High Degree of Adjustability</li></ul>",
+      "model": "PVC Tube Clamp",
+      "warranty": null,
+      "basePrice": 80.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "EKWB",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "3830046998521",
+          "price": 80.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 76.8,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "3830046998521",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "PVC Tube Clamp",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/ekwb-pvc-tube-clamp",
+      "sourceProductCode": "15579",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "3830046998521",
+      "sourceKeyFeatures": [
+        "MPN: 3830046998521",
+        "Model: PVC Tube Clamp",
+        "Fast and Easy Clamping to Ensure",
+        "Very Strong Plastic Materials",
+        "Highly Durable",
+        "High Degree of Adjustability"
+      ],
+      "needsReview": false,
+      "categorySlug": "water-liquid-cooling",
+      "image": "/images/products/component/water-liquid-cooling/ekwb-pvc-tube-clamp.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/water-liquid-cooling/ekwb-pvc-tube-clamp.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "ekwb-pvc-tube-clamp",
+        "candidateTitle": "EKWB PVC 10-12mm Tube Clamp",
+        "attemptStem": "ekwb-pvc-tube-clamp"
+      }
+    }
+  ]
+}

@@ -1,0 +1,2116 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/component",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\component",
+    "generatedAtUnix": 1790589891,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Component",
+      "slug": "component",
+      "parentSlug": null,
+      "image": "/images/products/component/ssd cooler/Arctic M2 Pro M.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Optical Disk Drive",
+      "slug": "optical-disk-drive",
+      "parentSlug": "component",
+      "image": "/images/products/component/optical-disk-drive/internal-optical-disk-drive/asus-bw-16d1ht-16x-blu-ray-dvd-writer.jpg",
+      "isActive": true,
+      "sortOrder": 15,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Internal Optical Disk Drive",
+      "slug": "optical-disk-drive-internal-optical-disk-drive",
+      "parentSlug": "optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/internal-optical-disk-drive/asus-bw-16d1ht-16x-blu-ray-dvd-writer.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "External Optical Disk Drive",
+      "slug": "optical-disk-drive-external-optical-disk-drive",
+      "parentSlug": "optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-sbw-06d2x-u-external-dvd-writer.jpg",
+      "isActive": true,
+      "sortOrder": 1,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Asus",
+      "slug": "asus",
+      "logo": null
+    },
+    {
+      "name": "LITE-ON",
+      "slug": "lite-on",
+      "logo": null
+    },
+    {
+      "name": "Onten",
+      "slug": "onten",
+      "logo": null
+    },
+    {
+      "name": "ORICO",
+      "slug": "orico",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "ASUS BW-16D1HT Ultra-fast 16X Blu-ray DVD Writer",
+      "slug": "asus-bw-16d1ht-16x-blu-ray-dvd-writer",
+      "type": "PHYSICAL",
+      "sku": "BW-16D1HT",
+      "description": "<h2 style=\"text-align: justify; \">ASUS BW-16D1HT Ultra-fast 16X Blu-ray DVD Writer</h2>\n<p style=\"text-align: justify;\">The ASUS BW-16D1HT is an internal ultra-fast 16X Blu-ray DVD Writer with superior writing quality. It features M-DISC and provides archival-quality storage to protect your precious photo, video, and data for 1,000 years or more. It is supported by Nero BackItUp and provides easy and comprehensive photo, video, and data backup for your valuable information. It offers drag-and-burn in 3 easy steps. It is suitable for anyone who desires a total storage and data backup solution. The ASUS BW-16D1HT comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: BW-16D1HT</li><li>Model: BW-16D1HT</li><li>Ultra-fast 16X Blu-ray writing speed</li><li>Interface: SATA</li><li>M-DISC Support</li><li>Drag-and-burn in 3 easy steps</li></ul>",
+      "model": "BW-16D1HT",
+      "warranty": "1 year",
+      "basePrice": 8500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 650.0,
+      "dimensions": {
+        "length": 170.0,
+        "width": 146.0,
+        "height": 41.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "BW-16D1HT",
+          "price": 8500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black",
+            "Interface": "SATA"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 8160.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Read Speed",
+              "value": "BD-ROM : 12X BD-R(SL, M-DISC) : 12X BD-RE : 10X DVD-ROM : 16X DVD+R : 16X DVD-R : 16X DVD+R(SL, M-DISC) : 12X DVD+RW : 12X DVD-RW : 12X DVD+R(DL) : 12X DVD-R(DL) : 12X DVD-RAM : 5X CD-ROM : 48X CD-R : 48X",
+              "position": 1
+            },
+            {
+              "label": "Write Speed",
+              "value": "BD-R : 16X BD-R(SL, M-DISC) : 4X BD-R(DL) : 12X BD-R(TL) : 8X BD-R(QL) : 6X BD-RE : 2X DVD+R : 16X DVD-R : 16X DVD+R(SL, M-DISC) : 4X DVD+RW : 8X DVD-RW : 6X DVD+R(DL) : 8X DVD-R(DL) : 8X DVD-RAM : 5X CD-R : 48X CD-RW : 24X",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "SATA",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Compatibility",
+          "position": 1,
+          "items": [
+            {
+              "label": "Operating Syatem",
+              "value": "Windows 11 Windows 10 Windows 8 / 8.1",
+              "position": 0
+            },
+            {
+              "label": "System Requirements",
+              "value": "CPU: Intel Pentium D 945(3.4 GHz) or higher RAM: 1 GB or more is recommended HDD: 10 GB or more Graphics Card: NVIDIA GeForce 7600 GT or ATI X1600 series or above Use HDCP Compatible display and VGA card to High Definition digital output",
+              "position": 1
+            },
+            {
+              "label": "Software",
+              "value": "CyberLink Power2Go 8 CyberLink PowerBackup 2.6 Nero BackItUp E-Green",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specifications",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "170 x 146 x 41 mm (L/W/H)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "650 ± 50 g",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-bw-16d1ht-16x-blu-ray-dvd-writer",
+      "sourceProductCode": "22922",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "BW-16D1HT",
+      "sourceKeyFeatures": [
+        "MPN: BW-16D1HT",
+        "Model: BW-16D1HT",
+        "Ultra-fast 16X Blu-ray writing speed",
+        "Interface: SATA",
+        "M-DISC Support",
+        "Drag-and-burn in 3 easy steps"
+      ],
+      "needsReview": false,
+      "categorySlug": "optical-disk-drive-internal-optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/internal-optical-disk-drive/asus-bw-16d1ht-16x-blu-ray-dvd-writer.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/optical-disk-drive/internal-optical-disk-drive/asus-bw-16d1ht-16x-blu-ray-dvd-writer.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-bw-16d1ht-16x-blu-ray-dvd-writer",
+        "candidateTitle": "ASUS BW-16D1HT Ultra-fast 16X Blu-ray DVD Writer",
+        "attemptStem": "asus-bw-16d1ht-16x-blu-ray-dvd-writer"
+      }
+    },
+    {
+      "name": "ASUS SBW-06D2X-U External Slim Blu-ray DVD Writer",
+      "slug": "asus-sbw-06d2x-u-external-dvd-writer",
+      "type": "PHYSICAL",
+      "sku": "SBW-06D2X-U",
+      "description": "<h2 style=\"text-align: justify; \">ASUS SBW-06D2X-U External Slim Blu-ray DVD Writer</h2><p style=\"text-align: justify;\">The ASUS SBW-06D2X-U is a portable 6X Blu-ray slim burner with M-DISC support. It comes with a detachable stand to save your space. M-DISC provides archival-quality storage to protect your precious photo, video, and data for 1,000 years or more. It features Nero BackItUp which provides the full backup solution for your valuable photo, video, document, and data with one click. It offers Windows and Mac OS compatibility. The ASUS SBW-06D2X-U External DVD Writer comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SBW-06D2X-U</li><li>Model: SBW-06D2X-U</li><li>6X Blu-ray slim DVD burner</li><li>Interface: USB 2.0 (Type-A)</li><li>M-DISC Support</li><li>Windows and Mac OS compatible</li></ul>",
+      "model": "SBW-06D2X-U",
+      "warranty": "1 year",
+      "basePrice": 9350.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 285.0,
+      "dimensions": {
+        "length": 157.0,
+        "width": 140.0,
+        "height": 18.5,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "USB 2.0 (Type-A)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SBW-06D2X-U",
+          "price": 9350.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black",
+            "Interface": "USB 2.0 (Type-A)"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 8976.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Read Speed",
+              "value": "BD-ROM : 6X BD-R(SL, M-DISC) : 6X BD-RE : 6X DVD-ROM : 8X DVD+R : 8X DVD-R : 8X DVD+R(SL, M-DISC) : 8X DVD+RW : 8X DVD-RW : 8X DVD+R(DL) : 8X DVD-R(DL) : 8X DVD-RAM : 5X CD-ROM : 24X CD-R : 24X",
+              "position": 1
+            },
+            {
+              "label": "Write Speed",
+              "value": "BD-R : 6X BD-R(SL, M-DISC) : 4X BD-R(DL) : 6X BD-R(TL/QL) : 4X BD-RE : 2X DVD+R : 8X DVD-R : 8X DVD+R(SL, M-DISC) : 4X DVD+RW : 8X DVD-RW : 6X DVD+R(DL) : 4X DVD-R(DL) : 4X DVD-RAM : 5X CD-R : 24X CD-RW : 10X",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "USB 2.0 (Type-A)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Compatibility",
+          "position": 1,
+          "items": [
+            {
+              "label": "Operating Syatem",
+              "value": "Windows 11 Windows 10 Windows 8 / 8.1 Mac OS X 10.6 and above",
+              "position": 0
+            },
+            {
+              "label": "System Requirements",
+              "value": "CPU: Intel Pentium D 945(3.4 GHz) or higher RAM: 1 GB or more is recommended HDD: 10 GB or more Graphics Card: NVIDIA GeForce 7600 GT or ATI X1600 series or above Use HDCP Compatible display and VGA card to High Definition digital output",
+              "position": 1
+            },
+            {
+              "label": "Software",
+              "value": "CyberLink Power2Go 8 CyberLink PowerBackup 2.6 Nero BackItUp",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specifications",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "157 x 140 x 18.5 mm (L/W/H)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "285 ± 30 g (330 ± 30 g with stand)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-sbw-06d2x-u-external-dvd-writer",
+      "sourceProductCode": "22921",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "SBW-06D2X-U",
+      "sourceKeyFeatures": [
+        "MPN: SBW-06D2X-U",
+        "Model: SBW-06D2X-U",
+        "6X Blu-ray slim DVD burner",
+        "Interface: USB 2.0 (Type-A)",
+        "M-DISC Support",
+        "Windows and Mac OS compatible"
+      ],
+      "needsReview": false,
+      "categorySlug": "optical-disk-drive-external-optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-sbw-06d2x-u-external-dvd-writer.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-sbw-06d2x-u-external-dvd-writer.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-sbw-06d2x-u-external-dvd-writer",
+        "candidateTitle": "ASUS SBW-06D2X-U External Slim Blu-ray DVD Writer",
+        "attemptStem": "asus-sbw-06d2x-u-external-dvd-writer"
+      }
+    },
+    {
+      "name": "ASUS SDRW-08D2S-U LITE External Slim DVD Writer",
+      "slug": "asus-sdrw-08d2s-u-lite-eexternal-slim-dvd-writer",
+      "type": "PHYSICAL",
+      "sku": "ST-573",
+      "description": "<h2><span id=\"ctl00_ContentPlaceHolder1_ctl00_overview1_span_overview\">ASUS SDRW-08D2S-U LITE External Slim DVD Writer</span></h2><p><span id=\"ctl00_ContentPlaceHolder1_ctl00_overview1_span_overview\">ASUS SDRW-08D2S-U LITE is an external slim DVD writer capable of 8X speeds. Its stylish and portable design includes a space-saving stand. The lattice-like appearance of the drive is inspired by diamonds, making the product unique from every angle. Additional features include USB 2.0 and the E-Green Engine for the best optical storage available. </span></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SDRW-08D2S-U LITE</li><li>Interface: USB 2.0</li><li>Disc Diameters: 12cm/8cm</li><li>Power: USB Power +5V Â± 5%</li></ul>",
+      "model": "SDRW-08D2S-U LITE",
+      "warranty": "1 Year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.28,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "USB 2.0",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-573",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black",
+            "Interface": "USB 2.0"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Optical Disk Drive",
+          "position": 0,
+          "items": [
+            {
+              "label": "Access time",
+              "value": "DVD : 160 ms CD : 140 ms",
+              "position": 0
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 1
+            },
+            {
+              "label": "Dimensions",
+              "value": "Vertical and Horizontal (+5° ~ -5°)",
+              "position": 2
+            },
+            {
+              "label": "Disc Diameters",
+              "value": "12cm/8cm",
+              "position": 3
+            },
+            {
+              "label": "Disc Formats",
+              "value": "Audio CD, Video CD, CD-I, CD-Extra, Photo CD, CD-Text, CD-ROM/XA, Multi-session CD, CD-R, CD-RW, CD-ROM , DVD±R(SL/DL), DVD±RW, DVD-ROM(SL/DL), DVD-RAM, DVD Video",
+              "position": 4
+            },
+            {
+              "label": "Humidity",
+              "value": "Operating : 15 % ~ 80 % (Non-condensing) Storage : 10 % ~ 90 % (Non-condensing)",
+              "position": 5
+            },
+            {
+              "label": "Interface",
+              "value": "USB 2.0",
+              "position": 6
+            },
+            {
+              "label": "Mounting Orientation",
+              "value": "Vertical and Horizontal (+12° ~ -12°)",
+              "position": 7
+            },
+            {
+              "label": "OS Support",
+              "value": "Windows® 7 Windows® Vista Windows® XP Windows® Server 2003 Windows® Server 2008 Mac OS X 10.5",
+              "position": 8
+            },
+            {
+              "label": "Power",
+              "value": "USB Power +5V ± 5%",
+              "position": 9
+            },
+            {
+              "label": "Read Speed",
+              "value": "DVD+R : 8X DVD-R : 8X DVD+RW : 8X DVD-RW : 8X DVD-ROM : 8X DVD+R(DL) : 8X DVD-R(DL) : 8X DVD-ROM(DL) : 8X DVD-RAM : 5X CD-R : 24X CD-RW : 24X CD-ROM : 24X DVD Video Playback : 4X VCD Playback : 10X Audio CD Playback : 10X",
+              "position": 10
+            },
+            {
+              "label": "System Requirements",
+              "value": "CPU: Intel Pentium® 4 2.0GHz or AMD Athlon 2100+ or higher RAM: 512 MB or more is recommended HDD: 10 GB or higher",
+              "position": 11
+            },
+            {
+              "label": "Temperature",
+              "value": "Operating : 5 ℃ to 40 ℃ Storage : -30 ℃ to 60 ℃",
+              "position": 12
+            },
+            {
+              "label": "Weight",
+              "value": "280 g",
+              "position": 13
+            },
+            {
+              "label": "Write Speed",
+              "value": "DVD+R : 8X DVD-R : 8X DVD+RW : 8X DVD-RW : 6X DVD+R(DL) : 6X DVD-R (DL) : 6X DVD-RAM : 5X CD-R : 24X CD-RW : 16X",
+              "position": 14
+            },
+            {
+              "label": "Warranty",
+              "value": "1 Year",
+              "position": 15
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-sdrw-08d2s-u-lite-eexternal-slim-dvd-writer",
+      "sourceProductCode": "573",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SDRW-08D2S-U LITE",
+        "Interface: USB 2.0",
+        "Disc Diameters: 12cm/8cm",
+        "Power: USB Power +5V Â± 5%"
+      ],
+      "needsReview": true,
+      "categorySlug": "optical-disk-drive-external-optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-sdrw-08d2s-u-lite-eexternal-slim-dvd-writer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-sdrw-08d2s-u-lite-eexternal-slim-dvd-writer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-sdrw-08d2s-u-lite-eexternal-slim-dvd-writer",
+        "candidateTitle": "ASUS SDRW-08D2S-U LITE External Slim DVD Writer",
+        "attemptStem": "asus-sdrw-08d2s-u-lite-eexternal-slim-dvd-writer"
+      }
+    },
+    {
+      "name": "ASUS ZenDrive SDRW-08U8M-U External DVD Drive",
+      "slug": "asus-zendrive-sdrw-08u8m-u-external-dvd-drive",
+      "type": "PHYSICAL",
+      "sku": "SDRW-08U8M-U/BLK",
+      "description": "<h2 style=\"text-align: justify; \"><span id=\"ctl00_ContentPlaceHolder1_ctl00_overview1_span_overview\">ASUS ZenDrive SDRW-08U8M-U External DVD Drive</span></h2><p style=\"text-align: justify; \">The ASUS ZenDrive SDRW-08U8M-U is an ultraslim external DVD drive &amp; writer with a USB Type-C interface. It has a robust construction with a Zen-inspired concentric-circle finish. With the USB-C, ASUS ZenDrive SDRW-08U8M-U External DVD Drive is ready to plug right in. It supports M-DISC, an archival-quality storage solution designed to help users protect their most precious digital memories. M-DISC burning technology engraves recorded data into a patented rock-like layer that is resistant to extreme conditions. It features hassle-free data protection through password control and hidden folder functions (Windows OS). The ASUS ZenDrive SDRW-08U8M-U offers cross-platform support and it is compatible with Windows and Mac OS. It comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SDRW-08U8M-U/BLK</li><li>Model: ZenDrive SDRW-08U8M-U</li><li>Zen-inspired Ultraslim Design</li><li>Interface: USB Type-C</li><li>M-DISC burning technology</li><li>Compatible with Windows and Mac OS</li></ul>",
+      "model": "ZenDrive SDRW-08U8M-U",
+      "warranty": "1 year",
+      "basePrice": 4900.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 235.0,
+      "dimensions": {
+        "length": 142.5,
+        "width": 135.5,
+        "height": 13.9,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "USB Type-C",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SDRW-08U8M-U/BLK",
+          "price": 4900.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black",
+            "Interface": "USB Type-C"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4704.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Read Speed",
+              "value": "DVD-ROM : 8X DVD+R : 8X DVD-R : 8X DVD+R(SL, M-DISC) : 8X DVD+RW : 8X DVD-RW : 8X DVD+R(DL) : 8X DVD-R(DL) : 8X CD-ROM : 24X CD-R : 24X",
+              "position": 1
+            },
+            {
+              "label": "Write Speed",
+              "value": "DVD+R : 8X DVD-R : 8X DVD+R(SL, M-DISC) : 4X DVD+RW : 8X DVD-RW : 6X DVD+R(DL) : 6X DVD-R(DL) : 6X CD-R : 24X CD-RW : 24X",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "USB Type-C",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Compatibility",
+          "position": 1,
+          "items": [
+            {
+              "label": "Operating Syatem",
+              "value": "Windows 11 Windows 10 Windows 8 / 8.1 Mac OS X 10.6 and above",
+              "position": 0
+            },
+            {
+              "label": "System Requirements",
+              "value": "CPU: Intel Pentium 4 2.0 GHz or AMD Athlon 2100+ or higher RAM: 512 MB or more is recommended HDD: 10 GB or more",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Specifications",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "142.5 x 135.5 x 13.9 mm (L/W/H)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "235 ± 20 g",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-zendrive-sdrw-08u8m-u-external-dvd-drive",
+      "sourceProductCode": "21127",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "SDRW-08U8M-U/BLK",
+      "sourceKeyFeatures": [
+        "MPN: SDRW-08U8M-U/BLK",
+        "Model: ZenDrive SDRW-08U8M-U",
+        "Zen-inspired Ultraslim Design",
+        "Interface: USB Type-C",
+        "M-DISC burning technology",
+        "Compatible with Windows and Mac OS"
+      ],
+      "needsReview": false,
+      "categorySlug": "optical-disk-drive-external-optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-sdrw-08u8m-u-external-dvd-drive.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-sdrw-08u8m-u-external-dvd-drive.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-zendrive-sdrw-08u8m-u-external-dvd-drive",
+        "candidateTitle": "ASUS ZenDrive SDRW-08U8M-U External DVD Drive",
+        "attemptStem": "asus-zendrive-sdrw-08u8m-u-external-dvd-drive"
+      }
+    },
+    {
+      "name": "ASUS ZenDrive SDRW-08U9M-U External DVD Drive",
+      "slug": "asus-zendrive-sdrw-08u9m-u-external-dvd-drive",
+      "type": "PHYSICAL",
+      "sku": "SDRW-08U9M-U/BLK",
+      "description": "<h2 style=\"text-align: justify; \">ASUS ZenDrive SDRW-08U9M-U External DVD Drive</h2><p style=\"text-align: justify;\">The ASUS ZenDrive SDRW-08U9M-U is an ultraslim external DVD drive &amp; writer with USB Type-C and Type-A interface to support a variety of laptops including PC and Mac. The reversible Type-C for any-way-up connectivity convenience enables ultra-fast data transmission from compatible devices. It has a robust construction with a Zen-inspired concentric-circle finish. With the USB-C, ASUS ZenDrive SDRW-08U9M-U External DVD Drive is ready to plug right in. It supports M-DISC, an archival-quality storage solution designed to help users protect their most precious digital memories. M-DISC burning technology engraves recorded data into a patented rock-like layer that is resistant to extreme conditions. It features hassle-free data protection through password control and hidden folder functions (Windows OS). The ASUS ZenDrive SDRW-08U9M-U offers cross-platform support and it is compatible with Windows and Mac OS. It comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SDRW-08U9M-U/BLK</li><li>Model: ZenDrive SDRW-08U9M-U</li><li>8X Portable DVD Writer</li><li>Interface: USB 2.0 (Type-C + Type-A)</li><li>M-DISC Support</li><li>Windows and Mac OS compatible</li></ul>",
+      "model": "ZenDrive SDRW-08U9M-U",
+      "warranty": "1 year",
+      "basePrice": 4900.0,
+      "originalPrice": 5390.0,
+      "currency": "BDT",
+      "weight": 235.0,
+      "dimensions": {
+        "length": 142.5,
+        "width": 135.5,
+        "height": 13.9,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "USB 2.0 (Type-C + Type-A)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SDRW-08U9M-U/BLK",
+          "price": 4900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Black",
+            "Interface": "USB 2.0 (Type-C + Type-A)"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4704.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Read Speed",
+              "value": "DVD-ROM : 8X DVD+R : 8X DVD-R : 8X DVD+R(SL, M-DISC) : 8X DVD+RW : 8X DVD-RW : 8X DVD+R(DL) : 8X DVD-R(DL) : 8X CD-ROM : 24X CD-R : 24X",
+              "position": 1
+            },
+            {
+              "label": "Write Speed",
+              "value": "DVD+R : 8X DVD-R : 8X DVD+R(SL, M-DISC) : 4X DVD+RW : 8X DVD-RW : 6X DVD+R(DL) : 6X DVD-R(DL) : 6X CD-R : 24X CD-RW : 24X",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "USB 2.0 (Type-C + Type-A)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Compatibility",
+          "position": 1,
+          "items": [
+            {
+              "label": "Operating Syatem",
+              "value": "Windows 11 Windows 10 Windows 8 / 8.1 Mac OS X 10.6 and above",
+              "position": 0
+            },
+            {
+              "label": "System Requirements",
+              "value": "CPU: Intel Pentium 4 2.0 GHz or AMD Athlon 2100+ or higher RAM: 512 MB or more is recommended HDD: 10 GB or more",
+              "position": 1
+            },
+            {
+              "label": "Software",
+              "value": "CyberLink Power2Go 8 CyberLink PowerBackup 2.6 Nero BackItUp E-Green",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specifications",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "142.5 x 135.5 x 13.9 mm (L/W/H)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "235 ± 20 g",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-zendrive-sdrw-08u9m-u-external-dvd-drive",
+      "sourceProductCode": "22919",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "SDRW-08U9M-U/BLK",
+      "sourceKeyFeatures": [
+        "MPN: SDRW-08U9M-U/BLK",
+        "Model: ZenDrive SDRW-08U9M-U",
+        "8X Portable DVD Writer",
+        "Interface: USB 2.0 (Type-C + Type-A)",
+        "M-DISC Support",
+        "Windows and Mac OS compatible"
+      ],
+      "needsReview": false,
+      "categorySlug": "optical-disk-drive-external-optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-sdrw-08u9m-u-external-dvd-drive.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-sdrw-08u9m-u-external-dvd-drive.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-zendrive-sdrw-08u9m-u-external-dvd-drive",
+        "candidateTitle": "ASUS ZenDrive SDRW-08U9M-U External DVD Drive",
+        "attemptStem": "asus-zendrive-sdrw-08u9m-u-external-dvd-drive"
+      }
+    },
+    {
+      "name": "ASUS ZenDrive SDRW-08U9M-U External DVD Drive Gold",
+      "slug": "asus-zendrive-sdrw-08u9m-u-external-dvd-drive-gold",
+      "type": "PHYSICAL",
+      "sku": "SDRW-08U9M-U/GOLD",
+      "description": "<h2 style=\"text-align: justify; \">ASUS ZenDrive SDRW-08U9M-U External DVD Drive Gold</h2><p style=\"text-align: justify;\">The ASUS ZenDrive SDRW-08U9M-U is an ultraslim external DVD drive &amp; writer with USB Type-C and Type-A interface to support a variety of laptops including PC and Mac. The reversible Type-C for any-way-up connectivity convenience enables ultra-fast data transmission from compatible devices. It has a robust construction with a Zen-inspired concentric-circle finish. With the USB-C, ASUS ZenDrive SDRW-08U9M-U External DVD Drive is ready to plug right in. It supports M-DISC, an archival-quality storage solution designed to help users protect their most precious digital memories. M-DISC burning technology engraves recorded data into a patented rock-like layer that is resistant to extreme conditions. It features hassle-free data protection through password control and hidden folder functions (Windows OS). The ASUS ZenDrive SDRW-08U9M-U offers cross-platform support and it is compatible with Windows and Mac OS. It comes with a 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SDRW-08U9M-U/GOLD</li><li>Model: ZenDrive SDRW-08U9M-U</li><li>8X Portable DVD Writer</li><li>Interface: USB 2.0 (Type-C + Type-A)</li><li>M-DISC Support</li><li>Windows and Mac OS compatible</li></ul>",
+      "model": "ZenDrive SDRW-08U9M-U",
+      "warranty": "1 year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 235.0,
+      "dimensions": {
+        "length": 142.5,
+        "width": 135.5,
+        "height": 13.9,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Gold",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "USB 2.0 (Type-C + Type-A)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SDRW-08U9M-U/GOLD",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Gold",
+            "Interface": "USB 2.0 (Type-C + Type-A)"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Gold",
+              "position": 0
+            },
+            {
+              "label": "Read Speed",
+              "value": "DVD-ROM : 8X DVD+R : 8X DVD-R : 8X DVD+R(SL, M-DISC) : 8X DVD+RW : 8X DVD-RW : 8X DVD+R(DL) : 8X DVD-R(DL) : 8X CD-ROM : 24X CD-R : 24X",
+              "position": 1
+            },
+            {
+              "label": "Write Speed",
+              "value": "DVD+R : 8X DVD-R : 8X DVD+R(SL, M-DISC) : 4X DVD+RW : 8X DVD-RW : 6X DVD+R(DL) : 6X DVD-R(DL) : 6X CD-R : 24X CD-RW : 24X",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "USB 2.0 (Type-C + Type-A)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Compatibility",
+          "position": 1,
+          "items": [
+            {
+              "label": "Operating Syatem",
+              "value": "Windows 11 Windows 10 Windows 8 / 8.1 Mac OS X 10.6 and above",
+              "position": 0
+            },
+            {
+              "label": "System Requirements",
+              "value": "CPU: Intel Pentium 4 2.0 GHz or AMD Athlon 2100+ or higher RAM: 512 MB or more is recommended HDD: 10 GB or more",
+              "position": 1
+            },
+            {
+              "label": "Software",
+              "value": "CyberLink Power2Go 8 CyberLink PowerBackup 2.6 Nero BackItUp E-Green",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specifications",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "142.5 x 135.5 x 13.9 mm (L/W/H)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "235 ± 20 g",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-zendrive-sdrw-08u9m-u-external-dvd-drive-gold",
+      "sourceProductCode": "22920",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "SDRW-08U9M-U/GOLD",
+      "sourceKeyFeatures": [
+        "MPN: SDRW-08U9M-U/GOLD",
+        "Model: ZenDrive SDRW-08U9M-U",
+        "8X Portable DVD Writer",
+        "Interface: USB 2.0 (Type-C + Type-A)",
+        "M-DISC Support",
+        "Windows and Mac OS compatible"
+      ],
+      "needsReview": true,
+      "categorySlug": "optical-disk-drive-external-optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-sdrw-08u9m-u-external-dvd-drive-gold.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-sdrw-08u9m-u-external-dvd-drive-gold.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-zendrive-sdrw-08u9m-u-external-dvd-drive-gold",
+        "candidateTitle": "ASUS ZenDrive SDRW-08U9M-U External DVD Drive Gold",
+        "attemptStem": "asus-zendrive-sdrw-08u9m-u-external-dvd-drive-gold"
+      }
+    },
+    {
+      "name": "ASUS ZenDrive U7M Ultra-Slim Portable External DVD Writer",
+      "slug": "asus-zendrive-u7m-external-dvd-writer",
+      "type": "PHYSICAL",
+      "sku": "SDRW-08U7M-U",
+      "description": "<h2>ASUS ZenDrive U7M Ultra-Slim Portable External DVD Writer</h2><p>The ASUS <strong>ZenDrive U7M</strong> Ultra-Slim Portable DVD Writer is a compact and lightweight external optical drive designed for modern users who need reliable disc reading and writing functionality. This portable DVD writer is ideal for both personal and professional use. It features an ultra-slim design that fits easily into any laptop bag, making it perfect for mobile lifestyles. The sleek matte finish adds a touch of elegance, while the sturdy build ensures long-lasting performance. With powerful read speeds of up to 8X for DVDs and 24X for CDs, the ASUS ZenDrive U7M makes reading media files smooth and fast. Whether you're watching movies, installing applications, or accessing archived data, this external DVD drive handles it efficiently. Its write speeds include 8X for DVD+R and DVD-R, 4X for M-DISC, 6X for dual-layer discs, and 24X for CD-R, allowing you to back up your files, music, and videos quickly and securely. The ASUS ZenDrive U7M Portable External DVD Writer supports M-DISC technology, which offers long-term data storage with up to 1,000 years of archival protection. This makes the ASUS ZenDrive U7M an excellent choice for users looking to preserve family memories, important documents, or business backups. The drive is powered via USB 2.0 (Type-A), eliminating the need for an external power source. It draws +5V power directly from the USB port, making it efficient and easy to use on the go. The ASUS U7M DVD writer is fully compatible with Windows 11, 10, 8/8.1, and Mac OS X 10.6 or later, ensuring broad usability across platforms. It works with even basic system configurations, requiring just an Intel Pentium 4 2.0GHz or AMD Athlon 2100+ processor, 512MB RAM, and 10GB HDD space. This means you can use it with older systems as well as the latest ones. To enhance functionality, ASUS includes a full suite of bundled software for the Windows OS. This includes CyberLink Power2Go 8 for easy disc burning, CyberLink PowerBackup 2.6 for simple backups, Nero BackItUp for secure data protection, and E-Green for power-saving operation. These SDRW-08U7M-U make data handling more efficient and user-friendly. The ASUS ZenDrive U7M Ultra-Slim Portable DVD Writer is a reliable and stylish solution for anyone who needs external DVD functionality. It combines fast performance, wide compatibility, M-DISC support, and premium bundled software in one sleek package. Perfect for laptops without built-in drives, this ZenDrive U7M <a href=\"https://www.startech.com.bd/component/optical-hdd/external-optical-hdd\" style=\"color: rgb(0, 0, 0);\" target=\"\">external optical disk drive</a> is a valuable addition to your digital toolkit.</p><h2 style=\"\">Buy ASUS ZenDrive U7M Ultra-Slim Portable External DVD Writer from Star Tech</h2><p style=\"\">In Bangladesh, you can get original <span style=\"font-weight: bold;\">ASUS ZenDrive U7M Ultra-Slim Portable External DVD Writer</span> From Star Tech. We have a large collection of latest ASUS <a href=\"https://www.startech.com.bd/component/optical-hdd\" target=\"\">Optical Disk Drive</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The ASUS ZenDrive U7M Ultra-Slim Portable External DVD Writer comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SDRW-08U7M-U</li><li>Model: ZenDrive U7M</li><li>DVD Read and Write Speeds: up to 8x</li><li>CD Read and Write Speeds: up to 24x</li><li>Interface: USB 2.0 (Type-A)</li><li>Includes two free M-DISC 4.7GB DVDs</li></ul>",
+      "model": "ZenDrive U7M",
+      "warranty": "1 year",
+      "basePrice": 5200.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 235.0,
+      "dimensions": {
+        "length": 142.5,
+        "width": 135.5,
+        "height": 13.9,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "USB 2.0 (Type-A)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SDRW-08U7M-U",
+          "price": 5200.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black",
+            "Interface": "USB 2.0 (Type-A)"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4992.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Read Speed",
+              "value": "DVD-ROM: 8X DVD+R: 8X DVD-R: 8X DVD+R(SL, M-DISC): 8X DVD+RW: 8X DVD-RW: 8X DVD+R(DL): 8X DVD-R(DL): 8X DVD-RAM: 5X CD-ROM: 24X CD-R: 24X",
+              "position": 1
+            },
+            {
+              "label": "Write Speed",
+              "value": "DVD+R: 8X DVD-R: 8X DVD+R(SL, M-DISC): 4X DVD+RW: 8X DVD-RW: 6X DVD+R(DL): 6X DVD-R(DL): 6X DVD-RAM: 5X CD-R: 24X CD-RW: 24X",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "USB 2.0 (Type-A)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Compatibility",
+          "position": 1,
+          "items": [
+            {
+              "label": "Operating Syatem",
+              "value": "Windows 11 Windows 10 Windows 8 / 8.1 Mac OS X 10.6 and above",
+              "position": 0
+            },
+            {
+              "label": "System Requirements",
+              "value": "CPU: Intel Pentium 4 2.0 GHz or AMD Athlon 2100+ or higher RAM: 512 MB or more is recommended HDD: 10 GB or more",
+              "position": 1
+            },
+            {
+              "label": "Software",
+              "value": "CyberLink Power2Go 8 CyberLink PowerBackup 2.6 Nero BackItUp E-Green",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specifications",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "142.5 x 135.5 x 13.9 mm (L/W/H)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "235 ± 20 g",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-zendrive-u7m-external-dvd-writer",
+      "sourceProductCode": "43859",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "SDRW-08U7M-U",
+      "sourceKeyFeatures": [
+        "MPN: SDRW-08U7M-U",
+        "Model: ZenDrive U7M",
+        "DVD Read and Write Speeds: up to 8x",
+        "CD Read and Write Speeds: up to 24x",
+        "Interface: USB 2.0 (Type-A)",
+        "Includes two free M-DISC 4.7GB DVDs"
+      ],
+      "needsReview": false,
+      "categorySlug": "optical-disk-drive-external-optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-u7m-external-dvd-writer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-u7m-external-dvd-writer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-zendrive-u7m-external-dvd-writer",
+        "candidateTitle": "ASUS ZenDrive U7M Ultra-Slim Portable External DVD Writer",
+        "attemptStem": "asus-zendrive-u7m-external-dvd-writer"
+      }
+    },
+    {
+      "name": "ASUS ZenDrive V1M External DVD Writer",
+      "slug": "asus-zendrive-v1m-external-dvd-writer",
+      "type": "PHYSICAL",
+      "sku": "SDRW-08V1M-U",
+      "description": "<h2 style=\"\">ASUS ZenDrive V1M External DVD Writer</h2><p style=\"\">The ASUS ZenDrive V1M External DVD Drive and Writer with M-Disc Support is a 14.6mm external optical drive with a USB Type-C interface that is compatible with Windows and Mac. This drive has an 8x maximum DVD read and write speed and a 24x maximum CD read and write speed. This drive also supports M-DISC, an archival-quality storage solution designed to assist users in protecting their data. M-DISC technology engraves recorded data into a specific layer that is resistant to extreme temperatures. M-DISC is intended to protect your data from degradation and loss for at least 1,000 years. This optical drive comes with Cyberlink and Nero software.</p><h3 style=\"\">Cut-Crystal Style and Storage</h3><p style=\"\">The ASUS ZenDrive V1M's sleek, contemporary design conceals a ton of functionality and convenience. You won't ever have to worry about forgetting or losing the 24 cm connecting cable because it is both contained and hidden by a corner cover.</p><h3 style=\"\">M-DISC Support</h3><p style=\"\">ASUS ZenDrive V1M supports M-DISC, an archival-quality storage solution for safeguarding your valuable digital memories ranging from family photos to home videos and more. M-DISC-burning technology engraves recorded data into a patented rock-like layer that is resistant to extreme temperatures, allowing you to save your life's memories and critical data for up to 1,000 years.</p><h2 style=\"\">Buy ASUS ZenDrive V1M External DVD Writer from Star Tech</h2><p style=\"\">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/asus-zendrive-v1m-external-dvd-writer\" target=\"\">ASUS ZenDrive V1M External DVD Writer</a> From Star Tech. We have a large collection of latest ASUS DVD Writer to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The ASUS ZenDrive V1M External DVD Writer comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SDRW-08V1M-U</li><li>Model: ZenDrive V1M</li><li>DVD Read and Write Speeds: up to 8x</li><li>CD Read and Write Speeds: up to 24x</li><li>USB Type-C Interface</li><li>M-DISC support</li></ul>",
+      "model": "ZenDrive V1M",
+      "warranty": "1 year",
+      "basePrice": 5600.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 255.0,
+      "dimensions": {
+        "length": 150.0,
+        "width": 142.0,
+        "height": 14.6,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "USB Type-C",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SDRW-08V1M-U",
+          "price": 5600.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black",
+            "Interface": "USB Type-C"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 5376.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Read Speed",
+              "value": "DVD-ROM : 8X DVD+R : 8X DVD-R : 8X DVD+R(SL, M-DISC) : 8X DVD+RW : 8X DVD-RW : 8X DVD+R(DL) : 8X DVD-R(DL) : 8X CD-ROM : 24X CD-R : 24X",
+              "position": 1
+            },
+            {
+              "label": "Write Speed",
+              "value": "DVD+R : 8X DVD-R : 8X DVD+R(SL, M-DISC) : 4X DVD+RW : 8X DVD-RW : 6X DVD+R(DL) : 6X DVD-R(DL) : 6X CD-R : 24X CD-RW : 24X",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "USB Type-C",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Compatibility",
+          "position": 1,
+          "items": [
+            {
+              "label": "Operating Syatem",
+              "value": "Windows 11 Windows 10 Windows 8 / 8.1 Mac OS X 10.6 and above",
+              "position": 0
+            },
+            {
+              "label": "System Requirements",
+              "value": "CPU: Intel Pentium 4 2.0 GHz or AMD Athlon 2100+ or higher RAM: 512 MB or more is recommended HDD: 10 GB or more",
+              "position": 1
+            },
+            {
+              "label": "Software",
+              "value": "CyberLink Power2Go 8 CyberLink PowerBackup 2.6 Nero BackItUp E-Green",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specifications",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "150 x 142 x 14.6 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "255 ± 20 g",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-zendrive-v1m-external-dvd-writer",
+      "sourceProductCode": "28158",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "SDRW-08V1M-U",
+      "sourceKeyFeatures": [
+        "MPN: SDRW-08V1M-U",
+        "Model: ZenDrive V1M",
+        "DVD Read and Write Speeds: up to 8x",
+        "CD Read and Write Speeds: up to 24x",
+        "USB Type-C Interface",
+        "M-DISC support"
+      ],
+      "needsReview": false,
+      "categorySlug": "optical-disk-drive-external-optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-v1m-external-dvd-writer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/optical-disk-drive/external-optical-disk-drive/asus-zendrive-v1m-external-dvd-writer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-zendrive-v1m-external-dvd-writer",
+        "candidateTitle": "ASUS ZenDrive V1M External DVD Writer",
+        "attemptStem": "asus-zendrive-v1m-external-dvd-writer"
+      }
+    },
+    {
+      "name": "LITE-ON 8x Slim Internal Laptop DVD Burner",
+      "slug": "lite-on-8x-slim-internal-laptop-dvd-burner",
+      "type": "PHYSICAL",
+      "sku": "ST-3353",
+      "description": "<div class=\"item_desc_text\">\n<p><span style=\"font-weight: bold;\">LITE-ON 8x Slim Internal Laptop DVD Burner</span></p><p></p><ul><li>SATA interface. 12.7mm height for notebook computer use<br/></li><li>High efficient power saving modes and ACPI compliant<br/></li><li>Fast access time and high data transfer rate, could be vertical mounted (optional)<br/></li><li>DVD+R /DVD+RW /DVD-R /DVD-RW /DVD+R9/ DVD-R9/ DVD-RAM /DVD-ROM / CD-R/ CD-RW /CD-ROM combination drive<br/></li><li>SMART-BURN1 avoiding Buffer Under Run error, Automatically adjusting writing strategy &amp; running OPC to provide the best burning quality<br/></li><li>SMART-X2 function adjusts CD-DA / VCD / DVD data extraction to a fastest allowable speed according to both data request rate from host and disk quality<br/></li><li>Support Fixed packet, Variable packet, Disc-at-once, Session-at-once<br/></li><li>CD read compliant: CD-DA,CD-ROM, CD-ROM/XA , Photo-CD, Multi-session, Video-CD, CD-I FMV, CD Extra, CD Plus, CD-R , and CD-RW discs with diameter of 8 or 12 cm<br/></li><li>DVD read compliant: DVD single / dual layer (PTP, OTP), DVD-RW, DVD+RW, DVD-R, DVD-R multi-borders, DVD+R, DVD+R multi-sessions, DVD-R9, DVD+R9 and DVD-RAM discs with diameter of 8 or 12 cm<br/></li><li>Conform to Orange Book: Part 2 CD-R Volume 1, Part 2 CD-R Volume 2 Multi Speed, Part 3 CD-RW Volume 1 (1x, 2x, and 4x), Part 3 CD-RW Volume2: High Speed, Part 3 CD-RW Volume 3: Ultra Speed.<br/></li><li>Supported transfer mode: Ultra DMA mode 6<br/></li></ul><p></p>\n</div>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: LITE-ON 8x Slim Internal</li><li>Form Factor: 5.25&quot;</li><li>Interface: SATA</li><li>Cache: 1MB</li></ul>",
+      "model": "LITE-ON 8x Slim Internal",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "LITE-ON",
+      "variantOptions": [
+        {
+          "name": "Form Factor",
+          "position": 0,
+          "values": [
+            {
+              "value": "5.25\"",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-3353",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Form Factor": "5.25\"",
+            "Interface": "SATA"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "LITE-ON 8x Slim Internal",
+              "position": 0
+            },
+            {
+              "label": "Form Factor",
+              "value": "5.25\"",
+              "position": 1
+            },
+            {
+              "label": "Interface",
+              "value": "SATA",
+              "position": 2
+            },
+            {
+              "label": "Cache",
+              "value": "1MB",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/lite-on-8x-slim-internal-laptop-dvd-burner",
+      "sourceProductCode": "3353",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: LITE-ON 8x Slim Internal",
+        "Form Factor: 5.25\"",
+        "Interface: SATA",
+        "Cache: 1MB"
+      ],
+      "needsReview": true,
+      "categorySlug": "optical-disk-drive-internal-optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/internal-optical-disk-drive/lite-on-8x-slim-internal-laptop-dvd-burner.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/optical-disk-drive/internal-optical-disk-drive/lite-on-8x-slim-internal-laptop-dvd-burner.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "lite-on-8x-slim-internal-laptop-dvd-burner",
+        "candidateTitle": "LITE-ON 8x Slim Internal Laptop DVD Burner",
+        "attemptStem": "lite-on-8x-slim-internal-laptop-dvd-burner"
+      }
+    },
+    {
+      "name": "Onten OTN-UCD22 Portable External DVD Writer",
+      "slug": "onten-otn-ucd22-dvd-writer",
+      "type": "PHYSICAL",
+      "sku": "ST-46754",
+      "description": "<h2>Onten OTN-UCD22 Portable External DVD Writer</h2><p>The Onten <strong>OTN-UCD22</strong> DVD Writer is a high-performance, portable optical drive that combines versatility, speed, and durability for users who need reliable disc reading and writing capabilities. Supporting DVD, and CD (read &amp; write) formats, the Onten OTN-UCD22 External DVD Writer delivers seamless performance across multiple operating systems, including Windows XP/7/8/10/11, macOS, and Linux, making it an ideal solution for both personal and professional use. Equipped with a built-in dual USB cable (Type-C + Type-A), the Onten OTN-UCD22 <a href=\"https://www.startech.com.bd/component/optical-hdd/external-optical-hdd\" style=\"color: rgb(0, 0, 0);\" target=\"\">Portable DVD Writer</a> ensures fast and stable connectivity, with USB 3.0 speeds of up to 5 Gbps for quick data transfer, smooth video playback, and reliable disc burning. The device features versatile interfaces including USB-C and USB-A uplink ports, 2× USB-A downlink ports (480 Mbps), a USB-C power input (5V), an SD card slot, and a TF (microSD) card slot, making it a multifunctional hub for modern computing needs. Built from anti-slip textured ABS plastic, the Onten OTN-UCD22 is lightweight, shock-resistant, and low-noise, with advanced error correction technology to ensure accurate data reading and writing. Its compact dimensions of 154.72 × 143.8 × 19.2 mm make it highly portable, while its plug-and-play design allows instant use without additional drivers. Whether you are working on laptops, desktops, or ultrabooks without built-in optical drives, the Onten OTN-UCD22 Portable DVD Writer is a reliable and durable choice for home, office, or travel use.</p><h2>Buy Onten OTN-UCD22 Portable External DVD Writer from Star Tech</h2><p style=\"\">In Bangladesh, you can get original <strong>Onten OTN-UCD22 Portable External DVD Writer</strong> From Star Tech. We have a large collection of latest Onten <a href=\"https://www.startech.com.bd/component/optical-hdd/external-optical-hdd\" target=\"\">Optical Disk Drive</a> to purchase for your <a href=\"https://www.startech.com.bd/desktops\" target=\"\">Desktop PC</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Onten OTN-UCD22 Portable External DVD Writer comes with 2 Years Replacement warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: OTN-UCD22</li><li>Disc Support: DVD, CD – Read &amp; Write</li><li>USB Speed: USB 3.0, up to 5 Gbps</li><li>Operating Systems: Windows XP/7/8/10/11, macOS, Linux</li><li>Cable: Built-in dual USB (Type-C + Type-A)</li></ul>",
+      "model": "OTN-UCD22",
+      "warranty": "2 years Replacement Warranty",
+      "basePrice": 3500.0,
+      "originalPrice": 4500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 154.72,
+        "width": 143.8,
+        "height": 19.2,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Onten",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "USB-A ×2 USB-C (Power input 5V) SD card slot TF (microSD) card slot",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-46754",
+          "price": 3500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Black",
+            "Interface": "USB-A ×2 USB-C (Power input 5V) SD card slot TF (microSD) card slot"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Interface",
+              "value": "USB-A ×2 USB-C (Power input 5V) SD card slot TF (microSD) card slot",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Compatibility",
+          "position": 1,
+          "items": [
+            {
+              "label": "Operating Syatem",
+              "value": "Windows XP/7/8/10/11, macOS, Linux",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Specifications",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "154.72 × 143.8 × 19.2 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 years Replacement Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/onten-otn-ucd22-dvd-writer",
+      "sourceProductCode": "46754",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: OTN-UCD22",
+        "Disc Support: DVD, CD – Read & Write",
+        "USB Speed: USB 3.0, up to 5 Gbps",
+        "Operating Systems: Windows XP/7/8/10/11, macOS, Linux",
+        "Cable: Built-in dual USB (Type-C + Type-A)"
+      ],
+      "needsReview": false,
+      "categorySlug": "optical-disk-drive-external-optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/onten-otn-ucd22-dvd-writer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/optical-disk-drive/external-optical-disk-drive/onten-otn-ucd22-dvd-writer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "onten-otn-ucd22-dvd-writer",
+        "candidateTitle": "Onten OTN-UCD22 Portable External DVD Writer",
+        "attemptStem": "onten-otn-ucd22-dvd-writer"
+      }
+    },
+    {
+      "name": "Orico XD007-BK-BP External CD Driver",
+      "slug": "orico-external-cd-driver",
+      "type": "PHYSICAL",
+      "sku": "XD007-BK-BP",
+      "description": "<h2 style=\"text-align: justify; \">Orico XD007-BK-BP External CD Driver</h2>\n<p style=\"text-align: justify; \">Orico XD007-BK-BP External CD Driver is DVD-RW (USB3.0) CD Type. It is made with ABS Plastic Material. This CD Driver is featured with CD-ROM Read:24X/DVD-ROM Read:8X Speed and CD-R:24X, CD-RW:16X, DVD-R:8X, DVD-RW:16X Burn Speed. This Orico External CD Driver has a 2MB Capacity. It Supports Ultra DMA 5 PIO Transfer Mode 4, Buffer underrun free. This CD Drive also has 5 DVD Partition. This Orico External CD Driver comes with Laser WavelengthCDï¼š783mmï¼ˆtypical, Laser PowerRead CD:1.2mW DVD:1.6mW objective lens, Input Current5V Reading/Writing 1.1/1.5A, 157*147*26mm Size with 380g( Net weightï¼‰Attach with 50cm USB A-Mirco cable weight. This new Orico External CD Driver (XD007-BK-BP) comes with 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: XD007-BK-BP</li><li>Model: External CD Driver</li><li>CD-ROM Read:24X/DVD-ROM Read:8X</li><li>Capacity: 2MB, No. of DVD Partition: 5</li><li>CD Type DVD-RW: (USB3.0)</li><li>Buffer under run free</li></ul>",
+      "model": "External CD Driver",
+      "warranty": "01 year warranty",
+      "basePrice": 2590.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.38,
+      "dimensions": {
+        "length": 157.0,
+        "width": 147.0,
+        "height": 26.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "ORICO",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "XD007-BK-BP",
+          "price": 2590.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2486.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Read Speed",
+              "value": "CD-ROM Read:24X/DVD-ROM Read:8X",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Specifications",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "157 x 147 x 26mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "380g( Net weight) Attach with 50cm USB A-Mirco cable",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 year warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/orico-external-cd-driver",
+      "sourceProductCode": "18390",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "XD007-BK-BP",
+      "sourceKeyFeatures": [
+        "MPN: XD007-BK-BP",
+        "Model: External CD Driver",
+        "CD-ROM Read:24X/DVD-ROM Read:8X",
+        "Capacity: 2MB, No. of DVD Partition: 5",
+        "CD Type DVD-RW: (USB3.0)",
+        "Buffer under run free"
+      ],
+      "needsReview": false,
+      "categorySlug": "optical-disk-drive-external-optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/orico-external-cd-driver.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/optical-disk-drive/external-optical-disk-drive/orico-external-cd-driver.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "orico-external-cd-driver",
+        "candidateTitle": "Orico XD007-BK-BP External CD Driver",
+        "attemptStem": "orico-external-cd-driver"
+      }
+    },
+    {
+      "name": "ORICO XD008 External DVD Writer with Hub",
+      "slug": "orico-xd008-external-dvd-writer",
+      "type": "PHYSICAL",
+      "sku": "XD008-BK-BP",
+      "description": "<h2 style=\"text-align: justify; \">ORICO XD008 External DVD Writer with Hub</h2>\n<p style=\"text-align: justify; \">The ORICO XD008 has a CD-ROM Read speed up to 24X and DVD-ROM Read speed up to 8X. It offers rewrite speed of CD-R 24X; CD-RW 16X; DVD-R 8X; DVD-RW 6X. It supports Error Correction Function. It comes with 2MB RAM. It features Ultra DMA 5, PIO mode 4 transmission mode. It supports the expansion of SD/TF cards. It has 2 USB 3.0 ports that support HUB expansion and a portable hard drive. It has an A+C TO Micro-B 2-in-1 cable(A to Micro-B/C to Micro-B) which can provide stable power and data transfer. The ORICO XD008 comes with a 1-year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: XD008-BK-BP</li><li>Model: XD008</li><li>Speed: CD-ROM Read up to 24X/ DVD-ROM Read up to 8X</li><li>Rewrite Speed: CD-R 24X; CD-RW 16X; DVD-R 8X; DVD-RW 6X</li><li>RAM: 2MB, Transmission: Ultra DMA 5, PIO mode 4</li><li>Supports Error Correction Function</li></ul>",
+      "model": "XD008",
+      "warranty": "01 year",
+      "basePrice": 2649.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "ORICO",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "Supported Rewriting Type: CD-R, CD-RW, DVD-R, DVD-RW",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "XD008-BK-BP",
+          "price": 2649.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black",
+            "Interface": "Supported Rewriting Type: CD-R, CD-RW, DVD-R, DVD-RW"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2543.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Read Speed",
+              "value": "CD-ROM Read: 24X DVD-ROM Read: 8X",
+              "position": 1
+            },
+            {
+              "label": "Write Speed",
+              "value": "CD-R: 24X CD-RW: 16X DVD-R,8X DVD-RW: 6X",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "Supported Rewriting Type: CD-R, CD-RW, DVD-R, DVD-RW",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/orico-xd008-external-dvd-writer",
+      "sourceProductCode": "20825",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "XD008-BK-BP",
+      "sourceKeyFeatures": [
+        "MPN: XD008-BK-BP",
+        "Model: XD008",
+        "Speed: CD-ROM Read up to 24X/ DVD-ROM Read up to 8X",
+        "Rewrite Speed: CD-R 24X; CD-RW 16X; DVD-R 8X; DVD-RW 6X",
+        "RAM: 2MB, Transmission: Ultra DMA 5, PIO mode 4",
+        "Supports Error Correction Function"
+      ],
+      "needsReview": false,
+      "categorySlug": "optical-disk-drive-external-optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/orico-xd008-external-dvd-writer.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/optical-disk-drive/external-optical-disk-drive/orico-xd008-external-dvd-writer.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "orico-xd008-external-dvd-writer",
+        "candidateTitle": "ORICO XD008 External DVD Writer with Hub",
+        "attemptStem": "orico-xd008-external-dvd-writer"
+      }
+    },
+    {
+      "name": "ORICO XD010 External DVD Writer with Hub",
+      "slug": "orico-xd010-external-dvd-writer",
+      "type": "PHYSICAL",
+      "sku": "XD010-BK-BP",
+      "description": "<h2 style=\"text-align: justify; \">ORICO XD010 External DVD Writer with Hub</h2>\n<p style=\"text-align: justify; \">The ORICO XD010 has a CD-ROM Read speed up to 24X and DVD-ROM Read speed up to 8X. It offers rewrite speed of CD-R 24X; CD-RW 16X; DVD-R 8X; DVD-RW 6X. It supports Error Correction Function. It comes with 2MB RAM. It features Ultra DMA 5, PIO mode 4 transmission mode. It supports the expansion of SD/TF cards. It has 2 USB 3.0 ports that support HUB expansion and a portable hard drive. It has an A+C TO Micro-B 2-in-1 cable(A to Micro-B/C to Micro-B) which can provide stable power and data transfer. The ORICO XD010 comes with a 1-year warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: XD010-BK-BP</li><li>Model: XD010</li><li>Speed: CD-ROM Read up to 24X/ DVD-ROM Read up to 8X</li><li>Rewrite Speed: CD-R 24X; CD-RW 16X; DVD-R 8X; DVD-RW 6X</li><li>RAM: 2MB, Transmission: Ultra DMA 5, PIO mode 4</li><li>Supports Error Correction Function</li></ul>",
+      "model": "XD010",
+      "warranty": "01 year",
+      "basePrice": 2833.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "ORICO",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "Supported Rewriting Type: CD-R, CD-RW, DVD-R, DVD-RW",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "XD010-BK-BP",
+          "price": 2833.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "Black",
+            "Interface": "Supported Rewriting Type: CD-R, CD-RW, DVD-R, DVD-RW"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2719.68,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Read Speed",
+              "value": "CD-ROM Read: 24X DVD-ROM Read: 8X",
+              "position": 1
+            },
+            {
+              "label": "Write Speed",
+              "value": "CD-R: 24X CD-RW: 16X DVD-R,8X DVD-RW: 6X",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "Supported Rewriting Type: CD-R, CD-RW, DVD-R, DVD-RW",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/orico-xd010-external-dvd-writer",
+      "sourceProductCode": "20816",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "XD010-BK-BP",
+      "sourceKeyFeatures": [
+        "MPN: XD010-BK-BP",
+        "Model: XD010",
+        "Speed: CD-ROM Read up to 24X/ DVD-ROM Read up to 8X",
+        "Rewrite Speed: CD-R 24X; CD-RW 16X; DVD-R 8X; DVD-RW 6X",
+        "RAM: 2MB, Transmission: Ultra DMA 5, PIO mode 4",
+        "Supports Error Correction Function"
+      ],
+      "needsReview": false,
+      "categorySlug": "optical-disk-drive-external-optical-disk-drive",
+      "image": "/images/products/component/optical-disk-drive/external-optical-disk-drive/orico-xd010-external-dvd-writer.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/component/optical-disk-drive/external-optical-disk-drive/orico-xd010-external-dvd-writer.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "orico-xd010-external-dvd-writer",
+        "candidateTitle": "ORICO XD010 External DVD Writer with Hub",
+        "attemptStem": "orico-xd010-external-dvd-writer"
+      }
+    }
+  ]
+}

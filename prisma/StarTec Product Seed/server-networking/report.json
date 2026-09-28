@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/server-networking",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\server-networking",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\server-networking",
+  "imagesFound": 342,
+  "uniqueProductStems": 342,
+  "productsInJson": 342,
+  "matchedProducts": 303,
+  "unmatchedProducts": 39,
+  "imageCoverage": 342,
+  "jsonGroupFiles": 13,
+  "matchMethods": {
+    "unmatched": 39,
+    "direct-slug": 289,
+    "search": 14
+  },
+  "jsonGenerationTimeSeconds": 332.82,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 342,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\server-networking\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\server-networking\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\server-networking\\unmatched.json"
+  },
+  "seedTimeSeconds": 6.92
+}

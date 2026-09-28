@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/software",
+  "imageFolder": "/images/products/software/adobe",
+  "groups": [
+    {
+      "name": "_direct",
+      "file": "_direct.json",
+      "status": "completed",
+      "products": 80,
+      "matched": 41,
+      "unmatched": 39
+    },
+    {
+      "name": "antivirus",
+      "file": "antivirus.json",
+      "status": "completed",
+      "products": 15,
+      "matched": 15,
+      "unmatched": 0
+    },
+    {
+      "name": "bangla-typing-software",
+      "file": "bangla-typing-software.json",
+      "status": "completed",
+      "products": 2,
+      "matched": 2,
+      "unmatched": 0
+    },
+    {
+      "name": "cloud-solutions",
+      "file": "cloud-solutions.json",
+      "status": "completed",
+      "products": 13,
+      "matched": 13,
+      "unmatched": 0
+    },
+    {
+      "name": "mail-server-solution",
+      "file": "mail-server-solution.json",
+      "status": "completed",
+      "products": 4,
+      "matched": 4,
+      "unmatched": 0
+    },
+    {
+      "name": "office-application",
+      "file": "office-application.json",
+      "status": "completed",
+      "products": 9,
+      "matched": 9,
+      "unmatched": 0
+    },
+    {
+      "name": "operating-system",
+      "file": "operating-system.json",
+      "status": "completed",
+      "products": 11,
+      "matched": 11,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790589365
+}

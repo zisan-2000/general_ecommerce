@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/server-networking",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\server-networking",
+    "generatedAtUnix": 1790588977,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Server Networking",
+      "slug": "server-networking",
+      "parentSlug": null,
+      "image": "/images/products/server-networking/server-and-storage/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Server HDD Bay",
+      "slug": "server-hdd-bay",
+      "parentSlug": "server-networking",
+      "image": "/images/products/server-networking/server-hdd-bay/dell-server-2-point-5-inch-bay.jpg",
+      "isActive": true,
+      "sortOrder": 7,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Dell",
+      "slug": "dell",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Dell Server 2.5\" HDD Bay",
+      "slug": "dell-server-2-point-5-inch-bay",
+      "type": "PHYSICAL",
+      "sku": "ST-7963",
+      "description": "<h2>Dell Server 2.5\" HDD Bay</h2><p>The Dell Server 2.5\" HDD Bay is a versatile and durable storage option for Dell servers, supporting a wide range of models including the PowerEdge and PowerVault series, as well as the Precision R5500. With a 2.5\" hot swap bay and a 3.5-inch hybrid carrier form factor, this bay is compatible with a variety of storage drives and supports SATA, SAS, and SAS NL interfaces. The bay blends in perfectly with Dell server setups, whether it's for PowerEdge models 1900, 2900, 6900, or the more modern R-series like R310, R630, or T-series like T410, T620. Hot-swap technology allows disks to be added or replaced without the need to shut down the server, assuring uninterrupted operation and reducing downtime. The Dell Server 2.5\" HDD Bay offers the versatility and dependability needed for effective storage management in Dell server infrastructures, whether in small-scale deployments or enterprise-grade configurations.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dell Server 2.5&quot; HDD Bay</li><li>Bay Type: 2.5&quot; Hot Swap bay</li><li>Form Factor: 3.5-inch Hybrid Carrier</li><li>Interface: SATA, SAS, SAS NL</li><li>Compatibility: Dell Server</li></ul>",
+      "model": "Dell Server 2.5\" HDD Bay",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [
+        {
+          "name": "Form Factor",
+          "position": 0,
+          "values": [
+            {
+              "value": "3.5-inch Hybrid Carrier",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 1,
+          "values": [
+            {
+              "value": "SATA, SAS, SAS NL",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-7963",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Form Factor": "3.5-inch Hybrid Carrier",
+            "Interface": "SATA, SAS, SAS NL"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Dell Server 2.5\" HDD Bay",
+              "position": 0
+            },
+            {
+              "label": "Bay Type",
+              "value": "2.5\" Hot Swap bay",
+              "position": 1
+            },
+            {
+              "label": "Form Factor",
+              "value": "3.5-inch Hybrid Carrier",
+              "position": 2
+            },
+            {
+              "label": "Interface",
+              "value": "SATA, SAS, SAS NL",
+              "position": 3
+            },
+            {
+              "label": "Compatibility",
+              "value": "Dell Server",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-server-2-point-5-inch-bay",
+      "sourceProductCode": "7963",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dell Server 2.5\" HDD Bay",
+        "Bay Type: 2.5\" Hot Swap bay",
+        "Form Factor: 3.5-inch Hybrid Carrier",
+        "Interface: SATA, SAS, SAS NL",
+        "Compatibility: Dell Server"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd-bay",
+      "image": "/images/products/server-networking/server-hdd-bay/dell-server-2-point-5-inch-bay.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd-bay/dell-server-2-point-5-inch-bay.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-server-2-point-5-inch-bay",
+        "candidateTitle": "Dell Server 2.5\" HDD Bay",
+        "attemptStem": "dell-server-2-point-5-inch-bay"
+      }
+    },
+    {
+      "name": "Dell Server 3.5\" HDD Bay",
+      "slug": "dell-server-3-point-5-inch-hdd-bay",
+      "type": "PHYSICAL",
+      "sku": "ST-7964",
+      "description": "<h2>Dell Server 3.5\" HDD Bay</h2><p><br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Dell Server 3.5&quot; HDD Bay</li><li>For Dell R&amp;T Series with 3.5&quot; drive configuration</li><li>Supports 3.5&quot; and 2.5&quot; drives</li><li>Works with PowerEdge servers</li><li>Dimensions: 9.45 x 5.51 x 1.57 inches</li></ul>",
+      "model": "Dell Server 3.5\" HDD Bay",
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 9.45,
+        "width": 5.51,
+        "height": 1.57,
+        "unit": "inches"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Dell",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-7964",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Dell Server 3.5\" HDD Bay",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "9.45 x 5.51 x 1.57 inches",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/dell-server-3-point-5-inch-hdd-bay",
+      "sourceProductCode": "7964",
+      "sourceStatus": "Call for Price",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Dell Server 3.5\" HDD Bay",
+        "For Dell R&T Series with 3.5\" drive configuration",
+        "Supports 3.5\" and 2.5\" drives",
+        "Works with PowerEdge servers",
+        "Dimensions: 9.45 x 5.51 x 1.57 inches"
+      ],
+      "needsReview": true,
+      "categorySlug": "server-hdd-bay",
+      "image": "/images/products/server-networking/server-hdd-bay/dell-server-3-point-5-inch-hdd-bay.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/server-networking/server-hdd-bay/dell-server-3-point-5-inch-hdd-bay.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "dell-server-3-point-5-inch-hdd-bay",
+        "candidateTitle": "Dell Server 3.5\" HDD Bay",
+        "attemptStem": "dell-server-3-point-5-inch-hdd-bay"
+      }
+    }
+  ]
+}
