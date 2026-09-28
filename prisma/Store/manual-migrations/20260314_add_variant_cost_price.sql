@@ -1,2 +1,0 @@
-ALTER TABLE "ProductVariant"
-ADD COLUMN IF NOT EXISTS "costPrice" DECIMAL(10, 2);
