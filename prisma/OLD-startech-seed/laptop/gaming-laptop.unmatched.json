@@ -1,0 +1,2282 @@
+[
+  {
+    "ok": false,
+    "stem": "acer-alg-al15g-53-core-5-rtx-3050-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e8e42d8cc15ffff26c8961747ce57a89f52b2f56330e4d0ec318c91005ff9e67.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/acer/acer-alg-al15g-53-core-5-rtx-3050-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/acer/acer-alg-al15g-53-core-5-rtx-3050-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "acer",
+        "folderBrandName": "Acer",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "acer-aspire-7-a715-79g-core-5-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b990722fb712025f20203e05fd63b3c4fdb414e5e4b6d98053ce424ac961249f.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/acer/acer-aspire-7-a715-79g-core-5-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/acer/acer-aspire-7-a715-79g-core-5-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "acer",
+        "folderBrandName": "Acer",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "acer-nitro-5-an516-74g1-core-i5-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b6caf69fb73f07b80aff92f2071eeda1bbe7def001cfcbb9c21a69eabd5c0ae6.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/acer/acer-nitro-5-an516-74g1-core-i5-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/acer/acer-nitro-5-an516-74g1-core-i5-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "acer",
+        "folderBrandName": "Acer",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "acer-nitro-5-pro-an5p16-74g2-core-i7-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\07aeb2714797d8ae2486cbcdc4c9747bbd1287c89970a997cef9ac5dd41310d2.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/acer/acer-nitro-5-pro-an5p16-74g2-core-i7-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/acer/acer-nitro-5-pro-an5p16-74g2-core-i7-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "acer",
+        "folderBrandName": "Acer",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "acer-predator-helios-neo-16-ai-ph16-73-rtx-5090-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6233c57f98861efb177499c1e6015034b5f7c6b434982c073249e97628c33eae.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/acer/acer-predator-helios-neo-16-ai-ph16-73-rtx-5090-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/acer/acer-predator-helios-neo-16-ai-ph16-73-rtx-5090-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "acer",
+        "folderBrandName": "Acer",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "acer-predator-helios-neo-16s-ai-phn16s-71-rtx-5070-oled-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\767704647ae9b2538bae3367d39ce17a4d4b49a1a678ebdfcef50edb2c81fda6.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/acer/acer-predator-helios-neo-16s-ai-phn16s-71-rtx-5070-oled-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/acer/acer-predator-helios-neo-16s-ai-phn16s-71-rtx-5070-oled-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "acer",
+        "folderBrandName": "Acer",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "acer-predator-helios-neo-16s-core-ultra-9-275hx-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\974aeb2cf39f99054542472bc0d296ddace74c6d632d79a6ecf26bd0a46bf916.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/acer/acer-predator-helios-neo-16s-core-ultra-9-275hx-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/acer/acer-predator-helios-neo-16s-core-ultra-9-275hx-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "acer",
+        "folderBrandName": "Acer",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "acer-predator-helios-neo-16s-core-ultra-9-32gb-ram-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7b5ba4e79e003117969dc5bc3e9f7cdd3962559bd33fcf2d19f00322eb944c0f.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/acer/acer-predator-helios-neo-16s-core-ultra-9-32gb-ram-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/acer/acer-predator-helios-neo-16s-core-ultra-9-32gb-ram-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "acer",
+        "folderBrandName": "Acer",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-proart-studiobook-16-oled-h5600qm-ryzen-9-5900hx-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\aff73ecce69ba9189121aaa79f437d820c73c950541f870fd2dc479acd47d321.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-proart-studiobook-16-oled-h5600qm-ryzen-9-5900hx-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-proart-studiobook-16-oled-h5600qm-ryzen-9-5900hx-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-proart-studiobook-16-oled-h5600qr-ryzen-9-5900hx-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ad3360998d648b3619f73ba13e7d13258af696dd06629ec016c69a33ee575730.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-proart-studiobook-16-oled-h5600qr-ryzen-9-5900hx-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-proart-studiobook-16-oled-h5600qr-ryzen-9-5900hx-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-strix-g16-g614ph-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e5b7e666460f05edb87f982bd70e21a2a866b4e7677bf05078944507e76fd8cf.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-g16-g614ph-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-g16-g614ph-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-strix-g16-g614pp-32gb-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\18b1a6e361544ae4342fe76d92cc8f7c431c1f13f2e7c42f9f38a9aaab317962.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-g16-g614pp-32gb-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-g16-g614pp-32gb-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-strix-g16-g614pp-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d0146290bb5cf79c579c30824ed46d1544ac9a701cbd4b2e39e045fb3893f8d9.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-g16-g614pp-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-g16-g614pp-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-strix-g16-g615lm-ultra-9-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\006bb957884aaa2195aa5f01a4787b11d3f1a62ccb2c2c094d91242b0f2e0cbf.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-g16-g615lm-ultra-9-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-g16-g615lm-ultra-9-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-strix-g16-g615lp-32gb-ram-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7dff67998ee00387bb693bd9bb7a10d49212a2b322dc9466575c2a1af851b1ab.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-g16-g615lp-32gb-ram-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-g16-g615lp-32gb-ram-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-strix-scar-16-g635lw-core-ultra-9-275hx-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c21d018018db644638392022a063a23a6be835a831dca31b689ef97cf0446bfc.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-scar-16-g635lw-core-ultra-9-275hx-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-scar-16-g635lw-core-ultra-9-275hx-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-strix-scar-16-g635lw-core-ultra-9-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e8250f52c02c97a478108672ead7b4fd80c54d851efb97c060ef3d6be8bb76b1.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-scar-16-g635lw-core-ultra-9-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-scar-16-g635lw-core-ultra-9-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-strix-scar-18-2025-g835lx-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bae03deca119e5a17e6de5c8ab52331b4b2f1eab0715b0a272905a64a8f2d55d.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-scar-18-2025-g835lx-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-scar-18-2025-g835lx-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-strix-scar-18-g835lw-1tb-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d93e949230eddc65542038a75eea4308808ffed60bdc6fe09256645e5d7e9894.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-scar-18-g835lw-1tb-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-scar-18-g835lw-1tb-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-strix-scar-18-g835lw-core-ultra-9-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5ea3fdf131284217f987008e64ba8a01d63c9bbe4d639043e744b2bef27190f3.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-scar-18-g835lw-core-ultra-9-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-scar-18-g835lw-core-ultra-9-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-strix-scar-18-g835lxg-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e21d0b2c432fd1e79baf0fbcfab4a40ae9dc536114c5d02f359cad0af4b0ebb9.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-scar-18-g835lxg-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-strix-scar-18-g835lxg-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-zephyrus-duo-16-gx651ax-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\98c3332e244b0fefa26b1df2ac732c563bdd5997d11ac471f105ef5ffc7ea117.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-zephyrus-duo-16-gx651ax-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-zephyrus-duo-16-gx651ax-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-zephyrus-g14-ga403wp-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d7c4ed694142cb100cfaab7e7e6890e68eb82a21df7a241891f06a87e0f6aa94.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-zephyrus-g14-ga403wp-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-zephyrus-g14-ga403wp-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-zephyrus-g14-ga403wp-ryzen-ai-9-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4923610f798ad16a0cef7ec50d15aadf69454a6fadf002e304318ca307879912.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-zephyrus-g14-ga403wp-ryzen-ai-9-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-zephyrus-g14-ga403wp-ryzen-ai-9-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-zephyrus-g14-gu405ap-core-ultra-9-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b16491d5d646e152ad977acf0e6675b8061aa2c038115a1ba03cc42e79acc4eb.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-zephyrus-g14-gu405ap-core-ultra-9-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-zephyrus-g14-gu405ap-core-ultra-9-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-zephyrus-g16-gu605cr-core-ultra-9-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1ce372d305174a1c4428a29da4e0bb92441f614d78b43d13783f173c5dac4d29.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-zephyrus-g16-gu605cr-core-ultra-9-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-zephyrus-g16-gu605cr-core-ultra-9-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-rog-zephyrus-g16-gu606ar-core-ultra-9-oled-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\14c1d2a6ad59b20ecfabe1b5bc82989397112b31634e9e15a12040eab1309540.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-rog-zephyrus-g16-gu606ar-core-ultra-9-oled-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-rog-zephyrus-g16-gu606ar-core-ultra-9-oled-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-a14-fa401uh-ryzen-7-260-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2840374f7cb7f40dff1d80de04f46dc051f9e91efe58c6702aea25a0fd28ff28.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a14-fa401uh-ryzen-7-260-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a14-fa401uh-ryzen-7-260-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-a15-fa506ncg-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\632d46326858069d6b5e11d7ab342801dcf863d32e12907283f667aaac966180.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a15-fa506ncg-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a15-fa506ncg-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-a15-fa506ncg-ryzen-7-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\04d1039c0f4253b2c5774401790fd09edc6e6c79613b6c9427c08f6d7d821b66.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a15-fa506ncg-ryzen-7-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a15-fa506ncg-ryzen-7-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-a15-fa506ncq-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eb3a4f81c818f1940a4963da8077a8824635eed60b3e88d8238d941a7520157c.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a15-fa506ncq-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a15-fa506ncq-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-a15-fa506ncr-ryzen-7-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b83f403b2f808656cd1658acab69edbd0edf87e5ed701de3e722b9f84ac0aff2.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a15-fa506ncr-ryzen-7-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a15-fa506ncr-ryzen-7-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-a15-fa506nfr-ryzen-7-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3198760642366335e4977ad72b7fe6e2c841f07f04ea7d325097717189b85edb.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a15-fa506nfr-ryzen-7-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a15-fa506nfr-ryzen-7-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-a16-advantage-edition-fa617ntr-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\adc0881da01f1b18dc00e2a11cc6fb0a0aa24512999e8a05e9dc72d78a80d1ba.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a16-advantage-edition-fa617ntr-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a16-advantage-edition-fa617ntr-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-a16-fa607nug-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\998783a104a8ac6a78cd3e2083135f9ab679b79c345dddb2daaad17a9248cd05.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a16-fa607nug-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a16-fa607nug-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-a16-fa607nuq-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4f81f0e21c9605cbe532a50e2b47276007da51949e7b7267c174cc5356a11213.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a16-fa607nuq-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a16-fa607nuq-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-a16-fa608uh-ryzen-7-260-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\5b922044e65696467f5bd7d5f6e75564dcbe6cb9b2e371edda1db2ec5542ce24.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a16-fa608uh-ryzen-7-260-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a16-fa608uh-ryzen-7-260-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-a16-fa608wv-ryzen-ai-9-hx-370-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9e1be993e74d7fcbcf39cf1cb6f572e7034893f08723f23b41082db71aa956f8.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a16-fa608wv-ryzen-ai-9-hx-370-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-a16-fa608wv-ryzen-ai-9-hx-370-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-f16-fx607vb-core-5-210h-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ea07528eb858ee6b5a67b3a275641fcf76f9ece91b654ac91721229fd3c5daa4.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx607vb-core-5-210h-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx607vb-core-5-210h-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-f16-fx607vb-core-5-rtx-4050-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\13fb86cf4d1f8d358e340c81fd5f712e3c195dbacffa58910bc244a401342234.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx607vb-core-5-rtx-4050-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx607vb-core-5-rtx-4050-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-f16-fx608jh-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2ac4976370d8df7c024184df8c33107658e9456123126d5411dc852bd5031aaf.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jh-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jh-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-f16-fx608jhi-core-i7-14650hx-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\de86c169fb9773abf18f4722595597263afa4c42712c0911019c75b22a885a24.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jhi-core-i7-14650hx-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jhi-core-i7-14650hx-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-f16-fx608jhi-core-i7-14th-gen-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\852f1a115552514103b9b2b4c83f957eaab814bcec7a6d2326ae3c591bd17290.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jhi-core-i7-14th-gen-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jhi-core-i7-14th-gen-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-f16-fx608jhi-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\44775ada3c4bfdf856be448c75c0f036e5e69741c6f4c9d799d26214801fe0a5.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jhi-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jhi-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-f16-fx608jmi-core-i7-14th-gen-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\bc1f2515b6a5dd7a3d38926e8a096f0cfc6d4b108d09eac2a6028a99051c61db.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jmi-core-i7-14th-gen-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jmi-core-i7-14th-gen-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-f16-fx608jmr-core-i7-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\eb167ec9c10dc1cfaf7c7d211d3ff4b2a4e8e1f55ee3b6dfa3e29097c0eeba1b.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jmr-core-i7-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jmr-core-i7-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-f16-fx608jpr-i7-16gb-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ce5b97fc59c7949928bd0d8e6c1430e85591affae60049afd84e2624002bd770.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jpr-i7-16gb-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jpr-i7-16gb-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-tuf-gaming-f16-fx608jpr-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1e96cbb4f248f47b4da9ca76146921b84057399e4f3fcd99901084cce1d75217.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jpr-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-tuf-gaming-f16-fx608jpr-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-v16-v3607vh-core-5-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\260288eaa81a8491a1b85dcbeaacdab1047caf3ecf8d28642f738ed5d9c2e054.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-v16-v3607vh-core-5-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-v16-v3607vh-core-5-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-v16-v3607vh-core-7-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\fffbb5752dee3751426b1e65d37610d379b1a3bddc9d8dfc382fd87d1068938a.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-v16-v3607vh-core-7-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-v16-v3607vh-core-7-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "asus-v16-v3607vu-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c5c7ff1bbc65b5b563697c89f3b55589cdbfd1eadd1add563c3873a103a320b7.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/asus/asus-v16-v3607vu-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/asus/asus-v16-v3607vu-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "asus",
+        "folderBrandName": "Asus",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gigabyte-aorus-15-bkg-core-ultra-7-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c64c2c6b07b1efed6d3e06189e6b5eeb017dcc51e6e8a03896e41c541f8f07d1.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-aorus-15-bkg-core-ultra-7-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-aorus-15-bkg-core-ultra-7-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "gigabyte",
+        "folderBrandName": "Gigabyte",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gigabyte-aorus-16x-akg-2024-core-i7-14th-gen-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e4e59a3c7d8beb816e5025b870904b5d16d905888db09689fae840193f2ba3d5.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-aorus-16x-akg-2024-core-i7-14th-gen-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-aorus-16x-akg-2024-core-i7-14th-gen-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "gigabyte",
+        "folderBrandName": "Gigabyte",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gigabyte-aorus-16x-asg-2024-core-i7-14th-gen-32gb-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3f7ebd948f1e8a6534e551b03636465224b2973bd674a653a6b338abd811f48c.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-aorus-16x-asg-2024-core-i7-14th-gen-32gb-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-aorus-16x-asg-2024-core-i7-14th-gen-32gb-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "gigabyte",
+        "folderBrandName": "Gigabyte",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gigabyte-aorus-master-16-byh-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8ee29a7a28261592100f55b38351783c7f6b0541c642900fdde83f2c79a4f41c.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-aorus-master-16-byh-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-aorus-master-16-byh-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "gigabyte",
+        "folderBrandName": "Gigabyte",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gigabyte-g5-kf-core-i5-12th-gen-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b95860b03dc499d2c10c59870033a2a1ce78b35bc6b3e93a999e241be3a5684d.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-g5-kf-core-i5-12th-gen-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-g5-kf-core-i5-12th-gen-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "gigabyte",
+        "folderBrandName": "Gigabyte",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gigabyte-g5-kf5-core-i7-13th-gen-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\72ed6e55438465c9d627c7b488ef9eac4f8690bf4ce45c3f9bfa4d93544d45f3.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-g5-kf5-core-i7-13th-gen-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-g5-kf5-core-i7-13th-gen-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "gigabyte",
+        "folderBrandName": "Gigabyte",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gigabyte-g5-mf5-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ffd79f2afb46330a9e0b40cbdb30a8d1b65a880399dde3afab559fad50161b6c.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-g5-mf5-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-g5-mf5-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "gigabyte",
+        "folderBrandName": "Gigabyte",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gigabyte-g6-kf-core-i7-13-gen-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\05651e93219753cf1eb3a9bbd50b4e24466504057d20fae283b390051a89befc.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-g6-kf-core-i7-13-gen-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-g6-kf-core-i7-13-gen-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "gigabyte",
+        "folderBrandName": "Gigabyte",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gigabyte-g6-mf-core-i7-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b8f98ae697f6029b4dc52235a6a3cea9f9e9234a9e80d26a5ba4195ed5e8abbf.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-g6-mf-core-i7-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-g6-mf-core-i7-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "gigabyte",
+        "folderBrandName": "Gigabyte",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "gigabyte-gaming-a16-ga6h-cmh-core-i7-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a0a15e35465b19bc5e00400bcd0873a832d6b95ed563add520b7a425370608d9.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-gaming-a16-ga6h-cmh-core-i7-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/gigabyte/gigabyte-gaming-a16-ga6h-cmh-core-i7-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "gigabyte",
+        "folderBrandName": "Gigabyte",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-omen-16-am0333tx-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a02eaab2190879b0e3f3f07fff845de363e2494cf8cef08665e7074816cb7e64.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/hp/hp-omen-16-am0333tx-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/hp/hp-omen-16-am0333tx-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "hp",
+        "folderBrandName": "Hp",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-omen-16-am0335tx-core-i7-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\00fb9d168f5f3caae22f01741d46bbea1b7030c1fcc25fc9b4ef431916e5a287.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/hp/hp-omen-16-am0335tx-core-i7-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/hp/hp-omen-16-am0335tx-core-i7-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "hp",
+        "folderBrandName": "Hp",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-victus-15-fa1393tx-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d773b70eccf4574a3c8497d1c0188ce1d60e0611e1512b171a2e82a71596412e.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/hp/hp-victus-15-fa1393tx-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/hp/hp-victus-15-fa1393tx-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "hp",
+        "folderBrandName": "Hp",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-victus-gaming-15-fa2275tx-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\58cabd9539fcec0cecf9ed2542c31f047a8f16d7bb302f270113bb9c7c553cde.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/hp/hp-victus-gaming-15-fa2275tx-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/hp/hp-victus-gaming-15-fa2275tx-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "hp",
+        "folderBrandName": "Hp",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-victus-gaming-15-fa2276tx-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d7a4dfddaedbfc191b6570da4b04a3520a02bd8528ab3b87649ef8e7e0f94c98.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/hp/hp-victus-gaming-15-fa2276tx-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/hp/hp-victus-gaming-15-fa2276tx-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "hp",
+        "folderBrandName": "Hp",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-victus-gaming-15-fa2288tx-core-i7-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\b1e7b54d77f75a3e68e30f2cdfe2a1dc378e6628683849646d4b770a5ef61d96.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/hp/hp-victus-gaming-15-fa2288tx-core-i7-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/hp/hp-victus-gaming-15-fa2288tx-core-i7-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "hp",
+        "folderBrandName": "Hp",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-victus-gaming-15-fb3166ax-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f5ddf9381faa2177c2c0f7ad0517049587600b5c459c7fe53952dd8d92508432.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/hp/hp-victus-gaming-15-fb3166ax-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/hp/hp-victus-gaming-15-fb3166ax-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "hp",
+        "folderBrandName": "Hp",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-victus-gaming-15-fb3167ax-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2a294fc9d57524e339c9a9429d05300c37940c34a86220b0364ab677ed487b82.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/hp/hp-victus-gaming-15-fb3167ax-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/hp/hp-victus-gaming-15-fb3167ax-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "hp",
+        "folderBrandName": "Hp",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "hp-victus-gaming-15-fb3180ax-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9fc129c9bb7e126d610d51cfbbb63354edf1d125ccd764027c57c9b8471e38d6.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/hp/hp-victus-gaming-15-fb3180ax-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/hp/hp-victus-gaming-15-fb3180ax-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "hp",
+        "folderBrandName": "Hp",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-5-15akp10-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\feb3cc1d90b8f1b15c83723eba10fcb4f3ef9a2c54445c55a3d1620c27c78a64.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15akp10-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15akp10-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-5-15akp10-rtx-5060-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d1ed91222ce9d6997a36577a7df2a36cb93849d2b9a63341cb8d46cb8b3d7000.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15akp10-rtx-5060-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15akp10-rtx-5060-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-5-15iax10-oled-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f0aed16c798de92cd2317193ebc5f7a01c349580c95ab55ffb01fec6a80da32c.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15iax10-oled-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15iax10-oled-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-5-15irx10-14th-gen-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9622dd3349fb6a9b95697e21b0a01d739d05cbb90cc8a6b20228e77531410057.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15irx10-14th-gen-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15irx10-14th-gen-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-5-15irx10-core-i9-32gb-ram-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\71e8c851bf6468919becc730732f1593a89de0b2f890a48c29e8b72c87e3943d.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15irx10-core-i9-32gb-ram-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15irx10-core-i9-32gb-ram-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-5-15irx10-core-i9-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\409723ca4a255d6a65e8e1f15c74b89bb52838a5b7918759a25c0fdfdf72e7e8.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15irx10-core-i9-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15irx10-core-i9-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-5-15irx10-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\430a173a5ca71dfa4fd0c518f6eba3cce8d06bcecb82de0f6c50a0158f6276ae.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15irx10-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-5-15irx10-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-9-16irx9-core-i9-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8d9dfcc41355da20b8c47545be70d77360d4769d32b4b06ee7b9a13804391ccc.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-9-16irx9-core-i9-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-9-16irx9-core-i9-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-9-16irx9-rtx-4090-16gb-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\6f50df188fa3d20d84fc8cd1ecffcc10d02e3bb197f7ffe38bf469b3f5c2560a.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-9-16irx9-rtx-4090-16gb-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-9-16irx9-rtx-4090-16gb-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-pro-5-16adr10-24gb-ram-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\3154e95de47326ad624c774cae05eecd9ac3c83c816833d0b1ae460f8c8bec6c.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-pro-5-16adr10-24gb-ram-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-pro-5-16adr10-24gb-ram-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-pro-5-16adr10-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\f76c1a6cc35c2d4c764c041203e9473444f4577d103f9c9cee540449c47efb6d.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-pro-5-16adr10-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-pro-5-16adr10-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-pro-5-16iax10-core-ultra-7-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\00398838c335b1c97e5e8ee935d203aa77f9ca39a5893bee70f667013b489f02.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-pro-5-16iax10-core-ultra-7-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-pro-5-16iax10-core-ultra-7-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-pro-5-16iax10-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\4b6b0ebda2f0bc30b2fe937428a669f6334ae3c30d93f25e53d4632779098e84.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-pro-5-16iax10-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-pro-5-16iax10-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-pro-7-16iax10h-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\cc49904c5e16bd0b9d3e44aa2744eacf346d33704e146bb760b201e6f000cb03.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-pro-7-16iax10h-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-pro-7-16iax10h-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-legion-pro-7-16iax10h-rtx-5070-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\473f2360afd53584142303b0bcaf425d5855ea2bfa3c5b17d685665ee71e3acd.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-pro-7-16iax10h-rtx-5070-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-legion-pro-7-16iax10h-rtx-5070-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-loq-15ahp10-laptop-with-freedos",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9b31f9eafe46daee02eaf67e0f55c175d8a704879c3b538484263fccc35749e4.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15ahp10-laptop-with-freedos.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15ahp10-laptop-with-freedos.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-loq-15ahp10-ryzen-7-250-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2dc585a3b722cba25e3ec2c7f179cf4d1ebdb97970c870f01a2f5c990bcdc208.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15ahp10-ryzen-7-250-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15ahp10-ryzen-7-250-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-loq-15iax9-core-i5-12th-gen-fhd-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9047f483c40c50b3dfc613770c4f650d1ce0ac2471699a710aa7c2e0eaab94af.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15iax9-core-i5-12th-gen-fhd-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15iax9-core-i5-12th-gen-fhd-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-loq-15iax9-core-i5-12th-gen-rtx-3050-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\04ecd22a76967006f89b2be5a3915701e517206db953720d37a165150e15e2cf.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15iax9-core-i5-12th-gen-rtx-3050-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15iax9-core-i5-12th-gen-rtx-3050-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-loq-15iax9-i5-12th-gen-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9db3b755ccec95fb87a197d2750e1a13f9a47028783ebf0903f0767b851c1bef.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15iax9-i5-12th-gen-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15iax9-i5-12th-gen-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-loq-15iax9e-core-i5-12th-gen-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\02d246f4dd4f1fe825e9fe2362b661532c4d9ca51029c6d4902cfd47c26ef379.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15iax9e-core-i5-12th-gen-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15iax9e-core-i5-12th-gen-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-loq-15iax9e-i5-12-gen-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\885bbfe20edf078ed22779394119f0251354057952a40e8a3aca23b7a2cfbd7d.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15iax9e-i5-12-gen-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15iax9e-i5-12-gen-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-loq-15iax9e-i5-12th-gen-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\1276b85a14c6ae4ea6f59b7801e8ad257dd85a458df6084509c04ba58f7b3d66.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15iax9e-i5-12th-gen-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15iax9e-i5-12th-gen-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-loq-15irx10-core-i7-13th-gen-rtx-5050-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\c4ecbbde9cf3a4a503f53095b6534ccd875da7a4dfe4382c284b94340388ac19.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15irx10-core-i7-13th-gen-rtx-5050-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15irx10-core-i7-13th-gen-rtx-5050-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-loq-15irx9-core-i5-13th-gen-fhd-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7d75bfd8bae736d0a3eb593e535b01437d90ffb8420db6adda771ccd3c1ba6b9.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15irx9-core-i5-13th-gen-fhd-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15irx9-core-i5-13th-gen-fhd-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-loq-15irx9-core-i5-13th-gen-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\27671dbdc05c982f3afb83d06f03155df13906033c15b874889f5c7003ab1721.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15irx9-core-i5-13th-gen-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15irx9-core-i5-13th-gen-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-loq-15irx9-core-i7-13th-gen-ai-powered-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\101d25884f0eeee4250edcd2ef08af305799333b5c9337d46607216861e1e0c1.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15irx9-core-i7-13th-gen-ai-powered-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15irx9-core-i7-13th-gen-ai-powered-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "lenovo-loq-15irx9-core-i7-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\621d0f024fe6b130adb72b91854fb412064e7699fdedbdd4723838692b5437f8.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15irx9-core-i7-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/lenovo/lenovo-loq-15irx9-core-i7-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "lenovo",
+        "folderBrandName": "Lenovo",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-cyborg-15-a13uc-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e09a07de1f2f0f854a4382459e66098149882536eb7144f3bd623e9f7147b168.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/msi/msi-cyborg-15-a13uc-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/msi/msi-cyborg-15-a13uc-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "msi",
+        "folderBrandName": "Msi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-cyborg-15-a13ve-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\8667f7cfcbd906f941e41865e9978e30885d2b5309dc71044b2d7a582d46ccbc.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/msi/msi-cyborg-15-a13ve-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/msi/msi-cyborg-15-a13ve-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "msi",
+        "folderBrandName": "Msi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-cyborg-15-b13wekg-core-i7-rtx-5050-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\243a90dbb5e38130daedda67b33b6d0303c41004a82bade5828149d6abe7c200.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/msi/msi-cyborg-15-b13wekg-core-i7-rtx-5050-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/msi/msi-cyborg-15-b13wekg-core-i7-rtx-5050-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "msi",
+        "folderBrandName": "Msi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-cyborg-15-black-edition-a13uc-core-i5-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e2095daf1fcf297169a1e5f2739d7260b03ea3c29e3cd71fbe26a3ae6b3f1e1e.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/msi/msi-cyborg-15-black-edition-a13uc-core-i5-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/msi/msi-cyborg-15-black-edition-a13uc-core-i5-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "msi",
+        "folderBrandName": "Msi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-cyborg-a15-ai-b2hwfkg-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\0fe6ed93c84ddedff1a44509671a893c3c76b01595d3d1e2f1f9588776a14199.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/msi/msi-cyborg-a15-ai-b2hwfkg-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/msi/msi-cyborg-a15-ai-b2hwfkg-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "msi",
+        "folderBrandName": "Msi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-katana-15-hx-b14wek-core-i7-qhd-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\9930f8ebd3d2155e81875790f8bc1f68a3ad050fc7f88b64236060dd5d95ae86.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/msi/msi-katana-15-hx-b14wek-core-i7-qhd-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/msi/msi-katana-15-hx-b14wek-core-i7-qhd-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "msi",
+        "folderBrandName": "Msi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-katana-15-hx-b14wek-core-i9-qhd-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\26fb38108a2ad5d5d142dd54451e46b5d98757bfdb782450fa253983f2ba2a85.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/msi/msi-katana-15-hx-b14wek-core-i9-qhd-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/msi/msi-katana-15-hx-b14wek-core-i9-qhd-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "msi",
+        "folderBrandName": "Msi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-raider-18-hx-ai-a2xwjg-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\ece733f82c7951628574f180ce7a8aae31338600f7d53c4ae79156755d05d549.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/msi/msi-raider-18-hx-ai-a2xwjg-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/msi/msi-raider-18-hx-ai-a2xwjg-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "msi",
+        "folderBrandName": "Msi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-stealth-16-ai-a2hwfg-rtx-5060-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a287d4f1a7e6dece8de4297392d22220b61cd40659e05131fb47e222b8aab02a.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/msi/msi-stealth-16-ai-a2hwfg-rtx-5060-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/msi/msi-stealth-16-ai-a2hwfg-rtx-5060-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "msi",
+        "folderBrandName": "Msi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-stealth-16-ai-a2hwgg-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\7ed37e6c0325b42bf49d7e854fe6cd0cf37f77c8f9433340c6dd872d88e61e82.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/msi/msi-stealth-16-ai-a2hwgg-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/msi/msi-stealth-16-ai-a2hwgg-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "msi",
+        "folderBrandName": "Msi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-stealth-a16-ai-plus-a3xwjg-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\a8c5700d5bf6a7c8851c4134557fd4cc20638524dd3b914f13db98525614ac42.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/msi/msi-stealth-a16-ai-plus-a3xwjg-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/msi/msi-stealth-a16-ai-plus-a3xwjg-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "msi",
+        "folderBrandName": "Msi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-thin-15-b13uc-core-i5-13th-gen-rtx-3050-fhd-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\e642e4633ba06290cf1d6cc5d314da7993e5f7e3b4edf0089ff70bc00b9ebbd3.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/msi/msi-thin-15-b13uc-core-i5-13th-gen-rtx-3050-fhd-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/msi/msi-thin-15-b13uc-core-i5-13th-gen-rtx-3050-fhd-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "msi",
+        "folderBrandName": "Msi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "msi-thin-a15-b7uc-ryzen-5-7535hs-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\2bfb141286ed579d2b3b0143421eb9354e1964aecfbec14de02d92da37dcc1d8.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/msi/msi-thin-a15-b7uc-ryzen-5-7535hs-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/msi/msi-thin-a15-b7uc-ryzen-5-7535hs-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": "msi",
+        "folderBrandName": "Msi",
+        "sourceKind": "brand"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "thunderobot-r16-core-i9-rtx-5070-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\68070ba86c6491014f6ea444fd694572c1c446a16795bcc8d56bf02bcaebd148.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/_other/thunderobot-r16-core-i9-rtx-5070-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/_other/thunderobot-r16-core-i9-rtx-5070-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "special"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "thunderobot-r16-core-i9-rtx-5080-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\abcf6f90cc7da0e5ebaa37ce57ba125f6a6c603ba7adf4fba31fe57213c9ed5a.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/_other/thunderobot-r16-core-i9-rtx-5080-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/_other/thunderobot-r16-core-i9-rtx-5080-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "special"
+      }
+    ]
+  },
+  {
+    "ok": false,
+    "stem": "thunderobot-zero-18-pro-core-ultra-9-275hx-gaming-laptop",
+    "reason": "[Errno 2] No such file or directory: '.cache\\\\startech-full-seed\\\\d068fed29365d80b0376d8e7c91aa4531ded996dd7a1ad066e780c4be82ed276.html'",
+    "sourceImages": [
+      "/images/products/laptop/gaming-laptop/_other/thunderobot-zero-18-pro-core-ultra-9-275hx-gaming-laptop.png"
+    ],
+    "sourceHierarchy": [
+      {
+        "image": "/images/products/laptop/gaming-laptop/_other/thunderobot-zero-18-pro-core-ultra-9-275hx-gaming-laptop.png",
+        "categorySlug": "laptop",
+        "categoryName": "Laptop",
+        "subcategorySlug": "gaming-laptop",
+        "subcategoryName": "Gaming Laptop",
+        "folderBrandSlug": null,
+        "folderBrandName": null,
+        "sourceKind": "special"
+      }
+    ]
+  }
+]

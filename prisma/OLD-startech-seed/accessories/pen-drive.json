@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 2,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryHierarchyFile": "prisma\\startech_category_subcategory_brand_seed.json",
+    "productImageHierarchyFile": "prisma\\product_image_hierarchy.json",
+    "generatedAtUnix": 1790512724,
+    "signature": "e2cb0a2bdb5410deabc13f64b3be9f5080f5c95f6c801842233e4a60c1e8a5d1"
+  },
+  "defaults": {
+    "stock": 200,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Accessories",
+      "slug": "accessories",
+      "parentSlug": null,
+      "image": null,
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Pen Drive",
+      "slug": "pen-drive",
+      "parentSlug": "accessories",
+      "image": null,
+      "isActive": true,
+      "sortOrder": 17,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [],
+  "products": []
+}
