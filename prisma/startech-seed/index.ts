@@ -1,4 +1,5 @@
-import { readFileSync } from "node:fs";
+import { existsSync, readFileSync } from "node:fs";
+import { createHash } from "node:crypto";
 import { dirname, isAbsolute, relative, resolve } from "node:path";
 import { Prisma, PrismaClient } from "../../generated/prisma";
 import { ensureVariantCodes } from "../../lib/product-codes";
@@ -24,7 +25,7 @@ import { ensureVariantCodes } from "../../lib/product-codes";
 const prisma = new PrismaClient();
 
 // Reuse important categories that already exist in the current storefront seed.
-// The source image folders use Star Tech-oriented slugs, while the application
+// The source image folders use Deshi Plus-oriented slugs, while the application
 // already has a few canonical slugs used by search / PC Builder / navigation.
 const CATEGORY_SLUG_ALIASES: Record<string, string> = {
   component: "components",
@@ -94,6 +95,7 @@ type SeedVariant = {
 };
 
 type SeedProduct = {
+  unmatched?: boolean;
   name: string;
   slug: string;
   type?: "PHYSICAL" | "DIGITAL" | "SERVICE" | "BUNDLE";
@@ -153,6 +155,65 @@ function readSeed(file: string): SeedFile {
     throw new Error(`Invalid seed file: ${path}`);
   }
   return parsed;
+}
+
+type UnmatchedRecord = {
+  stem: string;
+  sourceImages: string[];
+  sourceHierarchy: Array<{
+    categorySlug: string;
+    categoryName: string;
+    subcategorySlug?: string | null;
+    subcategoryName?: string | null;
+    folderBrandName?: string | null;
+  }>;
+};
+
+function appendUnmatched(file: string, seed: SeedFile, knownSlugs: Set<string>) {
+  const unmatchedFile = file.replace(/\.json$/i, ".unmatched.json");
+  if (!existsSync(unmatchedFile)) return;
+  const records: UnmatchedRecord[] = JSON.parse(readFileSync(unmatchedFile, "utf8"));
+  if (!Array.isArray(records)) throw new Error(`Invalid unmatched file: ${unmatchedFile}`);
+  let added = 0;
+  for (const record of records) {
+    const hierarchy = record.sourceHierarchy?.[0];
+    if (!record.stem || !hierarchy?.categorySlug || !record.sourceImages?.length) {
+      throw new Error(`Incomplete unmatched record in ${unmatchedFile}: ${record.stem}`);
+    }
+    const slug = slugify(record.stem);
+    // Matched products always take precedence, including those in later groups.
+    if (knownSlugs.has(slug)) continue;
+    knownSlugs.add(slug);
+    const addCategory = (categorySlug: string, name: string, parentSlug: string | null) => {
+      if (seed.categories.some((category) => category.slug === categorySlug)) return;
+      seed.categories.push({
+        slug: categorySlug, name, parentSlug, image: null, isActive: true,
+        sortOrder: seed.categories.length, showInHeader: false,
+        showInFooter: false, featured: false,
+      });
+    };
+    addCategory(hierarchy.categorySlug, hierarchy.categoryName, null);
+    const categorySlug = hierarchy.subcategorySlug || hierarchy.categorySlug;
+    if (categorySlug !== hierarchy.categorySlug) {
+      addCategory(categorySlug, hierarchy.subcategoryName || categorySlug, hierarchy.categorySlug);
+    }
+    // Stable identity across reruns; no rejected search candidate is trusted.
+    const sku = `STARTECH-UNMATCHED-${createHash("sha256").update(slug).digest("hex").slice(0, 24)}`;
+    seed.products.push({
+      unmatched: true,
+      name: record.stem.replace(/[-_]+/g, " "), slug, sku, categorySlug,
+      brandName: hierarchy.folderBrandName || null,
+      description: "", shortDesc: null, model: null, warranty: null,
+      // Required numeric fields use zero until an administrator supplies prices
+      // and inventory. These incomplete products and variants cannot be sold.
+      basePrice: 0, originalPrice: null, currency: "BDT", weight: null,
+      dimensions: null, available: false, featured: false,
+      image: record.sourceImages[0], gallery: [...new Set(record.sourceImages.slice(1))],
+      stock: 0, variants: [], variantOptions: [], specificationGroups: [],
+    });
+    added += 1;
+  }
+  console.log(`${unmatchedFile}: ${added} unmatched products included, ${records.length - added} duplicates skipped`);
 }
 
 async function ensureWarehouse() {
@@ -320,8 +381,7 @@ async function syncSpecificationGroups(
   }
 }
 
-async function seedFile(file: string) {
-  const seed = readSeed(file);
+async function seedFile(seed: SeedFile) {
   const warehouse = await ensureWarehouse();
   const categoryIds = new Map<string, number>();
   const brandIds = new Map<string, number>();
@@ -434,6 +494,18 @@ async function seedFile(file: string) {
   let index = 0;
   for (const item of seed.products) {
     index += 1;
+    if (item.unmatched) {
+      const existing = await prisma.product.findFirst({
+        where: { OR: [{ slug: item.slug }, { sku: item.sku }] },
+        select: { id: true, sku: true, variants: { select: { id: true }, take: 1 } },
+      });
+      // Do not replace an existing catalog product with incomplete source data.
+      // Retry our own placeholders so an interrupted variant import can finish.
+      if (existing && (existing.sku !== item.sku || existing.variants.length > 0)) {
+        console.log(`[${index}/${seed.products.length}] Preserved existing ${item.slug}`);
+        continue;
+      }
+    }
     const categoryId = categoryIds.get(item.categorySlug);
     if (!categoryId) throw new Error(`Missing category: ${item.categorySlug}`);
     const brandId = await upsertBrand(item.brandName, brandIds);
@@ -602,9 +674,13 @@ async function seedFile(file: string) {
 async function main() {
   const path = resolve(process.argv[2] || "prisma/startech-seed/index.json");
   const files = seedPaths(path);
-  for (const file of files) {
+  const seeds = files.map((file) => ({ file, seed: readSeed(file) }));
+  const knownSlugs = new Set(seeds.flatMap(({ seed }) => seed.products.map((product) => product.slug)));
+  for (const { file, seed } of seeds) appendUnmatched(file, seed, knownSlugs);
+  console.log(`Importing ${seeds.length} groups, ${seeds.reduce((count, { seed }) => count + seed.products.length, 0)} products (including unmatched)`);
+  for (const { file, seed } of seeds) {
     console.log(`Importing ${file}`);
-    await seedFile(file);
+    await seedFile(seed);
   }
 }
 
