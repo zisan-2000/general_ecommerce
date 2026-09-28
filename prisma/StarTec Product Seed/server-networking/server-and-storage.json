@@ -19,7 +19,7 @@
       "name": "Server Networking",
       "slug": "server-networking",
       "parentSlug": null,
-      "image": "/images/products/server-networking/server-and-storage/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
+      "image": "/images/products/server-networking/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
       "isActive": true,
       "sortOrder": 0,
       "showInHeader": true,
@@ -30,7 +30,7 @@
       "name": "Server And Storage",
       "slug": "server-and-storage",
       "parentSlug": "server-networking",
-      "image": "/images/products/server-networking/server-and-storage/cote-cpdu-1u-10c13-13amp-10-port-back-to-back-pdu.png",
+      "image": "/images/products/server-networking/cote-cpdu-1u-10c13-13amp-10-port-back-to-back-pdu.png",
       "isActive": true,
       "sortOrder": 5,
       "showInHeader": true,
@@ -168,10 +168,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/cote-cpdu-1u-10c13-13amp-10-port-back-to-back-pdu.png",
+      "image": "/images/products/server-networking/cote-cpdu-1u-10c13-13amp-10-port-back-to-back-pdu.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-cpdu-1u-10c13-13amp-10-port-back-to-back-pdu.png"
+        "/images/products/server-networking/cote-cpdu-1u-10c13-13amp-10-port-back-to-back-pdu.png"
       ],
       "match": {
         "method": "search",
@@ -273,10 +273,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/cote-cpdu-1u-12-8-c13-4-c19-16amp-1u-12-port-back-to-back-pdu.png",
+      "image": "/images/products/server-networking/cote-cpdu-1u-12-8-c13-4-c19-16amp-1u-12-port-back-to-back-pdu.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-cpdu-1u-12-8-c13-4-c19-16amp-1u-12-port-back-to-back-pdu.png"
+        "/images/products/server-networking/cote-cpdu-1u-12-8-c13-4-c19-16amp-1u-12-port-back-to-back-pdu.png"
       ],
       "match": {
         "method": "search",
@@ -378,10 +378,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/cote-cpdu-1u-6c13-13amp-6-port-c13-pdu.png",
+      "image": "/images/products/server-networking/cote-cpdu-1u-6c13-13amp-6-port-c13-pdu.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-cpdu-1u-6c13-13amp-6-port-c13-pdu.png"
+        "/images/products/server-networking/cote-cpdu-1u-6c13-13amp-6-port-c13-pdu.png"
       ],
       "match": {
         "method": "search",
@@ -483,10 +483,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/cote-cpdu-1u-6us-13amp-6-port-universal-3-pin-pdu.png",
+      "image": "/images/products/server-networking/cote-cpdu-1u-6us-13amp-6-port-universal-3-pin-pdu.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-cpdu-1u-6us-13amp-6-port-universal-3-pin-pdu.png"
+        "/images/products/server-networking/cote-cpdu-1u-6us-13amp-6-port-universal-3-pin-pdu.png"
       ],
       "match": {
         "method": "search",
@@ -595,10 +595,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/dateup-6u-server-rack-600x450x370.png",
+      "image": "/images/products/server-networking/dateup-6u-server-rack-600x450x370.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/dateup-6u-server-rack-600x450x370.png"
+        "/images/products/server-networking/dateup-6u-server-rack-600x450x370.png"
       ],
       "match": {
         "method": "search",
@@ -702,10 +702,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/dateup-8-port-pdu-with-2-meter-cable-for-server-rack.png",
+      "image": "/images/products/server-networking/dateup-8-port-pdu-with-2-meter-cable-for-server-rack.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/dateup-8-port-pdu-with-2-meter-cable-for-server-rack.png"
+        "/images/products/server-networking/dateup-8-port-pdu-with-2-meter-cable-for-server-rack.png"
       ],
       "match": {
         "method": "search",
@@ -791,10 +791,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/nexakey-nx-9u-wall-mount-server-rack.png",
+      "image": "/images/products/server-networking/nexakey-nx-9u-wall-mount-server-rack.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/nexakey-nx-9u-wall-mount-server-rack.png"
+        "/images/products/server-networking/nexakey-nx-9u-wall-mount-server-rack.png"
       ],
       "match": {
         "method": "search",
@@ -886,10 +886,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/safenet-22u-xl-tempered-glass-door-floor-standing-server-cabinet-64f09bad.png",
+      "image": "/images/products/server-networking/safenet-22u-xl-tempered-glass-door-floor-standing-server-cabinet-64f09bad.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/safenet-22u-xl-tempered-glass-door-floor-standing-server-cabinet-64f09bad.png"
+        "/images/products/server-networking/safenet-22u-xl-tempered-glass-door-floor-standing-server-cabinet-64f09bad.png"
       ],
       "match": {
         "method": "search",
@@ -975,10 +975,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/solitine-sol-265-6u-6u-server-rack.png",
+      "image": "/images/products/server-networking/solitine-sol-265-6u-6u-server-rack.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/solitine-sol-265-6u-6u-server-rack.png"
+        "/images/products/server-networking/solitine-sol-265-6u-6u-server-rack.png"
       ],
       "match": {
         "method": "search",
@@ -1064,10 +1064,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/solitine-sol-265-9u-9u-server-rack.png",
+      "image": "/images/products/server-networking/solitine-sol-265-9u-9u-server-rack.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/solitine-sol-265-9u-9u-server-rack.png"
+        "/images/products/server-networking/solitine-sol-265-9u-9u-server-rack.png"
       ],
       "match": {
         "method": "search",
@@ -1154,10 +1154,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/synology-rks-02-sliding-rail-kit-for-synology-rackmount-servers-73fa944f.png",
+      "image": "/images/products/server-networking/synology-rks-02-sliding-rail-kit-for-synology-rackmount-servers-73fa944f.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/synology-rks-02-sliding-rail-kit-for-synology-rackmount-servers-73fa944f.png"
+        "/images/products/server-networking/synology-rks-02-sliding-rail-kit-for-synology-rackmount-servers-73fa944f.png"
       ],
       "match": {
         "method": "search",
@@ -1267,10 +1267,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/toten-6u-600-x-450mm-server-rack.png",
+      "image": "/images/products/server-networking/toten-6u-600-x-450mm-server-rack.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/toten-6u-600-x-450mm-server-rack.png"
+        "/images/products/server-networking/toten-6u-600-x-450mm-server-rack.png"
       ],
       "match": {
         "method": "search",

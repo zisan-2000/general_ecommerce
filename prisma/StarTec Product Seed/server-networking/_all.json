@@ -19,7 +19,7 @@
       "name": "Server Networking",
       "slug": "server-networking",
       "parentSlug": null,
-      "image": "/images/products/server-networking/server-and-storage/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
+      "image": "/images/products/server-networking/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
       "isActive": true,
       "sortOrder": 0,
       "showInHeader": true,
@@ -85,7 +85,7 @@
       "name": "Server And Storage",
       "slug": "server-and-storage",
       "parentSlug": "server-networking",
-      "image": "/images/products/server-networking/server-and-storage/cote-cpdu-1u-10c13-13amp-10-port-back-to-back-pdu.png",
+      "image": "/images/products/server-networking/cote-cpdu-1u-10c13-13amp-10-port-back-to-back-pdu.png",
       "isActive": true,
       "sortOrder": 5,
       "showInHeader": true,
@@ -291,7 +291,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
+      "image": "/images/products/server-networking/cote-12u-600-x-600mm-server-rack-c2f0ea67.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -326,7 +326,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-12u-600-x-600mm-server-rack-c2f0ea67.png"
+        "/images/products/server-networking/cote-12u-600-x-600mm-server-rack-c2f0ea67.png"
       ]
     },
     {
@@ -348,7 +348,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/cote-15u-600-x-600mm-server-rack-8d382023.png",
+      "image": "/images/products/server-networking/cote-15u-600-x-600mm-server-rack-8d382023.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -383,7 +383,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-15u-600-x-600mm-server-rack-8d382023.png"
+        "/images/products/server-networking/cote-15u-600-x-600mm-server-rack-8d382023.png"
       ]
     },
     {
@@ -405,7 +405,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/cote-22u-600-x-1000mm-server-rack-89377b1d.png",
+      "image": "/images/products/server-networking/cote-22u-600-x-1000mm-server-rack-89377b1d.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -440,7 +440,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-22u-600-x-1000mm-server-rack-89377b1d.png"
+        "/images/products/server-networking/cote-22u-600-x-1000mm-server-rack-89377b1d.png"
       ]
     },
     {
@@ -462,7 +462,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/cote-gcw-6406-6u-600-x-450mm-server-rack-7087af55.png",
+      "image": "/images/products/server-networking/cote-gcw-6406-6u-600-x-450mm-server-rack-7087af55.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -497,7 +497,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-gcw-6406-6u-600-x-450mm-server-rack-7087af55.png"
+        "/images/products/server-networking/cote-gcw-6406-6u-600-x-450mm-server-rack-7087af55.png"
       ]
     },
     {
@@ -519,7 +519,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/cote-gcw-6409-9u-600-x-450mm-server-rack-a3e2e2f7.png",
+      "image": "/images/products/server-networking/cote-gcw-6409-9u-600-x-450mm-server-rack-a3e2e2f7.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -554,7 +554,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-gcw-6409-9u-600-x-450mm-server-rack-a3e2e2f7.png"
+        "/images/products/server-networking/cote-gcw-6409-9u-600-x-450mm-server-rack-a3e2e2f7.png"
       ]
     },
     {
@@ -576,7 +576,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/cote-gcw-6606-6u-600-x-600mm-server-rack-90d2c1d9.png",
+      "image": "/images/products/server-networking/cote-gcw-6606-6u-600-x-600mm-server-rack-90d2c1d9.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -611,7 +611,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-gcw-6606-6u-600-x-600mm-server-rack-90d2c1d9.png"
+        "/images/products/server-networking/cote-gcw-6606-6u-600-x-600mm-server-rack-90d2c1d9.png"
       ]
     },
     {
@@ -633,7 +633,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/cote-gcw-6609-9u-600-x-600mm-server-rack-bec5fb1a.png",
+      "image": "/images/products/server-networking/cote-gcw-6609-9u-600-x-600mm-server-rack-bec5fb1a.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -668,7 +668,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-gcw-6609-9u-600-x-600mm-server-rack-bec5fb1a.png"
+        "/images/products/server-networking/cote-gcw-6609-9u-600-x-600mm-server-rack-bec5fb1a.png"
       ]
     },
     {
@@ -690,7 +690,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/dateup-15u-server-rack-600x450x855-f19af198.png",
+      "image": "/images/products/server-networking/dateup-15u-server-rack-600x450x855-f19af198.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -725,7 +725,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/dateup-15u-server-rack-600x450x855-f19af198.png"
+        "/images/products/server-networking/dateup-15u-server-rack-600x450x855-f19af198.png"
       ]
     },
     {
@@ -747,7 +747,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/dateup-15u-server-rack-600x600x855-15058e86.png",
+      "image": "/images/products/server-networking/dateup-15u-server-rack-600x600x855-15058e86.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -782,7 +782,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/dateup-15u-server-rack-600x600x855-15058e86.png"
+        "/images/products/server-networking/dateup-15u-server-rack-600x600x855-15058e86.png"
       ]
     },
     {
@@ -804,7 +804,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/dateup-42u-glass-door-server-rack-600x1000x2055-2eb04dfa.png",
+      "image": "/images/products/server-networking/dateup-42u-glass-door-server-rack-600x1000x2055-2eb04dfa.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -839,7 +839,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/dateup-42u-glass-door-server-rack-600x1000x2055-2eb04dfa.png"
+        "/images/products/server-networking/dateup-42u-glass-door-server-rack-600x1000x2055-2eb04dfa.png"
       ]
     },
     {
@@ -861,7 +861,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/dateup-42u-glass-door-server-rack-600x800x2055-e22cf77c.png",
+      "image": "/images/products/server-networking/dateup-42u-glass-door-server-rack-600x800x2055-e22cf77c.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -896,7 +896,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/dateup-42u-glass-door-server-rack-600x800x2055-e22cf77c.png"
+        "/images/products/server-networking/dateup-42u-glass-door-server-rack-600x800x2055-e22cf77c.png"
       ]
     },
     {
@@ -918,7 +918,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/dateup-9u-server-rack-600x450x501-2b155a22.png",
+      "image": "/images/products/server-networking/dateup-9u-server-rack-600x450x501-2b155a22.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -953,7 +953,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/dateup-9u-server-rack-600x450x501-2b155a22.png"
+        "/images/products/server-networking/dateup-9u-server-rack-600x450x501-2b155a22.png"
       ]
     },
     {
@@ -975,7 +975,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/dateup-9u-server-rack-600x600x501-97b86ae2.png",
+      "image": "/images/products/server-networking/dateup-9u-server-rack-600x600x501-97b86ae2.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1010,7 +1010,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/dateup-9u-server-rack-600x600x501-97b86ae2.png"
+        "/images/products/server-networking/dateup-9u-server-rack-600x600x501-97b86ae2.png"
       ]
     },
     {
@@ -1089,7 +1089,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/orico-metabox-pro-2-bay-nas-storage-6a13f40c.png",
+      "image": "/images/products/server-networking/orico-metabox-pro-2-bay-nas-storage-6a13f40c.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1124,7 +1124,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/orico-metabox-pro-2-bay-nas-storage-6a13f40c.png"
+        "/images/products/server-networking/orico-metabox-pro-2-bay-nas-storage-6a13f40c.png"
       ]
     },
     {
@@ -1146,7 +1146,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/qnap-ts-233-2-bays-nas-storage-f8b31a3c.png",
+      "image": "/images/products/server-networking/qnap-ts-233-2-bays-nas-storage-f8b31a3c.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1181,7 +1181,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/qnap-ts-233-2-bays-nas-storage-f8b31a3c.png"
+        "/images/products/server-networking/qnap-ts-233-2-bays-nas-storage-f8b31a3c.png"
       ]
     },
     {
@@ -1203,7 +1203,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/safenet-12u-wall-mount-network-cabinet-with-pdu-c50604f4.png",
+      "image": "/images/products/server-networking/safenet-12u-wall-mount-network-cabinet-with-pdu-c50604f4.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1238,7 +1238,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/safenet-12u-wall-mount-network-cabinet-with-pdu-c50604f4.png"
+        "/images/products/server-networking/safenet-12u-wall-mount-network-cabinet-with-pdu-c50604f4.png"
       ]
     },
     {
@@ -1260,7 +1260,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/safenet-15u-wall-mount-network-cabinet-with-pdu-a87f9cc2.png",
+      "image": "/images/products/server-networking/safenet-15u-wall-mount-network-cabinet-with-pdu-a87f9cc2.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1295,7 +1295,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/safenet-15u-wall-mount-network-cabinet-with-pdu-a87f9cc2.png"
+        "/images/products/server-networking/safenet-15u-wall-mount-network-cabinet-with-pdu-a87f9cc2.png"
       ]
     },
     {
@@ -1317,7 +1317,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/safenet-6u-wall-mount-network-cabinet-with-pdu-1e7b6762.png",
+      "image": "/images/products/server-networking/safenet-6u-wall-mount-network-cabinet-with-pdu-1e7b6762.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1352,7 +1352,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/safenet-6u-wall-mount-network-cabinet-with-pdu-1e7b6762.png"
+        "/images/products/server-networking/safenet-6u-wall-mount-network-cabinet-with-pdu-1e7b6762.png"
       ]
     },
     {
@@ -1374,7 +1374,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/safenet-9u-wall-mount-network-cabinet-with-pdu-42e3b934.png",
+      "image": "/images/products/server-networking/safenet-9u-wall-mount-network-cabinet-with-pdu-42e3b934.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1409,7 +1409,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/safenet-9u-wall-mount-network-cabinet-with-pdu-42e3b934.png"
+        "/images/products/server-networking/safenet-9u-wall-mount-network-cabinet-with-pdu-42e3b934.png"
       ]
     },
     {
@@ -1431,7 +1431,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/solitine-sol-26100-22u-22u-server-rack-afcf4673.png",
+      "image": "/images/products/server-networking/solitine-sol-26100-22u-22u-server-rack-afcf4673.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1466,7 +1466,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/solitine-sol-26100-22u-22u-server-rack-afcf4673.png"
+        "/images/products/server-networking/solitine-sol-26100-22u-22u-server-rack-afcf4673.png"
       ]
     },
     {
@@ -1488,7 +1488,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/solitine-sol-26100-32u-32u-server-rack-2dd08411.png",
+      "image": "/images/products/server-networking/solitine-sol-26100-32u-32u-server-rack-2dd08411.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1523,7 +1523,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/solitine-sol-26100-32u-32u-server-rack-2dd08411.png"
+        "/images/products/server-networking/solitine-sol-26100-32u-32u-server-rack-2dd08411.png"
       ]
     },
     {
@@ -1545,7 +1545,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/solitine-sol-265-12u-12u-server-rack-1ba413d4.png",
+      "image": "/images/products/server-networking/solitine-sol-265-12u-12u-server-rack-1ba413d4.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1580,7 +1580,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/solitine-sol-265-12u-12u-server-rack-1ba413d4.png"
+        "/images/products/server-networking/solitine-sol-265-12u-12u-server-rack-1ba413d4.png"
       ]
     },
     {
@@ -1602,7 +1602,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/solitine-sol-265-15u-15u-server-rack-4c57accf.png",
+      "image": "/images/products/server-networking/solitine-sol-265-15u-15u-server-rack-4c57accf.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1637,7 +1637,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/solitine-sol-265-15u-15u-server-rack-4c57accf.png"
+        "/images/products/server-networking/solitine-sol-265-15u-15u-server-rack-4c57accf.png"
       ]
     },
     {
@@ -1659,7 +1659,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/solitine-sol-266-12u-12u-server-rack-1273767e.png",
+      "image": "/images/products/server-networking/solitine-sol-266-12u-12u-server-rack-1273767e.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1694,7 +1694,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/solitine-sol-266-12u-12u-server-rack-1273767e.png"
+        "/images/products/server-networking/solitine-sol-266-12u-12u-server-rack-1273767e.png"
       ]
     },
     {
@@ -1716,7 +1716,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/solitine-sol-266-9u-9u-server-rack-2584cc73.png",
+      "image": "/images/products/server-networking/solitine-sol-266-9u-9u-server-rack-2584cc73.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1751,7 +1751,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/solitine-sol-266-9u-9u-server-rack-2584cc73.png"
+        "/images/products/server-networking/solitine-sol-266-9u-9u-server-rack-2584cc73.png"
       ]
     },
     {
@@ -1773,7 +1773,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/synology-diskstation-ds124-1-bay-nas-enclosure-2b43cc0b.png",
+      "image": "/images/products/server-networking/synology-diskstation-ds124-1-bay-nas-enclosure-2b43cc0b.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1808,7 +1808,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/synology-diskstation-ds124-1-bay-nas-enclosure-2b43cc0b.png"
+        "/images/products/server-networking/synology-diskstation-ds124-1-bay-nas-enclosure-2b43cc0b.png"
       ]
     },
     {
@@ -1830,7 +1830,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/synology-diskstation-ds223-2-bays-nas-enclosure-84037f7b.png",
+      "image": "/images/products/server-networking/synology-diskstation-ds223-2-bays-nas-enclosure-84037f7b.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1865,7 +1865,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/synology-diskstation-ds223-2-bays-nas-enclosure-84037f7b.png"
+        "/images/products/server-networking/synology-diskstation-ds223-2-bays-nas-enclosure-84037f7b.png"
       ]
     },
     {
@@ -1887,7 +1887,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/synology-diskstation-ds223j-2-bays-nas-enclosure-4e3a62e4.png",
+      "image": "/images/products/server-networking/synology-diskstation-ds223j-2-bays-nas-enclosure-4e3a62e4.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1922,7 +1922,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/synology-diskstation-ds223j-2-bays-nas-enclosure-4e3a62e4.png"
+        "/images/products/server-networking/synology-diskstation-ds223j-2-bays-nas-enclosure-4e3a62e4.png"
       ]
     },
     {
@@ -1944,7 +1944,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/toten-12u-600-x-450mm-server-rack-dc824865.png",
+      "image": "/images/products/server-networking/toten-12u-600-x-450mm-server-rack-dc824865.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -1979,7 +1979,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/toten-12u-600-x-450mm-server-rack-dc824865.png"
+        "/images/products/server-networking/toten-12u-600-x-450mm-server-rack-dc824865.png"
       ]
     },
     {
@@ -2001,7 +2001,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/toten-12u-600-x-600mm-server-rack-9f674ff3.png",
+      "image": "/images/products/server-networking/toten-12u-600-x-600mm-server-rack-9f674ff3.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -2036,7 +2036,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/toten-12u-600-x-600mm-server-rack-9f674ff3.png"
+        "/images/products/server-networking/toten-12u-600-x-600mm-server-rack-9f674ff3.png"
       ]
     },
     {
@@ -2058,7 +2058,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/toten-15u-600-x-600mm-server-rack-f7ab4dda.png",
+      "image": "/images/products/server-networking/toten-15u-600-x-600mm-server-rack-f7ab4dda.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -2093,7 +2093,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/toten-15u-600-x-600mm-server-rack-f7ab4dda.png"
+        "/images/products/server-networking/toten-15u-600-x-600mm-server-rack-f7ab4dda.png"
       ]
     },
     {
@@ -2115,7 +2115,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/toten-22u-600-x-1000mm-server-rack-545f8d26.png",
+      "image": "/images/products/server-networking/toten-22u-600-x-1000mm-server-rack-545f8d26.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -2150,7 +2150,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/toten-22u-600-x-1000mm-server-rack-545f8d26.png"
+        "/images/products/server-networking/toten-22u-600-x-1000mm-server-rack-545f8d26.png"
       ]
     },
     {
@@ -2172,7 +2172,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/toten-22u-600-x-600mm-server-rack-3217850a.png",
+      "image": "/images/products/server-networking/toten-22u-600-x-600mm-server-rack-3217850a.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -2207,7 +2207,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/toten-22u-600-x-600mm-server-rack-3217850a.png"
+        "/images/products/server-networking/toten-22u-600-x-600mm-server-rack-3217850a.png"
       ]
     },
     {
@@ -2229,7 +2229,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/toten-32u-600-x-1000mm-server-rack-51a65338.png",
+      "image": "/images/products/server-networking/toten-32u-600-x-1000mm-server-rack-51a65338.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -2264,7 +2264,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/toten-32u-600-x-1000mm-server-rack-51a65338.png"
+        "/images/products/server-networking/toten-32u-600-x-1000mm-server-rack-51a65338.png"
       ]
     },
     {
@@ -2286,7 +2286,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/toten-32u-600-x-600mm-server-rack-c8ec7011.png",
+      "image": "/images/products/server-networking/toten-32u-600-x-600mm-server-rack-c8ec7011.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -2321,7 +2321,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/toten-32u-600-x-600mm-server-rack-c8ec7011.png"
+        "/images/products/server-networking/toten-32u-600-x-600mm-server-rack-c8ec7011.png"
       ]
     },
     {
@@ -2343,7 +2343,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/toten-6u-600-x-600mm-server-rack-d2598f43.png",
+      "image": "/images/products/server-networking/toten-6u-600-x-600mm-server-rack-d2598f43.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -2378,7 +2378,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/toten-6u-600-x-600mm-server-rack-d2598f43.png"
+        "/images/products/server-networking/toten-6u-600-x-600mm-server-rack-d2598f43.png"
       ]
     },
     {
@@ -2400,7 +2400,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/toten-9u-600-x-450mm-server-rack-4681e467.png",
+      "image": "/images/products/server-networking/toten-9u-600-x-450mm-server-rack-4681e467.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -2435,7 +2435,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/toten-9u-600-x-450mm-server-rack-4681e467.png"
+        "/images/products/server-networking/toten-9u-600-x-450mm-server-rack-4681e467.png"
       ]
     },
     {
@@ -2457,7 +2457,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/server-networking/server-and-storage/toten-9u-600-x-600mm-server-rack-c24ca5a4.png",
+      "image": "/images/products/server-networking/toten-9u-600-x-600mm-server-rack-c24ca5a4.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -2492,7 +2492,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/toten-9u-600-x-600mm-server-rack-c24ca5a4.png"
+        "/images/products/server-networking/toten-9u-600-x-600mm-server-rack-c24ca5a4.png"
       ]
     },
     {
@@ -23794,10 +23794,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/cote-cpdu-1u-10c13-13amp-10-port-back-to-back-pdu.png",
+      "image": "/images/products/server-networking/cote-cpdu-1u-10c13-13amp-10-port-back-to-back-pdu.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-cpdu-1u-10c13-13amp-10-port-back-to-back-pdu.png"
+        "/images/products/server-networking/cote-cpdu-1u-10c13-13amp-10-port-back-to-back-pdu.png"
       ],
       "match": {
         "method": "search",
@@ -23899,10 +23899,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/cote-cpdu-1u-12-8-c13-4-c19-16amp-1u-12-port-back-to-back-pdu.png",
+      "image": "/images/products/server-networking/cote-cpdu-1u-12-8-c13-4-c19-16amp-1u-12-port-back-to-back-pdu.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-cpdu-1u-12-8-c13-4-c19-16amp-1u-12-port-back-to-back-pdu.png"
+        "/images/products/server-networking/cote-cpdu-1u-12-8-c13-4-c19-16amp-1u-12-port-back-to-back-pdu.png"
       ],
       "match": {
         "method": "search",
@@ -24004,10 +24004,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/cote-cpdu-1u-6c13-13amp-6-port-c13-pdu.png",
+      "image": "/images/products/server-networking/cote-cpdu-1u-6c13-13amp-6-port-c13-pdu.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-cpdu-1u-6c13-13amp-6-port-c13-pdu.png"
+        "/images/products/server-networking/cote-cpdu-1u-6c13-13amp-6-port-c13-pdu.png"
       ],
       "match": {
         "method": "search",
@@ -24109,10 +24109,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/cote-cpdu-1u-6us-13amp-6-port-universal-3-pin-pdu.png",
+      "image": "/images/products/server-networking/cote-cpdu-1u-6us-13amp-6-port-universal-3-pin-pdu.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/cote-cpdu-1u-6us-13amp-6-port-universal-3-pin-pdu.png"
+        "/images/products/server-networking/cote-cpdu-1u-6us-13amp-6-port-universal-3-pin-pdu.png"
       ],
       "match": {
         "method": "search",
@@ -24221,10 +24221,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/dateup-6u-server-rack-600x450x370.png",
+      "image": "/images/products/server-networking/dateup-6u-server-rack-600x450x370.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/dateup-6u-server-rack-600x450x370.png"
+        "/images/products/server-networking/dateup-6u-server-rack-600x450x370.png"
       ],
       "match": {
         "method": "search",
@@ -24328,10 +24328,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/dateup-8-port-pdu-with-2-meter-cable-for-server-rack.png",
+      "image": "/images/products/server-networking/dateup-8-port-pdu-with-2-meter-cable-for-server-rack.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/dateup-8-port-pdu-with-2-meter-cable-for-server-rack.png"
+        "/images/products/server-networking/dateup-8-port-pdu-with-2-meter-cable-for-server-rack.png"
       ],
       "match": {
         "method": "search",
@@ -24417,10 +24417,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/nexakey-nx-9u-wall-mount-server-rack.png",
+      "image": "/images/products/server-networking/nexakey-nx-9u-wall-mount-server-rack.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/nexakey-nx-9u-wall-mount-server-rack.png"
+        "/images/products/server-networking/nexakey-nx-9u-wall-mount-server-rack.png"
       ],
       "match": {
         "method": "search",
@@ -24512,10 +24512,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/safenet-22u-xl-tempered-glass-door-floor-standing-server-cabinet-64f09bad.png",
+      "image": "/images/products/server-networking/safenet-22u-xl-tempered-glass-door-floor-standing-server-cabinet-64f09bad.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/safenet-22u-xl-tempered-glass-door-floor-standing-server-cabinet-64f09bad.png"
+        "/images/products/server-networking/safenet-22u-xl-tempered-glass-door-floor-standing-server-cabinet-64f09bad.png"
       ],
       "match": {
         "method": "search",
@@ -24601,10 +24601,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/solitine-sol-265-6u-6u-server-rack.png",
+      "image": "/images/products/server-networking/solitine-sol-265-6u-6u-server-rack.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/solitine-sol-265-6u-6u-server-rack.png"
+        "/images/products/server-networking/solitine-sol-265-6u-6u-server-rack.png"
       ],
       "match": {
         "method": "search",
@@ -24690,10 +24690,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/solitine-sol-265-9u-9u-server-rack.png",
+      "image": "/images/products/server-networking/solitine-sol-265-9u-9u-server-rack.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/solitine-sol-265-9u-9u-server-rack.png"
+        "/images/products/server-networking/solitine-sol-265-9u-9u-server-rack.png"
       ],
       "match": {
         "method": "search",
@@ -24780,10 +24780,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/synology-rks-02-sliding-rail-kit-for-synology-rackmount-servers-73fa944f.png",
+      "image": "/images/products/server-networking/synology-rks-02-sliding-rail-kit-for-synology-rackmount-servers-73fa944f.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/synology-rks-02-sliding-rail-kit-for-synology-rackmount-servers-73fa944f.png"
+        "/images/products/server-networking/synology-rks-02-sliding-rail-kit-for-synology-rackmount-servers-73fa944f.png"
       ],
       "match": {
         "method": "search",
@@ -24893,10 +24893,10 @@
       ],
       "needsReview": false,
       "categorySlug": "server-and-storage",
-      "image": "/images/products/server-networking/server-and-storage/toten-6u-600-x-450mm-server-rack.png",
+      "image": "/images/products/server-networking/toten-6u-600-x-450mm-server-rack.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/server-networking/server-and-storage/toten-6u-600-x-450mm-server-rack.png"
+        "/images/products/server-networking/toten-6u-600-x-450mm-server-rack.png"
       ],
       "match": {
         "method": "search",
