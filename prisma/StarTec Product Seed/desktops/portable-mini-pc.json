@@ -1,0 +1,2693 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/desktops",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\desktop",
+    "generatedAtUnix": 1790584227,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Desktop",
+      "slug": "desktop",
+      "parentSlug": null,
+      "image": "/images/products/desktop/apple-imac/apple-imac-m4-10-core-gpu-24-inch.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Portable Mini PC",
+      "slug": "portable-mini-pc",
+      "parentSlug": "desktop",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-expertcenter-pn53-barebone-mini-pc.png",
+      "isActive": true,
+      "sortOrder": 4,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Asus",
+      "slug": "asus",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "ASUS ExpertCenter PN53 (Barebone) Ryzen 5 7535H Portable Mini PC",
+      "slug": "asus-expertcenter-pn53-barebone-mini-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-46183",
+      "description": "<h2>ASUS ExpertCenter PN53 (Barebone) Ryzen 5 7535H Portable Mini PC</h2><p>The ASUS <strong>ExpertCenter PN53 (Barebone)</strong> Ryzen 5 7535H <a href=\"https://www.startech.com.bd/desktops/portable-mini-pc\" style=\"color: rgb(0, 0, 0);\" target=\"\">Portable Mini PC</a> is not light on performance. This ASUS Mini PC, powered by an AMD Ryzen 5 7535H CPU with 6 cores and 12 threads, a base frequency of 3.30GHz and a boost clock of 4.55GHz, provides exceptional multitasking capabilities while remaining energy efficient at 35W TDP. The integrated Radeon Graphics provides smooth images for everyday tasks, light gaming, and multimedia applications. The ASUS ExpertCenter PN53 (Barebone) Mini PC offers up to 32GB of DDR5-4800 dual-channel memory, ensuring quick responsiveness for demanding applications. The ASUS Portable Mini PC offers consumers the option of installing a high-speed M.2 2280 NVMe PCIe 4.0 x4 SSD with capacities ranging from 256GB to 2TB, as well as an extra 1TB 2.5-inch SATA HDD for increased capacity. The ASUS Mini PC's connectivity is a big asset, with Intel Wi-Fi 6E with Bluetooth 5.2 and a 2.5G Ethernet connector providing consistent wired and wireless performance. The front I/O ports feature one USB 4 Type-C with DisplayPort output, two USB 3.2 Gen1 Type-A ports, an audio jack, and a Kensington lock for further protection. On the back, the ASUS ExpertCenter PN53 (Barebone) Ryzen 5 7535H Portable Mini PC has another USB 4 Type-C connector with DP1.4 and PD input, three USB 3.2 Gen1 connections, dual HDMI 2.1 ports with 4K at 60Hz, a customizable VGA port, 2.5G LAN, DC-in, and a padlock ring. Its compact dimensions of 120 x 130 x 58 mm allow for outstanding portability and space efficiency. The ASUS ExpertCenter PN53 (Barebone) Ryzen 5 7535H Mini PC, powered by a 120W adaptor, is suitable for office productivity, digital signage, home entertainment, and commercial environments that require dependability and strong performance in a small form factor.</p><h2>Buy ASUS ExpertCenter PN53 (Barebone) Mini PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>ASUS ExpertCenter PN53 (Barebone) Mini PC</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-mini-pc\" target=\"\">Asus Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The ASUS ExpertCenter PN53 (Barebone) Mini PC comes with comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ExpertCenter PN53 (Barebone)</li><li>Processor: AMD Ryzen 5 7535H: 6C/12T, 3.30/4.55GHz (35W)</li><li>RAM: 32GB DDR5-4800 SO-DIMM x 2 (Support), Graphic: Integrated Radeon Graphics</li><li>Storage: 256GB~2TB M.2 2280 PCIe 4.0 x 4 SSD + 1TB 2.5&quot; SATA HDD (Support)</li><li>WLAN: Intel Wi-Fi 6E (Gig+), Bluetooth 5.2, LAN: 2.5G Ethernet, 10/100/1000/2500 Mbps</li></ul>",
+      "model": "ExpertCenter PN53 (Barebone)",
+      "warranty": "3 years",
+      "basePrice": 52000.0,
+      "originalPrice": 55000.0,
+      "currency": "BDT",
+      "weight": 0.75,
+      "dimensions": {
+        "length": 120.0,
+        "width": 130.0,
+        "height": 58.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "32GB DDR5-4800 SO-DIMM x 2 (Support)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "256GB~2TB M.2 2280 NVMe PCIe 4.0 x 4 SSD 1TB 2.5\" SATA HDD (Support)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-46183",
+          "price": 52000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "32GB DDR5-4800 SO-DIMM x 2 (Support)",
+            "Storage": "256GB~2TB M.2 2280 NVMe PCIe 4.0 x 4 SSD 1TB 2.5\" SATA HDD (Support)",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 49920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "AMD Ryzen 5 7535H: 6C/12T, 3.30/4.55GHz (35W)",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "32GB DDR5-4800 SO-DIMM x 2 (Support)",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Integrated Radeon Graphics",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "256GB~2TB M.2 2280 NVMe PCIe 4.0 x 4 SSD 1TB 2.5\" SATA HDD (Support)",
+              "position": 3
+            },
+            {
+              "label": "Power Supply",
+              "value": "19Vdc, 6.32A, 120W Power Adapter",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Intel Wi-Fi 6E (Gig+), Bluetooth 5.2 2.5G Ethernet, 10/100/1000/2500 Mbps",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Front I/O Ports 1 x USB 4 Type-C (w/ DP output) 2 x USB 3.2 Gen1 Type-A 1 x Audio Jack 1 x Kensington Lock(side) Back I/O 1 x USB 4 Type-C (Support DP1.4, PD input*) 3 x USB 3.2 Gen1 2 x HDMI 2.1 (Up to 4K@60Hz) 1 x Configurable Port (VGA) 1 x 2.5G RJ45 LAN 1 x DC-in 1 x Padlock ring",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "120 x 130 x 58 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "0.75 kg(barebone)",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-expertcenter-pn53-barebone-mini-pc",
+      "sourceProductCode": "46183",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ExpertCenter PN53 (Barebone)",
+        "Processor: AMD Ryzen 5 7535H: 6C/12T, 3.30/4.55GHz (35W)",
+        "RAM: 32GB DDR5-4800 SO-DIMM x 2 (Support), Graphic: Integrated Radeon Graphics",
+        "Storage: 256GB~2TB M.2 2280 PCIe 4.0 x 4 SSD + 1TB 2.5\" SATA HDD (Support)",
+        "WLAN: Intel Wi-Fi 6E (Gig+), Bluetooth 5.2, LAN: 2.5G Ethernet, 10/100/1000/2500 Mbps"
+      ],
+      "needsReview": false,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-expertcenter-pn53-barebone-mini-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-expertcenter-pn53-barebone-mini-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-expertcenter-pn53-barebone-mini-pc",
+        "candidateTitle": "ASUS ExpertCenter PN53 (Barebone) Ryzen 5 7535H Portable Mini PC",
+        "attemptStem": "asus-expertcenter-pn53-barebone-mini-pc"
+      }
+    },
+    {
+      "name": "Asus ExpertCenter PN64 Core i3 12th Gen Portable Mini PC",
+      "slug": "asus-expertcenter-pn64-core-i3-12th-gen-mini-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-36990",
+      "description": "<h2>Asus ExpertCenter PN64 Core i3 12th Gen Portable Mini PC</h2><p>The Asus <strong>ExpertCenter PN64</strong> Core i3 12th Gen <a href=\"https://www.startech.com.bd/desktops/portable-mini-pc\" style=\"color: rgb(0, 0, 0);\" target=\"\">Portable Mini PC</a> is a compact yet powerful choice for individuals who want a diverse and efficient computing experience. Thanks to its integrated Intel UHD Graphics and 28W TDP Intel Core i3-1220P processor, it can handle various daily duties. The system supports up to 32GB of DDR5 memory through two SO-DIMM slots, enabling seamless performance and multitasking. Strong storage options are offered via an M.2 2280 PCIe Gen4x4 slot that can support NVMe SSDs ranging in size from 256GB to 2TB, offering quick and large amounts of storage. The Asus ExpertCenter PN64 Core i3 12th Gen Portable Mini PC boasts excellent connectivity thanks to its dual-band Intel Wi-Fi 6 (Gig+) and Bluetooth 5.0. Ensuring high-speed wired connections, the LAN connector offers 10/100/1000/2500 Mbps rates via a 2.5G Intel LAN. Access to necessary accessories is made easy with the front I/O panel's two USB 3.2 Gen2 Type-A ports, one USB 3.2 Gen2 Type-C port, an audio jack, and a Kensington lock. With an additional USB 3.2 Gen2 Type-C port (with DP1.4 output and PD input), a USB 3.2 Gen2 Type-A port, two HDMI 2.1 connections supporting up to 4K@60Hz, a customizable port, a 2.5G RJ45 LAN port, a padlock ring, and a DC-in for power, the back I/O panel increases connectivity. With dimensions of about 120 x 130 x 58 mm and a weight of 0.75 kg, the ExpertCenter PN64 is incredibly lightweight and adaptable to any workspace. Essential accessories for the ECO Black mini PC include a user manual, warranty card, power cable, screw pack, and AC adapter. Installation flexibility is made possible with an optional VESA mount. Multiple certifications, such as BSMI, CB, CE, FCC, UL, CCC, Energy Star, C-Tick, WiFi, RF, and VCCI, are adhered to by the Asus ExpertCenter PN64 Core i3 12th Gen Portable Mini PC, guaranteeing conformity with global standards. All things considered, the Asus ExpertCenter PN64 is a great option for both personal and business use because it blends a small form factor, strong performance, and wide connectivity.</p><img alt=\"Asus ExpertCenter PN64 Core i3 12th Gen Portable Mini PC\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/mini-pc/asus/expertcenter-pn64-mini-pc/expertcenter-pn64-mini-pc-06.webp\" width=\"920\"/><h2>Buy Asus ExpertCenter PN64 Core i3 12th Gen Portable Mini PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ExpertCenter PN64 Core i3 12th Gen Portable Mini PC</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-mini-pc\" target=\"\">Asus Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Asus ExpertCenter PN64 Core i3 12th Gen Portable Mini PC comes with comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ExpertCenter PN64</li><li>Processor: Intel Core i3-1220P Processor, 28W TDP</li><li>RAM Support: Max. 16GB (No Installed RAM)</li><li>Storage: 1 x M.2 2280 PCIe Gen4x4, supports 256GB~2TB NVMe SSD</li><li>Graphics: Integrated, Intel UHD Graphic</li></ul>",
+      "model": "ExpertCenter PN64",
+      "warranty": "3 years",
+      "basePrice": 41000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.75,
+      "dimensions": {
+        "length": 120.0,
+        "width": 130.0,
+        "height": 58.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "Support: Max. 16GB (No Installed RAM)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "1 x M.2 2280 PCIe Gen4x4, supports 256GB~2TB NVMe SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-36990",
+          "price": 41000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "Support: Max. 16GB (No Installed RAM)",
+            "Storage": "1 x M.2 2280 PCIe Gen4x4, supports 256GB~2TB NVMe SSD",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 39360.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel Core i3-1220P Processor, 28W TDP",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "Support: Max. 16GB (No Installed RAM)",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Integrated, Intel UHD Graphics",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "1 x M.2 2280 PCIe Gen4x4, supports 256GB~2TB NVMe SSD",
+              "position": 3
+            },
+            {
+              "label": "Power Supply",
+              "value": "19Vdc, 4.74A, 90W Power Adapter",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Intel Wi-Fi 6 (Gig+), Bluetooth 5.0 (Barebone SKU) 10/100/1000/2500 Mbps, 2.5G Intel LAN",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Front I/O Ports 1 x USB 3.2 Gen2 Type-C 2 x USB 3.2 Gen2 Type-A 1 x Audio Jack 1 x Kensington Lock(side) Back I/O 1 x USB 3.2 Gen2 Type-C (with DP1.4 output and PD input) 1 x USB 3.2 Gen2 Type-A 2 x HDMI 2.1 (Up to 4K@60Hz) 1 x Configurable Port 1 x 2.5G RJ45 LAN 1 x Padlock ring 1 x DC-in",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "120 x 130 x58 mm (0.9L)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "0.75 kg",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-expertcenter-pn64-core-i3-12th-gen-mini-pc",
+      "sourceProductCode": "36990",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ExpertCenter PN64",
+        "Processor: Intel Core i3-1220P Processor, 28W TDP",
+        "RAM Support: Max. 16GB (No Installed RAM)",
+        "Storage: 1 x M.2 2280 PCIe Gen4x4, supports 256GB~2TB NVMe SSD",
+        "Graphics: Integrated, Intel UHD Graphic"
+      ],
+      "needsReview": false,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-expertcenter-pn64-core-i3-12th-gen-mini-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-expertcenter-pn64-core-i3-12th-gen-mini-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-expertcenter-pn64-core-i3-12th-gen-mini-pc",
+        "candidateTitle": "Asus ExpertCenter PN64 Core i3 12th Gen Portable Mini PC",
+        "attemptStem": "asus-expertcenter-pn64-core-i3-12th-gen-mini-pc"
+      }
+    },
+    {
+      "name": "Asus ExpertCenter PN64 Core i5 12th Gen Portable Mini PC",
+      "slug": "asus-expertcenter-pn64-core-i5-12th-gen-mini-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-36628",
+      "description": "<h2>Asus ExpertCenter PN64 Core i5 12th Gen Portable Mini PC</h2><p>The Asus <strong>ExpertCenter PN64</strong> Core i5 12th Gen <a href=\"https://www.startech.com.bd/desktops/portable-mini-pc\" style=\"color: rgb(0, 0, 0);\" target=\"\">Portable Mini PC</a> is a powerful and compact computing solution. With a 35W TDP, this Mini PC offers strong performance thanks to its Intel Core i5-12500H processor, which has four P-cores reaching up to 4.50 GHz and eight E-cores that peak at 3.30 GHz. For a range of applications, seamless visual performance is guaranteed by integrated Intel Iris Xe Graphics. Through its two slots, the <strong>Asus ExpertCenter PN64</strong> Core i5 12th Gen Mini PC supports DDR5 RAM running up to 7200MHz, improving multitasking performance. A 6Gb/s SATA connector for 2.5\" HDD/SSD and an M.2 2280 PCIe Gen3 slot for NVMe SSDs, enabling sizes ranging from 256GB to 1TB, are just two of the adaptable storage options provided by the PN64. Fast wireless networking is ensured by the Asus ExpertCenter PN64 Core i5 12th Gen Portable Mini PC's robust connectivity, which includes Intel Wi-Fi 6 and Bluetooth 5. With a 2.5G LAN connector and support for Wake on LAN, PXE, Auto Power On, and RTC Wake features, wired networking is similarly amazing. The small PC has two HDMI 2.0 connections, one DisplayPort (Type-C), one DisplayPort++ programmable connector, and two other interface options for peripherals and displays. With three USB 3.2 (Gen 2) ports, one USB 3.2 (Gen 2) Type-C port, and another USB 3.2 (Gen 2) Type-C port with DP output and PD power input, it also provides a comprehensive USB connection. The Asus ExpertCenter PN64 Core i5 12th Gen Portable Mini PC is adaptable to various user preferences since it supports several operating systems, including Windows 11 64-bit, Windows 11 Pro 64-bit, and Linux. In addition to being VESA mountable for versatile placement possibilities, it comes with a 65W power adaptor to ensure optimum power utilization. With compatibility for high-resolution outputs via DisplayPort and HDMI reaching up to 5120 x 2160 at 60 Hz and 4096 x 2160 at 60 Hz, the Asus ExpertCenter PN64 Core i5 12th Gen Mini PC is appropriate for high-definition screens. With its elegant black appearance, the Asus ExpertCenter PN64 is a portable powerhouse that's perfect for both home and business use.</p><img alt=\"Asus ExpertCenter PN64 Core i5 12th Gen Portable Mini PC\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/mini-pc/asus/expertcenter-pn64-mini-pc/expertcenter-pn64-mini-pc-06.webp\" width=\"920\"/><h2>Buy Asus ExpertCenter PN64 Core i5 12th Gen Portable Mini PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus ExpertCenter PN64 Core i5 12th Gen Portable Mini PC</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-mini-pc\" target=\"\">Asus Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Asus ExpertCenter PN64 Core i5 12th Gen Portable Mini PC comes with comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ExpertCenter PN64</li><li>Processor: Intel Core i5-12500H Processor, 35W TDP</li><li>RAM: 2 x DDR5 4800MHz - 7200HZ (Supported)</li><li>Storage: 1 x 6Gb/s SATA, 1 x M.2 2280 PCIe Gen3 Slot</li><li>Graphics: Integrated, Intel Iris Xe Graphic</li></ul>",
+      "model": "ExpertCenter PN64",
+      "warranty": "3 years",
+      "basePrice": 58000.0,
+      "originalPrice": 61600.0,
+      "currency": "BDT",
+      "weight": 0.75,
+      "dimensions": {
+        "length": 120.0,
+        "width": 130.0,
+        "height": 58.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 x DDR5 4800MHz - 7200HZ (Supported)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "1 x 6Gb/s SATA connector for 2.5” 1TB HDD/SSD* (Supported) 1 x M.2 2280 PCIe Gen3 slot for 256GB - 1TB SSD* NVMe only (Supported)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-36628",
+          "price": 58000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "2 x DDR5 4800MHz - 7200HZ (Supported)",
+            "Storage": "1 x 6Gb/s SATA connector for 2.5” 1TB HDD/SSD* (Supported) 1 x M.2 2280 PCIe Gen3 slot for 256GB - 1TB SSD* NVMe only (Supported)",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 55680.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel Core i5-12500H: P-core: 4C, up to 4.50 GHz / E-core: 8C, up to 3.30GHz (35W)",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "2 x DDR5 4800MHz - 7200HZ (Supported)",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Intel Iris Xe Graphics",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "1 x 6Gb/s SATA connector for 2.5” 1TB HDD/SSD* (Supported) 1 x M.2 2280 PCIe Gen3 slot for 256GB - 1TB SSD* NVMe only (Supported)",
+              "position": 3
+            },
+            {
+              "label": "Power Supply",
+              "value": "19.5Vdc/19Vdc, 3.33A/3.42A 65W Power Adapter",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "2.5G LAN Supports Wake on LAN / PXE / Auto Power on / RTC Wake 2x2 Intel Wi-Fi 6(802.11ax) module",
+              "position": 5
+            },
+            {
+              "label": "Operating System",
+              "value": "Supports Windows11 64bit, Windows11 Pro 64bit, Linux",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Graphics Output: 1 x Displayport(TYPE-C); 2 x HDMI 2.0; 1 x Displayport++ (default configurable port) USB : USB 3.2(G2)*3 ports USB 3.2(G2) TypeC*1 USB 3.2(G2) TypeC*1(DP output+PD power input@rear)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "120 x 130 x58 mm (0.9L)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "0.75 kg",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-expertcenter-pn64-core-i5-12th-gen-mini-pc",
+      "sourceProductCode": "36628",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ExpertCenter PN64",
+        "Processor: Intel Core i5-12500H Processor, 35W TDP",
+        "RAM: 2 x DDR5 4800MHz - 7200HZ (Supported)",
+        "Storage: 1 x 6Gb/s SATA, 1 x M.2 2280 PCIe Gen3 Slot",
+        "Graphics: Integrated, Intel Iris Xe Graphic"
+      ],
+      "needsReview": false,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-expertcenter-pn64-core-i5-12th-gen-mini-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-expertcenter-pn64-core-i5-12th-gen-mini-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-expertcenter-pn64-core-i5-12th-gen-mini-pc",
+        "candidateTitle": "Asus ExpertCenter PN64 Core i5 12th Gen Portable Mini PC",
+        "attemptStem": "asus-expertcenter-pn64-core-i5-12th-gen-mini-pc"
+      }
+    },
+    {
+      "name": "Asus NUC 13 Pro Core i3 13th Gen Portable Mini Pc",
+      "slug": "asus-nuc-13-pro-core-i3-13th-gen-mini-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-41837",
+      "description": "<h2>Asus NUC 13 Pro Core i3 13th Gen Mini Pc</h2><p>The Asus <strong>NUC 13 Pro</strong> Intel Core i3-1315U is a compact and efficient <a href=\"https://www.startech.com.bd/desktops/portable-mini-pc\" style=\"color: rgb(0, 0, 0);\" target=\"\">Mini PC</a> designed for professionals, businesses, and home users who need reliable performance in a small form factor. With a variable TDP of 20W, it combines energy-efficient computing with smooth multitasking for office work, streaming, and everyday apps. The Intel Core i3 13th Gen has six cores, two performance cores for demanding operations and four efficiency cores for optimum processing, guaranteeing smooth operation with minimal power usage. The integrated Intel UHD Graphics provides excellent images with 4K capability, making this tiny PC great for productivity, presentations, and entertainment. Connectivity is an outstanding feature, with Intel Wi-Fi 6E (Gig+) enabling ultra-fast wireless performance, Bluetooth 5.2 for easy device pairing. The Ethernet Controller I226-V provides robust 2.5G wired networking. Users can easily extend their workstation thanks to the vast range of ports, which includes two Thunderbolt 4 Type-C with DisplayPort 1.4, two HDMI 2.1, numerous USB 3.2 Gen2 Type-A, USB 2.0 Type-A, RJ45 LAN, and a Kensington Lock for enhanced protection. Realtek ALC269 ensures high-quality audio by providing clear sound for video chats, streaming, and multimedia activities. The Asus NUC 13 Pro Intel Core i3 13th Gen is ideal for tiny workstations, combining strong performance with a stylish appearance. The Asus Intel Core i3 13th Gen includes an AC adapter, power cord, VESA mount, cable clip, and warranty card for simple installation. Whether utilized in the business, a creative setting, or at home. The Asus NUC 13 Pro  Core i3 13th Gen Mini Pc offers a future-proof solution with high-speed computing, efficient multitasking, and versatile connectivity, making it an excellent choice for modern professionals and tech-savvy users.</p><h3>Efficient Performance &amp; Smart Processing</h3><p>The Asus NUC 13 Pro Core i3 13th Gen is based on Intel's Raptor Lake architecture, which includes 6 cores and 8 threads for optimal performance. It has two high-performance cores (P-Cores) and four power-efficient cores (E-Cores), which ensures a balance of speed and power efficiency. The P-Cores have a base frequency of 1.2 GHz and a boost clock of up to 4.5 GHz, whilst the E-Cores have a base frequency of 0.9 GHz and can boost up to 3.3 GHz. This configuration enables the CPU to intelligently assign tasks, resulting in seamless functioning of both demanding programs and background operations. </p><h3>Integrated Intel UHD Graphics – Crisp Visuals &amp; 4K Support</h3><p>The Intel UHD Graphics included in the i3-1315U delivers smooth images and supports multiple 4K screens for an immersive experience. Whether you're doing graphic design, presentations, or video streaming, this Asus NUC 13 Pro small PC delivers high-quality results with no lag. The GPU runs at a maximum frequency of 1250 MHz, resulting in vivid and bright images. </p><h2>Buy Asus NUC 13 Pro Core i3 13th Gen Mini Pc from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus NUC 13 Pro Core i3 13th Gen Mini Pc</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-mini-pc\" target=\"\">Asus Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Asus NUC 13 Pro Core i3 13th Gen Mini Pc comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NUC 13 Pro</li><li>Processor: Intel Core i3 1315U Processor, cTDP 20W</li><li>Graphics: Intel UHD Graphics</li><li>WLAN: Intel Wi-Fi 6E (Gig+), Bluetooth 5.2</li><li>LAN: Intel Ethernet Controller I226-V/LM, 2.5G</li></ul>",
+      "model": "NUC 13 Pro",
+      "warranty": "3 years",
+      "basePrice": 42500.0,
+      "originalPrice": 46500.0,
+      "currency": "BDT",
+      "weight": 0.502,
+      "dimensions": {
+        "length": 117.0,
+        "width": 112.0,
+        "height": 37.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "Supports 3200Mhz DDR4 Laptop RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "Supports NVMe SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41837",
+          "price": 42500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "Supports 3200Mhz DDR4 Laptop RAM",
+            "Storage": "Supports NVMe SSD",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 40800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel Core i3-1315U Processor, cTDP 20W",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "Supports 3200Mhz DDR4 Laptop RAM",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Intel® UHD Graphics",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "Supports NVMe SSD",
+              "position": 3
+            },
+            {
+              "label": "Audio",
+              "value": "Realtek ALC269",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Intel Wi-Fi 6E (Gig+), Bluetooth 5.2 Intel Ethernet Controller I226-V/LM, 2.5G",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Front & Side I/O:\"2 x USB 3.2 Gen2 Type-A 1 x 3.5mm Headset Jack 1 x Kensington Lock\" Back I/O:\"2 x Thunderbolt 4 Type-C w/ DisplayPort 1.4 1 x USB 3.2 Gen 2 Type-A 1 x USB 2.0 Type-A 2 x HDMI 2.1 (TMDS) 1 x RJ45 LAN 1 x DC-in\"",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "117 x 112 x 37 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "502g",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-nuc-13-pro-core-i3-13th-gen-mini-pc",
+      "sourceProductCode": "41837",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NUC 13 Pro",
+        "Processor: Intel Core i3 1315U Processor, cTDP 20W",
+        "Graphics: Intel UHD Graphics",
+        "WLAN: Intel Wi-Fi 6E (Gig+), Bluetooth 5.2",
+        "LAN: Intel Ethernet Controller I226-V/LM, 2.5G"
+      ],
+      "needsReview": false,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i3-13th-gen-mini-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i3-13th-gen-mini-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-nuc-13-pro-core-i3-13th-gen-mini-pc",
+        "candidateTitle": "Asus NUC 13 Pro Core i3 13th Gen Portable Mini Pc",
+        "attemptStem": "asus-nuc-13-pro-core-i3-13th-gen-mini-pc"
+      }
+    },
+    {
+      "name": "Asus NUC 13 Pro Core i3 13th Gen Portable Mini PC With RAM & SSD",
+      "slug": "asus-nuc-13-pro-core-i3-mini-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-47086",
+      "description": "<h2>Asus NUC 13 Pro Core i3 13th Gen Portable Mini PC With RAM &amp; SSD</h2><p>The Asus <strong>NUC 13 Pro</strong> Mini PC is powered by an Intel Core i3-1315U processor with a cTDP of 20W, delivering smooth everyday computing while maintaining balanced power economy. It has 8GB of 3200MHz DDR4 laptop RAM for steady multitasking and a 256GB NVMe SSD for speedy boot times and data access. The Asus NUC 13 Pro <a href=\"https://www.startech.com.bd/desktops/portable-mini-pc\" style=\"color: rgb(0, 0, 0);\" target=\"\">Mini PC</a> features Intel UHD Graphics, which provides crisp images for productivity, streaming, and light creative applications. This Asus Portable Mini PC also includes Realtek ALC269 audio, which provides clear and sharp sound for meetings, films, and entertainment. Connectivity options include Intel Wi-Fi 6E (Gig+), Bluetooth 5.2, and a high-speed Intel Ethernet Controller I226-V/LM with 2.5G capabilities, ensuring robust and responsive network performance. The Asus NUC 13 Pro Core i3 13th Generation Portable Mini PC offers a variety of I/O options, beginning with front and side ports that include two USB 3.2 Gen 2 Type-A connections, a 3.5mm headset jack, and a Kensington lock slot for security. Users have two Thunderbolt 4 Type-C connections on the back, which enable DisplayPort 1.4, making it perfect for high-resolution monitors. It also has another USB 3.2 Gen 2 Type-A port, one USB 2.0 Type-A port, two HDMI 2.1 (TMDS) outputs, an RJ45 LAN port, and a DC-in connector. The Asus NUC 13 Pro Core i3 13th Gen Portable Mini PC's extensive port selection makes it ideal for multiple or triple display configurations, office environments, home workstations, kiosks, and digital signage.</p><h2>Buy Asus NUC 13 Pro Core i3 13th Gen Portable Mini PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus NUC 13 Pro Core i3 13th Gen Portable Mini PC</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-mini-pc\" target=\"\">Asus Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Asus NUC 13 Pro Core i3 13th Gen Portable Mini PC comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NUC 13 Pro</li><li>Processor: Intel Core i3 1315U Processor, cTDP 20W</li><li>RAM: 8GB DDR4 3200MHz, Storage: 256GB NVME SSD</li><li>Graphics: Intel UHD Graphics</li><li>WLAN: Intel Wi-Fi 6E (Gig+), Bluetooth 5.2</li></ul>",
+      "model": "NUC 13 Pro",
+      "warranty": "3 years",
+      "basePrice": 57000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.502,
+      "dimensions": {
+        "length": 117.0,
+        "width": 112.0,
+        "height": 37.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "8GB 3200Mhz DDR4 Laptop RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "256GB NVMe SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47086",
+          "price": 57000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "8GB 3200Mhz DDR4 Laptop RAM",
+            "Storage": "256GB NVMe SSD",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 54720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel Core i3-1315U Processor, cTDP 20W",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "8GB 3200Mhz DDR4 Laptop RAM",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Intel® UHD Graphics",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "256GB NVMe SSD",
+              "position": 3
+            },
+            {
+              "label": "Audio",
+              "value": "Realtek ALC269",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Intel Wi-Fi 6E (Gig+), Bluetooth 5.2 Intel Ethernet Controller I226-V/LM, 2.5G",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Front & Side I/O: 2 x USB 3.2 Gen2 Type-A 1 x 3.5mm Headset Jack 1 x Kensington Lock Back I/O: 2 x Thunderbolt 4 Type-C w/ DisplayPort 1.4 1 x USB 3.2 Gen 2 Type-A 1 x USB 2.0 Type-A 2 x HDMI 2.1 (TMDS) 1 x RJ45 LAN 1 x DC-in",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "117 x 112 x 37 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "502g",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-nuc-13-pro-core-i3-mini-pc",
+      "sourceProductCode": "47086",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NUC 13 Pro",
+        "Processor: Intel Core i3 1315U Processor, cTDP 20W",
+        "RAM: 8GB DDR4 3200MHz, Storage: 256GB NVME SSD",
+        "Graphics: Intel UHD Graphics",
+        "WLAN: Intel Wi-Fi 6E (Gig+), Bluetooth 5.2"
+      ],
+      "needsReview": false,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i3-mini-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i3-mini-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-nuc-13-pro-core-i3-mini-pc",
+        "candidateTitle": "Asus NUC 13 Pro Core i3 13th Gen Portable Mini PC With RAM & SSD",
+        "attemptStem": "asus-nuc-13-pro-core-i3-mini-pc"
+      }
+    },
+    {
+      "name": "Asus NUC 13 Pro Core i5 13th Gen Portable Mini Pc",
+      "slug": "asus-nuc-13-pro-core-i5-13th-gen-mini-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-41830",
+      "description": "<h2>Asus NUC 13 Pro Core i5 13th Gen Mini Pc</h2><p>The Asus <strong>NUC 13 Pro</strong> is a powerful and small micro PC designed for professionals and companies. It is powered by the Intel Core i5-13420H CPU, which provides quick performance while reducing power consumption to a minimum with a customizable TDP of 45W. This makes it suitable for multitasking, content production, and demanding business applications. The Asus NUC 13 Pro Intel Core i5-13420H has Intel Iris Xe Graphics, which ensures fluid images and compatibility for multiple 4K screens. This small PC easily handles clear visuals for presentations as well as a fluid streaming experience. Connectivity is another notable element. It has Intel Wi-Fi 6E (Gig+) for lightning-fast wireless internet and Bluetooth 5.2 for simple connection with speakers, headsets, and keyboards. For wired networking, the Intel Ethernet Controller I226-V provides 2.5G LAN, ensuring stable and fast internet access. This <a href=\"https://www.startech.com.bd/desktops/portable-mini-pc\" style=\"color: rgb(0, 0, 0);\" target=\"\">Mini PC</a> offers a variety of ports to connect different peripherals. It has two Thunderbolt 4 Type-C ports with DisplayPort 1.4, two HDMI 2.1 ports, and multiple USB 3.2 Gen2 Type-A and Type-C slots. You can also find an RJ45 LAN port, a 3.5mm headset jack, and a Kensington Lock for added security. This makes it a great choice for users who need flexibility with external devices. For sound, the system features Realtek ALC269 audio, ensuring clear and immersive audio output whether you're in meetings or watching videos. The Intel Core i5-13th Gen includes an AC adapter, power cord, VESA bracket, and cable clip, making setup simple and convenient. Compact yet powerful, the Asus NUC 13 Pro Intel Core i5-13th Gen Portable Mini Pc makes it easy to fit into tight spaces without compromising performance. Whether you're using it in an office, a creative workspace, or at home, this mini PC is built for efficiency and reliability.</p><h3>Compact Powerhouse for Maximum Efficiency</h3><p>The Asus NUC 13 PRO (90AR0031-M00240) is a high-performance mini PC designed for business professionals, content creators, and multitaskers who need powerful computing in a compact form factor. At the heart of this mini PC is the Intel Core i5-13420H processor, built on Intel’s 13th Gen architecture. With a configurable TDP of 45W, it balances high-speed performance with energy efficiency, making it ideal for demanding workloads without excessive power consumption. The processor features 6 cores and 8 threads, ensuring smooth multitasking across applications like business software, video editing, and cloud computing.</p><h3>Next-Level Graphics with 4K Support</h3><p>Intel Iris Xe Graphics in the Asus NUC 13 PRO offers smooth rendering and support for multiple 4K displays, making it perfect for professional tasks, creative applications, and immersive streaming. With AI-driven image enhancements and hardware-accelerated encoding, users experience crisp visuals, fluid motion, and optimized performance. Whether for graphic design, presentations, or entertainment, this compact mini PC delivers superior clarity with minimal lag.</p><h2>Buy Asus NUC 13 Pro Core i5 13th Gen Mini Pc from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus NUC 13 Pro Core i5 13th Gen Mini Pc</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-mini-pc\" target=\"\">Asus Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Asus NUC 13 Pro Core i5 13th Gen Mini Pc comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NUC 13 Pro</li><li>Processor: Intel Core i5 13420H Processor, cTDP 45W</li><li>Graphics: Intel Iris Xe Graphics</li><li>WLAN: Intel Wi-Fi 6E (Gig+), Bluetooth 5.2</li><li>LAN: Intel Ethernet Controller I226-V, 2.5G</li></ul>",
+      "model": "NUC 13 Pro",
+      "warranty": "3 years",
+      "basePrice": 62500.0,
+      "originalPrice": 67800.0,
+      "currency": "BDT",
+      "weight": 0.502,
+      "dimensions": {
+        "length": 117.0,
+        "width": 112.0,
+        "height": 37.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "Supports 3200Mhz DDR4 Laptop RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "Supports NVMe SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41830",
+          "price": 62500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "Supports 3200Mhz DDR4 Laptop RAM",
+            "Storage": "Supports NVMe SSD",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 60000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel Core i5-13420H Processor, cTDP 45W",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "Supports 3200Mhz DDR4 Laptop RAM",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Integrated, Intel Iris Xe Graphics",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "Supports NVMe SSD",
+              "position": 3
+            },
+            {
+              "label": "Audio",
+              "value": "Realtek ALC269",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Intel Wi-Fi 6E (Gig+), Bluetooth 5.2 Intel Ethernet Controller I226-V, 2.5G",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Front & Side I/O:\"2 x USB 3.2 Gen2 Type-A 1 x 3.5mm Headset Jack 1 x Kensington Lock\" Back I/O:\"2 x Thunderbolt 4 Type-C w/ DisplayPort 1.4 1 x USB 3.2 Gen 2 Type-A 1 x USB 2.0 Type-A 2 x HDMI 2.1 (TMDS) 1 x RJ45 LAN 1 x DC-in\"",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "117 x 112 x 37 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "502g",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-nuc-13-pro-core-i5-13th-gen-mini-pc",
+      "sourceProductCode": "41830",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NUC 13 Pro",
+        "Processor: Intel Core i5 13420H Processor, cTDP 45W",
+        "Graphics: Intel Iris Xe Graphics",
+        "WLAN: Intel Wi-Fi 6E (Gig+), Bluetooth 5.2",
+        "LAN: Intel Ethernet Controller I226-V, 2.5G"
+      ],
+      "needsReview": false,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i5-13th-gen-mini-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i5-13th-gen-mini-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-nuc-13-pro-core-i5-13th-gen-mini-pc",
+        "candidateTitle": "Asus NUC 13 Pro Core i5 13th Gen Portable Mini Pc",
+        "attemptStem": "asus-nuc-13-pro-core-i5-13th-gen-mini-pc"
+      }
+    },
+    {
+      "name": "Asus NUC 13 Pro Core i5 13th Gen Mini PC With RAM & SSD",
+      "slug": "asus-nuc-13-pro-core-i5-mini-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-47072",
+      "description": "<h2>Asus NUC 13 Pro Core i5 13th Gen Mini PC With RAM &amp; SSD</h2><p>The Asus <strong>NUC 13 Pro</strong> is a powerful and small micro PC designed for professionals and companies. It is powered by the Intel Core i5-13420H CPU, which provides quick performance while reducing power consumption to a minimum with a customizable TDP of 45W. This makes it suitable for multitasking, content production, and demanding business applications. The Asus NUC 13 Pro Intel Core i5-13420H has Intel Iris Xe Graphics, which ensures fluid images and compatibility for multiple 4K screens. This small PC easily handles clear visuals for presentations as well as a fluid streaming experience. Connectivity is another notable element. It has Intel Wi-Fi 6E (Gig+) for lightning-fast wireless internet and Bluetooth 5.2 for simple connection with speakers, headsets, and keyboards. For wired networking, the Intel Ethernet Controller I226-V provides 2.5G LAN, ensuring stable and fast internet access. This <a href=\"https://www.startech.com.bd/desktops/portable-mini-pc\" style=\"color: rgb(0, 0, 0);\" target=\"\">Mini PC</a> offers a variety of ports to connect different peripherals. It has two Thunderbolt 4 Type-C ports with DisplayPort 1.4, two HDMI 2.1 ports, and multiple USB 3.2 Gen2 Type-A and Type-C slots. You can also find an RJ45 LAN port, a 3.5mm headset jack, and a Kensington Lock for added security. This makes it a great choice for users who need flexibility with external devices. For sound, the system features Realtek ALC269 audio, ensuring clear and immersive audio output whether you're in meetings or watching videos. The Intel Core i5-13th Gen includes an AC adapter, power cord, VESA bracket, and cable clip, making setup simple and convenient. Compact yet powerful, the Asus NUC 13 Pro Intel Core i5-13th Gen Portable Mini Pc makes it easy to fit into tight spaces without compromising performance. Whether you're using it in an office, a creative workspace, or at home, this mini PC is built for efficiency and reliability.</p><h2>Buy Asus NUC 13 Pro Core i5 13th Gen Mini PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus NUC 13 Pro Core i5 13th Gen Mini PC</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-mini-pc\" target=\"\">Asus Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Asus NUC 13 Pro Core i5 13th Gen Mini PC comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NUC 13 Pro</li><li>Processor: Intel Core i5 13420H Processor, cTDP 45W</li><li>RAM: 8GB DDR4 3200Hz, Storage: 256GB NVME SSD</li><li>Graphics: Intel Iris Xe Graphics</li><li>WLAN: Intel Wi-Fi 6E (Gig+), Bluetooth 5.2</li></ul>",
+      "model": "NUC 13 Pro",
+      "warranty": "3 years",
+      "basePrice": 80000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.502,
+      "dimensions": {
+        "length": 117.0,
+        "width": 112.0,
+        "height": 37.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "8GB 3200Mhz DDR4 Laptop RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "256GB NVMe SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47072",
+          "price": 80000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "8GB 3200Mhz DDR4 Laptop RAM",
+            "Storage": "256GB NVMe SSD",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 76800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel Core i5-13420H Processor, cTDP 45W",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "8GB 3200Mhz DDR4 Laptop RAM",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Integrated, Intel Iris Xe Graphics",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "256GB NVMe SSD",
+              "position": 3
+            },
+            {
+              "label": "Audio",
+              "value": "Realtek ALC269",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Intel Wi-Fi 6E (Gig+), Bluetooth 5.2 Intel Ethernet Controller I226-V, 2.5G",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Front & Side I/O:\"2 x USB 3.2 Gen2 Type-A 1 x 3.5mm Headset Jack 1 x Kensington Lock\" Back I/O:\"2 x Thunderbolt 4 Type-C w/ DisplayPort 1.4 1 x USB 3.2 Gen 2 Type-A 1 x USB 2.0 Type-A 2 x HDMI 2.1 (TMDS) 1 x RJ45 LAN 1 x DC-in\"",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "117 x 112 x 37 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "502g",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-nuc-13-pro-core-i5-mini-pc",
+      "sourceProductCode": "47072",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NUC 13 Pro",
+        "Processor: Intel Core i5 13420H Processor, cTDP 45W",
+        "RAM: 8GB DDR4 3200Hz, Storage: 256GB NVME SSD",
+        "Graphics: Intel Iris Xe Graphics",
+        "WLAN: Intel Wi-Fi 6E (Gig+), Bluetooth 5.2"
+      ],
+      "needsReview": false,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i5-mini-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-core-i5-mini-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-nuc-13-pro-core-i5-mini-pc",
+        "candidateTitle": "Asus NUC 13 Pro Core i5 13th Gen Mini PC With RAM & SSD",
+        "attemptStem": "asus-nuc-13-pro-core-i5-mini-pc"
+      }
+    },
+    {
+      "name": "Asus NUC 13 Pro Core i7 13th Gen Portable Mini PC",
+      "slug": "asus-nuc-13-pro-portable-mini-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-46186",
+      "description": "<h2>Asus NUC 13 Pro Core i7 13th Gen Portable Mini PC</h2><p>The Asus <strong>NUC 13 Pro</strong> Core i7 13th Gen <a href=\"https://www.startech.com.bd/desktops/portable-mini-pc\" style=\"color: rgb(0, 0, 0);\" target=\"\">Portable Mini PC</a> is a professional-grade computer with a small design. This Asus Mini PC, powered by an Intel Core i7-13620H processor with a variable TDP of 45W, delivers seamless multitasking, quicker processing speeds, and exceptional efficiency for activities such as content creation, data analysis, and business computing. The integrated chipset and Intel Iris Xe Graphics provide smooth visual performance, making the Asus NUC 13 Pro Portable Mini PC suitable for both productivity and enjoyment. This ASUS Portable Mini PC offers up to 64GB of DDR4-3200 memory via two SO-DIMM slots, allowing users to easily boost multitasking capabilities. The ASUS Mini PC has an M.2 2280 PCIe Gen4x4 slot that supports NVMe SSDs ranging from 128GB to 8TB, ensuring fast boot times and enough of storage for demanding workloads. Connectivity is a vital feature of the Asus NUC 13 Pro Core i7 13th Gen Portable Mini PC, with Intel Wi-Fi 6E and Bluetooth 5.2 for high-speed wireless communication and Intel I226-V 2.5G Ethernet for reliable wired networking. The front and side I/O interfaces have two USB 3.2 Gen2 Type-A connectors, a 3.5mm headphone jack, and a Kensington lock for enhanced protection. The Asus NUC 13 Pro Core i7 13th Gen Mini PC's back panel includes two Thunderbolt 4 Type-C connections with DisplayPort 1.4 support, one USB 3.2 Gen2 Type-A, one USB 2.0, dual HDMI 2.1 ports, RJ45 LAN, and DC-in. With Realtek ALC269 audio for great sound and FreeDOS pre-installed, the Asus NUC 13 Pro Portable Mini PC is ideal for small workstations, digital workplaces, and residential installations.</p><h2>Buy Asus NUC 13 Pro Core i7 13th Gen Portable Mini PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus NUC 13 Pro Core i7 13th Gen Portable Mini PC</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-mini-pc\" target=\"\">Asus Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Asus NUC 13 Pro Core i7 13th Gen Portable Mini PC comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NUC 13 Pro</li><li>Processor: Intel Core i7-13620H Processor, cTDP 45W</li><li>RAM: 2 x SO-DIMM, Up to DDR4-3200, 32GB*2 (Support)</li><li>Storage: 1 x M.2 2280 PCIe Gen4x4, 128GB~8TB NVMe SSD (Support)</li><li>WLAN: Intel Wi-Fi 6E (Gig+), Bluetooth 5.2, LAN: Intel Ethernet Controller I226-V, 2.5G</li></ul>",
+      "model": "NUC 13 Pro",
+      "warranty": "3 years",
+      "basePrice": 78000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.502,
+      "dimensions": {
+        "length": 117.0,
+        "width": 112.0,
+        "height": 37.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 x SO-DIMM, Up to DDR4-3200, 32GB*2 (Support)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "1 x M.2 2280 PCIe Gen4x4, supports 128GB~8TB NVMe SSD (Support)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-46186",
+          "price": 78000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "2 x SO-DIMM, Up to DDR4-3200, 32GB*2 (Support)",
+            "Storage": "1 x M.2 2280 PCIe Gen4x4, supports 128GB~8TB NVMe SSD (Support)",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 74880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel Core i7-13620H Processor, cTDP 45W",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "2 x SO-DIMM, Up to DDR4-3200, 32GB*2 (Support)",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Integrated, Intel Iris Xe Graphics",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "1 x M.2 2280 PCIe Gen4x4, supports 128GB~8TB NVMe SSD (Support)",
+              "position": 3
+            },
+            {
+              "label": "Audio",
+              "value": "Realtek ALC269",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Intel Wi-Fi 6E (Gig+), Bluetooth 5.2 Intel Ethernet Controller I226-V, 2.5G",
+              "position": 5
+            },
+            {
+              "label": "Operating System",
+              "value": "FreeDOS",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Front & Side I/O 2 x USB 3.2 Gen2 Type-A 1 x 3.5mm Headset Jack 1 x Kensington Lock Back I/O 2 x Thunderbolt 4 Type-C w/ DisplayPort 1.4 1 x USB 3.2 Gen 2 Type-A 1 x USB 2.0 Type-A 2 x HDMI 2.1 (TMDS) 1 x RJ45 LAN 1 x DC-in",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "117 x 112 x 37 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "502g",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-nuc-13-pro-portable-mini-pc",
+      "sourceProductCode": "46186",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NUC 13 Pro",
+        "Processor: Intel Core i7-13620H Processor, cTDP 45W",
+        "RAM: 2 x SO-DIMM, Up to DDR4-3200, 32GB*2 (Support)",
+        "Storage: 1 x M.2 2280 PCIe Gen4x4, 128GB~8TB NVMe SSD (Support)",
+        "WLAN: Intel Wi-Fi 6E (Gig+), Bluetooth 5.2, LAN: Intel Ethernet Controller I226-V, 2.5G"
+      ],
+      "needsReview": false,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-portable-mini-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-nuc-13-pro-portable-mini-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-nuc-13-pro-portable-mini-pc",
+        "candidateTitle": "Asus NUC 13 Pro Core i7 13th Gen Portable Mini PC",
+        "attemptStem": "asus-nuc-13-pro-portable-mini-pc"
+      }
+    },
+    {
+      "name": "Asus Nuc 14 Essential Core 3 N355 Portable Mini PC With RAM & SSD",
+      "slug": "asus-nuc-14-essential-core-3-mini-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-47087",
+      "description": "<h2>Asus Nuc 14 Essential Core 3 N355 Portable Mini PC With RAM &amp; SSD</h2><p>The Asus <strong>Nuc 14 Essential</strong> Core 3 N355 <a href=\"https://www.startech.com.bd/desktops/portable-mini-pc\" style=\"color: rgb(0, 0, 0);\" target=\"\">Mini PC</a> is powered by an Intel Core 3-N355 processor with a 15W TDP and provides smooth performance for office work, surfing, media playback, and lightweight multitasking. This Asus Nuc 14 Essential Core 3 Portable Mini PC has 8GB of 5600MHz DDR5 RAM for speedy operation, while the 256GB NVMe SSD offers fast boot-up and app loading. With Intel UHD Graphics, users can enjoy clear images for productivity and entertainment, making the Asus Nuc 14 Essential Mini PC suitable for both home and office use. The system also has Realtek ALC269 audio, which provides clear and immersive sound during calls and streaming. The Asus Nuc 14 Essential Core 3 N355 Portable Mini PC boasts excellent connectivity, with Intel Wi-Fi 6E (Gig+), Bluetooth 5.2, and a 2.5G Intel Ethernet Controller I226-V/LM assuring robust wireless and cable networking. On the front and side, the Asus Portable Mini PC has two USB 3.2 Gen 2 Type-A ports, a 3.5mm headset jack, and a Kensington lock slot for further protection. The back ports provide tremendous adaptability, with two Thunderbolt 4 Type-C connectors that enable DisplayPort 1.4, allowing for high-resolution external displays. The Asus Nuc 14 Essential Core 3 N355 Portable Mini PC comes equipped with one USB 3.2 Gen 2 Type-A, one USB 2.0 Type-A, two HDMI 2.1 (TMDS) ports, an RJ45 LAN port, and a DC-in connector.</p><h2>Buy Asus Nuc 14 Essential Core 3 N355 Portable Mini PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus Nuc 14 Essential Core 3 N355 Portable Mini PC</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-mini-pc\" target=\"\">Asus Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Asus Nuc 14 Essential Core 3 N355 Portable Mini PC comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NUC 14 Essential</li><li>Processor: Intel Core 3 N355</li><li>RAM: 8GB DDR5 5600MHz, Storage: 256GB NVME SSD</li><li>Graphics: Integrated, Intel Graphics</li><li>WLAN: Intel Wi-Fi 6E AX211 (Gig+), Bluetooth 5.3</li></ul>",
+      "model": "NUC 14 Essential",
+      "warranty": "3 years",
+      "basePrice": 63500.0,
+      "originalPrice": 68750.0,
+      "currency": "BDT",
+      "weight": 0.47,
+      "dimensions": {
+        "length": 135.0,
+        "width": 115.0,
+        "height": 36.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "8GB DDR5 5600MHz Laptop RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "256GB NVME SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47087",
+          "price": 63500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "8GB DDR5 5600MHz Laptop RAM",
+            "Storage": "256GB NVME SSD",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 60960.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel Core 3-N355 Processor, TDP 15W",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "8GB DDR5 5600MHz Laptop RAM",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Integrated, Intel Graphics",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "256GB NVME SSD",
+              "position": 3
+            },
+            {
+              "label": "Audio",
+              "value": "Realtek ALC3251",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Intel Wi-Fi 6E AX211 (Gig+), Bluetooth 5.3 1 x Realtek Ethernet Controller RTL8125BG-CG, 2.5G",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Front & Side I/O: 1 x USB 3.2 Gen2 Type-C 2 x USB 3.2 Gen2 Type-A 1 x 3.5mm Headset Jack 1 x Kensington Lock Back I/O: 1 x USB 3.2 Gen2 Type-C w/ DisplayPort 1.4 2 x USB 3.2 Gen 2 Type-A 1 x USB 2.0 Type-A 1 x HDMI 2.1 (TMDS) 1 x DisplayPort 1.4 1 x RJ45 LAN 1 x DC-in",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "135mm x 115mm x 36mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "470g",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-nuc-14-essential-core-3-mini-pc",
+      "sourceProductCode": "47087",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NUC 14 Essential",
+        "Processor: Intel Core 3 N355",
+        "RAM: 8GB DDR5 5600MHz, Storage: 256GB NVME SSD",
+        "Graphics: Integrated, Intel Graphics",
+        "WLAN: Intel Wi-Fi 6E AX211 (Gig+), Bluetooth 5.3"
+      ],
+      "needsReview": false,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-14-essential-core-3-mini-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-nuc-14-essential-core-3-mini-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-nuc-14-essential-core-3-mini-pc",
+        "candidateTitle": "Asus Nuc 14 Essential Core 3 N355 Portable Mini PC With RAM & SSD",
+        "attemptStem": "asus-nuc-14-essential-core-3-mini-pc"
+      }
+    },
+    {
+      "name": "Asus Nuc 14 Essential Core 3 N355 Portable Mini Pc",
+      "slug": "asus-nuc-14-essential-core-3-n355-mini-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-41825",
+      "description": "<h2>Asus Nuc 14 Essential Core 3 N355 Mini Pc</h2><p>The Asus <strong>Nuc 14 Essential</strong> Intel Core 3 N355 <a href=\"https://www.startech.com.bd/desktops/portable-mini-pc\" style=\"color: rgb(0, 0, 0);\" target=\"\">Mini Pc</a> is built for energy economy and dependable performance, making it suitable for both personal and business applications. With a low TDP of 15W, this CPU offers minimal power consumption while providing smooth performance for common computer applications like as surfing, office software, and media playing. The integrated Intel Graphics enables seamless visual processing, resulting in crisp visuals and fluid rendering for both business and entertainment applications. Connectivity is a noteworthy feature, with Intel Wi-Fi 6E AX211 (Gig+) providing high-speed wireless internet access with low latency, assuring consistent network performance. Bluetooth 5.3 improves device pairing efficiency, allowing users to connect peripherals like wireless keyboards, headphones, and speakers with ease. The Realtek Ethernet Controller RTL8125BG-CG allows wired connections. Whether you're connecting gadgets or using high-speed internet, you can anticipate a flawless experience. The Realtek 2.5G Ethernet controller enables quick data flow for wired connections, eliminating latency in both business and household environments. The Asus Nuc 14 Essential Mini Pc is designed for adaptability, with several ports to accommodate a variety of devices. Using USB 3.2 Gen2 Type-C and Type-A connectors, file transfers are rapid and efficient. HDMI 2.1 and DisplayPort 1.4 support high-resolution display output, making presentations, video streaming, and multitasking more pleasurable. A 3.5mm headset connector delivers good audio for conversation and enjoyment, and the Kensington Lock provides an added degree of protection. Realtek ALC3251 improves audio quality, providing clear and immersive sound whether on a video chat or listening to music. The Asus Nuc 14 Essential Intel Core 3 N355 includes an AC adapter and power wire for easy installation, a VESA bracket for flexible mounting choices, and necessary safety and warranty papers for peace of mind. With its performance, connection, and intelligent design, this system is a solid choice for professionals, students, and casual users. Whether it's everyday productivity or enjoyment, it's intended to meet current computing demands while assuring efficiency and simplicity of use.</p><h3>Efficient Performance with Low Power Consumption</h3><p>The Intel Core 3 N355 processor, featured in the Asus Nuc 14 Essential Mini PC, is designed for efficient everyday computing with a low 15W TDP to ensure power-saving performance. Built on the Alder Lake-N architecture, it has 8 cores and a turbo boost of up to 3.9 GHz, allowing for seamless multitasking for office work, online surfing, and media streaming. The integrated Intel UHD Graphics 770 enables three 4K screens, making it perfect for productive settings. It supports DDR4, DDR5, and LPDDR5 memory, as well as PCIe Gen 3 connection, allowing for faster data throughput and responsiveness. Perfect for small workstations, its power economy, adaptable connection, and dependable performance make it a perfect choice for home and business use.</p><h3>Multitask with Triple Display Support​</h3><p>The Asus Nuc 14 Essential Intel Core 3 N355 Mini PC is intended for efficient multitasking and can accommodate up to three 4K screens in a 0.56L chassis. Whether you're running software, working in meetings, or streaming immersive films, this small PC delivers low latency, optimal battery usage, and seamless data transmission. Its capacity to support numerous displays makes it ideal for productivity, education, and entertainment. The Asus Nuc 14 Essential, with its compact design and excellent performance, provides a diverse computing experience that improves work and leisure efficiency. Stay connected, work smarter, and experience breathtaking images effortlessly.</p><h2>Buy Asus Nuc 14 Essential Core 3 N355 Mini Pc from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus Nuc 14 Essential Core 3 N355 Mini Pc</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-mini-pc\" target=\"\">Asus Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Asus Nuc 14 Essential Core 3 N355 Mini Pc comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NUC 14 Essential</li><li>Processor: Intel Core 3 N355</li><li>Graphics: Integrated, Intel Graphics</li><li>WLAN: Intel Wi-Fi 6E AX211 (Gig+), Bluetooth 5.3</li><li>LAN: 1 x Realtek Ethernet Controller RTL8125BG-CG, 2.5G</li></ul>",
+      "model": "NUC 14 Essential",
+      "warranty": "3 years",
+      "basePrice": 40000.0,
+      "originalPrice": 42000.0,
+      "currency": "BDT",
+      "weight": 0.47,
+      "dimensions": {
+        "length": 135.0,
+        "width": 115.0,
+        "height": 36.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "Supported DDR5 Laptop RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "Supported NVME SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-41825",
+          "price": 40000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "Supported DDR5 Laptop RAM",
+            "Storage": "Supported NVME SSD",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 38400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel Core 3-N355 Processor, TDP 15W",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "Supported DDR5 Laptop RAM",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Integrated, Intel Graphics",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "Supported NVME SSD",
+              "position": 3
+            },
+            {
+              "label": "Audio",
+              "value": "Realtek ALC3251",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Intel® Wi-Fi 6E AX211 (Gig+), Bluetooth 5.3 1 x Realtek Ethernet Controller RTL8125BG-CG, 2.5G",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Front & Side I/O:1 x USB 3.2 Gen2 Type-C 2 x USB 3.2 Gen2 Type-A 1 x 3.5mm Headset Jack 1 x Kensington Lock Back I/O:\"1 x USB 3.2 Gen2 Type-C w/ DisplayPort 1.4 2 x USB 3.2 Gen 2 Type-A 1 x USB 2.0 Type-A 1 x HDMI 2.1 (TMDS) 1 x DisplayPort 1.4 1 x RJ45 LAN 1 x DC-in\"",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "135mm x 115mm x 36mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "470g",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-nuc-14-essential-core-3-n355-mini-pc",
+      "sourceProductCode": "41825",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NUC 14 Essential",
+        "Processor: Intel Core 3 N355",
+        "Graphics: Integrated, Intel Graphics",
+        "WLAN: Intel Wi-Fi 6E AX211 (Gig+), Bluetooth 5.3",
+        "LAN: 1 x Realtek Ethernet Controller RTL8125BG-CG, 2.5G"
+      ],
+      "needsReview": false,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-14-essential-core-3-n355-mini-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-nuc-14-essential-core-3-n355-mini-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-nuc-14-essential-core-3-n355-mini-pc",
+        "candidateTitle": "Asus Nuc 14 Essential Core 3 N355 Portable Mini Pc",
+        "attemptStem": "asus-nuc-14-essential-core-3-n355-mini-pc"
+      }
+    },
+    {
+      "name": "Asus NUC 14 Essential Intel N97 Portable Mini PC",
+      "slug": "asus-nuc-14-essential-mini-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-46188",
+      "description": "<h2>Asus NUC 14 Essential Intel N97 Portable Mini PC</h2><p>The Asus <strong>NUC 14 Essential</strong> Intel N97 <a href=\"https://www.startech.com.bd/desktops/portable-mini-pc\" style=\"color: rgb(0, 0, 0);\" target=\"\">Portable Mini PC</a> is powered by the Intel Processor N97, which has a 12W adjustable TDP. The Asus Portable Mini PC offers smooth multitasking and dependable performance without producing excessive heat, making it perfect for businesses, educational settings, and home entertainment systems. This Asus NUC 14 Essential Mini PC supports up to 16GB DDR5-4800 via a single SO-DIMM slot, resulting in better responsiveness and increased system economy. It has an M.2 2280/2242 PCIe Gen3x4 slot that supports both NVMe and SATA SSDs, allowing customers to upgrade from 128GB to 2TB for seamless performance. The Asus NUC 14 Essential Intel N97 Portable Mini PC is designed to handle a wide range of connectivity options, including Intel Wi-Fi 6E AX211 and Bluetooth 5.3 for fast wireless communication and Realtek 2.5G Ethernet for reliable wired connections. The ASUS Portable Mini PC's front and side I/O include a USB 3.2 Gen2 Type-C connector, two USB 3.2 Gen2 Type-A ports, a 3.5mm headset jack, and a Kensington lock for enhanced protection. This ASUS Mini PC's back panel contains USB 3.2 Gen2 Type-C with DisplayPort 1.4 support, two USB 3.2 Gen2 Type-A, one USB 2.0, HDMI 2.1, DisplayPort 1.4, RJ45 LAN, and DC-in ports, providing a wide range of display and peripheral connectivity options. The Asus NUC 14 Essential Intel N97 Mini PC has dual-display output, making it suitable for both productivity and multimedia needs. It runs FreeDOS and is equipped with Realtek ALC3251 audio for clear and consistent sound.</p><h2>Buy Asus NUC 14 Essential Intel N97 Portable Mini PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>Asus NUC 14 Essential Intel N97 Portable Mini PC</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-mini-pc\" target=\"\">Asus Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Asus NUC 14 Essential Intel N97 Portable Mini PC comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NUC 14 Essential</li><li>Processor: Intel Processor N97, cTDP 12W</li><li>RAM: 1 x SO-DIMM, Up to DDR5-4800, 16GB*1 (Support)</li><li>1 x M.2 2280/2242 PCIe Gen3x4, 128GB~2TB NVMe or SATA SSD (Support)</li><li>WLAN: Intel Wi-Fi 6E AX211 (Gig+), Bluetooth 5.3</li></ul>",
+      "model": "NUC 14 Essential",
+      "warranty": "3 years",
+      "basePrice": 27000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.48,
+      "dimensions": {
+        "length": 135.0,
+        "width": 115.0,
+        "height": 36.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 x SO-DIMM, Up to DDR5-4800, 16GB*1 (Support)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "1 x M.2 2280/2242 PCIe Gen3x4, supports 128GB~2TB NVMe or SATA SSD (Support)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-46188",
+          "price": 27000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "1 x SO-DIMM, Up to DDR5-4800, 16GB*1 (Support)",
+            "Storage": "1 x M.2 2280/2242 PCIe Gen3x4, supports 128GB~2TB NVMe or SATA SSD (Support)",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 25920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel Processor N97, cTDP 12W",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "1 x SO-DIMM, Up to DDR5-4800, 16GB*1 (Support)",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Integrated, Intel Graphics",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "1 x M.2 2280/2242 PCIe Gen3x4, supports 128GB~2TB NVMe or SATA SSD (Support)",
+              "position": 3
+            },
+            {
+              "label": "Audio",
+              "value": "Realtek ALC3251",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Intel Wi-Fi 6E AX211 (Gig+), Bluetooth 5.3 1 x Realtek Ethernet Controller RTL8125BG-CG, 2.5G",
+              "position": 5
+            },
+            {
+              "label": "Operating System",
+              "value": "FreeDOS",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Front & Side I/O 1 x USB 3.2 Gen2 Type-C 2 x USB 3.2 Gen2 Type-A 1 x 3.5mm Headset Jack 1 x Kensington Lock Back I/O 1 x USB 3.2 Gen2 Type-C w/ DisplayPort 1.4 2 x USB 3.2 Gen 2 Type-A 1 x USB 2.0 Type-A 1 x HDMI 2.1 (TMDS) 1 x DisplayPort 1.4 1 x RJ45 LAN 1 x DC-in",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "135mm x 115mm x 36mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "480g (0.48kg)",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-nuc-14-essential-mini-pc",
+      "sourceProductCode": "46188",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NUC 14 Essential",
+        "Processor: Intel Processor N97, cTDP 12W",
+        "RAM: 1 x SO-DIMM, Up to DDR5-4800, 16GB*1 (Support)",
+        "1 x M.2 2280/2242 PCIe Gen3x4, 128GB~2TB NVMe or SATA SSD (Support)",
+        "WLAN: Intel Wi-Fi 6E AX211 (Gig+), Bluetooth 5.3"
+      ],
+      "needsReview": false,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-14-essential-mini-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-nuc-14-essential-mini-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-nuc-14-essential-mini-pc",
+        "candidateTitle": "Asus NUC 14 Essential Intel N97 Portable Mini PC",
+        "attemptStem": "asus-nuc-14-essential-mini-pc"
+      }
+    },
+    {
+      "name": "ASUS NUC 15 Pro Core 5 210H Portable Mini PC",
+      "slug": "asus-nuc-15-pro-core-5-210h-mini-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-50661",
+      "description": "<h2>ASUS NUC 15 Pro Core 5 210H Portable Mini PC</h2><p>The <strong>ASUS NUC 15 Pro Core 5 210H Portable Mini PC</strong> is a compact computing solution built for performance and efficiency. Powered by the Intel Core 5 210H processor with a cTDP of 25W, it ensures smooth multitasking while conserving energy. Integrated Intel Graphics delivers reliable visuals for work and entertainment. With support for up to 96GB DDR5-5600 RAM and M.2 PCIe Gen4 NVMe SSD storage expandable to 8TB, this mini PC offers remarkable flexibility for professionals, creators, and tech enthusiasts. Its small footprint makes it a smart choice for those seeking high performance in limited space.</p><p>The ASUS NUC 15 Pro Core 5 Mini PC comes with advanced connectivity options, including Wi-Fi 7, Bluetooth 5.4, and 2.5G LAN for fast networking. Dual Thunderbolt 4 ports, HDMI 2.1, and multiple USB connections provide seamless integration with peripherals and displays. This ensures smooth multitasking and reliable data transfer across devices. The inclusion of Kensington Lock adds security, making it suitable for both office and home setups.</p><p>Whether handling professional workloads, creative projects, or streaming, it balances speed and efficiency. The ASUS NUC 15 Pro Core 5 Mini PC is crafted for users who demand consistent computing power. Its advanced memory and storage support allow users to expand according to their requirements, ensuring long-term usability. The FreeDOS operating system offers flexibility for installing preferred software environments.</p><p>Accessories such as the AC adapter, VESA bracket, screws, and cable clip enhance usability and installation convenience. With its compact design, robust specifications, and strong connectivity, the ASUS NUC 15 Pro Core 5 Mini PC stands out as a smart solution for modern computing. It is a reliable option for those who want performance, adaptability, and space-saving design in one package.</p><h2>Buy ASUS NUC 15 Pro Core 5 210H Portable Mini PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>ASUS NUC 15 Pro Core 5 210H Portable Mini PC</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-mini-pc\" target=\"\">Asus Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The ASUS NUC 15 Pro Core 5 210H Portable Mini PC comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NUC 15 Pro</li><li>Processor: Intel Core 5 Processor 210H Processor, cTDP 25W</li><li>RAM: 2 x SO-DIMM, Up to DDR5 5600, 48GBx2 (Support)</li><li>Storage: 1 x M.2 2280 PCIe Gen4x4, 128GB~8TB NVMe SSD (Support)</li><li>WLAN: Intel Wi-Fi 7 BE202, Bluetooth 5.4, LAN: Intel Ethernet Controller I226-LM, 2.5G</li></ul>",
+      "model": "NUC 15 Pro",
+      "warranty": "3 years",
+      "basePrice": 63500.0,
+      "originalPrice": 69000.0,
+      "currency": "BDT",
+      "weight": 0.502,
+      "dimensions": {
+        "length": 117.0,
+        "width": 112.0,
+        "height": 37.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 x SO-DIMM, Up to DDR5 5600, 48GBx2 (Support)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "1 x M.2 2280 PCIe Gen4x4, supports 128GB~8TB NVMe SSD (Support)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-50661",
+          "price": 63500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "2 x SO-DIMM, Up to DDR5 5600, 48GBx2 (Support)",
+            "Storage": "1 x M.2 2280 PCIe Gen4x4, supports 128GB~8TB NVMe SSD (Support)",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 60960.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel Core 5 Processor 210H Processor, cTDP 25W",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "2 x SO-DIMM, Up to DDR5 5600, 48GBx2 (Support)",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Integrated, Intel Graphics",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "1 x M.2 2280 PCIe Gen4x4, supports 128GB~8TB NVMe SSD (Support)",
+              "position": 3
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Intel Wi-Fi 7 BE202, Bluetooth 5.4 Intel Ethernet Controller I226-V, 2.5G",
+              "position": 4
+            },
+            {
+              "label": "Operating System",
+              "value": "FreeDOS",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Front & Side I/O 1 x USB 3.2 Gen2x2 Type-C 2 x USB 3.2 Gen2 Type-A 1 x Kensington Lock (Side) Back I/O 2 x HDMI 2.1 TMDS Compatible (4K@60Hz) 2 x Thunderbolt 4 ports (incl. DP 2.1 and USB4) 1 x USB 3.2 Gen2 Type-A 1 x USB 2.0 Type-A 1 x RJ45 LAN 1 x DC-in",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "117 x 112 x 37 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "502g",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-nuc-15-pro-core-5-210h-mini-pc",
+      "sourceProductCode": "50661",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NUC 15 Pro",
+        "Processor: Intel Core 5 Processor 210H Processor, cTDP 25W",
+        "RAM: 2 x SO-DIMM, Up to DDR5 5600, 48GBx2 (Support)",
+        "Storage: 1 x M.2 2280 PCIe Gen4x4, 128GB~8TB NVMe SSD (Support)",
+        "WLAN: Intel Wi-Fi 7 BE202, Bluetooth 5.4, LAN: Intel Ethernet Controller I226-LM, 2.5G"
+      ],
+      "needsReview": false,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-15-pro-core-5-210h-mini-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-nuc-15-pro-core-5-210h-mini-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-nuc-15-pro-core-5-210h-mini-pc",
+        "candidateTitle": "ASUS NUC 15 Pro Core 5 210H Portable Mini PC",
+        "attemptStem": "asus-nuc-15-pro-core-5-210h-mini-pc"
+      }
+    },
+    {
+      "name": "ASUS NUC 15 Pro Core i3 13th Gen Portable Mini PC",
+      "slug": "asus-nuc-15-pro-core-i3-13th-gen-mini-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-50663",
+      "description": "<h2>ASUS NUC 15 Pro Core i3 13th Gen Portable Mini PC</h2><p>The <strong>ASUS NUC 15 Pro Core i3 13th Gen Portable Mini PC</strong> is a compact powerhouse designed for modern computing needs. Powered by the Intel Core i3-1315U processor and integrated Intel UHD Graphics, it delivers smooth performance for work, streaming, and multitasking. With support for up to 96GB DDR5-5200 RAM and storage capacity reaching 8TB via M.2 PCIe Gen4 NVMe SSD, this mini PC ensures speed and efficiency. Its advanced connectivity options, including Wi-Fi 6E, Bluetooth 5.2, and 2.5G LAN, make it a strong choice for professionals and home users seeking reliable performance in a small form factor.</p><p>Connectivity is a highlight of the ASUS NUC 15 Pro Core i3 Mini PC. It features Thunderbolt 4 ports, HDMI 2.1, and multiple USB 3.2 Gen2 slots, offering seamless integration with peripherals and displays. The inclusion of a Kensington Lock adds security, while the VESA bracket allows flexible mounting. Whether used for office productivity, entertainment, or light creative tasks, this mini PC adapts to diverse requirements with ease.</p><p>Storage and memory expansion are straightforward with dual SO-DIMM slots supporting up to 48GB each and a PCIe Gen4x4 slot for NVMe SSDs. This ensures users can tailor the system to their workload, from basic tasks to demanding applications. The ASUS NUC 15 Pro Core i3 Mini PC has Intel Ethernet Controller I226-V provides stable wired connections, while wireless options keep devices connected without interruption.</p><p>Compact yet powerful, the ASUS NUC 15 Pro Core i3 Mini PC is crafted for those who value efficiency and adaptability. Its blend of performance, connectivity, and expandability makes it a smart solution for modern computing setups. With FreeDOS included, users have the flexibility to install their preferred operating system, ensuring a personalized experience from the start.</p><h2>Buy ASUS NUC 15 Pro Core i3 13th Gen Portable Mini PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>ASUS NUC 15 Pro Core i3 13th Gen Mini PC</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/asus-mini-pc\" target=\"\">Asus Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The ASUS NUC 15 Pro Core i3 13th Gen Portable Mini PC comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: NUC 15 Pro</li><li>Processor: Intel Core i3-1315U Processor</li><li>RAM: 2 x SO-DIMM Slots Support Up to DDR5-5200 (48GB*2)</li><li>Storage: 1 x M.2 2280 PCIe Gen4x4, 128GB~8TB NVMe SSD (Support)</li><li>WLAN: Intel Wi-Fi 6E, Bluetooth 5.2, LAN: Intel Ethernet Controller 2.5G</li></ul>",
+      "model": "NUC 15 Pro",
+      "warranty": "3 years",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.502,
+      "dimensions": {
+        "length": 117.0,
+        "width": 112.0,
+        "height": 37.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 x SO-DIMM Slots Support Up to DDR5-5200 (48GB*2)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "1 x M.2 2280 PCIe Gen4x4, supports 128GB~8TB NVMe SSD (Support)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-50663",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "2 x SO-DIMM Slots Support Up to DDR5-5200 (48GB*2)",
+            "Storage": "1 x M.2 2280 PCIe Gen4x4, supports 128GB~8TB NVMe SSD (Support)",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel Core i3-1315U Processor",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "2 x SO-DIMM Slots Support Up to DDR5-5200 (48GB*2)",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Integrated, Intel UHD Graphics",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "1 x M.2 2280 PCIe Gen4x4, supports 128GB~8TB NVMe SSD (Support)",
+              "position": 3
+            },
+            {
+              "label": "Power Supply",
+              "value": "90W Adapter",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Intel Wi-Fi 6E Bluetooth 5.4 Intel Ethernet Controller I226-V, 2.5G",
+              "position": 5
+            },
+            {
+              "label": "Operating System",
+              "value": "FreeDOS",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Front & Side I/O 1 x USB 3.2 Gen2x2 Type-C 2 x USB 3.2 Gen2 Type-A 1 x Kensington Lock (Side) Back I/O 2 x HDMI 2.1 TMDS Compatible (4K@60Hz) 2 x Thunderbolt 4 ports (incl. DP 2.1 and USB4) 1 x USB 3.2 Gen2 Type-A 1 x USB 2.0 Type-A 1 x RJ45 LAN 1 x DC-in",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "117 x 112 x 37 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "502g",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-nuc-15-pro-core-i3-13th-gen-mini-pc",
+      "sourceProductCode": "50663",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: NUC 15 Pro",
+        "Processor: Intel Core i3-1315U Processor",
+        "RAM: 2 x SO-DIMM Slots Support Up to DDR5-5200 (48GB*2)",
+        "Storage: 1 x M.2 2280 PCIe Gen4x4, 128GB~8TB NVMe SSD (Support)",
+        "WLAN: Intel Wi-Fi 6E, Bluetooth 5.2, LAN: Intel Ethernet Controller 2.5G"
+      ],
+      "needsReview": true,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-nuc-15-pro-core-i3-13th-gen-mini-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-nuc-15-pro-core-i3-13th-gen-mini-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-nuc-15-pro-core-i3-13th-gen-mini-pc",
+        "candidateTitle": "ASUS NUC 15 Pro Core i3 13th Gen Portable Mini PC",
+        "attemptStem": "asus-nuc-15-pro-core-i3-13th-gen-mini-pc"
+      }
+    },
+    {
+      "name": "ASUS ROG NUC Core Ultra 9 275HX RTX 5070Ti 12GB Graphics Mini Gaming PC",
+      "slug": "asus-rog-nuc-core-ultra-9-275hx-mini-gaming-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-44714",
+      "description": "<h2>ASUS ROG NUC Core Ultra 9 275HX RTX 5070Ti 12GB Graphics Mini Gaming PC</h2><p>The ASUS <strong>ROG NUC Core</strong> Ultra 9 Mini Gaming PC is a next-gen compact powerhouse built for gamers, creators, and professionals who demand elite performance in a portable form factor. Equipped with the Intel Core Ultra 9 275HX processor, this ASUS Core Ultra 9 Mini PC features a 24-core hybrid architecture with boost speeds up to 5.4GHz, delivering exceptional responsiveness for gaming, rendering, and AI-driven workloads.</p><p>Graphics are handled by the NVIDIA GeForce RTX 5070Ti 12GB Laptop GPU, based on the cutting-edge NVIDIA Blackwell architecture. With support for DLSS 4, ray tracing, and AI-enhanced visuals, this ASUS RTX 5070Ti Mini PC offers immersive gameplay and accelerated creative performance. The system includes 16GB DDR5-6400 RAM and a 1TB PCIe 4.0 NVMe SSD, with upgrade support for up to 2TB PCIe 5.0 SSDs.</p><p>Connectivity is future-ready with Wi-Fi 7, Bluetooth 5.4, and 2.5G Ethernet, while the I/O setup includes Thunderbolt 4, USB4, HDMI 2.1, DisplayPort, and multiple USB 3.2 Gen2 ports—supporting up to five 4K displays. The ASUS ROG NUC PC also features a triple-fan cooling system with dual vapor chambers, ensuring optimal thermal performance with minimal noise.</p><p>Despite its high-end internals, the ASUS Mini Gaming PC maintains a sleek footprint at just 3.12kg, with tool-less access for easy upgrades and customizable RGB lighting. Pre-installed with Windows 11 Home and backed by a 3-year brand warranty, this ASUS Portable Gaming PC is the ultimate blend of performance, portability, and reliability for serious users in Bangladesh.</p><h2>Key Features – ASUS ROG NUC Core Ultra 9 Mini Gaming PC</h2><ul> <li><strong>Processor:</strong> Intel Core Ultra 9 275HX (24-core, up to 5.4GHz boost)</li> <li><strong>Graphics:</strong> NVIDIA GeForce RTX 5070Ti 12GB Laptop GPU (Blackwell architecture)</li> <li><strong>Memory:</strong> 16GB DDR5-6400 RAM (SO-DIMM, upgradeable)</li> <li><strong>Storage:</strong> 1TB PCIe 4.0 NVMe SSD (supports up to 2TB PCIe 5.0)</li> <li><strong>Cooling:</strong> Triple-fan system with dual vapor chambers</li> <li><strong>Connectivity:</strong> Wi-Fi 7, Bluetooth 5.4, 2.5G Ethernet</li> <li><strong>Ports:</strong> Thunderbolt 4, USB4, HDMI 2.1, DisplayPort, USB 3.2 Gen2</li> <li><strong>Display Support:</strong> Up to 5 simultaneous 4K displays</li> <li><strong>Design:</strong> Compact chassis (282.4mm x 187.7mm x 56.5mm), 3.12kg</li> <li><strong>Operating System:</strong> Windows 11 Home pre-installed</li> <li><strong>Warranty:</strong> 3-Year Brand Warranty</li></ul><h3>Powerful RTX 5070Ti GPU</h3><p>At the heart of the ASUS ROG NUC Core Ultra 9 Mini Gaming PC lies the powerful NVIDIA GeForce RTX 5070Ti 12GB Laptop GPU, built on the advanced Blackwell architecture. This cutting-edge graphics processor features fifth-generation Tensor Cores, fourth-generation Ray Tracing Cores, and new streaming multiprocessors designed to deliver ultra-realistic visuals and lightning-fast performance. With support for DLSS 4, the GPU uses AI to boost frame rates, enhance resolution, and reduce latency making it ideal for high-end gaming, 3D rendering, and creative workflows. Whether you're playing AAA titles or editing 4K video, this ASUS RTX 5070Ti Mini PC ensures smooth, immersive graphics that rival full-sized desktops</p><h2>Frequently Asked Questions – ASUS ROG NUC Core Ultra 9 Mini Gaming PC</h2><p><strong>Q1: Can I upgrade the RAM and SSD in the ASUS ROG NUC PC?</strong></p><p>Yes, the system supports up to 96GB DDR5 RAM and up to 2TB PCIe 5.0 SSDs, allowing for future expansion.</p><p><strong>Q2: What kind of GPU does the ASUS Mini Gaming PC use?</strong></p><p>It features the NVIDIA GeForce RTX 5070Ti 12GB Laptop GPU, built on the Blackwell architecture with support for DLSS 4 and ray tracing.</p><p><strong>Q3: Is this ASUS Portable Gaming PC suitable for creative work?</strong></p><p>Absolutely. With powerful CPU and GPU performance, it’s ideal for 3D rendering, video editing, and AI-based tasks.</p><p><strong>Q4: How many displays can I connect to the ASUS ROG NUC?</strong></p><p>You can connect up to five 4K displays simultaneously using HDMI, DisplayPort, and Thunderbolt 4 ports.</p><p><strong>Q5: Does the ASUS Core Ultra 9 Mini PC support Wi-Fi 7?</strong></p><p>Yes, it includes Intel Killer Wi-Fi 7 for ultra-fast, low-latency wireless connectivity.</p><p><strong>Q6: What cooling system is used in this mini PC?</strong></p><p>It features a triple-fan setup with dual vapor chambers for efficient and quiet thermal management.</p><p><strong>Q7: Is Windows pre-installed on the ASUS ROG NUC?</strong></p><p>Yes, it comes with Windows 11 Home pre-installed and ready to use out of the box.</p><h2>Buy ASUS ROG NUC Core Ultra 9 275HX RTX 5070Ti 12GB Graphics Mini Gaming PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>ASUS ROG NUC Core Ultra 9 275HX RTX 5070Ti 12GB Graphics Mini Gaming PC</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/desktops/portable-mini-pc\">Asus Portable Mini PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The ASUS ROG NUC Core Ultra 9 275HX RTX 5070Ti 12GB Graphics Mini Gaming PC comes with 3 years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ROG NUC</li><li>Processor: Intel Core Ultra 9 Processor 275HX</li><li>RAM: 16GB DDR5-6400</li><li>Storage: 1TB M.2 NVMe PCIe 4.0 SSD</li><li>Graphics: NVIDIA GeForce RTX 5070Ti Laptop GPU</li></ul>",
+      "model": "ROG NUC",
+      "warranty": "3 years",
+      "basePrice": 390000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 3.12,
+      "dimensions": {
+        "length": 282.4,
+        "width": 187.7,
+        "height": 56.5,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Asus",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "Included: 16GB DDR5-6400 SO-DIMM Supported: SO-DIMM *2 Max Capacity: 16GB DDR5-6400 CSO-DIMM x 2",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "Included: 1TB M.2 2280 NVMe PCIe 4.0 SSD​ Support: 1TB~2TB M.2 2280 NVMe PCIe 4.0 x 4 SSD or 1TB~2TB M.2 2280 NVMe PCIe 5.0 x 4 SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-44714",
+          "price": 390000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "Included: 16GB DDR5-6400 SO-DIMM Supported: SO-DIMM *2 Max Capacity: 16GB DDR5-6400 CSO-DIMM x 2",
+            "Storage": "Included: 1TB M.2 2280 NVMe PCIe 4.0 SSD​ Support: 1TB~2TB M.2 2280 NVMe PCIe 4.0 x 4 SSD or 1TB~2TB M.2 2280 NVMe PCIe 5.0 x 4 SSD",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 374400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Intel Core Ultra 9 Processor 275HX",
+              "position": 0
+            },
+            {
+              "label": "Motherboard",
+              "value": "Integrated",
+              "position": 1
+            },
+            {
+              "label": "RAM",
+              "value": "Included: 16GB DDR5-6400 SO-DIMM Supported: SO-DIMM *2 Max Capacity: 16GB DDR5-6400 CSO-DIMM x 2",
+              "position": 2
+            },
+            {
+              "label": "Graphics Card",
+              "value": "NVIDIA GeForce RTX 5070Ti Laptop GPU Intel Arc GPU* *Intel Arc GPU requires using 2 x SO-DIMM",
+              "position": 3
+            },
+            {
+              "label": "Storage",
+              "value": "Included: 1TB M.2 2280 NVMe PCIe 4.0 SSD​ Support: 1TB~2TB M.2 2280 NVMe PCIe 4.0 x 4 SSD or 1TB~2TB M.2 2280 NVMe PCIe 5.0 x 4 SSD",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Wi-Fi 7 BE200+BT5.4(2*2) Intel 2.5 Gb Ethernet port",
+              "position": 5
+            },
+            {
+              "label": "Operating System",
+              "value": "Windows 11 Home",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Front & Side I/O: 2 x USB 3.2Gen2 Ports 1 x USB-C Back I/O: 1 x Thunderbolt 4 / USB4 Type-C port with DP 2.1 and (5V@3A / 5V@1.5A / 9V@2A / 12V@1.5A) fast charging profiles 2 x HDMI Ports 2 x DP Ports 4 x USB 3.2 Gen2 Ports",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "282.4mm x 187.7mm x 56.5mm (bottom: 146mm)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "3.12 KG",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "3 years",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/asus-rog-nuc-core-ultra-9-275hx-mini-gaming-pc",
+      "sourceProductCode": "44714",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ROG NUC",
+        "Processor: Intel Core Ultra 9 Processor 275HX",
+        "RAM: 16GB DDR5-6400",
+        "Storage: 1TB M.2 NVMe PCIe 4.0 SSD",
+        "Graphics: NVIDIA GeForce RTX 5070Ti Laptop GPU"
+      ],
+      "needsReview": false,
+      "categorySlug": "portable-mini-pc",
+      "image": "/images/products/desktop/portable-mini-pc/asus/asus-rog-nuc-core-ultra-9-275hx-mini-gaming-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/portable-mini-pc/asus/asus-rog-nuc-core-ultra-9-275hx-mini-gaming-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "asus-rog-nuc-core-ultra-9-275hx-mini-gaming-pc",
+        "candidateTitle": "ASUS ROG NUC Core Ultra 9 275HX RTX 5070Ti 12GB Graphics Mini Gaming PC",
+        "attemptStem": "asus-rog-nuc-core-ultra-9-275hx-mini-gaming-pc"
+      }
+    }
+  ]
+}

@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/desktops",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\desktop",
+    "generatedAtUnix": 1790584227,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Desktop",
+      "slug": "desktop",
+      "parentSlug": null,
+      "image": "/images/products/desktop/apple-imac/apple-imac-m4-10-core-gpu-24-inch.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "AI PC",
+      "slug": "ai-pc",
+      "parentSlug": "desktop",
+      "image": "/images/products/desktop/ai-pc/gigabyte-ai-top-atom-atagb10-9000-ai-supercomputer.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "GIGABYTE",
+      "slug": "gigabyte",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Gigabyte AI TOP ATOM ATAGB10-9000 Personal AI Supercomputer",
+      "slug": "gigabyte-ai-top-atom-atagb10-9000-ai-supercomputer",
+      "type": "PHYSICAL",
+      "sku": "ST-52126",
+      "description": "<h2>Gigabyte AI TOP ATOM ATAGB10-9000 Personal AI Supercomputer</h2><p>The Gigabyte <strong>AI TOP ATOM ATAGB10-9000</strong> Personal AI Supercomputer is a next-generation desktop AI system designed for researchers, developers, and enterprises working with advanced machine learning and deep learning workloads. Powered by NVIDIA’s Grace Blackwell Superchip, this Gigabyte AI PC delivers unmatched computational power, scalability, and connectivity in an ATX form factor.</p><h3>Extreme AI Processing Power</h3><p>At its core, the Gigabyte AI TOP ATOM ATAGB10-9000 features a 20-core Arm CPU (10 Cortex-X925 + 10 Cortex-A725) paired with the NVIDIA GB10 Grace Blackwell Superchip. This architecture ensures seamless AI acceleration, delivering up to 1 petaFLOP of tensor performance for large-scale model training and inference. Unified 128GB LPDDR5x system memory with 256-bit interface and 273 GB/s bandwidth provides lightning-fast data access for complex workloads.</p><h3>Advanced Graphics and Storage</h3><p>Equipped with NVIDIA Blackwell architecture graphics, the Gigabyte AI TOP ATOM ATAGB10-9000 offers cutting-edge GPU performance for deep learning, simulation, and visualization. Storage is future-ready with a massive 4TB M.2 NVMe PCIe 5.0 SSD, ensuring ultra-fast read/write speeds for datasets and applications. Expansion slots include PCIe 5.0 x16, PCIe 5.0 x8, PCIe 4.0 x4, and multiple M.2 slots for additional upgrades.</p><h3>Connectivity and Networking</h3><p>Networking is powered by NVIDIA ConnectX-7 NIC with 10GbE Ethernet, Wi-Fi 7, and Bluetooth 5.4, ensuring high-speed data transfer and low-latency communication. External I/O includes USB 3.2 Gen 2x2 Type-C ports (up to 20Gbps), HDMI 2.1a, and a Kensington Nano slot for security. This makes the Gigabyte AI Supercomputer ideal for collaborative AI development environments.</p><h3>Operating System and Software</h3><p>The Gigabyte AI TOP ATOM ATAGB10-9000 runs on NVIDIA DGX OS and Ubuntu Linux, optimized for AI research and deployment. With support for high-definition audio and advanced expansion, it is tailored for professionals building and deploying AI models at scale.</p><h3>Compact Yet Powerful Design</h3><p>Built in an ATX form factor with a 240W adapter, the Gigabyte AI TOP ATOM ATAGB10-9000 Personal AI Supercomputer combines efficiency with raw computational power. It is the ultimate solution for AI researchers, data scientists, and enterprises seeking a Gigabyte AI PC with unmatched acceleration.</p><h2>Buy Gigabyte AI TOP ATOM ATAGB10-9000 Personal AI Supercomputer from Star Tech</h2><p>In Bangladesh, you can get original <strong>Gigabyte AI TOP ATOM ATAGB10-9000 Personal AI Supercomputer</strong> From Star Tech. We have a large collection of latest Gigabyte <a href=\"https://www.startech.com.bd/desktops/gaming-pc\">Gaming PC</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Gigabyte AI TOP ATOM ATAGB10-9000 Personal AI Supercomputer comes with 3 Years warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ATAGB10-9000</li><li>Processor: 20-core Arm,10 Cortex-X925 + 10 Cortex A725</li><li>Memory: 128GB LPDDR5x, unified system memory</li><li>Storage: 4TB M.2 NVMe PCIe 5.0 SSD</li><li>Graphics: NVIDIA Blackwell Architecture</li></ul>",
+      "model": "ATAGB10-9000",
+      "warranty": "03 Years Warranty",
+      "basePrice": 800000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 1.2,
+      "dimensions": {
+        "length": 50.5,
+        "width": 150.0,
+        "height": 150.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "GIGABYTE",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "128GB LPDDR5x, unified system memory Memory Interface: 256-bit Memory Bandwidth: 273 GB/s",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "4TB M.2 NVMe PCIe 5.0 SSD",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52126",
+          "price": 800000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "128GB LPDDR5x, unified system memory Memory Interface: 256-bit Memory Bandwidth: 273 GB/s",
+            "Storage": "4TB M.2 NVMe PCIe 5.0 SSD"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 768000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "20-core Arm,10 Cortex-X925 + 10 Cortex A725",
+              "position": 0
+            },
+            {
+              "label": "Motherboard",
+              "value": "Chipset: NVIDIA® GB10 Grace Blackwell Superchip",
+              "position": 1
+            },
+            {
+              "label": "RAM",
+              "value": "128GB LPDDR5x, unified system memory Memory Interface: 256-bit Memory Bandwidth: 273 GB/s",
+              "position": 2
+            },
+            {
+              "label": "Graphics Card",
+              "value": "NVIDIA Blackwell Architecture",
+              "position": 3
+            },
+            {
+              "label": "Storage",
+              "value": "4TB M.2 NVMe PCIe 5.0 SSD",
+              "position": 4
+            },
+            {
+              "label": "Power Supply",
+              "value": "240W adapter",
+              "position": 5
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "10GbE Ethernet, Wi-Fi 7, Bluetooth 5.4",
+              "position": 6
+            },
+            {
+              "label": "Operating System",
+              "value": "NVIDIA DGX OS, Ubuntu Linux",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "Expansion Slots 1 x PCIe 5.0 x16 (Occupied) 1 x PCIe 5.0 x8 1 x PCIe 4.0 x4 1 x PCIe 5.0 M.2 Slot (1 Occupied) 3 x PCIe 4.0 M.2 Slots (1 Occupied) Audio: High Definition Audio Form Factor: ATX NIC: NVIDIA ConnectX-7 NIC Tensor Performance: 1 petaFLOP AI performance",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "Rear: 1 x USB 3.2 Gen 2x2 Type C (PD IN) 3 x USB 3.2 Gen 2x2 Type-C (Up to 20Gbps) 1 x NVIDIA ConnectX-7 1 x RJ-45 connector, 10 GbE 1 x HDMI 2.1a Side: 1 x Kensington Nano slot",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "H50.5x W150x D150 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "1.2 kg (2.64 lbs)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "03 Years Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/gigabyte-ai-top-atom-atagb10-9000-ai-supercomputer",
+      "sourceProductCode": "52126",
+      "sourceStatus": "Pre Order",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ATAGB10-9000",
+        "Processor: 20-core Arm,10 Cortex-X925 + 10 Cortex A725",
+        "Memory: 128GB LPDDR5x, unified system memory",
+        "Storage: 4TB M.2 NVMe PCIe 5.0 SSD",
+        "Graphics: NVIDIA Blackwell Architecture"
+      ],
+      "needsReview": false,
+      "categorySlug": "ai-pc",
+      "image": "/images/products/desktop/ai-pc/gigabyte-ai-top-atom-atagb10-9000-ai-supercomputer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/ai-pc/gigabyte-ai-top-atom-atagb10-9000-ai-supercomputer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "gigabyte-ai-top-atom-atagb10-9000-ai-supercomputer",
+        "candidateTitle": "Gigabyte AI TOP ATOM ATAGB10-9000 Personal AI Supercomputer",
+        "attemptStem": "gigabyte-ai-top-atom-atagb10-9000-ai-supercomputer"
+      }
+    }
+  ]
+}

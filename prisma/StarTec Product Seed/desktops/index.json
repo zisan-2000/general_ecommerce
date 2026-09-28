@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/desktops",
+  "imageFolder": "/images/products/desktop/ai-pc",
+  "groups": [
+    {
+      "name": "_direct",
+      "file": "_direct.json",
+      "status": "completed",
+      "products": 11,
+      "matched": 11,
+      "unmatched": 0
+    },
+    {
+      "name": "ai-pc",
+      "file": "ai-pc.json",
+      "status": "completed",
+      "products": 1,
+      "matched": 1,
+      "unmatched": 0
+    },
+    {
+      "name": "all-in-one-pc",
+      "file": "all-in-one-pc.json",
+      "status": "completed",
+      "products": 54,
+      "matched": 54,
+      "unmatched": 0
+    },
+    {
+      "name": "brand-pc",
+      "file": "brand-pc.json",
+      "status": "completed",
+      "products": 43,
+      "matched": 43,
+      "unmatched": 0
+    },
+    {
+      "name": "gaming-pc",
+      "file": "gaming-pc.json",
+      "status": "completed",
+      "products": 38,
+      "matched": 38,
+      "unmatched": 0
+    },
+    {
+      "name": "portable-mini-pc",
+      "file": "portable-mini-pc.json",
+      "status": "completed",
+      "products": 14,
+      "matched": 14,
+      "unmatched": 0
+    },
+    {
+      "name": "star-pc",
+      "file": "star-pc.json",
+      "status": "completed",
+      "products": 19,
+      "matched": 19,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790584227
+}

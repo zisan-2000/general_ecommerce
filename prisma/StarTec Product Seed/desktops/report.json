@@ -1,0 +1,27 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/desktops",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\desktop",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\desktops",
+  "imagesFound": 184,
+  "uniqueProductStems": 180,
+  "productsInJson": 180,
+  "matchedProducts": 180,
+  "unmatchedProducts": 0,
+  "imageCoverage": 184,
+  "jsonGroupFiles": 7,
+  "matchMethods": {
+    "direct-slug": 180
+  },
+  "jsonGenerationTimeSeconds": 81.76,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 180,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\desktops\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\desktops\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\desktops\\unmatched.json"
+  },
+  "seedTimeSeconds": 4.96
+}

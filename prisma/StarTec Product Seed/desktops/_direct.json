@@ -1,0 +1,2274 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/desktops",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\desktop",
+    "generatedAtUnix": 1790584227,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Desktop",
+      "slug": "desktop",
+      "parentSlug": null,
+      "image": "/images/products/desktop/apple-imac/apple-imac-m4-10-core-gpu-24-inch.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Apple",
+      "slug": "apple",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Apple iMac M4 Chip 10 Core GPU 256GB SSD 24\" 4.5K Retina Display All-in-One PC (Late 2024)",
+      "slug": "apple-imac-m4-10-core-gpu-24-inch",
+      "type": "PHYSICAL",
+      "sku": "MWUU3",
+      "description": "<h2>Apple iMac M4 Chip 256GB SSD 24\" 4.5K Retina Display All-in-One PC</h2><p>The Apple <strong>iMac M4 24\" </strong>4.5K Retina Display All-in-One PC is a excellent combination of both power and elegance. This Apple iMac, powered by the highly efficient Apple M4 chip, which has a 10-core CPU and 10-core GPU, ensuring exceptional performance for a wide range of operations, including multitasking and video editing, as well as creative apps. The 24\" 4.5K Retina Display delivers with a resolution of 4480-by-2520 pixels, 1 billion colors, and True Tone technology, providing a visually spectacular and comfortable viewing experience. With 256GB of SSD storage and 16GB of unified memory, the iMac provides fast and efficient access to your workflow, with a chance to expand for even more powerful performance. The 12MP Center Stage camera improves your video calling experience by providing Desk View and 1080p HD recording capabilities. The iMac's all-in-one design is not only elegant but also very functional, with connectivity choices such as Thunderbolt 4, USB 4, and USB 3.1 Gen 2 ports, making it simple to connect all of your accessories. This iMac M4 comes in a variety of colorful options, including Blue, Purple, Green, and Silver, allowing you to show your own style. The Magic Keyboard with Touch ID and Magic Mouse offer a smooth and secure user experience, while Wi-Fi 6E and Bluetooth 5.3 assure quick and dependable internet connectivity. This iMac M4 is a fantastic choice for professionals, creatives, and anyone who need a high-performance desktop computer without compromising aesthetics or functionality.</p><h2>Buy Apple iMac M4 Chip 256GB SSD 24\" 4.5K Retina Display All-in-One PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>Apple iMac M4 Chip 256GB SSD 24\" 4.5K Retina Display All-in-One PC </strong>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/desktops/apple-imac-desktop-pc\">Apple iMac</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Apple iMac M4 Chip 256GB SSD 24\" 4.5K Retina Display All-in-One PC comes with 1 year warranty (Box must be kept for warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MWUU3</li><li>Model: iMac</li><li>CPU: Apple M4 Chip (10-core CPU, 10-core GPU, 16-core Neural Engine)</li><li>RAM: 16GB, Storage: 256GB SSD</li><li>Display: 24&quot; 4.5K Retina Display (4480 x 2520), 218ppi</li><li>Ports: 2 x Thunderbolt 4, USB-C 3.1 Gen 2, DisplayPort</li></ul>",
+      "model": "iMac",
+      "warranty": "1 year warranty (Box must be kept for warranty claims)",
+      "basePrice": 238000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 9.74,
+      "dimensions": {
+        "length": 21.5,
+        "width": 54.7,
+        "height": 18.1,
+        "unit": "inches"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "16GB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "256GB SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Blue, Purple, Green, Silver",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "MWUU3",
+          "price": 238000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "16GB RAM",
+            "Storage": "256GB SSD",
+            "Color": "Blue, Purple, Green, Silver"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 228480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Apple M4 10-Core CPU ( 4 performance cores and 6 efficiency cores), 16-Core Neural Engine",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "16GB RAM",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Apple Integrated 10-core GPU",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "256GB SSD",
+              "position": 3
+            },
+            {
+              "label": "Monitor",
+              "value": "24-inch 4.5K Retina display 4480-by-2520 resolution at 218 pixels per inch with support for 1 billion colors 500 nits brightness Wide color (P3) True Tone technology",
+              "position": 4
+            },
+            {
+              "label": "Camera",
+              "value": "12MP Center Stage camera with support for Desk View 1080p FaceTime HD camera",
+              "position": 5
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Gigabit Ethernet Wi-Fi 6E (802.11ax) Bluetooth 5.3 wireless technology",
+              "position": 6
+            },
+            {
+              "label": "Operating System",
+              "value": "MacOS",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "120GB/s memory bandwidth",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "Keyboard",
+              "value": "Magic Keyboard with Touch ID",
+              "position": 0
+            },
+            {
+              "label": "Mouse",
+              "value": "Magic Mouse",
+              "position": 1
+            },
+            {
+              "label": "External I/O Ports",
+              "value": "2 x Thunderbolt 4 (up to 40Gb/s) USB 4 (up to 40Gb/s) USB 3.1 Gen 2 (up to 10Gb/s) 1 x 3.5 mm headphone jack with advanced support for high-impedance headphones",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "Width : 21.5 inches (54.7 cm) Height: 18.1 inches (46.1 cm) Basement Width: 5.8 inches (14.7 cm)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "9.74 pounds (4.42 kg)5",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Blue, Purple, Green, Silver",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year warranty (Box must be kept for warranty claims)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-imac-m4-10-core-gpu-24-inch",
+      "sourceProductCode": "39644",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MWUU3",
+      "sourceKeyFeatures": [
+        "MPN: MWUU3",
+        "Model: iMac",
+        "CPU: Apple M4 Chip (10-core CPU, 10-core GPU, 16-core Neural Engine)",
+        "RAM: 16GB, Storage: 256GB SSD",
+        "Display: 24\" 4.5K Retina Display (4480 x 2520), 218ppi",
+        "Ports: 2 x Thunderbolt 4, USB-C 3.1 Gen 2, DisplayPort"
+      ],
+      "needsReview": false,
+      "categorySlug": "desktop",
+      "image": "/images/products/desktop/apple-imac/apple-imac-m4-10-core-gpu-24-inch.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/apple-imac/apple-imac-m4-10-core-gpu-24-inch.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-imac-m4-10-core-gpu-24-inch",
+        "candidateTitle": "Apple iMac M4 Chip 10 Core GPU 256GB SSD 24\" 4.5K Retina Display All-in-One PC (Late 2024)",
+        "attemptStem": "apple-imac-m4-10-core-gpu-24-inch"
+      }
+    },
+    {
+      "name": "Apple iMac M4 Chip 10 Core GPU 24GB RAM 24\" 4.5K Retina Display All-in-One PC (Late 2024)",
+      "slug": "apple-imac-m4-24gb-ram-24-inch-aio-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-39647",
+      "description": "<h2>Apple iMac M4 Chip 24GB RAM 24\" 4.5K Retina Display All-in-One PC</h2><p>The Apple <strong>iMac M4 24\"</strong> 4.5K Retina Display is the ideal combo of power and aesthetic. This iMac is powered by the very efficient Apple M4 chip and has a 10-core CPU and GPU, delivering great performance for multitasking, video editing, and creative workloads. The 24\" 4.5K Retina Display has a resolution of 4480-by-2520 pixels, 1B colors, and True Tone technology to provide a stunning visuals and comfortable viewing experience. With 512GB of SSD storage and 24GB of unified memory, the iMac ensures with fast and easy access to your productive application, with the opportunity to expand for even more powerful performance. The 12MP Center Stage camera boasts your video calling experience by providing Desk View and 1080p HD recording capabilities. The all-in-one design of the latest iMac M4 is not only elegant but also very helpful, with wide range of connectivity choices such as Thunderbolt 4, USB 4, and USB 3.1 Gen 2 ports, making the iMac easy to connect all of your accessories. The iMac comes in a range of colors, including Blue, Green, and Silver, allowing you to showcase your personal style preference. The Magic Keyboard with Touch ID and Magic Mouse offer a smooth and secure user experience, while Wi-Fi 6E and Bluetooth 5.3 deliver fast and reliable internet connectivity. This iMac M4 is an excellent choice for professionals, creatives, and anyone in need of a high-performance desktop computer that is both good looking and productive.</p><h2>Buy Apple iMac M4 Chip 24GB RAM 24\" 4.5K Retina Display All-in-One PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>Apple iMac M4 Chip 24GB RAM 24\" 4.5K Retina Display All-in-One PC </strong>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/desktops/apple-imac-desktop-pc\">Apple iMac</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Apple iMac M4 Chip 24GB RAM 24\" 4.5K Retina Display All-in-One PC comes with 1 year warranty (Box must be kept for warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: iMac</li><li>CPU: Apple M4 Chip (10-core CPU, 10-core GPU, 16-core Neural Engine)</li><li>RAM: 24GB, Storage: 512 SSD</li><li>Display: 24&quot; 4.5K Retina Display (4480 x 2520), 218ppi</li><li>Ports: 2 x Thunderbolt 4, USB-C 3.1 Gen 2, DisplayPort</li></ul>",
+      "model": "iMac",
+      "warranty": "1 year warranty (Box must be kept for warranty claims)",
+      "basePrice": 305000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 9.76,
+      "dimensions": {
+        "length": 21.5,
+        "width": 54.7,
+        "height": 18.1,
+        "unit": "inches"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "24GB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "512GB SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Blue, Green, Silver",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39647",
+          "price": 305000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "24GB RAM",
+            "Storage": "512GB SSD",
+            "Color": "Blue, Green, Silver"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 292800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Apple M4 10-Core CPU ( 4 performance cores and 6 efficiency cores), 16-Core Neural Engine",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "24GB RAM",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Apple Integrated 10-core GPU",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "512GB SSD",
+              "position": 3
+            },
+            {
+              "label": "Monitor",
+              "value": "24-inch 4.5K Retina display 4480-by-2520 resolution at 218 pixels per inch with support for 1 billion colors 500 nits brightness Wide color (P3) True Tone technology",
+              "position": 4
+            },
+            {
+              "label": "Camera",
+              "value": "12MP Center Stage camera with support for Desk View 1080p FaceTime HD camera",
+              "position": 5
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Gigabit Ethernet Wi-Fi 6E (802.11ax) Bluetooth 5.3 wireless technology",
+              "position": 6
+            },
+            {
+              "label": "Operating System",
+              "value": "MacOS",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "120GB/s memory bandwidth",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "Keyboard",
+              "value": "Magic Keyboard with Touch ID",
+              "position": 0
+            },
+            {
+              "label": "Mouse",
+              "value": "Magic Mouse",
+              "position": 1
+            },
+            {
+              "label": "External I/O Ports",
+              "value": "2 x Thunderbolt 4 (up to 40Gb/s) USB 4 (up to 40Gb/s) USB 3.1 Gen 2 (up to 10Gb/s) 1 x 3.5 mm headphone jack with advanced support for high-impedance headphones",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "Width : 21.5 inches (54.7 cm) Height: 18.1 inches (46.1 cm) Basement Width: 5.8 inches (14.7 cm)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "9.76 pounds (4.44 kg)",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Blue, Green, Silver",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year warranty (Box must be kept for warranty claims)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-imac-m4-24gb-ram-24-inch-aio-pc",
+      "sourceProductCode": "39647",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: iMac",
+        "CPU: Apple M4 Chip (10-core CPU, 10-core GPU, 16-core Neural Engine)",
+        "RAM: 24GB, Storage: 512 SSD",
+        "Display: 24\" 4.5K Retina Display (4480 x 2520), 218ppi",
+        "Ports: 2 x Thunderbolt 4, USB-C 3.1 Gen 2, DisplayPort"
+      ],
+      "needsReview": false,
+      "categorySlug": "desktop",
+      "image": "/images/products/desktop/apple-imac/apple-imac-m4-24gb-ram-24-inch-aio-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/apple-imac/apple-imac-m4-24gb-ram-24-inch-aio-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-imac-m4-24gb-ram-24-inch-aio-pc",
+        "candidateTitle": "Apple iMac M4 Chip 10 Core GPU 24GB RAM 24\" 4.5K Retina Display All-in-One PC (Late 2024)",
+        "attemptStem": "apple-imac-m4-24gb-ram-24-inch-aio-pc"
+      }
+    },
+    {
+      "name": "Apple iMac M4 Chip 256GB SSD 24\" 4.5K Retina Display All-in-One PC (Late 2024)",
+      "slug": "apple-imac-m4-256gb-ssd-24-inch-all-in-one-pc",
+      "type": "PHYSICAL",
+      "sku": "MWUC3",
+      "description": "<h2>Apple iMac M4 Chip 256GB SSD 24\" 4.5K Retina Display All-in-One PC (Late 2024)</h2><p>The Apple <strong>iMac M4 24\"</strong> 4.5K Retina Display All-in-One PC is a powerful and sleek All-in-One desktop computer with the latest tech and an attractive design. This Apple iMac, powered by the Apple M4 chip, has a 8-core CPU and 8-core GPU, providing excellent performance for multitasking, multimedia editing, and creative applications. The 24\" 4.5K Retina Display of the iMac M4 provides excellent graphics with a resolution of 4480-by-2520 pixels, 1 billion colors, and True Tone technology for a more enjoyable viewing experience. With 256GB of SSD storage and 16GB of unified memory, this iMac 24\" offers quick access to your files and smooth performance, with the option to expand memory for even greater performance. The 12MP Center Stage camera enhances video calls by offering Desk View and 1080p HD recording. The all-in-one design features numerous connectivity options such as Thunderbolt 4, USB 4, and USB 3.1 Gen 2 ports, as well as a variety of colorful hues such as Blue, Purple, Green, Silver, The Magic Keyboard with Touch ID and Magic Mouse deliver a seamless and safe user experience. Wi-Fi 6E and Bluetooth 5.3 provide quick and dependable internet connections. The 3-Cell 39.3Whr battery provides long-lasting performance, making this iMac an excellent choice for professionals, creatives, and anybody seeking a high-performance desktop computer.</p><h2>Buy Apple iMac M4 Chip 256GB SSD 24\" 4.5K Retina Display All-in-One PC (Late 2024) from Star Tech</h2><p>In Bangladesh, you can get original <strong>Apple iMac M4 Chip 256GB SSD 24\" 4.5K Retina Display All-in-One PC (Late 2024)</strong>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/desktops/apple-imac-desktop-pc\">Apple iMac</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Apple iMac M4 Chip 256GB SSD 24\" 4.5K Retina Display All-in-One PC (Late 2024) comes with 1 year warranty (Box must be kept for warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MWUC3</li><li>Model: iMac</li><li>CPU: Apple M4 Chip (8-core CPU, 8-core GPU, 16-core Neural Engine)</li><li>RAM: 16GB, Storage: 256GB SSD</li><li>Display: 24&quot; 4.5K Retina Display (4480 x 2520), 218ppi</li><li>Ports: 2 x Thunderbolt 4, USB-C 3.1 Gen 2, DisplayPort</li></ul>",
+      "model": "iMac",
+      "warranty": "1 year warranty (Box must be kept for warranty claims)",
+      "basePrice": 265000.0,
+      "originalPrice": 297000.0,
+      "currency": "BDT",
+      "weight": 9.74,
+      "dimensions": {
+        "length": 21.5,
+        "width": 54.7,
+        "height": 18.1,
+        "unit": "inches"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "16GB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "256GB SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Blue, Purple, Green, Silver",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "MWUC3",
+          "price": 265000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "16GB RAM",
+            "Storage": "256GB SSD",
+            "Color": "Blue, Purple, Green, Silver"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 254400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Apple M4 8-Core CPU ( 4 performance cores and 4 efficiency cores), 16-Core Neural Engine",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "16GB RAM",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Apple Integrated 10-core GPU",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "256GB SSD",
+              "position": 3
+            },
+            {
+              "label": "Monitor",
+              "value": "24-inch 4.5K Retina display 4480-by-2520 resolution at 218 pixels per inch with support for 1 billion colors 500 nits brightness Wide color (P3) True Tone technology",
+              "position": 4
+            },
+            {
+              "label": "Camera",
+              "value": "12MP Center Stage camera with support for Desk View 1080p FaceTime HD camera",
+              "position": 5
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Gigabit Ethernet Wi-Fi 6E (802.11ax) Bluetooth 5.3 wireless technology",
+              "position": 6
+            },
+            {
+              "label": "Operating System",
+              "value": "MacOS",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "120GB/s memory bandwidth",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "Keyboard",
+              "value": "Magic Keyboard with Touch ID",
+              "position": 0
+            },
+            {
+              "label": "Mouse",
+              "value": "Magic Mouse",
+              "position": 1
+            },
+            {
+              "label": "External I/O Ports",
+              "value": "2 x Thunderbolt 4 (up to 40Gb/s) USB 4 (up to 40Gb/s) USB 3.1 Gen 2 (up to 10Gb/s) 1 x 3.5 mm headphone jack with advanced support for high-impedance headphones",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "Width : 21.5 inches (54.7 cm) Height: 18.1 inches (46.1 cm) Basement Width: 5.8 inches (14.7 cm)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "9.74 pounds (4.42 kg)5",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Blue, Purple, Green, Silver",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year warranty (Box must be kept for warranty claims)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-imac-m4-256gb-ssd-24-inch-all-in-one-pc",
+      "sourceProductCode": "39638",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "MWUC3",
+      "sourceKeyFeatures": [
+        "MPN: MWUC3",
+        "Model: iMac",
+        "CPU: Apple M4 Chip (8-core CPU, 8-core GPU, 16-core Neural Engine)",
+        "RAM: 16GB, Storage: 256GB SSD",
+        "Display: 24\" 4.5K Retina Display (4480 x 2520), 218ppi",
+        "Ports: 2 x Thunderbolt 4, USB-C 3.1 Gen 2, DisplayPort"
+      ],
+      "needsReview": false,
+      "categorySlug": "desktop",
+      "image": "/images/products/desktop/apple-imac/apple-imac-m4-256gb-ssd-24-inch-all-in-one-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/apple-imac/apple-imac-m4-256gb-ssd-24-inch-all-in-one-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-imac-m4-256gb-ssd-24-inch-all-in-one-pc",
+        "candidateTitle": "Apple iMac M4 Chip 256GB SSD 24\" 4.5K Retina Display All-in-One PC (Late 2024)",
+        "attemptStem": "apple-imac-m4-256gb-ssd-24-inch-all-in-one-pc"
+      }
+    },
+    {
+      "name": "Apple iMac M4 Chip 10 Core GPU 512GB SSD 24\" 4.5K Retina Display All-in-One PC (Late 2024)",
+      "slug": "apple-imac-m4-512gb-ssd-24-inch-aio-pc",
+      "type": "PHYSICAL",
+      "sku": "MWV33",
+      "description": "<h2>Apple iMac M4 Chip 512GB SSD 24\" 4.5K Retina Display All-in-One PC</h2><p>The Apple <strong>iMac M4 24\" </strong>4.5K Retina Display All-in-One PC is a excellent combination of both power and elegance. This Apple iMac, powered by the highly efficient Apple M4 chip, which has a 10-core CPU and 10-core GPU, ensuring exceptional performance for a wide range of operations, including multitasking and video editing, as well as creative apps. The 24\" 4.5K Retina Display delivers with a resolution of 4480-by-2520 pixels, 1 billion colors, and True Tone technology, providing a visually spectacular and comfortable viewing experience. With 512GB of SSD storage and 16GB of unified memory, the iMac provides fast and efficient access to your workflow, with a chance to expand for even more powerful performance. The 12MP Center Stage camera improves your video calling experience by providing Desk View and 1080p HD recording capabilities. The iMac's all-in-one design is not only elegant but also very functional, with connectivity choices such as Thunderbolt 4, USB 4, and USB 3.1 Gen 2 ports, making it simple to connect all of your accessories. This iMac M4 comes in a variety of colorful options, including Blue, Purple, Green, and Silver, allowing you to show your own style. The Magic Keyboard with Touch ID and Magic Mouse offer a smooth and secure user experience, while Wi-Fi 6E and Bluetooth 5.3 assure quick and dependable internet connectivity. This iMac M4 is a fantastic choice for professionals, creatives, and anyone who need a high-performance desktop computer without compromising aesthetics or functionality.</p><h2>Buy Apple iMac M4 Chip 512GB SSD 24\" 4.5K Retina Display All-in-One PC from Star Tech</h2><p>In Bangladesh, you can get original <strong>Apple iMac M4 Chip 512GB SSD 24\" 4.5K Retina Display All-in-One PC </strong>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/desktops/apple-imac-desktop-pc\">Apple iMac</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Apple iMac M4 Chip 512GB SSD 24\" 4.5K Retina Display All-in-One PC comes with 1 year warranty (Box must be kept for warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MWV33</li><li>Model: iMac</li><li>CPU: Apple M4 Chip (10-core CPU, 10-core GPU, 16-core Neural Engine)</li><li>RAM: 16GB, Storage: 512 SSD</li><li>Display: 24&quot; 4.5K Retina Display (4480 x 2520), 218ppi</li><li>Ports: 2 x Thunderbolt 4, USB-C 3.1 Gen 2, DisplayPort</li></ul>",
+      "model": "iMac",
+      "warranty": "1 year warranty (Box must be kept for warranty claims)",
+      "basePrice": 350000.0,
+      "originalPrice": 374000.0,
+      "currency": "BDT",
+      "weight": 9.76,
+      "dimensions": {
+        "length": 21.5,
+        "width": 54.7,
+        "height": 18.1,
+        "unit": "inches"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "16GB RAM",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "512GB SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Blue, Green, Silver",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "MWV33",
+          "price": 350000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "16GB RAM",
+            "Storage": "512GB SSD",
+            "Color": "Blue, Green, Silver"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 336000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Apple M4 10-Core CPU ( 4 performance cores and 6 efficiency cores), 16-Core Neural Engine",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "16GB RAM",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "Apple Integrated 10-core GPU",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "512GB SSD",
+              "position": 3
+            },
+            {
+              "label": "Monitor",
+              "value": "24-inch 4.5K Retina display 4480-by-2520 resolution at 218 pixels per inch with support for 1 billion colors 500 nits brightness Wide color (P3) True Tone technology",
+              "position": 4
+            },
+            {
+              "label": "Camera",
+              "value": "12MP Center Stage camera with support for Desk View 1080p FaceTime HD camera",
+              "position": 5
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Gigabit Ethernet Wi-Fi 6E (802.11ax) Bluetooth 5.3 wireless technology",
+              "position": 6
+            },
+            {
+              "label": "Operating System",
+              "value": "MacOS",
+              "position": 7
+            },
+            {
+              "label": "Others",
+              "value": "120GB/s memory bandwidth",
+              "position": 8
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "Keyboard",
+              "value": "Magic Keyboard with Touch ID",
+              "position": 0
+            },
+            {
+              "label": "Mouse",
+              "value": "Magic Mouse",
+              "position": 1
+            },
+            {
+              "label": "External I/O Ports",
+              "value": "2 x Thunderbolt 4 (up to 40Gb/s) USB 4 (up to 40Gb/s) USB 3.1 Gen 2 (up to 10Gb/s) 1 x 3.5 mm headphone jack with advanced support for high-impedance headphones",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "Width : 21.5 inches (54.7 cm) Height: 18.1 inches (46.1 cm) Basement Width: 5.8 inches (14.7 cm)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "9.76 pounds (4.44 kg)",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Blue, Green, Silver",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year warranty (Box must be kept for warranty claims)",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-imac-m4-512gb-ssd-24-inch-aio-pc",
+      "sourceProductCode": "39645",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "MWV33",
+      "sourceKeyFeatures": [
+        "MPN: MWV33",
+        "Model: iMac",
+        "CPU: Apple M4 Chip (10-core CPU, 10-core GPU, 16-core Neural Engine)",
+        "RAM: 16GB, Storage: 512 SSD",
+        "Display: 24\" 4.5K Retina Display (4480 x 2520), 218ppi",
+        "Ports: 2 x Thunderbolt 4, USB-C 3.1 Gen 2, DisplayPort"
+      ],
+      "needsReview": false,
+      "categorySlug": "desktop",
+      "image": "/images/products/desktop/apple-imac/apple-imac-m4-512gb-ssd-24-inch-aio-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/apple-imac/apple-imac-m4-512gb-ssd-24-inch-aio-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-imac-m4-512gb-ssd-24-inch-aio-pc",
+        "candidateTitle": "Apple iMac M4 Chip 10 Core GPU 512GB SSD 24\" 4.5K Retina Display All-in-One PC (Late 2024)",
+        "attemptStem": "apple-imac-m4-512gb-ssd-24-inch-aio-pc"
+      }
+    },
+    {
+      "name": "Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 16GB Memory 256GB Storage US variant (Inactive)",
+      "slug": "apple-mac-mini-m4-16gb-memory-256gb-storage",
+      "type": "PHYSICAL",
+      "sku": "MU9D3",
+      "description": "<h2>Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 16GB Memory 256GB Storage</h2><p>The Apple <strong>Mac Mini M4</strong> is a compact yet powerful Mini PC designed to meet the needs of professionals and enthusiasts alike. Equipped with a 10-core CPU and a 10-core GPU, this Portable Mini PC delivers exceptional performance for a wide range of tasks, from intensive computing to high-end graphics work. The 16GB of unified memory ensures smooth multitasking and efficient operation of multiple applications simultaneously, while the 256GB SSD provides fast and reliable storage for quick access to files and applications. Its sleek and minimalist design fits seamlessly into any workspace, making it an attractive addition to both home and office environments. Robust connectivity options, including multiple Thunderbolt ports, USB-A ports, HDMI, and Ethernet, ensure easy connection of peripherals, enhancing its versatility. The Mac Mini M4 is not only ideal for creative professionals and software developers but also for anyone in need of a reliable and powerful desktop solution. Its compact form factor makes it perfect for those with limited space, while its high performance and stylish design make it a standout choice in the realm of Mini PCs. Whether you're editing videos, developing software, or simply need a robust desktop for everyday tasks, the Apple Mac Mini M4 offers unparalleled performance, versatility, and style, setting a new standard for high-performance Mini PCs.</p><h3>Mac Mini M4 the Portable Powerhouse </h3><p>The Apple Mac Mini M4's CPU and GPU performance is truly impressive, making it a standout in the realm of compact desktops. The 10-core CPU is designed to handle intensive computing tasks with ease, providing swift and efficient processing power for everything from complex data analysis to software development. Meanwhile, the 10-core GPU delivers high-end graphics performance, making it ideal for tasks such as 3D rendering, video editing, and gaming. This combination of a powerful CPU and GPU ensures that the Mac Mini M4 can tackle demanding workloads without breaking a sweat, offering smooth and responsive performance across a variety of applications. Despite its powerful capabilities, the Mac Mini M4 maintains a compact and portable form factor, making it easy to transport and ideal for those who need high performance on the go. Whether you're a creative professional working with high-resolution media, a developer running resource-intensive simulations, or a gamer seeking a seamless experience, the Mac Mini M4's robust CPU and GPU capabilities, combined with its portability, provide the power and efficiency needed to excel in any task.</p><h2>Buy Apple Mac Mini M4 from the best Apple Store in BD</h2><p>In Bangladesh, you can get original <strong>Apple Mac Mini M4 chip </strong>From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/desktops/apple-mini-pc\">Apple Mac Mini</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Apple Mac Mini M4 comes with  01-year International warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MU9D3</li><li>Model: Mac Mini</li><li>10-core CPU, 10-core GPU, 16-core Neural Engine</li><li>RAM: 16GB Unified Memory, Storage: 256GB SSD</li><li>Wi-Fi 6E (802.11ax), Bluetooth 5.3</li><li>Gigabit Ethernet</li></ul>",
+      "model": "Mac Mini",
+      "warranty": "01 year International warranty.",
+      "basePrice": 112000.0,
+      "originalPrice": 115000.0,
+      "currency": "BDT",
+      "weight": 0.67,
+      "dimensions": {
+        "length": 5.0,
+        "width": 12.7,
+        "height": 12.7,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "16GB unified memory",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "256GB SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Silver",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "MU9D3",
+          "price": 112000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "16GB unified memory",
+            "Storage": "256GB SSD",
+            "Color": "Silver"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 107520.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Apple M4 chip, 10-core CPU with 4 performance & 6 efficiency cores 16-core Neural Engine 120GB/s memory bandwidth",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "16GB unified memory",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "10-core GPU Hardware-accelerated ray tracing",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "256GB SSD",
+              "position": 3
+            },
+            {
+              "label": "Power Supply",
+              "value": "Maximum continuous power: 155W",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "10/100/1000BASE-T Gigabit Ethernet (RJ-45 connector) Wi-Fi 6E (802.11ax)3 Bluetooth 5.3",
+              "position": 5
+            },
+            {
+              "label": "Operating System",
+              "value": "macOS",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "2 x USB Type-C (up to 10 Gbps) 1 x HDMI Output 1 x 3.5 mm Headphone/Line Output 3 x Thunderbolt 4 (USB Type-C) (Supports up to 40 Gbps)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "Height: 5.0cm Width: 12.7cm Depth: 12.7cm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "0.67kg",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Silver",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 year International warranty.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-mac-mini-m4-16gb-memory-256gb-storage",
+      "sourceProductCode": "38792",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "MU9D3",
+      "sourceKeyFeatures": [
+        "MPN: MU9D3",
+        "Model: Mac Mini",
+        "10-core CPU, 10-core GPU, 16-core Neural Engine",
+        "RAM: 16GB Unified Memory, Storage: 256GB SSD",
+        "Wi-Fi 6E (802.11ax), Bluetooth 5.3",
+        "Gigabit Ethernet"
+      ],
+      "needsReview": false,
+      "categorySlug": "desktop",
+      "image": "/images/products/desktop/apple-mac-mini/apple-mac-mini-m4-16gb-memory-256gb-storage.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/apple-mac-mini/apple-mac-mini-m4-16gb-memory-256gb-storage.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-mac-mini-m4-16gb-memory-256gb-storage",
+        "candidateTitle": "Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 16GB Memory 256GB Storage US variant (Inactive)",
+        "attemptStem": "apple-mac-mini-m4-16gb-memory-256gb-storage"
+      }
+    },
+    {
+      "name": "Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 16GB Memory 512GB Storage",
+      "slug": "apple-mac-mini-m4-16gb-memory-512gb-storage",
+      "type": "PHYSICAL",
+      "sku": "MU9E3",
+      "description": "<h2>Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 16GB Memory 512GB Storage</h2><p>The <strong>Apple Mac Mini M4</strong> is a compact yet powerful Mini PC crafted to meet the demands of both professionals and enthusiasts. Featuring a 10-core CPU and a 10-core GPU, this Portable Mini PC delivers outstanding performance across a variety of tasks, from intensive computing to high-end graphics work. With 16GB of unified memory and a memory bandwidth of 120GB/s, it ensures smooth multitasking and efficient operation of multiple applications simultaneously, while the 512GB SSD offers fast and reliable storage for quick access to files and applications. Its sleek and minimalist design integrates seamlessly into any workspace, making it an appealing addition to both home and office settings. The Mac Mini M4 boasts robust connectivity options, including multiple Thunderbolt ports, USB-A ports, HDMI, and Ethernet, ensuring easy connection of peripherals and enhancing its versatility. Ideal for creative professionals, software developers, and anyone in need of a reliable and powerful desktop solution, its compact form factor is perfect for those with limited space. Combining high performance with stylish design, the Apple Mac Mini M4 stands out in the realm of Mini PCs, offering unparalleled performance, versatility, and style, and setting a new standard for high-performance Mini PCs.</p><h3>Mac Mini M4 the Portable Powerhouse </h3><p>The Apple Mac Mini M4's CPU and GPU performance is truly impressive, making it a standout in the realm of compact desktops. The 10-core CPU is designed to handle intensive computing tasks with ease, providing swift and efficient processing power for everything from complex data analysis to software development. Meanwhile, the 10-core GPU delivers high-end graphics performance, making it ideal for tasks such as 3D rendering, video editing, and gaming. This combination of a powerful CPU and GPU ensures that the Mac Mini M4 can tackle demanding workloads without breaking a sweat, offering smooth and responsive performance across a variety of applications. Despite its powerful capabilities, the Mac Mini M4 maintains a compact and portable form factor, making it easy to transport and ideal for those who need high performance on the go. Whether you're a creative professional working with high-resolution media, a developer running resource-intensive simulations, or a gamer seeking a seamless experience, the Mac Mini M4's robust CPU and GPU capabilities, combined with its portability, provide the power and efficiency needed to excel in any task.</p><h2>Buy Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 16GB Memory 512GB Storage from the best Apple Mac Mini Shop in BD</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 16GB Memory </span><span style=\"font-weight: 700;\">512GB</span><span style=\"font-weight: bold;\"> Storage</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/desktops/apple-mini-pc\">Apple Mac Mini</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Apple Mac Mini M4 comes with  01-year International warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MU9E3</li><li>Model: Apple Mac Mini M4</li><li>10-core CPU, 10-core GPU, 16-core Neural Engine</li><li>RAM: 16GB Unified Memory, Storage: 512GB SSD</li><li>Wi-Fi 6E (802.11ax), Bluetooth 5.3</li><li>Gigabit Ethernet</li></ul>",
+      "model": "Apple Mac Mini M4",
+      "warranty": "01 year International warranty.",
+      "basePrice": 146000.0,
+      "originalPrice": 148000.0,
+      "currency": "BDT",
+      "weight": 0.67,
+      "dimensions": {
+        "length": 5.0,
+        "width": 12.7,
+        "height": 12.7,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "16GB unified memory",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "512GB SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Silver",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "MU9E3",
+          "price": 146000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "RAM": "16GB unified memory",
+            "Storage": "512GB SSD",
+            "Color": "Silver"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 140160.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Apple M4 chip, 10-core CPU with 4 performance & 6 efficiency cores 16-core Neural Engine 120GB/s memory bandwidth",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "16GB unified memory",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "10-core GPU Hardware-accelerated ray tracing",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "512GB SSD",
+              "position": 3
+            },
+            {
+              "label": "Power Supply",
+              "value": "Maximum continuous power: 155W",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "10/100/1000BASE-T Gigabit Ethernet (RJ-45 connector) Wi-Fi 6E (802.11ax)3 Bluetooth 5.3",
+              "position": 5
+            },
+            {
+              "label": "Operating System",
+              "value": "macOS",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "2 x USB Type-C (up to 10 Gbps) 1 x HDMI Output 1 x 3.5 mm Headphone/Line Output 3 x Thunderbolt 4 (USB Type-C) (Supports up to 40 Gbps)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "Height: 5.0cm Width: 12.7cm Depth: 12.7cm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "0.67kg",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Silver",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 year International warranty.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-mac-mini-m4-16gb-memory-512gb-storage",
+      "sourceProductCode": "38793",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "MU9E3",
+      "sourceKeyFeatures": [
+        "MPN: MU9E3",
+        "Model: Apple Mac Mini M4",
+        "10-core CPU, 10-core GPU, 16-core Neural Engine",
+        "RAM: 16GB Unified Memory, Storage: 512GB SSD",
+        "Wi-Fi 6E (802.11ax), Bluetooth 5.3",
+        "Gigabit Ethernet"
+      ],
+      "needsReview": false,
+      "categorySlug": "desktop",
+      "image": "/images/products/desktop/apple-mac-mini/apple-mac-mini-m4-16gb-memory-512gb-storage.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/apple-mac-mini/apple-mac-mini-m4-16gb-memory-512gb-storage.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-mac-mini-m4-16gb-memory-512gb-storage",
+        "candidateTitle": "Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 16GB Memory 512GB Storage",
+        "attemptStem": "apple-mac-mini-m4-16gb-memory-512gb-storage"
+      }
+    },
+    {
+      "name": "Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 24GB Memory 512GB Storage",
+      "slug": "apple-mac-mini-m4-24gb-memory-512gb-storage",
+      "type": "PHYSICAL",
+      "sku": "MCYT4",
+      "description": "<h2>Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 24GB Memory 512GB Storage</h2><p>The Apple<strong> Mac Mini M4</strong> with a 10-core CPU, 10-core GPU, 24GB unified memory, and 512GB SSD storage is a compact desktop that redefines what small form-factor computing can achieve. Powered by Apple’s latest M4 chip, this Mac Mini M4 delivers a significant leap in performance and efficiency, featuring 4 high-performance cores and 6 efficiency cores for a total of 10 CPU cores, along with a 10-core GPU that supports hardware-accelerated ray tracing and mesh shading. This makes the Mac Mini 10-core GPU model ideal for creative professionals, developers, and power users who need smooth performance in tasks like 4K video editing, 3D rendering, and AI-driven workflows. The 16-core Neural Engine and 120GB/s memory bandwidth further enhance its capabilities in machine learning and Apple Intelligence features, all while maintaining whisper-quiet operation. With 24GB of unified memory, the Mac Mini M4 24GB RAM variant ensures seamless multitasking and fluid performance across demanding applications, while the 512GB SSD offers fast boot times and ample space for media libraries and project files. Despite its compact 5-inch square footprint, the Mac Mini M4 supports up to three external displays—two 6K displays via Thunderbolt and one 4K display via HDMI—making it a versatile hub for professional workstations. Connectivity is robust, including three Thunderbolt 4 ports, two front-facing USB-C ports, HDMI, Gigabit Ethernet (configurable to 10Gb), and a 3.5mm headphone jack with high-impedance support. It also features Wi-Fi 6E and Bluetooth 5.3 for fast, reliable wireless connections. Running on macOS Sequoia, the Apple Mac Mini M4 integrates seamlessly with the Apple ecosystem and supports the latest Apple Intelligence tools for productivity and creativity. Whether you're building a minimalist desktop setup or a high-performance creative suite, the Mac Mini M4 offers unmatched power, efficiency, and elegance in a remarkably compact design.</p><h3>Mac Mini M4 the Portable Powerhouse </h3><p>The Apple Mac Mini M4's CPU and GPU performance is truly impressive, making it a standout in the realm of compact desktops. The 10-core CPU is designed to handle intensive computing tasks with ease, providing swift and efficient processing power for everything from complex data analysis to software development. Meanwhile, the 10-core GPU delivers high-end graphics performance, making it ideal for tasks such as 3D rendering, video editing, and gaming. This combination of a powerful CPU and GPU ensures that the Mac Mini M4 can tackle demanding workloads without breaking a sweat, offering smooth and responsive performance across a variety of applications. Despite its powerful capabilities, the Mac Mini M4 maintains a compact and portable form factor, making it easy to transport and ideal for those who need high performance on the go. Whether you're a creative professional working with high-resolution media, a developer running resource-intensive simulations, or a gamer seeking a seamless experience, the Mac Mini M4's robust CPU and GPU capabilities, combined with its portability, provide the power and efficiency needed to excel in any task.</p><h2>Buy Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 24GB Memory 512GB Storage from the best Apple Mac Mini Shop in BD</h2><p>In Bangladesh, you can get original <strong>Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 24GB Memory 512GB Storage</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/desktops/apple-mini-pc\">Apple Mac Mini</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Apple Mac Mini M4 comes with  01-year International warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MCYT4</li><li>Model: Apple Mac Mini M4</li><li>10-core CPU, 10-core GPU, 16-core Neural Engine</li><li>RAM: 24GB Unified Memory, Storage: 512GB SSD</li><li>Wi-Fi 6E (802.11ax), Bluetooth 5.3</li><li>Gigabit Ethernet, 3x Thunderbolt 4 Port</li></ul>",
+      "model": "Apple Mac Mini M4",
+      "warranty": "01 year International warranty.",
+      "basePrice": 148000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.67,
+      "dimensions": {
+        "length": 5.0,
+        "width": 12.7,
+        "height": 12.7,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "24GB unified memory",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "512GB SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Silver",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "MCYT4",
+          "price": 148000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "24GB unified memory",
+            "Storage": "512GB SSD",
+            "Color": "Silver"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 142080.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Apple M4 chip, 10-core CPU with 4 performance & 6 efficiency cores 16-core Neural Engine 120GB/s memory bandwidth",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "24GB unified memory",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "10-core GPU Hardware-accelerated ray tracing",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "512GB SSD",
+              "position": 3
+            },
+            {
+              "label": "Power Supply",
+              "value": "Maximum continuous power: 155W",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "10/100/1000BASE-T Gigabit Ethernet (RJ-45 connector) Wi-Fi 6E (802.11ax)3 Bluetooth 5.3",
+              "position": 5
+            },
+            {
+              "label": "Operating System",
+              "value": "macOS",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "2 x USB Type-C (up to 10 Gbps) 1 x HDMI Output 1 x 3.5 mm Headphone/Line Output 3 x Thunderbolt 4 (USB Type-C) (Supports up to 40 Gbps)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "Height: 5.0cm Width: 12.7cm Depth: 12.7cm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "0.67kg",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Silver",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 year International warranty.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-mac-mini-m4-24gb-memory-512gb-storage",
+      "sourceProductCode": "38794",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MCYT4",
+      "sourceKeyFeatures": [
+        "MPN: MCYT4",
+        "Model: Apple Mac Mini M4",
+        "10-core CPU, 10-core GPU, 16-core Neural Engine",
+        "RAM: 24GB Unified Memory, Storage: 512GB SSD",
+        "Wi-Fi 6E (802.11ax), Bluetooth 5.3",
+        "Gigabit Ethernet, 3x Thunderbolt 4 Port"
+      ],
+      "needsReview": false,
+      "categorySlug": "desktop",
+      "image": "/images/products/desktop/apple-mac-mini/apple-mac-mini-m4-24gb-memory-512gb-storage.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/apple-mac-mini/apple-mac-mini-m4-24gb-memory-512gb-storage.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-mac-mini-m4-24gb-memory-512gb-storage",
+        "candidateTitle": "Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 24GB Memory 512GB Storage",
+        "attemptStem": "apple-mac-mini-m4-24gb-memory-512gb-storage"
+      }
+    },
+    {
+      "name": "Apple Mac Mini M4 Chip with 10-core CPU 10-Core GPU 16GB Memory 256GB Storage China Variant (Inactive)",
+      "slug": "apple-mac-mini-m4-chip-256gb-storage",
+      "type": "PHYSICAL",
+      "sku": "MU9D3",
+      "description": "<h2>Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 16GB Memory 256GB Storage China Variant (Inactive)</h2><p>The Apple <strong>Mac Mini M4</strong> is a small but powerful mini PC. Designed to fulfill the demands of both professionals and enthusiasts. With a 10-core CPU and a 10-core GPU, this Portable Mini PC performs exceptionally well in a variety of tasks, from heavy computing to high-end graphics work. The 16GB of unified memory allows for seamless multitasking and the efficient operation of many apps at the same time, while the 256GB SSD delivers fast and dependable storage for instant access to files and applications. Its clean and minimalist form complements any workspace, making it an appealing addition to both home and professional settings. Robust connectivity options, such as multiple Thunderbolt connections, USB-A ports, HDMI, and Ethernet, allow for easy peripheral connection, increasing versatility. The Mac Mini M4 is suitable not only for creative professionals and software developers, but for anyone who requires a dependable and capable desktop solution. Its compact form size makes it ideal for individuals with limited space, while its high performance and beautiful appearance set it apart from other Mini PCs. Whether you are editing films, developing software, or simply need a reliable desktop for everyday activities, the Apple Mac Mini M4 delivers unrivaled performance, versatility, and style, establishing a new standard for high-performance Mini PCs.</p><h3>Mac Mini M4 the Portable Powerhouse </h3><p>The Apple Mac Mini M4's CPU and GPU performance are genuinely excellent, setting it apart from other tiny PCs. The 10-core CPU is intended to tackle demanding computational activities with ease, delivering quick and efficient processing capacity for everything from complicated data analysis to software development. Meanwhile, the 10-core GPU provides superior graphics performance, making it suitable for 3D rendering, video editing, and gaming. The Mac Mini M4's strong CPU and GPU ensure that it can handle demanding workloads with ease, providing smooth and responsive performance across a wide range of applications. Despite its formidable capabilities, the Mac Mini M4 has a compact and portable form factor, making it easy to transport and great for people who require high performance while on the go. Whether you are a creative professional working with high-resolution media, a developer running resource-intensive simulations, or a gamer looking for a seamless experience, the Mac Mini M4's powerful CPU and GPU capabilities, combined with its portability, provide the power and efficiency required to excel at any task.</p><h2>Buy Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 16GB Memory 256GB Storage from the best Apple Mac Mini Shop in BD</h2><p>In Bangladesh, you can get original <strong>Apple Mac Mini M4 chip with 10-core CPU 10-Core GPU 16GB Memory 256GB Storage</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/desktops/apple-mini-pc\">Apple Mac Mini</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Apple Mac Mini M4 comes with  01-year International warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MU9D3</li><li>Model: Apple Mac Mini M4</li><li>10-core CPU, 10-core GPU, 16-core Neural Engine</li><li>RAM: 16GB Unified Memory, Storage: 256GB SSD</li><li>Wi-Fi 6E (802.11ax), Bluetooth 5.3</li><li>Gigabit Ethernet</li></ul>",
+      "model": "Apple Mac Mini M4",
+      "warranty": "01 year International warranty.",
+      "basePrice": 95000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.67,
+      "dimensions": {
+        "length": 5.0,
+        "width": 12.7,
+        "height": 12.7,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "16GB unified memory",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "256GB SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Silver",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "MU9D3",
+          "price": 95000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "16GB unified memory",
+            "Storage": "256GB SSD",
+            "Color": "Silver"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 91200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Apple M4 chip, 10-core CPU with 4 performance & 6 efficiency cores 16-core Neural Engine 120GB/s memory bandwidth",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "16GB unified memory",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "10-core GPU Hardware-accelerated ray tracing",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "256GB SSD",
+              "position": 3
+            },
+            {
+              "label": "Power Supply",
+              "value": "Maximum continuous power: 155W",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "10/100/1000BASE-T Gigabit Ethernet (RJ-45 connector) Wi-Fi 6E (802.11ax)3 Bluetooth 5.3",
+              "position": 5
+            },
+            {
+              "label": "Operating System",
+              "value": "macOS",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "2 x USB Type-C (up to 10 Gbps) 1 x HDMI Output 1 x 3.5 mm Headphone/Line Output 3 x Thunderbolt 4 (USB Type-C) (Supports up to 40 Gbps)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "Height: 5.0cm Width: 12.7cm Depth: 12.7cm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "0.67kg",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Silver",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 year International warranty.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-mac-mini-m4-chip-256gb-storage",
+      "sourceProductCode": "44865",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MU9D3",
+      "sourceKeyFeatures": [
+        "MPN: MU9D3",
+        "Model: Apple Mac Mini M4",
+        "10-core CPU, 10-core GPU, 16-core Neural Engine",
+        "RAM: 16GB Unified Memory, Storage: 256GB SSD",
+        "Wi-Fi 6E (802.11ax), Bluetooth 5.3",
+        "Gigabit Ethernet"
+      ],
+      "needsReview": false,
+      "categorySlug": "desktop",
+      "image": "/images/products/desktop/apple-mac-mini/apple-mac-mini-m4-chip-256gb-storage.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/apple-mac-mini/apple-mac-mini-m4-chip-256gb-storage.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-mac-mini-m4-chip-256gb-storage",
+        "candidateTitle": "Apple Mac Mini M4 Chip with 10-core CPU 10-Core GPU 16GB Memory 256GB Storage China Variant (Inactive)",
+        "attemptStem": "apple-mac-mini-m4-chip-256gb-storage"
+      }
+    },
+    {
+      "name": "Apple Mac Mini M4 Pro chip with 12-core CPU 16-Core GPU 24GB Memory 512GB Storage #MCX44ZP/A",
+      "slug": "apple-mac-mini-m4-pro-24gb-memory-512gb-storage",
+      "type": "PHYSICAL",
+      "sku": "MCX44ZP/A",
+      "description": "<h2>Apple Mac Mini M4 Pro chip with 12-core CPU 16-Core GPU 24GB Memory 512GB Storage #MCX44ZP/A</h2>\n<p>The <strong>Apple Mac Mini with the M4 Pro</strong> chip is a compact yet incredibly powerful Mini PC designed to cater to the needs of professionals and enthusiasts who require top-tier performance in a small form factor. Featuring a 12-core CPU and a 16-core GPU, this Portable Mini PC delivers outstanding processing and graphics capabilities, making it perfect for a wide range of demanding tasks, from intensive computing and software development to high-end graphics work and video editing. With 24GB of unified memory, the Mac Mini ensures smooth multitasking and efficient operation of multiple applications simultaneously, while the 512GB SSD provides ample storage space and rapid data access, allowing you to store and retrieve your files and applications quickly and reliably. The sleek and minimalist design of the Mac Mini fits seamlessly into any workspace, whether at home or in the office, making it an attractive addition to any setup. Its robust connectivity options, including multiple Thunderbolt ports, USB-A ports, HDMI, and Ethernet, ensure you can easily connect all your peripherals and accessories, enhancing its versatility and functionality. Ideal for creative professionals, software developers, and anyone in need of a reliable and powerful desktop solution, the Apple Mac Mini with the M4 Pro chip combines high performance with stylish design, setting a new standard for high-performance Mini PCs. This compact yet powerful Mini PC offers unparalleled performance, versatility, and style, making it an excellent choice for those who need a high-performance desktop in a small, portable package. Whether you're editing videos, developing software, or simply need a robust desktop for everyday tasks, the Apple Mac Mini M4 Pro delivers the power and efficiency needed to excel in any task, all while maintaining a sleek and elegant appearance that complements any workspace.</p>\n<h3>Powerful M4 Pro Chip in Compact Form</h3>\n<p>The Apple Mac Mini M4 Pro chip is a powerhouse designed to deliver exceptional performance and efficiency. Featuring a 12-core CPU with 8 performance cores and 4 efficiency cores, it handles intensive computing tasks with ease, providing swift and efficient processing power for everything from complex data analysis to software development. The 16-core GPU offers high-end graphics performance, making it ideal for tasks such as 3D rendering, video editing, and gaming. Additionally, the M4 Pro chip includes a 16-core Neural Engine, which enhances machine learning tasks and accelerates AI-driven applications. With a memory bandwidth of 273GB/s, the M4 Pro ensures smooth multitasking and efficient operation of multiple high-performance applications simultaneously. This chip also supports hardware-accelerated ray tracing and features a media engine capable of handling H.264, HEVC, ProRes, and ProRes RAW formats, ensuring seamless video encoding and decoding. The M4 Pro chip's advanced architecture and robust capabilities make the Mac Mini an ideal choice for professionals and enthusiasts who require top-tier performance in a compact and portable form factor.</p>\n<h2>Buy Apple Mac Mini M4 Pro chip with 12-core CPU 16-Core GPU 24GB Memory 512GB Storage #MCX44ZP/A from the best Apple Mac Mini Shop in BD</h2>\n<p>In Bangladesh, you can get original <strong>Apple Mac Mini M4 Pro chip with 12-core CPU 16-Core GPU 24GB Memory 512GB Storage #MCX44ZP/A</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/desktops/apple-mini-pc\">Apple Mac Mini</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech</a> Shop to get yours at the lowest price. The Apple Mac Mini M4 Pro comes with  01-year International warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MCX44ZP/A</li><li>Model: Apple Mac Mini M4 Pro</li><li>12-core CPU, 16-core GPU, 16-core Neural Engine</li><li>RAM: 24GB Unified Memory, Storage: 512GB SSD</li><li>Wi-Fi 6E (802.11ax), Bluetooth 5.3</li><li>Gigabit Ethernet, 3x Thunderbolt 5 Port</li></ul>",
+      "model": "Apple Mac Mini M4 Pro",
+      "warranty": "01 year International warranty.",
+      "basePrice": 195000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.67,
+      "dimensions": {
+        "length": 5.0,
+        "width": 12.7,
+        "height": 12.7,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "24GB unified memory",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "512GB SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Silver",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "MCX44ZP/A",
+          "price": 195000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "24GB unified memory",
+            "Storage": "512GB SSD",
+            "Color": "Silver"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 187200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Apple M4 Pro chip, 12-core CPU with 8 performance & 4 efficiency cores 16-core Neural Engine 273GB/s memory bandwidth",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "24GB unified memory",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "16-core GPU Hardware-accelerated ray tracing",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "512GB SSD",
+              "position": 3
+            },
+            {
+              "label": "Power Supply",
+              "value": "Maximum continuous power: 155W",
+              "position": 4
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "10/100/1000BASE-T Gigabit Ethernet (RJ-45 connector) Wi-Fi 6E (802.11ax)3 Bluetooth 5.3",
+              "position": 5
+            },
+            {
+              "label": "Operating System",
+              "value": "macOS",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "2 x USB Type-C (up to 10 Gbps) 1 x HDMI Output 1 x 3.5 mm Headphone/Line Output 3 x Thunderbolt 5 (USB Type-C) (Supports up to 120 Gbps)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "Height: 5.0cm Width: 12.7cm Depth: 12.7cm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "0.67kg",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Silver",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 year International warranty.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-mac-mini-m4-pro-24gb-memory-512gb-storage",
+      "sourceProductCode": "38795",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MCX44ZP/A",
+      "sourceKeyFeatures": [
+        "MPN: MCX44ZP/A",
+        "Model: Apple Mac Mini M4 Pro",
+        "12-core CPU, 16-core GPU, 16-core Neural Engine",
+        "RAM: 24GB Unified Memory, Storage: 512GB SSD",
+        "Wi-Fi 6E (802.11ax), Bluetooth 5.3",
+        "Gigabit Ethernet, 3x Thunderbolt 5 Port"
+      ],
+      "needsReview": false,
+      "categorySlug": "desktop",
+      "image": "/images/products/desktop/apple-mac-mini/apple-mac-mini-m4-pro-24gb-memory-512gb-storage.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/apple-mac-mini/apple-mac-mini-m4-pro-24gb-memory-512gb-storage.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-mac-mini-m4-pro-24gb-memory-512gb-storage",
+        "candidateTitle": "Apple Mac Mini M4 Pro chip with 12-core CPU 16-Core GPU 24GB Memory 512GB Storage #MCX44ZP/A",
+        "attemptStem": "apple-mac-mini-m4-pro-24gb-memory-512gb-storage"
+      }
+    },
+    {
+      "name": "Apple Mac Pro M2 Ultra Tower Desktop PC",
+      "slug": "apple-mac-pro-m2-ultra-tower-desktop-pc",
+      "type": "PHYSICAL",
+      "sku": "ST-28922",
+      "description": "<h2 style=\"\">Apple Mac Pro M2 Ultra Tower Desktop PC</h2><p style=\"\">The Apple Mac Pro is equipped with the M2 Ultra 24-Core CPU, which enables creative professionals to tackle the most demanding workflows with speed and efficiency. The Mac Pro has the performance of seven Afterburner cards built-in, thanks to a 76-Core GPU and 64GB of unified RAM with 800 GB/s memory bandwidth. The M2 Ultra's media engine can handle up to 22 streams of 8K ProRes video. The 1TB SSD enables quick boot and load times. With six PCIe Gen 4.0 slots, the Mac Pro can be easily upgraded. There are two PCIe Gen 4.0 x16 and four PCIe Gen 4.0 x8 slots. The Apple I/O card also occupies a half-length PCIe Gen 3.0 x4 slot. Speaking of I/O, the Mac Pro has eight Thunderbolt 4 ports, each with 40 Gb/s data throughput and DisplayPort support. Connect to the internet via the dual 10 Gigabit Ethernet LAN jacks or go wireless with Wi-Fi 6E (802.11ax). Bluetooth 5.3 enables you to connect compatible devices wirelessly. The Mac Pro includes the Magic Keyboard with Touch ID and Numeric Keypad, as well as the Magic Mouse. To begin, all you need is a display. You also don't have to limit yourself to one screen because the Mac Pro can support up to eight 4K 60 Hz displays, six 6K 60 Hz displays, or three 8K 60 Hz displays.</p><h3 style=\"\">Apple M2 Ultra Chip</h3><p style=\"\">The M2 Ultra is a powerful chip created by Apple, using their UltraFusion technology. It combines two M2 Max dies through a silicon interposer, providing high interprocessor bandwidth. The M2 Ultra's 24-Core CPU consists of 16 performance cores and 8 high-efficiency cores, delivering 20% faster performance than the M1 Ultra. With a 76-core GPU, 64GB of RAM, and industry-leading media engine, it offers exceptional performance and can handle up to 22 streams of 8K ProRes video playback. Its unified design eliminates the need for code rewriting to utilize its extreme performance.</p><h3 style=\"\">Expansion</h3><p style=\"\">The Mac Pro combines Apple silicon performance with PCI expansion capability. It offers six PCIe Gen 4.0 slots, providing enhanced bandwidth for audio, video I/O, networking, and storage cards. The configuration includes two double-height PCIe Gen 4.0 x16 slots, two single-height PCIe 4.0 x8 slots, and two double-height PCIe 4.0 x8 slots. Additionally, there is a half-length PCIe 3.0 x4 slot occupied by the Apple I/O card.<br/></p><h3 style=\"\">Stacked with high-performance I/O</h3><p style=\"\">The Mac Pro offers extensive connectivity options, including eight Thunderbolt 4 ports with high-speed data transfer and DisplayPort support. It has two HDMI ports for 8K resolutions and 240 Hz refresh rates. Legacy USB devices can be connected through two USB-A ports, and headphone support is available with the 3.5 mm audio jack. The wireless connectivity features Wi-Fi 6E (802.11ax) and Bluetooth 5.3. Additionally, there are dual 10 Gigabit Ethernet LAN jacks for a reliable wired connection.</p><h2>Buy Apple Mac Pro M2 Ultra Tower Desktop PC from the best Apple Shop in Bangladesh: Star Tech</h2><p>In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/apple-mac-pro-m2-ultra-tower-desktop-pc\" target=\"\">Apple Mac Pro M2 Ultra Tower Desktop PC</a> From Star Tech. We have a large collection of latest Apple Mac Pro to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Apple Mac Pro M2 Ultra Tower Desktop PC comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Mac Pro</li><li>Proccessor: Apple M2 Ultra 24-Core CPU, 76-Core GPU</li><li>RAM: 64GB, Storage: 1TB SSD</li><li>Support for up to eight displays</li><li>Magic Keyboard with Touch ID &amp; Keypad, Magic Mouse</li></ul>",
+      "model": "Mac Pro",
+      "warranty": "1 year",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 37.2,
+      "dimensions": {
+        "length": 20.8,
+        "width": 52.9,
+        "height": 21.9,
+        "unit": "inches"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "64GB unified memory Configurable to: 128GB or 192GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "1TB SSD Configurable to: 2TB, 4TB, or 8TB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Silver",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-28922",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "64GB unified memory Configurable to: 128GB or 192GB",
+            "Storage": "1TB SSD Configurable to: 2TB, 4TB, or 8TB",
+            "Color": "Silver"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Apple M2 Ultra chip 24-core CPU and 32-core Neural Engine 800GB/s memory bandwidth",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "64GB unified memory Configurable to: 128GB or 192GB",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "76-core GPU Hardware-accelerated H.264, HEVC, ProRes, and ProRes RAW Two video decode engines Four video encode engines Four ProRes encode and decode engines",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "1TB SSD Configurable to: 2TB, 4TB, or 8TB",
+              "position": 3
+            },
+            {
+              "label": "Monitor",
+              "value": "Simultaneous support for up to eight displays: Eight displays with up to 4K resolution at 60Hz Six displays with up to 6K resolution at 60Hz Three displays with up to 8K resolution at 60Hz Thunderbolt 4 digital video output Support for native DisplayPort output over USB-C HDMI display video output (per port) Support for one display with up to 8K resolution at 60Hz or 4K resolution at 240Hz Support for variable refresh rate (VRR), HDR, and multichannel audio",
+              "position": 4
+            },
+            {
+              "label": "Casing",
+              "value": "Mac Pro tower enclosure with feet; configurable to tower with wheels",
+              "position": 5
+            },
+            {
+              "label": "Audio",
+              "value": "Built-in speaker 3.5 mm headphone jack with advanced support for high-impedance headphones HDMI port supports multichannel audio output",
+              "position": 6
+            },
+            {
+              "label": "Power Supply",
+              "value": "Line voltage: 100–125V AC at 12A; 220–240V AC at 6A Frequency: 50Hz to 60Hz, single phase Maximum continuous power: 1280W at 108–125V or 220–240V; 1180W at 100–107V Operating temperature: 50° to 95° F (10° to 35° C) Storage temperature: –40° to 116° F (–40° to 47° C) Relative humidity: 5% to 95% noncondensing Maximum altitude: tested up to 16,400 feet (5000 meters) Typical acoustical performance: Sound pressure level (operator position): 5 dBA at idle",
+              "position": 7
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Wi-Fi 6E (802.11ax)2 Bluetooth 5.3 Two 10Gb Ethernet ports: 10Gb Ethernet (Nbase-T Ethernet with support for 1Gb, 2.5Gb, 5Gb, and 10Gb Ethernet using RJ-45 connector)",
+              "position": 8
+            },
+            {
+              "label": "Operating System",
+              "value": "macOS",
+              "position": 9
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "Keyboard",
+              "value": "Magic Keyboard with Touch ID and Numeric Keypad",
+              "position": 0
+            },
+            {
+              "label": "Mouse",
+              "value": "Magic Mouse",
+              "position": 1
+            },
+            {
+              "label": "Optical Drive",
+              "value": "Six full-length PCI Express gen 4 slots Two x16 slots Four x8 slots One half-length x4 PCI Express gen 3 slot with Apple I/O card installed 300W auxiliary power available: Two 6-pin connectors delivering 75W of power each One 8-pin connector delivering 150W of power",
+              "position": 2
+            },
+            {
+              "label": "External I/O Ports",
+              "value": "Eight Thunderbolt 4 (USB-C) ports Six ports on the back of the enclosure and two ports on the top of the tower enclosure or two ports on the front of the rack enclosure Support for: Thunderbolt 4 (up to 40Gb/s) DisplayPort USB 4 (up to 40Gb/s) USB 3.1 Gen 2 (up to 10Gb/s) Internal connections One USB-A port (up to 5Gb/s) Two Serial ATA ports (up to 6Gb/s) Additional connections Two USB-A ports (up to 5Gb/s) Two HDMI ports Two 10Gb Ethernet ports 3.5 mm headphone jack",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "Height: 20.8 inches (52.9 cm) Height with optional wheels: 21.9 inches (55.7 cm) Width: 8.58 inches (21.8 cm) Depth: 17.7 inches (45.0 cm)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "37.2 pounds (16.86 kg)",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Silver",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-mac-pro-m2-ultra-tower-desktop-pc",
+      "sourceProductCode": "28922",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Mac Pro",
+        "Proccessor: Apple M2 Ultra 24-Core CPU, 76-Core GPU",
+        "RAM: 64GB, Storage: 1TB SSD",
+        "Support for up to eight displays",
+        "Magic Keyboard with Touch ID & Keypad, Magic Mouse"
+      ],
+      "needsReview": true,
+      "categorySlug": "desktop",
+      "image": "/images/products/desktop/apple-mac-pro/apple-mac-pro-m2-ultra-tower-desktop-pc.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/apple-mac-pro/apple-mac-pro-m2-ultra-tower-desktop-pc.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-mac-pro-m2-ultra-tower-desktop-pc",
+        "candidateTitle": "Apple Mac Pro M2 Ultra Tower Desktop PC",
+        "attemptStem": "apple-mac-pro-m2-ultra-tower-desktop-pc"
+      }
+    },
+    {
+      "name": "Apple Mac Studio M4 Max",
+      "slug": "apple-mac-studio-m4-max",
+      "type": "PHYSICAL",
+      "sku": "ST-46530",
+      "description": "<h2>Apple Mac Studio M4 Max</h2><p>The Apple <strong>Mac Studio M4 Max</strong> is Apple’s most advanced compact desktop, designed for professionals who need workstation‑level performance in a sleek, space‑saving design.</p><p>Powered by the M4 Max chip, this Mac Studio combines a 14‑core CPU, 32‑core GPU, and 16‑core Neural Engine to deliver extreme speed for creative workflows, AI tasks, and high‑end productivity.</p><p>With support for up to five displays, Thunderbolt 5 connectivity, and 10Gb Ethernet, the Apple Mac Studio M4 Max is built to be the ultimate hub for video editors, 3D artists, developers, and content creators.</p><h2>Key Specs of Apple Mac Studio M4 Max</h2><ul> <li><strong>Chipset:</strong> Apple M4 Max (14‑core CPU, 32‑core GPU, 16‑core Neural Engine)</li> <li><strong>Memory:</strong> 36GB unified memory, 410GB/s bandwidth</li> <li><strong>Storage:</strong> 512GB SSD</li> <li><strong>Media Engine:</strong> ProRes, ProRes RAW, AV1 decode, dual encode/decode engines</li> <li><strong>Display Support:</strong> Up to 5 displays (6K, 8K, 4K high refresh rates)</li> <li><strong>Connectivity:</strong> Thunderbolt 5, USB 4, HDMI 2.1, 10Gb Ethernet, Wi‑Fi 6E, Bluetooth 5.3</li></ul><h3>Unlease your Creative Power with the Mac Studio M4 Max</h3><p>The Mac Studio M4 Max delivers unmatched performance for professional workloads. Its 14‑core CPU and 32‑core GPU handle demanding tasks like video editing, motion graphics, and 3D rendering with ease. Hardware‑accelerated ray tracing ensures realistic visuals, while the 16‑core Neural Engine accelerates AI and machine learning applications.</p><p>With 36GB unified memory and 410GB/s bandwidth, multitasking is seamless even with massive projects. The advanced Media Engine supports ProRes and AV1 decode, making the Apple Mac Studio M4 Max a top choice for editors, animators, and content creators who need uncompromising speed and efficiency.</p><h3>Why Choose Apple Mac Studio M4 Max?</h3><p>The Apple Mac Studio M4 Max combines compact design with workstation‑class power, making it ideal for professional studios, offices, and home setups. Unlike bulky towers, this Mac Studio delivers extreme performance in a small footprint.</p><p>Its Thunderbolt 5 ports, multi‑display support, and 10Gb Ethernet make it future‑ready for high‑bandwidth workflows. Whether you’re a video editor, 3D artist, software developer, or AI researcher, the Mac Studio M4 Max offers unmatched speed, reliability, and flexibility cementing its place as the ultimate desktop solution for creative excellence.</p><h2>Buy Apple Mac Studio M4 Max from the best Apple Mac Studio Shop in Bangladesh: Star Tech</h2><p>In Bangladesh, you can get original<strong> Apple Mac Studio M4 Max</strong> From Star Tech. We have a large collection of the latest<a href=\"https://www.startech.com.bd/apple-mac-studio\"> Apple Mac Studio</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\">Star Tech</a> Shop to get yours at the lowest price. The Mac Studio M4 Max comes with 1 year of warranty.</p><h2>FAQs – Apple Mac Studio M4 Max</h2><p><strong>Q1: Does the Mac Studio M4 Max support 8K displays?</strong></p><p>Yes, it supports up to <strong>one 8K display at 60Hz</strong> via HDMI, along with multiple 6K and 4K displays.</p><p><strong>Q2: Can I upgrade the RAM or SSD later?</strong></p><p>No, the <strong>Mac Studio M4 Max</strong> uses unified memory and soldered SSD storage, so <strong>upgrades are not user‑accessible</strong>.</p><p><strong>Q3: Is the Mac Studio M4 Max good for video editing?</strong></p><p>Yes, it is optimized with <strong>ProRes acceleration, AV1 decode, and dual encode engines</strong> for professional video editing workflows.</p><p><strong>Q4: How many displays can I connect to the Mac Studio M4 Max?</strong></p><p>You can connect <strong>up to five displays simultaneously </strong>four 6K displays via Thunderbolt and one 4K/8K display via HDMI.</p><p><strong>Q5: Does the Mac Studio M4 Max support Wi‑Fi 6E?</strong></p><p>Yes, it comes with <strong>Wi‑Fi 6E</strong> and <strong>Bluetooth 5.3</strong> for fast and reliable wireless connectivity.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Mac Studio M4 Max</li><li>Processor: Apple M4 Max with 14 core CPU; 32‑core GPU; 16‑core Neural Engine</li><li>RAM: 36GB unified, Storage: 512GB SSD</li><li>Ports: 4 x Thunderbolt 5 (Type-C), 2 x USBA-A, 1x HDMI, Audio Port</li><li>Wi-Fi 6E (802.11ax), Bluetooth 5.3, 10Gbps Ethernet Port</li></ul>",
+      "model": "Mac Studio M4 Max",
+      "warranty": "1 year",
+      "basePrice": 350000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 2.74,
+      "dimensions": {
+        "length": 9.5,
+        "width": 19.7,
+        "height": 19.7,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Apple",
+      "variantOptions": [
+        {
+          "name": "RAM",
+          "position": 0,
+          "values": [
+            {
+              "value": "32GB unified memory",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 1,
+          "values": [
+            {
+              "value": "512GB SSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "Silver",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-46530",
+          "price": 350000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "RAM": "32GB unified memory",
+            "Storage": "512GB SSD",
+            "Color": "Silver"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 336000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Processor",
+              "value": "Apple M4 Max chip 14-core CPU with 10 performance cores and 4 efficiency cores 16-core Neural Engine 410GB/s memory bandwidth",
+              "position": 0
+            },
+            {
+              "label": "RAM",
+              "value": "32GB unified memory",
+              "position": 1
+            },
+            {
+              "label": "Graphics Card",
+              "value": "32-core GPU",
+              "position": 2
+            },
+            {
+              "label": "Storage",
+              "value": "512GB SSD",
+              "position": 3
+            },
+            {
+              "label": "Monitor",
+              "value": "Display Support: Simultaneous support for up to five displays: Up to four displays with 6K resolution at 60Hz over Thunderbolt and one display with 4K resolution at 144Hz over HDMI Up to two displays with 6K resolution at 60Hz over Thunderbolt and one display with 8K resolution at 60Hz or 4K resolution at up to 240Hz over HDMI",
+              "position": 4
+            },
+            {
+              "label": "Audio",
+              "value": "Built-in speaker 3.5 mm headphone jack with advanced support for high-impedance headphones HDMI port supports multichannel audio output",
+              "position": 5
+            },
+            {
+              "label": "Network & Wireless Connectivity",
+              "value": "Wi-Fi - Wi-Fi 6E (802.11ax) Bluetooth - Bluetooth 5.3 Ethernet - 10Gb Ethernet (Nbase-T Ethernet with support for 1Gb; 2.5Gb; 5Gb; and 10Gb Ethernet using RJ-45 connector)",
+              "position": 6
+            },
+            {
+              "label": "Operating System",
+              "value": "macOS",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Input Devices",
+          "position": 1,
+          "items": [
+            {
+              "label": "External I/O Ports",
+              "value": "4 x Thunderbolt 5 (up to 120 Gbps) USB 4 (up to 120 Gbps) USB 3 (up to 10 Gbps) DisplayPort 2.1 Two USB 3 (USB‑A) ports (up to 5 Gbps) HDMI 2.1 port 10Gb Ethernet 3.5mm headphone jack On front (M4 Max): Two USB Type‑C ports (up to 10 Gbps) SDXC card slot (UHS-II)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Details",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "Height: 9.50cm Width: 19.70cm Depth: 19.70cm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "2.74kg",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "Silver",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/apple-mac-studio-m4-max",
+      "sourceProductCode": "46530",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Mac Studio M4 Max",
+        "Processor: Apple M4 Max with 14 core CPU; 32‑core GPU; 16‑core Neural Engine",
+        "RAM: 36GB unified, Storage: 512GB SSD",
+        "Ports: 4 x Thunderbolt 5 (Type-C), 2 x USBA-A, 1x HDMI, Audio Port",
+        "Wi-Fi 6E (802.11ax), Bluetooth 5.3, 10Gbps Ethernet Port"
+      ],
+      "needsReview": false,
+      "categorySlug": "desktop",
+      "image": "/images/products/desktop/apple-mac-studio/apple-mac-studio-m4-max.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/desktop/apple-mac-studio/apple-mac-studio-m4-max.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "apple-mac-studio-m4-max",
+        "candidateTitle": "Apple Mac Studio M4 Max",
+        "attemptStem": "apple-mac-studio-m4-max"
+      }
+    }
+  ]
+}
