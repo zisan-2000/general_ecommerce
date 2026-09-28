@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download ALL Star Tech Tablet PC primary product images into hierarchy folders.
+Download ALL Deshi Plus Tablet PC primary product images into hierarchy folders.
 
 Source:
     https://www.startech.com.bd/tablet-pc
@@ -53,7 +53,7 @@ Examples:
 
 Notes:
 - Product count is NOT hardcoded.
-- The script reads the current Star Tech pagination.
+- The script reads the current Deshi Plus pagination.
 - Existing images are skipped unless --overwrite is used.
 - Each product is saved once in the first matching Tablet category.
 - A manifest is continuously written to startech_tablet_image_manifest.json.
@@ -303,7 +303,7 @@ def main() -> int:
         if hasattr(stream, "reconfigure"):
             stream.reconfigure(encoding="utf-8")
 
-    ap = argparse.ArgumentParser(description="Download all Star Tech Tablet PC images.")
+    ap = argparse.ArgumentParser(description="Download all Deshi Plus Tablet PC images.")
     ap.add_argument("--project-root", default=".")
     ap.add_argument("--output-root", default="public/images/products")
     ap.add_argument("--manifest", default="startech_tablet_image_manifest.json")

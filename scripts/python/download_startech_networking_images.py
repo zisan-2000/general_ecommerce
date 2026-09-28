@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download ALL Star Tech Networking product primary images into hierarchy folders.
+Download ALL Deshi Plus Networking product primary images into hierarchy folders.
 
 Source:
     https://www.startech.com.bd/networking

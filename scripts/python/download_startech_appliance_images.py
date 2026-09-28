@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download ALL Star Tech Appliance primary product images into hierarchy folders.
+Download ALL Deshi Plus Appliance primary product images into hierarchy folders.
 
 Source:
     https://www.startech.com.bd/appliance
@@ -60,9 +60,9 @@ Examples:
 
 Notes:
 - Product count is NOT hardcoded.
-- Pagination is read live from Star Tech.
+- Pagination is read live from Deshi Plus.
 - Existing images are skipped unless --overwrite is used.
-- Products are classified by matching Star Tech Appliance category pages.
+- Products are classified by matching Deshi Plus Appliance category pages.
 - A manifest is continuously written to:
       startech_appliance_image_manifest.json
 """

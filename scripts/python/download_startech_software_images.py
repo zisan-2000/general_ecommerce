@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download ALL Star Tech Software category product images into hierarchy folders.
+Download ALL Deshi Plus Software category product images into hierarchy folders.
 
 Source:
     https://www.startech.com.bd/software

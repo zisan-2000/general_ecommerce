@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Star Tech Laptop image downloader with full hierarchy.
+Deshi Plus Laptop image downloader with full hierarchy.
 
 Source:
     https://www.startech.com.bd/laptop-notebook
@@ -358,7 +358,7 @@ def discover_parent_url(client: Client, parent_slug: str, label: str) -> str | N
     if found:
         return found
 
-    # Known safe fallbacks for Star Tech's current laptop URL structure.
+    # Known safe fallbacks for Deshi Plus's current laptop URL structure.
     fallbacks = {
         "all-laptop": f"{BASE}/laptop-notebook/laptop",
         "gaming-laptop": f"{BASE}/gaming-laptop",
@@ -447,7 +447,7 @@ def main() -> int:
     manifest_path = (root / args.manifest).resolve()
     client = Client(args.delay)
 
-    print("Discovering Star Tech Laptop hierarchy...")
+    print("Discovering Deshi Plus Laptop hierarchy...")
 
     hierarchy_records = []
     product_candidates = OrderedDict()

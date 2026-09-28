@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Refresh the existing Star Tech seed from live listings (no images or DB writes).
+"""Refresh the existing Deshi Plus seed from live listings (no images or DB writes).
 
 python startech_catalog_builder.py
 python startech_catalog_builder.py --validate-only

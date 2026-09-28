@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download ALL Star Tech Office Equipment product primary images into hierarchy folders.
+Download ALL Deshi Plus Office Equipment product primary images into hierarchy folders.
 
 Source:
     https://www.startech.com.bd/office-equipment
@@ -8,7 +8,7 @@ Source:
 Default output:
     public/images/products/office-equipment/...
 
-Current direct categories on Star Tech include:
+Current direct categories on Deshi Plus include:
     projector
     conference-system
     pa-system

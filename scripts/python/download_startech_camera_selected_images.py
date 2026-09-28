@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download ONLY these Star Tech Camera categories:
+Download ONLY these Deshi Plus Camera categories:
 
 - Camera Lenses
 - Dash Cam
@@ -544,7 +544,7 @@ def main() -> int:
             "Download only Camera Lenses, "
             "Dash Cam, Body Camera and "
             "Instant Camera images from "
-            "Star Tech."
+            "Deshi Plus."
         )
     )
 

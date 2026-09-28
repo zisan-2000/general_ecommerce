@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "source": {
-    "site": "https://www.startech.com.bd",
+    "site": "https://www.deshiplus.com",
     "categoryHierarchyFile": "prisma\\startech_category_subcategory_brand_seed.json",
     "productImageHierarchyFile": "prisma\\product_image_hierarchy.json",
     "generatedAtUnix": 1790521728,

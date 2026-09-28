@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download Star Tech Office Equipment product images into a 3-level folder hierarchy.
+Download Deshi Plus Office Equipment product images into a 3-level folder hierarchy.
 
 Root:
     public/images/products/office-equipment/
@@ -15,8 +15,8 @@ Examples:
     office-equipment/printer/_direct/<product>.png
 
 Key behavior:
-- First-level Office Equipment submenu URLs are hardcoded from the supplied Star Tech menu.
-- Child menu URLs are discovered live from Star Tech's Office Equipment navigation.
+- First-level Office Equipment submenu URLs are hardcoded from the supplied Deshi Plus menu.
+- Child menu URLs are discovered live from Deshi Plus's Office Equipment navigation.
 - Projector child URLs are also included as a verified fallback list.
 - Product counts are NOT hardcoded; pagination is crawled live.
 - Every first-level branch is crawled directly, so products are not lost even if child discovery fails.
@@ -116,7 +116,7 @@ CATEGORY_URLS = OrderedDict([
 ])
 
 # Verified Projector child links supplied by the user. These are used as a fallback
-# even if Star Tech changes its navigation markup.
+# even if Deshi Plus changes its navigation markup.
 KNOWN_CHILDREN = {
     "projector": OrderedDict([
         ("optoma", ("Optoma", f"{BASE}/optoma-projector")),
@@ -327,7 +327,7 @@ def nearest_menu_container(anchor):
 
 def discover_children_from_nav(client: Client, category_slug: str, label: str, url: str):
     """
-    Discover second-level child links from Star Tech navigation.
+    Discover second-level child links from Deshi Plus navigation.
 
     Strategy:
     1) Read both homepage and Office Equipment page because the menu HTML may differ.
@@ -514,7 +514,7 @@ def main() -> int:
         if hasattr(stream, "reconfigure"):
             stream.reconfigure(encoding="utf-8")
 
-    ap = argparse.ArgumentParser(description="Download Star Tech Office Equipment product images as PNG in menu hierarchy folders.")
+    ap = argparse.ArgumentParser(description="Download Deshi Plus Office Equipment product images as PNG in menu hierarchy folders.")
     ap.add_argument("--project-root", default=".")
     ap.add_argument("--output-root", default="public/images/products")
     ap.add_argument("--manifest", default="startech_office_equipment_image_manifest.json")

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download ALL Star Tech Component product primary images into hierarchy folders.
+Download ALL Deshi Plus Component product primary images into hierarchy folders.
 
 Source:
     https://www.startech.com.bd/component
@@ -29,7 +29,7 @@ Examples:
 
 Notes:
 - Product count is NOT hardcoded. The script reads the live /component pagination.
-- It includes all products shown by Star Tech, including In Stock / Out Of Stock /
+- It includes all products shown by Deshi Plus, including In Stock / Out Of Stock /
   Pre Order / Up Coming listings.
 - Existing images are skipped by default, so interrupted runs can be resumed.
 - Every product is saved once in the deepest matching hierarchy folder.
@@ -73,7 +73,7 @@ HEADERS = {
 }
 
 
-# Star Tech Component hierarchy supplied by the user and matching the current
+# Deshi Plus Component hierarchy supplied by the user and matching the current
 # Component menu. URLs are discovered live rather than hardcoded.
 CATEGORY_TREE = OrderedDict(
     [
@@ -624,7 +624,7 @@ def main() -> int:
             stream.reconfigure(encoding="utf-8")
 
     parser = argparse.ArgumentParser(
-        description="Download Star Tech Component images into hierarchy folders."
+        description="Download Deshi Plus Component images into hierarchy folders."
     )
     parser.add_argument("--project-root", default=".", help="Repository root")
     parser.add_argument(

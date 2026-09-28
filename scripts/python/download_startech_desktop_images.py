@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download ALL product primary images from Star Tech Desktop category and save
+Download ALL product primary images from Deshi Plus Desktop category and save
 them in a Desktop -> Subcategory -> Child-category folder hierarchy.
 
 Default output (Next.js):
@@ -23,7 +23,7 @@ Examples:
 
 Notes:
 - The script does NOT hardcode "180". It reads the current /desktops listing and
-  crawls all pagination pages, so it keeps working if Star Tech adds/removes products.
+  crawls all pagination pages, so it keeps working if Deshi Plus adds/removes products.
 - All products from /desktops are included, including out-of-stock products.
 - Each product image is stored once in the deepest matching menu category.
 - All category matches are retained in the generated manifest.
@@ -62,8 +62,8 @@ HEADERS = {
     "Referer": BASE + "/",
 }
 
-# Menu hierarchy supplied/verified from the Star Tech Desktop menu.
-# URL values are discovered live from Star Tech rather than hardcoded.
+# Menu hierarchy supplied/verified from the Deshi Plus Desktop menu.
+# URL values are discovered live from Deshi Plus rather than hardcoded.
 CATEGORY_TREE = OrderedDict(
     [
         ("AI PC", OrderedDict()),
@@ -224,7 +224,7 @@ def extract_product_links(soup: BeautifulSoup) -> OrderedDict[str, str]:
     """
     Return {canonical_product_url: product_name}.
 
-    Star Tech has used several product-card class names over time, so multiple
+    Deshi Plus has used several product-card class names over time, so multiple
     selectors are supported.
     """
     selectors = [
@@ -257,7 +257,7 @@ def extract_product_links(soup: BeautifulSoup) -> OrderedDict[str, str]:
             return found
 
     # Conservative fallback for layout changes:
-    # h4 headings in Star Tech listing pages are normally product titles.
+    # h4 headings in Deshi Plus listing pages are normally product titles.
     for h4 in soup.find_all("h4"):
         a = h4.find("a", href=True)
         if not a:
@@ -336,7 +336,7 @@ def find_named_category_link(
     parent_label: str | None = None,
 ) -> str | None:
     """
-    Find the live Star Tech category URL for a visible menu/category label.
+    Find the live Deshi Plus category URL for a visible menu/category label.
 
     Exact anchor text is preferred. Candidate URLs are scored to avoid unrelated
     footer/search/filter links with the same text.
@@ -441,7 +441,7 @@ def flatten_tree(
                 client, top_url or DESKTOP_URL, child_name, parent_label=top_name
             )
             if not child_url:
-                # Some Star Tech child links are only present in the global mega menu.
+                # Some Deshi Plus child links are only present in the global mega menu.
                 child_url = find_named_category_link(
                     client, DESKTOP_URL, child_name, parent_label=top_name
                 )
@@ -674,7 +674,7 @@ def main() -> int:
             stream.reconfigure(encoding="utf-8")
 
     ap = argparse.ArgumentParser(
-        description="Download all Star Tech /desktops primary images into hierarchy folders."
+        description="Download all Deshi Plus /desktops primary images into hierarchy folders."
     )
     ap.add_argument("--project-root", default=".", help="Repository root")
     ap.add_argument(

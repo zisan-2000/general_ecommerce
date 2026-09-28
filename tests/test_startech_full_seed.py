@@ -19,7 +19,7 @@ class FinalizeTests(unittest.TestCase):
                                   sub, sub.title(), brand, brand.title(), "brand")
         product = {
             "name": "Adapter", "slug": "adapter", "sku": "SKU", "brandName": brand.title(),
-            "sourceProductUrl": f"https://www.startech.com.bd/{stem}", "image": image,
+            "sourceProductUrl": f"https://www.deshiplus.com/{stem}", "image": image,
             "localImageFile": "public" + image, "sourceImages": [image],
             "sourceHierarchy": [record.audit_dict()], "variants": [{"sku": "SKU", "options": {"Color": "Black"}}],
             "description": "Full description", "specificationGroups": [{"name": "General", "items": []}],

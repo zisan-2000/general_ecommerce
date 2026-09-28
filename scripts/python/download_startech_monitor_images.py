@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download ALL Star Tech Monitor primary product images into hierarchy folders.
+Download ALL Deshi Plus Monitor primary product images into hierarchy folders.
 
 Source:
     https://www.startech.com.bd/monitor
@@ -38,9 +38,9 @@ Examples:
 
 Notes:
 - Product count is NOT hardcoded.
-- It reads the live /monitor pagination, so it adapts if Star Tech adds/removes products.
+- It reads the live /monitor pagination, so it adapts if Deshi Plus adds/removes products.
 - Existing images are skipped by default.
-- Product folders are assigned by dedicated Star Tech monitor category pages first.
+- Product folders are assigned by dedicated Deshi Plus monitor category pages first.
 - Remaining normal monitors are placed under standard-monitor/<brand>/.
 - Manifest is continuously written to startech_monitor_image_manifest.json.
 """
@@ -480,7 +480,7 @@ def main() -> int:
             stream.reconfigure(encoding="utf-8")
 
     parser = argparse.ArgumentParser(
-        description="Download all Star Tech Monitor product images."
+        description="Download all Deshi Plus Monitor product images."
     )
     parser.add_argument("--project-root", default=".", help="Repository root")
     parser.add_argument(

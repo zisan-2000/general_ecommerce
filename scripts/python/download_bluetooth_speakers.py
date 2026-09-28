@@ -267,7 +267,7 @@ def main():
     total_failed = 0
 
     print("=" * 70)
-    print("STAR TECH BLUETOOTH SPEAKER DOWNLOADER")
+    print("Deshi Plus BLUETOOTH SPEAKER DOWNLOADER")
     print("=" * 70)
 
     print(f"Brands : {len(BRANDS)}")

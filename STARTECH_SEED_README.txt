@@ -1,11 +1,11 @@
-STAR TECH FULL PRODUCT SEED - HOW TO USE
+Deshi Plus FULL PRODUCT SEED - HOW TO USE
 ========================================
 
 Files in this package
 ---------------------
 1. build_startech_full_seed.py
    Reads category/subcategory/brand hierarchy + product image hierarchy,
-   matches every image filename to Star Tech, scrapes details/specifications,
+   matches every image filename to Deshi Plus, scrapes details/specifications,
    and writes a Prisma-oriented JSON seed.
 
 2. seed-startech-generated.ts
@@ -53,9 +53,9 @@ Default stock / seed behavior
 - currency = BDT
 - product type = PHYSICAL
 - inventory item class = CONSUMABLE
-- local products are available by default even if current Star Tech status is
-  Out Of Stock; Star Tech status is retained in sourceStatus.
-- To mirror current Star Tech availability exactly, add:
+- local products are available by default even if current Deshi Plus status is
+  Out Of Stock; Deshi Plus status is retained in sourceStatus.
+- To mirror current Deshi Plus availability exactly, add:
     --respect-source-availability
 
 Run Prisma seed
@@ -68,7 +68,7 @@ Then run:
 
 What specifications become
 --------------------------
-For every Star Tech specification row, the generator creates:
+For every Deshi Plus specification row, the generator creates:
 - specificationGroups[] / items[]
 - variantOptions[] / values[]
 - one default ProductVariant.options JSON entry
@@ -87,8 +87,8 @@ avoid showing the same image twice.
 
 Matching safety
 ---------------
-1. Try exact Star Tech URL from image filename first.
-2. If it does not resolve to a product, use Star Tech product search.
+1. Try exact Deshi Plus URL from image filename first.
+2. If it does not resolve to a product, use Deshi Plus product search.
 3. Fuzzy search results below the confidence threshold are rejected.
 4. Rejected/failed products are written to *.unmatched.json instead of being
    assigned to the wrong product.
@@ -108,9 +108,9 @@ including examples such as:
 
 If a generated child slug already exists under a different parent, the importer
 does NOT re-parent the old category. It creates/reuses a parent-prefixed slug
-for the Star Tech branch instead.
+for the Deshi Plus branch instead.
 
-Products are matched against the database by slug AND SKU. If the Star Tech
+Products are matched against the database by slug AND SKU. If the Deshi Plus
 slug changed but the SKU/MPN already exists, the existing Product row is
 updated and its public slug is preserved. This prevents duplicates such as an
 existing Kingston product with SKU KF432C16BWA/8.

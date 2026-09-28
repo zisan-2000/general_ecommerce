@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download ALL Star Tech Security Camera / Security product primary images into
+Download ALL Deshi Plus Security Camera / Security product primary images into
 category folders.
 
 Source:
@@ -9,7 +9,7 @@ Source:
 Default output:
     public/images/products/security-camera/...
 
-Live direct categories currently shown on Star Tech:
+Live direct categories currently shown on Deshi Plus:
     Portable WiFi Camera
     IP Camera
     CC Camera
@@ -49,7 +49,7 @@ Examples:
 
 Notes:
 - Product count is NOT hardcoded.
-- The script reads the current live pagination from Star Tech.
+- The script reads the current live pagination from Deshi Plus.
 - Existing images are skipped unless --overwrite is used.
 - Each product is stored once in the first matching Security category.
 - A manifest is continuously written to startech_security_image_manifest.json.
@@ -411,7 +411,7 @@ def main() -> int:
             stream.reconfigure(encoding="utf-8")
 
     parser = argparse.ArgumentParser(
-        description="Download all Star Tech Security Camera/Security product images."
+        description="Download all Deshi Plus Security Camera/Security product images."
     )
 
     parser.add_argument(

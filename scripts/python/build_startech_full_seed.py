@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build a schema-oriented Star Tech product seed from the two hierarchy JSON files.
+Build a schema-oriented Deshi Plus product seed from the two hierarchy JSON files.
 
 Inputs
 ------
@@ -8,13 +8,13 @@ Inputs
 2) product_image_hierarchy JSON
 
 For every local product image, the script:
-- derives a likely Star Tech product slug from the image filename
+- derives a likely Deshi Plus product slug from the image filename
 - tries https://www.startech.com.bd/<slug> first
-- falls back to Star Tech search when direct URL matching fails
+- falls back to Deshi Plus search when direct URL matching fails
 - scrapes product name, price, regular/original price, brand, model, MPN,
   product code, warranty, description, key features and specification groups
 - maps the product back to Category -> Subcategory -> Brand from the local path
-- writes ONE seed product for duplicate local mirrors of the same Star Tech page
+- writes ONE seed product for duplicate local mirrors of the same Deshi Plus page
 - preserves every local source image path for audit
 - converts specification rows into:
     * specificationGroups (display/detail page)
@@ -65,7 +65,7 @@ Output files
 
 Important
 ---------
-Star Tech pages and HTML can change. The generator refuses low-confidence search
+Deshi Plus pages and HTML can change. The generator refuses low-confidence search
 matches and puts them in the unmatched file instead of silently assigning the
 wrong product.
 """
@@ -156,7 +156,7 @@ def canonical_startech_url(url: str) -> str:
     p = urlsplit(urljoin(BASE, url))
     host = p.hostname or ""
     if host not in {"startech.com.bd", "www.startech.com.bd"}:
-        raise ValueError(f"Unexpected Star Tech URL: {url}")
+        raise ValueError(f"Unexpected Deshi Plus URL: {url}")
     path = quote_plus(unquote(p.path).strip().rstrip("/"), safe="/-._~")
     # quote_plus encodes spaces as +; path URLs are cleaner with %20 / slug style.
     path = path.replace("+", "%20") or "/"
@@ -572,7 +572,7 @@ def resolve_product_page(
 
 
 # ---------------------------------------------------------------------------
-# Star Tech page parser
+# Deshi Plus page parser
 # ---------------------------------------------------------------------------
 
 
@@ -886,7 +886,7 @@ def parse_product_page(
     short_desc = build_short_desc(features)
     variant_options, options = variant_material(groups)
 
-    # SKU priority: real MPN -> Star Tech product code -> stable URL hash.
+    # SKU priority: real MPN -> Deshi Plus product code -> stable URL hash.
     sku = clean_text(mpn or "")
     if not sku:
         sku = f"ST-{product_code}" if product_code else f"ST-{sha12(url)}"
@@ -1122,7 +1122,7 @@ def scrape_group(
         return {
             "ok": False,
             "stem": stem,
-            "reason": "No confident Star Tech product match",
+            "reason": "No confident Deshi Plus product match",
             "match": match,
             "sourceImages": [r.image for r in records],
             "sourceHierarchy": [r.audit_dict() for r in records],
@@ -1211,7 +1211,7 @@ def validate_product_taxonomy(product: dict[str, Any]) -> None:
 
 
 def finalize_output(successes: list[dict[str, Any]], args: argparse.Namespace, hints: HierarchyHints) -> dict[str, Any]:
-    # Deduplicate again by canonical Star Tech URL. Different local folders can mirror
+    # Deduplicate again by canonical Deshi Plus URL. Different local folders can mirror
     # the exact same product. Merge all local paths into one product record.
     by_url: dict[str, dict[str, Any]] = {}
     for result in successes:
@@ -1349,7 +1349,7 @@ def main() -> int:
     parser.add_argument("--timeout", type=int, default=45)
     parser.add_argument("--min-match-score", type=float, default=0.72)
     parser.add_argument("--refresh", action="store_true")
-    parser.add_argument("--respect-source-availability", action="store_true", help="Use Star Tech In Stock/Out Of Stock status. Default seed keeps local catalog products available.")
+    parser.add_argument("--respect-source-availability", action="store_true", help="Use Deshi Plus In Stock/Out Of Stock status. Default seed keeps local catalog products available.")
     args = parser.parse_args()
 
     args.category_json = resolve_input_path(
@@ -1388,7 +1388,7 @@ def main() -> int:
         grouped[record.filename_stem].append(record)
 
     print("=" * 80)
-    print("STAR TECH FULL SEED GENERATOR")
+    print("Deshi Plus FULL SEED GENERATOR")
     print("=" * 80)
     print(f"Hierarchy image records : {len(records)}")
     print(f"Unique filename stems   : {len(grouped)}")

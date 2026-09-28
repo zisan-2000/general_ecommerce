@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download ALL Star Tech Gadget product primary images into hierarchy folders.
+Download ALL Deshi Plus Gadget product primary images into hierarchy folders.
 
 Source:
     https://www.startech.com.bd/gadget
@@ -54,9 +54,9 @@ Examples:
 
 Notes:
 - Product count is NOT hardcoded.
-- Pagination is read live from Star Tech.
+- Pagination is read live from Deshi Plus.
 - Existing images are skipped unless --overwrite is used.
-- Products are classified by matching Star Tech category pages.
+- Products are classified by matching Deshi Plus category pages.
 - A manifest is continuously written to:
       startech_gadget_image_manifest.json
 """

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Star Tech Networking Image Downloader
+Deshi Plus Networking Image Downloader
 ======================================
 
 Downloads ONE primary/high-quality image per product as PNG.
@@ -17,7 +17,7 @@ Examples:
 Behavior:
 - All first-level Networking menu items are included.
 - Known child/brand URLs for Access Point and WiFi Adapter are included.
-- Other child/brand links are discovered live from Star Tech navigation.
+- Other child/brand links are discovered live from Deshi Plus navigation.
 - Parent category is crawled too, so unmatched products are not lost.
 - Only ONE primary product image is saved per product.
 - Image is converted to PNG without resizing.
@@ -472,7 +472,7 @@ def discover_children_from_nav(
     url: str,
 ):
     """
-    Discover child / brand links from live Star Tech menu.
+    Discover child / brand links from live Deshi Plus menu.
 
     Then merge KNOWN_CHILDREN so supplied brand URLs are never lost.
     """
@@ -949,7 +949,7 @@ def main() -> int:
 
     parser = argparse.ArgumentParser(
         description=(
-            "Download ONE primary Star Tech Networking "
+            "Download ONE primary Deshi Plus Networking "
             "product image as PNG in category/child folders."
         )
     )
@@ -1059,7 +1059,7 @@ def main() -> int:
         "=" * 72
     )
     print(
-        "STAR TECH NETWORKING IMAGE DOWNLOADER"
+        "Deshi Plus NETWORKING IMAGE DOWNLOADER"
     )
     print(
         "ONE PRIMARY IMAGE PER PRODUCT"

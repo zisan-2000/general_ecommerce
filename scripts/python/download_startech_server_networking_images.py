@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Download ALL Star Tech Server & Storage product primary images into hierarchy folders.
+Download ALL Deshi Plus Server & Storage product primary images into hierarchy folders.
 
 Source:
     https://www.startech.com.bd/server-networking
