@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 MONITOR_URL = f"{BASE}/monitor"
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/153 Safari/537.36",
@@ -119,7 +119,7 @@ def product_links(soup: BeautifulSoup):
             href, name = a.get("href"), a.get_text(" ", strip=True)
             if href and name:
                 u = canonical(str(href))
-                if urlparse(u).netloc in {"startech.com.bd", "www.startech.com.bd"}:
+                if urlparse(u).netloc in {"deshiplus.com", "www.deshiplus.com"}:
                     batch.setdefault(u, name)
         if batch:
             out.update(batch)
