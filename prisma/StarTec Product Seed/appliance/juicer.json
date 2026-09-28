@@ -1,0 +1,391 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/appliance",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\appliance",
+    "generatedAtUnix": 1790586316,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Appliance",
+      "slug": "appliance",
+      "parentSlug": null,
+      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Juicer",
+      "slug": "juicer",
+      "parentSlug": "appliance",
+      "image": "/images/products/appliance/juicer/philips-hr1832-00-viva-collection-juicer.png",
+      "isActive": true,
+      "sortOrder": 16,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "PHILIPS",
+      "slug": "philips",
+      "logo": null
+    },
+    {
+      "name": "XIAOMI",
+      "slug": "xiaomi",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Philips HR1832/00 Viva Collection Juicer",
+      "slug": "philips-hr1832-00-viva-collection-juicer",
+      "type": "PHYSICAL",
+      "sku": "ST-50608",
+      "description": "<h2>Philips HR1832/00 Viva Collection Juicer</h2><p>The Philips <strong>HR1832/00</strong> Viva Collection Juicer runs on 500W power at 220 to 240V and 50 to 60Hz frequency. A single optimized speed setting handles all fruit types simply and efficiently. QuickClean technology allows complete cleaning of this Philips Juicer within just one minute. Smooth surfaces, round shapes, and an innovative QuickClean sieve make rinsing effortless. </p><p>The sieve design allows pulp fibres to wipe away easily using a standard kitchen sponge. All pulp collects directly inside the integrated 1 liter pulp container for easy disposal. A see-through pulp container and lid let users monitor the juicing process visually. Users can clearly see when the container reaches full capacity and needs emptying. The Philips HR1832/00 Viva Collection Juicer produces up to 1.5 liters of fresh juice in one go. </p><p>A 500ml juice jug and a 55mm feeding tube accommodate most fruit sizes comfortably. The drip stop spout prevents juice from dripping and keeps countertops clean between uses. The detachable drip stop spout is fully dishwasher safe for convenient, hygienic maintenance. All removable parts are dishwasher safe, simplifying the entire post-juicing cleanup process. </p><p>A pre-clean product feature helps rinse internal components before full washing begins. The Philips HR1832/00 Juicer has non-slip feet keep the juicer stable and secure during active juicing sessions. Safety clamps ensure all parts stay locked during operation for user protection. Integrated cord storage and an 0.80 meter cord keep the workspace tidy.</p><h2>Buy Philips HR1832/00 Viva Collection Juicer from Star Tech</h2><p>In Bangladesh, you can get original <strong>Philips HR1832/00 Viva Collection Juicer </strong>From Star Tech. We have a large collection of the latest Philips <a href=\"https://www.startech.com.bd/juicer\" target=\"\">Juicer</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Philips HR1832/00 Viva Collection Juicer comes with 2 Years Official Warranty by Philips. The Philips warranty card must be kept for any warranty claim-For warranty, Call Philips at 01898805551, 01898805552/Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: HR1832/00</li><li>500W powerful motor</li><li>1.5L juice jug capacity</li><li>Efficient fruit extraction</li><li>Easy-to-clean detachable parts</li></ul>",
+      "model": "HR1832/00",
+      "warranty": "2 Years Official Warranty by Philips. The Philips warranty card must be kept for any warranty claim-For warranty, Call Philips at 01898805551, 01898805552/Star Tech will not bear warranty claims).",
+      "basePrice": 13000.0,
+      "originalPrice": 16000.0,
+      "currency": "BDT",
+      "weight": 1.8,
+      "dimensions": {
+        "length": 233.0,
+        "width": 233.0,
+        "height": 420.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "PHILIPS",
+      "variantOptions": [
+        {
+          "name": "Jar Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.5L",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-50608",
+          "price": 13000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Jar Capacity": "1.5L",
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 12480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Function",
+              "value": "Juicer",
+              "position": 0
+            },
+            {
+              "label": "Jar Capacity",
+              "value": "1.5L",
+              "position": 1
+            },
+            {
+              "label": "Speed Control",
+              "value": "Two-Speed Control",
+              "position": 2
+            },
+            {
+              "label": "Motor",
+              "value": "500W",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Supply",
+              "value": "220/240V, 50/60Hz",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Cord length: 0.80 m",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Material",
+              "value": "Material housing: ABS Plastic Material jug: PP Plastic Material pulp container and pusher: ABS, SAN",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "233 × 233 × 420 mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "1.8 kg",
+              "position": 2
+            },
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "2 Years Official Warranty by Philips. The Philips warranty card must be kept for any warranty claim-For warranty, Call Philips at 01898805551, 01898805552/Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/philips-hr1832-00-viva-collection-juicer",
+      "sourceProductCode": "50608",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: HR1832/00",
+        "500W powerful motor",
+        "1.5L juice jug capacity",
+        "Efficient fruit extraction",
+        "Easy-to-clean detachable parts"
+      ],
+      "needsReview": false,
+      "categorySlug": "juicer",
+      "image": "/images/products/appliance/juicer/philips-hr1832-00-viva-collection-juicer.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/juicer/philips-hr1832-00-viva-collection-juicer.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "philips-hr1832-00-viva-collection-juicer",
+        "candidateTitle": "Philips HR1832/00 Viva Collection Juicer",
+        "attemptStem": "philips-hr1832-00-viva-collection-juicer"
+      }
+    },
+    {
+      "name": "Xiaomi MIJIA MJZZB01PL 300ml Portable Juicer Cup",
+      "slug": "xiaomi-mijia-mjzzb01pl-portable-juicer-cup",
+      "type": "PHYSICAL",
+      "sku": "ST-35422",
+      "description": "<h2>Xiaomi MIJIA MJZZB01PL 300ml Portable Juicer Cup</h2><p>The XIAOMI <strong>MIJIA MJZZB01PL</strong> 300ml Portable Juicer Cup is a tiny powerhouse meant to transform your everyday refreshment routine. This portable juicer uses its 18,000 rpm high-speed DC motor to squeeze fruit quickly, producing a full cup of fresh, nutrient-rich liquids in only 35 seconds. Experience the pinnacle of flavor refinement with its increased power lithium battery, which delivers a whopping 45W of power to quickly break down ingredients, resulting in a silky smooth texture and a blended residual rate of less than 6%. Engineered for accuracy and longevity, the 304 stainless steel 4-blade knife head features a 3D disrupted four-blade design that ensures efficient and delicate mixing with every usage. Its concealed design provides a layer of protection and boosts longevity, promising years of reliable performance. Never go without your favorite beverage again, as the built-in 2 x 1300mAh lithium-ion batteries can power up to 12 cups of freshly squeezed juice on a single charge, keeping you hydrated and energetic all day. Cleaning has never been easier thanks to the groundbreaking double-click function, which launches a 35-second self-cleaning cycle while preserving hygiene and convenience. And with USB-C charging capability, you can easily recharge power, ensuring that your tasty drinks are always within reach, no matter where your travels take you. The XIAOMI MIJIA MJZZB01PL 300ml Portable Juicer Cup is the ideal blend of convenience and health, making it your go-to buddy for on-the-go refreshment without sacrificing taste or quality.</p><h2>Buy Xiaomi MIJIA MJZZB01PL 300ml Portable Juicer Cup from Star Tech</h2><p>In Bangladesh, you can get original <strong>Xiaomi MIJIA MJZZB01PL 300ml Portable Juicer Cup </strong>From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/blender\" target=\"\">Blender </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Xiaomi MIJIA MJZZB01PL 300ml Portable Juicer Cup comes with 1 year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MJZZB01PL</li><li>304 Stainless Steel 4-blade Knife Head</li><li>Up to 12 Cups of Juice on One Charge</li><li>Double Click to Clean</li><li>USB-C Charging</li></ul>",
+      "model": "MJZZB01PL",
+      "warranty": "1 year",
+      "basePrice": 3190.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.495,
+      "dimensions": {
+        "length": 187.8,
+        "width": 85.5,
+        "height": 85.5,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "XIAOMI",
+      "variantOptions": [
+        {
+          "name": "Jar Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "Juice Cup: 0.5L Pulp Container: 1.7L",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            {
+              "value": "Pink",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-35422",
+          "price": 3190.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Jar Capacity": "Juice Cup: 0.5L Pulp Container: 1.7L",
+            "Color": "Pink"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3062.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Function",
+              "value": "Juicer",
+              "position": 0
+            },
+            {
+              "label": "Jar Capacity",
+              "value": "Juice Cup: 0.5L Pulp Container: 1.7L",
+              "position": 1
+            },
+            {
+              "label": "Speed Control",
+              "value": "1 Speed",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Material",
+              "value": "Totally-hidden cutter blades, free and fast DIY working.",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "187.8 x 85.5 x 85.5mm / 7.39 x 3.36 x 3.36inch",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "Approx. 495g",
+              "position": 2
+            },
+            {
+              "label": "Color",
+              "value": "Pink",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Magnetic charging Food grade material, healthy and nutritional drinking. Lightweight and portable juicing bottle for outdoor travel. Totally-hidden cutter blades, free and fast DIY working. Magnetic charging way, automatic power off. Keep original taste and flavour Charging time: 2h Working time: About 15 times(In full recharge)",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-mijia-mjzzb01pl-portable-juicer-cup",
+      "sourceProductCode": "35422",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MJZZB01PL",
+        "304 Stainless Steel 4-blade Knife Head",
+        "Up to 12 Cups of Juice on One Charge",
+        "Double Click to Clean",
+        "USB-C Charging"
+      ],
+      "needsReview": false,
+      "categorySlug": "juicer",
+      "image": "/images/products/appliance/juicer/xiaomi-mijia-mjzzb01pl-portable-juicer-cup.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/juicer/xiaomi-mijia-mjzzb01pl-portable-juicer-cup.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "xiaomi-mijia-mjzzb01pl-portable-juicer-cup",
+        "candidateTitle": "Xiaomi MIJIA MJZZB01PL 300ml Portable Juicer Cup",
+        "attemptStem": "xiaomi-mijia-mjzzb01pl-portable-juicer-cup"
+      }
+    }
+  ]
+}

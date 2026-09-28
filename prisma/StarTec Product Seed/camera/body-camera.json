@@ -1,0 +1,4300 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/camera",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\camera",
+    "generatedAtUnix": 1790585809,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Camera",
+      "slug": "camera",
+      "parentSlug": null,
+      "image": "/images/products/camera/Action Camera/dgs-ox3-pocket-camera-67755d6a.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Body Camera",
+      "slug": "body-camera",
+      "parentSlug": "camera",
+      "image": "/images/products/camera/body-camera/a100-wifi-body-camera.png",
+      "isActive": true,
+      "sortOrder": 1,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    },
+    {
+      "name": "SJCAM",
+      "slug": "sjcam",
+      "logo": null
+    },
+    {
+      "name": "Transcend",
+      "slug": "transcend",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "A100 1080P Wi-Fi Body Camera",
+      "slug": "a100-wifi-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-44413",
+      "description": "<h2>A100 1080P Wi-Fi Body Camera</h2><p>The <span style=\"font-weight: bold;\">A100</span> Thumb Mini Outdoor Clip Sports Camera is a compact and lightweight spy camera designed for outdoor use. It features a 2 megapixel lens that captures 1920x1080p full HD video. The <a href=\"https://www.startech.com.bd/camera/action-camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">action camera</a> supports 720p recording resolution for smooth playback. With a 50-degree wide-angle lens, it records clear and focused footage.This mini Wifi camera includes infrared night vision, allowing you to record in low light. It supports online viewing and two-way audio, making it ideal for home security, pet monitoring, or outdoor surveillance. The 0.96-inch IPS color screen displays sharp visuals in real time.The A100 camera connects via 2.4GHz WiFi and offers a WiFi hotspot option for remote access. It includes a built-in 480mAh lithium battery for long working hours. The Body camera is protected by a waterproof cover and comes with a camera holder for stable mounting.Operation is simple with just two control buttons. A blue light indicates video recording, while a red light shows charging status.This outdoor clip camera supports up to 128GB TF memory card and uses a USB 2.0 interface for fast data transfer. It is perfect for cycling, traveling, sports recording, and police enforcement. The compact size makes it easy to carry and clip onto clothing or gear.</p><h2>Buy A100 1080P Wi-Fi Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>A100 1080P Wi-Fi Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The A100 1080P Wi-Fi Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A100</li><li>Camera Resolution: 2MP</li><li>Video Resolution: 1080P</li><li>Battery: 480mAh</li><li>Two-Way Audio, Night Vision, 50° wide-angle lens</li></ul>",
+      "model": "A100",
+      "warranty": "No Warranty",
+      "basePrice": 3250.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "480mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-44413",
+          "price": 3250.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "480mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "2 Megapixel",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "1920 x 1080p",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "480mAh",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "2.4 GHz WiFi Connectivity With WiFi Hotspot option",
+              "position": 0
+            },
+            {
+              "label": "Water Resistant",
+              "value": "Waterproof cover and camera holder",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Dimension: 63.8 x 21 x 31mm Indicator charging Two buttons for control Online View Two-Way Audio Night Vision",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/a100-wifi-body-camera",
+      "sourceProductCode": "44413",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A100",
+        "Camera Resolution: 2MP",
+        "Video Resolution: 1080P",
+        "Battery: 480mAh",
+        "Two-Way Audio, Night Vision, 50° wide-angle lens"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/a100-wifi-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/a100-wifi-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "a100-wifi-body-camera",
+        "candidateTitle": "A100 1080P Wi-Fi Body Camera",
+        "attemptStem": "a100-wifi-body-camera"
+      }
+    },
+    {
+      "name": "A18 1080P Body Camera",
+      "slug": "a18-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-44410",
+      "description": "<h2>A18 1080P Body Camera</h2><p>The <span style=\"font-weight: bold;\">A18</span> Body Camera offers Full HD 1080P video recording at 30 frames per second. It captures clear footage in both daylight and low-light conditions. The built-in infrared night vision ensures visibility even in complete darkness. With a 12MP photo resolution, it takes sharp and detailed images. The 180-degree rotatable lens allows flexible shooting angles for dynamic environments. This body cam supports intelligent motion detection, automatically starting video recording when movement is detected. The 1000mAh rechargeable battery provides long-lasting power for continuous use. You can charge while recording using the USB interface. The compact and lightweight design makes it easy to carry and wear. The back clip lets you attach it to clothing, bags, or gear. It also supports loop recording, which automatically overwrites old files when storage is full. You can use it as a PC webcam by connecting it to your computer via a USB cable. This <a href=\"https://www.startech.com.bd/camera/action-camera\" style=\"color: rgb(0, 0, 0);\">Action camera</a> is ideal for security personnel, commuters, delivery workers, and anyone needing portable video recording. The A18 HD body camera combines high-definition video, smart features, and a user-friendly design in one reliable device.</p><h2>Buy A18 Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>A18 Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The A18 Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A18</li><li>Camera Resolution: 12 Megapixels (4032 x 3024)</li><li>Video Resolution: 1080P at 30 frames</li><li>Battery: 1000mAh, 6H of continuous recording</li><li>Motion Detection, Night Vision, 180° wide-angle lens</li></ul>",
+      "model": "A18",
+      "warranty": "No Warranty",
+      "basePrice": 2400.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1000mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-44410",
+          "price": 2400.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "1000mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2304.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "12 Megapixels (4032 x 3024).",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "1920x1080P Full HD at 30 frames per second",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Charging Interface",
+              "value": "USB",
+              "position": 0
+            },
+            {
+              "label": "type",
+              "value": "polymer lithium battery",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "1000mAh",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Night Vision Lens Rotation Motion Detection Loop recording PC camera function Back clip design HD microphone Compact and lightweight",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/a18-body-camera",
+      "sourceProductCode": "44410",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A18",
+        "Camera Resolution: 12 Megapixels (4032 x 3024)",
+        "Video Resolution: 1080P at 30 frames",
+        "Battery: 1000mAh, 6H of continuous recording",
+        "Motion Detection, Night Vision, 180° wide-angle lens"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/a18-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/a18-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "a18-body-camera",
+        "candidateTitle": "A18 1080P Body Camera",
+        "attemptStem": "a18-body-camera"
+      }
+    },
+    {
+      "name": "A32 1080P Body Camera",
+      "slug": "a32-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-44412",
+      "description": "<h2>A32 1080P Body Camera</h2><p>The <span style=\"font-weight: bold;\">A32</span> Full HD Mini Body Camera is a compact and powerful spy camera built for personal security, driving, sports, and daily use. It features a mini body design with a durable plastic anti-fall shell. The <a href=\"https://www.startech.com.bd/camera/action-camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">Action camera</a> clips easily onto clothing with its back clip design, making it ideal for body-worn recording. This mini FHD camera records in 1080P and 720P HD video formats with a super wide 120-degree angle and 180-degree rotatable lens. It supports photo capture while recording, with resolutions ranging from 40MP to VGA. The CMOS sensor and 30FPS frame rate ensure smooth and clear footage. The A32 supports motion detection, invisible silent recording, and system time synchronization. It uses Type-C USB charging and includes a 1800mAh battery that lasts up to 8 hours on a single charge. Charging time is approximately 3 hours. It comes with a 1.3-inch TFT display (240x240 resolution) for easy playback. The Body camera supports expandable memory from 8GB to 128GB, allowing long recording sessions. Audio is recorded in WAV format, and video is encoded with H.264 for efficient storage. This mini spy camera works well as a car driving recorder, sports DV, or webcam. It supports playback on VLC, KM Player, and QQ Player. The LED indicator helps monitor recording status, and the straight-line detection range is up to 5 meters.</p><h2>Buy A32 1080P Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>A32 1080P Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The A32 1080P Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A32</li><li>Camera Resolution: 40M</li><li>Video Resolution: 1080P</li><li>Battery: 1800mAh, 8H of continuous recording</li><li>Motion Detection, 1.3&quot; TFT Display</li></ul>",
+      "model": "A32",
+      "warranty": "No Warranty",
+      "basePrice": 3900.0,
+      "originalPrice": 5000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "128GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "1800mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-44412",
+          "price": 3900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "128GB",
+            "Capacity": "1800mAh"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3744.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "40M / 21M / 12M / 10M / 8M / 5M / 2MHD / 1.3M / VGA",
+              "position": 0
+            },
+            {
+              "label": "Sensor Resolution",
+              "value": "CMOS",
+              "position": 1
+            },
+            {
+              "label": "Image",
+              "value": "JPG",
+              "position": 2
+            },
+            {
+              "label": "Video",
+              "value": "1080P / 720P MOV",
+              "position": 3
+            },
+            {
+              "label": "Display",
+              "value": "TFT 1.3-inch 240 x 240",
+              "position": 4
+            },
+            {
+              "label": "Memory",
+              "value": "128GB",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Charging Interface",
+              "value": "Type-C",
+              "position": 0
+            },
+            {
+              "label": "type",
+              "value": "polymer lithium battery",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "1800mAh",
+              "position": 2
+            },
+            {
+              "label": "Charging Time",
+              "value": "3 hours",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "8 hours Running Time Dimension-96 x 38 x 17mm Working Temperature-5 - 45 Celsius Weight-69g Material Plastic and Anti-fall Recording Angle-180 degree Battery power: 3.7V Video code: H.264 Motion Detection: Yes Straight line: 5 meters Audio Format: WAV Sensor Technology: CMOS Frame Number: 30FPS Super wider angle of 120 degrees Invisible and silent Recording: Yes Back clip design LED indicator Color: Black Super wider angle of 120 degrees Recording and charging at the same time Support taking photos when recording Suitable for Car driving recorder, Sports DV, Webcam Synchronize system time: Yes Playback software: QQ Player / KM Player / VLC media",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/a32-body-camera",
+      "sourceProductCode": "44412",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A32",
+        "Camera Resolution: 40M",
+        "Video Resolution: 1080P",
+        "Battery: 1800mAh, 8H of continuous recording",
+        "Motion Detection, 1.3\" TFT Display"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/a32-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/a32-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "a32-body-camera",
+        "candidateTitle": "A32 1080P Body Camera",
+        "attemptStem": "a32-body-camera"
+      }
+    },
+    {
+      "name": "A8 1080P Body Camera",
+      "slug": "a8-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-50015",
+      "description": "<h2>A8 1080P Body Camera</h2><p>The <strong>A8</strong> 1080P Body Camera captures full high-definition video footage, clear and detailed recordings in various lighting and environmental conditions. The Body Camera features starlight night vision capability, allowing users to record clear and usable footage even in extremely low-light or dark environments. This advanced night vision technology makes the camera a practical and trustworthy tool for nighttime patrols, security monitoring, and after-dark documentation needs. </p><p>The A8 1080P Body Camera includes a built-in microphone that captures clear audio alongside video, ensuring complete and accurate recordings during every session. A 500mAh built-in battery powers the device through extended recording sessions, providing sufficient endurance for regular fieldwork and daily operational use. The Body Camera supports Micro SD card storage with a maximum capacity of up to 128GB, offering ample space for hours of continuous high-definition video footage. </p><p>Users can expand storage easily by inserting a compatible Micro SD card, making file management and footage retrieval straightforward and convenient. The A8 Body Camera features a 180-degree rotating lens that allows users to adjust the recording angle flexibly without repositioning the entire device on the body. </p><p>This lens rotation capability gives users greater control over their field of view during active recording situations and dynamic environments. A practical back clip design enables secure and stable attachment to clothing, uniforms, vest pockets, and bags for hands-free operation at all times. The Body Camera stays firmly in place during movement, ensuring stable and shake-free footage throughout every recording session.</p><h2>Buy A8 1080P Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>A8 1080P Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The A8 1080P Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A8</li><li>1080p High-Definition Recording</li><li>Starlight Night Vision Capability</li><li>500mAh Battery, Built-in Microphone</li><li>180° Lens Rotate, Back Clip Design</li></ul>",
+      "model": "A8",
+      "warranty": "No Warranty",
+      "basePrice": 2200.0,
+      "originalPrice": 2340.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Micro SD card up to 128GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "500mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-50015",
+          "price": 2200.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Micro SD card up to 128GB",
+            "Capacity": "500mAh"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2112.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "CMOS",
+              "position": 0
+            },
+            {
+              "label": "Sensor Resolution",
+              "value": "1080P",
+              "position": 1
+            },
+            {
+              "label": "Memory",
+              "value": "Micro SD card up to 128GB",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "500mAh",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Built-in mic",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/a8-body-camera",
+      "sourceProductCode": "50015",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A8",
+        "1080p High-Definition Recording",
+        "Starlight Night Vision Capability",
+        "500mAh Battery, Built-in Microphone",
+        "180° Lens Rotate, Back Clip Design"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/a8-1080p-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/a8-1080p-body-camera.png"
+      ],
+      "match": {
+        "method": "search",
+        "score": 1.0,
+        "query": "a8-1080p-body-camera",
+        "candidateTitle": "A8 1080P Body Camera",
+        "attemptStem": "a8-1080p-body-camera"
+      }
+    },
+    {
+      "name": "CB77 4G Portable Body Camera",
+      "slug": "cb77-4g-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-39686",
+      "description": "<h2>CB77 4G Portable Body Camera</h2><p>The <strong>CB77 4G</strong> Portable Body Camera is a versatile and compact gadget that captures high-quality video and audio. With a 1296P HD resolution and 180° rotating lens, This Body Cam captures clear footage from every angle. This body cam offers 4G connectivity along with, making it a SIM-supported body camera that can be seen remotely and streamed live to many users at the same time. This Portable Body Camera has a built-in 1500mAh battery and can record for long continuous recording. this portable body camera includes night vision capabilities and cloud storage, making it an excellent choice for law enforcement, personal security, and a variety of professional uses.</p><h2>Buy CB77 4G Portable Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>CB77 4G Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The CB77 4G Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CB77 4G</li><li>IR Night Vision, Mobile Access</li><li>Battery Capacity: 1500mAh</li><li>Connctivity: 4G SIM</li><li>AI Detection, Storage: up to 256GB Supported</li></ul>",
+      "model": "CB77 4G",
+      "warranty": "No Warranty",
+      "basePrice": 3600.0,
+      "originalPrice": 4800.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Max 256GB micro SD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "1500mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39686",
+          "price": 3600.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Max 256GB micro SD",
+            "Capacity": "1500mAh"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3456.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "1296P Ultra HD REcording",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "2304 x 1296P Ultra HD Recording",
+              "position": 1
+            },
+            {
+              "label": "USB Port",
+              "value": "Type-C",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "Max 256GB micro SD",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Removable",
+              "value": "Li-ion",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1500mAh",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "4G SIM Supported",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "IR Night Vision",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cb77-4g-body-camera",
+      "sourceProductCode": "39686",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CB77 4G",
+        "IR Night Vision, Mobile Access",
+        "Battery Capacity: 1500mAh",
+        "Connctivity: 4G SIM",
+        "AI Detection, Storage: up to 256GB Supported"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/cb77-4g-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/cb77-4g-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cb77-4g-body-camera",
+        "candidateTitle": "CB77 4G Portable Body Camera",
+        "attemptStem": "cb77-4g-body-camera"
+      }
+    },
+    {
+      "name": "CB77 4G Portable Body Camera",
+      "slug": "cb77-4g-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-39686",
+      "description": "<h2>CB77 4G Portable Body Camera</h2><p>The <strong>CB77 4G</strong> Portable Body Camera is a versatile and compact gadget that captures high-quality video and audio. With a 1296P HD resolution and 180° rotating lens, This Body Cam captures clear footage from every angle. This body cam offers 4G connectivity along with, making it a SIM-supported body camera that can be seen remotely and streamed live to many users at the same time. This Portable Body Camera has a built-in 1500mAh battery and can record for long continuous recording. this portable body camera includes night vision capabilities and cloud storage, making it an excellent choice for law enforcement, personal security, and a variety of professional uses.</p><h2>Buy CB77 4G Portable Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>CB77 4G Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The CB77 4G Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CB77 4G</li><li>IR Night Vision, Mobile Access</li><li>Battery Capacity: 1500mAh</li><li>Connctivity: 4G SIM</li><li>AI Detection, Storage: up to 256GB Supported</li></ul>",
+      "model": "CB77 4G",
+      "warranty": "No Warranty",
+      "basePrice": 3600.0,
+      "originalPrice": 4800.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Max 256GB micro SD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "1500mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39686",
+          "price": 3600.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Max 256GB micro SD",
+            "Capacity": "1500mAh"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3456.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "1296P Ultra HD REcording",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "2304 x 1296P Ultra HD Recording",
+              "position": 1
+            },
+            {
+              "label": "USB Port",
+              "value": "Type-C",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "Max 256GB micro SD",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Removable",
+              "value": "Li-ion",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1500mAh",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "4G SIM Supported",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "IR Night Vision",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cb77-4g-body-camera",
+      "sourceProductCode": "39686",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CB77 4G",
+        "IR Night Vision, Mobile Access",
+        "Battery Capacity: 1500mAh",
+        "Connctivity: 4G SIM",
+        "AI Detection, Storage: up to 256GB Supported"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/cb77-4g-portable-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/cb77-4g-portable-body-camera.png"
+      ],
+      "match": {
+        "method": "search",
+        "score": 1.0,
+        "query": "cb77-4g-portable-body-camera",
+        "candidateTitle": "CB77 4G Portable Body Camera",
+        "attemptStem": "cb77-4g-portable-body-camera"
+      }
+    },
+    {
+      "name": "CS05 1080P Wi-Fi Body Camera",
+      "slug": "cs05-fhd-1080p-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-44382",
+      "description": "<h2>CS05 1080P Wi-Fi Body Camera</h2><p>The<span style=\"font-weight: bold;\"> CS05</span> Mini Full HD 1080P Body Camera is a compact and powerful security tool. It records in 1080p Full HD resolution, providing sharp and clear video every time. The 120° wide-angle lens captures a broader view, perfect for monitoring large areas. This body camera includes infrared night vision, so you can record even in low-light or dark environments. It also has a built-in microphone, allowing you to capture audio along with video. The <a href=\"https://www.startech.com.bd/camera/action-camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">Action camera</a> does not have a display, which keeps it lightweight and easy to carry. The CS05 supports loop recording, so it automatically overwrites old footage when the memory is full. It uses a Micro SD card for storage (up to 64GB, card not included). The motion detection sensor starts recording when movement is detected, saving battery and storage. The camera runs on a rechargeable lithium-ion battery. You get up to 2–3 hours of continuous recording on a full charge. It charges via USB 2.0 and supports charging while recording, so you never miss a moment. It works with both Windows and Mac OS, making it easy to transfer files and manage recordings. The one-button operation makes it simple to use, even for beginners. An LED indicator shows the camera’s status at a glance. The CS05 is made from high-quality ABS plastic. It’s small, lightweight, and easy to carry. The clip-on design lets you attach it to clothing, backpacks, or surfaces for hands-free recording . This mini Portable FHD body camera is perfect for personal security, law enforcement, home surveillance, and outdoor activities. Whether you're walking alone, working in the field, or securing your home, the CS05 Mini Body Camera gives you peace of mind with reliable performance.</p><h2>Buy CS05 1080P Wi-Fi Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>CS05 1080P Wi-Fi Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The CS05 1080P Wi-Fi Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CS05</li><li>Resolution: 1080P FHD</li><li>USB Interface: USB 2.0</li><li>Camera Lens: 120° wide-angle lens</li><li>Built-in Microphone, Night Vision, Motion Detection</li></ul>",
+      "model": "CS05",
+      "warranty": "No Warranty",
+      "basePrice": 2800.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "128G",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-44382",
+          "price": 2800.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "128G"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2688.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "1080P Full HD",
+              "position": 0
+            },
+            {
+              "label": "Image",
+              "value": "JPG",
+              "position": 1
+            },
+            {
+              "label": "Video",
+              "value": "Loop recording supported 1080P Full HD",
+              "position": 2
+            },
+            {
+              "label": "Display",
+              "value": "No inbuilt display, compact size",
+              "position": 3
+            },
+            {
+              "label": "USB Port",
+              "value": "USB 2.0 for data transfer and charging",
+              "position": 4
+            },
+            {
+              "label": "Memory",
+              "value": "128G",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "type",
+              "value": "Built-in rechargeable lithium-ion battery with 2-3 hours of recording time",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Type: Mini One-button operation for quick and easy use Supports charging while recording LED indicator for status notification Applications: Personal security Law enforcement Outdoor activities Home surveillance Build & Design: Material: High-quality ABS plastic Dimensions: Lightweight and compact for portability Mounting: Clip-on design for easy attachment to clothing or surfaces Power Supply: 5V DC via USB PC Compatibility: Windows and Mac OS Motion Detection: Advanced motion sensor for automatic recording Camera Lens: 120° wide-angle lens for a broader view Night Vision: Yes, Infrared Night Vision for low-light recording Microphone: Built-in for audio recording",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cs05-fhd-1080p-body-camera",
+      "sourceProductCode": "44382",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CS05",
+        "Resolution: 1080P FHD",
+        "USB Interface: USB 2.0",
+        "Camera Lens: 120° wide-angle lens",
+        "Built-in Microphone, Night Vision, Motion Detection"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/cs05-fhd-1080p-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/cs05-fhd-1080p-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cs05-fhd-1080p-body-camera",
+        "candidateTitle": "CS05 1080P Wi-Fi Body Camera",
+        "attemptStem": "cs05-fhd-1080p-body-camera"
+      }
+    },
+    {
+      "name": "CS06 1080P Wi-Fi Body Camera",
+      "slug": "cs06-1080p-wifi-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-44385",
+      "description": "<h2>CS06 1080P Wi-Fi Body Camera</h2><p>The <span style=\"font-weight: bold;\">CS06</span> 1080P Wi-Fi Body Camera is a compact and powerful mini spy camera designed for personal and professional use. It records full HD 1920x1080p video and takes clear JPG photos. The <a href=\"https://www.startech.com.bd/camera/action-camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">Action camera</a> features a 120-degree lens and a 150-degree wide-angle view, perfect for capturing more detail. The 180-degree rotating camera head lets you adjust the angle easily for hidden recording.This Wi-Fi body camera supports both Wi-Fi and hotspot connections, making it easy to control and view footage remotely. It comes with 8GB built-in memory and supports TF cards up to 128GB, giving you plenty of storage for long recordings. The 1400mAh battery allows up to 5 hours of continuous video recording.The CS06 includes motion detection, loop recording, and one-key start, making it simple to use. It also supports invisible and silent recording, ideal for discreet surveillance. The body camera has 4 infrared lights (940nm) for clear night vision. You can take photos while recording and sync system time for accurate tracking.Playback is supported on QQPlayer, KMPlayer, and VLC Media Player. The video format is MOV, and the audio format is WAV. It uses H.264 video compression for efficient storage. The camera is black and comes with a host unit, data cable, and racking box.Use the CS06 spy camera at home, office, meetings, stores, warehouses, or outdoors. It is perfect for security, monitoring, and personal safety. With its mini shape and portable design, you can carry it anywhere without drawing attention.</p><h2>Buy CS06 1080P Wi-Fi Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>CS06 1080P Wi-Fi Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The CS06 1080P Wi-Fi Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CS06</li><li>Resolution: 1080P FHD</li><li>USB Interface: USB 2.0</li><li>Camera Lens: 120° wide-angle lens</li><li>Built-in Microphone, Night Vision, Motion Detection</li></ul>",
+      "model": "CS06",
+      "warranty": "No Warranty",
+      "basePrice": 3450.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "64G",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "1400mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-44385",
+          "price": 3450.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "64G",
+            "Capacity": "1400mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3312.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image",
+              "value": "JPG",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "Loop recording supported MP4 1080P Full HD",
+              "position": 1
+            },
+            {
+              "label": "Display",
+              "value": "Built-in LED screen for live preview and playback",
+              "position": 2
+            },
+            {
+              "label": "USB Port",
+              "value": "Yes",
+              "position": 3
+            },
+            {
+              "label": "Memory",
+              "value": "64G",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "type",
+              "value": "Built-in rechargeable lithium-ion battery with 2-3 hours of recording time",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1400mAh",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Type: Mini One-button operation for quick and easy use Supports charging while recording LED indicator for status notification Applications: Personal security Law enforcement Outdoor activities Home surveillance Build & Design: Material: High-quality ABS plastic Dimensions: Lightweight and compact for portability Mounting: Clip-on design for easy attachment to clothing or surfaces Power Supply: 5V DC via USB PC Compatibility: Windows and Mac OS Motion Detection: Advanced motion sensor for automatic recording Camera Lens: 120° wide-angle lens for a broader view Night Vision: Yes, Infrared Night Vision for low-light recording Microphone: Built-in for audio recording",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cs06-1080p-wifi-body-camera",
+      "sourceProductCode": "44385",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CS06",
+        "Resolution: 1080P FHD",
+        "USB Interface: USB 2.0",
+        "Camera Lens: 120° wide-angle lens",
+        "Built-in Microphone, Night Vision, Motion Detection"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/cs06-1080p-wifi-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/cs06-1080p-wifi-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cs06-1080p-wifi-body-camera",
+        "candidateTitle": "CS06 1080P Wi-Fi Body Camera",
+        "attemptStem": "cs06-1080p-wifi-body-camera"
+      }
+    },
+    {
+      "name": "CS07 1080P Body Camera",
+      "slug": "cs07-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-44386",
+      "description": "<h2>CS07 1080P Body Camera</h2><p>The <span style=\"font-weight: bold;\">CS07</span> 1080P Body Camera is a smart choice for anyone who needs reliable video recording on the go. It records in Full HD 1080P resolution (1920×1080) at 30 frames per second, giving you smooth and clear footage. The 120° wide-angle lens captures more of your surroundings, making it ideal for law enforcement, home monitoring, and outdoor activities.This body camera supports night vision with built-in IR LEDs. It automatically switches to night mode, so you can record even in low light. The video format is AVI, which is easy to play and share.You can use a micro SD card from 8GB to 256GB (card not included). With loop recording, the <a href=\"https://www.startech.com.bd/camera/action-camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">Action camera</a> will overwrite old files when the memory is full. This keeps your storage fresh and ready.The 800mAh rechargeable battery gives you up to 3 hours of continuous recording. It charges in about 2 hours using the USB interface, which also lets you transfer data quickly.The CS07 has a built-in microphone for clear audio. It’s great for interviews, patrols, or personal notes. The compact and lightweight design makes it easy to carry. The clip design lets you attach it to your shirt, jacket, or backpack. That saves battery and storage. The one-button operation makes it simple to use. It also adds a timestamp to your videos, showing the date and time.You can use the CS07 as a body cam, security camera, or dashcam. It works with Windows and Mac OS. Just plug it in—no drivers needed.</p><h2>Buy CS07 1080P Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>CS07 1080P Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The CS07 1080P Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CS07</li><li>Resolution: 1080P FHD</li><li>USB Interface: USB 2.0</li><li>Camera Lens: 120° wide-angle lens</li><li>Built-in Microphone, Night Vision</li></ul>",
+      "model": "CS07",
+      "warranty": "No Warranty",
+      "basePrice": 2100.0,
+      "originalPrice": 3000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "256G",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "800mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-44386",
+          "price": 2100.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "256G",
+            "Capacity": "800mAh"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2016.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image",
+              "value": "JPG",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "AVI 1080P Full HD",
+              "position": 1
+            },
+            {
+              "label": "USB Port",
+              "value": "Yes",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "256G",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "type",
+              "value": "Built-in rechargeable lithium-ion battery with 2-3 hours of recording time",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "800mAh",
+              "position": 1
+            },
+            {
+              "label": "Charging Time",
+              "value": "Approximately 2 hours",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Type: Mini One-button operation for quick and easy use Supports charging while recording Equipped with IR LEDs for clear night recording Automatic night vision mode Applications: Personal security Law enforcement Outdoor activities Home surveillance Build & Design: Material: High-quality ABS plastic Dimensions: Lightweight and compact for portability Mounting: Clip-on design for easy attachment to clothing or surfaces Power Supply: 5V DC via USB PC Compatibility: Windows and Mac OS Camera Lens: 120° wide-angle lens for a broader view Night Vision: Yes, Infrared Night Vision for low-light recording Microphone: Built-in for audio recording Timestamp Function: Date and time stamp on recordings Multifunctional Use: Works as a body camera, security cam, or dashcam",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cs07-body-camera",
+      "sourceProductCode": "44386",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CS07",
+        "Resolution: 1080P FHD",
+        "USB Interface: USB 2.0",
+        "Camera Lens: 120° wide-angle lens",
+        "Built-in Microphone, Night Vision"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/cs07-1080p-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/cs07-1080p-body-camera.png"
+      ],
+      "match": {
+        "method": "search",
+        "score": 1.0,
+        "query": "cs07-1080p-body-camera",
+        "candidateTitle": "CS07 1080P Body Camera",
+        "attemptStem": "cs07-1080p-body-camera"
+      }
+    },
+    {
+      "name": "CS07 1080P Body Camera",
+      "slug": "cs07-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-44386",
+      "description": "<h2>CS07 1080P Body Camera</h2><p>The <span style=\"font-weight: bold;\">CS07</span> 1080P Body Camera is a smart choice for anyone who needs reliable video recording on the go. It records in Full HD 1080P resolution (1920×1080) at 30 frames per second, giving you smooth and clear footage. The 120° wide-angle lens captures more of your surroundings, making it ideal for law enforcement, home monitoring, and outdoor activities.This body camera supports night vision with built-in IR LEDs. It automatically switches to night mode, so you can record even in low light. The video format is AVI, which is easy to play and share.You can use a micro SD card from 8GB to 256GB (card not included). With loop recording, the <a href=\"https://www.startech.com.bd/camera/action-camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">Action camera</a> will overwrite old files when the memory is full. This keeps your storage fresh and ready.The 800mAh rechargeable battery gives you up to 3 hours of continuous recording. It charges in about 2 hours using the USB interface, which also lets you transfer data quickly.The CS07 has a built-in microphone for clear audio. It’s great for interviews, patrols, or personal notes. The compact and lightweight design makes it easy to carry. The clip design lets you attach it to your shirt, jacket, or backpack. That saves battery and storage. The one-button operation makes it simple to use. It also adds a timestamp to your videos, showing the date and time.You can use the CS07 as a body cam, security camera, or dashcam. It works with Windows and Mac OS. Just plug it in—no drivers needed.</p><h2>Buy CS07 1080P Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>CS07 1080P Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The CS07 1080P Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CS07</li><li>Resolution: 1080P FHD</li><li>USB Interface: USB 2.0</li><li>Camera Lens: 120° wide-angle lens</li><li>Built-in Microphone, Night Vision</li></ul>",
+      "model": "CS07",
+      "warranty": "No Warranty",
+      "basePrice": 2100.0,
+      "originalPrice": 3000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "256G",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "800mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-44386",
+          "price": 2100.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "256G",
+            "Capacity": "800mAh"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2016.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image",
+              "value": "JPG",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "AVI 1080P Full HD",
+              "position": 1
+            },
+            {
+              "label": "USB Port",
+              "value": "Yes",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "256G",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "type",
+              "value": "Built-in rechargeable lithium-ion battery with 2-3 hours of recording time",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "800mAh",
+              "position": 1
+            },
+            {
+              "label": "Charging Time",
+              "value": "Approximately 2 hours",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Type: Mini One-button operation for quick and easy use Supports charging while recording Equipped with IR LEDs for clear night recording Automatic night vision mode Applications: Personal security Law enforcement Outdoor activities Home surveillance Build & Design: Material: High-quality ABS plastic Dimensions: Lightweight and compact for portability Mounting: Clip-on design for easy attachment to clothing or surfaces Power Supply: 5V DC via USB PC Compatibility: Windows and Mac OS Camera Lens: 120° wide-angle lens for a broader view Night Vision: Yes, Infrared Night Vision for low-light recording Microphone: Built-in for audio recording Timestamp Function: Date and time stamp on recordings Multifunctional Use: Works as a body camera, security cam, or dashcam",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cs07-body-camera",
+      "sourceProductCode": "44386",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CS07",
+        "Resolution: 1080P FHD",
+        "USB Interface: USB 2.0",
+        "Camera Lens: 120° wide-angle lens",
+        "Built-in Microphone, Night Vision"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/cs07-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/cs07-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cs07-body-camera",
+        "candidateTitle": "CS07 1080P Body Camera",
+        "attemptStem": "cs07-body-camera"
+      }
+    },
+    {
+      "name": "CS11 2K Wi-Fi Body Camera",
+      "slug": "cs11-2k-wifi-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-44389",
+      "description": "<h2>CS11 2K Wi-Fi Body Camera</h2><p>The <span style=\"font-weight: bold;\">CS11</span> 2K Wi-Fi Body Camera is a compact and versatile mini spy camera designed for users who need reliable, high-quality video recording in a portable form. It captures video in 2K resolution (1.3MP) at 30 frames per second, delivering sharp footage that clearly shows faces, license plates, and important details. The <a href=\"https://www.startech.com.bd/camera/action-camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">Action camera</a> features a 90-degree fisheye lens that rotates 180 degrees, allowing flexible angle adjustment for wide-area coverage. This makes it ideal for body-worn surveillance, vehicle mounting, or stationary recording.The built-in 1.4-inch LCD screen lets users preview footage, navigate settings, and manage recordings directly from the device without needing a phone or computer. With Wi-Fi support up to 15 meters, users can stream live footage or transfer videos wirelessly for real-time monitoring or quick uploads. The 1400mAh rechargeable battery provides up to 7 hours of continuous recording, making it suitable for long shifts, outdoor activities, or travel.The CS11 supports MicroSD and TF cards up to 256GB, offering ample storage for high-resolution videos. It operates in extreme temperatures ranging from -10°C to 50°C, ensuring reliable performance in both indoor and outdoor environments. The compact size (96.5mm x 33.6mm x 22.6mm) makes it easy to carry, and the Type-C charging port allows fast and stable power delivery. Certified with FCC, RoHS, and CE, the CS11 meets international standards for safety and quality.This mini body camera is ideal for security guards, law enforcement, delivery drivers, and anyone who values personal safety. It combines high-resolution video, rotatable lens, Wi-Fi streaming, long battery life, expandable memory, and instant playback in one easy-to-use device. Whether for professional use or everyday protection, the CS11 offers advanced features in a user-friendly design.</p><h2>Buy CS11 2K Wi-Fi Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>CS11 2K Wi-Fi Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The CS11 2K Wi-Fi Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CS11</li><li>Resolution: 2K 1.3MP at 30fps</li><li>Running Time: Up to 7 hours, 1400mAh Battery</li><li>Lens: 90° fisheye, rotatable 180°</li><li>Display: 1.4-inch LCD</li></ul>",
+      "model": "CS11",
+      "warranty": "No Warranty",
+      "basePrice": 3250.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 96.5,
+        "width": 33.6,
+        "height": 22.6,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "MicroSD/TF cards up to 256GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "1400mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-44389",
+          "price": 3250.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "MicroSD/TF cards up to 256GB",
+            "Capacity": "1400mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "(1.3MP) at 30fps",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "2K",
+              "position": 1
+            },
+            {
+              "label": "Display",
+              "value": "1.4-inch LCD",
+              "position": 2
+            },
+            {
+              "label": "USB Port",
+              "value": "Type-C",
+              "position": 3
+            },
+            {
+              "label": "Memory",
+              "value": "MicroSD/TF cards up to 256GB",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "1400mAh",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Type: Mini One-button operation for quick and easy use Supports charging while recording LED indicator for status notification 90° fisheye, rotatable 180° Certifications: FCC, RoHS, CE Up to 7 hours continuous Applications: Personal security Law enforcement Outdoor activities Home surveillance Build & Design: Material: High-quality ABS plastic Dimensions: Lightweight and compact for portability Mounting: Clip-on design for easy attachment to clothing or surfaces Power Supply: 5V DC via USB PC Compatibility: Windows and Mac OS Motion Detection: Advanced motion sensor for automatic recording Night Vision: Yes, Infrared Night Vision for low-light recording Microphone: Built-in for audio recording",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cs11-2k-wifi-body-camera",
+      "sourceProductCode": "44389",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CS11",
+        "Resolution: 2K 1.3MP at 30fps",
+        "Running Time: Up to 7 hours, 1400mAh Battery",
+        "Lens: 90° fisheye, rotatable 180°",
+        "Display: 1.4-inch LCD"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/cs11-2k-wifi-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/cs11-2k-wifi-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cs11-2k-wifi-body-camera",
+        "candidateTitle": "CS11 2K Wi-Fi Body Camera",
+        "attemptStem": "cs11-2k-wifi-body-camera"
+      }
+    },
+    {
+      "name": "CS12 1440P Wi-Fi Body Camera",
+      "slug": "cs12-wifi-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-44390",
+      "description": "<h2>CS12 Wi-Fi Body Camera</h2><p>The <span style=\"font-weight: bold;\">CS12</span> WiFi Body Camera offers sharp video quality with multiple resolution options: 2560x1440P, 1920x1080P, and 1280x720P. You can record clear footage in different lighting and environments. The 180-degree rotatable lens lets you adjust the angle easily, making it perfect for chest, shoulder, or belt mounting. Whether you're documenting daily tasks or capturing important moments, this body cam delivers reliable performance. It’s ideal for security professionals, delivery workers, and personal use. The compact design and flexible lens make it easy to wear and operate. Choose the CS12 for high-quality, wearable video recording anytime, anywhere.This wearable <a href=\"https://www.startech.com.bd/camera/action-camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">Action camera</a> features a 1.4-inch screen for quick playback and easy settings control. You can view footage instantly without needing a computer. The camera uses a GC423 CMOS sensor, which helps capture smooth and detailed video. It works well in both bright and low-light conditions. The screen and sensor combo make the CS12 a smart choice for users who need fast access and reliable image quality. Whether you're on patrol or documenting fieldwork, this body cam gives you the tools to stay informed and protected. It’s built for convenience and clarity.Stay connected with the CS12 WiFi Body Camera’s built-in WiFi and hotspot support. You can transfer videos wirelessly or stream footage in real time. This feature is great for fast sharing and remote monitoring. No need for cables or extra devices just connect and go. The WiFi function adds flexibility for law enforcement, security teams, and solo users. Whether you're uploading evidence or backing up files, the CS12 makes it simple. With hotspot support, you can even connect in areas without standard WiFi. It’s a smart, mobile-friendly solution for modern surveillance needs.The CS12 Body Camera includes a 1600mAh battery, offering extended recording time for long shifts or outdoor use. You can rely on it for hours without needing a recharge. When it’s time to power up, the Type-C port ensures fast and efficient charging. This means less downtime and more action. Whether you're working in the field or commuting, the CS12 keeps up with your schedule. The battery and charging system are designed for convenience and durability. It’s a dependable choice for users who need power on the go.Store more with the CS12 WiFi Body Camera’s support for up to 256GB TF card (card not included). You can save hours of footage without worrying about space. This is perfect for users who need to record daily activities or long events. The camera makes file management simple, with easy access and transfer options. Whether you're organizing evidence or archiving personal videos, the CS12 gives you control. The large storage capacity and user-friendly design make it ideal for professional and personal use. It’s built for performance and practicality.</p><h2>Buy CS12 Wi-Fi Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>CS12 Wi-Fi Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The CS12 Wi-Fi Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CS12</li><li>Resolution: 2560x1440P, 1920x1080P, 1280x720P</li><li>Screen: 1.4-inch Screen</li><li>Sensor: GC423 CMOS</li><li>Battery: 1600mAh</li></ul>",
+      "model": "CS12",
+      "warranty": "No Warranty",
+      "basePrice": 4400.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "MicroSD/TF cards up to 256GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "1600mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-44390",
+          "price": 4400.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "MicroSD/TF cards up to 256GB",
+            "Capacity": "1600mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4224.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "GC423 CMOS",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "2560x1440P, 1920x1080P, 1280x720P",
+              "position": 1
+            },
+            {
+              "label": "Display",
+              "value": "1.4-inch LCD",
+              "position": 2
+            },
+            {
+              "label": "USB Port",
+              "value": "Type-C",
+              "position": 3
+            },
+            {
+              "label": "Memory",
+              "value": "MicroSD/TF cards up to 256GB",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "1600mAh",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Type: Mini One-button operation for quick and easy use Supports charging while recording LED indicator for status notification rotatable 180° Applications: Personal security Law enforcement Outdoor activities Home surveillance Build & Design: Material: High-quality ABS plastic Dimensions: Lightweight and compact for portability Mounting: Clip-on design for easy attachment to clothing or surfaces Power Supply: 5V DC via USB PC Compatibility: Windows and Mac OS Motion Detection: Advanced motion sensor for automatic recording Night Vision: Yes, Infrared Night Vision for low-light recording Microphone: Built-in for audio recording",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/cs12-wifi-body-camera",
+      "sourceProductCode": "44390",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CS12",
+        "Resolution: 2560x1440P, 1920x1080P, 1280x720P",
+        "Screen: 1.4-inch Screen",
+        "Sensor: GC423 CMOS",
+        "Battery: 1600mAh"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/cs12-wifi-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/cs12-wifi-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "cs12-wifi-body-camera",
+        "candidateTitle": "CS12 1440P Wi-Fi Body Camera",
+        "attemptStem": "cs12-wifi-body-camera"
+      }
+    },
+    {
+      "name": "L12 Wi-Fi Motion Detection HD Body Camera",
+      "slug": "l12-wi-fi-hd-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-47511",
+      "description": "<h2>L12 Wi-Fi Motion Detection HD Body Camera</h2><p>This L12 Wi-Fi Motion Detection HD Body Camera is a compact, multi-functional recording solution designed for daily life, travel, and security needs. With a 180-degree rotatable lens, Full HD video recording, built-in screen, and WiFi connectivity, it delivers flexibility and convenience in a small, portable form factor. Whether you need it for outdoor sports, meetings, driving records, or personal vlogging, this camera is built to adapt.</p><h3>180° Rotating Camera for Flexible Shooting</h3><p>The L12 Body Camera features a 180-degree rotatable design, allowing you to adjust shooting angles easily. This makes it ideal for various scenarios, such as cycling, car dashboards, meetings, or body-worn recording.</p><h3>Full HD Video &amp; Photo Recording</h3><p>The L12 Body Camera captures clear footage with Full HD 1080P video recording, with optional 720P resolution for extended storage. The camera also supports photo capture in 1MP, 2MP, and 3MP, making it suitable for both video and still photography.</p><p></p><ul><li>Video Resolution: 1920×1080P / 1280×720P</li><li>Video Format: AVI</li><li>Photo Format: JPG</li></ul><p></p><h3>Built-In Screen for Instant Preview</h3><p>This Body Camera is equipped with a 1.3-inch TFT color display (240×240), the camera lets you preview recordings, review footage, and adjust settings directly on the device without needing a phone.</p><h3>Night Recording with Dual Fill Lights</h3><p>The camera includes two high-brightness fill lights, ensuring clear recording even in low-light or night conditions. This makes it useful for indoor monitoring, night cycling, or evening driving records.</p><h3>WiFi Connectivity &amp; App Control</h3><p>With WiFi hotspot support, you can connect the camera to your smartphone and view live footage or playback videos directly through the app. This makes file access fast and convenient without removing the memory card.</p><h3>Motion Detection &amp; Loop Recording</h3><p>The built-in motion detection feature automatically starts recording when movement is detected, making it useful for security or monitoring purposes. Loop recording options (3, 5, 10, or 15 minutes) ensure continuous recording without manual file management.</p><h3>Long-Lasting 1200mAh Battery</h3><p>Powered by a 1200mAh rechargeable battery, the camera delivers reliable battery life for extended recording sessions. Automatic screen-off and auto shutdown options help conserve power when not in use.</p><h3>Multi-Purpose Recording Camera</h3><p>This Body Camera is designed for a wide range of everyday and professional uses, making it a practical choice for different situations. It works well for outdoor sports and cycling, allowing you to capture action and movement on the go. When used in a car, it functions effectively as a dash recording device to document your drives. It is also suitable for meetings and lectures, helping you record important discussions or presentations for later reference. For daily life and travel, the camera makes it easy to capture moments without hassle, and it can also be used for personal security and basic monitoring when you need an extra layer of awareness.</p><h2>Buy L12 Wi-Fi Motion Detection HD Body Camera<span style=\"color: inherit; font-family: inherit;\"> from Star Tech</span></h2><p>In Bangladesh, you can get original <strong>L12 Wi-Fi Motion Detection HD Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" style=\"background-color: rgb(255, 255, 255);\">Star Tech Shop</a> to get yours at lowest price. The L12 Wi-Fi Motion Detection HD Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: L12</li><li>Camera Resolution: 3MP</li><li>Video Resolution: 1080P</li><li>Battery: 1200mAh Polymer Lithium Battery</li><li>Built-In Screen, Motion Detection &amp; Loop Recording, 180° Rotating Camera</li></ul>",
+      "model": "L12",
+      "warranty": "No Warranty",
+      "basePrice": 3190.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Memory card: TF card, supports up to 128 GB ( Not included)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "Battery type: lithium polymer Battery voltage: 3.7V",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47511",
+          "price": 3190.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "Memory card: TF card, supports up to 128 GB ( Not included)",
+            "Capacity": "Battery type: lithium polymer Battery voltage: 3.7V"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3062.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "1M, 2M, 3M",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "1920x1080P, 1280x720P",
+              "position": 1
+            },
+            {
+              "label": "Display",
+              "value": "1.3-inch color display (240*240)",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "Memory card: TF card, supports up to 128 GB ( Not included)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "type",
+              "value": "lithium polymer",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "Battery type: lithium polymer Battery voltage: 3.7V",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "2.4 GHz WiFi Connectivity",
+              "position": 0
+            },
+            {
+              "label": "Water Resistant",
+              "value": "Waterproof cover and camera holder",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "White balance: automatic, daylight, cloudy, tungsten filament lamp, fluorescent lamp Dimension: 97.6*31.7*18.7mm Net weight: 54.3g",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/l12-wi-fi-hd-body-camera",
+      "sourceProductCode": "47511",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: L12",
+        "Camera Resolution: 3MP",
+        "Video Resolution: 1080P",
+        "Battery: 1200mAh Polymer Lithium Battery",
+        "Built-In Screen, Motion Detection & Loop Recording, 180° Rotating Camera"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/l12-wi-fi-hd-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/l12-wi-fi-hd-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "l12-wi-fi-hd-body-camera",
+        "candidateTitle": "L12 Wi-Fi Motion Detection HD Body Camera",
+        "attemptStem": "l12-wi-fi-hd-body-camera"
+      }
+    },
+    {
+      "name": "L13 1080P Wi-Fi Body Camera",
+      "slug": "l13-1080p-wifi-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-44392",
+      "description": "<h2>L13 1080P Wi-Fi Body Camera</h2><p>The <span style=\"font-weight: bold;\">L13</span> HD Wi-Fi Body Camera is a compact and powerful device designed for personal safety, security, and on-the-go recording. It features a 500W pixel sensor that delivers clear and detailed footage. The camera records in 1080P resolution at 30 frames per second, making it ideal for daily use, patrols, or evidence collection.With a 120-degree wide-angle lens, the L13 Body Cam captures a broad field of view. It supports infrared night vision, allowing you to record even in low-light or dark environments. The built-in motion detection feature helps save battery and storage by recording only when movement is detected.Audio is recorded in WAV format, while video is saved in AVI format for easy playback and sharing. The camera runs on a 1000mAh polymer lithium battery, offering up to 10 hours of continuous recording. It charges fully in just 2 hours using a Type-C interface, ensuring fast and reliable power-up.The L13 supports micro SD cards up to 128GB (C10 or higher recommended). Please note, the memory card is not included. The body is made of durable ABS plastic, built to withstand daily wear and tear.This <a href=\"https://www.startech.com.bd/camera/action-camera\" style=\"color: rgb(0, 0, 0);\">Action camera</a> includes Wi-Fi connectivity (P2P) for remote access and OTG support for direct mobile phone connection. The back clip design allows easy attachment to shirts, jackets, or belts, making it perfect for security guards, delivery drivers, law enforcement, and outdoor workers.</p><h2>Buy L13 Wi-Fi Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>L13 Wi-Fi Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The L13 Wi-Fi Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: L13</li><li>Camera Resolution: 500W pixel sensor</li><li>Video Resolution: 1080P at 30 frames</li><li>Battery: 1000mAh, 10H of continuous recording</li><li>Motion Detection, Night Vision, 120° wide-angle lens</li></ul>",
+      "model": "L13",
+      "warranty": "No Warranty",
+      "basePrice": 3400.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "128GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "1000mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-44392",
+          "price": 3400.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "128GB",
+            "Capacity": "1000mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3264.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Video",
+              "value": "1080P at 30 frames per second",
+              "position": 0
+            },
+            {
+              "label": "Display",
+              "value": "1.4-inch LCD",
+              "position": 1
+            },
+            {
+              "label": "Memory",
+              "value": "128GB",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Charging Interface",
+              "value": "Type-C",
+              "position": 0
+            },
+            {
+              "label": "type",
+              "value": "polymer lithium battery",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "1000mAh",
+              "position": 2
+            },
+            {
+              "label": "Charging Time",
+              "value": "2 hours",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Camera Resolution: 500W pixel sensor Lens Angle: 120° wide-angle lens Night Vision: Infrared night vision supported Motion Detection: Supported Recording Format: WAV for audio; AVI for video Material: ABS plastic for durability WiFi connectivity (P2P) OTG connection to mobile phones Back clip design for easy attachment Supports C10 or higher high-speed TF cards Dimensions: 90 x 30 x 14 mm Weight: Approximately 35 grams",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/l13-1080p-wifi-body-camera",
+      "sourceProductCode": "44392",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: L13",
+        "Camera Resolution: 500W pixel sensor",
+        "Video Resolution: 1080P at 30 frames",
+        "Battery: 1000mAh, 10H of continuous recording",
+        "Motion Detection, Night Vision, 120° wide-angle lens"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/l13-1080p-wifi-body-camera.webp",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/l13-1080p-wifi-body-camera.webp"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "l13-1080p-wifi-body-camera",
+        "candidateTitle": "L13 1080P Wi-Fi Body Camera",
+        "attemptStem": "l13-1080p-wifi-body-camera"
+      }
+    },
+    {
+      "name": "L15 Ultra HD 4K Wifi Portable Body Camera",
+      "slug": "l15-4k-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-40285",
+      "description": "<h2>L15 Ultra HD 4K Wifi Portable Body Camera</h2><p>The <strong>L15 </strong> Ultra HD 4K Wifi Portable Body <a href=\"https://www.startech.com.bd/camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">Camera </a>is a state-of-the-art miniature camcorder designed for high-performance video recording in various situations, including law enforcement, outdoor adventures, and personal security. Manufactured by VRIG in Mainland China, this compact L15 Portable Body Camera utilizes CMOS sensor technology to deliver 1080P Full-HD and 4K UHD video quality, ensuring crystal-clear visuals. Featuring a 115° wide-angle lens that is fully 180° rotatable, the L15 Body Camera allows users to adjust the camera’s field of view to capture every crucial detail. The L15 Camera supports WiFi connectivity, enabling real-time monitoring and remote access. With infrared night vision, it ensures visibility in low-light conditions. The built-in 1500mAh battery provides versatile power options, including mobile power sources, direct charging, and battery operation, ensuring continuous recording. Designed for efficiency, the L15 Body Cam features motion detection, one-click photo and video capture, and audio-video synchronization for accurate documentation. It supports MicroSD/TF cards up to 256GB, offering ample storage for extended use. The Type-C charging port makes charging fast and efficient, while the back clip and 1/4\" threaded hole allow for flexible mounting options. Combining ultra-high-definition recording, intelligent functionality, and a user-friendly design, the L15 Camera is the perfect choice for professionals and enthusiasts seeking a high-quality video documentation solution.</p><h2>Buy L15 Ultra HD 4K Wifi Portable Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>L15 Ultra HD 4K Wifi Portable Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The L15 Ultra HD 4K Wifi Portable Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: L15</li><li>Resolution: 4K</li><li>Connectivity: WIFI, Type-C Ports</li><li>Battery Capacity: 1500mAh, Up to 256GB Storage</li><li>4K UHD Video Quality, 180° Flip Adjustable Lens</li></ul>",
+      "model": "L15",
+      "warranty": "No Warranty",
+      "basePrice": 3900.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Max 256GB micro SD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "1500mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40285",
+          "price": 3900.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "Max 256GB micro SD",
+            "Capacity": "1500mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3744.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "4K",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Max 256GB micro SD",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Removable",
+              "value": "Li-ion",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1500mAh",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Type: Mini Viewing angle: Diagonal 129° Sensor Technology: CMOS Memory Card Type: MicroSD / TF High Definition Support:1080P (Full-HD) Wifi Mini Camera 180° Flip Adjustable Lens Versatile Power Supply Options Intelligent Enhanced Functionality User-Friendly Design & Expandable Storage Lens: 115° wide-angle, 180° rotatable",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/l15-4k-body-camera",
+      "sourceProductCode": "40285",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: L15",
+        "Resolution: 4K",
+        "Connectivity: WIFI, Type-C Ports",
+        "Battery Capacity: 1500mAh, Up to 256GB Storage",
+        "4K UHD Video Quality, 180° Flip Adjustable Lens"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/l15-4k-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/l15-4k-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "l15-4k-body-camera",
+        "candidateTitle": "L15 Ultra HD 4K Wifi Portable Body Camera",
+        "attemptStem": "l15-4k-body-camera"
+      }
+    },
+    {
+      "name": "L18 WiFi 2K Portable Body Camera",
+      "slug": "l18-portable-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-48279",
+      "description": "<h2>L18 WiFi 2K Portable Body Camera</h2><p>The <strong>L18</strong> WiFi 2K Portable Body Camera is a high-performance wearable recording device that combines outstanding video quality with smart connectivity, making it ideal for security, law enforcement, work documentation, and everyday use. Featuring crisp 2K resolution and integrated WiFi, this body camera lets you capture detailed footage and quickly transfer files or stream video to your smartphone or other devices. Its compact and lightweight design ensures comfortable all-day wear, while versatile recording functions support both video and audio capture with clear results. Easy to operate and built for reliability, the L18 WiFi 2K Portable Body Camera delivers a powerful combination of superior image quality, wireless convenience, and dependable performance in a portable body-worn form factor.</p><h2>Buy L18 WiFi 2K Portable Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>L18 WiFi 2K Portable Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The L18 WiFi 2K Portable Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: L18</li><li>Resolution: Up to 2K (2560 x 1944)</li><li>Motion Detection, Night Vision Support</li><li>WiFi Supported, App Compatible</li><li>Micro SD Card Support</li></ul>",
+      "model": "L18",
+      "warranty": "No Warranty",
+      "basePrice": 4800.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Micro SD Card Supported",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-48279",
+          "price": 4800.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "Micro SD Card Supported"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4608.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Video",
+              "value": "2560 x 1944 (AVI Format)",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Micro SD Card Supported",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Removable",
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Type: Mini Night Vision Support Motion Detection",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/l18-portable-body-camera",
+      "sourceProductCode": "48279",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: L18",
+        "Resolution: Up to 2K (2560 x 1944)",
+        "Motion Detection, Night Vision Support",
+        "WiFi Supported, App Compatible",
+        "Micro SD Card Support"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/l18-portable-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/l18-portable-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "l18-portable-body-camera",
+        "candidateTitle": "L18 WiFi 2K Portable Body Camera",
+        "attemptStem": "l18-portable-body-camera"
+      }
+    },
+    {
+      "name": "L7 HD Portable Body Camera",
+      "slug": "l7-hd-portable-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-48275",
+      "description": "<h2>L7 HD Portable Body Camera</h2><p>The <strong>L7 HD Body Camera</strong> is a compact and reliable Body Camera designed for personal security, work recording, and daily documentation. Built with durable ABS material and weighing just 68g, this Mini Body Camera is lightweight and comfortable for all-day wear while delivering clear 1920×1080P Full HD video at 30fps. It supports night vision mode for dependable recording in low-light environments and features a built-in 500mAh lithium-ion battery that provides up to 3 hours of continuous recording with extended standby time of up to 7 hours. With expandable storage support from 4GB to 128GB via microSD card (not included), fast USB 2.0 data transfer, and quick charging in about 60 minutes through a Micro USB interface, the L7 HD Body Camera is a practical, portable solution for anyone needing a discreet, efficient, and easy-to-use body-worn camera.</p><h2>Buy L7 HD Portable Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>L7 HD Portable Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The L7 HD Portable Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: L7</li><li>Resolution: 1080P FHD (Max)</li><li>Micro USB Charging</li><li>Max Frame Rate: 30 FPS</li><li>Battery capacity: 500mAh, Storage Support 128GB Micro SD</li></ul>",
+      "model": "L7",
+      "warranty": "No Warranty",
+      "basePrice": 1990.0,
+      "originalPrice": 2130.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Micro SD Up to 128GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "500mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-48275",
+          "price": 1990.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Micro SD Up to 128GB",
+            "Capacity": "500mAh"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1910.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Video",
+              "value": "1080P Full HD (AVI Format)",
+              "position": 0
+            },
+            {
+              "label": "USB Port",
+              "value": "Micro USB for Charging",
+              "position": 1
+            },
+            {
+              "label": "Memory",
+              "value": "Micro SD Up to 128GB",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Removable",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Charging Interface",
+              "value": "Micro USB",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "500mAh",
+              "position": 2
+            },
+            {
+              "label": "Charging Time",
+              "value": "Approximately 1 hour",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Type: Mini Night Vision Support",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/l7-hd-portable-body-camera",
+      "sourceProductCode": "48275",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: L7",
+        "Resolution: 1080P FHD (Max)",
+        "Micro USB Charging",
+        "Max Frame Rate: 30 FPS",
+        "Battery capacity: 500mAh, Storage Support 128GB Micro SD"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/l7-hd-portable-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/l7-hd-portable-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "l7-hd-portable-body-camera",
+        "candidateTitle": "L7 HD Portable Body Camera",
+        "attemptStem": "l7-hd-portable-body-camera"
+      }
+    },
+    {
+      "name": "L9 HD Night Vision Mini Body Camera",
+      "slug": "l9-mini-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-47512",
+      "description": "<p><span style=\"font-size: 25px;\">L12 Wi-Fi Motion Detection HD Body Camera</span></p><p>The <strong>L9 HD Night Vision Mini Body Camera</strong> is a portable, versatile recording device designed for personal security, outdoor activities, and everyday surveillance. Its lightweight and ultra-compact form makes it easy to wear on clothing, carry in a pocket, or place discreetly for capturing important moments quietly and efficiently.</p><h3>High-Definition Video &amp; Wide Recording Angle</h3><p>Capture clear, high-quality footage with Full HD 1080p resolution and a 120° wide-angle lens for broad scene coverage. The camera also supports AVI video format and JPG photo format to ensure flexible use for both video and still images.</p><p></p><ul><li>Video Resolution: 1920×1080p</li><li>Recording Angle: 180° adjustability</li><li>Photo Format: JPG</li><li>Video Format: AVI</li><li>Lens: 120° wide-angle</li></ul><p></p><p><span style=\"color: inherit; font-family: inherit; font-size: 21px;\">Night Vision &amp; Motion Detection</span></p><p>Equipped with night vision capability, the L9 records clear footage even in low light, ideal for nighttime security or monitoring. Motion detection support helps conserve storage and battery life by triggering recording only when movement is detected.</p><h3>Built-In Screen &amp; Easy Operation</h3><p>This body camera features a 1.3-inch color TFT display for instant preview and playback, so you can review footage right on the device without needing a computer. One-button operation makes starting and stopping recordings quick and simple.</p><h3>Long Battery Life &amp; Expandable Storage</h3><p>A 1200 mAh lithium battery provides up to 4 hours of continuous recording, and the camera supports microSD cards up to 128 GB (card not included) for plenty of storage space.</p><h3>Wi-Fi Connectivity</h3><p>Stay connected with built-in Wi-Fi, allowing you to link the camera to your smartphone or other device for easy playback and remote viewing through a compatible app.</p><h3>Durable &amp; Portable Design</h3><p>Made from ABS plastic and weighing only around 55 g, the L9 Mini Body Camera is ready for use in various environments, including law enforcement, personal security, outdoor sports, meetings, and more. Its compact size ensures it won’t draw attention or weigh you down.</p><p><span style=\"color: inherit; font-family: inherit; font-size: 25px;\">Buy </span><span style=\"font-size: 25px;\">L9 HD Night Vision Mini Body Camera</span><span style=\"color: inherit; font-family: inherit; font-size: 25px;\"> from Star Tech</span></p><p>In Bangladesh, you can get original <strong>L9 HD Night Vision Mini Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" style=\"background-color: rgb(255, 255, 255);\">Star Tech Shop</a> to get yours at lowest price. The L9 HD Night Vision Mini Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: L9</li><li>Camera Resolution: 3MP</li><li>Video Resolution: 1080P</li><li>Battery: 1200mAh Polymer Lithium Battery</li><li>Built-In Screen, Motion Detection, 180° Rotating Camera</li></ul>",
+      "model": "L9",
+      "warranty": "No Warranty",
+      "basePrice": 3200.0,
+      "originalPrice": 3750.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Memory card: TF card, supports up to 128 GB ( Not included)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "Battery Capacity: 1200mAh Battery voltage: 3.7V",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47512",
+          "price": 3200.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Memory card: TF card, supports up to 128 GB ( Not included)",
+            "Capacity": "Battery Capacity: 1200mAh Battery voltage: 3.7V"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3072.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "1M, 2M, 3M",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "1920 x 1080p",
+              "position": 1
+            },
+            {
+              "label": "Display",
+              "value": "TFT Display: 1.3-inch Color Display(240*240)",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "Memory card: TF card, supports up to 128 GB ( Not included)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "type",
+              "value": "lithium polymer",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "Battery Capacity: 1200mAh Battery voltage: 3.7V",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Dimension: 3.84 x 1.24 x 0.74 inch Net weight: 55gm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/l9-mini-body-camera",
+      "sourceProductCode": "47512",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: L9",
+        "Camera Resolution: 3MP",
+        "Video Resolution: 1080P",
+        "Battery: 1200mAh Polymer Lithium Battery",
+        "Built-In Screen, Motion Detection, 180° Rotating Camera"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/l9-hd-night-vision-mini-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/l9-hd-night-vision-mini-body-camera.png"
+      ],
+      "match": {
+        "method": "search",
+        "score": 1.0,
+        "query": "l9-hd-night-vision-mini-body-camera",
+        "candidateTitle": "L9 HD Night Vision Mini Body Camera",
+        "attemptStem": "l9-hd-night-vision-mini-body-camera"
+      }
+    },
+    {
+      "name": "L9 HD Night Vision Mini Body Camera",
+      "slug": "l9-mini-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-47512",
+      "description": "<p><span style=\"font-size: 25px;\">L12 Wi-Fi Motion Detection HD Body Camera</span></p><p>The <strong>L9 HD Night Vision Mini Body Camera</strong> is a portable, versatile recording device designed for personal security, outdoor activities, and everyday surveillance. Its lightweight and ultra-compact form makes it easy to wear on clothing, carry in a pocket, or place discreetly for capturing important moments quietly and efficiently.</p><h3>High-Definition Video &amp; Wide Recording Angle</h3><p>Capture clear, high-quality footage with Full HD 1080p resolution and a 120° wide-angle lens for broad scene coverage. The camera also supports AVI video format and JPG photo format to ensure flexible use for both video and still images.</p><p></p><ul><li>Video Resolution: 1920×1080p</li><li>Recording Angle: 180° adjustability</li><li>Photo Format: JPG</li><li>Video Format: AVI</li><li>Lens: 120° wide-angle</li></ul><p></p><p><span style=\"color: inherit; font-family: inherit; font-size: 21px;\">Night Vision &amp; Motion Detection</span></p><p>Equipped with night vision capability, the L9 records clear footage even in low light, ideal for nighttime security or monitoring. Motion detection support helps conserve storage and battery life by triggering recording only when movement is detected.</p><h3>Built-In Screen &amp; Easy Operation</h3><p>This body camera features a 1.3-inch color TFT display for instant preview and playback, so you can review footage right on the device without needing a computer. One-button operation makes starting and stopping recordings quick and simple.</p><h3>Long Battery Life &amp; Expandable Storage</h3><p>A 1200 mAh lithium battery provides up to 4 hours of continuous recording, and the camera supports microSD cards up to 128 GB (card not included) for plenty of storage space.</p><h3>Wi-Fi Connectivity</h3><p>Stay connected with built-in Wi-Fi, allowing you to link the camera to your smartphone or other device for easy playback and remote viewing through a compatible app.</p><h3>Durable &amp; Portable Design</h3><p>Made from ABS plastic and weighing only around 55 g, the L9 Mini Body Camera is ready for use in various environments, including law enforcement, personal security, outdoor sports, meetings, and more. Its compact size ensures it won’t draw attention or weigh you down.</p><p><span style=\"color: inherit; font-family: inherit; font-size: 25px;\">Buy </span><span style=\"font-size: 25px;\">L9 HD Night Vision Mini Body Camera</span><span style=\"color: inherit; font-family: inherit; font-size: 25px;\"> from Star Tech</span></p><p>In Bangladesh, you can get original <strong>L9 HD Night Vision Mini Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" style=\"background-color: rgb(255, 255, 255);\">Star Tech Shop</a> to get yours at lowest price. The L9 HD Night Vision Mini Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: L9</li><li>Camera Resolution: 3MP</li><li>Video Resolution: 1080P</li><li>Battery: 1200mAh Polymer Lithium Battery</li><li>Built-In Screen, Motion Detection, 180° Rotating Camera</li></ul>",
+      "model": "L9",
+      "warranty": "No Warranty",
+      "basePrice": 3200.0,
+      "originalPrice": 3750.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Memory card: TF card, supports up to 128 GB ( Not included)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "Battery Capacity: 1200mAh Battery voltage: 3.7V",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47512",
+          "price": 3200.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Memory card: TF card, supports up to 128 GB ( Not included)",
+            "Capacity": "Battery Capacity: 1200mAh Battery voltage: 3.7V"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 3072.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "1M, 2M, 3M",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "1920 x 1080p",
+              "position": 1
+            },
+            {
+              "label": "Display",
+              "value": "TFT Display: 1.3-inch Color Display(240*240)",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "Memory card: TF card, supports up to 128 GB ( Not included)",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "type",
+              "value": "lithium polymer",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "Battery Capacity: 1200mAh Battery voltage: 3.7V",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Dimension: 3.84 x 1.24 x 0.74 inch Net weight: 55gm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/l9-mini-body-camera",
+      "sourceProductCode": "47512",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: L9",
+        "Camera Resolution: 3MP",
+        "Video Resolution: 1080P",
+        "Battery: 1200mAh Polymer Lithium Battery",
+        "Built-In Screen, Motion Detection, 180° Rotating Camera"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/l9-mini-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/l9-mini-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "l9-mini-body-camera",
+        "candidateTitle": "L9 HD Night Vision Mini Body Camera",
+        "attemptStem": "l9-mini-body-camera"
+      }
+    },
+    {
+      "name": "L9P FHD Multipurpose Police Body Camera",
+      "slug": "l9p-fhd-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-52300",
+      "description": "<h2>L9P FHD Multipurpose Police Body Camera</h2><p>The <strong>L9P FHD Body Camera</strong> is a professional recording device designed for law enforcement, security, and surveillance applications, delivering full HD video at 1920 × 1080p for clear and accurate documentation in the field. It features a 2-inch color LCD display with 320 × 240 resolution for instant playback and easy navigation, while TF card support up to 128GB (not included) provides ample storage for extended recording sessions. Powered by a 2000mAh lithium polymer battery, the L9P ensures dependable performance during long shifts, and its IR night vision capability allows reliable recording even in low-light or nighttime environments. Built with IP65 waterproof protection, this Waterproof Body Camera is durable enough to withstand outdoor conditions, making it suitable for demanding environments. Compact, versatile, and multipurpose, the L9P FHD body camera combines portability with advanced functionality, serving as a trusted police body camera, security body camera, or law enforcement body camera for professionals who require reliable video evidence and rugged performance.</p><h2>Buy L9P FHD Multipurpose Police Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>L9P FHD Multipurpose Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The L9P FHD Multipurpose Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: L9</li><li>Screen Size: 2 inches; Resolution: 320*240 px</li><li>Video Resolution: Up to 1080p</li><li>Battery: 2000mAh; IP65 Waterproof</li><li>MicroSD Support: Up to 128GB; IR Night Vision</li></ul>",
+      "model": "L9",
+      "warranty": "No Warranty",
+      "basePrice": 4500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Memory card: TF card, supports up to 128 GB ( Not included)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "Battery Capacity: 2000mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52300",
+          "price": 4500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "Memory card: TF card, supports up to 128 GB ( Not included)",
+            "Capacity": "Battery Capacity: 2000mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Video",
+              "value": "1920 x 1080p",
+              "position": 0
+            },
+            {
+              "label": "Display",
+              "value": "LCD Display: 2-inch Color Display(320*240)",
+              "position": 1
+            },
+            {
+              "label": "Memory",
+              "value": "Memory card: TF card, supports up to 128 GB ( Not included)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "type",
+              "value": "lithium polymer",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "Battery Capacity: 2000mAh",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Water Resistant",
+              "value": "IP65",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "IR Night Vision",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/l9p-fhd-body-camera",
+      "sourceProductCode": "52300",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: L9",
+        "Screen Size: 2 inches; Resolution: 320*240 px",
+        "Video Resolution: Up to 1080p",
+        "Battery: 2000mAh; IP65 Waterproof",
+        "MicroSD Support: Up to 128GB; IR Night Vision"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/l9p-fhd-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/l9p-fhd-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "l9p-fhd-body-camera",
+        "candidateTitle": "L9P FHD Multipurpose Police Body Camera",
+        "attemptStem": "l9p-fhd-body-camera"
+      }
+    },
+    {
+      "name": "MC81 1080P Wi-Fi Body Camera",
+      "slug": "mc81-wifi-hd-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-44411",
+      "description": "<h2>MC81 1080P Wi-Fi Body Camera</h2><p>The <span style=\"font-weight: bold;\">MC81</span> WiFi HD Mini Body Camera is a smart choice for personal security, law enforcement, and discreet recording. It features a standard camera shape with a wide 150-degree recording angle for full scene coverage. The <a href=\"https://www.startech.com.bd/camera/action-camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">Action camera</a> captures sharp images with a 4032 x 3024 resolution and smooth video at 1920 x 1080 Full HD and 30FPS. The built-in 1/4 inch CMOS sensor ensures clear footage in various lighting conditions.This mini body cam supports Wi-Fi connectivity, making it easy to transfer files to your phone or computer. It works with iOS, Android, and Windows 7 or above, offering broad compatibility. The camera uses a Type-C USB port for fast charging and data transfer. Charging time is around 3 to 4 hours, and it runs efficiently with DC5V ± 5% input and 150–170mA power consumption.The MC81 includes a built-in -38dB microphone for crisp audio recording. It supports T-Flash card storage, giving users flexible memory options. The camera uses AVI compression format to save space without losing quality. For added safety, it features red and blue warning lights for alarm detection.Its compact size and lightweight design make it easy to wear or carry. Whether clipped to clothing or mounted in a fixed spot, the MC81 delivers reliable performance. This HD mini body cam is ideal for security professionals, commuters, delivery workers, and anyone needing portable surveillance.</p><h2>Buy MC81 Wi-Fi Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>MC81 Wi-Fi Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The MC81 Wi-Fi Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MC81</li><li>Image Sensor: 1/4 inch CMOS sensor</li><li>Camera Resolution: 4032 x 3024</li><li>Video Resolution: 1920 x 1080</li><li>Charging Time: 3-4 hours</li></ul>",
+      "model": "MC81",
+      "warranty": "No Warranty",
+      "basePrice": 4200.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Supports T-Flash card",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-44411",
+          "price": 4200.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "Supports T-Flash card"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4032.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "4032 x 3024 1/4 inch CMOS sensor",
+              "position": 0
+            },
+            {
+              "label": "Image",
+              "value": "Camera Shape: Standard Recording Angle: 150 degrees",
+              "position": 1
+            },
+            {
+              "label": "Video",
+              "value": "1920 x 1080@30FPS",
+              "position": 2
+            },
+            {
+              "label": "USB Port",
+              "value": "Type-C",
+              "position": 3
+            },
+            {
+              "label": "Memory",
+              "value": "Supports T-Flash card",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Charging Interface",
+          "position": 1,
+          "items": [
+            {
+              "label": "Charging Time",
+              "value": "3-4 hours",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Alarm Detection: Red and blue warning lights Rated Voltage: DC5V ± 5% Power Consumption: 150-170mA Compression Standard: AVI Input: Built-in -38dB microphone Dimensions: 10.5 x 3 x 1.75 cm Weight: 55g Operating System: iOS, Android, Windows 7 or above",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/mc81-wifi-hd-body-camera",
+      "sourceProductCode": "44411",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: MC81",
+        "Image Sensor: 1/4 inch CMOS sensor",
+        "Camera Resolution: 4032 x 3024",
+        "Video Resolution: 1920 x 1080",
+        "Charging Time: 3-4 hours"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/mc81-wifi-hd-body-camera.webp",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/mc81-wifi-hd-body-camera.webp"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "mc81-wifi-hd-body-camera",
+        "candidateTitle": "MC81 1080P Wi-Fi Body Camera",
+        "attemptStem": "mc81-wifi-hd-body-camera"
+      }
+    },
+    {
+      "name": "S11 4G Portable Body Camera",
+      "slug": "s11-4g-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-40283",
+      "description": "<h2>S11 4G Portable Body Camera</h2><p>The <strong>S11 4G</strong> Portable Body <a href=\"https://www.startech.com.bd/camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">Camera </a>is a cutting-edge S11 4G Body Camera designed for high-performance surveillance and security. With advanced human detection technology, it accurately identifies human presence, motion, and designated areas, making it an ideal choice for law enforcement, security personnel, and personal safety. This S11 Body Camera features a 2MP resolution and a 129-degree wide-angle lens, delivering crystal-clear video footage for reliable monitoring. Powered by a 1500mAh battery, it ensures extended operation without frequent recharging. The S11 4G Body Cam supports 4G SIM connectivity, enabling seamless remote access via the O-CAM Pro app. Additionally, it comes equipped with infrared night vision, two-way audio, and a built-in siren, providing a comprehensive surveillance solution. With cloud storage support and up to 256GB TF card expansion, users can store and access footage effortlessly. Featuring H.264 compression, adjustable image settings, and real-time online visitor support, the S11 4G Portable Body Camera is the ultimate choice for professional and personal security applications.</p><h2>Buy S11 4G Portable Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>S11 4G Portable Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The S11 4G Portable Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: S11 4G</li><li>2MP With 129-degree wide-angle view</li><li>Connectivity: 4G SIM</li><li>Battery Capacity: 1500mAh, up to 256GB Storage</li><li>AI, Human, Motion Detection, High-Quality Video Recording</li></ul>",
+      "model": "S11 4G",
+      "warranty": "No Warranty",
+      "basePrice": 4500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Max 256GB micro SD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "1500mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-40283",
+          "price": 4500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "Max 256GB micro SD",
+            "Capacity": "1500mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 4320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "2MP",
+              "position": 0
+            },
+            {
+              "label": "Memory",
+              "value": "Max 256GB micro SD",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Removable",
+              "value": "Li-ion",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1500mAh",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "4G SIM Supported AI Detection Human Detection Human frame Motion Detection Area Detection Viewing angle: Diagonal 129° APP: O-CAM Pro Compression standard: H.264 /MJPEF/JPEG CPU/Image sensor: T31, GC2083 Main stream: 1295P/25fps Substream: 360P/25fps Image adjustment: Vertical, horizontal adjustable, OSD display",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/s11-4g-body-camera",
+      "sourceProductCode": "40283",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: S11 4G",
+        "2MP With 129-degree wide-angle view",
+        "Connectivity: 4G SIM",
+        "Battery Capacity: 1500mAh, up to 256GB Storage",
+        "AI, Human, Motion Detection, High-Quality Video Recording"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/s11-4g-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/s11-4g-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "s11-4g-body-camera",
+        "candidateTitle": "S11 4G Portable Body Camera",
+        "attemptStem": "s11-4g-body-camera"
+      }
+    },
+    {
+      "name": "SJCAM A20 Wearable Multipurpose Portable Body Camera",
+      "slug": "sjcam-a20-portable-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-22325",
+      "description": "<h2>SJCAM A20 Wearable Multipurpose Portable Body Camera</h2><p>The SJCAM A20 Portable Body Camera shoots 2880p video at 24 fps with a broad 166° field of view. Additionally, the machine can capture still photographs at resolutions of up to 16MP. A built-in LED bulb delivers up to 33' of illumination. The included clips allow you to attach the camera to your clothing for hands-free filming. This Wi-Fi body camera has a 2.33\" LCD touchscreen, two built-in microphones, a built-in speaker, and a 2650mAh lithium battery. MicroSD cards of up to 64GB can be inserted into an onboard card slot (available separately). For safe outside usage, the A20 is enclosed in a sturdy waterproof casing. The SJCAM A20 Portable Body Camera has 3 months warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SJCAM A20</li><li>2.33&quot; LCD Touchscreen, 2880p Resolution at 24 fps</li><li>Up to 33&#x27; of Illumination via LED Lamp</li><li>166° Field of View, IP65 Rating Waterproof</li><li>Built-In Speaker &amp; Dual Microphones</li></ul>",
+      "model": "SJCAM A20",
+      "warranty": "3 months",
+      "basePrice": 13490.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "SJCAM",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-22325",
+          "price": 13490.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 12950.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "SONY IMX335",
+              "position": 0
+            },
+            {
+              "label": "Image",
+              "value": "Image Format: JPEG",
+              "position": 1
+            },
+            {
+              "label": "Video",
+              "value": "Video Format: MP4 (H.264)",
+              "position": 2
+            },
+            {
+              "label": "Display",
+              "value": "Screen: 2.33\"LCD touch screen",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "type",
+              "value": "Body Cam",
+              "position": 0
+            },
+            {
+              "label": "Charging Time",
+              "value": "5 hours",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Wi-Fi: 2.4G/ 802.11 b/g/n",
+              "position": 0
+            },
+            {
+              "label": "Water Resistant",
+              "value": "IP65",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "3 months",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/sjcam-a20-portable-body-camera",
+      "sourceProductCode": "22325",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SJCAM A20",
+        "2.33\" LCD Touchscreen, 2880p Resolution at 24 fps",
+        "Up to 33' of Illumination via LED Lamp",
+        "166° Field of View, IP65 Rating Waterproof",
+        "Built-In Speaker & Dual Microphones"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/sjcam-a20-portable-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/sjcam-a20-portable-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "sjcam-a20-portable-body-camera",
+        "candidateTitle": "SJCAM A20 Wearable Multipurpose Portable Body Camera",
+        "attemptStem": "sjcam-a20-portable-body-camera"
+      }
+    },
+    {
+      "name": "SJCAM A50 20MP 4K Portable Body Camera",
+      "slug": "sjcam-a50-20mp-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-39683",
+      "description": "<h2>SJCAM A50 20MP 4K Portable Body Camera</h2><p>The <strong>SJCAM A50</strong> 20MP 4K Portable Body Camera is a versatile and durable SJCAM Body Camera that can capture high-quality footage in any kind of conditions. This Body Camera has a 20MP photo resolution and supports 4K video recording at 30fps, resulting in detailed, clear images. The 135° ultra-wide angle lens provides a wide field of view, making it ideal for shooting large scenes. This SJCAM A50 Portable Body Camera also has LED and infrared night vision capabilities, which allow for quality recording in low-light situations. The SJCAM A50 Body Camera is IP65 weatherproof, making it ideal for usage in adverse weather conditions. This SJCAM 4K Camera has a 2.0\" touch screen, GPS tracking, and remote control capabilities, which makes it easier to use and more functional.2250mAh battery can last up to 7.5 hours and features Lloop recording, so you never miss a moment. This SJCAM Portable Body Camera is an excellent choice for law enforcement, security personnel, and outdoor enthusiasts looking for a dependable and high-performance Portable Camera. </p><h2>Buy SJCAM A50 20MP 4K Portable Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>SJCAM A50 20MP 4K Portable Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price.The SJCAM A50 20MP 4K Portable Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SJCAM A50</li><li>Display: 2.0&quot; LCD Touchscreen</li><li>Dual LED lights brightness, 3-axis gyro stabilization</li><li>135° Field of View, IP65 Rating Waterproof</li><li>Built-In Speaker &amp; Dual Microphones, GPS</li></ul>",
+      "model": "SJCAM A50",
+      "warranty": "No Warranty",
+      "basePrice": 15800.0,
+      "originalPrice": 21000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "SJCAM",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Max 128GB micro SD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "2250mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39683",
+          "price": 15800.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "Max 128GB micro SD",
+            "Capacity": "2250mAh"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 15168.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "20MP, 16MP, 14MP, 12MP, 10MP, 8MP, 5MP, 3MP",
+              "position": 0
+            },
+            {
+              "label": "Image",
+              "value": "Image Format: JPG",
+              "position": 1
+            },
+            {
+              "label": "Video",
+              "value": "4K 30FPS 2K 30FPS 1080P 30FPS 720P 30FPS WVGA 30FPS VGA 30FPS",
+              "position": 2
+            },
+            {
+              "label": "Display",
+              "value": "2.0″ touch screen",
+              "position": 3
+            },
+            {
+              "label": "USB Port",
+              "value": "Type-C",
+              "position": 4
+            },
+            {
+              "label": "Memory",
+              "value": "Max 128GB micro SD",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Removable",
+              "value": "Li-ion",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "2250mAh",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Wi-Fi: 2.4G/ 802.11 b/g/n",
+              "position": 0
+            },
+            {
+              "label": "Water Resistant",
+              "value": "IP65",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Time-lapse",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/sjcam-a50-20mp-body-camera",
+      "sourceProductCode": "39683",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SJCAM A50",
+        "Display: 2.0\" LCD Touchscreen",
+        "Dual LED lights brightness, 3-axis gyro stabilization",
+        "135° Field of View, IP65 Rating Waterproof",
+        "Built-In Speaker & Dual Microphones, GPS"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/sjcam-a50-20mp-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/sjcam-a50-20mp-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "sjcam-a50-20mp-body-camera",
+        "candidateTitle": "SJCAM A50 20MP 4K Portable Body Camera",
+        "attemptStem": "sjcam-a50-20mp-body-camera"
+      }
+    },
+    {
+      "name": "Transcend DrivePro Body 30 2K Body Camera",
+      "slug": "transcend-drivepro-body-30-body-camera",
+      "type": "PHYSICAL",
+      "sku": "TS128GDPB30A",
+      "description": "<h2>Transcend DrivePro Body 30 2K Body Camera</h2><p>The Transcend <strong>DrivePro Body 30</strong> 2K Body Camera is designed to provide consistent performance, crystal-clear video quality, and tough durability to professionals who require accurate field documentation. With 2K QHD 1440P resolution and smooth frame rates of 60 or 30 fps, it catches every detail with great clarity, whether during high-speed moves or everyday patrols. The <strong>Transcend DrivePro Body 30</strong> Body Camera is designed to survive harsh settings, with IP67 dust and water protection and meeting US military drop-test standards, making it suitable for law enforcement, security teams, and outdoor professionals. Its large 130° diagonal viewing angle and F/2.0 aperture provide a wide field of view with high detail. Built-in Bluetooth and Wi-Fi connectivity make wireless management and file transfers easier. The Transcend Body Camera operates on the 802.11n protocol at the 2.4 GHz frequency. The Transcend DrivePro Body 30 Body Camera has a powerful built-in Li-Polymer battery that lasts up to 12 hours and is powered by a DC 5V/2A power source that accepts input voltages ranging from AC 100V to 240V. The connecting interface contains a 3.5mm socket for USB Type A and USB 2.0, guaranteeing secure data transfer.</p><img alt=\"Transcend DrivePro Body 30 Body Camera\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/camera/dashcam/transcend/drivepro-body-30-/drivepro-body-30-05.webp\" width=\"920\"/><h3>Infrared LEDs for Night Vision</h3><p>Four infrared LEDs on the Transcend Body Camera will automatically activate in low light to improve night vision. This can significantly improve the quality of recordings made in complete darkness. Wide Dynamic Range (WDR) and High Frame Rate (HFR) technologies are two image-enhancing capabilities of the Transcend <strong>DrivePro Body 30</strong> Body Camera that enable high-quality recording at 60 frames per second. Even in low, dark light, important details can be revealed.</p><img alt=\"Transcend DrivePro Body 30 Body Camera\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/camera/dashcam/transcend/drivepro-body-30-/drivepro-body-30-06.webp\" width=\"920\"/><h3>Wireless Connectivity</h3><p>Wi-Fi connectivity allows the <strong>Transcend DrivePro Body 30</strong> Body Camera to broadcast live movies to iOS and Android mobile devices, while Bluetooth wireless technology is supported for simple setup and switching modes. The DrivePro Body App can be used for all of these tasks. By pairing the DrivePro Body 30 with iOS devices, you can use Siri voice control to operate the camera hands-free. Having quick and simple access to the gadget makes your job easier!</p><img alt=\"Transcend DrivePro Body 30 Body Camera\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/camera/dashcam/transcend/drivepro-body-30-/drivepro-body-30-07.webp\" width=\"920\"/><h3>Up to 12 Hours of Battery Life</h3><p>With its integrated Li-Polymer battery, the Transcend <strong>DrivePro Body 30</strong> Body Camera can record for up to 12 hours between charges. This makes it possible for law enforcement and other professionals to record for an entire shift. Users can monitor the current battery level via the battery power indicator. The Transcend Body Cam features a DDR3 memory cache to temporarily store captured films in addition to an internal large storage capacity for high-quality videos.</p><img alt=\"Transcend DrivePro Body 30 Body Camera\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/camera/dashcam/transcend/drivepro-body-30-/drivepro-body-30-08.webp\" width=\"920\"/><h3>Rugged and Durable Design</h3><p>Because of its durability, the <strong>Transcend DrivePro Body 30</strong> Body Camera is perfect for outdoor recording by law enforcement, firefighters, security personnel, and rescue teams. It provides complete protection against water and dust and has an IP67 rating. Additionally, it satisfies exacting shock resistance drop-test requirements set by the US military.</p><img alt=\"Transcend DrivePro Body 30 Body Camera\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/camera/dashcam/transcend/drivepro-body-30-/drivepro-body-30-09.webp\" width=\"920\"/><h2>Buy Transcend DrivePro Body 30 2K Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>Transcend DrivePro Body 30 2K Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The Transcend DrivePro Body 30 2K Body Camera comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: TS128GDPB30A</li><li>Model: DrivePro Body 30</li><li>Resolution: 2K QHD 1440P, Infrared LEDs for Night Vision</li><li>Wide Dynamic Range (WDR), Interface: USB 2.0</li><li>Storage: 128GB internal memory, Battery Life: Max. 12 hours</li><li>IP67-Rated Rugged and Durable Design, Wireless Connectivity</li></ul>",
+      "model": "DrivePro Body 30",
+      "warranty": "1 year",
+      "basePrice": 32500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Transcend",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "128GB internal memory",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "Max 12 hours Battery Life",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "TS128GDPB30A",
+          "price": 32500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "128GB internal memory",
+            "Capacity": "Max 12 hours Battery Life"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 31200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "2K QHD 1440P at 60/30 fps",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "MP4 (H.264)",
+              "position": 1
+            },
+            {
+              "label": "USB Port",
+              "value": "USB 2.0 3.5mm plug to USB Type A",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "128GB internal memory",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "Max 12 hours Battery Life",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Wi-Fi 802.11n 2.4 GHz",
+              "position": 0
+            },
+            {
+              "label": "Water Resistant",
+              "value": "IP67",
+              "position": 1
+            },
+            {
+              "label": "Shock Resistant",
+              "value": "US military drop-test standards for shock resistance",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Infrared LEDs for Night Vision",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-body-30-body-camera",
+      "sourceProductCode": "45312",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "TS128GDPB30A",
+      "sourceKeyFeatures": [
+        "MPN: TS128GDPB30A",
+        "Model: DrivePro Body 30",
+        "Resolution: 2K QHD 1440P, Infrared LEDs for Night Vision",
+        "Wide Dynamic Range (WDR), Interface: USB 2.0",
+        "Storage: 128GB internal memory, Battery Life: Max. 12 hours",
+        "IP67-Rated Rugged and Durable Design, Wireless Connectivity"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/transcend-drivepro-body-30-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/transcend-drivepro-body-30-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-drivepro-body-30-body-camera",
+        "candidateTitle": "Transcend DrivePro Body 30 2K Body Camera",
+        "attemptStem": "transcend-drivepro-body-30-body-camera"
+      }
+    },
+    {
+      "name": "Transcend DrivePro Body 40 2K Body Camera",
+      "slug": "transcend-drivepro-body-40-body-camera",
+      "type": "PHYSICAL",
+      "sku": "TS128GDPB40A",
+      "description": "<h2>Transcend DrivePro Body 40 2K Body Camera</h2><p>The Transcend <strong>DrivePro Body 40</strong> 2K Body Camera is intended for professionals. With brilliant 2K QHD 1440P resolution and smooth frame rates of 60 or 30 fps, this body camera captures every detail clearly, whether in fast action or routine monitoring. It records in MP4 (H.264) format for easy storage and interoperability, and its electronic image stabilization function keeps footage stable even when in motion. The <strong>Transcend DrivePro Body 40</strong> Body Camera's internal 128GB memory provides adequate storage for extended recording, and loop recording and buffering mode prevent data loss. It also offers useful features like as vibration warnings, password protection, stealth mode, rapid wakeup, and TAA compliance to ensure secure and adaptable operation. The Transcend DrivePro Body 40 Body Camera can run for up to 11 hours on a single charge, providing all-day reliability. A USB Type-C connection and USB 2.0 interface make connectivity simple, while Wi-Fi 802.11n capability at 2.4 GHz allows for rapid file uploads using GPS EASY software.</p><img alt=\"Transcend DrivePro Body 40 Body Camera\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/camera/dashcam/transcend/drivepro-body-40/drivepro-body-40-05.webp\" width=\"920\"/><h3>Night Vision With Infrared LEDs</h3><p>There are four infrared LEDs on the Transcend Body Camera, which automatically turn on in low light to improve night vision. The quality of recordings in total darkness is greatly enhanced by this function. Using Sony STARVIS 2 technology, the Transcend <strong>DrivePro Body 40</strong> Body Camera captures 2K QHD 1440P video at 60 frames per second. It clearly captures dynamic photographs that display the scene's many layers of detail.</p><img alt=\"Transcend DrivePro Body 40 Body Camera\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/camera/dashcam/transcend/drivepro-body-40/drivepro-body-40-06.webp\" width=\"920\"/><h3>Electronic Image Stabilization (EIS)</h3><p>The Transcend <strong>DrivePro Body 40</strong> Body Camera comes with an electronic image stabilization function (EIS), limiting the impacts of vibration and shaking to generate images with improved stability and precision. It provides high-resolution image quality even in low-light situations by balancing regions with intense illumination and insufficient light thanks to its increased sensitivity.</p><h3>GPS Tracking</h3><p>A GPS/GLONASS receiver is integrated into the <strong>Transcend DrivePro Body 40</strong> Body Camera to geotag photos and videos. During video playback, users may see their trip on a map display with the DrivePro Body Toolbox, which makes it simple to determine the time and location of an event.</p><img alt=\"Transcend DrivePro Body 40 Body Camera\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/camera/dashcam/transcend/drivepro-body-40/drivepro-body-40-07.webp\" width=\"920\"/><h3>Wireless Connectivity</h3><p>Both Bluetooth and Wi-Fi are supported by the Transcend <strong>DrivePro Body 40</strong> Body Camera for basic setup and mode switching, as well as enabling live video streaming to iOS and Android mobile devices. The DrivePro Body App provides access to all of these features.</p><h3>IP68-Rated Protection</h3><p>Because of its ability to withstand extreme weather, the Transcend <strong>DrivePro Body 40</strong> Body Camera is perfect for outdoor recording by law enforcement, firefighters, security personnel, and rescue crews. It satisfies strict U.S. military drop-test requirements for shock resistance and is IP68 rated, offering complete protection against dust and water.</p><img alt=\"Transcend DrivePro Body 40 Body Camera\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/camera/dashcam/transcend/drivepro-body-40/drivepro-body-40-08.webp\" width=\"920\"/><h2>Buy Transcend DrivePro Body 40 2K Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>Transcend DrivePro Body 40 2K Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest Star Tech Shop to get yours at lowest price. The Transcend DrivePro Body 40 2K Body Camera comes with 1-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: TS128GDPB40A</li><li>Model: DrivePro Body 40</li><li>Resolution: 2K QHD 1440P, Sony STARVIS 2 Technology</li><li>Infrared LEDs for Night Vision, Electronic Image Stabilization (EIS)</li><li>Storage: 128GB internal memory, Battery Life: Max. 11 hours</li><li>GPS/GLONASS Tracking, IP68 Protection, Wireless Connectivity</li></ul>",
+      "model": "DrivePro Body 40",
+      "warranty": "1 year",
+      "basePrice": 35000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Transcend",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "128GB internal memory",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "Max 11 hours Battery Life",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "TS128GDPB40A",
+          "price": 35000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "128GB internal memory",
+            "Capacity": "Max 11 hours Battery Life"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 33600.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "2K QHD 1440P at 60/30 fps",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "MP4 (H.264)",
+              "position": 1
+            },
+            {
+              "label": "USB Port",
+              "value": "USB 2.0 Type-C",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "128GB internal memory",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "Max 11 hours Battery Life",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Wi-Fi 802.11n 2.4 GHz",
+              "position": 0
+            },
+            {
+              "label": "Water Resistant",
+              "value": "IP68",
+              "position": 1
+            },
+            {
+              "label": "Shock Resistant",
+              "value": "US military drop-test standards for shock resistance",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "GPS/GLONASS Tracking electronic image stabilization function (EIS) Infrared LEDs for Night Vision Sony STARVIS 2 technology",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-body-40-body-camera",
+      "sourceProductCode": "45274",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "TS128GDPB40A",
+      "sourceKeyFeatures": [
+        "MPN: TS128GDPB40A",
+        "Model: DrivePro Body 40",
+        "Resolution: 2K QHD 1440P, Sony STARVIS 2 Technology",
+        "Infrared LEDs for Night Vision, Electronic Image Stabilization (EIS)",
+        "Storage: 128GB internal memory, Battery Life: Max. 11 hours",
+        "GPS/GLONASS Tracking, IP68 Protection, Wireless Connectivity"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/transcend-drivepro-body-40-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/transcend-drivepro-body-40-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-drivepro-body-40-body-camera",
+        "candidateTitle": "Transcend DrivePro Body 40 2K Body Camera",
+        "attemptStem": "transcend-drivepro-body-40-body-camera"
+      }
+    },
+    {
+      "name": "Y9 Portable Body Camera",
+      "slug": "y9-portable-body-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-48277",
+      "description": "<h2>Y9 Portable Body Camera</h2><p>The <strong>Y9 Portable Body Camera</strong> is a compact and reliable body camera designed for personal security, professional use, and everyday recording. This portable body camera captures clear 1080p video in AVI format with a 4:3 image ratio, making it suitable for video recording, photography, and audio recording in various situations. Powered by a built-in 1200mAh battery, the Y9 body camera delivers up to 4 hours of continuous video recording and up to 5 hours of total recording time, while the modern Type-C charging port allows a full recharge in about 2 hours. Compatible with both Windows and Mac OS X systems, this mini body camera offers easy data transfer and user-friendly operation, making it a practical and versatile solution for anyone looking for a dependable wearable body camera.</p><h2>Buy Y9 Portable Body Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>Y9 Portable Body Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/body-camera\">Body Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Y9 Portable Body Camera has no Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Y9</li><li>Resolution: 1080P FHD (Max)</li><li>Type-C Charging</li><li>Battery capacity: 1200mAh</li><li>Storage Support 128GB Micro SD</li></ul>",
+      "model": "Y9",
+      "warranty": "No Warranty",
+      "basePrice": 2650.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Micro SD Up to 128GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "1200mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-48277",
+          "price": 2650.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "Micro SD Up to 128GB",
+            "Capacity": "1200mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2544.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image",
+              "value": "Image ratio: 4:3",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "1080P Full HD (AVI Format)",
+              "position": 1
+            },
+            {
+              "label": "Memory",
+              "value": "Micro SD Up to 128GB",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Removable",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Charging Interface",
+              "value": "Type-C",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "1200mAh",
+              "position": 2
+            },
+            {
+              "label": "Charging Time",
+              "value": "Approximately 2 hour",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "One click recording One click photo taking One click recording Loop recording Infrared night vision 180 degree rotating lens Synchronize system time",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/y9-portable-body-camera",
+      "sourceProductCode": "48277",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Y9",
+        "Resolution: 1080P FHD (Max)",
+        "Type-C Charging",
+        "Battery capacity: 1200mAh",
+        "Storage Support 128GB Micro SD"
+      ],
+      "needsReview": false,
+      "categorySlug": "body-camera",
+      "image": "/images/products/camera/body-camera/y9-portable-body-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/body-camera/y9-portable-body-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "y9-portable-body-camera",
+        "candidateTitle": "Y9 Portable Body Camera",
+        "attemptStem": "y9-portable-body-camera"
+      }
+    }
+  ]
+}

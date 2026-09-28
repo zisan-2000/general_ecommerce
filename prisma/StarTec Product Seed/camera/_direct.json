@@ -1,0 +1,277 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/camera",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\camera",
+    "generatedAtUnix": 1790585809,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Camera",
+      "slug": "camera",
+      "parentSlug": null,
+      "image": "/images/products/camera/Action Camera/dgs-ox3-pocket-camera-67755d6a.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Action Camera",
+      "slug": "action-camera",
+      "logo": null
+    },
+    {
+      "name": "Body Camera",
+      "slug": "body-camera",
+      "logo": null
+    },
+    {
+      "name": "Camera Lenses",
+      "slug": "camera-lenses",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": true,
+      "name": "Dgs Ox3 Pocket Camera 67755d6a",
+      "slug": "dgs-ox3-pocket-camera-67755d6a",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-3314F8C9729464ADF8E68BE4",
+      "categorySlug": "camera",
+      "brandName": "Action Camera",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/camera/Action Camera/dgs-ox3-pocket-camera-67755d6a.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "dgs-ox3-pocket-camera-67755d6a",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "dgs-ox3-pocket-camera-67755d6a",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/camera/Action Camera/dgs-ox3-pocket-camera-67755d6a.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Sigma 16mm F 1 4 Dc Dn Contemporary Camera Lens For Sony E Mount A4d9af37",
+      "slug": "sigma-16mm-f-1-4-dc-dn-contemporary-camera-lens-for-sony-e-mount-a4d9af37",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-E5C73E87C02444B6B7C81685",
+      "categorySlug": "camera",
+      "brandName": "Camera Lenses",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/camera/camera-lenses/sigma-16mm-f-1-4-dc-dn-contemporary-camera-lens-for-sony-e-mount-a4d9af37.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "sigma-16mm-f-1-4-dc-dn-contemporary-camera-lens-for-sony-e-mount-a4d9af37",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "sigma-16mm-f-1-4-dc-dn-contemporary-camera-lens-for-sony-e-mount-a4d9af37",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/camera/camera-lenses/sigma-16mm-f-1-4-dc-dn-contemporary-camera-lens-for-sony-e-mount-a4d9af37.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Sjcam A50 20mp 4k Portable Body Camera 2a7fccbd",
+      "slug": "sjcam-a50-20mp-4k-portable-body-camera-2a7fccbd",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-8C0108DD090DD8D4123BDA28",
+      "categorySlug": "camera",
+      "brandName": "Body Camera",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/camera/body-camera/sjcam-a50-20mp-4k-portable-body-camera-2a7fccbd.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "sjcam-a50-20mp-4k-portable-body-camera-2a7fccbd",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "sjcam-a50-20mp-4k-portable-body-camera-2a7fccbd",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/camera/body-camera/sjcam-a50-20mp-4k-portable-body-camera-2a7fccbd.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Sony Fe 24 50mm F2 8 G Lens",
+      "slug": "sony-fe-24-50mm-f2-8-g-lens",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-5F8D5F73D239294F45935E55",
+      "categorySlug": "camera",
+      "brandName": "Camera Lenses",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/camera/camera-lenses/sony-fe-24-50mm-f2-8-g-lens.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "sony-fe-24-50mm-f2-8-g-lens",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "sony-fe-24-50mm-f2-8-g-lens",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/camera/camera-lenses/sony-fe-24-50mm-f2-8-g-lens.png"
+      ]
+    }
+  ]
+}

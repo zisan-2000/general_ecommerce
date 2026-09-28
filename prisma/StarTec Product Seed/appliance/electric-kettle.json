@@ -1,0 +1,1337 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/appliance",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\appliance",
+    "generatedAtUnix": 1790586316,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Appliance",
+      "slug": "appliance",
+      "parentSlug": null,
+      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Electric Kettle",
+      "slug": "electric-kettle",
+      "parentSlug": "appliance",
+      "image": "/images/products/appliance/electric-kettle/delonghi-kbot2001-gy-icona-metallics-electric-kettle.png",
+      "isActive": true,
+      "sortOrder": 11,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "DeLonghi",
+      "slug": "delonghi",
+      "logo": null
+    },
+    {
+      "name": "Oraimo",
+      "slug": "oraimo",
+      "logo": null
+    },
+    {
+      "name": "Pigeon",
+      "slug": "pigeon",
+      "logo": null
+    },
+    {
+      "name": "Smart",
+      "slug": "smart",
+      "logo": null
+    },
+    {
+      "name": "XIAOMI",
+      "slug": "xiaomi",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Delonghi KBOT2001.GY 1.7L Icona Metallics Electric Kettle",
+      "slug": "delonghi-kbot2001-gy-icona-metallics-electric-kettle",
+      "type": "PHYSICAL",
+      "sku": "ST-52513",
+      "description": "<h2>Delonghi KBOT2001.GY 1.7L Icona Metallics Electric Kettle</h2>\n<p>A 3000W heating system gives this kettle strong everyday boiling performance. The <strong>Delonghi KBOT2001.GY</strong> 1.7L Icona Metallics Electric Kettle holds 1.7 liters. That capacity can prepare boiled water for seven standard-sized cups. Its glossy grey metal body brings the Icona Metallics design into your kitchen. The 360° cordless base allows placement from any direction. A detachable lid, removable filter, and water indicator simplify daily handling. The Delonghi KBOT2001.GY 1.7L Icona Metallics Electric Kettle runs on 220-240V power.</p>\n<h3>Fast Boiling With High 3000W Power</h3>\n<p>For faster everyday preparation, this electric water kettle uses 3000W input power. The high power rating supports quick boiling for tea and coffee. It works with 220-240V voltage at a 50-60 Hz operating frequency. This Water Kettle holds 1.7 liters for several servings together. Delonghi KBOT2001.GY 1.7L Icona Metallics Electric Kettle fits busy kitchen routines.</p>\n<h3>Seven Cups From One Full Boil</h3>\n<p>A full 1.7-liter fill gives enough boiled water for seven standard cups. This 1.7 Liter Kettle works well when serving several people together. The water level indicator helps users fill the required amount accurately. It also prevents unnecessary filling when preparing fewer cups. The tea kettle therefore works well for regular tea and coffee preparation.</p>\n<h3>360° Base Makes Handling More Convenient</h3>\n<p>Placement becomes easier because the 360° power base accepts the kettle from every direction. This cordless kettle lifts away from its base without handling a fixed cable. Power cable storage keeps the cable organized when users finish boiling. The detachable lid also gives easier access while filling the kettle. Delonghi KBOT2001.GY 1.7L Icona Metallics Electric Kettle supports simple handling.</p>\n<h3>Removable Filter Helps During Water Pouring</h3>\n<p>The removable pouring filter helps control particles while users pour boiled water. Users can remove the filter when cleaning the kettle after regular use. The power-on light also shows when the electric kettle is operating. These practical details make routine operation easier to understand. Check the Electric Kettle Price in Bangladesh before purchasing this DeLonghi model.</p>\n<h2>Buy Delonghi KBOT2001.GY 1.7L Icona Metallics Electric Kettle from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Delonghi KBOT2001.GY 1.7L Icona Metallics Electric Kettle</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/electric-kettle\" target=\"\">Electric Kettle</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Delonghi KBOT2001.GY 1.7L Icona Metallics Electric Kettle comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: KBOT2001.GY</li><li>Capacity: 1.7 Ltr</li><li>360° cordless operation</li><li>Removable Pouring Filter</li><li>Transparent Water Level Indicator</li></ul>",
+      "model": "KBOT2001.GY",
+      "warranty": "no warranty",
+      "basePrice": 12500.0,
+      "originalPrice": 16500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "DeLonghi",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.7 Ltr",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52513",
+          "price": 12500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1.7 Ltr"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 12000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "KBOT2001.GY",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1.7 Ltr",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/delonghi-kbot2001-gy-icona-metallics-electric-kettle",
+      "sourceProductCode": "52513",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: KBOT2001.GY",
+        "Capacity: 1.7 Ltr",
+        "360° cordless operation",
+        "Removable Pouring Filter",
+        "Transparent Water Level Indicator"
+      ],
+      "needsReview": false,
+      "categorySlug": "electric-kettle",
+      "image": "/images/products/appliance/electric-kettle/delonghi-kbot2001-gy-icona-metallics-electric-kettle.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/electric-kettle/delonghi-kbot2001-gy-icona-metallics-electric-kettle.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "delonghi-kbot2001-gy-icona-metallics-electric-kettle",
+        "candidateTitle": "Delonghi KBOT2001.GY 1.7L Icona Metallics Electric Kettle",
+        "attemptStem": "delonghi-kbot2001-gy-icona-metallics-electric-kettle"
+      }
+    },
+    {
+      "name": "Delonghi KBOV2001.GR 1.7L Icona Vintage Electric Kettle",
+      "slug": "delonghi-kbov2001-gr-icona-vintage-electric-kettle",
+      "type": "PHYSICAL",
+      "sku": "ST-52510",
+      "description": "<h2>Delonghi KBOV2001.GR 1.7L Icona Vintage Electric Kettle</h2><p>The <strong>Delonghi KBOV2001.GR</strong> 1.7L Icona Vintage Electric Kettle brings retro style to daily boiling. Its 1.7-liter capacity works well for tea, coffee, and family use. The painted stainless steel body gives this water kettle a sturdy build. Its 2000W input power heats water for regular kitchen needs quickly. The glossy green finish adds a classic look to the kitchen. Delonghi KBOV2001.GR 1.7L Icona Vintage Electric Kettle includes one-year purchase-date warranty coverage.</p><h3>1.7 Liter Capacity for Daily Kitchen Use</h3>With 1.7 liters capacity, this 1.7-liter kettle handles several cups per boil. The 2000W input power supports quick water boiling for daily preparation. This electric water kettle works at 220-240V and 50-60 Hz frequency. Its 1.3 kg weight keeps the kitchen kettle manageable during regular use. The Delonghi KBOV2001.GR 1.7L Icona Vintage Electric Kettle fits tea and coffee routines.<h3>Stainless Steel Body With Retro Green Finish</h3>The stainless steel body gives this Stainless Steel Kettle a solid construction. Its glossy green finish creates the recognizable Icona Vintage appearance. This Retro Kettle adds classic styling without changing its practical boiling function. The DeLonghi Kettle also includes a water level indicator for easier filling. Delonghi KBOV2001.GR 1.7L Icona Vintage Electric Kettle suits users wanting style and utility.<h3>Cordless Operation and Easy Pouring</h3>A 360° cordless base lets users lift and position the kettle freely. The detachable lid makes filling the water kettle easier before boiling. Its removable pouring filter helps keep unwanted particles from reaching cups. Power cable storage keeps the cord organized when users store the kettle. Delonghi KBOV2001.GR 1.7L Icona Vintage Electric Kettle works well as an electric kettle.<h3>Easy Choice for Tea and Coffee Preparation</h3>For regular tea preparation, this Tea Kettle gives users 1.7 liters capacity. Its 2000W power rating supports everyday boiling across different kitchen routines. The water kettle uses a removable filter and detachable lid for convenience. Buyers can check the water kettle price in Bangladesh before purchase. Delonghi KBOV2001.GR 1.7L Icona Vintage Electric Kettle combines practical features with vintage styling.<h2>Buy Delonghi KBOV2001.GR 1.7L Icona Vintage Electric Kettle from Star Tech</h2><p>In Bangladesh, you can get original <strong>Delonghi KBOV2001.GR 1.7L Icona Vintage Electric Kettle</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/electric-kettle\" target=\"\">Electric Kettle</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Delonghi KBOV2001.GR 1.7L Icona Vintage Electric Kettle comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: KBOV2001.GR</li><li>Capacity: 1.7 Ltr</li><li>360° cordless operation</li><li>Auto Shut-Off</li><li>Stainless Steel Body Material</li></ul>",
+      "model": "KBOV2001.GR",
+      "warranty": "no warranty",
+      "basePrice": 12000.0,
+      "originalPrice": 15500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "DeLonghi",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.7 Ltr",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52510",
+          "price": 12000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1.7 Ltr"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 11520.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "KBOV2001.GR",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1.7 Ltr",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/delonghi-kbov2001-gr-icona-vintage-electric-kettle",
+      "sourceProductCode": "52510",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: KBOV2001.GR",
+        "Capacity: 1.7 Ltr",
+        "360° cordless operation",
+        "Auto Shut-Off",
+        "Stainless Steel Body Material"
+      ],
+      "needsReview": false,
+      "categorySlug": "electric-kettle",
+      "image": "/images/products/appliance/electric-kettle/delonghi-kbov2001-gr-icona-vintage-electric-kettle.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/electric-kettle/delonghi-kbov2001-gr-icona-vintage-electric-kettle.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "delonghi-kbov2001-gr-icona-vintage-electric-kettle",
+        "candidateTitle": "Delonghi KBOV2001.GR 1.7L Icona Vintage Electric Kettle",
+        "attemptStem": "delonghi-kbov2001-gr-icona-vintage-electric-kettle"
+      }
+    },
+    {
+      "name": "Oraimo FastBrew 1.7L Electric Kettle (OEK-261A)",
+      "slug": "oraimo-fastbrew-electric-kettle",
+      "type": "PHYSICAL",
+      "sku": "OEK-261A",
+      "description": "<h2>Oraimo FastBrew 1.7L Electric Kettle (OEK-261A)</h2><p>The Oraimo <strong>FastBrew</strong> 1.7L Electric Kettle (OEK-261A) combines fast heating, smart temperature control, and durable construction. This kettle delivers 1800W optimized power that performs like a 2200W unit while achieving 94% thermal efficiency. The Oraimo FastBrew Electric Kettle boils a full pot in just 3 minutes, saving both time and energy daily. Built from seamless 316 stainless steel with a metal and glass body, it offers durability and clean water quality.</p><h3>3-Minute Fast Boiling</h3><p>The Oraimo FastBrew 1.7L Electric Kettle delivers 1800W of optimized power that matches the performance of a 2200W kettle. This efficiency allows the kettle to boil a full pot in just 3 minutes consistently. A 94% thermal efficiency rating significantly reduces wasted energy during every boiling cycle. Boiling one pot daily costs approximately 2.7 kWh per month, keeping electricity bills low. The Oraimo FastBrew Electric Kettle operates on a rated voltage of 220-240V at 50-60Hz with 1850W rated power.</p><h3>Dual-Display Temp View</h3><p>Three smart boiling modes give users precise control over different brewing requirements. Dechlorination mode removes chlorine taste and odor from tap water effectively. The Oraimo FastBrew OEK-261A Electric Kettle features a dual temperature display that shows current and target heat levels clearly. Keep warm mode maintains steady heat for extended periods without reboiling. Extended boiling mode extracts deeper flavor from tea leaves for richer infusions.</p><h3>316 Stainless Steel Liner</h3><p>The Oraimo FastBrew 1.7L Electric Kettle uses seamless 316 stainless steel, superior heat and corrosion resistance compared to standard 304 steel. The one-piece, glue-free construction prevents harmful chemical release into boiled water. A magnetic lid design makes opening, closing, and cleaning the kettle effortless. An all-steel spout ensures zero plastic contact with water during pouring.</p><h3>Boil-Dry Protection</h3><p>Auto shut-off technology powers down the kettle automatically once water reaches boiling point. A beep alert notifies users when boiling completes for added convenience. Boil-dry protection automatically cuts power if the kettle runs empty, preventing overheating damage. The Oraimo FastBrew OEK-261A Electric Kettle features an upgraded double-wall design that keeps the exterior cool to the touch. This heat insulation protects hands from burns during pouring and handling.</p><h3>Seven-Stage Keep Warm</h3><p>The 3-minute auto-resume feature lets users lift the kettle to pour and place it back without resetting. Temperature settings remain active automatically within this window, saving repeated setup steps. Hidden cord storage wraps the power cord neatly under the base for a tidy countertop. Operating noise stays at or below 65dB, keeping the kitchen environment quiet. The Oraimo FastBrew 1.7L Electric Kettle offers seven distinct temperature settings for keeping water at precise heat levels. These settings suit coffee, baby formula, green tea, and other temperature-sensitive beverages perfectly.</p><h2>Buy Oraimo FastBrew 1.7L Electric Kettle from Star Tech</h2><p>In Bangladesh, you can get original <strong>Oraimo FastBrew 1.7L Electric Kettle</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/electric-kettle\" target=\"\">Electric Kettle</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Oraimo FastBrew 1.7L Electric Kettle comes with 1 Years Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: OEK-261A</li><li>Model: FastBrew</li><li>Capacity: 1.7 Ltr, 316 Stainless Steel Liner</li><li>3-Minute Fast Boiling, 3 Smart Boiling Modes</li><li>1800W Optimized Power, Dual-Display Temp View</li><li>Auto Shut-Off &amp; Beep Alert, Boil-Dry Protection</li></ul>",
+      "model": "FastBrew",
+      "warranty": "1 Years Warranty",
+      "basePrice": 3999.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Oraimo",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.7 Ltr, 316 Stainless Steel Liner",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "OEK-261A",
+          "price": 3999.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "1.7 Ltr, 316 Stainless Steel Liner"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3839.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "OEK-261A",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "FastBrew",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "1.7 Ltr, 316 Stainless Steel Liner",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/oraimo-fastbrew-electric-kettle",
+      "sourceProductCode": "50379",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "OEK-261A",
+      "sourceKeyFeatures": [
+        "MPN: OEK-261A",
+        "Model: FastBrew",
+        "Capacity: 1.7 Ltr, 316 Stainless Steel Liner",
+        "3-Minute Fast Boiling, 3 Smart Boiling Modes",
+        "1800W Optimized Power, Dual-Display Temp View",
+        "Auto Shut-Off & Beep Alert, Boil-Dry Protection"
+      ],
+      "needsReview": false,
+      "categorySlug": "electric-kettle",
+      "image": "/images/products/appliance/electric-kettle/oraimo-fastbrew-electric-kettle.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/electric-kettle/oraimo-fastbrew-electric-kettle.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "oraimo-fastbrew-electric-kettle",
+        "candidateTitle": "Oraimo FastBrew 1.7L Electric Kettle (OEK-261A)",
+        "attemptStem": "oraimo-fastbrew-electric-kettle"
+      }
+    },
+    {
+      "name": "Pigeon Classic Plus PG-02 1.8L Electric Kettle",
+      "slug": "pigeon-classic-plus-electric-kettle",
+      "type": "PHYSICAL",
+      "sku": "PG-02",
+      "description": "<h2>Pigeon Classic Plus PG-02 1.8L Electric Kettle</h2>\n<p>The Pigeon <strong>Classic Plus</strong> PG-02 1.8L Electric Kettle features a 1.8-liter capacity that supports preparing tea, coffee, noodles, and hot water efficiently. This Pigeon Electric Kettle uses a powerful 1500-watt heating system to boil water quickly while helping reduce waiting time during busy mornings. Pigeon Classic Plus Electric Kettle operates on a stable 220V and 50Hz power supply, ensuring dependable heating performance for regular kitchen use. The double-layered anti-scald body improves safety by reducing outer surface heat and providing more comfortable handling during operation. Pigeon Classic Plus PG-02 1.8L Electric Kettle includes automatic power-off functionality that helps prevent overheating and improves overall user safety during boiling tasks. Protection against dry burning adds another layer of safety by automatically stopping operation when insufficient water remains inside the kettle. Pigeon Classic Plus Electric Kettle features a durable 304 stainless steel interior that supports hygiene, corrosion resistance, and long-lasting daily performance. The seamless inner body design helps simplify cleaning while maintaining a cleaner and safer water boiling environment for regular household usage. Pigeon Electric Kettle also includes a convenient keep warm function for maintaining hot water temperature after boiling. The fully copper one-meter power cord improves electrical conductivity and supports stable operation for dependable daily kitchen performance. Pigeon Classic Plus PG-02 1.8L Electric Kettle combines fast heating, safety protection, and durable construction for practical use in modern kitchens.</p>\n<h2>Buy Pigeon Classic Plus PG-02 1.8L Electric Kettle from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Pigeon Classic Plus PG-02 1.8L Electric Kettle</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/electric-kettle\" target=\"\">Electric Kettle</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Pigeon Classic Plus PG-02 1.8L Electric Kettle comes with 02 Years Official Warranty by Pigeon. The Pigeon warranty card must be kept for any warranty claim. For warranty, Call Pigeon at 01898805551, 01898805552 (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: PG-02</li><li>Model: Classic Plus</li><li>Capacity: 1.8 Ltr</li><li>Automatic Power Off</li><li>Double-Layered anti-scald</li><li>Fully Copper 1 Meter Cord</li></ul>",
+      "model": "Classic Plus",
+      "warranty": "02 Years Official Warranty",
+      "basePrice": 1875.0,
+      "originalPrice": 2500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Pigeon",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.8 Ltr",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "PG-02",
+          "price": 1875.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1.8 Ltr"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "PG-02",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Classic Plus",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "1.8 Ltr",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/pigeon-classic-plus-electric-kettle",
+      "sourceProductCode": "49725",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "PG-02",
+      "sourceKeyFeatures": [
+        "MPN: PG-02",
+        "Model: Classic Plus",
+        "Capacity: 1.8 Ltr",
+        "Automatic Power Off",
+        "Double-Layered anti-scald",
+        "Fully Copper 1 Meter Cord"
+      ],
+      "needsReview": false,
+      "categorySlug": "electric-kettle",
+      "image": "/images/products/appliance/electric-kettle/pigeon-classic-plus-electric-kettle.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/electric-kettle/pigeon-classic-plus-electric-kettle.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "pigeon-classic-plus-electric-kettle",
+        "candidateTitle": "Pigeon Classic Plus PG-02 1.8L Electric Kettle",
+        "attemptStem": "pigeon-classic-plus-electric-kettle"
+      }
+    },
+    {
+      "name": "Pigeon Luxuary Plus PG-04 1.8L Electric Kettle",
+      "slug": "pigeon-luxuary-plus-electric-kettle",
+      "type": "PHYSICAL",
+      "sku": "PG-04",
+      "description": "<h2>Pigeon Luxuary Plus PG-04 1.8L Electric Kettle</h2>\n<p>The Pigeon Luxuary Plus PG-04 1.8L Electric Kettle uses efficient 1500W heating technology to boil water quickly while reducing unnecessary energy consumption. Pigeon Electric Kettle supports 220V and 50Hz power requirements, ensuring stable performance for homes and modern workplaces everywhere. Pigeon Electric Kettle features a durable 304 stainless steel interior that supports hygienic boiling, long-lasting durability, and simple daily cleaning. Pigeon Luxuary Plus PG-04 1.8L Electric Kettle includes a seamless inner body that helps maintain cleanliness and supports maintenance routines. The double-layered anti-scald design improves handling safety and keeps exterior surfaces comfortable during regular kitchen use and family gatherings daily. Pigeon Luxuary Plus 1.8L Electric Kettle provides automatic power off protection, helping users avoid overheating problems during frequent boiling sessions. Protection against dry burning increases appliance safety by preventing operation without sufficient water inside the kettle during accidental misuse situations. Pigeon Luxuary Plus Electric Kettle includes a fully copper one-meter cord that supports dependable power delivery and flexible placement options. The integrated keep warm function maintains suitable water temperature for tea, coffee, noodles, soups, and other hot beverages throughout mornings. Pigeon Electric Kettle offers a generous 1.8-liter capacity, making it suitable for families, guests, office meetings, and shared kitchen environments. Pigeon Luxuary Plus PG-04 1.8L Electric Kettle combines practical functionality with reliable performance, supporting convenient beverage preparation every single day. The cool-touch exterior design helps users pour hot water confidently while minimizing accidental burns during fast-paced cooking and preparation routines.</p>\n<h2>Buy Pigeon Luxuary Plus PG-04 1.8L Electric Kettle from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Pigeon Luxuary Plus PG-04 1.8L Electric Kettle</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/electric-kettle\" target=\"\">Electric Kettle</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Pigeon Luxuary Plus PG-04 1.8L Electric Kettle comes with 02 Years Official Warranty by Pigeon. The Pigeon warranty card must be kept for any warranty claim. For warranty, Call Pigeon at 01898805551, 01898805552 (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: PG-04</li><li>Model: Luxuary Plus</li><li>Capacity: 1.8 Ltr</li><li>Automatic Power Off</li><li>Double-Layered anti-scald</li><li>Fully Copper 1 Meter Cord</li></ul>",
+      "model": "Luxuary Plus",
+      "warranty": "02 Years Official Warranty",
+      "basePrice": 2660.0,
+      "originalPrice": 3500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Pigeon",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.8 Ltr",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "PG-04",
+          "price": 2660.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1.8 Ltr"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2553.6,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "PG-04",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Luxuary Plus",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "1.8 Ltr",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/pigeon-luxuary-plus-electric-kettle",
+      "sourceProductCode": "49731",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "PG-04",
+      "sourceKeyFeatures": [
+        "MPN: PG-04",
+        "Model: Luxuary Plus",
+        "Capacity: 1.8 Ltr",
+        "Automatic Power Off",
+        "Double-Layered anti-scald",
+        "Fully Copper 1 Meter Cord"
+      ],
+      "needsReview": false,
+      "categorySlug": "electric-kettle",
+      "image": "/images/products/appliance/electric-kettle/pigeon-luxuary-plus-electric-kettle.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/electric-kettle/pigeon-luxuary-plus-electric-kettle.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "pigeon-luxuary-plus-electric-kettle",
+        "candidateTitle": "Pigeon Luxuary Plus PG-04 1.8L Electric Kettle",
+        "attemptStem": "pigeon-luxuary-plus-electric-kettle"
+      }
+    },
+    {
+      "name": "Pigeon Premium Plus PG-03 1.8L Electric Kettle",
+      "slug": "pigeon-premium-plus-electric-kettle",
+      "type": "PHYSICAL",
+      "sku": "PG-03",
+      "description": "<h2>Pigeon Premium Plus PG-03 1.8L Electric Kettle</h2>\n<p>The Pigeon Premium Plus PG-03 1.8L Electric Kettle uses efficient 1500W heating technology to boil water quickly while reducing unnecessary energy consumption. Pigeon Electric Kettle supports 220V and 50Hz power requirements, ensuring stable performance for homes and modern workplaces everywhere. Pigeon Electric Kettle features a durable 304 stainless steel interior that supports hygienic boiling, long-lasting durability, and simple daily cleaning. Pigeon Premium Plus PG-03 1.8L Electric Kettle includes a seamless inner body that helps maintain cleanliness and supports maintenance routines. The double-layered anti-scald design improves handling safety and keeps exterior surfaces comfortable during regular kitchen use and family gatherings daily. Pigeon Premium Plus 1.8L Electric Kettle provides automatic power off protection, helping users avoid overheating problems during frequent boiling sessions. Protection against dry burning increases appliance safety by preventing operation without sufficient water inside the kettle during accidental misuse situations. Pigeon Premium Plus Electric Kettle includes a fully copper one-meter cord that supports dependable power delivery and flexible placement options. The integrated keep warm function maintains suitable water temperature for tea, coffee, noodles, soups, and other hot beverages throughout mornings. Pigeon Electric Kettle offers a generous 1.8-liter capacity, making it suitable for families, guests, office meetings, and shared kitchen environments. Pigeon Premium Plus PG-03 1.8L Electric Kettle combines practical functionality with reliable performance, supporting convenient beverage preparation every single day. The cool-touch exterior design helps users pour hot water confidently while minimizing accidental burns during fast-paced cooking and preparation routines.</p>\n<h2>Buy Pigeon Premium Plus PG-03 1.8L Electric Kettle from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Pigeon Premium Plus PG-03 1.8L Electric Kettle</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/electric-kettle\" target=\"\">Electric Kettle</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Pigeon Premium Plus PG-03 1.8L Electric Kettle comes with 02 Years Official Warranty by Pigeon. The Pigeon warranty card must be kept for any warranty claim. For warranty, Call Pigeon at 01898805551, 01898805552 (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: PG-03</li><li>Model: Premium Plus</li><li>Capacity: 1.8 Ltr</li><li>Automatic Power Off</li><li>Double-Layered anti-scald</li><li>Fully Copper 1 Meter Cord</li></ul>",
+      "model": "Premium Plus",
+      "warranty": "02 Years Official Warranty",
+      "basePrice": 2624.0,
+      "originalPrice": 3200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Pigeon",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.8 Ltr",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "PG-03",
+          "price": 2624.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1.8 Ltr"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2519.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "PG-03",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Premium Plus",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "1.8 Ltr",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/pigeon-premium-plus-electric-kettle",
+      "sourceProductCode": "49730",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "PG-03",
+      "sourceKeyFeatures": [
+        "MPN: PG-03",
+        "Model: Premium Plus",
+        "Capacity: 1.8 Ltr",
+        "Automatic Power Off",
+        "Double-Layered anti-scald",
+        "Fully Copper 1 Meter Cord"
+      ],
+      "needsReview": false,
+      "categorySlug": "electric-kettle",
+      "image": "/images/products/appliance/electric-kettle/pigeon-premium-plus-electric-kettle.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/electric-kettle/pigeon-premium-plus-electric-kettle.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "pigeon-premium-plus-electric-kettle",
+        "candidateTitle": "Pigeon Premium Plus PG-03 1.8L Electric Kettle",
+        "attemptStem": "pigeon-premium-plus-electric-kettle"
+      }
+    },
+    {
+      "name": "Pigeon Prime Plus PG-01 1.8L Electric Kettle",
+      "slug": "pigeon-prime-plus-electric-kettle",
+      "type": "PHYSICAL",
+      "sku": "PG-01",
+      "description": "<h2>Pigeon Prime Plus PG-01 1.8L Electric Kettle</h2>\n<p>The Pigeon <strong>Prime Plus</strong> PG-01 1.8L Electric Kettle uses efficient 1500W heating technology to boil water quickly while reducing unnecessary energy consumption. Pigeon Electric Kettle supports 220V and 50Hz power requirements, ensuring stable performance for homes and modern workplaces everywhere. Pigeon Electric Kettle features a durable 304 stainless steel interior that supports hygienic boiling, long-lasting durability, and simple daily cleaning. Pigeon Prime Plus PG-01 1.8L Electric Kettle includes a seamless inner body that helps maintain cleanliness and supports maintenance routines. The double-layered anti-scald design improves handling safety and keeps exterior surfaces comfortable during regular kitchen use and family gatherings daily. Pigeon Prime Plus 1.8L Electric Kettle provides automatic power off protection, helping users avoid overheating problems during frequent boiling sessions. Protection against dry burning increases appliance safety by preventing operation without sufficient water inside the kettle during accidental misuse situations. Pigeon Prime Plus Electric Kettle includes a fully copper one-meter cord that supports dependable power delivery and flexible placement options. The integrated keep warm function maintains suitable water temperature for tea, coffee, noodles, soups, and other hot beverages throughout mornings. Pigeon Electric Kettle offers a generous 1.8-liter capacity, making it suitable for families, guests, office meetings, and shared kitchen environments. Pigeon Prime Plus PG-01 1.8L Electric Kettle combines practical functionality with reliable performance, supporting convenient beverage preparation every single day. The cool-touch exterior design helps users pour hot water confidently while minimizing accidental burns during fast-paced cooking and preparation routines.</p>\n<h2>Buy Pigeon Prime Plus PG-01 1.8L Electric Kettle from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Pigeon Prime Plus PG-01 1.8L Electric Kettle</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/electric-kettle\" target=\"\">Electric Kettle</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Pigeon Prime Plus PG-01 1.8L Electric Kettle comes with 02 Years Official Warranty by Pigeon. The Pigeon warranty card must be kept for any warranty claim. For warranty, Call Pigeon at 01898805551, 01898805552 (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: PG-01</li><li>Model: Prime Plus</li><li>Capacity: 1.8 Ltr</li><li>Automatic Power Off</li><li>Double-Layered anti-scald</li><li>Fully Copper 1 Meter Cord</li></ul>",
+      "model": "Prime Plus",
+      "warranty": "02 Years Official Warranty",
+      "basePrice": 2190.0,
+      "originalPrice": 3000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Pigeon",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.8 Ltr",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "PG-01",
+          "price": 2190.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1.8 Ltr"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2102.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "PG-01",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "Prime Plus",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "1.8 Ltr",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/pigeon-prime-plus-electric-kettle",
+      "sourceProductCode": "49728",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "PG-01",
+      "sourceKeyFeatures": [
+        "MPN: PG-01",
+        "Model: Prime Plus",
+        "Capacity: 1.8 Ltr",
+        "Automatic Power Off",
+        "Double-Layered anti-scald",
+        "Fully Copper 1 Meter Cord"
+      ],
+      "needsReview": false,
+      "categorySlug": "electric-kettle",
+      "image": "/images/products/appliance/electric-kettle/pigeon-prime-plus-electric-kettle.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/electric-kettle/pigeon-prime-plus-electric-kettle.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "pigeon-prime-plus-electric-kettle",
+        "candidateTitle": "Pigeon Prime Plus PG-01 1.8L Electric Kettle",
+        "attemptStem": "pigeon-prime-plus-electric-kettle"
+      }
+    },
+    {
+      "name": "Smart SEK-P18ES 1.8 Ltr Electric Kettle",
+      "slug": "smart-sek-p18es-electric-kettle",
+      "type": "PHYSICAL",
+      "sku": "ST-39042",
+      "description": "<h2>Smart SEK-P18ES 1.8 Liters Electric Kettle</h2><p>The Smart <strong>SEK-P18ES</strong> 1.8 L <a href=\"https://www.startech.com.bd/electric-kettle\" style=\"color: rgb(0, 0, 0);\" target=\"\">Electric Kettle</a> is a perfect blend of functionality, safety, and modern design, making it an ideal companion for quick and efficient hot water needs. It comes with a spacious capacity of 1.8 ltr. The Smart SEK-P18ES Kettle is perfect for preparing multiple cups of tea, coffee, or instant meals, catering to both individual and family use. It has a powerful 1500W heating element and the Smart SEK-P18ES Electric Kettle operates efficiently at 220V and 50Hz, ensuring water boils in just 3-4 minutes, saving your time and effort. The SEK-P18ES Electric Kettle features a dual-layer heat-resistant body designed for durability and user safety. Its interior is crafted from 304-grade stainless steel, ensuring pure, contamination-free water, while the outer layer is made from heatproof plastic, keeping the surface cool to the touch even during operation. The 360° rotatable cordless base adds convenience, allowing easy placement and portability. The SEK-P18ES Smart Electric Kettle is a user-friendly choice for any home or office setup. Safety is at the core of the Smart SEK-P18ES Kettle's design. It includes an automatic shut-off feature that activates when water reaches 100°C. It prevents overheating and conserving energy. Additional safeguards such as boil-dry protection and overheat protection ensure secure operation, even under challenging conditions. These features are integrated into the Triple Safety Protection system, delivering peace of mind every time you use this Smart Kettle. The concealed stainless steel heating element enhances durability while ensuring effortless cleaning and maintenance. Stylish and practical, the Smart SEK-P18ES 1.8 Liters Electric Kettle is not only a functional appliance but also an elegant addition to modern kitchens. Whether you're preparing hot beverages, cooking with boiling water, or simply enjoying the convenience of instant hot water, this kettle fulfills all your needs with speed, safety, and ease.</p><h2>Buy Smart SEK-P18ES 1.8 Liters Electric Kettle from Star Tech</h2><p2>In Bangladesh, you can get original <strong>Smart SEK-P18ES 1.8 Liters Electric Kettle</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/electric-kettle\" target=\"\">Smart Electric Kettle</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Smart SEK-P18ES 1.8 Liters Electric Kettle comes with a 06-month service warranty.</p2>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SEK-P18ES</li><li>Capacity: 1.8L</li><li>Power: 1500W, 220V, 50Hz</li><li>Inner side 304 SS &amp; Outer side Plastic heatproof Body</li><li>360° Rotatable Cordless Electric Kettle</li></ul>",
+      "model": "SEK-P18ES",
+      "warranty": "a 06-month service warranty",
+      "basePrice": 2100.0,
+      "originalPrice": 2790.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Smart",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.8L",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39042",
+          "price": 2100.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1.8L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2016.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "SEK-P18ES",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1.8L",
+              "position": 1
+            },
+            {
+              "label": "Power",
+              "value": "1500W, 220V, 50Hz",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sek-p18es-electric-kettle",
+      "sourceProductCode": "39042",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SEK-P18ES",
+        "Capacity: 1.8L",
+        "Power: 1500W, 220V, 50Hz",
+        "Inner side 304 SS & Outer side Plastic heatproof Body",
+        "360° Rotatable Cordless Electric Kettle"
+      ],
+      "needsReview": false,
+      "categorySlug": "electric-kettle",
+      "image": "/images/products/appliance/electric-kettle/smart-sek-p18es-electric-kettle.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/electric-kettle/smart-sek-p18es-electric-kettle.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "smart-sek-p18es-electric-kettle",
+        "candidateTitle": "Smart SEK-P18ES 1.8 Ltr Electric Kettle",
+        "attemptStem": "smart-sek-p18es-electric-kettle"
+      }
+    },
+    {
+      "name": "Smart SEK-P20ES 1 Liter Black Electric Kettle",
+      "slug": "smart-sek-p20es-electric-kettle",
+      "type": "PHYSICAL",
+      "sku": "ST-39046",
+      "description": "<h2>Smart SEK-P20ES 1 Liter Black Electric Kettle</h2><p>The Smart <strong>SEK-P20ES</strong> 1 Liter Black <a href=\"https://www.startech.com.bd/electric-kettle\" style=\"color: rgb(0, 0, 0);\" target=\"\">Electric Kettle</a> is a thoughtfully designed appliance that perfectly combines efficiency, safety, and modern style, making it an ideal choice for contemporary kitchens and small households. The Smart SEK-P20ES Kettle is both visually appealing and highly functional. This kettle features a 1-liter capacity, making it perfect for preparing multiple cups of tea, coffee, or other hot beverages with ease. The inner side is crafted from durable 201-grade stainless steel to maintain water purity, while the outer side is constructed from high-quality Virgin PP material for added durability and a polished and beautiful look. Its heat-proof body and cool-touch double-wall design ensure optimal insulation and user safety. The 1000W heating element, the Smart SEK-P20ES Electric <a href=\"https://www.startech.com.bd/gadget/daily-lifestyle\" style=\"color: rgb(0, 0, 0);\" target=\"\">Kettle</a> operates efficiently at 220V and 50Hz, allowing water to boil quickly and reliably. Its 360º rotatable cordless base provides effortless handling and portability, making it convenient to use from any angle. The 10L cord length adds flexibility, allowing for easy placement anywhere in your kitchen. This SEK-P20ES Electric Kettle also includes an illuminated on-off switch, which not only adds functionality but also enhances its modern beauty. The auto-turn-off feature ensures that the kettle stops heating when the water reaches its boiling point at 100°C, conserving energy and prioritizing user safety. Safety is a standout feature of the SEK-P20ES Smart Electric Kettle, which includes a Triple Safety Protection system, complete with boil-dry and overheat safeguards. This advanced safety system offers peace of mind during use and ensures reliable and secure operation. More than just an appliance, this Smart Kettle is a statement piece that elevates your kitchen experience with its thoughtful design, advanced safety features, and sleek aesthetics. Whether you need hot water for beverages or cooking, the Smart SEK-P20ES 1.8-liter electric Kettle simplifies and enhances your daily routine while adding a touch of elegance to your kitchen.</p><h2>Buy Smart SEK-P20ES 1 Liter Black Electric Kettle from Star Tech</h2><p2>In Bangladesh, you can get original <strong>Smart SEK-P20ES 1 Liter Black Electric Kettle</strong> From Star Tech. We have a large collection of latest Smart <a href=\"https://www.startech.com.bd/electric-kettle\" target=\"\">Electric Kettle</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Smart SEK-P20ES 1 Liter Black Electric Kettle comes with a 06-month service warranty.</p2>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SEK-P20ES</li><li>Capacity: 1L</li><li>Power: 1000W, 220V, 50Hz</li><li>Safety Features: Triple Safety Protection</li><li>Auto-Turn Off when Water Boils (at 100 C)</li></ul>",
+      "model": "SEK-P20ES",
+      "warranty": "a 06-month service warranty",
+      "basePrice": 1400.0,
+      "originalPrice": 2790.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Smart",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1L",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39046",
+          "price": 1400.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1344.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "SEK-P20ES",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1L",
+              "position": 1
+            },
+            {
+              "label": "Power",
+              "value": "1000W, 220V, 50Hz",
+              "position": 2
+            },
+            {
+              "label": "Safety Features",
+              "value": "Triple Safety Protection",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sek-p20es-electric-kettle",
+      "sourceProductCode": "39046",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SEK-P20ES",
+        "Capacity: 1L",
+        "Power: 1000W, 220V, 50Hz",
+        "Safety Features: Triple Safety Protection",
+        "Auto-Turn Off when Water Boils (at 100 C)"
+      ],
+      "needsReview": false,
+      "categorySlug": "electric-kettle",
+      "image": "/images/products/appliance/electric-kettle/smart-sek-p20es-electric-kettle.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/electric-kettle/smart-sek-p20es-electric-kettle.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "smart-sek-p20es-electric-kettle",
+        "candidateTitle": "Smart SEK-P20ES 1 Liter Black Electric Kettle",
+        "attemptStem": "smart-sek-p20es-electric-kettle"
+      }
+    },
+    {
+      "name": "Smart SEK-P23ES 2.3L Electric Kettle",
+      "slug": "smart-sek-p23es-electric-kettle",
+      "type": "PHYSICAL",
+      "sku": "ST-39080",
+      "description": "<h2>Smart SEK-P23ES 2.3 Liters Electric Kettle</h2><p>The Smart SEK-P23ES 2.3 Liters <a href=\"https://www.startech.com.bd/electric-kettle\" style=\"color: rgb(0, 0, 0);\" target=\"\">Electric Kettle</a> is a dependable and efficient solution for all your boiling requirements, combining practicality and safety in a streamlined design. This electric kettle has a substantial 2.3L capacity and a 1500W power output, ensuring rapid and efficient boiling in just 3-4 minutes. With its 2.3-ltr capacity, this kettle is ideal for producing several cups of tea, coffee, or other hot beverages quickly. The cordless base's 360º rotation allows for easy transport and operation from any angle. The SEK-P23ES operates at 220V and 50Hz, making it a great complement to any kitchen. This Smart kettle has a completely heat-resistant, cool-touch two-layer body, a solid 201 stainless steel inside, and a heatproof plastic outside for extra safety. It has sophisticated safety features such as auto shut-off when the water temperature surpasses 100°C, boil-dry prevention, and overheat protection, providing triple safety guarantee for worry-free operation. The Smart SEK-P23ES Electric Kettle has been built for performance, durability, and convenience. Whether you're making tea, coffee, or hot water for cooking, this electric kettle consistently produces rapid and safe results.</p><h2>Buy Smart SEK-P23ES 2.3 Liters Electric Kettle from Star Tech</h2><p2>In Bangladesh, you can get the original <strong>Smart SEK-P23ES 2.3 Liters Electric Kettle</strong> From Star Tech. We have a large collection of the latest Smart <a href=\"https://www.startech.com.bd/electric-kettle\" target=\"\">Electric Kettle</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Smart SEK-P23ES 2.3 Liters Electric Kettle comes with a 06-month service warranty.</p2>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SEK-P23ES</li><li>Capacity: 2.3L</li><li>Power: 1500W, 220V, 50Hz</li><li>Safety Features: Triple Safety Protection</li><li>Auto turns Off when 100°C water boils.</li></ul>",
+      "model": "SEK-P23ES",
+      "warranty": "a 06-month service warranty",
+      "basePrice": 1700.0,
+      "originalPrice": 2990.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Smart",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "2.3L",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39080",
+          "price": 1700.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "2.3L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1632.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "SEK-P23ES",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "2.3L",
+              "position": 1
+            },
+            {
+              "label": "Power",
+              "value": "1500W, 220V, 50Hz",
+              "position": 2
+            },
+            {
+              "label": "Safety Features",
+              "value": "Triple Safety Protection",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sek-p23es-electric-kettle",
+      "sourceProductCode": "39080",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SEK-P23ES",
+        "Capacity: 2.3L",
+        "Power: 1500W, 220V, 50Hz",
+        "Safety Features: Triple Safety Protection",
+        "Auto turns Off when 100°C water boils."
+      ],
+      "needsReview": false,
+      "categorySlug": "electric-kettle",
+      "image": "/images/products/appliance/electric-kettle/smart-sek-p23es-electric-kettle.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/electric-kettle/smart-sek-p23es-electric-kettle.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "smart-sek-p23es-electric-kettle",
+        "candidateTitle": "Smart SEK-P23ES 2.3L Electric Kettle",
+        "attemptStem": "smart-sek-p23es-electric-kettle"
+      }
+    },
+    {
+      "name": "Smart SEK-S18ES 1.8 Liter Electric Kettle",
+      "slug": "smart-sek-s18es-electric-kettle",
+      "type": "PHYSICAL",
+      "sku": "ST-39040",
+      "description": "<h2>Smart SEK-S18ES 1.8 Liter Electric Kettle</h2><p>The Smart <strong>SEK-S18ES</strong> 1.8 Liter <a href=\"https://www.startech.com.bd/electric-kettle\" style=\"color: rgb(0, 0, 0);\" target=\"\">Electric Kettle</a> is an excellent solution for individuals who prioritize efficiency and safety when it comes to hot water. Having a large 1.8-liter capacity, this kettle is ideal for brewing many cups of tea, coffee, or even instant noodles. Its powerful 1500W heating element quickly heats water to a boil in 3-4 minutes, guaranteeing that you never have to wait long for hot water. This Smart kettle makes it exceedingly easy to acquire hot water quickly, whether you're at home, at work, or wherever in between. The SEK-S18ES Smart Electric Kettle is made of high-quality stainless steel and has a glossy silver finish that adds to its modern design while also ensuring long-lasting durability. The body has a thickness of 0.41mm, making it strong and durable enough to survive regular usage without sacrificing performance. This strong design not only adds to the kettle's lifetime, but it also improves heat retention, allowing your water to stay hot for longer. This kettle's design prioritizes safety. The Smart SEK-S18ES Kettle has various safety features, including an automatic shut-off mechanism that activates when the water hits the boiling point of 100°C. This function helps to avoid mishaps and saves energy by ensuring that the kettle stops heating once the water is ready. The kettle includes boil-dry and overheat safety, which avoids harm if there is insufficient water or if the kettle is left on for too long. These safety features are part of the kettle's Triple Safety Protection system, which provides peace of mind during usage. The kettle's affordable design makes it both functional and elegant in any kitchen or workplace. Its small size and elegant design blend well with modern kitchens, and its solid performance makes it a dependable tool for any short boiling duties. With the Smart SEK-S18ES 1.8 Liter Electric Kettle, you can make hot drinks all day long, boil water for cooking, or make a cup of tea with ease and safety.</p><h2>Buy Smart SEK-S18ES 1.8 Liter Electric Kettle from Star Tech</h2><p2>In Bangladesh, you can get original <strong>Smart SEK-S18ES 1.8 Liter Electric Kettle</strong> From Star Tech. We have a large collection of latest Smart <a href=\"https://www.startech.com.bd/electric-kettle\" target=\"\">Electric Kettle</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Smart SEK-S18ES 1.8 Liter Electric Kettle comes with a 06-months service warranty.</p2>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SEK-S18ES</li><li>Capacity: 1.8L</li><li>Power: 1500W, 220V, 50Hz</li><li>Stainless Steel Body With Silver Coating</li><li>Fast Water Boils Within 3-4 Minutes.</li></ul>",
+      "model": "SEK-S18ES",
+      "warranty": "a 06-months service warranty",
+      "basePrice": 1500.0,
+      "originalPrice": 2090.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Smart",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.8L",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39040",
+          "price": 1500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1.8L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1440.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "SEK-S18ES",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "1.8L",
+              "position": 1
+            },
+            {
+              "label": "Power",
+              "value": "1500W, 220V, 50Hz",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/smart-sek-s18es-electric-kettle",
+      "sourceProductCode": "39040",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SEK-S18ES",
+        "Capacity: 1.8L",
+        "Power: 1500W, 220V, 50Hz",
+        "Stainless Steel Body With Silver Coating",
+        "Fast Water Boils Within 3-4 Minutes."
+      ],
+      "needsReview": false,
+      "categorySlug": "electric-kettle",
+      "image": "/images/products/appliance/electric-kettle/smart-sek-s18es-electric-kettle.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/electric-kettle/smart-sek-s18es-electric-kettle.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "smart-sek-s18es-electric-kettle",
+        "candidateTitle": "Smart SEK-S18ES 1.8 Liter Electric Kettle",
+        "attemptStem": "smart-sek-s18es-electric-kettle"
+      }
+    },
+    {
+      "name": "Xiaomi Mijia N1 1.5L Electric Kettle",
+      "slug": "xiaomi-mijia-n1-electric-kettle",
+      "type": "PHYSICAL",
+      "sku": "MJDSH05YM",
+      "description": "<h2>Xiaomi Mijia N1 1.5L Electric Kettle</h2>\n<p>The Xiaomi <strong>Mijia N1</strong> 1.5L Electric Kettle is a strong and elegant kitchen gadget that blends practicality with simple design. The Xiaomi Mijia N1 Electric Kettle has a spacious 1.5-liter capacity and is ideal for boiling tea, coffee, or hot cereals for families or groups. The Xiaomi Mijia N1 Kettle has a 1500W power rating and uses a 360-degree ring heating technology to provide speedy, level boiling. This function makes the Xiaomi Mijia N1 1500W Electric Kettle excellent for people who require hot water quickly. The kettle's inside is composed of high-quality, food-grade 304 stainless steel, which ensures that the water is clean and devoid of metallic flavor and hazardous chemicals. The Xiaomi Mijia N1 1500W Kettle prioritizes safety, having passed over 10,000 tests and featuring several protective features like as dry-boil protection, high-temperature shutdown and steam induction prevention. The two-stage lid design includes shock absorption, which reduces the chance of spillage while opening and the U-shaped spout avoids water splashing, resulting in a cleaner pouring experience. The Xiaomi N1 Electric Kettle also has a precise thermostat to guarantee proper boiling and an indication light to notify when the water is ready. Its compact dimensions 211 x 143 x 244 mm and built-in cable storage make it easy to store, adding to its user-friendliness. This Xiaomi Mijia N1 Electric Kettle is the ideal complement to any modern kitchen, combining ease, safety and design.</p>\n<h2>Buy Xiaomi Mijia N1 1.5L Electric Kettle from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Xiaomi Mijia N1 1.5L Electric Kettle</strong> From Star Tech. We have a large collection of latest Xiaomi Electric Kettle to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Xiaomi Mijia N1 1.5L Electric Kettle comes with 6 months warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: MJDSH05YM</li><li>Model: Mijia N1</li><li>1.5L capacity</li><li>1500W Rapid Heating</li><li>304 Stainless Steel Inner Layer</li><li>Multiple safety features (dry-boil protection, temperature shutdown)</li></ul>",
+      "model": "Mijia N1",
+      "warranty": "6 Months",
+      "basePrice": 3199.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.9,
+      "dimensions": {
+        "length": 211.0,
+        "width": 143.0,
+        "height": 244.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "XIAOMI",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "MJDSH05YM",
+          "price": 3199.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3071.04,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Power",
+              "value": "Rated power: 1500W",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Leather Material: Plastic Resource: 220V / 50HZ Auto Power Off: YES Heating Speed: 4-6 minutes Function Safety: Auto-Off Function, Overheat Protection, Anti-Dry Protection, Water Level Indication, Shutdown When Removed Thermal: Yes Feature: 360 Degree Rotational Base Power(W): 1000W (included) – 1500 W (not included) Capacity: 1.5L Voltage (V): 220V",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "0.9Kg",
+              "position": 1
+            },
+            {
+              "label": "Dimensions",
+              "value": "211 x 143 x 244 mm",
+              "position": 2
+            },
+            {
+              "label": "Materials",
+              "value": "Stainless Steel",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "6 Months",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-mijia-n1-electric-kettle",
+      "sourceProductCode": "39960",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "MJDSH05YM",
+      "sourceKeyFeatures": [
+        "MPN: MJDSH05YM",
+        "Model: Mijia N1",
+        "1.5L capacity",
+        "1500W Rapid Heating",
+        "304 Stainless Steel Inner Layer",
+        "Multiple safety features (dry-boil protection, temperature shutdown)"
+      ],
+      "needsReview": false,
+      "categorySlug": "electric-kettle",
+      "image": "/images/products/appliance/electric-kettle/xiaomi-mijia-n1-electric-kettle.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/electric-kettle/xiaomi-mijia-n1-electric-kettle.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "xiaomi-mijia-n1-electric-kettle",
+        "candidateTitle": "Xiaomi Mijia N1 1.5L Electric Kettle",
+        "attemptStem": "xiaomi-mijia-n1-electric-kettle"
+      }
+    }
+  ]
+}

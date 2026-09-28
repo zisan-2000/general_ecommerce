@@ -1,0 +1,807 @@
+[
+  {
+    "stem": "dgs-ox3-pocket-camera-67755d6a",
+    "images": [
+      "/images/products/camera/Action Camera/dgs-ox3-pocket-camera-67755d6a.png"
+    ],
+    "categorySlug": "camera",
+    "brandName": "Action Camera",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "dgs-ox3-pocket-camera-67755d6a",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "dgs-ox3-pocket-camera-67755d6a",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "sigma-16mm-f-1-4-dc-dn-contemporary-camera-lens-for-sony-e-mount-a4d9af37",
+    "images": [
+      "/images/products/camera/camera-lenses/sigma-16mm-f-1-4-dc-dn-contemporary-camera-lens-for-sony-e-mount-a4d9af37.png"
+    ],
+    "categorySlug": "camera",
+    "brandName": "Camera Lenses",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "sigma-16mm-f-1-4-dc-dn-contemporary-camera-lens-for-sony-e-mount-a4d9af37",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "sigma-16mm-f-1-4-dc-dn-contemporary-camera-lens-for-sony-e-mount-a4d9af37",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "sjcam-a50-20mp-4k-portable-body-camera-2a7fccbd",
+    "images": [
+      "/images/products/camera/body-camera/sjcam-a50-20mp-4k-portable-body-camera-2a7fccbd.png"
+    ],
+    "categorySlug": "camera",
+    "brandName": "Body Camera",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "sjcam-a50-20mp-4k-portable-body-camera-2a7fccbd",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "sjcam-a50-20mp-4k-portable-body-camera-2a7fccbd",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "sony-fe-24-50mm-f2-8-g-lens",
+    "images": [
+      "/images/products/camera/camera-lenses/sony-fe-24-50mm-f2-8-g-lens.png"
+    ],
+    "categorySlug": "camera",
+    "brandName": "Camera Lenses",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "sony-fe-24-50mm-f2-8-g-lens",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "sony-fe-24-50mm-f2-8-g-lens",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "acefast-x1-4k-waterproof-action-camera-fe86ab69",
+    "images": [
+      "/images/products/camera/Action Camera/ACEFAST/acefast-x1-4k-waterproof-action-camera-fe86ab69.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "ACEFAST",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "acefast-x1-4k-waterproof-action-camera-fe86ab69",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "acefast-x1-4k-waterproof-action-camera-fe86ab69",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "ausek-at-m105-4k-pocket-gimbal-camera-0c0e9a11",
+    "images": [
+      "/images/products/camera/Action Camera/AUSEK/ausek-at-m105-4k-pocket-gimbal-camera-0c0e9a11.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "AUSEK",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "ausek-at-m105-4k-pocket-gimbal-camera-0c0e9a11",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "ausek-at-m105-4k-pocket-gimbal-camera-0c0e9a11",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "ausek-at-m44r-5k-wifi-waterproof-action-camera-64b3de9e",
+    "images": [
+      "/images/products/camera/Action Camera/AUSEK/ausek-at-m44r-5k-wifi-waterproof-action-camera-64b3de9e.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "AUSEK",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "ausek-at-m44r-5k-wifi-waterproof-action-camera-64b3de9e",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "ausek-at-m44r-5k-wifi-waterproof-action-camera-64b3de9e",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "ausek-at-m80tr-4k-wifi-waterproof-action-camera-4370e42b",
+    "images": [
+      "/images/products/camera/Action Camera/AUSEK/ausek-at-m80tr-4k-wifi-waterproof-action-camera-4370e42b.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "AUSEK",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "ausek-at-m80tr-4k-wifi-waterproof-action-camera-4370e42b",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "ausek-at-m80tr-4k-wifi-waterproof-action-camera-4370e42b",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "ausek-at-m82tr-6k-wifi-waterproof-action-camera-a32ed117",
+    "images": [
+      "/images/products/camera/Action Camera/AUSEK/ausek-at-m82tr-6k-wifi-waterproof-action-camera-a32ed117.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "AUSEK",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "ausek-at-m82tr-6k-wifi-waterproof-action-camera-a32ed117",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "ausek-at-m82tr-6k-wifi-waterproof-action-camera-a32ed117",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "ausek-at-m84tr-6k-30fps-waterproof-action-camera-ea59c077",
+    "images": [
+      "/images/products/camera/Action Camera/AUSEK/ausek-at-m84tr-6k-30fps-waterproof-action-camera-ea59c077.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "AUSEK",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "ausek-at-m84tr-6k-30fps-waterproof-action-camera-ea59c077",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "ausek-at-m84tr-6k-30fps-waterproof-action-camera-ea59c077",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "ausek-at-m86tr-8k-wifi-waterproof-action-camera-cc18c90b",
+    "images": [
+      "/images/products/camera/Action Camera/AUSEK/ausek-at-m86tr-8k-wifi-waterproof-action-camera-cc18c90b.jpg"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "AUSEK",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "ausek-at-m86tr-8k-wifi-waterproof-action-camera-cc18c90b",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "ausek-at-m86tr-8k-wifi-waterproof-action-camera-cc18c90b",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "ausek-at-m90tr-5k-waterproof-action-camera-f541ccfc",
+    "images": [
+      "/images/products/camera/Action Camera/AUSEK/ausek-at-m90tr-5k-waterproof-action-camera-f541ccfc.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "AUSEK",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "ausek-at-m90tr-5k-waterproof-action-camera-f541ccfc",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "ausek-at-m90tr-5k-waterproof-action-camera-f541ccfc",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "blisbond-go3-4k-portable-action-camera-c515cbfd",
+    "images": [
+      "/images/products/camera/Action Camera/Blisbond/blisbond-go3-4k-portable-action-camera-c515cbfd.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "Blisbond",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "blisbond-go3-4k-portable-action-camera-c515cbfd",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "blisbond-go3-4k-portable-action-camera-c515cbfd",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "blisbond-pro3-4k-portable-dual-screen-action-camera-c7f78a29",
+    "images": [
+      "/images/products/camera/Action Camera/Blisbond/blisbond-pro3-4k-portable-dual-screen-action-camera-c7f78a29.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "Blisbond",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "blisbond-pro3-4k-portable-dual-screen-action-camera-c7f78a29",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "blisbond-pro3-4k-portable-dual-screen-action-camera-c7f78a29",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "dji-osmo-360-adventure-combo-841adf42",
+    "images": [
+      "/images/products/camera/Action Camera/DJI/dji-osmo-360-adventure-combo-841adf42.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "DJI",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "dji-osmo-360-adventure-combo-841adf42",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "dji-osmo-360-adventure-combo-841adf42",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "dji-osmo-360-ii-adventure-combo-9e7f8af7",
+    "images": [
+      "/images/products/camera/Action Camera/DJI/dji-osmo-360-ii-adventure-combo-9e7f8af7.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "DJI",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "dji-osmo-360-ii-adventure-combo-9e7f8af7",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "dji-osmo-360-ii-adventure-combo-9e7f8af7",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "dji-osmo-360-standard-combo-34cb756e",
+    "images": [
+      "/images/products/camera/Action Camera/DJI/dji-osmo-360-standard-combo-34cb756e.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "DJI",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "dji-osmo-360-standard-combo-34cb756e",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "dji-osmo-360-standard-combo-34cb756e",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "dji-osmo-action-4-adventure-combo-action-camera-f94787fd",
+    "images": [
+      "/images/products/camera/Action Camera/DJI/dji-osmo-action-4-adventure-combo-action-camera-f94787fd.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "DJI",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "dji-osmo-action-4-adventure-combo-action-camera-f94787fd",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "dji-osmo-action-4-adventure-combo-action-camera-f94787fd",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "dji-osmo-action-4-standard-combo-action-camera-b7d9f261",
+    "images": [
+      "/images/products/camera/Action Camera/DJI/dji-osmo-action-4-standard-combo-action-camera-b7d9f261.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "DJI",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "dji-osmo-action-4-standard-combo-action-camera-b7d9f261",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "dji-osmo-action-4-standard-combo-action-camera-b7d9f261",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "dji-osmo-action-5-pro-adventure-combo-action-camera-802c5e18",
+    "images": [
+      "/images/products/camera/Action Camera/DJI/dji-osmo-action-5-pro-adventure-combo-action-camera-802c5e18.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "DJI",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "dji-osmo-action-5-pro-adventure-combo-action-camera-802c5e18",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "dji-osmo-action-5-pro-adventure-combo-action-camera-802c5e18",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "dji-osmo-action-5-pro-standard-combo-action-camera-469656c4",
+    "images": [
+      "/images/products/camera/Action Camera/DJI/dji-osmo-action-5-pro-standard-combo-action-camera-469656c4.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "DJI",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "dji-osmo-action-5-pro-standard-combo-action-camera-469656c4",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "dji-osmo-action-5-pro-standard-combo-action-camera-469656c4",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "dji-osmo-action-6-adventure-combo-cc6226b1",
+    "images": [
+      "/images/products/camera/Action Camera/DJI/dji-osmo-action-6-adventure-combo-cc6226b1.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "DJI",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "dji-osmo-action-6-adventure-combo-cc6226b1",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "dji-osmo-action-6-adventure-combo-cc6226b1",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "dji-osmo-action-6-standard-combo-fe2748ad",
+    "images": [
+      "/images/products/camera/Action Camera/DJI/dji-osmo-action-6-standard-combo-fe2748ad.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "DJI",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "dji-osmo-action-6-standard-combo-fe2748ad",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "dji-osmo-action-6-standard-combo-fe2748ad",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "dji-osmo-nano-7ce11edf",
+    "images": [
+      "/images/products/camera/Action Camera/DJI/dji-osmo-nano-7ce11edf.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "DJI",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "dji-osmo-nano-7ce11edf",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "dji-osmo-nano-7ce11edf",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "dji-osmo-pocket-3-gimbal-stabilizer-action-camera-8fc6d9d4",
+    "images": [
+      "/images/products/camera/Action Camera/DJI/dji-osmo-pocket-3-gimbal-stabilizer-action-camera-8fc6d9d4.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "DJI",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "dji-osmo-pocket-3-gimbal-stabilizer-action-camera-8fc6d9d4",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "dji-osmo-pocket-3-gimbal-stabilizer-action-camera-8fc6d9d4",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "insta360-ace-pro-8k-waterproof-action-camera-7053ad59",
+    "images": [
+      "/images/products/camera/Action Camera/Insta360/insta360-ace-pro-8k-waterproof-action-camera-7053ad59.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "Insta360",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "insta360-ace-pro-8k-waterproof-action-camera-7053ad59",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "insta360-ace-pro-8k-waterproof-action-camera-7053ad59",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "insta360-go-3s-standalone-action-camera-7104af1b",
+    "images": [
+      "/images/products/camera/Action Camera/Insta360/insta360-go-3s-standalone-action-camera-7104af1b.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "Insta360",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "insta360-go-3s-standalone-action-camera-7104af1b",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "insta360-go-3s-standalone-action-camera-7104af1b",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "insta360-one-rs-4k-edition-waterproof-action-camera-f231249b",
+    "images": [
+      "/images/products/camera/Action Camera/Insta360/insta360-one-rs-4k-edition-waterproof-action-camera-f231249b.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "Insta360",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "insta360-one-rs-4k-edition-waterproof-action-camera-f231249b",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "insta360-one-rs-4k-edition-waterproof-action-camera-f231249b",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "ordro-m3-5k-gimbal-stabilizer-action-camera-3a69481a",
+    "images": [
+      "/images/products/camera/Action Camera/ORDRO/ordro-m3-5k-gimbal-stabilizer-action-camera-3a69481a.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "ORDRO",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "ordro-m3-5k-gimbal-stabilizer-action-camera-3a69481a",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "ordro-m3-5k-gimbal-stabilizer-action-camera-3a69481a",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "ordro-m5-5k-3-axis-gimbal-stabilizer-action-camera-1e7fa743",
+    "images": [
+      "/images/products/camera/Action Camera/ORDRO/ordro-m5-5k-3-axis-gimbal-stabilizer-action-camera-1e7fa743.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "ORDRO",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "ordro-m5-5k-3-axis-gimbal-stabilizer-action-camera-1e7fa743",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "ordro-m5-5k-3-axis-gimbal-stabilizer-action-camera-1e7fa743",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "sjcam-c400-4k-16mp-handheld-action-camera-105cda3f",
+    "images": [
+      "/images/products/camera/Action Camera/SJCAM/sjcam-c400-4k-16mp-handheld-action-camera-105cda3f.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "SJCAM",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "sjcam-c400-4k-16mp-handheld-action-camera-105cda3f",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "sjcam-c400-4k-16mp-handheld-action-camera-105cda3f",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "sjcam-sj20-dual-lens-wifi-action-camera-combo-40be2dc9",
+    "images": [
+      "/images/products/camera/Action Camera/SJCAM/sjcam-sj20-dual-lens-wifi-action-camera-combo-40be2dc9.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "SJCAM",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "sjcam-sj20-dual-lens-wifi-action-camera-combo-40be2dc9",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "sjcam-sj20-dual-lens-wifi-action-camera-combo-40be2dc9",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "sjcam-sj30-8k-dual-lens-action-camera-00dd252a",
+    "images": [
+      "/images/products/camera/Action Camera/SJCAM/sjcam-sj30-8k-dual-lens-action-camera-00dd252a.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "SJCAM",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "sjcam-sj30-8k-dual-lens-action-camera-00dd252a",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "sjcam-sj30-8k-dual-lens-action-camera-00dd252a",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "sjcam-sj8-dual-screen-sports-action-camera-cc387ffa",
+    "images": [
+      "/images/products/camera/Action Camera/SJCAM/sjcam-sj8-dual-screen-sports-action-camera-cc387ffa.jpg"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "SJCAM",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "sjcam-sj8-dual-screen-sports-action-camera-cc387ffa",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "sjcam-sj8-dual-screen-sports-action-camera-cc387ffa",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "sjcam-zv200-5k-80mp-digital-camera-fb757ef8",
+    "images": [
+      "/images/products/camera/Action Camera/SJCAM/sjcam-zv200-5k-80mp-digital-camera-fb757ef8.png"
+    ],
+    "categorySlug": "action-camera",
+    "brandName": "SJCAM",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "sjcam-zv200-5k-80mp-digital-camera-fb757ef8",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "sjcam-zv200-5k-80mp-digital-camera-fb757ef8",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  }
+]

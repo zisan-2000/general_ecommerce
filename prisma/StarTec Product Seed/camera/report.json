@@ -1,0 +1,29 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/camera",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\camera",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\camera",
+  "imagesFound": 251,
+  "uniqueProductStems": 251,
+  "productsInJson": 251,
+  "matchedProducts": 216,
+  "unmatchedProducts": 35,
+  "imageCoverage": 251,
+  "jsonGroupFiles": 6,
+  "matchMethods": {
+    "unmatched": 35,
+    "search": 13,
+    "direct-slug": 203
+  },
+  "jsonGenerationTimeSeconds": 137.32,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 251,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\camera\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\camera\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\camera\\unmatched.json"
+  },
+  "seedTimeSeconds": 5.15
+}

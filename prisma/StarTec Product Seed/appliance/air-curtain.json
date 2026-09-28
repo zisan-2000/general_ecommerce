@@ -1,0 +1,350 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/appliance",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\appliance",
+    "generatedAtUnix": 1790586316,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Appliance",
+      "slug": "appliance",
+      "parentSlug": null,
+      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Air Curtain",
+      "slug": "air-curtain",
+      "parentSlug": "appliance",
+      "image": "/images/products/appliance/air-curtain/gree-3-feet-air-curtain.png",
+      "isActive": true,
+      "sortOrder": 2,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Gree",
+      "slug": "gree",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Gree FM-1.25-9K 3 Feet Air Curtain",
+      "slug": "gree-3-feet-air-curtain",
+      "type": "PHYSICAL",
+      "sku": "ST-45554",
+      "description": "<h2>Gree FM-1.25-9K 3 Feet Air Curtain</h2><p>The <strong>Gree FM-1.25-9K 3 Feet Air Curtain</strong> is a compact and efficient solution for maintaining indoor air quality, temperature control, and hygiene in high-traffic commercial spaces. Engineered for performance and durability, this Gree 3 Feet Air Curtain creates a powerful air barrier above doorways, helping to block dust, insects, and outdoor pollutants while reducing energy loss from air conditioning systems.</p><p>Also known as the Gree 3 Feet Air Cutter, this model is ideal for retail stores, restaurants, hospitals, and office entrances. It features a high-speed motor with optimized airflow design, delivering consistent performance with low noise levels. The Gree Air Cutter helps maintain a clean and comfortable indoor environment without obstructing foot traffic or visibility.</p><p>Built with corrosion-resistant materials and designed for easy installation, the Gree FM-1.25-9K Air Curtain supports continuous operation and long-term reliability. Whether you're looking to improve energy efficiency, enhance customer comfort, or meet hygiene standards, the Gree Air Curtain offers a smart and cost-effective solution backed by Gree’s trusted engineering.</p><h2>Buy Gree FM-1.25-9K 3 Feet Air Curtain from Star Tech</h2><p>In Bangladesh, you can get original <strong>Gree FM-1.25-9K 3 Feet Air Curtain</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/gree-air-curtain\">Gree Air Curtain</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Gree FM-1.25-9K 3 Feet Air Curtain comes with 01 Year Motor, 01 Year parts &amp; 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FM-1.25-9K</li><li>Function: Cross Flow Fan</li><li>Length: Vertical 3 Feet/ 900 mm</li><li>Air Circulation: 1200 m3/h</li><li>Noise Level: 59 dB, Rated Input Power: 110W</li></ul>",
+      "model": "FM-1.25-9K",
+      "warranty": "01 Year Motor, 01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+      "basePrice": 21500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 15.5,
+      "dimensions": {
+        "length": 225.0,
+        "width": 900.0,
+        "height": 220.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Gree",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-45554",
+          "price": 21500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 20640.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Technology",
+              "value": "Cross Flow Fan Tecnology",
+              "position": 0
+            },
+            {
+              "label": "Airflow",
+              "value": "Air Circulation: 1200 m3/h",
+              "position": 1
+            },
+            {
+              "label": "Noise Level",
+              "value": "59dB",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Voltage",
+              "value": "1ph 220~240V 50Hz",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "225 x 900 x 220",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "15.5/17 Kg",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 Year Motor, 01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/gree-3-feet-air-curtain",
+      "sourceProductCode": "45554",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FM-1.25-9K",
+        "Function: Cross Flow Fan",
+        "Length: Vertical 3 Feet/ 900 mm",
+        "Air Circulation: 1200 m3/h",
+        "Noise Level: 59 dB, Rated Input Power: 110W"
+      ],
+      "needsReview": false,
+      "categorySlug": "air-curtain",
+      "image": "/images/products/appliance/air-curtain/gree-3-feet-air-curtain.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/air-curtain/gree-3-feet-air-curtain.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "gree-3-feet-air-curtain",
+        "candidateTitle": "Gree FM-1.25-9K 3 Feet Air Curtain",
+        "attemptStem": "gree-3-feet-air-curtain"
+      }
+    },
+    {
+      "name": "Gree FM-1.25-12K 4 Feet Air Curtain",
+      "slug": "gree-4-feet-air-curtain",
+      "type": "PHYSICAL",
+      "sku": "ST-45558",
+      "description": "<h2>Gree FM-1.25-12K 4 Feet Air Curtain</h2><p>The <strong>Gree FM-1.25-12K 4 Feet Air Curtain</strong> is a high-performance solution designed to maintain indoor air quality, temperature stability, and hygiene in busy commercial environments. Engineered for doorways up to 4 feet wide, this powerful Gree 4 Feet Air Curtain creates a consistent, high-speed air barrier that separates indoor and outdoor spaces—effectively blocking dust, insects, odors, and unwanted heat or cold.</p><p>Also known as the Gree 4 Feet Air Cutter, this model is ideal for retail stores, restaurants, hospitals, showrooms, and office entrances. It features a robust motor, optimized airflow design, and low-noise operation, ensuring smooth functionality without disrupting customer flow or visibility. The Gree Air Cutter helps reduce HVAC load, improve energy efficiency, and maintain a cleaner, more comfortable indoor environment.</p><p>Built with durable, corrosion-resistant materials, the Gree FM-1.25-12K Air Curtain supports continuous operation and is easy to install and maintain. Whether you're looking to enhance climate control, reduce utility costs, or meet hygiene standards, the Gree Air Curtain offers a reliable and cost-effective solution backed by Gree’s global reputation for innovation and quality.</p><h2>Buy Gree FM-1.25-12K 4 Feet Air Curtain from Star Tech</h2><p>In Bangladesh, you can get original <strong>Gree FM-1.25-12K 4 Feet Air Curtain</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/gree-air-curtain\">Gree Air Curtain</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Gree FM-1.25-12K 4 Feet Air Curtain comes with 01 Year Motor, 01 Year parts &amp; 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: FM-1.25-12K</li><li>Function: Cross Flow Fan</li><li>Length: Vertical 4 Feet/ 1200 mm</li><li>Air Circulation: 1650 m3/h</li><li>Noise Level: 61 dB, Rated Input Power: 140W</li></ul>",
+      "model": "FM-1.25-12K",
+      "warranty": "01 Year Motor, 01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+      "basePrice": 25000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 16.0,
+      "dimensions": {
+        "length": 225.0,
+        "width": 1200.0,
+        "height": 220.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Gree",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-45558",
+          "price": 25000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 24000.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Technology",
+              "value": "Cross Flow Fan Tecnology",
+              "position": 0
+            },
+            {
+              "label": "Airflow",
+              "value": "Air Circulation: 1650 m3/h",
+              "position": 1
+            },
+            {
+              "label": "Noise Level",
+              "value": "61dB",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Voltage",
+              "value": "1ph 220~240V 50Hz",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "225 x 1200 x 220",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "16/17.5 Kg",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 Year Motor, 01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/gree-4-feet-air-curtain",
+      "sourceProductCode": "45558",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: FM-1.25-12K",
+        "Function: Cross Flow Fan",
+        "Length: Vertical 4 Feet/ 1200 mm",
+        "Air Circulation: 1650 m3/h",
+        "Noise Level: 61 dB, Rated Input Power: 140W"
+      ],
+      "needsReview": false,
+      "categorySlug": "air-curtain",
+      "image": "/images/products/appliance/air-curtain/gree-4-feet-air-curtain.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/air-curtain/gree-4-feet-air-curtain.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "gree-4-feet-air-curtain",
+        "candidateTitle": "Gree FM-1.25-12K 4 Feet Air Curtain",
+        "attemptStem": "gree-4-feet-air-curtain"
+      }
+    }
+  ]
+}

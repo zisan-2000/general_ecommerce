@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/camera",
+  "imageFolder": "/images/products/camera/Action Camera/ACEFAST",
+  "groups": [
+    {
+      "name": "_direct",
+      "file": "_direct.json",
+      "status": "completed",
+      "products": 4,
+      "matched": 0,
+      "unmatched": 4
+    },
+    {
+      "name": "action-camera",
+      "file": "action-camera.json",
+      "status": "completed",
+      "products": 54,
+      "matched": 23,
+      "unmatched": 31
+    },
+    {
+      "name": "body-camera",
+      "file": "body-camera.json",
+      "status": "completed",
+      "products": 27,
+      "matched": 27,
+      "unmatched": 0
+    },
+    {
+      "name": "camera-lenses",
+      "file": "camera-lenses.json",
+      "status": "completed",
+      "products": 149,
+      "matched": 149,
+      "unmatched": 0
+    },
+    {
+      "name": "dash-cam",
+      "file": "dash-cam.json",
+      "status": "completed",
+      "products": 12,
+      "matched": 12,
+      "unmatched": 0
+    },
+    {
+      "name": "instant-camera",
+      "file": "instant-camera.json",
+      "status": "completed",
+      "products": 5,
+      "matched": 5,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790585809
+}

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "sourceCategoryUrl": "https://www.startech.com.bd/appliance",
+  "imageFolder": "/images/products/appliance/ac/beko",
+  "groups": [
+    {
+      "name": "_direct",
+      "file": "_direct.json",
+      "status": "completed",
+      "products": 42,
+      "matched": 3,
+      "unmatched": 39
+    },
+    {
+      "name": "ac",
+      "file": "ac.json",
+      "status": "completed",
+      "products": 185,
+      "matched": 185,
+      "unmatched": 0
+    },
+    {
+      "name": "air-cooler",
+      "file": "air-cooler.json",
+      "status": "completed",
+      "products": 8,
+      "matched": 8,
+      "unmatched": 0
+    },
+    {
+      "name": "air-curtain",
+      "file": "air-curtain.json",
+      "status": "completed",
+      "products": 2,
+      "matched": 2,
+      "unmatched": 0
+    },
+    {
+      "name": "air-fryer",
+      "file": "air-fryer.json",
+      "status": "completed",
+      "products": 29,
+      "matched": 29,
+      "unmatched": 0
+    },
+    {
+      "name": "air-purifier",
+      "file": "air-purifier.json",
+      "status": "completed",
+      "products": 37,
+      "matched": 37,
+      "unmatched": 0
+    },
+    {
+      "name": "blender-grinder",
+      "file": "blender-grinder.json",
+      "status": "completed",
+      "products": 56,
+      "matched": 56,
+      "unmatched": 0
+    },
+    {
+      "name": "coffee-maker",
+      "file": "coffee-maker.json",
+      "status": "completed",
+      "products": 32,
+      "matched": 32,
+      "unmatched": 0
+    },
+    {
+      "name": "cooker",
+      "file": "cooker.json",
+      "status": "completed",
+      "products": 51,
+      "matched": 34,
+      "unmatched": 17
+    },
+    {
+      "name": "dehumidifier",
+      "file": "dehumidifier.json",
+      "status": "completed",
+      "products": 6,
+      "matched": 6,
+      "unmatched": 0
+    },
+    {
+      "name": "dishwasher",
+      "file": "dishwasher.json",
+      "status": "completed",
+      "products": 3,
+      "matched": 3,
+      "unmatched": 0
+    },
+    {
+      "name": "electric-cooker",
+      "file": "electric-cooker.json",
+      "status": "completed",
+      "products": 5,
+      "matched": 5,
+      "unmatched": 0
+    },
+    {
+      "name": "electric-kettle",
+      "file": "electric-kettle.json",
+      "status": "completed",
+      "products": 12,
+      "matched": 12,
+      "unmatched": 0
+    },
+    {
+      "name": "fan",
+      "file": "fan.json",
+      "status": "completed",
+      "products": 124,
+      "matched": 124,
+      "unmatched": 0
+    },
+    {
+      "name": "fridge",
+      "file": "fridge.json",
+      "status": "completed",
+      "products": 219,
+      "matched": 219,
+      "unmatched": 0
+    },
+    {
+      "name": "gas-stove",
+      "file": "gas-stove.json",
+      "status": "completed",
+      "products": 8,
+      "matched": 8,
+      "unmatched": 0
+    },
+    {
+      "name": "geyser",
+      "file": "geyser.json",
+      "status": "completed",
+      "products": 53,
+      "matched": 53,
+      "unmatched": 0
+    },
+    {
+      "name": "iron",
+      "file": "iron.json",
+      "status": "completed",
+      "products": 11,
+      "matched": 11,
+      "unmatched": 0
+    },
+    {
+      "name": "juicer",
+      "file": "juicer.json",
+      "status": "completed",
+      "products": 2,
+      "matched": 2,
+      "unmatched": 0
+    },
+    {
+      "name": "kitchen-hood",
+      "file": "kitchen-hood.json",
+      "status": "completed",
+      "products": 11,
+      "matched": 11,
+      "unmatched": 0
+    },
+    {
+      "name": "light",
+      "file": "light.json",
+      "status": "completed",
+      "products": 8,
+      "matched": 8,
+      "unmatched": 0
+    },
+    {
+      "name": "oven",
+      "file": "oven.json",
+      "status": "completed",
+      "products": 36,
+      "matched": 36,
+      "unmatched": 0
+    },
+    {
+      "name": "room-heater",
+      "file": "room-heater.json",
+      "status": "completed",
+      "products": 12,
+      "matched": 12,
+      "unmatched": 0
+    },
+    {
+      "name": "sewing-machine",
+      "file": "sewing-machine.json",
+      "status": "completed",
+      "products": 23,
+      "matched": 23,
+      "unmatched": 0
+    },
+    {
+      "name": "toaster",
+      "file": "toaster.json",
+      "status": "completed",
+      "products": 2,
+      "matched": 2,
+      "unmatched": 0
+    },
+    {
+      "name": "vacuum-cleaner",
+      "file": "vacuum-cleaner.json",
+      "status": "completed",
+      "products": 53,
+      "matched": 53,
+      "unmatched": 0
+    },
+    {
+      "name": "washing-machine",
+      "file": "washing-machine.json",
+      "status": "completed",
+      "products": 82,
+      "matched": 82,
+      "unmatched": 0
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790586319
+}

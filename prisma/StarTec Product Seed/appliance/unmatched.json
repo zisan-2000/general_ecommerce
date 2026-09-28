@@ -1,0 +1,1326 @@
+[
+  {
+    "stem": "jusal-6l-pressure-cooker-copy",
+    "images": [
+      "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Pressure Cooker",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "jusal-6l-pressure-cooker-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "jusal-6l-pressure-cooker-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "jusal-6l-pressure-cooker-copy-2",
+    "images": [
+      "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy (2).png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Pressure Cooker",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "jusal-6l-pressure-cooker-copy-2",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "jusal-6l-pressure-cooker-copy-2",
+            "candidates": []
+          }
+        },
+        {
+          "stem": "jusal-6l-pressure-cooker-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "jusal-6l-pressure-cooker-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "jusal-6l-pressure-cooker-copy-copy",
+    "images": [
+      "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Pressure Cooker",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "jusal-6l-pressure-cooker-copy-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "jusal-6l-pressure-cooker-copy-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-aero-x-54-inch-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-aero-x-54-inch-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-aero-x-54-inch-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-aero-x-54-inch-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-aero-x-ul-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-aero-x-ul-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-aero-x-ul-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-aero-x-ul-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-alpha-edge-4b-53-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-alpha-edge-4b-53-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-alpha-edge-4b-53-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-alpha-edge-4b-53-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-alpha-edge-4b-ul-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-alpha-edge-4b-ul-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-alpha-edge-4b-ul-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-alpha-edge-4b-ul-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-alpha-edge-5b-53-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-alpha-edge-5b-53-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-alpha-edge-5b-53-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-alpha-edge-5b-53-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-falcon-53-inch-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-falcon-53-inch-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-falcon-53-inch-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-falcon-53-inch-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-falcon-ul-53-inch-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-falcon-ul-53-inch-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-falcon-ul-53-inch-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-falcon-ul-53-inch-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-flora-28-inch-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-flora-28-inch-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-flora-28-inch-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-flora-28-inch-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-helix-ul-60-inch-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-helix-ul-60-inch-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-helix-ul-60-inch-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-helix-ul-60-inch-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-luxoria-ul-52-inch-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-luxoria-ul-52-inch-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-luxoria-ul-52-inch-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-luxoria-ul-52-inch-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6036-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6036-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6036-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6036-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k62288-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k62288-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k62288-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k62288-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6251-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6251-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6251-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6251-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6272-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6272-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6272-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6272-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6289-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6289-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6289-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6289-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6291-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6291-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6291-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6291-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6303-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6303-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6303-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6303-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6323-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6323-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6323-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6323-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6334-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6334-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6334-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6334-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6358-a-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6358-a-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6358-a-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6358-a-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6358-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6358-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6358-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6358-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6367-a-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6367-a-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6367-a-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6367-a-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6367-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6367-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6367-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6367-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6385-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6385-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6385-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6385-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-k6503-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6503-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-k6503-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-k6503-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-t7456-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-t7456-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-t7456-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-t7456-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-t8255-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-t8255-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-t8255-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-t8255-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-t8299-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-t8299-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-t8299-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-t8299-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-q-t8329-chandelier-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-q-t8329-chandelier-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-q-t8329-chandelier-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-q-t8329-chandelier-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-quantom-56-inch-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-quantom-56-inch-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-quantom-56-inch-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-quantom-56-inch-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-quantom-ul-56-inch-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-quantom-ul-56-inch-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-quantom-ul-56-inch-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-quantom-ul-56-inch-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-silex-54-inch-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-silex-54-inch-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-silex-54-inch-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-silex-54-inch-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-silex-66-inch-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-silex-66-inch-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-silex-66-inch-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-silex-66-inch-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-spinner-pro-32-inch-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-spinner-pro-32-inch-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-spinner-pro-32-inch-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-spinner-pro-32-inch-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-windora-56-inch-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-windora-56-inch-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-windora-56-inch-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-windora-56-inch-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "qulik-windora-ul-56-inch-ceiling-fan-copy",
+    "images": [
+      "/images/products/appliance/fan/Ceiling Fan/qulik-windora-ul-56-inch-ceiling-fan - Copy.png"
+    ],
+    "categorySlug": "appliance",
+    "brandName": "Ceiling Fan",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "qulik-windora-ul-56-inch-ceiling-fan-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "qulik-windora-ul-56-inch-ceiling-fan-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "oraimo-multipot-3l-electric-cooker-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-3l-electric-cooker - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "oraimo-multipot-3l-electric-cooker-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "oraimo-multipot-3l-electric-cooker-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "oraimo-multipot-3l-electric-cooker-copy-2",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-3l-electric-cooker - Copy (2).png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "oraimo-multipot-3l-electric-cooker-copy-2",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "oraimo-multipot-3l-electric-cooker-copy-2",
+            "candidates": []
+          }
+        },
+        {
+          "stem": "oraimo-multipot-3l-electric-cooker-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "oraimo-multipot-3l-electric-cooker-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "oraimo-multipot-3l-electric-cooker-copy-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-3l-electric-cooker - Copy - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "oraimo-multipot-3l-electric-cooker-copy-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "oraimo-multipot-3l-electric-cooker-copy-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "oraimo-multipot-s1-lite-electric-cooker-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-s1-lite-electric-cooker - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "oraimo-multipot-s1-lite-electric-cooker-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "oraimo-multipot-s1-lite-electric-cooker-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "oraimo-multipot-s1-lite-electric-cooker-copy-2",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-s1-lite-electric-cooker - Copy (2).png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "oraimo-multipot-s1-lite-electric-cooker-copy-2",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "oraimo-multipot-s1-lite-electric-cooker-copy-2",
+            "candidates": []
+          }
+        },
+        {
+          "stem": "oraimo-multipot-s1-lite-electric-cooker-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "oraimo-multipot-s1-lite-electric-cooker-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "oraimo-multipot-s1-lite-electric-cooker-copy-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/oraimo-multipot-s1-lite-electric-cooker - Copy - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "oraimo-multipot-s1-lite-electric-cooker-copy-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "oraimo-multipot-s1-lite-electric-cooker-copy-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "panasonic-sr-w22gs-rice-cooker-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-w22gs-rice-cooker - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "panasonic-sr-w22gs-rice-cooker-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "panasonic-sr-w22gs-rice-cooker-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "panasonic-sr-w22gs-rice-cooker-copy-2",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-w22gs-rice-cooker - Copy (2).png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "panasonic-sr-w22gs-rice-cooker-copy-2",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "panasonic-sr-w22gs-rice-cooker-copy-2",
+            "candidates": []
+          }
+        },
+        {
+          "stem": "panasonic-sr-w22gs-rice-cooker-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "panasonic-sr-w22gs-rice-cooker-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "panasonic-sr-w22gs-rice-cooker-copy-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-w22gs-rice-cooker - Copy - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "panasonic-sr-w22gs-rice-cooker-copy-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "panasonic-sr-w22gs-rice-cooker-copy-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "panasonic-sr-y18-j-slr-rice-cooker-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-y18-j-slr-rice-cooker - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "panasonic-sr-y18-j-slr-rice-cooker-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "panasonic-sr-y18-j-slr-rice-cooker-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "panasonic-sr-y18-j-slr-rice-cooker-copy-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/panasonic-sr-y18-j-slr-rice-cooker - Copy - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "panasonic-sr-y18-j-slr-rice-cooker-copy-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "panasonic-sr-y18-j-slr-rice-cooker-copy-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "pigeon-joy-plus-rice-cooker-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/pigeon-joy-plus-rice-cooker - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "pigeon-joy-plus-rice-cooker-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "pigeon-joy-plus-rice-cooker-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "pigeon-joy-plus-rice-cooker-copy-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/pigeon-joy-plus-rice-cooker - Copy - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "pigeon-joy-plus-rice-cooker-copy-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "pigeon-joy-plus-rice-cooker-copy-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "saffron-5l-pressure-cooker-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/saffron-5l-pressure-cooker - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "saffron-5l-pressure-cooker-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "saffron-5l-pressure-cooker-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "saffron-5l-pressure-cooker-copy-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/saffron-5l-pressure-cooker - Copy - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "saffron-5l-pressure-cooker-copy-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "saffron-5l-pressure-cooker-copy-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "singer-18cookmate-blk-1-8-l-rice-cooker-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-18cookmate-blk-1-8-l-rice-cooker - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "singer-18cookmate-blk-1-8-l-rice-cooker-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "singer-18cookmate-blk-1-8-l-rice-cooker-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  },
+  {
+    "stem": "singer-18cookmate-blk-1-8-l-rice-cooker-copy-copy",
+    "images": [
+      "/images/products/appliance/cooker/Rice Cooke/singer-18cookmate-blk-1-8-l-rice-cooker - Copy - Copy.png"
+    ],
+    "categorySlug": "cooker",
+    "brandName": "Rice Cooke",
+    "match": {
+      "method": "unmatched",
+      "attempts": [
+        {
+          "stem": "singer-18cookmate-blk-1-8-l-rice-cooker-copy-copy",
+          "meta": {
+            "method": "search-rejected",
+            "score": 0.0,
+            "query": "singer-18cookmate-blk-1-8-l-rice-cooker-copy-copy",
+            "candidates": []
+          }
+        }
+      ],
+      "externalCandidates": []
+    }
+  }
+]

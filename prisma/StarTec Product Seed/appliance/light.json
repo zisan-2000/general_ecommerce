@@ -1,0 +1,942 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/appliance",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\appliance",
+    "generatedAtUnix": 1790586316,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Appliance",
+      "slug": "appliance",
+      "parentSlug": null,
+      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Light",
+      "slug": "light",
+      "parentSlug": "appliance",
+      "image": "/images/products/appliance/light/la-600w-60w-solar-street-light.png",
+      "isActive": true,
+      "sortOrder": 18,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Orvibo",
+      "slug": "orvibo",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "LA-600W 60W Solar Street Light",
+      "slug": "la-600w-60w-solar-street-light",
+      "type": "PHYSICAL",
+      "sku": "ST-52502",
+      "description": "<h2>LA-600W 60W Solar Light </h2><p>The All In One <strong>LA-600W Solar Light</strong> delivers powerful, worry-free illumination completely off the grid. This Solar LED Light suits roads, gardens, hotels, warehouses, and busy commercial areas. A high-capacity 30Ah battery stores solar energy for consistent nightly brightness. Remote control lets users manage light, timer, and brightness settings effortlessly and quickly. LA-600W 60W Solar Light pairs rugged weatherproofing with genuinely simple daily operation.</p><h3>Solar Charging Requires No Electricity</h3><p>Daylight alone powers this fixture through a built-in solar charging panel daily. Full battery charging takes approximately 4 to 5 hours under direct sunlight. Once charged, this solar road light switches on automatically at dusk. No electrical wiring or grid connection is needed for daily operation. Households and businesses save on electricity costs while enjoying dependable nightly lighting outdoors.</p><h3>Powerful 1200 Lumens LED Light</h3><p>Brightness reaches an impressive 1200 lumens through 360pcs SMD 2835 LEDs. This LED light delivers noticeably stronger illumination than standard outdoor fixtures. Color temperature stays at 6500K, producing crisp, cool white light outdoors. This solar LED light suits larger driveways, parking areas, and open outdoor spaces. Consistent brightness helps improve visibility and safety throughout the entire night hours daily.</p><h3>Up to 30Ah Battery Storage</h3><p>A 3.2V 30Ah battery stores significantly more solar energy than smaller alternatives. This solar powered light runs reliably through cloudy days and longer nights. Higher capacity suits properties needing extended illumination across larger outdoor areas. LA-600W 60W Solar Light keeps performance consistent for years with minimal upkeep. This capacity makes the fixture practical for demanding commercial and industrial applications.</p><h3>Remote Control for Daily Light Management</h3><p>Light, timer, and operation settings adjust easily through the included remote control. Users schedule lighting patterns without needing manual switches or wiring adjustments daily. This control system suits properties wanting flexible, customizable outdoor lighting schedules daily. Settings adapt quickly for residential yards, hotels, warehouses, or sports facilities. Remote access makes daily adjustments convenient without physically reaching the fixture itself.</p><h2>Buy LA-600W 60W Solar Light from Star Tech</h2><p>In Bangladesh, you can get original <strong>LA-600W 60W Solar Light</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/light\" target=\"\">Light </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"_blank\">Star Tech</a> Shop to get yours at lowest price. <strong style=\"background-color: yellow;\">The LA-600W 60W Solar Light comes with 1 year warranty.</strong></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: LA-600W</li><li>1200 Lumens Bright Light</li><li>6500K Cool White Light</li><li>IP65 Waterproof Protection</li><li>Solar Powered Technology</li></ul>",
+      "model": "LA-600W",
+      "warranty": "1 year warranty",
+      "basePrice": 7500.0,
+      "originalPrice": 8000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-52502",
+          "price": 7500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 7200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "LA-600W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/la-600w-60w-solar-street-light",
+      "sourceProductCode": "52502",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: LA-600W",
+        "1200 Lumens Bright Light",
+        "6500K Cool White Light",
+        "IP65 Waterproof Protection",
+        "Solar Powered Technology"
+      ],
+      "needsReview": false,
+      "categorySlug": "light",
+      "image": "/images/products/appliance/light/la-600w-60w-solar-street-light.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/light/la-600w-60w-solar-street-light.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "la-600w-60w-solar-street-light",
+        "candidateTitle": "LA-600W 60W Solar Street Light",
+        "attemptStem": "la-600w-60w-solar-street-light"
+      }
+    },
+    {
+      "name": "Orvibo DCZ15131 15W Zigbee LED Magnetic Linear Spotlight",
+      "slug": "orvibo-dcz15131-15w-magnetic-spotlight",
+      "type": "PHYSICAL",
+      "sku": "ST-34092",
+      "description": "<h2>Orvibo DCZ15131 15W Zigbee LED Magnetic Linear Spotlight</h2><p>The Orvibo <strong>DCZ15131</strong> 15W Zigbee LED Magnetic Linear Spotlight, with its elegant black appearance and small 435x22x25mm proportions, provides an elegant lighting option. Because it is made of sturdy polycarbonate and aluminum, this flashlight is guaranteed to be both strong and attractive. With a 15-watt power output and a 48-volt operating voltage, it has an outstanding efficiency of 90 to 100 lumens per watt. The Orvibo DCZ15131 15W Zigbee LED Magnetic Linear Spotlight offers precise illumination appropriate for a range of applications, with a concentrated beam angle of 70°. The brightness can be changed by users from 1% to 100%, enabling personalized illumination experiences. With a color temperature range of 2700K to 6500K, the Orvibo DCZ15131 15W Zigbee LED Magnetic Linear Spotlight gives you the versatility to create the mood you want. This spotlight easily integrates with smart home networks for effortless control by using the Zigbee communication standard. It guarantees dependable performance in a variety of situations by working in a broad temperature range of -20°C to 50°C and an operational humidity range of 20% to 90%. For contemporary lighting arrangements, the Orvibo DCZ15131 spotlight is a great option since it blends durability, functionality, and versatility.</p><h2>Buy Orvibo DCZ15131 15W Zigbee LED Magnetic Linear Spotlight from Star Tech</h2><p>In Bangladesh, you can get original <strong>Orvibo DCZ15131 15W Zigbee LED Magnetic Linear Spotlight</strong> From Star Tech. We have a large collection of latest Orvibo LED Magnetic Spotlight to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Orvibo DCZ15131 15W Zigbee LED Magnetic Linear Spotlight has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DCZ15131</li><li>Color Temperature: 2700k-6000k</li><li>Material: Aluminum, Polycarbonate</li><li>Control: Voice, Touch Screen, Scene Switch, APP</li><li>Dimensions: 435 x 22 x 25mm</li></ul>",
+      "model": "DCZ15131",
+      "warranty": null,
+      "basePrice": 7400.0,
+      "originalPrice": 7999.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 435.0,
+        "width": 22.0,
+        "height": 25.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Orvibo",
+      "variantOptions": [
+        {
+          "name": "Color Temperature",
+          "position": 0,
+          "values": [
+            {
+              "value": "2700k-6000k",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34092",
+          "price": 7400.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color Temperature": "2700k-6000k"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 7104.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DCZ15131",
+              "position": 0
+            },
+            {
+              "label": "Color Temperature",
+              "value": "2700k-6000k",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "Aluminum, Polycarbonate",
+              "position": 2
+            },
+            {
+              "label": "Control",
+              "value": "Voice, Touch Screen, Scene Switch, APP",
+              "position": 3
+            },
+            {
+              "label": "Dimensions",
+              "value": "435 x 22 x 25mm",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/orvibo-dcz15131-15w-magnetic-spotlight",
+      "sourceProductCode": "34092",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DCZ15131",
+        "Color Temperature: 2700k-6000k",
+        "Material: Aluminum, Polycarbonate",
+        "Control: Voice, Touch Screen, Scene Switch, APP",
+        "Dimensions: 435 x 22 x 25mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "light",
+      "image": "/images/products/appliance/light/orvibo-dcz15131-15w-magnetic-spotlight.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/light/orvibo-dcz15131-15w-magnetic-spotlight.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "orvibo-dcz15131-15w-magnetic-spotlight",
+        "candidateTitle": "Orvibo DCZ15131 15W Zigbee LED Magnetic Linear Spotlight",
+        "attemptStem": "orvibo-dcz15131-15w-magnetic-spotlight"
+      }
+    },
+    {
+      "name": "Orvibo DCZ15132 15W Zigbee LED Magnetic Linear Spotlight",
+      "slug": "orvibo-dcz15132-15w-magnetic-spotlight",
+      "type": "PHYSICAL",
+      "sku": "ST-34095",
+      "description": "<h2>Orvibo DCZ15132 15W Zigbee LED Magnetic Linear Spotlight</h2><p>The Orvibo <strong>DCZ15132</strong> 15W Zigbee LED Magnetic Linear Spotlight, with its stylish black appearance and tiny 435x22x25mm dimensions, offers an exquisite lighting option. This flashlight is sure to be both powerful and stylish because it is composed of durable polycarbonate and metal. With a 48-volt operating voltage and a 15-watt light output, it offers an exceptional efficiency of 90 to 100 lumens per watt. With a focused beam angle of 70°, the Orvibo DCZ15132 15W Zigbee LED Magnetic Linear Spotlight provides accurate illumination suitable for a variety of applications. Users can adjust the brightness from 1% to 100% to create custom lighting experiences. The Orvibo DCZ15132 15W Zigbee LED Magnetic Linear Spotlight offers you the flexibility to create the ambiance you desire with a color temperature range of 2700K to 6500K. Using the Zigbee communication protocol, this spotlight effortlessly interfaces with smart home networks for seamless control. It operates in a wide temperature range of -20°C to 50°C and an operational humidity range of 20% to 90%, ensuring dependable performance in a variety of scenarios. The Orvibo DCZ15132 spotlight is an excellent choice for modern lighting designs since it combines functionality, durability, and versatility.</p><h2>Buy Orvibo DCZ15132 15W Zigbee LED Magnetic Linear Spotlight from Star Tech</h2><p>In Bangladesh, you can get original <strong>Orvibo DCZ15132 15W Zigbee LED Magnetic Linear Spotlight</strong> From Star Tech. We have a large collection of latest Orvibo LED Magnetic Spotlight to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Orvibo DCZ15132 15W Zigbee LED Magnetic Linear Spotlight has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DCZ15132</li><li>Color Temperature: 2700k-6000k</li><li>Material: Aluminum, Polycarbonate</li><li>Control: Voice, Touch Screen, Scene Switch, APP</li><li>Dimensions: 435 x 22 x 25mm</li></ul>",
+      "model": "DCZ15132",
+      "warranty": null,
+      "basePrice": 7400.0,
+      "originalPrice": 7999.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 435.0,
+        "width": 22.0,
+        "height": 25.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Orvibo",
+      "variantOptions": [
+        {
+          "name": "Color Temperature",
+          "position": 0,
+          "values": [
+            {
+              "value": "2700k-6000k",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34095",
+          "price": 7400.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color Temperature": "2700k-6000k"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 7104.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DCZ15132",
+              "position": 0
+            },
+            {
+              "label": "Color Temperature",
+              "value": "2700k-6000k",
+              "position": 1
+            },
+            {
+              "label": "Material",
+              "value": "Aluminum, Polycarbonate",
+              "position": 2
+            },
+            {
+              "label": "Control",
+              "value": "Voice, Touch Screen, Scene Switch, APP",
+              "position": 3
+            },
+            {
+              "label": "Dimensions",
+              "value": "435 x 22 x 25mm",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/orvibo-dcz15132-15w-magnetic-spotlight",
+      "sourceProductCode": "34095",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DCZ15132",
+        "Color Temperature: 2700k-6000k",
+        "Material: Aluminum, Polycarbonate",
+        "Control: Voice, Touch Screen, Scene Switch, APP",
+        "Dimensions: 435 x 22 x 25mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "light",
+      "image": "/images/products/appliance/light/orvibo-dcz15132-15w-magnetic-spotlight.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/light/orvibo-dcz15132-15w-magnetic-spotlight.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "orvibo-dcz15132-15w-magnetic-spotlight",
+        "candidateTitle": "Orvibo DCZ15132 15W Zigbee LED Magnetic Linear Spotlight",
+        "attemptStem": "orvibo-dcz15132-15w-magnetic-spotlight"
+      }
+    },
+    {
+      "name": "Orvibo DD10Z15A Magnetic Candle Shape Smart Hanging Lamp",
+      "slug": "orvibo-dd10z15a-magnetic-hanging-lamp",
+      "type": "PHYSICAL",
+      "sku": "ST-34086",
+      "description": "<h2>Orvibo DD10Z15A Magnetic Candle Shape Smart Hanging Lamp</h2><p>The Orvibo <strong>DD10Z15A</strong> Magnetic Candle Shape Smart Hanging Lamp's advanced technology and creative design, provide an elegant lighting option. Three S2 models each with Zigbee protocol for smooth connectivity within the smart home ecosystem are included in this Orvibo smart hanging light set. Users may change the brightness and color temperature of the Orvibo DD10Z15A Magnetic Candle Shape Smart Hanging Lamp to fit different events and moods. The brightness ranges from a warm 2700K to a vivid 6000K. These lamps' 222mm connector length and 1200mm height adjustment provide versatility in installation and placement. Their elegant black finish lends sophistication to any indoor area, and their narrow 14° beam angle provides concentrated lighting. Each lamp's 35W LED power source produces a luminous flux of 325lm, giving it enough brightness without sacrificing energy economy. These Orvibo DD10Z15A Magnetic Candle Shape Smart Hanging Lamps improve indoor lighting environments' visual appeal and practicality when used alone or in a set.</p><h2>Buy Orvibo DD10Z15A Magnetic Candle Shape Smart Hanging Lamp from Star Tech</h2><p>In Bangladesh, you can get original <strong>Orvibo DD10Z15A Magnetic Candle Shape Smart Hanging Lamp</strong> From Star Tech. We have a large collection of latest Orvibo Hanging Lamp to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Orvibo DD10Z15A Magnetic Candle Shape Smart Hanging Lamp has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DD10Z15A</li><li>3 Smart Magnetic Candle Chandelier Lamp</li><li>Beam Angle: 14° Luminous</li><li>Luminous Flux: 3*25lm, Connector Length: 222mm</li><li>Color Temperature Range: 2700 - 6000K</li></ul>",
+      "model": "DD10Z15A",
+      "warranty": null,
+      "basePrice": 11500.0,
+      "originalPrice": 12499.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Orvibo",
+      "variantOptions": [
+        {
+          "name": "Color Temperature Range",
+          "position": 0,
+          "values": [
+            {
+              "value": "2700 - 6000K",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34086",
+          "price": 11500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color Temperature Range": "2700 - 6000K"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 11040.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DD10Z15A",
+              "position": 0
+            },
+            {
+              "label": "Beam Angle",
+              "value": "14° Luminous",
+              "position": 1
+            },
+            {
+              "label": "Luminous Flux",
+              "value": "3*25lm, Connector Length: 222mm",
+              "position": 2
+            },
+            {
+              "label": "Color Temperature Range",
+              "value": "2700 - 6000K",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/orvibo-dd10z15a-magnetic-hanging-lamp",
+      "sourceProductCode": "34086",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DD10Z15A",
+        "3 Smart Magnetic Candle Chandelier Lamp",
+        "Beam Angle: 14° Luminous",
+        "Luminous Flux: 3*25lm, Connector Length: 222mm",
+        "Color Temperature Range: 2700 - 6000K"
+      ],
+      "needsReview": false,
+      "categorySlug": "light",
+      "image": "/images/products/appliance/light/orvibo-dd10z15a-magnetic-hanging-lamp.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/light/orvibo-dd10z15a-magnetic-hanging-lamp.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "orvibo-dd10z15a-magnetic-hanging-lamp",
+        "candidateTitle": "Orvibo DD10Z15A Magnetic Candle Shape Smart Hanging Lamp",
+        "attemptStem": "orvibo-dd10z15a-magnetic-hanging-lamp"
+      }
+    },
+    {
+      "name": "Orvibo DG10SA 8W Zigbee LED Magnetic Spotlight",
+      "slug": "orvibo-dg10sa-8w-magnetic-spotlight",
+      "type": "PHYSICAL",
+      "sku": "ST-34107",
+      "description": "<h2>Orvibo DG10SA 8W Zigbee LED Magnetic Spotlight</h2><p>The Orvibo <strong>DG10SA</strong> 8W Zigbee LED Magnetic Spotlight has easy APP control, making it ideal for a variety of situations such as hotels, business spaces, and households. Its small 38mm diameter allows it to illuminate a 24° beam angle with focused light. It provides a light effect ranging from 35 to 45 lumens per watt when operating at a rated power of 8W, guaranteeing effective and efficient lighting. With a wide color temperature range of 2700K to 6000K, the Orvibo DG10SA 8W Zigbee LED Magnetic Spotlight can be customized to fit a variety of tastes and requirements. Its 48V input voltage guarantees interoperability with conventional electrical systems. The Orvibo DG10SA 8W Zigbee LED Magnetic Spotlight is built to survive a variety of conditions. It can function in temperatures between -20°C and +50°C and relative humidity levels between 20% and 90% RH. The Orvibo DG10SA is a dependable lighting solution for a range of applications, improving both practicality and aesthetics with its adaptable features and specs.</p><h2>Buy Orvibo DG10SA 8W Zigbee LED Magnetic Spotlight from Star Tech</h2><p>In Bangladesh, you can get original <strong>Orvibo DG10SA 8W Zigbee LED Magnetic Spotlight</strong> From Star Tech. We have a large collection of latest Orvibo Downlight to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Orvibo DG10SA 8W Zigbee LED Magnetic Spotlight has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DG10SA</li><li>Beam Angle: 24 degree</li><li>Diameter: 38mm</li><li>Light Effect: 35-45LM/W</li><li>Color Temperature Range: 2700K-6000K</li></ul>",
+      "model": "DG10SA",
+      "warranty": null,
+      "basePrice": 6500.0,
+      "originalPrice": 6999.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Orvibo",
+      "variantOptions": [
+        {
+          "name": "Color Temperature Range",
+          "position": 0,
+          "values": [
+            {
+              "value": "2700K-6000K",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34107",
+          "price": 6500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color Temperature Range": "2700K-6000K"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 6240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DG10SA",
+              "position": 0
+            },
+            {
+              "label": "Beam Angle",
+              "value": "24 degree",
+              "position": 1
+            },
+            {
+              "label": "Diameter",
+              "value": "38mm",
+              "position": 2
+            },
+            {
+              "label": "Light Effect",
+              "value": "35-45LM/W",
+              "position": 3
+            },
+            {
+              "label": "Color Temperature Range",
+              "value": "2700K-6000K",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/orvibo-dg10sa-8w-magnetic-spotlight",
+      "sourceProductCode": "34107",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DG10SA",
+        "Beam Angle: 24 degree",
+        "Diameter: 38mm",
+        "Light Effect: 35-45LM/W",
+        "Color Temperature Range: 2700K-6000K"
+      ],
+      "needsReview": false,
+      "categorySlug": "light",
+      "image": "/images/products/appliance/light/orvibo-dg10sa-8w-magnetic-spotlight.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/light/orvibo-dg10sa-8w-magnetic-spotlight.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "orvibo-dg10sa-8w-magnetic-spotlight",
+        "candidateTitle": "Orvibo DG10SA 8W Zigbee LED Magnetic Spotlight",
+        "attemptStem": "orvibo-dg10sa-8w-magnetic-spotlight"
+      }
+    },
+    {
+      "name": "Orvibo DT60Z07B Surface-mounted Circular Smart Downlight S3",
+      "slug": "orvibo-dt60z07b-smart-downlight-s3",
+      "type": "PHYSICAL",
+      "sku": "ST-25418",
+      "description": "<h2 style=\"text-align: justify; \">Orvibo DT60Z07B Surface-mounted Circular Smart Downlight S3</h2><p style=\"text-align: justify;\">The Orvibo DT60Z07B Surface-mounted Circular Smart Downlight S3 is part of Orvibo's new series smart lighting collection, with a modern design and better quality materials that ensure a longer lifespan. The installation is simple and rapid, involving simply the connection of a single phase, neutral, and earthing cable to the electrical circuit. The Orvibo DT60Z07B Downlight S3 may be managed from anywhere with the Orvibo Home mobile app, which is available for iOS and Android. The Zigbee protocol is used to communicate with this smart Smart <a href=\"https://www.startech.com.bd/gadget/daily-lifestyle\" style=\"color: rgb(0, 0, 0);\" target=\"_blank\">Downlight</a>. The Orvibo Smart Downlight S3 is compatible with the MixPad or Mini Hub and so completes the manufacturer's smart home portfolio. You may change the color temperature and intensity of the light, program it to turn on and off and connect it to other ORVIBO smart devices in your house. connection to the motion sensor; when the sensor detects movement, the LED immediately illuminates. The Orvibo DT60Z07B Surface-mounted Circular Smart Downlight S3 has no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DT60Z07B</li><li>Communication protocol: Zigbee</li><li>changed color and brightness</li><li>ceiling light angle to 19, 28 degrees</li><li>Natural light with RA90 standard</li></ul>",
+      "model": "DT60Z07B",
+      "warranty": "No Warranty",
+      "basePrice": 4400.0,
+      "originalPrice": 4699.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Orvibo",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "Black",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-25418",
+          "price": 4400.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "Black"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4224.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Power",
+              "value": "7W",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Color Rendering Index: Ra>90 Anti-glare index: UGR<19 Beam Angle: 28° Color Temperature Range: 2700K~6000K",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "Black",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "93 mm x 106 mm",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/orvibo-dt60z07b-smart-downlight-s3",
+      "sourceProductCode": "25418",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DT60Z07B",
+        "Communication protocol: Zigbee",
+        "changed color and brightness",
+        "ceiling light angle to 19, 28 degrees",
+        "Natural light with RA90 standard"
+      ],
+      "needsReview": false,
+      "categorySlug": "light",
+      "image": "/images/products/appliance/light/orvibo-dt60z07b-smart-downlight-s3.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/light/orvibo-dt60z07b-smart-downlight-s3.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "orvibo-dt60z07b-smart-downlight-s3",
+        "candidateTitle": "Orvibo DT60Z07B Surface-mounted Circular Smart Downlight S3",
+        "attemptStem": "orvibo-dt60z07b-smart-downlight-s3"
+      }
+    },
+    {
+      "name": "Orvibo DT60Z07D Surface-mounted Circular Smart Downlight S3",
+      "slug": "orvibo-dt60z07d-smart-downlight-s3",
+      "type": "PHYSICAL",
+      "sku": "ST-25419",
+      "description": "<h2 style=\"text-align: justify; \">Orvibo DT60Z07D Surface-mounted Circular Smart Downlight S3</h2><p style=\"text-align: justify;\">The Orvibo DT60Z07D Surface-mounted Circular Smart Downlight S3 is part of Orvibo's new series smart lighting collection, and it features a modern design and higher-quality materials for a longer lifespan. The installation is straightforward and quick, requiring only the connecting of a single phase, neutral, and earthing cable to an electrical circuit. The Orvibo DT60Z07D Downlight S3 may be controlled from any location using the Orvibo Home mobile app, which is available for iOS and Android. The Orvibo Smart <a href=\"https://www.startech.com.bd/gadget/daily-lifestyle\" style=\"color: rgb(0, 0, 0);\" target=\"_blank\">Downlight </a>S3 works with the MixPad or Mini Hub, rounding out the manufacturer's smart home offering. You may adjust the light's color temperature and intensity set it to turn on and off and connect it to other ORVIBO smart gadgets in your home. connection to the motion sensor; when the sensor detects movement, the LED lights up. The Orvibo DT60Z07D Surface-mounted Circular Smart Downlight S3 has no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DT60Z07D</li><li>Communication protocol: Zigbee</li><li>changed color and brightness</li><li>ceiling light angle to 19, 28 degrees</li><li>Natural light with RA90 standard</li></ul>",
+      "model": "DT60Z07D",
+      "warranty": "No Warranty",
+      "basePrice": 4400.0,
+      "originalPrice": 4699.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Orvibo",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-25419",
+          "price": 4400.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4224.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Power",
+              "value": "7W",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Color Rendering Index: Ra>90 Anti-glare index: UGR<19 Beam Angle: 28° Color Temperature Range: 2700K~6000K",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Description",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            },
+            {
+              "label": "Dimensions",
+              "value": "93 mm x 106 mm",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Manufacturing Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/orvibo-dt60z07d-smart-downlight-s3",
+      "sourceProductCode": "25419",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DT60Z07D",
+        "Communication protocol: Zigbee",
+        "changed color and brightness",
+        "ceiling light angle to 19, 28 degrees",
+        "Natural light with RA90 standard"
+      ],
+      "needsReview": false,
+      "categorySlug": "light",
+      "image": "/images/products/appliance/light/orvibo-dt60z07d-smart-downlight-s3.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/light/orvibo-dt60z07d-smart-downlight-s3.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "orvibo-dt60z07d-smart-downlight-s3",
+        "candidateTitle": "Orvibo DT60Z07D Surface-mounted Circular Smart Downlight S3",
+        "attemptStem": "orvibo-dt60z07d-smart-downlight-s3"
+      }
+    },
+    {
+      "name": "Orvibo DTN06058 SOPRO Motion Sensor Downlight",
+      "slug": "orvibo-dtn06058-motion-sensor-downlight",
+      "type": "PHYSICAL",
+      "sku": "ST-34101",
+      "description": "<h2>Orvibo DTN06058 SOPRO Motion Sensor Downlight</h2><p>The Orvibo <strong>DTN06058</strong> SOPRO Motion Sensor Downlight is a complete lighting solution that includes advanced capabilities for customized and efficient illumination. With Mixpad or a smartphone, users can effortlessly modify hue, brightness, and color temperature, giving them the freedom to create the ideal atmosphere. Committed to safety, the Orvibo DTN06058 SOPRO Motion Sensor Downlight anti-glare function guards against eye strain while ensuring a steady light output without flashing, especially in low-power situations. It may function both alone and in a group, and it provides flexible usage choices to accommodate different illumination requirements. Adhering to the RA90 standard for natural light, it offers superior illumination suitable for any setting. The Orvibo DTN06058 SOPRO Motion Sensor Downlight is a ceiling-mounting device with φ80 x 43.5 mm in dimensions and a φ75 mm hole size needed. It provides broad coverage for efficient lighting distribution with an 85° beam angle. It uses 6W of energy and is powered by AC220V 50Hz. It provides performance and efficiency. Accurate color representation and cozy, inviting lighting are guaranteed by its 4000K color temperature range and ≥90Ra Color Rendering Index. The Orvibo DTN06058 SOPRO Motion Sensor Downlight is an adaptable and user-friendly option for smart lighting solutions because of its additional features, which include the ability to automatically alter lighting over time and adapt to sunlight, which further improves convenience and functionality.</p><h2>Buy Orvibo DTN06058 SOPRO Motion Sensor Downlight from Star Tech</h2><p>In Bangladesh, you can get original <strong>Orvibo DTN06058 SOPRO Motion Sensor Downlight</strong> From Star Tech. We have a large collection of latest Orvibo Downlight to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Orvibo DTN06058 SOPRO Motion Sensor Downlight has no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DTN06058</li><li>Natural Light with RA90 Standard</li><li>Beam Angle: 85 degrees</li><li>Luminous flux: 320lm</li><li>Color Temperature Range: 4000K</li></ul>",
+      "model": "DTN06058",
+      "warranty": null,
+      "basePrice": 2900.0,
+      "originalPrice": 3099.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Orvibo",
+      "variantOptions": [
+        {
+          "name": "Color Temperature Range",
+          "position": 0,
+          "values": [
+            {
+              "value": "4000K",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-34101",
+          "price": 2900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color Temperature Range": "4000K"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2784.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DTN06058",
+              "position": 0
+            },
+            {
+              "label": "Beam Angle",
+              "value": "85 degrees",
+              "position": 1
+            },
+            {
+              "label": "Luminous flux",
+              "value": "320lm",
+              "position": 2
+            },
+            {
+              "label": "Color Temperature Range",
+              "value": "4000K",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/orvibo-dtn06058-motion-sensor-downlight",
+      "sourceProductCode": "34101",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DTN06058",
+        "Natural Light with RA90 Standard",
+        "Beam Angle: 85 degrees",
+        "Luminous flux: 320lm",
+        "Color Temperature Range: 4000K"
+      ],
+      "needsReview": false,
+      "categorySlug": "light",
+      "image": "/images/products/appliance/light/orvibo-dtn06058-motion-sensor-downlight.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/light/orvibo-dtn06058-motion-sensor-downlight.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "orvibo-dtn06058-motion-sensor-downlight",
+        "candidateTitle": "Orvibo DTN06058 SOPRO Motion Sensor Downlight",
+        "attemptStem": "orvibo-dtn06058-motion-sensor-downlight"
+      }
+    }
+  ]
+}

@@ -1,0 +1,1758 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/camera",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\camera",
+    "generatedAtUnix": 1790585809,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Camera",
+      "slug": "camera",
+      "parentSlug": null,
+      "image": "/images/products/camera/Action Camera/dgs-ox3-pocket-camera-67755d6a.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Dash Cam",
+      "slug": "dash-cam",
+      "parentSlug": "camera",
+      "image": "/images/products/camera/dash-cam/70mai/70mai-a400-dash-cam.png",
+      "isActive": true,
+      "sortOrder": 3,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "70mai",
+      "slug": "70mai",
+      "logo": null
+    },
+    {
+      "name": "Transcend",
+      "slug": "transcend",
+      "logo": null
+    },
+    {
+      "name": "WiWU",
+      "slug": "wiwu",
+      "logo": null
+    },
+    {
+      "name": "XO",
+      "slug": "xo",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "70mai A400 2K QHD Dash Cam Set",
+      "slug": "70mai-a400-dash-cam",
+      "type": "PHYSICAL",
+      "sku": "ST-26802",
+      "description": "<h2 style=\"text-align: justify; \">70mai A400 2K QHD Dash Cam Set</h2><p style=\"text-align: justify; \">The 70mai A400 Dash Cam is equipped with GC4653 Sensor. It uses 7 layers of high quality glass lenses with F2.0 aperture. It process frames faster to deliver images with better clarity and vividness. overwrites the oldest videos with new content when the SD card is full, so the dash cam can achieve continues recording. You can change the video file length from 1,2,3min by settings. This cam supports microSD cards with a minimum capacity of 32GB and a read/write speed of U1(UHS-1) and above</p><h3 style=\"text-align: justify; \">1440P Quad HD + 145° Field of View</h3><p style=\"text-align: justify; \">70mai A400 records in QHD resolution of 2560 x 1440. It can deliver above-par clarity and color-accurateness. The 145° wide-angle FOV covers at least three lanes of traffic, capturing more events in each frame.</p><h3 style=\"text-align: justify; \">Dual-Channel Front &amp; Rear Recording</h3><p style=\"text-align: justify; \">The 70mai A400 Dash Cam is capable of dual-vision recording which allows you to capture both the road ahead of you and behind. It is compatible with the RC09 rear camera which is sold separately.</p><h3 style=\"text-align: justify; \">Enhanced Protection Inside and Out</h3><p style=\"text-align: justify; \">The 70mai A400 is also compatible with the FC02 Interior Dash Cam. It gives you a full HD view of your internal space. It can deliver well-illuminated images even at night, by leveraging its 6 infrared lights. The interior dash cam is also sold separately and cannot work alongside a rear or back camera.</p><h3 style=\"text-align: justify; \">Enhanced Night Vision</h3><p style=\"text-align: justify; \">70mai A400 Dash Cam WDR technology and can automatically adjust exposure balance when recording in low-light or high-contrast environments. F2.0 large aperture pulls in more light to brighten up dark scenes.</p><h3 style=\"text-align: justify; \">24-Hour Parking Surveillance</h3><p style=\"text-align: justify; \">70mai A400 supports a 24H Parking Surveillance system. It comes with G-sensor that automatically detects sudden shakes or collisions and starts recording, providing critical evidence for every important moment for 24h.</p><h3 style=\"text-align: justify; \">Loop Recording</h3><p style=\"text-align: justify; \">70mai A400 comes with some smart features. New recordings will automatically overwrite older footage when your storage reaches its limit.</p><h2 style=\"text-align: justify; \">Buy 70mai A400 2K QHD Dash Cam Set from the best Camera Shop in Bangladesh: Star Tech</h2><p style=\"text-align: justify; \">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/70mai-a400-dash-cam\" target=\"\">70mai A400 2K QHD Dash Cam Set</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/70mai-dashcam\" target=\"\">70mai Dashcam</a> to purchase for your vehicle. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The 70mai A400 QHD Dash Cam comes with no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A400</li><li>Resolution: QHD (2560 x 1440)</li><li>Dual-Channel Front &amp; Rear Recording</li><li>24H Parking Surveillance</li><li>Enhanced Night Vision</li></ul>",
+      "model": "A400",
+      "warranty": "No Warranty",
+      "basePrice": 8900.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "70mai",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Supports Micro SD up to 256GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "500 mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-26802",
+          "price": 8900.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "Supports Micro SD up to 256GB",
+            "Capacity": "500 mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 8544.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "GC4653",
+              "position": 0
+            },
+            {
+              "label": "Sensor Resolution",
+              "value": "QHD (2560 x 1440)",
+              "position": 1
+            },
+            {
+              "label": "Display",
+              "value": "2 inch",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "Supports Micro SD up to 256GB",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "500 mAh",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Slow Motion Recording",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Control via APP",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/70mai-a400-dash-cam",
+      "sourceProductCode": "26802",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A400",
+        "Resolution: QHD (2560 x 1440)",
+        "Dual-Channel Front & Rear Recording",
+        "24H Parking Surveillance",
+        "Enhanced Night Vision"
+      ],
+      "needsReview": false,
+      "categorySlug": "dash-cam",
+      "image": "/images/products/camera/dash-cam/70mai/70mai-a400-dash-cam.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/dash-cam/70mai/70mai-a400-dash-cam.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "70mai-a400-dash-cam",
+        "candidateTitle": "70mai A400 2K QHD Dash Cam Set",
+        "attemptStem": "70mai-a400-dash-cam"
+      }
+    },
+    {
+      "name": "70mai A800S 4K Dash Cam",
+      "slug": "70mai-a800s-4k-dash-cam",
+      "type": "PHYSICAL",
+      "sku": "ST-26799",
+      "description": "<h2 style=\"text-align: justify; \">70mai A800S 4K Dash Cam</h2><p style=\"text-align: justify; \">The 70mai A800S Dash Cam is equipped with Sony IMX415 Sensor with 4K resolution. It uses 7 layers of high quality glass lenses with F1.8 aperture. It process frames faster to deliver images with better clarity and vividness. overwrites the oldest videos with new content when the SD card is full, so the dash cam can achieve continues recording. You can change the video file length from 1,2,3min by settings. This cam supports microSD cards with a minimum capacity of 32GB and a read/write speed of U1(UHS-1) and above</p><h3 style=\"text-align: justify; \">Super High Resolution of 4K UHD</h3><p style=\"text-align: justify; \">70mai A800S 4K Dash Cam can deliver up to 4K Ultra High Definition of 3840x2160. It pushes the limits of image quality with the industry's highest resolution standard. The 70mai A800S incredibly clear frames when you are on a road trip.</p><h3 style=\"text-align: justify; \">Dual-Channel Front &amp; Rear Recording</h3><p style=\"text-align: justify; \">The 70mai A800S 4K Dash Cam is capable of dual-vision recording which allows you to capture both the road ahead of you and behind. It is compatible with the RC06 rear camera which is sold separately.</p><h3 style=\"text-align: justify; \">Enhanced Protection Inside and Out</h3><p style=\"text-align: justify; \">The 70mai A800S is also compatible with the FC02 Interior Dash Cam. It gives you a full HD view of your internal space. It can deliver well-illuminated images even at night, by leveraging its 6 infrared lights. The interior dash cam is also sold separately and cannot work alongside a rear or back camera.</p><h3 style=\"text-align: justify; \">Powerful Night Vision</h3><p style=\"text-align: justify; \">70mai A800S 4K Dash Cam uses an F1.8 aperture lens with 3D DNR technology and smart AI algorithm to reduce image noise. This gives the A800S outstanding low-light performance, delivering clear images during any time of day or under certain weather conditions.</p><h3 style=\"text-align: justify; \">24-Hour Parking Surveillance</h3><p style=\"text-align: justify; \">70mai A800S supports a 24H Parking Surveillance system. It comes with G-sensor that automatically detects sudden shakes or collisions and starts recording, providing critical evidence for every important moment for 24h.</p><h3 style=\"text-align: justify; \">Built-in GPS and Route Tracking</h3><p style=\"text-align: justify; \">70mai A800S 4K Dash Cam is equipped with built-in GPS. It monitors and displays real-time trip data including time, speed, and coordinates. Tracks the exact location of an accident if one should occur, crucial for roadside assistance and insurance claims.</p><h3 style=\"text-align: justify; \">Advanced Driver-Assistance Systems</h3><p style=\"text-align: justify; \">70mai A800S Dash Camera comes with the lane-departure warning system and the forward-collision warning system. Advanced Driving-Assistance System (ADAS) detects your surroundings and has real-time voice alerts to warn you of safety problems. The camera automatically detects lane markings and gives voice alerts when the car is drifting out of the lane.</p><h2 style=\"text-align: justify; \">Buy 70mai A800S 4K Dash Cam from the best Camera Shop in Bangladesh: Star Tech</h2><p style=\"text-align: justify; \">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/70mai-a800s-4k-dash-cam\" target=\"\">70mai A800S 4K Dash Cam</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/70mai-dashcam\" target=\"\">70mai Dashcam</a> to purchase for your vehicle. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The 70mai A800S 4K Dash Cam comes with no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A800S</li><li>Resolution: 4K UHD (3840x2160)</li><li>Dual-Channel Front &amp; Rear Recording</li><li>24H Parking Surveillance</li><li>Built-in GPS with ADAS</li></ul>",
+      "model": "A800S",
+      "warranty": "No Warranty",
+      "basePrice": 15300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "70mai",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Supports Micro SD up to 256GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "500 mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-26799",
+          "price": 15300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "Supports Micro SD up to 256GB",
+            "Capacity": "500 mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 14688.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "Sony IMX415",
+              "position": 0
+            },
+            {
+              "label": "Sensor Resolution",
+              "value": "4K (3840x2160)",
+              "position": 1
+            },
+            {
+              "label": "Display",
+              "value": "3\" IPS (854 x 480p)",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "Supports Micro SD up to 256GB",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "500 mAh",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Slow Motion Recording",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "ADAS (Advanced Driver Assistance System) Control via APP Built-in GPS",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/70mai-a800s-4k-dash-cam",
+      "sourceProductCode": "26799",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A800S",
+        "Resolution: 4K UHD (3840x2160)",
+        "Dual-Channel Front & Rear Recording",
+        "24H Parking Surveillance",
+        "Built-in GPS with ADAS"
+      ],
+      "needsReview": false,
+      "categorySlug": "dash-cam",
+      "image": "/images/products/camera/dash-cam/70mai/70mai-a800s-4k-dash-cam.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/dash-cam/70mai/70mai-a800s-4k-dash-cam.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "70mai-a800s-4k-dash-cam",
+        "candidateTitle": "70mai A800S 4K Dash Cam",
+        "attemptStem": "70mai-a800s-4k-dash-cam"
+      }
+    },
+    {
+      "name": "70mai Dash Cam Pro Plus+ Rear Cam Set",
+      "slug": "70mai-dash-cam-pro-plus-rear-cam-set",
+      "type": "PHYSICAL",
+      "sku": "A500S-1",
+      "description": "<h2>70mai Dash Cam Pro Plus+ Rear Cam Set</h2><p>The 70mai Dash Cam Pro Plus + Rear Cam Set features a dash camera with up to 2.7K resolution, integrated GPS, 3D night mode DNR + HDR, a 5MPx Sony sensor, ADAS-lane safety assistant and collision warning, 24-hour parking surveillance, WiFi connection with your smartphone, a 2.0\" LCD display, automatic time calibration, and a 500mAh battery. A set with a rear camera (70mai RC06, Full HD, 5.5m cord)</p><h3>Comprehensive car protection 24 hours a day</h3><p>The 70mai Dash Cam Pro Plus+ Rear Cam is a brave parking guard and intelligent driving helper, not just another standard car camera. The camera will automatically switch on when your car starts, and you can utilize ADAS and a lane departure warning system (LDWS) to receive real-time collision alerts. These two elements are perfect for lengthy trips when drivers frequently become disoriented. Your car will never be left alone, not even when parked.</p><h3>Because detail matters</h3><p>Sony's IMX335, f/1.8 camera ensures high-quality filming even in dimly illuminated environments. Travel-related video footage will be stunning with 2.7K resolution of 2592x1944 pixels and a wide 140° viewing angle.</p><h3>Easy to connect</h3><p>The 70mai Dash Cam Pro Plus+ Rear Cam Set footage can be stored locally on a MicroSD card with a maximum storage capacity of 64 GB or downloaded instantly to a smartphone using the Wi-Fi hotspot option by connecting directly to the camera. A user-friendly smartphone application is available for this use. Use a standard 12V car outlet to charge the camera.</p><h2 style=\"text-align: justify; \"><span style=\"color: inherit; font-family: inherit;\">Buy </span>70mai Dash Cam Pro Plus+ Rear Cam Set<span style=\"color: inherit; font-family: inherit;\"> from the best Camera Shop in Bangladesh: Star Tech</span><br/></h2><p style=\"text-align: justify; \">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/70mai-dash-cam-pro-plus-rear-cam-set\" target=\"\">70mai Dash Cam Pro Plus+ Rear Cam Set</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/70mai-dashcam\" target=\"\">70mai Dashcam</a> to purchase for your vehicle. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The 70mai Dash Cam Pro Plus+ Rear Cam Set comes with no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: A500S-1</li><li>Model: Dash Cam Pro Plus+</li><li>2 Inch IPS Screen</li><li>1944P Resolution &amp; 5-Megapixel Camera</li><li>Dual-Channel Recording</li><li>Built-In GPS with ADAS</li></ul>",
+      "model": "Dash Cam Pro Plus+",
+      "warranty": "No Warranty",
+      "basePrice": 10200.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "70mai",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "Supports Micro SD up to 64GB",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "500 mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "A500S-1",
+          "price": 10200.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "Supports Micro SD up to 64GB",
+            "Capacity": "500 mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 9792.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "5MPx Sony sensor,",
+              "position": 0
+            },
+            {
+              "label": "Sensor Resolution",
+              "value": "2592 x 1944 pixels",
+              "position": 1
+            },
+            {
+              "label": "Display",
+              "value": "2 Inch IPS Screen",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "Supports Micro SD up to 64GB",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "500 mAh",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Slow Motion Recording",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Built-In GPS with ADAS",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/70mai-dash-cam-pro-plus-rear-cam-set",
+      "sourceProductCode": "28047",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "A500S-1",
+      "sourceKeyFeatures": [
+        "MPN: A500S-1",
+        "Model: Dash Cam Pro Plus+",
+        "2 Inch IPS Screen",
+        "1944P Resolution & 5-Megapixel Camera",
+        "Dual-Channel Recording",
+        "Built-In GPS with ADAS"
+      ],
+      "needsReview": false,
+      "categorySlug": "dash-cam",
+      "image": "/images/products/camera/dash-cam/70mai/70mai-dash-cam-pro-plus-rear-cam-set.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/dash-cam/70mai/70mai-dash-cam-pro-plus-rear-cam-set.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "70mai-dash-cam-pro-plus-rear-cam-set",
+        "candidateTitle": "70mai Dash Cam Pro Plus+ Rear Cam Set",
+        "attemptStem": "70mai-dash-cam-pro-plus-rear-cam-set"
+      }
+    },
+    {
+      "name": "70mai M500 Dash Cam",
+      "slug": "70mai-m500-dash-cam",
+      "type": "PHYSICAL",
+      "sku": "ST-26803",
+      "description": "<h2 style=\"text-align: justify; \">70mai M500 Dash Cam</h2><p style=\"text-align: justify; \">The 70mai M500 Dash Cam is equipped with GC4653 Sensor. It uses 7 layers of high quality glass lenses with F2.0 aperture. It process frames faster to deliver images with better clarity and vividness. overwrites the oldest videos with new content when the SD card is full, so the dash cam can achieve continues recording. You can change the video file length from 1,2,3min by settings. This cam supports microSD cards with a minimum capacity of 32GB and a read/write speed of U1(UHS-1) and above</p><h3 style=\"text-align: justify; \">2.5 Times of 1080P with Widest FOV</h3><p style=\"text-align: justify; \">70mai M500 records in QHD resolution of 2560 x 1440. It can deliver above-par clarity and color-accurateness. The 145° wide-angle FOV covers at least three lanes of traffic, capturing more events in each frame.</p><h3 style=\"text-align: justify; \">Dual-Channel Front &amp; Rear Recording</h3><p style=\"text-align: justify; \">The 70mai M500 Dash Cam is capable of dual-vision recording which allows you to capture both the road ahead of you and behind. It is compatible with the RC09 rear camera which is sold separately.</p><h3 style=\"text-align: justify; \">Enhanced Protection Inside and Out</h3><p style=\"text-align: justify; \">The 70mai M500 is also compatible with the FC02 Interior Dash Cam. It gives you a full HD view of your internal space. It can deliver well-illuminated images even at night, by leveraging its 6 infrared lights. The interior dash cam is also sold separately and cannot work alongside a rear or back camera.</p><h3 style=\"text-align: justify; \">Powerful Night Vision</h3><p style=\"text-align: justify; \">70mai M500 Dash Cam WDR technology and can automatically adjust exposure balance when recording in low-light or high-contrast environments. F2.0 large aperture pulls in more light to brighten up dark scenes.</p><h3 style=\"text-align: justify; \">24-Hour Parking Surveillance</h3><p style=\"text-align: justify; \">70mai M500 supports a 24H Parking Surveillance system. It comes with G-sensor that automatically detects sudden shakes or collisions and starts recording, providing critical evidence for every important moment for 24h.</p><h3 style=\"text-align: justify; \">Loop Recording</h3><p style=\"text-align: justify; \">70mai M500 comes with some smart features. New recordings will automatically overwrite older footage when your storage reaches its limit.</p><h3 style=\"text-align: justify; \">Expanded Advanced Driver-Assistance Systems (ADAS)</h3><p style=\"text-align: justify; \">70mai M500 Dash Cam comes with expanded ADAS alerts including lane departure, forward collision, moving traffic, and pedestrian collision. It detects your surroundings and voice alerts to safety concerns.</p><h3 style=\"text-align: justify; \">Stable GPS &amp; GLONASS Positioning</h3><p style=\"text-align: justify; \">The 70mai M500's positioning system receives signals from both GPS &amp; GLONASS satellites, enabling stable and accurate positioning even in areas prone to signal obstruction.<br/></p><h2 style=\"text-align: justify; \">Buy 70mai M500 Dash Cam from the best Camera Shop in Bangladesh: Star Tech</h2><p style=\"text-align: justify; \">In Bangladesh, you can get original <a href=\"https://www.startech.com.bd/70mai-m500-dash-cam\" target=\"\">70mai M500 Dash Cam</a> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/70mai-dashcam\" target=\"\">70mai Dashcam</a> to purchase for your vehicle. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The 70mai M500 Dash Cam comes with no warranty.<br/></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: M500</li><li>Resolution: 1944P &amp; HDR</li><li>eMMC Built-in Storage</li><li>24H Parking Surveillance</li><li>Built-in GPS &amp; GLONASS with ADAS</li></ul>",
+      "model": "M500",
+      "warranty": "No Warranty",
+      "basePrice": 10550.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "70mai",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "eMMC Built-in Storage（Supports 32GB/64GB/128GB)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "500 mAh",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-26803",
+          "price": 10550.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "eMMC Built-in Storage（Supports 32GB/64GB/128GB)",
+            "Capacity": "500 mAh"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 10128.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "OS05A10",
+              "position": 0
+            },
+            {
+              "label": "Sensor Resolution",
+              "value": "2592*1944",
+              "position": 1
+            },
+            {
+              "label": "Memory",
+              "value": "eMMC Built-in Storage（Supports 32GB/64GB/128GB)",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "500 mAh",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Slow Motion Recording",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Built-in GPS 24H Parking Monitoring Emergency Recording ADAS G-Sensor HDR 3D DNR Loop Recording Time-lapse Recording Route Track Voice Control",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/70mai-m500-dash-cam",
+      "sourceProductCode": "26803",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: M500",
+        "Resolution: 1944P & HDR",
+        "eMMC Built-in Storage",
+        "24H Parking Surveillance",
+        "Built-in GPS & GLONASS with ADAS"
+      ],
+      "needsReview": false,
+      "categorySlug": "dash-cam",
+      "image": "/images/products/camera/dash-cam/70mai/70mai-m500-dash-cam.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/dash-cam/70mai/70mai-m500-dash-cam.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "70mai-m500-dash-cam",
+        "candidateTitle": "70mai M500 Dash Cam",
+        "attemptStem": "70mai-m500-dash-cam"
+      }
+    },
+    {
+      "name": "Transcend DrivePro 20 Motorcycle Dashcam",
+      "slug": "transcend-drivepro-20-motorcycle-dashcam",
+      "type": "PHYSICAL",
+      "sku": "TS-DP20A-32G",
+      "description": "<h2 style=\"text-align: justify; \">Transcend DrivePro 20 Motorcycle Dashcam</h2><p style=\"text-align: justify; \">The DrivePro 20 Motorcycle Dashcam from Transcend is designed specifically for motorcycle and scooter riders. Its straightforward and small design ensures your safety on the road. The Transcend DrivePro 20 Motorcycle Dashcam uses a STARVISTM image sensor to record Full HD 1080P at 60 frames per second for crystal clear clarity and night pictures even in low light. It is IP68 certified, meaning it can survive a wide range of weather conditions and is resistant to water, dust, heat, and shocks, making it ideal for outdoor recording. The free DrivePro App uses the built-in Wi-Fi connectivity to transmit live footage to mobile devices. It is easy to transport due to its tiny and portable nature. If you travel by scooter or work as a delivery driver, the DrivePro 20 is the dashcam for you. The DrivePro 20 Motorcycle Dashcam from Transcend is made for motorbikes and scooters. Its small size makes it simple to mount on a helmet. The Transcend DrivePro 20 Motorcycle Dashcam is ready to catch a ride with you after 3 seconds of pushing the power button. It has Wi-Fi connectivity that allows you to see and download real-time footage on your mobile devices using the DrivePro App. This implies that video evidence may be accessed quickly and easily for reporting occurrences to law police and insurance providers without having to remove the memory card. TheTranscend DrivePro 20 Motorcycle Dashcam comes with a high-capacity Li-Polymer battery, allowing up to 2.5 hours of recording on a single charge. A micro USB to USB Type-A cable is provided that allows you to charge the dashcam from a computer or other devices with 5V output. The Transcend DrivePro 20 Motorcycle Dashcam is a multipurpose device that is small, portable, and simple to set up. It's perfect for motorcycle and scooter riders, as well as delivery businesses including mail and parcel delivery, motorcycle taxis, and food delivery. It may be used for a variety of things, like documenting your next picturesque road trip! The Transcend DrivePro 20 Motorcycle Dashcam comes with a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: TS-DP20A-32G</li><li>Model: DrivePro 20</li><li>Resolution: 1920 x 1080 at 60 fps, 140Â° Diagonal Field of View</li><li>2.5-Hour Battery Life, Built-In G-Sensor</li><li>Includes 32GB microSD Card</li><li>IP68 Rated for Outdoor Use</li></ul>",
+      "model": "DrivePro 20",
+      "warranty": "01 Year Warranty",
+      "basePrice": 12450.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Transcend",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "32GB microSD card included",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "TS-DP20A-32G",
+          "price": 12450.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "32GB microSD card included"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 11952.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "Full HD 1080P",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "MP4 (H.264)",
+              "position": 1
+            },
+            {
+              "label": "USB Port",
+              "value": "USB 2.0",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "type",
+              "value": "micro USB to USB Type A",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "32GB microSD card included",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Wi-Fi Protocol: 802.11b/g/n",
+              "position": 0
+            },
+            {
+              "label": "Water Resistant",
+              "value": "IP68",
+              "position": 1
+            },
+            {
+              "label": "Shock Resistant",
+              "value": "Yes",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Dimensions: 90.2 mm x 30 mm x 30 mm (3.55\" x 1.18\" x 1.18\") Camera Weight: 74 g (2.6 oz) Camera Holder Weight: 20 g (0.7 oz) Viewing Angle: 140° (diagonal) Aperture: F/2.8 Operating Temperature: -10°C (14°F) ~ 60°C (140°F) Battery Life (Max.): 2.5 hour(s) Certificate: CE / FCC / BSMI / NCC / MIC / KC / RCM / EAC",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "01 Year Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-20-motorcycle-dashcam",
+      "sourceProductCode": "21516",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "TS-DP20A-32G",
+      "sourceKeyFeatures": [
+        "MPN: TS-DP20A-32G",
+        "Model: DrivePro 20",
+        "Resolution: 1920 x 1080 at 60 fps, 140Â° Diagonal Field of View",
+        "2.5-Hour Battery Life, Built-In G-Sensor",
+        "Includes 32GB microSD Card",
+        "IP68 Rated for Outdoor Use"
+      ],
+      "needsReview": false,
+      "categorySlug": "dash-cam",
+      "image": "/images/products/camera/dash-cam/Transcend/transcend-drivepro-20-motorcycle-dashcam.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/dash-cam/Transcend/transcend-drivepro-20-motorcycle-dashcam.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-drivepro-20-motorcycle-dashcam",
+        "candidateTitle": "Transcend DrivePro 20 Motorcycle Dashcam",
+        "attemptStem": "transcend-drivepro-20-motorcycle-dashcam"
+      }
+    },
+    {
+      "name": "Transcend DrivePro 230 Dash Camera",
+      "slug": "transcend-drivepro-230-dashcam",
+      "type": "PHYSICAL",
+      "sku": "TS-DP230M-32G",
+      "description": "<h2 style=\"text-align: justify; \">Transcend DrivePro 230 Dash Camera</h2><p style=\"text-align: justify; \">The Transcend DrivePro 230 Dashcam is designed with both style and safety in mind Even in low light, the DrivePro 230 uses a Sony image sensor to create high-resolution films with very nice tone gradation. A GPS/GLONASS receiver, a built-in battery, a convenient snapshot button, and Wi-Fi connectivity are all included. Transcend's DrivePro 230 is more than simply a safety gadget; it's a companion that wants to see more of the world with you. Even in low light, the DrivePro 230 employs an Exmor sensor to shoot high-resolution photographs with outstanding, rich color. The Transcend DrivePro 230 Dash Cam delivers smooth film and sharp still photos with 1080P Full HD recording at 30fps. With its GPS/GLONASS receiver, built-in battery, convenient snapshot button, and Wi-Fi connectivity Transcend's DrivePro 230 dashcam is a feature-rich, modern dash camera. It comes with a Transcend microSD memory card that is made of high-quality NAND flash and has been tested under extreme circumstances. The Transcend DrivePro 230 comes with a 02-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: TS-DP230M-32G</li><li>Model: DrivePro 230</li><li>Sony high-sensitivity image sensor</li><li>Built-in GPS/GLONASS receiver</li><li>Built-in Wi-Fi function for mobile live streaming</li><li>Optical Zoom: 1X</li></ul>",
+      "model": "DrivePro 230",
+      "warranty": "a Transcend microSD memory card that is made of high-quality NAND flash and has been tested under extreme circumstances. The Transcend DrivePro 230 comes with a 02-year warranty",
+      "basePrice": 12300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Transcend",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "TS-DP230M-32G",
+          "price": 12300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 11808.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "Sony high-sensitivity",
+              "position": 0
+            },
+            {
+              "label": "Display",
+              "value": "2.4\" color TFT LCD",
+              "position": 1
+            },
+            {
+              "label": "USB Port",
+              "value": "Micro USB",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Dimensions: 70.2 mm x 63.1 mm x 34.5 mm (2.76\" x 2.48\" x 1.36\") Weight: 81g (2.86 oz) Wi-Fi Protocol: 802.11n Capacity: 32GB microSD card included Viewing Angle: 130° (diagonal) Aperture: F/2.0 Operating Temperature: -20°C (-4°F) ~ 65°C (149°F) Storage Temperature: -25°C (-13°F) ~ 70°C (158°F) Input Voltage: 12V ~ 24V Output Voltage: 5V / 1A Resolution: Full HD 1080P Frame Rate: 30 fps Video Format: MOV (H.264) Certificate: CE FCC BSMI NCC MIC KC RCM EAC Operating System: Microsoft Windows 7/8/0, OS X Mountain Lion 10.8.2 or later, Linux Kernel 2.6.38 or later Memory Card Supported: 8GB, 16GB, 32GB, 64GB, 128GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-230-dashcam",
+      "sourceProductCode": "21526",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "TS-DP230M-32G",
+      "sourceKeyFeatures": [
+        "MPN: TS-DP230M-32G",
+        "Model: DrivePro 230",
+        "Sony high-sensitivity image sensor",
+        "Built-in GPS/GLONASS receiver",
+        "Built-in Wi-Fi function for mobile live streaming",
+        "Optical Zoom: 1X"
+      ],
+      "needsReview": false,
+      "categorySlug": "dash-cam",
+      "image": "/images/products/camera/dash-cam/Transcend/transcend-drivepro-230-dashcam.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/dash-cam/Transcend/transcend-drivepro-230-dashcam.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-drivepro-230-dashcam",
+        "candidateTitle": "Transcend DrivePro 230 Dash Camera",
+        "attemptStem": "transcend-drivepro-230-dashcam"
+      }
+    },
+    {
+      "name": "Transcend DrivePro 550 Dual Lens Dash Camera",
+      "slug": "transcend-drivepro-550-dual-lens-dash-camera",
+      "type": "PHYSICAL",
+      "sku": "TS-DP550B-64G",
+      "description": "<h2 style=\"text-align: justify; \">Transcend DrivePro 550 Dual Lens Dash Camera</h2><p style=\"text-align: justify; \">The Transcend DrivePro 550 Dual Lens Dash Camera is a dual-lens dash camera that protects both drivers and passengers. The 180Â° rotatable rear lens is equipped with four infrared LEDs, allowing sharp in-car video recordings at night and in low light conditions. The front lens has a Sony Image Sensor and wide field of view for capturing crystal-clear full HD 1080P (30Fps) videos, while the 180Â° rotatable rear lens has a Sony Image Sensor and wide field of view for capturing crystal-clear full HD 1080P (30Fps) videos. The Transcend DrivePro 550 Dual Lens Dash Camera dual-lens provides maximum protection for both drivers and passengers. It comes with a Transcend microSD memory card that is made of high-quality NAND flash and has been tested under extreme circumstances. The STARVISTM sensor in the front lens of the Transcend DrivePro 550 Dual Lens Dash Camera captures high-resolution photographs in outstanding, rich color even in low light. The front lens supports 1080P Full HD recording at 60 frames per second, resulting in seamless motion and sharp still photographs. It also safeguards those who work behind the wheel for a living. The Transcend DrivePro 550 Dual Lens Dash Camera protects occupational drivers and helps ensure that standard operating procedures are followed by drivers in the taxi, express delivery, truck, and bus sectors. It is suitable for commercial for-hire transportation, shared transportation, and charter services. The DrivePro 550 has a built-in GPS/GLONASS receiver for geotagging videos and images. Users may observe routes traveled on a map display during video playback with the proprietary DrivePro Toolbox, making it simple to determine when and where an event happened. In the case of a power outage, the DrivePro dashcam's built-in Li-Polymer battery may temporarily provide power until the files being recorded are properly saved, preventing the loss of important photographs due to file damage. The Transcend DrivePro 550 comes with a 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: TS-DP550B-64G</li><li>Model: DrivePro 550</li><li>Dual-lens design, Front lens features a Sony Image Sensor</li><li>Four infrared LEDs on the rear Lens to Improve recording quality</li><li>Built-in Wi-Fi function for mobile live streaming</li><li>Time-lapse video safeguards your vehicle continuously</li></ul>",
+      "model": "DrivePro 550",
+      "warranty": "1 year",
+      "basePrice": 21000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Transcend",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "64GB microSD card included",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "TS-DP550B-64G",
+          "price": 21000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "64GB microSD card included"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 20160.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "Full HD 1080P",
+              "position": 0
+            },
+            {
+              "label": "Display",
+              "value": "2.4\" color TFT LCD",
+              "position": 1
+            },
+            {
+              "label": "Memory",
+              "value": "64GB microSD card included",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "802.11n",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-550-dual-lens-dash-camera",
+      "sourceProductCode": "21522",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "TS-DP550B-64G",
+      "sourceKeyFeatures": [
+        "MPN: TS-DP550B-64G",
+        "Model: DrivePro 550",
+        "Dual-lens design, Front lens features a Sony Image Sensor",
+        "Four infrared LEDs on the rear Lens to Improve recording quality",
+        "Built-in Wi-Fi function for mobile live streaming",
+        "Time-lapse video safeguards your vehicle continuously"
+      ],
+      "needsReview": false,
+      "categorySlug": "dash-cam",
+      "image": "/images/products/camera/dash-cam/Transcend/transcend-drivepro-550-dual-lens-dash-camera.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/dash-cam/Transcend/transcend-drivepro-550-dual-lens-dash-camera.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-drivepro-550-dual-lens-dash-camera",
+        "candidateTitle": "Transcend DrivePro 550 Dual Lens Dash Camera",
+        "attemptStem": "transcend-drivepro-550-dual-lens-dash-camera"
+      }
+    },
+    {
+      "name": "Transcend DrivePro 550B Dual Lens Dash Camera",
+      "slug": "transcend-drivepro-550b-dash-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-47298",
+      "description": "<h2>Transcend DrivePro 550B Dual Lens Dash Camera</h2><p>The Transcend <strong>DrivePro 550B</strong> Dual Lens Dash Camera is a premium Transcend Dash Camera designed to provide complete in-car security with advanced recording features. Equipped with a front-facing 2K QHD 1440p lens that captures crystal-clear footage at 30fps and a 180° rotatable interior lens with infrared LEDs, this DrivePro 550B Dual Lens Dash Camera records both the road ahead and the cabin, ensuring safety for drivers and passengers even in low-light conditions. With a wide 140° front view, night vision support, and a built-in 2.4-inch LCD screen for instant playback, the Transcend DrivePro 550B offers reliable monitoring and easy operation. Bundled with a durable Transcend microSD card, this Car Security Camera ensures stable storage under harsh conditions. Supporting multi-device recording and advanced safety features, the Transcend DrivePro 550B Dual Lens Dash Camera is the ideal choice for rideshare drivers, fleet operators, and everyday motorists who value protection, clarity, and reliability in every journey.</p><h2>Buy Transcend DrivePro 550B Dual Lens Dash Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>Transcend DrivePro 550B Dual Lens Dash Camera</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/transcend-dashcam\">Transecnd Dash Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Transcend DrivePro 550B Dual Lens Dash Camera comes with 01-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DrivePro 550B</li><li>Camera Resolution: 2MP, Max Video Res: 1920x1080p</li><li>Display Size: 2.40 Inch, Dual-lens design</li><li>Built-in Wi-Fi function for mobile live streaming</li><li>LiPo Battery, Micro SD Card Support up to 128GB</li></ul>",
+      "model": "DrivePro 550B",
+      "warranty": "1 year",
+      "basePrice": 24000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Transcend",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "MicroSD Card Support up to 128GB",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47298",
+          "price": 24000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Memory": "MicroSD Card Support up to 128GB"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 23040.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "CMOS",
+              "position": 0
+            },
+            {
+              "label": "Sensor Resolution",
+              "value": "2.0MP",
+              "position": 1
+            },
+            {
+              "label": "Video",
+              "value": "Max Video Resolution: Full HD (1920x1080)",
+              "position": 2
+            },
+            {
+              "label": "Display",
+              "value": "2.4 inch TFT Color LCD Display",
+              "position": 3
+            },
+            {
+              "label": "Memory",
+              "value": "MicroSD Card Support up to 128GB",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "1 year",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-550b-dash-camera",
+      "sourceProductCode": "47298",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DrivePro 550B",
+        "Camera Resolution: 2MP, Max Video Res: 1920x1080p",
+        "Display Size: 2.40 Inch, Dual-lens design",
+        "Built-in Wi-Fi function for mobile live streaming",
+        "LiPo Battery, Micro SD Card Support up to 128GB"
+      ],
+      "needsReview": false,
+      "categorySlug": "dash-cam",
+      "image": "/images/products/camera/dash-cam/Transcend/transcend-drivepro-550b-dash-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/dash-cam/Transcend/transcend-drivepro-550b-dash-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-drivepro-550b-dash-camera",
+        "candidateTitle": "Transcend DrivePro 550B Dual Lens Dash Camera",
+        "attemptStem": "transcend-drivepro-550b-dash-camera"
+      }
+    },
+    {
+      "name": "Transcend DrivePro Body 30 Video Camera Camcorder",
+      "slug": "transcend-drivepro-body-30-video-camera-camcorder",
+      "type": "PHYSICAL",
+      "sku": "TS64GDPB30A",
+      "description": "<h2 style=\"text-align: justify; \">Transcend DrivePro Body 30 Video Camera Camcorder</h2><p style=\"text-align: justify; \">The DrivePro Body 30 Video Camera Camcorder by Transcend is a feature-rich body camera built primarily for public safety personnel. The DrivePro Body 30 is always ready for action, with 12-hour battery life, IP67 certified environmental sealing, military-grade shock protection, and a pre-event buffer. Image enhancement technologies with clear, high-definition evidence gathering using the STARVIS image sensor, high-quality lens, and automated infrared lighting, as well as image enhancement technologies with clear, high-definition evidence collection. A 360Â° rotating clip and a Velcro holder are also included in the box, allowing users to attach gadgets to uniforms, vests, or coats so they are always ready when duty calls. Users may operate the DrivePro Body 30 and manage films and photographs on the devices over Bluetooth and Wi-Fi when using Transcend's DrivePro Body App and Toolbox for smartphones and laptops. A comprehensive camera management solution is also available with Transcend's TS-DPD6N docking station. Two Ethernet connections, a LAN port for administrative configuration, and a WAN port for simultaneous data upload to a chosen folder while charging are included in the 6-port docking station. The Transcend DrivePro Body 30 Video Camera Camcorder has built-in 64GB storage for high-quality videos, and a DDR3 memory cache to temporarily store recorded videos. The Transcend DrivePro Body 30 comes with a 02-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: TS64GDPB30A</li><li>Model: DrivePro Body 30</li><li>STARVIS High-sensitivity Image Sensor</li><li>Infrared LEDs for Night Vision</li><li>Storage: 64GB internal memory</li><li>IP67-rated enclosure for outdoor use</li></ul>",
+      "model": "DrivePro Body 30",
+      "warranty": "a 02-year warranty",
+      "basePrice": 16900.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Transcend",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "64GB internal memory",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "TS64GDPB30A",
+          "price": 16900.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "64GB internal memory"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 16224.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "Full HD 1080P",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "MP4 (H.264)",
+              "position": 1
+            },
+            {
+              "label": "USB Port",
+              "value": "USB 2.0",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "64GB internal memory",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Water Resistant",
+              "value": "IP67",
+              "position": 1
+            },
+            {
+              "label": "Shock Resistant",
+              "value": "US military drop-test standards for shock resistance",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Dimensions: 95.9 mm x 52.2 mm x 27.6 mm (3.78\" x 2.06\" x 1.09\") Weight: 130 g (4.59 oz) Wi-Fi Protocol: 802.11n Frequency: 2.4 GHz Viewing Angle: 130° (diagonal) Aperture: F/2.0 Battery Life (Max.): 12 hour(s) Frame Rate: 60/30 fps Operating Temperature : -20°C (-4°F) ~ 65°C (149°F) Storage Temperature: -25°C (-13°F) ~ 70°C (158°F) Certificate: CE/FCC/BSMI/NCC/MIC/KC/RCM/EAC Operating System: Microsoft Windows 7 or later, macOS 10.14 or later",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-body-30-video-camera-camcorder",
+      "sourceProductCode": "21518",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": "TS64GDPB30A",
+      "sourceKeyFeatures": [
+        "MPN: TS64GDPB30A",
+        "Model: DrivePro Body 30",
+        "STARVIS High-sensitivity Image Sensor",
+        "Infrared LEDs for Night Vision",
+        "Storage: 64GB internal memory",
+        "IP67-rated enclosure for outdoor use"
+      ],
+      "needsReview": false,
+      "categorySlug": "dash-cam",
+      "image": "/images/products/camera/dash-cam/Transcend/transcend-drivepro-body-30-video-camera-camcorder.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/dash-cam/Transcend/transcend-drivepro-body-30-video-camera-camcorder.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-drivepro-body-30-video-camera-camcorder",
+        "candidateTitle": "Transcend DrivePro Body 30 Video Camera Camcorder",
+        "attemptStem": "transcend-drivepro-body-30-video-camera-camcorder"
+      }
+    },
+    {
+      "name": "Transcend DrivePro Body 60 Cylindrical Camera",
+      "slug": "transcend-drivepro-body-60-cylindrical-camera",
+      "type": "PHYSICAL",
+      "sku": "TS64GDPB60A",
+      "description": "<h2 style=\"text-align: justify; \">Transcend DrivePro Body 60 Cylindrical Camera</h2><p style=\"text-align: justify; \">The DrivePro Body 60 Cylindrical Camera by Transcend has a small camera unit that is tethered to a control unit, allowing for a broad range of attachment possibilities. The durable and extremely responsive DrivePro Body 60 is designed specifically for public safety personnel and provides for high-definition evidence collecting as well as wireless data previews and transfers. The ExmorTM sensor in the Transcend DrivePro Body 60 Cylindrical Camera captures high-resolution photos with outstanding, rich color even in low light. The images are quite detailed, with little noise and a good balance of bright and dark areas. The Transcend DrivePro Body 60 Cylindrical Camera is made up of a control unit that is attached to a small camera unit that can be securely installed on shoulder harnesses or helmets, making it an excellent choice for shooting in the challenging situations that public safety personnel face daily. The DrivePro Body 60 is designed to interact with Transcend's DrivePro Body App, and it has Bluetooth wireless technology for simple setup and switching modes, as well as Wi-Fi connectivity for live video streaming on iOS and Android mobile devices. You can control the camera hands-free with Siri voice control if you link the DrivePro Body 60 to an iOS smartphone. Your task is made easier by having immediate and quick access to the gadget. The Transcend DrivePro Body 60 comes with a 02-year warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: TS64GDPB60A</li><li>Model: DrivePro Body 60</li><li>Exmor high-sensitivity image sensor</li><li>Resolution: Full HD 1080P @30 fps</li><li>Capacity: 64GB internal memory</li><li>IP Rating: IP67</li></ul>",
+      "model": "DrivePro Body 60",
+      "warranty": "a 02-year warranty",
+      "basePrice": 20300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Transcend",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "64GB internal memory",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "TS64GDPB60A",
+          "price": 20300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Capacity": "64GB internal memory"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 19488.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Resolution",
+              "value": "Full HD 1080P",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "MP4 (H.264)",
+              "position": 1
+            },
+            {
+              "label": "USB Port",
+              "value": "USB 2.0",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "type",
+              "value": "3.5mm plug to USB Type A",
+              "position": 0
+            },
+            {
+              "label": "Capacity",
+              "value": "64GB internal memory",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Water Resistant",
+              "value": "IP67",
+              "position": 1
+            },
+            {
+              "label": "Shock Resistant",
+              "value": "Yes",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Dimensions 95.9 mm x 52.2 mm x 24.9 mm (3.78\" x 2.06\" x 0.98\") Camera Dimensions 61.3 mm x 22 mm x 22 mm (2.41\" x 0.87\" x 0.87\") Weight 167 g (5.89 oz) Wi-Fi Protocol: 802.11n, 802.11ac Frequency: 5/2.4 GHz Viewing Angle: 130° (diagonal) Aperture: F/2.8 Battery Life (Max.): 10 hour(s) Power Supply (Max.): Input: AC 100V-240V, 50-60Hz, 0.4A, Output: DC 5V / 2A Operating Temperature : -20°C (-4°F) ~ 65°C (149°F) Storage Temperature: -25°C (-13°F) ~ 70°C (158°F) Certificate: CE/FCC/BSMI/NCC/MIC/KC/RCM/EAC Operating System: Microsoft Windows 7 or later, macOS 10.14 or later",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/transcend-drivepro-body-60-cylindrical-camera",
+      "sourceProductCode": "21521",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "TS64GDPB60A",
+      "sourceKeyFeatures": [
+        "MPN: TS64GDPB60A",
+        "Model: DrivePro Body 60",
+        "Exmor high-sensitivity image sensor",
+        "Resolution: Full HD 1080P @30 fps",
+        "Capacity: 64GB internal memory",
+        "IP Rating: IP67"
+      ],
+      "needsReview": false,
+      "categorySlug": "dash-cam",
+      "image": "/images/products/camera/dash-cam/Transcend/transcend-drivepro-body-60-cylindrical-camera.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/dash-cam/Transcend/transcend-drivepro-body-60-cylindrical-camera.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "transcend-drivepro-body-60-cylindrical-camera",
+        "candidateTitle": "Transcend DrivePro Body 60 Cylindrical Camera",
+        "attemptStem": "transcend-drivepro-body-60-cylindrical-camera"
+      }
+    },
+    {
+      "name": "Wiwu Wi-DC201 4K WiFi Dash Camera",
+      "slug": "wiwu-wi-dc201-4k-wifi-dash-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-50421",
+      "description": "<h2>Wiwu Wi-DC201 4K WiFi Dash Camera</h2><p>The WiWU <strong>Wi-DC201</strong> 4K WiFi Dash Camera is a premium dual lens car recorder designed to provide crystal clear video and advanced safety features for modern vehicles. Equipped with a powerful front 4653 image sensor and rear 2083 sensor, it records ultra sharp 4K (3840 x 2160) footage from the front and Full HD (1920 x 1080) from the rear, ensuring complete coverage of your driving environment. With wide viewing angles of 170° front and 140° rear, it minimizes blind spots and captures more of the road. The 3.2 inch IPS display offers smooth playback and easy control, while built in Wi-Fi allows quick transfer and viewing of recordings on your smartphone. Featuring parking monitor, motion detection, GPS support, and ADAS (Advanced Driver Assistance System), the WiWU Dash Camera enhances safety and convenience for everyday driving. Compact yet powerful, the WiWU 4K Dash Cam is ideal for long journeys and daily commutes, delivering reliable performance and high resolution recording. For drivers seeking dependable protection and smart functionality, the WiWU Dash Camera for Vehicle is the ultimate choice.</p><h2>Buy Wiwu Wi-DC201 4K WiFi Dash Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>Wiwu Wi-DC201 4K WiFi Dash Camera</strong> From Star Tech. We have a large collection of latest WiWU <a href=\"https://www.startech.com.bd/dash-cam\">Dashcam</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Wiwu Wi-DC201 4K WiFi Dash Camera Comes with 3 months Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Wi-DC201</li><li>Lens: Front 4653, Rear 2083</li><li>Display Size: 3.2 Inch IPS</li><li>Max Resolution: 4K (3840 x 2160)</li><li>Interface: USB 2.0</li></ul>",
+      "model": "Wi-DC201",
+      "warranty": "03 Months Warranty",
+      "basePrice": 6900.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "WiWU",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-50421",
+          "price": 6900.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 6624.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "Lenses: Front 4653, Rear 2083",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "Front: 4K (3840 x 2160), Rear: FHD (1920 x 1080)",
+              "position": 1
+            },
+            {
+              "label": "Display",
+              "value": "3.2-inch IPS Display",
+              "position": 2
+            },
+            {
+              "label": "USB Port",
+              "value": "USB 2.0",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Wi-Fi",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Parking Monitor: Supported Motion Detection: Supported GPS and ADAS Support Viewing Angle: Front 170°, Rear 140°",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "03 Months Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/wiwu-wi-dc201-4k-wifi-dash-camera",
+      "sourceProductCode": "50421",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Wi-DC201",
+        "Lens: Front 4653, Rear 2083",
+        "Display Size: 3.2 Inch IPS",
+        "Max Resolution: 4K (3840 x 2160)",
+        "Interface: USB 2.0"
+      ],
+      "needsReview": false,
+      "categorySlug": "dash-cam",
+      "image": "/images/products/camera/dash-cam/WiWU/wiwu-wi-dc201-4k-wifi-dash-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/dash-cam/WiWU/wiwu-wi-dc201-4k-wifi-dash-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "wiwu-wi-dc201-4k-wifi-dash-camera",
+        "candidateTitle": "Wiwu Wi-DC201 4K WiFi Dash Camera",
+        "attemptStem": "wiwu-wi-dc201-4k-wifi-dash-camera"
+      }
+    },
+    {
+      "name": "XO XJ03 Full HD Dash Camera",
+      "slug": "xo-xj03-full-hd-dash-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-50553",
+      "description": "<h2>XO XJ03 Full HD Dash Camera</h2><p>The <strong>XO XJ03 Full HD Dash Camera</strong> delivers sharp 1080p front and VGA rear recording for reliable vehicle monitoring. With a 120° wide-angle lens, it captures broad road coverage, ensuring clear evidence during unexpected events. The built-in G-Sensor detects sudden impacts, while loop recording provides uninterrupted footage without manual effort. Parking and motion detection features add extra protection when your car is unattended. A compact 2-inch display allows quick playback, and memory support from 8GB to 64GB ensures ample storage. The XO XJ03 is crafted for drivers seeking consistent safety, offering smart recording functions that enhance confidence on every trip. Its lightweight design and 200mAh battery make it practical for daily use without hassle.</p><p>XO XJ03 also includes advanced parking monitor technology, automatically recording when motion or vibration is detected. This feature helps safeguard vehicles in parking lots or driveways. The G-Sensor ensures critical clips are locked, preventing accidental overwriting. Its wide viewing angle captures more detail, reducing blind spots and improving evidence collection. With continuous loop recording, drivers never worry about missing important footage. The XO XJ03 combines smart detection with clear visuals, making it a trusted companion for road safety.</p><p>For convenience, XO XJ03 supports easy installation and user-friendly operation. The 2-inch screen provides quick access to settings and playback. Storage flexibility allows drivers to choose memory cards based on their needs. Its compact build ensures it fits smoothly into any vehicle interior. Whether commuting or traveling long distances, the XO XJ03 offers consistent performance and confidence. This dash camera is designed to deliver clarity, security, and smart functionality for modern drivers.</p><h2>Buy XO XJ03 Full HD Dash Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>XO XJ03 Full HD Dash Camera</strong> From Star Tech. We have a large collection of latest XO <a href=\"https://www.startech.com.bd/xo-dash-cam\" target=\"\">Dash Cam</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The XO XJ03 Full HD Dash Camera Comes with 6 months Warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: XJ03</li><li>Lens: Front-8MP , Rear- VGA</li><li>Display Size: 2 Inch</li><li>Max Resolution: 1080p video</li><li>Battery: 200mAh , Storage : 8-64 GB MicroSD</li></ul>",
+      "model": "XJ03",
+      "warranty": "06 Months Warranty",
+      "basePrice": 4615.0,
+      "originalPrice": 4999.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "XO",
+      "variantOptions": [
+        {
+          "name": "Memory",
+          "position": 0,
+          "values": [
+            {
+              "value": "64 GB Max MicroSD",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity",
+          "position": 1,
+          "values": [
+            {
+              "value": "200mAh polymer",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-50553",
+          "price": 4615.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Memory": "64 GB Max MicroSD",
+            "Capacity": "200mAh polymer"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 4430.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Image Sensor",
+              "value": "Front Camera: 8MP photo • Rear Camera: VGA",
+              "position": 0
+            },
+            {
+              "label": "Video",
+              "value": "FHD (1920 x 1080)",
+              "position": 1
+            },
+            {
+              "label": "Display",
+              "value": "2-inch Display",
+              "position": 2
+            },
+            {
+              "label": "Memory",
+              "value": "64 GB Max MicroSD",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Battery Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "200mAh polymer",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Special Features",
+          "position": 2,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Loop Recording – Continuous video capture G-Sensor Built-in – Smart impact detection Viewing Angle: 120° wide field of view (Horizontal 90°, Vertical 65°) G-Sensor: DA380 vibration sensor Parking & Motion Detection: Both supported",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Manufacturing Warranty",
+              "value": "06 Months Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/xo-xj03-full-hd-dash-camera",
+      "sourceProductCode": "50553",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: XJ03",
+        "Lens: Front-8MP , Rear- VGA",
+        "Display Size: 2 Inch",
+        "Max Resolution: 1080p video",
+        "Battery: 200mAh , Storage : 8-64 GB MicroSD"
+      ],
+      "needsReview": false,
+      "categorySlug": "dash-cam",
+      "image": "/images/products/camera/dash-cam/XO/xo-xj03-full-hd-dash-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/dash-cam/XO/xo-xj03-full-hd-dash-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "xo-xj03-full-hd-dash-camera",
+        "candidateTitle": "XO XJ03 Full HD Dash Camera",
+        "attemptStem": "xo-xj03-full-hd-dash-camera"
+      }
+    }
+  ]
+}

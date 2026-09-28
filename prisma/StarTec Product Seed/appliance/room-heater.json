@@ -1,0 +1,1175 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/appliance",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\appliance",
+    "generatedAtUnix": 1790586316,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Appliance",
+      "slug": "appliance",
+      "parentSlug": null,
+      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Room Heater",
+      "slug": "room-heater",
+      "parentSlug": "appliance",
+      "image": "/images/products/appliance/room-heater/beko-rhp5320b-room-heater.png",
+      "isActive": true,
+      "sortOrder": 20,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "beko",
+      "slug": "beko",
+      "logo": null
+    },
+    {
+      "name": "TESY",
+      "slug": "tesy",
+      "logo": null
+    },
+    {
+      "name": "Walton",
+      "slug": "walton",
+      "logo": null
+    },
+    {
+      "name": "XIAOMI",
+      "slug": "xiaomi",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Beko RHP5320B Room Heater",
+      "slug": "beko-rhp5320b-room-heater",
+      "type": "PHYSICAL",
+      "sku": "ST-47224",
+      "description": "<h2>Beko RHP5320B Room Heater</h2><p>The Beko <strong>RHP5320B</strong> Room Heater has 2000W power output and offers fast and effective heat distribution, making it suitable for bedrooms, living rooms, and small office areas. With two adjustable heat settings and an integrated thermostat, this Beko <a href=\"https://www.startech.com.bd/room-heater\" style=\"color: rgb(0, 0, 0);\" target=\"\">Room Heater</a> allows users to simply control the temperature, ensuring a warm environment while reducing needless energy consumption. The simple switch control design simplifies use for consumers of all ages, providing ease without complication. The Beko RHP5320B Room Heater is a non-oscillating structure that directs heat in a constant direction, ensuring consistent warmth exactly where it is needed. Safety remains a top consideration, as this Beko Room Heater includes both overheat and tip-over protection, which instantly turns off the heater if it becomes too hot or is inadvertently knocked over. This makes the Beko RHP5320B Room Heater a dependable option for families with children or pets. To add to its versatility, the fan-only mode offers air circulation without heat, making the Beko Room Heater helpful even in moderate weather when warmth is unnecessary. The compact and effective design allows for convenient placement in a variety of regions of the home while maintaining consistent performance. The Beko RHP5320B Room Heater, known for its dependable engineering, provides balanced heating with consistent results by integrating power, safety, and convenience of use in a single unit.</p><h2>Buy Beko RHP5320B Room Heater from Star Tech</h2><p>In Bangladesh, you can get original <strong>Beko RHP5320B Room Heater</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/room-heater\">Room Heater</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Beko RHP5320B Room Heater comes with 01 Year Warranty by Beko. Beko Warranty card must be kept for warranty claims. For warranty, Call Beko at 16482/ 09606600600. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: RHP5320B</li><li>2000W Power Output, Non-Oscillating Design</li><li>2 Heat Settings with Thermostat, Switch Control</li><li>Overheat &amp; Tip-Over Protection</li><li>Fan-Only Mode without Heat</li></ul>",
+      "model": "RHP5320B",
+      "warranty": "01 Year Warranty",
+      "basePrice": 2390.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "beko",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47224",
+          "price": 2390.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2294.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "RHP5320B",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/beko-rhp5320b-room-heater",
+      "sourceProductCode": "47224",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: RHP5320B",
+        "2000W Power Output, Non-Oscillating Design",
+        "2 Heat Settings with Thermostat, Switch Control",
+        "Overheat & Tip-Over Protection",
+        "Fan-Only Mode without Heat"
+      ],
+      "needsReview": false,
+      "categorySlug": "room-heater",
+      "image": "/images/products/appliance/room-heater/beko-rhp5320b-room-heater.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/room-heater/beko-rhp5320b-room-heater.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "beko-rhp5320b-room-heater",
+        "candidateTitle": "Beko RHP5320B Room Heater",
+        "attemptStem": "beko-rhp5320b-room-heater"
+      }
+    },
+    {
+      "name": "Tesy CC 2008 E05R Oil-filled Radiators Series CC Room Heater",
+      "slug": "tesy-cc-2008-e05r-room-heater",
+      "type": "PHYSICAL",
+      "sku": "ST-47244",
+      "description": "<h2>Tesy CC 2008 E05R Oil-filled Radiators Series CC Room Heater</h2><p>The Tesy CC 2008 E05R Room Heater is a highly efficient and reliable solution for heating modern homes. This Tesy CC 2008 E05R Oil-filled Radiator Room Heater features an enlarged heating surface for faster and more effective warming of rooms up to 100–120 square feet. Equipped with three power settings (800 W, 1200 W, and 2000 W) and a mechanically adjustable thermoregulator, the Tesy CC 2008 E05R Room Heater provides precise temperature control. Its high-quality oil and durable metal construction ensure long-lasting performance and trouble-free operation. Additional benefits include silent operation, a light indicator, a convenient cable reel, and energy-saving features, all ErP compliant. Safety is a priority with anti-frost protection, overheating protection, safe surface temperature for children and pets, and sharpless edges, making it perfect for households with kids or pets. It is also suitable for people with allergies and respiratory concerns. Compact yet powerful, this Tesy CC 2008 E05R Oil-filled Radiator Room Heater measures 0.65 m in height, 0.29 m in width, and 0.45 m in length, weighs 12.85 kg, and comes with 8 fins, making it a dependable, efficient, and safe heating solution for any room.</p><h2>Buy Tesy CC 2008 E05R Room Heater from Star Tech</h2><p>In Bangladesh, you can get original <strong>Tesy CC 2008 E05R Room Heater</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/room-heater\" target=\"\">Room Heater</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Tesy CC 2008 E05R Room Heater comes with 2 Years Official warranty</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CC 2008 E05R</li><li>Maximum power: 2000 W, Thermo Regulator: Mechanical</li><li>For Room: up to 100-120 sq. ft, Heating area: 16-24 m²</li><li>Overheat &amp; Anti-frost Protection</li><li>Features: ErP Compliant, Three power settings</li></ul>",
+      "model": "CC 2008 E05R",
+      "warranty": "2 Years Official warranty",
+      "basePrice": 23590.0,
+      "originalPrice": 32000.0,
+      "currency": "BDT",
+      "weight": 12.85,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TESY",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47244",
+          "price": 23590.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 22646.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "CC 2008 E05R",
+              "position": 0
+            },
+            {
+              "label": "Maximum power",
+              "value": "2000 W, Thermo Regulator: Mechanical",
+              "position": 1
+            },
+            {
+              "label": "For Room",
+              "value": "up to 100-120 sq. ft, Heating area: 16-24 m²",
+              "position": 2
+            },
+            {
+              "label": "Features",
+              "value": "ErP Compliant, Three power settings",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tesy-cc-2008-e05r-room-heater",
+      "sourceProductCode": "47244",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CC 2008 E05R",
+        "Maximum power: 2000 W, Thermo Regulator: Mechanical",
+        "For Room: up to 100-120 sq. ft, Heating area: 16-24 m²",
+        "Overheat & Anti-frost Protection",
+        "Features: ErP Compliant, Three power settings"
+      ],
+      "needsReview": false,
+      "categorySlug": "room-heater",
+      "image": "/images/products/appliance/room-heater/tesy-cc-2008-e05r-room-heater.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/room-heater/tesy-cc-2008-e05r-room-heater.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tesy-cc-2008-e05r-room-heater",
+        "candidateTitle": "Tesy CC 2008 E05R Oil-filled Radiators Series CC Room Heater",
+        "attemptStem": "tesy-cc-2008-e05r-room-heater"
+      }
+    },
+    {
+      "name": "Tesy CN 06 060 EA FinEco Cloud AirSafe Electric Convector Heater",
+      "slug": "tesy-cn-06-060-ea-fineco-cloud-heater",
+      "type": "PHYSICAL",
+      "sku": "CN 06 060 EА CLOUD AS W",
+      "description": "<h2>Tesy CN 06 060 EA FinEco Cloud AirSafe Electric Convector Heater</h2><p>The Tesy <strong>CN 06 060 EA FinEco Cloud</strong> Electric Convector <a href=\"https://www.startech.com.bd/room-heater\" style=\"color: rgb(0, 0, 0);\" target=\"\">Heater</a> has a maximum power output of 600 W and can heat areas of 4-9 m² or room volumes up to 10-23 m³. It is ideal for bedrooms, study rooms, or bathrooms. Its sleek Scandinavian-inspired design complements any modern decor, and its slim body, measuring 0.342m in height, 0.645m in length, and 0.08m in depth, enables for clean under-window installation and excellent heat distribution. The Tesy CN 06 060 EA FinEco Cloud Room Heater employs a heat curtain effect to promote convection, ensuring that warmth is distributed uniformly around the room without cold patches. One of the most notable features of the Tesy CN 06 060 EA FinEco Cloud Convector Heater is the AirSafe air purification function, which helps supply air with up to 98% less viruses and bacteria, providing an extra layer of health protection. Smart living is simple thanks to internet control via the myTESY app, which enables instant connection, remote operation, and customizable scheduling. The electronic thermoregulator has an excellent ±0.1°C accuracy across a 10-30°C range. It has energy-saving features including adaptive start, open window and door recognition, thermostat calibration up to ±4°C, and ErP compliance. Predefined Eco, Comfort, and Sleep modes, as well as a 24-hour/7-day weekly programmer and delayed start times of up to 96 hours, give you complete control over your daily heating routine. Comprehensive safety features include a keyboard lock for kid protection, overheating and tip-over prevention, an anti-frost mode set at 5°C, and IP24 splash-proof protection for bathroom use.</p><h2>Buy Tesy CN 06 060 EA FinEco Cloud Heater from Star Tech</h2><p>In Bangladesh, you can get original <strong>Tesy CN 06 060 EA FinEco Cloud Heater</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/room-heater\" target=\"\">Room Heater</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Tesy CN 06 060 EA FinEco Cloud Heater comes with 2 Years Official warranty</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: CN 06 060 EА CLOUD AS W</li><li>Model: CN 06 060 EA FinEco Cloud</li><li>Maximum power: 600 W, Thermo Regulator: Electronic</li><li>For Room: Up to 10-23 m³, Heating area: 4-9 m²</li><li>Predefined modes: Eco, Comfort, Sleep</li><li>Features: AirSafe, ErP Compliant, LED Display, Anti-frost</li></ul>",
+      "model": "CN 06 060 EA FinEco Cloud",
+      "warranty": "2 Years Official warranty",
+      "basePrice": 32500.0,
+      "originalPrice": 38000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TESY",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "CN 06 060 EА CLOUD AS W",
+          "price": 32500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 31200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "CN 06 060 EА CLOUD AS W",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "CN 06 060 EA FinEco Cloud",
+              "position": 1
+            },
+            {
+              "label": "Maximum power",
+              "value": "600 W, Thermo Regulator: Electronic",
+              "position": 2
+            },
+            {
+              "label": "For Room",
+              "value": "Up to 10-23 m³, Heating area: 4-9 m²",
+              "position": 3
+            },
+            {
+              "label": "Predefined modes",
+              "value": "Eco, Comfort, Sleep",
+              "position": 4
+            },
+            {
+              "label": "Features",
+              "value": "AirSafe, ErP Compliant, LED Display, Anti-frost",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tesy-cn-06-060-ea-fineco-cloud-heater",
+      "sourceProductCode": "47422",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "CN 06 060 EА CLOUD AS W",
+      "sourceKeyFeatures": [
+        "MPN: CN 06 060 EА CLOUD AS W",
+        "Model: CN 06 060 EA FinEco Cloud",
+        "Maximum power: 600 W, Thermo Regulator: Electronic",
+        "For Room: Up to 10-23 m³, Heating area: 4-9 m²",
+        "Predefined modes: Eco, Comfort, Sleep",
+        "Features: AirSafe, ErP Compliant, LED Display, Anti-frost"
+      ],
+      "needsReview": false,
+      "categorySlug": "room-heater",
+      "image": "/images/products/appliance/room-heater/tesy-cn-06-060-ea-fineco-cloud-heater.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/room-heater/tesy-cn-06-060-ea-fineco-cloud-heater.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tesy-cn-06-060-ea-fineco-cloud-heater",
+        "candidateTitle": "Tesy CN 06 060 EA FinEco Cloud AirSafe Electric Convector Heater",
+        "attemptStem": "tesy-cn-06-060-ea-fineco-cloud-heater"
+      }
+    },
+    {
+      "name": "Tesy CN 06 140 EA FinEco Cloud AirSafe Electric Convector Heater",
+      "slug": "tesy-cn-06-140-ea-fineco-cloud-heater",
+      "type": "PHYSICAL",
+      "sku": "CN 06 140 EА CLOUD AS W",
+      "description": "<h2>Tesy CN 06 140 EA FinEco Cloud AirSafe Electric Convector Heater</h2><p>The Tesy <strong>CN 06 140 EA FinEco Cloud</strong> Electric Convector <a href=\"https://www.startech.com.bd/room-heater\" style=\"color: rgb(0, 0, 0);\" target=\"\">Heater</a> is designed for under-window installation, creating an efficient heat curtain effect that optimizes convection and distributes warmth evenly across rooms sized 14-18 m² or 34-45 m³. The Tesy CN 06 140 EA FinEco Cloud Room Heater has a maximum power output of 1400 W and an innovative electronic thermoregulator that adjusts from 10°C to 30°C with ±0.1°C accuracy, providing accurate temperature control and constant comfort. One of its most notable features is AirSafe air purification technology, which helps supply air with up to 98% fewer viruses and bacteria, providing health benefits alongside warmth. The Tesy CN 06 140 EA FinEco Cloud Convector Heater is fully internet controllable via the MyTESY app, allowing for easy setup, remote management, and access to predefined Eco, Comfort, and Sleep modes. Our focus is on energy efficiency, including ErP compliance, adaptive start, thermostat calibration up to ±4°C, open window detection, and delayed start up to 96 hours to reduce waste. A bright LED display shows the desired room temperature, and a 24-hour/7-day weekly programmer with 30-minute stages provides flexibility in scheduling. Comprehensive safety features include a keyboard lock for kid protection, overheating and tip-over prevention, an anti-frost mode set to 5°C, and IP24 splash-proof protection for bathroom installations. The compact dimensions of 1.070 m length, 0.342 m height, and 0.08 m depth enable convenient placement without overwhelming the space.</p><h2>Buy Tesy CN 06 140 EA FinEco Cloud Heater from Star Tech</h2><p>In Bangladesh, you can get original <strong>Tesy CN 06 140 EA FinEco Cloud Heater</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/room-heater\" target=\"\">Room Heater</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Tesy CN 06 140 EA FinEco Cloud Heater comes with 2 Years Official warranty</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: CN 06 140 EА CLOUD AS W</li><li>Model: CN 06 140 EA FinEco Cloud</li><li>Maximum power: 1400 W, Thermo Regulator: Electronic</li><li>For Room: Up to 34-45 m³, Heating area: 14-18 m²</li><li>Predefined modes: Eco, Comfort, Sleep</li><li>Features: AirSafe, ErP Compliant, LED Display, Anti-frost</li></ul>",
+      "model": "CN 06 140 EA FinEco Cloud",
+      "warranty": "2 Years Official warranty",
+      "basePrice": 36000.0,
+      "originalPrice": 42000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TESY",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "CN 06 140 EА CLOUD AS W",
+          "price": 36000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 34560.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "MPN",
+              "value": "CN 06 140 EА CLOUD AS W",
+              "position": 0
+            },
+            {
+              "label": "Model",
+              "value": "CN 06 140 EA FinEco Cloud",
+              "position": 1
+            },
+            {
+              "label": "Maximum power",
+              "value": "1400 W, Thermo Regulator: Electronic",
+              "position": 2
+            },
+            {
+              "label": "For Room",
+              "value": "Up to 34-45 m³, Heating area: 14-18 m²",
+              "position": 3
+            },
+            {
+              "label": "Predefined modes",
+              "value": "Eco, Comfort, Sleep",
+              "position": 4
+            },
+            {
+              "label": "Features",
+              "value": "AirSafe, ErP Compliant, LED Display, Anti-frost",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tesy-cn-06-140-ea-fineco-cloud-heater",
+      "sourceProductCode": "47421",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "CN 06 140 EА CLOUD AS W",
+      "sourceKeyFeatures": [
+        "MPN: CN 06 140 EА CLOUD AS W",
+        "Model: CN 06 140 EA FinEco Cloud",
+        "Maximum power: 1400 W, Thermo Regulator: Electronic",
+        "For Room: Up to 34-45 m³, Heating area: 14-18 m²",
+        "Predefined modes: Eco, Comfort, Sleep",
+        "Features: AirSafe, ErP Compliant, LED Display, Anti-frost"
+      ],
+      "needsReview": false,
+      "categorySlug": "room-heater",
+      "image": "/images/products/appliance/room-heater/tesy-cn-06-140-ea-fineco-cloud-heater.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/room-heater/tesy-cn-06-140-ea-fineco-cloud-heater.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tesy-cn-06-140-ea-fineco-cloud-heater",
+        "candidateTitle": "Tesy CN 06 140 EA FinEco Cloud AirSafe Electric Convector Heater",
+        "attemptStem": "tesy-cn-06-140-ea-fineco-cloud-heater"
+      }
+    },
+    {
+      "name": "Tesy CN 06 100 EA FinEco Cloud with AirSafe Electric Convector Heater",
+      "slug": "tesy-cn-06-heater",
+      "type": "PHYSICAL",
+      "sku": "ST-47246",
+      "description": "<h2>Tesy CN 06 100 EA FinEco Cloud with AirSafe Electric Convector Heater</h2><p>The Tesy <strong>CN 06</strong> 100 EA FinEco Cloud <a href=\"https://www.startech.com.bd/room-heater\" style=\"color: rgb(0, 0, 0);\" target=\"\">Heater</a> is a premium, energy-efficient heating solution designed for modern interiors, inspired by elegant Scandinavian style. This Tesy CN 06 AirSafe Electric Convector Heater delivers a maximum power of 1000 W with an electronic thermoregulator that maintains temperatures from 10–30°C with ±0.1°C precision, ideal for rooms of 24–33 m³ or heating areas of 10–13 m². Featuring predefined modes—Eco, Comfort, and Sleep, this Tesy CN 06 100 Electric Convector Heater combines comfort and energy savings, while its AirSafe function purifies air, reducing viruses and bacteria by 98%. The heat curtain effect ensures faster, more efficient convection, and the LED display clearly shows the desired room temperature. With quick connection to the myTESY app, it offers smart home control and scheduling, including delayed start up to 96 hours and a weekly programmer with 30-minute increments. Safety is prioritized with child lock, tip-over protection, overheating protection, and anti-frost function fixed at 5°C. Compact in size (0.805 m length, 0.342 m height, 0.08 m depth) and suitable for installation under a window, the Tesy CN 06 100 EA FinEco Cloud Heater delivers reliable warmth, purified air, and energy efficiency, making it a perfect choice for bedrooms, living rooms, or offices.</p><h2>Buy Tesy CN 06 100 EA FinEco Cloud Heater from Star Tech</h2><p>In Bangladesh, you can get original <strong>Tesy CN 06 100 EA FinEco Cloud Heater</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/room-heater\" target=\"\">Room Heater</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Tesy CN 06 100 EA FinEco Cloud Heater comes with 2 Years Official warranty</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CN 06</li><li>Maximum power: 1000 W, Thermo Regulator: Electronic</li><li>For Room up to: 24-33 m³, Heating area: 10-13 m²</li><li>Predefined modes: Eco, Comfort, Sleep</li><li>Features: AirSafe, ErP Compliant, LED Display, Anti-frost</li></ul>",
+      "model": "CN 06",
+      "warranty": "2 Years Official warranty",
+      "basePrice": 32990.0,
+      "originalPrice": 41500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "TESY",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47246",
+          "price": 32990.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 31670.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "CN 06",
+              "position": 0
+            },
+            {
+              "label": "Maximum power",
+              "value": "1000 W, Thermo Regulator: Electronic",
+              "position": 1
+            },
+            {
+              "label": "For Room up to",
+              "value": "24-33 m³, Heating area: 10-13 m²",
+              "position": 2
+            },
+            {
+              "label": "Predefined modes",
+              "value": "Eco, Comfort, Sleep",
+              "position": 3
+            },
+            {
+              "label": "Features",
+              "value": "AirSafe, ErP Compliant, LED Display, Anti-frost",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/tesy-cn-06-heater",
+      "sourceProductCode": "47246",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CN 06",
+        "Maximum power: 1000 W, Thermo Regulator: Electronic",
+        "For Room up to: 24-33 m³, Heating area: 10-13 m²",
+        "Predefined modes: Eco, Comfort, Sleep",
+        "Features: AirSafe, ErP Compliant, LED Display, Anti-frost"
+      ],
+      "needsReview": false,
+      "categorySlug": "room-heater",
+      "image": "/images/products/appliance/room-heater/tesy-cn-06-heater.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/room-heater/tesy-cn-06-heater.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "tesy-cn-06-heater",
+        "candidateTitle": "Tesy CN 06 100 EA FinEco Cloud with AirSafe Electric Convector Heater",
+        "attemptStem": "tesy-cn-06-heater"
+      }
+    },
+    {
+      "name": "Walton WRH-FH003 Room Heater",
+      "slug": "walton-wrh-fh003-room-heater",
+      "type": "PHYSICAL",
+      "sku": "ST-38838",
+      "description": "<h2>Walton WRH-PTC0X Mini Room Heater</h2><p>The Walton<strong>WRH-FH003</strong> Room Heater is a multipurpose and effective electric room heater, the Walton WRH-FH003 is made to heat well in a variety of environments. With a power source of 220-240V @ 50Hz and a rated power of 1000W/2000W, it provides two heating power levels for flexibility. Warmth is distributed throughout the room thanks to the fan's incorporation, which guarantees heated air circulation. The Walton Room Heater's safety profile is improved by features including a thermal cut-out and overheat protection. Precise temperature settings are possible because to the thermostat's adjustable feature, and it's easy to move and place thanks to its lightweight, portable design and built-in carry handle. This Walton Room Heater heater's user-friendly design is further enhanced with the power indicator light. Over all The Walton WRH-FH003 Room Heater is a great companion for your Room in Cold weathers.</p><h2>Buy Walton WRH-FH003 Room Heater from Star Tech</h2><p>In Bangladesh, you can get original <strong>Walton WRH-FH003 Room Heater</strong> From Star Tech. We have a large collection of latest Walton <a href=\"https://www.startech.com.bd/room-heater\">Room Heater</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Walton WRH-FH003 Room Heater has 06 Month Warranty</p><p><strong style=\"background-color: rgb(255, 255, 0);\">Walton warranty card must be kept for any warranty claim(For warranty claims, please contact the Walton distributor directly through the official customer service hotline at 16267 &amp; 09612316267).</strong></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: WRH-FH003</li><li>PTC heating wire element</li><li>Rated Power: 500 Watt/1000 Watt</li><li>Rated Voltage: 220-240V, 50Hz</li><li>Safety overheats protection, Safety tip-over switch</li></ul>",
+      "model": "WRH-FH003",
+      "warranty": null,
+      "basePrice": 2600.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Walton",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-38838",
+          "price": 2600.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2496.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "WRH-FH003",
+              "position": 0
+            },
+            {
+              "label": "Rated Power",
+              "value": "500 Watt/1000 Watt",
+              "position": 1
+            },
+            {
+              "label": "Rated Voltage",
+              "value": "220-240V, 50Hz",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/walton-wrh-fh003-room-heater",
+      "sourceProductCode": "38838",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: WRH-FH003",
+        "PTC heating wire element",
+        "Rated Power: 500 Watt/1000 Watt",
+        "Rated Voltage: 220-240V, 50Hz",
+        "Safety overheats protection, Safety tip-over switch"
+      ],
+      "needsReview": false,
+      "categorySlug": "room-heater",
+      "image": "/images/products/appliance/room-heater/walton-wrh-fh003-room-heater.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/room-heater/walton-wrh-fh003-room-heater.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "walton-wrh-fh003-room-heater",
+        "candidateTitle": "Walton WRH-FH003 Room Heater",
+        "attemptStem": "walton-wrh-fh003-room-heater"
+      }
+    },
+    {
+      "name": "Walton WRH-PTC007 Mini Room Heater",
+      "slug": "walton-wrh-ptc007-mini-room-heater",
+      "type": "PHYSICAL",
+      "sku": "ST-38840",
+      "description": "<h2>Walton WRH-PTC007 Mini Room Heater</h2><p>The <strong>Walton WRH-PTC007 Mini</strong> Room Heater is a Small but premium Room heeater Deisgned for Optimal warmth and comfort. The Room Heaters Advance PTC Technology ensures efficieant heating while maintaining energy savings.The Sleek Design of the Walton WRH-PTC007 Mini Room Heater boasts the Rooms interior while maintaining Safety ande Reliability at the core. The Walton WRH-PTC007 Mini Room Heater includes a safety tip-over switch ensuring top tier safety.. </p><h2>Buy Walton WRH-PTC007 Mini Room Heater from Star Tech</h2><p>In Bangladesh, you can get original <strong>Walton WRH-PTC007 Mini Room Heater</strong> From Star Tech. We have a large collection of latest Walton <a href=\"https://www.startech.com.bd/room-heater\">Room Heater</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Walton WRH-PTC007 Mini Room Heater has 06 Month Warranty</p><p><strong style=\"background-color: rgb(255, 255, 0);\">Walton warranty card must be kept for any warranty claim(For warranty claims, please contact the Walton distributor directly through the official customer service hotline at 16267 &amp; 09612316267).</strong></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: WRH-PTC007 Mini</li><li>ABS flame retardant &amp; environmental protection material</li><li>Rated Power: 500 Watt/1000 Watt</li><li>Warming within 3 seconds, Three adjustment choices (cold, warm, hot)</li><li>Special heating wire element</li></ul>",
+      "model": "WRH-PTC007 Mini",
+      "warranty": null,
+      "basePrice": 2500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Walton",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-38840",
+          "price": 2500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "WRH-PTC007 Mini",
+              "position": 0
+            },
+            {
+              "label": "Rated Power",
+              "value": "500 Watt/1000 Watt",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/walton-wrh-ptc007-mini-room-heater",
+      "sourceProductCode": "38840",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: WRH-PTC007 Mini",
+        "ABS flame retardant & environmental protection material",
+        "Rated Power: 500 Watt/1000 Watt",
+        "Warming within 3 seconds, Three adjustment choices (cold, warm, hot)",
+        "Special heating wire element"
+      ],
+      "needsReview": false,
+      "categorySlug": "room-heater",
+      "image": "/images/products/appliance/room-heater/walton-wrh-ptc007-mini-room-heater.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/room-heater/walton-wrh-ptc007-mini-room-heater.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "walton-wrh-ptc007-mini-room-heater",
+        "candidateTitle": "Walton WRH-PTC007 Mini Room Heater",
+        "attemptStem": "walton-wrh-ptc007-mini-room-heater"
+      }
+    },
+    {
+      "name": "Walton WRH-PTC0X Mini Room Heater",
+      "slug": "walton-wrh-ptc0x-mini-room-heater",
+      "type": "PHYSICAL",
+      "sku": "ST-38836",
+      "description": "<h2>Walton WRH-PTC0X Mini Room Heater</h2><p>The <strong>Walton WRH-PTC0X Mini</strong> Room Heater is a compact yet powerful Walton Room Heater designed for efficient and reliable warmth in small spaces. Featuring a PTC ceramic heating element, this mini room heater ensures rapid and consistent heating while maintaining energy efficiency. The adjustable thermostat allows you to set the desired temperature for optimal comfort, and the built-in overheat protection and safety tip-over switch provide peace of mind by preventing accidents. With double heating power settings, you can choose the level of warmth that suits your needs, while the fan ensures even distribution of heated air throughout the room. The safety thermal cut-out adds an extra layer of protection by cutting off power in case of overheating. Its sleek and modern design complements any decor, making it a stylish addition to your home. The Walton WRH-PTC0X Mini Room Heater combines advanced heating technology with user-friendly features, making it the perfect choice for staying warm and cozy during chilly days.</p><h2>Buy Walton WRH-PTC0X Mini Room Heater from Star Tech</h2><p>In Bangladesh, you can get original <strong>Walton WRH-PTC0X Mini Room Heater</strong> From Star Tech. We have a large collection of latest Walton <a href=\"https://www.startech.com.bd/room-heater\">Room Heater</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Walton WRH-PTC0X Mini Room Heater has 06 Month Warranty</p><p><strong style=\"background-color: rgb(255, 255, 0);\">Walton warranty card must be kept for any warranty claim(For warranty claims, please contact the Walton distributor directly through the official customer service hotline at 16267 &amp; 09612316267).</strong></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: WRH-PTC0X</li><li>PTC ceramic heating element</li><li>Rated Power: 1500 Watt</li><li>Rated Voltage: 220-240V, 50Hz</li><li>Adjustable thermostat, Safety tip-over switch</li></ul>",
+      "model": "WRH-PTC0X",
+      "warranty": null,
+      "basePrice": 3250.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Walton",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-38836",
+          "price": 3250.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 3120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "WRH-PTC0X",
+              "position": 0
+            },
+            {
+              "label": "Rated Power",
+              "value": "1500 Watt",
+              "position": 1
+            },
+            {
+              "label": "Rated Voltage",
+              "value": "220-240V, 50Hz",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/walton-wrh-ptc0x-mini-room-heater",
+      "sourceProductCode": "38836",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: WRH-PTC0X",
+        "PTC ceramic heating element",
+        "Rated Power: 1500 Watt",
+        "Rated Voltage: 220-240V, 50Hz",
+        "Adjustable thermostat, Safety tip-over switch"
+      ],
+      "needsReview": false,
+      "categorySlug": "room-heater",
+      "image": "/images/products/appliance/room-heater/walton-wrh-ptc0x-mini-room-heater.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/room-heater/walton-wrh-ptc0x-mini-room-heater.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "walton-wrh-ptc0x-mini-room-heater",
+        "candidateTitle": "Walton WRH-PTC0X Mini Room Heater",
+        "attemptStem": "walton-wrh-ptc0x-mini-room-heater"
+      }
+    },
+    {
+      "name": "Walton WRH-PTC205T Mini Room Heater",
+      "slug": "walton-wrh-ptc205t-mini-room-heater",
+      "type": "PHYSICAL",
+      "sku": "ST-38841",
+      "description": "<h2>Walton WRH-PTC205T Mini Room Heater</h2><p>The <strong>Walton WRH-PTC205T Mini</strong> Room Heater is an efficient and reliable electric heater that features a PTC Ceramic heating element. With an adjustable thermostat, users can customize the temperature settings according to their preferences.The safety tip-over switch in this Walton Room Heater also enhances safety, ensuring the heater automatically turns off if accidentally tipped over. The Walton WRH-PTC205T Mini Room Heater operates at a voltage of 220-240V. The Dual Heating Power Adjustment of 1000/2000W ensure to get the optimal heating accross the room according to the outside tempureature.Overall this Walton heater provides flexibility and convenience in heating solutions.The Tower shape design also ensures proper distribution of temperature accross room.</p><h2>Buy Walton WRH-PTC205T Mini Room Heater from Star Tech</h2><p>In Bangladesh, you can get original <strong>Walton WRH-PTC205T Mini Room Heater</strong> From Star Tech. We have a large collection of latest Walton <a href=\"https://www.startech.com.bd/room-heater\">Room Heater</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Walton WRH-PTC205T Mini Room Heater has 06 Month Warranty</p><p><strong style=\"background-color: rgb(255, 255, 0);\">Walton warranty card must be kept for any warranty claim(For warranty claims, please contact the Walton distributor directly through the official customer service hotline at 16267 &amp; 09612316267).</strong></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: WRH-PTC205T Mini</li><li>PTC ceramic heating element</li><li>Rated Power: 1000W/2000W</li><li>Rated Voltage: 220-240V, 50Hz</li><li>Adjustable thermostat, Safety tip-over switch</li></ul>",
+      "model": "WRH-PTC205T Mini",
+      "warranty": null,
+      "basePrice": 5300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Walton",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-38841",
+          "price": 5300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 5088.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "WRH-PTC205T Mini",
+              "position": 0
+            },
+            {
+              "label": "Rated Power",
+              "value": "1000W/2000W",
+              "position": 1
+            },
+            {
+              "label": "Rated Voltage",
+              "value": "220-240V, 50Hz",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/walton-wrh-ptc205t-mini-room-heater",
+      "sourceProductCode": "38841",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: WRH-PTC205T Mini",
+        "PTC ceramic heating element",
+        "Rated Power: 1000W/2000W",
+        "Rated Voltage: 220-240V, 50Hz",
+        "Adjustable thermostat, Safety tip-over switch"
+      ],
+      "needsReview": false,
+      "categorySlug": "room-heater",
+      "image": "/images/products/appliance/room-heater/walton-wrh-ptc205t-mini-room-heater.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/room-heater/walton-wrh-ptc205t-mini-room-heater.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "walton-wrh-ptc205t-mini-room-heater",
+        "candidateTitle": "Walton WRH-PTC205T Mini Room Heater",
+        "attemptStem": "walton-wrh-ptc205t-mini-room-heater"
+      }
+    },
+    {
+      "name": "Walton WRH-PTC302W Room Heater",
+      "slug": "walton-wrh-ptc302w-room-heater",
+      "type": "PHYSICAL",
+      "sku": "ST-38832",
+      "description": "<h2>Walton WRH-PTC302W Room Heater</h2><p>The Walton <strong>WRH-PTC302W Room Heater</strong> is designed to provide efficient and reliable heating for your home, featuring a PTC ceramic heating element that ensures rapid and consistent warmth while maintaining energy efficiency. With an adjustable thermostat, you can easily set the desired temperature for optimal comfort. Safety is a priority with built-in overheat protection and a safety tip-over switch that automatically shuts off the heater if it is accidentally tipped over. The heater offers dual heating settings of 1000W and 2000W to suit your needs, along with a fan mode for cool air, making it versatile for year-round use. Wide-angle oscillation ensures even heat distribution across the room, while the LED display provides easy-to-read temperature and settings information. The 24-hour timer allows you to set the heater to turn on or off at specific times, enhancing convenience and energy savings. Additionally, the child-lock function prevents accidental changes to settings, ensuring safety in homes with children. The sleek and modern design of the Walton WRH-PTC302W Room Heater complements any decor, and its compact size makes it a space-saving solution. For added convenience, it can also be wall-mounted, freeing up floor space. This room heater combines advanced heating technology with user-friendly features to create a warm and comfortable environment in your home, making it the perfect solution for staying cozy during chilly winter nights.</p><h2>Buy Walton WRH-PTC302W Room Heater from Star Tech</h2><p>In Bangladesh, you can get original <strong>Walton WRH-PTC302W Room Heater</strong> From Star Tech. We have a large collection of latest Walton <a href=\"https://www.startech.com.bd/room-heater\">Room Heater</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The Walton WRH-PTC302W Room Heater has 06 Month Warranty</p><p><strong style=\"background-color: rgb(255, 255, 0);\">Walton warranty card must be kept for any warranty claim(For warranty claims, please contact the Walton distributor directly through the official customer service hotline at 16267 &amp; 09612316267).</strong></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: WRH-PTC302W</li><li>PTC ceramic heating element</li><li>Rated Power: 1000W/2000W</li><li>Rated Voltage: 220-240V, 50Hz</li><li>Adjustable thermostat, Safety tip-over switch</li></ul>",
+      "model": "WRH-PTC302W",
+      "warranty": null,
+      "basePrice": 7700.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Walton",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-38832",
+          "price": 7700.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 7392.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "WRH-PTC302W",
+              "position": 0
+            },
+            {
+              "label": "Rated Power",
+              "value": "1000W/2000W",
+              "position": 1
+            },
+            {
+              "label": "Rated Voltage",
+              "value": "220-240V, 50Hz",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/walton-wrh-ptc302w-room-heater",
+      "sourceProductCode": "38832",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: WRH-PTC302W",
+        "PTC ceramic heating element",
+        "Rated Power: 1000W/2000W",
+        "Rated Voltage: 220-240V, 50Hz",
+        "Adjustable thermostat, Safety tip-over switch"
+      ],
+      "needsReview": false,
+      "categorySlug": "room-heater",
+      "image": "/images/products/appliance/room-heater/walton-wrh-ptc302w-room-heater.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/room-heater/walton-wrh-ptc302w-room-heater.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "walton-wrh-ptc302w-room-heater",
+        "candidateTitle": "Walton WRH-PTC302W Room Heater",
+        "attemptStem": "walton-wrh-ptc302w-room-heater"
+      }
+    },
+    {
+      "name": "Xiaomi MI Mijia ZMNFJ01YM 600W Desktop Electric Heater",
+      "slug": "xiaomi-mi-mijia-zmnfj01ym-600w-electric-heater",
+      "type": "PHYSICAL",
+      "sku": "ST-26185",
+      "description": "<h2>Xiaomi MI Mijia ZMNFJ01YM 600W Desktop Electric Heater</h2><p style=\"text-align: justify; \">The Xiaomi MI Mijia ZMNFJ01YM Desktop Electric Heater has PTC ceramic heating technology and a 600W fast warmer. It includes an intelligent anti-tip switch, automatic power off when dumping, and is completely safe to use. Temperature control switch + temperature fuse, double protection is safer. V-0 grade ABS fireproof enclosure is non-flammable and safer to use. This heater Easy-to-clean removable air filter with a striped pattern. This is an excellent choice for colder days. The rapid heating technology quickly warms and comforts your space. It also includes a handy adjustable thermostat, allowing you to set the warmth to your preference. This lightweight and compact heater are ideal to use in smaller spaces or personal areas. It features a modern and sleek style that will go with any decor.</p><h3 style=\"text-align: justify;\">Safe &amp; Energy Efficient</h3><p style=\"text-align: justify;\">It includes an automatic shut-off feature that shuts off the heater if it becomes too hot or is knocked over. This guarantees your and your family's safety when using the heater. The Mijia Electric Heater is very electric, making it an affordable option for staying warm. You may use it for extended durations without being concerned about your energy cost because of its low power usage.</p><h3 style=\"text-align: justify;\">Comes With a Built-in Humidifier</h3><p style=\"text-align: justify;\">The Xiaomi MI Mijia ZMNFJ01YM Desktop Electric Heater has a humidifier in complement to its heating powers. This adds moisture to the air, allowing it to be easier to breathe and reducing the likelihood of dry skin and sinus problems. Essentially, the Xiaomi Mijia Electric Heater 600W is a dependable and practical option for keeping warm and comfortable throughout the chilly winter months. Its immediate heating technology, programmable temp, and several safety features make it an excellent choice for anybody seeking a dependable and cost-effective heater.</p><h2 style=\"\">Buy Xiaomi MI Mijia ZMNFJ01YM 600W Desktop Electric Heater from the best Shop in BD</h2><p style=\"text-align: justify; \">In Bangladesh, you can get the original <a href=\"https://www.startech.com.bd/xiaomi-mi-mijia-zmnfj01ym-600w-electric-heater\" target=\"_blank\">Xiaomi MI Mijia ZMNFJ01YM 600W Desktop Electric Heater</a> From Star Tech. We have a large collection of the latest Xiaomi Electric heaters to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Xiaomi MI Mijia 600W Desktop Electric Heater comes with 6 months of warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ZMNFJ01YM</li><li>Heating Method: PTC Heating</li><li>Shell Material: ABS</li><li>Rated Voltage: 220V</li><li>Rated Power: 600W</li></ul>",
+      "model": "ZMNFJ01YM",
+      "warranty": "6 months of warranty",
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "XIAOMI",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-26185",
+          "price": 0.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": null,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ZMNFJ01YM",
+              "position": 0
+            },
+            {
+              "label": "Heating Method",
+              "value": "PTC Heating",
+              "position": 1
+            },
+            {
+              "label": "Shell Material",
+              "value": "ABS",
+              "position": 2
+            },
+            {
+              "label": "Rated Voltage",
+              "value": "220V",
+              "position": 3
+            },
+            {
+              "label": "Rated Power",
+              "value": "600W",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-mi-mijia-zmnfj01ym-600w-electric-heater",
+      "sourceProductCode": "26185",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ZMNFJ01YM",
+        "Heating Method: PTC Heating",
+        "Shell Material: ABS",
+        "Rated Voltage: 220V",
+        "Rated Power: 600W"
+      ],
+      "needsReview": true,
+      "categorySlug": "room-heater",
+      "image": "/images/products/appliance/room-heater/xiaomi-mi-mijia-zmnfj01ym-600w-electric-heater.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/room-heater/xiaomi-mi-mijia-zmnfj01ym-600w-electric-heater.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "xiaomi-mi-mijia-zmnfj01ym-600w-electric-heater",
+        "candidateTitle": "Xiaomi MI Mijia ZMNFJ01YM 600W Desktop Electric Heater",
+        "attemptStem": "xiaomi-mi-mijia-zmnfj01ym-600w-electric-heater"
+      }
+    },
+    {
+      "name": "Xiaomi VIOMI VXNF01 Mini Portable Heater",
+      "slug": "xiaomi-viomi-vxnf01-portable-heater",
+      "type": "PHYSICAL",
+      "sku": "ST-32000",
+      "description": "<h2>Xiaomi VIOMI VXNF01 Mini Portable Heater</h2><p>The Xiaomi <span style=\"font-weight: bold;\">VIOMI VXNF01 </span>Heater provides quick warmth and exceptional convenience. This portable heater's innovative heating technology assures speedy heat-up using PTC (Positive Temperature Coefficient) material. Say goodbye to frigid conditions as this heater efficiently heats your room, delivering comfort on colder days. This heater has a wide-angle oscillation and an oscillating design that guarantees even heat distribution around the room. Warmth may be felt from any angle, providing a friendly feeling in any area. The device has two wind modes that are simply adjusted with a simple switch, enabling you to tailor your heating experience to your preferences. With touch control, you can easily use this heater, which has a sophisticated and straightforward interface for modifying settings. The touch control function makes operating simple and convenient, enabling you to focus just on remaining warm. Safety comes first, and the Xiaomi VIOMI VXNF01 Mini Portable Heater puts it first. It has tip-over protection to avoid mishaps caused by overheating. The heater has many safeguards, such as a temperature sensor switch and a temperature fuse, to ensure reliable and safe operation. This portable heater is made with an ABS flame-resistant casing to ensure your safety. The material is not only long-lasting but also flame-resistant, adding to the device's overall safety. With a weight of only 0.9kg, it is extremely portable, allowing you to transfer it easily wherever warmth is required. This heater, with a rated power of 660W, provides excellent heating performance. It also has a removable air filter, which ensures clean and pure warm air. This heater increases energy economy while providing steady and comforting warmth by utilizing PTC ceramic heating technology. The Xiaomi VIOMI VXNF01 Mini Portable Heater will keep you warm during the cooler months. This revolutionary heating system provides warmth, convenience, and safety, making your living areas pleasant and appealing.</p><h2>Buy Xiaomi VIOMI VXNF01 Mini Portable Heater from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Xiaomi VIOMI VXNF01 Mini Portable Heater</span> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/gadget\" target=\"\">Gadget</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at lowest price. The Xiaomi VIOMI VXNF01 Mini Portable Heater comes with 6 months warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: VIOMI VXNF01</li><li>Rated Power: 660w</li><li>Detachable Air Filter</li><li>PTC Ceramic Heating Technology</li><li>Features: Touch Control</li></ul>",
+      "model": "VIOMI VXNF01",
+      "warranty": "6 months warranty",
+      "basePrice": 2750.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "XIAOMI",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-32000",
+          "price": 2750.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 2640.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "VIOMI VXNF01",
+              "position": 0
+            },
+            {
+              "label": "Rated Power",
+              "value": "660w",
+              "position": 1
+            },
+            {
+              "label": "Features",
+              "value": "Touch Control",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/xiaomi-viomi-vxnf01-portable-heater",
+      "sourceProductCode": "32000",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: VIOMI VXNF01",
+        "Rated Power: 660w",
+        "Detachable Air Filter",
+        "PTC Ceramic Heating Technology",
+        "Features: Touch Control"
+      ],
+      "needsReview": false,
+      "categorySlug": "room-heater",
+      "image": "/images/products/appliance/room-heater/xiaomi-viomi-vxnf01-portable-heater.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/room-heater/xiaomi-viomi-vxnf01-portable-heater.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "xiaomi-viomi-vxnf01-portable-heater",
+        "candidateTitle": "Xiaomi VIOMI VXNF01 Mini Portable Heater",
+        "attemptStem": "xiaomi-viomi-vxnf01-portable-heater"
+      }
+    }
+  ]
+}

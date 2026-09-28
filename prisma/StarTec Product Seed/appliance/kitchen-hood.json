@@ -1,0 +1,1287 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/appliance",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\appliance",
+    "generatedAtUnix": 1790586316,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Appliance",
+      "slug": "appliance",
+      "parentSlug": null,
+      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Kitchen Hood",
+      "slug": "kitchen-hood",
+      "parentSlug": "appliance",
+      "image": "/images/products/appliance/kitchen-hood/bosch-dhu665cgb-serie-4-kitchen-hood.png",
+      "isActive": true,
+      "sortOrder": 17,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "BOSCH",
+      "slug": "bosch",
+      "logo": null
+    },
+    {
+      "name": "Others",
+      "slug": "others",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "BOSCH DHU665CGB Serie 4 60cm Kitchen Hood",
+      "slug": "bosch-dhu665cgb-serie-4-kitchen-hood",
+      "type": "PHYSICAL",
+      "sku": "ST-52925",
+      "description": "<h2>BOSCH DHU665CGB Serie 4 60cm Kitchen Hood</h2><p>The BOSCH <strong>DHU665CGB Serie 4</strong> 60cm Kitchen Hood is a high-performance ventilation system designed to deliver powerful airflow with modern convenience. This BOSCH 60cm Kitchen Hood is equipped with a robust 250W motor, offering a maximum air extraction rate of 350 m³/h to effectively clear smoke, steam, and cooking odors from your kitchen. With three speed settings controlled by advanced Button controls, it provides smooth and precise operation tailored to your cooking needs.This BOSCH Kitchen Hood enhances your cooking experience with a built-in halogen light, giving bright illumination over your cooktop for better visibility. The washable grease filter ensures easy cleaning and long-lasting efficiency, keeping the hood performing at its best.Stylishly designed, the DHU665CGB is a reliable BOSCH Kitchen Chimney that blends functionality with elegance. Its 60cm size makes it ideal for medium cooktops, offering effective coverage without taking up excess space. Whether you’re preparing everyday meals or experimenting with new recipes, this Cooker Hood delivers dependable ventilation, easy maintenance, and Bosch’s trusted durability.</p><h2>Buy BOSCH DHU665CGB Serie 4 60cm Kitchen Hood from Star Tech</h2><p>In Bangladesh, you can get original <strong>BOSCH DHU665CGB Serie 4 60cm Kitchen Hood</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kitchen-hood\">Kitchen Hood</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The BOSCH DHU665CGB Serie 4 60cm Kitchen Hood comes with 1 Year Parts &amp; Service Warranty by BOSCH. Warranty card must be kept for warranty claims. For warranty, Call BOSCH at 01755626940. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DHU665CGB Serie 4</li><li>Size: 60cm, Motor Power: 250W</li><li>Max. Air extraction: 350 m³/h</li><li>Control Type: Button Control; Speed Settings: 3</li><li>Features: Built in Halogen Light, Washable Grease Filter</li></ul>",
+      "model": "DHU665CGB Serie 4",
+      "warranty": "1 Year Parts & Service Warranty",
+      "basePrice": 44000.0,
+      "originalPrice": 52000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "BOSCH",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "60cm, Motor Power: 250W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52925",
+          "price": 44000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "60cm, Motor Power: 250W"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 42240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DHU665CGB Serie 4",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "60cm, Motor Power: 250W",
+              "position": 1
+            },
+            {
+              "label": "Max. Air extraction",
+              "value": "350 m³/h",
+              "position": 2
+            },
+            {
+              "label": "Control Type",
+              "value": "Button Control; Speed Settings: 3",
+              "position": 3
+            },
+            {
+              "label": "Features",
+              "value": "Built in Halogen Light, Washable Grease Filter",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bosch-dhu665cgb-serie-4-kitchen-hood",
+      "sourceProductCode": "52925",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DHU665CGB Serie 4",
+        "Size: 60cm, Motor Power: 250W",
+        "Max. Air extraction: 350 m³/h",
+        "Control Type: Button Control; Speed Settings: 3",
+        "Features: Built in Halogen Light, Washable Grease Filter"
+      ],
+      "needsReview": false,
+      "categorySlug": "kitchen-hood",
+      "image": "/images/products/appliance/kitchen-hood/bosch-dhu665cgb-serie-4-kitchen-hood.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/kitchen-hood/bosch-dhu665cgb-serie-4-kitchen-hood.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bosch-dhu665cgb-serie-4-kitchen-hood",
+        "candidateTitle": "BOSCH DHU665CGB Serie 4 60cm Kitchen Hood",
+        "attemptStem": "bosch-dhu665cgb-serie-4-kitchen-hood"
+      }
+    },
+    {
+      "name": "BOSCH DIB97IM50 Series 4 90cm Kitchen Hood",
+      "slug": "bosch-dib97im50-series-4-kitchen-hood",
+      "type": "PHYSICAL",
+      "sku": "ST-52941",
+      "description": "<h2>BOSCH DIB97IM50 Series 4 90cm Kitchen Hood</h2><p>The <strong>BOSCH DIB97IM50 Series 4</strong> 90cm Kitchen Hood is a premium ventilation system designed for larger kitchens and cooktops. This BOSCH 90cm Kitchen Hood is powered by a 250W motor, delivering a maximum air extraction rate of 438 m³/h, with an intensive boost mode that reaches up to 754 m³/h for heavy-duty cooking sessions. With three standard speed levels plus an intensive mode, controlled by simple touch operation, it gives you flexible airflow options to match different cooking requirements.This BOSCH Kitchen Hood is equipped with built-in LED lighting, providing bright and energy-efficient illumination over your cooking area. The washable grease filter ensures easy maintenance and consistent performance, keeping your kitchen air fresh and clean.With its wide 90cm size, the DIB97IM50 is ideal for larger cooktops, offering full coverage and powerful extraction. As a BOSCH Kitchen Chimney, it combines strong performance with a sleek design that complements modern interiors. For those seeking a Cooking Hood that balances advanced functionality with Bosch’s trusted build quality, this model is a smart choice for contemporary kitchens.</p><h2>Buy BOSCH DIB97IM50 Series 4 90cm Kitchen Hood from Star Tech</h2><p>In Bangladesh, you can get original <strong>BOSCH DIB97IM50 Series 4 90cm Kitchen Hood</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kitchen-hood\">Kitchen Hood</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The BOSCH DHU665CQ Series 4 60cm Kitchen Hood comes with 1 Year Parts &amp; Service Warranty by BOSCH. Warranty card must be kept for warranty claims. For warranty, Call BOSCH at 01755626940. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DIB97IM50 Series 4</li><li>Size: 90cm, Motor Power: 250W</li><li>Max. Air extraction: 438 m³/h; Boost Air Extraction: 754 m³/h</li><li>Control Type: Touch; Speed Settings: 3 Level + Intensive mode</li><li>Features: Built in LED Light; Washable Grease Filter</li></ul>",
+      "model": "DIB97IM50 Series 4",
+      "warranty": "1 Year Parts & Service Warranty",
+      "basePrice": 204500.0,
+      "originalPrice": 230000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "BOSCH",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "90cm, Motor Power: 250W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52941",
+          "price": 204500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "90cm, Motor Power: 250W"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 196320.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DIB97IM50 Series 4",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "90cm, Motor Power: 250W",
+              "position": 1
+            },
+            {
+              "label": "Max. Air extraction",
+              "value": "438 m³/h; Boost Air Extraction: 754 m³/h",
+              "position": 2
+            },
+            {
+              "label": "Control Type",
+              "value": "Touch; Speed Settings: 3 Level + Intensive mode",
+              "position": 3
+            },
+            {
+              "label": "Features",
+              "value": "Built in LED Light; Washable Grease Filter",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bosch-dib97im50-series-4-kitchen-hood",
+      "sourceProductCode": "52941",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DIB97IM50 Series 4",
+        "Size: 90cm, Motor Power: 250W",
+        "Max. Air extraction: 438 m³/h; Boost Air Extraction: 754 m³/h",
+        "Control Type: Touch; Speed Settings: 3 Level + Intensive mode",
+        "Features: Built in LED Light; Washable Grease Filter"
+      ],
+      "needsReview": false,
+      "categorySlug": "kitchen-hood",
+      "image": "/images/products/appliance/kitchen-hood/bosch-dib97im50-series-4-kitchen-hood.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/kitchen-hood/bosch-dib97im50-series-4-kitchen-hood.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bosch-dib97im50-series-4-kitchen-hood",
+        "candidateTitle": "BOSCH DIB97IM50 Series 4 90cm Kitchen Hood",
+        "attemptStem": "bosch-dib97im50-series-4-kitchen-hood"
+      }
+    },
+    {
+      "name": "BOSCH DWB94BC51B 90cm Kitchen Hood",
+      "slug": "bosch-dwb94bc51b-90cm-kitchen-hood",
+      "type": "PHYSICAL",
+      "sku": "ST-52917",
+      "description": "<h2>BOSCH DWB94BC51B 90cm Kitchen Hood</h2><p>The BOSCH <strong>DWB94BC51B </strong>90cm Kitchen Hood is a premium ventilation solution crafted to combine performance, durability, and modern design. This BOSCH 90cm Kitchen Hood is powered by a 95W motor that delivers a maximum air extraction rate of 365 m³/h, ensuring your kitchen remains fresh and free from smoke, steam, and lingering odors. With three adjustable speed settings controlled by simple button operation, you can tailor airflow to match your cooking intensity.Designed with practicality in mind, this BOSCH Kitchen Hood features a built-in LED lamp that provides bright, energy-efficient illumination over your cooking area, enhancing visibility while saving power. The washable grease filter ensures easy maintenance and long-lasting efficiency, keeping your cooker hood performing at its best.As a stylish and functional BOSCH Kitchen Chimney, the DWB94BC51B model is ideal for larger cooktops, offering wide coverage with its 90cm size. Its sleek stainless steel finish adds a touch of sophistication to any modern kitchen setup. Whether you’re preparing everyday meals or experimenting with elaborate recipes, this BOSCH 90cm Kitchen Hood delivers reliable ventilation, convenience, and Bosch’s trusted quality.</p><h2>Buy BOSCH DWB94BC51B 90cm Kitchen Hood from Star Tech</h2><p>In Bangladesh, you can get original <strong>BOSCH DWB94BC51B 90cm Kitchen Hood</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kitchen-hood\">Kitchen Hood</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The BOSCH DWB94BC51B 90cm Kitchen Hood comes with 1 Year Parts &amp; Service Warranty by BOSCH. Warranty card must be kept for warranty claims. For warranty, Call BOSCH at 01755626940. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DWB94BC51B</li><li>Size: 90cm, Motor Power: 95W</li><li>Max. Air extraction: 365 m³/h</li><li>Control Type: Button; Speed Settings: 3</li><li>Features: Built in LED Lamp, Washable Grease Filter</li></ul>",
+      "model": "DWB94BC51B",
+      "warranty": "1 Year Parts & Service Warranty",
+      "basePrice": 102500.0,
+      "originalPrice": 120000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "BOSCH",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "90cm, Motor Power: 95W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52917",
+          "price": 102500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "90cm, Motor Power: 95W"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 98400.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DWB94BC51B",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "90cm, Motor Power: 95W",
+              "position": 1
+            },
+            {
+              "label": "Max. Air extraction",
+              "value": "365 m³/h",
+              "position": 2
+            },
+            {
+              "label": "Control Type",
+              "value": "Button; Speed Settings: 3",
+              "position": 3
+            },
+            {
+              "label": "Features",
+              "value": "Built in LED Lamp, Washable Grease Filter",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bosch-dwb94bc51b-90cm-kitchen-hood",
+      "sourceProductCode": "52917",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DWB94BC51B",
+        "Size: 90cm, Motor Power: 95W",
+        "Max. Air extraction: 365 m³/h",
+        "Control Type: Button; Speed Settings: 3",
+        "Features: Built in LED Lamp, Washable Grease Filter"
+      ],
+      "needsReview": false,
+      "categorySlug": "kitchen-hood",
+      "image": "/images/products/appliance/kitchen-hood/bosch-dwb94bc51b-90cm-kitchen-hood.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/kitchen-hood/bosch-dwb94bc51b-90cm-kitchen-hood.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bosch-dwb94bc51b-90cm-kitchen-hood",
+        "candidateTitle": "BOSCH DWB94BC51B 90cm Kitchen Hood",
+        "attemptStem": "bosch-dwb94bc51b-90cm-kitchen-hood"
+      }
+    },
+    {
+      "name": "BOSCH DWK66AJ60M Series 4 60cm Kitchen Hood",
+      "slug": "bosch-dwk66aj60m-series-4-kitchen-hood",
+      "type": "PHYSICAL",
+      "sku": "ST-52942",
+      "description": "<h2>BOSCH DWK66AJ60M Series 4 60cm Kitchen Hood</h2><p>The <strong>BOSCH DWK66AJ60M </strong>Series 4 90cm Kitchen Hood is a powerful and stylish ventilation system designed for modern kitchens. This BOSCH 90cm Kitchen Hood is equipped with a 210W motor that delivers a maximum air extraction rate of 638 m³/h, ensuring effective removal of smoke, steam, and cooking odors. With three speed levels operated through touch controls, it offers smooth and precise airflow adjustment to suit different cooking needs.This BOSCH Kitchen Hood features built-in LED lighting that provides bright, energy-efficient illumination over your cooktop, making cooking more convenient. The washable grease filter ensures easy cleaning and helps maintain consistent performance, keeping your kitchen air fresh and clear.With its wide 90cm size, the DWK66AJ60M is ideal for larger cooktops, offering full coverage and strong extraction capacity. As a BOSCH Kitchen Chimney, it combines advanced functionality with a sleek design that complements contemporary interiors. For households seeking a Cooking Hood that balances high airflow with modern controls, this model is a smart addition to any kitchen setup.</p><h2>Buy BOSCH DWK66AJ60M Series 4 60cm Kitchen Hood from Star Tech</h2><p>In Bangladesh, you can get original <strong>BOSCH DWK66AJ60M Series 4 60cm Kitchen Hood</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kitchen-hood\">Kitchen Hood</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The BOSCH DWK66AJ60M Series 4 60cm Kitchen Hood comes with 1 Year Parts &amp; Service Warranty by BOSCH. Warranty card must be kept for warranty claims. For warranty, Call BOSCH at 01755626940. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DWK66AJ60M Series 4</li><li>Size: 90cm, Motor Power: 210W</li><li>Max. Air extraction: 638 m³/h</li><li>Control Type: Touch; Speed Settings: 3 Level</li><li>Features: Built in LED Light; Washable Grease Filter</li></ul>",
+      "model": "DWK66AJ60M Series 4",
+      "warranty": "1 Year Parts & Service Warranty",
+      "basePrice": 115500.0,
+      "originalPrice": 130000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "BOSCH",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "90cm, Motor Power: 210W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52942",
+          "price": 115500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "90cm, Motor Power: 210W"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 110880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DWK66AJ60M Series 4",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "90cm, Motor Power: 210W",
+              "position": 1
+            },
+            {
+              "label": "Max. Air extraction",
+              "value": "638 m³/h",
+              "position": 2
+            },
+            {
+              "label": "Control Type",
+              "value": "Touch; Speed Settings: 3 Level",
+              "position": 3
+            },
+            {
+              "label": "Features",
+              "value": "Built in LED Light; Washable Grease Filter",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bosch-dwk66aj60m-series-4-kitchen-hood",
+      "sourceProductCode": "52942",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DWK66AJ60M Series 4",
+        "Size: 90cm, Motor Power: 210W",
+        "Max. Air extraction: 638 m³/h",
+        "Control Type: Touch; Speed Settings: 3 Level",
+        "Features: Built in LED Light; Washable Grease Filter"
+      ],
+      "needsReview": false,
+      "categorySlug": "kitchen-hood",
+      "image": "/images/products/appliance/kitchen-hood/bosch-dwk66aj60m-series-4-kitchen-hood.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/kitchen-hood/bosch-dwk66aj60m-series-4-kitchen-hood.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bosch-dwk66aj60m-series-4-kitchen-hood",
+        "candidateTitle": "BOSCH DWK66AJ60M Series 4 60cm Kitchen Hood",
+        "attemptStem": "bosch-dwk66aj60m-series-4-kitchen-hood"
+      }
+    },
+    {
+      "name": "BOSCH DWP64CC50M Serie 2 60cm Kitchen Hood",
+      "slug": "bosch-dwp64cc50m-serie-2-kitchen-hood",
+      "type": "PHYSICAL",
+      "sku": "ST-52922",
+      "description": "<h2>BOSCH DWP64CC50M Serie 2 60cm Kitchen Hood</h2><p>The BOSCH<strong> DWP64CC50M Serie 2 </strong>60cm Kitchen Hood is built to deliver efficient ventilation with a compact design that fits seamlessly into modern kitchens. This BOSCH 60cm Kitchen Hood is powered by a 125W motor, offering a maximum air extraction rate of 380 m³/h to quickly clear smoke, steam, and cooking odors. With three speed settings operated through straightforward button controls, you can easily adjust airflow to match your cooking needs.This BOSCH Kitchen Hood comes equipped with a bright LED lamp that illuminates your cooking area while consuming minimal energy. The washable grease filter ensures simple maintenance, keeping performance consistent and extending the hood’s lifespan.Engineered with Bosch’s focus on practicality and style, the DWP64CC50M is more than just a ventilation unit it’s a reliable BOSCH Kitchen Chimney that enhances both functionality and aesthetics in your kitchen. Its 60cm size makes it ideal for medium cooktops, providing effective coverage without occupying excess space.For those seeking a versatile Cooker Hood, this model delivers dependable performance, easy operation, and Bosch’s trusted durability. Whether you’re preparing daily meals or experimenting with new recipes, the BOSCH 60cm Kitchen Chimney Hood ensures a cleaner, fresher cooking environment.</p><h2>Buy BOSCH DWP64CC50M Serie 2 60cm Kitchen Hood from Star Tech</h2><p>In Bangladesh, you can get original <strong>BOSCH DWP64CC50M Serie 2 60cm Kitchen Hood</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kitchen-hood\">Kitchen Hood</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The BOSCH DWP64CC50M Serie 2 60cm Kitchen Hood comes with 1 Year Parts &amp; Service Warranty by BOSCH. Warranty card must be kept for warranty claims. For warranty, Call BOSCH at 01755626940. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DWP64CC50M Serie 2</li><li>Size: 60cm, Motor Power: 125W</li><li>Max. Air extraction: 380 m³/h</li><li>Control Type: Button; Speed Settings: 3</li><li>Features: Built in LED Lamp, Washable Grease Filter</li></ul>",
+      "model": "DWP64CC50M Serie 2",
+      "warranty": "1 Year Parts & Service Warranty",
+      "basePrice": 59500.0,
+      "originalPrice": 70000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "BOSCH",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "60cm, Motor Power: 125W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52922",
+          "price": 59500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "60cm, Motor Power: 125W"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 57120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DWP64CC50M Serie 2",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "60cm, Motor Power: 125W",
+              "position": 1
+            },
+            {
+              "label": "Max. Air extraction",
+              "value": "380 m³/h",
+              "position": 2
+            },
+            {
+              "label": "Control Type",
+              "value": "Button; Speed Settings: 3",
+              "position": 3
+            },
+            {
+              "label": "Features",
+              "value": "Built in LED Lamp, Washable Grease Filter",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bosch-dwp64cc50m-serie-2-kitchen-hood",
+      "sourceProductCode": "52922",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DWP64CC50M Serie 2",
+        "Size: 60cm, Motor Power: 125W",
+        "Max. Air extraction: 380 m³/h",
+        "Control Type: Button; Speed Settings: 3",
+        "Features: Built in LED Lamp, Washable Grease Filter"
+      ],
+      "needsReview": false,
+      "categorySlug": "kitchen-hood",
+      "image": "/images/products/appliance/kitchen-hood/bosch-dwp64cc50m-serie-2-kitchen-hood.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/kitchen-hood/bosch-dwp64cc50m-serie-2-kitchen-hood.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bosch-dwp64cc50m-serie-2-kitchen-hood",
+        "candidateTitle": "BOSCH DWP64CC50M Serie 2 60cm Kitchen Hood",
+        "attemptStem": "bosch-dwp64cc50m-serie-2-kitchen-hood"
+      }
+    },
+    {
+      "name": "BOSCH DWP94CC50M Serie 2 90cm Kitchen Hood",
+      "slug": "bosch-dwp94cc50m-serie-2-kitchen-hood",
+      "type": "PHYSICAL",
+      "sku": "ST-52927",
+      "description": "<h2>BOSCH DWP94CC50M Serie 2 90cm Kitchen Hood</h2><p>The BOSCH <strong>DWP94CC50M Serie 2 </strong>90cm Kitchen Hood is designed to deliver efficient ventilation with a sleek, modern build that fits perfectly into larger kitchen spaces. This BOSCH 90cm Kitchen Hood is powered by a 125W motor, offering a maximum air extraction rate of 380 m³/h to effectively remove smoke, steam, and cooking odors. With three speed settings controlled by simple button operation, it allows you to adjust airflow according to your cooking intensity.This BOSCH Kitchen Hood is equipped with a built-in LED lamp that provides bright, energy-efficient lighting over your cooktop, ensuring clear visibility while preparing meals. The washable grease filter makes cleaning easy and helps maintain consistent performance over time.Crafted with Bosch’s focus on durability and practicality, the DWP94CC50M is a reliable BOSCH Kitchen Chimney that combines functionality with style. Its 90cm size makes it ideal for larger cooktops, offering wide coverage and effective ventilation. For those seeking a dependable Cooker Hood, this model delivers powerful airflow, easy maintenance, and Bosch’s trusted quality, making it a valuable addition to any modern kitchen.</p><h2>Buy BOSCH DWP94CC50M Serie 2 90cm Kitchen Hood from Star Tech</h2><p>In Bangladesh, you can get original <strong>BOSCH DWP94CC50M Serie 2 90cm Kitchen Hood</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kitchen-hood\">Kitchen Hood</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\">Star Tech Shop</a> to get yours at lowest price. The BOSCH DWP94CC50M Serie 2 90cm Kitchen Hood comes with 1 Year Parts &amp; Service Warranty by BOSCH. Warranty card must be kept for warranty claims. For warranty, Call BOSCH at 01755626940. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DWP94CC50M Serie 2</li><li>Size: 90cm, Motor Power: 125W</li><li>Max. Air extraction: 380 m³/h</li><li>Control Type: Button; Speed Settings: 3</li><li>Features: Built in LED Lamp, Washable Grease Filter</li></ul>",
+      "model": "DWP94CC50M Serie 2",
+      "warranty": "1 Year Parts & Service Warranty",
+      "basePrice": 65500.0,
+      "originalPrice": 75000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "BOSCH",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "90cm, Motor Power: 125W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52927",
+          "price": 65500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "90cm, Motor Power: 125W"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 62880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "DWP94CC50M Serie 2",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "90cm, Motor Power: 125W",
+              "position": 1
+            },
+            {
+              "label": "Max. Air extraction",
+              "value": "380 m³/h",
+              "position": 2
+            },
+            {
+              "label": "Control Type",
+              "value": "Button; Speed Settings: 3",
+              "position": 3
+            },
+            {
+              "label": "Features",
+              "value": "Built in LED Lamp, Washable Grease Filter",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/bosch-dwp94cc50m-serie-2-kitchen-hood",
+      "sourceProductCode": "52927",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DWP94CC50M Serie 2",
+        "Size: 90cm, Motor Power: 125W",
+        "Max. Air extraction: 380 m³/h",
+        "Control Type: Button; Speed Settings: 3",
+        "Features: Built in LED Lamp, Washable Grease Filter"
+      ],
+      "needsReview": false,
+      "categorySlug": "kitchen-hood",
+      "image": "/images/products/appliance/kitchen-hood/bosch-dwp94cc50m-serie-2-kitchen-hood.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/kitchen-hood/bosch-dwp94cc50m-serie-2-kitchen-hood.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "bosch-dwp94cc50m-serie-2-kitchen-hood",
+        "candidateTitle": "BOSCH DWP94CC50M Serie 2 90cm Kitchen Hood",
+        "attemptStem": "bosch-dwp94cc50m-serie-2-kitchen-hood"
+      }
+    },
+    {
+      "name": "Candy CBT.6240.X 90cm Kitchen Hood",
+      "slug": "candy-cbt-6240-x-kitchen-hood",
+      "type": "PHYSICAL",
+      "sku": "ST-52877",
+      "description": "<h2>Candy CBT.6240.X 90cm Kitchen Hood</h2><p>Candy <span style=\"font-weight: bold;\">CBT.6240.X</span> is 90cm Kitchen Hood uses 560 m³/h suction power for ventilation. It uses ducted ventilation with Extract operation for cooking fumes. Slider control keeps operation simple during everyday cooking tasks. Two 28W halogen lights improve visibility across the cooking surface. Aluminium fat filters help capture grease during cooking activities. Candy Kitchen Hood uses a 90cm size for installation. Candy Kitchen Hood supports direct air extraction through its ducted design.</p><p>Candy CBT.6240.X Kitchen Hood delivers 560 m³/h suction for ventilation. It uses ducted extraction to move cooking air outside. This Ducted Kitchen Hood uses Extract operation for focused air removal. Candy 560 m³/h Kitchen Hood supports strong airflow during cooking. The Kitchen Extractor helps remove fumes through the connected duct. A Vent hood can support regular kitchen ventilation.</p><p>With slider control, the Candy CBT.6240.X Kitchen Hood allows easy operation. It uses two 28W halogen lights for cooking visibility. These lights help users see the cooking surface more clearly. It also functions as a range hood for kitchen ventilation. The Candy Kitchen Hood provides recirculation controls for daily cooking.</p><p>Aluminium fat filters help Candy CBT.6240.X Kitchen Hood capture cooking grease. It uses aluminium filters within its ventilation system. Candy Kitchen Hood supports the extract operation through ducted ventilation. This Kitchen Hood uses a 90cm width for installation requirements. Candy CBT.6240.X provides two 28W halogen lights above cooking areas.</p><h2>Buy Candy CBT.6240.X 90cm Kitchen Hood from Star Tech</h2><p>In Bangladesh, you can get original <strong>Candy CBT.6240.X 90cm Kitchen Hood</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kitchen-hood\" target=\"_blank\">Kitchen Hood</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Candy CBT.6240.X 90cm Kitchen Hood comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CBT.6240.X</li><li>Size: 90cm, Venting Type: Ducted</li><li>Suction Power: 560 m³/h, Operating Modes: Extract</li><li>Control Type: Slider Control</li><li>Features: Halogen 2x28W Light, Aluminum Fat Filters</li></ul>",
+      "model": "CBT.6240.X",
+      "warranty": "no warranty",
+      "basePrice": 28000.0,
+      "originalPrice": 32000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "90cm, Venting Type: Ducted",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52877",
+          "price": 28000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "90cm, Venting Type: Ducted"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 26880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "CBT.6240.X",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "90cm, Venting Type: Ducted",
+              "position": 1
+            },
+            {
+              "label": "Suction Power",
+              "value": "560 m³/h, Operating Modes: Extract",
+              "position": 2
+            },
+            {
+              "label": "Control Type",
+              "value": "Slider Control",
+              "position": 3
+            },
+            {
+              "label": "Features",
+              "value": "Halogen 2x28W Light, Aluminum Fat Filters",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/candy-cbt-6240-x-kitchen-hood",
+      "sourceProductCode": "52877",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CBT.6240.X",
+        "Size: 90cm, Venting Type: Ducted",
+        "Suction Power: 560 m³/h, Operating Modes: Extract",
+        "Control Type: Slider Control",
+        "Features: Halogen 2x28W Light, Aluminum Fat Filters"
+      ],
+      "needsReview": false,
+      "categorySlug": "kitchen-hood",
+      "image": "/images/products/appliance/kitchen-hood/candy-cbt-6240-x-kitchen-hood.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/kitchen-hood/candy-cbt-6240-x-kitchen-hood.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "candy-cbt-6240-x-kitchen-hood",
+        "candidateTitle": "Candy CBT.6240.X 90cm Kitchen Hood",
+        "attemptStem": "candy-cbt-6240-x-kitchen-hood"
+      }
+    },
+    {
+      "name": "Candy CBT.9240.X 90cm Kitchen Hood",
+      "slug": "candy-cbt-9240-x-kitchen-hood",
+      "type": "PHYSICAL",
+      "sku": "ST-52878",
+      "description": "<h2>Candy CBT.9240.X 90cm Kitchen Hood</h2><p>Candy <span style=\"font-weight: bold;\">CBT.9240.X </span>90cm Kitchen Hood delivers 329 m³/h suction for kitchen ventilation. It uses ducted ventilation for direct cooking air extraction. Mechanical control keeps operation simple during regular cooking activities. Two 2W LED lights improve visibility across the cooking surface. Aluminum fat filters help capture grease during everyday cooking. Candy Kitchen Hood uses a 90cm width for installation. Candy Kitchen Hood supports practical air extraction through ducted design. This Kitchen Hood also works as a Kitchen Chimney for cooking ventilation.</p><p>Using 329 m³/h suction, Candy CBT.9240.X Kitchen Hood removes cooking air. It uses ducted ventilation for direct air discharge outside. Candy 329 m³/h Kitchen Hood provides focused kitchen ventilation. This ducted kitchen hood supports straightforward mechanical control during cooking. The Kitchen Extractor helps move cooking fumes through connected ductwork. An exhaust hood supports regular kitchen air removal.</p><p>Mechanical control lets Candy CBT.9240.X Kitchen Hood provide simple operation. It uses two 28W halogen lights above cooking areas. These lights improve visibility when preparing food on the cooking surface. Candy Kitchen Hood works as a cooker hood. It also functions as a range hood for ventilation. The Candy Kitchen Hood provides aluminium fat filters for grease capture.</p><p>Aluminium fat filters help the Candy CBT.9240.X Kitchen Hood capture cooking grease. The CBT.9240.X uses these filters within its ventilation system. Candy Kitchen Hood supports ducted air extraction during cooking. This kitchen hood uses a size for installation requirements.</p><h2>Buy Candy CBT.9240.X 90cm Kitchen Hood from Star Tech</h2><p>In Bangladesh, you can get original <strong>Candy CBT.9240.X 90cm Kitchen Hood</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kitchen-hood\" target=\"_blank\">Kitchen Hood</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Candy CBT.9240.X 90cm Kitchen Hood comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: CBT.9240.X</li><li>Size: 90cm, Venting Type: Ducted</li><li>Suction Power: 329 m³/h</li><li>Control Type: Mechanical Control</li><li>Features: LED 2x2W Light, Aluminum Fat Filters</li></ul>",
+      "model": "CBT.9240.X",
+      "warranty": "no warranty",
+      "basePrice": 33000.0,
+      "originalPrice": 65000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "90cm, Venting Type: Ducted",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52878",
+          "price": 33000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "90cm, Venting Type: Ducted"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 31680.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "CBT.9240.X",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "90cm, Venting Type: Ducted",
+              "position": 1
+            },
+            {
+              "label": "Suction Power",
+              "value": "329 m³/h",
+              "position": 2
+            },
+            {
+              "label": "Control Type",
+              "value": "Mechanical Control",
+              "position": 3
+            },
+            {
+              "label": "Features",
+              "value": "LED 2x2W Light, Aluminum Fat Filters",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/candy-cbt-9240-x-kitchen-hood",
+      "sourceProductCode": "52878",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: CBT.9240.X",
+        "Size: 90cm, Venting Type: Ducted",
+        "Suction Power: 329 m³/h",
+        "Control Type: Mechanical Control",
+        "Features: LED 2x2W Light, Aluminum Fat Filters"
+      ],
+      "needsReview": false,
+      "categorySlug": "kitchen-hood",
+      "image": "/images/products/appliance/kitchen-hood/candy-cbt-9240-x-kitchen-hood.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/kitchen-hood/candy-cbt-9240-x-kitchen-hood.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "candy-cbt-9240-x-kitchen-hood",
+        "candidateTitle": "Candy CBT.9240.X 90cm Kitchen Hood",
+        "attemptStem": "candy-cbt-9240-x-kitchen-hood"
+      }
+    },
+    {
+      "name": "Elba ECH602SS 60cm Kitchen Hood",
+      "slug": "elba-ech602ss-kitchen-hood",
+      "type": "PHYSICAL",
+      "sku": "ST-52872",
+      "description": "<h2>Elba ECH602SS 60cm Kitchen Hood</h2>\n<p>Elba <span style=\"font-weight: bold;\">ECH602SS</span> in 60cm Kitchen Hood uses 560 m³/h suction power for cooking ventilation. It uses ducted extraction for direct kitchen air removal. Slider control keeps operation simple during regular daily cooking tasks. Three modes support Extract and Recirculation for kitchen ventilation needs. Two 28W halogen lights improve visibility around the cooking area. Two washable aluminum fat filters help capture cooking grease easily. The Elba kitchen hood 560 m³/h Kitchen Hood supports regular kitchen air extraction. Its 60cm size fits many standard compact cooking areas easily.</p>\n<p>Powered by a 150W motor, Elba ECH602SS Hood handles kitchen extraction. ECH602SS uses a 120mm extractor diameter for ventilation connections during installation. The Elba Ducted Kitchen Hood supports direct air discharge. The Elba Kitchen Hood supports both extraction and recirculation modes. This Kitchen Extractor uses three modes for practical cooking control. The Elba uses slider control for easy adjustments.</p>\n<p>Two aluminum fat filters help Elba ECH602SS Kitchen Hood capture grease. It uses washable filters for easier routine kitchen maintenance needs. The Elba Stainless Steel Kitchen Hood uses stainless steel construction. This Stainless Steel Hood and Elba Hood support daily kitchen ventilation. The Elba 60cm Kitchen Hood uses slider control for straightforward adjustments. The Elba Washable Grease Filter Hood supports regular filter cleaning.The Elba Kitchen Hood uses two 28W halogen lights for visibility. </p>\n<h2>Buy Elba ECH602SS 60cm Kitchen Hood from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Elba ECH602SS 60cm Kitchen Hood</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kitchen-hood\" target=\"_blank\">Kitchen Hood</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Elba ECH602SS 60cm Kitchen Hood comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ECH602SS</li><li>Size: 60cm, Venting Type: Ducted</li><li>Suction Power: 560 m³/h, Operating Modes: Extract</li><li>Control Type: Slider Control</li><li>Features: Halogen 2x28 W Light, Washable Grease Filter</li></ul>",
+      "model": "ECH602SS",
+      "warranty": "no warranty",
+      "basePrice": 28000.0,
+      "originalPrice": 55000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "60cm, Venting Type: Ducted",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52872",
+          "price": 28000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "60cm, Venting Type: Ducted"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 26880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ECH602SS",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "60cm, Venting Type: Ducted",
+              "position": 1
+            },
+            {
+              "label": "Suction Power",
+              "value": "560 m³/h, Operating Modes: Extract",
+              "position": 2
+            },
+            {
+              "label": "Control Type",
+              "value": "Slider Control",
+              "position": 3
+            },
+            {
+              "label": "Features",
+              "value": "Halogen 2x28 W Light, Washable Grease Filter",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/elba-ech602ss-kitchen-hood",
+      "sourceProductCode": "52872",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ECH602SS",
+        "Size: 60cm, Venting Type: Ducted",
+        "Suction Power: 560 m³/h, Operating Modes: Extract",
+        "Control Type: Slider Control",
+        "Features: Halogen 2x28 W Light, Washable Grease Filter"
+      ],
+      "needsReview": false,
+      "categorySlug": "kitchen-hood",
+      "image": "/images/products/appliance/kitchen-hood/elba-ech602ss-kitchen-hood.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/kitchen-hood/elba-ech602ss-kitchen-hood.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "elba-ech602ss-kitchen-hood",
+        "candidateTitle": "Elba ECH602SS 60cm Kitchen Hood",
+        "attemptStem": "elba-ech602ss-kitchen-hood"
+      }
+    },
+    {
+      "name": "Elba ECH930SS 90cm Kitchen Hood",
+      "slug": "elba-ech930ss-kitchen-hood",
+      "type": "PHYSICAL",
+      "sku": "ST-52869",
+      "description": "<h2>Elba ECH930SS 90cm Kitchen Hood</h2>\n<p>The Elba <span style=\"font-weight: bold;\">ECH930SS </span>is<span style=\"font-weight: bold;\"> </span>90cm kitchen hood clears the air quickly during everyday cooking sessions. This Elba Kitchen Hood suits kitchens wanting powerful ducted ventilation and reliable performance. Suction capacity reaches 560 cubic meters per hour for fast smoke clearing. Slider controls let users adjust suction power for light or heavy cooking. This exhaust hood pairs a stainless steel finish with genuinely practical everyday kitchen functionality.</p>\n<h3>Powerful 560 m³/h Suction Clears Smoke Fast</h3>\n<p>This Elba ECH930SS 560 m³/h kitchen hood pulls smoke and steam away quickly. This vent hood operates in extract or recirculation mode depending on kitchen setup. This ducted kitchen hood vents air outside through a 120 mm extractor diameter. Three suction modes let users match power to actual cooking intensity. This range hood suits kitchens wanting strong, reliable ventilation during daily cooking.</p>\n<h3>Halogen Lighting Brightens Every Cooking Task</h3>\n<p>Two 28W halogen lights illuminate the cooktop for clearer daily visibility. This ECH930SS kitchen hood keeps pots, pans, and ingredients well-lit during evening cooking sessions. This Kitchen Chimney suits kitchens wanting brighter, more functional cooking work surfaces. A 150W motor powers both suction and lighting reliably during daily use. This lighting suits users wanting better visibility while preparing daily meals.</p>\n<h3>Washable Filters Simplify Ongoing Maintenance</h3>\n<p>This Elba ECH930SS Washable Grease Filter Hood includes two aluminum fat filters. This kitchen hood lets users rinse and reuse filters instead of replacing them often. This Kitchen Extractor suits households wanting lower long-term maintenance costs over time. A check valve avoids outside air and odors from entering the ducting. This Exhaust Hood suits kitchens wanting practical, low-maintenance daily operation.</p>\n<h2>Buy Elba ECH930SS 90cm Kitchen Hood from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>Elba ECH930SS 90cm Kitchen Hood</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kitchen-hood\" target=\"_blank\">Kitchen Hood</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Elba ECH930SS 90cm Kitchen Hood comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: ECH930SS</li><li>Size: 90cm, Venting Type: Ducted</li><li>Suction Power: 560 m³/h, Operating Modes: Extract</li><li>Control Type: Slider Control</li><li>Features: Halogen 2x28 W Light, Washable Grease Filter</li></ul>",
+      "model": "ECH930SS",
+      "warranty": "no warranty",
+      "basePrice": 33000.0,
+      "originalPrice": 65000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "90cm, Venting Type: Ducted",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52869",
+          "price": 33000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "90cm, Venting Type: Ducted"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 31680.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "ECH930SS",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "90cm, Venting Type: Ducted",
+              "position": 1
+            },
+            {
+              "label": "Suction Power",
+              "value": "560 m³/h, Operating Modes: Extract",
+              "position": 2
+            },
+            {
+              "label": "Control Type",
+              "value": "Slider Control",
+              "position": 3
+            },
+            {
+              "label": "Features",
+              "value": "Halogen 2x28 W Light, Washable Grease Filter",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/elba-ech930ss-kitchen-hood",
+      "sourceProductCode": "52869",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: ECH930SS",
+        "Size: 90cm, Venting Type: Ducted",
+        "Suction Power: 560 m³/h, Operating Modes: Extract",
+        "Control Type: Slider Control",
+        "Features: Halogen 2x28 W Light, Washable Grease Filter"
+      ],
+      "needsReview": false,
+      "categorySlug": "kitchen-hood",
+      "image": "/images/products/appliance/kitchen-hood/elba-ech930ss-kitchen-hood.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/kitchen-hood/elba-ech930ss-kitchen-hood.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "elba-ech930ss-kitchen-hood",
+        "candidateTitle": "Elba ECH930SS 90cm Kitchen Hood",
+        "attemptStem": "elba-ech930ss-kitchen-hood"
+      }
+    },
+    {
+      "name": "Elica Majestic BL-A-60 60cm Kitchen Hood",
+      "slug": "elica-majestic-bl-a-60-kitchen-hood",
+      "type": "PHYSICAL",
+      "sku": "ST-52874",
+      "description": "<h2>Elica Majestic BL-A-60 60cm Kitchen Hood</h2><p>The Elica <span style=\"font-weight: bold;\">Majestic BL-A-60</span> 60cm Kitchen Hood delivers 691 m³/h suction power. It uses ducted ventilation for direct air extraction. Touch control lets users manage the hood with simple finger presses. Two 5W LED lights improve visibility across the cooking surface. Elica Kitchen Hood supports Extract operation for kitchen ventilation. Its aluminium grease filter helps capture grease during cooking. This Elica 60cm Kitchen Hood uses a 60cm design for kitchen installation.</p><p>With 691 m³/h suction, Elica Majestic BL-A-60 60cm Kitchen Hood removes cooking air. It uses ducted ventilation for direct exhaust outside. The Elica Kitchen Hood supports strong airflow. This Ducted Kitchen Hood uses Extract mode for focused ventilation. The Kitchen Extractor helps remove cooking fumes through the duct. A Vent hood can support everyday cooking ventilation.</p><p>Touch control gives Elica Majestic BL-A-60 60cm Kitchen Hood straightforward operation. It uses two 5W LED lights above the cooking area. These lights improve visibility while preparing meals on the cooking surface. The Elica Kitchen Hood works as a cooker hood. Elica vent hood also have lighting functions supports clear cooking visibility without complex controls.</p><p>An aluminium grease filter helps Elica Majestic BL-A-60 60cm Kitchen Hood capture grease. Majestic BL-A-60 uses an aluminium filter within its ventilation system. The Elica Kitchen Hood supports Extract operation only. This Elica Kitchen Hood has a 60cm size for installation.</p><h2>Buy Elica Majestic BL-A-60 60cm Kitchen Hood from Star Tech</h2><p>In Bangladesh, you can get original <strong>Elica Majestic BL-A-60 60cm Kitchen Hood</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/kitchen-hood\" target=\"_blank\">Kitchen Hood</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Elica Majestic BL-A-60 60cm Kitchen Hood comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Majestic BL-A-60</li><li>Size: 60cm, Venting Type: Ducted</li><li>Suction Power: 691 m³/h, Operating Modes: Extract</li><li>Control Type: Touch Control</li><li>Features: LED 2x5 W Light, Aluminium Grease Filter</li></ul>",
+      "model": "Majestic BL-A-60",
+      "warranty": "no warranty",
+      "basePrice": 82000.0,
+      "originalPrice": 165000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Others",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "60cm, Venting Type: Ducted",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52874",
+          "price": 82000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Size": "60cm, Venting Type: Ducted"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 78720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "Majestic BL-A-60",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "60cm, Venting Type: Ducted",
+              "position": 1
+            },
+            {
+              "label": "Suction Power",
+              "value": "691 m³/h, Operating Modes: Extract",
+              "position": 2
+            },
+            {
+              "label": "Control Type",
+              "value": "Touch Control",
+              "position": 3
+            },
+            {
+              "label": "Features",
+              "value": "LED 2x5 W Light, Aluminium Grease Filter",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/elica-majestic-bl-a-60-kitchen-hood",
+      "sourceProductCode": "52874",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Majestic BL-A-60",
+        "Size: 60cm, Venting Type: Ducted",
+        "Suction Power: 691 m³/h, Operating Modes: Extract",
+        "Control Type: Touch Control",
+        "Features: LED 2x5 W Light, Aluminium Grease Filter"
+      ],
+      "needsReview": false,
+      "categorySlug": "kitchen-hood",
+      "image": "/images/products/appliance/kitchen-hood/elica-majestic-bl-a-60-kitchen-hood.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/kitchen-hood/elica-majestic-bl-a-60-kitchen-hood.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "elica-majestic-bl-a-60-kitchen-hood",
+        "candidateTitle": "Elica Majestic BL-A-60 60cm Kitchen Hood",
+        "attemptStem": "elica-majestic-bl-a-60-kitchen-hood"
+      }
+    }
+  ]
+}

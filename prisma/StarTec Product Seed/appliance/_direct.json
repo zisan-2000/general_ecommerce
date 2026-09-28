@@ -1,0 +1,2917 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/appliance",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\appliance",
+    "generatedAtUnix": 1790586316,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Appliance",
+      "slug": "appliance",
+      "parentSlug": null,
+      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Ceiling Fan",
+      "slug": "ceiling-fan",
+      "logo": null
+    },
+    {
+      "name": "Hitachi",
+      "slug": "hitachi",
+      "logo": null
+    },
+    {
+      "name": "Pressure Cooker",
+      "slug": "pressure-cooker",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Hitachi 1.5 Ton Inverter AC",
+      "slug": "hitachi-1-5-ton-inverter-ac",
+      "type": "PHYSICAL",
+      "sku": "ST-47678",
+      "description": "<h2>Hitachi 1.5 Ton Inverter AC</h2><p>The Hitachi <strong>RSQG018HFEOEZ1</strong> 1.5 Ton <a href=\"https://www.startech.com.bd/air-conditioner\" style=\"color: rgb(0, 0, 0);\" target=\"\">AC</a> is designed for the 1.0TR tonnage class, has a rated and maximum cooling capacity up to 18000 BTU, or 5100 watts at full load, ensuring steady temperature management even during peak summer conditions. The Hitachi RSQG018HFEOEZ1 AC is powered by a high performance rotary compressor and runs on a normal 230V, 50Hz, single phase power supply. With a rated power input of only 1645 watts, it is an energy-efficient alternative. With a rated EER of 3.10, AEER of 3.04, and MEPS of 2.93, this Hitachi 1.5 Ton AC combines powerful cooling with low electricity consumption, requiring only 7.9 amps during rated operation. The indoor device provides powerful airflow of up to 583 CFM with three fan speed settings, while keeping a low interior noise level of 37 dB for calm comfort. Advanced Soft Dry technology keeps the evaporator coil dry even after shutting down, eliminating moisture buildup, dust, and pollen for cleaner air. The Hitachi RSQG018HFEOEZ1 1.5 Ton Inverter AC features wave Blade Design technology, which uses sine wave blades and a bigger blower to reduce air cutting noise while throwing air farther. The clever Penta Sensor constantly analyzes conditions to improve cooling and safeguard key components. Stepless compressor control adjusts speed smoothly for continuous comfort. Built with 100% inner grooved copper tubing, the Hitachi AC ensures faster heat transmission, corrosion resistance, and a longer lifespan, making the Hitachi RSQG018HFEOEZ1 1.5 Ton Inverter AC a reliable solution for efficient everyday cooling.</p><h2>Buy Hitachi 1.5 Ton Inverter AC (RSQG018HFEOEZ1) from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hitachi 1.5 Ton Inverter AC (RSQG018HFEOEZ1)</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/hitachi-ac\" target=\"\">Hitachi Air Conditioner</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Hitachi 1.5 Ton Inverter AC (RSQG018HFEOEZ1) comes with 10 Years Compressor, 01 Year Parts &amp; 01 Year Service Warranty by Hitachi. Hitachi Warranty card must be kept for warranty claims. For warranty, Call Hitachi at 16212. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: RSQG018HFEOEZ1</li><li>Technology: Inverter</li><li>Cooling Capacity: Max. 18000 BTU</li><li>Coverage: Up to 180 Square Feet</li><li>Features: Soft Dry, Wave Blade Design, Penta Sensor</li></ul>",
+      "model": "RSQG018HFEOEZ1",
+      "warranty": "10 Years Compressor, 01 Year Parts & 01 Year Service Warranty by Hitachi. Hitachi Warranty card must be kept for warranty claims. For warranty, Call Hitachi at 16212. (Star Tech will not bear warranty claims).",
+      "basePrice": 120000.0,
+      "originalPrice": 138000.0,
+      "currency": "BDT",
+      "weight": 11.2,
+      "dimensions": {
+        "length": 968.0,
+        "width": 294.0,
+        "height": 240.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hitachi",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1.5 Ton",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity of Cooling (BTU)",
+          "position": 1,
+          "values": [
+            {
+              "value": "18000 BTU",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47678",
+          "price": 120000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1.5 Ton",
+            "Capacity of Cooling (BTU)": "18000 BTU",
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 115200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "AC Type",
+              "value": "Split Type",
+              "position": 0
+            },
+            {
+              "label": "Technology",
+              "value": "Inverter",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "1.5 Ton",
+              "position": 2
+            },
+            {
+              "label": "Coverage",
+              "value": "Up to 180 Square Feet",
+              "position": 3
+            },
+            {
+              "label": "Capacity of Cooling (BTU)",
+              "value": "18000 BTU",
+              "position": 4
+            },
+            {
+              "label": "Speed",
+              "value": "3 Steps",
+              "position": 5
+            },
+            {
+              "label": "Airflow",
+              "value": "583 CFM",
+              "position": 6
+            },
+            {
+              "label": "Noise Level",
+              "value": "37dB (IDU)",
+              "position": 7
+            },
+            {
+              "label": "Compressor Type",
+              "value": "Rotary",
+              "position": 8
+            },
+            {
+              "label": "Condenser Type",
+              "value": "100% Inner Grooved Copper",
+              "position": 9
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Voltage",
+              "value": "230/50/1 Volts/Hz/Phase",
+              "position": 0
+            },
+            {
+              "label": "Power Consumption",
+              "value": "1645 W (100 % load)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "968x294x240mm (IDU) (W X H X D) 750 X 548 X 288mm (ODU) (W X H X D)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "11.2 Kg (IDU) 30 Kg (ODU)",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "10 Years Compressor, 01 Year Parts & 01 Year Service Warranty by Hitachi. Hitachi Warranty card must be kept for warranty claims. For warranty, Call Hitachi at 16212. (Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hitachi-1-5-ton-inverter-ac",
+      "sourceProductCode": "47678",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: RSQG018HFEOEZ1",
+        "Technology: Inverter",
+        "Cooling Capacity: Max. 18000 BTU",
+        "Coverage: Up to 180 Square Feet",
+        "Features: Soft Dry, Wave Blade Design, Penta Sensor"
+      ],
+      "needsReview": false,
+      "categorySlug": "appliance",
+      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hitachi-1-5-ton-inverter-ac",
+        "candidateTitle": "Hitachi 1.5 Ton Inverter AC",
+        "attemptStem": "hitachi-1-5-ton-inverter-ac"
+      }
+    },
+    {
+      "name": "Hitachi 1 Ton Inverter AC",
+      "slug": "hitachi-1-ton-inverter-ac",
+      "type": "PHYSICAL",
+      "sku": "ST-47676",
+      "description": "<h2>Hitachi 1 Ton Inverter AC</h2><p>The Hitachi <strong>RAPG012HFE0EZ1</strong> 1 Ton <a href=\"https://www.startech.com.bd/air-conditioner\" style=\"color: rgb(0, 0, 0);\" target=\"\">AC</a> is designed for the 1.0TR tonnage class, has a rated and maximum cooling capacity of 12000 BTU, or 3516 watts at full load, ensuring steady temperature management even during peak summer conditions. The Hitachi RAPG012HFE0EZ1 AC is powered by a high performance rotary compressor and runs on a normal 230V, 50Hz, single phase power supply. With a rated power input of only 920 watts, it is an energy-efficient alternative. With a rated EER of 3.82, AEER of 3.69, and MEPS of 3.34, this Hitachi 1 Ton AC combines powerful cooling with low electricity consumption, requiring only 4.7 amps during rated operation. The indoor device provides powerful airflow of up to 425 CFM with three fan speed settings, while keeping a low interior noise level of 37 dB for calm comfort. Advanced Soft Dry technology keeps the evaporator coil dry even after shutting down, eliminating moisture buildup, dust, and pollen for cleaner air. The Hitachi RAPG012HFE0EZ1 1 Ton Inverter AC features wave Blade Design technology, which uses sine wave blades and a bigger blower to reduce air cutting noise while throwing air farther. The clever Penta Sensor constantly analyzes conditions to improve cooling and safeguard key components. Stepless compressor control adjusts speed smoothly for continuous comfort. Built with 100% inner grooved copper tubing, the Hitachi AC ensures faster heat transmission, corrosion resistance, and a longer lifespan, making the Hitachi RAPG012HFE0EZ1 1 Ton Inverter AC a reliable solution for efficient everyday cooling.</p><h2>Buy Hitachi 1 Ton Inverter AC (RAPG012HFE0EZ1) from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hitachi 1 Ton Inverter AC (RAPG012HFE0EZ1)</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/hitachi-ac\" target=\"\">Hitachi Air Conditioner</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Hitachi 1 Ton Inverter AC (RAPG012HFE0EZ1) comes with 10 Years Compressor, 01 Year Parts &amp; 01 Year Service Warranty by Hitachi. Hitachi Warranty card must be kept for warranty claims. For warranty, Call Hitachi at 16212. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: RAPG012HFE0EZ1</li><li>Technology: Inverter</li><li>Cooling Capacity: 12000 BTU</li><li>Coverage: Up to 120 Square Feet</li><li>Features: Soft Dry, Wave Blade Design, Penta Sensor</li></ul>",
+      "model": "RAPG012HFE0EZ1",
+      "warranty": "10 Years Compressor, 01 Year Parts & 01 Year Service Warranty by Hitachi. Hitachi Warranty card must be kept for warranty claims. For warranty, Call Hitachi at 16212. (Star Tech will not bear warranty claims).",
+      "basePrice": 98000.0,
+      "originalPrice": 112000.0,
+      "currency": "BDT",
+      "weight": 9.5,
+      "dimensions": {
+        "length": 798.0,
+        "width": 295.0,
+        "height": 240.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hitachi",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 Ton",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity of Cooling (BTU)",
+          "position": 1,
+          "values": [
+            {
+              "value": "12000 BTU",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47676",
+          "price": 98000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "1 Ton",
+            "Capacity of Cooling (BTU)": "12000 BTU",
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 94080.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "AC Type",
+              "value": "Split Type",
+              "position": 0
+            },
+            {
+              "label": "Technology",
+              "value": "Inverter",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "1 Ton",
+              "position": 2
+            },
+            {
+              "label": "Coverage",
+              "value": "Up to 120 Square Feet",
+              "position": 3
+            },
+            {
+              "label": "Capacity of Cooling (BTU)",
+              "value": "12000 BTU",
+              "position": 4
+            },
+            {
+              "label": "Speed",
+              "value": "3 Steps",
+              "position": 5
+            },
+            {
+              "label": "Airflow",
+              "value": "425 CFM",
+              "position": 6
+            },
+            {
+              "label": "Noise Level",
+              "value": "37dB (IDU)",
+              "position": 7
+            },
+            {
+              "label": "Compressor Type",
+              "value": "Rotary",
+              "position": 8
+            },
+            {
+              "label": "Condenser Type",
+              "value": "100% Inner Grooved Copper",
+              "position": 9
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Voltage",
+              "value": "230/50/1 Volts/Hz/Phase",
+              "position": 0
+            },
+            {
+              "label": "Power Consumption",
+              "value": "920 W (100 % load)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "798x295x240mm (IDU) (W X H X D) 658 X 530 X 274mm (ODU) (W X H X D)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "9.5 Kg (IDU) 26Kg (ODU)",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "10 Years Compressor, 01 Year Parts & 01 Year Service Warranty by Hitachi. Hitachi Warranty card must be kept for warranty claims. For warranty, Call Hitachi at 16212. (Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hitachi-1-ton-inverter-ac",
+      "sourceProductCode": "47676",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: RAPG012HFE0EZ1",
+        "Technology: Inverter",
+        "Cooling Capacity: 12000 BTU",
+        "Coverage: Up to 120 Square Feet",
+        "Features: Soft Dry, Wave Blade Design, Penta Sensor"
+      ],
+      "needsReview": false,
+      "categorySlug": "appliance",
+      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-ton-inverter-ac.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/ac/Hitachi/hitachi-1-ton-inverter-ac.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hitachi-1-ton-inverter-ac",
+        "candidateTitle": "Hitachi 1 Ton Inverter AC",
+        "attemptStem": "hitachi-1-ton-inverter-ac"
+      }
+    },
+    {
+      "name": "Hitachi 2 Ton Inverter AC",
+      "slug": "hitachi-2-ton-inverter-ac",
+      "type": "PHYSICAL",
+      "sku": "ST-47679",
+      "description": "<h2>Hitachi 2 Ton Inverter AC</h2><p>The Hitachi <strong>RMQG024HFEOEZ1</strong> AC is a 2.0TR system with a maximum cooling capacity of 24000 BTU, or 6300 watts at full load, ensuring quick and uniform temperature management even during high heat. The Hitachi RMQG024HFEOEZ1 AC is powered by a high efficiency rotary compressor and runs on a 230V, 50Hz, single phase power supply. It has a rated power input of 2000 watts and a rated current draw of 9.2 amp. The Hitachi 2 Ton Inverter <a href=\"https://www.startech.com.bd/air-conditioner\" style=\"color: rgb(0, 0, 0);\" target=\"\">AC</a>, with an EER of 3.15, AEER of 3.1, and MEPS rating of 2.93, strikes a balance between powerful cooling performance and efficient energy consumption. The indoor device delivers a powerful airflow of up to 583 CFM across three fan speed settings while maintaining a low indoor noise level of only 38 dB for comfortable operation. Soft Dry technology keeps the indoor fan running shortly after shutdown to dry accumulated moisture on the evaporator coil, reducing dust, pollen, and debris buildup and providing cleaner air. Wave Blade Design technique employs sine wave blades and a bigger blower to reduce air cutting noise while providing extended airflow. The clever Penta Sensor monitors indoor and outdoor conditions to optimise cooling under load changes and safeguard critical components. Stepless compressor control regulates compressor speed constantly, providing smooth, uninterrupted comfort. Built with 100 percent inner grooved copper tubing, the Hitachi AC enhances heat transfer, resists corrosion, and extends system life, making the Hitachi RMQG024HFEOEZ1 2 Ton Inverter AC a dependable cooling solution for modern homes seeking efficient performance, quiet operation, durable construction, advanced sensing technology, consistent airflow, reliable summer comfort, and trusted brand quality from Hitachi AC systems worldwide.</p><h2>Buy Hitachi 2 Ton Inverter AC (RMQG024HFEOEZ1) from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hitachi 2 Ton Inverter AC (RMQG024HFEOEZ1)</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/hitachi-ac\" target=\"\">Hitachi Air Conditioner</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Hitachi 2 Ton Inverter AC (RMQG024HFEOEZ1) comes with 10 Years Compressor, 01 Year Parts &amp; 01 Year Service Warranty by Hitachi. Hitachi Warranty card must be kept for warranty claims. For warranty, Call Hitachi at 16212. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: RMQG024HFEOEZ1</li><li>Technology: Inverter</li><li>Cooling Capacity: Max. 24000 BTU</li><li>Coverage: Up to 220 Square Feet</li><li>Features: Soft Dry, Wave Blade Design, Penta Sensor</li></ul>",
+      "model": "RMQG024HFEOEZ1",
+      "warranty": "10 Years Compressor, 01 Year Parts & 01 Year Service Warranty by Hitachi. Hitachi Warranty card must be kept for warranty claims. For warranty, Call Hitachi at 16212. (Star Tech will not bear warranty claims).",
+      "basePrice": 142500.0,
+      "originalPrice": 160000.0,
+      "currency": "BDT",
+      "weight": 11.0,
+      "dimensions": {
+        "length": 968.0,
+        "width": 294.0,
+        "height": 240.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Hitachi",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 Ton",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Capacity of Cooling (BTU)",
+          "position": 1,
+          "values": [
+            {
+              "value": "24000 BTU",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 2,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-47679",
+          "price": 142500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "2 Ton",
+            "Capacity of Cooling (BTU)": "24000 BTU",
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 136800.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "AC Type",
+              "value": "Split Type",
+              "position": 0
+            },
+            {
+              "label": "Technology",
+              "value": "Inverter",
+              "position": 1
+            },
+            {
+              "label": "Capacity",
+              "value": "2 Ton",
+              "position": 2
+            },
+            {
+              "label": "Coverage",
+              "value": "Up to 220 Square Feet",
+              "position": 3
+            },
+            {
+              "label": "Capacity of Cooling (BTU)",
+              "value": "24000 BTU",
+              "position": 4
+            },
+            {
+              "label": "Speed",
+              "value": "3 Steps",
+              "position": 5
+            },
+            {
+              "label": "Airflow",
+              "value": "583 CFM",
+              "position": 6
+            },
+            {
+              "label": "Noise Level",
+              "value": "38 dB (IDU)",
+              "position": 7
+            },
+            {
+              "label": "Compressor Type",
+              "value": "Rotary",
+              "position": 8
+            },
+            {
+              "label": "Condenser Type",
+              "value": "100% Inner Grooved Copper",
+              "position": 9
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 1,
+          "items": [
+            {
+              "label": "Power Voltage",
+              "value": "230/50/1 Volts/Hz/Phase",
+              "position": 0
+            },
+            {
+              "label": "Power Consumption",
+              "value": "2000 W (100 % load)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimensions",
+              "value": "968x294x240mm (IDU) (W X H X D) 792 X 600 X 299mm (ODU) (W X H X D)",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "11 Kg (IDU) 39 Kg (ODU)",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "10 Years Compressor, 01 Year Parts & 01 Year Service Warranty by Hitachi. Hitachi Warranty card must be kept for warranty claims. For warranty, Call Hitachi at 16212. (Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/hitachi-2-ton-inverter-ac",
+      "sourceProductCode": "47679",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: RMQG024HFEOEZ1",
+        "Technology: Inverter",
+        "Cooling Capacity: Max. 24000 BTU",
+        "Coverage: Up to 220 Square Feet",
+        "Features: Soft Dry, Wave Blade Design, Penta Sensor"
+      ],
+      "needsReview": false,
+      "categorySlug": "appliance",
+      "image": "/images/products/appliance/ac/Hitachi/hitachi-2-ton-inverter-ac.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/ac/Hitachi/hitachi-2-ton-inverter-ac.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "hitachi-2-ton-inverter-ac",
+        "candidateTitle": "Hitachi 2 Ton Inverter AC",
+        "attemptStem": "hitachi-2-ton-inverter-ac"
+      }
+    },
+    {
+      "unmatched": true,
+      "name": "Jusal 6l Pressure Cooker Copy",
+      "slug": "jusal-6l-pressure-cooker-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-BDF31AAA76D32A9864507010",
+      "categorySlug": "appliance",
+      "brandName": "Pressure Cooker",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "jusal-6l-pressure-cooker-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "jusal-6l-pressure-cooker-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Jusal 6l Pressure Cooker Copy 2",
+      "slug": "jusal-6l-pressure-cooker-copy-2",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-BF072931E9F549990466426F",
+      "categorySlug": "appliance",
+      "brandName": "Pressure Cooker",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy (2).png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "jusal-6l-pressure-cooker-copy-2",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "jusal-6l-pressure-cooker-copy-2",
+              "candidates": []
+            }
+          },
+          {
+            "stem": "jusal-6l-pressure-cooker-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "jusal-6l-pressure-cooker-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy (2).png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Jusal 6l Pressure Cooker Copy Copy",
+      "slug": "jusal-6l-pressure-cooker-copy-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-BC6DA8C0FF297FE8FB011817",
+      "categorySlug": "appliance",
+      "brandName": "Pressure Cooker",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "jusal-6l-pressure-cooker-copy-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "jusal-6l-pressure-cooker-copy-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/cooker/Pressure Cooker/jusal-6l-pressure-cooker - Copy - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Aero X 54 Inch Ceiling Fan Copy",
+      "slug": "qulik-aero-x-54-inch-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-DB36D79D36F8D47013718404",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-aero-x-54-inch-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-aero-x-54-inch-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-aero-x-54-inch-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-aero-x-54-inch-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Aero X Ul Fan Copy",
+      "slug": "qulik-aero-x-ul-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-2D00936A91A72B65B48D464E",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-aero-x-ul-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-aero-x-ul-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-aero-x-ul-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-aero-x-ul-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Alpha Edge 4b 53 Ceiling Fan Copy",
+      "slug": "qulik-alpha-edge-4b-53-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-0F7D83A33DE159DB066BD2BF",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-alpha-edge-4b-53-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-alpha-edge-4b-53-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-alpha-edge-4b-53-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-alpha-edge-4b-53-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Alpha Edge 4b Ul Ceiling Fan Copy",
+      "slug": "qulik-alpha-edge-4b-ul-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-4DC4791F2C80985591BF8154",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-alpha-edge-4b-ul-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-alpha-edge-4b-ul-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-alpha-edge-4b-ul-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-alpha-edge-4b-ul-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Alpha Edge 5b 53 Ceiling Fan Copy",
+      "slug": "qulik-alpha-edge-5b-53-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-D4547B14AA81E6684A739B7D",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-alpha-edge-5b-53-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-alpha-edge-5b-53-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-alpha-edge-5b-53-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-alpha-edge-5b-53-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Falcon 53 Inch Ceiling Fan Copy",
+      "slug": "qulik-falcon-53-inch-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-CDA271A2EF1BE0C7C3B72A34",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-falcon-53-inch-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-falcon-53-inch-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-falcon-53-inch-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-falcon-53-inch-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Falcon Ul 53 Inch Ceiling Fan Copy",
+      "slug": "qulik-falcon-ul-53-inch-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-0226D126FB72DEA2A05B086C",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-falcon-ul-53-inch-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-falcon-ul-53-inch-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-falcon-ul-53-inch-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-falcon-ul-53-inch-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Flora 28 Inch Ceiling Fan Copy",
+      "slug": "qulik-flora-28-inch-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-0CEBED3509D3577D52AA7A45",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-flora-28-inch-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-flora-28-inch-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-flora-28-inch-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-flora-28-inch-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Helix Ul 60 Inch Ceiling Fan Copy",
+      "slug": "qulik-helix-ul-60-inch-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-F2E254090E47AFE9954A95E3",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-helix-ul-60-inch-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-helix-ul-60-inch-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-helix-ul-60-inch-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-helix-ul-60-inch-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Luxoria Ul 52 Inch Ceiling Fan Copy",
+      "slug": "qulik-luxoria-ul-52-inch-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-F01957DA3B36813EF9C2D318",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-luxoria-ul-52-inch-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-luxoria-ul-52-inch-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-luxoria-ul-52-inch-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-luxoria-ul-52-inch-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6036 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6036-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-8B41C1286023BECE9659AD32",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6036-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6036-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6036-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6036-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K62288 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k62288-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-35C6795AA933936E3731853A",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k62288-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k62288-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k62288-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k62288-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6251 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6251-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-5F1A319A0B7F098E1FB39503",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6251-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6251-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6251-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6251-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6272 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6272-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-1C3BA1115BFD98CBBBFB1DD2",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6272-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6272-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6272-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6272-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6289 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6289-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-5E0BCA98DD1DE14D350A557B",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6289-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6289-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6289-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6289-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6291 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6291-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-9F7507586190788441542682",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6291-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6291-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6291-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6291-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6303 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6303-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-34497E03CE79AB6DC98838EF",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6303-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6303-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6303-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6303-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6323 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6323-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-5F88D10327D6F8CF86840A4E",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6323-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6323-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6323-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6323-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6334 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6334-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-E4714AE00E31FFF2D97926C6",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6334-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6334-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6334-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6334-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6358 A Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6358-a-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-B1EB64438DA7CCFF9F102DB5",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6358-a-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6358-a-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6358-a-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6358-a-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6358 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6358-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-4E18B47B9FB34097201D40B6",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6358-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6358-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6358-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6358-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6367 A Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6367-a-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-B74C62D12C91ACC2EDDE068F",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6367-a-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6367-a-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6367-a-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6367-a-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6367 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6367-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-F725CBAF772A51841FFB86FB",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6367-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6367-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6367-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6367-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6385 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6385-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-C2AE840EAA233ED839A9989C",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6385-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6385-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6385-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6385-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q K6503 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-k6503-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-C421AFF6988E7BF3636906AB",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6503-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-k6503-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-k6503-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-k6503-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q T7456 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-t7456-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-5E6D9F77D246120602F3A362",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-t7456-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-t7456-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-t7456-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-t7456-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q T8255 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-t8255-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-8450F3D295A41D291FF28896",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-t8255-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-t8255-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-t8255-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-t8255-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q T8299 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-t8299-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-465C9F636F114F6F7815F1B6",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-t8299-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-t8299-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-t8299-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-t8299-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Q T8329 Chandelier Ceiling Fan Copy",
+      "slug": "qulik-q-t8329-chandelier-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-C3947DE2352983DC9155F5DB",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-q-t8329-chandelier-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-q-t8329-chandelier-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-q-t8329-chandelier-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-q-t8329-chandelier-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Quantom 56 Inch Ceiling Fan Copy",
+      "slug": "qulik-quantom-56-inch-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-28D41FC4430B3E480670BAFD",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-quantom-56-inch-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-quantom-56-inch-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-quantom-56-inch-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-quantom-56-inch-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Quantom Ul 56 Inch Ceiling Fan Copy",
+      "slug": "qulik-quantom-ul-56-inch-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-8904EEB28BBD3FE7C44C7D2B",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-quantom-ul-56-inch-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-quantom-ul-56-inch-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-quantom-ul-56-inch-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-quantom-ul-56-inch-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Silex 54 Inch Ceiling Fan Copy",
+      "slug": "qulik-silex-54-inch-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-79EBE3C1257D047C798C42E0",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-silex-54-inch-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-silex-54-inch-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-silex-54-inch-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-silex-54-inch-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Silex 66 Inch Ceiling Fan Copy",
+      "slug": "qulik-silex-66-inch-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-1A42D7F0774870F9AAB53213",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-silex-66-inch-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-silex-66-inch-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-silex-66-inch-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-silex-66-inch-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Spinner Pro 32 Inch Ceiling Fan Copy",
+      "slug": "qulik-spinner-pro-32-inch-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-4ECB8E88F06765AB56B5B229",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-spinner-pro-32-inch-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-spinner-pro-32-inch-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-spinner-pro-32-inch-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-spinner-pro-32-inch-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Windora 56 Inch Ceiling Fan Copy",
+      "slug": "qulik-windora-56-inch-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-C7547A631851939BCFB428A1",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-windora-56-inch-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-windora-56-inch-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-windora-56-inch-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-windora-56-inch-ceiling-fan - Copy.png"
+      ]
+    },
+    {
+      "unmatched": true,
+      "name": "Qulik Windora Ul 56 Inch Ceiling Fan Copy",
+      "slug": "qulik-windora-ul-56-inch-ceiling-fan-copy",
+      "type": "PHYSICAL",
+      "sku": "STARTECH-UNMATCHED-11CFE677CD6DB3F74A87AE41",
+      "categorySlug": "appliance",
+      "brandName": "Ceiling Fan",
+      "description": "",
+      "shortDesc": null,
+      "model": null,
+      "warranty": null,
+      "basePrice": 0.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "image": "/images/products/appliance/fan/Ceiling Fan/qulik-windora-ul-56-inch-ceiling-fan - Copy.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "variants": [],
+      "variantOptions": [],
+      "specificationGroups": [],
+      "sourceProductUrl": null,
+      "sourceProductCode": null,
+      "sourceStatus": null,
+      "sourceMpn": null,
+      "sourceKeyFeatures": [],
+      "needsReview": true,
+      "match": {
+        "method": "unmatched",
+        "attempts": [
+          {
+            "stem": "qulik-windora-ul-56-inch-ceiling-fan-copy",
+            "meta": {
+              "method": "search-rejected",
+              "score": 0.0,
+              "query": "qulik-windora-ul-56-inch-ceiling-fan-copy",
+              "candidates": []
+            }
+          }
+        ],
+        "externalCandidates": []
+      },
+      "sourceImages": [
+        "/images/products/appliance/fan/Ceiling Fan/qulik-windora-ul-56-inch-ceiling-fan - Copy.png"
+      ]
+    }
+  ]
+}

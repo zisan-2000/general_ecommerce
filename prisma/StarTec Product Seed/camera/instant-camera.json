@@ -1,0 +1,1004 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/camera",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\camera",
+    "generatedAtUnix": 1790585809,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Camera",
+      "slug": "camera",
+      "parentSlug": null,
+      "image": "/images/products/camera/Action Camera/dgs-ox3-pocket-camera-67755d6a.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Instant Camera",
+      "slug": "instant-camera",
+      "parentSlug": "camera",
+      "image": "/images/products/camera/instant-camera/fujifilm-instax-mini-11-instant-camera.png",
+      "isActive": true,
+      "sortOrder": 4,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Fujifilm",
+      "slug": "fujifilm",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "FUJIFILM INSTAX mini 11 Instant Film Camera",
+      "slug": "fujifilm-instax-mini-11-instant-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-36498",
+      "description": "<h2>FUJIFILM INSTAX mini 11 Instant Film Camera</h2><p>The FUJIFILM <strong>INSTAX mini 11</strong> Instant Film Camera is designed to provide instant pictures with high-quality prints, using the FUJIFILM Instax mini instant film to produce photo pictures sized at 62 mm × 46 mm. The lens on the Polaroid camera has two components and two elements, with a 1:12.7 aperture and a focal length of 60 mm. Accurate framing is guaranteed by its actual image finder, which has a target point and 0.37× magnification. The <a href=\"https://www.startech.com.bd/instant-camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">Instant camera</a>'s 0.3-meter shooting range makes it perfect for close-up photos when in selfie mode, which is designed for distances of 0.3 to 0.5 meters. With a slow synchro mode for low light and a preset electronic shutter that operates between 1/2 and 1/250 seconds, the camera produces bright, clear images under a variety of lighting circumstances. With automatic exposure management, the ISO of 800 is equivalent to light intensities between Lv 5.0 and 14.5. The film is automatically ejected by the <strong>FUJIFILM INSTAX mini 11 Instant Camera</strong>, and it takes about 90 seconds to develop, though this can change based on the outside temperature. With new AA-size alkaline batteries, the INSTAX mini 11 Polaroid Instant Camera has a flash recycle time of 6.5 seconds or less and is equipped with a continuous firing flash that adapts automatically to lighting situations. With an effective flash range of 0.3 to 2.7 meters, you can take well-lit pictures even in low light. Two AA-sized alkaline batteries are required to operate the FUJIFILM INSTAX mini 11 Instant Camera, which is capable of holding around ten Instax mini film packs with ten exposures each. Other features include a convenient film pack confirmation display, a film counter, and an auto power-off mode that shuts off after five minutes to preserve battery life. The INSTAX mini 11 is a great option for effortlessly and stylishly capturing impromptu moments because it is small and easy to use.</p><img alt=\"FUJIFILM INSTAX mini 11 Instant Camera\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/instant-camera/fujifilm/instax-mini-11/instax-mini-11.webp\" width=\"920\"/><h2>Buy FUJIFILM INSTAX mini 11 Instant Film Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>FUJIFILM INSTAX mini 11 Instant Film Camera</strong> From Star Tech. We have a large collection of latest Fujifilm <a href=\"https://www.startech.com.bd\" target=\"\">Instant Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The FUJIFILM INSTAX mini 11 Instant Film Camera comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: INSTAX mini 11</li><li>Lens: 2 Components, 2 Elements, f = 60mm, 1:12.7</li><li>Photo Picture Size: 62 mm × 46 mm, Selfie Mirror</li><li>Programmed Electronic Shutter 1/2 to 1/250 sec</li><li>Constant Firing Flash (Automatic Light Adjustment)</li></ul>",
+      "model": "INSTAX mini 11",
+      "warranty": "No Warranty",
+      "basePrice": 11500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.293,
+      "dimensions": {
+        "length": 107.6,
+        "width": 121.2,
+        "height": 67.3,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Fujifilm",
+      "variantOptions": [
+        {
+          "name": "Image Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "62 mm × 46 mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-36498",
+          "price": 11500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Image Size": "62 mm × 46 mm"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 11040.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Exposure Control",
+          "position": 0,
+          "items": [
+            {
+              "label": "Exposure Modes",
+              "value": "Automatic, Lv 5.0 to 14.5 (ISO 800)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Shutter",
+          "position": 1,
+          "items": [
+            {
+              "label": "Shutter Speed",
+              "value": "0.3 m and beyond (use Close-Up Mode for 0.3 m to 0.5 m)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Viewfinder",
+          "position": 2,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Real image finder, 0.37×, with target spot Features parallax correction function for Close-Up Mode",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "File Type",
+          "position": 3,
+          "items": [
+            {
+              "label": "Image Size",
+              "value": "62 mm × 46 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Flash",
+          "position": 4,
+          "items": [
+            {
+              "label": "Built-in Flash",
+              "value": "Constant firing flash (automatic light adjustment), recycle time: 7 seconds or less (when using new batteries), effective flash range: 0.3 to 2.2 m",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Power Source",
+          "position": 5,
+          "items": [
+            {
+              "label": "Battery",
+              "value": "Two AA-size alkaline batteries (LR6), capacity: approx. 10 instax mini film packs of 10 exposures each (depends on usage conditions)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 6,
+          "items": [
+            {
+              "label": "Dimensions (W x H x D)",
+              "value": "107.6 mm × 121.2 mm × 67.3 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight (Body Only)",
+              "value": "293 g (without batteries, strap, and film)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Other Features",
+          "position": 7,
+          "items": [
+            {
+              "label": "Features",
+              "value": "Film Ejection: Automatic Film Developing Time: Approx. 90 seconds (varies depending on the ambient temperature)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Lens",
+          "position": 8,
+          "items": [
+            {
+              "label": "Lens Mount",
+              "value": "2 components, 2 elements, f = 60 mm, 1:12.7",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 9,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-instax-mini-11-instant-camera",
+      "sourceProductCode": "36498",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: INSTAX mini 11",
+        "Lens: 2 Components, 2 Elements, f = 60mm, 1:12.7",
+        "Photo Picture Size: 62 mm × 46 mm, Selfie Mirror",
+        "Programmed Electronic Shutter 1/2 to 1/250 sec",
+        "Constant Firing Flash (Automatic Light Adjustment)"
+      ],
+      "needsReview": false,
+      "categorySlug": "instant-camera",
+      "image": "/images/products/camera/instant-camera/fujifilm-instax-mini-11-instant-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/instant-camera/fujifilm-instax-mini-11-instant-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fujifilm-instax-mini-11-instant-camera",
+        "candidateTitle": "FUJIFILM INSTAX mini 11 Instant Film Camera",
+        "attemptStem": "fujifilm-instax-mini-11-instant-camera"
+      }
+    },
+    {
+      "name": "FUJIFILM INSTAX mini 12 Instant Film Camera",
+      "slug": "fujifilm-instax-mini-12-instant-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-36496",
+      "description": "<h2>FUJIFILM INSTAX mini 12 Instant Film Camera</h2><p>The FUJIFILM <strong>INSTAX mini 12</strong> Instant Film Camera is a compact, multifunctional camera that can instantly capture and print images while developing memories. The 62 mm × 46 mm photos produced by this <a href=\"https://www.startech.com.bd/instant-camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">instant camera</a> guarantee bright and excellent printouts. This lens has two components and two elements, and it has an aperture of 1:12.7 and a focal length of 60 mm. With a target spot and parallax correction function, the actual image finder with 0.37× magnification improves accuracy in the Close-Up Mode, perfect for shooting targets between 0.3 and 0.5 m. It can shoot efficiently from 0.3 m and beyond for various ranges. The electronic shutter on the <strong>FUJIFILM INSTAX mini 12 Instant Camera</strong> is configured to operate between 1/2 and 1/250 seconds, and it has a slow synchro function for dim lighting. With an ISO of 800, its automated exposure management allows it to capture light levels ranging from Lv 5.0 to 14.5, providing the best possible brightness and clarity under a variety of lighting conditions. The film is automatically ejected and developed, taking about 90 seconds on average, though this can change depending on the outside temperature. Using new AA-size alkaline batteries, this continuous firing flash with automated light adjustment improves image quality in low light conditions and recycles in 7 seconds or less. Effectively, the flash can span an area between 0.3 and 2.2 meters. Depending on usage conditions, the Polaried Instant camera can accommodate up to 10 Instax mini film packs with 10 exposures each, powered by two AA-size alkaline batteries. Convenient features such as an auto power-off function after five minutes, a film counter, and a film pack confirmation display are included in the FUJIFILM INSTAX mini 12 Polaroid Instant Camera. </p><img alt=\"FUJIFILM INSTAX mini 12 Instant Camera\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/instant-camera/fujifilm/instax-mini-12/instax-mini-12-08.webp\" width=\"920\"/><h3>Take Better Selfies With Selfie Mirror</h3><p>Use the selfie mirror on the FUJIFILM <strong>INSTAX mini 12</strong> Instant Film Camera to compose your photo. The flash adjusts automatically, even in Close-up mode! Achieve the ideal lighting conditions without overexposing the picture. It's simple to turn on and enter close-up mode by twisting the lens twice. For distances between 30 and 50 cm, this setting is perfect. You may snap pictures with ease because shutter speed, flash brightness, and other settings adapt to the surrounding light automatically.</p><img alt=\"FUJIFILM INSTAX mini 12 Instant Camera\" height=\"450\" src=\"https://www.startech.com.bd/image/catalog/instant-camera/fujifilm/instax-mini-12/instax-mini-12-09.webp\" width=\"920\"/><h2>Buy FUJIFILM INSTAX mini 12 Instant Film Camera from Star Tech</h2><p>In Bangladesh, you can get original <strong>FUJIFILM INSTAX mini 12 Instant Film Camera</strong> From Star Tech. We have a large collection of latest Fujifilm <a href=\"https://www.startech.com.bd/instant-camera\" target=\"\">Instant Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The FUJIFILM INSTAX mini 12 Instant Camera comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: INSTAX mini 12</li><li>Lens: 2 Components, 2 Elements, f = 60mm, 1:12.7</li><li>Photo Picture Size: 62 mm × 46 mm, Selfie Mirror</li><li>Programmed Electronic Shutter 1/2 to 1/250 sec</li><li>Constant Firing Flash (Automatic Light Adjustment)</li></ul>",
+      "model": "INSTAX mini 12",
+      "warranty": "No Warranty",
+      "basePrice": 12900.0,
+      "originalPrice": 15000.0,
+      "currency": "BDT",
+      "weight": 0.306,
+      "dimensions": {
+        "length": 104.0,
+        "width": 66.6,
+        "height": 122.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Fujifilm",
+      "variantOptions": [
+        {
+          "name": "Image Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "62 mm × 46 mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-36496",
+          "price": 12900.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Image Size": "62 mm × 46 mm"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 12384.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Exposure Control",
+          "position": 0,
+          "items": [
+            {
+              "label": "Exposure Modes",
+              "value": "Automatic, Lv 5.0 to 14.5 (ISO 800)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Shutter",
+          "position": 1,
+          "items": [
+            {
+              "label": "Shutter Speed",
+              "value": "0.3 m and beyond (use Close-Up Mode for 0.3 m to 0.5 m)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Viewfinder",
+          "position": 2,
+          "items": [
+            {
+              "label": "Type",
+              "value": "Real image finder, 0.37×, with target spot Features parallax correction function for Close-Up Mode",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "File Type",
+          "position": 3,
+          "items": [
+            {
+              "label": "Image Size",
+              "value": "62 mm × 46 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Flash",
+          "position": 4,
+          "items": [
+            {
+              "label": "Built-in Flash",
+              "value": "Constant firing flash (automatic light adjustment), recycle time: 7 seconds or less (when using new batteries), effective flash range: 0.3 to 2.2 m",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Power Source",
+          "position": 5,
+          "items": [
+            {
+              "label": "Battery",
+              "value": "Two AA-size alkaline batteries (LR6), capacity: approx. 10 instax mini film packs of 10 exposures each (depends on usage conditions)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 6,
+          "items": [
+            {
+              "label": "Dimensions (W x H x D)",
+              "value": "104 mm×66.6 mm×122 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight (Body Only)",
+              "value": "306 g (without batteries, strap, and film)",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Other Features",
+          "position": 7,
+          "items": [
+            {
+              "label": "Features",
+              "value": "Film Ejection: Automatic Film Developing Time: Approx. 90 seconds (varies depending on the ambient temperature)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Lens",
+          "position": 8,
+          "items": [
+            {
+              "label": "Lens Mount",
+              "value": "2 components, 2 elements, f = 60 mm, 1:12.7",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 9,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-instax-mini-12-instant-camera",
+      "sourceProductCode": "36496",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: INSTAX mini 12",
+        "Lens: 2 Components, 2 Elements, f = 60mm, 1:12.7",
+        "Photo Picture Size: 62 mm × 46 mm, Selfie Mirror",
+        "Programmed Electronic Shutter 1/2 to 1/250 sec",
+        "Constant Firing Flash (Automatic Light Adjustment)"
+      ],
+      "needsReview": false,
+      "categorySlug": "instant-camera",
+      "image": "/images/products/camera/instant-camera/fujifilm-instax-mini-12-instant-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/instant-camera/fujifilm-instax-mini-12-instant-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fujifilm-instax-mini-12-instant-camera",
+        "candidateTitle": "FUJIFILM INSTAX mini 12 Instant Film Camera",
+        "attemptStem": "fujifilm-instax-mini-12-instant-camera"
+      }
+    },
+    {
+      "name": "FUJIFILM Instax Mini EVO Hybrid Instant Camera",
+      "slug": "fujifilm-instax-mini-evo-instant-camera",
+      "type": "PHYSICAL",
+      "sku": "ST-39984",
+      "description": "<h2>FUJIFILM Instax Mini EVO Hybrid Instant Film Camera</h2>\n<p>The FUJIFILM <strong>Instax Mini EVO</strong> Hybrid <a href=\"https://www.startech.com.bd/instant-camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">Instant Camera</a> features a 1/5-inch CMOS image sensor with a primary color filter, capturing images at a resolution of 2560 x 1920 pixels. This FUJIFILM Instax Mini EVO Instant Camera offers versatile storage options, with internal memory holding about 45 images and a microSD/microSDHC memory card storing up to 850 images. It records images in DCF-compliant Exif Ver 2.3 format. With an f = 28 mm focus distance (35-mm film equivalent) and an F2.0 aperture, the FUJIFILM Instax Mini EVO Camera delivers excellent clarity. The camera uses a single autofocus with an AF illuminator, and the shooting distance ranges from 10 cm to infinity. It offers a wide shutter speed range from 1/4 second to 1/8000 second and shooting sensitivity from ISO 100 to 1600, both of which adjust automatically. The FUJIFILM Instax Mini EVO Instant Film Camera features Program AE for exposure control, and exposure compensation from −2.0 EV to +2.0 EV in 1/3 EV steps. The FUJIFILM Instax Mini EVO Film Camera supports TTL 256 split metering and multi-metering, with multiple white balance settings, including Auto, Fine, Shade, and Fluorescent. Flash modes include Auto, Forced, and Suppressed, with a shooting range of 50 cm to 1.5 m. The self-timer offers 2 seconds or 10 seconds, and 100 creative effects are available, combining 10 lens effects and 10 film effects. For printing, the FUJIFILM Instant Camera has an exposure print pixel count of 1600 x 600 dots, with a resolution of 25 dots/mm by 12.5 dots/mm, and prints JPEG images from internal memory or memory cards. It has a 3.0-inch TFT color LCD screen with approximately 460,000 dots. Powered by a lithium-ion battery, the camera can print about 100 images per full charge, with a charging time of 2 to 3 hours. Measuring 87 mm x 122.9 mm x 36 mm and weighing 285 g, the FUJIFILM Instax Mini EVO Instant Camera operates in temperatures from 5°C to 40°C and humidity levels from 20% to 80%. The camera uses FUJIFILM Instax Mini film, sold separately, for instant photography.</p>\n<h2>BuyFUJIFILM Instax Mini EVO Hybrid Instant Film Camera from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>FUJIFILM Instax Mini EVO Hybrid Instant Film Camera</strong> From Star Tech. We have a large collection of latest Fujifilm <a href=\"https://www.startech.com.bd\" target=\"\">Instant Camera</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The FUJIFILM Instax Mini EVO Hybrid Instant Film Camera comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Instax Mini EVO</li><li>1/5-inch CMOS with primary color filter</li><li>3.0-inch TFT color LCD screen</li><li>10 Lens Effects and 10 Film Effects</li><li>Accepts INSTAX MINI Instant Film</li></ul>",
+      "model": "Instax Mini EVO",
+      "warranty": "No Warranty",
+      "basePrice": 25500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 10.1,
+      "dimensions": {
+        "length": 4.8,
+        "width": 3.4,
+        "height": 1.4,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Fujifilm",
+      "variantOptions": [
+        {
+          "name": "Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "3.0-inch",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage Type",
+          "position": 1,
+          "values": [
+            {
+              "value": "Internal memory, microSD/microSDHC memory card Storage capacity: Approximately 45 images in internal memory, approximately 850 images per 1 GB in microSD/microSDHC memory card",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-39984",
+          "price": 25500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Size": "3.0-inch",
+            "Storage Type": "Internal memory, microSD/microSDHC memory card Storage capacity: Approximately 45 images in internal memory, approximately 850 images per 1 GB in microSD/microSDHC memory card"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 24480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Image Sensor",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sensor Type",
+              "value": "1/5-inch CMOS with primary color filter",
+              "position": 0
+            },
+            {
+              "label": "Total Pixels",
+              "value": "2560 x 1920",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Focus",
+          "position": 1,
+          "items": [
+            {
+              "label": "Focus Type",
+              "value": "Autofocus: Single AF (with AF Illuminator)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Exposure Control",
+          "position": 2,
+          "items": [
+            {
+              "label": "Metering Modes",
+              "value": "Multi, TTL 256-Zones",
+              "position": 0
+            },
+            {
+              "label": "Exposure Modes",
+              "value": "Auto",
+              "position": 1
+            },
+            {
+              "label": "Exposure Compensation",
+              "value": "−2.0 EV to +2.0 EV (1/3 EV step)",
+              "position": 2
+            },
+            {
+              "label": "ISO Sensitivity",
+              "value": "100 to 1600 in Auto Mode",
+              "position": 3
+            },
+            {
+              "label": "White Balance",
+              "value": "Auto, Fine, Shade, Fluorescent 1, Fluorescent 2, Fluorescent 3, Incandescent",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Shutter",
+          "position": 3,
+          "items": [
+            {
+              "label": "Shutter Type",
+              "value": "Electronic Shutter",
+              "position": 0
+            },
+            {
+              "label": "Shutter Speed",
+              "value": "1/4 second to 1/8000 second (automatic switching)",
+              "position": 1
+            },
+            {
+              "label": "Self Timer",
+              "value": "Approximately 2 seconds / approximately 10 seconds",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Viewfinder",
+          "position": 4,
+          "items": [
+            {
+              "label": "Dioptre Correction",
+              "value": "Yes",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "LCD Monitor",
+          "position": 5,
+          "items": [
+            {
+              "label": "Type",
+              "value": "TFT color LCD screen",
+              "position": 0
+            },
+            {
+              "label": "Size",
+              "value": "3.0-inch",
+              "position": 1
+            },
+            {
+              "label": "Dots",
+              "value": "Approximately 460,000 dots",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "File Type",
+          "position": 6,
+          "items": [
+            {
+              "label": "Image Type",
+              "value": "Printable image format: JPEG images taken with this unit",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Storage",
+          "position": 7,
+          "items": [
+            {
+              "label": "Storage Type",
+              "value": "Internal memory, microSD/microSDHC memory card Storage capacity: Approximately 45 images in internal memory, approximately 850 images per 1 GB in microSD/microSDHC memory card",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Interface",
+          "position": 8,
+          "items": [
+            {
+              "label": "USB",
+              "value": "1x USB-C Input",
+              "position": 0
+            },
+            {
+              "label": "Wireless",
+              "value": "Standard compliance: Bluetooth Ver. 4.2 (BLE)",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Media/Memory Card Slotl Single Slot: microSD/microSDHC Mobile App Compatible: Yes: Android & iOS App Name: Instax App Functionality: Access Stored Files, Adjust Settings, Firmware Update, Remote Control, Setup, View Live Feed Smartphone app linked functions: Smartphone image print function, remote shooting function, printed image transfer function, firmware upgrade function",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Flash",
+          "position": 9,
+          "items": [
+            {
+              "label": "Built-in Flash",
+              "value": "Yes Auto flash / Forced flash / Suppressed flash Shooting range with flash: Approximately 50 cm to 1.5 m",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Power Source",
+          "position": 10,
+          "items": [
+            {
+              "label": "Battery",
+              "value": "1x Built-in Rechargeable Lithium-Ion (Approx. 100 Shots)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 11,
+          "items": [
+            {
+              "label": "Dimensions (W x H x D)",
+              "value": "4.8 x 3.4 x 1.4\" / 123 x 87 x 36 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight (Body Only)",
+              "value": "10.1 oz / 285 g",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Environmental",
+          "position": 12,
+          "items": [
+            {
+              "label": "Operating Temperature",
+              "value": "37 to 72°F / 5 to 40°C",
+              "position": 0
+            },
+            {
+              "label": "Operating Humidity",
+              "value": "20 to 80%",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Other Features",
+          "position": 13,
+          "items": [
+            {
+              "label": "Features",
+              "value": "Film Ejection: Automatic Film Developing Time: Approx. 90 seconds (varies depending on the ambient temperature)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Lens",
+          "position": 14,
+          "items": [
+            {
+              "label": "Lens Mount",
+              "value": "2 components, 2 elements, f = 60 mm, 1:12.7",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 15,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-instax-mini-evo-instant-camera",
+      "sourceProductCode": "39984",
+      "sourceStatus": "Up Coming",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: Instax Mini EVO",
+        "1/5-inch CMOS with primary color filter",
+        "3.0-inch TFT color LCD screen",
+        "10 Lens Effects and 10 Film Effects",
+        "Accepts INSTAX MINI Instant Film"
+      ],
+      "needsReview": false,
+      "categorySlug": "instant-camera",
+      "image": "/images/products/camera/instant-camera/fujifilm-instax-mini-evo-instant-camera.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/instant-camera/fujifilm-instax-mini-evo-instant-camera.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fujifilm-instax-mini-evo-instant-camera",
+        "candidateTitle": "FUJIFILM Instax Mini EVO Hybrid Instant Camera",
+        "attemptStem": "fujifilm-instax-mini-evo-instant-camera"
+      }
+    },
+    {
+      "name": "FUJIFILM INSTAX mini Instant Film (20 Sheets)",
+      "slug": "fujifilm-instax-mini-instant-film",
+      "type": "PHYSICAL",
+      "sku": "ST-36501",
+      "description": "<h2>FUJIFILM INSTAX mini Instant Film (20 Sheets)</h2><p>The FUJIFILM <strong>INSTAX mini Instant Film</strong> is a high-quality film designed for use with FUJIFILM INSTAX mini-series <a href=\"https://www.startech.com.bd/instant-camera\" style=\"color: rgb(0, 0, 0);\" target=\"\">instant camera</a>s, allowing users to generate instant, credit card-size prints. Twenty sheets of film are included in each pack, which is ideal for recording a range of special occasions. With an ISO 800/30° rating, the film provides good results in a range of lighting situations, particularly in the daytime, which makes it a flexible option for both interior and outdoor photography. The glossy surface type of the FUJIFILM INSTAX small Instant Film improves color vibrancy, yielding skin tones that are natural and crisp, clear images with exceptional grain structure. The total film size is 2.09 x 3.39 inches (53 x 86 mm), with a traditional white border that gives each print a nostalgic feel. The image area is 1.81 x 2.44 inches (46 x 62 mm). The photos' rectangular shape makes them perfect for a variety of creative applications, such as scrapbooks and photo albums. With its exceptional clarity and grain structure, the FUJIFILM INSTAX small Instant Film captures every detail with accuracy. Color film allows for vivid and realistic re-creations of your favorite moments. Instant gratification and tangible memories may be obtained with Fujifilm INSTAX small Instant Film, which is an ideal option for documenting memorable occasions, enjoyable days out with friends, and family get-togethers.</p><h2>Buy FUJIFILM INSTAX mini Instant Film (20 Sheets) from Star Tech</h2><p>In Bangladesh, you can get original <strong>FUJIFILM INSTAX mini Instant Film (20 Sheets)</strong> From Star Tech. We have a large collection of latest Fujifilm Instant Film to purchase for your <a href=\"https://www.startech.com.bd/instant-camera\" target=\"\">Instant Camera</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop </a>to get yours at lowest price. The FUJIFILM INSTAX mini Instant Film (20 Sheets) comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: INSTAX mini Instant Film</li><li>Image Area: 1.81 x 2.44&quot; / 46 x 62 mm</li><li>Film Size (W x H): 2.09 x 3.39&quot; / 53 x 86 mm</li><li>Glossy Surface Type, Vibrant Colors and Natural Skin Tones</li><li>Compatibility: FUJIFILM INSTAX mini Series Instant Camera</li></ul>",
+      "model": "INSTAX mini Instant Film",
+      "warranty": "no warranty",
+      "basePrice": 3100.0,
+      "originalPrice": 3300.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Fujifilm",
+      "variantOptions": [
+        {
+          "name": "Film Size (W x H)",
+          "position": 0,
+          "values": [
+            {
+              "value": "2.09 x 3.39\" / 53 x 86 mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-36501",
+          "price": 3100.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Film Size (W x H)": "2.09 x 3.39\" / 53 x 86 mm"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 2976.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "INSTAX mini Instant Film",
+              "position": 0
+            },
+            {
+              "label": "Image Area",
+              "value": "1.81 x 2.44\" / 46 x 62 mm",
+              "position": 1
+            },
+            {
+              "label": "Film Size (W x H)",
+              "value": "2.09 x 3.39\" / 53 x 86 mm",
+              "position": 2
+            },
+            {
+              "label": "Compatibility",
+              "value": "FUJIFILM INSTAX mini Series Instant Camera",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-instax-mini-instant-film",
+      "sourceProductCode": "36501",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: INSTAX mini Instant Film",
+        "Image Area: 1.81 x 2.44\" / 46 x 62 mm",
+        "Film Size (W x H): 2.09 x 3.39\" / 53 x 86 mm",
+        "Glossy Surface Type, Vibrant Colors and Natural Skin Tones",
+        "Compatibility: FUJIFILM INSTAX mini Series Instant Camera"
+      ],
+      "needsReview": false,
+      "categorySlug": "instant-camera",
+      "image": "/images/products/camera/instant-camera/fujifilm-instax-mini-instant-film.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/instant-camera/fujifilm-instax-mini-instant-film.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fujifilm-instax-mini-instant-film",
+        "candidateTitle": "FUJIFILM INSTAX mini Instant Film (20 Sheets)",
+        "attemptStem": "fujifilm-instax-mini-instant-film"
+      }
+    },
+    {
+      "name": "FUJIFILM INSTAX mini Instant Film (10 Sheets)",
+      "slug": "fujifilm-instax-mini-instant-film-10-sheets",
+      "type": "PHYSICAL",
+      "sku": "ST-36502",
+      "description": "<h2>FUJIFILM INSTAX mini Instant Film (10 Sheets)</h2><p>The FUJIFILM <strong>INSTAX mini Instant Film</strong> is intended for use with FUJIFILM INSTAX mini cameras and provides an easy and enjoyable way to capture memories quickly. Ten sheets of film are included in each pack, providing plenty of chances to take bright, clear pictures while on the go. With an image area of 1.81 x 2.44 inches, the film yields credit card-sized prints that are 2.09 x 3.39 inches and are ideal for wallets and compact frames. With its daylight-balanced ISO 800/30° film speed, the FUJIFILM INSTAX small Instant Film delivers natural skin tones and vibrant, true-to-life colors, guaranteeing great performance in a variety of lighting circumstances. The glossy surface intensifies the colors in the photos, giving each one a sharp, clear flash of detail. The film preserves your memories with incredible accuracy because of its excellent sharpness and fine-grain structure, which record every nuance. With their traditional rectangular shape and white border, the photos offer a timeless look that goes well with any theme. The FUJIFILM INSTAX small Instant Film is a dependable and excellent choice for fans of instant photography, whether you're recording your travels or capturing impromptu moments with pals.</p><h2>Buy FUJIFILM INSTAX mini Instant Film (10 Sheets) from Star Tech</h2><p>In Bangladesh, you can get original <strong>FUJIFILM INSTAX mini Instant Film (10 Sheets)</strong> From Star Tech. We have a large collection of latest Fujifilm Instant Film to purchase for your <a href=\"https://www.startech.com.bd/instant-camera\" target=\"\">Instant Camera</a>. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The FUJIFILM INSTAX mini Instant Film (10 Sheets) comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: INSTAX mini Instant Film</li><li>Image Area: 1.81 x 2.44&quot; / 46 x 62 mm</li><li>Film Size (W x H): 2.09 x 3.39&quot; / 53 x 86 mm</li><li>Glossy Surface Type, Vibrant Colors and Natural Skin Tones</li><li>Compatibility: FUJIFILM INSTAX mini Series Instant Camera</li></ul>",
+      "model": "INSTAX mini Instant Film",
+      "warranty": "no warranty",
+      "basePrice": 2000.0,
+      "originalPrice": 2200.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Fujifilm",
+      "variantOptions": [
+        {
+          "name": "Film Size (W x H)",
+          "position": 0,
+          "values": [
+            {
+              "value": "2.09 x 3.39\" / 53 x 86 mm",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-36502",
+          "price": 2000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Film Size (W x H)": "2.09 x 3.39\" / 53 x 86 mm"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 1920.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Key Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Model",
+              "value": "INSTAX mini Instant Film",
+              "position": 0
+            },
+            {
+              "label": "Image Area",
+              "value": "1.81 x 2.44\" / 46 x 62 mm",
+              "position": 1
+            },
+            {
+              "label": "Film Size (W x H)",
+              "value": "2.09 x 3.39\" / 53 x 86 mm",
+              "position": 2
+            },
+            {
+              "label": "Compatibility",
+              "value": "FUJIFILM INSTAX mini Series Instant Camera",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/fujifilm-instax-mini-instant-film-10-sheets",
+      "sourceProductCode": "36502",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: INSTAX mini Instant Film",
+        "Image Area: 1.81 x 2.44\" / 46 x 62 mm",
+        "Film Size (W x H): 2.09 x 3.39\" / 53 x 86 mm",
+        "Glossy Surface Type, Vibrant Colors and Natural Skin Tones",
+        "Compatibility: FUJIFILM INSTAX mini Series Instant Camera"
+      ],
+      "needsReview": false,
+      "categorySlug": "instant-camera",
+      "image": "/images/products/camera/instant-camera/fujifilm-instax-mini-instant-film-10-sheets.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/camera/instant-camera/fujifilm-instax-mini-instant-film-10-sheets.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "fujifilm-instax-mini-instant-film-10-sheets",
+        "candidateTitle": "FUJIFILM INSTAX mini Instant Film (10 Sheets)",
+        "attemptStem": "fujifilm-instax-mini-instant-film-10-sheets"
+      }
+    }
+  ]
+}

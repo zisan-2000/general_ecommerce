@@ -1,0 +1,28 @@
+{
+  "status": "completed",
+  "categoryUrl": "https://www.startech.com.bd/appliance",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\appliance",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\appliance",
+  "imagesFound": 1112,
+  "uniqueProductStems": 1112,
+  "productsInJson": 1112,
+  "matchedProducts": 1056,
+  "unmatchedProducts": 56,
+  "imageCoverage": 1112,
+  "jsonGroupFiles": 27,
+  "matchMethods": {
+    "direct-slug": 1056,
+    "unmatched": 56
+  },
+  "jsonGenerationTimeSeconds": 654.18,
+  "seedAttempted": true,
+  "seedExitCode": 0,
+  "seededProductsFromConsole": 1112,
+  "seedSucceeded": true,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\appliance\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\appliance\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\StarTec Product Seed\\appliance\\unmatched.json"
+  },
+  "seedTimeSeconds": 21.26
+}

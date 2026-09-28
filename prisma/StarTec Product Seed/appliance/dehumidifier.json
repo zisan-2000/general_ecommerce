@@ -1,0 +1,680 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/appliance",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\appliance",
+    "generatedAtUnix": 1790586316,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Appliance",
+      "slug": "appliance",
+      "parentSlug": null,
+      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Dehumidifier",
+      "slug": "dehumidifier",
+      "parentSlug": "appliance",
+      "image": "/images/products/appliance/dehumidifier/delonghi-dns65-tasciugo-ariadry-light-dehumidifier.png",
+      "isActive": true,
+      "sortOrder": 8,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "DeLonghi",
+      "slug": "delonghi",
+      "logo": null
+    },
+    {
+      "name": "Gree",
+      "slug": "gree",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "DeLonghi DNS65 Tasciugo AriaDry Light Dehumidifier",
+      "slug": "delonghi-dns65-tasciugo-ariadry-light-dehumidifier",
+      "type": "PHYSICAL",
+      "sku": "ST-52470",
+      "description": "<h2>DeLonghi DNS65 Tasciugo AriaDry Light Dehumidifier</h2><p>The DeLonghi DNS65 Tasciugo AriaDry Light Dehumidifier is designed to deliver efficient moisture removal with advanced comfort functions. It combines a compact build with strong performance, making it suitable for homes and offices. With a 2.8-liter capacity, multiple fan speeds, and a quiet operation range of 34–48dB, it ensures a comfortable environment. Its air filter and dry function improve air quality while reducing humidity. This discontinued model remains a reliable choice for users seeking a portable dehumidifier.</p><h3>Compact Design With Portable Usability</h3><p>The DeLonghi DNS65 Tasciugo AriaDry Light Dehumidifier features a slim body with a built-in handle for easy movement. Its lightweight 6.5 kg design makes it convenient to place in different rooms. The compact size ensures it fits well in small spaces without compromising performance. This portable dehumidifier helps users maintain a clean and dry environment, preventing mold and dampness. It is ideal for apartments, offices, or bedrooms where space-saving appliances are essential.</p><h3>Efficient Moisture Removal with Dry Function</h3><p>This dehumidifier absorbs up to 6 liters of humidity in 24 hours under standard conditions. The dry function ensures effective removal of excess moisture, keeping rooms comfortable and safe. By maintaining relative humidity between 30% and 95%, it prevents condensation and protects furniture. The feature is useful for households in humid climates, offering consistent performance. Users benefit from healthier indoor air and reduced risk of damp-related issues.</p><h3>Quiet Pperation With Multiple Fan Speeds</h3><p>The DeLonghi DNS65 Tasciugo AriaDry Light Dehumidifier operates at a noise level of 34–48dB, making it suitable for quiet environments. With two fan speed options, users can adjust airflow based on comfort needs. This ensures flexibility for daytime use or nighttime operation without disturbance. The quiet design makes it perfect for bedrooms, study areas, or offices. It balances performance with comfort, ensuring a peaceful atmosphere while maintaining air quality.</p><h3>Advanced Air Filter For Cleaner Rnvironment</h3><p>Equipped with an integrated air filter, the DeLonghi DNS65 Tasciugo AriaDry Light Dehumidifier improves indoor air quality. The filter captures dust and allergens, making the device useful for allergy-prone households. Cleaner air supports healthier breathing and reduces irritation caused by pollutants. This feature enhances the overall value of the dehumidifier, combining moisture removal with air purification. It is especially beneficial for families seeking a dual-function appliance.</p><h2>Buy DeLonghi DNS65 Tasciugo AriaDry Light Dehumidifier from Star Tech</h2><p>In Bangladesh, you can get original <strong>DeLonghi DNS65 Tasciugo AriaDry Light Dehumidifier</strong> From Star Tech. We have a large collection of the latest DeLonghi <a href=\"https://www.startech.com.bd/dehumidifier\" target=\"\">Dehumidifier</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The DeLonghi DNS65 Tasciugo AriaDry Light Dehumidifier comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: DNS65</li><li>Noise Level 34 - 48dB</li><li>Air filter, Dry Function</li><li>Multiple fan speeds</li><li>Relative humidity: 30% - 95%</li></ul>",
+      "model": "DNS65",
+      "warranty": "No Warranty",
+      "basePrice": 59000.0,
+      "originalPrice": 70000.0,
+      "currency": "BDT",
+      "weight": 6.5,
+      "dimensions": {
+        "length": 34.0,
+        "width": 19.2,
+        "height": 50.1,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "DeLonghi",
+      "variantOptions": [
+        {
+          "name": "Capacity",
+          "position": 0,
+          "values": [
+            {
+              "value": "2.8 ltr",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Color",
+          "position": 1,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-52470",
+          "price": 59000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Capacity": "2.8 ltr",
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 56640.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Capacity",
+              "value": "2.8 ltr",
+              "position": 0
+            },
+            {
+              "label": "Fan Speed",
+              "value": "2",
+              "position": 1
+            },
+            {
+              "label": "Noise Level",
+              "value": "34 - 48dB",
+              "position": 2
+            },
+            {
+              "label": "Power",
+              "value": "520W 220-240 V / 50 Hz",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "Absorbed humidity (l/24h, 32°C/80%): 6 Comfort function: Yes Continuous draining safety system: Yes Dry Function: Yes Handle: Yes Fan speed: 2 Air filter: Yes Operating limits: Temperature 1°C - 35°C Relative humidity: 30% - 95%",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Physical Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "34 x 19.2 x 50.1",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "6.5 kg",
+              "position": 1
+            },
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/delonghi-dns65-tasciugo-ariadry-light-dehumidifier",
+      "sourceProductCode": "52470",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: DNS65",
+        "Noise Level 34 - 48dB",
+        "Air filter, Dry Function",
+        "Multiple fan speeds",
+        "Relative humidity: 30% - 95%"
+      ],
+      "needsReview": false,
+      "categorySlug": "dehumidifier",
+      "image": "/images/products/appliance/dehumidifier/delonghi-dns65-tasciugo-ariadry-light-dehumidifier.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/dehumidifier/delonghi-dns65-tasciugo-ariadry-light-dehumidifier.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "delonghi-dns65-tasciugo-ariadry-light-dehumidifier",
+        "candidateTitle": "DeLonghi DNS65 Tasciugo AriaDry Light Dehumidifier",
+        "attemptStem": "delonghi-dns65-tasciugo-ariadry-light-dehumidifier"
+      }
+    },
+    {
+      "name": "Gree GD-180NL32 180 Liter Inverter Dehumidifier",
+      "slug": "gree-gd-180nl32-dehumidifier",
+      "type": "PHYSICAL",
+      "sku": "ST-45629",
+      "description": "<h2>Gree GD-180NL32 180 Liter Dehumidifier</h2><p>The Gree <span style=\"font-weight: bold;\">GD-180NL32</span> Industrial <a href=\"https://www.startech.com.bd/dehumidifier\" style=\"color: rgb(0, 0, 0);\" target=\"\">Dehumidifier</a> Inverter with 180-liter capacity represents a superior, energy-saving option designed for extensive moisture management in business and industrial settings. Featuring an advanced DC birotor compressor combined with complete DC inverter technology, this Gree GD-180NL32 Dehumidifier provides outstanding moisture removal capabilities of 180 liters daily, perfect for manufacturing facilities, storage areas, and large interior environments. The unit offers automated humidity management, variable fan settings, and eco/turbo/automatic operating modes to deliver accurate climate control adapted to different environmental requirements. Built for longevity and user-friendliness, the Gree GD-180NL32 incorporates a sturdy stainless steel construction, 2-meter external drain hose, washable filtration system, and smooth-rolling wheels for easy transportation. The digital screen, smartphone app connectivity, and 24-hour programming feature improve operational convenience, while quiet performance levels reaching as low as 47 dB minimize environmental disturbance. The system emphasizes safety and dependability through automatic restart capabilities, power failure memory retention, overflow protection, and built-in diagnostic functions. Functioning effectively within 35% to 80% relative humidity levels, this moisture control system prevents fungal growth, corrosion, and deterioration while safeguarding delicate machinery, enhancing indoor air conditions, and expediting drying operations. The Gree GD-180NL32 emerges as an exceptional selection for professional-grade humidity control applications.</p><h2>Buy Gree GD-180NL32 180 Liter Dehumidifier from Star Tech</h2><p>In Bangladesh, you can get original <strong>Gree GD-180NL32 180 Liter Dehumidifier</strong> From Star Tech. We have a large collection of the latest Gree <a href=\"https://www.startech.com.bd/dehumidifier\" target=\"\">Dehumidifier</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Gree GD-180NL32 180 Liter Dehumidifier comes with 01 Year parts &amp; 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GD-180NL32</li><li>Big LCD screen</li><li>Automatic humidity control</li><li>Multiple fan speeds</li><li>Birotor efficient compressor</li></ul>",
+      "model": "GD-180NL32",
+      "warranty": "01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+      "basePrice": 107000.0,
+      "originalPrice": 124900.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Gree",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45629",
+          "price": 107000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 102720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Birotor efficient compressor 24h timer APP long-distance control 2m external drainage pipe Stainless steel castors Energy-saving and efficient Big LCD display screen Strong dehumidification Precise humidify control Low noise for operation Cleanable filter Button lock, power-off memory Automatic humidity control Multiple modes switchover Multiple fan speeds Durable unit body Concise and elegant",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/gree-gd-180nl32-dehumidifier",
+      "sourceProductCode": "45629",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GD-180NL32",
+        "Big LCD screen",
+        "Automatic humidity control",
+        "Multiple fan speeds",
+        "Birotor efficient compressor"
+      ],
+      "needsReview": false,
+      "categorySlug": "dehumidifier",
+      "image": "/images/products/appliance/dehumidifier/gree-gd-180nl32-dehumidifier.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/dehumidifier/gree-gd-180nl32-dehumidifier.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "gree-gd-180nl32-dehumidifier",
+        "candidateTitle": "Gree GD-180NL32 180 Liter Inverter Dehumidifier",
+        "attemptStem": "gree-gd-180nl32-dehumidifier"
+      }
+    },
+    {
+      "name": "Gree GD-20NL 20 Liter Dehumidifier",
+      "slug": "gree-gd-20nl-dehumidifier",
+      "type": "PHYSICAL",
+      "sku": "ST-45620",
+      "description": "<h2>Gree GD-20NL 20 Liter Dehumidifier</h2><p>The Gree <span style=\"font-weight: bold;\">GD-20NL</span> 20 Liter <a href=\"https://www.startech.com.bd/dehumidifier\" style=\"color: rgb(0, 0, 0);\" target=\"\">Dehumidifier</a> is an effective and energy-conscious option for addressing excessive moisture levels in homes, businesses, and industrial environments. Built with the capability to extract 20 liters of moisture daily, this unit helps maintain superior indoor air quality by minimizing allergens like mold, mildew, and dust mites. Its streamlined and space-saving dimensions (352x482x240 mm) allow it to integrate effortlessly into areas up to 1400 cubic feet, making it perfect for sleeping quarters, cellars, workspaces, and storage rooms. The Gree GD-20NL incorporates a 2.6 to 3.0-liter collection tank, complete with a full tank alert, external drainage option, and convenient rolling wheels for effortless transport and upkeep. Running silently at only 37–39 dB(A), it offers intelligent features including automatic defrosting, live humidity monitoring, programmable timer, and self-diagnostic capabilities for improved user experience. With power consumption ranging from 350–680W and utilizing R-134a coolant, it provides dependable operation while keeping energy usage minimal. The Gree GD-20NL stands as a reliable option for sustaining a wholesome, pleasant indoor atmosphere.</p><h2>Buy Gree GD-20NL 20 Liter Dehumidifier from Star Tech</h2><p>In Bangladesh, you can get original <strong>Gree GD-20NL 20 Liter Dehumidifier</strong> From Star Tech. We have a large collection of the latest Gree <a href=\"https://www.startech.com.bd/dehumidifier\" target=\"\">Dehumidifier</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Gree GD-20NL 20 Liter Dehumidifier comes with 01 Year parts &amp; 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GD-20NL</li><li>Water Overflow Protection</li><li>Filter Clearing Reminder</li><li>Auto Restart, Timer</li><li>0.5W Standby, 5°C Low-Temperature</li></ul>",
+      "model": "GD-20NL",
+      "warranty": "01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+      "basePrice": 23300.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 352.0,
+        "width": 482.0,
+        "height": 240.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Gree",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45620",
+          "price": 23300.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 22368.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Water Overflow Protection Filter Clearing Reminder Timer Self Diagnosis Auto Restart 0.5W Standby Free of the hassle of pouring water 5°C Low-Temperature Operation",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/gree-gd-20nl-dehumidifier",
+      "sourceProductCode": "45620",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GD-20NL",
+        "Water Overflow Protection",
+        "Filter Clearing Reminder",
+        "Auto Restart, Timer",
+        "0.5W Standby, 5°C Low-Temperature"
+      ],
+      "needsReview": false,
+      "categorySlug": "dehumidifier",
+      "image": "/images/products/appliance/dehumidifier/gree-gd-20nl-dehumidifier.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/dehumidifier/gree-gd-20nl-dehumidifier.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "gree-gd-20nl-dehumidifier",
+        "candidateTitle": "Gree GD-20NL 20 Liter Dehumidifier",
+        "attemptStem": "gree-gd-20nl-dehumidifier"
+      }
+    },
+    {
+      "name": "Gree GD-24NL 24 Liter Dehumidifier",
+      "slug": "gree-gd-24nl-dehumidifier",
+      "type": "PHYSICAL",
+      "sku": "ST-45624",
+      "description": "<h2>Gree GD-24NL 24 Liter Dehumidifier</h2><p>The Gree <span style=\"font-weight: bold;\">GD-24NL</span> 24 Liter <a href=\"https://www.startech.com.bd/dehumidifier\" style=\"color: rgb(0, 0, 0);\" target=\"\">Dehumidifier</a> offers an effective and energy-saving approach to managing excessive moisture in homes, businesses, and industrial environments. Built with the capability to extract 24 liters of moisture daily, this unit helps maintain superior indoor air quality by minimizing allergens such as mold, mildew, and dust mites. Its stylish and space-saving dimensions (350x482x240 mm) allow it to integrate easily into areas up to 1700 cubic feet, making it perfect for bedrooms, basements, workspaces, and storage rooms. The Gree GD-24NL includes a 2.6 to 3.0-liter collection tank, an external drainage option, and a detachable container for convenient maintenance. Operating at a quiet 42–44 dB(A) noise level, it functions discreetly while its digital control interface, live humidity monitoring, and automatic defrosting provide enhanced ease of use. Smart capabilities encompass programmable timers, full tank alerts, self-diagnostic functions, and rolling wheels for easy movement. Utilizing R-134a refrigerant and running on 220–240V/50Hz power, the Gree GD-24NL merges high performance with environmentally responsible engineering. Whether addressing stale odors or safeguarding electronics and textiles from humidity-related harm, the Gree GD-24NL serves as your reliable dehumidification solution for creating a cleaner, more comfortable indoor atmosphere.</p><h2>Buy Gree GD-24NL 24 Liter Dehumidifier from Star Tech</h2><p>In Bangladesh, you can get original <strong>Gree GD-24NL 24 Liter Dehumidifier</strong> From Star Tech. We have a large collection of the latest Gree <a href=\"https://www.startech.com.bd/dehumidifier\" target=\"\">Dehumidifier</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Gree GD-24NL 24 Liter Dehumidifier comes with 01 Year parts &amp; 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GD-24NL</li><li>Water Overflow Protection</li><li>Filter Clearing Reminder</li><li>Auto Restart, Timer</li><li>0.5W Standby, 5°C Low-Temperature</li></ul>",
+      "model": "GD-24NL",
+      "warranty": "01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+      "basePrice": 31500.0,
+      "originalPrice": 38990.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 350.0,
+        "width": 482.0,
+        "height": 240.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Gree",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45624",
+          "price": 31500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 30240.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Water Overflow Protection Filter Clearing Reminder Timer Self Diagnosis Auto Restart 0.5W Standby Free of the hassle of pouring water 5°C Low-Temperature Operation",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/gree-gd-24nl-dehumidifier",
+      "sourceProductCode": "45624",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GD-24NL",
+        "Water Overflow Protection",
+        "Filter Clearing Reminder",
+        "Auto Restart, Timer",
+        "0.5W Standby, 5°C Low-Temperature"
+      ],
+      "needsReview": false,
+      "categorySlug": "dehumidifier",
+      "image": "/images/products/appliance/dehumidifier/gree-gd-24nl-dehumidifier.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/dehumidifier/gree-gd-24nl-dehumidifier.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "gree-gd-24nl-dehumidifier",
+        "candidateTitle": "Gree GD-24NL 24 Liter Dehumidifier",
+        "attemptStem": "gree-gd-24nl-dehumidifier"
+      }
+    },
+    {
+      "name": "Gree GD-30NL 30 Liter Dehumidifier",
+      "slug": "gree-gd-30nl-dehumidifier",
+      "type": "PHYSICAL",
+      "sku": "ST-45625",
+      "description": "<h2>Gree GD-30NL 30 Liter Dehumidifier</h2><p>The Gree <span style=\"font-weight: bold;\">GD-30NL</span> 30 Liter <a href=\"https://www.startech.com.bd/dehumidifier\" style=\"color: rgb(0, 0, 0);\" target=\"\">Dehumidifier</a> is an advanced air treatment system engineered to address excess moisture and enhance indoor air conditions in home and business environments. Featuring an impressive daily moisture removal capacity of 30 liters, this Dehumidifier successfully eliminates mold growth, mildew development, and stale odors, making it perfect for spacious areas and humidity-susceptible locations. Built with energy conservation in mind, the unit consumes only 450W during operation and maintains minimal standby consumption at 0.5W, contributing to lower energy bills. The Gree GD-30NL incorporates a 4.8-liter collection tank equipped with a full-capacity indicator and external drainage connection for convenient upkeep. The sophisticated filtering mechanism contains a wellness filter that captures particles and airborne irritants, while the live humidity monitor and filter maintenance alert guarantee peak functionality. Running at a whisper-quiet 41dB level, it preserves tranquil surroundings, and the built-in diagnostic capability streamlines problem identification. Featuring intuitive push-button operation, an elegant off-white appearance, and space-saving measurements of 343 x 525 x 262mm, the Gree GD-30NL merges practicality with aesthetic appeal. Whether seeking to shield your residence from moisture damage or improve air cleanliness in your workplace, this Gree dehumidifier provides dependable and silent performance daily.</p><h2>Buy Gree GD-30NL 30 Liter Dehumidifier from Star Tech</h2><p>In Bangladesh, you can get original <strong>Gree GD-30NL 30 Liter Dehumidifier</strong> From Star Tech. We have a large collection of the latest Gree <a href=\"https://www.startech.com.bd/dehumidifier\" target=\"\">Dehumidifier</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Gree GD-30NL 30 Liter Dehumidifier comes with 01 Year parts &amp; 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GD-30NL</li><li>Water Overflow Protection</li><li>Filter Clearing Reminder</li><li>Auto Restart, Timer</li><li>0.5W Standby, 5°C Low-Temperature</li></ul>",
+      "model": "GD-30NL",
+      "warranty": "01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+      "basePrice": 29800.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "length": 343.0,
+        "width": 525.0,
+        "height": 262.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "Gree",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45625",
+          "price": 29800.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 28608.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Water Overflow Protection Filter Clearing Reminder Timer Self Diagnosis Auto Restart 0.5W Standby Free of the hassle of pouring water 5°C Low-Temperature Operation",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/gree-gd-30nl-dehumidifier",
+      "sourceProductCode": "45625",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GD-30NL",
+        "Water Overflow Protection",
+        "Filter Clearing Reminder",
+        "Auto Restart, Timer",
+        "0.5W Standby, 5°C Low-Temperature"
+      ],
+      "needsReview": false,
+      "categorySlug": "dehumidifier",
+      "image": "/images/products/appliance/dehumidifier/gree-gd-30nl-dehumidifier.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/dehumidifier/gree-gd-30nl-dehumidifier.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "gree-gd-30nl-dehumidifier",
+        "candidateTitle": "Gree GD-30NL 30 Liter Dehumidifier",
+        "attemptStem": "gree-gd-30nl-dehumidifier"
+      }
+    },
+    {
+      "name": "Gree GD-40NL 40 Liter Dehumidifier",
+      "slug": "gree-gd-40nl-dehumidifier",
+      "type": "PHYSICAL",
+      "sku": "ST-45628",
+      "description": "<h2>Gree GD-40NL 40 Liter Dehumidifier</h2><p>The Gree <span style=\"font-weight: bold;\">GD-40NL</span> 40 Liter <a href=\"https://www.startech.com.bd/dehumidifier\" style=\"color: rgb(0, 0, 0);\" target=\"\">Dehumidifier</a> is a powerful, energy-saving option engineered to address excessive moisture in homes, businesses, and industrial facilities. Featuring an impressive daily moisture extraction capacity of 40 liters, this unit works effectively in spaces ranging from 646 to 775 square feet, making it well-suited for spacious bedrooms, cellars, workplaces, or storage rooms. Built with sophisticated technology including digital controls, live humidity monitoring, and automatic defrosting capabilities, the Gree GD-40NL maintains excellent functionality across different weather conditions, even in cold environments as low as 5°C. The unit's centrifugal fan provides variable airflow settings (195–275 m³/h), while its 7.6-liter collection tank and external drainage port allow for versatile water removal methods. The Gree 40 Liter Dehumidifier includes intelligent features like self-diagnostic capabilities, programmable timers, full tank alerts, and automatic restart memory, improving both user convenience and dependability. With whisper-quiet operation at only 40–42 dB(A), this Gree Dehumidifier creates a healthier indoor environment by minimizing allergens, mold growth, and mildew formation, while protecting furnishings, electronic devices, and textiles. The Gree GD-40NL stands as a reliable option for individuals wanting effective moisture management with low upkeep requirements. For those looking for top-tier dehumidification equipment for their indoor air quality systems, the Gree GD-40NL provides exceptional functionality and value.</p><h2>Buy Gree GD-40NL 40 Liter Dehumidifier from Star Tech</h2><p>In Bangladesh, you can get original <strong>Gree GD-40NL 40 Liter Dehumidifier</strong> From Star Tech. We have a large collection of the latest Gree <a href=\"https://www.startech.com.bd/dehumidifier\" target=\"\">Dehumidifier</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech</a> Shop to get yours at the lowest price. The Gree GD-40NL 40 Liter Dehumidifier comes with 01 Year parts &amp; 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: GD-40NL</li><li>Water Overflow Protection</li><li>Filter Clearing Reminder</li><li>Auto Restart, Timer</li><li>0.5W Standby, 5°C Low-Temperature</li></ul>",
+      "model": "GD-40NL",
+      "warranty": "01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+      "basePrice": 43000.0,
+      "originalPrice": 52990.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "Gree",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45628",
+          "price": 43000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 41280.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "General Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Water Overflow Protection Filter Clearing Reminder Timer Self Diagnosis Auto Restart 0.5W Standby Free of the hassle of pouring water 5°C Low-Temperature Operation",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty Information",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 Year parts & 01 Year service warranty by Gree. Warranty card must be kept for warranty claims. For warranty, Call Gree at 16649/ 09678333666.(Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/gree-gd-40nl-dehumidifier",
+      "sourceProductCode": "45628",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: GD-40NL",
+        "Water Overflow Protection",
+        "Filter Clearing Reminder",
+        "Auto Restart, Timer",
+        "0.5W Standby, 5°C Low-Temperature"
+      ],
+      "needsReview": false,
+      "categorySlug": "dehumidifier",
+      "image": "/images/products/appliance/dehumidifier/gree-gd-40nl-dehumidifier.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/dehumidifier/gree-gd-40nl-dehumidifier.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "gree-gd-40nl-dehumidifier",
+        "candidateTitle": "Gree GD-40NL 40 Liter Dehumidifier",
+        "attemptStem": "gree-gd-40nl-dehumidifier"
+      }
+    }
+  ]
+}

@@ -1,0 +1,3195 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "https://www.startech.com.bd",
+    "categoryUrl": "https://www.startech.com.bd/appliance",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\appliance",
+    "generatedAtUnix": 1790586316,
+    "generator": "prisma/startech_single_category_json_and_seed.py"
+  },
+  "defaults": {
+    "stock": 10,
+    "costRatio": 0.96,
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Appliance",
+      "slug": "appliance",
+      "parentSlug": null,
+      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Sewing Machine",
+      "slug": "sewing-machine",
+      "parentSlug": "appliance",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-a2b-c-auto-trimmer-sewing-machine.png",
+      "isActive": true,
+      "sortOrder": 21,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "JACK",
+      "slug": "jack",
+      "logo": null
+    },
+    {
+      "name": "SINGER",
+      "slug": "singer",
+      "logo": null
+    },
+    {
+      "name": "ZOJE",
+      "slug": "zoje",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "name": "Jack A2B-C Auto Trimmer Direct Drive Single Needle Lock Sewing Machine",
+      "slug": "jack-a2b-c-auto-trimmer-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-38363",
+      "description": "<h2>Jack A2B-C Auto Trimmer Direct Drive Single Needle Lock Sewing Machine</h2><p>The Jack <strong>A2B-C</strong> Auto Trimmer Direct Drive Single Needle Lock <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> is a high-performance, multipurpose machine that can sew a variety of materials, from light to heavy, such as denim, cotton, knits, polyester, nylon, and sheer textiles. By modifying parts like the needle plate, feed dog, foot, stitch regulator, hook, and needle bar, this Jack A2B-C Auto Trimmer Sewing Machine can handle denim and other thick materials, making it perfect for creating clothing such as blouses, shirts, uniforms, and even lingerie. With an astounding 5,000 stitches per minute, it is designed for accurate and efficient stitching, guaranteeing a speedy turnaround for small orders or urgent reorders. This Jack A2B-C Auto Trimmer Sewing Machine features a 3/4 HP, 550-watt Direct Drive Motor (available in 110V or 220V), a noise-absorbing table mount, and completely automatic lubrication with a high-pressure recirculating pump to assure longevity and a quieter work environment. In addition to the electric foot lift, treadle-controlled foot lifter, and needle positioning, the integrated bobbin winder, electric thread clamp, and under-bed thread trimmer simplify operations and provide uninterrupted thread management. The machine's ability to stitch precisely is enhanced by the automatic reverse feature and a convenient LED light with programmable brightness levels. With a maximum stitch length of 5mm and a presser foot height that can be adjusted from 5mm to 13mm, the Jack A2B-C Auto Trimmer Sewing Machine offers even more versatility by enabling seamless handling of a wide range of fabric thicknesses. A tool box, drawer, and thread stand are included in the machine's accessories package, which guarantees a completely furnished setup upon arrival. The machine's 10-inch operational space provides sufficient space for intricate stitching projects.</p><h2>Buy Jack A2B-C Auto Trimmer Direct Drive Single Needle Lock Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get original <strong>Jack A2B-C Auto Trimmer Direct Drive Single Needle Lock Sewing Machine</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/jack-sewing-machine\" target=\"\">Jack Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Jack A2B-C Auto Trimmer Direct Drive Single Needle Lock Sewing Machine comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A2B-C</li><li>Fully automatic lubrication, Automatic lubrication with pump</li><li>Noise and vibration-absorbing table mounting</li><li>5,000-RPM high-speed operation, Automatic reverse</li><li>Built-in 3/4HP, 550 watt Direct Drive Motor</li></ul>",
+      "model": "A2B-C",
+      "warranty": "No Parts Warranty",
+      "basePrice": 38000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "JACK",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-38363",
+          "price": 38000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 36480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Bobbin Type",
+              "value": "Built-in bobbin winder",
+              "position": 0
+            },
+            {
+              "label": "Needle Threader",
+              "value": "1",
+              "position": 1
+            },
+            {
+              "label": "Thread Cutter",
+              "value": "automatic",
+              "position": 2
+            },
+            {
+              "label": "Sewing Light",
+              "value": "LED",
+              "position": 3
+            },
+            {
+              "label": "Foot Controller",
+              "value": "Electric foot lift Presser Foot Height: 5mm to 13mm",
+              "position": 4
+            },
+            {
+              "label": "Display",
+              "value": "Yes",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "Fully automatic lubrication with recirculating high pressure pump and oil glass indicator Noise and vibration absorbing table mounting Treadle controlled foot lifter Automatic reverse Auto-lubrication rotary hook Under bed thread trimmer Electric thread clamp (holds thread after thread trim) Needle positioning Electric foot lift Stitch counter Built-in bobbin winder Built -in LED light with level settings and on/off switch Built-in 3/4HP, 550 watt Direct Drive Motor (110v or 220v) 5,000-RPM high-speed operation Automatic lubrication with pump Instruction / parts manual included Tool kit, drawer, thread stand included Individually tested and sewn-off before shipping",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "Up to 5000 Rpm",
+              "position": 0
+            },
+            {
+              "label": "Stitch Length Control",
+              "value": "5mm",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Parts Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/jack-a2b-c-auto-trimmer-sewing-machine",
+      "sourceProductCode": "38363",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A2B-C",
+        "Fully automatic lubrication, Automatic lubrication with pump",
+        "Noise and vibration-absorbing table mounting",
+        "5,000-RPM high-speed operation, Automatic reverse",
+        "Built-in 3/4HP, 550 watt Direct Drive Motor"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-a2b-c-auto-trimmer-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/JACK/jack-a2b-c-auto-trimmer-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "jack-a2b-c-auto-trimmer-sewing-machine",
+        "candidateTitle": "Jack A2B-C Auto Trimmer Direct Drive Single Needle Lock Sewing Machine",
+        "attemptStem": "jack-a2b-c-auto-trimmer-sewing-machine"
+      }
+    },
+    {
+      "name": "Jack A2C-C Auto Trimmer Direct Drive Single Needle Lock Sewing Machine",
+      "slug": "jack-a2c-c-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-45621",
+      "description": "<h2>Jack A2C-C Auto Trimmer Direct Drive Single Needle Lock Sewing Machine</h2><p>The Jack <strong>A2C-C</strong> Auto Trimmer <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> is an advanced industrial sewing solution designed for speed, precision, and dependability. The Jack A2C-C Sewing Machine, known for its sturdy construction and superior automation, is intended to provide consistent, high-quality output for garment makers, textile workshops, and professional sewing operations. This Jack A2C-C Single Needle Lock Sewing Machine has an automated thread trimming system, a single needle lockstitch mechanism, and an energy-efficient direct drive motor, which results in better performance and lower energy usage. Powered by the unique Mighty Ape Platform Motor, it produces an astounding 5.5 Nm torque and a maximum sewing speed of 5,000 stitches per minute, making it suitable for high-volume manufacturing and heavy-duty sewing operations. The Jack A2C-C also has a built-in bobbin winder, automated thread cutter, and LED lighting, ensuring simplicity of use and visibility even in low-light circumstances. Equipped with the Fortress Electric Control and PCB system, the machine provides improved stability, safety, and ESD resistance up to 12,000 V with a voltage range of 110-295 V, making it appropriate for worldwide operations. It has a stitch length of up to 5 mm (and up to 7 mm for the A2C-CH-7 model), and a presser foot height of 5 mm manually or 13 mm with knee raise, allowing for easy stitching of a broad range of materials, including light cotton, thick denim, synthetics, and even up to 100 layers of paper. Its small yet sturdy construction assures long-term use, and its innovative features make it one of the most dependable and efficient machines on the market. For professionals looking for speed, accuracy, and durability, the Jack A2C-C Auto Trimmer Sewing Machine is the best choice for industrial sewing.</p><h2>Buy Jack A2C-C Auto Trimmer Direct Drive Single Needle Lock Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get original <strong>Jack A2C-C Auto Trimmer Direct Drive Single Needle Lock Sewing Machine</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/jack-sewing-machine\" target=\"\">Jack Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Jack A2C-C Auto Trimmer Direct Drive Single Needle Lock Sewing Machine comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A2C-C</li><li>Automatic Thread Trimming, Single Needle Lockstitch</li><li>Energy Efficient Direct Drive, LED Illumination</li><li>Maximum Sewing Speed: 5,000 stitches per minute</li><li>Stitch Length: Up to 5 mm (A2C-CH-7 up to 7 mm)</li></ul>",
+      "model": "A2C-C",
+      "warranty": "No Parts Warranty",
+      "basePrice": 38925.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "JACK",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-45621",
+          "price": 38925.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 37368.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Bobbin Type",
+              "value": "Built-in bobbin winder",
+              "position": 0
+            },
+            {
+              "label": "Needle Threader",
+              "value": "DBx1 (Sizes 11-18)",
+              "position": 1
+            },
+            {
+              "label": "Thread Cutter",
+              "value": "Automatic",
+              "position": 2
+            },
+            {
+              "label": "Sewing Light",
+              "value": "LED Illumination",
+              "position": 3
+            },
+            {
+              "label": "Foot Controller",
+              "value": "Presser Foot Height: 5 mm (manual), 13 mm (knee lift)",
+              "position": 4
+            },
+            {
+              "label": "Display",
+              "value": "Yes",
+              "position": 5
+            },
+            {
+              "label": "Others",
+              "value": "Motor type: Mighty Ape Platform Motor Electrical system: Fortress Electric Control Automatic Thread Trimming High-Torque Motor Fortress PCB Control Energy Efficient Direct Drive LED Illumination Compact and Durable Build",
+              "position": 6
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "up to 5000 stitches/min (A2C-CH-7 up to 3500 stitches/min)",
+              "position": 0
+            },
+            {
+              "label": "Stitch Length Control",
+              "value": "up to 5 mm (A2C-CH-7 up to 7 mm)",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Penetration capacity: Up to 100 layers of paper Suitable Materials: Cotton, denim, synthetics, light to heavy fabrics",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Parts Warranty",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 4,
+          "items": [
+            {
+              "label": "Power Requirement",
+              "value": "Voltage range: 110 – 295 V ESD resistance: 12,000 V",
+              "position": 0
+            },
+            {
+              "label": "Other Power Features",
+              "value": "Motor torque: 5.5 Nm",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/jack-a2c-c-sewing-machine",
+      "sourceProductCode": "45621",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A2C-C",
+        "Automatic Thread Trimming, Single Needle Lockstitch",
+        "Energy Efficient Direct Drive, LED Illumination",
+        "Maximum Sewing Speed: 5,000 stitches per minute",
+        "Stitch Length: Up to 5 mm (A2C-CH-7 up to 7 mm)"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-a2c-c-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/JACK/jack-a2c-c-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "jack-a2c-c-sewing-machine",
+        "candidateTitle": "Jack A2C-C Auto Trimmer Direct Drive Single Needle Lock Sewing Machine",
+        "attemptStem": "jack-a2c-c-sewing-machine"
+      }
+    },
+    {
+      "name": "Jack A4B-A-C Computerized Lockstitch Sewing Machine With Auto Foot Lifter",
+      "slug": "jack-a4b-a-c-computerized-lockstitch-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-32807",
+      "description": "<h2>Jack A4B-A-C Computerized Lockstitch Sewing Machine With Auto Foot Lifter</h2><p>The Jack <strong>A4B-A-C</strong> is a computerized lockstitch sewing machine. It features an electronic stitch length selection system up to 5 mm, a servo presser foot lifter, a built-in servo motor, and a needle positioner for industrial sewing on light and medium materials. The bobbin thread gripping mechanism of the brand-new, patented Jack function effectively lowers the risk of thread breakage at the start of sewing. Numerous fabrics and knitted items are produced with the Jack A4B-A-C straight stitch machine. The A4B series has been upgraded and modernized. It now has a lower thread clamping function, a servo presser foot lifter with adjustable intermediate lift height, and an updated stitch length adjustment unit. Both a USB port and voice confirmation for programmed features are absent from this <strong>JK-A4B-A-C</strong> variant. The machine runs nearly silently now that these upgrades have been made, which benefits the seamstress's comfort. Because of its compliance with all performance indicators and available capabilities, the universal model is perfect for seamstresses working from home as well as for production work. Jack just received a patent for a bobbin thread clamp that significantly lowers the risk of thread breaking when sewing a seam. Time and convenience are saved as the presser foot's height can be changed from 0 to 13 mm based on the thickness of the fabric. The stepper motor of the <strong>Jack A4B-A-C Computerized Lockstitch Electric Sewing Machine</strong> allows for a stitch length of up to 0.1 mm. For the purpose of preventing operator error, the stitch length adjustment function can be locked. Time and convenience are saved as the presser foot's height can be changed from 0 to 13 mm based on the thickness of the fabric. The sewing machine, table, needles, bobbins, screwdrivers, and 0.5 liter of oil are all included in Jack A4B-A-C. The entire set is included in the price. This sewing machine can be used to sew basic seams on most clothing items. It comes in two varieties: mechatronic flats and electronic flats. The electronic models feature automated features that increase production efficiency by performing tasks like thread cutting, stitch count programming, finishing at the start and finish of sewing, and lifting. Given that the last sewing machine just has a needle positioner and requires manual thread cutting and presser foot lifting with a knee pad, automatic presses are 25% faster than flat mechatronic ones. Family sewing machines, industrial sewing machines, heavy-duty sewing machines, sewing and cutting machines, two-needle flat machines, 20u flat machines, and zigzag machines are among the several varieties of flat sewing machines. The primary purpose of lockstitch sewing machines is to create a straight seam by entwining an upper and a lower thread through the fabric. It works well with knit and flat fabrics alike. The production of apparel, lingerie repair, light upholstery, accessories, and awnings are among the industries that can employ this sewing machine. </p><h2>Buy Jack A4B-A-C Computerized Lockstitch Sewing Machine With Auto Foot Lifter From Star Tech</h2><p>In Bangladesh, you can get original <strong>Jack A4B-A-C Computerized Lockstitch Sewing Machine With Auto Foot Lifter</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/jack-sewing-machine\" target=\"\">Jack Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Jack A4B-A-C Computerized Sewing Machine comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A4B-A-C</li><li>Stepping Motor for controlling Stitch Length and presser foot lifter</li><li>Needle Gauge Adjustment Button variable stitch option</li><li>Stitch Lock Function for Light-to-Medium Material</li><li>Variable Stitch Options with Auto Thread Trimmer</li></ul>",
+      "model": "A4B-A-C",
+      "warranty": "No Parts Warranty",
+      "basePrice": 49000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "JACK",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-32807",
+          "price": 49000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 47040.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Bobbin Type",
+              "value": "1",
+              "position": 0
+            },
+            {
+              "label": "Needle Threader",
+              "value": "2",
+              "position": 1
+            },
+            {
+              "label": "Thread Cutter",
+              "value": "thread less than 3.5 mm",
+              "position": 2
+            },
+            {
+              "label": "Sewing Light",
+              "value": "LED",
+              "position": 3
+            },
+            {
+              "label": "Foot Controller",
+              "value": "Auto Foot Lifter",
+              "position": 4
+            },
+            {
+              "label": "Display",
+              "value": "Yes",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "Up to 5000 Rpm",
+              "position": 0
+            },
+            {
+              "label": "Stitch Pattern Selection",
+              "value": "Electronic Stitch Length Selection",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Parts Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/jack-a4b-a-c-computerized-lockstitch-sewing-machine",
+      "sourceProductCode": "32807",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A4B-A-C",
+        "Stepping Motor for controlling Stitch Length and presser foot lifter",
+        "Needle Gauge Adjustment Button variable stitch option",
+        "Stitch Lock Function for Light-to-Medium Material",
+        "Variable Stitch Options with Auto Thread Trimmer"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-a4b-a-c-computerized-lockstitch-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/JACK/jack-a4b-a-c-computerized-lockstitch-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "jack-a4b-a-c-computerized-lockstitch-sewing-machine",
+        "candidateTitle": "Jack A4B-A-C Computerized Lockstitch Sewing Machine With Auto Foot Lifter",
+        "attemptStem": "jack-a4b-a-c-computerized-lockstitch-sewing-machine"
+      }
+    },
+    {
+      "name": "Jack A4C-C Direct Drive Lockstitch Industrial Sewing Machine",
+      "slug": "jack-a4c-c-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-45623",
+      "description": "<h2>Jack A4C-C Direct Drive Lockstitch Industrial Sewing Machine</h2><p>The Jack <strong>A4C-C</strong> Direct Drive Lockstitch Industrial <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> is an innovative, high-efficiency solution designed for professional garment manufacture that provides unrivaled precision, durability, and performance. The Jack A4C-C Sewing Machine is the flagship model in Jack's portfolio, including the unique Octopus Nine-Brain AI Chip, a powerful engine that enables the NTB System to intelligently evaluate over 200,000 fabric samples at an astounding 10,000 computations per second. This enables excellent fabric feeding and consistent stitch quality, even at the machine's amazing maximum sewing speed of 5,000 stitches per minute. Jack's 0-Degree Thread Path Technology reduces thread tension by up to 30%, resulting in smoother thread handling, less breakage, and longer thread life—making it suitable for working with a variety of fabrics, from delicate cotton to medium-weight synthetics and heavy denim. The Jack A4C-C Direct Drive Lockstitch Industrial Sewing Machine has an energy-efficient direct-drive motor and a stepper motor for accurate presser foot lift and reverse stitching. It has automated stitching features, a needle threader, and an automatic thread cutter to ensure smooth operation. With a stitch length of up to 5 mm and a presser foot lift range of 5-13 mm, this machine combines versatility and speed. It supports DBX1 11-18# needles in a two-thread configuration, ensuring reliable performance in high-volume production situations. Additional features, such as LED lighting and a clear display, improve use and decrease operator fatigue. The Jack A4C-C, measuring 695 × 295 × 550 mm and weighing 36 / 42 kg, combines precision engineering, intelligent automation, and energy efficiency. It is ideal for garment factories, tailoring businesses, and textile production units looking for consistent stitch quality, high productivity, and reliability.</p><h2>Buy Jack A4C-C Direct Drive Lockstitch Industrial Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get original <strong>Jack A4C-C Direct Drive Lockstitch Industrial Sewing Machine</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/jack-sewing-machine\" target=\"\">Jack Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Jack A4C-C Direct Drive Lockstitch Industrial Sewing Machine comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: A4C-C</li><li>Automatic Sewing Functions, Octopus Nine‑Brain AI Chip</li><li>0‑Degree Thread Path Technology, Direct Drive Motor</li><li>Maximum Sewing Speed: 5,000 stitches per minute</li><li>Stitch Length: Up to 5 mm, Presser foot lift: 5 – 13 mm</li></ul>",
+      "model": "A4C-C",
+      "warranty": "No Parts Warranty",
+      "basePrice": 53000.0,
+      "originalPrice": 61000.0,
+      "currency": "BDT",
+      "weight": 36.0,
+      "dimensions": {
+        "length": 695.0,
+        "width": 295.0,
+        "height": 550.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "JACK",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-45623",
+          "price": 53000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 50880.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Needle Threader",
+              "value": "Needles: DBX1 11-18# Number of threads: 2",
+              "position": 0
+            },
+            {
+              "label": "Thread Cutter",
+              "value": "Automatic",
+              "position": 1
+            },
+            {
+              "label": "Sewing Light",
+              "value": "LED Illumination",
+              "position": 2
+            },
+            {
+              "label": "Foot Controller",
+              "value": "Presser Foot Height: 5 mm (manual), 13 mm (knee lift)",
+              "position": 3
+            },
+            {
+              "label": "Display",
+              "value": "Yes",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "NTB System: Intelligence Meets Precision Octopus Nine-Brain AI Chip Automatic Sewing Functions 0-Degree Thread Path Technology Direct‑Drive, Energy‑Saving Motor Stepper Motor for Presser Foot Lift and Reverse Energy Efficient Direct Drive LED Illumination Compact and Durable Build",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "up to 5000 stitches/min",
+              "position": 0
+            },
+            {
+              "label": "Stitch Length Control",
+              "value": "up to 5 mm",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Suitable Materials: Cotton, denim, synthetics, light to heavy fabrics",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "695 x 295 x 550 mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "36 / 42 kg",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Parts Warranty",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 4,
+          "items": [
+            {
+              "label": "Power Requirement",
+              "value": "Voltage range: 110 – 295 V ESD resistance: 12,000 V",
+              "position": 0
+            },
+            {
+              "label": "Other Power Features",
+              "value": "Motor torque: 5.5 Nm",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/jack-a4c-c-sewing-machine",
+      "sourceProductCode": "45623",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: A4C-C",
+        "Automatic Sewing Functions, Octopus Nine‑Brain AI Chip",
+        "0‑Degree Thread Path Technology, Direct Drive Motor",
+        "Maximum Sewing Speed: 5,000 stitches per minute",
+        "Stitch Length: Up to 5 mm, Presser foot lift: 5 – 13 mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-a4c-c-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/JACK/jack-a4c-c-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "jack-a4c-c-sewing-machine",
+        "candidateTitle": "Jack A4C-C Direct Drive Lockstitch Industrial Sewing Machine",
+        "attemptStem": "jack-a4c-c-sewing-machine"
+      }
+    },
+    {
+      "name": "Jack E4S-5-03/333 5 Thread Overlock Industrial Sewing Machine",
+      "slug": "jack-e4s-5-03333-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-45626",
+      "description": "<h2>Jack E4S-5-03/333 5 Thread Overlock Industrial Sewing Machine</h2><p>The Jack <strong>E4S-5-03/333</strong> Overlock Industrial <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> is a premium, high-performance sewing solution for professional garment manufacture, with unrivaled speed, precision, and longevity. The Jack E4S-5-03/333 Sewing Machine has a powerful single shaft motor that eliminates torsion, enhances stroke stability, and provides long-lasting performance, with up to 5500 stitches per minute. This Jack E4S-5-03/333 5 Thread Overlock Industrial Sewing Machine has two DCx27 #14 needles and five threads to create accurate and durable 3x4 stitches ranging in length from 0.8mm to 4.6mm and width from 4mm to 4.6mm. The Jack E4S-5-03/333's innovative L/M/H selector makes it easy to alter the feed dog inclination for light, medium, or heavy-duty fabrics, making it extremely flexible. The rapid response system cuts start/stop times by 40-50%, increasing production, while the oil return constraint maintains seams clean and clear of oil. The intuitive one-key reset simplifies parameter adjustments, and an LED display ensures simple operation. With a 5mm presser foot height, differential ratio of 0.7-2, and compact dimensions of 525x360x510 mm weighing 28/36 kg, the Jack E4S-5-03/333 Overlock Industrial Sewing Machine is a dependable solution for high-volume manufacturing. This machine, which has a needle threader, a foot controller, and an ergonomic design, is an excellent choice for precise stitching in industrial settings.</p><h2>Buy Jack E4S-5-03/333 5 Thread Overlock Industrial Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get original <strong>Jack E4S-5-03/333 5 Thread Overlock Industrial Sewing Machine</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/jack-sewing-machine\" target=\"\">Jack Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Jack E4S-5-03/333 5 Thread Overlock Industrial Sewing Machine comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: E4S-5-03/333</li><li>Functions: Safety Stitch, Single Shaft Motor</li><li>Number of Needles: 2, Number of Threads: 5</li><li>Maximum Sewing Speed: 5500 stitches per minute</li><li>Stitch Length: 0.8mm - 4.6mm, Stitch Width: 4mm x 4.6mm</li></ul>",
+      "model": "E4S-5-03/333",
+      "warranty": "No Parts Warranty",
+      "basePrice": 51900.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 28.0,
+      "dimensions": {
+        "length": 525.0,
+        "width": 360.0,
+        "height": 510.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "JACK",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "ST-45626",
+          "price": 51900.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 49824.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Needle Threader",
+              "value": "Needles: DCx27 Size #1 Number of Needles: 2 Number of Threads: 5",
+              "position": 0
+            },
+            {
+              "label": "Sewing Light",
+              "value": "LED",
+              "position": 1
+            },
+            {
+              "label": "Foot Controller",
+              "value": "Presser Foot Height: 5 mm",
+              "position": 2
+            },
+            {
+              "label": "Display",
+              "value": "Yes",
+              "position": 3
+            },
+            {
+              "label": "Others",
+              "value": "L/M/H Selector (Patented) Quick Response Oil Return Constraint One Key Reset Single Shaft Motor Application: 3x4 Stitch Stitch Width (mm): 4 Stitch Length: 4 Differential Ratio: 0.7-2",
+              "position": 4
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "up to 5500 stitches/min",
+              "position": 0
+            },
+            {
+              "label": "Stitch Length Control",
+              "value": "up to 4 mm",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            },
+            {
+              "label": "Dimension",
+              "value": "525x360x510 mm",
+              "position": 1
+            },
+            {
+              "label": "Weight",
+              "value": "28/36 kg",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Parts Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/jack-e4s-5-03333-sewing-machine",
+      "sourceProductCode": "45626",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: E4S-5-03/333",
+        "Functions: Safety Stitch, Single Shaft Motor",
+        "Number of Needles: 2, Number of Threads: 5",
+        "Maximum Sewing Speed: 5500 stitches per minute",
+        "Stitch Length: 0.8mm - 4.6mm, Stitch Width: 4mm x 4.6mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-e4s-5-03333-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/JACK/jack-e4s-5-03333-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "jack-e4s-5-03333-sewing-machine",
+        "candidateTitle": "Jack E4S-5-03/333 5 Thread Overlock Industrial Sewing Machine",
+        "attemptStem": "jack-e4s-5-03333-sewing-machine"
+      }
+    },
+    {
+      "name": "Jack E4S-4-M03/333 Direct Drive 4 Thread Overlock Machine",
+      "slug": "jack-e4s-m03-333-overlock-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-38365",
+      "description": "<h2>Jack E4S-4-M03/333 Direct Drive 4 Thread Overlock Machine</h2><p>The Jack <strong>E4S-4-M03/333</strong> Direct Drive 4 Thread Overlock Machine is a high-performance industrial sewing machine that produces professional-grade overlocking on both light and heavy fabrics. This machine, featuring two needles and four threads, provides strong, long-lasting stitching that is ideal for a wide range of fabrics and clothing. The Jack E4S-4-M03/333 4 Thread Overlock Machine's adjustable feed mechanism makes it easy to switch between light and heavy fabrics, and its maximum speed of 5,500 stitches per minute ensures accurate and versatile results for a variety of sewing tasks. Its adaptability is further increased by the presser foot height, which can be adjusted up to 5.5 mm to accommodate thicker fabrics. The Jack E4S-4-M03/333 4 Thread Overlock Machine's direct-drive servomotor, which is built right into the handwheel, is one of its best features. This configuration is a more economical and quieter choice for extended use, as it not only increases energy efficiency by up to 80% but also reduces noise and eliminates the need for a belt. Its sophisticated mechanical platform also completely incorporates the control box, panel, and servo motor into the machine head, providing a sleek, contemporary design that makes maintenance and operation easier. By automatically going into a dormant condition after 30 minutes of inactivity, the machine's clever latency function saves energy and prolongs its lifespan. Additionally, the Jack E4S-4-M03/333 4 Thread Overlock Machine has a sophisticated oil system that includes an enclosed needle bar mechanism, integrated oil filter, and return to stop oil leaks and guarantee reliable lubrication and long-lasting operation. With a presser foot height that rises to an amazing 27 mm, the expanded feeding space offers plenty of space for effortlessly handling heavier or larger fabrics. With its precision, robustness, and energy-saving technology, this Jack E4S-4-M03/333 4 Thread Overlock Machine is an excellent option for professional settings that require dependable, fast overlocking with easy integration and low maintenance.</p><h2>Buy Jack E4S-4-M03/333 Direct Drive 4 Thread Overlock Machine From Star Tech</h2><p>In Bangladesh, you can get original <strong>Jack E4S-4-M03/333 Direct Drive 4 Thread Overlock Machine</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/jack-sewing-machine\" target=\"\">Jack Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Jack E4S-4-M03/333 Direct Drive 4 Thread Overlock Machine comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: E4S-4-M03/333</li><li>4 Threads, 2 Needles</li><li>Automatic Lubrication</li><li>Functions: Plain Seam Mock Safety Stitch</li><li>For sewing light to medium-weight materials</li></ul>",
+      "model": "E4S-4-M03/333",
+      "warranty": "No Parts Warranty",
+      "basePrice": 48400.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "JACK",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-38365",
+          "price": 48400.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 46464.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Needle Threader",
+              "value": "4 Thread 2 Needles",
+              "position": 0
+            },
+            {
+              "label": "Foot Controller",
+              "value": "Electric foot lift Presser Foot Height: 5.5mm",
+              "position": 1
+            },
+            {
+              "label": "Display",
+              "value": "Yes",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Adjustable Feed Mechanism for Sewing Light and Heavy Fabrics. Automatic Lubrication. Direct Drive Servomotor Incorporated in the Handwheel, 80% Energy Saving, Silent Without Belt. For sewing light to medium-weight materials including cottons, knits, polyester, nylon, sheer fabrics and denim Suitable for stitching such products as blouses, shirts, men's, ladies and children's apparel, uniforms, overalls, lingerie, etc.",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "Up to 5500 Rpm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Parts Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/jack-e4s-m03-333-overlock-machine",
+      "sourceProductCode": "38365",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: E4S-4-M03/333",
+        "4 Threads, 2 Needles",
+        "Automatic Lubrication",
+        "Functions: Plain Seam Mock Safety Stitch",
+        "For sewing light to medium-weight materials"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-e4s-m03-333-overlock-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/JACK/jack-e4s-m03-333-overlock-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "jack-e4s-m03-333-overlock-machine",
+        "candidateTitle": "Jack E4S-4-M03/333 Direct Drive 4 Thread Overlock Machine",
+        "attemptStem": "jack-e4s-m03-333-overlock-machine"
+      }
+    },
+    {
+      "name": "Jack F5 Single Needle Direct Drive Lockstitch Industrial Sewing Machine",
+      "slug": "jack-f5-industrial-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-38360",
+      "description": "<h2>Jack F5 Single Needle Direct Drive Lockstitch Industrial Sewing Machine</h2><p>The Jack F5 Single Needle Direct Drive Lockstitch Industrial Sewing Machine is an advanced sewing machine designed for optimal efficiency, durability, and professional-grade results. With fully automatic lubrication, this machine uses a high-pressure recirculating pump along with an oil glass indicator to ensure smooth operation while minimizing maintenance needs. Its noise and vibration-absorbing table mounting is crafted for extended, uninterrupted use, making it an ideal choice for heavy-duty tasks in a quieter workspace. The machine’s treadle-controlled foot lifter allows for seamless control, which is particularly useful for handling complex sewing projects with ease. The Jack F5 features several automated functions that enhance its efficiency and reliability. An automatic reverse feature and auto-lubrication rotary hook keep the stitching process smooth and consistent. The under-bed thread trimmer makes clean, precise cuts after every stitch and an electric thread clamp holds the thread firmly post-trim, minimizing waste. This machine includes a needle positioning feature, an electric foot lift, and a stitch counter, each contributing to an accuracy that meets the demands of detail-oriented sewing. The Jack F5 also integrates a built-in LED light with adjustable settings, ensuring visibility in various lighting conditions. Powered by a robust 3/4 HP, 550-watt Direct Drive Motor, available in both 110v and 220v, this machine reaches high speeds of up to 5,000 RPM, making it well-suited for intense industrial settings. With a built-in lubrication pump, it maintains consistent performance at these speeds, supporting both efficiency and the machine's longevity. The Jack F5 includes practical accessories to streamline setup and use. An instruction and parts manual, tool kit, drawer, and thread stand are all included, making it ready to use upon arrival. Each unit is also individually tested and sewn off before shipping to ensure that it meets the highest quality standards. This industrial-grade sewing machine is designed to empower professionals with reliability and high performance for demanding projects.</p><h2 style='font-family: \"Open Sans\", sans-serif; color: rgb(102, 102, 102);'>Buy Jack F5 Single Needle Direct Drive Lockstitch Industrial Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get the original <span style=\"font-weight: 700;\">Jack F5 Single Needle Direct Drive Lockstitch Industrial Sewing Machine</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/jack-sewing-machine\" target=\"\">Jack Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The JACK F5 Industrial Sewing Machine comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: F5</li><li>Auto-lubrication rotary hook</li><li>Maximum Speed: 5000 Stitches Per Minute (SPM/RPM)</li><li>Maximum Stitch Length: 5mm</li><li>Presser Foot Height: 5mm to 13mm</li></ul>",
+      "model": "F5",
+      "warranty": "No warranty",
+      "basePrice": 32500.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "JACK",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-38360",
+          "price": 32500.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 31200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Needle Threader",
+              "value": "DB×1 11-18",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "5000 Stitches Per Minute (SPM/RPM)",
+              "position": 0
+            },
+            {
+              "label": "Stitch Length Control",
+              "value": "5mm",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Applications: Suitable for sewing all kinds of small orders and quick reorders of fabrics Use for: Heavy, Light, Elastic Operating Space: 10\"",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/jack-f5-industrial-sewing-machine",
+      "sourceProductCode": "38360",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: F5",
+        "Auto-lubrication rotary hook",
+        "Maximum Speed: 5000 Stitches Per Minute (SPM/RPM)",
+        "Maximum Stitch Length: 5mm",
+        "Presser Foot Height: 5mm to 13mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-f5-industrial-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/JACK/jack-f5-industrial-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "jack-f5-industrial-sewing-machine",
+        "candidateTitle": "Jack F5 Single Needle Direct Drive Lockstitch Industrial Sewing Machine",
+        "attemptStem": "jack-f5-industrial-sewing-machine"
+      }
+    },
+    {
+      "name": "Jack F6 Single Needle Direct Drive Lockstitch Industrial Sewing Machine",
+      "slug": "jack-f6-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-47896",
+      "description": "<h2>Jack F6 Single Needle Direct Drive Lockstitch Industrial Sewing Machine</h2><p>The Jack <strong>F6</strong> Industrial <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> is designed to deliver excellent performance, durability, and professional output in tough industrial situations. It has a completely automatic lubrication system with a high-pressure recirculating pump and an oil glass indicator, which ensures smooth performance and reduces maintenance requirements. The <strong>Jack F6</strong> Industrial Sewing Machine is mounted on a noise- and vibration-absorbing table, allowing for long periods of uninterrupted use with minimal disruption, making it ideal for busy production floors. The treadle-controlled foot lifter allows for precise control, making difficult sewing operations easier and more efficient. The Jack F6 Sewing Machine features advanced automatic functions that boost productivity and stitching consistency. It has an automatic reverse function and a self-lubricating rotary hook for smooth, dependable operation. The under-bed thread trimmer makes clean, accurate cuts after each stitch, and the electric thread clamp secures the thread after trimming to save waste. The Jack F6 Sewing Machine includes needle positioning, an automatic foot lift, and a stitch counter for detail-oriented work. A built-in LED light with adjustable brightness improves visibility under all operating conditions. The Jack F6 Industrial Sewing Machine is powered by a powerful 3/4 HP, 550W Direct Drive motor and is available in both 110V and 220V models. It can reach speeds of up to 5,000 RPM, making it appropriate for heavy industrial applications. The inbuilt lubrication pump ensures consistent performance even at high speeds, extending the machine's lifespan. It also comes complete with an instruction and parts manual, tool kit, drawer, and thread stand, ensuring quick setup and immediate operation.</p><h2>Buy Jack F6 Industrial Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get the original <strong>Jack F6 Industrial Sewing Machine</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/jack-sewing-machine\" target=\"\">Jack Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The Jack F6 Industrial Sewing Machine comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: F6</li><li>Auto-lubrication rotary hook</li><li>Maximum Speed: 5000 Stitches Per Minute (SPM/RPM)</li><li>Maximum Stitch Length: 5mm</li><li>Presser Foot Height: 5mm to 13mm</li></ul>",
+      "model": "F6",
+      "warranty": "No warranty",
+      "basePrice": 34500.0,
+      "originalPrice": 42000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "JACK",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-47896",
+          "price": 34500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 33120.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Needle Threader",
+              "value": "DB×1 11-18",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "5000 Stitches Per Minute (SPM/RPM)",
+              "position": 0
+            },
+            {
+              "label": "Stitch Length Control",
+              "value": "5mm",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Applications: Suitable for sewing all kinds of small orders and quick reorders of fabrics Use for: Heavy, Light, Elastic Operating Space: 10\"",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/jack-f6-sewing-machine",
+      "sourceProductCode": "47896",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: F6",
+        "Auto-lubrication rotary hook",
+        "Maximum Speed: 5000 Stitches Per Minute (SPM/RPM)",
+        "Maximum Stitch Length: 5mm",
+        "Presser Foot Height: 5mm to 13mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-f6-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/JACK/jack-f6-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "jack-f6-sewing-machine",
+        "candidateTitle": "Jack F6 Single Needle Direct Drive Lockstitch Industrial Sewing Machine",
+        "attemptStem": "jack-f6-sewing-machine"
+      }
+    },
+    {
+      "name": "Jack JK-T1903GSK-D II Electronic Button Sewing Machine",
+      "slug": "jack-jk-t1903gsk-d-ii-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-45639",
+      "description": "<h2>Jack JK-T1903GSK-D II Electronic Button Sewing Machine</h2><p>The Jack <strong>JK-T1903GSK-D II</strong> <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> is a premium industrial button sewing solution designed for garment manufacturers, tailoring shops, and high-volume production lines that require precision, speed, and reliability. The Jack JK-T1903GSK-D II combines advanced technology with robust construction to deliver outstanding performance in button sewing tasks. Featuring an intuitive touch screen display, the machine provides easy operation and quick adjustment of settings, while the automatic thread trimmer improves efficiency by reducing manual work. Built with a 135x17 (DPx17) needle system, one needle, and two threads, the Jack JK-T1903GSK-D II ensures precise and durable stitching on a wide range of fabrics. With a remarkable maximum sewing speed of 2,700 stitches per minute, this machine enhances productivity without sacrificing quality. The Jack JK-T1903GSK-D II Sewing Machine supports button sizes ranging from 2.4mm to 6.8mm in thickness and 8mm to 30mm in diameter, making it versatile for garments, uniforms, and accessories. Its 10mm presser foot lift allows smooth handling of fabrics of different thicknesses, and the integrated control box ensures reliable performance. Mounted on a stand with wheels, the machine offers stability and mobility for industrial environments. Operating at 220V, the Jack JK-T1903GSK-D II is engineered for durability, with dimensions of 805 x 405 x 525mm and a weight of 55/64kg, making it an ideal choice for professionals seeking high efficiency, quality craftsmanship, and long-lasting performance in button sewing operations.</p><h2>Buy Jack JK-T1903GSK-D II Electronic Button Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get original <strong>Jack JK-T1903GSK-D II Electronic Button Sewing Machine</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/jack-sewing-machine\" target=\"\">Jack Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Jack JK-T1903GSK-D II Electronic Button Sewing Machine comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: JK-T1903GSK-D II</li><li>Automatic Thread Trimmer, Touch Screen Display</li><li>Needle System: 135x17 (DPx17), Number of Threads: 2</li><li>Maximum Sewing Speed: 2,700 Stitches Per Minute</li><li>Button: 2.4~6.8mm, Presser Foot Lift: 10mm</li></ul>",
+      "model": "JK-T1903GSK-D II",
+      "warranty": "No Parts Warranty",
+      "basePrice": 245000.0,
+      "originalPrice": 280000.0,
+      "currency": "BDT",
+      "weight": 55.0,
+      "dimensions": {
+        "length": 805.0,
+        "width": 405.0,
+        "height": 525.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "JACK",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45639",
+          "price": 245000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 235200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Needle Threader",
+              "value": "135x17 (DPx17) Number of Threads: 2 Number of Needles: 1",
+              "position": 0
+            },
+            {
+              "label": "Display",
+              "value": "Touch screen display",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Automatic thread trimmer Integrated control box Stand with wheels",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "up to 2,700 stitches/min",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "Presser foot lift: 10mm Button: 2.4~6.8mm Button diameter: 8~30mm",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "805*405*525mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "55/64kg",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Parts Warranty",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 4,
+          "items": [
+            {
+              "label": "Power Requirement",
+              "value": "220V",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/jack-jk-t1903gsk-d-ii-sewing-machine",
+      "sourceProductCode": "45639",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: JK-T1903GSK-D II",
+        "Automatic Thread Trimmer, Touch Screen Display",
+        "Needle System: 135x17 (DPx17), Number of Threads: 2",
+        "Maximum Sewing Speed: 2,700 Stitches Per Minute",
+        "Button: 2.4~6.8mm, Presser Foot Lift: 10mm"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-jk-t1903gsk-d-ii-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/JACK/jack-jk-t1903gsk-d-ii-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "jack-jk-t1903gsk-d-ii-sewing-machine",
+        "candidateTitle": "Jack JK-T1903GSK-D II Electronic Button Sewing Machine",
+        "attemptStem": "jack-jk-t1903gsk-d-ii-sewing-machine"
+      }
+    },
+    {
+      "name": "Jack K5-D-01GBX356 Interlock Sewing Machine",
+      "slug": "jack-k5-d-01gbx356-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-45635",
+      "description": "<h2>Jack K5-D-01GBX356 Interlock Sewing Machine</h2><p>The Jack <strong>K5-D-01GBX356</strong> Interlock <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> is a premium industrial sewing solution designed for professionals who value precision, dependability, and speed. The Jack K5-D-01GBX356 Sewing Machine includes sophisticated automation features including Auto Bar Tacking, Auto Thread Trimming, and Automatic Needle Positioning, resulting in faster output and smooth stitching performance. It has the UY128GAS 11-14# needle system and supports 5 threads and 3 needles, allowing users to create high-quality interlock stitches for a wide range of garments and materials. The Jack K5-D-01GBX356 has a maximum stitching speed of 500 stitches per minute with adjustable stitch width (1.5-45 mm) and length (5.6/6.4 mm) to meet a variety of sewing requirements. It also has a Basic Top and Bottom Feed Cylinderbed Interlock, Silent Thread Trimmer, and Automatic Footlifter to provide smooth and silent operation. The machine's Wide Fabric Adaptability, Vocal Guide, and Industry 4.0 connection make it an excellent solution for contemporary sewing applications. With its single motor shaft design and built-in display, the Jack K5-D-01GBX356 Interlock Sewing Machine improves control and efficiency. The 670×445×595 mm and 52/62 kg design ensures stability, long-lasting performance, and productivity in professional tailoring or garment manufacturers.</p><h2>Buy Jack K5-D-01GBX356 Interlock Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get original <strong>Jack K5-D-01GBX356 Interlock Sewing Machine</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/jack-sewing-machine\" target=\"\">Jack Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Jack K5-D-01GBX356 Interlock Sewing Machine comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: K5-D-01GBX356</li><li>Auto Bar Tacking, Auto Thread Trimming and Needle Positioning</li><li>Needle System: UY128GAS 11-14#, Number of Threads: 5</li><li>Maximum Sewing Speed: 500 Stitches per Minute</li><li>Stitch Width (mm): 1.5-45, Stitch Length: 5.6/6.4</li></ul>",
+      "model": "K5-D-01GBX356",
+      "warranty": "No Parts Warranty",
+      "basePrice": 90125.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 52.0,
+      "dimensions": {
+        "length": 670.0,
+        "width": 445.0,
+        "height": 595.0,
+        "unit": "mm"
+      },
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "JACK",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45635",
+          "price": 90125.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 86520.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Needle Threader",
+              "value": "UY128GAS 11-14# Number of Threads: 5 Number of Needles: 3",
+              "position": 0
+            },
+            {
+              "label": "Display",
+              "value": "Yes",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Basic Top and Bottom Feed Cylinderbed Interlock Silent Thread Trimmer And Footlifter Wide Fabric Adaptability Vocal Guide Single Motor Shaft Industry 4.0",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "up to 500 stitches/min",
+              "position": 0
+            },
+            {
+              "label": "Stitch Width Control",
+              "value": "1.5-45",
+              "position": 1
+            },
+            {
+              "label": "Stitch Length Control",
+              "value": "5.6/6.4",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Differential Ratio: 0.8-1.3",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "670x445x595 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "52/62 kg",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Parts Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/jack-k5-d-01gbx356-sewing-machine",
+      "sourceProductCode": "45635",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: K5-D-01GBX356",
+        "Auto Bar Tacking, Auto Thread Trimming and Needle Positioning",
+        "Needle System: UY128GAS 11-14#, Number of Threads: 5",
+        "Maximum Sewing Speed: 500 Stitches per Minute",
+        "Stitch Width (mm): 1.5-45, Stitch Length: 5.6/6.4"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-k5-d-01gbx356-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/JACK/jack-k5-d-01gbx356-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "jack-k5-d-01gbx356-sewing-machine",
+        "candidateTitle": "Jack K5-D-01GBX356 Interlock Sewing Machine",
+        "attemptStem": "jack-k5-d-01gbx356-sewing-machine"
+      }
+    },
+    {
+      "name": "Jack T1377E B Single Thread Direct Drive Button Sewing Machine",
+      "slug": "jack-t1377e-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-45627",
+      "description": "<h2>Jack T1377E B Single Thread Direct Drive Button Sewing Machine</h2><p>The Jack <strong>T1377E</strong> B Single Thread Direct Drive Button <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> is a professional-grade industrial sewing machine designed for precision, speed, and durability, making it a popular option among garment makers, tailors, and workshops in Bangladesh and elsewhere. This machine is specifically intended for attaching buttons to light to medium-weight fabrics such as shirts, blouses, uniforms, workwear, and jackets. It provides unrivaled efficiency and quality. It has a chainstitch mechanism, employs TQx1 needles (diameters 14 to 18), and supports thread sizes ranging from TEX 27 to TEX 60, making it suitable for a variety of fabrics. The Jack T1377E B can sew at a maximum speed of 1,500 stitches per minute, dramatically increasing manufacturing productivity while maintaining stitch precision. This button sewing machine has button diameters ranging from 10 to 28 mm and customizable stitch pattern sizes (X and Y axes: 2.5 to 6.5 mm), making it ideal for a wide range of stitching applications. The Jack T1377E features a direct drive eco motor that provides strong, energy-efficient operation while minimizing vibration and noise. The LED sewing light improves visibility, assuring perfect stitching, and the user-friendly LCD display and control panel make operation simple, even for beginners. This machine is very efficient and user-friendly, with features such as an automated needle threader, built-in thread cutter, 9 mm presser foot height, and an eccentric gear system.</p><h2>Buy Jack T1377E B Single Thread Direct Drive Button Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get original <strong>Jack T1377E B Single Thread Direct Drive Button Sewing Machine</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/jack-sewing-machine\" target=\"\">Jack Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Jack T1377E B Single Thread Direct Drive Button Sewing Machine comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: T1377E</li><li>Stitch Type: Chainstitch</li><li>NEEDLE: TQx1, Sizes 14 to 18</li><li>Maximum Sewing Speed: 1,500 SPM</li><li>Energy-Saving Motor, LED Lighting</li></ul>",
+      "model": "T1377E",
+      "warranty": "No Parts Warranty",
+      "basePrice": 96000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "JACK",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45627",
+          "price": 96000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 92160.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Needle Threader",
+              "value": "TQx1, Sizes 14 to 18",
+              "position": 0
+            },
+            {
+              "label": "Thread Cutter",
+              "value": "Thread Size: TEX 27 to TEX 60",
+              "position": 1
+            },
+            {
+              "label": "Sewing Light",
+              "value": "LED",
+              "position": 2
+            },
+            {
+              "label": "Foot Controller",
+              "value": "Presser Foot Height: 9 mm",
+              "position": 3
+            },
+            {
+              "label": "Display",
+              "value": "Yes",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "3 Sewing Types Energy-Saving Motor Direct Drive Eco Motor Easy To Operate Control Panel Easy To Use LCD Display Eccentric Gear Intelligent Configuration Button size: 10 – 28 mm",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "up to 1500 stitches/min",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Parts Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/jack-t1377e-sewing-machine",
+      "sourceProductCode": "45627",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: T1377E",
+        "Stitch Type: Chainstitch",
+        "NEEDLE: TQx1, Sizes 14 to 18",
+        "Maximum Sewing Speed: 1,500 SPM",
+        "Energy-Saving Motor, LED Lighting"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-t1377e-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/JACK/jack-t1377e-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "jack-t1377e-sewing-machine",
+        "candidateTitle": "Jack T1377E B Single Thread Direct Drive Button Sewing Machine",
+        "attemptStem": "jack-t1377e-sewing-machine"
+      }
+    },
+    {
+      "name": "Jack T781G-Z Direct Drive Mechatronic Buttonhole Industrial Sewing Machine",
+      "slug": "jack-t781g-z-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-45631",
+      "description": "<h2>Jack T781G-Z Direct Drive Mechatronic Buttonhole Industrial Sewing Machine</h2><p>The Jack <strong>T781G-Z</strong> <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> is a professional-grade, powerful solution that meets the needs of current garment manufacturing. The Jack T781G-Z Industrial Sewing Machine, designed for woven textiles, provides accurate and long-lasting stitching at speeds of up to 3,600 stitches per minute. It uses the DPx5 Size #12 needle system, which has two threads and one needle, to provide consistent and accurate buttonhole creation on all types of cloth. The Jack T781G-Z has sophisticated automation, such as an automated thread trimmer, presser foot raising, and a counter, which streamlines workflow and saves important production time. The LCD display provides for simple control and adjustment, while the end bobbin thread sensor (F13) and broken thread sensor ensure smooth, continuous operation. Its LED stitching light assures great visibility, and the step motor technology allows for rapid reaction with minimum noise, making it perfect for industrial situations. Features include a side cutter (1/4\" ~ 3/4\"), parallel interspace adjustment (0.2mm to 2.5mm), and 12mm clearance beneath the presser foot for handling thick textiles. The Jack T781G-Z stitching Machine, with its durability, accuracy, and smart features, is an excellent choice for professionals looking for dependability and great productivity in buttonhole stitching applications.</p><h2>Buy Jack T781G-Z Direct Drive Mechatronic Buttonhole Industrial Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get original <strong>Jack T781G-Z Direct Drive Mechatronic Buttonhole Industrial Sewing Machine</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/jack-sewing-machine\" target=\"\">Jack Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Jack T781G-Z Direct Drive Mechatronic Buttonhole Industrial Sewing Machine comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: T781G-Z</li><li>Functions: Woven Material</li><li>Needle System: DPx5 Size #12, Number of Threads: 2</li><li>Maximum Sewing Speed: 3600 Stitches per Minute</li><li>Automatic Thread Timmer, Advanced LCD Display</li></ul>",
+      "model": "T781G-Z",
+      "warranty": "No Parts Warranty",
+      "basePrice": 170000.0,
+      "originalPrice": 190000.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "JACK",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45631",
+          "price": 170000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 163200.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Bobbin Type",
+              "value": "End Bobbin Thread Sensor (F13)",
+              "position": 0
+            },
+            {
+              "label": "Needle Threader",
+              "value": "DPx5 Size #12 Number of Threads: 2 Number of Needles: 1",
+              "position": 1
+            },
+            {
+              "label": "Sewing Light",
+              "value": "LED",
+              "position": 2
+            },
+            {
+              "label": "Foot Controller",
+              "value": "Automatic Footlifter",
+              "position": 3
+            },
+            {
+              "label": "Display",
+              "value": "Yes",
+              "position": 4
+            },
+            {
+              "label": "Others",
+              "value": "Side Cutter Function: 1/4\" ~ 3/4\" Parallel Interspace: 0.2mm to 2.5mm Automatic Thread Timmer Automatic Presser Foot Lifting Clearance under the Presser Foot: 12mm Automatic Counter Broken Thread Sensor Short Thread 3mm (X) Quick Response Low Noise Step Motor",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "up to 3600 stitches/min",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Parts Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/jack-t781g-z-sewing-machine",
+      "sourceProductCode": "45631",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: T781G-Z",
+        "Functions: Woven Material",
+        "Needle System: DPx5 Size #12, Number of Threads: 2",
+        "Maximum Sewing Speed: 3600 Stitches per Minute",
+        "Automatic Thread Timmer, Advanced LCD Display"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-t781g-z-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/JACK/jack-t781g-z-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "jack-t781g-z-sewing-machine",
+        "candidateTitle": "Jack T781G-Z Direct Drive Mechatronic Buttonhole Industrial Sewing Machine",
+        "attemptStem": "jack-t781g-z-sewing-machine"
+      }
+    },
+    {
+      "name": "Jack W4-D-01GBX356 Interlock Sewing Machine",
+      "slug": "jack-w4-d-01gbx356-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-45634",
+      "description": "<h2>Jack W4-D-01GBX356 Interlock Sewing Machine</h2><p>The Jack <strong>W4-D-01GBX356</strong> Interlock <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> is a high-performance industrial sewing machine ideal for professionals who appreciate precision, speed, and adaptability. The Jack W4-D-01GBX356 Sewing Machine specializes in plain seaming functions, making it ideal for generating long-lasting, high-quality garment finishes. The Jack W4-D-01GBX356, which comes with a UY128GAS (11-14#) needle system, three needles, and five threads, provides great stitch strength and elasticity—making it suitable for knitwear and stretch fabrics. With a maximum sewing speed of 5,500 stitches per minute, this model provides high efficiency in any garment factory or tailoring business. It has a thread width of 1.5mm to 4.55mm and a stitch length of 5.6mm or 6.4mm, allowing for excellent control over a wide range of fabric types. The differential ratio of 0.65-1.3 ensures smooth stitching by reducing fabric deformation and puckering. The Jack W4-D-01GBX356 Sewing Machine's digital display enables simple monitoring and accurate adjustments for best results. This interlock sewing machine is designed for solidity and long-term endurance, measuring 670x445x595 mm and weighing 48/58 kg, making it an excellent choice for industrial use. Overall, the Jack W4-D-01GBX356 Interlock Sewing Machine stands out as an excellent, efficient, and long-lasting alternative for professional garment making.</p><h2>Buy Jack W4-D-01GBX356 Interlock Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get original <strong>Jack W4-D-01GBX356 Interlock Sewing Machine</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/jack-sewing-machine\" target=\"\">Jack Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Jack W4-D-01GBX356 Interlock Sewing Machine comes with no warranty.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: W4-D-01GBX356</li><li>Functions: Plain Seaming</li><li>Needle System: UY128GAS 11-14#, Number of Threads: 5</li><li>Maximum Sewing Speed: 5500 Stitches per Minute</li><li>Stitch Width (mm): 1.5-4.55, Stitch Length: 5.6/6.4</li></ul>",
+      "model": "W4-D-01GBX356",
+      "warranty": "No Parts Warranty",
+      "basePrice": 69500.0,
+      "originalPrice": 78000.0,
+      "currency": "BDT",
+      "weight": 48.0,
+      "dimensions": {
+        "length": 670.0,
+        "width": 445.0,
+        "height": 595.0,
+        "unit": "mm"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "JACK",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-45634",
+          "price": 69500.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 66720.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Needle Threader",
+              "value": "UY128GAS 11-14# Number of Threads: 5 Number of Needles: 3",
+              "position": 0
+            },
+            {
+              "label": "Display",
+              "value": "Yes",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Direct Drive 3-Needle 5.6mm Top and Bottom Flatbed Interlock Normal sewing, tape binding and bottom hem sewing Voice Guide Expand sewing range, suitable for various fabrics",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "up to 5500 stitches/min",
+              "position": 0
+            },
+            {
+              "label": "Stitch Width Control",
+              "value": "0.65-1.3",
+              "position": 1
+            },
+            {
+              "label": "Stitch Length Control",
+              "value": "5.6/6.4",
+              "position": 2
+            },
+            {
+              "label": "Others",
+              "value": "Differential Ratio: 0.65-1.3",
+              "position": 3
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "670x445x595 mm",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "48/58 kg",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "No Parts Warranty",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/jack-w4-d-01gbx356-sewing-machine",
+      "sourceProductCode": "45634",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: W4-D-01GBX356",
+        "Functions: Plain Seaming",
+        "Needle System: UY128GAS 11-14#, Number of Threads: 5",
+        "Maximum Sewing Speed: 5500 Stitches per Minute",
+        "Stitch Width (mm): 1.5-4.55, Stitch Length: 5.6/6.4"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/JACK/jack-w4-d-01gbx356-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/JACK/jack-w4-d-01gbx356-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "jack-w4-d-01gbx356-sewing-machine",
+        "candidateTitle": "Jack W4-D-01GBX356 Interlock Sewing Machine",
+        "attemptStem": "jack-w4-d-01gbx356-sewing-machine"
+      }
+    },
+    {
+      "name": "SINGER PK-SM-15CH1-WT-ST-NEW Sewing Machine With Cover",
+      "slug": "singer-pk-sm-15ch1-wt-st-new-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-39768",
+      "description": "<h2>SINGER PK-SM-15CH1-WT-ST-NEW Sewing Machine With Cover</h2>\n<p>The SINGER <strong>PK-SM-15CH1-WT-ST-NEW</strong> <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> is a multipurpose sewing solution. This machine's feed-drop mechanism gives it the ability to precisely control and adapt the stitch formation. It is perfect for producing elaborate designs and reinforcing seams because it can be used both forward and backward. Across various textiles, the dial-type thread tension changes guarantee uniform stitch quality. Both novice and expert sewers can benefit from the efficiency and productivity of this SINGER 15CH1 sewing machine, which can stitch 1000 stitches per minute. Thread number 2 and needle sizes between 11# and 14# are compatible with the Singer PK-SM-15CH1-WT-ST-NEW sewing machine. It can accommodate a variety of fabric kinds, including silk, cotton, wool, and chemical fibers, with a maximum sewing thickness of 5mm and a presser foot height of 6mm. With a stitch length adjustment of up to 4mm, this Singer sewing machine may be customized to meet the needs of the project. PK-SM-15CH1-WT-ST-NEW SINGER Strong and long-lasting seams are produced by the sewing machine's lock stitch formation, which is necessary for projects and clothing that last. The sewing machine weighs 12.5 kg gross and 11.5 kg net, making it steady and strong enough to operate smoothly. It provides versatility and convenience by being able to be operated by foot, hand, or electric motor. The machine's longevity is increased by the provided cover, which shields it from dust and harm. The Singer PK-SM-15CH1-WT-ST-NEW Sewing Machine is a great option for anyone who wants to sew with convenience and dependability while achieving professional-quality results.</p>\n<h2>Buy SINGER PK-SM-15CH1-WT-ST-NEW Sewing Machine from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>SINGER PK-SM-15CH1-WT-ST-NEW Sewing Machine</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/singer-sewing-machine\" target=\"\">SINGER Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The SINGER PK-SM-15CH1-WT-ST-NEW Sewing Machine With Cover comes with 1 year warranty by Singer (no warranty on cover, stand &amp; accessories). Warranty card must be kept for warranty claims. For warranty, Call Singer at 16482/09606600600. (Star Tech will not bear warranty claims).\r\n</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PK-SM-15CH1-WT-ST-NEW</li><li>Feed Drop Mechanism, Forward &amp; Reverse Stitching</li><li>Dial Type Thread Tension Adjustments</li><li>Sewing Fabrics: Silk, cotton, wool, and chemical fibers</li><li>Stitch Formation: Lock stitch, Sewing Speed: 1000s.p.m</li></ul>",
+      "model": "PK-SM-15CH1-WT-ST-NEW",
+      "warranty": "1 year warranty by Singer (no warranty on cover, stand & accessories). Warranty card must be kept for warranty claims. For warranty, Call Singer at 16482/09606600600. (Star Tech will not bear warranty claims).",
+      "basePrice": 14700.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 12.5,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "SINGER",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39768",
+          "price": 14700.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 14112.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Needle Threader",
+              "value": "11# to 14#",
+              "position": 0
+            },
+            {
+              "label": "Thread Tension Control",
+              "value": "2",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "1000s.p.m",
+              "position": 0
+            },
+            {
+              "label": "Stitch Length Control",
+              "value": "4mm",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Max sewing thickness: 5mm Height of Presser Foot: 6mm Sewing fabrics: Silk, cotton, wool, and chemical fibers Stitch Formation: Lock stitch Sewing driver: Hand, foot & electric motor",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Weight",
+              "value": "Sewing Head Gross Weight: 12.5kg Sewing Head Net Weight: 11.5kg",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year warranty by Singer (no warranty on cover, stand & accessories). Warranty card must be kept for warranty claims. For warranty, Call Singer at 16482/09606600600. (Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/singer-pk-sm-15ch1-wt-st-new-sewing-machine",
+      "sourceProductCode": "39768",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PK-SM-15CH1-WT-ST-NEW",
+        "Feed Drop Mechanism, Forward & Reverse Stitching",
+        "Dial Type Thread Tension Adjustments",
+        "Sewing Fabrics: Silk, cotton, wool, and chemical fibers",
+        "Stitch Formation: Lock stitch, Sewing Speed: 1000s.p.m"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/SINGER/singer-pk-sm-15ch1-wt-st-new-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/SINGER/singer-pk-sm-15ch1-wt-st-new-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "singer-pk-sm-15ch1-wt-st-new-sewing-machine",
+        "candidateTitle": "SINGER PK-SM-15CH1-WT-ST-NEW Sewing Machine With Cover",
+        "attemptStem": "singer-pk-sm-15ch1-wt-st-new-sewing-machine"
+      }
+    },
+    {
+      "name": "SINGER PK-SM-15CH1-WT-ST-NEW Sewing Machine Without Cover",
+      "slug": "singer-pk-sm-15ch1-wt-st-new-sewing-machine-without-cover",
+      "type": "PHYSICAL",
+      "sku": "ST-39770",
+      "description": "<h2>SINGER PK-SM-15CH1-WT-ST-NEW Sewing Machine Without Cover</h2><p>The SINGER <strong>PK-SM-15CH1-WT-ST-NEW</strong> <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">sewing machine</a> has a feed drop system, which allows for precise control over specific sewing techniques. Its ability to stitch both forward and backwards makes for strong, secure stitches, and the dial-style thread tension adjustments guarantee uniform results on a variety of fabric kinds. Both novices and experts may rely on its quick and dependable performance because to its 1000 stitches per minute sewing pace. With needle sizes ranging from 11# to 14#, the SINGER 15CH1 sewing machine can handle a variety of sewing tasks. With its two-thread capability and maximum stitching thickness of 5mm, it is appropriate for medium-weight and lightweight textiles such as silk, cotton, wool, and chemical fibers. Multiple layers of fabric can be easily accommodated by raising the presser foot by up to 6mm. With a 4mm stitch length adjustment, you may tailor it to your specific stitching requirements. With its gross and net weights of 12.5 and 11.5 kg, respectively, the SINGER PK-SM-15CH1-WT-ST-NEW sewing machine head provides stability and durability while in use. With its lock stitch structure, this SINGER sewing machine produces sturdy, expert-caliber stitches. It can be operated by hand, foot, or electric motor, allowing users to select their preferred mode of operation.</p><h2>Buy SINGER PK-SM-15CH1-WT-ST-NEW Sewing Machine Without Cover from Star Tech</h2><p>In Bangladesh, you can get original <strong>SINGER PK-SM-15CH1-WT-ST-NEW Sewing Machine Without Cover</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/singer-sewing-machine\" target=\"\">SINGER Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The SINGER PK-SM-15CH1-WT-ST-NEW Sewing Machine Without Cover comes with 1 Year Brand Warranty (No Warranty on Cover, Stand &amp; Accessories). </p><p><span style=\"font-weight: bold; color: rgb(0, 0, 0); background-color: yellow;\">Singer Warranty card must be kept for warranty claims-For warranty claims, please contact the Singer distributor directly through the official customer service hotline at 16482 or 09606600600.</span></p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: PK-SM-15CH1-WT-ST-NEW</li><li>Sewing Fabrics: Silk, cotton, wool, and chemical fibers</li><li>Stitch Formation: Lock stitch, Sewing Speed: 1000s.p.m</li><li>Feed Drop Mechanism, Forward &amp; Reverse Stitching</li><li>Dial Type Thread Tension Adjustments</li></ul>",
+      "model": "PK-SM-15CH1-WT-ST-NEW",
+      "warranty": "1 Year Brand Warranty (No Warranty on Cover, Stand & Accessories) Singer Warranty card must be kept for warranty claims-For warranty claims, please contact the Singer distributor directly through the official customer service hotline at 16482 or 09606600600.",
+      "basePrice": 14000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 12.5,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "SINGER",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39770",
+          "price": 14000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {},
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 13440.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Needle Threader",
+              "value": "11# to 14#",
+              "position": 0
+            },
+            {
+              "label": "Thread Tension Control",
+              "value": "2",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "1000s.p.m",
+              "position": 0
+            },
+            {
+              "label": "Stitch Length Control",
+              "value": "4mm",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Max sewing thickness: 5mm Height of Presser Foot: 6mm Sewing fabrics: Silk, cotton, wool, and chemical fibers Stitch Formation: Lock stitch Sewing driver: Hand, foot & electric motor",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Weight",
+              "value": "Sewing Head Gross Weight: 12.5kg Sewing Head Net Weight: 11.5kg",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Brand Warranty (No Warranty on Cover, Stand & Accessories) Singer Warranty card must be kept for warranty claims-For warranty claims, please contact the Singer distributor directly through the official customer service hotline at 16482 or 09606600600.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/singer-pk-sm-15ch1-wt-st-new-sewing-machine-without-cover",
+      "sourceProductCode": "39770",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: PK-SM-15CH1-WT-ST-NEW",
+        "Sewing Fabrics: Silk, cotton, wool, and chemical fibers",
+        "Stitch Formation: Lock stitch, Sewing Speed: 1000s.p.m",
+        "Feed Drop Mechanism, Forward & Reverse Stitching",
+        "Dial Type Thread Tension Adjustments"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/SINGER/singer-pk-sm-15ch1-wt-st-new-sewing-machine-without-cover.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/SINGER/singer-pk-sm-15ch1-wt-st-new-sewing-machine-without-cover.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "singer-pk-sm-15ch1-wt-st-new-sewing-machine-without-cover",
+        "candidateTitle": "SINGER PK-SM-15CH1-WT-ST-NEW Sewing Machine Without Cover",
+        "attemptStem": "singer-pk-sm-15ch1-wt-st-new-sewing-machine-without-cover"
+      }
+    },
+    {
+      "name": "SINGER SRSM-SM024 Electric Sewing Machine",
+      "slug": "singer-srsm-sm024-electric-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-22714",
+      "description": "<h2 style=\"\">SINGER SRSM-SM024 Electric Sewing Machine</h2><p style=\"\">The Singer SRSM-SM024 Electric Sewing Machine provides the luxurious features of a more costly machine in a tiny package. The SRSM-SM024 has an automated needle threader, twin needle, and drop feed for free-motion sewing, so you can stitch with a professional finish. Hobbyists will appreciate its quick threading and dependable stitching, whether they use the 4-step buttonhole function or the all-purpose foot and free arm to make fine hems and cuffs. A sturdy all-metal frame provides the consistent support that Singer portable sewing machines are known for. Under the bright LED illumination, the needle feeder and simple winding front-load bobbin are visible stitch by stitch.</p><h3 style=\"\">24 Built-in stitches, 4-step buttonhole</h3><p style=\"\">The Singer SRSM-SM024 Sewing Machine is capable of basic, stretch, and decorative stitches for a variety of sewing techniques and textiles. Make buttonholes in four simple steps! The stitch selector dial displays the steps.</p><h3 style=\"\">Automatic needle threader &amp; Front loading bobbin</h3><p style=\"\">The Singer SRSM-SM024 threads the needle effortlessly, saving time. Bobbins wind and insert easily while keeping a smooth needle plate surface.</p><h3 style=\"\">Reverse operation &amp; Free arm design</h3><p style=\"\">The reverse lever on this sewing machine makes it simple to sew in reverse. It simply pulls out the accessories compartment to get access to the machine's free arm. The free arm makes sewing hems, sleeve cuffs, and other tiny or tubular items a breeze.</p><h3 style=\"\">Drop feed &amp; Variable stitch length</h3><p style=\"\">Lowering the feed dogs allows for button and free-motion stitching. Lower the feed teeth by swiping the Drop Feed Lever. To re-engage the feed dogs, slide it back and fully crank the handwheel to elevate the feed teeth. It increases or decreases the space between stitches to easily alter the look of your chosen stitch. This feature is useful for a variety of stitch methods.</p><h3 style=\"\">1 x Staybright LED light &amp; Snap-on presser feet</h3><p style=\"\">Long-lasting lighting illuminates well while remaining cool to the touch. Presser feet that snap on. The snap-on presser feet are simply removed and replaceable. The Singer SRSM-SM024 Electric Sewing Machine comes with 1 year warranty by Singer (no warranty on cover, stand &amp; accessories). Warranty card must be kept for warranty claims. For warranty, Call Singer at 16482/09606600600. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SRSM-SM024</li><li>24 Stitches for crafting,</li><li>Front Load Bobbin</li><li>Needle Thread, LED Lighting</li><li>4-Step ButtonhcsIes, Automatic Bobbin Winding</li></ul>",
+      "model": "SRSM-SM024",
+      "warranty": "1 year warranty by Singer (no warranty on cover, stand & accessories). Warranty card must be kept for warranty claims. For warranty, Call Singer at 16482/09606600600. (Star Tech will not bear warranty claims).",
+      "basePrice": 16490.0,
+      "originalPrice": 17490.0,
+      "currency": "BDT",
+      "weight": 7.0,
+      "dimensions": {
+        "length": 15.75,
+        "width": 11.81,
+        "height": 12.6,
+        "unit": "inches"
+      },
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "SINGER",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-22714",
+          "price": 16490.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 15830.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Needle Threader",
+              "value": "Yes",
+              "position": 0
+            },
+            {
+              "label": "Thread Cutter",
+              "value": "Yes",
+              "position": 1
+            },
+            {
+              "label": "Sewing Light",
+              "value": "LED",
+              "position": 2
+            },
+            {
+              "label": "Quick-Set Bobbin",
+              "value": "Yes",
+              "position": 3
+            },
+            {
+              "label": "F.a.s.t Bobbin Winding System",
+              "value": "Automatic bobbin winding",
+              "position": 4
+            },
+            {
+              "label": "Display",
+              "value": "No",
+              "position": 5
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Stitch No.",
+              "value": "24",
+              "position": 0
+            },
+            {
+              "label": "Stitch Width Control",
+              "value": "Yes",
+              "position": 1
+            },
+            {
+              "label": "Stitch Length Control",
+              "value": "Yes",
+              "position": 2
+            },
+            {
+              "label": "Buttonhole Sewing",
+              "value": "4 Step",
+              "position": 3
+            },
+            {
+              "label": "Number of Buttonholes",
+              "value": "1",
+              "position": 4
+            },
+            {
+              "label": "Drop Feed",
+              "value": "Yes",
+              "position": 5
+            },
+            {
+              "label": "Knee Lifter",
+              "value": "No",
+              "position": 6
+            },
+            {
+              "label": "Side Feeding",
+              "value": "No",
+              "position": 7
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Dimension",
+              "value": "15.75 x 11.81 x 12.6 inches",
+              "position": 0
+            },
+            {
+              "label": "Weight",
+              "value": "7 kg",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year warranty by Singer (no warranty on cover, stand & accessories). Warranty card must be kept for warranty claims. For warranty, Call Singer at 16482/09606600600. (Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/singer-srsm-sm024-electric-sewing-machine",
+      "sourceProductCode": "22714",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SRSM-SM024",
+        "24 Stitches for crafting,",
+        "Front Load Bobbin",
+        "Needle Thread, LED Lighting",
+        "4-Step ButtonhcsIes, Automatic Bobbin Winding"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/SINGER/singer-srsm-sm024-electric-sewing-machine.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/SINGER/singer-srsm-sm024-electric-sewing-machine.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "singer-srsm-sm024-electric-sewing-machine",
+        "candidateTitle": "SINGER SRSM-SM024 Electric Sewing Machine",
+        "attemptStem": "singer-srsm-sm024-electric-sewing-machine"
+      }
+    },
+    {
+      "name": "SINGER SRSM-SM1412 Electric Sewing Machine",
+      "slug": "singer-srsm-sm1412-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-39771",
+      "description": "<h2>SINGER SRSM-SM1412 Electric Sewing Machine</h2><p>The SINGER <strong>SRSM-SM1412</strong> Electric <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> features 12 built-in stitches, including 5 basic, 3 stretch, 3 decorative, and 1 fully automatic 4-step buttonhole, making it simple to create professional results. You may save time and effort by setting up quickly and easily thanks to the simple stitch selection and easy threading method. The SINGER SM1412 Sewing Machine is adaptable to a variety of materials because its adjustable stitch length guarantees sturdy seams and keeps cloth from bunching. Stability and skip-free sewing are guaranteed by the sturdy metal frame, and stitching several layers of heavy fabric is made possible by the extra-high presser foot lift. Additionally, the SINGER SRSM-SM1412 Sewing Machine has a snap-on presser foot for simple and quick adjustments, increasing your sewing options. Automatic reverse allows you to reinforce stitches with the easy touch of a lever, increasing the durability of your crafts. The free arm design makes it simple to stitch cuffs and sleeves, allowing you to work on intricate and sophisticated outfits. The SINGER sewing machine has a maximum stitching speed of 750 stitches per minute, allowing you to finish jobs fast and efficiently. With a thread width of up to 5 mm, you may produce appealing ornamental stitches that lend a personal touch to your projects. The SINGER SRSM-SM1412 Portable Sewing Machine's durable design and user-friendly features make it a dependable tool for any sewing enthusiast.</p><h2>Buy SINGER SRSM-SM1412 Electric Sewing Machine from Star Tech</h2><p>In Bangladesh, you can get original <strong>SINGER SRSM-SM1412 Electric Sewing Machine</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/singer-sewing-machine\" target=\"\">SINGER Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The SINGER SRSM-SM1412 Electric Sewing Machine comes with 1 year warranty by Singer (no warranty on cover, stand &amp; accessories). Warranty card must be kept for warranty claims. For warranty, Call Singer at 16482/09606600600. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SRSM-SM1412</li><li>Sewing Speed: Maximum 750 stitches-per-minute</li><li>Up to 5 mm Stitch Width, Automatic Reverse</li><li>1 Fully Automatic 4-Step Buttonhole</li><li>12 Built-In Stitches, Adjustable Stitch Length</li></ul>",
+      "model": "SRSM-SM1412",
+      "warranty": "1 year warranty by Singer (no warranty on cover, stand & accessories). Warranty card must be kept for warranty claims. For warranty, Call Singer at 16482/09606600600. (Star Tech will not bear warranty claims).",
+      "basePrice": 14990.0,
+      "originalPrice": 15990.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "SINGER",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39771",
+          "price": 14990.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 14390.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Sewing Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Stitch No.",
+              "value": "maximum 750 stitches-per-minute",
+              "position": 0
+            },
+            {
+              "label": "Others",
+              "value": "12 Built-In Stitches Easy Threading Simple Stitch Selection 1 Fully Automatic 4-Step Buttonhole Adjustable Stitch Length Heavy Duty Metal Frame Extra High Presser Foot Lift Automatic Reverse Free Arm for Sewing Cuffs and Sleeves",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year warranty by Singer (no warranty on cover, stand & accessories). Warranty card must be kept for warranty claims. For warranty, Call Singer at 16482/09606600600. (Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/singer-srsm-sm1412-sewing-machine",
+      "sourceProductCode": "39771",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SRSM-SM1412",
+        "Sewing Speed: Maximum 750 stitches-per-minute",
+        "Up to 5 mm Stitch Width, Automatic Reverse",
+        "1 Fully Automatic 4-Step Buttonhole",
+        "12 Built-In Stitches, Adjustable Stitch Length"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/SINGER/singer-srsm-sm1412-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/SINGER/singer-srsm-sm1412-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "singer-srsm-sm1412-sewing-machine",
+        "candidateTitle": "SINGER SRSM-SM1412 Electric Sewing Machine",
+        "attemptStem": "singer-srsm-sm1412-sewing-machine"
+      }
+    },
+    {
+      "name": "SINGER SRSM-SME-1408 Electric Sewing Machine",
+      "slug": "singer-srsm-sme-1408-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "ST-39772",
+      "description": "<h2>SINGER SRSM-SME-1408 Electric Sewing Machine</h2>\n<p>The SINGER <strong>SRSM-SME-1408</strong> Electric <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> has 8 built-in stitches, including 6 basic, 1 decorative, and 1 automatic 4-step buttonhole, providing the ideal stitch for every sewing need, resulting in easier stitching and better results. To get results that look professional, the automatic 4-step buttonhole walks you through each step. The heavy-duty metal frame guarantees that the SINGER 1408 Sewing Machine stays motionless for skip-free sewing, and the intuitive threading system offers a simple threading path that saves time. With a straightforward release mechanism, the snap-on presser foot provides quick and simple alterations, increasing your stitching options. Multiple layers of heavy fabric can be placed under the presser foot more easily thanks to the extra-high presser foot lifter's increased clearance. Between 75W and 85W, the SINGER SRSM-SME-1408 Electric Stitching Machine's power consumption provides effective performance for a range of stitching applications. Because of its free arm design, this Singer Portable Sewing Machine makes it simple to sew sleeves and cuffs, and its accessory cabinet keeps your supplies handy and organized. You can switch stitches in a single, simple step using simple stitch selection, which improves stitching efficiency and user-friendliness. Because of its robust build, ease of use, and functionality, the SINGER SRSM-SME-1408 Sewing Machine is a great option for both novice and expert sewers.</p>\n<h2>Buy SINGER SRSM-SME-1408 Electric Sewing Machine from Star Tech</h2>\n<p>In Bangladesh, you can get original <strong>SINGER SRSM-SME-1408 Electric Sewing Machine</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/singer-sewing-machine\" target=\"\">SINGER Sewing Machine</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The SINGER SRSM-SME-1408 Electric Sewing Machine comes with 1 year warranty by Singer (no warranty on cover, stand &amp; accessories). Warranty card must be kept for warranty claims. For warranty, Call Singer at 16482/09606600600. (Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SRSM-SME-1408</li><li>1 Automatic 4-Step Buttonhole</li><li>Extra-High Presser Foot Lifter</li><li>8 Built-In Stitches, Simple Stitch Selection</li><li>Power Consumption: 75W- 85W</li></ul>",
+      "model": "SRSM-SME-1408",
+      "warranty": "1 year warranty by Singer (no warranty on cover, stand & accessories). Warranty card must be kept for warranty claims. For warranty, Call Singer at 16482/09606600600. (Star Tech will not bear warranty claims).",
+      "basePrice": 14000.0,
+      "originalPrice": 18990.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "SINGER",
+      "variantOptions": [],
+      "variants": [
+        {
+          "sku": "ST-39772",
+          "price": 14000.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 13440.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Sewing Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "8 Built-In Stitches Power Consumption: 75W- 85W The right stitch- Easier sewing with better results. Includes 6 Basic, 1 Decorative and 1 Automatic 4-Step Buttonhole 1 Automatic 4-Step Buttonhole Guides you through every step to professional-looking results Easy Threading Easy, straight forward threading path saves time Simple Stitch Selection Change stitches in one easy step Heavy Duty Metal Frame The machine remains still for skip-free sewing Extra-High Presser Foot Lifter Offers more clearance, which is needed when placing multiple layers of bulky fabric under the presser foot Snap-on Presser Feet Expand your sewing possibilities. Quick-release for easy on and off? change presser feet in a snap! Free Arm Easily sew sleeves and cuffs Accessory Storage",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 1,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 year warranty by Singer (no warranty on cover, stand & accessories). Warranty card must be kept for warranty claims. For warranty, Call Singer at 16482/09606600600. (Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/singer-srsm-sme-1408-sewing-machine",
+      "sourceProductCode": "39772",
+      "sourceStatus": "In Stock",
+      "sourceMpn": null,
+      "sourceKeyFeatures": [
+        "Model: SRSM-SME-1408",
+        "1 Automatic 4-Step Buttonhole",
+        "Extra-High Presser Foot Lifter",
+        "8 Built-In Stitches, Simple Stitch Selection",
+        "Power Consumption: 75W- 85W"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/SINGER/singer-srsm-sme-1408-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/SINGER/singer-srsm-sme-1408-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "singer-srsm-sme-1408-sewing-machine",
+        "candidateTitle": "SINGER SRSM-SME-1408 Electric Sewing Machine",
+        "attemptStem": "singer-srsm-sme-1408-sewing-machine"
+      }
+    },
+    {
+      "name": "ZOJE A6000-D-G Industrial Sewing Machine",
+      "slug": "zoje-a6000-d-g-industrial-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "SRSM-ZJ-A6000-D-G",
+      "description": "<h2>ZOJE A6000-D-G Industrial Sewing Machine</h2><p>The ZOJE <span style=\"font-weight: bold;\">A6000-D-G</span> Industrial Sewing Machine is a powerful and efficient choice for industrial and commercial sewing needs. With a direct drive and single-needle design, it’s built for precision and speed, reaching impressive operating speeds of up to 6000 rpm. This high-speed capability, paired with its auto trimming feature equipped with a rotary knife system, ensures clean, consistent cuts and smooth workflow by reducing the need for manual trimming. Powered by a 550W motor, the ZOJE A6000-D-G is robust enough to handle light to medium fabrics with ease, making it suitable for a wide range of sewing applications. Its adjustable stitch length, which ranges from 0 to 5 mm, provides flexibility and control, allowing users to tailor the stitch size precisely to meet project requirements. For added convenience, it comes with an adjustable LED light with three dimming modes, ensuring optimal visibility during long working hours and making detailed work easier on the eyes. User experience is a priority in the ZOJE A6000-D-G, featuring a straightforward control panel for easy operation that caters to both professional and novice users. A USB port is also integrated into the design, which can be used for firmware updates or device connectivity, enhancing its versatility in modern production setups. This <a href=\"https://www.startech.com.bd/sewing-machine\" target=\"\">sewing machine</a> is engineered to maintain a lower noise and vibration level, which provides a more comfortable working environment over extended periods. The ZOJE A6000-D-G is an investment in productivity. Its durable construction, reliable performance, and minimal maintenance needs make it a financially savvy choice for businesses looking to optimize their sewing operations without incurring high operational costs. Overall, it’s an excellent choice for any professional setting, offering a balance of power, precision, and ease of use to meet the demands of industrial sewing.</p><h2 style='font-family: \"Open Sans\", sans-serif; color: rgb(102, 102, 102);'>Buy ZOJE A6000-D-G Industrial Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get the original <span style=\"font-weight: 700;\">ZOJE A6000-D-G Industrial Sewing Machine</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/zoje-sewing-machine\" target=\"\">ZOJE Sewing Machines</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The ZOJE A6000-D-G Industrial Sewing Machine comes with 01-year official warranty. (ZOJE Warranty card must be kept for warranty claims.) For warranty claims, please contact the ZOJE distributor directly through the official customer service hotline at 16482 or 09606600600.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SRSM-ZJ-A6000-D-G</li><li>Model: A6000-D-G</li><li>Direct Drive Single Needle Auto Trimming Machine</li><li>Max speed: 6000 RPM (Max)</li><li>Stitching length: 0-5mm</li><li>Auto trimming- Rotary knife for cutting</li></ul>",
+      "model": "A6000-D-G",
+      "warranty": "Official Warranty: 01-Year Warranty (ZOJE Warranty card must be kept for warranty claims.) For warranty claims, please contact the ZOJE distributor directly through the official customer service hotline at 16482 or 09606600600.",
+      "basePrice": 38000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "ZOJE",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SRSM-ZJ-A6000-D-G",
+          "price": 38000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 36480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Direct Drive Single Needle Auto Trimming Machine Auto trimming- Rotary knife for cutting Stitch length: 0-5 mm Three dimming modes of LED light Light to Medium Fabric Simple panel and easy operation USB port Available Lower Noise & Less vibration Cost Efficient",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "6000 rpm",
+              "position": 0
+            },
+            {
+              "label": "Stitch Length Control",
+              "value": "0-5 mm",
+              "position": 1
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "Official Warranty: 01-Year Warranty (ZOJE Warranty card must be kept for warranty claims.) For warranty claims, please contact the ZOJE distributor directly through the official customer service hotline at 16482 or 09606600600.",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 4,
+          "items": [
+            {
+              "label": "Power Requirement",
+              "value": "Power: 550W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoje-a6000-d-g-industrial-sewing-machine",
+      "sourceProductCode": "38343",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "SRSM-ZJ-A6000-D-G",
+      "sourceKeyFeatures": [
+        "MPN: SRSM-ZJ-A6000-D-G",
+        "Model: A6000-D-G",
+        "Direct Drive Single Needle Auto Trimming Machine",
+        "Max speed: 6000 RPM (Max)",
+        "Stitching length: 0-5mm",
+        "Auto trimming- Rotary knife for cutting"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/ZOJE/zoje-a6000-d-g-industrial-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/ZOJE/zoje-a6000-d-g-industrial-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoje-a6000-d-g-industrial-sewing-machine",
+        "candidateTitle": "ZOJE A6000-D-G Industrial Sewing Machine",
+        "attemptStem": "zoje-a6000-d-g-industrial-sewing-machine"
+      }
+    },
+    {
+      "name": "ZOJE B9000-13 Industrial 4 Thread Overlock Machine",
+      "slug": "zoje-b9000-13-industrial-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "SRSM-ZJ-B9000-13",
+      "description": "<h2>ZOJE B9000-13 Industrial 4 Thread Overlock Machine</h2><p>The ZOJE B9000-13 Industrial Overlock Sewing Machine is an advanced overlock machine tailored for heavy-duty industrial use. Built with a powerful direct-drive motor and a solid construction, it excels in high-speed sewing tasks, reaching up to 6000 rpm. This machine is designed to handle various fabric types and materials, delivering consistent, durable stitching. Its 550W direct-drive motor not only offers reliable power but also enhances energy efficiency, making it ideal for prolonged, demanding usage without compromising performance. With a 4-thread, 2-needle configuration, the ZOJE B9000-13 <a href=\"https://www.startech.com.bd/zoje-sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"_blank\">Sewing Machine</a> ensures strong, secure stitching, ideal for professional overlock sewing. This setup is perfect for creating high-quality finishes on garments and other materials, ensuring that each piece has a polished and professional appearance. The machine includes a simple control panel, making it highly accessible and easy to operate, even for those who are newer to industrial Overlock sewing. This intuitive interface allows users to adjust settings quickly, facilitating a seamless workflow. Built to optimize cost-efficiency and longevity, the ZOJE B9000-13 is engineered to reduce noise and vibration, creating a quieter and more comfortable working environment. The machine also features a wrapped needle rod design to prevent oil leakage, maintain a clean workspace, and reduce maintenance needs. This thoughtful design makes it a practical choice for businesses focused on productivity and quality, offering an ideal blend of performance, durability, and cost savings for industrial sewing applications.</p><h2>Buy ZOJE B9000-13 Industrial 4 Thread Overlock Machine From Star Tech</h2><p>In Bangladesh, you can get the original <strong>ZOJE B9000-13 Industrial 4 Thread Overlock Machine</strong> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/zoje-sewing-machine\" target=\"\">ZOJE Sewing Machines</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The ZOJE B9000-13 Industrial 4 Thread Overlock Machine comes with 01-year official warranty. (ZOJE Warranty card must be kept for warranty claims.) For warranty claims, please contact the ZOJE distributor directly through the official customer service hotline at 16482 or 09606600600.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SRSM-ZJ-B9000-13</li><li>Model: B9000-13</li><li>Direct Drive 4 thread overlock Machine</li><li>Max speed: 6000 RPM (Max)</li><li>4 threads 2 needles</li><li>Lower Noise &amp; Less vibration</li></ul>",
+      "model": "B9000-13",
+      "warranty": "Official Warranty: 01-Year Warranty (ZOJE Warranty card must be kept for warranty claims.) For warranty claims, please contact the ZOJE distributor directly through the official customer service hotline at 16482 or 09606600600.",
+      "basePrice": 46990.0,
+      "originalPrice": 53500.0,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 10,
+      "brandName": "ZOJE",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SRSM-ZJ-B9000-13",
+          "price": 46990.0,
+          "currency": "BDT",
+          "stock": 10,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 10,
+          "costPrice": 45110.4,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Direct Drive 4 thread overlock Machine 4 threads 2 needles Simple Panel and Easy Operation Cost Efficient Lower Noise & Less vibration No oil leakage, the needle rod is wrapped",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "6000 rpm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "Official Warranty: 01-Year Warranty (ZOJE Warranty card must be kept for warranty claims.) For warranty claims, please contact the ZOJE distributor directly through the official customer service hotline at 16482 or 09606600600.",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 4,
+          "items": [
+            {
+              "label": "Power Requirement",
+              "value": "Power: 550W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoje-b9000-13-industrial-sewing-machine",
+      "sourceProductCode": "38344",
+      "sourceStatus": "In Stock",
+      "sourceMpn": "SRSM-ZJ-B9000-13",
+      "sourceKeyFeatures": [
+        "MPN: SRSM-ZJ-B9000-13",
+        "Model: B9000-13",
+        "Direct Drive 4 thread overlock Machine",
+        "Max speed: 6000 RPM (Max)",
+        "4 threads 2 needles",
+        "Lower Noise & Less vibration"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/ZOJE/zoje-b9000-13-industrial-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/ZOJE/zoje-b9000-13-industrial-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoje-b9000-13-industrial-sewing-machine",
+        "candidateTitle": "ZOJE B9000-13 Industrial 4 Thread Overlock Machine",
+        "attemptStem": "zoje-b9000-13-industrial-sewing-machine"
+      }
+    },
+    {
+      "name": "ZOJE ZJ-A6000-P-D Industrial Sewing Machine",
+      "slug": "zoje-zj-a6000-p-d-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "SRSM-ZJ-A6000-P-D",
+      "description": "<h2>ZOJE ZJ-A6000-P-D Industrial Sewing Machine</h2><p>The ZOJE SRSM-ZJ-<span style=\"font-weight: bold;\">A6000-P-D</span> Industrial <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> is a next-generation solution for garment professionals seeking speed, precision, and seamless automation in their sewing workflow. Built with a direct drive motor system, this single-needle machine delivers smooth, vibration-free operation while maximizing energy efficiency with its powerful 550W motor. Whether you're working with light to medium fabrics, this Sewing Machine ensures consistent stitch quality across a wide range of materials, making it ideal for apparel production, tailoring shops, and textile factories. One of its standout features is the automatic thread trimming system, powered by a rotary knife that cleanly cuts threads after each stitch—eliminating manual snipping and significantly improving production speed. The machine offers a stitch length range of 0 to 5 mm, allowing operators to customize stitch density for various applications, from delicate seams to reinforced edges. Its simple control panel is designed for intuitive use, reducing the learning curve for new operators and enabling quick adjustments during high-volume runs. To enhance visibility and reduce eye strain, the ZJ-A6000-P-D includes a three-level LED dimming system, so users can tailor lighting to their workspace conditions. Every aspect of the ZOJE A6000-P-D reflects a commitment to ergonomic design and operator comfort. The direct drive mechanism not only reduces maintenance needs but also extends the machine’s lifespan—making it a smart investment for businesses focused on long-term performance and reliability. Whether you're upgrading your current setup or launching a new production line, this ZOJE ZJ-A6000-P-D offers a balanced combination of speed, power, and user-friendly features.</p><h2>Buy ZOJE ZJ-A6000-P-D Industrial Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get the original <span style=\"font-weight: bold;\">ZOJE ZJ-A6000-P-D Industrial Sewing Machine</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/zoje-sewing-machine\" target=\"\">ZOJE Sewing Machines</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The ZOJE ZJ-A6000-P-D Industrial Sewing Machine comes with 01 Year Warranty by ZOJE. Warranty card must be kept for warranty claims.)For warranty, Call ZOJE at 16482 or 09606600600.(Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SRSM-ZJ-A6000-P-D</li><li>Model: ZJ-A6000-P-D</li><li>Direct Drive Single Needle</li><li>Power: 550 Watts</li><li>Auto trimming- Rotary knife</li><li>Three dimming modes of LED light</li></ul>",
+      "model": "ZJ-A6000-P-D",
+      "warranty": "01 Year Warranty by ZOJE. Warranty card must be kept for warranty claims.)For warranty, Call ZOJE at 16482 or 09606600600.(Star Tech will not bear warranty claims).",
+      "basePrice": 38000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "ZOJE",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SRSM-ZJ-A6000-P-D",
+          "price": 38000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 36480.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Others",
+              "value": "Direct Drive Single Needle Auto Trimming Machine Auto trimming- Rotary knife for cutting Three dimming mode of Led light Light to Medium Fabric Simple panel and easy operation",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Stitch Length Control",
+              "value": "0-5 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "01 Year Warranty by ZOJE. Warranty card must be kept for warranty claims.)For warranty, Call ZOJE at 16482 or 09606600600.(Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 4,
+          "items": [
+            {
+              "label": "Power Requirement",
+              "value": "500W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoje-zj-a6000-p-d-sewing-machine",
+      "sourceProductCode": "45279",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "SRSM-ZJ-A6000-P-D",
+      "sourceKeyFeatures": [
+        "MPN: SRSM-ZJ-A6000-P-D",
+        "Model: ZJ-A6000-P-D",
+        "Direct Drive Single Needle",
+        "Power: 550 Watts",
+        "Auto trimming- Rotary knife",
+        "Three dimming modes of LED light"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/ZOJE/zoje-zj-a6000-p-d-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/ZOJE/zoje-zj-a6000-p-d-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoje-zj-a6000-p-d-sewing-machine",
+        "candidateTitle": "ZOJE ZJ-A6000-P-D Industrial Sewing Machine",
+        "attemptStem": "zoje-zj-a6000-p-d-sewing-machine"
+      }
+    },
+    {
+      "name": "ZOJE ZJ-A6000-P-G Industrial Sewing Machine",
+      "slug": "zoje-zj-a6000-p-g-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "SRSM-ZJ-A6000-P-G",
+      "description": "<h2>ZOJE ZJ-A6000-P-G Industrial Sewing Machine</h2><p>The ZOJE SRSM-ZJ-<span style=\"font-weight: bold;\">A6000-P-G</span> is a next-generation single needle lock stitch machine engineered for high-speed, high-precision industrial sewing. Designed with modern factories and tailoring units in mind, this <a href=\"https://www.startech.com.bd/sewing-machine\" style=\"color: rgb(0, 0, 0);\" target=\"\">Sewing Machine</a> combines smart automation with robust mechanical performance to streamline production and reduce energy consumption. At its core, the A6000-P-G boasts a powerful 500-watt motor that delivers consistent stitching performance across a wide range of fabrics—from lightweight synthetics to heavy-duty denim. The 0–5 mm adjustable stitch length offers flexibility for various garment types, whether you're reinforcing seams or crafting delicate topstitching. One of its standout features is the Auto Needle Control system, which intelligently manages needle positioning to reduce manual adjustments and improve workflow efficiency. This is especially useful during complex stitching operations or when switching between fabric layers. The machine’s LCD touch screen monitor adds a layer of user-friendly control, allowing operators to fine-tune settings with ease. From speed adjustments to stitch programming, everything is accessible at a glance—ideal for busy production environments where time and precision matter. The ZOJE A6000-P-G apart is its 70% energy-saving capability. Thanks to advanced motor technology and optimized power management, this helps reduce electricity costs significantly over time, making it a smart investment for eco-conscious manufacturers. Whether you're running a garment factory, a high-volume tailoring shop, or a specialized production unit, the ZOJE ZJ-A6000-P-G Industrial Sewing Machine offers the reliability, speed, and smart control needed to stay competitive. </p><h2>Buy ZOJE ZJ-A6000-P-G Industrial Sewing Machine From Star Tech</h2><p>In Bangladesh, you can get the original <span style=\"font-weight: bold;\">ZOJE ZJ-A6000-P-G Industrial Sewing Machine</span> From Star Tech. We have a large collection of the latest <a href=\"https://www.startech.com.bd/zoje-sewing-machine\" target=\"\">ZOJE Sewing Machines</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech Shop</a> to get yours at the lowest price. The ZOJE ZJ-A6000-P-G Industrial Sewing Machine comes with 03 Years Electronic Parts &amp; 01 Year Service Warranty by ZOJE. Warranty card must be kept for warranty claims.)For warranty, Call ZOJE at 16482 or 09606600600.(Star Tech will not bear warranty claims).</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SRSM-ZJ-A6000-P-G</li><li>Model: ZJ-A6000-P-G</li><li>Single Needle Lock</li><li>70% energy saving, Auto Needle Control</li><li>LCD Monitor Touch screen</li><li>Power: 550 Watts</li></ul>",
+      "model": "ZJ-A6000-P-G",
+      "warranty": "03 Years Electronic Parts & 01 Year Service Warranty by ZOJE. Warranty card must be kept for warranty claims.)For warranty, Call ZOJE at 16482 or 09606600600.(Star Tech will not bear warranty claims).",
+      "basePrice": 36000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "ZOJE",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SRSM-ZJ-A6000-P-G",
+          "price": 36000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 34560.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Basic Information",
+          "position": 0,
+          "items": [
+            {
+              "label": "Needle Threader",
+              "value": "Auto Needle Control",
+              "position": 0
+            },
+            {
+              "label": "Display",
+              "value": "LCD monitor Touch screen",
+              "position": 1
+            },
+            {
+              "label": "Others",
+              "value": "Single Needle Lock Stitch Machine 70% energy saving",
+              "position": 2
+            }
+          ]
+        },
+        {
+          "name": "Sewing Features",
+          "position": 1,
+          "items": [
+            {
+              "label": "Stitch Length Control",
+              "value": "0-5 mm",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 2,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 3,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "03 Years Electronic Parts & 01 Year Service Warranty by ZOJE. Warranty card must be kept for warranty claims.)For warranty, Call ZOJE at 16482 or 09606600600.(Star Tech will not bear warranty claims).",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Power",
+          "position": 4,
+          "items": [
+            {
+              "label": "Power Requirement",
+              "value": "550W",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoje-zj-a6000-p-g-sewing-machine",
+      "sourceProductCode": "45277",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "SRSM-ZJ-A6000-P-G",
+      "sourceKeyFeatures": [
+        "MPN: SRSM-ZJ-A6000-P-G",
+        "Model: ZJ-A6000-P-G",
+        "Single Needle Lock",
+        "70% energy saving, Auto Needle Control",
+        "LCD Monitor Touch screen",
+        "Power: 550 Watts"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/ZOJE/zoje-zj-a6000-p-g-sewing-machine.png",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/ZOJE/zoje-zj-a6000-p-g-sewing-machine.png"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoje-zj-a6000-p-g-sewing-machine",
+        "candidateTitle": "ZOJE ZJ-A6000-P-G Industrial Sewing Machine",
+        "attemptStem": "zoje-zj-a6000-p-g-sewing-machine"
+      }
+    },
+    {
+      "name": "ZOJE ZJ9513 Direct Drive Industrial Sewing Machine",
+      "slug": "zoje-zj9513-industrial-sewing-machine",
+      "type": "PHYSICAL",
+      "sku": "SRSM-ZJ9513-G",
+      "description": "<h2 style=\"text-align: justify; \">ZOJE ZJ9513 Direct Drive Industrial Sewing Machine</h2><p style=\"text-align: justify; \">The ZOJE ZJ9513 Industrial Sewing Machine is an Energy Saving Direct Drive Single Needle Machine. It has a max speed of 5000 RPM and a stitching length of 0-5mm. It features lockstitch for light to medium fabrics. The ZOJE ZJ9513 comes with 1 Year Warranty(Stand &amp; Accessories No Warranty )Singer Warranty card must be kept for warranty claims-For warranty claims, please contact the Singer distributor directly through the official customer service hotline at 16482 or 09606600600.</p>",
+      "shortDesc": "<h2>Key Features</h2>\n<ul><li>MPN: SRSM-ZJ9513-G</li><li>Model: ZJ9513</li><li>Energy Saving Direct Drive Single Needle Machine</li><li>Max speed: 5000 RPM (Max)</li><li>Stitching length: 0-5mm</li><li>Lockstitch for light to medium fabrics</li></ul>",
+      "model": "ZJ9513",
+      "warranty": "1 Year Warranty(Stand & Accessories No Warranty ) Singer Warranty card must be kept for warranty claims-For warranty claims, please contact the Singer distributor directly through the official customer service hotline at 16482 or 09606600600.",
+      "basePrice": 34000.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": false,
+      "featured": false,
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 10,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 0,
+      "brandName": "ZOJE",
+      "variantOptions": [
+        {
+          "name": "Color",
+          "position": 0,
+          "values": [
+            {
+              "value": "White",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "variants": [
+        {
+          "sku": "SRSM-ZJ9513-G",
+          "price": 34000.0,
+          "currency": "BDT",
+          "stock": 0,
+          "options": {
+            "Color": "White"
+          },
+          "isDefault": true,
+          "active": false,
+          "lowStockThreshold": 10,
+          "costPrice": 32640.0,
+          "colorImage": null
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Sewing Features",
+          "position": 0,
+          "items": [
+            {
+              "label": "Sewing Speed",
+              "value": "4000-5000 (stitch/min)",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Physical Specification",
+          "position": 1,
+          "items": [
+            {
+              "label": "Color",
+              "value": "White",
+              "position": 0
+            }
+          ]
+        },
+        {
+          "name": "Warranty",
+          "position": 2,
+          "items": [
+            {
+              "label": "Warranty",
+              "value": "1 Year Warranty(Stand & Accessories No Warranty ) Singer Warranty card must be kept for warranty claims-For warranty claims, please contact the Singer distributor directly through the official customer service hotline at 16482 or 09606600600.",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": "https://www.startech.com.bd/zoje-zj9513-industrial-sewing-machine",
+      "sourceProductCode": "20398",
+      "sourceStatus": "Out Of Stock",
+      "sourceMpn": "SRSM-ZJ9513-G",
+      "sourceKeyFeatures": [
+        "MPN: SRSM-ZJ9513-G",
+        "Model: ZJ9513",
+        "Energy Saving Direct Drive Single Needle Machine",
+        "Max speed: 5000 RPM (Max)",
+        "Stitching length: 0-5mm",
+        "Lockstitch for light to medium fabrics"
+      ],
+      "needsReview": false,
+      "categorySlug": "sewing-machine",
+      "image": "/images/products/appliance/sewing-machine/ZOJE/zoje-zj9513-industrial-sewing-machine.jpg",
+      "gallery": [],
+      "sourceImages": [
+        "/images/products/appliance/sewing-machine/ZOJE/zoje-zj9513-industrial-sewing-machine.jpg"
+      ],
+      "match": {
+        "method": "direct-slug",
+        "score": 1.0,
+        "query": "zoje-zj9513-industrial-sewing-machine",
+        "candidateTitle": "ZOJE ZJ9513 Direct Drive Industrial Sewing Machine",
+        "attemptStem": "zoje-zj9513-industrial-sewing-machine"
+      }
+    }
+  ]
+}
