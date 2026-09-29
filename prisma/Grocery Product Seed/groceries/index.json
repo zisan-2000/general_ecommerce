@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 1,
+  "sourceCategory": "groceries",
+  "imageFolder": "/images/products/groceries",
+  "groups": [
+    {
+      "name": "Atta",
+      "slug": "atta",
+      "file": "atta.json",
+      "status": "completed",
+      "products": 1,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 1
+    },
+    {
+      "name": "Bathing Soap",
+      "slug": "bathing-soap",
+      "file": "bathing-soap.json",
+      "status": "completed",
+      "products": 0,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 0
+    },
+    {
+      "name": "Chia Seed",
+      "slug": "chia-seed",
+      "file": "chia-seed.json",
+      "status": "completed",
+      "products": 1,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 1
+    },
+    {
+      "name": "Detergent",
+      "slug": "detergent",
+      "file": "detergent.json",
+      "status": "completed",
+      "products": 6,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 6
+    },
+    {
+      "name": "Dish Wash",
+      "slug": "dish-wash",
+      "file": "dish-wash.json",
+      "status": "completed",
+      "products": 2,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 2
+    },
+    {
+      "name": "Garlic",
+      "slug": "garlic",
+      "file": "garlic.json",
+      "status": "completed",
+      "products": 2,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 2
+    },
+    {
+      "name": "Ghee",
+      "slug": "ghee",
+      "file": "ghee.json",
+      "status": "completed",
+      "products": 1,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 1
+    },
+    {
+      "name": "Ginger",
+      "slug": "ginger",
+      "file": "ginger.json",
+      "status": "completed",
+      "products": 2,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 2
+    },
+    {
+      "name": "Hand Wash",
+      "slug": "hand-wash",
+      "file": "hand-wash.json",
+      "status": "completed",
+      "products": 2,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 2
+    },
+    {
+      "name": "Honey",
+      "slug": "honey",
+      "file": "honey.json",
+      "status": "completed",
+      "products": 4,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 4
+    },
+    {
+      "name": "Laundry Soap",
+      "slug": "laundry-soap",
+      "file": "laundry-soap.json",
+      "status": "completed",
+      "products": 0,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 0
+    },
+    {
+      "name": "Lentil",
+      "slug": "lentil",
+      "file": "lentil.json",
+      "status": "completed",
+      "products": 2,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 2
+    },
+    {
+      "name": "Milk Powder",
+      "slug": "milk-powder",
+      "file": "milk-powder.json",
+      "status": "completed",
+      "products": 6,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 6
+    },
+    {
+      "name": "Mustard Oil",
+      "slug": "mustard-oil",
+      "file": "mustard-oil.json",
+      "status": "completed",
+      "products": 3,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 3
+    },
+    {
+      "name": "Onion",
+      "slug": "onion",
+      "file": "onion.json",
+      "status": "completed",
+      "products": 2,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 2
+    },
+    {
+      "name": "Rice",
+      "slug": "rice",
+      "file": "rice.json",
+      "status": "completed",
+      "products": 1,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 1
+    },
+    {
+      "name": "Salt",
+      "slug": "salt",
+      "file": "salt.json",
+      "status": "completed",
+      "products": 1,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 1
+    },
+    {
+      "name": "Soap",
+      "slug": "soap",
+      "file": "soap.json",
+      "status": "completed",
+      "products": 1,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 1
+    },
+    {
+      "name": "Soyabean Oil",
+      "slug": "soyabean-oil",
+      "file": "soyabean-oil.json",
+      "status": "completed",
+      "products": 13,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 13
+    },
+    {
+      "name": "Spice",
+      "slug": "spice",
+      "file": "spice.json",
+      "status": "completed",
+      "products": 10,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 10
+    },
+    {
+      "name": "Sugar",
+      "slug": "sugar",
+      "file": "sugar.json",
+      "status": "completed",
+      "products": 3,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 3
+    },
+    {
+      "name": "Toilet Cleaner",
+      "slug": "toilet-cleaner",
+      "file": "toilet-cleaner.json",
+      "status": "completed",
+      "products": 1,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 1
+    },
+    {
+      "name": "Toothpaste",
+      "slug": "toothpaste",
+      "file": "toothpaste.json",
+      "status": "completed",
+      "products": 6,
+      "productsEnrichedFromWeb": 0,
+      "localOnlyProducts": 6
+    }
+  ],
+  "allFile": "_all.json",
+  "generatedAtUnix": 1790686327
+}

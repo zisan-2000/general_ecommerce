@@ -1,0 +1,1034 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Milk Powder",
+      "slug": "milk-powder",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/milk-powder/Dessert_Milk_1kg.jpg",
+      "isActive": true,
+      "sortOrder": 13,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Glory",
+      "slug": "glory",
+      "logo": null
+    },
+    {
+      "name": "No.1",
+      "slug": "no-1",
+      "logo": null
+    },
+    {
+      "name": "Pusti",
+      "slug": "pusti",
+      "logo": null
+    },
+    {
+      "name": "Super Pure",
+      "slug": "super-pure",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Dessert Milk",
+      "slug": "dessert-milk-712826ae",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-712826AE8CF92DEA6ED8",
+      "categorySlug": "milk-powder",
+      "brandName": null,
+      "description": "Dessert Milk is a milk powder product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Dessert Milk is a milk powder product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 395.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/milk-powder/Dessert_Milk_400g.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1391,
+      "variants": [
+        {
+          "sku": "GROCERY-B4713BBD32A3A2A9EFCE",
+          "price": 395.0,
+          "currency": "BDT",
+          "stock": 718,
+          "options": {
+            "Pack Size": "400 g"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/milk-powder/Dessert_Milk_400g.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-8CEE417A80DF88FEA8BC",
+          "price": 985.0,
+          "currency": "BDT",
+          "stock": 673,
+          "options": {
+            "Pack Size": "1 kg"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/milk-powder/Dessert_Milk_1kg.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "400 g",
+              "position": 0
+            },
+            {
+              "value": "1 kg",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Milk Powder",
+              "position": 0
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "400 g, 1 kg",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/milk-powder/Dessert_Milk_1kg.jpg",
+        "/images/products/groceries/milk-powder/Dessert_Milk_400g.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "milk-powder|unknown|dessert milk",
+        "packs": [
+          {
+            "packSize": "400 g",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Dessert Milk is a milk powder product prepared for the grocery catalog. Pack size: 400 g. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Dessert Milk Milk Powder 400 g Bangladesh",
+              "brandHint": null,
+              "packHint": "400 g",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "milk-powder",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "1 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Dessert Milk is a milk powder product prepared for the grocery catalog. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Dessert Milk Milk Powder 1 kg Bangladesh",
+              "brandHint": null,
+              "packHint": "1 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "milk-powder",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/milk-powder/Dessert_Milk_1kg.jpg",
+          "packSize": "1 kg",
+          "variantSku": "GROCERY-8CEE417A80DF88FEA8BC",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/milk-powder/Dessert_Milk_400g.jpg",
+          "packSize": "400 g",
+          "variantSku": "GROCERY-B4713BBD32A3A2A9EFCE",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Glory Instant Milk Powder",
+      "slug": "glory-instant-milk-powder-a56208b0",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-A56208B043251B4D1521",
+      "categorySlug": "milk-powder",
+      "brandName": "Glory",
+      "description": "Glory Instant Milk Powder is a milk powder product prepared for the grocery catalog. Brand: Glory. Pack size: 500 g. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Glory Instant Milk Powder is a milk powder product prepared for the grocery catalog. Brand: Glory. Pack size: 500 g. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 540.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.5,
+      "dimensions": {
+        "packageSize": "500 g"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/milk-powder/Glory-Instant-milk-powder-500-gm.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 652,
+      "variants": [
+        {
+          "sku": "GROCERY-2EFA36D4271AB18643A5",
+          "price": 540.0,
+          "currency": "BDT",
+          "stock": 652,
+          "options": {
+            "Pack Size": "500 g"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/milk-powder/Glory-Instant-milk-powder-500-gm.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "500 g",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Milk Powder",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Glory",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "500 g",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/milk-powder/Glory-Instant-milk-powder-500-gm.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "milk-powder|glory|glory instant milk powder",
+        "packs": [
+          {
+            "packSize": "500 g",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Glory Instant Milk Powder is a milk powder product prepared for the grocery catalog. Brand: Glory. Pack size: 500 g. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Glory Glory Instant Milk Powder 500 g Bangladesh",
+              "brandHint": "Glory",
+              "packHint": "500 g",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "milk-powder",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/milk-powder/Glory-Instant-milk-powder-500-gm.png",
+          "packSize": "500 g",
+          "variantSku": "GROCERY-2EFA36D4271AB18643A5",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "No.1 Full Cream Milk",
+      "slug": "no-1-full-cream-milk-32e18346",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-32E18346CB3F754EE46F",
+      "categorySlug": "milk-powder",
+      "brandName": "No.1",
+      "description": "No.1 Full Cream Milk is a milk powder product prepared for the grocery catalog. Brand: No.1. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "No.1 Full Cream Milk is a milk powder product prepared for the grocery catalog. Brand: No.1. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 220.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/milk-powder/No.1-Full-Cream-Milk-250gm-pack.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 2254,
+      "variants": [
+        {
+          "sku": "GROCERY-5696BDB877E1EAAF2B1C",
+          "price": 220.0,
+          "currency": "BDT",
+          "stock": 607,
+          "options": {
+            "Pack Size": "250 g"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/milk-powder/No.1-Full-Cream-Milk-250gm-pack.png",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-B26B4ED7FDC8CAB5DF50",
+          "price": 350.0,
+          "currency": "BDT",
+          "stock": 955,
+          "options": {
+            "Pack Size": "400 g"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/milk-powder/No.1-Full-Cream-Milk-400g-Mockup_.png",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-7E4E526A278D59B07B7B",
+          "price": 440.0,
+          "currency": "BDT",
+          "stock": 692,
+          "options": {
+            "Pack Size": "500 g"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/milk-powder/No.1-Full-Cream-Milk-500gm-pack.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "250 g",
+              "position": 0
+            },
+            {
+              "value": "400 g",
+              "position": 1
+            },
+            {
+              "value": "500 g",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Milk Powder",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "No.1",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "250 g, 400 g, 500 g",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/milk-powder/No.1-Full-Cream-Milk-250gm-pack.png",
+        "/images/products/groceries/milk-powder/No.1-Full-Cream-Milk-400g-Mockup_.png",
+        "/images/products/groceries/milk-powder/No.1-Full-Cream-Milk-500gm-pack.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "milk-powder|no.1|no.1 full cream milk",
+        "packs": [
+          {
+            "packSize": "250 g",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "No.1 Full Cream Milk is a milk powder product prepared for the grocery catalog. Brand: No.1. Pack size: 250 g. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "No.1 No.1 Full Cream Milk Milk Powder 250 g Bangladesh",
+              "brandHint": "No.1",
+              "packHint": "250 g",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "milk-powder",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "400 g",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "No.1 Full Cream Milk is a milk powder product prepared for the grocery catalog. Brand: No.1. Pack size: 400 g. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "No.1 No.1 Full Cream Milk Milk Powder 400 g Bangladesh",
+              "brandHint": "No.1",
+              "packHint": "400 g",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "milk-powder",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "500 g",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "No.1 Full Cream Milk is a milk powder product prepared for the grocery catalog. Brand: No.1. Pack size: 500 g. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "No.1 No.1 Full Cream Milk Milk Powder 500 g Bangladesh",
+              "brandHint": "No.1",
+              "packHint": "500 g",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "milk-powder",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/milk-powder/No.1-Full-Cream-Milk-250gm-pack.png",
+          "packSize": "250 g",
+          "variantSku": "GROCERY-5696BDB877E1EAAF2B1C",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/groceries/milk-powder/No.1-Full-Cream-Milk-400g-Mockup_.png",
+          "packSize": "400 g",
+          "variantSku": "GROCERY-B26B4ED7FDC8CAB5DF50",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/milk-powder/No.1-Full-Cream-Milk-500gm-pack.png",
+          "packSize": "500 g",
+          "variantSku": "GROCERY-7E4E526A278D59B07B7B",
+          "state": "variant"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Pusti Instant Milk Powder Chain Pack",
+      "slug": "pusti-instant-milk-powder-chain-pack-427c9c62",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-427C9C624C0A11AEA140",
+      "categorySlug": "milk-powder",
+      "brandName": "Pusti",
+      "description": "Pusti Instant Milk Powder Chain Pack is a milk powder product prepared for the grocery catalog. Brand: Pusti. Pack size: 10 g. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Pusti Instant Milk Powder Chain Pack is a milk powder product prepared for the grocery catalog. Brand: Pusti. Pack size: 10 g. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 10.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.01,
+      "dimensions": {
+        "packageSize": "10 g"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/milk-powder/Pusti-Instant-Milk-Powder-Chain-Pack-10-g.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 904,
+      "variants": [
+        {
+          "sku": "GROCERY-9B47182EA8E471C3789D",
+          "price": 10.0,
+          "currency": "BDT",
+          "stock": 904,
+          "options": {
+            "Pack Size": "10 g"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/milk-powder/Pusti-Instant-Milk-Powder-Chain-Pack-10-g.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "10 g",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Milk Powder",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Pusti",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "10 g",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/milk-powder/Pusti-Instant-Milk-Powder-Chain-Pack-10-g.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "milk-powder|pusti|pusti instant milk powder chain pack",
+        "packs": [
+          {
+            "packSize": "10 g",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Pusti Instant Milk Powder Chain Pack is a milk powder product prepared for the grocery catalog. Brand: Pusti. Pack size: 10 g. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Pusti Pusti Instant Milk Powder Chain Pack 10 g Bangladesh",
+              "brandHint": "Pusti",
+              "packHint": "10 g",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "milk-powder",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/milk-powder/Pusti-Instant-Milk-Powder-Chain-Pack-10-g.png",
+          "packSize": "10 g",
+          "variantSku": "GROCERY-9B47182EA8E471C3789D",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Pusti Plus Instant Full Cream Milk",
+      "slug": "pusti-plus-instant-full-cream-milk-15b89e16",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-15B89E163CD4BA4B059A",
+      "categorySlug": "milk-powder",
+      "brandName": "Pusti",
+      "description": "Pusti Plus Instant Full Cream Milk is a milk powder product prepared for the grocery catalog. Brand: Pusti. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Pusti Plus Instant Full Cream Milk is a milk powder product prepared for the grocery catalog. Brand: Pusti. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 405.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/milk-powder/Pusti-Plus-Instant-full-Cream-Milk-400-g-BB.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1545,
+      "variants": [
+        {
+          "sku": "GROCERY-5F8DA3924D3512F55F77",
+          "price": 405.0,
+          "currency": "BDT",
+          "stock": 857,
+          "options": {
+            "Pack Size": "400 g"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/milk-powder/Pusti-Plus-Instant-full-Cream-Milk-400-g-BB.png",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-6A008EBDAE721A6FD5D3",
+          "price": 1010.0,
+          "currency": "BDT",
+          "stock": 688,
+          "options": {
+            "Pack Size": "1 kg"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/milk-powder/Pusti-Plus-Instant-full-Cream-Milk-1kg.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "400 g",
+              "position": 0
+            },
+            {
+              "value": "1 kg",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Milk Powder",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Pusti",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "400 g, 1 kg",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/milk-powder/Pusti-Plus-Instant-full-Cream-Milk-1kg.png",
+        "/images/products/groceries/milk-powder/Pusti-Plus-Instant-full-Cream-Milk-400-g-BB.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "milk-powder|pusti|pusti plus instant full cream milk",
+        "packs": [
+          {
+            "packSize": "400 g",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Pusti Plus Instant Full Cream Milk is a milk powder product prepared for the grocery catalog. Brand: Pusti. Pack size: 400 g. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Pusti Pusti Plus Instant Full Cream Milk Milk Powder 400 g Bangladesh",
+              "brandHint": "Pusti",
+              "packHint": "400 g",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "milk-powder",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "1 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Pusti Plus Instant Full Cream Milk is a milk powder product prepared for the grocery catalog. Brand: Pusti. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Pusti Pusti Plus Instant Full Cream Milk Milk Powder 1 kg Bangladesh",
+              "brandHint": "Pusti",
+              "packHint": "1 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "milk-powder",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/milk-powder/Pusti-Plus-Instant-full-Cream-Milk-1kg.png",
+          "packSize": "1 kg",
+          "variantSku": "GROCERY-6A008EBDAE721A6FD5D3",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/milk-powder/Pusti-Plus-Instant-full-Cream-Milk-400-g-BB.png",
+          "packSize": "400 g",
+          "variantSku": "GROCERY-5F8DA3924D3512F55F77",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Super Pure Fcmp Milk 3d",
+      "slug": "super-pure-fcmp-milk-3d-5d4e208c",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-5D4E208CBB799255B7A5",
+      "categorySlug": "milk-powder",
+      "brandName": "Super Pure",
+      "description": "Super Pure Fcmp Milk 3d is a milk powder product prepared for the grocery catalog. Brand: Super Pure. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Super Pure Fcmp Milk 3d is a milk powder product prepared for the grocery catalog. Brand: Super Pure. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 990.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/milk-powder/Super-Pure-FCMP-milk-3D-1kg.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1731,
+      "variants": [
+        {
+          "sku": "GROCERY-C95F0B8E6220032E6C15",
+          "price": 990.0,
+          "currency": "BDT",
+          "stock": 972,
+          "options": {
+            "Pack Size": "1 kg"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/milk-powder/Super-Pure-FCMP-milk-3D-1kg.png",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-9DE3923C78638F2FF5C1",
+          "price": 1975.0,
+          "currency": "BDT",
+          "stock": 759,
+          "options": {
+            "Pack Size": "2 kg"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/milk-powder/Super-Pure-FCMP-milk-3D-2kg-copy.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 kg",
+              "position": 0
+            },
+            {
+              "value": "2 kg",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Milk Powder",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Super Pure",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 kg, 2 kg",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/milk-powder/Super-Pure-FCMP-milk-3D-1kg.png",
+        "/images/products/groceries/milk-powder/Super-Pure-FCMP-milk-3D-2kg-copy.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "milk-powder|super pure|super pure fcmp milk 3d",
+        "packs": [
+          {
+            "packSize": "1 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Super Pure Fcmp Milk 3d is a milk powder product prepared for the grocery catalog. Brand: Super Pure. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Super Pure Super Pure Fcmp Milk 3d Milk Powder 1 kg Bangladesh",
+              "brandHint": "Super Pure",
+              "packHint": "1 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "milk-powder",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "2 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Super Pure Fcmp Milk 3d is a milk powder product prepared for the grocery catalog. Brand: Super Pure. Pack size: 2 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Super Pure Super Pure Fcmp Milk 3d Milk Powder 2 kg Bangladesh",
+              "brandHint": "Super Pure",
+              "packHint": "2 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "milk-powder",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/milk-powder/Super-Pure-FCMP-milk-3D-1kg.png",
+          "packSize": "1 kg",
+          "variantSku": "GROCERY-C95F0B8E6220032E6C15",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/groceries/milk-powder/Super-Pure-FCMP-milk-3D-2kg-copy.png",
+          "packSize": "2 kg",
+          "variantSku": "GROCERY-9DE3923C78638F2FF5C1",
+          "state": "variant"
+        }
+      ]
+    }
+  ]
+}

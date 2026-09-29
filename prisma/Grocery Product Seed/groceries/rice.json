@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Rice",
+      "slug": "rice",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/rice/Glory-Aromatic-Rice-25-KG.png",
+      "isActive": true,
+      "sortOrder": 16,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Glory",
+      "slug": "glory",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Glory Aromatic Rice",
+      "slug": "glory-aromatic-rice-bec30694",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-BEC30694E0C9B1F4C557",
+      "categorySlug": "rice",
+      "brandName": "Glory",
+      "description": "Glory Aromatic Rice is a rice product prepared for the grocery catalog. Brand: Glory. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Glory Aromatic Rice is a rice product prepared for the grocery catalog. Brand: Glory. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 1900.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/rice/Glory-Aromatic-Rice-25-KG.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1530,
+      "variants": [
+        {
+          "sku": "GROCERY-9FB5C745A02A8C16DE15",
+          "price": 1900.0,
+          "currency": "BDT",
+          "stock": 784,
+          "options": {
+            "Pack Size": "25 kg"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/rice/Glory-Aromatic-Rice-25-KG.png",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-401FE663D4596170CEA3",
+          "price": 3800.0,
+          "currency": "BDT",
+          "stock": 746,
+          "options": {
+            "Pack Size": "50 kg"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/rice/Glory-Aromatic-Rice-50-KG.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "25 kg",
+              "position": 0
+            },
+            {
+              "value": "50 kg",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Rice",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Glory",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "25 kg, 50 kg",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/rice/Glory-Aromatic-Rice-25-KG.png",
+        "/images/products/groceries/rice/Glory-Aromatic-Rice-50-KG.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "rice|glory|glory aromatic rice",
+        "packs": [
+          {
+            "packSize": "25 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Glory Aromatic Rice is a rice product prepared for the grocery catalog. Brand: Glory. Pack size: 25 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Glory Glory Aromatic Rice 25 kg Bangladesh",
+              "brandHint": "Glory",
+              "packHint": "25 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "rice",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "50 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Glory Aromatic Rice is a rice product prepared for the grocery catalog. Brand: Glory. Pack size: 50 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Glory Glory Aromatic Rice 50 kg Bangladesh",
+              "brandHint": "Glory",
+              "packHint": "50 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "rice",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/rice/Glory-Aromatic-Rice-25-KG.png",
+          "packSize": "25 kg",
+          "variantSku": "GROCERY-9FB5C745A02A8C16DE15",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/groceries/rice/Glory-Aromatic-Rice-50-KG.png",
+          "packSize": "50 kg",
+          "variantSku": "GROCERY-401FE663D4596170CEA3",
+          "state": "variant"
+        }
+      ]
+    }
+  ]
+}

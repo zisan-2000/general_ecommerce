@@ -1,0 +1,472 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Sugar",
+      "slug": "sugar",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/sugar/fresh-refined-sugar-1-kg.jpg",
+      "isActive": true,
+      "sortOrder": 21,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Fresh",
+      "slug": "fresh",
+      "logo": null
+    },
+    {
+      "name": "TEER",
+      "slug": "teer",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Fresh Refined Sugar",
+      "slug": "fresh-refined-sugar-97515eb8",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-97515EB866D5525F3BCE",
+      "categorySlug": "sugar",
+      "brandName": "Fresh",
+      "description": "Fresh Refined Sugar is a sugar product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Fresh Refined Sugar is a sugar product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 75.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/sugar/fresh-refined-sugar-500-gm.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1096,
+      "variants": [
+        {
+          "sku": "GROCERY-DD280B0E3B9449ADE32B",
+          "price": 75.0,
+          "currency": "BDT",
+          "stock": 508,
+          "options": {
+            "Pack Size": "500 g"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/sugar/fresh-refined-sugar-500-gm.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-1274C4725D673F636AAE",
+          "price": 145.0,
+          "currency": "BDT",
+          "stock": 588,
+          "options": {
+            "Pack Size": "1 kg"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/sugar/fresh-refined-sugar-1-kg.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "500 g",
+              "position": 0
+            },
+            {
+              "value": "1 kg",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Sugar",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Fresh",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "500 g, 1 kg",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/sugar/fresh-refined-sugar-1-kg.jpg",
+        "/images/products/groceries/sugar/fresh-refined-sugar-500-gm.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "sugar|fresh|fresh refined sugar",
+        "packs": [
+          {
+            "packSize": "500 g",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh Refined Sugar is a sugar product prepared for the grocery catalog. Brand: Fresh. Pack size: 500 g. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Fresh Fresh Refined Sugar 500 g Bangladesh",
+              "brandHint": "Fresh",
+              "packHint": "500 g",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "sugar",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "1 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh Refined Sugar is a sugar product prepared for the grocery catalog. Brand: Fresh. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Fresh Fresh Refined Sugar 1 kg Bangladesh",
+              "brandHint": "Fresh",
+              "packHint": "1 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "sugar",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/sugar/fresh-refined-sugar-1-kg.jpg",
+          "packSize": "1 kg",
+          "variantSku": "GROCERY-1274C4725D673F636AAE",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/sugar/fresh-refined-sugar-500-gm.jpg",
+          "packSize": "500 g",
+          "variantSku": "GROCERY-DD280B0E3B9449ADE32B",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "No 1 Refined Sugar",
+      "slug": "no-1-refined-sugar-723b80a5",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-723B80A5117CAEE461BC",
+      "categorySlug": "sugar",
+      "brandName": null,
+      "description": "No 1 Refined Sugar is a sugar product prepared for the grocery catalog. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "No 1 Refined Sugar is a sugar product prepared for the grocery catalog. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 100.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 1.0,
+      "dimensions": {
+        "packageSize": "1 kg"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/sugar/no-1-refined-sugar-1-kg.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 717,
+      "variants": [
+        {
+          "sku": "GROCERY-2C2ED320542F99BCF8A9",
+          "price": 100.0,
+          "currency": "BDT",
+          "stock": 717,
+          "options": {
+            "Pack Size": "1 kg"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/sugar/no-1-refined-sugar-1-kg.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 kg",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Sugar",
+              "position": 0
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 kg",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/sugar/no-1-refined-sugar-1-kg.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "sugar|unknown|no 1 refined sugar",
+        "packs": [
+          {
+            "packSize": "1 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "No 1 Refined Sugar is a sugar product prepared for the grocery catalog. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "No 1 Refined Sugar 1 kg Bangladesh",
+              "brandHint": null,
+              "packHint": "1 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "sugar",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/sugar/no-1-refined-sugar-1-kg.jpg",
+          "packSize": "1 kg",
+          "variantSku": "GROCERY-2C2ED320542F99BCF8A9",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Teer Sugar",
+      "slug": "teer-sugar-53752e47",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-53752E47166E7917A78E",
+      "categorySlug": "sugar",
+      "brandName": "TEER",
+      "description": "Teer Sugar is a sugar product prepared for the grocery catalog. Brand: TEER. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Teer Sugar is a sugar product prepared for the grocery catalog. Brand: TEER. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 145.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 1.0,
+      "dimensions": {
+        "packageSize": "1 kg"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/sugar/Teer Sugar 1kg.avif",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 673,
+      "variants": [
+        {
+          "sku": "GROCERY-BDCDAB634B321FB3698B",
+          "price": 145.0,
+          "currency": "BDT",
+          "stock": 673,
+          "options": {
+            "Pack Size": "1 kg"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/sugar/Teer Sugar 1kg.avif",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 kg",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Sugar",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "TEER",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 kg",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/sugar/Teer Sugar 1kg.avif"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "sugar|teer|teer sugar",
+        "packs": [
+          {
+            "packSize": "1 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Teer Sugar is a sugar product prepared for the grocery catalog. Brand: TEER. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "TEER Teer Sugar 1 kg Bangladesh",
+              "brandHint": "TEER",
+              "packHint": "1 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "sugar",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/sugar/Teer Sugar 1kg.avif",
+          "packSize": "1 kg",
+          "variantSku": "GROCERY-BDCDAB634B321FB3698B",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

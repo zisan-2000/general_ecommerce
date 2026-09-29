@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Toilet Cleaner",
+      "slug": "toilet-cleaner",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/toilet-cleaner/OK Toilet Cleaner.png",
+      "isActive": true,
+      "sortOrder": 22,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "OK",
+      "slug": "ok",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Ok Toilet Cleaner",
+      "slug": "ok-toilet-cleaner-da4c36ec",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-DA4C36EC9190C8A4D0B4",
+      "categorySlug": "toilet-cleaner",
+      "brandName": "OK",
+      "description": "Ok Toilet Cleaner is a toilet cleaner product prepared for the grocery catalog. Brand: OK. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Ok Toilet Cleaner is a toilet cleaner product prepared for the grocery catalog. Brand: OK. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 430.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/toilet-cleaner/OK Toilet Cleaner.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 829,
+      "variants": [
+        {
+          "sku": "GROCERY-1E71C1C6FE77F2CEADC1",
+          "price": 430.0,
+          "currency": "BDT",
+          "stock": 829,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/toilet-cleaner/OK Toilet Cleaner.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Toilet Cleaner",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "OK",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/toilet-cleaner/OK Toilet Cleaner.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "toilet-cleaner|ok|ok toilet cleaner|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Ok Toilet Cleaner is a toilet cleaner product prepared for the grocery catalog. Brand: OK. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "OK Ok Toilet Cleaner Bangladesh",
+              "brandHint": "OK",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "toilet-cleaner",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/toilet-cleaner/OK Toilet Cleaner.png",
+          "packSize": null,
+          "variantSku": "GROCERY-1E71C1C6FE77F2CEADC1",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

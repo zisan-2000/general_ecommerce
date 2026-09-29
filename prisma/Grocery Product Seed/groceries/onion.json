@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Onion",
+      "slug": "onion",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/onion/onion_5kg.png",
+      "isActive": true,
+      "sortOrder": 15,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Birds of Eden",
+      "slug": "birds-of-eden",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Birds of Eden Fresh Onion",
+      "slug": "birds-of-eden-fresh-onion-d81a9550",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-D81A9550DF8AAC88813A",
+      "categorySlug": "onion",
+      "brandName": "Birds of Eden",
+      "description": "Fresh onion packaged by Birds of Eden.",
+      "shortDesc": "Fresh onion packaged by Birds of Eden.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 225.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 5.0,
+      "dimensions": {
+        "packageSize": "5 kg"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/onion/onion_5kg.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 559,
+      "variants": [
+        {
+          "sku": "GROCERY-A8CB48DF6868A120147C",
+          "price": 225.0,
+          "currency": "BDT",
+          "stock": 559,
+          "options": {
+            "Pack Size": "5 kg"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/onion/onion_5kg.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "5 kg",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Onion",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Birds of Eden",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "5 kg",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/onion/onion_5kg.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "onion|birds of eden|birds of eden fresh onion",
+        "packs": [
+          {
+            "packSize": "5 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh onion packaged by Birds of Eden.",
+            "match": {
+              "method": "local-boed",
+              "category": {
+                "method": "folder",
+                "source": "onion",
+                "score": 1.0
+              },
+              "ocrText": null
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/onion/onion_5kg.png",
+          "packSize": "5 kg",
+          "variantSku": "GROCERY-A8CB48DF6868A120147C",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Onion",
+      "slug": "onion-03f974ad",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-03F974ADF54D680A723E",
+      "categorySlug": "onion",
+      "brandName": null,
+      "description": "Onion is a onion product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Onion is a onion product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 870.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/onion/onion.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 611,
+      "variants": [
+        {
+          "sku": "GROCERY-2815ABDC4E8DFF3F0FD2",
+          "price": 870.0,
+          "currency": "BDT",
+          "stock": 611,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/onion/onion.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Onion",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/onion/onion.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "onion|unknown|onion|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Onion is a onion product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Onion Bangladesh",
+              "brandHint": null,
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "onion",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/onion/onion.jpg",
+          "packSize": null,
+          "variantSku": "GROCERY-2815ABDC4E8DFF3F0FD2",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

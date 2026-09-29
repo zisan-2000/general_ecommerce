@@ -1,0 +1,285 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Hand Wash",
+      "slug": "hand-wash",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/hand-wash/CarePlus Liquid Hand Wash 5 liter.png",
+      "isActive": true,
+      "sortOrder": 9,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "CarePlus",
+      "slug": "careplus",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Careplus Liquid Hand Wash",
+      "slug": "careplus-liquid-hand-wash-abe2fd25",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-ABE2FD25130183A8A377",
+      "categorySlug": "hand-wash",
+      "brandName": "CarePlus",
+      "description": "Careplus Liquid Hand Wash is a hand wash product prepared for the grocery catalog. Brand: CarePlus. Pack size: 5 L. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Careplus Liquid Hand Wash is a hand wash product prepared for the grocery catalog. Brand: CarePlus. Pack size: 5 L. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 3125.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "packageSize": "5 L"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/hand-wash/CarePlus Liquid Hand Wash 5 liter.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 520,
+      "variants": [
+        {
+          "sku": "GROCERY-AE0296A0D476FC07A3AC",
+          "price": 3125.0,
+          "currency": "BDT",
+          "stock": 520,
+          "options": {
+            "Pack Size": "5 L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/hand-wash/CarePlus Liquid Hand Wash 5 liter.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "5 L",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Hand Wash",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "CarePlus",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "5 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/hand-wash/CarePlus Liquid Hand Wash 5 liter.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "hand-wash|careplus|careplus liquid hand wash",
+        "packs": [
+          {
+            "packSize": "5 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Careplus Liquid Hand Wash is a hand wash product prepared for the grocery catalog. Brand: CarePlus. Pack size: 5 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "CarePlus Careplus Liquid Hand Wash 5 L Bangladesh",
+              "brandHint": "CarePlus",
+              "packHint": "5 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "hand-wash",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/hand-wash/CarePlus Liquid Hand Wash 5 liter.png",
+          "packSize": "5 L",
+          "variantSku": "GROCERY-AE0296A0D476FC07A3AC",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Careplus Liquid Hand Wash",
+      "slug": "careplus-liquid-hand-wash-faf002dc",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-FAF002DCE00F5A7E311A",
+      "categorySlug": "hand-wash",
+      "brandName": "CarePlus",
+      "description": "Careplus Liquid Hand Wash is a hand wash product prepared for the grocery catalog. Brand: CarePlus. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Careplus Liquid Hand Wash is a hand wash product prepared for the grocery catalog. Brand: CarePlus. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 140.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/hand-wash/CarePlus Liquid Hand Wash.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 673,
+      "variants": [
+        {
+          "sku": "GROCERY-04968859D522E76BF89A",
+          "price": 140.0,
+          "currency": "BDT",
+          "stock": 673,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/hand-wash/CarePlus Liquid Hand Wash.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Hand Wash",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "CarePlus",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/hand-wash/CarePlus Liquid Hand Wash.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "hand-wash|careplus|careplus liquid hand wash|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Careplus Liquid Hand Wash is a hand wash product prepared for the grocery catalog. Brand: CarePlus. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "CarePlus Careplus Liquid Hand Wash Bangladesh",
+              "brandHint": "CarePlus",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "hand-wash",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/hand-wash/CarePlus Liquid Hand Wash.png",
+          "packSize": null,
+          "variantSku": "GROCERY-04968859D522E76BF89A",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

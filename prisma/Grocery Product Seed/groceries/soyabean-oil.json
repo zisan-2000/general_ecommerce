@@ -1,0 +1,2412 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Soyabean Oil",
+      "slug": "soyabean-oil",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 2L.jpg",
+      "isActive": true,
+      "sortOrder": 19,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Actifit",
+      "slug": "actifit",
+      "logo": null
+    },
+    {
+      "name": "Fresh",
+      "slug": "fresh",
+      "logo": null
+    },
+    {
+      "name": "No1",
+      "slug": "no1",
+      "logo": null
+    },
+    {
+      "name": "Oleo",
+      "slug": "oleo",
+      "logo": null
+    },
+    {
+      "name": "Pusti Glory",
+      "slug": "pusti-glory",
+      "logo": null
+    },
+    {
+      "name": "Super Fresh",
+      "slug": "super-fresh",
+      "logo": null
+    },
+    {
+      "name": "Super Pure",
+      "slug": "super-pure",
+      "logo": null
+    },
+    {
+      "name": "TEER",
+      "slug": "teer",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Actifit Fortified Soyabean Oil",
+      "slug": "actifit-fortified-soyabean-oil-3e4471d1",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-3E4471D12C4C2C0259B4",
+      "categorySlug": "soyabean-oil",
+      "brandName": "Actifit",
+      "description": "Actifit Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Actifit. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Actifit Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Actifit. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 90.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 500ML.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 3068,
+      "variants": [
+        {
+          "sku": "GROCERY-E16183B2056EC843E2C5",
+          "price": 90.0,
+          "currency": "BDT",
+          "stock": 554,
+          "options": {
+            "Pack Size": "500 ml"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 500ML.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-A96E6FEB81E0145D1F51",
+          "price": 175.0,
+          "currency": "BDT",
+          "stock": 752,
+          "options": {
+            "Pack Size": "1 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil-1L.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-1321446F5788B7F9163D",
+          "price": 355.0,
+          "currency": "BDT",
+          "stock": 825,
+          "options": {
+            "Pack Size": "2 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 2L.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-DDAAB8516846704C81D1",
+          "price": 885.0,
+          "currency": "BDT",
+          "stock": 937,
+          "options": {
+            "Pack Size": "5 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 5L.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "500 ml",
+              "position": 0
+            },
+            {
+              "value": "1 L",
+              "position": 1
+            },
+            {
+              "value": "2 L",
+              "position": 2
+            },
+            {
+              "value": "5 L",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soyabean Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Actifit",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "500 ml, 1 L, 2 L, 5 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 2L.jpg",
+        "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 500ML.jpg",
+        "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 5L.jpg",
+        "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil-1L.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soyabean-oil|actifit|actifit fortified soyabean oil",
+        "packs": [
+          {
+            "packSize": "500 ml",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Actifit Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Actifit. Pack size: 500 ml. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Actifit Actifit Fortified Soyabean Oil 500 ml Bangladesh",
+              "brandHint": "Actifit",
+              "packHint": "500 ml",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "1 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Actifit Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Actifit. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Actifit Actifit Fortified Soyabean Oil 1 L Bangladesh",
+              "brandHint": "Actifit",
+              "packHint": "1 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "2 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Actifit Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Actifit. Pack size: 2 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Actifit Actifit Fortified Soyabean Oil 2 L Bangladesh",
+              "brandHint": "Actifit",
+              "packHint": "2 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "5 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Actifit Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Actifit. Pack size: 5 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Actifit Actifit Fortified Soyabean Oil 5 L Bangladesh",
+              "brandHint": "Actifit",
+              "packHint": "5 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 2L.jpg",
+          "packSize": "2 L",
+          "variantSku": "GROCERY-1321446F5788B7F9163D",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 500ML.jpg",
+          "packSize": "500 ml",
+          "variantSku": "GROCERY-E16183B2056EC843E2C5",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 5L.jpg",
+          "packSize": "5 L",
+          "variantSku": "GROCERY-DDAAB8516846704C81D1",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil-1L.jpg",
+          "packSize": "1 L",
+          "variantSku": "GROCERY-A96E6FEB81E0145D1F51",
+          "state": "variant"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Fresh Rice Bran Oil",
+      "slug": "fresh-rice-bran-oil-75904cf9",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-75904CF9C6A5C015A1C6",
+      "categorySlug": "soyabean-oil",
+      "brandName": "Fresh",
+      "description": "Fresh Rice Bran Oil is a soyabean oil product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Fresh Rice Bran Oil is a soyabean oil product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 365.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/soyabean-oil/Fresh-Rice-Bran-Oil-2L.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1590,
+      "variants": [
+        {
+          "sku": "GROCERY-91AC2525D1138D91F0C6",
+          "price": 365.0,
+          "currency": "BDT",
+          "stock": 708,
+          "options": {
+            "Pack Size": "2 L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Fresh-Rice-Bran-Oil-2L.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-B651846BC93D05EAF323",
+          "price": 915.0,
+          "currency": "BDT",
+          "stock": 882,
+          "options": {
+            "Pack Size": "5 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Fresh-Rice-Bran-Oil-5L.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 L",
+              "position": 0
+            },
+            {
+              "value": "5 L",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soyabean Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Fresh",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "2 L, 5 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/soyabean-oil/Fresh-Rice-Bran-Oil-2L.jpg",
+        "/images/products/groceries/soyabean-oil/Fresh-Rice-Bran-Oil-5L.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soyabean-oil|fresh|fresh rice bran oil",
+        "packs": [
+          {
+            "packSize": "2 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh Rice Bran Oil is a soyabean oil product prepared for the grocery catalog. Brand: Fresh. Pack size: 2 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Fresh Fresh Rice Bran Oil Soyabean Oil 2 L Bangladesh",
+              "brandHint": "Fresh",
+              "packHint": "2 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "5 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh Rice Bran Oil is a soyabean oil product prepared for the grocery catalog. Brand: Fresh. Pack size: 5 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Fresh Fresh Rice Bran Oil Soyabean Oil 5 L Bangladesh",
+              "brandHint": "Fresh",
+              "packHint": "5 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/soyabean-oil/Fresh-Rice-Bran-Oil-2L.jpg",
+          "packSize": "2 L",
+          "variantSku": "GROCERY-91AC2525D1138D91F0C6",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Fresh-Rice-Bran-Oil-5L.jpg",
+          "packSize": "5 L",
+          "variantSku": "GROCERY-B651846BC93D05EAF323",
+          "state": "variant"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "No1 Fortified Soyabean Oil",
+      "slug": "no1-fortified-soyabean-oil-5bdee6cf",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-5BDEE6CFB2CE7285EC60",
+      "categorySlug": "soyabean-oil",
+      "brandName": "No1",
+      "description": "No1 Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: No1. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "No1 Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: No1. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 460.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-2L.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1278,
+      "variants": [
+        {
+          "sku": "GROCERY-C07A92CC182AA4C814F0",
+          "price": 460.0,
+          "currency": "BDT",
+          "stock": 592,
+          "options": {
+            "Pack Size": "2 L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-2L.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-703109FC5DC5BC476468",
+          "price": 1155.0,
+          "currency": "BDT",
+          "stock": 686,
+          "options": {
+            "Pack Size": "5 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-5L.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 L",
+              "position": 0
+            },
+            {
+              "value": "5 L",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soyabean Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "No1",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "2 L, 5 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-2L.jpg",
+        "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-5L.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soyabean-oil|no1|no1 fortified soyabean oil",
+        "packs": [
+          {
+            "packSize": "2 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "No1 Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: No1. Pack size: 2 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "No1 No1 Fortified Soyabean Oil 2 L Bangladesh",
+              "brandHint": "No1",
+              "packHint": "2 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "5 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "No1 Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: No1. Pack size: 5 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "No1 No1 Fortified Soyabean Oil 5 L Bangladesh",
+              "brandHint": "No1",
+              "packHint": "5 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-2L.jpg",
+          "packSize": "2 L",
+          "variantSku": "GROCERY-C07A92CC182AA4C814F0",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-5L.jpg",
+          "packSize": "5 L",
+          "variantSku": "GROCERY-703109FC5DC5BC476468",
+          "state": "variant"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "No1 Fortified Soyabean Oil L",
+      "slug": "no1-fortified-soyabean-oil-l-33e0bf39",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-33E0BF3966FA2C933651",
+      "categorySlug": "soyabean-oil",
+      "brandName": "No1",
+      "description": "No1 Fortified Soyabean Oil L is a soyabean oil product prepared for the grocery catalog. Brand: No1. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "No1 Fortified Soyabean Oil L is a soyabean oil product prepared for the grocery catalog. Brand: No1. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 860.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-L.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 802,
+      "variants": [
+        {
+          "sku": "GROCERY-ED1868A13C1D0CF050A3",
+          "price": 860.0,
+          "currency": "BDT",
+          "stock": 802,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-L.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soyabean Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "No1",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-L.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soyabean-oil|no1|no1 fortified soyabean oil l|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "No1 Fortified Soyabean Oil L is a soyabean oil product prepared for the grocery catalog. Brand: No1. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "No1 No1 Fortified Soyabean Oil L Bangladesh",
+              "brandHint": "No1",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-L.jpg",
+          "packSize": null,
+          "variantSku": "GROCERY-ED1868A13C1D0CF050A3",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Oleo Fortified Palm Olein",
+      "slug": "oleo-fortified-palm-olein-68c03a91",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-68C03A914FAC45568205",
+      "categorySlug": "soyabean-oil",
+      "brandName": "Oleo",
+      "description": "Oleo Fortified Palm Olein is a soyabean oil product prepared for the grocery catalog. Brand: Oleo. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Oleo Fortified Palm Olein is a soyabean oil product prepared for the grocery catalog. Brand: Oleo. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 130.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-500ML.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 3312,
+      "variants": [
+        {
+          "sku": "GROCERY-D51AB3436E0CE9DDF163",
+          "price": 130.0,
+          "currency": "BDT",
+          "stock": 737,
+          "options": {
+            "Pack Size": "500 ml"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-500ML.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-0DF66C23C7E5A7B6DFEA",
+          "price": 260.0,
+          "currency": "BDT",
+          "stock": 947,
+          "options": {
+            "Pack Size": "1 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-1L.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-1C866E201F67B89E50A8",
+          "price": 515.0,
+          "currency": "BDT",
+          "stock": 722,
+          "options": {
+            "Pack Size": "2 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-2L.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-E767314AD3CBF8BC3DE4",
+          "price": 1290.0,
+          "currency": "BDT",
+          "stock": 906,
+          "options": {
+            "Pack Size": "5 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-5L.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "500 ml",
+              "position": 0
+            },
+            {
+              "value": "1 L",
+              "position": 1
+            },
+            {
+              "value": "2 L",
+              "position": 2
+            },
+            {
+              "value": "5 L",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soyabean Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Oleo",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "500 ml, 1 L, 2 L, 5 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-1L.jpg",
+        "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-2L.jpg",
+        "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-500ML.jpg",
+        "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-5L.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soyabean-oil|oleo|oleo fortified palm olein",
+        "packs": [
+          {
+            "packSize": "500 ml",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Oleo Fortified Palm Olein is a soyabean oil product prepared for the grocery catalog. Brand: Oleo. Pack size: 500 ml. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Oleo Oleo Fortified Palm Olein Soyabean Oil 500 ml Bangladesh",
+              "brandHint": "Oleo",
+              "packHint": "500 ml",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "1 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Oleo Fortified Palm Olein is a soyabean oil product prepared for the grocery catalog. Brand: Oleo. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Oleo Oleo Fortified Palm Olein Soyabean Oil 1 L Bangladesh",
+              "brandHint": "Oleo",
+              "packHint": "1 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "2 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Oleo Fortified Palm Olein is a soyabean oil product prepared for the grocery catalog. Brand: Oleo. Pack size: 2 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Oleo Oleo Fortified Palm Olein Soyabean Oil 2 L Bangladesh",
+              "brandHint": "Oleo",
+              "packHint": "2 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "5 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Oleo Fortified Palm Olein is a soyabean oil product prepared for the grocery catalog. Brand: Oleo. Pack size: 5 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Oleo Oleo Fortified Palm Olein Soyabean Oil 5 L Bangladesh",
+              "brandHint": "Oleo",
+              "packHint": "5 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-1L.jpg",
+          "packSize": "1 L",
+          "variantSku": "GROCERY-0DF66C23C7E5A7B6DFEA",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-2L.jpg",
+          "packSize": "2 L",
+          "variantSku": "GROCERY-1C866E201F67B89E50A8",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-500ML.jpg",
+          "packSize": "500 ml",
+          "variantSku": "GROCERY-D51AB3436E0CE9DDF163",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-5L.jpg",
+          "packSize": "5 L",
+          "variantSku": "GROCERY-E767314AD3CBF8BC3DE4",
+          "state": "variant"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Pusti Glory Palm Olin",
+      "slug": "pusti-glory-palm-olin-e2354d28",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-E2354D286090408652C1",
+      "categorySlug": "soyabean-oil",
+      "brandName": "Pusti Glory",
+      "description": "Pusti Glory Palm Olin is a soyabean oil product prepared for the grocery catalog. Brand: Pusti Glory. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Pusti Glory Palm Olin is a soyabean oil product prepared for the grocery catalog. Brand: Pusti Glory. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 260.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "packageSize": "1 L"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/soyabean-oil/Pusti-Glory-palm-olin-1L.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 988,
+      "variants": [
+        {
+          "sku": "GROCERY-C2E63ABD41505872A7F7",
+          "price": 260.0,
+          "currency": "BDT",
+          "stock": 988,
+          "options": {
+            "Pack Size": "1 L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Pusti-Glory-palm-olin-1L.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 L",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soyabean Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Pusti Glory",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/soyabean-oil/Pusti-Glory-palm-olin-1L.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soyabean-oil|pusti glory|pusti glory palm olin",
+        "packs": [
+          {
+            "packSize": "1 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Pusti Glory Palm Olin is a soyabean oil product prepared for the grocery catalog. Brand: Pusti Glory. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Pusti Glory Pusti Glory Palm Olin Soyabean Oil 1 L Bangladesh",
+              "brandHint": "Pusti Glory",
+              "packHint": "1 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/soyabean-oil/Pusti-Glory-palm-olin-1L.png",
+          "packSize": "1 L",
+          "variantSku": "GROCERY-C2E63ABD41505872A7F7",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Pusti Glory Refined Soyabean Oil",
+      "slug": "pusti-glory-refined-soyabean-oil-1e03a4cd",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-1E03A4CDC2630A28201D",
+      "categorySlug": "soyabean-oil",
+      "brandName": "Pusti Glory",
+      "description": "Pusti Glory Refined Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Pusti Glory. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Pusti Glory Refined Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Pusti Glory. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 375.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-2L.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1778,
+      "variants": [
+        {
+          "sku": "GROCERY-B9957BBA84CAD8EC746D",
+          "price": 375.0,
+          "currency": "BDT",
+          "stock": 812,
+          "options": {
+            "Pack Size": "2 L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-2L.png",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-0EBDE8B853394A0D1B91",
+          "price": 935.0,
+          "currency": "BDT",
+          "stock": 966,
+          "options": {
+            "Pack Size": "5 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-5L.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 L",
+              "position": 0
+            },
+            {
+              "value": "5 L",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soyabean Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Pusti Glory",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "2 L, 5 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-2L.png",
+        "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-5L.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soyabean-oil|pusti glory|pusti glory refined soyabean oil",
+        "packs": [
+          {
+            "packSize": "2 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Pusti Glory Refined Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Pusti Glory. Pack size: 2 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Pusti Glory Pusti Glory Refined Soyabean Oil 2 L Bangladesh",
+              "brandHint": "Pusti Glory",
+              "packHint": "2 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "5 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Pusti Glory Refined Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Pusti Glory. Pack size: 5 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Pusti Glory Pusti Glory Refined Soyabean Oil 5 L Bangladesh",
+              "brandHint": "Pusti Glory",
+              "packHint": "5 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-2L.png",
+          "packSize": "2 L",
+          "variantSku": "GROCERY-B9957BBA84CAD8EC746D",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-5L.png",
+          "packSize": "5 L",
+          "variantSku": "GROCERY-0EBDE8B853394A0D1B91",
+          "state": "variant"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Pusti Glory Refined Soyabean Oil Pouch Pack",
+      "slug": "pusti-glory-refined-soyabean-oil-pouch-pack-eb988d99",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-EB988D99B1AB9562B6E7",
+      "categorySlug": "soyabean-oil",
+      "brandName": "Pusti Glory",
+      "description": "Pusti Glory Refined Soyabean Oil Pouch Pack is a soyabean oil product prepared for the grocery catalog. Brand: Pusti Glory. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Pusti Glory Refined Soyabean Oil Pouch Pack is a soyabean oil product prepared for the grocery catalog. Brand: Pusti Glory. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 180.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "packageSize": "1 L"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-Pouch-Pack-1-L.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 875,
+      "variants": [
+        {
+          "sku": "GROCERY-BCA3CDC05F8F16567C6A",
+          "price": 180.0,
+          "currency": "BDT",
+          "stock": 875,
+          "options": {
+            "Pack Size": "1 L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-Pouch-Pack-1-L.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 L",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soyabean Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Pusti Glory",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-Pouch-Pack-1-L.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soyabean-oil|pusti glory|pusti glory refined soyabean oil pouch pack",
+        "packs": [
+          {
+            "packSize": "1 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Pusti Glory Refined Soyabean Oil Pouch Pack is a soyabean oil product prepared for the grocery catalog. Brand: Pusti Glory. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Pusti Glory Pusti Glory Refined Soyabean Oil Pouch Pack 1 L Bangladesh",
+              "brandHint": "Pusti Glory",
+              "packHint": "1 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-Pouch-Pack-1-L.png",
+          "packSize": "1 L",
+          "variantSku": "GROCERY-BCA3CDC05F8F16567C6A",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Super Fresh Fortified Soyabean Oil",
+      "slug": "super-fresh-fortified-soyabean-oil-ae7d1c14",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-AE7D1C1409DB72D0DC8C",
+      "categorySlug": "soyabean-oil",
+      "brandName": "Super Fresh",
+      "description": "Super Fresh Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Super Fresh. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Super Fresh Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Super Fresh. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 130.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-500ML.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 4853,
+      "variants": [
+        {
+          "sku": "GROCERY-046434C39D87A5292FB7",
+          "price": 130.0,
+          "currency": "BDT",
+          "stock": 995,
+          "options": {
+            "Pack Size": "500 ml"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-500ML.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-3C035AB55BC5FF6BCDF6",
+          "price": 255.0,
+          "currency": "BDT",
+          "stock": 502,
+          "options": {
+            "Pack Size": "1 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-1L.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-4A745D960D07E3746AA6",
+          "price": 510.0,
+          "currency": "BDT",
+          "stock": 886,
+          "options": {
+            "Pack Size": "2 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-2L.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-DD9DE5DF9994297F51E9",
+          "price": 770.0,
+          "currency": "BDT",
+          "stock": 892,
+          "options": {
+            "Pack Size": "3 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-3L.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-055CC731781DE1C49680",
+          "price": 1280.0,
+          "currency": "BDT",
+          "stock": 961,
+          "options": {
+            "Pack Size": "5 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-5L.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-3BA1F6B0ECF3AD3BA176",
+          "price": 2050.0,
+          "currency": "BDT",
+          "stock": 617,
+          "options": {
+            "Pack Size": "8 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-8L.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "500 ml",
+              "position": 0
+            },
+            {
+              "value": "1 L",
+              "position": 1
+            },
+            {
+              "value": "2 L",
+              "position": 2
+            },
+            {
+              "value": "3 L",
+              "position": 3
+            },
+            {
+              "value": "5 L",
+              "position": 4
+            },
+            {
+              "value": "8 L",
+              "position": 5
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soyabean Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Super Fresh",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "500 ml, 1 L, 2 L, 3 L, 5 L, 8 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-1L.jpg",
+        "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-2L.jpg",
+        "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-3L.jpg",
+        "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-500ML.jpg",
+        "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-5L.jpg",
+        "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-8L.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soyabean-oil|super fresh|super fresh fortified soyabean oil",
+        "packs": [
+          {
+            "packSize": "500 ml",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Super Fresh Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Super Fresh. Pack size: 500 ml. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Super Fresh Super Fresh Fortified Soyabean Oil 500 ml Bangladesh",
+              "brandHint": "Super Fresh",
+              "packHint": "500 ml",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "1 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Super Fresh Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Super Fresh. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Super Fresh Super Fresh Fortified Soyabean Oil 1 L Bangladesh",
+              "brandHint": "Super Fresh",
+              "packHint": "1 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "2 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Super Fresh Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Super Fresh. Pack size: 2 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Super Fresh Super Fresh Fortified Soyabean Oil 2 L Bangladesh",
+              "brandHint": "Super Fresh",
+              "packHint": "2 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "3 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Super Fresh Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Super Fresh. Pack size: 3 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Super Fresh Super Fresh Fortified Soyabean Oil 3 L Bangladesh",
+              "brandHint": "Super Fresh",
+              "packHint": "3 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "5 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Super Fresh Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Super Fresh. Pack size: 5 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Super Fresh Super Fresh Fortified Soyabean Oil 5 L Bangladesh",
+              "brandHint": "Super Fresh",
+              "packHint": "5 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "8 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Super Fresh Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: Super Fresh. Pack size: 8 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Super Fresh Super Fresh Fortified Soyabean Oil 8 L Bangladesh",
+              "brandHint": "Super Fresh",
+              "packHint": "8 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-1L.jpg",
+          "packSize": "1 L",
+          "variantSku": "GROCERY-3C035AB55BC5FF6BCDF6",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-2L.jpg",
+          "packSize": "2 L",
+          "variantSku": "GROCERY-4A745D960D07E3746AA6",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-3L.jpg",
+          "packSize": "3 L",
+          "variantSku": "GROCERY-DD9DE5DF9994297F51E9",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-500ML.jpg",
+          "packSize": "500 ml",
+          "variantSku": "GROCERY-046434C39D87A5292FB7",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-5L.jpg",
+          "packSize": "5 L",
+          "variantSku": "GROCERY-055CC731781DE1C49680",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-8L.jpg",
+          "packSize": "8 L",
+          "variantSku": "GROCERY-3BA1F6B0ECF3AD3BA176",
+          "state": "variant"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Super Fresh Fortified Soyabean Oil Poly Pack",
+      "slug": "super-fresh-fortified-soyabean-oil-poly-pack-a4c0cd06",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-A4C0CD06C549B4AFBD14",
+      "categorySlug": "soyabean-oil",
+      "brandName": "Super Fresh",
+      "description": "Super Fresh Fortified Soyabean Oil Poly Pack is a soyabean oil product prepared for the grocery catalog. Brand: Super Fresh. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Super Fresh Fortified Soyabean Oil Poly Pack is a soyabean oil product prepared for the grocery catalog. Brand: Super Fresh. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 225.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "packageSize": "1 L"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-Poly-Pack-1L.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 608,
+      "variants": [
+        {
+          "sku": "GROCERY-1084AA6189FBBA1E60DA",
+          "price": 225.0,
+          "currency": "BDT",
+          "stock": 608,
+          "options": {
+            "Pack Size": "1 L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-Poly-Pack-1L.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 L",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soyabean Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Super Fresh",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-Poly-Pack-1L.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soyabean-oil|super fresh|super fresh fortified soyabean oil poly pack",
+        "packs": [
+          {
+            "packSize": "1 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Super Fresh Fortified Soyabean Oil Poly Pack is a soyabean oil product prepared for the grocery catalog. Brand: Super Fresh. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Super Fresh Super Fresh Fortified Soyabean Oil Poly Pack 1 L Bangladesh",
+              "brandHint": "Super Fresh",
+              "packHint": "1 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-Poly-Pack-1L.jpg",
+          "packSize": "1 L",
+          "variantSku": "GROCERY-1084AA6189FBBA1E60DA",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Super Pure Fortified Palm Olein",
+      "slug": "super-pure-fortified-palm-olein-bd3141c1",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-BD3141C1A613FB8D67F6",
+      "categorySlug": "soyabean-oil",
+      "brandName": "Super Pure",
+      "description": "Super Pure Fortified Palm Olein is a soyabean oil product prepared for the grocery catalog. Brand: Super Pure. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Super Pure Fortified Palm Olein is a soyabean oil product prepared for the grocery catalog. Brand: Super Pure. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 200.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-1L.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1807,
+      "variants": [
+        {
+          "sku": "GROCERY-C431C5CBD8DA4AE2AA0A",
+          "price": 200.0,
+          "currency": "BDT",
+          "stock": 531,
+          "options": {
+            "Pack Size": "1 L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-1L.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-81A8B9C7D998802CDB0A",
+          "price": 400.0,
+          "currency": "BDT",
+          "stock": 578,
+          "options": {
+            "Pack Size": "2 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-2L.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-076DCA4D38584BED1457",
+          "price": 1005.0,
+          "currency": "BDT",
+          "stock": 698,
+          "options": {
+            "Pack Size": "5 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-5L.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 L",
+              "position": 0
+            },
+            {
+              "value": "2 L",
+              "position": 1
+            },
+            {
+              "value": "5 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soyabean Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Super Pure",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 L, 2 L, 5 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-1L.jpg",
+        "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-2L.jpg",
+        "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-5L.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soyabean-oil|super pure|super pure fortified palm olein",
+        "packs": [
+          {
+            "packSize": "1 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Super Pure Fortified Palm Olein is a soyabean oil product prepared for the grocery catalog. Brand: Super Pure. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Super Pure Super Pure Fortified Palm Olein Soyabean Oil 1 L Bangladesh",
+              "brandHint": "Super Pure",
+              "packHint": "1 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "2 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Super Pure Fortified Palm Olein is a soyabean oil product prepared for the grocery catalog. Brand: Super Pure. Pack size: 2 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Super Pure Super Pure Fortified Palm Olein Soyabean Oil 2 L Bangladesh",
+              "brandHint": "Super Pure",
+              "packHint": "2 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "5 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Super Pure Fortified Palm Olein is a soyabean oil product prepared for the grocery catalog. Brand: Super Pure. Pack size: 5 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Super Pure Super Pure Fortified Palm Olein Soyabean Oil 5 L Bangladesh",
+              "brandHint": "Super Pure",
+              "packHint": "5 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-1L.jpg",
+          "packSize": "1 L",
+          "variantSku": "GROCERY-C431C5CBD8DA4AE2AA0A",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-2L.jpg",
+          "packSize": "2 L",
+          "variantSku": "GROCERY-81A8B9C7D998802CDB0A",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-5L.jpg",
+          "packSize": "5 L",
+          "variantSku": "GROCERY-076DCA4D38584BED1457",
+          "state": "variant"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Super Pure Fortified Palm Olein Poly Pack",
+      "slug": "super-pure-fortified-palm-olein-poly-pack-7f5f3007",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-7F5F3007DD9ED40D391A",
+      "categorySlug": "soyabean-oil",
+      "brandName": "Super Pure",
+      "description": "Super Pure Fortified Palm Olein Poly Pack is a soyabean oil product prepared for the grocery catalog. Brand: Super Pure. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Super Pure Fortified Palm Olein Poly Pack is a soyabean oil product prepared for the grocery catalog. Brand: Super Pure. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 215.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "packageSize": "1 L"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-Poly-Pack-1L.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 723,
+      "variants": [
+        {
+          "sku": "GROCERY-7BAFD6002F84D5165A74",
+          "price": 215.0,
+          "currency": "BDT",
+          "stock": 723,
+          "options": {
+            "Pack Size": "1 L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-Poly-Pack-1L.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 L",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soyabean Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Super Pure",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-Poly-Pack-1L.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soyabean-oil|super pure|super pure fortified palm olein poly pack",
+        "packs": [
+          {
+            "packSize": "1 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Super Pure Fortified Palm Olein Poly Pack is a soyabean oil product prepared for the grocery catalog. Brand: Super Pure. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Super Pure Super Pure Fortified Palm Olein Poly Pack Soyabean Oil 1 L Bangladesh",
+              "brandHint": "Super Pure",
+              "packHint": "1 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-Poly-Pack-1L.jpg",
+          "packSize": "1 L",
+          "variantSku": "GROCERY-7BAFD6002F84D5165A74",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Teer Advance Fortified Soyabean Oil",
+      "slug": "teer-advance-fortified-soyabean-oil-98a31291",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-98A3129138BDEBD96D7B",
+      "categorySlug": "soyabean-oil",
+      "brandName": "TEER",
+      "description": "Teer Advance Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: TEER. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Teer Advance Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: TEER. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 190.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "packageSize": "1 L"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/soyabean-oil/Teer Advance Fortified Soyabean Oil- 1Ltr.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 756,
+      "variants": [
+        {
+          "sku": "GROCERY-A48A9A2F0E7D16E7E319",
+          "price": 190.0,
+          "currency": "BDT",
+          "stock": 756,
+          "options": {
+            "Pack Size": "1 L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/soyabean-oil/Teer Advance Fortified Soyabean Oil- 1Ltr.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 L",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soyabean Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "TEER",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/soyabean-oil/Teer Advance Fortified Soyabean Oil- 1Ltr.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soyabean-oil|teer|teer advance fortified soyabean oil",
+        "packs": [
+          {
+            "packSize": "1 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Teer Advance Fortified Soyabean Oil is a soyabean oil product prepared for the grocery catalog. Brand: TEER. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "TEER Teer Advance Fortified Soyabean Oil 1 L Bangladesh",
+              "brandHint": "TEER",
+              "packHint": "1 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "soyabean-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/soyabean-oil/Teer Advance Fortified Soyabean Oil- 1Ltr.png",
+          "packSize": "1 L",
+          "variantSku": "GROCERY-A48A9A2F0E7D16E7E319",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

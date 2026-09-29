@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Ghee",
+      "slug": "ghee",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/Ghee/Pusti Special Ghee 200gm (Tin).png",
+      "isActive": true,
+      "sortOrder": 7,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Pusti",
+      "slug": "pusti",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Pusti Special Ghee (tin)",
+      "slug": "pusti-special-ghee-tin-99b168de",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-99B168DE091A762FB5B1",
+      "categorySlug": "ghee",
+      "brandName": "Pusti",
+      "description": "Pusti Special Ghee (tin) is a ghee product prepared for the grocery catalog. Brand: Pusti. Pack size: 170 g. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Pusti Special Ghee (tin) is a ghee product prepared for the grocery catalog. Brand: Pusti. Pack size: 170 g. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 170.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.2,
+      "dimensions": {
+        "packageSize": "170 g"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/Ghee/Pusti Special Ghee 200gm (Tin).png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 738,
+      "variants": [
+        {
+          "sku": "GROCERY-B38406D99043D67BB49B",
+          "price": 170.0,
+          "currency": "BDT",
+          "stock": 738,
+          "options": {
+            "Pack Size": "170 g"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/Ghee/Pusti Special Ghee 200gm (Tin).png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "170 g",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Ghee",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Pusti",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "170 g",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/Ghee/Pusti Special Ghee 200gm (Tin).png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "ghee|pusti|pusti special ghee (tin)",
+        "packs": [
+          {
+            "packSize": "170 g",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Pusti Special Ghee (tin) is a ghee product prepared for the grocery catalog. Brand: Pusti. Pack size: 170 g. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Pusti Pusti Special Ghee (tin) 170 g Bangladesh",
+              "brandHint": "Pusti",
+              "packHint": "170 g",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "Ghee",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/Ghee/Pusti Special Ghee 200gm (Tin).png",
+          "packSize": "170 g",
+          "variantSku": "GROCERY-B38406D99043D67BB49B",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

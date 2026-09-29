@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Soap",
+      "slug": "soap",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/Soap/Regina Peach Cream Soap Bar.png",
+      "isActive": true,
+      "sortOrder": 18,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Regina",
+      "slug": "regina",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Regina Peach Cream Soap Bar",
+      "slug": "regina-peach-cream-soap-bar-ba6f13b3",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-BA6F13B3E0E490803D10",
+      "categorySlug": "soap",
+      "brandName": "Regina",
+      "description": "Regina Peach Cream Soap Bar is a soap product prepared for the grocery catalog. Brand: Regina. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Regina Peach Cream Soap Bar is a soap product prepared for the grocery catalog. Brand: Regina. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 200.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/Soap/Regina Peach Cream Soap Bar.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 591,
+      "variants": [
+        {
+          "sku": "GROCERY-6D109F2CEB0308F3AEF3",
+          "price": 200.0,
+          "currency": "BDT",
+          "stock": 591,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/Soap/Regina Peach Cream Soap Bar.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Soap",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Regina",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/Soap/Regina Peach Cream Soap Bar.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "soap|regina|regina peach cream soap bar|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Regina Peach Cream Soap Bar is a soap product prepared for the grocery catalog. Brand: Regina. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Regina Regina Peach Cream Soap Bar Bangladesh",
+              "brandHint": "Regina",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "Soap",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/Soap/Regina Peach Cream Soap Bar.png",
+          "packSize": null,
+          "variantSku": "GROCERY-6D109F2CEB0308F3AEF3",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

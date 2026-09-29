@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Dish Wash",
+      "slug": "dish-wash",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/dish-wash/Eazy Liquid Dish Wash.png",
+      "isActive": true,
+      "sortOrder": 5,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Eazy",
+      "slug": "eazy",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Eazy Liquid Dish Wash",
+      "slug": "eazy-liquid-dish-wash-36bd13b9",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-36BD13B938B1FB358618",
+      "categorySlug": "dish-wash",
+      "brandName": "Eazy",
+      "description": "Eazy Liquid Dish Wash is a dish wash product prepared for the grocery catalog. Brand: Eazy. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Eazy Liquid Dish Wash is a dish wash product prepared for the grocery catalog. Brand: Eazy. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 205.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/dish-wash/Eazy Liquid Dish Wash.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 934,
+      "variants": [
+        {
+          "sku": "GROCERY-26C00377571E7AF4B91A",
+          "price": 205.0,
+          "currency": "BDT",
+          "stock": 934,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/dish-wash/Eazy Liquid Dish Wash.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Dish Wash",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Eazy",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/dish-wash/Eazy Liquid Dish Wash.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "dish-wash|eazy|eazy liquid dish wash|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Eazy Liquid Dish Wash is a dish wash product prepared for the grocery catalog. Brand: Eazy. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Eazy Eazy Liquid Dish Wash Bangladesh",
+              "brandHint": "Eazy",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "dish-wash",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/dish-wash/Eazy Liquid Dish Wash.png",
+          "packSize": null,
+          "variantSku": "GROCERY-26C00377571E7AF4B91A",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Eazy Liquid Dish Wash Packet",
+      "slug": "eazy-liquid-dish-wash-packet-d2e04d37",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-D2E04D37FAC8641700F6",
+      "categorySlug": "dish-wash",
+      "brandName": "Eazy",
+      "description": "Eazy Liquid Dish Wash Packet is a dish wash product prepared for the grocery catalog. Brand: Eazy. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Eazy Liquid Dish Wash Packet is a dish wash product prepared for the grocery catalog. Brand: Eazy. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 560.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/dish-wash/Eazy Liquid Dish Wash Packet.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 834,
+      "variants": [
+        {
+          "sku": "GROCERY-371D2D395435194C33F9",
+          "price": 560.0,
+          "currency": "BDT",
+          "stock": 834,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/dish-wash/Eazy Liquid Dish Wash Packet.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Dish Wash",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Eazy",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/dish-wash/Eazy Liquid Dish Wash Packet.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "dish-wash|eazy|eazy liquid dish wash packet|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Eazy Liquid Dish Wash Packet is a dish wash product prepared for the grocery catalog. Brand: Eazy. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Eazy Eazy Liquid Dish Wash Packet Bangladesh",
+              "brandHint": "Eazy",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "dish-wash",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/dish-wash/Eazy Liquid Dish Wash Packet.png",
+          "packSize": null,
+          "variantSku": "GROCERY-371D2D395435194C33F9",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

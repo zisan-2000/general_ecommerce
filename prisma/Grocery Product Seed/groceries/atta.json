@@ -1,0 +1,209 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Atta",
+      "slug": "atta",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 1,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Aata Single",
+      "slug": "aata-single-3f2c85af",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-3F2C85AF89A1E399F6C4",
+      "categorySlug": "atta",
+      "brandName": null,
+      "description": "Aata Single is a atta product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Aata Single is a atta product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 80.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1086,
+      "variants": [
+        {
+          "sku": "GROCERY-A8237F29188EB8DAB341",
+          "price": 80.0,
+          "currency": "BDT",
+          "stock": 510,
+          "options": {
+            "Pack Size": "1 kg"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-90BC084299E7E24796B4",
+          "price": 155.0,
+          "currency": "BDT",
+          "stock": 576,
+          "options": {
+            "Pack Size": "2 kg"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/atta/Aata-2-Kg-Single.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 kg",
+              "position": 0
+            },
+            {
+              "value": "2 kg",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Atta",
+              "position": 0
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 kg, 2 kg",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+        "/images/products/groceries/atta/Aata-2-Kg-Single.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "atta|unknown|aata single",
+        "packs": [
+          {
+            "packSize": "1 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Aata Single is a atta product prepared for the grocery catalog. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Aata Single Atta 1 kg Bangladesh",
+              "brandHint": null,
+              "packHint": "1 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "atta",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "2 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Aata Single is a atta product prepared for the grocery catalog. Pack size: 2 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Aata Single Atta 2 kg Bangladesh",
+              "brandHint": null,
+              "packHint": "2 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "atta",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+          "packSize": "1 kg",
+          "variantSku": "GROCERY-A8237F29188EB8DAB341",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/groceries/atta/Aata-2-Kg-Single.jpg",
+          "packSize": "2 kg",
+          "variantSku": "GROCERY-90BC084299E7E24796B4",
+          "state": "variant"
+        }
+      ]
+    }
+  ]
+}

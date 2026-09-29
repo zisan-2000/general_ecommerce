@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Ginger",
+      "slug": "ginger",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/ginger/Ginger_5kg.png",
+      "isActive": true,
+      "sortOrder": 8,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Birds of Eden",
+      "slug": "birds-of-eden",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Birds of Eden Fresh Ginger",
+      "slug": "birds-of-eden-fresh-ginger-66718037",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-667180376D1FF87115D7",
+      "categorySlug": "ginger",
+      "brandName": "Birds of Eden",
+      "description": "Fresh ginger packaged by Birds of Eden.",
+      "shortDesc": "Fresh ginger packaged by Birds of Eden.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 790.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 5.0,
+      "dimensions": {
+        "packageSize": "5 kg"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/ginger/Ginger_5kg.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 645,
+      "variants": [
+        {
+          "sku": "GROCERY-C5BBAF291EFEB7022AA3",
+          "price": 1725.0,
+          "currency": "BDT",
+          "stock": 645,
+          "options": {
+            "Pack Size": "5 kg"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/ginger/Ginger_5kg.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "5 kg",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Ginger",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Birds of Eden",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "5 kg",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/ginger/Ginger_5kg.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "ginger|birds of eden|birds of eden fresh ginger",
+        "packs": [
+          {
+            "packSize": "5 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh ginger packaged by Birds of Eden.",
+            "match": {
+              "method": "local-boed",
+              "category": {
+                "method": "folder",
+                "source": "ginger",
+                "score": 1.0
+              },
+              "ocrText": null
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/ginger/Ginger_5kg.png",
+          "packSize": "5 kg",
+          "variantSku": "GROCERY-C5BBAF291EFEB7022AA3",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Ginger",
+      "slug": "ginger-5da4aaa3",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-5DA4AAA3CF96BDE48947",
+      "categorySlug": "ginger",
+      "brandName": null,
+      "description": "Ginger is a ginger product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Ginger is a ginger product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 355.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/ginger/Ginger.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 597,
+      "variants": [
+        {
+          "sku": "GROCERY-336B8614895518EC5D14",
+          "price": 190.0,
+          "currency": "BDT",
+          "stock": 597,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/ginger/Ginger.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Ginger",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/ginger/Ginger.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "ginger|unknown|ginger|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Ginger is a ginger product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Ginger Bangladesh",
+              "brandHint": null,
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "ginger",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/ginger/Ginger.jpg",
+          "packSize": null,
+          "variantSku": "GROCERY-336B8614895518EC5D14",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

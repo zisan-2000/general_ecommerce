@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Garlic",
+      "slug": "garlic",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/garlic/Garlic_5kg.png",
+      "isActive": true,
+      "sortOrder": 6,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Birds of Eden",
+      "slug": "birds-of-eden",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Birds of Eden Fresh Garlic",
+      "slug": "birds-of-eden-fresh-garlic-a4d6d3e9",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-A4D6D3E97E8BF57FB7B5",
+      "categorySlug": "garlic",
+      "brandName": "Birds of Eden",
+      "description": "Fresh garlic packaged by Birds of Eden.",
+      "shortDesc": "Fresh garlic packaged by Birds of Eden.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 530.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 5.0,
+      "dimensions": {
+        "packageSize": "5 kg"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/garlic/Garlic_5kg.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 770,
+      "variants": [
+        {
+          "sku": "GROCERY-1A0694087F86FFC5B941",
+          "price": 1290.0,
+          "currency": "BDT",
+          "stock": 770,
+          "options": {
+            "Pack Size": "5 kg"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/garlic/Garlic_5kg.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "5 kg",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Garlic",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Birds of Eden",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "5 kg",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/garlic/Garlic_5kg.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "garlic|birds of eden|birds of eden fresh garlic",
+        "packs": [
+          {
+            "packSize": "5 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh garlic packaged by Birds of Eden.",
+            "match": {
+              "method": "local-boed",
+              "category": {
+                "method": "folder",
+                "source": "garlic",
+                "score": 1.0
+              },
+              "ocrText": null
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/garlic/Garlic_5kg.png",
+          "packSize": "5 kg",
+          "variantSku": "GROCERY-1A0694087F86FFC5B941",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Garlic",
+      "slug": "garlic-525d015d",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-525D015D66518515328C",
+      "categorySlug": "garlic",
+      "brandName": null,
+      "description": "Garlic is a garlic product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Garlic is a garlic product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 570.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/garlic/Garlic.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 980,
+      "variants": [
+        {
+          "sku": "GROCERY-986253984FF244F389FE",
+          "price": 570.0,
+          "currency": "BDT",
+          "stock": 980,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/garlic/Garlic.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Garlic",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/garlic/Garlic.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "garlic|unknown|garlic|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Garlic is a garlic product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Garlic Bangladesh",
+              "brandHint": null,
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "garlic",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/garlic/Garlic.jpg",
+          "packSize": null,
+          "variantSku": "GROCERY-986253984FF244F389FE",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

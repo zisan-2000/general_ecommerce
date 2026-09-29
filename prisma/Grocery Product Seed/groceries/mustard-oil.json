@@ -1,0 +1,509 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Mustard Oil",
+      "slug": "mustard-oil",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-1L.jpg",
+      "isActive": true,
+      "sortOrder": 14,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Fresh",
+      "slug": "fresh",
+      "logo": null
+    },
+    {
+      "name": "Glory",
+      "slug": "glory",
+      "logo": null
+    },
+    {
+      "name": "Pusti",
+      "slug": "pusti",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Fresh Mustard Oil",
+      "slug": "fresh-mustard-oil-0ec2395d",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-0EC2395DFC2ABC281BF3",
+      "categorySlug": "mustard-oil",
+      "brandName": "Fresh",
+      "description": "Fresh Mustard Oil is a mustard oil product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Fresh Mustard Oil is a mustard oil product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 170.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-500ML.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 2016,
+      "variants": [
+        {
+          "sku": "GROCERY-C58521390F20DF022772",
+          "price": 170.0,
+          "currency": "BDT",
+          "stock": 847,
+          "options": {
+            "Pack Size": "500 ml"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-500ML.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-6956951B351485988EE6",
+          "price": 340.0,
+          "currency": "BDT",
+          "stock": 650,
+          "options": {
+            "Pack Size": "1 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-1L.jpg",
+          "sourceProductUrl": null
+        },
+        {
+          "sku": "GROCERY-0BCE9074F9E73084744F",
+          "price": 680.0,
+          "currency": "BDT",
+          "stock": 519,
+          "options": {
+            "Pack Size": "2 L"
+          },
+          "isDefault": false,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-2L.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "500 ml",
+              "position": 0
+            },
+            {
+              "value": "1 L",
+              "position": 1
+            },
+            {
+              "value": "2 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Mustard Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Fresh",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "500 ml, 1 L, 2 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-1L.jpg",
+        "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-2L.jpg",
+        "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-500ML.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "mustard-oil|fresh|fresh mustard oil",
+        "packs": [
+          {
+            "packSize": "500 ml",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh Mustard Oil is a mustard oil product prepared for the grocery catalog. Brand: Fresh. Pack size: 500 ml. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Fresh Fresh Mustard Oil 500 ml Bangladesh",
+              "brandHint": "Fresh",
+              "packHint": "500 ml",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "mustard-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "1 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh Mustard Oil is a mustard oil product prepared for the grocery catalog. Brand: Fresh. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Fresh Fresh Mustard Oil 1 L Bangladesh",
+              "brandHint": "Fresh",
+              "packHint": "1 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "mustard-oil",
+                "score": 1.0
+              }
+            }
+          },
+          {
+            "packSize": "2 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh Mustard Oil is a mustard oil product prepared for the grocery catalog. Brand: Fresh. Pack size: 2 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Fresh Fresh Mustard Oil 2 L Bangladesh",
+              "brandHint": "Fresh",
+              "packHint": "2 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "mustard-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-1L.jpg",
+          "packSize": "1 L",
+          "variantSku": "GROCERY-6956951B351485988EE6",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-2L.jpg",
+          "packSize": "2 L",
+          "variantSku": "GROCERY-0BCE9074F9E73084744F",
+          "state": "variant"
+        },
+        {
+          "image": "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-500ML.jpg",
+          "packSize": "500 ml",
+          "variantSku": "GROCERY-C58521390F20DF022772",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Glory Mustared Oil",
+      "slug": "glory-mustared-oil-e553d159",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-E553D15917A7A3E34519",
+      "categorySlug": "mustard-oil",
+      "brandName": "Glory",
+      "description": "Glory Mustared Oil is a mustard oil product prepared for the grocery catalog. Brand: Glory. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Glory Mustared Oil is a mustard oil product prepared for the grocery catalog. Brand: Glory. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 275.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": {
+        "packageSize": "1 L"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/mustard-oil/Glory-Mustared-oil-1L.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 906,
+      "variants": [
+        {
+          "sku": "GROCERY-CC8EED743BAB2851B048",
+          "price": 275.0,
+          "currency": "BDT",
+          "stock": 906,
+          "options": {
+            "Pack Size": "1 L"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/mustard-oil/Glory-Mustared-oil-1L.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 L",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Mustard Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Glory",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 L",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/mustard-oil/Glory-Mustared-oil-1L.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "mustard-oil|glory|glory mustared oil",
+        "packs": [
+          {
+            "packSize": "1 L",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Glory Mustared Oil is a mustard oil product prepared for the grocery catalog. Brand: Glory. Pack size: 1 L. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Glory Glory Mustared Oil Mustard Oil 1 L Bangladesh",
+              "brandHint": "Glory",
+              "packHint": "1 L",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "mustard-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/mustard-oil/Glory-Mustared-oil-1L.png",
+          "packSize": "1 L",
+          "variantSku": "GROCERY-CC8EED743BAB2851B048",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Pusti Mustard Oil",
+      "slug": "pusti-mustard-oil-42bcb5ac",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-42BCB5AC5644E8A33FCC",
+      "categorySlug": "mustard-oil",
+      "brandName": "Pusti",
+      "description": "Pusti Mustard Oil is a mustard oil product prepared for the grocery catalog. Brand: Pusti. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Pusti Mustard Oil is a mustard oil product prepared for the grocery catalog. Brand: Pusti. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 845.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/mustard-oil/Pusti Mustard Oil.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 518,
+      "variants": [
+        {
+          "sku": "GROCERY-C9300B7FB4A1AFF757F6",
+          "price": 845.0,
+          "currency": "BDT",
+          "stock": 518,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/mustard-oil/Pusti Mustard Oil.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Mustard Oil",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Pusti",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/mustard-oil/Pusti Mustard Oil.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "mustard-oil|pusti|pusti mustard oil|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Pusti Mustard Oil is a mustard oil product prepared for the grocery catalog. Brand: Pusti. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Pusti Pusti Mustard Oil Bangladesh",
+              "brandHint": "Pusti",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "mustard-oil",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/mustard-oil/Pusti Mustard Oil.png",
+          "packSize": null,
+          "variantSku": "GROCERY-C9300B7FB4A1AFF757F6",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

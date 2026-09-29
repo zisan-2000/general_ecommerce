@@ -1,0 +1,798 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Toothpaste",
+      "slug": "toothpaste",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/toothpaste/Buy Dabur Red Toothpaste 190g Get 85g Toothpaste free.avif",
+      "isActive": true,
+      "sortOrder": 23,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Closeup",
+      "slug": "closeup",
+      "logo": null
+    },
+    {
+      "name": "Colgate",
+      "slug": "colgate",
+      "logo": null
+    },
+    {
+      "name": "Dabur",
+      "slug": "dabur",
+      "logo": null
+    },
+    {
+      "name": "Magic",
+      "slug": "magic",
+      "logo": null
+    },
+    {
+      "name": "Mediplus",
+      "slug": "mediplus",
+      "logo": null
+    },
+    {
+      "name": "Sensodyne",
+      "slug": "sensodyne",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Buy Dabur Red Toothpaste 190g Get 85g Toothpaste Free",
+      "slug": "buy-dabur-red-toothpaste-190g-get-85g-toothpaste-free-114b5755",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-114B57557959F96407FA",
+      "categorySlug": "toothpaste",
+      "brandName": "Dabur",
+      "description": "Buy Dabur Red Toothpaste 190g Get 85g Toothpaste Free is a toothpaste product prepared for the grocery catalog. Brand: Dabur. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Buy Dabur Red Toothpaste 190g Get 85g Toothpaste Free is a toothpaste product prepared for the grocery catalog. Brand: Dabur. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 355.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/toothpaste/Buy Dabur Red Toothpaste 190g Get 85g Toothpaste free.avif",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 601,
+      "variants": [
+        {
+          "sku": "GROCERY-AB58D2FE7D5CDA662449",
+          "price": 355.0,
+          "currency": "BDT",
+          "stock": 601,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/toothpaste/Buy Dabur Red Toothpaste 190g Get 85g Toothpaste free.avif",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Toothpaste",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Dabur",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/toothpaste/Buy Dabur Red Toothpaste 190g Get 85g Toothpaste free.avif"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "toothpaste|dabur|buy dabur red toothpaste 190g get 85g toothpaste free|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Buy Dabur Red Toothpaste 190g Get 85g Toothpaste Free is a toothpaste product prepared for the grocery catalog. Brand: Dabur. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Dabur Buy Dabur Red Toothpaste 190g Get 85g Toothpaste Free Bangladesh",
+              "brandHint": "Dabur",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "toothpaste",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Multiple quantities or promotional bundle; retain full identity",
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/toothpaste/Buy Dabur Red Toothpaste 190g Get 85g Toothpaste free.avif",
+          "packSize": null,
+          "variantSku": "GROCERY-AB58D2FE7D5CDA662449",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Closeup Toothpaste Menthol Fresh",
+      "slug": "closeup-toothpaste-menthol-fresh-d6988416",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-D69884169140379B0FF7",
+      "categorySlug": "toothpaste",
+      "brandName": "Closeup",
+      "description": "Closeup Toothpaste Menthol Fresh is a toothpaste product prepared for the grocery catalog. Brand: Closeup. Pack size: 85 g. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Closeup Toothpaste Menthol Fresh is a toothpaste product prepared for the grocery catalog. Brand: Closeup. Pack size: 85 g. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 160.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.085,
+      "dimensions": {
+        "packageSize": "85 g"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/toothpaste/Closeup Toothpaste Menthol Fresh 85g.avif",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 764,
+      "variants": [
+        {
+          "sku": "GROCERY-E4F89172D557C7BE9D92",
+          "price": 160.0,
+          "currency": "BDT",
+          "stock": 764,
+          "options": {
+            "Pack Size": "85 g"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/toothpaste/Closeup Toothpaste Menthol Fresh 85g.avif",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "85 g",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Toothpaste",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Closeup",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "85 g",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/toothpaste/Closeup Toothpaste Menthol Fresh 85g.avif"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "toothpaste|closeup|closeup toothpaste menthol fresh",
+        "packs": [
+          {
+            "packSize": "85 g",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Closeup Toothpaste Menthol Fresh is a toothpaste product prepared for the grocery catalog. Brand: Closeup. Pack size: 85 g. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Closeup Closeup Toothpaste Menthol Fresh 85 g Bangladesh",
+              "brandHint": "Closeup",
+              "packHint": "85 g",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "toothpaste",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/toothpaste/Closeup Toothpaste Menthol Fresh 85g.avif",
+          "packSize": "85 g",
+          "variantSku": "GROCERY-E4F89172D557C7BE9D92",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Colgate Visible White Toothpaste 100g (extra 20gm Free)",
+      "slug": "colgate-visible-white-toothpaste-100g-extra-20gm-free-587c4da6",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-587C4DA6D99676ADA005",
+      "categorySlug": "toothpaste",
+      "brandName": "Colgate",
+      "description": "Colgate Visible White Toothpaste 100g (extra 20gm Free) is a toothpaste product prepared for the grocery catalog. Brand: Colgate. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Colgate Visible White Toothpaste 100g (extra 20gm Free) is a toothpaste product prepared for the grocery catalog. Brand: Colgate. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 465.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/toothpaste/Colgate Visible White Toothpaste 100g (Extra 20gm Free).avif",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 998,
+      "variants": [
+        {
+          "sku": "GROCERY-E3A4105D1BF79D8AD1C4",
+          "price": 465.0,
+          "currency": "BDT",
+          "stock": 998,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/toothpaste/Colgate Visible White Toothpaste 100g (Extra 20gm Free).avif",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Toothpaste",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Colgate",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/toothpaste/Colgate Visible White Toothpaste 100g (Extra 20gm Free).avif"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "toothpaste|colgate|colgate visible white toothpaste 100g (extra 20gm free)|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Colgate Visible White Toothpaste 100g (extra 20gm Free) is a toothpaste product prepared for the grocery catalog. Brand: Colgate. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Colgate Colgate Visible White Toothpaste 100g (extra 20gm Free) Bangladesh",
+              "brandHint": "Colgate",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "toothpaste",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Multiple quantities or promotional bundle; retain full identity",
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/toothpaste/Colgate Visible White Toothpaste 100g (Extra 20gm Free).avif",
+          "packSize": null,
+          "variantSku": "GROCERY-E3A4105D1BF79D8AD1C4",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Magic Herbal Toothpaste",
+      "slug": "magic-herbal-toothpaste-4fa0e4f8",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-4FA0E4F89A35682AE241",
+      "categorySlug": "toothpaste",
+      "brandName": "Magic",
+      "description": "Magic Herbal Toothpaste is a toothpaste product prepared for the grocery catalog. Brand: Magic. Pack size: 200 g. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Magic Herbal Toothpaste is a toothpaste product prepared for the grocery catalog. Brand: Magic. Pack size: 200 g. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 175.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.2,
+      "dimensions": {
+        "packageSize": "200 g"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/toothpaste/Magic Herbal Toothpaste 200gm.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 875,
+      "variants": [
+        {
+          "sku": "GROCERY-FECC4DA8B4DE3724F0F0",
+          "price": 175.0,
+          "currency": "BDT",
+          "stock": 875,
+          "options": {
+            "Pack Size": "200 g"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/toothpaste/Magic Herbal Toothpaste 200gm.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "200 g",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Toothpaste",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Magic",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "200 g",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/toothpaste/Magic Herbal Toothpaste 200gm.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "toothpaste|magic|magic herbal toothpaste",
+        "packs": [
+          {
+            "packSize": "200 g",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Magic Herbal Toothpaste is a toothpaste product prepared for the grocery catalog. Brand: Magic. Pack size: 200 g. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Magic Magic Herbal Toothpaste 200 g Bangladesh",
+              "brandHint": "Magic",
+              "packHint": "200 g",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "toothpaste",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/toothpaste/Magic Herbal Toothpaste 200gm.png",
+          "packSize": "200 g",
+          "variantSku": "GROCERY-FECC4DA8B4DE3724F0F0",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Mediplus Ds Toothpaste",
+      "slug": "mediplus-ds-toothpaste-ad519275",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-AD5192753CBFE4DC3A5C",
+      "categorySlug": "toothpaste",
+      "brandName": "Mediplus",
+      "description": "Mediplus Ds Toothpaste is a toothpaste product prepared for the grocery catalog. Brand: Mediplus. Pack size: 90 g. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Mediplus Ds Toothpaste is a toothpaste product prepared for the grocery catalog. Brand: Mediplus. Pack size: 90 g. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 265.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.09,
+      "dimensions": {
+        "packageSize": "90 g"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/toothpaste/Mediplus DS Toothpaste 90gm.avif",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 964,
+      "variants": [
+        {
+          "sku": "GROCERY-77DA9F75CB18B6EB265D",
+          "price": 265.0,
+          "currency": "BDT",
+          "stock": 964,
+          "options": {
+            "Pack Size": "90 g"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/toothpaste/Mediplus DS Toothpaste 90gm.avif",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "90 g",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Toothpaste",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Mediplus",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "90 g",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/toothpaste/Mediplus DS Toothpaste 90gm.avif"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "toothpaste|mediplus|mediplus ds toothpaste",
+        "packs": [
+          {
+            "packSize": "90 g",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Mediplus Ds Toothpaste is a toothpaste product prepared for the grocery catalog. Brand: Mediplus. Pack size: 90 g. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Mediplus Mediplus Ds Toothpaste 90 g Bangladesh",
+              "brandHint": "Mediplus",
+              "packHint": "90 g",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "toothpaste",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/toothpaste/Mediplus DS Toothpaste 90gm.avif",
+          "packSize": "90 g",
+          "variantSku": "GROCERY-77DA9F75CB18B6EB265D",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Sensodyne Rapid Relief Toothpaste",
+      "slug": "sensodyne-rapid-relief-toothpaste-3c0465f9",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-3C0465F9A9F77CCDF0A3",
+      "categorySlug": "toothpaste",
+      "brandName": "Sensodyne",
+      "description": "Sensodyne Rapid Relief Toothpaste is a toothpaste product prepared for the grocery catalog. Brand: Sensodyne. Pack size: 80 g. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Sensodyne Rapid Relief Toothpaste is a toothpaste product prepared for the grocery catalog. Brand: Sensodyne. Pack size: 80 g. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 435.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 0.08,
+      "dimensions": {
+        "packageSize": "80 g"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/toothpaste/Sensodyne Rapid Relief Toothpaste 80g.avif",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 796,
+      "variants": [
+        {
+          "sku": "GROCERY-284EF4FEA8AB9198A13D",
+          "price": 435.0,
+          "currency": "BDT",
+          "stock": 796,
+          "options": {
+            "Pack Size": "80 g"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/toothpaste/Sensodyne Rapid Relief Toothpaste 80g.avif",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "80 g",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Toothpaste",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Sensodyne",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "80 g",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/toothpaste/Sensodyne Rapid Relief Toothpaste 80g.avif"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "toothpaste|sensodyne|sensodyne rapid relief toothpaste",
+        "packs": [
+          {
+            "packSize": "80 g",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Sensodyne Rapid Relief Toothpaste is a toothpaste product prepared for the grocery catalog. Brand: Sensodyne. Pack size: 80 g. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Sensodyne Sensodyne Rapid Relief Toothpaste 80 g Bangladesh",
+              "brandHint": "Sensodyne",
+              "packHint": "80 g",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "toothpaste",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/toothpaste/Sensodyne Rapid Relief Toothpaste 80g.avif",
+          "packSize": "80 g",
+          "variantSku": "GROCERY-284EF4FEA8AB9198A13D",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,758 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Detergent",
+      "slug": "detergent",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/detergent/Detergent - Rin - 1kg.avif",
+      "isActive": true,
+      "sortOrder": 4,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Rin",
+      "slug": "rin",
+      "logo": null
+    },
+    {
+      "name": "Saf",
+      "slug": "saf",
+      "logo": null
+    },
+    {
+      "name": "Surf Excel",
+      "slug": "surf-excel",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Detergent Rin",
+      "slug": "detergent-rin-56d61966",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-56D6196621AE6838B364",
+      "categorySlug": "detergent",
+      "brandName": "Rin",
+      "description": "Detergent Rin is a detergent product prepared for the grocery catalog. Brand: Rin. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Detergent Rin is a detergent product prepared for the grocery catalog. Brand: Rin. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 88.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 500.0,
+      "dimensions": {
+        "packageSize": "1 kg"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/detergent/Detergent - Rin - 1kg.avif",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 974,
+      "variants": [
+        {
+          "sku": "GROCERY-D844986F7AC1439B6677",
+          "price": 88.0,
+          "currency": "BDT",
+          "stock": 974,
+          "options": {
+            "Pack Size": "1 kg"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/detergent/Detergent - Rin - 1kg.avif",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 kg",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Detergent",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Rin",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 kg",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/detergent/Detergent - Rin - 1kg.avif"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "detergent|rin|detergent rin",
+        "packs": [
+          {
+            "packSize": "1 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Detergent Rin is a detergent product prepared for the grocery catalog. Brand: Rin. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Rin Detergent Rin 1 kg Bangladesh",
+              "brandHint": "Rin",
+              "packHint": "1 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "detergent",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/detergent/Detergent - Rin - 1kg.avif",
+          "packSize": "1 kg",
+          "variantSku": "GROCERY-D844986F7AC1439B6677",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Rin Advanced Synthetic Laundry Detergent Powder",
+      "slug": "rin-advanced-synthetic-laundry-detergent-powder-ff39f8cc",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-FF39F8CCBE4200FC638D",
+      "categorySlug": "detergent",
+      "brandName": "Rin",
+      "description": "Rin Advanced Synthetic Laundry Detergent Powder is a detergent product prepared for the grocery catalog. Brand: Rin. Pack size: 2 kg. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Rin Advanced Synthetic Laundry Detergent Powder is a detergent product prepared for the grocery catalog. Brand: Rin. Pack size: 2 kg. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 380.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 2.0,
+      "dimensions": {
+        "packageSize": "2 kg"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/detergent/Rin Advanced Synthetic Laundry Detergent Powder 2kg.avif",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 970,
+      "variants": [
+        {
+          "sku": "GROCERY-91FD39ED34E8B92C6600",
+          "price": 380.0,
+          "currency": "BDT",
+          "stock": 970,
+          "options": {
+            "Pack Size": "2 kg"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/detergent/Rin Advanced Synthetic Laundry Detergent Powder 2kg.avif",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "2 kg",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Detergent",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Rin",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "2 kg",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/detergent/Rin Advanced Synthetic Laundry Detergent Powder 2kg.avif"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "detergent|rin|rin advanced synthetic laundry detergent powder",
+        "packs": [
+          {
+            "packSize": "2 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Rin Advanced Synthetic Laundry Detergent Powder is a detergent product prepared for the grocery catalog. Brand: Rin. Pack size: 2 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Rin Rin Advanced Synthetic Laundry Detergent Powder 2 kg Bangladesh",
+              "brandHint": "Rin",
+              "packHint": "2 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "detergent",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/detergent/Rin Advanced Synthetic Laundry Detergent Powder 2kg.avif",
+          "packSize": "2 kg",
+          "variantSku": "GROCERY-91FD39ED34E8B92C6600",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Saf Laundry Soap (bagh)",
+      "slug": "saf-laundry-soap-bagh-da6db8fc",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-DA6DB8FC6891CEBB5B88",
+      "categorySlug": "detergent",
+      "brandName": "Saf",
+      "description": "Saf Laundry Soap (bagh) is a detergent product prepared for the grocery catalog. Brand: Saf. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Saf Laundry Soap (bagh) is a detergent product prepared for the grocery catalog. Brand: Saf. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 60.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/detergent/Saf Laundry Soap (Bagh).png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 674,
+      "variants": [
+        {
+          "sku": "GROCERY-AB30FDE6BEA1E1B68FD6",
+          "price": 60.0,
+          "currency": "BDT",
+          "stock": 674,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/detergent/Saf Laundry Soap (Bagh).png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Detergent",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Saf",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/detergent/Saf Laundry Soap (Bagh).png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "detergent|saf|saf laundry soap (bagh)|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Saf Laundry Soap (bagh) is a detergent product prepared for the grocery catalog. Brand: Saf. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Saf Saf Laundry Soap (bagh) Detergent Bangladesh",
+              "brandHint": "Saf",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "detergent",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/detergent/Saf Laundry Soap (Bagh).png",
+          "packSize": null,
+          "variantSku": "GROCERY-AB30FDE6BEA1E1B68FD6",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Saf Synthetic Detergent Powder",
+      "slug": "saf-synthetic-detergent-powder-ba27a4d3",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-BA27A4D3F5B4EE958C42",
+      "categorySlug": "detergent",
+      "brandName": "Saf",
+      "description": "Saf Synthetic Detergent Powder is a detergent product prepared for the grocery catalog. Brand: Saf. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Saf Synthetic Detergent Powder is a detergent product prepared for the grocery catalog. Brand: Saf. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 100.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/detergent/Saf Synthetic Detergent Powder.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 911,
+      "variants": [
+        {
+          "sku": "GROCERY-131D92DCD54A8E3AF101",
+          "price": 700.0,
+          "currency": "BDT",
+          "stock": 911,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/detergent/Saf Synthetic Detergent Powder.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Detergent",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Saf",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/detergent/Saf Synthetic Detergent Powder.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "detergent|saf|saf synthetic detergent powder|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Saf Synthetic Detergent Powder is a detergent product prepared for the grocery catalog. Brand: Saf. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Saf Saf Synthetic Detergent Powder Bangladesh",
+              "brandHint": "Saf",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "detergent",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/detergent/Saf Synthetic Detergent Powder.png",
+          "packSize": null,
+          "variantSku": "GROCERY-131D92DCD54A8E3AF101",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Surf Excel Synthetic Laundry Detergent Powder",
+      "slug": "surf-excel-synthetic-laundry-detergent-powder-efee6caa",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-EFEE6CAAF3F89F98684B",
+      "categorySlug": "detergent",
+      "brandName": "Surf Excel",
+      "description": "Surf Excel Synthetic Laundry Detergent Powder is a detergent product prepared for the grocery catalog. Brand: Surf Excel. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Surf Excel Synthetic Laundry Detergent Powder is a detergent product prepared for the grocery catalog. Brand: Surf Excel. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 295.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 1.0,
+      "dimensions": {
+        "packageSize": "1 kg"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/detergent/Surf Excel Synthetic Laundry Detergent Powder 1kg.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 907,
+      "variants": [
+        {
+          "sku": "GROCERY-F9AFA08DDBB627F5E113",
+          "price": 295.0,
+          "currency": "BDT",
+          "stock": 907,
+          "options": {
+            "Pack Size": "1 kg"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/detergent/Surf Excel Synthetic Laundry Detergent Powder 1kg.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 kg",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Detergent",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Surf Excel",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 kg",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/detergent/Surf Excel Synthetic Laundry Detergent Powder 1kg.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "detergent|surf excel|surf excel synthetic laundry detergent powder",
+        "packs": [
+          {
+            "packSize": "1 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Surf Excel Synthetic Laundry Detergent Powder is a detergent product prepared for the grocery catalog. Brand: Surf Excel. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Surf Excel Surf Excel Synthetic Laundry Detergent Powder 1 kg Bangladesh",
+              "brandHint": "Surf Excel",
+              "packHint": "1 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "detergent",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/detergent/Surf Excel Synthetic Laundry Detergent Powder 1kg.jpg",
+          "packSize": "1 kg",
+          "variantSku": "GROCERY-F9AFA08DDBB627F5E113",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "White Wash Synthetic Detergent Powder",
+      "slug": "white-wash-synthetic-detergent-powder-1fa2d71a",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-1FA2D71AEE5670A69E75",
+      "categorySlug": "detergent",
+      "brandName": null,
+      "description": "White Wash Synthetic Detergent Powder is a detergent product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "White Wash Synthetic Detergent Powder is a detergent product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 230.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/detergent/White Wash Synthetic Detergent Powder.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 613,
+      "variants": [
+        {
+          "sku": "GROCERY-DC9101EA05C95AE84FF4",
+          "price": 230.0,
+          "currency": "BDT",
+          "stock": 613,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/detergent/White Wash Synthetic Detergent Powder.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Detergent",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/detergent/White Wash Synthetic Detergent Powder.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "detergent|unknown|white wash synthetic detergent powder|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "White Wash Synthetic Detergent Powder is a detergent product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "White Wash Synthetic Detergent Powder Bangladesh",
+              "brandHint": null,
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "detergent",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/detergent/White Wash Synthetic Detergent Powder.png",
+          "packSize": null,
+          "variantSku": "GROCERY-DC9101EA05C95AE84FF4",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

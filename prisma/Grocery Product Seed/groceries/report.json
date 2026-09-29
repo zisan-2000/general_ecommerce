@@ -1,0 +1,854 @@
+{
+  "status": "json-generated",
+  "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+  "outputDir": "D:\\Office Projects\\general_ecommerce\\prisma\\Grocery Product Seed\\groceries",
+  "imagesFound": 98,
+  "categoriesFoundFromFolders": 23,
+  "canonicalProducts": 70,
+  "variantsCreated": 97,
+  "galleryImagesAssigned": 1,
+  "imageAssignments": [
+    {
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "packSize": "1 kg",
+      "variantSku": "GROCERY-A8237F29188EB8DAB341",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/atta/Aata-2-Kg-Single.jpg",
+      "packSize": "2 kg",
+      "variantSku": "GROCERY-90BC084299E7E24796B4",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/chia-seed/Chia_seed.jpeg",
+      "packSize": null,
+      "variantSku": "GROCERY-253C1159EE76C453B731",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/detergent/Detergent - Rin - 1kg.avif",
+      "packSize": "1 kg",
+      "variantSku": "GROCERY-D844986F7AC1439B6677",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/detergent/Rin Advanced Synthetic Laundry Detergent Powder 2kg.avif",
+      "packSize": "2 kg",
+      "variantSku": "GROCERY-91FD39ED34E8B92C6600",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/detergent/Saf Laundry Soap (Bagh).png",
+      "packSize": null,
+      "variantSku": "GROCERY-AB30FDE6BEA1E1B68FD6",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/detergent/Saf Synthetic Detergent Powder.png",
+      "packSize": null,
+      "variantSku": "GROCERY-131D92DCD54A8E3AF101",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/detergent/Surf Excel Synthetic Laundry Detergent Powder 1kg.jpg",
+      "packSize": "1 kg",
+      "variantSku": "GROCERY-F9AFA08DDBB627F5E113",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/detergent/White Wash Synthetic Detergent Powder.png",
+      "packSize": null,
+      "variantSku": "GROCERY-DC9101EA05C95AE84FF4",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/dish-wash/Eazy Liquid Dish Wash.png",
+      "packSize": null,
+      "variantSku": "GROCERY-26C00377571E7AF4B91A",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/dish-wash/Eazy Liquid Dish Wash Packet.png",
+      "packSize": null,
+      "variantSku": "GROCERY-371D2D395435194C33F9",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/garlic/Garlic_5kg.png",
+      "packSize": "5 kg",
+      "variantSku": "GROCERY-1A0694087F86FFC5B941",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/garlic/Garlic.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-986253984FF244F389FE",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/Ghee/Pusti Special Ghee 200gm (Tin).png",
+      "packSize": "200 g",
+      "variantSku": "GROCERY-B38406D99043D67BB49B",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/ginger/Ginger_5kg.png",
+      "packSize": "5 kg",
+      "variantSku": "GROCERY-C5BBAF291EFEB7022AA3",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/ginger/Ginger.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-336B8614895518EC5D14",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/hand-wash/CarePlus Liquid Hand Wash 5 liter.png",
+      "packSize": "5 L",
+      "variantSku": "GROCERY-AE0296A0D476FC07A3AC",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/hand-wash/CarePlus Liquid Hand Wash.png",
+      "packSize": null,
+      "variantSku": "GROCERY-04968859D522E76BF89A",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/honey/Pusti_Honey_Kalojira.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-3B2C5477DF3868843CAB",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/honey/Pusti_Honey_Litchi.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-9E099932462BD037BA4B",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/honey/Pusti_Honey_Sorisha.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-DFBDEF4E3B9035FFB66C",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/honey/Pusti_Honey_Sundarbans.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-F10230FE480629A563AE",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/lentil/Pusti Red Lentils  Moshur Dal-1kg.png",
+      "packSize": "1 kg",
+      "variantSku": "GROCERY-A088C78F41774E6BD6EA",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/lentil/Pusti Red Lentils  Moshur Dal-500g.png",
+      "packSize": "500 g",
+      "variantSku": "GROCERY-3BA01E8EBE45C791A7E0",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/lentil/TEER Red Lentil 1kg.avif",
+      "packSize": "1 kg",
+      "variantSku": "GROCERY-13BFF64EDECD14975ECE",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/milk-powder/Dessert_Milk_1kg.jpg",
+      "packSize": "1 kg",
+      "variantSku": "GROCERY-8CEE417A80DF88FEA8BC",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/milk-powder/Dessert_Milk_400g.jpg",
+      "packSize": "400 g",
+      "variantSku": "GROCERY-B4713BBD32A3A2A9EFCE",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/milk-powder/Glory-Instant-milk-powder-500-gm.png",
+      "packSize": "500 g",
+      "variantSku": "GROCERY-2EFA36D4271AB18643A5",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/milk-powder/No.1-Full-Cream-Milk-250gm-pack.png",
+      "packSize": "250 g",
+      "variantSku": "GROCERY-5696BDB877E1EAAF2B1C",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/milk-powder/No.1-Full-Cream-Milk-400g-Mockup_.png",
+      "packSize": "400 g",
+      "variantSku": "GROCERY-B26B4ED7FDC8CAB5DF50",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/milk-powder/No.1-Full-Cream-Milk-500gm-pack.png",
+      "packSize": "500 g",
+      "variantSku": "GROCERY-7E4E526A278D59B07B7B",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/milk-powder/Pusti-Instant-Milk-Powder-Chain-Pack-10-g.png",
+      "packSize": "10 g",
+      "variantSku": "GROCERY-9B47182EA8E471C3789D",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/milk-powder/Pusti-Plus-Instant-full-Cream-Milk-1kg.png",
+      "packSize": "1 kg",
+      "variantSku": "GROCERY-6A008EBDAE721A6FD5D3",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/milk-powder/Pusti-Plus-Instant-full-Cream-Milk-400-g-BB.png",
+      "packSize": "400 g",
+      "variantSku": "GROCERY-5F8DA3924D3512F55F77",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/milk-powder/Super-Pure-FCMP-milk-3D-1kg.png",
+      "packSize": "1 kg",
+      "variantSku": "GROCERY-C95F0B8E6220032E6C15",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/milk-powder/Super-Pure-FCMP-milk-3D-2kg-copy.png",
+      "packSize": "2 kg",
+      "variantSku": "GROCERY-9DE3923C78638F2FF5C1",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-1L.jpg",
+      "packSize": "1 L",
+      "variantSku": "GROCERY-6956951B351485988EE6",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-2L.jpg",
+      "packSize": "2 L",
+      "variantSku": "GROCERY-0BCE9074F9E73084744F",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/mustard-oil/Fresh-Mustard-Oil-500ML.jpg",
+      "packSize": "500 ml",
+      "variantSku": "GROCERY-C58521390F20DF022772",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/mustard-oil/Glory-Mustared-oil-1L.png",
+      "packSize": "1 L",
+      "variantSku": "GROCERY-CC8EED743BAB2851B048",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/mustard-oil/Pusti Mustard Oil.png",
+      "packSize": null,
+      "variantSku": "GROCERY-C9300B7FB4A1AFF757F6",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/onion/onion_5kg.png",
+      "packSize": "5 kg",
+      "variantSku": "GROCERY-A8CB48DF6868A120147C",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/onion/onion.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-2815ABDC4E8DFF3F0FD2",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/rice/Glory-Aromatic-Rice-25-KG.png",
+      "packSize": "25 kg",
+      "variantSku": "GROCERY-9FB5C745A02A8C16DE15",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/rice/Glory-Aromatic-Rice-50-KG.png",
+      "packSize": "50 kg",
+      "variantSku": "GROCERY-401FE663D4596170CEA3",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/salt/Teer Premium Iodized Salt 1kg.jpeg",
+      "packSize": "1 kg",
+      "variantSku": "GROCERY-66AFA9BA8225096C4270",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/Soap/Regina Peach Cream Soap Bar.png",
+      "packSize": null,
+      "variantSku": "GROCERY-6D109F2CEB0308F3AEF3",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 2L.jpg",
+      "packSize": "2 L",
+      "variantSku": "GROCERY-1321446F5788B7F9163D",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 500ML.jpg",
+      "packSize": "500 ml",
+      "variantSku": "GROCERY-E16183B2056EC843E2C5",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil 5L.jpg",
+      "packSize": "5 L",
+      "variantSku": "GROCERY-DDAAB8516846704C81D1",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Actifit-Fortified-Soyabean-Oil-1L.jpg",
+      "packSize": "1 L",
+      "variantSku": "GROCERY-A96E6FEB81E0145D1F51",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Fresh-Rice-Bran-Oil-2L.jpg",
+      "packSize": "2 L",
+      "variantSku": "GROCERY-91AC2525D1138D91F0C6",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Fresh-Rice-Bran-Oil-5L.jpg",
+      "packSize": "5 L",
+      "variantSku": "GROCERY-B651846BC93D05EAF323",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-2L.jpg",
+      "packSize": "2 L",
+      "variantSku": "GROCERY-C07A92CC182AA4C814F0",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-5L.jpg",
+      "packSize": "5 L",
+      "variantSku": "GROCERY-703109FC5DC5BC476468",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/No1-Fortified-Soyabean-Oil-L.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-ED1868A13C1D0CF050A3",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-1L.jpg",
+      "packSize": "1 L",
+      "variantSku": "GROCERY-0DF66C23C7E5A7B6DFEA",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-2L.jpg",
+      "packSize": "2 L",
+      "variantSku": "GROCERY-1C866E201F67B89E50A8",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-500ML.jpg",
+      "packSize": "500 ml",
+      "variantSku": "GROCERY-D51AB3436E0CE9DDF163",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Oleo-Fortified-Palm-Olein-5L.jpg",
+      "packSize": "5 L",
+      "variantSku": "GROCERY-E767314AD3CBF8BC3DE4",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Pusti-Glory-palm-olin-1L.png",
+      "packSize": "1 L",
+      "variantSku": "GROCERY-C2E63ABD41505872A7F7",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-2L.png",
+      "packSize": "2 L",
+      "variantSku": "GROCERY-B9957BBA84CAD8EC746D",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-5L.png",
+      "packSize": "5 L",
+      "variantSku": "GROCERY-0EBDE8B853394A0D1B91",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Pusti-Glory-Refined-Soyabean-Oil-Pouch-Pack-1-L.png",
+      "packSize": "1 L",
+      "variantSku": "GROCERY-BCA3CDC05F8F16567C6A",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-1L.jpg",
+      "packSize": "1 L",
+      "variantSku": "GROCERY-3C035AB55BC5FF6BCDF6",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-2L.jpg",
+      "packSize": "2 L",
+      "variantSku": "GROCERY-4A745D960D07E3746AA6",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-3L.jpg",
+      "packSize": "3 L",
+      "variantSku": "GROCERY-DD9DE5DF9994297F51E9",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-500ML.jpg",
+      "packSize": "500 ml",
+      "variantSku": "GROCERY-046434C39D87A5292FB7",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-5L.jpg",
+      "packSize": "5 L",
+      "variantSku": "GROCERY-055CC731781DE1C49680",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-8L.jpg",
+      "packSize": "8 L",
+      "variantSku": "GROCERY-3BA1F6B0ECF3AD3BA176",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Super-Fresh-Fortified-Soyabean-Oil-Poly-Pack-1L.jpg",
+      "packSize": "1 L",
+      "variantSku": "GROCERY-1084AA6189FBBA1E60DA",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-1L.jpg",
+      "packSize": "1 L",
+      "variantSku": "GROCERY-C431C5CBD8DA4AE2AA0A",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-2L.jpg",
+      "packSize": "2 L",
+      "variantSku": "GROCERY-81A8B9C7D998802CDB0A",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-5L.jpg",
+      "packSize": "5 L",
+      "variantSku": "GROCERY-076DCA4D38584BED1457",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Super-Pure-Fortified-Palm-Olein-Poly-Pack-1L.jpg",
+      "packSize": "1 L",
+      "variantSku": "GROCERY-7BAFD6002F84D5165A74",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/soyabean-oil/Teer Advance Fortified Soyabean Oil- 1Ltr.png",
+      "packSize": "1 L",
+      "variantSku": "GROCERY-A48A9A2F0E7D16E7E319",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/spice/Borhani Mosollah.png",
+      "packSize": null,
+      "variantSku": "GROCERY-E6C1C5799959B081216D",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/spice/Fresh_biriani_moisollah.png",
+      "packSize": null,
+      "variantSku": "GROCERY-B3E307FFE3C3A7516A34",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/spice/Fresh_Dhoniya_gura.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-796163A24CA3994FA4D1",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/spice/Fresh_Gorurmangser_mosollah.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-3B93FF8AA466C89E022C",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/spice/Fresh_Holud_gura.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-64D0CEF31FE6E2D00E1C",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/spice/Fresh_Jirar_gura.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-BBFC5396CCC6762BD3D4",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/spice/Fresh_Jirar_gura_2.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-BBFC5396CCC6762BD3D4",
+      "state": "gallery"
+    },
+    {
+      "image": "/images/products/groceries/spice/Fresh_Rost_kari_power.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-8B1B7A5AA07E5A291F5E",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/spice/Spice-Powder-ATC-Chilli.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-47F71C62BC7698BE8907",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/spice/Spice-Powder-ATC-COriander.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-74E335805EAF2289298E",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/spice/Spice-Powder-ATC-CUmin.jpg",
+      "packSize": null,
+      "variantSku": "GROCERY-7B8519B611DE8B7E1013",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/sugar/fresh-refined-sugar-1-kg.jpg",
+      "packSize": "1 kg",
+      "variantSku": "GROCERY-1274C4725D673F636AAE",
+      "state": "variant"
+    },
+    {
+      "image": "/images/products/groceries/sugar/fresh-refined-sugar-500-gm.jpg",
+      "packSize": "500 g",
+      "variantSku": "GROCERY-DD280B0E3B9449ADE32B",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/sugar/no-1-refined-sugar-1-kg.jpg",
+      "packSize": "1 kg",
+      "variantSku": "GROCERY-2C2ED320542F99BCF8A9",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/sugar/Teer Sugar 1kg.avif",
+      "packSize": "1 kg",
+      "variantSku": "GROCERY-BDCDAB634B321FB3698B",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/toilet-cleaner/OK Toilet Cleaner.png",
+      "packSize": null,
+      "variantSku": "GROCERY-1E71C1C6FE77F2CEADC1",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/toothpaste/Buy Dabur Red Toothpaste 190g Get 85g Toothpaste free.avif",
+      "packSize": null,
+      "variantSku": "GROCERY-AB58D2FE7D5CDA662449",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/toothpaste/Closeup Toothpaste Menthol Fresh 85g.avif",
+      "packSize": "85 g",
+      "variantSku": "GROCERY-E4F89172D557C7BE9D92",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/toothpaste/Colgate Visible White Toothpaste 100g (Extra 20gm Free).avif",
+      "packSize": null,
+      "variantSku": "GROCERY-E3A4105D1BF79D8AD1C4",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/toothpaste/Magic Herbal Toothpaste 200gm.png",
+      "packSize": "200 g",
+      "variantSku": "GROCERY-FECC4DA8B4DE3724F0F0",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/toothpaste/Mediplus DS Toothpaste 90gm.avif",
+      "packSize": "90 g",
+      "variantSku": "GROCERY-77DA9F75CB18B6EB265D",
+      "state": "primary"
+    },
+    {
+      "image": "/images/products/groceries/toothpaste/Sensodyne Rapid Relief Toothpaste 80g.avif",
+      "packSize": "80 g",
+      "variantSku": "GROCERY-284EF4FEA8AB9198A13D",
+      "state": "primary"
+    }
+  ],
+  "imageStateCounts": {
+    "primary": 70,
+    "variant": 27,
+    "gallery": 1
+  },
+  "identityNotes": [
+    {
+      "familyKey": "chia-seed|unknown|chia seed|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "detergent|saf|saf laundry soap (bagh)|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "detergent|saf|saf synthetic detergent powder|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "detergent|unknown|white wash synthetic detergent powder|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "dish-wash|eazy|eazy liquid dish wash|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "dish-wash|eazy|eazy liquid dish wash packet|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "garlic|unknown|garlic|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "ginger|unknown|ginger|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "hand-wash|careplus|careplus liquid hand wash|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "honey|pusti|pusti honey kalojira|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "honey|pusti|pusti honey litchi|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "honey|pusti|pusti honey sorisha|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "honey|pusti|pusti honey sundarbans|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "mustard-oil|pusti|pusti mustard oil|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "onion|unknown|onion|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "soap|regina|regina peach cream soap bar|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "soyabean-oil|no1|no1 fortified soyabean oil l|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "spice|unknown|borhani mosollah|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "spice|fresh|fresh biriani moisollah|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "spice|fresh|fresh dhoniya gura|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "spice|fresh|fresh gorurmangser mosollah|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "spice|fresh|fresh holud gura|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "spice|fresh|fresh jirar gura|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "spice|fresh|fresh rost kari power|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "spice|unknown|spice powder atc chilli|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "spice|unknown|spice powder atc coriander|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "spice|unknown|spice powder atc cumin|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "toilet-cleaner|ok|ok toilet cleaner|unsized",
+      "notes": [
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "toothpaste|dabur|buy dabur red toothpaste 190g get 85g toothpaste free|unsized",
+      "notes": [
+        "Multiple quantities or promotional bundle; retain full identity",
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    },
+    {
+      "familyKey": "toothpaste|colgate|colgate visible white toothpaste 100g (extra 20gm free)|unsized",
+      "notes": [
+        "Multiple quantities or promotional bundle; retain full identity",
+        "Pack size unresolved; not merged with known sizes"
+      ]
+    }
+  ],
+  "productsInJson": 70,
+  "productsEnrichedFromWeb": 0,
+  "localOnlyProducts": 70,
+  "productsUsingFallbackPrice": 70,
+  "stockRange": {
+    "min": 500,
+    "max": 1000
+  },
+  "lowStockThreshold": 100,
+  "malformedImages": 0,
+  "duplicateImages": 4,
+  "duplicates": [
+    {
+      "image": "/images/products/groceries/detergent/Rin Advanced Synthetic Laundry Detergent Powder 2kg.avif",
+      "duplicateOf": "/images/products/groceries/detergent/Detergent - Rin - 1kg.avif"
+    },
+    {
+      "image": "/images/products/groceries/honey/Pusti_Honey_Litchi.jpg",
+      "duplicateOf": "/images/products/groceries/honey/Pusti_Honey_Kalojira.jpg"
+    },
+    {
+      "image": "/images/products/groceries/honey/Pusti_Honey_Sorisha.jpg",
+      "duplicateOf": "/images/products/groceries/honey/Pusti_Honey_Kalojira.jpg"
+    },
+    {
+      "image": "/images/products/groceries/honey/Pusti_Honey_Sundarbans.jpg",
+      "duplicateOf": "/images/products/groceries/honey/Pusti_Honey_Kalojira.jpg"
+    }
+  ],
+  "duplicatePolicy": "Retained under their own local family and pack; no binary deduplication",
+  "archivedObsoleteFiles": [],
+  "brandsFound": 25,
+  "subcategoryCounts": {
+    "atta": 1,
+    "chia-seed": 1,
+    "detergent": 6,
+    "dish-wash": 2,
+    "garlic": 2,
+    "ghee": 1,
+    "ginger": 2,
+    "hand-wash": 2,
+    "honey": 4,
+    "lentil": 2,
+    "milk-powder": 6,
+    "mustard-oil": 3,
+    "onion": 2,
+    "rice": 1,
+    "salt": 1,
+    "soap": 1,
+    "soyabean-oil": 13,
+    "spice": 10,
+    "sugar": 3,
+    "toilet-cleaner": 1,
+    "toothpaste": 6
+  },
+  "matchMethods": {
+    "local-only": 94,
+    "local-boed": 3
+  },
+  "timeSeconds": 482.17,
+  "files": {
+    "index": "D:\\Office Projects\\general_ecommerce\\prisma\\Grocery Product Seed\\groceries\\index.json",
+    "all": "D:\\Office Projects\\general_ecommerce\\prisma\\Grocery Product Seed\\groceries\\_all.json",
+    "unmatched": "D:\\Office Projects\\general_ecommerce\\prisma\\Grocery Product Seed\\groceries\\unmatched.json"
+  }
+}

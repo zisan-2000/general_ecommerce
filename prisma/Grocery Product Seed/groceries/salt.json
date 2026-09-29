@@ -1,0 +1,177 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Salt",
+      "slug": "salt",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/salt/Teer Premium Iodized Salt 1kg.jpeg",
+      "isActive": true,
+      "sortOrder": 17,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "TEER",
+      "slug": "teer",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Teer Premium Iodized Salt",
+      "slug": "teer-premium-iodized-salt-3d5a1101",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-3D5A110113311EBFDF9F",
+      "categorySlug": "salt",
+      "brandName": "TEER",
+      "description": "Teer Premium Iodized Salt is a salt product prepared for the grocery catalog. Brand: TEER. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Teer Premium Iodized Salt is a salt product prepared for the grocery catalog. Brand: TEER. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 40.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": 1.0,
+      "dimensions": {
+        "packageSize": "1 kg"
+      },
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/salt/Teer Premium Iodized Salt 1kg.jpeg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 670,
+      "variants": [
+        {
+          "sku": "GROCERY-66AFA9BA8225096C4270",
+          "price": 40.0,
+          "currency": "BDT",
+          "stock": 670,
+          "options": {
+            "Pack Size": "1 kg"
+          },
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/salt/Teer Premium Iodized Salt 1kg.jpeg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [
+        {
+          "name": "Pack Size",
+          "position": 0,
+          "values": [
+            {
+              "value": "1 kg",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Salt",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "TEER",
+              "position": 1
+            },
+            {
+              "label": "Pack Sizes",
+              "value": "1 kg",
+              "position": 2
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/salt/Teer Premium Iodized Salt 1kg.jpeg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "salt|teer|teer premium iodized salt",
+        "packs": [
+          {
+            "packSize": "1 kg",
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Teer Premium Iodized Salt is a salt product prepared for the grocery catalog. Brand: TEER. Pack size: 1 kg. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "TEER Teer Premium Iodized Salt 1 kg Bangladesh",
+              "brandHint": "TEER",
+              "packHint": "1 kg",
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "salt",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/salt/Teer Premium Iodized Salt 1kg.jpeg",
+          "packSize": "1 kg",
+          "variantSku": "GROCERY-66AFA9BA8225096C4270",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}

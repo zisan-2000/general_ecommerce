@@ -1,0 +1,1120 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "multi-source-grocery-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\groceries",
+    "generatedAtUnix": 1790686327,
+    "generator": "prisma/groceries_json_builder.py"
+  },
+  "defaults": {
+    "stockMin": 500,
+    "stockMax": 1000,
+    "lowStockThreshold": 100,
+    "stockSource": "Deterministic seed stock generated from product/variant identity",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE"
+  },
+  "categories": [
+    {
+      "name": "Groceries",
+      "slug": "groceries",
+      "parentSlug": null,
+      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    },
+    {
+      "name": "Spice",
+      "slug": "spice",
+      "parentSlug": "groceries",
+      "image": "/images/products/groceries/spice/Borhani Mosollah.png",
+      "isActive": true,
+      "sortOrder": 20,
+      "showInHeader": false,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Fresh",
+      "slug": "fresh",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Borhani Mosollah",
+      "slug": "borhani-mosollah-09fea1bf",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-09FEA1BF0DF1FC70DFBE",
+      "categorySlug": "spice",
+      "brandName": null,
+      "description": "Borhani Mosollah is a spice product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Borhani Mosollah is a spice product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 435.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/spice/Borhani Mosollah.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 838,
+      "variants": [
+        {
+          "sku": "GROCERY-E6C1C5799959B081216D",
+          "price": 435.0,
+          "currency": "BDT",
+          "stock": 838,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/spice/Borhani Mosollah.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Spice",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/spice/Borhani Mosollah.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "spice|unknown|borhani mosollah|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Borhani Mosollah is a spice product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Borhani Mosollah Spice Bangladesh",
+              "brandHint": null,
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "spice",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/spice/Borhani Mosollah.png",
+          "packSize": null,
+          "variantSku": "GROCERY-E6C1C5799959B081216D",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Fresh Biriani Moisollah",
+      "slug": "fresh-biriani-moisollah-556dd62d",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-556DD62DD572BCD8D647",
+      "categorySlug": "spice",
+      "brandName": "Fresh",
+      "description": "Fresh Biriani Moisollah is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Fresh Biriani Moisollah is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 370.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/spice/Fresh_biriani_moisollah.png",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 828,
+      "variants": [
+        {
+          "sku": "GROCERY-B3E307FFE3C3A7516A34",
+          "price": 370.0,
+          "currency": "BDT",
+          "stock": 828,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/spice/Fresh_biriani_moisollah.png",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Spice",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Fresh",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/spice/Fresh_biriani_moisollah.png"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "spice|fresh|fresh biriani moisollah|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh Biriani Moisollah is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Fresh Fresh Biriani Moisollah Spice Bangladesh",
+              "brandHint": "Fresh",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "spice",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/spice/Fresh_biriani_moisollah.png",
+          "packSize": null,
+          "variantSku": "GROCERY-B3E307FFE3C3A7516A34",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Fresh Dhoniya Gura",
+      "slug": "fresh-dhoniya-gura-2d2e5cd3",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-2D2E5CD3FD2384AEA423",
+      "categorySlug": "spice",
+      "brandName": "Fresh",
+      "description": "Fresh Dhoniya Gura is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Fresh Dhoniya Gura is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 260.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/spice/Fresh_Dhoniya_gura.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 707,
+      "variants": [
+        {
+          "sku": "GROCERY-796163A24CA3994FA4D1",
+          "price": 260.0,
+          "currency": "BDT",
+          "stock": 707,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/spice/Fresh_Dhoniya_gura.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Spice",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Fresh",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/spice/Fresh_Dhoniya_gura.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "spice|fresh|fresh dhoniya gura|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh Dhoniya Gura is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Fresh Fresh Dhoniya Gura Spice Bangladesh",
+              "brandHint": "Fresh",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "spice",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/spice/Fresh_Dhoniya_gura.jpg",
+          "packSize": null,
+          "variantSku": "GROCERY-796163A24CA3994FA4D1",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Fresh Gorurmangser Mosollah",
+      "slug": "fresh-gorurmangser-mosollah-3e2f0078",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-3E2F0078DB2CCDB8EEE2",
+      "categorySlug": "spice",
+      "brandName": "Fresh",
+      "description": "Fresh Gorurmangser Mosollah is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Fresh Gorurmangser Mosollah is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 270.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/spice/Fresh_Gorurmangser_mosollah.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 888,
+      "variants": [
+        {
+          "sku": "GROCERY-3B93FF8AA466C89E022C",
+          "price": 270.0,
+          "currency": "BDT",
+          "stock": 888,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/spice/Fresh_Gorurmangser_mosollah.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Spice",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Fresh",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/spice/Fresh_Gorurmangser_mosollah.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "spice|fresh|fresh gorurmangser mosollah|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh Gorurmangser Mosollah is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Fresh Fresh Gorurmangser Mosollah Spice Bangladesh",
+              "brandHint": "Fresh",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "spice",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/spice/Fresh_Gorurmangser_mosollah.jpg",
+          "packSize": null,
+          "variantSku": "GROCERY-3B93FF8AA466C89E022C",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Fresh Holud Gura",
+      "slug": "fresh-holud-gura-6e6e995a",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-6E6E995A5F557699A7A0",
+      "categorySlug": "spice",
+      "brandName": "Fresh",
+      "description": "Fresh Holud Gura is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Fresh Holud Gura is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 565.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/spice/Fresh_Holud_gura.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 817,
+      "variants": [
+        {
+          "sku": "GROCERY-64D0CEF31FE6E2D00E1C",
+          "price": 565.0,
+          "currency": "BDT",
+          "stock": 817,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/spice/Fresh_Holud_gura.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Spice",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Fresh",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/spice/Fresh_Holud_gura.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "spice|fresh|fresh holud gura|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh Holud Gura is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Fresh Fresh Holud Gura Spice Bangladesh",
+              "brandHint": "Fresh",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "spice",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/spice/Fresh_Holud_gura.jpg",
+          "packSize": null,
+          "variantSku": "GROCERY-64D0CEF31FE6E2D00E1C",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Fresh Jirar Gura",
+      "slug": "fresh-jirar-gura-77e5970a",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-77E5970AC6B92854DDE1",
+      "categorySlug": "spice",
+      "brandName": "Fresh",
+      "description": "Fresh Jirar Gura is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Fresh Jirar Gura is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 210.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/spice/Fresh_Jirar_gura.jpg",
+      "gallery": [
+        "/images/products/groceries/spice/Fresh_Jirar_gura_2.jpg"
+      ],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 894,
+      "variants": [
+        {
+          "sku": "GROCERY-BBFC5396CCC6762BD3D4",
+          "price": 210.0,
+          "currency": "BDT",
+          "stock": 894,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/spice/Fresh_Jirar_gura.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Spice",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Fresh",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/spice/Fresh_Jirar_gura.jpg",
+        "/images/products/groceries/spice/Fresh_Jirar_gura_2.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "spice|fresh|fresh jirar gura|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh Jirar Gura is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Fresh Fresh Jirar Gura Spice Bangladesh",
+              "brandHint": "Fresh",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "spice",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/spice/Fresh_Jirar_gura.jpg",
+          "packSize": null,
+          "variantSku": "GROCERY-BBFC5396CCC6762BD3D4",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/groceries/spice/Fresh_Jirar_gura_2.jpg",
+          "packSize": null,
+          "variantSku": "GROCERY-BBFC5396CCC6762BD3D4",
+          "state": "gallery"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Fresh Rost Kari Power",
+      "slug": "fresh-rost-kari-power-713fc3e6",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-713FC3E686D14D31D510",
+      "categorySlug": "spice",
+      "brandName": "Fresh",
+      "description": "Fresh Rost Kari Power is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Fresh Rost Kari Power is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 425.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/spice/Fresh_Rost_kari_power.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 905,
+      "variants": [
+        {
+          "sku": "GROCERY-8B1B7A5AA07E5A291F5E",
+          "price": 425.0,
+          "currency": "BDT",
+          "stock": 905,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/spice/Fresh_Rost_kari_power.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Spice",
+              "position": 0
+            },
+            {
+              "label": "Brand",
+              "value": "Fresh",
+              "position": 1
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/spice/Fresh_Rost_kari_power.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "spice|fresh|fresh rost kari power|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Fresh Rost Kari Power is a spice product prepared for the grocery catalog. Brand: Fresh. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Fresh Fresh Rost Kari Power Spice Bangladesh",
+              "brandHint": "Fresh",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "spice",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/spice/Fresh_Rost_kari_power.jpg",
+          "packSize": null,
+          "variantSku": "GROCERY-8B1B7A5AA07E5A291F5E",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Spice Powder Atc Chilli",
+      "slug": "spice-powder-atc-chilli-683ab277",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-683AB277B901387BBAF6",
+      "categorySlug": "spice",
+      "brandName": null,
+      "description": "Spice Powder Atc Chilli is a spice product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Spice Powder Atc Chilli is a spice product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 65.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/spice/Spice-Powder-ATC-Chilli.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 937,
+      "variants": [
+        {
+          "sku": "GROCERY-47F71C62BC7698BE8907",
+          "price": 65.0,
+          "currency": "BDT",
+          "stock": 937,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/spice/Spice-Powder-ATC-Chilli.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Spice",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/spice/Spice-Powder-ATC-Chilli.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "spice|unknown|spice powder atc chilli|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Spice Powder Atc Chilli is a spice product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Spice Powder Atc Chilli Bangladesh",
+              "brandHint": null,
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "spice",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/spice/Spice-Powder-ATC-Chilli.jpg",
+          "packSize": null,
+          "variantSku": "GROCERY-47F71C62BC7698BE8907",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Spice Powder Atc Coriander",
+      "slug": "spice-powder-atc-coriander-07e75fdb",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-07E75FDB9AB10F292464",
+      "categorySlug": "spice",
+      "brandName": null,
+      "description": "Spice Powder Atc Coriander is a spice product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Spice Powder Atc Coriander is a spice product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 320.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/spice/Spice-Powder-ATC-COriander.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 752,
+      "variants": [
+        {
+          "sku": "GROCERY-74E335805EAF2289298E",
+          "price": 320.0,
+          "currency": "BDT",
+          "stock": 752,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/spice/Spice-Powder-ATC-COriander.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Spice",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/spice/Spice-Powder-ATC-COriander.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "spice|unknown|spice powder atc coriander|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Spice Powder Atc Coriander is a spice product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Spice Powder Atc Coriander Bangladesh",
+              "brandHint": null,
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "spice",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/spice/Spice-Powder-ATC-COriander.jpg",
+          "packSize": null,
+          "variantSku": "GROCERY-74E335805EAF2289298E",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Spice Powder Atc Cumin",
+      "slug": "spice-powder-atc-cumin-5c667d14",
+      "type": "PHYSICAL",
+      "sku": "GROCERY-5C667D14AA1F4AB1BD54",
+      "categorySlug": "spice",
+      "brandName": null,
+      "description": "Spice Powder Atc Cumin is a spice product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "shortDesc": "Spice Powder Atc Cumin is a spice product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+      "model": null,
+      "warranty": null,
+      "basePrice": 585.0,
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/groceries/spice/Spice-Powder-ATC-CUmin.jpg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 822,
+      "variants": [
+        {
+          "sku": "GROCERY-7B8519B611DE8B7E1013",
+          "price": 585.0,
+          "currency": "BDT",
+          "stock": 822,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/groceries/spice/Spice-Powder-ATC-CUmin.jpg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Spice",
+              "position": 0
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/groceries/spice/Spice-Powder-ATC-CUmin.jpg"
+      ],
+      "priceSource": "synthetic-seed-fallback",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "grocery-family",
+        "familyKey": "spice|unknown|spice powder atc cumin|unsized",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Spice Powder Atc Cumin is a spice product prepared for the grocery catalog. Product image and category are sourced from the local grocery catalog.",
+            "match": {
+              "method": "local-only",
+              "query": "Spice Powder Atc Cumin Bangladesh",
+              "brandHint": null,
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "spice",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Pack size unresolved; not merged with known sizes"
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/groceries/spice/Spice-Powder-ATC-CUmin.jpg",
+          "packSize": null,
+          "variantSku": "GROCERY-7B8519B611DE8B7E1013",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}
