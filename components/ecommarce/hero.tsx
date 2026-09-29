@@ -72,29 +72,6 @@ function SideBanner({
               className="object-cover transition-transform duration-700 group-hover/side:scale-[1.025] motion-reduce:transition-none"
               sizes="(max-width: 1023px) 100vw, 32vw"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-white via-white/95 to-white/5" />
-
-            <div className="absolute inset-y-0 left-0 z-10 flex w-[58%] flex-col justify-center px-5 py-4 sm:px-6 lg:px-5 xl:px-7">
-              {banner.subtitle ? (
-                <p className="mb-1.5 text-[10px] font-bold uppercase tracking-[0.16em] text-[#2563eb] sm:text-[11px]">
-                  {banner.subtitle}
-                </p>
-              ) : null}
-              <h2 className="text-lg font-extrabold leading-[1.08] tracking-[-0.025em] text-slate-950 sm:text-xl xl:text-[25px]">
-                {banner.title}
-              </h2>
-              {banner.description ? (
-                <p className="mt-2 line-clamp-2 max-w-[240px] text-[11px] leading-relaxed text-slate-600 xl:text-xs">
-                  {banner.description}
-                </p>
-              ) : null}
-              {banner.buttonText ? (
-                <span className="mt-3 inline-flex w-fit items-center gap-1.5 rounded-md bg-[#175cd3] px-3 py-2 text-[10px] font-bold text-white shadow-sm transition-colors group-hover/side:bg-[#124aa9] sm:text-[11px]">
-                  {banner.buttonText}
-                  <ArrowRight className="h-3 w-3" aria-hidden="true" />
-                </span>
-              ) : null}
-            </div>
           </Link>
         </article>
       ))}
@@ -148,9 +125,7 @@ export default function Hero({
         );
         if (!cancelled) {
           setBanners(
-            data.filter(
-              (banner) => banner.isActive && banner.type !== "POPUP",
-            ),
+            data.filter((banner) => banner.isActive && banner.type !== "POPUP"),
           );
         }
       } catch (error) {
@@ -285,29 +260,6 @@ export default function Hero({
                     className="object-cover transition-transform duration-1000 group-hover/hero:scale-[1.018] motion-reduce:transition-none"
                     sizes="(max-width: 1023px) 100vw, 69vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-r from-slate-950/95 via-slate-950/55 to-transparent" />
-
-                  <div className="absolute inset-y-0 left-0 z-10 flex w-[68%] flex-col justify-center px-6 py-8 text-white sm:w-[58%] sm:px-10 lg:w-[55%] lg:px-12 xl:px-16">
-                    {banner.subtitle ? (
-                      <p className="mb-2 text-[10px] font-bold uppercase tracking-[0.22em] text-cyan-300 sm:text-xs lg:text-[13px]">
-                        {banner.subtitle}
-                      </p>
-                    ) : null}
-                    <h2 className="max-w-xl text-[25px] font-extrabold leading-[1.05] tracking-[-0.035em] sm:text-4xl lg:text-[clamp(34px,3vw,48px)]">
-                      {banner.title}
-                    </h2>
-                    {banner.description ? (
-                      <p className="mt-3 line-clamp-2 max-w-lg text-xs leading-relaxed text-slate-200 sm:text-sm lg:mt-4 lg:text-[15px]">
-                        {banner.description}
-                      </p>
-                    ) : null}
-                    {banner.buttonText ? (
-                      <span className="mt-5 inline-flex w-fit items-center gap-2 rounded-md bg-white px-4 py-2.5 text-xs font-bold text-slate-950 shadow-md transition-colors group-hover/hero:bg-cyan-50 sm:px-5 sm:text-sm">
-                        {banner.buttonText}
-                        <ArrowRight className="h-4 w-4" aria-hidden="true" />
-                      </span>
-                    ) : null}
-                  </div>
                 </Link>
               </article>
             ))}
