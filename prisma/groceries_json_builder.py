@@ -43,11 +43,13 @@ Default grocery taxonomy:
 How matching works:
 1. Scan every image recursively.
 2. Determine subcategory from folder name first, then image filename/OCR keywords.
-3. Build a search query from image filename + optional OCR text.
-4. Discover candidate pages with Google Custom Search (if configured) or DuckDuckGo.
-5. Parse Product JSON-LD / meta tags / page text from the selected page.
-6. Never invent a missing price. Unresolved products are written as inactive placeholders.
-7. Write one JSON per subcategory plus _all.json, index.json, unmatched.json, report.json.
+3. Group by category, brand and exact normalized family; keep packaging/flavours distinct.
+4. Extract pack sizes and search separately for each pack; OCR supplies review evidence.
+5. Discover candidate pages with Google Custom Search (if configured) or DuckDuckGo.
+6. Accept only approved sources with matching title identity, brand and pack size.
+7. Never invent missing prices or costs. Unresolved packs are inactive by default.
+8. Assign primary/variant/gallery images and audit duplicates and review cases.
+9. Write one JSON per subcategory plus _all.json, index.json, unmatched.json, report.json.
 
 Dependencies:
     python -m pip install requests beautifulsoup4 pillow
@@ -87,6 +89,7 @@ import time
 from collections import Counter, defaultdict
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from dataclasses import dataclass
+from decimal import Decimal
 from difflib import SequenceMatcher
 from pathlib import Path
 from typing import Any, Iterable
@@ -144,7 +147,7 @@ CATEGORY_KEYWORDS: dict[str, tuple[str, ...]] = {
     "atta": ("atta", "whole wheat flour", "wheat flour"),
     "salt": ("salt", "iodized salt", "iodised salt", "lobon"),
     "sugar": ("sugar", "refined sugar", "chini"),
-    "milk-powder": ("milk powder", "full cream milk", "powder milk"),
+    "milk-powder": ("milk powder", "full cream milk", "powder milk", "fcmp milk"),
     "turmeric-powder": ("turmeric", "halud", "holud"),
     "chilli-powder": ("chilli powder", "chili powder", "red chilli", "morich"),
     "coriander-powder": ("coriander", "dhonia", "dhania"),
@@ -165,6 +168,9 @@ CATEGORY_KEYWORDS: dict[str, tuple[str, ...]] = {
 }
 
 KNOWN_BRANDS = [
+    "Actifit", "Super Pure", "Oleo", "Glory", "No1", "No.1",
+    "Dabur", "Colgate", "Closeup", "Sensodyne", "Savlon", "Meril",
+    "Mediplus", "Magic", "Lifebuoy",
     "Pusti",
     "Pusti Glory",
     "Pusti Happy Time",
@@ -346,7 +352,7 @@ def scan_images(image_root: Path) -> list[LocalImage]:
             LocalImage(
                 disk_path=path,
                 public_path=public_url_for_file(path),
-                stem=slugify(path.stem),
+                stem=path.stem,
                 rel_dirs=tuple(rel.parts[:-1]),
             )
         )
@@ -358,7 +364,10 @@ def normalize_category_token(value: str) -> str:
 
 
 def category_from_text(text: str) -> tuple[str | None, float]:
-    haystack = " " + clean_text(text).lower().replace("-", " ") + " "
+    haystack = " " + clean_text(re.sub(r"[-_]", " ", text)).lower() + " "
+    # These types are outside the requested taxonomy; do not call rice-bran oil rice.
+    if re.search(r"\b(?:palm|olein|olin|rice bran|ghee|cumin|jirar|chia)\b", haystack):
+        return None, 0.0
     best_slug: str | None = None
     best_score = 0.0
     for slug, keywords in CATEGORY_KEYWORDS.items():
@@ -367,8 +376,6 @@ def category_from_text(text: str) -> tuple[str | None, float]:
             kw_norm = kw.lower().replace("-", " ")
             if f" {kw_norm} " in haystack:
                 score = max(score, 1.0 + min(len(kw_norm) / 50.0, 0.25))
-            elif kw_norm in haystack:
-                score = max(score, 0.8 + min(len(kw_norm) / 60.0, 0.2))
         if score > best_score:
             best_slug, best_score = slug, score
     return best_slug, best_score
@@ -399,32 +406,29 @@ def category_from_image(image: LocalImage, ocr_text: str = "") -> tuple[str, dic
 
 
 def candidate_name_from_stem(stem: str) -> str:
-    text = stem.replace("-", " ")
-    # Drop common local file suffixes without deleting useful pack-size numbers.
-    text = re.sub(r"\b(?:image|img|front|back|main|primary|photo)\b", " ", text, flags=re.I)
-    text = re.sub(r"\s+", " ", text).strip()
-    return pretty_name(text)
+    return pretty_name(identity_text(stem))
 
 
 def detect_brand(text: str) -> str | None:
-    haystack = clean_text(text).lower()
+    haystack = clean_text(re.sub(r"[-_]", " ", text)).lower()
     # Longest name first prevents "Fresh" from winning over "Super Fresh".
     for brand in sorted(KNOWN_BRANDS, key=len, reverse=True):
-        if brand.lower() in haystack:
+        if re.search(r"(?<!\w)" + re.escape(brand.lower()) + r"(?!\w)", haystack):
             return "Birds of Eden" if brand == "BOED" else brand
     return None
 
 
 PACK_RE = re.compile(
-    r"(?<!\w)(\d+(?:\.\d+)?)\s*(kg|kgs|kilogram|kilograms|g|gm|grams?|l|lt|ltr|litre|liter|litres|liters|ml|pcs?|pieces?)(?!\w)",
+    r"(?<![\w.])(\d+(?:\.\d+)?)[\s_-]*(kg|kgs|kilogram|kilograms|g|gm|grams?|l|lt|ltr|litre|liter|litres|liters|ml|pcs?|pieces?)(?![a-z0-9])",
     re.I,
 )
 
 
 def normalize_pack_size(text: str) -> str | None:
-    match = PACK_RE.search(clean_text(text))
-    if not match:
+    matches = list(PACK_RE.finditer(clean_text(text).replace("_", " ")))
+    if len(matches) != 1:
         return None
+    match = matches[0]
     number = match.group(1)
     unit = match.group(2).lower()
     unit_map = {
@@ -447,7 +451,96 @@ def normalize_pack_size(text: str) -> str | None:
         "pc": "pc",
     }
     unit = unit_map.get(unit, unit)
-    return f"{number} {unit}"
+    amount = Decimal(number)
+    if amount <= 0:
+        return None
+    if unit == "g" and amount >= 1000:
+        amount, unit = amount / 1000, "kg"
+    elif unit == "ml" and amount >= 1000:
+        amount, unit = amount / 1000, "L"
+    return f"{format(amount.normalize(), 'f')} {unit}"
+
+
+# Explicit local evidence, reviewed against the package images. Never infer BOED
+# from a generic produce name. Paths are relative to the grocery image root.
+LOCAL_IDENTITIES = {
+    "onion_5kg.png": ("Birds of Eden Fresh Onion", "Birds of Eden", "onion", "5 kg"),
+    "ginger_5kg.png": ("Birds of Eden Fresh Ginger", "Birds of Eden", "ginger", "5 kg"),
+    "garlic_5kg.png": ("Birds of Eden Fresh Garlic", "Birds of Eden", "garlic", "5 kg"),
+    "pusti-plus-instant-full-cream-milk-400-g-bb.png":
+        ("Pusti Plus Instant Full Cream Milk", "Pusti", "milk-powder", "400 g"),
+    "super-pure-fcmp-milk-3d-2kg-copy.png":
+        ("Super Pure FCMP Milk 3D", "Super Pure", "milk-powder", "2 kg"),
+}
+
+
+def identity_text(text: str) -> str:
+    return clean_text(re.sub(r"[-_]", " ", text)).lower()
+
+
+def image_identity(image: LocalImage) -> dict[str, Any]:
+    relative = "/".join((*image.rel_dirs, image.disk_path.name)).lower()
+    override = LOCAL_IDENTITIES.get(relative)
+    text = identity_text(image.disk_path.stem)
+    # Only explicit terminal photographic markers are automatic gallery hints.
+    base = re.sub(r"\s+(?:front|back|main|primary|(?:image|img|photo)(?:\s+\d+)?)$", "", text)
+    alternate = base != text
+    numeric_base = re.sub(r"\s+\d+$", "", base)
+    # A bare number is a photo index only with an exact unsuffixed sibling.
+    # A product/model number without that evidence remains part of its name.
+    if numeric_base != base and detect_brand(numeric_base):
+        anchor_exists = any(
+            sibling.is_file() and sibling.suffix.lower() in IMAGE_EXTENSIONS
+            and identity_text(sibling.stem) == numeric_base
+            for sibling in image.disk_path.parent.iterdir()
+        )
+        if anchor_exists:
+            base, alternate = numeric_base, True
+    pack = normalize_pack_size(base)
+    reasons = []
+    if len(list(PACK_RE.finditer(base))) > 1 or re.search(r"\b(?:free|combo|bonus)\b|\d\s*[x×]\s*\d", base):
+        pack = None
+        reasons.append("Multiple quantities or promotional bundle; retain full identity")
+    if pack:
+        base = clean_text(PACK_RE.sub(" ", base))
+        # Generic terminal 'pack' is redundant; pouch/poly/chain remain identity words.
+        base = re.sub(r"(?<!poly)(?<!pouch)(?<!chain)\s+pack$", "", base)
+    brand = detect_brand(base)
+    category, _ = category_from_image(image)
+    if override:
+        base, brand, category, pack = override
+        base = identity_text(base)
+    if not brand:
+        reasons.append("Brand unknown; image kept separate pending review")
+    if not pack:
+        reasons.append("Pack size unresolved; not merged with known sizes")
+    if re.search(r"\b(?:mockup|copy|bb)\b", base) and not override:
+        reasons.append("Unverified filename suffix retained; review product identity")
+    if category == "unclassified":
+        reasons.append("No safe match in requested grocery taxonomy")
+    key = f"{category}|{slugify(brand or 'unknown')}|{slugify(base)}"
+    if not pack:
+        key += "|unsized"
+    if not brand or any("promotional" in reason for reason in reasons):
+        key += "|" + image.public_path
+    return {"key": key, "name": pretty_name(base), "brand": brand,
+            "category": category, "pack": pack, "alternate": alternate, "reasons": reasons}
+
+
+def group_families(images: list[LocalImage]) -> dict[str, list[LocalImage]]:
+    grouped: dict[str, list[LocalImage]] = defaultdict(list)
+    # No fuzzy similarity grouping; numeric photo indices require an exact anchor.
+    for image in images:
+        grouped[image_identity(image)["key"]].append(image)
+    return grouped
+
+
+def pack_sort_key(pack: str | None) -> tuple[str, Decimal]:
+    if not pack:
+        return ("z", Decimal(0))
+    amount, unit = pack.split()
+    dimension = {"kg": "mass", "g": "mass", "L": "volume", "ml": "volume", "pc": "count"}[unit]
+    return dimension, Decimal(amount) * (1000 if unit in {"kg", "L"} else 1)
 
 
 def weight_kg_from_pack(pack: str | None) -> float | None:
@@ -670,11 +763,12 @@ def numeric_price(value: Any) -> float | None:
 
 def parse_offer(offers: Any) -> tuple[float | None, str, bool | None]:
     if isinstance(offers, list):
-        offers = next((x for x in offers if isinstance(x, dict)), None)
+        offers = offers[0] if len(offers) == 1 else None
     if not isinstance(offers, dict):
         return None, "BDT", None
 
-    price = numeric_price(offers.get("price") or offers.get("lowPrice"))
+    # Aggregate lowPrice is not the price of a particular pack.
+    price = numeric_price(offers.get("price")) if offers.get("@type") != "AggregateOffer" else None
     currency = clean_text(offers.get("priceCurrency")) or "BDT"
     availability = clean_text(offers.get("availability")).lower()
     if not availability:
@@ -723,7 +817,7 @@ def parse_page_product(url: str, html: str) -> dict[str, Any]:
         ("name", "twitter:description"),
     )
 
-    if price is None:
+    if price is None and not (product and product.get("offers")):
         price_meta = meta_content(
             soup,
             ("property", "product:price:amount"),
@@ -732,11 +826,10 @@ def parse_page_product(url: str, html: str) -> dict[str, Any]:
         price = numeric_price(price_meta)
 
     if not brand:
-        text_for_brand = " ".join([name, description, first_text(soup, ["body"])[:2000]])
-        brand = detect_brand(text_for_brand) or ""
+        brand = detect_brand(name) or ""
 
-    page_text = clean_text(soup.get_text(" ", strip=True))[:12000]
-    pack_size = normalize_pack_size(" ".join([name, description, page_text]))
+    # Body text often contains unrelated recommendations and several pack sizes.
+    pack_size = normalize_pack_size(name)
 
     return {
         "name": name,
@@ -762,7 +855,7 @@ def make_stable_sku(prefix: str, identity: str) -> str:
 def short_description(description: str, fallback_name: str) -> str | None:
     text = clean_text(description)
     if not text:
-        return f"Grocery product: {fallback_name}."
+        return None
     return text[:240]
 
 
@@ -785,10 +878,10 @@ def product_quality_score(local_query: str, page: dict[str, Any], candidate_scor
 
 
 def build_query(image: LocalImage, subcategory_slug: str, ocr_text: str) -> tuple[str, str | None, str | None]:
-    local_name = candidate_name_from_stem(image.stem)
-    combined = " ".join([local_name, ocr_text])
-    brand_hint = detect_brand(combined)
-    pack_hint = normalize_pack_size(combined)
+    identity = image_identity(image)
+    local_name = identity["name"]
+    brand_hint = identity["brand"]
+    pack_hint = identity["pack"]
     category_name = SUBCATEGORY_NAMES.get(subcategory_slug, subcategory_slug)
 
     parts = []
@@ -832,6 +925,26 @@ def match_online_product(
             audit.append({"url": candidate.url, "title": candidate.title, "score": round(candidate.score, 4), "fetch": "failed"})
             continue
         page = parse_page_product(candidate.url, html)
+        identity = image_identity(image)
+        page_base = identity_text(PACK_RE.sub(" ", clean_text(page.get("name"))))
+        local_tokens = set(identity_text(identity["name"]).split())
+        page_tokens = set(page_base.split())
+        page_brand = clean_text(page.get("brand"))
+        host = (urlsplit(candidate.url).hostname or "").lower()
+        rejection = None
+        if host not in OFFICIAL_DOMAINS | RETAIL_DOMAINS:
+            rejection = "Source outside approved manufacturer/retailer domains"
+        elif not brand_hint or slugify(page_brand) != slugify(brand_hint):
+            rejection = "Brand is missing or conflicts with local identity"
+        elif local_tokens != page_tokens:
+            rejection = "Source title identity differs; no fuzzy flavour/type matching"
+        elif pack_hint != page.get("packSize"):
+            rejection = "Source pack size missing or different"
+        elif not pack_hint:
+            rejection = "Local pack size unresolved"
+        if rejection:
+            audit.append({"url": candidate.url, "reason": rejection, "pageName": page.get("name")})
+            continue
         quality = product_quality_score(query, page, candidate.score, brand_hint)
         audit.append(
             {
@@ -874,7 +987,8 @@ def match_online_product(
 
 def local_boed_product(image: LocalImage, subcategory_slug: str, ocr_text: str) -> dict[str, Any] | None:
     combined = " ".join([image.stem.replace("-", " "), ocr_text]).lower()
-    is_boed = any(x in combined for x in ("birds of eden", "birds-of-eden", "boed"))
+    identity = image_identity(image)
+    is_boed = identity["brand"] == "Birds of Eden" or detect_brand(combined) == "Birds of Eden"
     if not is_boed or subcategory_slug not in {"onion", "ginger", "garlic"}:
         return None
 
@@ -883,7 +997,7 @@ def local_boed_product(image: LocalImage, subcategory_slug: str, ocr_text: str) 
         "ginger": "Birds of Eden Fresh Ginger",
         "garlic": "Birds of Eden Fresh Garlic",
     }
-    pack = normalize_pack_size(combined)
+    pack = identity["pack"]
     return {
         "name": f"{name_map[subcategory_slug]} {pack}" if pack else name_map[subcategory_slug],
         "description": f"Fresh {SUBCATEGORY_NAMES[subcategory_slug].lower()} packaged by Birds of Eden.",
@@ -909,18 +1023,18 @@ def make_product(
     stock: int,
     available_without_price: bool,
 ) -> tuple[dict[str, Any], bool]:
-    primary = sorted(image_group, key=lambda x: x.public_path)[0]
-    local_name = candidate_name_from_stem(primary.stem)
+    primary = sorted(image_group, key=lambda x: (image_identity(x)["alternate"], x.public_path))[0]
+    identity = image_identity(primary)
+    local_name = identity["name"]
     page = page or {}
 
     matched = bool(page)
-    name = clean_text(page.get("name")) or local_name
-    brand = clean_text(page.get("brand")) or detect_brand(local_name) or None
-    pack_size = clean_text(page.get("packSize")) or normalize_pack_size(local_name)
+    name = local_name
+    brand = identity["brand"]
+    pack_size = identity["pack"]
     source_url = page.get("sourceUrl")
 
-    source_sku = clean_text(page.get("sku"))
-    sku = source_sku or make_stable_sku("GROCERY", f"{slugify(name)}|{primary.public_path}")
+    sku = make_stable_sku("GROCERY", identity["key"] + "|" + (pack_size or "unsized"))
 
     price = page.get("price")
     base_price = float(price) if isinstance(price, (int, float)) else 0.0
@@ -944,7 +1058,7 @@ def make_product(
         ]
         variant_values = {"Pack Size": pack_size}
 
-    cost_price = round(base_price * 0.96, 2) if base_price > 0 else None
+    cost_price = None  # A retail price does not establish acquisition cost.
     effective_stock = stock if available else 0
 
     specs = [
@@ -998,7 +1112,8 @@ def make_product(
                 "active": available,
                 "lowStockThreshold": 10,
                 "costPrice": cost_price,
-                "colorImage": None,
+                "colorImage": primary.public_path,
+                "sourceProductUrl": source_url,
             }
         ],
         "variantOptions": variant_options,
@@ -1092,6 +1207,7 @@ def seed_payload(results: list[ProductResult], image_root: Path, stock: int) -> 
         },
         "defaults": {
             "stock": stock,
+            "stockSource": "CLI --stock initial inventory, not supplier availability",
             "currency": "BDT",
             "productType": "PHYSICAL",
             "inventoryItemClass": "CONSUMABLE",
@@ -1126,15 +1242,17 @@ def dedupe_product_slugs(results: list[ProductResult]) -> None:
         result.product["slug"] = f"{base}-{suffix}"
 
 
-def worker(
+def pack_worker(
     key: str,
     images: list[LocalImage],
     args: argparse.Namespace,
     cache_root: Path,
 ) -> ProductResult:
-    primary = images[0]
+    primary = sorted(images, key=lambda x: (image_identity(x)["alternate"], x.public_path))[0]
     ocr_text = try_ocr(primary.disk_path, args.ocr)
-    subcategory_slug, category_meta = category_from_image(primary, ocr_text)
+    identity = image_identity(primary)
+    subcategory_slug = identity["category"]
+    category_meta = {"method": "local-family", "reasons": identity["reasons"]}
 
     local_page = local_boed_product(primary, subcategory_slug, ocr_text)
     if local_page:
@@ -1154,7 +1272,7 @@ def worker(
         return ProductResult(key, subcategory_slug, images, product, matched, match_meta)
 
     page = None
-    if not args.no_search:
+    if not args.no_search and identity["brand"] and identity["pack"] and subcategory_slug != "unclassified":
         page, match_meta = match_online_product(
             primary,
             subcategory_slug,
@@ -1166,7 +1284,7 @@ def worker(
     else:
         _, brand_hint, pack_hint = build_query(primary, subcategory_slug, ocr_text)
         match_meta = {
-            "method": "search-disabled",
+            "method": "search-disabled" if args.no_search else "local-review-required",
             "brandHint": brand_hint,
             "packHint": pack_hint,
         }
@@ -1184,6 +1302,105 @@ def worker(
         args.available_without_price,
     )
     return ProductResult(key, subcategory_slug, images, product, matched, match_meta)
+
+
+def worker(
+    key: str,
+    images: list[LocalImage],
+    args: argparse.Namespace,
+    cache_root: Path,
+    failure: str | None = None,
+) -> ProductResult:
+    by_pack: dict[str | None, list[LocalImage]] = defaultdict(list)
+    for image in images:
+        by_pack[image_identity(image)["pack"]].append(image)
+    parts = []
+    for pack, records in sorted(by_pack.items(), key=lambda item: pack_sort_key(item[0])):
+        try:
+            if failure:
+                raise ValueError(failure)
+            part = pack_worker(key, records, args, cache_root)
+        except Exception as exc:
+            category = image_identity(records[0])["category"]
+            meta = {"method": "exception", "error": str(exc)}
+            product, matched = make_product(records, category, None, meta, args.stock, False)
+            part = ProductResult(key, category, records, product, matched, meta)
+        parts.append(part)
+
+    # Smallest active pack is the default, otherwise smallest known pack.
+    default = next((part for part in parts if part.product["available"]), parts[0])
+    product = dict(default.product)
+    product["sku"] = make_stable_sku("GROCERY", key)
+    product["slug"] = slugify(product["name"]) + "-" + hashlib.sha256(key.encode()).hexdigest()[:8]
+    variants = []
+    for part in parts:
+        variant = dict(part.product["variants"][0])
+        variant["isDefault"] = part is default
+        variants.append(variant)
+    product["variants"] = variants
+    sizes = [pack for pack in sorted(by_pack, key=pack_sort_key) if pack]
+    product["variantOptions"] = ([{"name": "Pack Size", "position": 0,
+        "values": [{"value": size, "position": i} for i, size in enumerate(sizes)]}] if sizes else [])
+    product["stock"] = sum(v["stock"] for v in variants)
+    product["available"] = any(v["active"] for v in variants)
+    product["weight"] = weight_kg_from_pack(sizes[0]) if len(sizes) == 1 else None
+    product["dimensions"] = {"packageSize": sizes[0]} if len(sizes) == 1 else None
+    specs = [{"label": "Category", "value": SUBCATEGORY_NAMES.get(default.subcategory_slug, default.subcategory_slug), "position": 0}]
+    if product["brandName"]:
+        specs.append({"label": "Brand", "value": product["brandName"], "position": len(specs)})
+    if sizes:
+        specs.append({"label": "Pack Sizes", "value": ", ".join(sizes), "position": len(specs)})
+    product["specificationGroups"] = [{"name": "Product Details", "position": 0, "items": specs}]
+    # Descriptions may describe only one pack; keep those in the per-pack audit.
+    if len(parts) > 1:
+        product["description"] = ""
+        product["shortDesc"] = None
+    product["sourceImages"] = sorted(image.public_path for image in images)
+    product["gallery"] = []
+    assignments = []
+    hashes: dict[str, str] = {}
+    reasons = sorted({reason for image in images for reason in image_identity(image)["reasons"]})
+    representatives = {v["colorImage"] for v in variants}
+    ordered = sorted(images, key=lambda image: (image.public_path not in representatives, image.public_path))
+    for image in ordered:
+        path = image.public_path
+        assignment: dict[str, Any] = {"image": path, "packSize": image_identity(image)["pack"]}
+        try:
+            digest = hashlib.sha256(image.disk_path.read_bytes()).hexdigest()
+        except OSError as exc:
+            digest = None
+            assignment["error"] = str(exc)
+            reasons.append(f"Cannot read image: {path}")
+        if path == product["image"]:
+            assignment["state"] = "primary"
+        elif path in representatives:
+            assignment["state"] = "variant"
+        elif digest is None or digest in hashes:
+            assignment["state"] = "manual-review"
+            assignment["reason"] = "Unreadable image" if digest is None else "Duplicate image bytes"
+            reasons.append(f"Image requires review: {path} ({assignment['reason']})")
+            if digest in hashes:
+                assignment["duplicateOf"] = hashes[digest]
+        else:
+            assignment["state"] = "gallery"
+            product["gallery"].append(path)
+        if digest:
+            if digest in hashes and path in representatives:
+                reasons.append(f"Identical bytes used by different pack images: {path}")
+            hashes.setdefault(digest, path)
+        assignments.append(assignment)
+    matched = all(part.matched for part in parts)
+    product["unmatched"] = not matched
+    product["needsReview"] = bool(reasons) or any(part.product["needsReview"] for part in parts)
+    product["reviewReasons"] = sorted(set(reasons))
+    product["imageAssignments"] = assignments
+    meta = {"method": "grocery-family", "familyKey": key, "packs": [
+        {"packSize": image_identity(part.images[0])["pack"], "matched": part.matched,
+         "sourceProductUrl": part.product.get("sourceProductUrl"),
+         "description": part.product.get("description"), "match": part.match_meta}
+        for part in parts]}
+    product["match"] = meta
+    return ProductResult(key, default.subcategory_slug, images, product, matched, meta)
 
 
 def main() -> int:
@@ -1240,15 +1457,12 @@ def main() -> int:
     if not images:
         raise SystemExit(f"No product images found under {image_root}")
 
-    # Images with the same file stem are treated as front/back/gallery images of one product.
-    grouped: dict[str, list[LocalImage]] = defaultdict(list)
-    for image in images:
-        grouped[image.stem].append(image)
+    grouped = group_families(images)
 
     log("\nGROCERY IMAGE -> JSON BUILDER")
     log(f"Image folder:          {image_root}")
     log(f"Images found:          {len(images)}")
-    log(f"Unique product stems:  {len(grouped)}")
+    log(f"Canonical families:    {len(grouped)}")
     log(f"Output:                {output_root}")
     log(f"Workers:               {args.workers}")
     log(f"Web search:            {'OFF' if args.no_search else 'ON'}")
@@ -1269,18 +1483,7 @@ def main() -> int:
             try:
                 result = future.result()
             except Exception as exc:
-                records = grouped[key]
-                category_slug, category_meta = category_from_image(records[0], "")
-                match_meta = {"method": "exception", "error": str(exc), "category": category_meta}
-                product, matched = make_product(
-                    records,
-                    category_slug,
-                    None,
-                    match_meta,
-                    args.stock,
-                    args.available_without_price,
-                )
-                result = ProductResult(key, category_slug, records, product, matched, match_meta)
+                result = worker(key, grouped[key], args, cache_root, failure=str(exc))
 
             results.append(result)
             marker = "OK" if result.matched else "REVIEW"
@@ -1293,7 +1496,7 @@ def main() -> int:
                 checkpoint,
                 {
                     "imagesFound": len(images),
-                    "uniqueProductStems": len(grouped),
+                    "canonicalProducts": len(grouped),
                     "processed": done,
                     "matched": sum(1 for x in results if x.matched),
                     "unmatched": sum(1 for x in results if not x.matched),
@@ -1349,9 +1552,11 @@ def main() -> int:
             "productName": r.product.get("name"),
             "brandName": r.product.get("brandName"),
             "match": r.match_meta,
+            "reviewReasons": r.product["reviewReasons"],
+            "imageAssignments": r.product["imageAssignments"],
         }
         for r in results
-        if not r.matched
+        if r.product["needsReview"]
     ]
     unmatched_file = output_root / "unmatched.json"
     atomic_json(unmatched_file, unmatched)
@@ -1361,10 +1566,18 @@ def main() -> int:
         "imageRoot": str(image_root),
         "outputDir": str(output_root),
         "imagesFound": len(images),
-        "uniqueProductStems": len(grouped),
+        "canonicalProducts": len(grouped),
+        "variantsCreated": sum(len(r.product["variants"]) for r in results),
+        "galleryImagesAssigned": sum(len(r.product["gallery"]) for r in results),
+        "unmatchedImages": sum(len(r.images) for r in results if not r.matched),
+        "imageAssignments": [assignment for r in results for assignment in r.product["imageAssignments"]],
+        "imageStateCounts": dict(Counter(assignment["state"] for r in results for assignment in r.product["imageAssignments"])),
+        "ambiguousGroups": [{"familyKey": r.key, "reasons": r.product["reviewReasons"]}
+                            for r in results if r.product["reviewReasons"]],
         "productsInJson": len(results),
         "matchedProducts": sum(1 for r in results if r.matched),
-        "unmatchedProducts": len(unmatched),
+        "unmatchedProducts": sum(1 for r in results if not r.matched),
+        "productsNeedingReview": len(unmatched),
         "unclassifiedProducts": sum(1 for r in results if r.subcategory_slug == "unclassified"),
         "brandsFound": len(payload["brands"]),
         "subcategoryCounts": dict(Counter(r.subcategory_slug for r in results)),
@@ -1383,10 +1596,10 @@ def main() -> int:
     log("FINAL REPORT")
     log("=" * 76)
     log(f"Images scanned:            {len(images)}")
-    log(f"Unique product stems:      {len(grouped)}")
+    log(f"Canonical families:        {len(grouped)}")
     log(f"Products written to JSON:  {len(results)}")
     log(f"Matched product pages:     {report['matchedProducts']}")
-    log(f"Needs manual review:       {report['unmatchedProducts']}")
+    log(f"Needs manual review:       {report['productsNeedingReview']}")
     log(f"Unclassified:              {report['unclassifiedProducts']}")
     log(f"Brands found:              {report['brandsFound']}")
     log(f"Index:                     {index_file}")
