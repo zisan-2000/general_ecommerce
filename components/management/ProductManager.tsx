@@ -123,6 +123,8 @@ function getProductInventorySummary(product: any) {
 
 export default function ProductManager({
   products,
+  pagination,
+  onQueryChange,
   loading,
   onCreate,
   onUpdate,
@@ -179,7 +181,25 @@ export default function ProductManager({
   );
   const [warehouseLoading, setWarehouseLoading] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
-  const [currentPage, setCurrentPage] = useState(1);
+  const [debouncedSearch, setDebouncedSearch] = useState("");
+  useEffect(() => {
+    const timer = setTimeout(() => setDebouncedSearch(search), 300);
+    return () => clearTimeout(timer);
+  }, [search]);
+  const filterKey = new URLSearchParams({
+    search: debouncedSearch, category: categoryFilter, type: productTypeFilter,
+    availability: availabilityFilter, featured: featuredFilter,
+    stock: stockFilter, sort: sortBy, warehouse: warehouseId,
+  }).toString();
+  const [pageState, setPageState] = useState({ key: "", page: 1 });
+  const requestedPage = pageState.key === filterKey ? pageState.page : 1;
+  const currentPage = loading ? requestedPage : Math.min(requestedPage, pagination.pages);
+  const setCurrentPage = (value: number | ((page: number) => number)) => {
+    setPageState({ key: filterKey, page: typeof value === "function" ? value(currentPage) : value });
+  };
+  useEffect(() => {
+    onQueryChange(`${filterKey}&page=${requestedPage}`);
+  }, [filterKey, requestedPage, onQueryChange]);
 
   const hasActiveFilters = Boolean(
     search ||
@@ -203,150 +223,9 @@ export default function ProductManager({
 
   const productList = Array.isArray(products) ? products : [];
 
-  const filtered = useMemo(() => {
-    const query = search.trim().toLowerCase();
-    let result = productList.filter((p: any) => {
-      if (!query) return true;
-      return [
-        p.name,
-        p.sku,
-        p.category?.name,
-        p.brand?.name,
-        ...(Array.isArray(p.variants)
-          ? p.variants.map((variant: any) => variant?.sku)
-          : []),
-      ]
-        .filter(Boolean)
-        .some((value) => String(value).toLowerCase().includes(query));
-    });
-
-    if (categoryFilter) {
-      result = result.filter(
-        (p: any) => String(p.category?.id ?? "") === categoryFilter,
-      );
-    }
-
-    if (productTypeFilter) {
-      result = result.filter((p: any) => p.type === productTypeFilter);
-    }
-
-    if (availabilityFilter) {
-      result = result.filter((p: any) =>
-        availabilityFilter === "available"
-          ? Boolean(p.available)
-          : !p.available,
-      );
-    }
-
-    if (featuredFilter) {
-      result = result.filter((p: any) =>
-        featuredFilter === "featured" ? Boolean(p.featured) : !p.featured,
-      );
-    }
-
-    if (warehouses.length > 0 && warehouseId) {
-      const accessibleWarehouseIds = new Set(warehouses.map((w) => w.id));
-      const selectedWarehouseId = Number(warehouseId);
-
-      result = result.filter((p: any) => {
-        if (p.type !== "PHYSICAL") {
-          return true;
-        }
-
-        const variants = Array.isArray(p?.variants) ? p.variants : [];
-        return variants.some((variant: any) => {
-          const stockLevels = Array.isArray(variant?.stockLevels)
-            ? variant.stockLevels
-            : [];
-
-          return stockLevels.some((stockLevel: any) => {
-            const warehouseIdValue = Number(stockLevel?.warehouseId);
-            const quantityValue = Number(stockLevel?.quantity);
-
-            if (!Number.isFinite(warehouseIdValue)) return false;
-            if (!accessibleWarehouseIds.has(warehouseIdValue)) return false;
-            if (warehouseIdValue !== selectedWarehouseId) {
-              return false;
-            }
-            return Number.isFinite(quantityValue) && quantityValue > 0;
-          });
-        });
-      });
-    }
-
-    if (stockFilter) {
-      result = result.filter((p: any) => {
-        if (p.type !== "PHYSICAL") {
-          return stockFilter === "non-physical";
-        }
-
-        const inventory = getProductInventorySummary(p);
-
-        if (stockFilter === "in-stock") return inventory.status === "IN_STOCK";
-        if (stockFilter === "low-stock")
-          return inventory.status === "LOW_STOCK";
-        if (stockFilter === "out-of-stock") {
-          return inventory.status === "OUT_OF_STOCK";
-        }
-
-        return true;
-      });
-    }
-
-    result.sort((a: any, b: any) => {
-      const [field, order] = sortBy.split("-");
-      const direction = order === "desc" ? -1 : 1;
-
-      let aValue: string | number = "";
-      let bValue: string | number = "";
-
-      switch (field) {
-        case "price":
-          aValue = Number(a.basePrice ?? 0);
-          bValue = Number(b.basePrice ?? 0);
-          break;
-        case "category":
-          aValue = String(a.category?.name ?? "").toLowerCase();
-          bValue = String(b.category?.name ?? "").toLowerCase();
-          break;
-        case "stock":
-          aValue =
-            a.type === "PHYSICAL"
-              ? getProductInventorySummary(a).totalStock
-              : -1;
-          bValue =
-            b.type === "PHYSICAL"
-              ? getProductInventorySummary(b).totalStock
-              : -1;
-          break;
-        default:
-          aValue = String(a.name ?? "").toLowerCase();
-          bValue = String(b.name ?? "").toLowerCase();
-      }
-
-      if (aValue > bValue) return direction;
-      if (aValue < bValue) return -direction;
-      return 0;
-    });
-
-    return result;
-  }, [
-    productList,
-    search,
-    categoryFilter,
-    productTypeFilter,
-    availabilityFilter,
-    featuredFilter,
-    stockFilter,
-    sortBy,
-    warehouseId,
-    warehouses,
-  ]);
-
-  const totalPages = Math.max(
-    1,
-    Math.ceil(filtered.length / PRODUCTS_PER_PAGE),
-  );
+  const filtered = productList;
+  const totalProducts = pagination.total;
+  const totalPages = pagination.pages;
   const paginationPages = useMemo(() => {
     const pages: number[] = [];
     const maxVisible = 5;
@@ -360,32 +239,9 @@ export default function ProductManager({
 
     return pages;
   }, [currentPage, totalPages]);
-  const paginatedProducts = useMemo(() => {
-    const start = (currentPage - 1) * PRODUCTS_PER_PAGE;
-    return filtered.slice(start, start + PRODUCTS_PER_PAGE);
-  }, [currentPage, filtered]);
-  const pageStart =
-    filtered.length === 0 ? 0 : (currentPage - 1) * PRODUCTS_PER_PAGE + 1;
-  const pageEnd = Math.min(currentPage * PRODUCTS_PER_PAGE, filtered.length);
-
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [
-    search,
-    categoryFilter,
-    productTypeFilter,
-    availabilityFilter,
-    featuredFilter,
-    stockFilter,
-    sortBy,
-    warehouseId,
-  ]);
-
-  useEffect(() => {
-    if (currentPage > totalPages) {
-      setCurrentPage(totalPages);
-    }
-  }, [currentPage, totalPages]);
+  const paginatedProducts = filtered;
+  const pageStart = totalProducts === 0 ? 0 : (currentPage - 1) * PRODUCTS_PER_PAGE + 1;
+  const pageEnd = Math.min(currentPage * PRODUCTS_PER_PAGE, totalProducts);
 
   const fetchWarehouseData = useCallback(
     async (nextWarehouseId?: string, showRefresh = false) => {
@@ -425,8 +281,7 @@ export default function ProductManager({
         setRefreshing(false);
       }
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [warehouseId],
+    [warehouseId, t],
   );
 
   useEffect(() => {
@@ -1326,7 +1181,7 @@ export default function ProductManager({
             {t("pagination.showing", {
               start: pageStart,
               end: pageEnd,
-              total: filtered.length,
+              total: totalProducts,
             })}
           </p>
         </div>

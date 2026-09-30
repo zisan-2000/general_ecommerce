@@ -1,4 +1,5 @@
 import { prisma } from "@/lib/prisma";
+import { adminProductQuery, ADMIN_PRODUCTS_PAGE_SIZE } from "@/lib/admin-product-pagination";
 import { authOptions } from "@/lib/auth";
 import { logActivity } from "@/lib/activity-log";
 import { syncVariantWarehouseStock } from "@/lib/inventory";
@@ -174,6 +175,39 @@ export async function GET(req: Request) {
   try {
     const { searchParams } = new URL(req.url);
     const storefront = isStorefrontRequest(req);
+    if (!storefront && searchParams.get("paginated") === "true") {
+      const session = await getServerSession(authOptions);
+      const access = await getAccessContext(session?.user as { id?: string; role?: string } | undefined);
+      if (!access.userId) return privateJson({ error: "Unauthorized" }, { status: 401 });
+      if (!access.has("products.manage")) return privateJson({ error: "Forbidden" }, { status: 403 });
+      const warehouse = Number(searchParams.get("warehouse"));
+      if (warehouse > 0 && !access.isSuperAdmin &&
+          !["dashboard.read", "inventory.manage", "products.manage"].some((permission) => access.hasGlobal(permission)) &&
+          !access.warehouseIds.includes(warehouse)) {
+        return privateJson({ error: "Forbidden" }, { status: 403 });
+      }
+      const query = adminProductQuery(searchParams);
+      const counts = await prisma.$queryRaw<Array<{ total: bigint }>>(
+        Prisma.sql`SELECT COUNT(*) AS total ${query.from}`,
+      );
+      const total = Number(counts[0]?.total ?? 0);
+      const pages = Math.max(1, Math.ceil(total / ADMIN_PRODUCTS_PAGE_SIZE));
+      const page = Math.min(query.page, pages);
+      const ids = await prisma.$queryRaw<Array<{ id: number }>>(
+        Prisma.sql`SELECT p.id ${query.from} ORDER BY ${query.orderBy}
+          LIMIT ${ADMIN_PRODUCTS_PAGE_SIZE} OFFSET ${(page - 1) * ADMIN_PRODUCTS_PAGE_SIZE}`,
+      );
+      const products = ids.length ? await prisma.product.findMany({
+        where: { id: { in: ids.map((row) => row.id) } },
+        include: productInclude,
+      }) : [];
+      const colorImages = await getVariantColorImageMap(products.flatMap((product) => product.variants.map((variant) => variant.id)));
+      const byId = new Map(products.map((product) => [product.id, attachVariantColorImages(product, colorImages)]));
+      return privateJson({
+        products: ids.map((row) => byId.get(row.id)).filter(Boolean),
+        pagination: { total, page, pages, pageSize: ADMIN_PRODUCTS_PAGE_SIZE },
+      });
+    }
     const brandId = searchParams.get('brandId');
     const brandSlug = searchParams.get('brandSlug');
 
