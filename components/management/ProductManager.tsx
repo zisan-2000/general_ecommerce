@@ -73,6 +73,54 @@ type WarehouseStats = {
 
 const PRODUCTS_PER_PAGE = 24;
 
+function calculateStock(product: any) {
+  if (!product.variants || product.variants.length === 0) return 0;
+  return product.variants.reduce(
+    (acc: number, variant: any) => acc + (variant.stock || 0),
+    0,
+  );
+}
+
+function getProductInventorySummary(product: any) {
+  const variants = Array.isArray(product?.variants) ? product.variants : [];
+  if (product?.type !== "PHYSICAL" || variants.length === 0) {
+    return {
+      totalStock: 0,
+      status: "IN_STOCK" as const,
+      lowCount: 0,
+      outCount: 0,
+    };
+  }
+
+  const totalStock = calculateStock(product);
+  const statuses = variants.map((variant: any) =>
+    getInventoryStatus(
+      variant?.stock,
+      variant?.lowStockThreshold ?? product?.lowStockThreshold,
+    ),
+  );
+  const lowCount = statuses.filter(
+    (status: InventoryStatus) => status === "LOW_STOCK",
+  ).length;
+  const outCount = statuses.filter(
+    (status: InventoryStatus) => status === "OUT_OF_STOCK",
+  ).length;
+
+  const status: InventoryStatus =
+    totalStock <= 0
+      ? "OUT_OF_STOCK"
+      : lowCount > 0 || outCount > 0
+        ? "LOW_STOCK"
+        : "IN_STOCK";
+
+  return {
+    totalStock,
+    status,
+    lowCount,
+    outCount,
+  };
+}
+
 export default function ProductManager({
   products,
   loading,
@@ -648,54 +696,6 @@ export default function ProductManager({
     } finally {
       setFlashSaleSaving(false);
     }
-  };
-
-  const calculateStock = (product: any) => {
-    if (!product.variants || product.variants.length === 0) return 0;
-    return product.variants.reduce(
-      (acc: number, v: any) => acc + (v.stock || 0),
-      0,
-    );
-  };
-
-  const getProductInventorySummary = (product: any) => {
-    const variants = Array.isArray(product?.variants) ? product.variants : [];
-    if (product?.type !== "PHYSICAL" || variants.length === 0) {
-      return {
-        totalStock: 0,
-        status: "IN_STOCK" as const,
-        lowCount: 0,
-        outCount: 0,
-      };
-    }
-
-    const totalStock = calculateStock(product);
-    const statuses = variants.map((variant: any) =>
-      getInventoryStatus(
-        variant?.stock,
-        variant?.lowStockThreshold ?? product?.lowStockThreshold,
-      ),
-    );
-    const lowCount = statuses.filter(
-      (status: InventoryStatus) => status === "LOW_STOCK",
-    ).length;
-    const outCount = statuses.filter(
-      (status: InventoryStatus) => status === "OUT_OF_STOCK",
-    ).length;
-
-    const status: InventoryStatus =
-      totalStock <= 0
-        ? "OUT_OF_STOCK"
-        : lowCount > 0 || outCount > 0
-          ? "LOW_STOCK"
-          : "IN_STOCK";
-
-    return {
-      totalStock,
-      status,
-      lowCount,
-      outCount,
-    };
   };
 
   const getStatusBadgeClasses = (
