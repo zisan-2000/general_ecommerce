@@ -4,6 +4,7 @@ import {
   type FormEvent,
   type ReactNode,
   useEffect,
+  useLayoutEffect,
   useRef,
   useTransition,
 } from "react";
@@ -42,7 +43,34 @@ export default function CatalogFilterForm({
   const pathname = usePathname();
   const router = useRouter();
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   const [isPending, startTransition] = useTransition();
+
+  // Keep the form mounted (including all nested scroll positions), while
+  // syncing uncontrolled fields after URL navigation, clear, or browser Back.
+  useLayoutEffect(() => {
+    if (isPending) return;
+    const form = formRef.current;
+    if (!form) return;
+    for (const field of Array.from(form.elements)) {
+      if (field instanceof HTMLInputElement) {
+        if (field.type === "checkbox" || field.type === "radio") {
+          field.checked = field.defaultChecked;
+        } else {
+          field.value = field.defaultValue;
+        }
+      } else if (field instanceof HTMLSelectElement) {
+        const selected = Array.from(field.options).find((option) => option.defaultSelected);
+        if (selected) field.value = selected.value;
+      }
+    }
+  }, [children, isPending]);
+
+  useEffect(() => {
+    const results = document.getElementById("catalog-results");
+    results?.setAttribute("aria-busy", String(isPending));
+    return () => results?.setAttribute("aria-busy", "false");
+  }, [isPending]);
 
   useEffect(
     () => () => {
@@ -107,6 +135,7 @@ export default function CatalogFilterForm({
 
   return (
     <form
+      ref={formRef}
       method="get"
       action="/ecommerce/products"
       className={className}

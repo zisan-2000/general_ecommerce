@@ -363,7 +363,7 @@ export default function ProductCardCompact({
         <Link
           href={product.href}
           aria-label={t("viewProduct", { name: product.name })}
-          className="block h-full w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#174a92]"
+          className="relative block h-full w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#174a92]"
         >
           <Image
             key={primaryImageSrc}
