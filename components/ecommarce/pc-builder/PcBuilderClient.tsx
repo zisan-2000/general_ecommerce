@@ -291,6 +291,10 @@ export default function PcBuilderClient({
   }, [restored, extraItems]);
 
   const evaluation = useMemo(() => evaluatePcBuild(selection), [selection]);
+  const compatibilityIssues = useMemo(
+    () => evaluation.issues.filter((item) => item.severity === "error"),
+    [evaluation],
+  );
   const selectedProducts = useMemo(
     () =>
       PC_BUILDER_SLOTS.flatMap((slot) => {
@@ -336,7 +340,7 @@ export default function PcBuilderClient({
           activeSlot,
           product,
         );
-        if (!candidate.builderReady || !candidate.compatible) return false;
+        if (!candidate.compatible) return false;
       }
       return true;
     });
@@ -655,7 +659,7 @@ export default function PcBuilderClient({
                   const product = selection[slot.key];
                   const extras = extraItems[slot.key] ?? [];
                   const SlotIcon = SLOT_ICONS[slot.key];
-                  const slotIssues = evaluation.issues.filter((item) =>
+                  const slotIssues = compatibilityIssues.filter((item) =>
                     item.slots.includes(slot.key),
                   );
                   const hasError = slotIssues.some(
@@ -912,9 +916,9 @@ export default function PcBuilderClient({
             </div>
 
             {/* Issues — left-border flags instead of tinted boxes */}
-            {evaluation.issues.length ? (
+            {compatibilityIssues.length ? (
               <div aria-live="polite" className="space-y-1.5 border-b py-4">
-                {evaluation.issues.map((item) => (
+                {compatibilityIssues.map((item) => (
                   <div
                     key={item.code}
                     className={`border-l-2 pl-3 text-xs leading-relaxed ${
@@ -1001,7 +1005,7 @@ export default function PcBuilderClient({
                 <DialogDescription>
                   {addExtraMode
                     ? "This additional item is added to your cart alongside your build without affecting compatibility checks."
-                    : "Live catalog results are searched and cursor-paginated from the server. Compatible, builder-ready options are shown by default."}
+                    : "Live catalog results are searched and cursor-paginated from the server. Compatible in-stock options are shown by default."}
                 </DialogDescription>
               </DialogHeader>
               <div className="border-b p-4">
@@ -1061,20 +1065,18 @@ export default function PcBuilderClient({
                         activeSlot,
                         product,
                       );
-                      const readinessIssues = candidateStatus.readinessIssues;
-                      const notBuilderReady = !candidateStatus.builderReady;
                       const incompatible = !candidateStatus.compatible;
                       const statusIssue =
-                        readinessIssues.find(
-                          (item) => item.severity === "error",
-                        ) ??
                         candidateStatus.blockingIssues[0] ??
-                        candidateStatus.warningIssues[0] ??
-                        candidateStatus.deferredIssues[0];
+                        candidateStatus.deferredIssues.find((item) =>
+                          ["graphics-required", "cooler-required"].includes(
+                            item.code,
+                          ),
+                        );
                       return (
                         <article
                           key={product.selectionId}
-                          className={`rounded-xl border p-3 transition ${incompatible || notBuilderReady ? "border-destructive/40" : "hover:border-primary/50"}`}
+                          className={`rounded-xl border p-3 transition ${incompatible ? "border-destructive/40" : "hover:border-primary/50"}`}
                         >
                           <div className="flex gap-3">
                             <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-lg border bg-white">
@@ -1122,7 +1124,7 @@ export default function PcBuilderClient({
                           </div>
                           {statusIssue ? (
                             <p
-                              className={`mt-3 text-xs ${notBuilderReady || incompatible ? "text-destructive" : "text-amber-700 dark:text-amber-400"}`}
+                              className={`mt-3 text-xs ${incompatible ? "text-destructive" : "text-amber-700 dark:text-amber-400"}`}
                             >
                               {statusIssue.message}
                             </p>
@@ -1141,16 +1143,13 @@ export default function PcBuilderClient({
                               onClick={() => choose(activeSlot, product)}
                               disabled={
                                 product.stock < 1 ||
-                                notBuilderReady ||
                                 incompatible
                               }
                               className="inline-flex h-10 items-center justify-center gap-2 rounded-lg bg-primary px-4 text-sm font-bold text-primary-foreground disabled:cursor-not-allowed disabled:opacity-40"
                             >
                               {product.stock < 1
                                 ? "Out of stock"
-                                : notBuilderReady
-                                  ? "Missing required specs"
-                                  : incompatible
+                                : incompatible
                                     ? "Incompatible"
                                     : "Select component"}{" "}
                               <ChevronRight
@@ -1178,7 +1177,7 @@ export default function PcBuilderClient({
                     <h3 className="mt-3 font-bold">No matching components</h3>
                     <p className="mt-1 text-sm text-muted-foreground">
                       {compatibleOnly
-                        ? "No compatible, builder-ready options are in the loaded pages yet."
+                        ? "No products compatible with the current selection are in the loaded pages yet."
                         : "No live catalog products match this search."}
                     </p>
                     {compatibleOnly ? (

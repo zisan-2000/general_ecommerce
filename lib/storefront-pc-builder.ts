@@ -5,6 +5,7 @@ import { resolveFlashSalePricing } from "@/lib/flash-sale";
 import {
   PC_BUILDER_SLOTS,
   evaluatePcBuild,
+  getPcBuilderCategorySlugs,
   parsePcBuilderSelectionId,
   type PcBuildEvaluation,
   type PcBuilderCatalog,
@@ -23,6 +24,7 @@ import { prisma } from "@/lib/prisma";
 import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 import { mergePcBuilderVariantAttributes } from "@/lib/pc-builder-variant-attributes";
+import { derivePcBuilderCompatibilityAttributes } from "@/lib/pc-builder-derived-attributes";
 
 export type PcBuilderCatalogResult = {
   catalog: PcBuilderCatalog;
@@ -40,6 +42,8 @@ const pcBuilderProductSelect = {
   name: true,
   slug: true,
   sku: true,
+  shortDesc: true,
+  description: true,
   image: true,
   basePrice: true,
   originalPrice: true,
@@ -121,13 +125,19 @@ function projectProduct(
     currency: /^[A-Z]{3}$/.test(row.currency) ? row.currency : "BDT",
     brand: row.brand?.name ?? null,
     categorySlug: row.category.slug,
-    attributes: mergePcBuilderVariantAttributes(
-      row.category.slug,
-      Object.fromEntries(
-        row.attributes.map((item) => [item.attribute.name, item.value]),
+    attributes: derivePcBuilderCompatibilityAttributes({
+      categorySlug: row.category.slug,
+      name: row.name,
+      shortDesc: row.shortDesc,
+      description: row.description,
+      attributes: mergePcBuilderVariantAttributes(
+        row.category.slug,
+        Object.fromEntries(
+          row.attributes.map((item) => [item.attribute.name, item.value]),
+        ),
+        variant.options,
       ),
-      variant.options,
-    ),
+    }),
     variantId: variant.id,
     variantSku: variant.sku,
     variantLabel: variantLabel(variant.options, variant.sku),
@@ -142,6 +152,7 @@ function searchWhere(
 ): Prisma.ProductWhereInput {
   const slotDefinition = PC_BUILDER_SLOTS.find((item) => item.key === slot);
   if (!slotDefinition) return { id: -1 };
+  const categorySlugs = getPcBuilderCategorySlugs(slot);
 
   const normalizedQuery = normalizePcBuilderCatalogQuery(query);
   return {
@@ -149,7 +160,7 @@ function searchWhere(
     available: true,
     type: "PHYSICAL",
     categoryId: { in: activeCategoryIds },
-    category: { slug: slotDefinition.categorySlug, deleted: false },
+    category: { slug: { in: categorySlugs }, deleted: false },
     variants: { some: { active: true } },
     ...(normalizedQuery
       ? {
@@ -294,13 +305,11 @@ export async function validatePcBuilderSelectionLive(
   const selection: PcBuilderSelection = {};
   const missingSlots: PcBuilderSlotKey[] = [];
   for (const requestedItem of requested) {
-    const slotDefinition = PC_BUILDER_SLOTS.find(
-      (slot) => slot.key === requestedItem.slot,
-    );
+    const categorySlugs = getPcBuilderCategorySlugs(requestedItem.slot);
     const row = rows.find(
       (item) =>
         item.id === requestedItem.productId &&
-        item.category.slug === slotDefinition?.categorySlug,
+        categorySlugs.includes(item.category.slug),
     );
     const variant = row?.variants.find(
       (item) => item.id === requestedItem.variantId,
@@ -357,13 +366,11 @@ export async function resolvePcBuilderExtraItems(
   const items: Partial<Record<PcBuilderSlotKey, PcBuilderProduct[]>> = {};
   let missingCount = 0;
   for (const requestedItem of requested) {
-    const slotDefinition = PC_BUILDER_SLOTS.find(
-      (slot) => slot.key === requestedItem.slot,
-    );
+    const categorySlugs = getPcBuilderCategorySlugs(requestedItem.slot);
     const row = rows.find(
       (item) =>
         item.id === requestedItem.productId &&
-        item.category.slug === slotDefinition?.categorySlug,
+        categorySlugs.includes(item.category.slug),
     );
     const variant = row?.variants.find(
       (item) => item.id === requestedItem.variantId,

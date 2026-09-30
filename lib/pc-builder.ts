@@ -19,7 +19,7 @@ import {
 } from "./pc-builder-core";
 
 function issueFingerprint(issue: PcBuildIssue) {
-  return `${issue.code}\n${issue.message}\n${issue.slots.join(",")}`;
+  return `${issue.code}\n${issue.slots.join(",")}`;
 }
 
 function uniqueIssues(issues: PcBuildIssue[]) {
@@ -107,6 +107,8 @@ export type PcBuilderCandidateEvaluation = {
 const DEFERRED_CANDIDATE_ERROR_CODES = new Set([
   "graphics-required",
   "cooler-required",
+  "graphics-capability-data",
+  "cooler-included-data",
 ]);
 
 function candidateIssueFingerprint(issue: PcBuildIssue) {

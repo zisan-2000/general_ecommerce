@@ -72,7 +72,7 @@ export function validatePcBuilderPlaceholderReadiness(
     return [
       {
         code: `pc-builder-spec-${slot}-${requirement.code}`,
-        severity: "error" as const,
+        severity: "warning" as const,
         message: `${product.name} has an invalid or unsupported ${requirement.label} specification required by PC Builder.`,
         slots: [slot],
       },

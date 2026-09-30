@@ -1,5 +1,6 @@
 import {
   PC_BUILDER_SLOTS,
+  getPcBuilderCategorySlugs,
   validatePcBuilderProductReadiness,
   type PcBuildIssue,
   type PcBuilderProduct,
@@ -35,7 +36,11 @@ export type PcBuilderActivationValidation = {
 };
 
 const SLOT_BY_CATEGORY_SLUG = new Map<string, PcBuilderSlotKey>(
-  PC_BUILDER_SLOTS.map((slot) => [slot.categorySlug, slot.key]),
+  PC_BUILDER_SLOTS.flatMap((slot) =>
+    getPcBuilderCategorySlugs(slot.key).map(
+      (slug) => [slug, slot.key] as const,
+    ),
+  ),
 );
 
 export function getPcBuilderSlotForCategory(

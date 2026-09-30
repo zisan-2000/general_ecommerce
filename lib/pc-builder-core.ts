@@ -44,6 +44,7 @@ export const PC_BUILDER_SLOTS = [
     label: "Storage",
     group: "core",
     categorySlug: "ssd-storage",
+    categorySlugs: ["ssd", "hard-disk-drive"],
     required: true,
     multiple: true,
     description: "Choose an SSD or other primary storage device.",
@@ -159,6 +160,14 @@ export const PC_BUILDER_SLOTS = [
 ] as const;
 
 export type PcBuilderSlotKey = (typeof PC_BUILDER_SLOTS)[number]["key"];
+
+export function getPcBuilderCategorySlugs(slotKey: PcBuilderSlotKey) {
+  const slot = PC_BUILDER_SLOTS.find((item) => item.key === slotKey);
+  if (!slot) return [];
+  return "categorySlugs" in slot
+    ? [...slot.categorySlugs]
+    : [slot.categorySlug];
+}
 export type PcBuilderSlotGroup = (typeof PC_BUILDER_SLOTS)[number]["group"];
 
 export type PcBuilderProduct = {
@@ -456,11 +465,14 @@ function booleanAttribute(
 function supported(supportedValues: string, selectedValue: string) {
   const selected = canonicalCompatibilityToken(selectedValue);
   if (!selected || !supportedValues) return true;
-  return supportedValues
+  const supportedTokens = supportedValues
     .split(/[,;/|\n]+|\s+and\s+/i)
     .map(canonicalCompatibilityToken)
-    .filter(Boolean)
-    .some((value) => value === selected);
+    .filter(Boolean);
+  if (supportedTokens.includes(selected)) return true;
+  if (supportedTokens.includes("amd") && /^am\d/.test(selected)) return true;
+  if (supportedTokens.includes("intel") && /^lga\d/.test(selected)) return true;
+  return false;
 }
 
 const INVALID_COMPATIBILITY_TOKENS = new Set([
@@ -534,7 +546,7 @@ export function validatePcBuilderProductReadiness(
     return [
       issue(
         `pc-builder-spec-${slot}-${requirement.code}`,
-        "error",
+        "warning",
         `${product.name} ${problem} ${requirement.label} specification required by PC Builder.`,
         [slot],
       ),
@@ -614,7 +626,7 @@ export function evaluatePcBuild(
       issues.push(
         issue(
           "cpu-motherboard-data",
-          "error",
+          "warning",
           "Socket data is incomplete, so processor and motherboard compatibility cannot be verified.",
           ["processor", "motherboard"],
         ),
@@ -641,7 +653,7 @@ export function evaluatePcBuild(
       issues.push(
         issue(
           "motherboard-memory-data",
-          "error",
+          "warning",
           "Memory generation data is incomplete, so motherboard and RAM compatibility cannot be verified.",
           ["motherboard", "memory"],
         ),
@@ -668,7 +680,7 @@ export function evaluatePcBuild(
       issues.push(
         issue(
           "motherboard-case-data",
-          "error",
+          "warning",
           "Motherboard or case form-factor data is incomplete, so physical fit cannot be verified.",
           ["motherboard", "case"],
         ),
@@ -700,7 +712,7 @@ export function evaluatePcBuild(
       issues.push(
         issue(
           "gpu-case-data",
-          "error",
+          "warning",
           "Graphics-card length or case clearance data is incomplete or uses an unsupported unit, so physical fit cannot be verified.",
           ["graphics", "case"],
         ),
@@ -732,7 +744,7 @@ export function evaluatePcBuild(
       issues.push(
         issue(
           "cooler-case-data",
-          "error",
+          "warning",
           "CPU-cooler height or case clearance data is incomplete or uses an unsupported unit, so physical fit cannot be verified.",
           ["cooler", "case"],
         ),
@@ -759,7 +771,7 @@ export function evaluatePcBuild(
       issues.push(
         issue(
           "cpu-cooler-data",
-          "error",
+          "warning",
           "CPU or cooler socket data is incomplete, so cooler compatibility cannot be verified.",
           ["processor", "cooler"],
         ),
@@ -829,7 +841,7 @@ export function evaluatePcBuild(
     issues.push(
       issue(
         "processor-power-data",
-        "error",
+        "warning",
         "Processor power data is missing or uses an unsupported unit, so a safe PSU recommendation cannot be calculated.",
         ["processor", "powerSupply"],
       ),
@@ -839,7 +851,7 @@ export function evaluatePcBuild(
     issues.push(
       issue(
         "graphics-power-data",
-        "error",
+        "warning",
         "Graphics-card power data is missing or uses an unsupported unit, so a safe PSU recommendation cannot be calculated.",
         ["graphics", "powerSupply"],
       ),
@@ -871,7 +883,7 @@ export function evaluatePcBuild(
     issues.push(
       issue(
         "power-supply-data",
-        "error",
+        "warning",
         "Power-supply wattage is missing or uses an unsupported unit, so capacity cannot be verified.",
         ["powerSupply"],
       ),
