@@ -11,7 +11,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-BASE = 'https://www.startech.com.bd'
+BASE = 'https://www.deshiplus.com'
 ACCESSORIES_URL = f'{BASE}/accessories'
 HEADERS = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 Chrome/153.0.0.0 Safari/537.36',

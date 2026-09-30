@@ -1,8 +1,8 @@
 {
   "schemaVersion": 3,
   "source": {
-    "site": "https://www.startech.com.bd",
-    "categoryUrl": "https://www.startech.com.bd/accessories",
+    "site": "https://www.deshiplus.com",
+    "categoryUrl": "https://www.deshiplus.com/accessories",
     "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\accessories",
     "generatedAtUnix": 1790591006,
     "generator": "prisma/startech_single_category_json_and_seed.py"
@@ -114,7 +114,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/orico-sc2-usb-external-sound-card",
+      "sourceProductUrl": "https://www.deshiplus.com/orico-sc2-usb-external-sound-card",
       "sourceProductCode": "18523",
       "sourceStatus": "Out Of Stock",
       "sourceMpn": "SC2-BK",
@@ -204,7 +204,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/orico-skt3-usb-external-sound-card",
+      "sourceProductUrl": "https://www.deshiplus.com/orico-skt3-usb-external-sound-card",
       "sourceProductCode": "18522",
       "sourceStatus": "Out Of Stock",
       "sourceMpn": "SKT3-BK",

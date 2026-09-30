@@ -3,7 +3,7 @@
 Download ALL Deshi Plus Server & Storage product primary images into hierarchy folders.
 
 Source:
-    https://www.startech.com.bd/server-networking
+    https://www.deshiplus.com/server-networking
 
 Default output:
     public/images/products/server-networking/...
@@ -62,7 +62,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 SERVER_URL = f"{BASE}/server-networking"
 
 HEADERS = {

@@ -3,7 +3,7 @@
 Download ALL Deshi Plus Gadget product primary images into hierarchy folders.
 
 Source:
-    https://www.startech.com.bd/gadget
+    https://www.deshiplus.com/gadget
 
 Default output:
     public/images/products/gadget/...
@@ -79,7 +79,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 GADGET_URL = f"{BASE}/gadget"
 
 HEADERS = {

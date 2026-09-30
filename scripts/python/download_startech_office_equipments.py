@@ -3,7 +3,7 @@
 Download ALL Deshi Plus Office Equipment product primary images into hierarchy folders.
 
 Source:
-    https://www.startech.com.bd/office-equipment
+    https://www.deshiplus.com/office-equipment
 
 Default output:
     public/images/products/office-equipment/...
@@ -77,7 +77,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 OFFICE_URL = f"{BASE}/office-equipment"
 
 HEADERS = {

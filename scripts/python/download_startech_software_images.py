@@ -3,7 +3,7 @@
 Download ALL Deshi Plus Software category product images into hierarchy folders.
 
 Source:
-    https://www.startech.com.bd/software
+    https://www.deshiplus.com/software
 
 Default output:
     public/images/products/software/...
@@ -62,7 +62,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 SOFTWARE_URL = f"{BASE}/software"
 
 HEADERS = {

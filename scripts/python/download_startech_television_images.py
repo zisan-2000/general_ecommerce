@@ -3,7 +3,7 @@
 Download ALL Deshi Plus Television Shop primary product images into hierarchy folders.
 
 Source:
-    https://www.startech.com.bd/television-shop
+    https://www.deshiplus.com/television-shop
 
 Default output:
     public/images/products/television-shop/...
@@ -65,7 +65,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 TV_URL = f"{BASE}/television-shop"
 
 HEADERS = {

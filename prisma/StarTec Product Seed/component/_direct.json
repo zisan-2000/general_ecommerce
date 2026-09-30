@@ -1,8 +1,8 @@
 {
   "schemaVersion": 3,
   "source": {
-    "site": "https://www.startech.com.bd",
-    "categoryUrl": "https://www.startech.com.bd/component",
+    "site": "https://deshiplus.com",
+    "categoryUrl": "https://deshiplus.com/component",
     "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\component",
     "generatedAtUnix": 1790589891,
     "generator": "prisma/startech_single_category_json_and_seed.py"
@@ -85,12 +85,12 @@
               "candidates": [
                 {
                   "score": 0.7179,
-                  "url": "https://www.startech.com.bd/arctic-m2-pro-ssd-cooler",
+                  "url": "https://deshiplus.com/arctic-m2-pro-ssd-cooler",
                   "title": "Arctic M2 Pro M.2 2280 SSD Cooler Black"
                 },
                 {
                   "score": 0.6087,
-                  "url": "https://www.startech.com.bd/arctic-m2-pro-ssd-cooler-silver",
+                  "url": "https://deshiplus.com/arctic-m2-pro-ssd-cooler-silver",
                   "title": "Arctic M2 Pro M.2 2280 SSD Cooler Silver"
                 }
               ]

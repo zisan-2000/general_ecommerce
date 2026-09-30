@@ -3,7 +3,7 @@
 Deshi Plus Laptop image downloader with full hierarchy.
 
 Source:
-    https://www.startech.com.bd/laptop-notebook
+    https://deshiplus.com/laptop-notebook
 
 Hierarchy preserved as:
 
@@ -113,7 +113,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 ROOT_URL = f"{BASE}/laptop-notebook"
 
 HEADERS = {

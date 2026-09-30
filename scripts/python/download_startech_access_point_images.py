@@ -10,7 +10,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 CATEGORY_URL = f"{BASE}/access-point"
 
 HEADERS = {

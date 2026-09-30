@@ -1,8 +1,8 @@
 {
   "schemaVersion": 3,
   "source": {
-    "site": "https://www.startech.com.bd",
-    "categoryUrl": "https://www.startech.com.bd/server-networking",
+    "site": "https://www.deshiplus.com",
+    "categoryUrl": "https://www.deshiplus.com/server-networking",
     "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\server-networking",
     "generatedAtUnix": 1790588977,
     "generator": "prisma/startech_single_category_json_and_seed.py"
@@ -143,7 +143,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/dell-server-2-point-5-inch-bay",
+      "sourceProductUrl": "https://www.deshiplus.com/dell-server-2-point-5-inch-bay",
       "sourceProductCode": "7963",
       "sourceStatus": "Call for Price",
       "sourceMpn": null,
@@ -232,7 +232,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/dell-server-3-point-5-inch-hdd-bay",
+      "sourceProductUrl": "https://www.deshiplus.com/dell-server-3-point-5-inch-hdd-bay",
       "sourceProductCode": "7964",
       "sourceStatus": "Call for Price",
       "sourceMpn": null,

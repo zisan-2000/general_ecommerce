@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """
-Build split Star Tech seed JSON files from an already-downloaded local image folder,
+Build split Deshi Plus seed JSON files from an already-downloaded local image folder,
 then seed them into the current general_ecommerce Prisma database.
 
 Designed for:
   https://github.com/zisan-2000/general_ecommerce
 
 Typical use (run from repository root):
-  python prisma/startech_single_category_json_and_seed.py "https://www.startech.com.bd/desktops"
-  python prisma/startech_single_category_json_and_seed.py "https://www.startech.com.bd/laptop-notebook"
+  python prisma/startech_single_category_json_and_seed.py "https://deshiplus.com/desktops"
+  python prisma/startech_single_category_json_and_seed.py "https://deshiplus.com/laptop-notebook"
 
 If --image-folder is omitted the script asks for it interactively, for example:
   /images/products/desktop
@@ -16,10 +16,10 @@ If --image-folder is omitted the script asks for it interactively, for example:
 
 What it does:
   1. Scans every local image recursively. No scanned image is silently dropped.
-  2. Uses the image filename as the preferred Star Tech product slug.
-  3. Tries direct Star Tech URL, Star Tech internal search, then Google discovery.
+  2. Uses the image filename as the preferred Deshi Plus product slug.
+  3. Tries direct Deshi Plus URL, Deshi Plus internal search, then Google discovery.
      If Google HTML/API is unavailable it can use DuckDuckGo only to discover a
-     Star Tech URL. Product data is always scraped from startech.com.bd.
+     Deshi Plus URL. Product data is always scraped from deshiplus.com.
   4. Scrapes full product details, description, key features, price, brand,
      model, warranty, dimensions/weight, and specification groups.
   5. Maps local folder hierarchy to category/subcategory/child category + brand.
@@ -28,7 +28,7 @@ What it does:
      plus index.json, _all.json, report.json, and unmatched.json.
   7. Unresolved images are still represented as INACTIVE placeholder products,
      so the run has complete image coverage without inventing product details.
-  8. Seeds completed JSON groups using the repository's Star Tech Prisma seeder.
+  8. Seeds completed JSON groups using the repository's Deshi Plus Prisma seeder.
 
 Dependencies:
   python -m pip install requests beautifulsoup4
@@ -172,12 +172,12 @@ def pretty(value: str) -> str:
 def canonical_startech_category(url: str) -> str:
     p = urlsplit(url.strip())
     if p.scheme not in {"http", "https"} or (p.hostname or "").lower() not in {
-        "startech.com.bd",
-        "www.startech.com.bd",
+        "deshiplus.com",
+        "www.deshiplus.com",
     }:
-        raise ValueError("Category URL must be a startech.com.bd URL")
+        raise ValueError("Category URL must be a deshiplus.com URL")
     path = "/" + p.path.strip("/")
-    return f"https://www.startech.com.bd{path.rstrip('/')}"
+    return f"https://www.deshiplus.com{path.rstrip('/')}"
 
 
 def category_url_slug(url: str) -> str:
@@ -282,8 +282,8 @@ def scan_images(image_root: Path, project_root: Path) -> list[LocalImage]:
 
 
 def google_candidates(query: str, timeout: int = 20) -> list[tuple[str, str, str]]:
-    """Return (url, title, method). URLs are discovery only; details still come from Star Tech."""
-    q = f'site:startech.com.bd "{query}"'
+    """Return (url, title, method). URLs are discovery only; details still come from Deshi Plus."""
+    q = f'site:deshiplus.com "{query}"'
     headers = {
         "User-Agent": core.HEADERS["User-Agent"],
         "Accept-Language": "en-US,en;q=0.9",
@@ -358,7 +358,7 @@ def google_candidates(query: str, timeout: int = 20) -> list[tuple[str, str, str
 
 def _is_startech_url(url: str) -> bool:
     host = (urlsplit(url).hostname or "").lower()
-    return host in {"startech.com.bd", "www.startech.com.bd"}
+    return host in {"deshiplus.com", "www.deshiplus.com"}
 
 
 def _extract_google_result_url(href: str) -> str | None:
@@ -780,7 +780,7 @@ def ensure_startech_seeder(project_root: Path) -> Path:
         return target
 
     raise FileNotFoundError(
-        "No Star Tech Prisma seeder found. Expected either "
+        "No Deshi Plus Prisma seeder found. Expected either "
         "prisma/Store/OLD-startech-seed/index.ts or "
         "prisma/Store/seed-startech-generated.ts"
     )
@@ -821,20 +821,20 @@ def main() -> int:
         sys.stdout.reconfigure(encoding="utf-8")
 
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("category_url", help="Star Tech category URL, e.g. https://www.startech.com.bd/desktops")
+    parser.add_argument("category_url", help="Deshi Plus category URL, e.g. https://deshiplus.com/desktops")
     parser.add_argument("--image-folder", help="Local/public image folder, e.g. /images/products/desktop")
     parser.add_argument("--output-root", default="prisma/StarTec Product Seed", help="Root directory for generated category folders")
     parser.add_argument("--workers", type=int, default=4)
-    parser.add_argument("--delay", type=float, default=0.25, help="Minimum delay shared by Star Tech requests")
+    parser.add_argument("--delay", type=float, default=0.25, help="Minimum delay shared by Deshi Plus requests")
     parser.add_argument("--stock", type=int, default=10, help="Seed stock for matched in-stock products")
     parser.add_argument("--cost-ratio", type=float, default=0.96, help="Default costPrice/basePrice ratio used by repo parser")
-    parser.add_argument("--min-match-score", type=float, default=0.72, help="Minimum Star Tech internal-search match score")
+    parser.add_argument("--min-match-score", type=float, default=0.72, help="Minimum Deshi Plus internal-search match score")
     parser.add_argument("--min-external-score", type=float, default=0.72, help="Minimum Google/DDG discovery match score")
     parser.add_argument("--cache-dir", default=".cache/startech-single-category")
-    parser.add_argument("--refresh", action="store_true", help="Ignore cached Star Tech HTML")
+    parser.add_argument("--refresh", action="store_true", help="Ignore cached Deshi Plus HTML")
     parser.add_argument("--no-google", action="store_true", help="Disable Google/DDG fallback discovery")
     parser.add_argument("--no-seed", action="store_true", help="Generate JSON only; do not seed database")
-    parser.add_argument("--force-available", action="store_true", help="Mark matched products available even if Star Tech reports unavailable")
+    parser.add_argument("--force-available", action="store_true", help="Mark matched products available even if Deshi Plus reports unavailable")
     args = parser.parse_args()
 
     if args.workers < 1:
@@ -893,7 +893,7 @@ def main() -> int:
         timeout=45,
     )
 
-    log("\nSTAR TECH SINGLE CATEGORY JSON + SEED")
+    log("\nDeshi Plus SINGLE CATEGORY JSON + SEED")
     log(f"Category URL:       {category_url}")
     log(f"Image folder:       {image_root}")
     log(f"Images found:       {len(images)}")

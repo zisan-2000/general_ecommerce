@@ -58,7 +58,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 NETWORKING_URL = f"{BASE}/networking"
 
 HEADERS = {
@@ -372,8 +372,8 @@ def is_same_site(url: str) -> bool:
         p = urlparse(url)
 
         return p.netloc.lower() in {
-            "startech.com.bd",
-            "www.startech.com.bd",
+            "deshiplus.com",
+            "www.deshiplus.com",
         }
 
     except Exception:
