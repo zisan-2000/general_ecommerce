@@ -1,8 +1,8 @@
 {
   "schemaVersion": 3,
   "source": {
-    "site": "https://www.startech.com.bd",
-    "categoryUrl": "https://www.startech.com.bd/television-shop",
+    "site": "https://deshiplus.com",
+    "categoryUrl": "https://deshiplus.com/television-shop",
     "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\television-shop",
     "generatedAtUnix": 1790589618,
     "generator": "prisma/startech_single_category_json_and_seed.py"
@@ -51,10 +51,10 @@
       "slug": "smart-sel-32g25f-tv",
       "type": "PHYSICAL",
       "sku": "ST-47625",
-      "description": "<h2>Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV</h2><p>The Smart <strong>SEL-32G25F</strong> Android Smart Google <a href=\"https://www.startech.com.bd/television-startech\" style=\"color: rgb(0, 0, 0);\" target=\"\">TV</a> boasts a 32-inch BOE panel with Full HD resolution of 1920 x 1080, ensuring clear details, rich colors, and a smooth 60Hz refresh rate for everyday viewing. The Smart SEL-32G25F 32\" FHD Smart TV has a brightness rating of 180±10% nits and 176-degree horizontal and vertical viewing angles, ensuring constant picture quality from any seat in the room. The Smart SEL-32G25F Smart Google TV, which runs Android 13, provides personalized content recommendations based on your tastes, making entertainment discovery simple and exciting. Built-in voice control with Google Assistant enables hands-free navigation, quick searches, and even smart home control, increasing ease in everyday use. With several HDMI connectors, USB ports, AV input, Ethernet compatibility, Wi-Fi, and Bluetooth, you can easily connect to gaming consoles, sound systems, and external storage devices. The Smart SEL-32G25F 32\" FHD Google TV boasts dual 10W stereo speakers powered by Dolby Audio MS12/AC-4 and Dolby Atmos, resulting in a cinema-like soundstage that enriches movies, shows, and music. Power efficiency is carefully balanced, with 75W consumed during FHD use and standby power usage at under 0.5W. With dependable performance, smart functionality, and a stylish style, the Smart SEL-32G25F 32\" FHD Android Smart Google TV is an excellent choice for bedrooms, living rooms, or flats. Whether streaming, browsing, or gaming, this Smart Google TV provides a seamless, user-friendly, and connected entertainment experience.</p><h2>Buy Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV from Star Tech</h2><p>In Bangladesh, you can get original <strong>Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV</strong> From Star Tech. We have a large collection of latest Smart <a href=\"https://www.startech.com.bd/television-startech\" target=\"\">TV </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV comes with 3-year panel and 2-year parts &amp; 5-year service warranty by Smart. Warranty card must be kept for warranty claims. For warranty, Call Smart at 09610977977. (Star Tech will not bear warranty claims).</p>",
+      "description": "<h2>Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV</h2><p>The Smart <strong>SEL-32G25F</strong> Android Smart Google <a href=\"https://deshiplus.com/television-startech\" style=\"color: rgb(0, 0, 0);\" target=\"\">TV</a> boasts a 32-inch BOE panel with Full HD resolution of 1920 x 1080, ensuring clear details, rich colors, and a smooth 60Hz refresh rate for everyday viewing. The Smart SEL-32G25F 32\" FHD Smart TV has a brightness rating of 180±10% nits and 176-degree horizontal and vertical viewing angles, ensuring constant picture quality from any seat in the room. The Smart SEL-32G25F Smart Google TV, which runs Android 13, provides personalized content recommendations based on your tastes, making entertainment discovery simple and exciting. Built-in voice control with Google Assistant enables hands-free navigation, quick searches, and even smart home control, increasing ease in everyday use. With several HDMI connectors, USB ports, AV input, Ethernet compatibility, Wi-Fi, and Bluetooth, you can easily connect to gaming consoles, sound systems, and external storage devices. The Smart SEL-32G25F 32\" FHD Google TV boasts dual 10W stereo speakers powered by Dolby Audio MS12/AC-4 and Dolby Atmos, resulting in a cinema-like soundstage that enriches movies, shows, and music. Power efficiency is carefully balanced, with 75W consumed during FHD use and standby power usage at under 0.5W. With dependable performance, smart functionality, and a stylish style, the Smart SEL-32G25F 32\" FHD Android Smart Google TV is an excellent choice for bedrooms, living rooms, or flats. Whether streaming, browsing, or gaming, this Smart Google TV provides a seamless, user-friendly, and connected entertainment experience.</p><h2>Buy Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV from Deshi Plus</h2><p>In Bangladesh, you can get original <strong>Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV</strong> From Deshi Plus. We have a large collection of latest Smart <a href=\"https://deshiplus.com/television-startech\" target=\"\">TV </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://deshiplus.com\" target=\"\">Deshi Plus Shop</a> to get yours at lowest price. The Smart SEL-32G25F 32\" FHD Voice Control Android Smart Google TV comes with 3-year panel and 2-year parts &amp; 5-year service warranty by Smart. Warranty card must be kept for warranty claims. For warranty, Call Smart at 09610977977. (Deshi Plus will not bear warranty claims).</p>",
       "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: SEL-32G25F</li><li>Screen: 32-inch, FHD (1920 x 1080), 60Hz</li><li>RAM: 1GB, ROM: 8GB, 2 x 10W Stereo Speakers</li><li>Connectivity: HDMI, USB, Ethernet, AV Input</li><li>Features: Dolby Vision, Dolby Atmos, Wi-Fi, Google Assistant</li></ul>",
       "model": "SEL-32G25F",
-      "warranty": "3-year panel and 2-year parts & 5-year service warranty by Smart. Warranty card must be kept for warranty claims. For warranty, Call Smart at 09610977977. (Star Tech will not bear warranty claims).",
+      "warranty": "3-year panel and 2-year parts & 5-year service warranty by Smart. Warranty card must be kept for warranty claims. For warranty, Call Smart at 09610977977. (Deshi Plus will not bear warranty claims).",
       "basePrice": 23500.0,
       "originalPrice": null,
       "currency": "BDT",
@@ -263,13 +263,13 @@
           "items": [
             {
               "label": "Warranty",
-              "value": "3-year panel and 2-year parts & 5-year service warranty by Smart. Warranty card must be kept for warranty claims. For warranty, Call Smart at 09610977977. (Star Tech will not bear warranty claims).",
+              "value": "3-year panel and 2-year parts & 5-year service warranty by Smart. Warranty card must be kept for warranty claims. For warranty, Call Smart at 09610977977. (Deshi Plus will not bear warranty claims).",
               "position": 0
             }
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/smart-sel-32g25f-tv",
+      "sourceProductUrl": "https://deshiplus.com/smart-sel-32g25f-tv",
       "sourceProductCode": "47625",
       "sourceStatus": "Out Of Stock",
       "sourceMpn": null,

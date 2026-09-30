@@ -1,8 +1,8 @@
 {
   "schemaVersion": 3,
   "source": {
-    "site": "https://www.startech.com.bd",
-    "categoryUrl": "https://www.startech.com.bd/software",
+    "site": "https://deshiplus.com",
+    "categoryUrl": "https://deshiplus.com/software",
     "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\software",
     "generatedAtUnix": 1790589365,
     "generator": "prisma/startech_single_category_json_and_seed.py"
@@ -110,7 +110,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-apps-for-enterprise",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-365-apps-for-enterprise",
       "sourceProductCode": "19141",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -255,7 +255,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-business-standard",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-365-business-standard",
       "sourceProductCode": "19140",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -405,7 +405,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-enterprise-e3",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-365-enterprise-e3",
       "sourceProductCode": "17979",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -554,7 +554,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-enterprise-e5",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-365-enterprise-e5",
       "sourceProductCode": "19199",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -704,7 +704,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-f1",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-365-f1",
       "sourceProductCode": "19208",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -854,7 +854,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-f3",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-365-f3",
       "sourceProductCode": "19206",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -1004,7 +1004,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-365-enterprise-e1",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-office-365-enterprise-e1",
       "sourceProductCode": "19200",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -1154,7 +1154,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-365-enterprise-e3",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-office-365-enterprise-e3",
       "sourceProductCode": "19202",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -1304,7 +1304,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-365-enterprise-e5",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-office-365-enterprise-e5",
       "sourceProductCode": "19203",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -1454,7 +1454,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-365-f3",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-office-365-f3",
       "sourceProductCode": "19204",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -1533,7 +1533,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/ms-office-365",
+      "sourceProductUrl": "https://deshiplus.com/ms-office-365",
       "sourceProductCode": "7706",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -1612,7 +1612,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/ms-office-365-business-premium",
+      "sourceProductUrl": "https://deshiplus.com/ms-office-365-business-premium",
       "sourceProductCode": "7707",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -1691,7 +1691,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/office-365-business-essential",
+      "sourceProductUrl": "https://deshiplus.com/office-365-business-essential",
       "sourceProductCode": "7708",
       "sourceStatus": "In Stock",
       "sourceMpn": null,

@@ -1,8 +1,8 @@
 {
   "schemaVersion": 3,
   "source": {
-    "site": "https://www.startech.com.bd",
-    "categoryUrl": "https://www.startech.com.bd/software",
+    "site": "https://deshiplus.com",
+    "categoryUrl": "https://deshiplus.com/software",
     "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\software",
     "generatedAtUnix": 1790589365,
     "generator": "prisma/startech_single_category_json_and_seed.py"
@@ -99,7 +99,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-365-family",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-365-family",
       "sourceProductCode": "4015",
       "sourceStatus": "Out Of Stock",
       "sourceMpn": null,
@@ -243,7 +243,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-home-and-business",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-office-home-and-business",
       "sourceProductCode": "9983",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -388,7 +388,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-home-and-business-2019",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-office-home-and-business-2019",
       "sourceProductCode": "24349",
       "sourceStatus": "Out Of Stock",
       "sourceMpn": "T5D-03249",
@@ -468,7 +468,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-professional-plus",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-office-professional-plus",
       "sourceProductCode": "12626",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -552,7 +552,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-professional-plus-2021",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-office-professional-plus-2021",
       "sourceProductCode": "32744",
       "sourceStatus": "Out Of Stock",
       "sourceMpn": null,
@@ -631,7 +631,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office-standard-open-licence",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-office-standard-open-licence",
       "sourceProductCode": "12613",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -710,7 +710,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-office2016-for-mac",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-office2016-for-mac",
       "sourceProductCode": "4975",
       "sourceStatus": "Out Of Stock",
       "sourceMpn": null,
@@ -848,7 +848,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/ms-office-365-personal-oem",
+      "sourceProductUrl": "https://deshiplus.com/ms-office-365-personal-oem",
       "sourceProductCode": "4017",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -879,7 +879,7 @@
       "slug": "visual-studio-professional-2022",
       "type": "PHYSICAL",
       "sku": "ST-30879",
-      "description": "<h2>Visual Studio Professional 2022</h2><p>The Visual <span style=\"font-weight: bold;\">Studio Professional 2022</span> is a highly advanced and large development environment that is well-known among developers all across the world. Our cutting-edge 64-bit IDE enables you to manage massive projects and complicated workloads with ease. Visual Studio Professional 2022 Increase productivity, write flawless code, and redefine collaboration with an assortment of cutting-edge tools and flawlessly integrated features designed to tackle the most demanding development workflows and support the production of revolutionary, large-scale apps. The Visual Studio Professional 2022 has Ai-Powered Code Completions.</p><h2>Buy Visual Studio Professional 2022 from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Visual Studio Professional 2022 </span>From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/software\" target=\"\">Software </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd/\" target=\"\">Star Tech </a>Shop to get yours at lowest price. The Visual Studio Professional 2022 comes with no warranty.</p>",
+      "description": "<h2>Visual Studio Professional 2022</h2><p>The Visual <span style=\"font-weight: bold;\">Studio Professional 2022</span> is a highly advanced and large development environment that is well-known among developers all across the world. Our cutting-edge 64-bit IDE enables you to manage massive projects and complicated workloads with ease. Visual Studio Professional 2022 Increase productivity, write flawless code, and redefine collaboration with an assortment of cutting-edge tools and flawlessly integrated features designed to tackle the most demanding development workflows and support the production of revolutionary, large-scale apps. The Visual Studio Professional 2022 has Ai-Powered Code Completions.</p><h2>Buy Visual Studio Professional 2022 from Star Tech</h2><p>In Bangladesh, you can get original <span style=\"font-weight: bold;\">Visual Studio Professional 2022 </span>From Star Tech. We have a large collection of latest <a href=\"https://deshiplus.com/software\" target=\"\">Software </a>to purchase. Order Online Or Visit your Nearest <a href=\"https://deshiplus.com/\" target=\"\">Star Tech </a>Shop to get yours at lowest price. The Visual Studio Professional 2022 comes with no warranty.</p>",
       "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: Studio Professional 2022</li><li>64-Bit Ide</li><li>Advanced Suite of Tools</li><li>Built-In Integrations</li><li>Ai-Powered Code Completions</li></ul>",
       "model": "Studio Professional 2022",
       "warranty": "no warranty",
@@ -971,7 +971,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/visual-studio-professional-2022",
+      "sourceProductUrl": "https://deshiplus.com/visual-studio-professional-2022",
       "sourceProductCode": "30879",
       "sourceStatus": "In Stock",
       "sourceMpn": null,

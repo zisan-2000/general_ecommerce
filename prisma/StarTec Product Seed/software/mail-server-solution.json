@@ -1,8 +1,8 @@
 {
   "schemaVersion": 3,
   "source": {
-    "site": "https://www.startech.com.bd",
-    "categoryUrl": "https://www.startech.com.bd/software",
+    "site": "https://deshiplus.com",
+    "categoryUrl": "https://deshiplus.com/software",
     "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\software",
     "generatedAtUnix": 1790589365,
     "generator": "prisma/startech_single_category_json_and_seed.py"
@@ -160,7 +160,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-exchange-server-2019-enterprise",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-exchange-server-2019-enterprise",
       "sourceProductCode": "19114",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -300,7 +300,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-exchange-server-2019-standard",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-exchange-server-2019-standard",
       "sourceProductCode": "19112",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -440,7 +440,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-exchange-server-2019-standard-device-cal",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-exchange-server-2019-standard-device-cal",
       "sourceProductCode": "19110",
       "sourceStatus": "In Stock",
       "sourceMpn": null,
@@ -580,7 +580,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/microsoft-exchange-server-2019-standard-user-cal",
+      "sourceProductUrl": "https://deshiplus.com/microsoft-exchange-server-2019-standard-user-cal",
       "sourceProductCode": "19109",
       "sourceStatus": "In Stock",
       "sourceMpn": null,

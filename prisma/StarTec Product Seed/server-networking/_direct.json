@@ -1,8 +1,8 @@
 {
   "schemaVersion": 3,
   "source": {
-    "site": "https://www.startech.com.bd",
-    "categoryUrl": "https://www.startech.com.bd/server-networking",
+    "site": "https://deshiplus.com",
+    "categoryUrl": "https://deshiplus.com/server-networking",
     "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\server-networking",
     "generatedAtUnix": 1790588977,
     "generator": "prisma/startech_single_category_json_and_seed.py"

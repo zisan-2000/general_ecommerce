@@ -3,7 +3,7 @@
 Download ALL Deshi Plus Laptop & Notebook product primary images into hierarchy folders.
 
 Source:
-    https://www.startech.com.bd/laptop-notebook
+    https://deshiplus.com/laptop-notebook
 
 Default output:
     public/images/products/laptop/...

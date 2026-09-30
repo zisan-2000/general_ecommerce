@@ -43,7 +43,7 @@ npm run seed:universal -- --products-only
 ```
 
 A warehouse must already exist for initial stock allocation. Stock `10` is the
-existing project's seed quantity, not a quantity reported by Star Tech. The
+existing project's seed quantity, not a quantity reported by Deshi Plus. The
 importer upserts categories, brands, products, and variants, persists model and
 warranty, and retains warehouse stock quantities/reservations on re-import.
 The source URLs and local file fields are downloader metadata; Prisma stores
@@ -53,7 +53,7 @@ the public `image` and `gallery` paths.
 `npm run seed:universal`, it runs all existing demo modules, resets
 the demo admin credentials, and archives catalog records outside its curated
 storefront before importing both product seed files. Use `--products-only` for
-this Star Tech workflow to avoid those unrelated operations.
+this Deshi Plus workflow to avoid those unrelated operations.
 
 Checks without seeding or contacting the database:
 

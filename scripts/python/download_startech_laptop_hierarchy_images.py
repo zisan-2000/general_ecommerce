@@ -3,7 +3,7 @@
 Deshi Plus Laptop image downloader with full hierarchy.
 
 Source:
-    https://www.startech.com.bd/laptop-notebook
+    https://deshiplus.com/laptop-notebook
 
 Hierarchy preserved as:
 
