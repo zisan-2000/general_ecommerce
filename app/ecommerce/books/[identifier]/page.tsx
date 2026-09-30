@@ -14,7 +14,7 @@ export default async function LegacyProductPage({
   const normalized = decodeURIComponent(identifier).trim();
   const numericId = /^\d+$/.test(normalized) ? Number(normalized) : null;
 
-  const books = await getStorefrontBooks();
+  const { books } = await getStorefrontBooks({ identifier: normalized });
   const product = books.find((book) =>
     numericId
       ? book.product.id === numericId

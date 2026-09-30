@@ -1,3 +1,5 @@
+import ProductPagination from "@/components/ecommarce/catalog/ProductPagination";
+import { storefrontPage } from "@/lib/storefront-pagination";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import CatalogProductGrid from "@/components/ecommarce/catalog/CatalogProductGrid";
@@ -9,9 +11,9 @@ export const metadata: Metadata = {
   description: "Browse available books by writer and publisher.",
 };
 
-export default async function BooksPage() {
+export default async function BooksPage({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
   if (!(await isFeatureEnabled("BOOKS"))) notFound();
-  const books = await getStorefrontBooks();
+  const { books, page, total } = await getStorefrontBooks({ page: storefrontPage((await searchParams).page) });
   return (
     <main className="min-h-screen bg-background text-foreground">
       <div className="container px-3 py-8 sm:px-6">
@@ -25,6 +27,7 @@ export default async function BooksPage() {
         ) : (
           <div className="rounded-xl border border-dashed p-10 text-center text-muted-foreground">No books are available yet.</div>
         )}
+        <ProductPagination page={page} total={total} basePath="/ecommerce/books" />
       </div>
     </main>
   );

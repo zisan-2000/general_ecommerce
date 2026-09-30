@@ -1,6 +1,8 @@
 import "server-only";
 
-import { unstable_cache } from "next/cache";
+import { compressedCache } from "@/lib/compressed-cache";
+import { storefrontPage, STOREFRONT_PAGE_SIZE } from "@/lib/storefront-pagination";
+import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 import { prisma } from "@/lib/prisma";
 import {
   serializeStorefrontHomeProduct,
@@ -11,15 +13,16 @@ import type { FeatureControlledProductType } from "@/lib/store-features";
 import type { Prisma } from "@/generated/prisma";
 import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 
-const readActiveFlashSales = unstable_cache(
-  async (serializedDisabledTypes: string, serializedBookVisibility: string) => {
+const readActiveFlashSales = compressedCache(
+  async (serializedDisabledTypes: string, serializedBookVisibility: string, requestedPage: number) => {
     const now = new Date();
     const disabledTypes = JSON.parse(
       serializedDisabledTypes,
     ) as FeatureControlledProductType[];
     const bookVisibility = JSON.parse(serializedBookVisibility) as Prisma.ProductWhereInput;
-    const products = await prisma.product.findMany({
-      where: {
+    const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
+    const where: Prisma.ProductWhereInput = {
+        categoryId: { in: activeCategoryIds },
         deleted: false,
         available: true,
         ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
@@ -28,23 +31,28 @@ const readActiveFlashSales = unstable_cache(
         flashSalePrice: { not: null },
         flashSaleStartsAt: { lte: now },
         flashSaleEndsAt: { gt: now },
-      },
-      orderBy: [{ flashSaleSortOrder: "asc" }, { flashSaleEndsAt: "asc" }],
-      take: 100,
+    };
+    const total = await prisma.product.count({ where });
+    const page = Math.min(storefrontPage(requestedPage), Math.max(1, Math.ceil(total / STOREFRONT_PAGE_SIZE)));
+    const products = await prisma.product.findMany({
+      where,
+      skip: (page - 1) * STOREFRONT_PAGE_SIZE,
+      orderBy: [{ flashSaleSortOrder: "asc" }, { flashSaleEndsAt: "asc" }, { id: "asc" }],
+      take: STOREFRONT_PAGE_SIZE,
       select: storefrontHomeProductSelect,
     });
-    return products
+    return { page, total, products: products
       .map((product) => serializeStorefrontHomeProduct(product, now))
-      .filter((product) => product.flashSale.active);
+      .filter((product) => product.flashSale.active) };
   },
-  ["storefront-flash-sales-v1"],
+  ["storefront-flash-sales-paged-v2"],
   { revalidate: 30, tags: ["flash-sales", "products"] },
 );
 
-export async function getActiveFlashSaleProducts() {
+export async function getActiveFlashSaleProducts(page = 1) {
   const [disabledTypes, bookVisibility] = await Promise.all([
     getDisabledStorefrontProductTypes(),
     getBookProductVisibilityWhere(),
   ]);
-  return readActiveFlashSales(JSON.stringify(disabledTypes), JSON.stringify(bookVisibility));
+  return readActiveFlashSales(JSON.stringify(disabledTypes), JSON.stringify(bookVisibility), storefrontPage(page));
 }

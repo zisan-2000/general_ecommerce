@@ -1,5 +1,6 @@
 import { parseSpecificationFilters, specificationKey, specificationWhere, specificationFacetQuery, type SpecificationFacet } from "@/lib/catalog-specification-filters";
 import { unstable_cache } from "next/cache.js";
+import { compressedCache } from "@/lib/compressed-cache";
 import { Prisma } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
@@ -597,7 +598,7 @@ const readCatalogFacets = unstable_cache(
  * offers RAM/SSD/Processor while another category offers its own specs. Values
  * are counted over products that are actually visible in the catalog.
  */
-const readCatalogAttributeFacets = unstable_cache(
+const readCatalogAttributeFacets = compressedCache(
   async (serializedCategoryIds: string, serializedDisabledTypes: string) => {
     const categoryIds = JSON.parse(serializedCategoryIds) as number[];
     const disabledTypes = JSON.parse(
@@ -803,17 +804,14 @@ const readCatalogAttributeFacets = unstable_cache(
       .sort((a, b) => a.sortOrder - b.sortOrder || a.name.localeCompare(b.name))
       .slice(0, CATALOG_MAX_ATTRIBUTE_GROUPS);
   },
-  ["storefront-catalog-attribute-facets-v2"],
-  {
-    revalidate: 300,
-    tags: ["storefront-catalog", "products", "categories"],
-  },
+  ["storefront-catalog-attribute-facets-compressed-v1"],
+  { revalidate: 300, tags: ["storefront-catalog", "products", "categories"] },
 );
 
 /** Build filter groups directly from active variant JSON, without requiring
  * an Attributes Manager mapping. This keeps the catalog in sync with every
  * option created in Variant Setup. */
-const readCatalogVariantFacets = unstable_cache(
+const readCatalogVariantFacets = compressedCache(
   async (serializedCategoryIds: string, serializedDisabledTypes: string) => {
     const categoryIds = JSON.parse(serializedCategoryIds) as number[];
     const disabledTypes = JSON.parse(
@@ -867,11 +865,11 @@ const readCatalogVariantFacets = unstable_cache(
       .sort((left, right) => left.name.localeCompare(right.name))
       .slice(0, CATALOG_MAX_ATTRIBUTE_GROUPS);
   },
-  ["storefront-catalog-variant-facets-v1"],
+  ["storefront-catalog-variant-facets-compressed-v1"],
   { revalidate: 300, tags: ["storefront-catalog", "products", "categories"] },
 );
 
-const readCatalogSpecificationFacets = unstable_cache(
+const readCatalogSpecificationFacets = compressedCache(
   async (serializedCategoryIds: string, serializedDisabledTypes: string, hideBooks: boolean) => {
     const rows = await prisma.$queryRaw<Array<{ group: string; label: string; value: string; productCount: number }>>(
       specificationFacetQuery(JSON.parse(serializedCategoryIds), JSON.parse(serializedDisabledTypes), hideBooks),
@@ -900,7 +898,7 @@ const readCatalogSpecificationFacets = unstable_cache(
       )
       .slice(0, CATALOG_MAX_ATTRIBUTE_GROUPS);
   },
-  ["storefront-catalog-specification-facets-v1"],
+  ["storefront-catalog-specification-facets-compressed-v1"],
   { revalidate: 300, tags: ["storefront-catalog", "products", "categories"] },
 );
 
@@ -1223,7 +1221,10 @@ export type StorefrontCatalogFacets = Awaited<
   ReturnType<typeof readCatalogFacets>
 >;
 
-export async function getStorefrontCatalog(filters: CatalogFilters) {
+export async function getStorefrontCatalog(
+  filters: CatalogFilters,
+  options: { includeFilterOptions?: boolean } = {},
+) {
   const [disabledTypes, bookVisibility] = await Promise.all([
     getDisabledStorefrontProductTypes(),
     getBookProductVisibilityWhere(),

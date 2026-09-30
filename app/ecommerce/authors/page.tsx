@@ -1,14 +1,14 @@
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import BookPartyGrid from "@/components/ecommarce/books/BookPartyGrid";
-import { getStorefrontBooks } from "@/lib/book-catalog";
+import { getStorefrontBookDirectory } from "@/lib/book-catalog";
 import { isFeatureEnabled } from "@/lib/store-features-server";
 
 export const metadata: Metadata = { title: "Authors", description: "Browse books by author." };
 
 export default async function AuthorsPage() {
   if (!(await isFeatureEnabled("AUTHORS"))) notFound();
-  const books = await getStorefrontBooks();
+  const books = await getStorefrontBookDirectory();
   const authors = new Map<number, { id: number; name: string; image: string | null; bookCount: number }>();
   for (const book of books) {
     if (!book.writer) continue;
