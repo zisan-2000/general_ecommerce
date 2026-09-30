@@ -30,7 +30,9 @@ import {
 import { Badge } from "@/components/ui/badge";
 import { toast } from "sonner";
 import { useLocale, useTranslations } from "next-intl";
-import BundleFormModal from "@/components/admin/products/bundles/BundleFormModal";
+import BundleFormModal, {
+  BUNDLE_CREATE_DRAFT_STORAGE_KEY,
+} from "@/components/admin/products/bundles/BundleFormModal";
 
 interface Bundle {
   id: number;
@@ -110,6 +112,16 @@ export default function BundlesPage() {
   const [isDeleting, setIsDeleting] = useState(false);
   const [refreshing, setRefreshing] = useState(false);
   const [createModalOpen, setCreateModalOpen] = useState(false);
+
+  useEffect(() => {
+    try {
+      if (window.localStorage.getItem(BUNDLE_CREATE_DRAFT_STORAGE_KEY)) {
+        setCreateModalOpen(true);
+      }
+    } catch {
+      // The page remains usable when browser storage is unavailable.
+    }
+  }, []);
 
   const fetchBundles = async () => {
     try {

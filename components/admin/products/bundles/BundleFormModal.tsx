@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import Image from "next/image";
 import { useLocale, useTranslations } from "next-intl";
 import { DollarSign, Package, Save, Upload, X } from "lucide-react";
@@ -8,7 +8,6 @@ import { toast } from "sonner";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Switch } from "@/components/ui/switch";
@@ -30,6 +29,7 @@ import ConfigurableBundleGroupBuilder, {
   createBundleGroup,
   type BundleBuilderGroup,
 } from "./ConfigurableBundleGroupBuilder";
+import { ResponsiveInput, ResponsiveTextarea } from "./ResponsiveFormField";
 import {
   calculateBundlePricing,
   mergeDuplicateBundleItems,
@@ -71,6 +71,50 @@ const defaultFormData = {
   bundleStockLimit: "",
 };
 
+export const BUNDLE_CREATE_DRAFT_STORAGE_KEY = "admin-bundle-create-draft-v1";
+
+type BundleCreateDraft = {
+  version: 1;
+  savedAt: number;
+  formData: typeof defaultFormData;
+  discountType: DiscountType;
+  discountValue: string;
+  manualPrice: string;
+  groups: BundleBuilderGroup[];
+};
+
+function selectedItemsFromGroups(groups: BundleBuilderGroup[]): BundleSelectedItem[] {
+  return groups.flatMap((group) =>
+    group.options
+      .filter((option) => option.isDefault && option.product)
+      .map((option) => ({
+        product: option.product,
+        variant: option.variant,
+        quantity: group.defaultQuantity,
+      })),
+  );
+}
+
+function readCreateDraft(): BundleCreateDraft | null {
+  try {
+    const value = window.localStorage.getItem(BUNDLE_CREATE_DRAFT_STORAGE_KEY);
+    if (!value) return null;
+    const draft = JSON.parse(value) as Partial<BundleCreateDraft>;
+    if (draft.version !== 1 || !draft.formData || !Array.isArray(draft.groups)) return null;
+    return draft as BundleCreateDraft;
+  } catch {
+    return null;
+  }
+}
+
+function writeCreateDraft(draft: BundleCreateDraft) {
+  try {
+    window.localStorage.setItem(BUNDLE_CREATE_DRAFT_STORAGE_KEY, JSON.stringify(draft));
+  } catch {
+    // Storage can be unavailable or full. The editable form should still work.
+  }
+}
+
 export default function BundleFormModal({
   open,
   onOpenChange,
@@ -81,6 +125,7 @@ export default function BundleFormModal({
   const t = useTranslations("AdminBundles.form");
   const locale = useLocale();
   const fileInputRef = useRef<HTMLInputElement | null>(null);
+  const latestDraftRef = useRef<BundleCreateDraft | null>(null);
   const isEdit = mode === "edit";
 
   const [loading, setLoading] = useState(false);
@@ -95,6 +140,14 @@ export default function BundleFormModal({
   const [categories, setCategories] = useState<Category[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [vatClasses, setVatClasses] = useState<VatClass[]>([]);
+  const [draftReady, setDraftReady] = useState(false);
+
+  const updateTextField = useCallback((
+    field: "name" | "sku" | "shortDesc" | "description" | "image" | "bundleStockLimit",
+    value: string,
+  ) => {
+    setFormData((current) => ({ ...current, [field]: value }));
+  }, []);
 
   const resetState = () => {
     setFormData(defaultFormData);
@@ -117,6 +170,7 @@ export default function BundleFormModal({
 
   useEffect(() => {
     if (!open) {
+      setDraftReady(false);
       resetState();
       return;
     }
@@ -269,11 +323,23 @@ export default function BundleFormModal({
           setDiscountValue(discountPercentage.toFixed(1));
           setManualPrice("");
         } else {
-          setFormData((prev) => ({
-            ...prev,
-            bundleStockLimit: "",
-          }));
-          setGroups([createBundleGroup(), createBundleGroup()]);
+          const draft = readCreateDraft();
+          if (draft) {
+            const restoredGroups = draft.groups.length > 0
+              ? draft.groups
+              : [createBundleGroup(), createBundleGroup()];
+            setFormData({ ...defaultFormData, ...draft.formData });
+            setDiscountType(draft.discountType || "PERCENTAGE");
+            setDiscountValue(draft.discountValue ?? "15");
+            setManualPrice(draft.manualPrice ?? "");
+            setGroups(restoredGroups);
+            setSelectedItems(selectedItemsFromGroups(restoredGroups));
+            toast.success(t("success.draftRestored"));
+          } else {
+            setFormData(defaultFormData);
+            setGroups([createBundleGroup(), createBundleGroup()]);
+          }
+          setDraftReady(true);
         }
       } catch (error) {
         console.error("Error loading bundle form data:", error);
@@ -288,6 +354,35 @@ export default function BundleFormModal({
 
     void loadModalData();
   }, [open, isEdit, bundleId, onOpenChange, t]);
+
+  const currentDraft = useMemo<BundleCreateDraft>(() => ({
+    version: 1,
+    savedAt: Date.now(),
+    formData,
+    discountType,
+    discountValue,
+    manualPrice,
+    groups,
+  }), [formData, discountType, discountValue, manualPrice, groups]);
+
+  useEffect(() => {
+    latestDraftRef.current = currentDraft;
+  }, [currentDraft]);
+
+  useEffect(() => {
+    if (!open || isEdit || !draftReady) return;
+    const timer = window.setTimeout(() => writeCreateDraft(currentDraft), 300);
+    return () => window.clearTimeout(timer);
+  }, [open, isEdit, draftReady, currentDraft]);
+
+  useEffect(() => {
+    if (!open || isEdit || !draftReady) return;
+    const persistLatestDraft = () => {
+      if (latestDraftRef.current) writeCreateDraft(latestDraftRef.current);
+    };
+    window.addEventListener("pagehide", persistLatestDraft);
+    return () => window.removeEventListener("pagehide", persistLatestDraft);
+  }, [open, isEdit, draftReady]);
 
   const pricingState = useMemo(() => {
     const validItems = selectedItems.filter((item) => item?.product?.id);
@@ -481,20 +576,24 @@ export default function BundleFormModal({
     return Number(itemStock) <= 0;
   });
 
-  const handleGroupsChange = (nextGroups: BundleBuilderGroup[]) => {
+  const handleGroupsChange = useCallback((nextGroups: BundleBuilderGroup[]) => {
     setGroups(nextGroups);
-    setSelectedItems(
-      nextGroups.flatMap((group) =>
-        group.options
-          .filter((option) => option.isDefault && option.product)
-          .map((option) => ({
-            product: option.product,
-            variant: option.variant,
-            quantity: group.defaultQuantity,
-          })),
-      ),
-    );
-  };
+    setSelectedItems(selectedItemsFromGroups(nextGroups));
+  }, []);
+
+  const closeModal = useCallback(() => onOpenChange(false), [onOpenChange]);
+
+  const discardDraft = useCallback(() => {
+    setDraftReady(false);
+    window.localStorage.removeItem(BUNDLE_CREATE_DRAFT_STORAGE_KEY);
+    setFormData(defaultFormData);
+    setDiscountType("PERCENTAGE");
+    setDiscountValue("15");
+    setManualPrice("");
+    setGroups([]);
+    setSelectedItems([]);
+    closeModal();
+  }, [closeModal]);
 
   const handleImageUpload = async (file: File) => {
     setUploading(true);
@@ -630,7 +729,8 @@ export default function BundleFormModal({
         isEdit ? t("success.updated") : t("success.created"),
       );
       const nextBundleId = Number(result.bundle?.id || bundleId);
-      onOpenChange(false);
+      if (!isEdit) window.localStorage.removeItem(BUNDLE_CREATE_DRAFT_STORAGE_KEY);
+      closeModal();
       if (nextBundleId && onSuccess) {
         await onSuccess(nextBundleId);
       }
@@ -645,15 +745,31 @@ export default function BundleFormModal({
   };
 
   return (
-    <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="max-w-7xl p-0 sm:rounded-2xl">
-        <DialogHeader className="border-b px-6 py-4">
+    <Dialog open={open} onOpenChange={(nextOpen) => nextOpen && onOpenChange(true)}>
+      <DialogContent
+        className="max-w-7xl p-0 sm:rounded-2xl"
+        showCloseButton={false}
+        onPointerDownOutside={(event) => event.preventDefault()}
+        onInteractOutside={(event) => event.preventDefault()}
+        onEscapeKeyDown={(event) => event.preventDefault()}
+      >
+        <DialogHeader className="relative border-b px-6 py-4 pr-16">
           <DialogTitle>{isEdit ? t("dialog.editTitle") : t("dialog.createTitle")}</DialogTitle>
           <DialogDescription>
             {isEdit
               ? t("dialog.editDescription")
               : t("dialog.createDescription")}
           </DialogDescription>
+          <Button
+            type="button"
+            variant="ghost"
+            size="icon"
+            className="absolute right-4 top-3"
+            onClick={closeModal}
+            aria-label={t("actions.close")}
+          >
+            <X className="h-4 w-4" />
+          </Button>
         </DialogHeader>
 
         {loading ? (
@@ -674,15 +790,10 @@ export default function BundleFormModal({
                   <CardContent className="space-y-4">
                     <div>
                       <Label htmlFor="bundle-name">{t("basic.name")}</Label>
-                      <Input
+                      <ResponsiveInput
                         id="bundle-name"
                         value={formData.name}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            name: e.target.value,
-                          }))
-                        }
+                        onValueChange={(value) => updateTextField("name", value)}
                         placeholder={t("basic.namePlaceholder")}
                         required
                       />
@@ -690,15 +801,10 @@ export default function BundleFormModal({
 
                     <div>
                       <Label htmlFor="bundle-sku">{t("basic.sku")}</Label>
-                      <Input
+                      <ResponsiveInput
                         id="bundle-sku"
                         value={formData.sku}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            sku: e.target.value,
-                          }))
-                        }
+                        onValueChange={(value) => updateTextField("sku", value)}
                         placeholder={t("basic.skuPlaceholder")}
                         required
                       />
@@ -708,15 +814,10 @@ export default function BundleFormModal({
                       <Label htmlFor="bundle-short-desc">
                         {t("basic.shortDescription")}
                       </Label>
-                      <Input
+                      <ResponsiveInput
                         id="bundle-short-desc"
                         value={formData.shortDesc}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            shortDesc: e.target.value,
-                          }))
-                        }
+                        onValueChange={(value) => updateTextField("shortDesc", value)}
                         placeholder={t("basic.shortDescriptionPlaceholder")}
                       />
                     </div>
@@ -725,15 +826,10 @@ export default function BundleFormModal({
                       <Label htmlFor="bundle-description">
                         {t("basic.fullDescription")}
                       </Label>
-                      <Textarea
+                      <ResponsiveTextarea
                         id="bundle-description"
                         value={formData.description}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            description: e.target.value,
-                          }))
-                        }
+                        onValueChange={(value) => updateTextField("description", value)}
                         placeholder={t("basic.fullDescriptionPlaceholder")}
                         rows={4}
                         required
@@ -830,17 +926,12 @@ export default function BundleFormModal({
                       <Label htmlFor="bundle-stock-limit">
                         {t("stock.fieldLabel")}
                       </Label>
-                      <Input
+                      <ResponsiveInput
                         id="bundle-stock-limit"
                         type="number"
                         min="0"
                         value={formData.bundleStockLimit}
-                        onChange={(e) =>
-                          setFormData((prev) => ({
-                            ...prev,
-                            bundleStockLimit: e.target.value,
-                          }))
-                        }
+                        onValueChange={(value) => updateTextField("bundleStockLimit", value)}
                         placeholder={
                           bundleStockMetrics.maxBundlesFromStock > 0
                             ? t("stock.maxPlaceholder", { count: bundleStockMetrics.maxBundlesFromStock })
@@ -989,14 +1080,14 @@ export default function BundleFormModal({
                           {t("pricing.discountPercentage")}
                         </Label>
                         <div className="flex items-center gap-2">
-                          <Input
+                          <ResponsiveInput
                             id="discount-value"
                             type="number"
                             min="0"
                             max="100"
                             step="0.1"
                             value={discountValue}
-                            onChange={(e) => setDiscountValue(e.target.value)}
+                            onValueChange={setDiscountValue}
                           />
                           <span className="text-sm text-muted-foreground">
                             %
@@ -1008,13 +1099,13 @@ export default function BundleFormModal({
                     {discountType === "FIXED" && (
                       <div>
                         <Label htmlFor="discount-amount">{t("pricing.discountAmount")}</Label>
-                        <Input
+                        <ResponsiveInput
                           id="discount-amount"
                           type="number"
                           min="0"
                           step="0.01"
                           value={discountValue}
-                          onChange={(e) => setDiscountValue(e.target.value)}
+                          onValueChange={setDiscountValue}
                         />
                       </div>
                     )}
@@ -1022,13 +1113,13 @@ export default function BundleFormModal({
                     {discountType === "MANUAL" && (
                       <div>
                         <Label htmlFor="manual-price">{t("pricing.finalPrice")}</Label>
-                        <Input
+                        <ResponsiveInput
                           id="manual-price"
                           type="number"
                           min="0"
                           step="0.01"
                           value={manualPrice}
-                          onChange={(e) => setManualPrice(e.target.value)}
+                          onValueChange={setManualPrice}
                         />
                       </div>
                     )}
@@ -1187,16 +1278,11 @@ export default function BundleFormModal({
                       </Button>
                     </div>
 
-                    <Input
+                    <ResponsiveInput
                       type="text"
                       placeholder={t("image.urlPlaceholder")}
                       value={formData.image}
-                      onChange={(e) =>
-                        setFormData((prev) => ({
-                          ...prev,
-                          image: e.target.value,
-                        }))
-                      }
+                      onValueChange={(value) => updateTextField("image", value)}
                     />
                   </CardContent>
                 </Card>
@@ -1210,8 +1296,13 @@ export default function BundleFormModal({
                   : t("footer.incomplete")}
               </p>
               <div className="flex gap-2">
-                <Button type="button" variant="outline" onClick={() => onOpenChange(false)}>
-                  {t("actions.cancel")}
+                {!isEdit ? (
+                  <Button type="button" variant="ghost" onClick={discardDraft}>
+                    {t("actions.discardDraft")}
+                  </Button>
+                ) : null}
+                <Button type="button" variant="outline" onClick={closeModal}>
+                  {t("actions.close")}
                 </Button>
                 <Button
                   type="submit"

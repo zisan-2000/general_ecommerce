@@ -1,11 +1,13 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import {
   AlertCircle,
   ArrowDown,
   ArrowUp,
+  ChevronDown,
+  ChevronUp,
   Check,
   Plus,
   RefreshCw,
@@ -18,6 +20,7 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { ResponsiveInput } from "./ResponsiveFormField";
 
 type CatalogVariant = {
   id: number;
@@ -95,7 +98,7 @@ const money = (value: number, currency: string) =>
     ? `৳${Math.round(value).toLocaleString("en-US")}`
     : new Intl.NumberFormat("en-US", { style: "currency", currency }).format(value);
 
-function GroupCatalogPicker({
+const GroupCatalogPicker = memo(function GroupCatalogPicker({
   group,
   groupIndex,
   categories,
@@ -107,8 +110,8 @@ function GroupCatalogPicker({
   groupIndex: number;
   categories: CatalogCategory[];
   defaultCategoryId: string;
-  onCategoryChange: (categoryId: string) => void;
-  onAdd: (choice: CatalogChoice) => void;
+  onCategoryChange: (groupIndex: number, categoryId: string) => void;
+  onAdd: (groupIndex: number, choice: CatalogChoice) => void;
 }) {
   const t = useTranslations("AdminBundles.builder.catalog");
   const [products, setProducts] = useState<CatalogProduct[]>([]);
@@ -130,7 +133,7 @@ function GroupCatalogPicker({
       setLoading(true);
       setLoadError("");
       try {
-        const params = new URLSearchParams({ search, categoryIds: categoryId, limit: "100" });
+        const params = new URLSearchParams({ search, categoryIds: categoryId, limit: "30" });
         const response = await fetch(
           `/api/admin/operations/products/bundles/search-products?${params}`,
           { signal: controller.signal },
@@ -183,7 +186,7 @@ function GroupCatalogPicker({
       <div className="grid gap-3 md:grid-cols-[220px_minmax(0,1fr)]">
         <div>
           <Label htmlFor={`bundle-group-category-${groupIndex}`}>{t("categoryLabel")}</Label>
-          <Select value={categoryId} onValueChange={onCategoryChange}>
+          <Select value={categoryId} onValueChange={(value) => onCategoryChange(groupIndex, value)}>
             <SelectTrigger id={`bundle-group-category-${groupIndex}`} className="mt-1">
               <SelectValue placeholder={t("categoryPlaceholder")} />
             </SelectTrigger>
@@ -250,7 +253,7 @@ function GroupCatalogPicker({
                     size="sm"
                     variant={selected ? "secondary" : "outline"}
                     disabled={selected || stock <= 0}
-                    onClick={() => onAdd(choice)}
+                    onClick={() => onAdd(groupIndex, choice)}
                   >
                     {selected ? <Check className="mr-1 h-4 w-4" /> : <Plus className="mr-1 h-4 w-4" />}
                     {selected ? t("added") : stock > 0 ? t("add") : t("outOfStock")}
@@ -269,9 +272,18 @@ function GroupCatalogPicker({
       ) : null}
     </div>
   );
-}
+}, (previous, next) =>
+  previous.group.catalogCategoryId === next.group.catalogCategoryId &&
+  previous.group.selectionType === next.group.selectionType &&
+  previous.group.options === next.group.options &&
+  previous.groupIndex === next.groupIndex &&
+  previous.categories === next.categories &&
+  previous.defaultCategoryId === next.defaultCategoryId &&
+  previous.onCategoryChange === next.onCategoryChange &&
+  previous.onAdd === next.onAdd,
+);
 
-export default function ConfigurableBundleGroupBuilder({
+function ConfigurableBundleGroupBuilder({
   groups,
   onChange,
   defaultCategoryId = "",
@@ -283,9 +295,22 @@ export default function ConfigurableBundleGroupBuilder({
   categories?: CatalogCategory[];
 }) {
   const t = useTranslations("AdminBundles.builder");
-  const updateGroup = (index: number, patch: Partial<BundleBuilderGroup>) => {
-    onChange(groups.map((group, groupIndex) => groupIndex === index ? { ...group, ...patch } : group));
-  };
+  const groupsRef = useRef(groups);
+  const onChangeRef = useRef(onChange);
+  const [advancedGroups, setAdvancedGroups] = useState<Set<string>>(new Set());
+
+  useEffect(() => {
+    groupsRef.current = groups;
+    onChangeRef.current = onChange;
+  }, [groups, onChange]);
+
+  const updateGroup = useCallback((index: number, patch: Partial<BundleBuilderGroup>) => {
+    onChangeRef.current(
+      groupsRef.current.map((group, groupIndex) =>
+        groupIndex === index ? { ...group, ...patch } : group,
+      ),
+    );
+  }, []);
 
   const moveGroup = (index: number, direction: -1 | 1) => {
     const nextIndex = index + direction;
@@ -295,8 +320,9 @@ export default function ConfigurableBundleGroupBuilder({
     onChange(nextGroups);
   };
 
-  const addOption = (groupIndex: number, choice: CatalogChoice) => {
-    const group = groups[groupIndex];
+  const addOption = useCallback((groupIndex: number, choice: CatalogChoice) => {
+    const group = groupsRef.current[groupIndex];
+    if (!group) return;
     if (group.options.some((option) => option.productId === choice.product.id && option.variantId === (choice.variant?.id ?? null))) return;
     const shouldDefault = group.selectionType !== "OPTIONAL" && group.options.filter((option) => option.isDefault).length < group.minSelect;
     updateGroup(groupIndex, {
@@ -308,6 +334,29 @@ export default function ConfigurableBundleGroupBuilder({
         product: choice.product,
         variant: choice.variant,
       }],
+    });
+  }, [updateGroup]);
+
+  const changeCatalogCategory = useCallback((groupIndex: number, catalogCategoryId: string) => {
+    const group = groupsRef.current[groupIndex];
+    if (!group) return;
+    const categoryName = categories.find(
+      (category) => String(category.id) === catalogCategoryId,
+    )?.name;
+    updateGroup(groupIndex, {
+      catalogCategoryId,
+      ...(!group.name.trim() && categoryName
+        ? { name: t("defaultGroupName", { category: categoryName }) }
+        : {}),
+    });
+  }, [categories, t, updateGroup]);
+
+  const toggleAdvanced = (key: string) => {
+    setAdvancedGroups((current) => {
+      const next = new Set(current);
+      if (next.has(key)) next.delete(key);
+      else next.add(key);
+      return next;
     });
   };
 
@@ -361,10 +410,10 @@ export default function ConfigurableBundleGroupBuilder({
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
-            <div className="grid gap-3 md:grid-cols-3">
+            <div className="grid gap-3 md:grid-cols-2">
               <div>
                 <Label htmlFor={`bundle-group-name-${groupIndex}`}>{t("fields.name")}</Label>
-                <Input id={`bundle-group-name-${groupIndex}`} value={group.name} onChange={(event) => updateGroup(groupIndex, { name: event.target.value })} placeholder={t("fields.namePlaceholder")} />
+                <ResponsiveInput id={`bundle-group-name-${groupIndex}`} value={group.name} onValueChange={(value) => updateGroup(groupIndex, { name: value })} placeholder={t("fields.namePlaceholder")} />
               </div>
               <div>
                 <Label htmlFor={`bundle-group-type-${groupIndex}`}>{t("fields.selectionType")}</Label>
@@ -388,29 +437,34 @@ export default function ConfigurableBundleGroupBuilder({
                   </SelectContent>
                 </Select>
               </div>
-              <div>
-                <Label htmlFor={`bundle-group-pricing-${groupIndex}`}>{t("fields.pricingMode")}</Label>
-                <Select value={group.pricingMode} onValueChange={(pricingMode: BundleBuilderGroup["pricingMode"]) => updateGroup(groupIndex, { pricingMode })}>
-                  <SelectTrigger id={`bundle-group-pricing-${groupIndex}`}><SelectValue /></SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="AUTOMATIC">{t("pricingModes.AUTOMATIC")}</SelectItem>
-                    <SelectItem value="MANUAL">{t("pricingModes.MANUAL")}</SelectItem>
-                  </SelectContent>
-                </Select>
-              </div>
             </div>
 
-            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
-              <div className="flex items-center rounded border px-3 py-2 text-sm"><span>{group.selectionType === "OPTIONAL" ? t("groupTypes.optional") : t("groupTypes.required")}</span></div>
-              <div><Label htmlFor={`bundle-group-min-${groupIndex}`}>{t("fields.minChoices")}</Label><Input id={`bundle-group-min-${groupIndex}`} type="number" min={group.required ? 1 : 0} value={group.minSelect} disabled={group.selectionType === "FIXED" || group.selectionType === "OPTIONAL"} onChange={(event) => updateGroup(groupIndex, { minSelect: Number(event.target.value) })} /></div>
-              <div><Label htmlFor={`bundle-group-max-${groupIndex}`}>{t("fields.maxChoices")}</Label><Input id={`bundle-group-max-${groupIndex}`} type="number" min="1" value={group.maxSelect} disabled={group.selectionType === "FIXED"} onChange={(event) => updateGroup(groupIndex, { maxSelect: Number(event.target.value) })} /></div>
-              <div><Label htmlFor={`bundle-group-default-qty-${groupIndex}`}>{t("fields.defaultQuantity")}</Label><Input id={`bundle-group-default-qty-${groupIndex}`} type="number" min="1" value={group.defaultQuantity} onChange={(event) => updateGroup(groupIndex, { defaultQuantity: Number(event.target.value) })} /></div>
-              <label className="flex items-center gap-2 rounded border px-3 py-2 text-sm"><Switch aria-label={t("fields.allowQuantityAria", { number: groupIndex + 1 })} checked={group.allowQuantityChange} onCheckedChange={(allowQuantityChange) => updateGroup(groupIndex, { allowQuantityChange, maxQuantity: allowQuantityChange ? Math.max(2, group.maxQuantity) : group.defaultQuantity, minQuantity: allowQuantityChange ? group.minQuantity : group.defaultQuantity })} />{t("fields.customerQuantity")}</label>
+            <div className="flex flex-wrap items-center justify-between gap-3 rounded-md border bg-muted/20 px-3 py-2">
+              <p className="text-xs text-muted-foreground">
+                {group.selectionType === "OPTIONAL" ? t("groupTypes.optional") : t("groupTypes.required")} · {t("choices.summary", { count: group.options.length, min: group.minSelect, max: group.maxSelect })} · {t(`pricingModes.${group.pricingMode}`)}
+              </p>
+              <Button type="button" size="sm" variant="ghost" onClick={() => toggleAdvanced(group.key)}>
+                {advancedGroups.has(group.key) ? <ChevronUp className="mr-2 h-4 w-4" /> : <ChevronDown className="mr-2 h-4 w-4" />}
+                {advancedGroups.has(group.key) ? t("actions.hideAdvanced") : t("actions.showAdvanced")}
+              </Button>
             </div>
-            {group.allowQuantityChange ? (
-              <div className="grid max-w-sm grid-cols-2 gap-3">
-                <div><Label htmlFor={`bundle-group-min-qty-${groupIndex}`}>{t("fields.minQuantity")}</Label><Input id={`bundle-group-min-qty-${groupIndex}`} type="number" min="1" value={group.minQuantity} onChange={(event) => updateGroup(groupIndex, { minQuantity: Number(event.target.value) })} /></div>
-                <div><Label htmlFor={`bundle-group-max-qty-${groupIndex}`}>{t("fields.maxQuantity")}</Label><Input id={`bundle-group-max-qty-${groupIndex}`} type="number" min="1" value={group.maxQuantity} onChange={(event) => updateGroup(groupIndex, { maxQuantity: Number(event.target.value) })} /></div>
+
+            {advancedGroups.has(group.key) ? (
+              <div className="space-y-3 rounded-md border p-3">
+                <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+                  <div>
+                    <Label htmlFor={`bundle-group-pricing-${groupIndex}`}>{t("fields.pricingMode")}</Label>
+                    <Select value={group.pricingMode} onValueChange={(pricingMode: BundleBuilderGroup["pricingMode"]) => updateGroup(groupIndex, { pricingMode })}>
+                      <SelectTrigger id={`bundle-group-pricing-${groupIndex}`}><SelectValue /></SelectTrigger>
+                      <SelectContent><SelectItem value="AUTOMATIC">{t("pricingModes.AUTOMATIC")}</SelectItem><SelectItem value="MANUAL">{t("pricingModes.MANUAL")}</SelectItem></SelectContent>
+                    </Select>
+                  </div>
+                  <div><Label htmlFor={`bundle-group-min-${groupIndex}`}>{t("fields.minChoices")}</Label><Input id={`bundle-group-min-${groupIndex}`} type="number" min={group.required ? 1 : 0} value={group.minSelect} disabled={group.selectionType === "FIXED" || group.selectionType === "OPTIONAL"} onChange={(event) => updateGroup(groupIndex, { minSelect: Number(event.target.value) })} /></div>
+                  <div><Label htmlFor={`bundle-group-max-${groupIndex}`}>{t("fields.maxChoices")}</Label><Input id={`bundle-group-max-${groupIndex}`} type="number" min="1" value={group.maxSelect} disabled={group.selectionType === "FIXED"} onChange={(event) => updateGroup(groupIndex, { maxSelect: Number(event.target.value) })} /></div>
+                  <div><Label htmlFor={`bundle-group-default-qty-${groupIndex}`}>{t("fields.defaultQuantity")}</Label><Input id={`bundle-group-default-qty-${groupIndex}`} type="number" min="1" value={group.defaultQuantity} onChange={(event) => updateGroup(groupIndex, { defaultQuantity: Number(event.target.value) })} /></div>
+                  <label className="flex items-center gap-2 rounded border px-3 py-2 text-sm"><Switch aria-label={t("fields.allowQuantityAria", { number: groupIndex + 1 })} checked={group.allowQuantityChange} onCheckedChange={(allowQuantityChange) => updateGroup(groupIndex, { allowQuantityChange, maxQuantity: allowQuantityChange ? Math.max(2, group.maxQuantity) : group.defaultQuantity, minQuantity: allowQuantityChange ? group.minQuantity : group.defaultQuantity })} />{t("fields.customerQuantity")}</label>
+                </div>
+                {group.allowQuantityChange ? <div className="grid max-w-sm grid-cols-2 gap-3"><div><Label htmlFor={`bundle-group-min-qty-${groupIndex}`}>{t("fields.minQuantity")}</Label><Input id={`bundle-group-min-qty-${groupIndex}`} type="number" min="1" value={group.minQuantity} onChange={(event) => updateGroup(groupIndex, { minQuantity: Number(event.target.value) })} /></div><div><Label htmlFor={`bundle-group-max-qty-${groupIndex}`}>{t("fields.maxQuantity")}</Label><Input id={`bundle-group-max-qty-${groupIndex}`} type="number" min="1" value={group.maxQuantity} onChange={(event) => updateGroup(groupIndex, { maxQuantity: Number(event.target.value) })} /></div></div> : null}
               </div>
             ) : null}
 
@@ -419,8 +473,8 @@ export default function ConfigurableBundleGroupBuilder({
               groupIndex={groupIndex}
               categories={categories}
               defaultCategoryId={defaultCategoryId}
-              onCategoryChange={(catalogCategoryId) => updateGroup(groupIndex, { catalogCategoryId })}
-              onAdd={(choice) => addOption(groupIndex, choice)}
+              onCategoryChange={changeCatalogCategory}
+              onAdd={addOption}
             />
 
             <div className="space-y-2">
@@ -452,3 +506,5 @@ export default function ConfigurableBundleGroupBuilder({
     </div>
   );
 }
+
+export default memo(ConfigurableBundleGroupBuilder);

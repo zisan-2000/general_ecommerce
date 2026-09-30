@@ -6682,6 +6682,8 @@
       },
       "actions": {
         "cancel": "Cancel",
+        "close": "Close",
+        "discardDraft": "Discard draft",
         "create": "Create Bundle",
         "creating": "Creating Bundle...",
         "update": "Update Bundle",
@@ -6689,6 +6691,7 @@
       },
       "success": {
         "imageUploaded": "Image uploaded successfully",
+        "draftRestored": "Your saved bundle draft has been restored",
         "created": "Bundle created successfully",
         "updated": "Bundle updated successfully"
       },
@@ -6733,12 +6736,15 @@
       "title": "Bundle selection groups",
       "description": "Each group has its own category, product search and pricing rule.",
       "groupNumber": "Group {number}",
+      "defaultGroupName": "{category} options",
       "empty": "Add at least two groups to create a bundle.",
       "actions": {
         "addGroup": "Add selection group",
         "moveUp": "Move group {number} up",
         "moveDown": "Move group {number} down",
-        "remove": "Remove"
+        "remove": "Remove",
+        "showAdvanced": "Advanced settings",
+        "hideAdvanced": "Hide advanced settings"
       },
       "fields": {
         "name": "Group name",
