@@ -3,7 +3,7 @@
 Download ALL Deshi Plus Tablet PC primary product images into hierarchy folders.
 
 Source:
-    https://www.startech.com.bd/tablet-pc
+    https://www.deshiplus.com/tablet-pc
 
 Default output:
     public/images/products/tablet-pc/...
@@ -77,7 +77,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 TABLET_URL = f"{BASE}/tablet-pc"
 
 HEADERS = {

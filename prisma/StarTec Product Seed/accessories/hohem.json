@@ -1,8 +1,8 @@
 {
   "schemaVersion": 3,
   "source": {
-    "site": "https://www.startech.com.bd",
-    "categoryUrl": "https://www.startech.com.bd/accessories",
+    "site": "https://www.deshiplus.com",
+    "categoryUrl": "https://www.deshiplus.com/accessories",
     "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\accessories",
     "generatedAtUnix": 1790591006,
     "generator": "prisma/startech_single_category_json_and_seed.py"
@@ -51,7 +51,7 @@
       "slug": "hohem-mic-01-1tx-1rx-microphone",
       "type": "PHYSICAL",
       "sku": "ST-40189",
-      "description": "<h2>Hohem MIC-01 (1TX + 1RX) Wireless Microphone</h2><p>The Hohem <strong>MIC-01</strong> (1TX + 1RX) Wireless <a href=\"https://www.startech.com.bd/accessories/microphone\" style=\"color: rgb(0, 0, 0);\" target=\"\">Microphone</a> is a flexible option for creators who want clean, consistent sound. This microphone is designed to function effortlessly with Android smartphones, tablets, and computers. Simply connect in the RX receiver and you're ready to record, making it great for video professionals who want rapid setup and versatility across numerous platforms. The Hohem MIC-01 Wireless Mic also supports smartphone shutter control, which allows you to capture images and movies without having to reach for your device. The Hohem Microphone has powerful DSP noise suppression to deliver clear audio in a variety of scenarios. Choose from three noise cancellation settings to customize the microphone's effectiveness for your recording requirements. Whether you're in a busy environment or a quiet studio, the Wireless Microphone provides continuous sound quality, helping you capture every detail. The Hohem MIC-01's plug-and-play architecture makes setup easy and quick. Connect the RX receiver to begin recording immediately. This Hohem MIC-01 Microphone is designed for long-term usage, allowing you to record without worrying about battery life or setup time. With this seamless connection, you may create balanced audio-visual recordings that satisfy professional standards. The Hohem MIC-01 (1TX plus1RX) Microphone for Android is a vital tool for producers who want adaptable, high-quality audio on the road. </p><h2>Buy Hohem MIC-01 Wireless Microphone from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hohem MIC-01 Wireless Microphone</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.startech.com.bd/accessories/microphone\" target=\"\">Microphone</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.startech.com.bd\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Hohem MIC-01 Wireless Microphone comes with 1 year warranty.</p>",
+      "description": "<h2>Hohem MIC-01 (1TX + 1RX) Wireless Microphone</h2><p>The Hohem <strong>MIC-01</strong> (1TX + 1RX) Wireless <a href=\"https://www.deshiplus.com/accessories/microphone\" style=\"color: rgb(0, 0, 0);\" target=\"\">Microphone</a> is a flexible option for creators who want clean, consistent sound. This microphone is designed to function effortlessly with Android smartphones, tablets, and computers. Simply connect in the RX receiver and you're ready to record, making it great for video professionals who want rapid setup and versatility across numerous platforms. The Hohem MIC-01 Wireless Mic also supports smartphone shutter control, which allows you to capture images and movies without having to reach for your device. The Hohem Microphone has powerful DSP noise suppression to deliver clear audio in a variety of scenarios. Choose from three noise cancellation settings to customize the microphone's effectiveness for your recording requirements. Whether you're in a busy environment or a quiet studio, the Wireless Microphone provides continuous sound quality, helping you capture every detail. The Hohem MIC-01's plug-and-play architecture makes setup easy and quick. Connect the RX receiver to begin recording immediately. This Hohem MIC-01 Microphone is designed for long-term usage, allowing you to record without worrying about battery life or setup time. With this seamless connection, you may create balanced audio-visual recordings that satisfy professional standards. The Hohem MIC-01 (1TX plus1RX) Microphone for Android is a vital tool for producers who want adaptable, high-quality audio on the road. </p><h2>Buy Hohem MIC-01 Wireless Microphone from Star Tech</h2><p>In Bangladesh, you can get original <strong>Hohem MIC-01 Wireless Microphone</strong> From Star Tech. We have a large collection of latest <a href=\"https://www.deshiplus.com/accessories/microphone\" target=\"\">Microphone</a> to purchase. Order Online Or Visit your Nearest <a href=\"https://www.deshiplus.com\" target=\"\">Star Tech Shop</a> to get yours at lowest price. The Hohem MIC-01 Wireless Microphone comes with 1 year warranty.</p>",
       "shortDesc": "<h2>Key Features</h2>\n<ul><li>Model: MIC-01</li><li>Microphone Direction: Omni-Directional, Wireless</li><li>Noise Cancellation: DSP 3-Level, shutter remote control</li><li>Charging Case: 850mAh, Built-in TF Card</li><li>Runtime: 7.5hrs(Up to 20hrs with the Charging Case), Apple MFi Certified</li></ul>",
       "model": "MIC-01",
       "warranty": "1 year",
@@ -167,7 +167,7 @@
           ]
         }
       ],
-      "sourceProductUrl": "https://www.startech.com.bd/hohem-mic-01-1tx-1rx-microphone",
+      "sourceProductUrl": "https://www.deshiplus.com/hohem-mic-01-1tx-1rx-microphone",
       "sourceProductCode": "40189",
       "sourceStatus": "In Stock",
       "sourceMpn": null,

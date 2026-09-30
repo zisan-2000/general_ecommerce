@@ -8,7 +8,7 @@ Download ONLY these Deshi Plus Camera categories:
 - Instant Camera
 
 Source:
-    https://www.startech.com.bd/camera
+    https://www.deshiplus.com/camera
 
 Default output:
     public/images/products/camera/
@@ -67,7 +67,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 CAMERA_URL = f"{BASE}/camera"
 
 HEADERS = {

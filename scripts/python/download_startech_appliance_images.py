@@ -3,7 +3,7 @@
 Download ALL Deshi Plus Appliance primary product images into hierarchy folders.
 
 Source:
-    https://www.startech.com.bd/appliance
+    https://www.deshiplus.com/appliance
 
 Default output:
     public/images/products/appliance/...
@@ -85,7 +85,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 APPLIANCE_URL = f"{BASE}/appliance"
 
 HEADERS = {

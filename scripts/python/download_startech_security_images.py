@@ -4,7 +4,7 @@ Download ALL Deshi Plus Security Camera / Security product primary images into
 category folders.
 
 Source:
-    https://www.startech.com.bd/Security-Camera
+    https://www.deshiplus.com/Security-Camera
 
 Default output:
     public/images/products/security-camera/...
@@ -73,7 +73,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 SECURITY_URL = f"{BASE}/Security-Camera"
 
 HEADERS = {

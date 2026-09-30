@@ -19,7 +19,7 @@ What it does:
   2. Uses the image filename as the preferred Deshi Plus product slug.
   3. Tries direct Deshi Plus URL, Deshi Plus internal search, then Google discovery.
      If Google HTML/API is unavailable it can use DuckDuckGo only to discover a
-     Deshi Plus URL. Product data is always scraped from startech.com.bd.
+     Deshi Plus URL. Product data is always scraped from deshiplus.com.
   4. Scrapes full product details, description, key features, price, brand,
      model, warranty, dimensions/weight, and specification groups.
   5. Maps local folder hierarchy to category/subcategory/child category + brand.
@@ -172,12 +172,12 @@ def pretty(value: str) -> str:
 def canonical_startech_category(url: str) -> str:
     p = urlsplit(url.strip())
     if p.scheme not in {"http", "https"} or (p.hostname or "").lower() not in {
-        "startech.com.bd",
-        "www.startech.com.bd",
+        "deshiplus.com",
+        "www.deshiplus.com",
     }:
-        raise ValueError("Category URL must be a startech.com.bd URL")
+        raise ValueError("Category URL must be a deshiplus.com URL")
     path = "/" + p.path.strip("/")
-    return f"https://www.startech.com.bd{path.rstrip('/')}"
+    return f"https://www.deshiplus.com{path.rstrip('/')}"
 
 
 def category_url_slug(url: str) -> str:
@@ -283,7 +283,7 @@ def scan_images(image_root: Path, project_root: Path) -> list[LocalImage]:
 
 def google_candidates(query: str, timeout: int = 20) -> list[tuple[str, str, str]]:
     """Return (url, title, method). URLs are discovery only; details still come from Deshi Plus."""
-    q = f'site:startech.com.bd "{query}"'
+    q = f'site:deshiplus.com "{query}"'
     headers = {
         "User-Agent": core.HEADERS["User-Agent"],
         "Accept-Language": "en-US,en;q=0.9",
@@ -358,7 +358,7 @@ def google_candidates(query: str, timeout: int = 20) -> list[tuple[str, str, str
 
 def _is_startech_url(url: str) -> bool:
     host = (urlsplit(url).hostname or "").lower()
-    return host in {"startech.com.bd", "www.startech.com.bd"}
+    return host in {"deshiplus.com", "www.deshiplus.com"}
 
 
 def _extract_google_result_url(href: str) -> str | None:

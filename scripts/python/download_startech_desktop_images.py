@@ -48,7 +48,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 DESKTOP_URL = f"{BASE}/desktops"
 
 HEADERS = {
@@ -151,7 +151,7 @@ def canonical_url(url: str) -> str:
 
 def same_site(url: str) -> bool:
     host = urlparse(url).netloc.lower()
-    return host in {"www.startech.com.bd", "startech.com.bd"}
+    return host in {"www.deshiplus.com", "deshiplus.com"}
 
 
 def with_page(url: str, page: int) -> str:

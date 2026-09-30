@@ -9,7 +9,7 @@ Inputs
 
 For every local product image, the script:
 - derives a likely Deshi Plus product slug from the image filename
-- tries https://www.startech.com.bd/<slug> first
+- tries https://www.deshiplus.com/<slug> first
 - falls back to Deshi Plus search when direct URL matching fails
 - scrapes product name, price, regular/original price, brand, model, MPN,
   product code, warranty, description, key features and specification groups
@@ -97,7 +97,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 IMAGE_EXTENSIONS = {".png", ".jpg", ".jpeg", ".webp", ".avif", ".gif"}
 SPECIAL_FOLDERS = {"_direct", "_other", "_uncategorized"}
 DEFAULT_CACHE_SECONDS = 7 * 24 * 60 * 60
@@ -155,12 +155,12 @@ def pretty_name(value: str) -> str:
 def canonical_startech_url(url: str) -> str:
     p = urlsplit(urljoin(BASE, url))
     host = p.hostname or ""
-    if host not in {"startech.com.bd", "www.startech.com.bd"}:
+    if host not in {"deshiplus.com", "www.deshiplus.com"}:
         raise ValueError(f"Unexpected Deshi Plus URL: {url}")
     path = quote_plus(unquote(p.path).strip().rstrip("/"), safe="/-._~")
     # quote_plus encodes spaces as +; path URLs are cleaner with %20 / slug style.
     path = path.replace("+", "%20") or "/"
-    return urlunsplit(("https", "www.startech.com.bd", path, "", ""))
+    return urlunsplit(("https", "www.deshiplus.com", path, "", ""))
 
 
 def money(text: str) -> float | None:

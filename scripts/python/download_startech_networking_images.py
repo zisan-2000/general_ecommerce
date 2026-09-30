@@ -3,7 +3,7 @@
 Download ALL Deshi Plus Networking product primary images into hierarchy folders.
 
 Source:
-    https://www.startech.com.bd/networking
+    https://www.deshiplus.com/networking
 
 Default output:
     public/images/products/networking/...
@@ -73,7 +73,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 NETWORKING_URL = f"{BASE}/networking"
 
 HEADERS = {

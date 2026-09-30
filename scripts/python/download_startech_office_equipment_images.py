@@ -67,7 +67,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 
-BASE = "https://www.startech.com.bd"
+BASE = "https://www.deshiplus.com"
 OFFICE_URL = f"{BASE}/office-equipment"
 
 HEADERS = {
@@ -277,7 +277,7 @@ def crawl(client: Client, url: str, verbose: bool = False):
 def is_same_site(url: str) -> bool:
     try:
         p = urlparse(url)
-        return p.netloc.lower() in {"startech.com.bd", "www.startech.com.bd"}
+        return p.netloc.lower() in {"deshiplus.com", "www.deshiplus.com"}
     except Exception:
         return False
 

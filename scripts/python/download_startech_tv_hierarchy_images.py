@@ -10,7 +10,7 @@ from PIL import Image
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-BASE="https://www.startech.com.bd"
+BASE="https://www.deshiplus.com"
 ROOT=f"{BASE}/television-shop"
 CATS=OrderedDict([
  ("all-tv","All TV"),("led-tv","LED TV"),("smart-tv","Smart TV"),
