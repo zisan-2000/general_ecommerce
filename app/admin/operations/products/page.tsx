@@ -64,7 +64,6 @@ interface DigitalAsset {
 }
 
 interface ProductsPageCache {
-  products: Product[];
   categories: Category[];
   brands: Brand[];
   vatClasses: VatClass[];
@@ -112,9 +111,39 @@ function invalidateStorefrontProductCache() {
 }
 
 export default function ProductsPage() {
-  const [products, setProducts] = useState<Product[]>(
-    () => productsPageCache?.products ?? [],
-  );
+  const [products, setProducts] = useState<Product[]>([]);
+  const [query, setQuery] = useState<string | null>(null);
+  const [revision, setRevision] = useState(0);
+  const [pagination, setPagination] = useState({ total: 0, page: 1, pages: 1, pageSize: 24 });
+  const [productsLoading, setProductsLoading] = useState(true);
+  const [loadError, setLoadError] = useState("");
+  const refreshProducts = useCallback(() => setRevision((value) => value + 1), []);
+
+  useEffect(() => {
+    if (query === null) return;
+    const controller = new AbortController();
+    setProductsLoading(true);
+    setLoadError("");
+    void (async () => {
+      try {
+        const response = await fetch(`/api/products?paginated=true&${query}`, {
+          cache: "no-store", signal: controller.signal,
+        });
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error || "Failed to load products");
+        if (controller.signal.aborted) return;
+        setProducts(payload.products);
+        setPagination(payload.pagination);
+      } catch (error) {
+        if (controller.signal.aborted) return;
+        setProducts([]);
+        setLoadError(error instanceof Error ? error.message : "Failed to load products");
+      } finally {
+        if (!controller.signal.aborted) setProductsLoading(false);
+      }
+    })();
+    return () => controller.abort();
+  }, [query, revision]);
   const [categories, setCategories] = useState<Category[]>(
     () => productsPageCache?.categories ?? [],
   );
@@ -134,7 +163,6 @@ export default function ProductsPage() {
 
   const loadAll = useCallback(async () => {
     if (productsPageCache) {
-      setProducts(productsPageCache.products);
       setCategories(productsPageCache.categories);
       setBrands(productsPageCache.brands);
       setVatClasses(productsPageCache.vatClasses);
@@ -160,8 +188,7 @@ export default function ProductsPage() {
         BUNDLES: featurePayload?.features?.BUNDLES ?? true,
         BOOKS: featurePayload?.features?.BOOKS ?? false,
       };
-      const [p, c, b, vat, da] = await Promise.all([
-        fetchJsonArray<Product>("/api/products", "products"),
+      const [c, b, vat, da] = await Promise.all([
         fetchJsonArray<Category>("/api/categories", "categories"),
         fetchJsonArray<Brand>("/api/brands", "brands"),
         fetchJsonArray<VatClass>("/api/vat-classes", "VAT classes"),
@@ -171,7 +198,6 @@ export default function ProductsPage() {
       ]);
 
       productsPageCache = {
-        products: p,
         categories: c,
         brands: b,
         vatClasses: vat,
@@ -179,7 +205,6 @@ export default function ProductsPage() {
         features: nextFeatures,
       };
 
-      setProducts(p);
       setCategories(c);
       setBrands(b);
       setVatClasses(vat);
@@ -214,17 +239,9 @@ export default function ProductsPage() {
       throw new Error(err.error || "Create failed");
     }
 
-    const newProduct = await res.json();
-
-    setProducts((prev) => [newProduct, ...prev]);
-    if (productsPageCache) {
-      productsPageCache = {
-        ...productsPageCache,
-        products: [newProduct, ...productsPageCache.products],
-      };
-    }
     invalidateStorefrontProductCache();
-  }, []);
+    refreshProducts();
+  }, [refreshProducts]);
 
   const updateProduct = useCallback(async (id: number, data: unknown) => {
     const res = await fetch(`/api/products/${id}`, {
@@ -241,18 +258,12 @@ export default function ProductsPage() {
     const updated = await res.json();
 
     setProducts((prev) => prev.map((p) => (p.id === id ? updated : p)));
-    if (productsPageCache) {
-      productsPageCache = {
-        ...productsPageCache,
-        products: productsPageCache.products.map((p) =>
-          p.id === id ? updated : p,
-        ),
-      };
-    }
+
     invalidateStorefrontProductCache();
+    refreshProducts();
 
     return updated;
-  }, []);
+  }, [refreshProducts]);
 
   const updateProductAvailability = useCallback(
     async (id: number, available: boolean, expectedUpdatedAt: string) => {
@@ -265,19 +276,7 @@ export default function ProductsPage() {
       const payload = await res.json().catch(() => ({}));
       if (!res.ok) {
         if (res.status === 409) {
-          const latestResponse = await fetch("/api/products", {
-            cache: "no-store",
-          });
-          if (latestResponse.ok) {
-            const latestProducts = (await latestResponse.json()) as Product[];
-            setProducts(latestProducts);
-            if (productsPageCache) {
-              productsPageCache = {
-                ...productsPageCache,
-                products: latestProducts,
-              };
-            }
-          }
+          refreshProducts();
         }
 
         throw new Error(
@@ -287,18 +286,12 @@ export default function ProductsPage() {
 
       const updated = payload as Product;
       setProducts((prev) => prev.map((p) => (p.id === id ? updated : p)));
-      if (productsPageCache) {
-        productsPageCache = {
-          ...productsPageCache,
-          products: productsPageCache.products.map((p) =>
-            p.id === id ? updated : p,
-          ),
-        };
-      }
+
       invalidateStorefrontProductCache();
+      refreshProducts();
       return updated;
     },
-    [],
+    [refreshProducts],
   );
 
   const updateProductFlashSale = useCallback((id: number, data: any) => {
@@ -319,29 +312,23 @@ export default function ProductsPage() {
         product.id === id ? { ...product, ...patch } : product,
       ),
     );
-    if (productsPageCache) {
-      productsPageCache = {
-        ...productsPageCache,
-        products: productsPageCache.products.map((product) =>
-          product.id === id ? { ...product, ...patch } : product,
-        ),
-      };
-    }
+
     invalidateStorefrontProductCache();
-  }, []);
+    refreshProducts();
+  }, [refreshProducts]);
 
   const deleteProduct = useCallback(async (id: number) => {
-    await fetch(`/api/products/${id}`, { method: "DELETE" });
+    const response = await fetch(`/api/products/${id}`, { method: "DELETE" });
+    if (!response.ok) {
+      const payload = await response.json().catch(() => ({}));
+      throw new Error(payload.error || "Delete failed");
+    }
 
     setProducts((prev) => prev.filter((p) => p.id !== id));
-    if (productsPageCache) {
-      productsPageCache = {
-        ...productsPageCache,
-        products: productsPageCache.products.filter((p) => p.id !== id),
-      };
-    }
+
     invalidateStorefrontProductCache();
-  }, []);
+    refreshProducts();
+  }, [refreshProducts]);
 
   const memoizedProducts = useMemo(() => products, [products]);
   const memoizedCategories = useMemo(() => categories, [categories]);
@@ -351,6 +338,9 @@ export default function ProductsPage() {
 
   return (
     <div className="min-h-screen bg-background">
+      {loadError && <div role="alert" className="p-4 text-destructive">
+        {loadError} <button type="button" onClick={refreshProducts}>Retry</button>
+      </div>}
       <ProductManager
         products={memoizedProducts}
         categories={memoizedCategories}
@@ -358,7 +348,9 @@ export default function ProductsPage() {
         vatClasses={memoizedVatClasses}
         digitalAssets={memoizedDigitalAssets}
         features={features}
-        loading={loading}
+        loading={loading || productsLoading}
+        pagination={pagination}
+        onQueryChange={setQuery}
         onCreate={createProduct}
         onUpdate={updateProduct}
         onAvailabilityChange={updateProductAvailability}

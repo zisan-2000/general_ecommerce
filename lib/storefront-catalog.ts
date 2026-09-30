@@ -1,3 +1,4 @@
+import { parseSpecificationFilters, specificationKey, specificationWhere, specificationFacetQuery, type SpecificationFacet } from "@/lib/catalog-specification-filters";
 import { unstable_cache } from "next/cache.js";
 import { Prisma } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
@@ -60,6 +61,7 @@ export type CatalogFilters = {
   attributes: Record<string, string[]>;
   // Dynamic sellable-variant filters keyed by option name.
   variants: Record<string, string[]>;
+  specifications: Record<string, string[]>;
 };
 
 export const catalogProductSelect = {
@@ -294,6 +296,7 @@ export function parseCatalogFilters(
     perPage,
     attributes: parseAttributeFilters(searchParams),
     variants: parseVariantFilters(searchParams),
+    specifications: parseSpecificationFilters(searchParams),
   };
 }
 
@@ -867,6 +870,24 @@ const readCatalogVariantFacets = unstable_cache(
   { revalidate: 300, tags: ["storefront-catalog", "products", "categories"] },
 );
 
+const readCatalogSpecificationFacets = unstable_cache(
+  async (serializedCategoryIds: string, serializedDisabledTypes: string, hideBooks: boolean) => {
+    const rows = await prisma.$queryRaw<Array<{ group: string; label: string; value: string; productCount: number }>>(
+      specificationFacetQuery(JSON.parse(serializedCategoryIds), JSON.parse(serializedDisabledTypes), hideBooks),
+    );
+    const groups = new Map<string, SpecificationFacet>();
+    for (const row of rows) {
+      const key = specificationKey(row.group, row.label);
+      const facet = groups.get(key) ?? { key, group: row.group, label: row.label, values: [] };
+      facet.values.push({ value: row.value, productCount: row.productCount });
+      groups.set(key, facet);
+    }
+    return [...groups.values()];
+  },
+  ["storefront-catalog-specification-facets-v1"],
+  { revalidate: 300, tags: ["storefront-catalog", "products", "categories"] },
+);
+
 function descendantCategoryIds(
   categories: Awaited<ReturnType<typeof readCatalogFacets>>["categories"],
   slug: string,
@@ -906,8 +927,11 @@ function catalogOrderBy(
   return [{ createdAt: "desc" }, { id: "desc" }];
 }
 
-const readCatalog = unstable_cache(
-  async (serializedFilters: string, serializedDisabledTypes: string, serializedBookVisibility: string) => {
+const readCatalog = async (
+  serializedFilters: string,
+  serializedDisabledTypes: string,
+  serializedBookVisibility: string,
+) => {
     const requestedFilters = JSON.parse(serializedFilters) as CatalogFilters;
     const disabledTypes = JSON.parse(
       serializedDisabledTypes,
@@ -938,16 +962,26 @@ const readCatalog = unstable_cache(
       ? descendantCategoryIds(facets.categories, scopedCategory.slug)
       : [];
     const facetCategoryIds = scopedCategory ? categoryIds : activeCategoryIds;
-    const [attributeFacets, variantFacets] = await Promise.all([
+    const facetResults = await Promise.all([
       readCatalogAttributeFacets(
         JSON.stringify(facetCategoryIds),
         serializedDisabledTypes,
-      ),
+      ).then((attributes) => ({ attributes })),
       readCatalogVariantFacets(
         JSON.stringify(facetCategoryIds),
         serializedDisabledTypes,
-      ),
+      ).then((variants) => ({ variants })),
+      readCatalogSpecificationFacets(
+        JSON.stringify(facetCategoryIds),
+        serializedDisabledTypes,
+        Object.keys(bookVisibility).length > 0,
+      ).then((specifications) => ({ specifications })),
     ]);
+    const { attributes: attributeFacets, variants: variantFacets, specifications: specificationFacets } = {
+      ...facetResults[0],
+      ...facetResults[1],
+      ...facetResults[2],
+    };
     const attributeFacetNames = new Set(
       attributeFacets.map((facet) => facet.name.toLocaleLowerCase()),
     );
@@ -959,8 +993,9 @@ const readCatalog = unstable_cache(
       facets,
       attributeFacets,
       catalogVariantFacets,
+      specificationFacets,
     );
-    const andFilters: Prisma.ProductWhereInput[] = [];
+    const andFilters: Prisma.ProductWhereInput[] = specificationWhere(filters.specifications);
     for (const term of catalogSearchTerms(filters.q)) {
       andFilters.push({
         OR: [
@@ -1150,6 +1185,7 @@ const readCatalog = unstable_cache(
         ...facets,
         attributes: attributeFacets,
         variantOptions: catalogVariantFacets,
+        specificationGroups: specificationFacets,
       },
       products: products.map(serializeCatalogProduct),
       pagination: {
@@ -1159,10 +1195,7 @@ const readCatalog = unstable_cache(
         totalPages: Math.max(1, Math.ceil(total / filters.perPage)),
       },
     };
-  },
-  ["storefront-catalog-results-v4"],
-  { revalidate: 120, tags: ["storefront-catalog", "products", "categories"] },
-);
+  };
 
 export type CatalogAttributeFacet = Awaited<
   ReturnType<typeof readCatalogAttributeFacets>
@@ -1197,6 +1230,7 @@ export function resolveCatalogFilters(
     name: string;
     values: Array<{ value: string; productCount: number }>;
   }> = [],
+  specificationFacets: SpecificationFacet[] = [],
 ): CatalogFilters {
   const selectedCategory = filters.category
     ? facets.categories.find(
@@ -1233,12 +1267,19 @@ export function resolveCatalogFilters(
     if (kept.length) variants[facet.name] = kept;
   }
 
+  const specifications: Record<string, string[]> = {};
+  for (const facet of specificationFacets) {
+    const known = new Set(facet.values.map((entry) => entry.value));
+    const kept = (filters.specifications?.[facet.key] ?? []).filter((value) => known.has(value));
+    if (kept.length) specifications[facet.key] = kept;
+  }
   return {
     ...filters,
     category: selectedCategory?.slug ?? "",
     brands: filters.brands.filter((brand) => knownBrands.has(brand)),
     attributes,
     variants,
+    specifications,
   };
 }
 
@@ -1249,6 +1290,7 @@ export function catalogCanonicalUrl(filters: CatalogFilters) {
     brands: keepBrand ? filters.brands : [],
     attributes: {},
     variants: {},
+    specifications: {},
     type: "",
     minPrice: null,
     maxPrice: null,
@@ -1265,6 +1307,7 @@ export function isIndexableCatalogView(filters: CatalogFilters) {
     !filters.q &&
     Object.keys(filters.attributes).length === 0 &&
     Object.keys(filters.variants).length === 0 &&
+    Object.keys(filters.specifications ?? {}).length === 0 &&
     filters.brands.length <= 1 &&
     !(filters.category && filters.brands.length > 0) &&
     !filters.type &&
@@ -1299,6 +1342,9 @@ export function catalogUrl(
     for (const value of values) {
       params.append(`${CATALOG_VARIANT_PREFIX}${name}`, value);
     }
+  }
+  for (const [key, values] of Object.entries(next.specifications ?? {})) {
+    for (const value of values) params.append(`spec_${key}`, value);
   }
   if (next.inStock) params.set("inStock", "1");
   if (next.featured) params.set("featured", "1");

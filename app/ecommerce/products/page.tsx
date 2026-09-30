@@ -1,7 +1,8 @@
+import FilterSection from "@/components/ecommarce/catalog/CatalogFilterSection";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { redirect } from "next/navigation";
-import { ChevronDown, Filter, PackageSearch, Search } from "lucide-react";
+import { Filter, LoaderCircle, PackageSearch, Search } from "lucide-react";
 import CatalogFilterForm from "@/components/ecommarce/catalog/CatalogFilterForm";
 import CatalogProductGrid from "@/components/ecommarce/catalog/CatalogProductGrid";
 import SearchResultsTelemetry from "@/components/ecommarce/search/SearchResultsTelemetry";
@@ -30,43 +31,6 @@ const SORT_OPTIONS: Array<{ value: CatalogSort; labelKey: string }> = [
   { value: "price-desc", labelKey: "sort.priceDesc" },
   { value: "name-asc", labelKey: "sort.nameAsc" },
 ];
-
-/**
- * Native <details> keeps each filter group collapsible without client state,
- * which matters because CatalogFilterForm remounts on every filter change -
- * a useState-based accordion would snap shut on each navigation.
- */
-function FilterSection({
-  title,
-  badge,
-  defaultOpen = false,
-  children,
-}: {
-  title: string;
-  badge?: number;
-  defaultOpen?: boolean;
-  children: React.ReactNode;
-}) {
-  return (
-    <details open={defaultOpen} className="group border-b pb-3 last:border-b-0">
-      <summary className="flex cursor-pointer list-none items-center justify-between gap-2 py-2 text-sm font-semibold marker:hidden [&::-webkit-details-marker]:hidden">
-        <span className="flex items-center gap-2">
-          {title}
-          {badge ? (
-            <span className="rounded-full bg-primary px-1.5 py-0.5 text-[10px] font-bold text-primary-foreground">
-              {badge}
-            </span>
-          ) : null}
-        </span>
-        <ChevronDown
-          className="h-4 w-4 shrink-0 text-muted-foreground transition-transform group-open:rotate-180"
-          aria-hidden="true"
-        />
-      </summary>
-      <div className="pt-1">{children}</div>
-    </details>
-  );
-}
 
 export async function generateMetadata({
   searchParams,
@@ -104,6 +68,7 @@ function paginationPages(page: number, totalPages: number) {
 
 export default async function ProductsPage({ searchParams }: ProductsPageProps) {
   const t = await getTranslations("StorefrontCatalog.page");
+  const filtersT = await getTranslations("StorefrontCatalog.filters");
   const productTypeLabel = (type: string) => {
     const key = type.toLowerCase();
     return ["physical", "digital", "service", "bundle"].includes(key)
@@ -140,6 +105,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
     filters.featured,
     ...Object.values(filters.attributes).map((values) => values.length > 0),
     ...Object.values(filters.variants).map((values) => values.length > 0),
+    ...Object.values(filters.specifications).map((values) => values.length > 0),
   ].filter(Boolean).length;
   const activeFilterLinks: Array<{ key: string; label: string; href: string }> = [];
   if (filters.q) {
@@ -218,6 +184,19 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
         key: `variant-${group.name}-${value}`,
         label: `${group.name}: ${value}`,
         href: catalogUrl(filters, { variants: nextVariants, page: 1 }),
+      });
+    }
+  }
+  for (const group of facets.specificationGroups) {
+    for (const value of filters.specifications[group.key] ?? []) {
+      const specifications = { ...filters.specifications };
+      const rest = specifications[group.key].filter((entry) => entry !== value);
+      if (rest.length) specifications[group.key] = rest;
+      else delete specifications[group.key];
+      activeFilterLinks.push({
+        key: `spec-${group.key}-${value}`,
+        label: `${group.group} / ${group.label}: ${value}`,
+        href: catalogUrl(filters, { specifications, page: 1 }),
       });
     }
   }
@@ -345,7 +324,6 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             </div>
 
             <CatalogFilterForm
-              key={catalogUrl(filters)}
               className="hidden border-t p-4 peer-checked:block lg:block lg:min-h-0 lg:flex-1 lg:overflow-y-auto lg:border-t-0"
             >
               {activeFilterCount ? (
@@ -580,6 +558,35 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                 );
               })}
 
+              {Array.from(new Set(facets.specificationGroups.map((facet) => facet.group))).map((groupName) => (
+                <section key={groupName} className="pt-4" aria-label={groupName}>
+                  <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                    {groupName}
+                  </h3>
+                  {facets.specificationGroups.filter((facet) => facet.group === groupName).map((group) => {
+                const selected = filters.specifications[group.key] ?? [];
+                return (
+                  <FilterSection key={`spec-${group.key}`} title={group.label}
+                    badge={selected.length} defaultOpen={selected.length > 0}>
+                    <div className="max-h-44 space-y-1 overflow-y-auto pr-1">
+                      {group.values.map((entry) => (
+                        <label key={entry.value} className="flex cursor-pointer items-start justify-between gap-3 rounded-md px-2 py-1.5 text-sm hover:bg-muted">
+                          <span className="flex min-w-0 items-start gap-2">
+                            <input type="checkbox" name={`spec_${group.key}`} value={entry.value}
+                              defaultChecked={selected.includes(entry.value)}
+                              className="mt-1 h-4 w-4 shrink-0 rounded border-border accent-primary" />
+                            <span className="break-words" title={entry.value}>{entry.value}</span>
+                          </span>
+                          <span className="shrink-0 text-xs text-muted-foreground">{entry.productCount}</span>
+                        </label>
+                      ))}
+                    </div>
+                  </FilterSection>
+                );
+                  })}
+                </section>
+              ))}
+
               <div className="space-y-3 pt-3">
                 <label className="block space-y-2 text-sm font-semibold">
                   {t("sortBy")}
@@ -613,7 +620,11 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             </CatalogFilterForm>
           </aside>
 
-          <main className="min-w-0">
+          <main id="catalog-results" className="group/results relative min-w-0">
+            <div className="pointer-events-none absolute inset-0 z-20 hidden justify-center bg-background/60 pt-24 group-aria-busy/results:flex" role="status">
+              <LoaderCircle className="h-8 w-8 animate-spin text-primary" aria-hidden="true" />
+              <span className="sr-only">{filtersT("updating")}</span>
+            </div>
             <div className="mb-4 flex flex-col gap-3 rounded-2xl border bg-card px-4 py-4 sm:flex-row sm:items-center sm:justify-between">
               <div>
                 <h2 className="font-bold">
