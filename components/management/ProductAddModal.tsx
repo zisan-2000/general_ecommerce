@@ -21,7 +21,12 @@ import {
   normalizeVariantMediaMeta,
 } from "@/lib/product-variants";
 import { type CatalogAttributeType } from "@/lib/attribute-schema";
+import {
+  parseSpecificationGroupsInput,
+  type SpecificationGroupInput,
+} from "@/lib/product-specifications";
 import TinymceEditor from "../tinymceEditor";
+import ProductSpecificationBuilder from "./ProductSpecificationBuilder";
 
 type ProductType = "PHYSICAL" | "DIGITAL" | "SERVICE";
 
@@ -118,6 +123,41 @@ interface VariantRowForm {
   stock: string;
   lowStockThreshold: string;
   active: boolean;
+}
+
+interface SpecificationRowInput {
+  name?: unknown;
+  items?: unknown;
+}
+
+// Products arrive from the API with ordered groups/items; seed the builder with
+// that shape and drop anything the server would reject so edit never 400s.
+function normalizeSpecificationGroups(editing: any): SpecificationGroupInput[] {
+  const rawGroups = Array.isArray(editing?.specificationGroups)
+    ? editing.specificationGroups
+    : [];
+  if (rawGroups.length === 0) return [];
+
+  const shaped = rawGroups.map((group: SpecificationRowInput) => ({
+    name: typeof group?.name === "string" ? group.name : "",
+    items: Array.isArray(group?.items)
+      ? group.items.map((item: any) => ({
+          label: typeof item?.label === "string" ? item.label : "",
+          value: typeof item?.value === "string" ? item.value : "",
+        }))
+      : [],
+  }));
+
+  const parsed = parseSpecificationGroupsInput(shaped);
+  if (!parsed.ok) return [];
+
+  // Drop empty groups/items that the parser keeps but the UI treats as noise.
+  return parsed.value
+    .map((group) => ({
+      name: group.name,
+      items: group.items.filter((item) => item.label),
+    }))
+    .filter((group) => group.items.length > 0);
 }
 
 interface Props {
@@ -336,6 +376,10 @@ export default function ProductAddModal({
   const [variantOptionSearches, setVariantOptionSearches] = useState<
     Record<number, string>
   >({});
+  const [specificationsEnabled, setSpecificationsEnabled] = useState(false);
+  const [specificationGroups, setSpecificationGroups] = useState<
+    SpecificationGroupInput[]
+  >([]);
 
   const categoryOptions = useMemo(() => {
     const childrenByParent = new Map<number | null, CategoryEntity[]>();
@@ -466,6 +510,8 @@ export default function ProductAddModal({
       setVariantRows([]);
       setColorVariantImages({});
       setVariantOptionSearches({});
+      setSpecificationsEnabled(false);
+      setSpecificationGroups([]);
       return;
     }
 
@@ -613,6 +659,10 @@ export default function ProductAddModal({
       gallery: editing.gallery ?? [],
       videoUrl: editing.videoUrl ?? "",
     });
+    const seededSpecifications = normalizeSpecificationGroups(editing);
+    setSpecificationsEnabled(seededSpecifications.length > 0);
+    setSpecificationGroups(seededSpecifications);
+
     setHasVariants(isVariantProduct);
     setVariantOptions(isVariantProduct ? optionFormsWithAttributeIds : []);
     setVariantRows(isVariantProduct ? mappedRows : []);
@@ -1066,6 +1116,26 @@ export default function ProductAddModal({
         ? null
         : reminderHours * 60 + reminderMinutes;
 
+    const specificationInput = specificationsEnabled
+      ? specificationGroups
+          .map((group) => ({
+            name: group.name.trim(),
+            items: group.items
+              .map((item) => ({
+                label: item.label.trim(),
+                value: item.value.trim(),
+              }))
+              .filter((item) => item.label || item.value),
+          }))
+          .filter((group) => group.name || group.items.length > 0)
+      : [];
+    const specificationValidation =
+      parseSpecificationGroupsInput(specificationInput);
+    if (!specificationValidation.ok) {
+      toast.error(specificationValidation.error);
+      return;
+    }
+
     setLoading(true);
     try {
       const payload: any = {
@@ -1100,6 +1170,7 @@ export default function ProductAddModal({
         gallery: form.gallery || [],
         videoUrl: form.videoUrl || null,
         variantOptions: hasVariants ? normalizedVariantOptions : [],
+        specificationGroups: specificationValidation.value,
       };
 
       if (!editing) payload.available = form.available;
@@ -1844,6 +1915,13 @@ export default function ProductAddModal({
               </div>
             )}
           </section>
+
+          <ProductSpecificationBuilder
+            enabled={specificationsEnabled}
+            groups={specificationGroups}
+            onEnabledChange={setSpecificationsEnabled}
+            onChange={setSpecificationGroups}
+          />
 
           <section className="space-y-4 rounded-xl border p-4">
             <h3 className="font-semibold">{t("additional.title")}</h3>

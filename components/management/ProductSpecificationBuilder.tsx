@@ -164,7 +164,7 @@ export default function ProductSpecificationBuilder({
           ) : (
             <div className="space-y-4">
               {groups.map((group, groupIndex) => (
-                <div key={`${groupIndex}-${group.name}`} className="space-y-3 rounded-lg border p-3">
+                <div key={groupIndex} className="space-y-3 rounded-lg border p-3">
                   <div className="flex gap-2">
                     <Input
                       aria-label={`Group ${groupIndex + 1} name`}
@@ -185,7 +185,7 @@ export default function ProductSpecificationBuilder({
                   </div>
 
                   {group.items.map((item, itemIndex) => (
-                    <div key={`${itemIndex}-${item.label}`} className="grid gap-2 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)_auto_auto_auto]">
+                    <div key={itemIndex} className="grid gap-2 md:grid-cols-[minmax(0,0.8fr)_minmax(0,1.2fr)_auto_auto_auto]">
                       <Input
                         aria-label={`Specification ${itemIndex + 1} label`}
                         value={item.label}
