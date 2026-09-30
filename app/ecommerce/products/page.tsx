@@ -1,6 +1,8 @@
+import CatalogDynamicFilters from "@/components/ecommarce/catalog/CatalogDynamicFilters";
+import { catalogFacetPage } from "@/lib/catalog-facet-page";
 import FilterSection from "@/components/ecommarce/catalog/CatalogFilterSection";
 import type { Metadata } from "next";
-import Link from "next/link";
+import Link from "@/components/ecommarce/catalog/CatalogLink";
 import { redirect } from "next/navigation";
 import { Filter, LoaderCircle, PackageSearch, Search } from "lucide-react";
 import CatalogFilterForm from "@/components/ecommarce/catalog/CatalogFilterForm";
@@ -315,6 +317,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
               </div>
               {activeFilterCount ? (
                 <Link
+                    prefetch={false}
                   href="/ecommerce/products"
                   className="text-xs font-semibold text-primary hover:underline"
                 >
@@ -329,6 +332,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
               {activeFilterCount ? (
                 <div className="flex justify-end lg:hidden">
                   <Link
+                    prefetch={false}
                     href="/ecommerce/products"
                     className="text-xs font-semibold text-primary hover:underline"
                   >
@@ -482,110 +486,16 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                 </div>
               </FilterSection>
 
-              {facets.attributes.map((group) => {
-                const selected = filters.attributes[String(group.id)] ?? [];
-                return (
-                  // Groups with an active value stay expanded so a selection is
-                  // never hidden behind a collapsed header.
-                  <FilterSection
-                    key={group.id}
-                    title={`${group.name}${group.unit ? ` (${group.unit})` : ""}`}
-                    badge={selected.length}
-                    defaultOpen={selected.length > 0}
-                  >
-                    <div className="max-h-44 space-y-1 overflow-y-auto pr-1">
-                      {group.values.map((entry) => (
-                        <label
-                          key={entry.value}
-                          className="flex cursor-pointer items-center justify-between gap-3 rounded-md px-2 py-1.5 text-sm hover:bg-muted"
-                        >
-                          <span className="flex min-w-0 items-center gap-2">
-                            <input
-                              type="checkbox"
-                              name={`attr_${group.id}`}
-                              value={entry.value}
-                              defaultChecked={selected.includes(entry.value)}
-                              className="h-4 w-4 rounded border-border accent-primary"
-                            />
-                            <span className="truncate">
-                              {group.type === "BOOLEAN"
-                                ? entry.value === "true" ? t("yes") : t("no")
-                                : entry.value}
-                            </span>
-                          </span>
-                          <span className="text-xs text-muted-foreground">
-                            {entry.productCount}
-                          </span>
-                        </label>
-                      ))}
-                    </div>
-                  </FilterSection>
-                );
-              })}
-
-              {facets.variantOptions.map((group) => {
-                const selected = filters.variants[group.name] ?? [];
-                return (
-                  <FilterSection
-                    key={`variant-${group.name}`}
-                    title={group.name}
-                    badge={selected.length}
-                    defaultOpen={selected.length > 0}
-                  >
-                    <div className="max-h-44 space-y-1 overflow-y-auto pr-1">
-                      {group.values.map((entry) => (
-                        <label
-                          key={entry.value}
-                          className="flex cursor-pointer items-center justify-between gap-3 rounded-md px-2 py-1.5 text-sm hover:bg-muted"
-                        >
-                          <span className="flex min-w-0 items-center gap-2">
-                            <input
-                              type="checkbox"
-                              name={`variant_${group.name}`}
-                              value={entry.value}
-                              defaultChecked={selected.includes(entry.value)}
-                              className="h-4 w-4 rounded border-border accent-primary"
-                            />
-                            <span className="truncate">{entry.value}</span>
-                          </span>
-                          <span className="text-xs text-muted-foreground">
-                            {entry.productCount}
-                          </span>
-                        </label>
-                      ))}
-                    </div>
-                  </FilterSection>
-                );
-              })}
-
-              {Array.from(new Set(facets.specificationGroups.map((facet) => facet.group))).map((groupName) => (
-                <section key={groupName} className="pt-4" aria-label={groupName}>
-                  <h3 className="mb-2 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                    {groupName}
-                  </h3>
-                  {facets.specificationGroups.filter((facet) => facet.group === groupName).map((group) => {
-                const selected = filters.specifications[group.key] ?? [];
-                return (
-                  <FilterSection key={`spec-${group.key}`} title={group.label}
-                    badge={selected.length} defaultOpen={selected.length > 0}>
-                    <div className="max-h-44 space-y-1 overflow-y-auto pr-1">
-                      {group.values.map((entry) => (
-                        <label key={entry.value} className="flex cursor-pointer items-start justify-between gap-3 rounded-md px-2 py-1.5 text-sm hover:bg-muted">
-                          <span className="flex min-w-0 items-start gap-2">
-                            <input type="checkbox" name={`spec_${group.key}`} value={entry.value}
-                              defaultChecked={selected.includes(entry.value)}
-                              className="mt-1 h-4 w-4 shrink-0 rounded border-border accent-primary" />
-                            <span className="break-words" title={entry.value}>{entry.value}</span>
-                          </span>
-                          <span className="shrink-0 text-xs text-muted-foreground">{entry.productCount}</span>
-                        </label>
-                      ))}
-                    </div>
-                  </FilterSection>
-                );
-                  })}
-                </section>
-              ))}
+              <CatalogDynamicFilters
+                key={catalogUrl(filters)}
+                initial={catalogFacetPage(facets)}
+                category={filters.category}
+                selections={Object.fromEntries([
+                  ...Object.entries(filters.attributes).map(([key, values]) => [`attr_${key}`, values]),
+                  ...Object.entries(filters.variants).map(([key, values]) => [`variant_${key}`, values]),
+                  ...Object.entries(filters.specifications).map(([key, values]) => [`spec_${key}`, values]),
+                ])}
+              />
 
               <div className="space-y-3 pt-3">
                 <label className="block space-y-2 text-sm font-semibold">
@@ -642,6 +552,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
               <div className="flex flex-wrap gap-2">
                 {SORT_OPTIONS.slice(0, 4).map((option) => (
                   <Link
+                    prefetch={false}
                     key={option.value}
                     href={catalogUrl(filters, { sort: option.value, page: 1 })}
                     aria-current={filters.sort === option.value ? "page" : undefined}
@@ -667,6 +578,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                 </span>
                 {activeFilterLinks.map((filter) => (
                   <Link
+                    prefetch={false}
                     key={filter.key}
                     href={filter.href}
                     aria-label={t("active.remove", { label: filter.label })}
@@ -677,6 +589,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                   </Link>
                 ))}
                 <Link
+                    prefetch={false}
                   href="/ecommerce/products"
                   className="px-2 py-1 text-xs font-semibold text-primary hover:underline"
                 >
@@ -699,6 +612,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                   {t("empty.description")}
                 </p>
                 <Link
+                    prefetch={false}
                   href="/ecommerce/products"
                   className="mt-5 inline-flex rounded-xl bg-primary px-5 py-2.5 text-sm font-bold text-primary-foreground"
                 >
@@ -713,6 +627,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                 aria-label={t("pagination.label")}
               >
                 <Link
+                    prefetch={false}
                   href={catalogUrl(filters, {
                     page: Math.max(1, pagination.page - 1),
                   })}
@@ -733,6 +648,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                         <span className="px-1 text-muted-foreground">…</span>
                       ) : null}
                       <Link
+                    prefetch={false}
                         href={catalogUrl(filters, { page })}
                         aria-current={pagination.page === page ? "page" : undefined}
                         className={`inline-flex h-10 min-w-10 items-center justify-center rounded-lg border px-3 text-sm font-bold ${
@@ -747,6 +663,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                   );
                 })}
                 <Link
+                    prefetch={false}
                   href={catalogUrl(filters, {
                     page: Math.min(pagination.totalPages, pagination.page + 1),
                   })}

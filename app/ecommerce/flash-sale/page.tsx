@@ -1,3 +1,5 @@
+import ProductPagination from "@/components/ecommarce/catalog/ProductPagination";
+import { storefrontPage } from "@/lib/storefront-pagination";
 import Link from "next/link";
 import { ArrowLeft, Flame } from "lucide-react";
 import { getTranslations } from "next-intl/server";
@@ -12,8 +14,8 @@ export async function generateMetadata() {
   };
 }
 
-export default async function FlashSalePage() {
-  const products = await getActiveFlashSaleProducts();
+export default async function FlashSalePage({ searchParams }: { searchParams: Promise<{ page?: string }> }) {
+  const { products, page, total } = await getActiveFlashSaleProducts(storefrontPage((await searchParams).page));
   const t = await getTranslations("Landing.FlashSale.page");
   return (
     <main className="min-h-[70vh] bg-background px-4 py-10 sm:px-6">
@@ -28,6 +30,7 @@ export default async function FlashSalePage() {
         ) : (
           <div className="rounded-3xl border border-dashed border-border bg-card px-6 py-20 text-center"><h2 className="text-xl font-bold">{t("noDeals")}</h2><p className="mt-2 text-muted-foreground">{t("noDealsDescription")}</p><Link href="/ecommerce/products" className="mt-6 inline-flex rounded-lg bg-orange-600 px-5 py-3 font-bold text-white hover:bg-orange-700">{t("browseProducts")}</Link></div>
         )}
+        <ProductPagination page={page} total={total} basePath="/ecommerce/flash-sale" />
       </div>
     </main>
   );

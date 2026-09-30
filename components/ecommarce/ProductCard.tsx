@@ -361,6 +361,7 @@ export default function ProductCardCompact({
         className="relative h-[164px] overflow-hidden bg-white sm:h-[190px]"
       >
         <Link
+          prefetch={false}
           href={product.href}
           aria-label={t("viewProduct", { name: product.name })}
           className="relative block h-full w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#174a92]"
@@ -372,7 +373,8 @@ export default function ProductCardCompact({
             fill
             className="object-contain p-4 transition-transform duration-300 ease-out group-hover:scale-[1.035] sm:p-5"
             sizes="(max-width: 640px) 45vw, (max-width: 1024px) 30vw, 20vw"
-            priority={imagePriority}
+            loading={imagePriority ? "eager" : "lazy"}
+            fetchPriority={imagePriority ? "high" : "auto"}
           />
         </Link>
 
@@ -419,6 +421,7 @@ export default function ProductCardCompact({
 
       <div className="flex flex-1 flex-col px-3 pb-3 pt-2.5 sm:px-4 sm:pb-4 sm:pt-3">
         <Link
+          prefetch={false}
           href={product.href}
           className="min-h-[42px] rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174a92] sm:min-h-[44px]"
         >
@@ -507,6 +510,7 @@ export default function ProductCardCompact({
         <div className="mt-2.5 flex gap-2">
           {primaryAction === "view-details" ? (
             <Link
+          prefetch={false}
               href={product.href}
               aria-label={t("viewDetailsFor", { name: product.name })}
               className="flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded bg-[#174a92] px-2 text-[11px] font-semibold text-white transition hover:bg-[#103b76] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174a92] focus-visible:ring-offset-1 sm:h-9 sm:text-[12px]"

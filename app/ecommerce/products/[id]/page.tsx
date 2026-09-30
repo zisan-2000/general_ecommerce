@@ -76,6 +76,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
       sort: "popular",
       perPage: "12",
     }),
+    { includeFilterOptions: false },
   );
   const recommendations = new Map<number, StorefrontCatalogProduct>();
   const addRecommendations = (products: StorefrontCatalogProduct[]) => {
@@ -99,12 +100,14 @@ export default async function ProductPage({ params }: ProductPageProps) {
         sort: "popular",
         perPage: "12",
       }),
+      { includeFilterOptions: false },
     );
     addRecommendations(brandData.products);
   }
   if (recommendations.size < 8) {
     const popularData = await getStorefrontCatalog(
       parseCatalogFilters({ sort: "popular", perPage: "12" }),
+      { includeFilterOptions: false },
     );
     addRecommendations(popularData.products);
   }

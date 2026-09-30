@@ -1,14 +1,16 @@
+import ProductPagination from "@/components/ecommarce/catalog/ProductPagination";
+import { storefrontPage } from "@/lib/storefront-pagination";
 import { notFound } from "next/navigation";
 import CatalogProductGrid from "@/components/ecommarce/catalog/CatalogProductGrid";
 import { getStorefrontBooks } from "@/lib/book-catalog";
 import { isFeatureEnabled } from "@/lib/store-features-server";
 
-export default async function PublisherPage({ params }: { params: Promise<{ id: string }> }) {
+export default async function PublisherPage({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ page?: string }> }) {
   if (!(await isFeatureEnabled("BOOKS"))) notFound();
   const id = Number((await params).id);
   if (!Number.isSafeInteger(id) || id < 1) notFound();
-  const books = await getStorefrontBooks();
-  const published = books.filter((book) => book.publisher?.id === id);
+  const { books, page, total } = await getStorefrontBooks({ publisherId: id, page: storefrontPage((await searchParams).page) });
+  const published = books;
   const publisher = published[0]?.publisher;
   if (!publisher) notFound();
   return (
@@ -17,6 +19,7 @@ export default async function PublisherPage({ params }: { params: Promise<{ id: 
         <p className="text-sm font-semibold uppercase tracking-widest text-primary">Publisher</p>
         <h1 className="mb-8 mt-2 text-3xl font-bold sm:text-4xl">{publisher.name}</h1>
         <CatalogProductGrid products={published.map((book) => book.product)} />
+        <ProductPagination page={page} total={total} basePath={`/ecommerce/publishers/${id}`} />
       </div>
     </main>
   );

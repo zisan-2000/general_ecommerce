@@ -24,7 +24,7 @@ function catalogParams(form: HTMLFormElement) {
   const params = new URLSearchParams();
 
   for (const [name, rawValue] of new FormData(form).entries()) {
-    if (typeof rawValue !== "string") continue;
+    if (typeof rawValue !== "string" || name === "page") continue;
     const value = rawValue.trim();
     if (!value) continue;
     if (name === "sort" && value === "newest") continue;

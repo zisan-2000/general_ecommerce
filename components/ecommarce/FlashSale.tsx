@@ -63,7 +63,7 @@ export function FlashSaleCard({ product }: { product: FlashSaleProduct }) {
     <article className="group relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-card via-card to-muted/40 shadow-[0_8px_20px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
       <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-muted/30 to-muted/10">
         <span className="absolute left-3 top-3 z-10 rounded-md bg-emerald-700 px-2.5 py-1 text-xs font-extrabold text-white shadow-sm">{t("save", { amount: formatPrice(sale.savings) })}</span>
-        <Link href={`/ecommerce/products/${product.id}`} className="relative block h-full w-full" aria-label={t("viewProduct", { name: product.name })}>
+        <Link prefetch={false} href={`/ecommerce/products/${product.id}`} className="relative block h-full w-full" aria-label={t("viewProduct", { name: product.name })}>
           {product.image ? (
             <Image src={product.image} alt={product.name} fill sizes="(max-width: 640px) 72vw, (max-width: 1024px) 38vw, 260px" className="object-cover transition-all duration-500 ease-out group-hover:scale-110" />
           ) : (
@@ -73,7 +73,7 @@ export function FlashSaleCard({ product }: { product: FlashSaleProduct }) {
       </div>
 
       <div className="flex flex-1 flex-col px-3 pb-3 pt-2.5 sm:px-4 sm:pb-3.5 sm:pt-3">
-        <Link href={`/ecommerce/products/${product.id}`} className="mb-2 line-clamp-2 min-h-[42px] text-[14px] font-semibold leading-snug text-foreground transition-colors group-hover:text-primary sm:min-h-[44px] sm:text-[15px]">{product.name}</Link>
+        <Link prefetch={false} href={`/ecommerce/products/${product.id}`} className="mb-2 line-clamp-2 min-h-[42px] text-[14px] font-semibold leading-snug text-foreground transition-colors group-hover:text-primary sm:min-h-[44px] sm:text-[15px]">{product.name}</Link>
         <div className="mb-3 mt-1.5 flex min-h-7 flex-wrap items-baseline gap-2">
           <span className="text-[17px] font-bold text-primary sm:text-[18px]">{formatPrice(Number(product.basePrice))}</span>
           <span className="text-[12px] text-muted-foreground line-through sm:text-[13px]">{formatPrice(sale.regularPrice)}</span>
@@ -81,7 +81,7 @@ export function FlashSaleCard({ product }: { product: FlashSaleProduct }) {
 
         <div className="mt-auto space-y-3">
           <FlashSaleCountdown endsAt={sale.endsAt} />
-          <Link href={`/ecommerce/products/${product.id}`} className="flex h-10 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-orange-500 to-red-600 text-sm font-extrabold text-white shadow-sm transition hover:from-orange-600 hover:to-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2">
+          <Link prefetch={false} href={`/ecommerce/products/${product.id}`} className="flex h-10 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-orange-500 to-red-600 text-sm font-extrabold text-white shadow-sm transition hover:from-orange-600 hover:to-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2">
             <Zap className="h-4 w-4 fill-current" aria-hidden="true" /> {t("viewDeal")}
           </Link>
           <p className="sr-only">{t("stock", { count: stock })}</p>

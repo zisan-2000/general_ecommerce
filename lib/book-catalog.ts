@@ -1,6 +1,7 @@
 import "server-only";
 
-import { unstable_cache } from "next/cache";
+import { compressedCache } from "@/lib/compressed-cache";
+import { storefrontPage, STOREFRONT_PAGE_SIZE } from "@/lib/storefront-pagination";
 import { Prisma } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
@@ -31,27 +32,47 @@ function activeParty<T extends { deleted: boolean }>(party: T | null) {
   return party && !party.deleted ? party : null;
 }
 
-const readBookCatalog = unstable_cache(
-  async (serializedDisabledTypes: string) => {
+type BookOptions = { page?: number; writerId?: number; publisherId?: number; identifier?: string };
+
+async function bookWhere(disabledTypes: FeatureControlledProductType[], options: BookOptions = {}): Promise<Prisma.ProductWhereInput> {
+  const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
+  const and: Prisma.ProductWhereInput[] = [];
+  if (options.writerId) and.push({ OR: [
+    { bookMetadata: { writer: { id: options.writerId, deleted: false } } },
+    { AND: [{ OR: [{ bookMetadata: { is: null } }, { bookMetadata: { writer: { is: null } } }, { bookMetadata: { writer: { deleted: true } } }] }, { writer: { id: options.writerId, deleted: false } }] },
+  ] });
+  if (options.publisherId) and.push({ OR: [
+    { bookMetadata: { publisher: { id: options.publisherId, deleted: false } } },
+    { AND: [{ OR: [{ bookMetadata: { is: null } }, { bookMetadata: { publisher: { is: null } } }, { bookMetadata: { publisher: { deleted: true } } }] }, { publisher: { id: options.publisherId, deleted: false } }] },
+  ] });
+  return {
+    deleted: false, available: true, categoryId: { in: activeCategoryIds },
+    ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+    OR: [
+      { bookMetadata: { writerId: { not: null } } }, { bookMetadata: { publisherId: { not: null } } },
+      { writerId: { not: null } }, { publisherId: { not: null } },
+    ],
+    ...(and.length ? { AND: and } : {}),
+    ...(options.identifier ? (/^\d+$/.test(options.identifier) ? { id: Number(options.identifier) } : { slug: options.identifier.toLowerCase() }) : {}),
+  };
+}
+
+const readBookCatalog = compressedCache(
+  async (serializedDisabledTypes: string, serializedOptions: string) => {
     const disabledTypes = JSON.parse(serializedDisabledTypes) as FeatureControlledProductType[];
-    const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
+    const options = JSON.parse(serializedOptions) as BookOptions;
+    const where = await bookWhere(disabledTypes, options);
+    const total = await prisma.product.count({ where });
+    const page = Math.min(storefrontPage(options.page), Math.max(1, Math.ceil(total / STOREFRONT_PAGE_SIZE)));
     const rows = await prisma.product.findMany({
-      where: {
-        deleted: false,
-        available: true,
-        categoryId: { in: activeCategoryIds },
-        ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
-        OR: [
-          { bookMetadata: { isNot: null } },
-          { writerId: { not: null } },
-          { publisherId: { not: null } },
-        ],
-      },
+      where,
       orderBy: [{ soldCount: "desc" }, { createdAt: "desc" }, { id: "desc" }],
+      skip: (page - 1) * STOREFRONT_PAGE_SIZE,
+      take: STOREFRONT_PAGE_SIZE,
       select: bookProductSelect,
     });
 
-    return rows.flatMap((row: RawBookProduct) => {
+    const books = rows.flatMap((row: RawBookProduct) => {
       const effective = resolveCompatibleBookMetadata({
         legacy: { writerId: row.writerId, publisherId: row.publisherId },
         metadata: row.bookMetadata,
@@ -69,14 +90,28 @@ const readBookCatalog = unstable_cache(
         publisher: publisher ? { id: publisher.id, name: publisher.name, image: publisher.image } : null,
       }];
     });
+    return { books, page, total };
   },
-  ["storefront-book-catalog-v1"],
+  ["storefront-book-catalog-paged-v2"],
   { revalidate: 60, tags: ["storefront-catalog", "storefront-books", "products"] },
 );
 
-export async function getStorefrontBooks() {
+export async function getStorefrontBooks(options: BookOptions = {}) {
   const disabledTypes = await getDisabledStorefrontProductTypes();
-  return readBookCatalog(JSON.stringify(disabledTypes));
+  return readBookCatalog(JSON.stringify(disabledTypes), JSON.stringify(options));
 }
 
-export type StorefrontBook = Awaited<ReturnType<typeof getStorefrontBooks>>[number];
+export type StorefrontBook = Awaited<ReturnType<typeof getStorefrontBooks>>["books"][number];
+
+// Directory pages only need party metadata, never full product/variant graphs.
+export async function getStorefrontBookDirectory() {
+  const where = await bookWhere(await getDisabledStorefrontProductTypes());
+  const rows = await prisma.product.findMany({ where, select: {
+    writer: bookProductSelect.writer, publisher: bookProductSelect.publisher,
+    bookMetadata: bookProductSelect.bookMetadata,
+  } });
+  return rows.map((row) => ({
+    writer: activeParty(row.bookMetadata?.writer ?? null) ?? activeParty(row.writer),
+    publisher: activeParty(row.bookMetadata?.publisher ?? null) ?? activeParty(row.publisher),
+  }));
+}
