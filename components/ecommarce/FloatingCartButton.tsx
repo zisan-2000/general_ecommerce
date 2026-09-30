@@ -26,6 +26,7 @@ import { useSession, signIn } from "@/lib/auth-client";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { useLocale, useTranslations } from "next-intl";
+import { cartItemNeedsVariantSelection } from "@/lib/cart-variant";
 
 const STORAGE_KEY = "floating-cart-position";
 const BUTTON_WIDTH_MOBILE = 48;
@@ -369,12 +370,10 @@ export default function FloatingCartButton() {
 
   // Check if any cart items have variants that need selection
   const hasUnselectedVariants = useMemo(() => {
-    return cartItems.some(item => {
-      // Check if this item needs variant selection
-      // Items with variantId null/undefined but have variants in the product need selection
-      return !item.variantId && item.productId;
-    });
-  }, [cartItems]);
+    return cartItems.some((item) =>
+      cartItemNeedsVariantSelection(item, itemVariants[item.id]),
+    );
+  }, [cartItems, itemVariants]);
 
   const handleCheckout = async () => {
     if (!isAuthenticated) {
@@ -404,21 +403,21 @@ export default function FloatingCartButton() {
     setLoadingVariants(prev => new Set([...prev, item.id]));
     
     try {
-      console.log('Fetching variants for product:', item.productId);
       const res = await fetch(`/api/products/${item.productId}?view=storefront`);
+      if (!res.ok) throw new Error(`Product request failed with ${res.status}`);
       const product = await res.json();
-      console.log('Product data:', product);
-      
-      if (product.variants && product.variants.length > 0) {
-        console.log('Found variants:', product.variants);
+
+      const variants = product.type !== "BUNDLE" && Array.isArray(product.variants)
+        ? product.variants.filter((variant: any) => variant.active !== false)
+        : [];
+      if (variants.length > 0) {
         setItemVariants(prev => ({
           ...prev,
-          [item.id]: product.variants
+          [item.id]: variants
         }));
-        return product.variants;
+        return variants;
       } else {
-        console.log('No variants found for product');
-        toast.info(t("errors.noVariants"));
+        setItemVariants(prev => ({ ...prev, [item.id]: [] }));
       }
     } catch (err) {
       console.error('Failed to fetch product variants:', err);
@@ -446,36 +445,31 @@ export default function FloatingCartButton() {
   // Auto-fetch variants for items that need them
   useEffect(() => {
     cartItems.forEach(async (item) => {
-      if (!item.variantId && !itemVariants[item.id] && !loadingVariants.has(item.id)) {
+      if (
+        !item.variantId &&
+        item.hasVariants !== false &&
+        !itemVariants[item.id] &&
+        !loadingVariants.has(item.id)
+      ) {
         await fetchItemVariants(item);
       }
     });
   }, [cartItems]);
 
-  const handleInlineVariantSelect = (item: CartItemWithVariants, variant: any) => {
-    console.log('Selecting variant:', variant, 'for item:', item);
-    
-    // Remove the item without variant
-    removeFromCart(item.id);
-    
-    // Add the item with variant
-    setTimeout(() => {
-      console.log('Adding variant to cart:', item.productId, variant.id, item.quantity);
-      addToCart(item.productId, item.quantity, variant.id);
-      
-      // Show success message
+  const handleInlineVariantSelect = async (item: CartItemWithVariants, variant: any) => {
+    const added = await addToCart(item.productId, item.quantity, variant.id);
+    if (added) {
+      removeFromCart(item.id);
       toast.success(t("variantSelected", { variant: getVariantLabel(variant) }));
-      
-      // Remove from expanded items
       setExpandedItems(prev => new Set([...prev].filter(id => id !== item.id)));
-      
-      // Clear cached variants for this item
       setItemVariants(prev => {
         const newVariants = { ...prev };
         delete newVariants[item.id];
         return newVariants;
       });
-    }, 100);
+    } else {
+      toast.error(t("errors.loadVariantsFailed"));
+    }
   };
 
   // Helper function to get variant label
@@ -614,7 +608,10 @@ export default function FloatingCartButton() {
               ) : (
                 <div className="space-y-3">
                   {cartItems.map((item) => {
-                    const needsVariantSelection = !item.variantId;
+                    const needsVariantSelection = cartItemNeedsVariantSelection(
+                      item,
+                      itemVariants[item.id],
+                    );
                     const isExpanded = expandedItems.has(item.id);
                     return (
                     <div

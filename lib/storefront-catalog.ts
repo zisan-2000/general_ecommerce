@@ -800,7 +800,8 @@ const readCatalogAttributeFacets = unstable_cache(
           .slice(0, CATALOG_MAX_FACET_VALUES_PER_GROUP),
       }))
       .filter((group) => group.values.length > 1)
-      .sort((a, b) => a.sortOrder - b.sortOrder || a.name.localeCompare(b.name));
+      .sort((a, b) => a.sortOrder - b.sortOrder || a.name.localeCompare(b.name))
+      .slice(0, CATALOG_MAX_ATTRIBUTE_GROUPS);
   },
   ["storefront-catalog-attribute-facets-v2"],
   {
@@ -882,7 +883,22 @@ const readCatalogSpecificationFacets = unstable_cache(
       facet.values.push({ value: row.value, productCount: row.productCount });
       groups.set(key, facet);
     }
-    return [...groups.values()];
+    return [...groups.values()]
+      .map((facet) => ({
+        ...facet,
+        values: facet.values
+          .sort(
+            (left, right) =>
+              right.productCount - left.productCount ||
+              left.value.localeCompare(right.value, undefined, { numeric: true }),
+          )
+          .slice(0, CATALOG_MAX_FACET_VALUES_PER_GROUP),
+      }))
+      .sort(
+        (left, right) =>
+          left.group.localeCompare(right.group) || left.label.localeCompare(right.label),
+      )
+      .slice(0, CATALOG_MAX_ATTRIBUTE_GROUPS);
   },
   ["storefront-catalog-specification-facets-v1"],
   { revalidate: 300, tags: ["storefront-catalog", "products", "categories"] },
@@ -931,6 +947,7 @@ const readCatalog = async (
   serializedFilters: string,
   serializedDisabledTypes: string,
   serializedBookVisibility: string,
+  includeDynamicFacets = true,
 ) => {
     const requestedFilters = JSON.parse(serializedFilters) as CatalogFilters;
     const disabledTypes = JSON.parse(
@@ -962,26 +979,26 @@ const readCatalog = async (
       ? descendantCategoryIds(facets.categories, scopedCategory.slug)
       : [];
     const facetCategoryIds = scopedCategory ? categoryIds : activeCategoryIds;
-    const facetResults = await Promise.all([
-      readCatalogAttributeFacets(
-        JSON.stringify(facetCategoryIds),
-        serializedDisabledTypes,
-      ).then((attributes) => ({ attributes })),
-      readCatalogVariantFacets(
-        JSON.stringify(facetCategoryIds),
-        serializedDisabledTypes,
-      ).then((variants) => ({ variants })),
-      readCatalogSpecificationFacets(
-        JSON.stringify(facetCategoryIds),
-        serializedDisabledTypes,
-        Object.keys(bookVisibility).length > 0,
-      ).then((specifications) => ({ specifications })),
-    ]);
-    const { attributes: attributeFacets, variants: variantFacets, specifications: specificationFacets } = {
-      ...facetResults[0],
-      ...facetResults[1],
-      ...facetResults[2],
-    };
+    let attributeFacets: Awaited<ReturnType<typeof readCatalogAttributeFacets>> = [];
+    let variantFacets: Awaited<ReturnType<typeof readCatalogVariantFacets>> = [];
+    let specificationFacets: Awaited<ReturnType<typeof readCatalogSpecificationFacets>> = [];
+    if (includeDynamicFacets) {
+      [attributeFacets, variantFacets, specificationFacets] = await Promise.all([
+        readCatalogAttributeFacets(
+          JSON.stringify(facetCategoryIds),
+          serializedDisabledTypes,
+        ),
+        readCatalogVariantFacets(
+          JSON.stringify(facetCategoryIds),
+          serializedDisabledTypes,
+        ),
+        readCatalogSpecificationFacets(
+          JSON.stringify(facetCategoryIds),
+          serializedDisabledTypes,
+          Object.keys(bookVisibility).length > 0,
+        ),
+      ]);
+    }
     const attributeFacetNames = new Set(
       attributeFacets.map((facet) => facet.name.toLocaleLowerCase()),
     );
@@ -1215,6 +1232,23 @@ export async function getStorefrontCatalog(filters: CatalogFilters) {
     JSON.stringify(filters),
     JSON.stringify(disabledTypes),
     JSON.stringify(bookVisibility),
+  );
+}
+
+/**
+ * Product rails do not render catalog filters. Avoid loading and caching the
+ * potentially large dynamic facet payload for those callers.
+ */
+export async function getStorefrontCatalogProducts(filters: CatalogFilters) {
+  const [disabledTypes, bookVisibility] = await Promise.all([
+    getDisabledStorefrontProductTypes(),
+    getBookProductVisibilityWhere(),
+  ]);
+  return readCatalog(
+    JSON.stringify(filters),
+    JSON.stringify(disabledTypes),
+    JSON.stringify(bookVisibility),
+    false,
   );
 }
 

@@ -8,7 +8,7 @@ import ProductPurchasePanel from "@/components/ecommarce/product-detail/ProductP
 import ProductQuestions from "@/components/ecommarce/product-detail/ProductQuestions";
 import RelatedProductRail from "@/components/ecommarce/product-detail/RelatedProductRail";
 import {
-  getStorefrontCatalog,
+  getStorefrontCatalogProducts,
   parseCatalogFilters,
 } from "@/lib/storefront-catalog";
 import type { StorefrontCatalogProduct } from "@/lib/storefront-catalog";
@@ -70,7 +70,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const product = await getProduct(rawId);
   if (!product) notFound();
 
-  const categoryData = await getStorefrontCatalog(
+  const categoryData = await getStorefrontCatalogProducts(
     parseCatalogFilters({
       category: product.category.slug,
       sort: "popular",
@@ -93,7 +93,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   // A sparse category must not leave the desktop page with an empty rail.
   // Prefer the same brand, then fill the remaining slots with popular items.
   if (recommendations.size < 8 && product.brand) {
-    const brandData = await getStorefrontCatalog(
+    const brandData = await getStorefrontCatalogProducts(
       parseCatalogFilters({
         brand: product.brand.slug,
         sort: "popular",
@@ -103,7 +103,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     addRecommendations(brandData.products);
   }
   if (recommendations.size < 8) {
-    const popularData = await getStorefrontCatalog(
+    const popularData = await getStorefrontCatalogProducts(
       parseCatalogFilters({ sort: "popular", perPage: "12" }),
     );
     addRecommendations(popularData.products);

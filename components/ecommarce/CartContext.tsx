@@ -35,6 +35,7 @@ export interface CartItem {
   quantity: number;
   image: string;
   variantLabel?: string | null;
+  hasVariants?: boolean;
   pcBuildId?: string | null;
   pcBuildSlot?: string | null;
   bundleSelections?: Array<{ groupId: number; optionId: number | null; quantity: number; omitted?: boolean }> | null;
@@ -142,6 +143,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
             ...x,
             productId: x.productId,
             variantId: x.variantId ?? null,
+            hasVariants:
+              typeof x.hasVariants === "boolean" ? x.hasVariants : undefined,
             quantity: clamp(Number(x.quantity ?? 1)),
             image: x.image || "/placeholder.svg",
             pcBuildId: x.pcBuildId ?? null,
@@ -237,6 +240,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
             vid !== ""
               ? product.variants?.find((item) => norm(item.id) === vid) ?? null
               : null;
+          const hasVariants =
+            product.type !== "BUNDLE" && (product.variants?.length ?? 0) > 0;
           const variantLabel =
             variant?.options && Object.keys(variant.options).length > 0
               ? Object.entries(variant.options)
@@ -250,6 +255,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
               id: createCartRowId(),
               productId: product.id,
               variantId: variant?.id ?? null,
+              hasVariants,
               name: product.name,
               price: Number(variant?.price ?? product.price),
               quantity: nextQty,
@@ -340,6 +346,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
         product.type === "BUNDLE"
           ? requestedVariant ?? product.variants?.[0] ?? null
           : requestedVariant;
+      const hasVariants =
+        product.type !== "BUNDLE" && (product.variants?.length ?? 0) > 0;
       const cartVariantKey = normVariant(variant?.id ?? null);
       const variantLabel =
         variant?.options && Object.keys(variant.options).length > 0
@@ -471,6 +479,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
             id: createCartRowId(),
             productId: product.id,
             variantId: variant?.id ?? null,
+            hasVariants,
             name: product.name,
               price: Number(persistedBundlePrice ?? variant?.price ?? product.price),
             quantity: add,
