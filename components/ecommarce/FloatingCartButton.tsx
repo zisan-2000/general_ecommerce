@@ -617,7 +617,7 @@ export default function FloatingCartButton() {
 
         <SheetContent
           side={drawerSide}
-          className="w-full border-border p-0 sm:max-w-[420px]"
+          className="h-[100dvh] max-h-[100dvh] w-full gap-0 overflow-hidden border-border p-0 pt-[env(safe-area-inset-top)] sm:max-w-[420px]"
         >
           <SheetHeader className="border-b bg-primary px-4 py-3 text-primary-foreground">
             <div className="flex w-full items-center justify-between">
@@ -639,8 +639,8 @@ export default function FloatingCartButton() {
             </SheetDescription>
           </SheetHeader>
 
-          <div className="flex h-full flex-col bg-background">
-            <div className="flex-1 overflow-y-auto px-3 py-4">
+          <div className="flex min-h-0 flex-1 flex-col bg-background">
+            <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain px-3 py-4">
               {cartItems.length === 0 ? (
                 <div className="flex h-full min-h-[320px] flex-col items-center justify-center rounded-xl border border-dashed border-border px-6 text-center">
                   <ShoppingBag className="mb-3 h-10 w-10 text-muted-foreground" />
@@ -715,12 +715,12 @@ export default function FloatingCartButton() {
                                         : "border-orange-300 hover:border-orange-400 hover:bg-orange-100"
                                     )}
                                   >
-                                    <div className="flex items-center justify-between">
-                                      <div className="flex items-center gap-3">
-                                        <div className="h-5 w-5 rounded-full border-2 border-orange-400 flex items-center justify-center">
+                                    <div className="flex flex-wrap items-center justify-between gap-2">
+                                      <div className="flex min-w-0 flex-1 items-center gap-3">
+                                        <div className="h-5 w-5 shrink-0 rounded-full border-2 border-orange-400 flex items-center justify-center">
                                           <div className="h-2 w-2 rounded-full bg-orange-400" />
                                         </div>
-                                        <div>
+                                        <div className="min-w-0 break-words">
                                           <span className="text-sm font-medium text-orange-800">
                                             {getVariantLabel(variant)}
                                           </span>
@@ -729,7 +729,7 @@ export default function FloatingCartButton() {
                                           )}
                                         </div>
                                       </div>
-                                      <div className="text-right">
+                                      <div className="shrink-0 text-right">
                                         <span className="text-sm font-semibold text-orange-900">
                                           {formatPrice(variant.price, locale)}
                                         </span>
@@ -805,9 +805,9 @@ export default function FloatingCartButton() {
               )}
             </div>
 
-            <div className="border-t border-border bg-card">
-              <div className="grid grid-cols-[1fr_auto] items-center px-4 py-3">
-                <div>
+            <div className="shrink-0 border-t border-border bg-card pb-[env(safe-area-inset-bottom)]">
+              <div className="flex flex-wrap items-center justify-between gap-3 px-4 py-3">
+                <div className="min-w-0 break-words">
                   <div className="text-xs uppercase tracking-wide text-muted-foreground">
                     {t("cartTotal")}
                   </div>
@@ -818,14 +818,14 @@ export default function FloatingCartButton() {
                 <Button
                   onClick={handleCheckout}
                   disabled={cartItems.length === 0 || hasUnselectedVariants}
-                  className={`h-12 rounded-none rounded-tr-none rounded-br-none px-6 text-primary-foreground hover:bg-primary disabled:bg-muted disabled:text-muted-foreground sm:rounded-md ${
+                  className={`h-auto min-h-12 max-w-full whitespace-normal rounded-md px-4 py-3 text-primary-foreground hover:bg-primary disabled:bg-muted disabled:text-muted-foreground ${
                     hasUnselectedVariants 
                       ? 'bg-orange-100 text-orange-600 hover:bg-orange-200' 
                       : 'bg-primary'
                   }`}
                 >
                   {hasUnselectedVariants ? t("selectVariants") : t("checkout")}
-                  <ArrowRight className="ml-2 h-4 w-4" />
+                  <ArrowRight className="ml-2 h-4 w-4 shrink-0" />
                 </Button>
               </div>
             </div>

@@ -1176,11 +1176,11 @@ export default function PcBuilderClient({
                     />
                     <h3 className="mt-3 font-bold">No matching components</h3>
                     <p className="mt-1 text-sm text-muted-foreground">
-                      {compatibleOnly
+                      {compatibleOnly && activeProducts.length > 0
                         ? "No products compatible with the current selection are in the loaded pages yet."
                         : "No live catalog products match this search."}
                     </p>
-                    {compatibleOnly ? (
+                    {compatibleOnly && activeProducts.length > 0 ? (
                       <button
                         type="button"
                         onClick={() => setCompatibleOnly(false)}

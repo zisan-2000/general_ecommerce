@@ -11,6 +11,23 @@ const nextConfig: NextConfig = {
     serverSourceMaps: false,
   },
   productionBrowserSourceMaps: false,
+  turbopack: {
+    rules: {
+      'generated/prisma/index.js': {
+        loaders: ['./scripts/prisma-tracing-loader.cjs'],
+      },
+      'generated/prisma/runtime/library.js': {
+        loaders: ['./scripts/prisma-tracing-loader.cjs'],
+      },
+    },
+  },
+  // Explicitly include runtime assets skipped by Prisma's dynamic path tracing.
+  outputFileTracingIncludes: {
+    '/*': [
+      './generated/prisma/schema.prisma',
+      './generated/prisma/*.node',
+    ],
+  },
   // Additional build optimizations
   poweredByHeader: false,
   images: {

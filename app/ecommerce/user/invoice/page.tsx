@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import AccountHeader from "../AccountHeader";
@@ -31,6 +31,7 @@ export default function InvoicePage() {
   const [loading, setLoading] = useState(true);
   const [rows, setRows] = useState<OrderRow[]>([]);
   const [downloadingId, setDownloadingId] = useState<string | null>(null);
+  const downloadInProgress = useRef(false);
 
   useEffect(() => {
     const load = async () => {
@@ -89,6 +90,8 @@ export default function InvoicePage() {
 
   // ✅ Direct download (no new tab)
   const downloadInvoice = async (orderId: string) => {
+    if (downloadInProgress.current) return;
+    downloadInProgress.current = true;
     const toastId = `inv-${orderId}`;
 
     try {
@@ -101,7 +104,6 @@ export default function InvoicePage() {
       });
 
       if (!res.ok) {
-        const d = await res.json().catch(() => ({}));
         throw new Error(t("invoices.errors.generate"));
       }
 
@@ -121,13 +123,15 @@ export default function InvoicePage() {
       a.click();
       a.remove();
 
-      window.URL.revokeObjectURL(url);
+      // Give the browser time to start reading the PDF before releasing it.
+      window.setTimeout(() => window.URL.revokeObjectURL(url), 60_000);
 
       toast.success(t("invoices.downloaded"), { id: toastId });
     } catch (e: any) {
       console.error(e);
       toast.error(e?.message || t("invoices.errors.download"), { id: toastId });
     } finally {
+      downloadInProgress.current = false;
       setDownloadingId(null);
     }
   };
@@ -219,7 +223,7 @@ export default function InvoicePage() {
                       <button
                         type="button"
                         onClick={() => downloadInvoice(o.id)}
-                        disabled={isDownloading}
+                        disabled={downloadingId !== null}
                         className="h-10 px-4 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 inline-flex items-center gap-2 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                       >
                         {isDownloading ? (
