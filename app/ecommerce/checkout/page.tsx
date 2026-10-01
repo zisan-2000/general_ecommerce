@@ -99,7 +99,7 @@ type TaxQuote = {
 export default function CheckoutPage() {
   const t = useTranslations("StorefrontCommerce.checkout");
   const locale = useLocale();
-  const { cartItems, clearCart } = useCart();
+  const { cartItems, clearCart, replaceCart } = useCart();
   const { data: session, status: sessionStatus } = useSession();
   const router = useRouter();
 
@@ -214,7 +214,7 @@ export default function CheckoutPage() {
         if (!res.ok) {
           console.error("Failed to load server cart:", res.status);
           setServerCartItems([]);
-          return;
+          return null;
         }
 
         const data = await res.json();
@@ -245,8 +245,10 @@ export default function CheckoutPage() {
         }));
 
         setServerCartItems(mapped);
+        return mapped;
       } catch (err) {
         console.error("Error loading server cart:", err);
+        return null;
       } finally {
         setLoadingServerCart(false);
       }
@@ -254,7 +256,8 @@ export default function CheckoutPage() {
 
     const syncGuestCartToServer = async () => {
       if (cartItems.length === 0) {
-        await fetchServerCart();
+        const items = await fetchServerCart();
+        if (items) replaceCart(items);
         syncInFlightRef.current = false;
         setCartSynced(true);
         return;
@@ -270,14 +273,20 @@ export default function CheckoutPage() {
           const serverData = await serverRes.json();
           const existingItems = Array.isArray(serverData.items) ? serverData.items : [];
 
-          const existingKeys = new Set(
-            existingItems.map(
-              (item: any) => `${item.productId}:${item.variantId ?? ""}:${item.lineKey ?? "standard"}`,
-            ),
-          );
-
           const itemsToSync = cartItems.filter(
-            (item) => !existingKeys.has(`${item.productId}:${item.variantId ?? ""}:${item.bundleConfigurationKey ?? "standard"}`),
+            (localItem) =>
+              !existingItems.some((serverItem: any) => {
+                const sameLine =
+                  String(serverItem.productId) === String(localItem.productId) &&
+                  String(serverItem.pcBuildId ?? "") === String(localItem.pcBuildId ?? "") &&
+                  String(serverItem.lineKey ?? "standard") ===
+                    String(localItem.bundleConfigurationKey ?? "standard");
+                const sameVariant =
+                  String(serverItem.variantId ?? "") === String(localItem.variantId ?? "") ||
+                  (!localItem.variantId && serverItem.variantId != null &&
+                    !localItem.bundleConfigurationKey && !localItem.pcBuildId);
+                return sameLine && sameVariant;
+              }),
           );
 
           const failed: Array<string | number> = [];
@@ -317,11 +326,9 @@ export default function CheckoutPage() {
           console.error("Failed to load server cart:", serverRes.status);
         }
 
-        // Load the server cart BEFORE clearing the local one, so there is never a
-        // frame where both are empty and the Order Summary renders with no items.
-        // The local cart is only dropped once every item is safely on the server.
-        await fetchServerCart();
-        if (allSynced) clearCart();
+        // Replace the local mirror only after every guest line is safely on server.
+        const refreshedItems = await fetchServerCart();
+        if (allSynced && refreshedItems) replaceCart(refreshedItems);
       } catch (err) {
         console.error("Error syncing guest cart to server:", err);
         await fetchServerCart();
@@ -333,7 +340,7 @@ export default function CheckoutPage() {
     };
 
     syncGuestCartToServer();
-  }, [isAuthenticated, isMounted, cartItems, clearCart, cartSynced]);
+  }, [isAuthenticated, isMounted, cartItems, clearCart, replaceCart, cartSynced]);
 
   const parseAddressDetails = (details: UserAddress["details"]) => {
     if (Array.isArray(details)) return details.filter(Boolean).join(", ");

@@ -327,6 +327,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
             </div>
 
             <CatalogFilterForm
+              key={catalogUrl(filters)}
               className="hidden border-t p-4 peer-checked:block lg:block lg:min-h-0 lg:flex-1 lg:overflow-y-auto lg:border-t-0"
             >
               {activeFilterCount ? (

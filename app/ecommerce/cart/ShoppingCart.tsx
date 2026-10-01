@@ -44,6 +44,21 @@ function cartSelectionKey(item: Pick<LocalCartItem, "productId" | "variantId" | 
   return `${item.productId}:${item.variantId ?? "default"}:${item.bundleConfigurationKey ?? "standard"}`;
 }
 
+function serverHasCartLine(serverItems: any[], localItem: LocalCartItem) {
+  return serverItems.some((serverItem) => {
+    const sameLine =
+      String(serverItem.productId) === String(localItem.productId) &&
+      String(serverItem.pcBuildId ?? "") === String(localItem.pcBuildId ?? "") &&
+      String(serverItem.lineKey ?? "standard") ===
+        String(localItem.bundleConfigurationKey ?? "standard");
+    const sameVariant =
+      String(serverItem.variantId ?? "") === String(localItem.variantId ?? "") ||
+      (!localItem.variantId && serverItem.variantId != null &&
+        !localItem.bundleConfigurationKey && !localItem.pcBuildId);
+    return sameLine && sameVariant;
+  });
+}
+
 function combinePcBuildCompanionQuantities(items: LocalCartItem[]) {
   const standardQueues = new Map<string, LocalCartItem[]>();
   for (const item of items) {
@@ -199,8 +214,8 @@ export default function CartPage() {
   const { cartItems, removeFromCart, updateQuantity, clearCart, replaceCart } =
     useCart();
 
-  const { status } = useSession();
-  const isAuthenticated = status === "authenticated";
+  const { data: session, status } = useSession();
+  const isAuthenticated = status === "authenticated" && Boolean(session?.user?.id);
   const router = useRouter();
 
   const [couponCode, setCouponCode] = useState("");
@@ -214,54 +229,10 @@ export default function CartPage() {
   const [loadingServerCart, setLoadingServerCart] = useState(false);
   const [serverCartError, setServerCartError] = useState<string | null>(null);
 
-  // ✅ prevent repeated context replace
-  const lastReplacedRef = useRef<string>("");
-
   // ✅ prevent parallel requests
   const inFlightRef = useRef(false);
 
   useEffect(() => setHasMounted(true), []);
-
-  /**
-   * ✅ IMPORTANT: এই key টা তোমার CartContext localStorage key অনুযায়ী বসাও
-   * Example: "cart" / "ecommerce_cart" / "cartItems" etc.
-   */
-  const GUEST_CART_STORAGE_KEY = "cartItems";
-
-  // ----------------------------
-  // ✅ Server cart -> Context cart (ONLY when changed)
-  // ----------------------------
-  const mappedServerForContext = useMemo(() => {
-    if (!Array.isArray(serverCartItems)) return null;
-    return serverCartItems.map((i) => ({
-      id: i.id,
-      productId: i.productId,
-      variantId: i.variantId ?? null,
-      name: i.name,
-      price: i.price,
-      quantity: i.quantity,
-      image: i.image || "/placeholder.svg",
-      variantLabel: i.variantLabel ?? null,
-      pcBuildId: i.pcBuildId ?? null,
-      pcBuildSlot: i.pcBuildSlot ?? null,
-      bundleSummary: i.bundleSummary ?? null,
-      bundleConfigurationKey: i.bundleConfigurationKey ?? null,
-    }));
-  }, [serverCartItems]);
-
-  // ✅ Removed replaceCart to preserve cart context
-  // Cart page should only display items, not modify the context
-  // useEffect(() => {
-  //   if (!hasMounted) return;
-  //   if (!isAuthenticated) return;
-  //   if (!mappedServerForContext) return;
-
-  //   const nextStr = JSON.stringify(mappedServerForContext);
-  //   if (lastReplacedRef.current === nextStr) return;
-
-  //   lastReplacedRef.current = nextStr;
-  //   replaceCart(mappedServerForContext);
-  // }, [hasMounted, isAuthenticated, mappedServerForContext, replaceCart]);
 
   const fetchServerCart = useCallback(async () => {
     try {
@@ -302,30 +273,27 @@ export default function CartPage() {
       }));
 
       setServerCartItems(mapped);
+      return mapped;
     } catch (err) {
       setServerCartError(
         err instanceof Error ? err.message : t("errors.load")
       );
+      return null;
     } finally {
       setLoadingServerCart(false);
     }
   }, [t]);
 
-  // ✅ only clear guest storage (NOT context state)
-  const clearGuestCartStorageOnly = useCallback(() => {
-    try {
-      localStorage.removeItem(GUEST_CART_STORAGE_KEY);
-    } catch {}
-  }, []);
-
   const syncGuestCartToServer = useCallback(async () => {
+    if (inFlightRef.current) return;
+    inFlightRef.current = true;
     try {
       setServerCartError(null);
       setLoadingServerCart(true);
 
       // 1) get existing server cart
       const serverRes = await fetch("/api/cart", { cache: "no-store" });
-      if (!serverRes.ok) throw new Error("Failed to fetch server cart");
+      if (!serverRes.ok) throw new Error(t("errors.load"));
 
       const serverData = await serverRes.json();
       const existingItems = Array.isArray(serverData.items)
@@ -336,19 +304,14 @@ export default function CartPage() {
       const localSnapshot: any[] = Array.isArray(cartItems) ? cartItems : [];
 
       // 3) only sync missing products
-      const itemsToSync = localSnapshot.filter(
-        (localItem) =>
-          !existingItems.some(
-            (serverItem: any) =>
-              String(serverItem.productId) === String(localItem.productId) &&
-              String(serverItem.variantId ?? "") === String(localItem.variantId ?? "") &&
-              String(serverItem.pcBuildId ?? "") === String(localItem.pcBuildId ?? "")
-          )
+      const itemsToSync = localSnapshot.filter((localItem) =>
+        !serverHasCartLine(existingItems, localItem),
       );
 
       // 4) push to server
+      const failedItems: LocalCartItem[] = [];
       for (const item of itemsToSync) {
-        await fetch("/api/cart", {
+        const res = await fetch("/api/cart", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -358,25 +321,25 @@ export default function CartPage() {
             pcBuilder: false,
           }),
         });
+        if (!res.ok) failedItems.push(item);
       }
 
-      /**
-       * ✅ IMPORTANT:
-       * এখানে clearCart() দিবে না
-       * কারণ clearCart() দিলে CartContext count/badge 0 হয়ে যায়
-       * checkout না হওয়া পর্যন্ত user এর count ঠিক থাকা উচিত
-       */
-      clearGuestCartStorageOnly();
-
       // 5) now fetch latest server cart (this will replace context)
-      await fetchServerCart();
+      const refreshedItems = await fetchServerCart();
+      if (refreshedItems) {
+        const combined = [...refreshedItems, ...failedItems];
+        setServerCartItems(combined);
+        replaceCart(combined);
+      }
+      if (failedItems.length > 0) toast.error(t("errors.partialCartSync"));
     } catch (err) {
       console.error("Error syncing guest cart to server:", err);
       await fetchServerCart();
     } finally {
+      inFlightRef.current = false;
       setLoadingServerCart(false);
     }
-  }, [cartItems, clearGuestCartStorageOnly, fetchServerCart]);
+  }, [cartItems, fetchServerCart, replaceCart, t]);
 
   // ----------------------------
   // ✅ Main auth sync - DISABLED on cart page to preserve context
@@ -387,8 +350,7 @@ export default function CartPage() {
     if (!hasMounted) return;
     
     if (isAuthenticated && !serverCartItems && !serverCartError) {
-      // Only fetch server cart for display, don't sync with context
-      fetchServerCart();
+      syncGuestCartToServer();
     }
     
     return;
@@ -397,7 +359,7 @@ export default function CartPage() {
     hasMounted,
     serverCartItems,
     serverCartError,
-    fetchServerCart,
+    syncGuestCartToServer,
   ]);
 
   // ----------------------------
@@ -460,7 +422,7 @@ export default function CartPage() {
   const retryServerCart = async () => {
     inFlightRef.current = false;
     setServerCartItems(null);
-    await fetchServerCart();
+    await syncGuestCartToServer();
   };
 
   // listen for external clear event
@@ -468,11 +430,11 @@ export default function CartPage() {
     const handler = () => {
       setServerCartItems([]);
       setServerCartError(null);
-      lastReplacedRef.current = JSON.stringify([]);
+      replaceCart([]);
     };
     window.addEventListener("serverCartCleared", handler);
     return () => window.removeEventListener("serverCartCleared", handler);
-  }, []);
+  }, [replaceCart]);
 
   if (!hasMounted) return null;
 
@@ -486,28 +448,9 @@ export default function CartPage() {
     return ((cartItems as any) || []);
   }
 
-  // For authenticated users, combine server cart and context items
-  const serverItems = serverCartItems ?? [];
-  const contextItems = (cartItems as any) || [];
-
-  // Merge items, preferring server items for same product/variant
-  const mergedItems = [...serverItems];
-  
-  // Add context items that don't exist in server cart
-  contextItems.forEach((contextItem: any) => {
-    const existsInServer = serverItems.some(
-      (serverItem: any) =>
-        String(serverItem.productId) === String(contextItem.productId) &&
-        String(serverItem.variantId ?? "") === String(contextItem.variantId ?? "") &&
-        String(serverItem.pcBuildId ?? "") === String(contextItem.pcBuildId ?? "")
-    );
-    
-    if (!existsInServer) {
-      mergedItems.push(contextItem);
-    }
-  });
-
-  return combinePcBuildCompanionQuantities(mergedItems);
+  // The server resolves missing variants to a concrete default variant ID.
+  // Context rows may still have a null variant, so merging them can duplicate items.
+  return combinePcBuildCompanionQuantities(serverCartItems ?? []);
 })();
 
   const subtotal = itemsToRender.reduce(

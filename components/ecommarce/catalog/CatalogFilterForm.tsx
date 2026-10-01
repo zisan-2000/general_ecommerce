@@ -52,19 +52,36 @@ export default function CatalogFilterForm({
     if (isPending) return;
     const form = formRef.current;
     if (!form) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const selectedByName = new Map<string, Set<string>>();
+    for (const [name, rawValue] of params.entries()) {
+      if (!name) continue;
+      const values = selectedByName.get(name) ?? new Set<string>();
+      values.add(rawValue);
+      selectedByName.set(name, values);
+    }
+
     for (const field of Array.from(form.elements)) {
       if (field instanceof HTMLInputElement) {
+        const values = selectedByName.get(field.name);
         if (field.type === "checkbox" || field.type === "radio") {
-          field.checked = field.defaultChecked;
+          field.checked = values ? values.has(field.value) : field.defaultChecked;
         } else {
-          field.value = field.defaultValue;
+          const valueFromUrl = values ? Array.from(values)[0] : undefined;
+          field.value = valueFromUrl ?? field.defaultValue;
         }
       } else if (field instanceof HTMLSelectElement) {
-        const selected = Array.from(field.options).find((option) => option.defaultSelected);
-        if (selected) field.value = selected.value;
+        const values = selectedByName.get(field.name);
+        const selectedValue = values ? Array.from(values)[0] : undefined;
+        const options = Array.from(field.options);
+        const matchedOption = selectedValue
+          ? options.find((option) => option.value === selectedValue)
+          : options.find((option) => option.defaultSelected);
+        field.value = matchedOption ? matchedOption.value : field.defaultValue;
       }
     }
-  }, [children, isPending]);
+  }, [children, isPending, pathname]);
 
   useEffect(() => {
     const results = document.getElementById("catalog-results");

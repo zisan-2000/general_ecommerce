@@ -134,8 +134,9 @@ export default function FloatingCartButton() {
   const locale = useLocale();
   const router = useRouter();
   const { cartItems, cartCount, removeFromCart, updateQuantity, addToCart } = useCart();
-  const { status } = useSession();
-  const isAuthenticated = status === "authenticated";
+  const { data: session, status } = useSession();
+  const isAuthenticated = status === "authenticated" && Boolean(session?.user?.id);
+  const cartT = useTranslations("StorefrontCommerce.cart");
 
   const [mounted, setMounted] = useState(false);
   const [position, setPosition] = useState<Position>(getDefaultPosition);
@@ -394,6 +395,49 @@ export default function FloatingCartButton() {
     // If authenticated and no variant issues, proceed to checkout
     setOpen(false);
     router.push("/ecommerce/checkout");
+  };
+
+  const handleRemoveItem = async (item: CartItemWithVariants) => {
+    const serverId = Number(item.id);
+    if (isAuthenticated && Number.isInteger(serverId) && serverId > 0) {
+      try {
+        const response = await fetch(`/api/cart/${serverId}`, { method: "DELETE" });
+        if (!response.ok && response.status !== 404) {
+          toast.error(cartT("errors.removeFailed"));
+          return;
+        }
+      } catch {
+        toast.error(cartT("errors.removeFailed"));
+        return;
+      }
+    }
+    removeFromCart(item.id);
+  };
+
+  const handleUpdateQuantity = async (
+    item: CartItemWithVariants,
+    quantity: number,
+  ) => {
+    const serverId = Number(item.id);
+    if (isAuthenticated && Number.isInteger(serverId) && serverId > 0) {
+      try {
+        const response = await fetch(`/api/cart/${serverId}`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ quantity }),
+        });
+        if (!response.ok) {
+          toast.error(cartT("errors.updateFailed"));
+          return;
+        }
+      } catch {
+        toast.error(cartT("errors.updateFailed"));
+        return;
+      }
+    }
+
+    if (quantity <= 0) removeFromCart(item.id);
+    else updateQuantity(item.id, quantity);
   };
 
   const fetchItemVariants = async (item: CartItemWithVariants) => {
@@ -719,7 +763,7 @@ export default function FloatingCartButton() {
                           <button
                             type="button"
                             onClick={() =>
-                              updateQuantity(item.id, Math.max(0, item.quantity - 1))
+                              handleUpdateQuantity(item, Math.max(0, item.quantity - 1))
                             }
                             className="rounded border border-border p-1 text-foreground transition hover:bg-accent"
                             aria-label={t("decreaseQuantity")}
@@ -731,7 +775,7 @@ export default function FloatingCartButton() {
                           </span>
                           <button
                             type="button"
-                            onClick={() => updateQuantity(item.id, item.quantity + 1)}
+                            onClick={() => handleUpdateQuantity(item, item.quantity + 1)}
                             className="rounded border border-border p-1 text-foreground transition hover:bg-accent"
                             aria-label={t("increaseQuantity")}
                           >
@@ -747,7 +791,7 @@ export default function FloatingCartButton() {
                         </span>
                         <button
                           type="button"
-                          onClick={() => removeFromCart(item.id)}
+                          onClick={() => handleRemoveItem(item)}
                           className="ml-3 rounded bg-destructive/10 p-2 text-destructive transition hover:bg-destructive hover:text-destructive-foreground"
                           aria-label={t("removeItem")}
                         >

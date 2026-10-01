@@ -348,7 +348,6 @@ export function CartProvider({ children }: { children: ReactNode }) {
           : requestedVariant;
       const hasVariants =
         product.type !== "BUNDLE" && (product.variants?.length ?? 0) > 0;
-      const cartVariantKey = normVariant(variant?.id ?? null);
       const variantLabel =
         variant?.options && Object.keys(variant.options).length > 0
           ? Object.entries(variant.options)
@@ -365,6 +364,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
       let persistedBundleKey: string | null = null;
       let persistedBundleSummary = options?.bundleSummary ?? null;
       let persistedBundlePrice = options?.bundlePrice;
+      let persistedCartItemId: string | number | undefined;
+      let persistedVariantId: string | number | null = variant?.id ?? null;
+      let persistedVariantPrice = Number(variant?.price ?? product.price);
+      let persistedVariantLabel = variantLabel;
 
       if (fromPcBuilder) {
         try {
@@ -380,6 +383,10 @@ export function CartProvider({ children }: { children: ReactNode }) {
           });
           const data = await response.json().catch(() => null);
           if (response.ok) {
+            persistedCartItemId = data?.id;
+            if (data?.variantId !== undefined) {
+              persistedVariantId = data.variantId;
+            }
             pcBuildId = typeof data?.pcBuildId === "string" ? data.pcBuildId : null;
             pcBuildSlot = typeof data?.pcBuildSlot === "string" ? data.pcBuildSlot : null;
           } else if (response.status !== 401) {
@@ -414,6 +421,22 @@ export function CartProvider({ children }: { children: ReactNode }) {
           }
           if (response.ok) {
             const data = await response.json().catch(() => null);
+            persistedCartItemId = data?.id;
+            if (data?.variantId !== undefined) {
+              persistedVariantId = data.variantId;
+              const persistedVariant = product.variants?.find(
+                (candidate) => norm(candidate.id) === norm(data.variantId),
+              );
+              if (persistedVariant) {
+                persistedVariantPrice = Number(persistedVariant.price ?? product.price);
+                persistedVariantLabel =
+                  persistedVariant.options && Object.keys(persistedVariant.options).length > 0
+                    ? Object.entries(persistedVariant.options)
+                        .map(([key, value]) => `${key}: ${String(value)}`)
+                        .join(", ")
+                    : persistedVariant.sku ?? null;
+              }
+            }
             persistedBundleKey = typeof data?.lineKey === "string" ? data.lineKey : null;
             const config = data?.bundleConfiguration;
             if (config && typeof config === "object") {
@@ -427,6 +450,8 @@ export function CartProvider({ children }: { children: ReactNode }) {
           console.error("Failed to sync cart row:", error);
         }
       }
+
+      const cartVariantKey = normVariant(persistedVariantId);
 
       setCartItems((prevItems) => {
         if (fromPcBuilder) {
@@ -442,14 +467,14 @@ export function CartProvider({ children }: { children: ReactNode }) {
           return [
             ...prevItems,
             {
-              id: createCartRowId(),
+              id: persistedCartItemId ?? createCartRowId(),
               productId: product.id,
-              variantId: variant?.id ?? null,
+              variantId: persistedVariantId,
               name: product.name,
-              price: Number(variant?.price ?? product.price),
+              price: persistedVariantPrice,
               quantity: 1,
               image: product.image || "/placeholder.svg",
-              variantLabel,
+              variantLabel: persistedVariantLabel,
               pcBuildId,
               pcBuildSlot,
             },
@@ -464,27 +489,39 @@ export function CartProvider({ children }: { children: ReactNode }) {
           (item) =>
             !item.pcBuildId &&
             norm(item.productId) === pid &&
-            normVariant(item.variantId) === cartVariantKey &&
+            (normVariant(item.variantId) === cartVariantKey ||
+              (variant === null && persistedVariantId !== null && item.variantId == null)) &&
             (product.type !== "BUNDLE" || item.bundleConfigurationKey === bundleConfigurationKey)
         );
 
         if (idx !== -1) {
           const nextQty = clamp(prevItems[idx].quantity + add);
-          return prevItems.map((it, i) => (i === idx ? { ...it, quantity: nextQty } : it));
+          return prevItems.map((it, i) =>
+            i === idx
+              ? {
+                  ...it,
+                  id: persistedCartItemId ?? it.id,
+                  variantId: persistedVariantId,
+                  price: persistedVariantPrice,
+                  variantLabel: persistedVariantLabel,
+                  quantity: nextQty,
+                }
+              : it,
+          );
         }
 
         return [
           ...prevItems,
           {
-            id: createCartRowId(),
+            id: persistedCartItemId ?? createCartRowId(),
             productId: product.id,
-            variantId: variant?.id ?? null,
+            variantId: persistedVariantId,
             hasVariants,
             name: product.name,
-              price: Number(persistedBundlePrice ?? variant?.price ?? product.price),
+              price: Number(persistedBundlePrice ?? persistedVariantPrice),
             quantity: add,
             image: product.image || "/placeholder.svg",
-              variantLabel,
+              variantLabel: persistedVariantLabel,
               bundleSelections: options?.bundleSelections ?? null,
               bundleSummary: persistedBundleSummary,
               bundleConfigurationKey,
