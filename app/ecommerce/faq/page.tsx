@@ -1,5 +1,6 @@
 "use client";
 
+import { translateDynamic } from "@/i18n/dynamic-messages";
 import { Suspense, useMemo, useState, type ComponentType } from "react";
 import {
   ChevronDown,
@@ -52,8 +53,8 @@ function FAQPageContent() {
           const number = index + 1;
           return {
             id: `${id}-${number}`,
-            question: t(`categories.${id}.q${number}`),
-            answer: t(`categories.${id}.a${number}`),
+            question: translateDynamic(t, `categories.${id}.q${number}`),
+            answer: translateDynamic(t, `categories.${id}.a${number}`),
           };
         }),
       })),

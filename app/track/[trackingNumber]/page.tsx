@@ -44,13 +44,13 @@ export default function TrackingPage({ params }: Props) {
         const res = await fetch(`/api/track/${trackingNumber}`, { cache: "no-store" });
         const payload = await res.json().catch(() => ({}));
         if (!res.ok) {
-          throw new Error(t("errors.load"));
+          throw new Error(t("loadError"));
         }
         if (!active) return;
         setData(payload as TrackData);
       } catch (e) {
         if (!active) return;
-        setError(e instanceof Error ? e.message : t("errors.load"));
+        setError(e instanceof Error ? e.message : t("loadError"));
       } finally {
         if (active) setLoading(false);
       }
@@ -103,7 +103,7 @@ export default function TrackingPage({ params }: Props) {
                 {data.courierStatus || t("notAvailable")}
               </p>
               <p>
-                <span className="font-semibold">{t("lastSynced")}:</span>{" "}
+                <span className="font-semibold">{t("updatedAt")}:</span>{" "}
                 {data.lastSyncedAt ? new Date(data.lastSyncedAt).toLocaleString(locale) : t("notAvailable")}
               </p>
             </div>
@@ -111,7 +111,7 @@ export default function TrackingPage({ params }: Props) {
             {data.order && (
               <div className="rounded-md border border-border bg-muted/30 p-3">
                 <p>
-                  <span className="font-semibold">{t("orderId")}:</span> {data.order.id}
+                  <span className="font-semibold">{t("orderNumber")}:</span> {data.order.id}
                 </p>
                 <p>
                   <span className="font-semibold">{t("recipient")}:</span> {data.order.name}

@@ -10,7 +10,7 @@ import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
 
-const publicRoot = path.join(process.cwd(), "public");
+const publicRoot = path.join(/* turbopackIgnore: true */ process.cwd(), "public");
 const imageExtensions = new Set([
   ".avif",
   ".gif",
@@ -293,8 +293,8 @@ function normalizeFolder(value: string | null) {
 }
 
 function resolveInsidePublic(relPath: string) {
-  const target = path.resolve(publicRoot, relPath);
-  const root = path.resolve(publicRoot);
+  const target = path.resolve(/* turbopackIgnore: true */ publicRoot, relPath);
+  const root = path.resolve(/* turbopackIgnore: true */ publicRoot);
 
   if (target !== root && !target.startsWith(`${root}${path.sep}`)) {
     throw new Error("Path is outside public directory");
@@ -631,7 +631,7 @@ export async function DELETE(req: Request) {
     for (const relPath of relPaths) {
       try {
         const target = resolveInsidePublic(relPath);
-        const stat = await fs.stat(target).catch(() => null);
+        const stat = await fs.stat(/* turbopackIgnore: true */ target).catch(() => null);
         if (!stat || !stat.isFile()) {
           notFound.push(relPath);
           continue;
@@ -702,18 +702,18 @@ export async function PUT(req: Request) {
 
     const bytes = await file.arrayBuffer();
     const buffer = Buffer.from(bytes);
-    await fs.writeFile(target, buffer);
+    await fs.writeFile(/* turbopackIgnore: true */ target, buffer);
 
     if (finalRelPath !== relPathRaw) {
       await updateImageReferences(relPathRaw, finalRelPath);
 
       const oldTarget = resolveInsidePublic(relPathRaw);
-      await fs.unlink(oldTarget).catch(() => null);
+      await fs.unlink(/* turbopackIgnore: true */ oldTarget).catch(() => null);
     }
 
     galleryCache.clear();
 
-    const stat = await fs.stat(target);
+    const stat = await fs.stat(/* turbopackIgnore: true */ target);
     const folder = toPosixPath(path.dirname(finalRelPath));
 
     return NextResponse.json({

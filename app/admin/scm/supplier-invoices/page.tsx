@@ -1,5 +1,6 @@
 "use client";
 
+import { translateDynamic, hasDynamicMessage } from "@/i18n/dynamic-messages";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
@@ -831,8 +832,8 @@ export default function SupplierInvoicesAdminPage() {
                           <ScmStatusChip status={invoice.status} />
                         )}
                         <Badge variant="outline">
-                          {t.has(`matchStatuses.${invoice.matchStatus || "PENDING"}`)
-                            ? t(`matchStatuses.${invoice.matchStatus || "PENDING"}`)
+                          {hasDynamicMessage(t, `matchStatuses.${invoice.matchStatus || "PENDING"}`)
+                            ? translateDynamic(t, `matchStatuses.${invoice.matchStatus || "PENDING"}`)
                             : toStageLabel(invoice.matchStatus || "PENDING")}
                         </Badge>
                       </div>

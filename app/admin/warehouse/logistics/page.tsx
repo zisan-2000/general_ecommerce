@@ -1,5 +1,6 @@
 "use client";
 
+import { translateDynamic } from "@/i18n/dynamic-messages";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import ShipmentsSkeleton from "@/components/ui/ShipmentsSkeleton";
@@ -187,10 +188,10 @@ function formatDateTime(value?: string | null) {
   return date.toLocaleString();
 }
 
-function formatShortDate(value?: string | null) {
-  if (!value) return "Not scheduled";
+function formatShortDate(value?: string | null, fallback = "Not scheduled") {
+  if (!value) return fallback;
   const date = new Date(value);
-  if (Number.isNaN(date.getTime())) return "Not scheduled";
+  if (Number.isNaN(date.getTime())) return fallback;
   return date.toLocaleDateString("en-US", { month: "short", day: "numeric" });
 }
 
@@ -1073,7 +1074,7 @@ export default function LogisticsPage() {
                     />
                   </div>
                   <span className="text-xs font-medium text-muted-foreground">
-                    {t(`months.${bar.label}`)}
+                    {translateDynamic(t, `months.${bar.label}`)}
                   </span>
                 </div>
               ))}

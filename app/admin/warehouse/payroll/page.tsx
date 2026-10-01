@@ -1,5 +1,6 @@
 "use client";
 
+import { translateDynamic } from "@/i18n/dynamic-messages";
 import { useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import { toast } from "sonner";
@@ -791,7 +792,7 @@ export default function AdminPayrollPage() {
                               ),
                             )}
                           >
-                            {t(`paymentTypes.${profile.paymentType}`)}
+                            {translateDynamic(t, `paymentTypes.${profile.paymentType}`)}
                           </span>
                           <p className="mt-1 text-xs text-muted-foreground">
                             {profile.paymentMethod ||
@@ -898,7 +899,7 @@ export default function AdminPayrollPage() {
                               getBadgeClass(period.status),
                             )}
                           >
-                            {t(`periodStatus.${period.status}`)}
+                            {translateDynamic(t, `periodStatus.${period.status}`)}
                           </span>
                         </div>
                         <div className="text-sm text-foreground">
@@ -1013,7 +1014,7 @@ export default function AdminPayrollPage() {
                               getBadgeClass(entry.paymentStatus),
                             )}
                           >
-                            {t(`paymentStatus.${entry.paymentStatus}`)}
+                            {translateDynamic(t, `paymentStatus.${entry.paymentStatus}`)}
                           </span>
                         </div>
                         <div className="flex justify-start xl:justify-end">
@@ -1555,7 +1556,7 @@ export default function AdminPayrollPage() {
                     </option>
                     {data?.periods.map((period) => (
                       <option key={period.id} value={period.id}>
-                        {period.name} ({t(`periodStatus.${period.status}`)})
+                        {period.name} ({translateDynamic(t, `periodStatus.${period.status}`)})
                       </option>
                     ))}
                   </select>

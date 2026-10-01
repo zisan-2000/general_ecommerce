@@ -10002,6 +10002,10 @@
   },
   "StorefrontSupport": {
     "tracking": {
+      "notAvailable": "Not available",
+      "courierStatus": "Courier status",
+      "recipient": "Recipient",
+      "phone": "Phone",
       "title": "Track your delivery",
       "subtitle": "See the latest status and delivery progress for this shipment.",
       "loading": "Loading tracking details...",

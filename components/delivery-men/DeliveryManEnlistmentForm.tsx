@@ -1,5 +1,6 @@
 "use client";
 
+import { translateDynamic } from "@/i18n/dynamic-messages";
 import { ChangeEvent, useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
 import Tesseract from "tesseract.js";
@@ -689,7 +690,7 @@ export default function DeliveryManEnlistmentForm() {
                     {done ? "✓" : index + 1}
                   </div>
                   <span className="rubik-medium text-sm">
-                    {t(`steps.${index}`)}
+                    {translateDynamic(t, `steps.${index}`)}
                   </span>
                 </div>
               </div>

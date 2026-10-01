@@ -1,3 +1,4 @@
+import { translateDynamic } from "@/i18n/dynamic-messages";
 import { CreditCard, Eye, Lock, Shield, User } from "lucide-react";
 import Link from "next/link";
 import { getTranslations } from "next-intl/server";
@@ -64,7 +65,7 @@ export default async function PrivacyPolicyPage() {
                   <h3 className="font-semibold">{t(`collect.${group.key}.title`)}</h3>
                   <ul className="mt-2 space-y-1 text-sm text-muted-foreground">
                     {group.items.map((item) => (
-                      <li key={item}>• {t(`collect.${group.key}.${item}`)}</li>
+                      <li key={item}>• {translateDynamic(t, `collect.${group.key}.${item}`)}</li>
                     ))}
                   </ul>
                 </div>
@@ -85,7 +86,7 @@ export default async function PrivacyPolicyPage() {
                   {group.items.map((item) => (
                     <li key={item} className="flex items-start gap-2">
                       <span className="mt-1.5 h-2 w-2 shrink-0 rounded-full bg-primary" aria-hidden />
-                      <span>{t(`usage.${group.key}.${item}`)}</span>
+                      <span>{translateDynamic(t, `usage.${group.key}.${item}`)}</span>
                     </li>
                   ))}
                 </ul>

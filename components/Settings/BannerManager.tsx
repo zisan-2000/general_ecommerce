@@ -34,7 +34,7 @@ const BANNER_TYPE_TRANSLATION_KEYS: Record<
 const isBannerType = (value: string): value is BannerType =>
   BANNER_TYPES.includes(value as BannerType);
 
-interface Banner {
+export interface Banner {
   id: number;
   title: string;
   image: string;

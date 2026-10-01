@@ -1,5 +1,6 @@
 "use client";
 
+import { translateDynamic } from "@/i18n/dynamic-messages";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import {
@@ -313,7 +314,7 @@ export function InvestorWorkflowGuide({
                       <Badge className="h-5 px-2 text-[10px]">{t("current")}</Badge>
                     ) : null}
                   </div>
-                  <p className="mt-1 text-sm font-semibold leading-tight">{t(`stages.${stage.id}.title`)}</p>
+                  <p className="mt-1 text-sm font-semibold leading-tight">{translateDynamic(t, `stages.${stage.id}.title`)}</p>
                 </div>
               </div>
             );
@@ -355,7 +356,7 @@ export function InvestorWorkflowGuide({
                       {isPage ? (
                         <CheckCircle2 className="h-3.5 w-3.5" />
                       ) : null}
-                      <span>{t(`steps.${step.id}.title`)}</span>
+                      <span>{translateDynamic(t, `steps.${step.id}.title`)}</span>
                     </Link>
                   );
                 })}
@@ -373,7 +374,7 @@ export function InvestorWorkflowGuide({
                     href={step.href}
                     className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-primary/50"
                   >
-                    <span>{t(`steps.${step.id}.title`)}</span>
+                    <span>{translateDynamic(t, `steps.${step.id}.title`)}</span>
                     <ArrowRight className="h-3.5 w-3.5 text-muted-foreground" />
                   </Link>
                 ))}

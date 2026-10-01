@@ -11399,6 +11399,10 @@
   },
   "StorefrontSupport": {
     "tracking": {
+      "notAvailable": "Tidak tersedia",
+      "courierStatus": "Status kurir",
+      "recipient": "Penerima",
+      "phone": "Telepon",
       "title": "Lacak pengiriman Anda",
       "subtitle": "Lihat status terbaru dan perkembangan pengiriman untuk pengiriman ini.",
       "loading": "Memuat rincian pelacakan...",

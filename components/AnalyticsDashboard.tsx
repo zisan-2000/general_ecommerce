@@ -1086,7 +1086,7 @@ const AnalyticsDashboard: React.FC = () => {
 
                             <Tooltip
                               formatter={(value, name) => [
-                                `${numberFormatter.format(Number(value))} (${pct(
+                                `${formatNumber(Number(value))} (${pct(
                                   Number(value),
                                   deviceTypeTotal
                                 )}%)`,
@@ -1136,7 +1136,7 @@ const AnalyticsDashboard: React.FC = () => {
                                       {b.name}
                                     </div>
                                     {/* <div className="text-xs text-gray-500">
-                                      {numberFormatter.format(b.count)} users
+                                      {formatNumber(b.count)} users
                                     </div> */}
                                   </div>
                                 </div>

@@ -847,8 +847,8 @@ export default function VatReports() {
 
             <p className="text-sm text-muted-foreground">
               {t("rateModal.classLabel", {
-                name: rateClass?.name,
-                code: rateClass?.code,
+                name: rateClass?.name ?? "",
+                code: rateClass?.code ?? "",
               })}
             </p>
 

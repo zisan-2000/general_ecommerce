@@ -76,7 +76,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         select: { slug: true, updatedAt: true },
         orderBy: { updatedAt: "desc" },
       }),
-      registry.features.BOOKS.enabled ? getStorefrontBooks() : Promise.resolve([]),
+      registry.features.BOOKS.enabled ? getStorefrontBooks().then((catalog) => catalog.books) : Promise.resolve([]),
     ]);
 
     const authors = new Map<number, Date>();

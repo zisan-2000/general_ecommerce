@@ -11399,6 +11399,10 @@
   },
   "StorefrontSupport": {
     "tracking": {
+      "notAvailable": "????",
+      "courierStatus": "????",
+      "recipient": "???",
+      "phone": "??",
       "title": "跟踪您的交付",
       "subtitle": "见这批货物的最新状况和交货进度。",
       "loading": "正在装入跟踪细节...",

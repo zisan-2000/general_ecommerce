@@ -11399,6 +11399,10 @@
   },
   "StorefrontSupport": {
     "tracking": {
+      "notAvailable": "?????? ???",
+      "courierStatus": "?????? ??????",
+      "recipient": "????????????",
+      "phone": "???",
       "title": "♫ track your environment",
       "subtitle": "♫ See the nuever status and livrance progress for this transport.",
       "loading": "♫ Loading tracking details...",

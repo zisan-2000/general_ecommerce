@@ -1,5 +1,6 @@
 "use client";
 
+import { translateDynamic } from "@/i18n/dynamic-messages";
 import { FormEvent, useCallback, useEffect, useState } from "react";
 import { useTranslations } from "next-intl";
 import { BarChart3, Plus, RefreshCw, Search, Trash2 } from "lucide-react";
@@ -298,7 +299,7 @@ export default function SearchManagement() {
               className="rounded-lg border bg-background p-3"
             >
               <p className="text-xs text-muted-foreground">
-                {t(`performance.kpis.${entry.key}`)}
+                {translateDynamic(t, `performance.kpis.${entry.key}`)}
               </p>
               <p className="mt-1 text-xl font-bold">{entry.value}</p>
             </div>

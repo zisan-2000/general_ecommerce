@@ -2,7 +2,7 @@ import fs from "fs/promises";
 import path from "path";
 import { del, get, put } from "@vercel/blob";
 
-const LOCAL_UPLOAD_ROOT = path.join(process.cwd(), "public", "upload");
+const LOCAL_UPLOAD_ROOT = path.join(/* turbopackIgnore: true */ process.cwd(), "public", "upload");
 const PRIVATE_PREFIXES = new Set([
   "delivery-proofs",
   "delivery-man-documents",
@@ -54,7 +54,7 @@ function normalizeRelativePath(relPath: string) {
 }
 
 function localPath(relPath: string) {
-  const target = path.resolve(LOCAL_UPLOAD_ROOT, relPath);
+  const target = path.resolve(/* turbopackIgnore: true */ LOCAL_UPLOAD_ROOT, relPath);
   if (!target.startsWith(`${LOCAL_UPLOAD_ROOT}${path.sep}`)) {
     throw new Error("Invalid local upload storage path.");
   }

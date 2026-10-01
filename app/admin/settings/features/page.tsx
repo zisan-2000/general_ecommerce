@@ -1,5 +1,6 @@
 "use client";
 
+import { translateDynamic } from "@/i18n/dynamic-messages";
 import { useCallback, useEffect, useState } from "react";
 import { AlertTriangle, RefreshCw, SlidersHorizontal } from "lucide-react";
 import { toast } from "sonner";
@@ -59,7 +60,7 @@ export default function StoreFeaturesPage() {
           const blocked = payload.blockedBy?.length
             ? t("errors.blockedBy", {
                 features: payload.blockedBy
-                  .map((key) => t(`featureNames.${key}`))
+                  .map((key) => translateDynamic(t, `featureNames.${key}`))
                   .join(", "),
               })
             : "";

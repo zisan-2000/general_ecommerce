@@ -182,7 +182,7 @@ export async function GET(req: Request) {
       if (!access.has("products.manage")) return privateJson({ error: "Forbidden" }, { status: 403 });
       const warehouse = Number(searchParams.get("warehouse"));
       if (warehouse > 0 && !access.isSuperAdmin &&
-          !["dashboard.read", "inventory.manage", "products.manage"].some((permission) => access.hasGlobal(permission)) &&
+          !(["dashboard.read", "inventory.manage", "products.manage"] as const).some((permission) => access.hasGlobal(permission)) &&
           !access.warehouseIds.includes(warehouse)) {
         return privateJson({ error: "Forbidden" }, { status: 403 });
       }

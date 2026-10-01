@@ -1,5 +1,6 @@
 "use client";
 
+import { translateDynamic } from "@/i18n/dynamic-messages";
 import { use, useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
@@ -297,7 +298,7 @@ export default function BundleDetailPage({
                     <div className="flex flex-wrap items-center gap-2">
                       <span className="flex h-7 w-7 items-center justify-center rounded-full bg-primary text-xs font-bold text-primary-foreground">{index + 1}</span>
                       <h4 className="font-semibold">{group.name}</h4>
-                      <Badge variant="outline">{t(`selectionTypes.${group.selectionType}`)}</Badge>
+                      <Badge variant="outline">{translateDynamic(t, `selectionTypes.${group.selectionType}`)}</Badge>
                       <Badge variant="outline">{group.pricingMode === "AUTOMATIC" ? t("groups.automaticPricing") : t("groups.manualPricing")}</Badge>
                       <Badge variant={group.required ? "default" : "secondary"}>{group.required ? t("groups.required") : t("groups.optional")}</Badge>
                       <span className="text-xs text-muted-foreground">{t("groups.selectionSummary", { min: group.minSelect, max: group.maxSelect, quantity: group.defaultQuantity })}</span>

@@ -11399,6 +11399,10 @@
   },
   "StorefrontSupport": {
     "tracking": {
+      "notAvailable": "??? ????",
+      "courierStatus": "???? ???? ?????",
+      "recipient": "???????",
+      "phone": "??????",
       "title": "تتبع تسليمك",
       "subtitle": "See the latest status and delivery progress for this shipment.",
       "loading": "تفاصيل التعقب",

@@ -54,7 +54,7 @@ const navItems = [
   { href: "/investor/documents", labelKey: "nav.documents", icon: FolderOpen },
   { href: "/investor/profile", labelKey: "nav.profile", icon: UserCircle2 },
   { href: "/investor/notifications", labelKey: "nav.notifications", icon: Bell },
-];
+] as const;
 
 export default function InvestorNav({ investorName, investorCode, onNavClick }: InvestorNavProps) {
   const pathname = usePathname();

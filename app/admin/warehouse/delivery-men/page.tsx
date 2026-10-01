@@ -1,5 +1,6 @@
 "use client";
 
+import { translateDynamic } from "@/i18n/dynamic-messages";
 import { useState, useEffect } from "react";
 import { useSession } from "next-auth/react";
 import { useRouter } from "next/navigation";
@@ -451,7 +452,7 @@ export default function DeliveryMenList() {
       if (data.success) {
         toast.success(
           t("success.applicationStatusUpdated", {
-            status: t(`applicationStatus.${newApplicationStatus}`),
+            status: translateDynamic(t, `applicationStatus.${newApplicationStatus}`),
           }),
         );
 
@@ -829,7 +830,7 @@ export default function DeliveryMenList() {
                                         )
                                       }
                                     >
-                                      {t(`status.${status}`)}
+                                      {translateDynamic(t, `status.${status}`)}
                                     </DropdownMenuItem>
                                   ))}
                                   <DropdownMenuSeparator />

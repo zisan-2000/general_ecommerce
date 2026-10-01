@@ -4,19 +4,10 @@ import { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
-import BannerManager from "@/components/Settings/BannerManager";
+import BannerManager, { type Banner } from "@/components/Settings/BannerManager";
 import PaymentGatewayManager from "@/components/PaymentSystem";
 import SiteSettingsForm from "@/components/Settings/SiteSettingsForm";
 import { useTranslations } from "next-intl";
-
-interface Banner {
-  id: number;
-  title: string;
-  image: string;
-  type: string;
-  position: number;
-  isActive: boolean;
-}
 
 export default function SettingsPage() {
   const t = useTranslations("AdminSettingsPage");

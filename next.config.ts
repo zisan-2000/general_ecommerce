@@ -8,24 +8,9 @@ const nextConfig: NextConfig = {
   // Allow cross-origin requests from specific development origins
   allowedDevOrigins: ['192.168.0.114'],
   experimental: {
-    // Custom webpack hooks (including next-intl's) disable the automatic worker.
-    // Separate compiler processes release their heaps between build stages.
-    webpackBuildWorker: true,
-    webpackMemoryOptimizations: true,
-    parallelServerCompiles: false,
-    parallelServerBuildTraces: false,
     serverSourceMaps: false,
   },
   productionBrowserSourceMaps: false,
-  webpack: (config, { dev }) => {
-    if (!dev) {
-      // Avoid retaining cached modules alongside the production compiler graph.
-      config.cache = false;
-      // Bound simultaneous module processing to reduce peak heap usage.
-      config.parallelism = 8;
-    }
-    return config;
-  },
   // Additional build optimizations
   poweredByHeader: false,
   images: {
@@ -194,8 +179,9 @@ const nextConfig: NextConfig = {
       },
     ];
   },
-  // Disable file system access during build
-  serverExternalPackages: ['fs', 'path', 'os'],
+  // Load server dependencies through Node.js instead of compiling them into
+  // route bundles. Client imports (such as the OCR form) remain bundled.
+  serverExternalPackages: ['nodemailer', 'tesseract.js', 'bwip-js', 'pdf-lib'],
 };
 
 export default withNextIntl(nextConfig);

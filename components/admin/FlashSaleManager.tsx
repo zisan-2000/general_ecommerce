@@ -1,5 +1,6 @@
 "use client";
 
+import { translateDynamic } from "@/i18n/dynamic-messages";
 import Image from "next/image";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
@@ -280,7 +281,7 @@ export default function FlashSaleManager() {
           <Card key={entry.key}>
             <CardContent className="p-4">
               <p className="text-sm text-muted-foreground">
-                {t(`stats.${entry.key}`)}
+                {translateDynamic(t, `stats.${entry.key}`)}
               </p>
               <p className={`text-3xl font-black ${entry.style}`}>
                 {entry.value}

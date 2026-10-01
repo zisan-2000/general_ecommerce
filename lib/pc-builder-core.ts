@@ -161,7 +161,7 @@ export const PC_BUILDER_SLOTS = [
 
 export type PcBuilderSlotKey = (typeof PC_BUILDER_SLOTS)[number]["key"];
 
-export function getPcBuilderCategorySlugs(slotKey: PcBuilderSlotKey) {
+export function getPcBuilderCategorySlugs(slotKey: PcBuilderSlotKey): string[] {
   const slot = PC_BUILDER_SLOTS.find((item) => item.key === slotKey);
   if (!slot) return [];
   return "categorySlugs" in slot

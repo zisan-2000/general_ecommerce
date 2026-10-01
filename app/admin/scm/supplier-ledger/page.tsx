@@ -1,5 +1,6 @@
 "use client";
 
+import { translateDynamic, hasDynamicMessage } from "@/i18n/dynamic-messages";
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
 import { useSession } from "next-auth/react";
@@ -414,8 +415,8 @@ function LedgerDetailModal({
                         {entry.referenceNumber || "-"}
                       </TableCell>
                       <TableCell className="py-3 text-sm text-foreground">
-                        {t.has(`entryTypes.${entry.entryType}`)
-                          ? t(`entryTypes.${entry.entryType}`)
+                        {hasDynamicMessage(t, `entryTypes.${entry.entryType}`)
+                          ? translateDynamic(t, `entryTypes.${entry.entryType}`)
                           : humanizeEnum(entry.entryType)}
                       </TableCell>
                       <TableCell className="text-right py-3 text-sm text-destructive">
@@ -450,12 +451,12 @@ function LedgerDetailModal({
                             <div className="flex items-center gap-2 flex-wrap">
                               <p className="text-sm font-semibold text-foreground">{invoice.invoiceNumber}</p>
                               <Badge variant="outline" className="text-xs">
-                                {t.has(`invoiceStatuses.${invoice.status}`)
-                                  ? t(`invoiceStatuses.${invoice.status}`)
+                                {hasDynamicMessage(t, `invoiceStatuses.${invoice.status}`)
+                                  ? translateDynamic(t, `invoiceStatuses.${invoice.status}`)
                                   : humanizeEnum(invoice.status)}
                               </Badge>
                               <Badge variant="outline" className={cn("text-xs", holdBadge.className)}>
-                                {t(`paymentHoldStatuses.${holdBadge.status}`)}
+                                {translateDynamic(t, `paymentHoldStatuses.${holdBadge.status}`)}
                               </Badge>
                               {invoice.slaCreditStatus && invoice.slaCreditStatus !== "NONE" && (
                                 <Badge variant="outline" className="text-xs bg-info/10 text-info">
@@ -475,8 +476,8 @@ function LedgerDetailModal({
                               {formatMoney(invoice.total)}
                             </p>
                             <p className="text-xs text-muted-foreground">
-                              {t("detail.match")}: {t.has(`matchStatuses.${invoice.threeWayMatch?.status || invoice.matchStatus || "PENDING"}`)
-                                ? t(`matchStatuses.${invoice.threeWayMatch?.status || invoice.matchStatus || "PENDING"}`)
+                              {t("detail.match")}: {hasDynamicMessage(t, `matchStatuses.${invoice.threeWayMatch?.status || invoice.matchStatus || "PENDING"}`)
+                                ? translateDynamic(t, `matchStatuses.${invoice.threeWayMatch?.status || invoice.matchStatus || "PENDING"}`)
                                 : humanizeEnum(invoice.threeWayMatch?.status || invoice.matchStatus || "PENDING")}
                             </p>
                           </div>
@@ -601,8 +602,8 @@ function LedgerDetailModal({
                           {formatDate(payment.paymentDate, locale)}
                         </TableCell>
                         <TableCell className="py-3 text-sm text-foreground">
-                          {t.has(`paymentMethods.${payment.method}`)
-                            ? t(`paymentMethods.${payment.method}`)
+                          {hasDynamicMessage(t, `paymentMethods.${payment.method}`)
+                            ? translateDynamic(t, `paymentMethods.${payment.method}`)
                             : humanizeEnum(payment.method)}
                         </TableCell>
                         <TableCell className="py-3 text-sm text-foreground">
