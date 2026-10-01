@@ -97,8 +97,9 @@ export function normalizeSearchQuery(value: unknown) {
   return normalizeUnicode(String(value ?? ""))
     .replace(/[\u0000-\u001f\u007f]/g, " ")
     .replace(/[‐‑‒–—―]/g, "-")
-    .replace(/([a-z])([0-9])/gi, "$1 $2")
-    .replace(/([0-9])([a-z])/gi, "$1 $2")
+    // Separate long letter prefixes such as RTX4070 for friendlier matching,
+    // but preserve model numbers/suffixes such as i5, 3200G and B650E.
+    .replace(/\b([a-z]{2,})(\d{3,})/gi, "$1 $2")
     .replace(/\b(\d+)\s*(gb|tb|mhz|ghz|hz|inch|inches|watt|watts|w)\b/gi, "$1$2")
     .replace(/\s+/g, " ")
     .trim()

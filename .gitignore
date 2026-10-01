@@ -44,6 +44,7 @@ next-env.d.ts
 
 # Uploads
 /public/uploads/
+/public/pdf.worker.min.mjs
 
 # Prisma generated client
 /generated/

@@ -40,6 +40,8 @@ import SearchSuggestionPanel from "@/components/ecommarce/search/SearchSuggestio
 
 import { sendSearchEvent } from "@/lib/search/client-analytics";
 
+import { normalizeSearchQuery } from "@/lib/search/core";
+
 import type {
   SearchSuggestionLink,
   SearchSuggestionProduct,
@@ -901,17 +903,55 @@ export default function Header({
     router.push(`/ecommerce/products/${product.id}`);
   };
 
-  const submitCatalogSearch = (queryOverride?: string) => {
+  const submitCatalogSearch = async (queryOverride?: string) => {
     const query = (queryOverride ?? searchTerm).trim();
     if (!query) return;
+
+    const normalizedQuery = normalizeSearchQuery(query).toLocaleLowerCase("en-US");
+    const suggestionsAreCurrent =
+      normalizeSearchQuery(searchData?.query).toLocaleLowerCase("en-US") ===
+      normalizedQuery;
+    let submittedSearchData = suggestionsAreCurrent ? searchData : null;
+
+    // A user can press Enter before the debounced suggestions request finishes.
+    // Resolve that case too, so an exact product name always opens the product.
+    if (!submittedSearchData) {
+      try {
+        const response = await fetch(
+          `/api/search/suggest?q=${encodeURIComponent(query)}&limit=12`,
+          { cache: "no-store" },
+        );
+        if (response.ok) {
+          submittedSearchData =
+            (await response.json()) as SearchSuggestionResponse;
+        }
+      } catch {
+        // The catalog results page remains the safe fallback if suggestions fail.
+      }
+    }
+
+    const exactProduct = submittedSearchData?.products.find(
+      (product) =>
+        normalizeSearchQuery(product.name).toLocaleLowerCase("en-US") ===
+        normalizedQuery,
+    );
+
     sendSearchEvent({
       event: "SEARCH_SUBMITTED",
       query,
-      queryId: searchData?.queryId,
-      resultCount: searchData?.total,
+      queryId: submittedSearchData?.queryId,
+      resultCount: submittedSearchData?.total,
+      productId: exactProduct?.id,
     });
     setShowSearchDropdown(false);
     setMobileSearchOpen(false);
+
+    if (exactProduct) {
+      setSearchTerm("");
+      router.push(`/ecommerce/products/${exactProduct.id}`);
+      return;
+    }
+
     router.push(`/ecommerce/products?q=${encodeURIComponent(query)}`);
   };
 
