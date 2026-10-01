@@ -9,15 +9,22 @@ const nextConfig: NextConfig = {
   allowedDevOrigins: ['192.168.0.114'],
   experimental: {
     serverSourceMaps: false,
+    // Avoid the persistent cache database compaction failure during builds.
+    // Development still uses its own filesystem cache.
+    turbopackFileSystemCacheForBuild: false,
   },
   productionBrowserSourceMaps: false,
   turbopack: {
     rules: {
-      'generated/prisma/index.js': {
-        loaders: ['./scripts/prisma-tracing-loader.cjs'],
+      'index.js': {
+        condition: { path: /(?:^|\/)generated\/prisma\/index\.js$/ },
+        loaders: [require.resolve('./scripts/prisma-tracing-loader.cjs')],
+        as: '*.js',
       },
-      'generated/prisma/runtime/library.js': {
-        loaders: ['./scripts/prisma-tracing-loader.cjs'],
+      'library.js': {
+        condition: { path: /(?:^|\/)generated\/prisma\/runtime\/library\.js$/ },
+        loaders: [require.resolve('./scripts/prisma-tracing-loader.cjs')],
+        as: '*.js',
       },
     },
   },

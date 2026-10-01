@@ -75,10 +75,13 @@ export default function CatalogFilterForm({
         const values = selectedByName.get(field.name);
         const selectedValue = values ? Array.from(values)[0] : undefined;
         const options = Array.from(field.options);
-        const matchedOption = selectedValue
-          ? options.find((option) => option.value === selectedValue)
-          : options.find((option) => option.defaultSelected);
-        field.value = matchedOption ? matchedOption.value : field.defaultValue;
+        const defaultOption =
+          options.find((option) => option.defaultSelected) ?? options[0];
+        const matchedOption =
+          selectedValue !== undefined
+            ? options.find((option) => option.value === selectedValue)
+            : undefined;
+        field.value = (matchedOption ?? defaultOption)?.value ?? "";
       }
     }
   }, [children, isPending, pathname]);

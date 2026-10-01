@@ -8503,6 +8503,7 @@
         "description": "Add some products to get started."
       },
       "errors": {
+        "partialCartSync": "Some items could not be moved to your account cart. They are still in your cart—please try again.",
         "load": "Failed to load the cart.",
         "loginRequired": "Please log in to continue to checkout.",
         "clearFailed": "Failed to clear the cart.",

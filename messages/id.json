@@ -9550,6 +9550,7 @@
         "description": "Tambahkan beberapa produk untuk memulai."
       },
       "errors": {
+        "partialCartSync": "Beberapa item tidak dapat dipindahkan ke keranjang akun Anda. Item tersebut masih ada di keranjang—silakan coba lagi.",
         "load": "Keranjang tidak dapat dimuat.",
         "loginRequired": "Silakan masuk untuk melanjutkan checkout.",
         "clearFailed": "Keranjang tidak dapat dikosongkan.",

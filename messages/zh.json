@@ -9550,6 +9550,7 @@
         "description": "添加一些商品即可开始购物。"
       },
       "errors": {
+        "partialCartSync": "部分商品无法移入您的账户购物车。这些商品仍在购物车中，请重试。",
         "load": "无法加载购物车。",
         "loginRequired": "请登录后继续结账。",
         "clearFailed": "无法清空购物车。",
