@@ -941,6 +941,52 @@ function catalogOrderBy(
   return [{ createdAt: "desc" }, { id: "desc" }];
 }
 
+async function readDynamicFacets(
+  categoryIds: number[],
+  serializedDisabledTypes: string,
+  hideBooks: boolean,
+) {
+  const serializedCategoryIds = JSON.stringify(categoryIds);
+  const [attributes, variants, specificationGroups] = await Promise.all([
+    readCatalogAttributeFacets(serializedCategoryIds, serializedDisabledTypes),
+    readCatalogVariantFacets(serializedCategoryIds, serializedDisabledTypes),
+    readCatalogSpecificationFacets(serializedCategoryIds, serializedDisabledTypes, hideBooks),
+  ]);
+  const attributeNames = new Set(
+    attributes.map((facet) => facet.name.toLocaleLowerCase()),
+  );
+  return {
+    attributes,
+    variantOptions: variants.filter(
+      (facet) => !attributeNames.has(facet.name.toLocaleLowerCase()),
+    ),
+    specificationGroups,
+  };
+}
+
+/** Load filter groups using the catalog's category scope and feature gates,
+ * without querying the product listing or its pagination count. */
+export async function getStorefrontDynamicFacets(
+  category = "",
+): Promise<
+  Pick<
+    StorefrontCatalogData["facets"],
+    "attributes" | "variantOptions" | "specificationGroups"
+  >
+> {
+  const [facets, disabledTypes, bookVisibility] = await Promise.all([
+    readCatalogFacets(),
+    getDisabledStorefrontProductTypes(),
+    getBookProductVisibilityWhere(),
+  ]);
+  const selectedIds = descendantCategoryIds(facets.categories, category);
+  return readDynamicFacets(
+    selectedIds.length ? selectedIds : facets.categories.map((item) => item.id),
+    JSON.stringify(disabledTypes),
+    Object.keys(bookVisibility).length > 0,
+  );
+}
+
 const readCatalog = async (
   serializedFilters: string,
   serializedDisabledTypes: string,
@@ -978,31 +1024,18 @@ const readCatalog = async (
       : [];
     const facetCategoryIds = scopedCategory ? categoryIds : activeCategoryIds;
     let attributeFacets: Awaited<ReturnType<typeof readCatalogAttributeFacets>> = [];
-    let variantFacets: Awaited<ReturnType<typeof readCatalogVariantFacets>> = [];
+    let catalogVariantFacets: Awaited<ReturnType<typeof readCatalogVariantFacets>> = [];
     let specificationFacets: Awaited<ReturnType<typeof readCatalogSpecificationFacets>> = [];
     if (includeDynamicFacets) {
-      [attributeFacets, variantFacets, specificationFacets] = await Promise.all([
-        readCatalogAttributeFacets(
-          JSON.stringify(facetCategoryIds),
-          serializedDisabledTypes,
-        ),
-        readCatalogVariantFacets(
-          JSON.stringify(facetCategoryIds),
-          serializedDisabledTypes,
-        ),
-        readCatalogSpecificationFacets(
-          JSON.stringify(facetCategoryIds),
-          serializedDisabledTypes,
-          Object.keys(bookVisibility).length > 0,
-        ),
-      ]);
+      const dynamicFacets = await readDynamicFacets(
+        facetCategoryIds,
+        serializedDisabledTypes,
+        Object.keys(bookVisibility).length > 0,
+      );
+      attributeFacets = dynamicFacets.attributes;
+      catalogVariantFacets = dynamicFacets.variantOptions;
+      specificationFacets = dynamicFacets.specificationGroups;
     }
-    const attributeFacetNames = new Set(
-      attributeFacets.map((facet) => facet.name.toLocaleLowerCase()),
-    );
-    const catalogVariantFacets = variantFacets.filter(
-      (facet) => !attributeFacetNames.has(facet.name.toLocaleLowerCase()),
-    );
     const filters = resolveCatalogFilters(
       requestedFilters,
       facets,

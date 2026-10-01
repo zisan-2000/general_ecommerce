@@ -7,13 +7,22 @@ const nextConfig: NextConfig = {
   compress: true,
   // Allow cross-origin requests from specific development origins
   allowedDevOrigins: ['192.168.0.114'],
-  // Simple webpack config to prevent system directory scanning
+  experimental: {
+    // Custom webpack hooks (including next-intl's) disable the automatic worker.
+    // Separate compiler processes release their heaps between build stages.
+    webpackBuildWorker: true,
+    webpackMemoryOptimizations: true,
+    parallelServerCompiles: false,
+    parallelServerBuildTraces: false,
+    serverSourceMaps: false,
+  },
+  productionBrowserSourceMaps: false,
   webpack: (config, { dev }) => {
     if (!dev) {
-      // Disable watching during production build
-      config.watchOptions = {
-        ignored: '**/*',
-      };
+      // Avoid retaining cached modules alongside the production compiler graph.
+      config.cache = false;
+      // Bound simultaneous module processing to reduce peak heap usage.
+      config.parallelism = 8;
     }
     return config;
   },
