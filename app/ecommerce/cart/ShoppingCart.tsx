@@ -490,8 +490,6 @@ export default function CartPage() {
 
       // এখানে user নিজে clear করেছে, তাই context clear OK
       clearCart();
-      lastReplacedRef.current = "";
-      clearGuestCartStorageOnly();
       toast.success(t("success.cleared"));
     } catch (error) {
       console.error("Error clearing cart:", error);
