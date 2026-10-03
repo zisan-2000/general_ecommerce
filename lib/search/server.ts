@@ -21,6 +21,41 @@ type RankedProductRow = {
   matchedVariantSku: string | null;
 };
 
+type SearchCapabilities = {
+  hasSearchVector: boolean;
+  hasSimilarity: boolean;
+};
+
+let cachedSearchCapabilities: {
+  expiresAt: number;
+  value: Promise<SearchCapabilities>;
+} | null = null;
+
+async function getSearchCapabilities(): Promise<SearchCapabilities> {
+  if (cachedSearchCapabilities && cachedSearchCapabilities.expiresAt > Date.now()) {
+    return cachedSearchCapabilities.value;
+  }
+  // Inspect optional database features before referencing them in SQL. Catching
+  // a missing-column error afterwards still emits Prisma errors on every search.
+  const value = prisma.$queryRaw<SearchCapabilities[]>(Prisma.sql`
+    SELECT
+      EXISTS (
+        SELECT 1 FROM pg_catalog.pg_attribute
+        WHERE attrelid = to_regclass('"Product"')
+          AND attname = 'searchVector'
+          AND attnum > 0 AND NOT attisdropped
+      ) AS "hasSearchVector",
+      to_regprocedure('similarity(text,text)') IS NOT NULL AS "hasSimilarity"
+  `).then((rows) => rows[0] ?? { hasSearchVector: false, hasSimilarity: false });
+  cachedSearchCapabilities = { expiresAt: Date.now() + 60_000, value };
+  try {
+    return await value;
+  } catch (error) {
+    if (cachedSearchCapabilities?.value === value) cachedSearchCapabilities = null;
+    throw error;
+  }
+}
+
 type SearchRuleAction = {
   pinProductIds?: number[];
   boostProductIds?: number[];
@@ -152,11 +187,25 @@ async function rankedProductCandidates(
   limit: number,
   activeCategoryIds: number[],
 ) {
+  const capabilities = await getSearchCapabilities();
+  // Use the indexed vector when installed; otherwise build it from existing
+  // columns so relevance search also works on databases without that migration.
+  const searchVector = capabilities.hasSearchVector
+    ? Prisma.sql`p."searchVector"`
+    : Prisma.sql`to_tsvector('simple', concat_ws(' ',
+        p."name", p."slug", p."sku", p."shortDesc", b."name", c."name"
+      ))`;
   const normalized = query.toLocaleLowerCase("en-US");
   const compact = compactModelToken(query);
   const prefix = `${normalized}%`;
   const contains = `%${normalized}%`;
   const termConditions = expandedTerms.map(searchableTermCondition);
+  const similarityScore = capabilities.hasSimilarity
+    ? Prisma.sql`similarity(lower(p."name"), ${normalized}) * 220`
+    : Prisma.sql`0`;
+  const similarityMatch = capabilities.hasSimilarity
+    ? Prisma.sql`similarity(lower(p."name"), ${normalized}) >= 0.16`
+    : Prisma.sql`false`;
   const boostIds = boostProductIds.length
     ? Prisma.sql`CASE WHEN p."id" IN (${Prisma.join(boostProductIds)}) THEN 180 ELSE 0 END`
     : Prisma.sql`0`;
@@ -177,8 +226,8 @@ async function rankedProductCandidates(
         + CASE WHEN lower(p."name") LIKE ${contains} THEN 240 ELSE 0 END
         + CASE WHEN lower(coalesce(b."name", '')) = ${normalized} THEN 180 ELSE 0 END
         + CASE WHEN lower(c."name") = ${normalized} THEN 160 ELSE 0 END
-        + similarity(lower(p."name"), ${normalized}) * 220
-        + ts_rank_cd(p."searchVector", websearch_to_tsquery('simple', ${query})) * 180
+        + ${similarityScore}
+        + ts_rank_cd(${searchVector}, websearch_to_tsquery('simple', ${query})) * 180
         + LEAST(p."soldCount", 1000) * 0.025
         + p."ratingAvg" * 2
         + ${boostIds}
@@ -202,8 +251,8 @@ async function rankedProductCandidates(
       AND p."available" = true
       AND p."categoryId" IN (${Prisma.join(activeCategoryIds)})
       AND (
-        p."searchVector" @@ websearch_to_tsquery('simple', ${query})
-        OR similarity(lower(p."name"), ${normalized}) >= 0.16
+        ${searchVector} @@ websearch_to_tsquery('simple', ${query})
+        OR ${similarityMatch}
         OR ${Prisma.join(termConditions, " OR ")}
       )
     ORDER BY "score" DESC, p."soldCount" DESC, p."id" DESC
