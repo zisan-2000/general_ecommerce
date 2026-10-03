@@ -605,7 +605,7 @@ export default function NewArrivals({
                         product={{
                           id: p.id,
                           name: p.name,
-                          href: `/ecommerce/products/${p.id}`,
+                          href: `/ecommerce/products/${encodeURIComponent(p.slug || String(p.id))}`,
                           image: p.image,
                           shortDesc: p.shortDesc ?? undefined,
                           specifications: p.specifications,

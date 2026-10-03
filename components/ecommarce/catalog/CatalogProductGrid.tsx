@@ -143,7 +143,7 @@ export default function CatalogProductGrid({
             product={{
               id: product.id,
               name: product.name,
-              href: `/ecommerce/products/${product.id}`,
+              href: `/ecommerce/products/${encodeURIComponent(product.slug)}`,
               image: product.image,
               shortDesc: product.shortDesc ?? undefined,
               specifications: product.specifications,

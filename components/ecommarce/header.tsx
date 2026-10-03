@@ -900,7 +900,7 @@ export default function Header({
     setSearchTerm("");
     setShowSearchDropdown(false);
     setMobileSearchOpen(false);
-    router.push(`/ecommerce/products/${product.id}`);
+    router.push(`/ecommerce/products/${encodeURIComponent(product.slug)}`);
   };
 
   const submitCatalogSearch = async (queryOverride?: string) => {
@@ -948,7 +948,7 @@ export default function Header({
 
     if (exactProduct) {
       setSearchTerm("");
-      router.push(`/ecommerce/products/${exactProduct.id}`);
+      router.push(`/ecommerce/products/${encodeURIComponent(exactProduct.slug)}`);
       return;
     }
 

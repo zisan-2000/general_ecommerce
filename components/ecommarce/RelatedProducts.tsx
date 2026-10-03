@@ -104,7 +104,7 @@ export default function RelatedProducts({
             {products.slice(0, 5).map((product) => (
               <Link
                 key={product.id}
-                href={`/ecommerce/products/${product.id}`}
+                href={`/ecommerce/products/${encodeURIComponent(product.slug || String(product.id))}`}
                 className="flex gap-4 rounded-xl border border-border p-4 hover:bg-accent transition"
               >
                 <div className="relative h-20 w-20 rounded-lg overflow-hidden bg-card border border-border shrink-0">
@@ -163,7 +163,7 @@ export default function RelatedProducts({
               product={{
                 id: product.id,
                 name: product.name,
-                href: `/ecommerce/products/${product.id}`,
+                href: `/ecommerce/products/${encodeURIComponent(product.slug || String(product.id))}`,
                 image: product.image,
                 price: product.basePrice,
                 originalPrice: product.originalPrice,

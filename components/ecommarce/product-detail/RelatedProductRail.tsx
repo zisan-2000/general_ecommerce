@@ -42,7 +42,7 @@ export default async function RelatedProductRail({
           return (
             <Link
               key={product.id}
-              href={`/ecommerce/products/${product.id}`}
+              href={`/ecommerce/products/${encodeURIComponent(product.slug)}`}
               className="group grid min-h-[96px] flex-1 grid-cols-[62px_minmax(0,1fr)] content-center gap-3 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#174a92]"
             >
               <span className="relative h-[62px] w-[62px] overflow-hidden rounded border border-slate-200 bg-white">

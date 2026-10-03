@@ -72,9 +72,11 @@ function simpleOptions(value: unknown) {
 export default function ProductPurchasePanel({
   product,
   details,
+  productHref,
 }: {
   product: ProductPurchaseData;
   details: PurchasePanelDetails;
+  productHref: string;
 }) {
   const t = useTranslations("StorefrontProduct.purchase");
   const locale = useLocale();
@@ -215,7 +217,7 @@ export default function ProductPurchasePanel({
   const toggleWishlist = async () => {
     if (status !== "authenticated") {
       router.push(
-        `/signin?callbackUrl=${encodeURIComponent(`/ecommerce/products/${product.id}`)}`,
+        `/signin?callbackUrl=${encodeURIComponent(productHref)}`,
       );
       return;
     }
@@ -555,7 +557,7 @@ export default function ProductPurchasePanel({
               <PriceDropAlertButton
                 productId={product.id}
                 variantId={selectedVariant?.id ?? null}
-                productHref={`/ecommerce/products/${product.id}`}
+                productHref={productHref}
                 compact
               />
               {compareEnabled ? (

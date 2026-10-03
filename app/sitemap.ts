@@ -59,7 +59,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
           ...bookVisibility,
         },
-        select: { id: true, updatedAt: true },
+        select: { slug: true, updatedAt: true },
         orderBy: { updatedAt: "desc" },
       }),
       prisma.blog.findMany({
@@ -90,7 +90,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     return [
       ...staticRoutes,
       ...products.map((product) => ({
-        url: `${siteUrl}/ecommerce/products/${product.id}`,
+        url: `${siteUrl}/ecommerce/products/${encodeURIComponent(product.slug)}`,
         lastModified: product.updatedAt,
         changeFrequency: "weekly" as const,
         priority: 0.8,

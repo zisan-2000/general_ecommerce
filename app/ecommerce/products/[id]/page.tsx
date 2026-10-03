@@ -1,7 +1,7 @@
 import { cache } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
-import { notFound } from "next/navigation";
+import { notFound, permanentRedirect } from "next/navigation";
 import CatalogProductGrid from "@/components/ecommarce/catalog/CatalogProductGrid";
 import ProductDetailTabs from "@/components/ecommarce/product-detail/ProductDetailTabs";
 import ProductPurchasePanel from "@/components/ecommarce/product-detail/ProductPurchasePanel";
@@ -41,7 +41,7 @@ export async function generateMetadata({ params }: ProductPageProps): Promise<Me
     stripHtml(product.shortDesc || product.description) ||
       t("metadata.buyOnline", { name: product.name }),
   );
-  const canonical = `/ecommerce/products/${product.id}`;
+  const canonical = `/ecommerce/products/${encodeURIComponent(product.slug)}`;
   const image = toAbsoluteUrl(product.image || "/placeholder.svg");
 
   return {
@@ -69,6 +69,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const { id: rawId } = await params;
   const product = await getProduct(rawId);
   if (!product) notFound();
+  const productHref = `/ecommerce/products/${encodeURIComponent(product.slug)}`;
+  if (rawId !== product.slug) {
+    permanentRedirect(productHref);
+  }
 
   const categoryData = await getStorefrontCatalogProducts(
     parseCatalogFilters({
@@ -157,7 +161,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         : undefined,
     offers: {
       "@type": "Offer",
-      url: `${getSiteUrl()}/ecommerce/products/${product.id}`,
+      url: `${getSiteUrl()}${productHref}`,
       priceCurrency: product.currency,
       price: product.basePrice,
       availability:
@@ -208,6 +212,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
           <main className="min-w-0 space-y-4">
             <ProductPurchasePanel
               product={purchaseProduct}
+              productHref={productHref}
               details={{
                 brandName: product.brand?.name,
                 categoryName: product.category.name,
