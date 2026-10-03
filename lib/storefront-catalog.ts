@@ -14,7 +14,7 @@ import {
   type CatalogAttributeType,
 } from "@/lib/attribute-schema";
 import { getEffectivelyActiveCategoryIds } from "@/lib/category-navigation";
-import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
+import { BOOK_PRODUCT_IDENTITY_WHERE, getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 
 const CATALOG_PAGE_SIZES = [12, 24, 36] as const;
 export const CATALOG_MAX_PRICE = 99_999_999.99;
@@ -593,13 +593,70 @@ const readCatalogFacets = unstable_cache(
   },
 );
 
+// Basic filter options must use the same category scope as the product listing.
+// Do not narrow by selected brands/specs: shoppers can still select alternatives.
+const readCatalogScopedFacets = compressedCache(
+  async (
+    serializedCategoryIds: string,
+    serializedDisabledTypes: string,
+    serializedBookVisibility: string,
+  ) => {
+    const categoryIds = JSON.parse(serializedCategoryIds) as number[];
+    const disabledTypes = JSON.parse(serializedDisabledTypes) as FeatureControlledProductType[];
+    const bookVisibility = JSON.parse(serializedBookVisibility) as Prisma.ProductWhereInput;
+    const productWhere = {
+      deleted: false,
+      available: true,
+      categoryId: { in: categoryIds },
+      ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
+      ...bookVisibility,
+    } satisfies Prisma.ProductWhereInput;
+    const [brands, prices, types] = await Promise.all([
+      prisma.brand.findMany({
+        where: { deleted: false, products: { some: productWhere } },
+        orderBy: { name: "asc" },
+        select: {
+          id: true,
+          name: true,
+          slug: true,
+          logo: true,
+          _count: { select: { products: { where: productWhere } } },
+        },
+      }),
+      prisma.product.aggregate({
+        where: productWhere,
+        _min: { basePrice: true },
+        _max: { basePrice: true },
+      }),
+      prisma.product.groupBy({ by: ["type"], where: productWhere }),
+    ]);
+    const availableTypes = new Set(types.map((product) => product.type));
+    return {
+      brands: brands.map((brand) => ({
+        id: brand.id,
+        name: brand.name,
+        slug: brand.slug,
+        logo: brand.logo,
+        productCount: brand._count.products,
+      })),
+      priceRange: {
+        min: Math.floor(Number(prices._min.basePrice ?? 0)),
+        max: Math.ceil(Number(prices._max.basePrice ?? 0)),
+      },
+      productTypes: PRODUCT_TYPES.filter((type) => availableTypes.has(type)),
+    };
+  },
+  ["storefront-catalog-scoped-facets-v1"],
+  { revalidate: 300, tags: ["storefront-catalog", "products", "categories"] },
+);
+
 /**
  * Attribute facets are scoped to the categories in view, so a Laptops page
  * offers RAM/SSD/Processor while another category offers its own specs. Values
  * are counted over products that are actually visible in the catalog.
  */
 const readCatalogAttributeFacets = compressedCache(
-  async (serializedCategoryIds: string, serializedDisabledTypes: string) => {
+  async (serializedCategoryIds: string, serializedDisabledTypes: string, hideBooks: boolean) => {
     const categoryIds = JSON.parse(serializedCategoryIds) as number[];
     const disabledTypes = JSON.parse(
       serializedDisabledTypes,
@@ -607,6 +664,7 @@ const readCatalogAttributeFacets = compressedCache(
     const visibleProductWhere = {
       deleted: false,
       available: true,
+      ...(hideBooks ? { NOT: BOOK_PRODUCT_IDENTITY_WHERE } : {}),
       ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
       ...(categoryIds.length ? { categoryId: { in: categoryIds } } : {}),
     } satisfies Prisma.ProductWhereInput;
@@ -804,7 +862,7 @@ const readCatalogAttributeFacets = compressedCache(
       .sort((a, b) => a.sortOrder - b.sortOrder || a.name.localeCompare(b.name))
       .slice(0, CATALOG_MAX_ATTRIBUTE_GROUPS);
   },
-  ["storefront-catalog-attribute-facets-compressed-v1"],
+  ["storefront-catalog-attribute-facets-compressed-v2"],
   { revalidate: 300, tags: ["storefront-catalog", "products", "categories"] },
 );
 
@@ -812,7 +870,7 @@ const readCatalogAttributeFacets = compressedCache(
  * an Attributes Manager mapping. This keeps the catalog in sync with every
  * option created in Variant Setup. */
 const readCatalogVariantFacets = compressedCache(
-  async (serializedCategoryIds: string, serializedDisabledTypes: string) => {
+  async (serializedCategoryIds: string, serializedDisabledTypes: string, hideBooks: boolean) => {
     const categoryIds = JSON.parse(serializedCategoryIds) as number[];
     const disabledTypes = JSON.parse(
       serializedDisabledTypes,
@@ -823,6 +881,7 @@ const readCatalogVariantFacets = compressedCache(
         product: {
           deleted: false,
           available: true,
+          ...(hideBooks ? { NOT: BOOK_PRODUCT_IDENTITY_WHERE } : {}),
           ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
           ...(categoryIds.length ? { categoryId: { in: categoryIds } } : {}),
         },
@@ -865,7 +924,7 @@ const readCatalogVariantFacets = compressedCache(
       .sort((left, right) => left.name.localeCompare(right.name))
       .slice(0, CATALOG_MAX_ATTRIBUTE_GROUPS);
   },
-  ["storefront-catalog-variant-facets-compressed-v1"],
+  ["storefront-catalog-variant-facets-compressed-v2"],
   { revalidate: 300, tags: ["storefront-catalog", "products", "categories"] },
 );
 
@@ -948,8 +1007,8 @@ async function readDynamicFacets(
 ) {
   const serializedCategoryIds = JSON.stringify(categoryIds);
   const [attributes, variants, specificationGroups] = await Promise.all([
-    readCatalogAttributeFacets(serializedCategoryIds, serializedDisabledTypes),
-    readCatalogVariantFacets(serializedCategoryIds, serializedDisabledTypes),
+    readCatalogAttributeFacets(serializedCategoryIds, serializedDisabledTypes, hideBooks),
+    readCatalogVariantFacets(serializedCategoryIds, serializedDisabledTypes, hideBooks),
     readCatalogSpecificationFacets(serializedCategoryIds, serializedDisabledTypes, hideBooks),
   ]);
   const attributeNames = new Set(
@@ -999,7 +1058,7 @@ const readCatalog = async (
     ) as FeatureControlledProductType[];
     const bookVisibility = JSON.parse(serializedBookVisibility) as Prisma.ProductWhereInput;
     const rawFacets = await readCatalogFacets();
-    const facets = {
+    let facets = {
       ...rawFacets,
       productTypes: rawFacets.productTypes.filter(
         (type) => !disabledTypes.includes(type as FeatureControlledProductType),
@@ -1027,11 +1086,19 @@ const readCatalog = async (
     let catalogVariantFacets: Awaited<ReturnType<typeof readCatalogVariantFacets>> = [];
     let specificationFacets: Awaited<ReturnType<typeof readCatalogSpecificationFacets>> = [];
     if (includeDynamicFacets) {
-      const dynamicFacets = await readDynamicFacets(
-        facetCategoryIds,
-        serializedDisabledTypes,
-        Object.keys(bookVisibility).length > 0,
-      );
+      const [scopedFacets, dynamicFacets] = await Promise.all([
+        readCatalogScopedFacets(
+          JSON.stringify(facetCategoryIds),
+          serializedDisabledTypes,
+          serializedBookVisibility,
+        ),
+        readDynamicFacets(
+          facetCategoryIds,
+          serializedDisabledTypes,
+          Object.keys(bookVisibility).length > 0,
+        ),
+      ]);
+      facets = { ...facets, ...scopedFacets };
       attributeFacets = dynamicFacets.attributes;
       catalogVariantFacets = dynamicFacets.variantOptions;
       specificationFacets = dynamicFacets.specificationGroups;
@@ -1345,6 +1412,7 @@ export function resolveCatalogFilters(
     ...filters,
     category: selectedCategory?.slug ?? "",
     brands: filters.brands.filter((brand) => knownBrands.has(brand)),
+    type: filters.type && facets.productTypes.includes(filters.type) ? filters.type : "",
     attributes,
     variants,
     specifications,
