@@ -18,7 +18,8 @@ import { BOOK_PRODUCT_IDENTITY_WHERE, getBookProductVisibilityWhere } from "@/li
 
 const CATALOG_PAGE_SIZES = [12, 24, 36] as const;
 export const CATALOG_MAX_PRICE = 99_999_999.99;
-export const CATALOG_MAX_PAGE = 500;
+// Numeric input guard only; the actual last page is determined by product count.
+export const CATALOG_MAX_PAGE = 2_147_483_647;
 const CATALOG_MAX_BRANDS = 12;
 const CATALOG_MAX_SEARCH_TERMS = 8;
 // Attribute facets are dynamic, so they need their own hard caps to keep a
@@ -1046,6 +1047,14 @@ export async function getStorefrontDynamicFacets(
   );
 }
 
+// Reuse totals across page/sort changes without caching product details.
+const readCatalogProductCount = compressedCache(
+  async (serializedWhere: string) =>
+    prisma.product.count({ where: JSON.parse(serializedWhere) as Prisma.ProductWhereInput }),
+  ["storefront-catalog-product-count-v1"],
+  { revalidate: 30, tags: ["storefront-catalog", "products", "categories"] },
+);
+
 const readCatalog = async (
   serializedFilters: string,
   serializedDisabledTypes: string,
@@ -1252,7 +1261,6 @@ const readCatalog = async (
           }
         : {}),
     };
-    const skip = (filters.page - 1) * filters.perPage;
     let products: RawCatalogProduct[];
     let total: number;
     if (filters.q && filters.sort === "relevance") {
@@ -1260,6 +1268,7 @@ const readCatalog = async (
       if (rankedIds.length === 0) {
         products = [];
         total = 0;
+        filters.page = 1;
       } else {
         const eligibleRows = await prisma.product.findMany({
           where: { ...where, id: { in: rankedIds } },
@@ -1268,6 +1277,8 @@ const readCatalog = async (
         const eligible = new Set(eligibleRows.map((row) => row.id));
         const orderedIds = rankedIds.filter((id) => eligible.has(id));
         total = orderedIds.length;
+        filters.page = Math.min(filters.page, Math.max(1, Math.ceil(total / filters.perPage)));
+        const skip = (filters.page - 1) * filters.perPage;
         const pageIds = orderedIds.slice(skip, skip + filters.perPage);
         const pageRows = pageIds.length
           ? await prisma.product.findMany({
@@ -1282,16 +1293,39 @@ const readCatalog = async (
         });
       }
     } else {
-      [products, total] = await Promise.all([
-        prisma.product.findMany({
+      total = await readCatalogProductCount(JSON.stringify(where));
+      // Clamp before querying so a crafted page number cannot cause a huge OFFSET.
+      filters.page = Math.min(filters.page, Math.max(1, Math.ceil(total / filters.perPage)));
+      const skip = (filters.page - 1) * filters.perPage;
+      const orderBy = catalogOrderBy(filters.sort);
+      if (total === 0) {
+        products = [];
+      } else if (skip >= 1_000) {
+        // Deep numbered pages still need an offset, but only on the lightweight
+        // ID query. Fetch nested variants/specifications for this page alone.
+        const pageIds = await prisma.product.findMany({
           where,
-          orderBy: catalogOrderBy(filters.sort),
+          orderBy,
+          skip,
+          take: filters.perPage,
+          select: { id: true },
+        });
+        products = pageIds.length
+          ? await prisma.product.findMany({
+              where: { ...where, id: { in: pageIds.map((product) => product.id) } },
+              orderBy,
+              select: catalogProductSelect,
+            })
+          : [];
+      } else {
+        products = await prisma.product.findMany({
+          where,
+          orderBy,
           skip,
           take: filters.perPage,
           select: catalogProductSelect,
-        }),
-        prisma.product.count({ where }),
-      ]);
+        });
+      }
     }
 
     return {
