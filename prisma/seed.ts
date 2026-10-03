@@ -2,6 +2,7 @@ import { loadEnvConfig } from "@next/env";
 import { hash } from "bcryptjs";
 import { PrismaClient } from "../generated/prisma";
 import { disconnectStartech, seedGroceries, seedStartech } from "./startech-seed";
+import { seedHealthCare } from "./HealthCare/seed";
 
 loadEnvConfig(process.cwd());
 const prisma = new PrismaClient();
@@ -40,6 +41,7 @@ async function main() {
   console.log("Admin and user accounts seeded.");
   await seedStartech();
   await seedGroceries();
+  await seedHealthCare(prisma);
 }
 
 main().catch((error) => {

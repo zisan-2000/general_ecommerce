@@ -4,8 +4,6 @@ import healthcareProducts from "./healthcare_products.json";
 
 loadEnvConfig(process.cwd());
 
-const prisma = new PrismaClient();
-
 type SeedVariantOption = {
   name: string;
   position?: number;
@@ -51,7 +49,7 @@ async function seedVariantOptions(
   }
 }
 
-async function main() {
+export async function seedHealthCare(prisma: PrismaClient) {
   console.log("Starting Health Care seed...");
 
   // Guard this standalone entry point against accidentally loading another catalog.
@@ -301,12 +299,17 @@ async function main() {
   console.log("Health Care seed completed.");
 }
 
-main()
-  .catch((error) => {
-    console.error("Health Care seed failed:");
-    console.error(error);
-    process.exitCode = 1;
-  })
-  .finally(async () => {
-    await prisma.$disconnect();
-  });
+// Importing this module does not start a seed or disconnect the caller's client.
+// Direct execution keeps the standalone seed:healthcare command working.
+if (require.main === module) {
+  const prisma = new PrismaClient();
+  seedHealthCare(prisma)
+    .catch((error) => {
+      console.error("Health Care seed failed:");
+      console.error(error);
+      process.exitCode = 1;
+    })
+    .finally(async () => {
+      await prisma.$disconnect();
+    });
+}
