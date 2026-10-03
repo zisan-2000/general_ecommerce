@@ -77,6 +77,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const categoryData = await getStorefrontCatalogProducts(
     parseCatalogFilters({
       category: product.category.slug,
+      inStock: "1",
       sort: "popular",
       perPage: "12",
     }),
@@ -84,7 +85,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
   const recommendations = new Map<number, StorefrontCatalogProduct>();
   const addRecommendations = (products: StorefrontCatalogProduct[]) => {
     for (const candidate of products) {
-      if (candidate.id === product.id || recommendations.has(candidate.id)) {
+      if (
+        candidate.stock <= 0 ||
+        candidate.id === product.id ||
+        recommendations.has(candidate.id)
+      ) {
         continue;
       }
       recommendations.set(candidate.id, candidate);
@@ -100,6 +105,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
     const brandData = await getStorefrontCatalogProducts(
       parseCatalogFilters({
         brand: product.brand.slug,
+        inStock: "1",
         sort: "popular",
         perPage: "12",
       }),
@@ -108,7 +114,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   }
   if (recommendations.size < 8) {
     const popularData = await getStorefrontCatalogProducts(
-      parseCatalogFilters({ sort: "popular", perPage: "12" }),
+      parseCatalogFilters({ inStock: "1", sort: "popular", perPage: "12" }),
     );
     addRecommendations(popularData.products);
   }
