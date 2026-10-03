@@ -146,10 +146,6 @@ export default function CatalogFilterForm({
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const isDesktop = window.matchMedia(DESKTOP_QUERY).matches;
-    if (!isDesktop && event.currentTarget.checkValidity()) {
-      const toggle = document.getElementById("catalog-filter-toggle");
-      if (toggle instanceof HTMLInputElement) toggle.checked = false;
-    }
     navigate(event.currentTarget, !isDesktop);
   }
 
@@ -163,7 +159,11 @@ export default function CatalogFilterForm({
       onChange={handleChange}
       onSubmit={handleSubmit}
     >
-      {children}
+      <div className="min-h-0 flex-1 space-y-3 overflow-y-auto overscroll-contain p-3 sm:p-4">
+        {children}
+      </div>
+
+      <div className="shrink-0 space-y-2 border-t bg-card p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] lg:border-t-0 lg:p-4">
 
       <div
         className="min-h-5 text-center text-xs font-medium text-muted-foreground"
@@ -201,6 +201,7 @@ export default function CatalogFilterForm({
           {t("apply")}
         </button>
       </noscript>
+      </div>
     </form>
   );
 }

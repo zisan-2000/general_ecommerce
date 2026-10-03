@@ -4,8 +4,9 @@ import FilterSection from "@/components/ecommarce/catalog/CatalogFilterSection";
 import type { Metadata } from "next";
 import Link from "@/components/ecommarce/catalog/CatalogLink";
 import { redirect } from "next/navigation";
-import { Filter, LoaderCircle, PackageSearch, Search } from "lucide-react";
+import { LoaderCircle, PackageSearch, Search } from "lucide-react";
 import CatalogFilterForm from "@/components/ecommarce/catalog/CatalogFilterForm";
+import CatalogFilterSidebar from "@/components/ecommarce/catalog/CatalogFilterSidebar";
 import CatalogProductGrid from "@/components/ecommarce/catalog/CatalogProductGrid";
 import SearchResultsTelemetry from "@/components/ecommarce/search/SearchResultsTelemetry";
 import {
@@ -266,7 +267,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
           }}
         />
       ) : null}
-      <div className="container px-3 py-5 sm:px-6 lg:py-8">
+      <div className="container px-3 pb-5 pt-[76px] sm:px-6 lg:py-8">
         <section className="overflow-hidden rounded-3xl border bg-gradient-to-br from-primary/10 via-background to-accent/10 px-5 py-7 sm:px-8 sm:py-10">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-primary">
@@ -283,52 +284,10 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
         </section>
 
         <div className="mt-6 grid items-start gap-6 lg:grid-cols-[280px_minmax(0,1fr)]">
-          <aside className="rounded-2xl border bg-card shadow-sm lg:sticky lg:top-[136px] lg:flex lg:max-h-[calc(100vh-152px)] lg:flex-col lg:overflow-hidden">
-            <input
-              id="catalog-filter-toggle"
-              type="checkbox"
-              className="peer sr-only"
-            />
-            <label
-              htmlFor="catalog-filter-toggle"
-              className="flex cursor-pointer items-center justify-between px-4 py-4 lg:hidden"
-            >
-              <span className="flex items-center gap-2 font-bold">
-                <Filter className="h-4 w-4 text-primary" aria-hidden="true" />
-                {t("filters")}
-                {activeFilterCount ? (
-                  <span className="rounded-full bg-primary px-2 py-0.5 text-[10px] font-bold text-primary-foreground">
-                    {activeFilterCount}
-                  </span>
-                ) : null}
-              </span>
-              <span className="text-xs font-semibold text-primary">{t("showHide")}</span>
-            </label>
-
-            <div className="hidden shrink-0 items-center justify-between border-b px-4 py-4 lg:flex">
-              <div className="flex items-center gap-2">
-                <Filter className="h-4 w-4 text-primary" aria-hidden="true" />
-                <h2 className="font-bold">{t("filters")}</h2>
-                {activeFilterCount ? (
-                  <span className="rounded-full bg-primary px-2 py-0.5 text-[10px] font-bold text-primary-foreground">
-                    {activeFilterCount}
-                  </span>
-                ) : null}
-              </div>
-              {activeFilterCount ? (
-                <Link
-                    prefetch={false}
-                  href="/ecommerce/products"
-                  className="text-xs font-semibold text-primary hover:underline"
-                >
-                  {t("clear")}
-                </Link>
-              ) : null}
-            </div>
-
+          <CatalogFilterSidebar activeFilterCount={activeFilterCount}>
             <CatalogFilterForm
               key={catalogUrl(filters)}
-              className="hidden border-t p-4 peer-checked:block lg:block lg:min-h-0 lg:flex-1 lg:overflow-y-auto lg:border-t-0"
+              className="flex min-h-0 flex-1 flex-col"
             >
               {activeFilterCount ? (
                 <div className="flex justify-end lg:hidden">
@@ -430,7 +389,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                   filters.minPrice !== null || filters.maxPrice !== null ? 1 : 0
                 }
               >
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-1 gap-2 lg:grid-cols-2">
                   <input
                     type="number"
                     name="minPrice"
@@ -440,7 +399,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                     defaultValue={filters.minPrice ?? ""}
                     placeholder={t("minPrice", { value: facets.priceRange.min })}
                     aria-label={t("minimumPrice")}
-                    className="h-10 rounded-lg border bg-background px-3 text-sm"
+                    className="h-10 min-w-0 w-full rounded-lg border bg-background px-3 text-sm"
                   />
                   <input
                     type="number"
@@ -451,7 +410,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                     defaultValue={filters.maxPrice ?? ""}
                     placeholder={t("maxPrice", { value: facets.priceRange.max })}
                     aria-label={t("maximumPrice")}
-                    className="h-10 rounded-lg border bg-background px-3 text-sm"
+                    className="h-10 min-w-0 w-full rounded-lg border bg-background px-3 text-sm"
                   />
                 </div>
               </FilterSection>
@@ -529,7 +488,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
               </div>
 
             </CatalogFilterForm>
-          </aside>
+          </CatalogFilterSidebar>
 
           <main id="catalog-results" className="group/results relative min-w-0">
             <div className="pointer-events-none absolute inset-0 z-20 hidden justify-center bg-background/60 pt-24 group-aria-busy/results:flex" role="status">
