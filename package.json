@@ -10,6 +10,7 @@
     "lint": "eslint .",
     "typecheck": "cross-env NODE_OPTIONS=--max-old-space-size=6144 tsc --noEmit",
     "test:phase0": "tsx --test tests/phase0-security.test.mjs",
+    "seed:healthcare": "tsx prisma/HealthCare/seed.ts",
     "test:phase1": "tsx --test tests/phase1-storefront.test.mjs",
     "test:phase2": "tsx --test tests/phase2-product-detail.test.mjs",
     "test:flash-sale": "tsx --test tests/flash-sale.test.mjs",

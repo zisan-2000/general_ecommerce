@@ -257,9 +257,9 @@ export default function ProductPurchasePanel({
   return (
     <section className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-[0_1px_3px_rgba(15,23,42,0.08)]">
         <div className="grid lg:grid-cols-[minmax(340px,0.95fr)_minmax(0,1.25fr)]">
-          <div className="border-b border-border p-4 lg:border-b-0 lg:border-r sm:p-5">
+          <div className="flex min-w-0 flex-col border-b border-border p-2 lg:border-b-0 lg:border-r">
             <div
-              className="relative h-[310px] overflow-hidden rounded-md bg-white cursor-zoom-in sm:h-[390px]"
+              className="relative h-[360px] overflow-hidden rounded-md bg-white cursor-zoom-in sm:h-[480px] lg:h-auto lg:min-h-[500px] lg:flex-1"
               onMouseEnter={(event) => {
                 updateImageZoomOrigin(event);
                 setIsImageZoomed(true);
@@ -281,7 +281,7 @@ export default function ProductPurchasePanel({
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-contain p-4 transition-transform duration-200 ease-out motion-reduce:transition-none sm:p-6"
+                className="object-contain transition-transform duration-200 ease-out motion-reduce:transition-none"
                 style={{
                   transform: isImageZoomed ? "scale(2.1)" : "scale(1)",
                   transformOrigin: `${imageZoomOrigin.x}% ${imageZoomOrigin.y}%`,

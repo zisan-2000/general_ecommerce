@@ -1,0 +1,663 @@
+{
+  "schemaVersion": 3,
+  "source": {
+    "site": "local-healthcare-catalog",
+    "imageRoot": "D:\\Office Projects\\general_ecommerce\\public\\images\\products\\healthCare",
+    "generator": "manual-healthcare-json-builder"
+  },
+  "defaults": {
+    "stockMin": 1000,
+    "stockMax": 1500,
+    "lowStockThreshold": 100,
+    "stockSource": "Random stock generated per healthcare product",
+    "currency": "BDT",
+    "productType": "PHYSICAL",
+    "inventoryItemClass": "CONSUMABLE",
+    "priceStatus": "TBA"
+  },
+  "categories": [
+    {
+      "name": "Health Care",
+      "slug": "health-care",
+      "parentSlug": null,
+      "image": "/images/products/healthCare/Red Maple Leaf Fish Oil.jpeg",
+      "isActive": true,
+      "sortOrder": 0,
+      "showInHeader": true,
+      "showInFooter": false,
+      "featured": false
+    }
+  ],
+  "brands": [
+    {
+      "name": "Red Maple Leaf",
+      "slug": "red-maple-leaf",
+      "logo": null
+    }
+  ],
+  "products": [
+    {
+      "unmatched": false,
+      "name": "Red Maple Leaf Brand Fish Oil Softgel",
+      "slug": "red-maple-leaf-fish-oil-softgel",
+      "type": "PHYSICAL",
+      "sku": "HEALTH-E51FB3467FDC4225C7AF",
+      "categorySlug": "health-care",
+      "brandName": "Red Maple Leaf",
+      "description": "Red Maple Leaf Brand Fish Oil Softgel is a dietary supplement formulated with fish-oil-derived omega-3 fatty acids, commonly associated with EPA and DHA. Omega-3 supplements are widely used to support general nutrition, heart health, and normal lipid metabolism. The exact EPA/DHA amount and serving size should be confirmed from the product label before use. This is a dietary supplement and is not intended to diagnose, treat, cure, or prevent disease.",
+      "shortDesc": "Omega-3 fish oil softgel dietary supplement containing EPA/DHA-type fatty acids for general nutritional and cardiovascular support.",
+      "model": null,
+      "warranty": null,
+      "basePrice": null,
+      "priceLabel": "TBA",
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/healthCare/Red Maple Leaf Fish Oil.jpeg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1014,
+      "variants": [
+        {
+          "sku": "HEALTH-13DE9EF6564803AE410E",
+          "price": null,
+          "priceLabel": "TBA",
+          "currency": "BDT",
+          "stock": 1014,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/healthCare/Red Maple Leaf Fish Oil.jpeg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Health Care",
+              "position": 0
+            },
+            {
+              "label": "Product Type",
+              "value": "Dietary Supplement",
+              "position": 1
+            },
+            {
+              "label": "Supplement Type",
+              "value": "Omega-3 / Fish Oil",
+              "position": 2
+            },
+            {
+              "label": "Price",
+              "value": "TBA",
+              "position": 3
+            },
+            {
+              "label": "Brand",
+              "value": "Red Maple Leaf",
+              "position": 4
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/healthCare/Red Maple Leaf Fish Oil.jpeg"
+      ],
+      "priceSource": "TBA",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "local-healthcare",
+        "familyKey": "health-care|red maple leaf|red-maple-leaf-fish-oil-softgel",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Omega-3 fish oil softgel dietary supplement containing EPA/DHA-type fatty acids for general nutritional and cardiovascular support.",
+            "match": {
+              "method": "local-only",
+              "query": "Red Maple Leaf Brand Fish Oil Softgel dietary supplement",
+              "brandHint": "Red Maple Leaf",
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "healthCare",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Exact pack size/strength should be confirmed from the product label."
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/healthCare/Red Maple Leaf Fish Oil.jpeg",
+          "packSize": null,
+          "variantSku": "HEALTH-13DE9EF6564803AE410E",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "American Ginseng",
+      "slug": "american-ginseng",
+      "type": "PHYSICAL",
+      "sku": "HEALTH-5B04C9D92BE11CF9E0AF",
+      "categorySlug": "health-care",
+      "brandName": null,
+      "description": "American Ginseng (Panax quinquefolius) is a herbal dietary supplement containing naturally occurring ginsenosides. It is commonly marketed for general wellness, energy support, fatigue management, concentration, and mental alertness. Clinical evidence varies by product, dose, and intended use, so benefits should not be assumed to be guaranteed. People taking prescription medicines, especially medicines affecting blood sugar or blood clotting, should review the label and consult a qualified healthcare professional.",
+      "shortDesc": "Panax quinquefolius dietary supplement commonly used for general wellness, energy support, fatigue management, and mental alertness.",
+      "model": null,
+      "warranty": null,
+      "basePrice": null,
+      "priceLabel": "TBA",
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/healthCare/American Ginseng.jpeg",
+      "gallery": [
+        "/images/products/healthCare/American Ginseng galary-1.jpeg"
+      ],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1312,
+      "variants": [
+        {
+          "sku": "HEALTH-CE07599E83D3899C8A89",
+          "price": null,
+          "priceLabel": "TBA",
+          "currency": "BDT",
+          "stock": 1312,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/healthCare/American Ginseng.jpeg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Health Care",
+              "position": 0
+            },
+            {
+              "label": "Product Type",
+              "value": "Dietary Supplement",
+              "position": 1
+            },
+            {
+              "label": "Supplement Type",
+              "value": "Herbal Supplement",
+              "position": 2
+            },
+            {
+              "label": "Price",
+              "value": "TBA",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/healthCare/American Ginseng.jpeg",
+        "/images/products/healthCare/American Ginseng galary-1.jpeg"
+      ],
+      "priceSource": "TBA",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "local-healthcare",
+        "familyKey": "health-care|unknown|american-ginseng",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Panax quinquefolius dietary supplement commonly used for general wellness, energy support, fatigue management, and mental alertness.",
+            "match": {
+              "method": "local-only",
+              "query": "American Ginseng dietary supplement",
+              "brandHint": null,
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "healthCare",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Exact pack size/strength should be confirmed from the product label."
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/healthCare/American Ginseng.jpeg",
+          "packSize": null,
+          "variantSku": "HEALTH-CE07599E83D3899C8A89",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/healthCare/American Ginseng galary-1.jpeg",
+          "packSize": null,
+          "variantSku": "HEALTH-CE07599E83D3899C8A89",
+          "state": "gallery"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Glutathione",
+      "slug": "glutathione",
+      "type": "PHYSICAL",
+      "sku": "HEALTH-17B5945F0EA14F26907F",
+      "categorySlug": "health-care",
+      "brandName": null,
+      "description": "Glutathione is an antioxidant naturally produced in the human body from amino acids including cysteine, glycine, and glutamate. Oral glutathione supplements are commonly marketed for antioxidant support, oxidative-stress management, general wellness, and skin-related benefits. Absorption and clinical effects can vary between formulations, and cosmetic claims such as permanent skin lightening should not be treated as guaranteed. Check the product label for the exact strength, serving size, and ingredient formulation.",
+      "shortDesc": "Antioxidant dietary supplement commonly marketed for oxidative-stress support and general wellness; product strength should be checked on the label.",
+      "model": null,
+      "warranty": null,
+      "basePrice": null,
+      "priceLabel": "TBA",
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/healthCare/Glutathione.jpeg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1471,
+      "variants": [
+        {
+          "sku": "HEALTH-27920F1C571B10CBE7B2",
+          "price": null,
+          "priceLabel": "TBA",
+          "currency": "BDT",
+          "stock": 1471,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/healthCare/Glutathione.jpeg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Health Care",
+              "position": 0
+            },
+            {
+              "label": "Product Type",
+              "value": "Dietary Supplement",
+              "position": 1
+            },
+            {
+              "label": "Supplement Type",
+              "value": "Antioxidant Supplement",
+              "position": 2
+            },
+            {
+              "label": "Price",
+              "value": "TBA",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/healthCare/Glutathione.jpeg"
+      ],
+      "priceSource": "TBA",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "local-healthcare",
+        "familyKey": "health-care|unknown|glutathione",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Antioxidant dietary supplement commonly marketed for oxidative-stress support and general wellness; product strength should be checked on the label.",
+            "match": {
+              "method": "local-only",
+              "query": "Glutathione dietary supplement",
+              "brandHint": null,
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "healthCare",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Exact pack size/strength should be confirmed from the product label."
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/healthCare/Glutathione.jpeg",
+          "packSize": null,
+          "variantSku": "HEALTH-27920F1C571B10CBE7B2",
+          "state": "primary"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Garlic Oil",
+      "slug": "garlic-oil",
+      "type": "PHYSICAL",
+      "sku": "HEALTH-4D56E9C4B55B0E7B603E",
+      "categorySlug": "health-care",
+      "brandName": null,
+      "description": "Garlic Oil is a dietary supplement derived from garlic and is commonly used for general cardiovascular and wellness support. Garlic supplements have been studied for possible modest effects on blood pressure and cholesterol, although results vary by preparation and dose. Garlic products may interact with medicines that affect blood clotting, so users taking anticoagulant or antiplatelet medicines should seek professional advice before use. Refer to the package label for the exact oil strength and recommended serving.",
+      "shortDesc": "Garlic-derived dietary supplement commonly used for cardiovascular and general wellness support.",
+      "model": null,
+      "warranty": null,
+      "basePrice": null,
+      "priceLabel": "TBA",
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/healthCare/Garlic Oil.jpeg",
+      "gallery": [
+        "/images/products/healthCare/Garlic Oil galary iimage.jpeg"
+      ],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1002,
+      "variants": [
+        {
+          "sku": "HEALTH-F97C5EBC8E7126817619",
+          "price": null,
+          "priceLabel": "TBA",
+          "currency": "BDT",
+          "stock": 1002,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/healthCare/Garlic Oil.jpeg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Health Care",
+              "position": 0
+            },
+            {
+              "label": "Product Type",
+              "value": "Dietary Supplement",
+              "position": 1
+            },
+            {
+              "label": "Supplement Type",
+              "value": "Herbal Oil Supplement",
+              "position": 2
+            },
+            {
+              "label": "Price",
+              "value": "TBA",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/healthCare/Garlic Oil.jpeg",
+        "/images/products/healthCare/Garlic Oil galary iimage.jpeg"
+      ],
+      "priceSource": "TBA",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "local-healthcare",
+        "familyKey": "health-care|unknown|garlic-oil",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Garlic-derived dietary supplement commonly used for cardiovascular and general wellness support.",
+            "match": {
+              "method": "local-only",
+              "query": "Garlic Oil dietary supplement",
+              "brandHint": null,
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "healthCare",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Exact pack size/strength should be confirmed from the product label."
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/healthCare/Garlic Oil.jpeg",
+          "packSize": null,
+          "variantSku": "HEALTH-F97C5EBC8E7126817619",
+          "state": "primary"
+        },
+        {
+          "image": "/images/products/healthCare/Garlic Oil galary iimage.jpeg",
+          "packSize": null,
+          "variantSku": "HEALTH-F97C5EBC8E7126817619",
+          "state": "gallery"
+        }
+      ]
+    },
+    {
+      "unmatched": false,
+      "name": "Spirulina Tablets",
+      "slug": "spirulina-tablets",
+      "type": "PHYSICAL",
+      "sku": "HEALTH-55824A5D94F90ECC811A",
+      "categorySlug": "health-care",
+      "brandName": null,
+      "description": "Spirulina Tablets are a dietary supplement made from nutrient-rich blue-green algae, commonly Spirulina/Arthrospira species. Spirulina naturally contains protein and a range of micronutrients and antioxidant compounds, and is generally marketed for nutritional and general wellness support. Product quality is important because poorly controlled algae products may carry contamination risks. Use a reputable product and follow the exact serving and storage instructions printed on the package.",
+      "shortDesc": "Blue-green algae dietary supplement providing protein and naturally occurring micronutrients for general nutritional support.",
+      "model": null,
+      "warranty": null,
+      "basePrice": null,
+      "priceLabel": "TBA",
+      "originalPrice": null,
+      "currency": "BDT",
+      "weight": null,
+      "dimensions": null,
+      "available": true,
+      "featured": false,
+      "image": "/images/products/healthCare/Spirulina Tablets.jpeg",
+      "gallery": [],
+      "soldCount": 0,
+      "ratingAvg": 0,
+      "ratingCount": 0,
+      "lowStockThreshold": 100,
+      "inventoryItemClass": "CONSUMABLE",
+      "requiresAssetTag": false,
+      "bundleStockLimit": null,
+      "stock": 1173,
+      "variants": [
+        {
+          "sku": "HEALTH-7FEA5A6F1587D0029E23",
+          "price": null,
+          "priceLabel": "TBA",
+          "currency": "BDT",
+          "stock": 1173,
+          "options": {},
+          "isDefault": true,
+          "active": true,
+          "lowStockThreshold": 100,
+          "costPrice": null,
+          "colorImage": "/images/products/healthCare/Spirulina Tablets.jpeg",
+          "sourceProductUrl": null
+        }
+      ],
+      "variantOptions": [],
+      "specificationGroups": [
+        {
+          "name": "Product Details",
+          "position": 0,
+          "items": [
+            {
+              "label": "Category",
+              "value": "Health Care",
+              "position": 0
+            },
+            {
+              "label": "Product Type",
+              "value": "Dietary Supplement",
+              "position": 1
+            },
+            {
+              "label": "Supplement Type",
+              "value": "Algae / Nutritional Supplement",
+              "position": 2
+            },
+            {
+              "label": "Price",
+              "value": "TBA",
+              "position": 3
+            }
+          ]
+        }
+      ],
+      "sourceProductUrl": null,
+      "sourceImages": [
+        "/images/products/healthCare/Spirulina Tablets.jpeg"
+      ],
+      "priceSource": "TBA",
+      "needsPriceReview": true,
+      "sourceAvailability": null,
+      "needsReview": false,
+      "match": {
+        "method": "local-healthcare",
+        "familyKey": "health-care|unknown|spirulina-tablets",
+        "packs": [
+          {
+            "packSize": null,
+            "matched": false,
+            "sourceProductUrl": null,
+            "description": "Blue-green algae dietary supplement providing protein and naturally occurring micronutrients for general nutritional support.",
+            "match": {
+              "method": "local-only",
+              "query": "Spirulina Tablets dietary supplement",
+              "brandHint": null,
+              "packHint": null,
+              "bestScore": 0.0,
+              "candidates": [],
+              "category": {
+                "method": "folder",
+                "source": "healthCare",
+                "score": 1.0
+              }
+            }
+          }
+        ]
+      },
+      "identityNotes": [
+        "Exact pack size/strength should be confirmed from the product label."
+      ],
+      "imageAssignments": [
+        {
+          "image": "/images/products/healthCare/Spirulina Tablets.jpeg",
+          "packSize": null,
+          "variantSku": "HEALTH-7FEA5A6F1587D0029E23",
+          "state": "primary"
+        }
+      ]
+    }
+  ]
+}
