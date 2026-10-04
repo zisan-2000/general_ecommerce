@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createOrderAdminNotifications } from "@/lib/order-admin-notifications";
 import { getServerSession } from "next-auth/next";
 import { Prisma } from "@/generated/prisma";
 import { authOptions } from "@/lib/auth";
@@ -168,6 +169,11 @@ export async function POST(request: NextRequest) {
         },
       });
 
+      await createOrderAdminNotifications({
+        tx, orderId: orderItem.orderId, title: "Refund requested",
+        message: `A refund was requested for order #${orderItem.orderId}.`,
+        metadata: { event: "REFUND_REQUESTED", refundId: refund.id },
+      });
       return refund;
     });
 

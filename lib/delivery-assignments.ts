@@ -9,6 +9,7 @@ import { appendShipmentStatusLog } from "@/lib/report-history";
 import { canAccessWarehouseWithPermission } from "@/lib/warehouse-scope";
 import { syncCommissionEntriesForOrderStatus } from "@/lib/business-network/commission";
 import { transitionOrderStatusWithInventory } from "@/lib/order-inventory-lifecycle";
+import { createOrderAdminNotifications } from "@/lib/order-admin-notifications";
 
 export const DELIVERY_ASSIGNMENT_MANAGE_PERMISSIONS = [
   "delivery-men.manage",
@@ -753,6 +754,13 @@ export async function createDeliveryAssignments(
       },
     });
 
+    await createOrderAdminNotifications({
+      tx: client, orderId: shipment.orderId,
+      title: "Delivery assigned",
+      message: `Order #${shipment.orderId} has been assigned to ${deliveryMan.fullName}.`,
+      metadata: { event: "DELIVERY_ASSIGNED", assignmentId: assignment.id, to: "ASSIGNED" },
+    });
+
     await client.shipmentAssignment.create({
       data: {
         shipmentId: shipment.id,
@@ -979,6 +987,13 @@ export async function transitionDeliveryAssignmentStatus(
           : input.note ?? null,
       actorUserId: input.actorUserId ?? null,
     },
+  });
+
+  await createOrderAdminNotifications({
+    tx: client, orderId: assignment.order.id,
+    title: "Delivery status updated",
+    message: `Delivery for order #${assignment.order.id} is now ${DELIVERY_ASSIGNMENT_STATUS_LABELS[input.nextStatus].toLowerCase()}.`,
+    metadata: { event: "DELIVERY_STATUS_CHANGED", assignmentId: assignment.id, from: assignment.status, to: input.nextStatus },
   });
 
   await syncShipmentAndOrderForAssignmentStatus(client, {

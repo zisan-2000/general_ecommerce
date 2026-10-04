@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
@@ -69,9 +69,9 @@ export default function ScmNotificationsPage() {
   const [search, setSearch] = useState("");
   const [moduleFilter, setModuleFilter] = useState("ALL");
 
-  const load = async (nextUnreadOnly = unreadOnly) => {
+  const load = useCallback(async (nextUnreadOnly = unreadOnly, background = false) => {
     try {
-      setLoading(true);
+      if (!background) setLoading(true);
       setError(null);
       const params = new URLSearchParams({ limit: "100" });
       if (nextUnreadOnly) {
@@ -91,11 +91,15 @@ export default function ScmNotificationsPage() {
     } finally {
       setLoading(false);
     }
-  };
+  }, [t, unreadOnly]);
 
   useEffect(() => {
     void load();
-  }, [t]);
+    const refresh = () => { void load(unreadOnly, true); };
+    const interval = window.setInterval(refresh, 15000);
+    window.addEventListener("admin-notifications-changed", refresh);
+    return () => { window.clearInterval(interval); window.removeEventListener("admin-notifications-changed", refresh); };
+  }, [load, unreadOnly]);
 
   const markRead = async (row: NotificationRow) => {
     try {
@@ -109,6 +113,7 @@ export default function ScmNotificationsPage() {
         throw new Error(payload?.error || t("errors.mark"));
       }
       await load();
+      window.dispatchEvent(new Event("admin-notifications-changed"));
     } catch (err: any) {
       setError(err?.message || t("errors.mark"));
     }
@@ -127,6 +132,7 @@ export default function ScmNotificationsPage() {
         throw new Error(payload?.error || t("errors.markAll"));
       }
       await load();
+      window.dispatchEvent(new Event("admin-notifications-changed"));
     } catch (err: any) {
       setError(err?.message || t("errors.markAll"));
     } finally {

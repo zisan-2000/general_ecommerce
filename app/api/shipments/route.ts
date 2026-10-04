@@ -484,6 +484,14 @@ export async function POST(request: NextRequest) {
 
         await ensureShipmentDeliveryConfirmation(tx, nextShipment.id);
 
+        if (localShipment.status !== nextShipment.status) {
+          await createOrderNotification({
+            tx, userId: order.userId, orderId: order.id, title: "Courier status updated",
+            message: `Shipment for order #${order.id} is now ${nextShipment.status.replaceAll("_", " ").toLowerCase()}.`,
+            metadata: { event: "SHIPMENT_STATUS_CHANGED", shipmentId: nextShipment.id, from: localShipment.status, to: nextShipment.status },
+          });
+        }
+
         return tx.shipment.findUnique({
           where: { id: nextShipment.id },
           include: buildShipmentInclude(),
@@ -515,6 +523,11 @@ export async function POST(request: NextRequest) {
           courierStatus: "CREATE_FAILED",
           lastSyncedAt: new Date(),
         },
+      });
+      await createOrderNotification({
+        tx: prisma, userId: order.userId, orderId: order.id, title: "Courier booking failed",
+        message: `Courier booking for order #${order.id} failed.`,
+        metadata: { event: "SHIPMENT_CREATION_FAILED", shipmentId: localShipment.id },
       });
 
       return NextResponse.json(

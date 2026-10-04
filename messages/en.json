@@ -337,6 +337,10 @@
       "empty": "No admin notifications.",
       "viewAll": "View All",
       "noScm": "No SCM notifications.",
+      "ordersAndScm": "Orders & SCM",
+      "clearAll": "Clear all",
+      "clearing": "Clearing...",
+      "clearError": "Some notifications could not be cleared. Please try again.",
       "investors": "Investors",
       "noInvestors": "No investor notifications."
     },

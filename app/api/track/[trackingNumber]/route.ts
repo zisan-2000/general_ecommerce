@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getCourierProvider } from "@/lib/couriers";
 import { appendShipmentStatusLog } from "@/lib/report-history";
+import { createOrderAdminNotifications } from "@/lib/order-admin-notifications";
 
 type RouteParams = {
   params: Promise<{ trackingNumber: string }>;
@@ -92,6 +93,14 @@ export async function GET(_request: NextRequest, { params }: RouteParams) {
         toStatus: nextShipment.status,
         source: "PUBLIC_TRACK",
       });
+
+      if (shipment.status !== nextShipment.status) {
+        await createOrderAdminNotifications({
+          tx, orderId: shipment.orderId, title: "Courier status updated",
+          message: `Shipment for order #${shipment.orderId} is now ${nextShipment.status.replaceAll("_", " ").toLowerCase()}.`,
+          metadata: { event: "SHIPMENT_STATUS_CHANGED", shipmentId: shipment.id, from: shipment.status, to: nextShipment.status },
+        });
+      }
 
       return nextShipment;
     });

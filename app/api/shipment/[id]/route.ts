@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { appendShipmentStatusLog } from "@/lib/report-history";
+import { createOrderAdminNotifications } from "@/lib/order-admin-notifications";
 
 // GET single shipment
 export async function GET(
@@ -84,6 +85,11 @@ export async function PATCH(
           fromStatus: existing.status,
           toStatus: updated.status,
           source: "LEGACY_API",
+        });
+        await createOrderAdminNotifications({
+          tx, orderId: updated.orderId, title: "Shipment status updated",
+          message: `Shipment for order #${updated.orderId} is now ${updated.status.replaceAll("_", " ").toLowerCase()}.`,
+          metadata: { event: "SHIPMENT_STATUS_CHANGED", shipmentId: updated.id, from: existing.status, to: updated.status },
         });
       }
 
