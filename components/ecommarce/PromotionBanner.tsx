@@ -211,7 +211,7 @@ function PromoCard({
 
             <div className="max-w-[75%] space-y-3">
               <div className="space-y-2">
-                <h3 className="text-2xl font-extrabold uppercase leading-[1.05] tracking-tight text-white drop-shadow-md md:text-4xl">
+                <h3 className="text-xl font-semibold uppercase leading-[1.05] tracking-tight text-white drop-shadow-md md:text-4xl">
                   {banner.title}
                 </h3>
 

@@ -9,7 +9,7 @@
   "galleryImagesAssigned": 1,
   "imageAssignments": [
     {
-      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "image": "/assets/categories/Grocery.png",
       "packSize": "1 kg",
       "variantSku": "GROCERY-A8237F29188EB8DAB341",
       "state": "primary"

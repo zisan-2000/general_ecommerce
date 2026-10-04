@@ -3,6 +3,7 @@ import { hash } from "bcryptjs";
 import { PrismaClient } from "../generated/prisma";
 import { disconnectStartech, seedGroceries, seedStartech } from "./startech-seed";
 import { seedHealthCare } from "./HealthCare/seed";
+import { seedBanners } from "./Banner Seed/seed";
 
 loadEnvConfig(process.cwd());
 const prisma = new PrismaClient();
@@ -42,6 +43,7 @@ async function main() {
   await seedStartech();
   await seedGroceries();
   await seedHealthCare(prisma);
+  await seedBanners(prisma);
 }
 
 main().catch((error) => {

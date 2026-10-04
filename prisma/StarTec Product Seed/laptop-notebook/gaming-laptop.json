@@ -19,7 +19,7 @@
       "name": "Laptop",
       "slug": "laptop",
       "parentSlug": null,
-      "image": "/images/products/laptop/all-laptop/acer/acer-aspire-14-as14h-53-core-5-14-inch-laptop.png",
+      "image": "/assets/categories/Laptops.png",
       "isActive": true,
       "sortOrder": 0,
       "showInHeader": true,

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "banners": [
+    {
+      "title": "Banner 2",
+      "image": "/assets/Banners/bannar_2.png",
+      "type": "BANNER2",
+      "position": 0,
+      "isActive": true
+    },
+    {
+      "title": "Banner 1",
+      "image": "/assets/Banners/bannar_1.png",
+      "type": "BANNER1",
+      "position": 0,
+      "isActive": true
+    },
+    {
+      "title": "Vintage Laptop",
+      "image": "/assets/Banners/Vintage%20Laptop%20Coming%20Soon.png",
+      "type": "POPUP",
+      "position": 0,
+      "isActive": true
+    },
+    {
+      "title": "Hero 1",
+      "image": "/assets/Banners/Hero_1.png",
+      "type": "HERO",
+      "position": 1,
+      "isActive": true
+    },
+    {
+      "title": "Monthly Essentials Package",
+      "image": "/assets/Banners/Monthly%20Essentials%20Package.png",
+      "type": "PROMOTION",
+      "position": 1,
+      "isActive": true
+    },
+    {
+      "title": "Accessories Collection",
+      "image": "/assets/Banners/Accessories%20Collection.png",
+      "type": "PROMOTION",
+      "position": 2,
+      "isActive": true
+    }
+  ]
+}

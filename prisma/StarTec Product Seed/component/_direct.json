@@ -19,7 +19,7 @@
       "name": "Component",
       "slug": "component",
       "parentSlug": null,
-      "image": "/images/products/component/ssd cooler/Arctic M2 Pro M.png",
+      "image": "/assets/categories/Components.png",
       "isActive": true,
       "sortOrder": 0,
       "showInHeader": true,
@@ -54,7 +54,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/component/ssd cooler/Arctic M2 Pro M.png",
+      "image": "/assets/categories/Components.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -100,7 +100,7 @@
         "externalCandidates": []
       },
       "sourceImages": [
-        "/images/products/component/ssd cooler/Arctic M2 Pro M.png"
+        "/assets/categories/Components.png"
       ]
     },
     {
