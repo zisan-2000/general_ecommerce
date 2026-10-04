@@ -24,7 +24,7 @@
       "sortOrder": 0,
       "showInHeader": true,
       "showInFooter": false,
-      "featured": false
+      "featured": true
     },
     {
       "name": "AC",
