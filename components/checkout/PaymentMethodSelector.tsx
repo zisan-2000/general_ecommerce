@@ -193,6 +193,7 @@ export default function PaymentMethodSelector({
                   src={paymentScreenshotUrl || paymentScreenshotPreview!}
                   alt={t("screenshotAlt")}
                   fill
+                  unoptimized
                   className="object-cover"
                 />
               </div>
