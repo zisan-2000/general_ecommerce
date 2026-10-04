@@ -8,6 +8,23 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
+model StorePolicyContent {
+  id            String   @id @default(cuid())
+  kind          String   @db.VarChar(20)
+  locale        String   @default("en") @db.VarChar(10)
+  title         String   @db.VarChar(250)
+  content       String   @db.Text
+  category      String   @default("") @db.VarChar(100)
+  linkUrl       String?  @db.VarChar(500)
+  sortOrder     Int      @default(0)
+  isPublished   Boolean  @default(false)
+  effectiveDate DateTime? @db.Date
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  @@index([kind, locale, isPublished, sortOrder])
+}
+
 model User {
   id                                        String                                 @id @default(cuid())
   email                                     String                                 @unique

@@ -816,6 +816,11 @@ const menuItems: MenuItem[] = [
         requiredPermissions: ["settings.manage"],
       },
       {
+        name: "Policy Management",
+        href: "/admin/settings/policies",
+        requiredPermissions: ["settings.manage"],
+      },
+      {
         name: "Writers",
         href: "/admin/management/writers",
         requiredPermissions: ["products.manage"],

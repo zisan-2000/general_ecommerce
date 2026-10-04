@@ -1,4 +1,10 @@
 {
+  "ManagedPolicies": {
+    "updated": "Last updated:",
+    "effective": "Effective date:",
+    "empty": "No published content is available yet.",
+    "contact": "Contact support"
+  },
   "Common": {
     "all": "All",
     "askAi": "Ask AI",

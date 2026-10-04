@@ -504,7 +504,7 @@ export default function Footer({
               {[
                 { href: "/ecommerce/privacy", label: t("links.privacyPolicy") },
                 { href: "/ecommerce/terms", label: t("links.terms") },
-                { href: "/sitemap.xml", label: t("links.sitemap") },
+                { href: "/ecommerce/sitemap", label: t("links.sitemap") },
               ].map((link) => (
                 <Link
                   key={link.href}

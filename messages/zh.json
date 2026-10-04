@@ -1,4 +1,10 @@
 {
+  "ManagedPolicies": {
+    "updated": "最后更新：",
+    "effective": "生效日期：",
+    "empty": "暂无已发布内容。",
+    "contact": "联系支持"
+  },
   "Common": {
     "all": "全部",
     "askAi": "询问 AI",

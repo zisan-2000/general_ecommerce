@@ -26,6 +26,7 @@ export const INVESTOR_ACTIVITY_ENTITY_PREFIXES = [
 ] as const;
 
 const ACTIVITY_ENTITY_RULES: ActivityEntityRule[] = [
+  { match: ["store_policy_content"], permissions: ["settings.manage"] },
   {
     match: ["activity_log", "activity-log"],
     permissions: ["settings.activitylog.read", "settings.manage"],

@@ -1,4 +1,10 @@
 {
+  "ManagedPolicies": {
+    "updated": "Terakhir diperbarui:",
+    "effective": "Tanggal berlaku:",
+    "empty": "Belum ada konten yang diterbitkan.",
+    "contact": "Hubungi dukungan"
+  },
   "Common": {
     "all": "Semua",
     "askAi": "Tanya AI",
