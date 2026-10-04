@@ -20,7 +20,7 @@
       "name": "Groceries",
       "slug": "groceries",
       "parentSlug": null,
-      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "image": "/assets/categories/Grocery.png",
       "isActive": true,
       "sortOrder": 0,
       "showInHeader": true,

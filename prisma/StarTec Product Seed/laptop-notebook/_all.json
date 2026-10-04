@@ -19,18 +19,18 @@
       "name": "Laptop",
       "slug": "laptop",
       "parentSlug": null,
-      "image": "/images/products/laptop/all-laptop/acer/acer-aspire-14-as14h-53-core-5-14-inch-laptop.png",
+      "image": "/assets/categories/Laptops.png",
       "isActive": true,
       "sortOrder": 0,
       "showInHeader": true,
       "showInFooter": false,
-      "featured": false
+      "featured": true
     },
     {
       "name": "All Laptop",
       "slug": "all-laptop",
       "parentSlug": "laptop",
-      "image": "/images/products/laptop/all-laptop/acer/acer-aspire-14-as14h-53-core-5-14-inch-laptop.png",
+      "image": "/assets/categories/Laptops.png",
       "isActive": true,
       "sortOrder": 0,
       "showInHeader": true,
@@ -792,10 +792,10 @@
       ],
       "needsReview": true,
       "categorySlug": "all-laptop",
-      "image": "/images/products/laptop/all-laptop/acer/acer-aspire-14-as14h-53-core-5-14-inch-laptop.png",
+      "image": "/assets/categories/Laptops.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/laptop/all-laptop/acer/acer-aspire-14-as14h-53-core-5-14-inch-laptop.png"
+        "/assets/categories/Laptops.png"
       ],
       "match": {
         "method": "direct-slug",

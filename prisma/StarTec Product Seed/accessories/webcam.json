@@ -19,7 +19,7 @@
       "name": "Accessories",
       "slug": "accessories",
       "parentSlug": null,
-      "image": "/images/products/accessories/keyboard/bajeal/bajeal-k100-mechanical-keyboard.png",
+      "image": "/assets/categories/Accessories.png",
       "isActive": true,
       "sortOrder": 0,
       "showInHeader": true,

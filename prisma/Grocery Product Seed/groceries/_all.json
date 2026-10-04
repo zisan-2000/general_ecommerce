@@ -20,7 +20,7 @@
       "name": "Groceries",
       "slug": "groceries",
       "parentSlug": null,
-      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "image": "/assets/categories/Grocery.png",
       "isActive": true,
       "sortOrder": 0,
       "showInHeader": true,
@@ -31,7 +31,7 @@
       "name": "Atta",
       "slug": "atta",
       "parentSlug": "groceries",
-      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "image": "/assets/categories/Grocery.png",
       "isActive": true,
       "sortOrder": 1,
       "showInHeader": false,
@@ -428,7 +428,7 @@
       "dimensions": null,
       "available": true,
       "featured": false,
-      "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+      "image": "/assets/categories/Grocery.png",
       "gallery": [],
       "soldCount": 0,
       "ratingAvg": 0,
@@ -451,7 +451,7 @@
           "active": true,
           "lowStockThreshold": 100,
           "costPrice": null,
-          "colorImage": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+          "colorImage": "/assets/categories/Grocery.png",
           "sourceProductUrl": null
         },
         {
@@ -506,7 +506,7 @@
       ],
       "sourceProductUrl": null,
       "sourceImages": [
-        "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+        "/assets/categories/Grocery.png",
         "/images/products/groceries/atta/Aata-2-Kg-Single.jpg"
       ],
       "priceSource": "synthetic-seed-fallback",
@@ -560,7 +560,7 @@
       "identityNotes": [],
       "imageAssignments": [
         {
-          "image": "/images/products/groceries/atta/Aata-1-Kg-Single.jpg",
+          "image": "/assets/categories/Grocery.png",
           "packSize": "1 kg",
           "variantSku": "GROCERY-A8237F29188EB8DAB341",
           "state": "primary"
