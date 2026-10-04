@@ -43,10 +43,11 @@ const ORDER_STATUS_TRANSITIONS: AllowedOrderStatusTransitions = {
     OrderStatus.CANCELLED,
   ],
   [OrderStatus.SHIPPED]: [OrderStatus.DELIVERED, OrderStatus.FAILED],
-  [OrderStatus.DELIVERED]: [OrderStatus.RETURNED],
+  [OrderStatus.DELIVERED]: [OrderStatus.RETURNED, OrderStatus.REFUNDED],
   [OrderStatus.FAILED]: [],
   [OrderStatus.RETURNED]: [],
   [OrderStatus.CANCELLED]: [],
+  [OrderStatus.REFUNDED]: [],
 };
 
 // GET /api/orders/:id
@@ -101,6 +102,7 @@ export async function GET(
                 id: true,
                 productId: true,
                 quantity: true,
+                product: { select: { id: true, name: true } },
               },
             },
           },
@@ -227,6 +229,7 @@ export async function PATCH(
         "CANCELLED",
         "FAILED",
         "RETURNED",
+        "REFUNDED",
       ] as const;
 
       if (!validOrderStatuses.includes(status)) {

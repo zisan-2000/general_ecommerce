@@ -1569,6 +1569,7 @@
       "DELIVERED": "Delivered",
       "FAILED": "Failed",
       "RETURNED": "Returned",
+      "REFUNDED": "Refunded",
       "CANCELLED": "Cancelled"
     },
     "paymentStatus": {
@@ -1695,6 +1696,49 @@
       "viewProofPhoto": "View proof photo",
       "noCustomerProof": "No customer delivery proof submitted yet.",
       "shipmentAdminNote": "* Only admin can create/update shipment; other users will get Forbidden from API."
+    },
+    "refund": {
+      "title": "Refund Claims",
+      "description": "Review the customer's reason and accept or reject each pending claim.",
+      "claimCount": "{count} claim(s)",
+      "unknownItem": "Order item",
+      "summary": "Claim #{id} · Qty {quantity} · {amount}",
+      "customerReason": "Customer reason",
+      "adminNoteLabel": "Admin note",
+      "adminNotePlaceholder": "Required when rejecting; optional when accepting...",
+      "rejectionNoteHint": "A rejection note is required and will be shown to the customer.",
+      "accept": "Accept refund",
+      "reject": "Reject refund",
+      "reviewing": "Saving...",
+      "adminNote": "Admin note",
+      "reviewedOn": "Reviewed on {date}",
+      "acceptSuccess": "Refund accepted and marked as refunded.",
+      "rejectSuccess": "Refund request rejected.",
+      "destination": "Customer refund destination",
+      "paymentTitle": "Send refund payment",
+      "paymentHint": "Send the refund via {method} to {account}, then record the transaction/reference below.",
+      "originalDestination": "original payment method",
+      "transactionPlaceholder": "Refund transaction/reference ID",
+      "markPaid": "Mark payment sent",
+      "transactionId": "Refund transaction/reference",
+      "paidOn": "Payment recorded on {date}",
+      "paymentSuccess": "Refund payment recorded successfully.",
+      "invoiceDownload": "Download invoice",
+      "invoiceDownloading": "Downloading...",
+      "invoiceDownloadFailed": "Failed to download invoice.",
+      "invoiceInvalidFile": "The server did not return a valid PDF invoice.",
+      "status": {
+        "REQUESTED": "Pending review",
+        "APPROVED": "Approved",
+        "REJECTED": "Refund rejected",
+        "COMPLETED": "Refunded"
+      },
+      "errors": {
+        "rejectionNoteRequired": "Please add a rejection note before rejecting this claim.",
+        "reviewFailed": "Failed to review refund request.",
+        "transactionRequired": "Enter the refund transaction/reference before marking payment sent.",
+        "paymentFailed": "Failed to record refund payment."
+      }
     },
     "successModal": {
       "title": "Update Successful",
@@ -10544,7 +10588,8 @@
       "changePassword": "Change Password",
       "addresses": "Addresses",
       "wishlist": "Wish List",
-      "notifications": "Notifications"
+      "notifications": "Notifications",
+      "refunded": "Refunded"
     },
     "dashboard": {
       "password": "Password",
@@ -10714,6 +10759,8 @@
     "orders": {
       "title": "Order History",
       "description": "Track your recent orders, payment state, and delivery progress.",
+      "refundedTitle": "Refunded Orders",
+      "refundedDescription": "Orders with an accepted refund claim appear here.",
       "rewards": "{stars} stars • {credit} credit",
       "empty": "You have not placed any orders yet.",
       "orderId": "Order ID",
@@ -10812,11 +10859,31 @@
         "reason": "Reason",
         "reasonPlaceholder": "Tell us why you need a refund...",
         "submit": "Submit Refund",
+        "originalPaymentMethod": "Original payment method",
+        "manualPayment": "Manual payment",
+        "refundMethod": "Receive refund through",
+        "noRefundMethod": "No refund method is available",
+        "refundAccount": "Refund account / mobile number",
+        "refundAccountPlaceholder": "Enter the account or mobile number that should receive the refund",
+        "refundDestination": "Refund destination",
+        "refundTransaction": "Refund transaction/reference",
+        "unknownItem": "Order item",
+        "claimSummary": "Qty {quantity} · BDT {amount}",
+        "yourReason": "Your reason",
+        "adminNote": "Admin response",
+        "status": {
+          "pending": "Pending review",
+          "approved": "Approved · payment pending",
+          "refunded": "Refunded",
+          "rejected": "Refund rejected"
+        },
         "errors": {
           "window": "Refunds are available only within 7 days of delivery.",
           "reason": "Please add a clear reason for the refund.",
           "quantity": "No refundable quantity is left for this item.",
-          "submit": "Failed to submit refund request."
+          "submit": "Failed to submit refund request.",
+          "method": "Please select how you want to receive the refund.",
+          "account": "Please enter a valid refund account or mobile number."
         }
       }
     },

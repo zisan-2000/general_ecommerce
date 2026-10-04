@@ -254,6 +254,7 @@ export async function GET(request: NextRequest) {
         "CANCELLED",
         "FAILED",
         "RETURNED",
+        "REFUNDED",
       ] as const;
       if (
         !validOrderStatuses.includes(

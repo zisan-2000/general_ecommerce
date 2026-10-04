@@ -55,8 +55,21 @@ interface OrderRefund {
   reason: string;
   amount: number;
   quantity: number | null;
+  adminNote: string | null;
+  reviewedAt: string | null;
+  refundMethod: string;
+  refundAccount: string | null;
+  payoutStatus: string;
+  payoutTransactionId: string | null;
+  paidAt: string | null;
   createdAt: string;
   updatedAt: string;
+}
+
+interface RefundMethodOption {
+  key: string;
+  label: string;
+  requiresAccount: boolean;
 }
 
 interface Customer {
@@ -135,6 +148,12 @@ const getOrderStatusConfig = (status: string) => {
   if (s === "RETURNED") {
     return {
       labelKey: "returned",
+      className: "bg-violet-100 text-violet-800 border border-violet-200",
+    };
+  }
+  if (s === "REFUNDED") {
+    return {
+      labelKey: "refunded",
       className: "bg-violet-100 text-violet-800 border border-violet-200",
     };
   }
@@ -394,8 +413,56 @@ export default function OrderDetailsPage() {
   } | null>(null);
   const [refundQuantity, setRefundQuantity] = useState(1);
   const [refundReason, setRefundReason] = useState("");
+  const [refundMethod, setRefundMethod] = useState("");
+  const [refundAccount, setRefundAccount] = useState("");
+  const [refundMethods, setRefundMethods] = useState<RefundMethodOption[]>([]);
   const [refundSubmitting, setRefundSubmitting] = useState(false);
   const [refundError, setRefundError] = useState<string | null>(null);
+
+  useEffect(() => {
+    let cancelled = false;
+    const loadRefundMethods = async () => {
+      const options: RefundMethodOption[] = [];
+      if (order?.paymentMethod?.startsWith("SSLCOMMERZ:")) {
+        options.push({
+          key: "ORIGINAL",
+          label: t("orderDetail.refund.originalPaymentMethod"),
+          requiresAccount: false,
+        });
+      }
+      try {
+        const response = await fetch("/api/payment-gateways", {
+          cache: "no-store",
+        });
+        const payload = await response.json().catch(() => ({}));
+        if (response.ok && Array.isArray(payload.gateways)) {
+          for (const gateway of payload.gateways) {
+            const data = gateway?.paymentGatewayData;
+            if (String(data?.type || "").toUpperCase() !== "MANUAL") continue;
+            options.push({
+              key: `MANUAL:${Number(gateway.id)}`,
+              label: String(data?.channel || t("orderDetail.refund.manualPayment")),
+              requiresAccount: true,
+            });
+          }
+        }
+      } catch {
+        // The modal will show a clear error if no refund method is available.
+      }
+      if (!cancelled) {
+        setRefundMethods(options);
+        setRefundMethod((current) =>
+          options.some((option) => option.key === current)
+            ? current
+            : options[0]?.key || "",
+        );
+      }
+    };
+    void loadRefundMethods();
+    return () => {
+      cancelled = true;
+    };
+  }, [order?.paymentMethod, t]);
 
   useEffect(() => {
     if (!invoiceId) {
@@ -543,6 +610,22 @@ export default function OrderDetailsPage() {
                   refund.quantity === null || refund.quantity === undefined
                     ? null
                     : Number(refund.quantity),
+                adminNote:
+                  typeof refund.adminNote === "string" ? refund.adminNote : null,
+                reviewedAt: refund.reviewedAt ?? null,
+                refundMethod: String(
+                  refund.refundMethod ?? t("orderDetail.refund.originalPaymentMethod"),
+                ),
+                refundAccount:
+                  typeof refund.refundAccount === "string"
+                    ? refund.refundAccount
+                    : null,
+                payoutStatus: String(refund.payoutStatus ?? "PENDING"),
+                payoutTransactionId:
+                  typeof refund.payoutTransactionId === "string"
+                    ? refund.payoutTransactionId
+                    : null,
+                paidAt: refund.paidAt ?? null,
                 createdAt: refund.createdAt ?? new Date().toISOString(),
                 updatedAt:
                   refund.updatedAt ??
@@ -848,6 +931,8 @@ export default function OrderDetailsPage() {
     });
     setRefundQuantity(Math.max(1, availableQuantity || 1));
     setRefundReason("");
+    setRefundAccount("");
+    setRefundMethod(refundMethods[0]?.key || "");
     setRefundError(null);
     setRefundModalOpen(true);
   };
@@ -857,6 +942,7 @@ export default function OrderDetailsPage() {
     setRefundItem(null);
     setRefundQuantity(1);
     setRefundReason("");
+    setRefundAccount("");
     setRefundError(null);
     setRefundSubmitting(false);
   };
@@ -877,6 +963,18 @@ export default function OrderDetailsPage() {
 
     if (!refundReason.trim() || refundReason.trim().length < 10) {
       setRefundError(t("orderDetail.refund.errors.reason"));
+      return;
+    }
+
+    const selectedRefundMethod = refundMethods.find(
+      (option) => option.key === refundMethod,
+    );
+    if (!selectedRefundMethod) {
+      setRefundError(t("orderDetail.refund.errors.method"));
+      return;
+    }
+    if (selectedRefundMethod.requiresAccount && refundAccount.trim().length < 3) {
+      setRefundError(t("orderDetail.refund.errors.account"));
       return;
     }
 
@@ -902,6 +1000,8 @@ export default function OrderDetailsPage() {
           orderItemId: refundItem.orderItemId,
           quantity: nextQuantity,
           reason: refundReason.trim(),
+          refundMethod,
+          refundAccount: refundAccount.trim() || null,
         }),
       });
 
@@ -935,6 +1035,13 @@ export default function OrderDetailsPage() {
                       createdRefund.quantity === undefined
                         ? null
                         : Number(createdRefund.quantity),
+                    adminNote: null,
+                    reviewedAt: null,
+                    refundMethod: selectedRefundMethod.label,
+                    refundAccount: refundAccount.trim() || null,
+                    payoutStatus: "PENDING",
+                    payoutTransactionId: null,
+                    paidAt: null,
                     createdAt:
                       createdRefund.createdAt ?? new Date().toISOString(),
                     updatedAt:
@@ -1430,7 +1537,8 @@ export default function OrderDetailsPage() {
             </Card>
 
             <Card>
-              {canLeaveReview && items.length > 0 && (
+              {(canLeaveReview || (order.refunds?.length ?? 0) > 0) &&
+                items.length > 0 && (
                 <div className="rounded-lg border border-border bg-card p-5 shadow-sm">
                   <div className="mb-4">
                     <h3 className="text-lg font-semibold uppercase tracking-[0.18em] text-red-700 shadow-md">
@@ -1440,6 +1548,89 @@ export default function OrderDetailsPage() {
                       {t("orderDetail.refund.description")}
                     </p>
                   </div>
+
+                  {(order.refunds?.length ?? 0) > 0 && (
+                    <div className="mb-4 space-y-3">
+                      {order.refunds?.map((refund) => {
+                        const refundStatus = refund.status.toUpperCase();
+                        const itemName =
+                          items.find(
+                            (item) => Number(item.id) === refund.orderItemId,
+                          )?.name || t("orderDetail.refund.unknownItem");
+                        const statusClass =
+                          refundStatus === "COMPLETED"
+                            ? "border-emerald-200 bg-emerald-50 text-emerald-800 dark:border-emerald-900 dark:bg-emerald-950/30 dark:text-emerald-300"
+                            : refundStatus === "REJECTED"
+                              ? "border-red-200 bg-red-50 text-red-800 dark:border-red-900 dark:bg-red-950/30 dark:text-red-300"
+                              : refundStatus === "APPROVED"
+                                ? "border-blue-200 bg-blue-50 text-blue-800 dark:border-blue-900 dark:bg-blue-950/30 dark:text-blue-300"
+                                : "border-amber-200 bg-amber-50 text-amber-800 dark:border-amber-900 dark:bg-amber-950/30 dark:text-amber-300";
+                        const statusKey =
+                          refundStatus === "COMPLETED"
+                            ? "refunded"
+                            : refundStatus === "REJECTED"
+                              ? "rejected"
+                              : refundStatus === "APPROVED"
+                                ? "approved"
+                                : "pending";
+
+                        return (
+                          <div
+                            key={refund.id}
+                            className={`rounded-xl border p-4 ${statusClass}`}
+                          >
+                            <div className="flex flex-wrap items-start justify-between gap-2">
+                              <div>
+                                <p className="font-semibold">{itemName}</p>
+                                <p className="mt-1 text-xs opacity-80">
+                                  {t("orderDetail.refund.claimSummary", {
+                                    quantity: refund.quantity ?? 1,
+                                    amount: refund.amount.toFixed(2),
+                                  })}
+                                </p>
+                              </div>
+                              <span className="rounded-full border border-current/20 px-3 py-1 text-xs font-bold uppercase tracking-wide">
+                                {t(`orderDetail.refund.status.${statusKey}` as any)}
+                              </span>
+                            </div>
+                            <div className="mt-3 space-y-2 text-sm">
+                              <p>
+                                <span className="font-semibold">
+                                  {t("orderDetail.refund.yourReason")}:
+                                </span>{" "}
+                                {refund.reason}
+                              </p>
+                              <p>
+                                <span className="font-semibold">
+                                  {t("orderDetail.refund.refundDestination")}:
+                                </span>{" "}
+                                {refund.refundMethod}
+                                {refund.refundAccount
+                                  ? ` · ${refund.refundAccount}`
+                                  : ""}
+                              </p>
+                              {refund.payoutTransactionId && (
+                                <p>
+                                  <span className="font-semibold">
+                                    {t("orderDetail.refund.refundTransaction")}:
+                                  </span>{" "}
+                                  {refund.payoutTransactionId}
+                                </p>
+                              )}
+                              {refund.adminNote && (
+                                <p>
+                                  <span className="font-semibold">
+                                    {t("orderDetail.refund.adminNote")}:
+                                  </span>{" "}
+                                  {refund.adminNote}
+                                </p>
+                              )}
+                            </div>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  )}
 
                   <div className="flex flex-wrap gap-2">
                     {items.map((item) =>
@@ -1702,6 +1893,56 @@ export default function OrderDetailsPage() {
                     />
                   </div>
                 </div>
+              </div>
+
+              <div className="mt-4 grid gap-4 md:grid-cols-2">
+                <div className="space-y-2">
+                  <label
+                    htmlFor="refund-method"
+                    className="text-sm font-medium text-foreground"
+                  >
+                    {t("orderDetail.refund.refundMethod")}
+                  </label>
+                  <select
+                    id="refund-method"
+                    value={refundMethod}
+                    onChange={(event) => {
+                      setRefundMethod(event.target.value);
+                      setRefundAccount("");
+                    }}
+                    className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm"
+                  >
+                    {refundMethods.length === 0 && (
+                      <option value="">
+                        {t("orderDetail.refund.noRefundMethod")}
+                      </option>
+                    )}
+                    {refundMethods.map((method) => (
+                      <option key={method.key} value={method.key}>
+                        {method.label}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+
+                {refundMethods.find((method) => method.key === refundMethod)
+                  ?.requiresAccount && (
+                  <div className="space-y-2">
+                    <label
+                      htmlFor="refund-account"
+                      className="text-sm font-medium text-foreground"
+                    >
+                      {t("orderDetail.refund.refundAccount")}
+                    </label>
+                    <Input
+                      id="refund-account"
+                      value={refundAccount}
+                      onChange={(event) => setRefundAccount(event.target.value)}
+                      maxLength={200}
+                      placeholder={t("orderDetail.refund.refundAccountPlaceholder")}
+                    />
+                  </div>
+                )}
               </div>
 
               <div className="mt-4 space-y-2">

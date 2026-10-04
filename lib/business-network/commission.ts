@@ -589,7 +589,7 @@ export async function syncCommissionEntriesForOrderStatus(input: {
       && (entry.status === CommissionStatus.PENDING || entry.status === CommissionStatus.HOLD)) {
       assertCommissionEntryTransition(entry.status, CommissionStatus.CANCELLED);
       results.push(await input.tx.commissionEntry.update({ where: { id: entry.id }, data: { status: CommissionStatus.CANCELLED }, include: entryInclude }));
-    } else if (input.orderStatus === OrderStatus.RETURNED && entry.status !== CommissionStatus.CANCELLED && entry.status !== CommissionStatus.REVERSED) {
+    } else if ((input.orderStatus === OrderStatus.RETURNED || input.orderStatus === OrderStatus.REFUNDED) && entry.status !== CommissionStatus.CANCELLED && entry.status !== CommissionStatus.REVERSED) {
       if (entry.status === CommissionStatus.PENDING || entry.status === CommissionStatus.HOLD) {
         assertCommissionEntryTransition(entry.status, CommissionStatus.CANCELLED);
         results.push(await input.tx.commissionEntry.update({ where: { id: entry.id }, data: { status: CommissionStatus.CANCELLED }, include: entryInclude }));
