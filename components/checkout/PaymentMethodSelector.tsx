@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { LabeledInput } from "@/components/ui/labeled-input";
 import { ArrowLeft } from "lucide-react";
@@ -26,6 +27,8 @@ type Props = {
 
   onBack: () => void;
   onNext: () => void;
+  legalConsentAccepted: boolean;
+  onLegalConsentChange: (accepted: boolean) => void;
   total: number;
 };
 
@@ -41,6 +44,8 @@ export default function PaymentMethodSelector({
   isUploadingScreenshot,
   onBack,
   onNext,
+  legalConsentAccepted,
+  onLegalConsentChange,
   total,
 }: Props) {
   const t = useTranslations("StorefrontCommerce.payment");
@@ -209,7 +214,41 @@ export default function PaymentMethodSelector({
         </div>
       )}
 
-      <Button className="w-full" onClick={onNext} disabled={!selectedMethod}>
+      <div className="rounded-xl border border-border bg-muted/30 p-4">
+        <div className="flex items-start gap-3">
+          <input
+            id="checkout-legal-consent"
+            type="checkbox"
+            checked={legalConsentAccepted}
+            onChange={(event) => onLegalConsentChange(event.target.checked)}
+            className="mt-0.5 h-4 w-4 shrink-0 rounded border-border accent-primary"
+            required
+          />
+          <label htmlFor="checkout-legal-consent" className="text-sm leading-6 text-foreground">
+            {t("consent.prefix")} {""}
+            <Link
+              href="/ecommerce/terms"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-primary underline underline-offset-2"
+            >
+              {t("consent.terms")}
+            </Link>{" "}
+            {t("consent.and")} {""}
+            <Link
+              href="/ecommerce/privacy"
+              target="_blank"
+              rel="noreferrer"
+              className="font-semibold text-primary underline underline-offset-2"
+            >
+              {t("consent.privacy")}
+            </Link>
+            {t("consent.suffix")}
+          </label>
+        </div>
+      </div>
+
+      <Button className="w-full" onClick={onNext} disabled={!selectedMethod || !legalConsentAccepted}>
         {t("placeOrder")}
       </Button>
     </div>

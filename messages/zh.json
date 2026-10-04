@@ -9826,6 +9826,7 @@
         "saveAddressFailed": "无法保存地址。",
         "emptyCart": "购物车为空。",
         "requiredInformation": "请填写所有必填信息。",
+        "legalConsentRequired": "请同意条款与条件及隐私政策后再提交订单。",
         "waitForUpload": "请等待截图上传完成。",
         "screenshotRequired": "必须上传支付截图。",
         "placeOrderFailedRetry": "提交订单时出现问题，请稍后重试。",
@@ -9858,7 +9859,14 @@
       "screenshotAlt": "支付截图预览",
       "sslRedirect": "提交订单后，您将被重定向至 SSLCommerz。",
       "noPaymentNow": "目前无需付款。",
-      "placeOrder": "提交订单"
+      "placeOrder": "提交订单",
+      "consent": {
+        "prefix": "我同意",
+        "terms": "条款与条件",
+        "and": "和",
+        "privacy": "隐私政策",
+        "suffix": "。"
+      }
     },
     "paymentResult": {
       "success": "支付成功",
@@ -11391,6 +11399,14 @@
       "backToOrders": "返回订单",
       "backToMyOrders": "返回我的订单",
       "orderDate": "订购日期",
+      "legalConsentTitle": "结账同意记录",
+      "legalConsentHint": "该同意记录于客户提交此订单时保存。",
+      "consentAccepted": "已同意",
+      "consentNotRecorded": "未记录",
+      "termsConsent": "条款与条件",
+      "privacyConsent": "隐私政策",
+      "acceptedAt": "同意时间：{date}",
+      "notRecorded": "无同意记录（历史订单）",
       "status": "地位",
       "orderDelivered": "订单已交付",
       "orderStatus": "订单状态：{status}",

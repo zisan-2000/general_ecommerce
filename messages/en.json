@@ -1625,6 +1625,14 @@
       "paymentMethod": "Payment Method:",
       "currency": "Currency:",
       "orderDate": "Order Date:",
+      "legalConsentTitle": "Checkout consent",
+      "legalConsentHint": "Acceptance captured when the customer placed this order.",
+      "consentAccepted": "Accepted",
+      "consentNotRecorded": "Not recorded",
+      "termsConsent": "Terms & Conditions",
+      "privacyConsent": "Privacy Policy",
+      "acceptedAt": "Accepted on {date}",
+      "notRecorded": "No acceptance record (legacy order)",
       "deliveryAddress": "Delivery Address",
       "area": "Area: {value}",
       "district": "District: {value}",
@@ -8789,6 +8797,7 @@
         "saveAddressFailed": "Failed to save the address.",
         "emptyCart": "Your cart is empty.",
         "requiredInformation": "Please fill in all required information.",
+        "legalConsentRequired": "Please accept the Terms & Conditions and Privacy Policy to place your order.",
         "waitForUpload": "Please wait until the screenshot upload is complete.",
         "screenshotRequired": "A payment screenshot is required.",
         "placeOrderFailedRetry": "There was a problem placing the order. Please try again later.",
@@ -8821,7 +8830,14 @@
       "screenshotAlt": "Payment screenshot preview",
       "sslRedirect": "You will be redirected to SSLCommerz after placing the order.",
       "noPaymentNow": "No payment is required now.",
-      "placeOrder": "Place Order"
+      "placeOrder": "Place Order",
+      "consent": {
+        "prefix": "I agree to the",
+        "terms": "Terms & Conditions",
+        "and": "and",
+        "privacy": "Privacy Policy",
+        "suffix": "."
+      }
     },
     "paymentResult": {
       "success": "Payment successful",

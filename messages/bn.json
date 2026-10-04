@@ -1625,6 +1625,14 @@
       "paymentMethod": "পেমেন্ট পদ্ধতি:",
       "currency": "মুদ্রা:",
       "orderDate": "অর্ডারের তারিখ:",
+      "legalConsentTitle": "চেকআউট সম্মতি",
+      "legalConsentHint": "ক্রেতা অর্ডার দেওয়ার সময় এই সম্মতি রেকর্ড করা হয়েছে।",
+      "consentAccepted": "সম্মতি দেওয়া হয়েছে",
+      "consentNotRecorded": "রেকর্ড নেই",
+      "termsConsent": "শর্তাবলি",
+      "privacyConsent": "গোপনীয়তা নীতিমালা",
+      "acceptedAt": "{date}-এ সম্মতি দেওয়া হয়েছে",
+      "notRecorded": "সম্মতির রেকর্ড নেই (পুরোনো অর্ডার)",
       "deliveryAddress": "ডেলিভারি ঠিকানা",
       "area": "এলাকা: {value}",
       "district": "জেলা: {value}",
@@ -9842,6 +9850,7 @@
         "saveAddressFailed": "ঠিকানা সংরক্ষণ করা যায়নি।",
         "emptyCart": "আপনার কার্ট খালি।",
         "requiredInformation": "প্রয়োজনীয় সব তথ্য পূরণ করুন।",
+        "legalConsentRequired": "অর্ডার দিতে শর্তাবলি ও গোপনীয়তা নীতিমালায় সম্মতি দিন।",
         "waitForUpload": "স্ক্রিনশট আপলোড শেষ হওয়া পর্যন্ত অপেক্ষা করুন।",
         "screenshotRequired": "পেমেন্টের স্ক্রিনশট প্রয়োজন।",
         "placeOrderFailedRetry": "অর্ডার দিতে সমস্যা হয়েছে। পরে আবার চেষ্টা করুন।",
@@ -9874,7 +9883,14 @@
       "screenshotAlt": "পেমেন্ট স্ক্রিনশটের প্রিভিউ",
       "sslRedirect": "অর্ডার দেওয়ার পর আপনাকে SSLCommerz-এ পাঠানো হবে।",
       "noPaymentNow": "এখন কোনো পেমেন্ট প্রয়োজন নেই।",
-      "placeOrder": "অর্ডার দিন"
+      "placeOrder": "অর্ডার দিন",
+      "consent": {
+        "prefix": "আমি",
+        "terms": "শর্তাবলি",
+        "and": "ও",
+        "privacy": "গোপনীয়তা নীতিমালায়",
+        "suffix": " সম্মতি দিচ্ছি।"
+      }
     },
     "paymentResult": {
       "success": "পেমেন্ট সফল হয়েছে",

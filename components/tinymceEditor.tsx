@@ -7,12 +7,23 @@ interface TinymceEditorProps {
   value: string;
   onChange: (content: string) => void;
   height?: number;
+  selectionScopedHeadings?: boolean;
 }
+
+const scopedHeadingFormats = [
+  ["policyHeading1", "Heading 1", "2em"],
+  ["policyHeading2", "Heading 2", "1.75em"],
+  ["policyHeading3", "Heading 3", "1.5em"],
+  ["policyHeading4", "Heading 4", "1.25em"],
+  ["policyHeading5", "Heading 5", "1.125em"],
+  ["policyHeading6", "Heading 6", "1em"],
+] as const;
 
 const TinymceEditor: React.FC<TinymceEditorProps> = ({
   value,
   onChange,
   height = 400,
+  selectionScopedHeadings = false,
 }) => {
   return (
     <Editor
@@ -41,10 +52,57 @@ const TinymceEditor: React.FC<TinymceEditorProps> = ({
           "wordcount",
         ],
         toolbar:
-          "undo redo | blocks | " +
+          `undo redo | ${selectionScopedHeadings ? "selectionheadings" : "blocks"} | ` +
           "bold italic forecolor | alignleft aligncenter " +
           "alignright alignjustify | bullist numlist outdent indent | " +
           "removeformat | help",
+        formats: selectionScopedHeadings
+          ? Object.fromEntries(
+              scopedHeadingFormats.map(([name, , fontSize]) => [
+                name,
+                {
+                  inline: "span",
+                  styles: {
+                    fontSize,
+                    fontWeight: "700",
+                    lineHeight: "1.25",
+                  },
+                  exact: true,
+                },
+              ]),
+            )
+          : undefined,
+        setup: selectionScopedHeadings
+          ? editor => {
+              const clearScopedHeadings = () => {
+                for (const [formatName] of scopedHeadingFormats) {
+                  editor.formatter.remove(formatName);
+                }
+              };
+
+              editor.ui.registry.addMenuButton("selectionheadings", {
+                text: "Paragraph / Heading",
+                tooltip: "Format selected text",
+                fetch: callback => {
+                  callback([
+                    {
+                      type: "menuitem",
+                      text: "Paragraph",
+                      onAction: clearScopedHeadings,
+                    },
+                    ...scopedHeadingFormats.map(([formatName, label]) => ({
+                      type: "menuitem" as const,
+                      text: label,
+                      onAction: () => {
+                        clearScopedHeadings();
+                        editor.formatter.apply(formatName);
+                      },
+                    })),
+                  ]);
+                },
+              });
+            }
+          : undefined,
         content_style: `
           body { 
             font-family: Helvetica, Arial, sans-serif; 

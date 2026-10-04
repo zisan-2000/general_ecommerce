@@ -794,6 +794,8 @@ model Order {
   status                  OrderStatus            @default(PENDING)
   paymentStatus           PaymentStatus          @default(UNPAID)
   transactionId           String?
+  termsAcceptedAt         DateTime?
+  privacyPolicyAcceptedAt DateTime?
   createdAt               DateTime               @default(now())
   updatedAt               DateTime               @updatedAt
   couponId                String?

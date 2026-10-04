@@ -9826,6 +9826,7 @@
         "saveAddressFailed": "تعذر حفظ العنوان.",
         "emptyCart": "سلتك فارغة.",
         "requiredInformation": "يرجى تعبئة جميع المعلومات المطلوبة.",
+        "legalConsentRequired": "يرجى الموافقة على الشروط والأحكام وسياسة الخصوصية لإتمام الطلب.",
         "waitForUpload": "يرجى الانتظار حتى يكتمل رفع لقطة الشاشة.",
         "screenshotRequired": "لقطة شاشة الدفع مطلوبة.",
         "placeOrderFailedRetry": "حدثت مشكلة أثناء تقديم الطلب. يرجى المحاولة لاحقًا.",
@@ -9858,7 +9859,14 @@
       "screenshotAlt": "معاينة لقطة شاشة الدفع",
       "sslRedirect": "ستتم إعادة توجيهك إلى SSLCommerz بعد تقديم الطلب.",
       "noPaymentNow": "لا يلزم الدفع الآن.",
-      "placeOrder": "تقديم الطلب"
+      "placeOrder": "تقديم الطلب",
+      "consent": {
+        "prefix": "أوافق على",
+        "terms": "الشروط والأحكام",
+        "and": "و",
+        "privacy": "سياسة الخصوصية",
+        "suffix": "."
+      }
     },
     "paymentResult": {
       "success": "تم الدفع بنجاح",
@@ -11391,6 +11399,14 @@
       "backToOrders": "العودة إلى الطلبات",
       "backToMyOrders": "العودة إلى طلباتي",
       "orderDate": "تاريخ الطلب",
+      "legalConsentTitle": "موافقة إتمام الطلب",
+      "legalConsentHint": "تم تسجيل الموافقة عند تقديم العميل لهذا الطلب.",
+      "consentAccepted": "تمت الموافقة",
+      "consentNotRecorded": "غير مسجل",
+      "termsConsent": "الشروط والأحكام",
+      "privacyConsent": "سياسة الخصوصية",
+      "acceptedAt": "تمت الموافقة في {date}",
+      "notRecorded": "لا يوجد سجل موافقة (طلب قديم)",
       "status": "الحالة",
       "orderDelivered": "تم توصيل الطلبية",
       "orderStatus": "حالة الطلب: {status}",
