@@ -1265,6 +1265,7 @@ export default function CheckoutPage() {
                           src={paymentScreenshotUrl || paymentScreenshotPreview!}
                           alt={t("confirmation.screenshotAlt")}
                           fill
+                          unoptimized
                           className="object-cover"
                         />
                       </div>
