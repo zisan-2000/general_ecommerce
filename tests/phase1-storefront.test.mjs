@@ -143,16 +143,15 @@ test("bundle stock uses the explicit bundle limit", () => {
   assert.equal(bundle.stock, 4);
 });
 
-test("best-selling normalization keeps only products with sales", () => {
+test("best-selling normalization includes curated products without sales", () => {
   const products = normalizeStorefrontProducts(
     [
-      { id: 1, name: "No sales", soldCount: 0 },
+      { id: 1, name: "Curated", bestSelling: true, soldCount: 0 },
       { id: 2, name: "Popular", totalSold: 12 },
     ],
-    { requireSold: true },
   );
 
-  assert.deepEqual(products.map((product) => product.id), [2]);
+  assert.deepEqual(products.map((product) => product.id), [1, 2]);
 });
 
 test("review payloads accept the API wrapper shape", () => {

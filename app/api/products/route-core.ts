@@ -142,6 +142,7 @@ function toProductLogSnapshot(product: any) {
     currency: product.currency,
     available: product.available,
     featured: product.featured,
+    bestSelling: product.bestSelling,
     lowStockThreshold: product.lowStockThreshold,
     variantOptions: Array.isArray(product.variantOptions)
       ? product.variantOptions.map((option: any) => ({
@@ -571,6 +572,7 @@ export async function POST(req: Request) {
 
           available: body.available ?? true,
           featured: body.featured ?? false,
+          bestSelling: body.bestSelling ?? false,
           cartReminderMinutes,
 
           image: body.image || null,

@@ -1038,7 +1038,8 @@
       "unavailable": "अनुपलब्ध",
       "statusHint": "उपलब्धता परिवर्तन गर्न उत्पादन कार्डको Activate/Deactivate कार्य प्रयोग गर्नुहोस्।",
       "availableLabel": "उपलब्ध",
-      "featuredLabel": "विशेष"
+      "featuredLabel": "विशेष",
+      "bestSellingLabel": "सर्वाधिक बिक्री हुने"
     },
     "cartReminder": {
       "title": "कार्ट रिमाइन्डर सूचना",
@@ -1727,8 +1728,18 @@
       "invoiceDownloading": "Downloading...",
       "invoiceDownloadFailed": "Failed to download invoice.",
       "invoiceInvalidFile": "The server did not return a valid PDF invoice.",
-      "status": { "REQUESTED": "Pending review", "APPROVED": "Approved", "REJECTED": "Refund rejected", "COMPLETED": "Refunded" },
-      "errors": { "rejectionNoteRequired": "Please add a rejection note before rejecting this claim.", "reviewFailed": "Failed to review refund request.", "transactionRequired": "Enter the refund transaction/reference before marking payment sent.", "paymentFailed": "Failed to record refund payment." }
+      "status": {
+        "REQUESTED": "Pending review",
+        "APPROVED": "Approved",
+        "REJECTED": "Refund rejected",
+        "COMPLETED": "Refunded"
+      },
+      "errors": {
+        "rejectionNoteRequired": "Please add a rejection note before rejecting this claim.",
+        "reviewFailed": "Failed to review refund request.",
+        "transactionRequired": "Enter the refund transaction/reference before marking payment sent.",
+        "paymentFailed": "Failed to record refund payment."
+      }
     },
     "successModal": {
       "title": "अपडेट सफल",
@@ -11750,7 +11761,7 @@
         "phone": "Telefon",
         "email": "♫ Email / Email",
         "address": "Adresse:",
-        "onlineStore": "♫ Online store",
+        "onlineStore": "♫ Desi Plus",
         "alwaysOpen": "§ Disponible 24/7 for browsing and orders"
       },
       "orderHelp": {

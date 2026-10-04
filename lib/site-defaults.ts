@@ -1,1 +1,1 @@
-export const DEFAULT_SITE_TITLE = "Online Store";
+export const DEFAULT_SITE_TITLE = "Desi Plus";

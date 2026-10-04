@@ -389,6 +389,7 @@ model Product {
   serviceOnlineLink       String?
   available               Boolean                           @default(true)
   featured                Boolean                           @default(false)
+  bestSelling             Boolean                           @default(false)
   image                   String?
   gallery                 String[]
   videoUrl                String?
@@ -435,6 +436,7 @@ model Product {
   @@index([deleted, available, soldCount])
   @@index([deleted, available, basePrice])
   @@index([deleted, available, featured])
+  @@index([deleted, available, bestSelling])
   @@index([deleted, available, flashSaleEnabled, flashSaleStartsAt, flashSaleEndsAt])
   @@index([categoryId, deleted, available])
   @@index([brandId, deleted, available])

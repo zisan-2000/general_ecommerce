@@ -29,6 +29,7 @@ interface Product {
   available: boolean;
   updatedAt: string;
   featured?: boolean;
+  bestSelling?: boolean;
   cartReminderMinutes?: number | null;
   flashSaleEnabled?: boolean;
   flashSalePrice?: number | null;

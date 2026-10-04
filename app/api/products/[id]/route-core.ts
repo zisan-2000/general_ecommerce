@@ -131,6 +131,7 @@ function toProductLogSnapshot(product: any) {
     currency: product.currency,
     available: product.available,
     featured: product.featured,
+    bestSelling: product.bestSelling,
     lowStockThreshold: product.lowStockThreshold,
     deleted: product.deleted ?? false,
     variantOptions: Array.isArray(product.variantOptions)
@@ -587,6 +588,10 @@ export async function PUT(
           serviceOnlineLink: body.serviceOnlineLink ?? existing.serviceOnlineLink,
           available: existing.available,
           featured: body.featured !== undefined ? body.featured : existing.featured,
+          bestSelling:
+            body.bestSelling !== undefined
+              ? body.bestSelling
+              : existing.bestSelling,
           cartReminderMinutes: nextCartReminderMinutes,
           image: body.image ?? existing.image,
           gallery: body.gallery ?? existing.gallery,

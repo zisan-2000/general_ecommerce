@@ -1038,7 +1038,8 @@
       "unavailable": "غير متاح",
       "statusHint": "استخدم إجراء تفعيل/إلغاء تفعيل في بطاقة المنتج لتغيير حالة التوفر.",
       "availableLabel": "متاح",
-      "featuredLabel": "مميز"
+      "featuredLabel": "مميز",
+      "bestSellingLabel": "الأكثر مبيعًا"
     },
     "cartReminder": {
       "title": "إشعار تذكير سلة التسوق",

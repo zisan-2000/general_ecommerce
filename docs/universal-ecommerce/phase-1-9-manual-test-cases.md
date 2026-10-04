@@ -92,17 +92,17 @@ fixture বা vertical preset ব্যবহার করবেন না। �
 
 ## Phase 7 — Store identity, localization and SEO
 
-পরীক্ষার আগে বর্তমান values লিখে রাখুন: Store name `Online Store`, store type
+পরীক্ষার আগে বর্তমান values লিখে রাখুন: Store name `Desi Plus`, store type
 `GENERAL`, currency `BDT`, currency position `BEFORE`, timezone `Asia/Dhaka`, locale
 `en-BD`।
 
 | ID | Steps | Expected result | Result |
 |---|---|---|---|
-| P7-01 | Admin → Settings → General-এ store name `Online Store QA` করুন। | Header/title/metadata-তে নতুন identity দেখা যাবে; hard-coded TechHub/Bookstore branding থাকবে না। | |
+| P7-01 | Admin → Settings → General-এ store name `Desi Plus QA` করুন। | Header/title/metadata-তে নতুন identity দেখা যাবে; hard-coded TechHub/Bookstore branding থাকবে না। | |
 | P7-02 | Currency position পরিবর্তন করে product page খুলুন। | Price presentation configured position অনুযায়ী বদলাবে। | |
 | P7-03 | Invalid currency/locale/timezone submit করুন। | Validation invalid setting reject করবে। | |
 | P7-04 | `/manifest.webmanifest`, `/robots.txt`, `/sitemap.xml` এবং page source metadata দেখুন। | Configured identity/URLs valid থাকবে; admin/private pages indexable হবে না। | |
-| P7-05 | Store name এবং সব localization values initial state-এ restore করুন। | Store আবার `Online Store`/GENERAL/BDT/Asia-Dhaka/en-BD state-এ থাকবে। | |
+| P7-05 | Store name এবং সব localization values initial state-এ restore করুন। | Store আবার `Desi Plus`/GENERAL/BDT/Asia-Dhaka/en-BD state-এ থাকবে। | |
 
 ## Phase 8 — Book module decoupling
 

@@ -1038,7 +1038,8 @@
       "unavailable": "অনুপলব্ধ",
       "statusHint": "উপলব্ধতা পরিবর্তন করতে পণ্য কার্ডের সক্রিয়/নিষ্ক্রিয় ক্রিয়া ব্যবহার করুন।",
       "availableLabel": "উপলব্ধ",
-      "featuredLabel": "ফিচার্ড"
+      "featuredLabel": "ফিচার্ড",
+      "bestSellingLabel": "সর্বাধিক বিক্রিত"
     },
     "cartReminder": {
       "title": "কার্ট রিমাইন্ডার নোটিফিকেশন",

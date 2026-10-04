@@ -1038,7 +1038,8 @@
       "unavailable": "Unavailable",
       "statusHint": "Use the product card's Activate/Deactivate action to change availability.",
       "availableLabel": "Available",
-      "featuredLabel": "Featured"
+      "featuredLabel": "Featured",
+      "bestSellingLabel": "Best Selling"
     },
     "cartReminder": {
       "title": "Cart reminder notification",
@@ -4175,48 +4176,178 @@
     }
   },
   "AdminScmHome": {
-    "header": { "title": "SCM Workspace", "description": "Start from work queues, risks, and next actions instead of hunting across modules." },
-    "actions": { "myTasks": "My Tasks", "exceptions": "Exceptions", "notifications": "Notifications", "refresh": "Refresh", "sync": "Sync" },
-    "loading": "Loading SCM workspace...",
-    "common": { "notAvailable": "N/A" },
-    "empty": { "accessTitle": "SCM workspace unavailable", "accessDescription": "Your current role does not have SCM workspace access." },
-    "errors": { "tasks": "Failed to load SCM tasks", "exceptions": "Failed to load SCM exceptions", "notifications": "Failed to load SCM notifications", "overview": "Failed to load SCM overview", "workspace": "Failed to load SCM workspace." },
-    "stats": {
-      "needsMyAction": { "label": "Needs My Action", "hint": "Documents currently waiting on you." },
-      "overdue": { "label": "Overdue Work", "hint": "Items stalled beyond expected response time." },
-      "unread": { "label": "Unread Notifications", "hint": "Internal SCM workflow updates." },
-      "critical": { "label": "Critical Exceptions", "lowStock": "{count} low-stock variants", "hint": "Risk queue needing review" },
-      "pendingApprovals": { "label": "Pending Approvals", "hint": "Current approval workload" },
-      "orderedValue": { "label": "Ordered Value", "hint": "PO value (30 days)" },
-      "supplierPayments": { "label": "Supplier Payments", "hint": "Treasury settlements (30 days)" },
-      "auditEvents": { "label": "Audit Events", "hint": "Recent SCM changes" }
+    "header": {
+      "title": "SCM Workspace",
+      "description": "Start from work queues, risks, and next actions instead of hunting across modules."
     },
-    "workToday": { "title": "My Work Today", "description": "Require your approval, confirmation, or update", "emptyTitle": "Nothing is blocked on you", "emptyDescription": "Your immediate approval queue is clear" },
-    "exceptions": { "title": "Urgent Exceptions", "description": "Address these critical issues first", "emptyTitle": "No critical exceptions", "emptyDescription": "All systems are currently under control" },
-    "continueWork": { "title": "Continue Previous Work", "description": "Documents moving through other teams", "emptyTitle": "Nothing waiting on others", "emptyDescription": "No documents currently dependent on other teams" },
-    "notifications": { "title": "Recent Notifications", "description": "Latest workflow changes reaching your inbox", "openInbox": "Open Inbox", "emptyTitle": "No recent notifications", "emptyDescription": "Workflow updates will appear here" },
-    "quickStart": { "title": "Quick Start", "description": "Common SCM actions for your role" },
-    "directory": { "title": "Module Directory", "description": "Navigate by business area" },
-    "sections": { "procurement": "Procurement", "warehouse": "Warehouse", "financeSupplier": "Finance & Supplier" },
+    "actions": {
+      "myTasks": "My Tasks",
+      "exceptions": "Exceptions",
+      "notifications": "Notifications",
+      "refresh": "Refresh",
+      "sync": "Sync"
+    },
+    "loading": "Loading SCM workspace...",
+    "common": {
+      "notAvailable": "N/A"
+    },
+    "empty": {
+      "accessTitle": "SCM workspace unavailable",
+      "accessDescription": "Your current role does not have SCM workspace access."
+    },
+    "errors": {
+      "tasks": "Failed to load SCM tasks",
+      "exceptions": "Failed to load SCM exceptions",
+      "notifications": "Failed to load SCM notifications",
+      "overview": "Failed to load SCM overview",
+      "workspace": "Failed to load SCM workspace."
+    },
+    "stats": {
+      "needsMyAction": {
+        "label": "Needs My Action",
+        "hint": "Documents currently waiting on you."
+      },
+      "overdue": {
+        "label": "Overdue Work",
+        "hint": "Items stalled beyond expected response time."
+      },
+      "unread": {
+        "label": "Unread Notifications",
+        "hint": "Internal SCM workflow updates."
+      },
+      "critical": {
+        "label": "Critical Exceptions",
+        "lowStock": "{count} low-stock variants",
+        "hint": "Risk queue needing review"
+      },
+      "pendingApprovals": {
+        "label": "Pending Approvals",
+        "hint": "Current approval workload"
+      },
+      "orderedValue": {
+        "label": "Ordered Value",
+        "hint": "PO value (30 days)"
+      },
+      "supplierPayments": {
+        "label": "Supplier Payments",
+        "hint": "Treasury settlements (30 days)"
+      },
+      "auditEvents": {
+        "label": "Audit Events",
+        "hint": "Recent SCM changes"
+      }
+    },
+    "workToday": {
+      "title": "My Work Today",
+      "description": "Require your approval, confirmation, or update",
+      "emptyTitle": "Nothing is blocked on you",
+      "emptyDescription": "Your immediate approval queue is clear"
+    },
+    "exceptions": {
+      "title": "Urgent Exceptions",
+      "description": "Address these critical issues first",
+      "emptyTitle": "No critical exceptions",
+      "emptyDescription": "All systems are currently under control"
+    },
+    "continueWork": {
+      "title": "Continue Previous Work",
+      "description": "Documents moving through other teams",
+      "emptyTitle": "Nothing waiting on others",
+      "emptyDescription": "No documents currently dependent on other teams"
+    },
+    "notifications": {
+      "title": "Recent Notifications",
+      "description": "Latest workflow changes reaching your inbox",
+      "openInbox": "Open Inbox",
+      "emptyTitle": "No recent notifications",
+      "emptyDescription": "Workflow updates will appear here"
+    },
+    "quickStart": {
+      "title": "Quick Start",
+      "description": "Common SCM actions for your role"
+    },
+    "directory": {
+      "title": "Module Directory",
+      "description": "Navigate by business area"
+    },
+    "sections": {
+      "procurement": "Procurement",
+      "warehouse": "Warehouse",
+      "financeSupplier": "Finance & Supplier"
+    },
     "links": {
-      "createRequisition": { "title": "Create Requisition", "description": "Start a new internal purchase demand." },
-      "prepareRfq": { "title": "Prepare RFQ", "description": "Launch supplier sourcing from approved demand." },
-      "postGrn": { "title": "Post GRN", "description": "Receive inbound goods and update stock." },
-      "createSupplierInvoice": { "title": "Create Supplier Invoice", "description": "Review received PO lines before AP posting." },
-      "submitPrf": { "title": "Submit PRF", "description": "Initiate supplier payment workflow." },
-      "purchaseRequisitions": { "title": "Purchase Requisitions", "description": "Raise and route demand requests." },
-      "rfqs": { "title": "RFQs", "description": "Invite suppliers and collect quotations." },
-      "comparativeStatements": { "title": "Comparative Statements", "description": "Score supplier proposals and drive approvals." },
-      "purchaseOrders": { "title": "Purchase Orders", "description": "Issue approved orders and track delivery." },
-      "goodsReceipts": { "title": "Goods Receipts", "description": "Receive stock and confirm inbound documents." },
-      "warehouseTransfers": { "title": "Warehouse Transfers", "description": "Dispatch and receive internal stock movements." },
-      "materialRequests": { "title": "Material Requests", "description": "Manage internal issue workflow and approvals." },
-      "stockReports": { "title": "Stock Reports", "description": "Review stock health, ageing, and summaries." },
-      "paymentRequests": { "title": "Payment Requests", "description": "Approve and process supplier payments." },
-      "supplierInvoices": { "title": "Supplier Invoices", "description": "Create and monitor AP invoice records." },
-      "supplierLedger": { "title": "Supplier Ledger", "description": "Track invoice and payment exposure." },
-      "threeWayMatch": { "title": "3-Way Match", "description": "Resolve invoice variance before payment." },
-      "suppliers": { "title": "Suppliers", "description": "Maintain supplier master and governance." }
+      "createRequisition": {
+        "title": "Create Requisition",
+        "description": "Start a new internal purchase demand."
+      },
+      "prepareRfq": {
+        "title": "Prepare RFQ",
+        "description": "Launch supplier sourcing from approved demand."
+      },
+      "postGrn": {
+        "title": "Post GRN",
+        "description": "Receive inbound goods and update stock."
+      },
+      "createSupplierInvoice": {
+        "title": "Create Supplier Invoice",
+        "description": "Review received PO lines before AP posting."
+      },
+      "submitPrf": {
+        "title": "Submit PRF",
+        "description": "Initiate supplier payment workflow."
+      },
+      "purchaseRequisitions": {
+        "title": "Purchase Requisitions",
+        "description": "Raise and route demand requests."
+      },
+      "rfqs": {
+        "title": "RFQs",
+        "description": "Invite suppliers and collect quotations."
+      },
+      "comparativeStatements": {
+        "title": "Comparative Statements",
+        "description": "Score supplier proposals and drive approvals."
+      },
+      "purchaseOrders": {
+        "title": "Purchase Orders",
+        "description": "Issue approved orders and track delivery."
+      },
+      "goodsReceipts": {
+        "title": "Goods Receipts",
+        "description": "Receive stock and confirm inbound documents."
+      },
+      "warehouseTransfers": {
+        "title": "Warehouse Transfers",
+        "description": "Dispatch and receive internal stock movements."
+      },
+      "materialRequests": {
+        "title": "Material Requests",
+        "description": "Manage internal issue workflow and approvals."
+      },
+      "stockReports": {
+        "title": "Stock Reports",
+        "description": "Review stock health, ageing, and summaries."
+      },
+      "paymentRequests": {
+        "title": "Payment Requests",
+        "description": "Approve and process supplier payments."
+      },
+      "supplierInvoices": {
+        "title": "Supplier Invoices",
+        "description": "Create and monitor AP invoice records."
+      },
+      "supplierLedger": {
+        "title": "Supplier Ledger",
+        "description": "Track invoice and payment exposure."
+      },
+      "threeWayMatch": {
+        "title": "3-Way Match",
+        "description": "Resolve invoice variance before payment."
+      },
+      "suppliers": {
+        "title": "Suppliers",
+        "description": "Maintain supplier master and governance."
+      }
     }
   },
   "AdminGoodsReceipts": {
@@ -4224,7 +4355,9 @@
       "title": "Goods Receiving Note (GRN)",
       "description": "Receive goods, confirm requester review, check WO-vs-delivery-vs-invoice variance, upload challan/bill documents, and complete 3-role vendor evaluation."
     },
-    "common": { "notAvailable": "N/A" },
+    "common": {
+      "notAvailable": "N/A"
+    },
     "actions": {
       "newGrn": "New GRN",
       "refresh": "Refresh",
@@ -4239,11 +4372,26 @@
       "submitEvaluation": "Submit Evaluation"
     },
     "stats": {
-      "total": { "label": "Total GRN", "hint": "Visible receipt register" },
-      "pendingConfirmation": { "label": "Pending Confirmation", "hint": "Requester still needs to confirm" },
-      "variance": { "label": "Variance", "hint": "WO vs delivery vs invoice mismatch" },
-      "evaluationPending": { "label": "Evaluation Pending", "hint": "One or more roles still missing" },
-      "readyToReceive": { "label": "Ready To Receive", "hint": "Approved PO still open for receipt" }
+      "total": {
+        "label": "Total GRN",
+        "hint": "Visible receipt register"
+      },
+      "pendingConfirmation": {
+        "label": "Pending Confirmation",
+        "hint": "Requester still needs to confirm"
+      },
+      "variance": {
+        "label": "Variance",
+        "hint": "WO vs delivery vs invoice mismatch"
+      },
+      "evaluationPending": {
+        "label": "Evaluation Pending",
+        "hint": "One or more roles still missing"
+      },
+      "readyToReceive": {
+        "label": "Ready To Receive",
+        "hint": "Approved PO still open for receipt"
+      }
     },
     "focus": {
       "activeTitle": "Focused queue active",
@@ -4276,7 +4424,11 @@
       "title": "WO vs Delivered vs Invoice",
       "quantities": "Ordered {ordered} | Delivered {delivered} | Invoiced {invoiced}",
       "invoices": "Invoices {count} | Match {status}",
-      "statuses": { "PENDING": "Pending", "MATCHED": "Matched", "VARIANCE": "Variance" }
+      "statuses": {
+        "PENDING": "Pending",
+        "MATCHED": "Matched",
+        "VARIANCE": "Variance"
+      }
     },
     "confirmation": {
       "title": "Requester Confirmation",
@@ -4285,7 +4437,10 @@
       "pending": "Pending requester confirmation",
       "notePlaceholder": "Requester confirmation note (optional)"
     },
-    "table": { "item": "Item", "qtyReceived": "Qty Received" },
+    "table": {
+      "item": "Item",
+      "qtyReceived": "Qty Received"
+    },
     "attachments": {
       "title": "Challan / Bill Attachments",
       "empty": "No attachments yet.",
@@ -4294,7 +4449,11 @@
       "uploadedBy": "Uploaded {date} by {name}",
       "notePlaceholder": "Attachment note (optional)"
     },
-    "attachmentTypes": { "CHALLAN": "CHALLAN", "BILL": "BILL", "OTHER": "OTHER" },
+    "attachmentTypes": {
+      "CHALLAN": "CHALLAN",
+      "BILL": "BILL",
+      "OTHER": "OTHER"
+    },
     "roles": {
       "REQUESTER": "Requester",
       "PROCUREMENT": "Procurement",
@@ -4334,38 +4493,236 @@
   },
   "AdminScmCommon": {
     "notAvailable": "N/A",
-    "actions": { "review": "Review" },
-    "priority": { "critical": "Critical", "high": "High", "normal": "Normal" },
-    "severity": { "critical": "Critical", "high": "High", "medium": "Medium" },
-    "metadata": { "age": "Age", "days": "{count, plural, =1 {# day} other {# days}}", "warehouse": "Warehouse", "created": "Created", "detected": "Detected", "due": "Due" },
-    "statuses": { "REJECTED": "Rejected", "FAILED": "Failed", "CANCELLED": "Cancelled", "VARIANCE": "Variance", "OUT_OF_STOCK": "Out of Stock", "OVERDUE": "Overdue", "SUBMITTED": "Submitted", "PENDING": "Pending", "PENDING_REVIEW": "Pending Review", "IN_PROGRESS": "In Progress", "TREASURY_PROCESSING": "Treasury Processing", "LOW_STOCK": "Low Stock", "PARTIALLY_RECEIVED": "Partially Received", "PARTIALLY_DISPATCHED": "Partially Dispatched", "PARTIALLY_RELEASED": "Partially Released", "APPROVED": "Approved", "FINAL_APPROVED": "Final Approved", "MANAGER_APPROVED": "Manager Approved", "COMMITTEE_APPROVED": "Committee Approved", "FINANCE_APPROVED": "Finance Approved", "BUDGET_CLEARED": "Budget Cleared", "ENDORSED": "Endorsed", "RECEIVED": "Received", "RELEASED": "Released", "MATCHED": "Matched", "PAID": "Paid", "DELIVERED": "Delivered", "RESOLVED": "Resolved", "CLOSED": "Closed", "DRAFT": "Draft", "OPEN": "Open", "ACKNOWLEDGED": "Acknowledged" }
+    "actions": {
+      "review": "Review"
+    },
+    "priority": {
+      "critical": "Critical",
+      "high": "High",
+      "normal": "Normal"
+    },
+    "severity": {
+      "critical": "Critical",
+      "high": "High",
+      "medium": "Medium"
+    },
+    "metadata": {
+      "age": "Age",
+      "days": "{count, plural, =1 {# day} other {# days}}",
+      "warehouse": "Warehouse",
+      "created": "Created",
+      "detected": "Detected",
+      "due": "Due"
+    },
+    "statuses": {
+      "REJECTED": "Rejected",
+      "FAILED": "Failed",
+      "CANCELLED": "Cancelled",
+      "VARIANCE": "Variance",
+      "OUT_OF_STOCK": "Out of Stock",
+      "OVERDUE": "Overdue",
+      "SUBMITTED": "Submitted",
+      "PENDING": "Pending",
+      "PENDING_REVIEW": "Pending Review",
+      "IN_PROGRESS": "In Progress",
+      "TREASURY_PROCESSING": "Treasury Processing",
+      "LOW_STOCK": "Low Stock",
+      "PARTIALLY_RECEIVED": "Partially Received",
+      "PARTIALLY_DISPATCHED": "Partially Dispatched",
+      "PARTIALLY_RELEASED": "Partially Released",
+      "APPROVED": "Approved",
+      "FINAL_APPROVED": "Final Approved",
+      "MANAGER_APPROVED": "Manager Approved",
+      "COMMITTEE_APPROVED": "Committee Approved",
+      "FINANCE_APPROVED": "Finance Approved",
+      "BUDGET_CLEARED": "Budget Cleared",
+      "ENDORSED": "Endorsed",
+      "RECEIVED": "Received",
+      "RELEASED": "Released",
+      "MATCHED": "Matched",
+      "PAID": "Paid",
+      "DELIVERED": "Delivered",
+      "RESOLVED": "Resolved",
+      "CLOSED": "Closed",
+      "DRAFT": "Draft",
+      "OPEN": "Open",
+      "ACKNOWLEDGED": "Acknowledged"
+    }
   },
   "AdminScmTasks": {
-    "header": { "title": "My Tasks", "description": "This workspace shows exactly what needs your attention now, what is waiting on others, and what just finished." },
-    "actions": { "refresh": "Refresh" }, "loading": "Loading SCM task queue...", "errors": { "load": "Failed to load your SCM task queue." },
-    "stats": { "needsMyAction": { "label": "Needs My Action", "hint": "Documents blocked until you act." }, "overdue": { "label": "Overdue", "hint": "Items older than expected response time." }, "waiting": { "label": "Waiting On Others", "hint": "Your documents currently in someone else's queue." }, "completed": { "label": "Recently Completed", "hint": "Recent outcomes you may want to review." } },
-    "needsAction": { "title": "Needs My Action", "description": "Start here first. These are the approvals, confirmations, and workflow moves currently waiting on you.", "emptyTitle": "No immediate task assigned", "emptyDescription": "Your approval and execution queue is clear for now." },
-    "waiting": { "title": "Waiting On Others", "description": "These are your documents that already moved forward and are now with another team or approval stage.", "emptyTitle": "Nothing is waiting downstream", "emptyDescription": "You do not currently have SCM documents pending with another stage." },
-    "completed": { "title": "Recently Completed", "description": "Review recent approvals, releases, and completed treasury or warehouse actions.", "emptyTitle": "No recent completions", "emptyDescription": "Completed SCM outcomes will appear here once workflows finish." }
+    "header": {
+      "title": "My Tasks",
+      "description": "This workspace shows exactly what needs your attention now, what is waiting on others, and what just finished."
+    },
+    "actions": {
+      "refresh": "Refresh"
+    },
+    "loading": "Loading SCM task queue...",
+    "errors": {
+      "load": "Failed to load your SCM task queue."
+    },
+    "stats": {
+      "needsMyAction": {
+        "label": "Needs My Action",
+        "hint": "Documents blocked until you act."
+      },
+      "overdue": {
+        "label": "Overdue",
+        "hint": "Items older than expected response time."
+      },
+      "waiting": {
+        "label": "Waiting On Others",
+        "hint": "Your documents currently in someone else's queue."
+      },
+      "completed": {
+        "label": "Recently Completed",
+        "hint": "Recent outcomes you may want to review."
+      }
+    },
+    "needsAction": {
+      "title": "Needs My Action",
+      "description": "Start here first. These are the approvals, confirmations, and workflow moves currently waiting on you.",
+      "emptyTitle": "No immediate task assigned",
+      "emptyDescription": "Your approval and execution queue is clear for now."
+    },
+    "waiting": {
+      "title": "Waiting On Others",
+      "description": "These are your documents that already moved forward and are now with another team or approval stage.",
+      "emptyTitle": "Nothing is waiting downstream",
+      "emptyDescription": "You do not currently have SCM documents pending with another stage."
+    },
+    "completed": {
+      "title": "Recently Completed",
+      "description": "Review recent approvals, releases, and completed treasury or warehouse actions.",
+      "emptyTitle": "No recent completions",
+      "emptyDescription": "Completed SCM outcomes will appear here once workflows finish."
+    }
   },
   "AdminScmExceptions": {
-    "header": { "title": "Exceptions", "description": "Review the items most likely to block procurement flow, stock continuity, invoice control, or supplier governance." },
-    "actions": { "refresh": "Refresh" }, "loading": "Loading SCM exceptions...", "errors": { "load": "Failed to load SCM exceptions." },
-    "stats": { "critical": { "label": "Critical", "hint": "Immediate operational or finance risk." }, "needsReview": { "label": "Needs Review", "hint": "Items waiting for human follow-up." }, "operationalRisks": { "label": "Operational Risks", "hint": "Supply, SLA, warehouse, or delivery signals." } },
-    "critical": { "title": "Critical", "description": "Resolve these first. They are the most likely to cause payment errors, stock-outs, or major delays.", "emptyTitle": "No critical exception", "emptyDescription": "There are no severe SCM exceptions in the current queue." },
-    "needsReview": { "title": "Needs Review", "description": "These issues still require a human decision, acknowledgement, or close-out.", "emptyTitle": "No review backlog", "emptyDescription": "Pending confirmations, approval delays, and return close-outs are under control." },
-    "operationalRisks": { "title": "Operational Risks", "description": "These are live risks that may not be blocked yet, but should be watched before they escalate.", "emptyTitle": "No open operational risk", "emptyDescription": "Warehouse transfer, supplier SLA, and delivery risk indicators are currently stable." }
+    "header": {
+      "title": "Exceptions",
+      "description": "Review the items most likely to block procurement flow, stock continuity, invoice control, or supplier governance."
+    },
+    "actions": {
+      "refresh": "Refresh"
+    },
+    "loading": "Loading SCM exceptions...",
+    "errors": {
+      "load": "Failed to load SCM exceptions."
+    },
+    "stats": {
+      "critical": {
+        "label": "Critical",
+        "hint": "Immediate operational or finance risk."
+      },
+      "needsReview": {
+        "label": "Needs Review",
+        "hint": "Items waiting for human follow-up."
+      },
+      "operationalRisks": {
+        "label": "Operational Risks",
+        "hint": "Supply, SLA, warehouse, or delivery signals."
+      }
+    },
+    "critical": {
+      "title": "Critical",
+      "description": "Resolve these first. They are the most likely to cause payment errors, stock-outs, or major delays.",
+      "emptyTitle": "No critical exception",
+      "emptyDescription": "There are no severe SCM exceptions in the current queue."
+    },
+    "needsReview": {
+      "title": "Needs Review",
+      "description": "These issues still require a human decision, acknowledgement, or close-out.",
+      "emptyTitle": "No review backlog",
+      "emptyDescription": "Pending confirmations, approval delays, and return close-outs are under control."
+    },
+    "operationalRisks": {
+      "title": "Operational Risks",
+      "description": "These are live risks that may not be blocked yet, but should be watched before they escalate.",
+      "emptyTitle": "No open operational risk",
+      "emptyDescription": "Warehouse transfer, supplier SLA, and delivery risk indicators are currently stable."
+    }
   },
   "AdminScmNotifications": {
-    "header": { "title": "SCM Notifications", "description": "Track internal approval workflow alerts across requisitions, CS, PO, and PRF." },
-    "actions": { "showAll": "Show All", "unreadOnly": "Unread Only", "refresh": "Refresh", "marking": "Marking...", "markAllRead": "Mark All Read", "processing": "Processing...", "processQueue": "Process Email Queue", "retrying": "Retrying...", "retryFailed": "Retry Failed Emails", "openWorkflow": "Open Workflow", "markRead": "Mark Read", "openModule": "Open Module" },
-    "loading": "Loading notifications...", "errors": { "load": "Failed to load notifications.", "mark": "Failed to mark notification.", "markAll": "Failed to mark all notifications.", "queue": "Failed to process notification queue." },
-    "stats": { "unread": { "label": "Unread", "hint": "Needs your attention" }, "visible": { "label": "Visible Rows", "hint": "After local filter/search" }, "failed": { "label": "Failed Emails", "hint": "Delivery issues in queue" }, "modules": { "label": "Modules", "hint": "Notification-producing SCM areas" } },
-    "controls": { "title": "Inbox Controls", "searchPlaceholder": "Search title, message, entity number, stage...", "allModules": "All modules" },
-    "health": { "system": "System", "emailSent": "Email Sent", "emailPending": "Email Pending", "emailFailed": "Email Failed" },
-    "alerts": { "title": "System Alerts", "empty": "No failed email deliveries." },
-    "labels": { "failed": "FAILED", "noEmail": "No email", "notAvailable": "N/A", "error": "Error", "unread": "UNREAD", "read": "READ", "entity": "Entity", "created": "Created", "readAt": "Read", "sent": "Sent" },
-    "empty": "No SCM notifications found.", "needsAction": { "title": "Needs Action", "empty": "No unread workflow alerts in the current filter." }, "recent": { "title": "Recent Updates", "empty": "No read updates in the current filter." }
+    "header": {
+      "title": "SCM Notifications",
+      "description": "Track internal approval workflow alerts across requisitions, CS, PO, and PRF."
+    },
+    "actions": {
+      "showAll": "Show All",
+      "unreadOnly": "Unread Only",
+      "refresh": "Refresh",
+      "marking": "Marking...",
+      "markAllRead": "Mark All Read",
+      "processing": "Processing...",
+      "processQueue": "Process Email Queue",
+      "retrying": "Retrying...",
+      "retryFailed": "Retry Failed Emails",
+      "openWorkflow": "Open Workflow",
+      "markRead": "Mark Read",
+      "openModule": "Open Module"
+    },
+    "loading": "Loading notifications...",
+    "errors": {
+      "load": "Failed to load notifications.",
+      "mark": "Failed to mark notification.",
+      "markAll": "Failed to mark all notifications.",
+      "queue": "Failed to process notification queue."
+    },
+    "stats": {
+      "unread": {
+        "label": "Unread",
+        "hint": "Needs your attention"
+      },
+      "visible": {
+        "label": "Visible Rows",
+        "hint": "After local filter/search"
+      },
+      "failed": {
+        "label": "Failed Emails",
+        "hint": "Delivery issues in queue"
+      },
+      "modules": {
+        "label": "Modules",
+        "hint": "Notification-producing SCM areas"
+      }
+    },
+    "controls": {
+      "title": "Inbox Controls",
+      "searchPlaceholder": "Search title, message, entity number, stage...",
+      "allModules": "All modules"
+    },
+    "health": {
+      "system": "System",
+      "emailSent": "Email Sent",
+      "emailPending": "Email Pending",
+      "emailFailed": "Email Failed"
+    },
+    "alerts": {
+      "title": "System Alerts",
+      "empty": "No failed email deliveries."
+    },
+    "labels": {
+      "failed": "FAILED",
+      "noEmail": "No email",
+      "notAvailable": "N/A",
+      "error": "Error",
+      "unread": "UNREAD",
+      "read": "READ",
+      "entity": "Entity",
+      "created": "Created",
+      "readAt": "Read",
+      "sent": "Sent"
+    },
+    "empty": "No SCM notifications found.",
+    "needsAction": {
+      "title": "Needs Action",
+      "empty": "No unread workflow alerts in the current filter."
+    },
+    "recent": {
+      "title": "Recent Updates",
+      "empty": "No read updates in the current filter."
+    }
   },
   "AdminActivityLog": {
     "header": {
@@ -4801,10 +5158,22 @@
       "openDetail": "Open Detail"
     },
     "stats": {
-      "total": { "label": "Total", "hint": "Visible purchase orders" },
-      "draft": { "label": "Draft", "hint": "Commercial draft stage" },
-      "approval": { "label": "In Approval", "hint": "Submitted through committee stage" },
-      "approved": { "label": "Approved", "hint": "Ready for receiving" }
+      "total": {
+        "label": "Total",
+        "hint": "Visible purchase orders"
+      },
+      "draft": {
+        "label": "Draft",
+        "hint": "Commercial draft stage"
+      },
+      "approval": {
+        "label": "In Approval",
+        "hint": "Submitted through committee stage"
+      },
+      "approved": {
+        "label": "Approved",
+        "hint": "Ready for receiving"
+      }
     },
     "register": {
       "title": "PO Register",
@@ -4848,10 +5217,22 @@
       "filter": "Filter"
     },
     "stats": {
-      "total": { "label": "Total", "hint": "Total suppliers" },
-      "active": { "label": "Active", "hint": "Active suppliers" },
-      "inactive": { "label": "Inactive", "hint": "Inactive suppliers" },
-      "complete": { "label": "Complete", "hint": "Complete documentation" }
+      "total": {
+        "label": "Total",
+        "hint": "Total suppliers"
+      },
+      "active": {
+        "label": "Active",
+        "hint": "Active suppliers"
+      },
+      "inactive": {
+        "label": "Inactive",
+        "hint": "Inactive suppliers"
+      },
+      "complete": {
+        "label": "Complete",
+        "hint": "Complete documentation"
+      }
     },
     "filters": {
       "searchPlaceholder": "Search by name, code, contact, email, phone...",
@@ -4964,12 +5345,30 @@
       "mrf": "MRF Status Tracking"
     },
     "cards": {
-      "pendingApprovals": { "label": "Pending Approvals", "hint": "Open personal approval queue" },
-      "poValue": { "label": "PO Value", "hint": "Jump into approved order register" },
-      "invoicedValue": { "label": "Invoiced Value", "hint": "Review invoice control queue" },
-      "paidValue": { "label": "Paid Value", "hint": "Open vendor payment report" },
-      "lowStockVariants": { "label": "Low Stock Variants", "hint": "Open replenishment signals" },
-      "auditEvents": { "label": "Audit Events", "hint": "Open SCM audit activity" }
+      "pendingApprovals": {
+        "label": "Pending Approvals",
+        "hint": "Open personal approval queue"
+      },
+      "poValue": {
+        "label": "PO Value",
+        "hint": "Jump into approved order register"
+      },
+      "invoicedValue": {
+        "label": "Invoiced Value",
+        "hint": "Review invoice control queue"
+      },
+      "paidValue": {
+        "label": "Paid Value",
+        "hint": "Open vendor payment report"
+      },
+      "lowStockVariants": {
+        "label": "Low Stock Variants",
+        "hint": "Open replenishment signals"
+      },
+      "auditEvents": {
+        "label": "Audit Events",
+        "hint": "Open SCM audit activity"
+      }
     },
     "tabs": {
       "overview": "Overview",
@@ -5017,521 +5416,593 @@
     }
   },
   "AdminPurchaseRequisitions": {
-  "header": {
-    "title": "Purchase Requisitions",
-    "description": "Browse requisitions, filter backlog, and move into detail workspaces for approvals or conversion."
-  },
-  "actions": {
-    "newRequisition": "New Requisition",
-    "refresh": "Refresh",
-    "openDetail": "Open Detail"
-  },
-  "stats": {
-    "total": { "label": "Total", "hint": "Visible requisitions" },
-    "pendingApproval": { "label": "Pending Approval", "hint": "Submitted, budget-cleared, endorsed" },
-    "approved": { "label": "Approved", "hint": "Ready for sourcing or conversion" },
-    "converted": { "label": "Converted", "hint": "Already linked to purchase orders" }
-  },
-  "filters": {
-    "searchPlaceholder": "Search requisition, title, warehouse, budget...",
-    "allStatuses": "All Statuses"
-  },
-  "statuses": {
-    "DRAFT": "Draft",
-    "SUBMITTED": "Submitted",
-    "BUDGET_CLEARED": "Budget Cleared",
-    "ENDORSED": "Endorsed",
-    "APPROVED": "Approved",
-    "REJECTED": "Rejected",
-    "CONVERTED": "Converted",
-    "CANCELLED": "Cancelled"
-  },
-  "register": {
-    "title": "Requisition Register",
-    "description": "This screen is now queue-focused. Create, approvals, and conversion happen in dedicated workspaces."
-  },
-  "labels": {
-    "warehouse": "Warehouse",
-    "budget": "Budget",
-    "neededBy": "Needed By",
-    "poLinks": "PO Links"
-  },
-  "loading": "Loading purchase requisitions...",
-  "empty": "No purchase requisitions found.",
-  "errors": {
-    "load": "Failed to load purchase requisitions"
-  }
-},
-  "AdminRfqs": {
-  "header": {
-    "title": "RFQ Management",
-    "description": "Browse RFQ queue here. Draft creation, invites, quoting, and awarding now flow through dedicated workspaces."
-  },
-  "actions": {
-    "newRfq": "New RFQ",
-    "refresh": "Refresh",
-    "openDetail": "Open Detail"
-  },
-  "stats": {
-    "total": { "label": "Total", "hint": "Visible RFQs" },
-    "open": { "label": "Open", "hint": "Draft and submitted" },
-    "awarded": { "label": "Awarded", "hint": "Ready for PO conversion or already awarded" },
-    "closed": { "label": "Closed", "hint": "Closed or cancelled sourcing cycles" }
-  },
-  "filters": {
-    "searchPlaceholder": "Search RFQ, MRF, supplier...",
-    "allStatuses": "All statuses"
-  },
-  "statuses": {
-    "DRAFT": "Draft",
-    "SUBMITTED": "Submitted",
-    "CLOSED": "Closed",
-    "AWARDED": "Awarded",
-    "CANCELLED": "Cancelled"
-  },
-  "register": {
-    "title": "RFQ Register",
-    "description": "Register-first view. Open detail to invite suppliers, capture quotations, request resubmission, or convert award to PO."
-  },
-  "labels": {
-    "warehouse": "Warehouse",
-    "mrf": "MRF",
-    "invites": "Invites",
-    "quotes": "Quotes"
-  },
-  "loading": "Loading RFQs...",
-  "empty": "No RFQ found.",
-  "errors": {
-    "load": "Failed to load RFQs"
-  }
-},
- "AdminComparativeStatements": {
-  "header": {
-    "title": "Comparative Statements",
-    "description": "Auto-generate CS from supplier financial proposals, maintain technical scorecards, and run manager-committee-final approval workflow."
-  },
-  "actions": {
-    "refresh": "Refresh",
-    "openDetail": "Open Detail"
-  },
-  "stats": {
-    "total": { "label": "Total", "hint": "Total statements" },
-    "pending": { "label": "Pending", "hint": "Pending review" },
-    "approved": { "label": "Approved", "hint": "Approved statements" }
-  },
-  "filters": {
-    "searchPlaceholder": "Search CS number / RFQ / warehouse...",
-    "allStatuses": "All statuses",
-    "selectCs": "Select CS"
-  },
-  "statuses": {
-    "DRAFT": "DRAFT",
-    "SUBMITTED": "SUBMITTED",
-    "MANAGER_APPROVED": "MANAGER_APPROVED",
-    "COMMITTEE_APPROVED": "COMMITTEE_APPROVED",
-    "FINAL_APPROVED": "FINAL_APPROVED",
-    "REJECTED": "REJECTED",
-    "CANCELLED": "CANCELLED"
-  },
-  "generate": {
-    "title": "Generate Comparative Statement",
-    "description": "Extract supplier financial proposals from an RFQ and start CS workflow in AAB format.",
-    "rfqLabel": "RFQ",
-    "selectRfq": "Select RFQ",
-    "technicalWeight": "Technical Weight (%)",
-    "financialWeight": "Financial Weight (%)",
-    "noteLabel": "Note",
-    "notePlaceholder": "Optional CS generation note",
-    "generateButton": "Generate CS",
-    "generating": "Generating..."
-  },
-  "register": {
-    "title": "CS Register",
-    "description": "Monitor comparative statement versions and approval progress."
-  },
-  "detail": {
-    "cs": "CS",
-    "rfq": "RFQ",
-    "warehouse": "Warehouse",
-    "status": "Status",
-    "generatedPo": "Generated PO",
-    "generated": "Generated",
-    "submitted": "Submitted",
-    "managerApproved": "Manager Approved",
-    "finalApproved": "Final Approved"
-  },
-  "scorecard": {
-    "title": "Technical Scorecard",
-    "description": "Enter technical scores and responsiveness. Financial scores/rank are auto-calculated.",
-    "workflowNote": "Workflow Note",
-    "workflowNotePlaceholder": "Approval/rejection note",
-    "rank": "Rank",
-    "financial": "Financial",
-    "combined": "Combined",
-    "grandTotal": "Grand Total",
-    "responsive": "Responsive",
-    "technicalScore": "Technical Score",
-    "technicalNote": "Technical Note",
-    "saveButton": "Save Scorecard",
-    "saving": "Saving..."
-  },
-  "table": {
-    "rank": "Rank",
-    "supplier": "Supplier",
-    "responsive": "Responsive",
-    "technical": "Technical",
-    "financial": "Financial",
-    "combined": "Combined",
-    "grandTotal": "Grand Total",
-    "technicalNote": "Technical Note"
-  },
-  "workflow": {
-    "title": "Approval Workflow",
-    "submit": "Submit",
-    "managerApprove": "Manager Approve",
-    "committeeApprove": "Committee Approve",
-    "finalApprove": "Final Approve",
-    "generatePo": "Generate PO",
-    "reject": "Reject",
-    "cancel": "Cancel",
-    "trailTitle": "Approval Trail",
-    "noEvents": "No approval events yet.",
-    "unknown": "Unknown",
-    "noNote": "No note"
-  },
-  "labels": {
-    "na": "N/A"
-  },
-  "loading": "Loading comparative statements...",
-  "empty": "No comparative statements found.",
-  "noSelection": "No comparative statement selected.",
-  "forbidden": {
-    "title": "Forbidden",
-    "description": "You do not have permission to access comparative statements."
-  },
-  "errors": {
-    "loadStatements": "Failed to load comparative statements",
-    "loadRfqs": "Failed to load RFQs",
-    "loadWorkspace": "Failed to load comparative statement workspace",
-    "rfqRequired": "RFQ is required",
-    "generateFailed": "Failed to generate comparative statement",
-    "scorecardFailed": "Failed to update scorecard",
-    "actionFailed": "Failed to {action}"
-  },
-  "toasts": {
-    "generated": "Generated {number}",
-    "scorecardUpdated": "Updated {number} scorecard",
-    "actionDone": "{number}: {action} done"
-  }
-},
- "AdminMaterialRequests": {
-  "header": {
-    "title": "Material Requests",
-    "description": "Manage warehouse material requisitions from requester draft to multi-stage approval."
-  },
-  "actions": {
-    "newRequest": "New Material Request",
-    "refresh": "Refresh",
-    "clearFocus": "Clear Focus",
-    "openDetail": "Open Detail",
-    "submit": "Submit",
-    "endorseSupervisor": "Endorse (Supervisor)",
-    "endorseProjectManager": "Endorse (Project Manager)",
-    "approveAdmin": "Final Approve (Admin)",
-    "reject": "Reject",
-    "cancel": "Cancel",
-    "submitShort": "submit",
-    "endorse_supervisorShort": "endorse supervisor",
-    "endorse_project_managerShort": "endorse project manager",
-    "approve_adminShort": "approve admin",
-    "rejectShort": "reject",
-    "cancelShort": "cancel"
-  },
-  "stats": {
-    "total": { "label": "Total", "hint": "Visible material requests" },
-    "supervisorQueue": { "label": "Supervisor Queue", "hint": "Waiting for supervisor endorsement" },
-    "projectQueue": { "label": "Project Queue", "hint": "Waiting for project manager review" },
-    "adminQueue": { "label": "Admin Queue", "hint": "Waiting for admin approval" },
-    "releaseReady": { "label": "Release Ready", "hint": "Approved and ready for issue or release" }
-  },
-  "focus": {
-    "bannerTitle": "Focused queue active",
-    "supervisor": "Showing requests waiting for supervisor endorsement.",
-    "project": "Showing requests waiting for project manager endorsement.",
-    "admin": "Showing requests waiting for administration approval.",
-    "readyForRelease": "Showing approved requests that are ready to release.",
-    "myActive": "Showing your active requests still moving through workflow.",
-    "default": "Showing a filtered material request queue."
-  },
-  "filters": {
-    "searchPlaceholder": "Search by request number, title, purpose, or warehouse...",
-    "visibleCount": "{count} visible request(s)",
-    "queues": {
-      "all": "All queues",
-      "supervisor": "Supervisor queue",
-      "project": "Project queue",
-      "admin": "Admin queue",
-      "readyForRelease": "Ready for release",
-      "myActive": "My active requests"
+    "header": {
+      "title": "Purchase Requisitions",
+      "description": "Browse requisitions, filter backlog, and move into detail workspaces for approvals or conversion."
+    },
+    "actions": {
+      "newRequisition": "New Requisition",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": {
+        "label": "Total",
+        "hint": "Visible requisitions"
+      },
+      "pendingApproval": {
+        "label": "Pending Approval",
+        "hint": "Submitted, budget-cleared, endorsed"
+      },
+      "approved": {
+        "label": "Approved",
+        "hint": "Ready for sourcing or conversion"
+      },
+      "converted": {
+        "label": "Converted",
+        "hint": "Already linked to purchase orders"
+      }
+    },
+    "filters": {
+      "searchPlaceholder": "Search requisition, title, warehouse, budget...",
+      "allStatuses": "All Statuses"
     },
     "statuses": {
-      "all": "All statuses"
+      "DRAFT": "Draft",
+      "SUBMITTED": "Submitted",
+      "BUDGET_CLEARED": "Budget Cleared",
+      "ENDORSED": "Endorsed",
+      "APPROVED": "Approved",
+      "REJECTED": "Rejected",
+      "CONVERTED": "Converted",
+      "CANCELLED": "Cancelled"
+    },
+    "register": {
+      "title": "Requisition Register",
+      "description": "This screen is now queue-focused. Create, approvals, and conversion happen in dedicated workspaces."
+    },
+    "labels": {
+      "warehouse": "Warehouse",
+      "budget": "Budget",
+      "neededBy": "Needed By",
+      "poLinks": "PO Links"
+    },
+    "loading": "Loading purchase requisitions...",
+    "empty": "No purchase requisitions found.",
+    "errors": {
+      "load": "Failed to load purchase requisitions"
     }
   },
-  "statuses": {
-    "DRAFT": "DRAFT",
-    "SUBMITTED": "SUBMITTED",
-    "SUPERVISOR_ENDORSED": "SUPERVISOR_ENDORSED",
-    "PROJECT_MANAGER_ENDORSED": "PROJECT_MANAGER_ENDORSED",
-    "ADMIN_APPROVED": "ADMIN_APPROVED",
-    "PARTIALLY_RELEASED": "PARTIALLY_RELEASED",
-    "RELEASED": "RELEASED",
-    "REJECTED": "REJECTED",
-    "CANCELLED": "CANCELLED"
+  "AdminRfqs": {
+    "header": {
+      "title": "RFQ Management",
+      "description": "Browse RFQ queue here. Draft creation, invites, quoting, and awarding now flow through dedicated workspaces."
+    },
+    "actions": {
+      "newRfq": "New RFQ",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": {
+        "label": "Total",
+        "hint": "Visible RFQs"
+      },
+      "open": {
+        "label": "Open",
+        "hint": "Draft and submitted"
+      },
+      "awarded": {
+        "label": "Awarded",
+        "hint": "Ready for PO conversion or already awarded"
+      },
+      "closed": {
+        "label": "Closed",
+        "hint": "Closed or cancelled sourcing cycles"
+      }
+    },
+    "filters": {
+      "searchPlaceholder": "Search RFQ, MRF, supplier...",
+      "allStatuses": "All statuses"
+    },
+    "statuses": {
+      "DRAFT": "Draft",
+      "SUBMITTED": "Submitted",
+      "CLOSED": "Closed",
+      "AWARDED": "Awarded",
+      "CANCELLED": "Cancelled"
+    },
+    "register": {
+      "title": "RFQ Register",
+      "description": "Register-first view. Open detail to invite suppliers, capture quotations, request resubmission, or convert award to PO."
+    },
+    "labels": {
+      "warehouse": "Warehouse",
+      "mrf": "MRF",
+      "invites": "Invites",
+      "quotes": "Quotes"
+    },
+    "loading": "Loading RFQs...",
+    "empty": "No RFQ found.",
+    "errors": {
+      "load": "Failed to load RFQs"
+    }
   },
-  "register": {
-    "title": "Material Request Register",
-    "description": "Track request status, approval events, and release readiness."
+  "AdminComparativeStatements": {
+    "header": {
+      "title": "Comparative Statements",
+      "description": "Auto-generate CS from supplier financial proposals, maintain technical scorecards, and run manager-committee-final approval workflow."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "openDetail": "Open Detail"
+    },
+    "stats": {
+      "total": {
+        "label": "Total",
+        "hint": "Total statements"
+      },
+      "pending": {
+        "label": "Pending",
+        "hint": "Pending review"
+      },
+      "approved": {
+        "label": "Approved",
+        "hint": "Approved statements"
+      }
+    },
+    "filters": {
+      "searchPlaceholder": "Search CS number / RFQ / warehouse...",
+      "allStatuses": "All statuses",
+      "selectCs": "Select CS"
+    },
+    "statuses": {
+      "DRAFT": "DRAFT",
+      "SUBMITTED": "SUBMITTED",
+      "MANAGER_APPROVED": "MANAGER_APPROVED",
+      "COMMITTEE_APPROVED": "COMMITTEE_APPROVED",
+      "FINAL_APPROVED": "FINAL_APPROVED",
+      "REJECTED": "REJECTED",
+      "CANCELLED": "CANCELLED"
+    },
+    "generate": {
+      "title": "Generate Comparative Statement",
+      "description": "Extract supplier financial proposals from an RFQ and start CS workflow in AAB format.",
+      "rfqLabel": "RFQ",
+      "selectRfq": "Select RFQ",
+      "technicalWeight": "Technical Weight (%)",
+      "financialWeight": "Financial Weight (%)",
+      "noteLabel": "Note",
+      "notePlaceholder": "Optional CS generation note",
+      "generateButton": "Generate CS",
+      "generating": "Generating..."
+    },
+    "register": {
+      "title": "CS Register",
+      "description": "Monitor comparative statement versions and approval progress."
+    },
+    "detail": {
+      "cs": "CS",
+      "rfq": "RFQ",
+      "warehouse": "Warehouse",
+      "status": "Status",
+      "generatedPo": "Generated PO",
+      "generated": "Generated",
+      "submitted": "Submitted",
+      "managerApproved": "Manager Approved",
+      "finalApproved": "Final Approved"
+    },
+    "scorecard": {
+      "title": "Technical Scorecard",
+      "description": "Enter technical scores and responsiveness. Financial scores/rank are auto-calculated.",
+      "workflowNote": "Workflow Note",
+      "workflowNotePlaceholder": "Approval/rejection note",
+      "rank": "Rank",
+      "financial": "Financial",
+      "combined": "Combined",
+      "grandTotal": "Grand Total",
+      "responsive": "Responsive",
+      "technicalScore": "Technical Score",
+      "technicalNote": "Technical Note",
+      "saveButton": "Save Scorecard",
+      "saving": "Saving..."
+    },
+    "table": {
+      "rank": "Rank",
+      "supplier": "Supplier",
+      "responsive": "Responsive",
+      "technical": "Technical",
+      "financial": "Financial",
+      "combined": "Combined",
+      "grandTotal": "Grand Total",
+      "technicalNote": "Technical Note"
+    },
+    "workflow": {
+      "title": "Approval Workflow",
+      "submit": "Submit",
+      "managerApprove": "Manager Approve",
+      "committeeApprove": "Committee Approve",
+      "finalApprove": "Final Approve",
+      "generatePo": "Generate PO",
+      "reject": "Reject",
+      "cancel": "Cancel",
+      "trailTitle": "Approval Trail",
+      "noEvents": "No approval events yet.",
+      "unknown": "Unknown",
+      "noNote": "No note"
+    },
+    "labels": {
+      "na": "N/A"
+    },
+    "loading": "Loading comparative statements...",
+    "empty": "No comparative statements found.",
+    "noSelection": "No comparative statement selected.",
+    "forbidden": {
+      "title": "Forbidden",
+      "description": "You do not have permission to access comparative statements."
+    },
+    "errors": {
+      "loadStatements": "Failed to load comparative statements",
+      "loadRfqs": "Failed to load RFQs",
+      "loadWorkspace": "Failed to load comparative statement workspace",
+      "rfqRequired": "RFQ is required",
+      "generateFailed": "Failed to generate comparative statement",
+      "scorecardFailed": "Failed to update scorecard",
+      "actionFailed": "Failed to {action}"
+    },
+    "toasts": {
+      "generated": "Generated {number}",
+      "scorecardUpdated": "Updated {number} scorecard",
+      "actionDone": "{number}: {action} done"
+    }
   },
-  "labels": {
-    "requested": "Requested",
-    "requiredBy": "Required By",
-    "submitted": "Submitted",
-    "adminApproved": "Admin Approved",
-    "purpose": "Purpose",
-    "budget": "Budget",
-    "boq": "BOQ",
-    "createdBy": "Created By",
-    "specification": "Specification",
-    "attachments": "Attachments",
-    "workflowNote": "Workflow Note (optional)",
-    "workflowNotePlaceholder": "Add note for submit/endorse/approve/reject/cancel",
-    "na": "N/A"
+  "AdminMaterialRequests": {
+    "header": {
+      "title": "Material Requests",
+      "description": "Manage warehouse material requisitions from requester draft to multi-stage approval."
+    },
+    "actions": {
+      "newRequest": "New Material Request",
+      "refresh": "Refresh",
+      "clearFocus": "Clear Focus",
+      "openDetail": "Open Detail",
+      "submit": "Submit",
+      "endorseSupervisor": "Endorse (Supervisor)",
+      "endorseProjectManager": "Endorse (Project Manager)",
+      "approveAdmin": "Final Approve (Admin)",
+      "reject": "Reject",
+      "cancel": "Cancel",
+      "submitShort": "submit",
+      "endorse_supervisorShort": "endorse supervisor",
+      "endorse_project_managerShort": "endorse project manager",
+      "approve_adminShort": "approve admin",
+      "rejectShort": "reject",
+      "cancelShort": "cancel"
+    },
+    "stats": {
+      "total": {
+        "label": "Total",
+        "hint": "Visible material requests"
+      },
+      "supervisorQueue": {
+        "label": "Supervisor Queue",
+        "hint": "Waiting for supervisor endorsement"
+      },
+      "projectQueue": {
+        "label": "Project Queue",
+        "hint": "Waiting for project manager review"
+      },
+      "adminQueue": {
+        "label": "Admin Queue",
+        "hint": "Waiting for admin approval"
+      },
+      "releaseReady": {
+        "label": "Release Ready",
+        "hint": "Approved and ready for issue or release"
+      }
+    },
+    "focus": {
+      "bannerTitle": "Focused queue active",
+      "supervisor": "Showing requests waiting for supervisor endorsement.",
+      "project": "Showing requests waiting for project manager endorsement.",
+      "admin": "Showing requests waiting for administration approval.",
+      "readyForRelease": "Showing approved requests that are ready to release.",
+      "myActive": "Showing your active requests still moving through workflow.",
+      "default": "Showing a filtered material request queue."
+    },
+    "filters": {
+      "searchPlaceholder": "Search by request number, title, purpose, or warehouse...",
+      "visibleCount": "{count} visible request(s)",
+      "queues": {
+        "all": "All queues",
+        "supervisor": "Supervisor queue",
+        "project": "Project queue",
+        "admin": "Admin queue",
+        "readyForRelease": "Ready for release",
+        "myActive": "My active requests"
+      },
+      "statuses": {
+        "all": "All statuses"
+      }
+    },
+    "statuses": {
+      "DRAFT": "DRAFT",
+      "SUBMITTED": "SUBMITTED",
+      "SUPERVISOR_ENDORSED": "SUPERVISOR_ENDORSED",
+      "PROJECT_MANAGER_ENDORSED": "PROJECT_MANAGER_ENDORSED",
+      "ADMIN_APPROVED": "ADMIN_APPROVED",
+      "PARTIALLY_RELEASED": "PARTIALLY_RELEASED",
+      "RELEASED": "RELEASED",
+      "REJECTED": "REJECTED",
+      "CANCELLED": "CANCELLED"
+    },
+    "register": {
+      "title": "Material Request Register",
+      "description": "Track request status, approval events, and release readiness."
+    },
+    "labels": {
+      "requested": "Requested",
+      "requiredBy": "Required By",
+      "submitted": "Submitted",
+      "adminApproved": "Admin Approved",
+      "purpose": "Purpose",
+      "budget": "Budget",
+      "boq": "BOQ",
+      "createdBy": "Created By",
+      "specification": "Specification",
+      "attachments": "Attachments",
+      "workflowNote": "Workflow Note (optional)",
+      "workflowNotePlaceholder": "Add note for submit/endorse/approve/reject/cancel",
+      "na": "N/A"
+    },
+    "table": {
+      "item": "Item",
+      "requested": "Requested",
+      "released": "Released",
+      "remaining": "Remaining",
+      "class": "Class",
+      "tag": "TAG"
+    },
+    "loading": "Loading material requests...",
+    "empty": "No material requests found.",
+    "forbidden": {
+      "title": "Forbidden",
+      "description": "You do not have permission to access material requests."
+    },
+    "errors": {
+      "load": "Failed to load material requests",
+      "action": "Failed to {action} material request"
+    },
+    "toasts": {
+      "actionCompleted": "Material request {action} completed"
+    }
   },
-  "table": {
-    "item": "Item",
-    "requested": "Requested",
-    "released": "Released",
-    "remaining": "Remaining",
-    "class": "Class",
-    "tag": "TAG"
+  "AdminMaterialReleases": {
+    "header": {
+      "title": "Material Releases",
+      "description": "Issue release notes from approved material requests and post warehouse stock-out."
+    },
+    "actions": {
+      "newRelease": "New Release",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail",
+      "print": "Print"
+    },
+    "stats": {
+      "total": {
+        "label": "Total",
+        "hint": "Visible release notes"
+      },
+      "issued": {
+        "label": "Issued",
+        "hint": "Completed warehouse stock-out"
+      },
+      "cancelled": {
+        "label": "Cancelled",
+        "hint": "Release notes voided before use"
+      },
+      "assetTagged": {
+        "label": "Asset Tagged",
+        "hint": "Releases that generated asset tags"
+      }
+    },
+    "filters": {
+      "searchPlaceholder": "Search release/challan/waybill/request/warehouse...",
+      "allStatuses": "All statuses"
+    },
+    "statuses": {
+      "ISSUED": "ISSUED",
+      "CANCELLED": "CANCELLED"
+    },
+    "register": {
+      "title": "Release Register",
+      "description": "Track issued release notes, line-level stock-out, and generated asset tags."
+    },
+    "labels": {
+      "requestShort": "Request",
+      "releasedAt": "Released At",
+      "challan": "Challan",
+      "waybill": "Waybill",
+      "releasedBy": "Released By",
+      "totalQty": "Total Qty",
+      "totalCost": "Total Cost",
+      "na": "N/A"
+    },
+    "table": {
+      "item": "Item",
+      "qty": "Qty",
+      "unitCost": "Unit Cost",
+      "lineCost": "Line Cost",
+      "assetTags": "Asset Tags",
+      "more": "+{count} more"
+    },
+    "loading": "Loading material releases...",
+    "empty": "No material releases found.",
+    "forbidden": {
+      "title": "Forbidden",
+      "description": "You do not have permission to access material releases."
+    },
+    "errors": {
+      "load": "Failed to load material releases"
+    }
   },
-  "loading": "Loading material requests...",
-  "empty": "No material requests found.",
-  "forbidden": {
-    "title": "Forbidden",
-    "description": "You do not have permission to access material requests."
+  "AdminMaterialReleaseReport": {
+    "header": {
+      "title": "Material Release Report",
+      "description": "Review release notes with challan/waybill traceability and export report snapshots."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "exportCsv": "Export CSV",
+      "challan": "Challan",
+      "waybill": "Waybill"
+    },
+    "filters": {
+      "title": "Filters",
+      "search": "Search",
+      "searchPlaceholder": "Release/challan/waybill/request",
+      "warehouse": "Warehouse",
+      "status": "Status",
+      "from": "From",
+      "to": "To",
+      "all": "All"
+    },
+    "statuses": {
+      "ISSUED": "ISSUED",
+      "CANCELLED": "CANCELLED"
+    },
+    "stats": {
+      "releaseNotes": "Release Notes",
+      "totalReleasedQty": "Total Released Qty",
+      "totalReleasedValue": "Total Released Value"
+    },
+    "register": {
+      "title": "Release Register",
+      "description": "Use print actions to generate challan/waybill documents.",
+      "totalReleases": "Total Releases: {count}"
+    },
+    "table": {
+      "release": "Release",
+      "warehouse": "Warehouse",
+      "request": "Request",
+      "status": "Status",
+      "qty": "Qty",
+      "value": "Value",
+      "actions": "Actions"
+    },
+    "labels": {
+      "challanShort": "CHL",
+      "waybillShort": "WBL",
+      "na": "N/A"
+    },
+    "csv": {
+      "releaseNo": "Release No",
+      "date": "Date",
+      "warehouse": "Warehouse",
+      "requestNo": "Request No",
+      "challan": "Challan",
+      "waybill": "Waybill",
+      "status": "Status",
+      "totalQty": "Total Qty",
+      "totalValue": "Total Value"
+    },
+    "loading": "Loading report rows...",
+    "empty": "No release data found for selected filters.",
+    "forbidden": {
+      "title": "Forbidden",
+      "description": "You do not have permission to access material release reports."
+    },
+    "errors": {
+      "loadWarehouses": "Failed to load warehouses",
+      "loadReport": "Failed to load material release report",
+      "noRows": "No rows to export"
+    }
   },
-  "errors": {
-    "load": "Failed to load material requests",
-    "action": "Failed to {action} material request"
+  "AdminWarehouseTransfers": {
+    "header": {
+      "title": "Warehouse Transfers",
+      "description": "Approve, dispatch, and receive internal stock movement between warehouses."
+    },
+    "actions": {
+      "newTransfer": "New Transfer",
+      "refresh": "Refresh",
+      "openDetail": "Open Detail",
+      "submit": "Submit",
+      "approve": "Approve",
+      "dispatch": "Dispatch",
+      "receive": "Receive",
+      "cancel": "Cancel"
+    },
+    "stats": {
+      "total": {
+        "label": "Total",
+        "hint": "Visible transfer queue"
+      },
+      "pendingApproval": {
+        "label": "Pending Approval",
+        "hint": "Waiting for approval"
+      },
+      "inTransit": {
+        "label": "In Transit",
+        "hint": "Still active between warehouses"
+      },
+      "received": {
+        "label": "Received",
+        "hint": "Completed internal movement"
+      }
+    },
+    "filters": {
+      "searchPlaceholder": "Search transfer number or warehouse...",
+      "allStatuses": "All statuses"
+    },
+    "statuses": {
+      "DRAFT": "DRAFT",
+      "SUBMITTED": "SUBMITTED",
+      "APPROVED": "APPROVED",
+      "PARTIALLY_DISPATCHED": "PARTIALLY_DISPATCHED",
+      "DISPATCHED": "DISPATCHED",
+      "PARTIALLY_RECEIVED": "PARTIALLY_RECEIVED",
+      "RECEIVED": "RECEIVED",
+      "CANCELLED": "CANCELLED"
+    },
+    "register": {
+      "title": "Transfer Queue",
+      "description": "Monitor transfer requests and progress through approval, dispatch, and receipt."
+    },
+    "labels": {
+      "requested": "Requested",
+      "dispatched": "Dispatched",
+      "received": "Received",
+      "submitted": "Submitted",
+      "approved": "Approved",
+      "to": "to",
+      "needBy": "Need by",
+      "requiredBy": "Required By",
+      "quantity": "Quantity",
+      "na": "N/A"
+    },
+    "table": {
+      "transfer": "Transfer",
+      "route": "Route",
+      "status": "Status",
+      "items": "Items",
+      "timeline": "Timeline",
+      "actions": "Actions"
+    },
+    "loading": "Loading warehouse transfers...",
+    "empty": "No warehouse transfers found.",
+    "forbidden": {
+      "title": "Forbidden",
+      "description": "You do not have permission to access warehouse transfers."
+    },
+    "errors": {
+      "load": "Failed to load warehouse transfers",
+      "action": "Failed to {action} warehouse transfer"
+    },
+    "toasts": {
+      "actionCompleted": "Warehouse transfer {action} completed"
+    }
   },
-  "toasts": {
-    "actionCompleted": "Material request {action} completed"
-  }
-},
- "AdminMaterialReleases": {
-  "header": {
-    "title": "Material Releases",
-    "description": "Issue release notes from approved material requests and post warehouse stock-out."
-  },
-  "actions": {
-    "newRelease": "New Release",
-    "refresh": "Refresh",
-    "openDetail": "Open Detail",
-    "print": "Print"
-  },
-  "stats": {
-    "total": { "label": "Total", "hint": "Visible release notes" },
-    "issued": { "label": "Issued", "hint": "Completed warehouse stock-out" },
-    "cancelled": { "label": "Cancelled", "hint": "Release notes voided before use" },
-    "assetTagged": { "label": "Asset Tagged", "hint": "Releases that generated asset tags" }
-  },
-  "filters": {
-    "searchPlaceholder": "Search release/challan/waybill/request/warehouse...",
-    "allStatuses": "All statuses"
-  },
-  "statuses": {
-    "ISSUED": "ISSUED",
-    "CANCELLED": "CANCELLED"
-  },
-  "register": {
-    "title": "Release Register",
-    "description": "Track issued release notes, line-level stock-out, and generated asset tags."
-  },
-  "labels": {
-    "requestShort": "Request",
-    "releasedAt": "Released At",
-    "challan": "Challan",
-    "waybill": "Waybill",
-    "releasedBy": "Released By",
-    "totalQty": "Total Qty",
-    "totalCost": "Total Cost",
-    "na": "N/A"
-  },
-  "table": {
-    "item": "Item",
-    "qty": "Qty",
-    "unitCost": "Unit Cost",
-    "lineCost": "Line Cost",
-    "assetTags": "Asset Tags",
-    "more": "+{count} more"
-  },
-  "loading": "Loading material releases...",
-  "empty": "No material releases found.",
-  "forbidden": {
-    "title": "Forbidden",
-    "description": "You do not have permission to access material releases."
-  },
-  "errors": {
-    "load": "Failed to load material releases"
-  }
-},
-"AdminMaterialReleaseReport": {
-  "header": {
-    "title": "Material Release Report",
-    "description": "Review release notes with challan/waybill traceability and export report snapshots."
-  },
-  "actions": {
-    "refresh": "Refresh",
-    "exportCsv": "Export CSV",
-    "challan": "Challan",
-    "waybill": "Waybill"
-  },
-  "filters": {
-    "title": "Filters",
-    "search": "Search",
-    "searchPlaceholder": "Release/challan/waybill/request",
-    "warehouse": "Warehouse",
-    "status": "Status",
-    "from": "From",
-    "to": "To",
-    "all": "All"
-  },
-  "statuses": {
-    "ISSUED": "ISSUED",
-    "CANCELLED": "CANCELLED"
-  },
-  "stats": {
-    "releaseNotes": "Release Notes",
-    "totalReleasedQty": "Total Released Qty",
-    "totalReleasedValue": "Total Released Value"
-  },
-  "register": {
-    "title": "Release Register",
-    "description": "Use print actions to generate challan/waybill documents.",
-    "totalReleases": "Total Releases: {count}"
-  },
-  "table": {
-    "release": "Release",
-    "warehouse": "Warehouse",
-    "request": "Request",
-    "status": "Status",
-    "qty": "Qty",
-    "value": "Value",
-    "actions": "Actions"
-  },
-  "labels": {
-    "challanShort": "CHL",
-    "waybillShort": "WBL",
-    "na": "N/A"
-  },
-  "csv": {
-    "releaseNo": "Release No",
-    "date": "Date",
-    "warehouse": "Warehouse",
-    "requestNo": "Request No",
-    "challan": "Challan",
-    "waybill": "Waybill",
-    "status": "Status",
-    "totalQty": "Total Qty",
-    "totalValue": "Total Value"
-  },
-  "loading": "Loading report rows...",
-  "empty": "No release data found for selected filters.",
-  "forbidden": {
-    "title": "Forbidden",
-    "description": "You do not have permission to access material release reports."
-  },
-  "errors": {
-    "loadWarehouses": "Failed to load warehouses",
-    "loadReport": "Failed to load material release report",
-    "noRows": "No rows to export"
-  }
-},
- "AdminWarehouseTransfers": {
-  "header": {
-    "title": "Warehouse Transfers",
-    "description": "Approve, dispatch, and receive internal stock movement between warehouses."
-  },
-  "actions": {
-    "newTransfer": "New Transfer",
-    "refresh": "Refresh",
-    "openDetail": "Open Detail",
-    "submit": "Submit",
-    "approve": "Approve",
-    "dispatch": "Dispatch",
-    "receive": "Receive",
-    "cancel": "Cancel"
-  },
-  "stats": {
-    "total": { "label": "Total", "hint": "Visible transfer queue" },
-    "pendingApproval": { "label": "Pending Approval", "hint": "Waiting for approval" },
-    "inTransit": { "label": "In Transit", "hint": "Still active between warehouses" },
-    "received": { "label": "Received", "hint": "Completed internal movement" }
-  },
-  "filters": {
-    "searchPlaceholder": "Search transfer number or warehouse...",
-    "allStatuses": "All statuses"
-  },
-  "statuses": {
-    "DRAFT": "DRAFT",
-    "SUBMITTED": "SUBMITTED",
-    "APPROVED": "APPROVED",
-    "PARTIALLY_DISPATCHED": "PARTIALLY_DISPATCHED",
-    "DISPATCHED": "DISPATCHED",
-    "PARTIALLY_RECEIVED": "PARTIALLY_RECEIVED",
-    "RECEIVED": "RECEIVED",
-    "CANCELLED": "CANCELLED"
-  },
-  "register": {
-    "title": "Transfer Queue",
-    "description": "Monitor transfer requests and progress through approval, dispatch, and receipt."
-  },
-  "labels": {
-    "requested": "Requested",
-    "dispatched": "Dispatched",
-    "received": "Received",
-    "submitted": "Submitted",
-    "approved": "Approved",
-    "to": "to",
-    "needBy": "Need by",
-    "requiredBy": "Required By",
-    "quantity": "Quantity",
-    "na": "N/A"
-  },
-  "table": {
-    "transfer": "Transfer",
-    "route": "Route",
-    "status": "Status",
-    "items": "Items",
-    "timeline": "Timeline",
-    "actions": "Actions"
-  },
-  "loading": "Loading warehouse transfers...",
-  "empty": "No warehouse transfers found.",
-  "forbidden": {
-    "title": "Forbidden",
-    "description": "You do not have permission to access warehouse transfers."
-  },
-  "errors": {
-    "load": "Failed to load warehouse transfers",
-    "action": "Failed to {action} warehouse transfer"
-  },
-  "toasts": {
-    "actionCompleted": "Warehouse transfer {action} completed"
-  }
-},
   "AdminPaymentRequests": {
     "header": {
       "title": "Payment Requests",
@@ -5543,10 +6014,22 @@
       "openDetail": "Open Detail"
     },
     "stats": {
-      "total": { "label": "Total", "hint": "Total requests" },
-      "pending": { "label": "Pending", "hint": "Pending approval" },
-      "approved": { "label": "Approved", "hint": "Approved requests" },
-      "paid": { "label": "Paid", "hint": "Paid requests" }
+      "total": {
+        "label": "Total",
+        "hint": "Total requests"
+      },
+      "pending": {
+        "label": "Pending",
+        "hint": "Pending approval"
+      },
+      "approved": {
+        "label": "Approved",
+        "hint": "Approved requests"
+      },
+      "paid": {
+        "label": "Paid",
+        "hint": "Paid requests"
+      }
     },
     "filters": {
       "searchPlaceholder": "Search PRF number, supplier...",
@@ -5566,9 +6049,18 @@
       "openDetail": "Open Detail"
     },
     "stats": {
-      "total": { "label": "Total", "hint": "Total returns" },
-      "pending": { "label": "Pending", "hint": "Pending returns" },
-      "completed": { "label": "Completed", "hint": "Completed returns" }
+      "total": {
+        "label": "Total",
+        "hint": "Total returns"
+      },
+      "pending": {
+        "label": "Pending",
+        "hint": "Pending returns"
+      },
+      "completed": {
+        "label": "Completed",
+        "hint": "Completed returns"
+      }
     },
     "filters": {
       "searchPlaceholder": "Search return number, supplier...",
@@ -5588,9 +6080,18 @@
       "openDetail": "Open Detail"
     },
     "stats": {
-      "total": { "label": "Total", "hint": "Total verifications" },
-      "pending": { "label": "Pending", "hint": "Pending verifications" },
-      "completed": { "label": "Completed", "hint": "Completed verifications" }
+      "total": {
+        "label": "Total",
+        "hint": "Total verifications"
+      },
+      "pending": {
+        "label": "Pending",
+        "hint": "Pending verifications"
+      },
+      "completed": {
+        "label": "Completed",
+        "hint": "Completed verifications"
+      }
     },
     "filters": {
       "searchPlaceholder": "Search verification number, warehouse...",
@@ -5610,9 +6111,18 @@
       "openDetail": "Open Detail"
     },
     "stats": {
-      "total": { "label": "Total", "hint": "Total assets" },
-      "active": { "label": "Active", "hint": "Active assets" },
-      "depreciated": { "label": "Depreciated", "hint": "Depreciated assets" }
+      "total": {
+        "label": "Total",
+        "hint": "Total assets"
+      },
+      "active": {
+        "label": "Active",
+        "hint": "Active assets"
+      },
+      "depreciated": {
+        "label": "Depreciated",
+        "hint": "Depreciated assets"
+      }
     },
     "filters": {
       "searchPlaceholder": "Search asset number, name...",
@@ -5632,9 +6142,18 @@
       "openDetail": "Open Detail"
     },
     "stats": {
-      "total": { "label": "Total", "hint": "Total cost entries" },
-      "pending": { "label": "Pending", "hint": "Pending allocation" },
-      "allocated": { "label": "Allocated", "hint": "Allocated costs" }
+      "total": {
+        "label": "Total",
+        "hint": "Total cost entries"
+      },
+      "pending": {
+        "label": "Pending",
+        "hint": "Pending allocation"
+      },
+      "allocated": {
+        "label": "Allocated",
+        "hint": "Allocated costs"
+      }
     },
     "filters": {
       "searchPlaceholder": "Search PO number, shipment...",
@@ -5644,216 +6163,237 @@
     "empty": "No landed costs found."
   },
   "AdminReplenishment": {
-  "header": {
-    "title": "Replenishment Planning",
-    "description": "Define warehouse reorder rules, review shortage signals, and convert purchase needs into requisitions."
+    "header": {
+      "title": "Replenishment Planning",
+      "description": "Define warehouse reorder rules, review shortage signals, and convert purchase needs into requisitions."
+    },
+    "actions": {
+      "refresh": "Refresh",
+      "edit": "Edit",
+      "createOrder": "Create Order"
+    },
+    "stats": {
+      "rules": {
+        "label": "Rules",
+        "hint": "Configured replenishment logic"
+      },
+      "triggered": {
+        "label": "Triggered",
+        "hint": "Current shortage or planning signals"
+      },
+      "purchaseSignals": {
+        "label": "Purchase Signals",
+        "hint": "Can convert into requisitions"
+      },
+      "transferSignals": {
+        "label": "Transfer Signals",
+        "hint": "Can convert into transfer drafts"
+      }
+    },
+    "filters": {
+      "searchPlaceholder": "Search warehouse, product, or SKU...",
+      "allWarehouses": "All warehouses"
+    },
+    "ruleForm": {
+      "createTitle": "Create Rule",
+      "editTitle": "Edit Rule",
+      "description": "Store rule-based planning thresholds by warehouse and variant.",
+      "warehouse": "Warehouse",
+      "selectWarehouse": "Select warehouse",
+      "variant": "Variant",
+      "selectVariant": "Select variant",
+      "strategy": "Strategy",
+      "leadTimeDays": "Lead Time (days)",
+      "reorderPoint": "Reorder Point",
+      "targetStock": "Target Stock",
+      "safetyStock": "Safety Stock",
+      "minOrderQty": "Min Order Qty",
+      "orderMultiple": "Order Multiple",
+      "note": "Note",
+      "ruleActive": "Rule Active",
+      "saveRule": "Save Rule",
+      "updateRule": "Update Rule",
+      "saving": "Saving...",
+      "cancelEdit": "Cancel Edit",
+      "variantDefaultThreshold": "Variant default low-stock threshold: {value}"
+    },
+    "register": {
+      "title": "Rules & Signals",
+      "description": "Review active replenishment signals and compare transfer vs purchase guidance."
+    },
+    "rulesCard": {
+      "title": "Configured Rules",
+      "empty": "No replenishment rules found.",
+      "statusActive": "ACTIVE",
+      "statusInactive": "INACTIVE",
+      "skuLabel": "SKU",
+      "reorderPoint": "Reorder Point",
+      "targetLevel": "Target Level",
+      "minOrderQty": "Min Order Qty",
+      "orderMultiple": "Order Multiple",
+      "ruleSummary": "RP {rp} / Target {target}",
+      "ruleDetail": "MOQ {moq} / Multiple {multiple}",
+      "table": {
+        "warehouse": "Warehouse",
+        "variant": "Variant",
+        "rule": "Rule",
+        "status": "Status",
+        "action": "Action"
+      }
+    },
+    "suggestionsCard": {
+      "title": "Planning Suggestions",
+      "description": "Triggered rules below reorder point appear here.",
+      "requisitionNotePlaceholder": "Requisition note",
+      "createRequisition": "Create Requisition",
+      "createTransfer": "Create Transfer",
+      "createTransferDraft": "Create Transfer Draft",
+      "empty": "No triggered replenishment suggestions.",
+      "available": "Available",
+      "reorderPoint": "Reorder Point",
+      "shortage": "Shortage",
+      "reserved": "Reserved",
+      "transfer": "Transfer",
+      "purchase": "Purchase",
+      "leadTime": "Lead Time",
+      "availableLine": "Available {available}, RP {rp}",
+      "shortageReservedLine": "Shortage {shortage} | Reserved {reserved}",
+      "transferPurchaseLine": "Transfer {transfer} | Purchase {purchase}",
+      "sourceLine": "Source: {code} ({qty})",
+      "leadTimeDays": "{days} days",
+      "table": {
+        "item": "Item",
+        "signal": "Signal",
+        "recommendation": "Recommendation",
+        "leadTime": "Lead Time",
+        "action": "Action"
+      }
+    },
+    "recommendedActions": {
+      "NONE": "NONE",
+      "PURCHASE": "PURCHASE",
+      "TRANSFER": "TRANSFER",
+      "HYBRID": "HYBRID"
+    },
+    "labels": {
+      "na": "N/A"
+    },
+    "transferNoteDefault": "Generated for {product} ({sku}) from replenishment planning.",
+    "loading": "Loading replenishment data...",
+    "empty": "No replenishment signals found.",
+    "forbidden": {
+      "title": "Forbidden",
+      "description": "You do not have permission to access replenishment planning."
+    },
+    "errors": {
+      "loadWarehouses": "Failed to load warehouses",
+      "loadVariants": "Failed to load variants",
+      "loadRules": "Failed to load replenishment rules",
+      "loadSuggestions": "Failed to load replenishment suggestions",
+      "loadData": "Failed to load replenishment planning data",
+      "warehouseVariantRequired": "Warehouse and variant are required",
+      "saveRule": "Failed to save replenishment rule",
+      "selectPurchaseSuggestion": "Select at least one purchase suggestion",
+      "sameWarehouseRequired": "Selected suggestions must belong to the same warehouse",
+      "createRequisition": "Failed to create replenishment requisition",
+      "noTransferableQty": "This suggestion does not have a transferable quantity",
+      "createTransfer": "Failed to create transfer draft"
+    },
+    "toasts": {
+      "ruleSaved": "Replenishment rule saved",
+      "requisitionCreated": "Purchase requisition {number} created from planning",
+      "transferCreated": "Transfer draft {number} created from planning"
+    }
   },
-  "actions": {
-    "refresh": "Refresh",
-    "edit": "Edit",
-    "createOrder": "Create Order"
-  },
-  "stats": {
-    "rules": { "label": "Rules", "hint": "Configured replenishment logic" },
-    "triggered": { "label": "Triggered", "hint": "Current shortage or planning signals" },
-    "purchaseSignals": { "label": "Purchase Signals", "hint": "Can convert into requisitions" },
-    "transferSignals": { "label": "Transfer Signals", "hint": "Can convert into transfer drafts" }
-  },
-  "filters": {
-    "searchPlaceholder": "Search warehouse, product, or SKU...",
-    "allWarehouses": "All warehouses"
-  },
-  "ruleForm": {
-    "createTitle": "Create Rule",
-    "editTitle": "Edit Rule",
-    "description": "Store rule-based planning thresholds by warehouse and variant.",
-    "warehouse": "Warehouse",
-    "selectWarehouse": "Select warehouse",
-    "variant": "Variant",
-    "selectVariant": "Select variant",
-    "strategy": "Strategy",
-    "leadTimeDays": "Lead Time (days)",
-    "reorderPoint": "Reorder Point",
-    "targetStock": "Target Stock",
-    "safetyStock": "Safety Stock",
-    "minOrderQty": "Min Order Qty",
-    "orderMultiple": "Order Multiple",
-    "note": "Note",
-    "ruleActive": "Rule Active",
-    "saveRule": "Save Rule",
-    "updateRule": "Update Rule",
-    "saving": "Saving...",
-    "cancelEdit": "Cancel Edit",
-    "variantDefaultThreshold": "Variant default low-stock threshold: {value}"
-  },
-  "register": {
-    "title": "Rules & Signals",
-    "description": "Review active replenishment signals and compare transfer vs purchase guidance."
-  },
-  "rulesCard": {
-    "title": "Configured Rules",
-    "empty": "No replenishment rules found.",
-    "statusActive": "ACTIVE",
-    "statusInactive": "INACTIVE",
-    "skuLabel": "SKU",
-    "reorderPoint": "Reorder Point",
-    "targetLevel": "Target Level",
-    "minOrderQty": "Min Order Qty",
-    "orderMultiple": "Order Multiple",
-    "ruleSummary": "RP {rp} / Target {target}",
-    "ruleDetail": "MOQ {moq} / Multiple {multiple}",
+  "AdminReorderAlerts": {
+    "header": {
+      "title": "Reorder Alerts",
+      "description": "Review low stock signals and manage replenishment notifications."
+    },
+    "actions": {
+      "newAlert": "New Alert",
+      "refresh": "Refresh",
+      "edit": "Edit",
+      "scanStock": "Scan Stock"
+    },
+    "stats": {
+      "total": {
+        "label": "Total",
+        "hint": "Total alerts"
+      },
+      "active": {
+        "label": "Active",
+        "hint": "Active alerts"
+      },
+      "triggered": {
+        "label": "Triggered",
+        "hint": "Triggered alerts"
+      }
+    },
+    "filters": {
+      "title": "Filters",
+      "description": "Filter alerts by warehouse, status, or SKU.",
+      "warehouse": "Warehouse",
+      "allWarehouses": "All warehouses",
+      "status": "Status",
+      "all": "All",
+      "search": "Search",
+      "searchPlaceholder": "SKU or product name...",
+      "closeFilters": "Close Filters"
+    },
+    "statuses": {
+      "OPEN": "Open",
+      "ACKNOWLEDGED": "Acknowledged",
+      "RESOLVED": "Resolved"
+    },
+    "manual": {
+      "title": "Create Manual Alert",
+      "description": "Open a single alert for a specific variant.",
+      "selectWarehouse": "Select Warehouse",
+      "selectVariant": "Select Variant",
+      "notePlaceholder": "Note (optional)",
+      "createAlert": "Create Alert",
+      "creating": "Creating..."
+    },
+    "register": {
+      "title": "Alert Register",
+      "description": "Track open, acknowledged, and resolved alerts."
+    },
     "table": {
       "warehouse": "Warehouse",
       "variant": "Variant",
-      "rule": "Rule",
+      "onHand": "On hand",
+      "threshold": "Threshold",
+      "suggested": "Suggested",
       "status": "Status",
-      "action": "Action"
+      "updateStatus": "Update Status"
+    },
+    "labels": {
+      "variant": "Variant",
+      "note": "Note"
+    },
+    "loading": "Loading reorder alerts...",
+    "empty": "No alerts found.",
+    "forbidden": {
+      "title": "Forbidden",
+      "description": "You do not have permission to access stock alerts."
+    },
+    "errors": {
+      "loadWarehouses": "Failed to load warehouses",
+      "loadVariants": "Failed to load variants",
+      "loadData": "Failed to load data",
+      "loadAlerts": "Failed to load alerts",
+      "warehouseVariantRequired": "Warehouse and variant are required.",
+      "createAlert": "Failed to create alert",
+      "updateAlert": "Failed to update alert",
+      "scanAlerts": "Failed to scan alerts"
+    },
+    "toasts": {
+      "alertCreated": "Alert created",
+      "alertUpdated": "Alert updated",
+      "scanResult": "Created {count} alert(s)."
     }
   },
-  "suggestionsCard": {
-    "title": "Planning Suggestions",
-    "description": "Triggered rules below reorder point appear here.",
-    "requisitionNotePlaceholder": "Requisition note",
-    "createRequisition": "Create Requisition",
-    "createTransfer": "Create Transfer",
-    "createTransferDraft": "Create Transfer Draft",
-    "empty": "No triggered replenishment suggestions.",
-    "available": "Available",
-    "reorderPoint": "Reorder Point",
-    "shortage": "Shortage",
-    "reserved": "Reserved",
-    "transfer": "Transfer",
-    "purchase": "Purchase",
-    "leadTime": "Lead Time",
-    "availableLine": "Available {available}, RP {rp}",
-    "shortageReservedLine": "Shortage {shortage} | Reserved {reserved}",
-    "transferPurchaseLine": "Transfer {transfer} | Purchase {purchase}",
-    "sourceLine": "Source: {code} ({qty})",
-    "leadTimeDays": "{days} days",
-    "table": {
-      "item": "Item",
-      "signal": "Signal",
-      "recommendation": "Recommendation",
-      "leadTime": "Lead Time",
-      "action": "Action"
-    }
-  },
-  "recommendedActions": {
-    "NONE": "NONE",
-    "PURCHASE": "PURCHASE",
-    "TRANSFER": "TRANSFER",
-    "HYBRID": "HYBRID"
-  },
-  "labels": {
-    "na": "N/A"
-  },
-  "transferNoteDefault": "Generated for {product} ({sku}) from replenishment planning.",
-  "loading": "Loading replenishment data...",
-  "empty": "No replenishment signals found.",
-  "forbidden": {
-    "title": "Forbidden",
-    "description": "You do not have permission to access replenishment planning."
-  },
-  "errors": {
-    "loadWarehouses": "Failed to load warehouses",
-    "loadVariants": "Failed to load variants",
-    "loadRules": "Failed to load replenishment rules",
-    "loadSuggestions": "Failed to load replenishment suggestions",
-    "loadData": "Failed to load replenishment planning data",
-    "warehouseVariantRequired": "Warehouse and variant are required",
-    "saveRule": "Failed to save replenishment rule",
-    "selectPurchaseSuggestion": "Select at least one purchase suggestion",
-    "sameWarehouseRequired": "Selected suggestions must belong to the same warehouse",
-    "createRequisition": "Failed to create replenishment requisition",
-    "noTransferableQty": "This suggestion does not have a transferable quantity",
-    "createTransfer": "Failed to create transfer draft"
-  },
-  "toasts": {
-    "ruleSaved": "Replenishment rule saved",
-    "requisitionCreated": "Purchase requisition {number} created from planning",
-    "transferCreated": "Transfer draft {number} created from planning"
-  }
-},
-  "AdminReorderAlerts": {
-  "header": {
-    "title": "Reorder Alerts",
-    "description": "Review low stock signals and manage replenishment notifications."
-  },
-  "actions": {
-    "newAlert": "New Alert",
-    "refresh": "Refresh",
-    "edit": "Edit",
-    "scanStock": "Scan Stock"
-  },
-  "stats": {
-    "total": { "label": "Total", "hint": "Total alerts" },
-    "active": { "label": "Active", "hint": "Active alerts" },
-    "triggered": { "label": "Triggered", "hint": "Triggered alerts" }
-  },
-  "filters": {
-    "title": "Filters",
-    "description": "Filter alerts by warehouse, status, or SKU.",
-    "warehouse": "Warehouse",
-    "allWarehouses": "All warehouses",
-    "status": "Status",
-    "all": "All",
-    "search": "Search",
-    "searchPlaceholder": "SKU or product name...",
-    "closeFilters": "Close Filters"
-  },
-  "statuses": {
-    "OPEN": "Open",
-    "ACKNOWLEDGED": "Acknowledged",
-    "RESOLVED": "Resolved"
-  },
-  "manual": {
-    "title": "Create Manual Alert",
-    "description": "Open a single alert for a specific variant.",
-    "selectWarehouse": "Select Warehouse",
-    "selectVariant": "Select Variant",
-    "notePlaceholder": "Note (optional)",
-    "createAlert": "Create Alert",
-    "creating": "Creating..."
-  },
-  "register": {
-    "title": "Alert Register",
-    "description": "Track open, acknowledged, and resolved alerts."
-  },
-  "table": {
-    "warehouse": "Warehouse",
-    "variant": "Variant",
-    "onHand": "On hand",
-    "threshold": "Threshold",
-    "suggested": "Suggested",
-    "status": "Status",
-    "updateStatus": "Update Status"
-  },
-  "labels": {
-    "variant": "Variant",
-    "note": "Note"
-  },
-  "loading": "Loading reorder alerts...",
-  "empty": "No alerts found.",
-  "forbidden": {
-    "title": "Forbidden",
-    "description": "You do not have permission to access stock alerts."
-  },
-  "errors": {
-    "loadWarehouses": "Failed to load warehouses",
-    "loadVariants": "Failed to load variants",
-    "loadData": "Failed to load data",
-    "loadAlerts": "Failed to load alerts",
-    "warehouseVariantRequired": "Warehouse and variant are required.",
-    "createAlert": "Failed to create alert",
-    "updateAlert": "Failed to update alert",
-    "scanAlerts": "Failed to scan alerts"
-  },
-  "toasts": {
-    "alertCreated": "Alert created",
-    "alertUpdated": "Alert updated",
-    "scanResult": "Created {count} alert(s)."
-  }
-},
   "AdminStockReports": {
     "header": {
       "title": "Stock Reports",
@@ -5904,8 +6444,14 @@
       "edit": "Edit"
     },
     "stats": {
-      "total": { "label": "Total", "hint": "Total locations" },
-      "active": { "label": "Active", "hint": "Active locations" }
+      "total": {
+        "label": "Total",
+        "hint": "Total locations"
+      },
+      "active": {
+        "label": "Active",
+        "hint": "Active locations"
+      }
     },
     "filters": {
       "warehouse": "Warehouse",
@@ -5936,9 +6482,18 @@
       "cancel": "Cancel"
     },
     "stats": {
-      "invoices": { "label": "Invoices", "hint": "Supplier invoice register" },
-      "receivedPos": { "label": "Received POs", "hint": "POs with GRN quantities" },
-      "selectedPoInvoices": { "label": "Selected PO Invoices", "emptyHint": "No PO selected" },
+      "invoices": {
+        "label": "Invoices",
+        "hint": "Supplier invoice register"
+      },
+      "receivedPos": {
+        "label": "Received POs",
+        "hint": "POs with GRN quantities"
+      },
+      "selectedPoInvoices": {
+        "label": "Selected PO Invoices",
+        "emptyHint": "No PO selected"
+      },
       "landedCost": {
         "label": "Landed Cost",
         "includedHint": "Included in other charges",
@@ -6188,10 +6743,22 @@
       "openDetail": "Open Detail"
     },
     "stats": {
-      "total": { "label": "Total", "hint": "Total matches" },
-      "matched": { "label": "Matched", "hint": "Successfully matched" },
-      "variance": { "label": "Variance", "hint": "With variance" },
-      "pending": { "label": "Pending", "hint": "Pending matching" }
+      "total": {
+        "label": "Total",
+        "hint": "Total matches"
+      },
+      "matched": {
+        "label": "Matched",
+        "hint": "Successfully matched"
+      },
+      "variance": {
+        "label": "Variance",
+        "hint": "With variance"
+      },
+      "pending": {
+        "label": "Pending",
+        "hint": "Pending matching"
+      }
     },
     "filters": {
       "searchPlaceholder": "Search PO, GRN, invoice...",
@@ -6449,9 +7016,18 @@
       "processing": "Processing..."
     },
     "stats": {
-      "pending": { "label": "Pending", "hint": "Pending approvals" },
-      "approved": { "label": "Approved", "hint": "Approved vendors" },
-      "rejected": { "label": "Rejected", "hint": "Rejected vendors" }
+      "pending": {
+        "label": "Pending",
+        "hint": "Pending approvals"
+      },
+      "approved": {
+        "label": "Approved",
+        "hint": "Approved vendors"
+      },
+      "rejected": {
+        "label": "Rejected",
+        "hint": "Rejected vendors"
+      }
     },
     "filters": {
       "search": "Search",
@@ -6485,10 +7061,23 @@
       "DOCUMENT_UPDATE": "Document Update",
       "ANNUAL_RENEWAL": "Annual Renewal"
     },
-    "statuses": { "PENDING": "Pending", "APPROVED": "Approved", "REJECTED": "Rejected" },
-    "pagination": { "previous": "Previous page", "next": "Next page" },
-    "errors": { "load": "Failed to load vendor approvals.", "review": "Failed to review request." },
-    "success": { "approved": "Request approved.", "rejected": "Request rejected." },
+    "statuses": {
+      "PENDING": "Pending",
+      "APPROVED": "Approved",
+      "REJECTED": "Rejected"
+    },
+    "pagination": {
+      "previous": "Previous page",
+      "next": "Next page"
+    },
+    "errors": {
+      "load": "Failed to load vendor approvals.",
+      "review": "Failed to review request."
+    },
+    "success": {
+      "approved": "Request approved.",
+      "rejected": "Request rejected."
+    },
     "loading": "Loading vendor approvals...",
     "empty": "No requests found.",
     "emptyFiltered": "Try adjusting your filters.",
@@ -6508,9 +7097,18 @@
       "creating": "Creating..."
     },
     "stats": {
-      "total": { "label": "Total", "hint": "Total feedback" },
-      "positive": { "label": "Positive", "hint": "Positive feedback" },
-      "negative": { "label": "Negative", "hint": "Negative feedback" }
+      "total": {
+        "label": "Total",
+        "hint": "Total feedback"
+      },
+      "positive": {
+        "label": "Positive",
+        "hint": "Positive feedback"
+      },
+      "negative": {
+        "label": "Negative",
+        "hint": "Negative feedback"
+      }
     },
     "filters": {
       "supplier": "Supplier",
@@ -6521,16 +7119,64 @@
       "toggle": "Toggle filters",
       "close": "Close Filters"
     },
-    "modal": { "title": "Create Vendor Feedback", "description": "Capture service quality and vendor performance feedback from operations or clients." },
-    "register": { "title": "Feedback Register" },
-    "fields": {
-      "supplierRequired": "Supplier *", "selectSupplier": "Select supplier", "sourceType": "Source Type", "sourceReference": "Source Reference", "sourceReferencePlaceholder": "PO / WO / Ticket reference", "clientName": "Client Name", "clientNamePlaceholder": "Client or department name", "clientEmail": "Client Email", "clientEmailPlaceholder": "client@example.com", "ratings": "Ratings (1-5)", "overall": "Overall", "serviceQuality": "Service Quality", "delivery": "Delivery", "compliance": "Compliance", "comment": "Comment", "commentPlaceholder": "Detailed feedback about vendor performance, strengths, and areas for improvement..."
+    "modal": {
+      "title": "Create Vendor Feedback",
+      "description": "Capture service quality and vendor performance feedback from operations or clients."
     },
-    "sourceTypes": { "INTERNAL": "Internal Team", "CLIENT": "Client Feedback", "VENDOR_SELF": "Vendor Self-Assessment" },
-    "common": { "supplier": "Supplier", "rating": "Rating", "source": "Source", "client": "Client", "details": "Details", "date": "Date", "codeValue": "Code: {code}", "reference": "Reference:", "referenceValue": "Ref: {reference}", "byValue": "By: {creator}", "noComment": "No comment", "serviceShort": "S", "deliveryShort": "D", "complianceShort": "C" },
-    "pagination": { "previous": "Previous page", "next": "Next page" },
-    "errors": { "load": "Failed to load supplier feedback.", "create": "Failed to create feedback.", "supplierRequired": "Please select a supplier." },
-    "success": { "created": "Supplier feedback created successfully." },
+    "register": {
+      "title": "Feedback Register"
+    },
+    "fields": {
+      "supplierRequired": "Supplier *",
+      "selectSupplier": "Select supplier",
+      "sourceType": "Source Type",
+      "sourceReference": "Source Reference",
+      "sourceReferencePlaceholder": "PO / WO / Ticket reference",
+      "clientName": "Client Name",
+      "clientNamePlaceholder": "Client or department name",
+      "clientEmail": "Client Email",
+      "clientEmailPlaceholder": "client@example.com",
+      "ratings": "Ratings (1-5)",
+      "overall": "Overall",
+      "serviceQuality": "Service Quality",
+      "delivery": "Delivery",
+      "compliance": "Compliance",
+      "comment": "Comment",
+      "commentPlaceholder": "Detailed feedback about vendor performance, strengths, and areas for improvement..."
+    },
+    "sourceTypes": {
+      "INTERNAL": "Internal Team",
+      "CLIENT": "Client Feedback",
+      "VENDOR_SELF": "Vendor Self-Assessment"
+    },
+    "common": {
+      "supplier": "Supplier",
+      "rating": "Rating",
+      "source": "Source",
+      "client": "Client",
+      "details": "Details",
+      "date": "Date",
+      "codeValue": "Code: {code}",
+      "reference": "Reference:",
+      "referenceValue": "Ref: {reference}",
+      "byValue": "By: {creator}",
+      "noComment": "No comment",
+      "serviceShort": "S",
+      "deliveryShort": "D",
+      "complianceShort": "C"
+    },
+    "pagination": {
+      "previous": "Previous page",
+      "next": "Next page"
+    },
+    "errors": {
+      "load": "Failed to load supplier feedback.",
+      "create": "Failed to create feedback.",
+      "supplierRequired": "Please select a supplier."
+    },
+    "success": {
+      "created": "Supplier feedback created successfully."
+    },
     "loading": "Loading vendor feedback...",
     "empty": "No feedback records found.",
     "emptyHint": "Select Add Feedback to create your first vendor feedback."
@@ -6552,19 +7198,91 @@
     "filters": {
       "supplier": "Supplier",
       "timeRange": "Time Range",
-      "label": "Filters", "toggle": "Toggle filters", "searchPlaceholder": "Search supplier name, code, or email...", "mobileSearchPlaceholder": "Search...", "allBands": "All bands", "close": "Close Filters"
+      "label": "Filters",
+      "toggle": "Toggle filters",
+      "searchPlaceholder": "Search supplier name, code, or email...",
+      "mobileSearchPlaceholder": "Search...",
+      "allBands": "All bands",
+      "close": "Close Filters"
     },
-    "access": { "denied": "You do not have access to supplier intelligence." },
-    "windows": { "days90": "Last 90 days", "days180": "Last 180 days", "days365": "Last 365 days", "days730": "Last 730 days" },
-    "overview": { "suppliersTracked": "Suppliers Tracked", "trackedPos": "Tracked POs", "observedLeadTime": "Observed Lead Time", "averageOnTime": "Avg On-Time Rate", "openLatePos": "Open Late POs" },
-    "scorecard": { "title": "Supplier Lead-Time Scorecard", "description": "Recommended lead time uses real receipt history and keeps the configured baseline when safer." },
-    "bands": { "STABLE": "Stable", "WATCH": "Watch", "AT_RISK": "At Risk", "INSUFFICIENT_DATA": "Insufficient Data" },
-    "common": { "supplier": "Supplier", "configLt": "Config LT", "observedLt": "Observed LT", "recommendedLt": "Recommended LT", "onTime": "On-Time", "openLate": "Open Late", "partialRate": "Partial Rate", "band": "Band", "codeValue": "Code: {code}", "daysSuffix": " days" },
-    "detail": { "summary": "Configured lead time {configured} • Recommended {recommended} • Last receipt {receipt}", "completedPos": "Completed POs", "averageFirstReceipt": "Avg First Receipt", "averageFinalReceipt": "Avg Final Receipt", "averageDelay": "Avg Delay", "fillRate": "Fill Rate", "suggestedBuffer": "Suggested Buffer" },
-    "orders": { "title": "Recent Orders", "po": "PO", "warehouse": "Warehouse", "status": "Status", "due": "Due", "leadTime": "Lead Time", "delay": "Delay", "openLate": "Open late", "delayed": "Delayed", "onTime": "On time", "empty": "No recent orders found for this supplier." },
-    "orderStatuses": { "DRAFT": "Draft", "SUBMITTED": "Submitted", "MANAGER_APPROVED": "Manager Approved", "COMMITTEE_APPROVED": "Committee Approved", "APPROVED": "Approved", "PARTIALLY_RECEIVED": "Partially Received", "RECEIVED": "Received", "REJECTED": "Rejected", "CANCELLED": "Cancelled" },
-    "pagination": { "previous": "Previous page", "next": "Next page" },
-    "errors": { "load": "Failed to load supplier intelligence data." },
+    "access": {
+      "denied": "You do not have access to supplier intelligence."
+    },
+    "windows": {
+      "days90": "Last 90 days",
+      "days180": "Last 180 days",
+      "days365": "Last 365 days",
+      "days730": "Last 730 days"
+    },
+    "overview": {
+      "suppliersTracked": "Suppliers Tracked",
+      "trackedPos": "Tracked POs",
+      "observedLeadTime": "Observed Lead Time",
+      "averageOnTime": "Avg On-Time Rate",
+      "openLatePos": "Open Late POs"
+    },
+    "scorecard": {
+      "title": "Supplier Lead-Time Scorecard",
+      "description": "Recommended lead time uses real receipt history and keeps the configured baseline when safer."
+    },
+    "bands": {
+      "STABLE": "Stable",
+      "WATCH": "Watch",
+      "AT_RISK": "At Risk",
+      "INSUFFICIENT_DATA": "Insufficient Data"
+    },
+    "common": {
+      "supplier": "Supplier",
+      "configLt": "Config LT",
+      "observedLt": "Observed LT",
+      "recommendedLt": "Recommended LT",
+      "onTime": "On-Time",
+      "openLate": "Open Late",
+      "partialRate": "Partial Rate",
+      "band": "Band",
+      "codeValue": "Code: {code}",
+      "daysSuffix": " days"
+    },
+    "detail": {
+      "summary": "Configured lead time {configured} • Recommended {recommended} • Last receipt {receipt}",
+      "completedPos": "Completed POs",
+      "averageFirstReceipt": "Avg First Receipt",
+      "averageFinalReceipt": "Avg Final Receipt",
+      "averageDelay": "Avg Delay",
+      "fillRate": "Fill Rate",
+      "suggestedBuffer": "Suggested Buffer"
+    },
+    "orders": {
+      "title": "Recent Orders",
+      "po": "PO",
+      "warehouse": "Warehouse",
+      "status": "Status",
+      "due": "Due",
+      "leadTime": "Lead Time",
+      "delay": "Delay",
+      "openLate": "Open late",
+      "delayed": "Delayed",
+      "onTime": "On time",
+      "empty": "No recent orders found for this supplier."
+    },
+    "orderStatuses": {
+      "DRAFT": "Draft",
+      "SUBMITTED": "Submitted",
+      "MANAGER_APPROVED": "Manager Approved",
+      "COMMITTEE_APPROVED": "Committee Approved",
+      "APPROVED": "Approved",
+      "PARTIALLY_RECEIVED": "Partially Received",
+      "RECEIVED": "Received",
+      "REJECTED": "Rejected",
+      "CANCELLED": "Cancelled"
+    },
+    "pagination": {
+      "previous": "Previous page",
+      "next": "Next page"
+    },
+    "errors": {
+      "load": "Failed to load supplier intelligence data."
+    },
     "loading": "Loading supplier intelligence...",
     "empty": "No supplier intelligence records found.",
     "emptyHint": "Try adjusting your filters or window period."
@@ -6578,12 +7296,27 @@
       "invite": "Invite Supplier",
       "refresh": "Refresh",
       "revoke": "Revoke Access",
-      "add": "Add Access", "cancel": "Cancel", "create": "Create Access", "update": "Update Access", "saving": "Saving...", "edit": "Edit", "editAccess": "Edit Access"
+      "add": "Add Access",
+      "cancel": "Cancel",
+      "create": "Create Access",
+      "update": "Update Access",
+      "saving": "Saving...",
+      "edit": "Edit",
+      "editAccess": "Edit Access"
     },
     "stats": {
-      "total": { "label": "Total", "hint": "Total suppliers" },
-      "active": { "label": "Active", "hint": "Active portal users" },
-      "pending": { "label": "Pending", "hint": "Pending invitations" }
+      "total": {
+        "label": "Total",
+        "hint": "Total suppliers"
+      },
+      "active": {
+        "label": "Active",
+        "hint": "Active portal users"
+      },
+      "pending": {
+        "label": "Pending",
+        "hint": "Pending invitations"
+      }
     },
     "filters": {
       "searchPlaceholder": "Search supplier name, email...",
@@ -6591,16 +7324,76 @@
       "allStatuses": "All statuses",
       "toggle": "Toggle search filters"
     },
-    "modal": { "createTitle": "Create Supplier Portal Access", "editTitle": "Edit Supplier Portal Access", "createDescription": "Assign a user to a supplier and configure portal access settings.", "editDescription": "Update access permissions and security settings for this supplier user." },
-    "registry": { "title": "Access Registry" },
-    "fields": { "userRequired": "User *", "selectUser": "Select user", "supplierRequired": "Supplier *", "selectSupplier": "Select supplier", "twoFactorPolicy": "2FA Policy", "noteOptional": "Note (Optional)", "notePlaceholder": "Add governance notes, reason for access, or special conditions..." },
-    "statuses": { "ACTIVE": "Active", "SUSPENDED": "Suspended", "REVOKED": "Revoked", "INACTIVE": "Inactive" },
-    "statusOptions": { "ACTIVE": "ACTIVE - Full access", "SUSPENDED": "SUSPENDED - Temporarily blocked", "REVOKED": "REVOKED - Permanently removed" },
-    "twoFactor": { "DISABLED": "Disabled (Optional only)", "EMAIL_OTP": "Required: Email OTP", "TOTP": "Required: TOTP App", "AUTH_APP": "Required: Authenticator App", "requiredValue": "Required ({method})", "optional": "Optional", "mobileRequiredValue": "2FA Required ({method})", "mobileOptional": "2FA Optional" },
-    "common": { "user": "User", "supplier": "Supplier", "status": "Status", "twoFactor": "2FA", "lastUpdated": "Last Updated", "actions": "Actions", "unnamed": "Unnamed", "unnamedUser": "Unnamed user", "noEmail": "No email", "system": "System", "roleValue": "Role: {role}", "codeValue": "Code: {code}", "byValue": "By: {creator}", "noteValue": "Note: {note}", "updatedValue": "Updated: {date}", "createdByValue": "Created by: {creator}" },
-    "pagination": { "previous": "Previous page", "next": "Next page" },
-    "errors": { "load": "Failed to load supplier portal access.", "required": "User and supplier are required.", "save": "Failed to save supplier portal access." },
-    "success": { "created": "Access created.", "updated": "Access updated." },
+    "modal": {
+      "createTitle": "Create Supplier Portal Access",
+      "editTitle": "Edit Supplier Portal Access",
+      "createDescription": "Assign a user to a supplier and configure portal access settings.",
+      "editDescription": "Update access permissions and security settings for this supplier user."
+    },
+    "registry": {
+      "title": "Access Registry"
+    },
+    "fields": {
+      "userRequired": "User *",
+      "selectUser": "Select user",
+      "supplierRequired": "Supplier *",
+      "selectSupplier": "Select supplier",
+      "twoFactorPolicy": "2FA Policy",
+      "noteOptional": "Note (Optional)",
+      "notePlaceholder": "Add governance notes, reason for access, or special conditions..."
+    },
+    "statuses": {
+      "ACTIVE": "Active",
+      "SUSPENDED": "Suspended",
+      "REVOKED": "Revoked",
+      "INACTIVE": "Inactive"
+    },
+    "statusOptions": {
+      "ACTIVE": "ACTIVE - Full access",
+      "SUSPENDED": "SUSPENDED - Temporarily blocked",
+      "REVOKED": "REVOKED - Permanently removed"
+    },
+    "twoFactor": {
+      "DISABLED": "Disabled (Optional only)",
+      "EMAIL_OTP": "Required: Email OTP",
+      "TOTP": "Required: TOTP App",
+      "AUTH_APP": "Required: Authenticator App",
+      "requiredValue": "Required ({method})",
+      "optional": "Optional",
+      "mobileRequiredValue": "2FA Required ({method})",
+      "mobileOptional": "2FA Optional"
+    },
+    "common": {
+      "user": "User",
+      "supplier": "Supplier",
+      "status": "Status",
+      "twoFactor": "2FA",
+      "lastUpdated": "Last Updated",
+      "actions": "Actions",
+      "unnamed": "Unnamed",
+      "unnamedUser": "Unnamed user",
+      "noEmail": "No email",
+      "system": "System",
+      "roleValue": "Role: {role}",
+      "codeValue": "Code: {code}",
+      "byValue": "By: {creator}",
+      "noteValue": "Note: {note}",
+      "updatedValue": "Updated: {date}",
+      "createdByValue": "Created by: {creator}"
+    },
+    "pagination": {
+      "previous": "Previous page",
+      "next": "Next page"
+    },
+    "errors": {
+      "load": "Failed to load supplier portal access.",
+      "required": "User and supplier are required.",
+      "save": "Failed to save supplier portal access."
+    },
+    "success": {
+      "created": "Access created.",
+      "updated": "Access updated."
+    },
     "loading": "Loading supplier portal access...",
     "empty": "No supplier portal assignments found.",
     "emptyHint": "Select Add Access to create your first assignment."
@@ -7293,27 +8086,65 @@
       "inThisStage": "In This Stage",
       "next": "Next",
       "stages": {
-        "onboard": { "title": "Onboard And Verify" },
-        "fund": { "title": "Fund And Allocate" },
-        "profit": { "title": "Calculate And Govern" },
-        "settle": { "title": "Settle And Communicate" }
+        "onboard": {
+          "title": "Onboard And Verify"
+        },
+        "fund": {
+          "title": "Fund And Allocate"
+        },
+        "profit": {
+          "title": "Calculate And Govern"
+        },
+        "settle": {
+          "title": "Settle And Communicate"
+        }
       },
       "steps": {
-        "overview": { "title": "Investor Workspace" },
-        "tasks": { "title": "My Tasks" },
-        "exceptions": { "title": "Exceptions" },
-        "notifications": { "title": "Notifications" },
-        "registry": { "title": "Investor Registry" },
-        "documents": { "title": "Documents" },
-        "profile-requests": { "title": "Profile Requests" },
-        "portal-access": { "title": "Portal Access" },
-        "ledger": { "title": "Capital Ledger" },
-        "allocations": { "title": "Allocations" },
-        "profit-runs": { "title": "Profit Runs" },
-        "payouts": { "title": "Payouts" },
-        "withdrawals": { "title": "Withdrawals" },
-        "statements": { "title": "Statements" },
-        "statement-schedules": { "title": "Statement Schedules" }
+        "overview": {
+          "title": "Investor Workspace"
+        },
+        "tasks": {
+          "title": "My Tasks"
+        },
+        "exceptions": {
+          "title": "Exceptions"
+        },
+        "notifications": {
+          "title": "Notifications"
+        },
+        "registry": {
+          "title": "Investor Registry"
+        },
+        "documents": {
+          "title": "Documents"
+        },
+        "profile-requests": {
+          "title": "Profile Requests"
+        },
+        "portal-access": {
+          "title": "Portal Access"
+        },
+        "ledger": {
+          "title": "Capital Ledger"
+        },
+        "allocations": {
+          "title": "Allocations"
+        },
+        "profit-runs": {
+          "title": "Profit Runs"
+        },
+        "payouts": {
+          "title": "Payouts"
+        },
+        "withdrawals": {
+          "title": "Withdrawals"
+        },
+        "statements": {
+          "title": "Statements"
+        },
+        "statement-schedules": {
+          "title": "Statement Schedules"
+        }
       },
       "sections": {
         "overview": {
@@ -7588,7 +8419,10 @@
         }
       },
       "ledger": {
-        "tabs": { "post": "Post Transaction", "history": "Transaction History" },
+        "tabs": {
+          "post": "Post Transaction",
+          "history": "Transaction History"
+        },
         "form": {
           "title": "Post Transaction",
           "description": "Record capital transactions for investors.",
@@ -7608,7 +8442,10 @@
         }
       },
       "allocations": {
-        "tabs": { "create": "Create Allocation", "view": "View Allocations" },
+        "tabs": {
+          "create": "Create Allocation",
+          "view": "View Allocations"
+        },
         "form": {
           "title": "Create Allocation",
           "description": "Allocate investors to product variants with participation terms.",
@@ -7688,7 +8525,10 @@
         }
       },
       "payouts": {
-        "tabs": { "create": "Create Payout", "register": "Payout Register" },
+        "tabs": {
+          "create": "Create Payout",
+          "register": "Payout Register"
+        },
         "form": {
           "title": "Create Payout Draft",
           "description": "Generate payout drafts for investors based on profit distribution.",
@@ -7736,8 +8576,13 @@
       "statements": {
         "title": "Investor Statements",
         "description": "Review investor statement scope, preview ledger and payout activity, then export the selected range.",
-        "filters": { "investorScope": "Investor Scope" },
-        "actions": { "exportCsv": "Export CSV", "exportPdf": "Export PDF" },
+        "filters": {
+          "investorScope": "Investor Scope"
+        },
+        "actions": {
+          "exportCsv": "Export CSV",
+          "exportPdf": "Export PDF"
+        },
         "summary": {
           "investors": "Investors In Scope",
           "transactions": "Transactions",
@@ -7921,11 +8766,32 @@
         "yes": "Yes"
       },
       "enums": {
-        "accessStatuses": { "ACTIVE": "Active", "SUSPENDED": "Suspended", "REVOKED": "Revoked" },
-        "allocationStatuses": { "ACTIVE": "Active", "INACTIVE": "Inactive", "SUSPENDED": "Suspended", "CLOSED": "Closed" },
-        "allocationBases": { "NET_REVENUE": "Net Revenue", "NET_UNITS": "Net Units" },
-        "directions": { "CREDIT": "Credit", "DEBIT": "Debit" },
-        "documentStatuses": { "PENDING": "Pending", "UNDER_REVIEW": "Under Review", "VERIFIED": "Verified", "REJECTED": "Rejected", "EXPIRED": "Expired" },
+        "accessStatuses": {
+          "ACTIVE": "Active",
+          "SUSPENDED": "Suspended",
+          "REVOKED": "Revoked"
+        },
+        "allocationStatuses": {
+          "ACTIVE": "Active",
+          "INACTIVE": "Inactive",
+          "SUSPENDED": "Suspended",
+          "CLOSED": "Closed"
+        },
+        "allocationBases": {
+          "NET_REVENUE": "Net Revenue",
+          "NET_UNITS": "Net Units"
+        },
+        "directions": {
+          "CREDIT": "Credit",
+          "DEBIT": "Debit"
+        },
+        "documentStatuses": {
+          "PENDING": "Pending",
+          "UNDER_REVIEW": "Under Review",
+          "VERIFIED": "Verified",
+          "REJECTED": "Rejected",
+          "EXPIRED": "Expired"
+        },
         "documentTypes": {
           "IDENTITY_PROOF": "Identity Proof",
           "TAX_IDENTIFICATION": "Tax Identification",
@@ -7934,16 +8800,62 @@
           "INVESTMENT_AGREEMENT": "Investment Agreement",
           "SOURCE_OF_FUNDS": "Source of Funds"
         },
-        "investorStatuses": { "ACTIVE": "Active", "INACTIVE": "Inactive", "SUSPENDED": "Suspended" },
-        "kycStatuses": { "PENDING": "Pending", "UNDER_REVIEW": "Under Review", "VERIFIED": "Verified", "REJECTED": "Rejected" },
-        "paymentMethods": { "BANK_TRANSFER": "Bank Transfer", "MOBILE_BANKING": "Mobile Banking", "CHEQUE": "Cheque", "CASH": "Cash" },
-        "payoutStatuses": { "PENDING_APPROVAL": "Pending Approval", "APPROVED": "Approved", "REJECTED": "Rejected", "PAID": "Paid", "VOID": "Void" },
-        "profitStatuses": { "PENDING_APPROVAL": "Pending Approval", "APPROVED": "Approved", "REJECTED": "Rejected", "POSTED": "Posted" },
-        "requestStatuses": { "PENDING": "Pending", "APPROVED": "Approved", "REJECTED": "Rejected" },
-        "withdrawalStatuses": { "REQUESTED": "Requested", "APPROVED": "Approved", "REJECTED": "Rejected", "SETTLED": "Settled", "CANCELLED": "Cancelled" },
-        "scheduleStatuses": { "ACTIVE": "Active", "PAUSED": "Paused" },
-        "frequencies": { "WEEKLY": "Weekly", "MONTHLY": "Monthly", "QUARTERLY": "Quarterly" },
-        "deliveryFormats": { "CSV": "CSV", "PDF": "PDF", "BOTH": "CSV and PDF" },
+        "investorStatuses": {
+          "ACTIVE": "Active",
+          "INACTIVE": "Inactive",
+          "SUSPENDED": "Suspended"
+        },
+        "kycStatuses": {
+          "PENDING": "Pending",
+          "UNDER_REVIEW": "Under Review",
+          "VERIFIED": "Verified",
+          "REJECTED": "Rejected"
+        },
+        "paymentMethods": {
+          "BANK_TRANSFER": "Bank Transfer",
+          "MOBILE_BANKING": "Mobile Banking",
+          "CHEQUE": "Cheque",
+          "CASH": "Cash"
+        },
+        "payoutStatuses": {
+          "PENDING_APPROVAL": "Pending Approval",
+          "APPROVED": "Approved",
+          "REJECTED": "Rejected",
+          "PAID": "Paid",
+          "VOID": "Void"
+        },
+        "profitStatuses": {
+          "PENDING_APPROVAL": "Pending Approval",
+          "APPROVED": "Approved",
+          "REJECTED": "Rejected",
+          "POSTED": "Posted"
+        },
+        "requestStatuses": {
+          "PENDING": "Pending",
+          "APPROVED": "Approved",
+          "REJECTED": "Rejected"
+        },
+        "withdrawalStatuses": {
+          "REQUESTED": "Requested",
+          "APPROVED": "Approved",
+          "REJECTED": "Rejected",
+          "SETTLED": "Settled",
+          "CANCELLED": "Cancelled"
+        },
+        "scheduleStatuses": {
+          "ACTIVE": "Active",
+          "PAUSED": "Paused"
+        },
+        "frequencies": {
+          "WEEKLY": "Weekly",
+          "MONTHLY": "Monthly",
+          "QUARTERLY": "Quarterly"
+        },
+        "deliveryFormats": {
+          "CSV": "CSV",
+          "PDF": "PDF",
+          "BOTH": "CSV and PDF"
+        },
         "transactionTypes": {
           "CAPITAL_COMMITMENT": "Capital Commitment",
           "CAPITAL_CONTRIBUTION": "Capital Contribution",
@@ -7953,7 +8865,14 @@
           "WITHDRAWAL": "Withdrawal",
           "ADJUSTMENT": "Adjustment"
         },
-        "actions": { "approve": "Approve", "reject": "Reject", "hold": "Hold", "release": "Release", "pay": "Mark Paid", "void": "Void" },
+        "actions": {
+          "approve": "Approve",
+          "reject": "Reject",
+          "hold": "Hold",
+          "release": "Release",
+          "pay": "Mark Paid",
+          "void": "Void"
+        },
         "notificationTypes": {
           "PROFILE_REQUEST": "Profile Request",
           "DOCUMENT_REVIEW": "Document Review",
@@ -7964,13 +8883,43 @@
           "SYSTEM": "System"
         },
         "activityActions": {
-          "CREATE": "Created", "UPDATE": "Updated", "APPROVE": "Approved", "REJECT": "Rejected", "VERIFY": "Verified", "REVOKE": "Revoked", "POST": "Posted", "PAY": "Paid", "HOLD": "Held", "RELEASE": "Released", "VOID": "Voided", "DISPATCH": "Dispatched"
+          "CREATE": "Created",
+          "UPDATE": "Updated",
+          "APPROVE": "Approved",
+          "REJECT": "Rejected",
+          "VERIFY": "Verified",
+          "REVOKE": "Revoked",
+          "POST": "Posted",
+          "PAY": "Paid",
+          "HOLD": "Held",
+          "RELEASE": "Released",
+          "VOID": "Voided",
+          "DISPATCH": "Dispatched"
         },
         "activityEntities": {
-          "INVESTOR": "Investor", "DOCUMENT": "Document", "PORTAL_ACCESS": "Portal Access", "PROFILE_REQUEST": "Profile Request", "LEDGER": "Ledger", "ALLOCATION": "Allocation", "PROFIT_RUN": "Profit Run", "PAYOUT": "Payout", "WITHDRAWAL": "Withdrawal", "STATEMENT_SCHEDULE": "Statement Schedule"
+          "INVESTOR": "Investor",
+          "DOCUMENT": "Document",
+          "PORTAL_ACCESS": "Portal Access",
+          "PROFILE_REQUEST": "Profile Request",
+          "LEDGER": "Ledger",
+          "ALLOCATION": "Allocation",
+          "PROFIT_RUN": "Profit Run",
+          "PAYOUT": "Payout",
+          "WITHDRAWAL": "Withdrawal",
+          "STATEMENT_SCHEDULE": "Statement Schedule"
         },
         "profileFields": {
-          "name": "Name", "email": "Email", "phone": "Phone", "legalName": "Legal Name", "taxNumber": "Tax Number", "nationalIdNumber": "National ID", "passportNumber": "Passport Number", "bankName": "Bank Name", "bankAccountName": "Bank Account Name", "bankAccountNumber": "Bank Account Number", "notes": "Notes"
+          "name": "Name",
+          "email": "Email",
+          "phone": "Phone",
+          "legalName": "Legal Name",
+          "taxNumber": "Tax Number",
+          "nationalIdNumber": "National ID",
+          "passportNumber": "Passport Number",
+          "bankName": "Bank Name",
+          "bankAccountName": "Bank Account Name",
+          "bankAccountNumber": "Bank Account Number",
+          "notes": "Notes"
         }
       },
       "errors": {
@@ -8404,37 +9353,112 @@
       },
       "payload": {
         "summary": {
-          "active-investors": { "label": "Active Investors", "hint": "Currently active investor profiles." },
-          "pending-kyc": { "label": "Pending KYC", "hint": "Profiles still under onboarding review." },
-          "open-tasks": { "label": "Open Tasks", "hint": "Actionable investor operations assigned to this workspace." },
-          "exceptions": { "label": "Exceptions", "hint": "Risk items needing follow-up or governance review." }
+          "active-investors": {
+            "label": "Active Investors",
+            "hint": "Currently active investor profiles."
+          },
+          "pending-kyc": {
+            "label": "Pending KYC",
+            "hint": "Profiles still under onboarding review."
+          },
+          "open-tasks": {
+            "label": "Open Tasks",
+            "hint": "Actionable investor operations assigned to this workspace."
+          },
+          "exceptions": {
+            "label": "Exceptions",
+            "hint": "Risk items needing follow-up or governance review."
+          }
         },
         "tasks": {
-          "investor-kyc-review": { "title": "KYC review queue", "description": "Active investors still waiting on KYC review or verification." },
-          "profit-run-approval": { "title": "Profit runs awaiting approval", "description": "Review and approve pending investor profitability runs." },
-          "profit-run-post": { "title": "Approved runs awaiting posting", "description": "Approved investor profit runs still need ledger posting." },
-          "payout-approval": { "title": "Payouts awaiting approval", "description": "Investor payout drafts are waiting for approval decision." },
-          "payout-pay": { "title": "Approved payouts awaiting payment", "description": "Approved investor payouts are ready for payment execution." },
-          "profile-request-review": { "title": "Profile requests awaiting review", "description": "Investor-submitted profile and bank updates are waiting for review." },
-          "statement-schedule-due": { "title": "Scheduled statements due", "description": "Recurring investor statements are due for dispatch." },
-          "portal-access-provisioning": { "title": "Portal access provisioning", "description": "Active investors do not yet have active portal access." }
+          "investor-kyc-review": {
+            "title": "KYC review queue",
+            "description": "Active investors still waiting on KYC review or verification."
+          },
+          "profit-run-approval": {
+            "title": "Profit runs awaiting approval",
+            "description": "Review and approve pending investor profitability runs."
+          },
+          "profit-run-post": {
+            "title": "Approved runs awaiting posting",
+            "description": "Approved investor profit runs still need ledger posting."
+          },
+          "payout-approval": {
+            "title": "Payouts awaiting approval",
+            "description": "Investor payout drafts are waiting for approval decision."
+          },
+          "payout-pay": {
+            "title": "Approved payouts awaiting payment",
+            "description": "Approved investor payouts are ready for payment execution."
+          },
+          "profile-request-review": {
+            "title": "Profile requests awaiting review",
+            "description": "Investor-submitted profile and bank updates are waiting for review."
+          },
+          "statement-schedule-due": {
+            "title": "Scheduled statements due",
+            "description": "Recurring investor statements are due for dispatch."
+          },
+          "portal-access-provisioning": {
+            "title": "Portal access provisioning",
+            "description": "Active investors do not yet have active portal access."
+          }
         },
         "exceptions": {
-          "aged-kyc-review": { "title": "Aged KYC backlog", "description": "KYC review has been open for more than seven days." },
-          "aged-approved-payouts": { "title": "Approved payouts aging", "description": "Approved payouts have not been paid for more than three days." },
-          "posted-without-payout": { "title": "Posted runs without payout draft", "description": "Posted profit runs still have no payout draft created." },
-          "allocation-governance-gap": { "title": "Allocations tied to inactive investors", "description": "Active allocations still point to suspended or inactive investors." },
-          "missing-investor-portal": { "title": "Portal access gap", "description": "Active investors cannot use the investor portal yet." },
-          "overdue-statement-schedules": { "title": "Overdue statement dispatches", "description": "Scheduled investor statements were not dispatched within one day of due time." }
+          "aged-kyc-review": {
+            "title": "Aged KYC backlog",
+            "description": "KYC review has been open for more than seven days."
+          },
+          "aged-approved-payouts": {
+            "title": "Approved payouts aging",
+            "description": "Approved payouts have not been paid for more than three days."
+          },
+          "posted-without-payout": {
+            "title": "Posted runs without payout draft",
+            "description": "Posted profit runs still have no payout draft created."
+          },
+          "allocation-governance-gap": {
+            "title": "Allocations tied to inactive investors",
+            "description": "Active allocations still point to suspended or inactive investors."
+          },
+          "missing-investor-portal": {
+            "title": "Portal access gap",
+            "description": "Active investors cannot use the investor portal yet."
+          },
+          "overdue-statement-schedules": {
+            "title": "Overdue statement dispatches",
+            "description": "Scheduled investor statements were not dispatched within one day of due time."
+          }
         },
         "quickLinks": {
-          "new-investor": { "label": "Investor Registry", "description": "Create or update investor master records and KYC status." },
-          "ledger": { "label": "Capital Ledger", "description": "Post capital contributions, distributions, and adjustments." },
-          "allocations": { "label": "Allocations", "description": "Manage investor participation across product variants." },
-          "profit-runs": { "label": "Profit Runs", "description": "Generate, approve, and post investor profitability runs." },
-          "payouts": { "label": "Payouts", "description": "Approve, pay, or void investor payout batches." },
-          "portal-access": { "label": "Portal Access", "description": "Provision investor self-service access and monitor status." },
-          "statement-schedules": { "label": "Statement Schedules", "description": "Manage recurring investor statement dispatch cadence and due queue." }
+          "new-investor": {
+            "label": "Investor Registry",
+            "description": "Create or update investor master records and KYC status."
+          },
+          "ledger": {
+            "label": "Capital Ledger",
+            "description": "Post capital contributions, distributions, and adjustments."
+          },
+          "allocations": {
+            "label": "Allocations",
+            "description": "Manage investor participation across product variants."
+          },
+          "profit-runs": {
+            "label": "Profit Runs",
+            "description": "Generate, approve, and post investor profitability runs."
+          },
+          "payouts": {
+            "label": "Payouts",
+            "description": "Approve, pay, or void investor payout batches."
+          },
+          "portal-access": {
+            "label": "Portal Access",
+            "description": "Provision investor self-service access and monitor status."
+          },
+          "statement-schedules": {
+            "label": "Statement Schedules",
+            "description": "Manage recurring investor statement dispatch cadence and due queue."
+          }
         }
       },
       "activity": {
@@ -8518,12 +9542,30 @@
         "subcategories": "{name} subcategories"
       },
       "shopActions": {
-        "flashSale": { "label": "Flash Sale", "description": "View active limited-time deals" },
-        "compare": { "label": "Compare", "description": "Compare selected products" },
-        "books": { "label": "Books", "description": "Browse the book collection" },
-        "authors": { "label": "Authors", "description": "Browse books by author" },
-        "publishers": { "label": "Publishers", "description": "Browse books by publisher" },
-        "pcBuilder": { "label": "PC Builder", "description": "Build a compatible custom desktop PC" }
+        "flashSale": {
+          "label": "Flash Sale",
+          "description": "View active limited-time deals"
+        },
+        "compare": {
+          "label": "Compare",
+          "description": "Compare selected products"
+        },
+        "books": {
+          "label": "Books",
+          "description": "Browse the book collection"
+        },
+        "authors": {
+          "label": "Authors",
+          "description": "Browse books by author"
+        },
+        "publishers": {
+          "label": "Publishers",
+          "description": "Browse books by publisher"
+        },
+        "pcBuilder": {
+          "label": "PC Builder",
+          "description": "Build a compatible custom desktop PC"
+        }
       }
     },
     "search": {
@@ -8542,10 +9584,22 @@
     "footer": {
       "logoAlt": "Store logo",
       "features": {
-        "delivery": { "label": "Fast Delivery", "description": "Nationwide delivery options" },
-        "ordering": { "label": "Online Ordering", "description": "Place orders 24/7" },
-        "payment": { "label": "Secure Payment", "description": "Protected payment flow" },
-        "authentic": { "label": "100% Authentic", "description": "Guaranteed genuine products" }
+        "delivery": {
+          "label": "Fast Delivery",
+          "description": "Nationwide delivery options"
+        },
+        "ordering": {
+          "label": "Online Ordering",
+          "description": "Place orders 24/7"
+        },
+        "payment": {
+          "label": "Secure Payment",
+          "description": "Protected payment flow"
+        },
+        "authentic": {
+          "label": "100% Authentic",
+          "description": "Guaranteed genuine products"
+        }
       },
       "brand": {
         "defaultTagline": "Quality products, secure shopping and dependable service",
@@ -8893,7 +9947,12 @@
         "priceDesc": "Price: High to Low",
         "nameAsc": "Name: A–Z"
       },
-      "productTypes": { "physical": "Physical", "digital": "Digital", "service": "Service", "bundle": "Bundle" },
+      "productTypes": {
+        "physical": "Physical",
+        "digital": "Digital",
+        "service": "Service",
+        "bundle": "Bundle"
+      },
       "active": {
         "label": "Active product filters",
         "title": "Active",
@@ -10340,7 +11399,7 @@
         "phone": "Phone",
         "email": "Email",
         "address": "Address",
-        "onlineStore": "Online store",
+        "onlineStore": "Desi Plus",
         "alwaysOpen": "Available 24/7 for browsing and orders"
       },
       "orderHelp": {

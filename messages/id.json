@@ -1038,7 +1038,8 @@
       "unavailable": "Tidak Tersedia",
       "statusHint": "Gunakan tindakan Aktifkan/Nonaktifkan pada kartu produk untuk mengubah ketersediaan.",
       "availableLabel": "Tersedia",
-      "featuredLabel": "Unggulan"
+      "featuredLabel": "Unggulan",
+      "bestSellingLabel": "Terlaris"
     },
     "cartReminder": {
       "title": "Notifikasi pengingat keranjang",

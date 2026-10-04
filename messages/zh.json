@@ -1038,7 +1038,8 @@
       "unavailable": "不可用",
       "statusHint": "使用商品卡片上的启用/停用操作来更改可用状态。",
       "availableLabel": "可用",
-      "featuredLabel": "精选"
+      "featuredLabel": "精选",
+      "bestSellingLabel": "畅销"
     },
     "cartReminder": {
       "title": "购物车提醒通知",

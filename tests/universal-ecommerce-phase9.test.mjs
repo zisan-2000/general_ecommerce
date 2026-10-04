@@ -115,8 +115,8 @@ test("missing legacy runtime settings are repaired without overwriting configure
       storeType: null,
     }),
     {
-      storeName: "Online Store",
-      siteTitle: "Online Store",
+      storeName: "Desi Plus",
+      siteTitle: "Desi Plus",
       currency: "BDT",
       currencyPosition: "BEFORE",
       timezone: "Asia/Dhaka",

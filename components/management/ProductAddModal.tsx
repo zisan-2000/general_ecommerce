@@ -96,6 +96,7 @@ interface ProductForm {
   brandId: string;
   available: boolean;
   featured: boolean;
+  bestSelling: boolean;
   cartReminderHours: string;
   cartReminderMinutes: string;
   image: string;
@@ -203,6 +204,7 @@ const emptyForm: ProductForm = {
   brandId: "",
   available: true,
   featured: false,
+  bestSelling: false,
   cartReminderHours: "",
   cartReminderMinutes: "",
   image: "",
@@ -649,6 +651,7 @@ export default function ProductAddModal({
       brandId: editing.brandId?.toString?.() ?? "",
       available: editing.available ?? true,
       featured: editing.featured ?? false,
+      bestSelling: editing.bestSelling ?? false,
       cartReminderHours:
         cartReminderMinutes > 0
           ? String(Math.floor(cartReminderMinutes / 60))
@@ -1165,6 +1168,7 @@ export default function ProductAddModal({
         serviceLocation: form.serviceLocation || null,
         serviceOnlineLink: form.serviceOnlineLink || null,
         featured: form.featured,
+        bestSelling: form.bestSelling,
         cartReminderMinutes,
         image: form.image || null,
         gallery: form.gallery || [],
@@ -1262,7 +1266,7 @@ export default function ProductAddModal({
                 height={200}
               />
             </div>
-            <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
               <div>
                 <Label>{t("basic.type")}</Label>
                 <select
@@ -2099,6 +2103,19 @@ export default function ProductAddModal({
                   }
                 />
                 <Label>{t("additional.featuredLabel")}</Label>
+              </label>
+              <label className="flex items-center gap-2">
+                <input
+                  type="checkbox"
+                  checked={form.bestSelling}
+                  onChange={(e) =>
+                    setForm((prev) => ({
+                      ...prev,
+                      bestSelling: e.target.checked,
+                    }))
+                  }
+                />
+                <Label>{t("additional.bestSellingLabel")}</Label>
               </label>
             </div>
             <div className="rounded-xl border bg-muted/30 p-4">
