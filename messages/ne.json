@@ -9826,6 +9826,7 @@
         "saveAddressFailed": "ठेगाना सुरक्षित गर्न सकिएन।",
         "emptyCart": "तपाईंको कार्ट खाली छ।",
         "requiredInformation": "सबै आवश्यक जानकारी भर्नुहोस्।",
+        "legalConsentRequired": "अर्डर गर्न नियम तथा सर्तहरू र गोपनीयता नीतिमा सहमति दिनुहोस्।",
         "waitForUpload": "स्क्रिनसट अपलोड पूरा नभएसम्म पर्खनुहोस्।",
         "screenshotRequired": "भुक्तानी स्क्रिनसट आवश्यक छ।",
         "placeOrderFailedRetry": "अर्डर राख्दा समस्या भयो। पछि फेरि प्रयास गर्नुहोस्।",
@@ -9858,7 +9859,14 @@
       "screenshotAlt": "भुक्तानी स्क्रिनसट पूर्वावलोकन",
       "sslRedirect": "अर्डर राखेपछि तपाईंलाई SSLCommerz मा पठाइनेछ।",
       "noPaymentNow": "अहिले भुक्तानी आवश्यक छैन।",
-      "placeOrder": "अर्डर राख्नुहोस्"
+      "placeOrder": "अर्डर राख्नुहोस्",
+      "consent": {
+        "prefix": "म",
+        "terms": "नियम तथा सर्तहरू",
+        "and": "र",
+        "privacy": "गोपनीयता नीतिमा",
+        "suffix": " सहमत छु।"
+      }
     },
     "paymentResult": {
       "success": "भुक्तानी सफल भयो",
@@ -11391,6 +11399,14 @@
       "backToOrders": "अर्डरहरूमा फर्कनुहोस्",
       "backToMyOrders": "मेरा अर्डरहरूमा फर्कनुहोस्",
       "orderDate": "अर्डर मिति",
+      "legalConsentTitle": "चेकआउट सहमति",
+      "legalConsentHint": "ग्राहकले यो अर्डर गर्दा सहमति रेकर्ड गरिएको हो।",
+      "consentAccepted": "स्वीकृत",
+      "consentNotRecorded": "रेकर्ड छैन",
+      "termsConsent": "नियम तथा सर्तहरू",
+      "privacyConsent": "गोपनीयता नीति",
+      "acceptedAt": "{date} मा स्वीकृत",
+      "notRecorded": "सहमतिको रेकर्ड छैन (पुरानो अर्डर)",
       "status": "स्थिति",
       "orderDelivered": "अर्डर पठाइयो",
       "orderStatus": "अर्डर स्थिति:{status}",

@@ -9826,6 +9826,7 @@
         "saveAddressFailed": "Alamat tidak dapat disimpan.",
         "emptyCart": "Keranjang Anda kosong.",
         "requiredInformation": "Isi semua informasi yang wajib.",
+        "legalConsentRequired": "Setujui Syarat & Ketentuan dan Kebijakan Privasi untuk membuat pesanan.",
         "waitForUpload": "Tunggu hingga unggahan tangkapan layar selesai.",
         "screenshotRequired": "Tangkapan layar pembayaran wajib diunggah.",
         "placeOrderFailedRetry": "Terjadi masalah saat membuat pesanan. Silakan coba lagi nanti.",
@@ -9858,7 +9859,14 @@
       "screenshotAlt": "Pratinjau tangkapan layar pembayaran",
       "sslRedirect": "Anda akan diarahkan ke SSLCommerz setelah membuat pesanan.",
       "noPaymentNow": "Tidak perlu melakukan pembayaran sekarang.",
-      "placeOrder": "Buat Pesanan"
+      "placeOrder": "Buat Pesanan",
+      "consent": {
+        "prefix": "Saya menyetujui",
+        "terms": "Syarat & Ketentuan",
+        "and": "dan",
+        "privacy": "Kebijakan Privasi",
+        "suffix": "."
+      }
     },
     "paymentResult": {
       "success": "Pembayaran berhasil",
@@ -11391,6 +11399,14 @@
       "backToOrders": "Kembali ke Pesanan",
       "backToMyOrders": "Kembali ke Pesanan Saya",
       "orderDate": "Tanggal Pemesanan",
+      "legalConsentTitle": "Persetujuan checkout",
+      "legalConsentHint": "Persetujuan dicatat saat pelanggan membuat pesanan ini.",
+      "consentAccepted": "Disetujui",
+      "consentNotRecorded": "Tidak tercatat",
+      "termsConsent": "Syarat & Ketentuan",
+      "privacyConsent": "Kebijakan Privasi",
+      "acceptedAt": "Disetujui pada {date}",
+      "notRecorded": "Tidak ada catatan persetujuan (pesanan lama)",
       "status": "Status",
       "orderDelivered": "Pesanan terkirim",
       "orderStatus": "Status pesanan:{status}",

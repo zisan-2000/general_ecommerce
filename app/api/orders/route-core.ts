@@ -356,6 +356,8 @@ export async function POST(
       image,
       couponId,
       couponCode,
+      termsAccepted,
+      privacyPolicyAccepted,
     } = body;
     const paymentMethod = String(payment_method || "");
     const isCOD = paymentMethod === "CashOnDelivery";
@@ -387,6 +389,17 @@ export async function POST(
           { error: "Invalid order item(s)" },
           { status: 400 },
         );
+
+    if (termsAccepted !== true || privacyPolicyAccepted !== true) {
+      return NextResponse.json(
+        {
+          error:
+            "You must accept the Terms & Conditions and Privacy Policy before placing an order.",
+          code: "LEGAL_CONSENT_REQUIRED",
+        },
+        { status: 400 },
+      );
+    }
 
     const normalizedItems = items.map((item: any) => ({
       productId: Number(item.productId),
@@ -679,6 +692,7 @@ export async function POST(
     const shipping_cost = shippingQuote.shippingCost;
     const vat_total = taxQuote.totalVAT;
     const tax_charge_total = taxQuote.totalTaxCharge;
+    const legalConsentAcceptedAt = new Date();
 
     const transactionResult = await prisma.$transaction(async (tx: any) => {
       // Same-key requests queue here across all app instances. The waiter rechecks
@@ -729,6 +743,8 @@ export async function POST(
           status: "PENDING",
           paymentStatus: "UNPAID",
           transactionId: transactionId ?? null,
+          termsAcceptedAt: legalConsentAcceptedAt,
+          privacyPolicyAcceptedAt: legalConsentAcceptedAt,
           image: isManualPayment ? (image ?? null) : null,
           couponId: couponResult?.coupon.id ?? null,
           commercialContext: orderIdempotencyCommercialContext(idempotency),
@@ -850,6 +866,8 @@ export async function POST(
           paymentMethod: created.payment_method,
           status: created.status,
           paymentStatus: created.paymentStatus,
+          termsAcceptedAt: created.termsAcceptedAt,
+          privacyPolicyAcceptedAt: created.privacyPolicyAcceptedAt,
           grandTotal: Number(created.grand_total),
           itemCount: created.orderItems.length,
           items: created.orderItems.map((item: any) => ({

@@ -116,6 +116,7 @@ export default function CheckoutPage() {
 
   const [paymentMethod, setPaymentMethod] = useState("");
   const [transactionId, setTransactionId] = useState("");
+  const [legalConsentAccepted, setLegalConsentAccepted] = useState(false);
   const [invoiceId, setInvoiceId] = useState("");
 
   const [placedOrder, setPlacedOrder] = useState<any>(null);
@@ -761,6 +762,11 @@ export default function CheckoutPage() {
       return;
     }
 
+    if (!legalConsentAccepted) {
+      toast.error(t("errors.legalConsentRequired"));
+      return;
+    }
+
     const computedPaymentStatus = "UNPAID";
     const localInvoiceId =
       globalThis.crypto?.randomUUID?.() ??
@@ -806,6 +812,8 @@ export default function CheckoutPage() {
       image: isManualPayment ? (paymentScreenshotUrl || null) : null,
       couponId: appliedCoupon?.id || null,
       couponCode: appliedCoupon?.code || null,
+      termsAccepted: legalConsentAccepted,
+      privacyPolicyAccepted: legalConsentAccepted,
     };
 
     try {
@@ -1172,6 +1180,8 @@ export default function CheckoutPage() {
                   isUploadingScreenshot={isUploadingScreenshot}
                   onBack={() => setStep("details")}
                   onNext={handlePlaceOrder}
+                  legalConsentAccepted={legalConsentAccepted}
+                  onLegalConsentChange={setLegalConsentAccepted}
                   total={total}
                 />
               )}

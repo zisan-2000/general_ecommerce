@@ -125,6 +125,8 @@ interface Order {
   status: OrderStatusType;
   paymentStatus: PaymentStatusType;
   transactionId?: string | null;
+  termsAcceptedAt?: string | null;
+  privacyPolicyAcceptedAt?: string | null;
   image?: string | null; // payment screenshot URL (from DB)
   createdAt: string;
   orderItems?: OrderItem[];
@@ -1914,6 +1916,56 @@ const OrderManagement = () => {
                       <p className="mt-1 text-xs text-muted-foreground">
                         {t("detail.country", { value: orderDetail.country })}
                       </p>
+                    </div>
+                  </div>
+
+                  {/* 1.25 Checkout legal consent */}
+                  <div className="rounded-2xl border border-border bg-muted/30 p-4">
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                      <div>
+                        <h3 className="text-xs font-semibold text-muted-foreground">
+                          {t("detail.legalConsentTitle")}
+                        </h3>
+                        <p className="mt-1 text-xs text-muted-foreground">
+                          {t("detail.legalConsentHint")}
+                        </p>
+                      </div>
+                      {orderDetail.termsAcceptedAt && orderDetail.privacyPolicyAcceptedAt ? (
+                        <span className="inline-flex w-fit items-center rounded-full bg-emerald-100 px-3 py-1 text-[11px] font-semibold text-emerald-800">
+                          {t("detail.consentAccepted")}
+                        </span>
+                      ) : (
+                        <span className="inline-flex w-fit items-center rounded-full bg-amber-100 px-3 py-1 text-[11px] font-semibold text-amber-800">
+                          {t("detail.consentNotRecorded")}
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                      <div className="rounded-xl bg-card px-3 py-2.5">
+                        <p className="text-xs font-medium text-foreground">
+                          {t("detail.termsConsent")}
+                        </p>
+                        <p className="mt-1 text-[11px] text-muted-foreground">
+                          {orderDetail.termsAcceptedAt
+                            ? t("detail.acceptedAt", {
+                                date: formatDateTime(orderDetail.termsAcceptedAt),
+                              })
+                            : t("detail.notRecorded")}
+                        </p>
+                      </div>
+                      <div className="rounded-xl bg-card px-3 py-2.5">
+                        <p className="text-xs font-medium text-foreground">
+                          {t("detail.privacyConsent")}
+                        </p>
+                        <p className="mt-1 text-[11px] text-muted-foreground">
+                          {orderDetail.privacyPolicyAcceptedAt
+                            ? t("detail.acceptedAt", {
+                                date: formatDateTime(orderDetail.privacyPolicyAcceptedAt),
+                              })
+                            : t("detail.notRecorded")}
+                        </p>
+                      </div>
                     </div>
                   </div>
 
