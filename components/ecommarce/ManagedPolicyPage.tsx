@@ -4,6 +4,7 @@ import { getLocale, getTranslations } from "next-intl/server";
 import { prisma } from "@/lib/prisma";
 import { type PolicyKind } from "@/lib/policy-content";
 import ManagedFAQ from "@/components/ecommarce/ManagedFAQ";
+import ProductRichText from "@/components/ecommarce/product-detail/ProductRichText";
 import { getSiteSettingsForSeo } from "@/lib/seo";
 
 export default async function ManagedPolicyPage({ kind }: { kind: PolicyKind }) {
@@ -28,7 +29,12 @@ export default async function ManagedPolicyPage({ kind }: { kind: PolicyKind }) 
           {record.category && <p className="mb-2 text-sm font-medium text-primary">{record.category}</p>}
           <h2 className="text-xl font-semibold">{kind === "sitemap" && record.linkUrl ? <Link href={record.linkUrl} className="text-primary hover:underline">{record.title}</Link> : record.title}</h2>
           {record.effectiveDate && <p className="mt-2 text-xs text-muted-foreground">{t("effective")} {formatDate(record.effectiveDate, "UTC")}</p>}
-          {record.content && <div className="mt-4 whitespace-pre-wrap break-words text-sm leading-7 text-muted-foreground">{record.content}</div>}
+          {record.content && (
+            <ProductRichText
+              content={record.content}
+              className="mt-4 break-words text-sm leading-7 text-muted-foreground"
+            />
+          )}
         </article>)}
         <Link href="/ecommerce/contact" className="inline-block text-sm font-medium text-primary hover:underline">{t("contact")}</Link>
       </section>
