@@ -1569,6 +1569,7 @@
       "DELIVERED": "डेलिभर गरिएको",
       "FAILED": "असफल",
       "RETURNED": "फिर्ता गरिएको",
+      "REFUNDED": "रिफन्ड गरिएको",
       "CANCELLED": "रद्द गरिएको"
     },
     "paymentStatus": {
@@ -1695,6 +1696,39 @@
       "viewProofPhoto": "प्रमाण फोटो हेर्नुहोस्",
       "noCustomerProof": "अहिलेसम्म ग्राहक डेलिभरी प्रमाण पेश गरिएको छैन।",
       "shipmentAdminNote": "* शिपमेन्ट सिर्जना/अपडेट केवल एडमिनले गर्न सक्छ; अन्य प्रयोगकर्ताले API बाट Forbidden पाउनेछन्।"
+    },
+    "refund": {
+      "title": "Refund Claims",
+      "description": "Review the customer's reason and accept or reject each pending claim.",
+      "claimCount": "{count} claim(s)",
+      "unknownItem": "Order item",
+      "summary": "Claim #{id} · Qty {quantity} · {amount}",
+      "customerReason": "Customer reason",
+      "adminNoteLabel": "Admin note",
+      "adminNotePlaceholder": "Required when rejecting; optional when accepting...",
+      "rejectionNoteHint": "A rejection note is required and will be shown to the customer.",
+      "accept": "Accept refund",
+      "reject": "Reject refund",
+      "reviewing": "Saving...",
+      "adminNote": "Admin note",
+      "reviewedOn": "Reviewed on {date}",
+      "acceptSuccess": "Refund accepted and marked as refunded.",
+      "rejectSuccess": "Refund request rejected.",
+      "destination": "Customer refund destination",
+      "paymentTitle": "Send refund payment",
+      "paymentHint": "Send the refund via {method} to {account}, then record the transaction/reference below.",
+      "originalDestination": "original payment method",
+      "transactionPlaceholder": "Refund transaction/reference ID",
+      "markPaid": "Mark payment sent",
+      "transactionId": "Refund transaction/reference",
+      "paidOn": "Payment recorded on {date}",
+      "paymentSuccess": "Refund payment recorded successfully.",
+      "invoiceDownload": "Download invoice",
+      "invoiceDownloading": "Downloading...",
+      "invoiceDownloadFailed": "Failed to download invoice.",
+      "invoiceInvalidFile": "The server did not return a valid PDF invoice.",
+      "status": { "REQUESTED": "Pending review", "APPROVED": "Approved", "REJECTED": "Refund rejected", "COMPLETED": "Refunded" },
+      "errors": { "rejectionNoteRequired": "Please add a rejection note before rejecting this claim.", "reviewFailed": "Failed to review refund request.", "transactionRequired": "Enter the refund transaction/reference before marking payment sent.", "paymentFailed": "Failed to record refund payment." }
     },
     "successModal": {
       "title": "अपडेट सफल",
@@ -11162,7 +11196,8 @@
       "changePassword": "पासवर्ड परिवर्तन गर्नुहोस्",
       "addresses": "ठेगानाहरू",
       "wishlist": "इच्छा सूची",
-      "notifications": "सूचनाहरू"
+      "notifications": "सूचनाहरू",
+      "refunded": "रिफन्ड गरिएको"
     },
     "dashboard": {
       "password": "पासवर्ड",
@@ -11332,6 +11367,8 @@
     "orders": {
       "title": "अर्डर इतिहास",
       "description": "तपाईंको हालका अर्डरहरू, भुक्तानी स्थिति, र डेलिभरी प्रगति ट्र्याक गर्नुहोस्।",
+      "refundedTitle": "रिफन्ड गरिएका अर्डरहरू",
+      "refundedDescription": "स्वीकृत रिफन्ड दाबी भएका अर्डरहरू यहाँ देखिन्छन्।",
       "rewards": "{stars}ताराहरू •{credit}क्रेडिट",
       "empty": "तपाईंले अहिलेसम्म कुनै अर्डर गर्नुभएको छैन।",
       "orderId": "अर्डर आईडी",
@@ -11430,11 +11467,31 @@
         "reason": "कारण",
         "reasonPlaceholder": "हामीलाई भन्नुहोस् किन तपाईंलाई फिर्ता चाहिन्छ...",
         "submit": "फिर्ता पेश गर्नुहोस्",
+        "originalPaymentMethod": "मूल भुक्तानी विधि",
+        "manualPayment": "म्यानुअल भुक्तानी",
+        "refundMethod": "रिफन्ड प्राप्त गर्ने माध्यम",
+        "noRefundMethod": "कुनै रिफन्ड विधि उपलब्ध छैन",
+        "refundAccount": "रिफन्ड खाता / मोबाइल नम्बर",
+        "refundAccountPlaceholder": "रिफन्ड पाउने खाता वा मोबाइल नम्बर लेख्नुहोस्",
+        "refundDestination": "रिफन्ड गन्तव्य",
+        "refundTransaction": "रिफन्ड कारोबार/सन्दर्भ",
+        "unknownItem": "अर्डर वस्तु",
+        "claimSummary": "मात्रा {quantity} · BDT {amount}",
+        "yourReason": "तपाईंको कारण",
+        "adminNote": "प्रशासकको जवाफ",
+        "status": {
+          "pending": "समीक्षा बाँकी",
+          "approved": "स्वीकृत · भुक्तानी बाँकी",
+          "refunded": "फिर्ता गरियो",
+          "rejected": "फिर्ता अस्वीकृत"
+        },
         "errors": {
           "window": "फिर्ताहरू डेलिभरीको 7 दिन भित्र मात्र उपलब्ध छन्।",
           "reason": "कृपया फिर्ताको लागि स्पष्ट कारण थप्नुहोस्।",
           "quantity": "यस वस्तुको लागि कुनै फिर्ता योग्य मात्रा बाँकी छैन।",
-          "submit": "फिर्ता अनुरोध पेश गर्न असफल भयो।"
+          "submit": "फिर्ता अनुरोध पेश गर्न असफल भयो।",
+          "method": "रिफन्ड कसरी प्राप्त गर्ने चयन गर्नुहोस्।",
+          "account": "मान्य रिफन्ड खाता वा मोबाइल नम्बर लेख्नुहोस्।"
         }
       }
     },

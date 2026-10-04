@@ -10,6 +10,7 @@ import {
   MapPin,
   Heart,
   FileTextIcon,
+  RotateCcw,
 } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -25,6 +26,7 @@ export default function AccountMenu() {
 
   const items: MenuItem[] = [
     { label: t("orders"), href: "/ecommerce/user/orders", icon: <ShoppingBag className="h-4 w-4" /> },
+    { label: t("refunded"), href: "/ecommerce/user/refunded", icon: <RotateCcw className="h-4 w-4" /> },
     { label: t("invoices"), href: "/ecommerce/user/invoice", icon: <FileTextIcon className="h-4 w-4" /> },
     { label: t("editProfile"), href: "/ecommerce/user/profile", icon: <User className="h-4 w-4" /> },
     { label: t("changePassword"), href: "/ecommerce/user/change-password", icon: <Lock className="h-4 w-4" /> },

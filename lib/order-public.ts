@@ -31,6 +31,18 @@ export function redactCustomerOrder<T>(order: T): T {
   const source = order as Record<string, any>;
   return {
     ...source,
+    refunds: Array.isArray(source.refunds)
+      ? source.refunds.map((refund: Record<string, any>) => {
+          const {
+            reviewedById: _reviewedById,
+            reviewedBy: _reviewedBy,
+            paidById: _paidById,
+            paidBy: _paidBy,
+            ...safeRefund
+          } = refund;
+          return safeRefund;
+        })
+      : source.refunds,
     orderItems: Array.isArray(source.orderItems)
       ? source.orderItems.map((item: Record<string, any>) => {
           const { costPriceSnapshot: _internalCost, ...safeItem } = item;

@@ -1569,6 +1569,7 @@
       "DELIVERED": "Terkirim",
       "FAILED": "Gagal",
       "RETURNED": "Dikembalikan",
+      "REFUNDED": "Dikembalikan Dana",
       "CANCELLED": "Dibatalkan"
     },
     "paymentStatus": {
@@ -1695,6 +1696,39 @@
       "viewProofPhoto": "Lihat foto bukti",
       "noCustomerProof": "Belum ada bukti penerimaan pelanggan yang dikirim.",
       "shipmentAdminNote": "* Hanya admin yang dapat membuat/memperbarui pengiriman; pengguna lain akan menerima Forbidden dari API."
+    },
+    "refund": {
+      "title": "Refund Claims",
+      "description": "Review the customer's reason and accept or reject each pending claim.",
+      "claimCount": "{count} claim(s)",
+      "unknownItem": "Order item",
+      "summary": "Claim #{id} · Qty {quantity} · {amount}",
+      "customerReason": "Customer reason",
+      "adminNoteLabel": "Admin note",
+      "adminNotePlaceholder": "Required when rejecting; optional when accepting...",
+      "rejectionNoteHint": "A rejection note is required and will be shown to the customer.",
+      "accept": "Accept refund",
+      "reject": "Reject refund",
+      "reviewing": "Saving...",
+      "adminNote": "Admin note",
+      "reviewedOn": "Reviewed on {date}",
+      "acceptSuccess": "Refund accepted and marked as refunded.",
+      "rejectSuccess": "Refund request rejected.",
+      "destination": "Customer refund destination",
+      "paymentTitle": "Send refund payment",
+      "paymentHint": "Send the refund via {method} to {account}, then record the transaction/reference below.",
+      "originalDestination": "original payment method",
+      "transactionPlaceholder": "Refund transaction/reference ID",
+      "markPaid": "Mark payment sent",
+      "transactionId": "Refund transaction/reference",
+      "paidOn": "Payment recorded on {date}",
+      "paymentSuccess": "Refund payment recorded successfully.",
+      "invoiceDownload": "Download invoice",
+      "invoiceDownloading": "Downloading...",
+      "invoiceDownloadFailed": "Failed to download invoice.",
+      "invoiceInvalidFile": "The server did not return a valid PDF invoice.",
+      "status": { "REQUESTED": "Pending review", "APPROVED": "Approved", "REJECTED": "Refund rejected", "COMPLETED": "Refunded" },
+      "errors": { "rejectionNoteRequired": "Please add a rejection note before rejecting this claim.", "reviewFailed": "Failed to review refund request.", "transactionRequired": "Enter the refund transaction/reference before marking payment sent.", "paymentFailed": "Failed to record refund payment." }
     },
     "successModal": {
       "title": "Pembaruan Berhasil",
@@ -11162,7 +11196,8 @@
       "changePassword": "Ubah Kata Sandi",
       "addresses": "Alamat",
       "wishlist": "Daftar Keinginan",
-      "notifications": "Pemberitahuan"
+      "notifications": "Pemberitahuan",
+      "refunded": "Dikembalikan Dana"
     },
     "dashboard": {
       "password": "Kata sandi",
@@ -11332,6 +11367,8 @@
     "orders": {
       "title": "Riwayat Pesanan",
       "description": "Lacak pesanan terbaru Anda, status pembayaran, dan kemajuan pengiriman.",
+      "refundedTitle": "Pesanan Dikembalikan",
+      "refundedDescription": "Pesanan dengan klaim pengembalian dana yang diterima muncul di sini.",
       "rewards": "{stars}bintang •{credit}kredit",
       "empty": "Anda belum melakukan pemesanan apa pun.",
       "orderId": "ID Pesanan",
@@ -11430,11 +11467,31 @@
         "reason": "Alasan",
         "reasonPlaceholder": "Beri tahu kami mengapa Anda memerlukan pengembalian dana...",
         "submit": "Kirim Pengembalian Dana",
+        "originalPaymentMethod": "Metode pembayaran asli",
+        "manualPayment": "Pembayaran manual",
+        "refundMethod": "Terima pengembalian melalui",
+        "noRefundMethod": "Tidak ada metode pengembalian tersedia",
+        "refundAccount": "Akun / nomor ponsel pengembalian",
+        "refundAccountPlaceholder": "Masukkan akun atau nomor ponsel penerima dana",
+        "refundDestination": "Tujuan pengembalian",
+        "refundTransaction": "Transaksi/referensi pengembalian",
+        "unknownItem": "Item pesanan",
+        "claimSummary": "Jumlah {quantity} · BDT {amount}",
+        "yourReason": "Alasan Anda",
+        "adminNote": "Tanggapan admin",
+        "status": {
+          "pending": "Menunggu tinjauan",
+          "approved": "Disetujui · pembayaran tertunda",
+          "refunded": "Dana dikembalikan",
+          "rejected": "Pengembalian dana ditolak"
+        },
         "errors": {
           "window": "Pengembalian dana hanya tersedia dalam waktu 7 hari setelah pengiriman.",
           "reason": "Harap tambahkan alasan yang jelas untuk pengembalian dana.",
           "quantity": "Tidak ada sisa jumlah yang dapat dikembalikan untuk item ini.",
-          "submit": "Gagal mengirimkan permintaan pengembalian dana."
+          "submit": "Gagal mengirimkan permintaan pengembalian dana.",
+          "method": "Pilih cara menerima pengembalian dana.",
+          "account": "Masukkan akun atau nomor ponsel yang valid."
         }
       }
     },

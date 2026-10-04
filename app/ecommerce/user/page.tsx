@@ -14,6 +14,7 @@ import {
   Heart,
   ChevronRight,
   FileTextIcon,
+  RotateCcw,
 } from "lucide-react";
 import AccountHeader from "./AccountHeader";
 import { useTranslations } from "next-intl";
@@ -135,6 +136,11 @@ export default function UserDashboardPage() {
       title: t("menu.invoices"),
       href: "/ecommerce/user/invoice",
       icon: <FileTextIcon className="h-4 w-4" />,
+    },
+    {
+      title: t("menu.refunded"),
+      href: "/ecommerce/user/refunded",
+      icon: <RotateCcw className="h-5 w-5" />,
     },
     {
       title: t("menu.editProfile"),
