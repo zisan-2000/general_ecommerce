@@ -11,11 +11,14 @@ import {
   Sun,
   Check,
   Bell,
+  BellOff,
+  CheckCheck,
+  Loader2,
   Globe2,
 } from "lucide-react";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import Link from "next/link";
-import { useState, useEffect, useMemo } from "react";
+import { useState, useEffect, useMemo, useRef } from "react";
 import { useTheme } from "next-themes";
 import {
   DropdownMenu,
@@ -52,6 +55,8 @@ type ScmNotificationPreview = {
   id: number;
   type: string;
   title: string;
+  message: string;
+  createdAt: string;
   href: string;
   readAt: string | null;
 };
@@ -76,6 +81,10 @@ type InvestorNotificationsResponse = {
   rows: InvestorNotificationPreview[];
 };
 
+type AdminNotificationPreview = ScmNotificationPreview & {
+  source: "scm" | "investor";
+};
+
 export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
   const router = useRouter();
   const locale = useLocale();
@@ -91,6 +100,10 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
   const [investorNotifications, setInvestorNotifications] =
     useState<InvestorNotificationsResponse | null>(null);
   const [loadingNotifications, setLoadingNotifications] = useState(false);
+  const [clearingNotifications, setClearingNotifications] = useState(false);
+  const [notificationError, setNotificationError] = useState<string | null>(null);
+  const notificationRequestVersion = useRef(0);
+  const clearingNotificationsRef = useRef(false);
 
   // Avoid hydration mismatch
   useEffect(() => {
@@ -125,14 +138,49 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
   const canViewAnyAdminNotifications =
     canViewScmNotifications || canViewInvestorNotifications;
 
-  const markNotificationRead = (row: ScmNotificationPreview) => {
+  const markNotificationRead = (row: AdminNotificationPreview) => {
     if (row.readAt) return;
-    void fetch("/api/scm/notifications", {
+    const endpoint = row.source === "investor"
+      ? "/api/admin/investor-notifications" : "/api/scm/notifications";
+    void fetch(endpoint, {
       method: "PATCH", headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ id: row.id, type: row.type }), keepalive: true,
     }).then((response) => {
       if (response.ok) window.dispatchEvent(new Event("admin-notifications-changed"));
     }).catch((error: unknown) => console.error("Failed to mark notification read:", error));
+  };
+
+  const clearAllNotifications = async () => {
+    if (clearingNotificationsRef.current) return;
+    clearingNotificationsRef.current = true;
+    setClearingNotifications(true);
+    setNotificationError(null);
+    notificationRequestVersion.current += 1;
+    const clearSource = async (source: "scm" | "investor") => {
+      const endpoint = source === "investor"
+        ? "/api/admin/investor-notifications" : "/api/scm/notifications";
+      const response = await fetch(endpoint, {
+        method: "PATCH",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ markAll: true }),
+      });
+      if (!response.ok) throw new Error("Failed to clear notifications.");
+      if (source === "scm") setScmNotifications({ unreadCount: 0, rows: [] });
+      else setInvestorNotifications({ unreadCount: 0, rows: [] });
+    };
+    try {
+      const requests: Promise<void>[] = [];
+      if (canViewScmNotifications) requests.push(clearSource("scm"));
+      if (canViewInvestorNotifications) requests.push(clearSource("investor"));
+      const results = await Promise.allSettled(requests);
+      if (results.some((result) => result.status === "rejected")) {
+        setNotificationError(t("notifications.clearError"));
+      }
+    } finally {
+      clearingNotificationsRef.current = false;
+      setClearingNotifications(false);
+      window.dispatchEvent(new Event("admin-notifications-changed"));
+    }
   };
 
   useEffect(() => {
@@ -147,13 +195,15 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
     const investorController = new AbortController();
 
     const fetchNotifications = async () => {
+      if (clearingNotificationsRef.current) return;
+      const requestVersion = ++notificationRequestVersion.current;
       try {
         setLoadingNotifications(true);
         const requests: Promise<void>[] = [];
 
         if (canViewScmNotifications) {
           requests.push(
-            fetch("/api/scm/notifications?limit=5&preview=true", {
+            fetch("/api/scm/notifications?limit=10&preview=true&unreadOnly=true", {
               cache: "no-store",
               signal: scmController.signal,
             })
@@ -164,7 +214,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                     payload?.error || "Failed to load SCM notifications.",
                   );
                 }
-                if (active) {
+                if (active && requestVersion === notificationRequestVersion.current) {
                   setScmNotifications(payload as ScmNotificationsResponse);
                 }
               })
@@ -180,7 +230,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
 
         if (canViewInvestorNotifications) {
           requests.push(
-            fetch("/api/admin/investor-notifications?limit=5", {
+            fetch("/api/admin/investor-notifications?limit=10&unreadOnly=true", {
               cache: "no-store",
               signal: investorController.signal,
             })
@@ -191,7 +241,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                     payload?.error || "Failed to load investor notifications.",
                   );
                 }
-                if (active) {
+                if (active && requestVersion === notificationRequestVersion.current) {
                   setInvestorNotifications(payload as InvestorNotificationsResponse);
                 }
               })
@@ -210,7 +260,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
 
         await Promise.all(requests);
       } finally {
-        if (active) {
+        if (active && requestVersion === notificationRequestVersion.current) {
           setLoadingNotifications(false);
         }
       }
@@ -274,28 +324,16 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
   const unreadNotificationCount =
     scmUnreadNotificationCount + investorUnreadNotificationCount;
 
-  const scmUnreadPreviewRows = useMemo(
-    () => (scmNotifications?.rows || []).filter((row) => !row.readAt).slice(0, 4),
-    [scmNotifications],
-  );
-  const scmRecentPreviewRows = useMemo(
-    () => (scmNotifications?.rows || []).filter((row) => Boolean(row.readAt)).slice(0, 3),
-    [scmNotifications],
-  );
-  const investorUnreadPreviewRows = useMemo(
-    () =>
-      (investorNotifications?.rows || [])
-        .filter((row) => !row.readAt)
-        .slice(0, 4),
-    [investorNotifications],
-  );
-  const investorRecentPreviewRows = useMemo(
-    () =>
-      (investorNotifications?.rows || [])
-        .filter((row) => Boolean(row.readAt))
-        .slice(0, 3),
-    [investorNotifications],
-  );
+  const notificationRows = useMemo<AdminNotificationPreview[]>(() => [
+    ...(scmNotifications?.rows ?? []).map((row) => ({ ...row, source: "scm" as const })),
+    ...(investorNotifications?.rows ?? []).map((row) => ({
+      ...row,
+      source: "investor" as const,
+      href: row.targetUrl || "/admin/investors/notifications",
+    })),
+  ].filter((row) => !row.readAt)
+    .sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime() || b.id - a.id),
+  [scmNotifications, investorNotifications]);
 
   return (
     <header className="w-full h-20 bg-background border-border border-b flex items-center justify-between px-4 sm:px-6 sticky top-0 z-20 shadow-sm">
@@ -406,6 +444,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                 size="icon"
                 className="relative rounded-full bg-muted hover:bg-primary/80 text-foreground"
                 title={t("notifications.title")}
+                aria-label={t("notifications.title")}
               >
                 <Bell className="h-5 w-5" />
                 {unreadNotificationCount > 0 ? (
@@ -415,156 +454,80 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                 ) : null}
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="w-80">
-              <div className="flex items-center justify-between px-2 py-1.5">
-                <div>
-                  <p className="text-sm font-semibold">{t("notifications.title")}</p>
-                  <p className="text-xs text-muted-foreground">
-                    {loadingNotifications
+            <DropdownMenuContent
+              align="end"
+              sideOffset={12}
+              className="w-[380px] max-w-[calc(100vw-24px)] rounded-2xl border-border/70 p-0 shadow-xl"
+            >
+              <div className="flex items-center justify-between gap-3 border-b border-border/60 px-4 py-4">
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold tracking-tight">{t("notifications.title")}</p>
+                  <p className="mt-1 text-xs text-muted-foreground" aria-live="polite">
+                    {loadingNotifications && !scmNotifications && !investorNotifications
                       ? t("notifications.loading")
                       : t("notifications.unread", { count: unreadNotificationCount })}
                   </p>
                 </div>
+                <DropdownMenuItem
+                  asChild
+                  disabled={clearingNotifications || unreadNotificationCount === 0}
+                  onSelect={(event) => event.preventDefault()}
+                  className="rounded-lg focus:bg-primary/10 focus:text-primary"
+                >
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    disabled={clearingNotifications || unreadNotificationCount === 0}
+                    onClick={() => void clearAllNotifications()}
+                    className="h-8 shrink-0 gap-1.5 rounded-lg px-2 text-xs font-medium text-primary hover:bg-primary/10 hover:text-primary"
+                  >
+                    {clearingNotifications
+                      ? <Loader2 className="h-3.5 w-3.5 animate-spin" aria-hidden="true" />
+                      : <CheckCheck className="h-3.5 w-3.5" aria-hidden="true" />}
+                    {t(clearingNotifications ? "notifications.clearing" : "notifications.clearAll")}
+                  </Button>
+                </DropdownMenuItem>
               </div>
-              <div className="max-h-80 space-y-1 overflow-y-auto px-1 py-1">
-                {!canViewScmNotifications &&
-                !canViewInvestorNotifications ? (
-                  <div className="px-2 py-3 text-sm text-muted-foreground">
-                    {t("notifications.empty")}
+              <div className="max-h-[400px] overflow-y-auto overscroll-contain p-1.5">
+                {notificationRows.length === 0 ? (
+                  <div className="flex flex-col items-center gap-3 px-6 py-10 text-center">
+                    <div className="flex h-12 w-12 items-center justify-center rounded-full bg-muted">
+                      <BellOff className="h-5 w-5 text-muted-foreground" aria-hidden="true" />
+                    </div>
+                    <p className="text-sm text-muted-foreground">
+                      {loadingNotifications && !scmNotifications && !investorNotifications
+                        ? t("notifications.loading") : t("notifications.empty")}
+                    </p>
                   </div>
-                ) : (
-                  <>
-                    {canViewScmNotifications ? (
-                      <div className="border-b border-border/60 pb-2 last:border-b-0">
-                        <div className="flex items-center justify-between px-2 pb-1 pt-1">
-                          <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                            {t("notifications.ordersAndScm")}
-                          </div>
-                          <Link
-                            href="/admin/scm/notifications"
-                            className="text-xs font-medium text-primary hover:underline"
-                          >
-                            {t("notifications.viewAll")}
-                          </Link>
-                        </div>
-                        {(!scmNotifications || scmNotifications.rows.length === 0) ? (
-                          <div className="px-2 py-2 text-sm text-muted-foreground">
-                            {t("notifications.noScm")}
-                          </div>
-                        ) : (
-                          <>
-                            {scmUnreadPreviewRows.map((row) => (
-                              <DropdownMenuItem key={`scm-${row.type}-${row.id}`} asChild>
-                                <Link
-                                  href={row.href}
-                                  onClick={() => markNotificationRead(row)}
-                                  className="flex flex-col items-start gap-1 whitespace-normal rounded-md px-2 py-2"
-                                >
-                                  <div className="flex w-full items-start justify-between gap-2">
-                                    <span className="text-sm font-medium leading-tight">
-                                      {row.title}
-                                    </span>
-                                    {!row.readAt ? (
-                                      <span className="mt-0.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
-                                    ) : null}
-                                  </div>
-                                  <span className="text-xs text-muted-foreground">
-                                    {row.type}
-                                  </span>
-                                </Link>
-                              </DropdownMenuItem>
-                            ))}
-                            {scmRecentPreviewRows.map((row) => (
-                              <DropdownMenuItem key={`scm-${row.type}-${row.id}`} asChild>
-                                <Link
-                                  href={row.href}
-                                  className="flex flex-col items-start gap-1 whitespace-normal rounded-md px-2 py-2"
-                                >
-                                  <div className="flex w-full items-start justify-between gap-2">
-                                    <span className="text-sm font-medium leading-tight">
-                                      {row.title}
-                                    </span>
-                                  </div>
-                                  <span className="text-xs text-muted-foreground">
-                                    {row.type}
-                                  </span>
-                                </Link>
-                              </DropdownMenuItem>
-                            ))}
-                          </>
-                        )}
-                      </div>
-                    ) : null}
-                    {canViewInvestorNotifications ? (
-                      <div className="pt-2">
-                        <div className="flex items-center justify-between px-2 pb-1 pt-1">
-                          <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                            {t("notifications.investors")}
-                          </div>
-                          <Link
-                            href="/admin/investors/notifications"
-                            className="text-xs font-medium text-primary hover:underline"
-                          >
-                            {t("notifications.viewAll")}
-                          </Link>
-                        </div>
-                        {(!investorNotifications ||
-                          investorNotifications.rows.length === 0) ? (
-                          <div className="px-2 py-2 text-sm text-muted-foreground">
-                            {t("notifications.noInvestors")}
-                          </div>
-                        ) : (
-                          <>
-                            {investorUnreadPreviewRows.map((row) => (
-                              <DropdownMenuItem
-                                key={`investor-${row.type}-${row.id}`}
-                                asChild
-                              >
-                                <Link
-                                  href={row.targetUrl || "/admin/investors/notifications"}
-                                  className="flex flex-col items-start gap-1 whitespace-normal rounded-md px-2 py-2"
-                                >
-                                  <div className="flex w-full items-start justify-between gap-2">
-                                    <span className="text-sm font-medium leading-tight">
-                                      {row.title}
-                                    </span>
-                                    {!row.readAt ? (
-                                      <span className="mt-0.5 h-2 w-2 shrink-0 rounded-full bg-primary" />
-                                    ) : null}
-                                  </div>
-                                  <span className="line-clamp-2 text-xs text-muted-foreground">
-                                    {row.message}
-                                  </span>
-                                </Link>
-                              </DropdownMenuItem>
-                            ))}
-                            {investorRecentPreviewRows.map((row) => (
-                              <DropdownMenuItem
-                                key={`investor-${row.type}-${row.id}`}
-                                asChild
-                              >
-                                <Link
-                                  href={row.targetUrl || "/admin/investors/notifications"}
-                                  className="flex flex-col items-start gap-1 whitespace-normal rounded-md px-2 py-2"
-                                >
-                                  <div className="flex w-full items-start justify-between gap-2">
-                                    <span className="text-sm font-medium leading-tight">
-                                      {row.title}
-                                    </span>
-                                  </div>
-                                  <span className="line-clamp-2 text-xs text-muted-foreground">
-                                    {row.message}
-                                  </span>
-                                </Link>
-                              </DropdownMenuItem>
-                            ))}
-                          </>
-                        )}
-                      </div>
-                    ) : null}
-                  </>
-                )}
+                ) : notificationRows.map((row) => (
+                  <DropdownMenuItem key={`${row.source}-${row.type}-${row.id}`} asChild>
+                    <Link
+                      href={row.href}
+                      onClick={() => markNotificationRead(row)}
+                      className="group flex cursor-pointer items-start gap-3 rounded-xl px-3 py-3 text-start hover:bg-primary/5 focus:bg-primary/5 focus:text-foreground"
+                    >
+                      <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                        <Bell className="h-4 w-4" aria-hidden="true" />
+                      </span>
+                      <span className="min-w-0 flex-1">
+                        <span className="flex items-start justify-between gap-3">
+                          <span className="text-sm font-medium leading-5">{row.title}</span>
+                          <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
+                        </span>
+                        <span className="mt-1 line-clamp-2 text-xs leading-5 text-muted-foreground">{row.message}</span>
+                        <time dateTime={row.createdAt} className="mt-1.5 block text-[11px] text-muted-foreground/75">
+                          {new Date(row.createdAt).toLocaleString(locale, {
+                            month: "short", day: "numeric", hour: "numeric", minute: "2-digit",
+                          })}
+                        </time>
+                      </span>
+                    </Link>
+                  </DropdownMenuItem>
+                ))}
               </div>
+              {notificationError ? (
+                <p role="alert" className="border-t border-border/60 px-4 py-3 text-xs text-destructive">{notificationError}</p>
+              ) : null}
             </DropdownMenuContent>
           </DropdownMenu>
         ) : null}

@@ -338,6 +338,9 @@
       "viewAll": "Lihat Semua",
       "noScm": "Tidak ada notifikasi SCM.",
       "ordersAndScm": "Pesanan & SCM",
+      "clearAll": "Hapus semua",
+      "clearing": "Menghapus...",
+      "clearError": "Beberapa notifikasi tidak dapat dihapus. Silakan coba lagi.",
       "investors": "Investor",
       "noInvestors": "Tidak ada notifikasi investor."
     },
