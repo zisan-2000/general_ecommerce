@@ -7,6 +7,7 @@ import { dispatchRfqEmailNotifications } from "@/lib/rfq-notifications";
 import { dispatchSupplierPortalEmailNotifications } from "@/lib/supplier-portal-notifications";
 
 export const SCM_INTERNAL_NOTIFICATION_TYPES = [
+  "ORDER",
   "PURCHASE_REQUISITION",
   "COMPARATIVE_STATEMENT",
   "PURCHASE_ORDER",
@@ -284,6 +285,11 @@ export async function markScmInternalNotificationRead(input: {
   };
 
   switch (input.type) {
+    case "ORDER":
+      return prisma.orderAdminNotification.updateMany({
+        where: { id: input.id, userId: input.userId, readAt: null },
+        data: { readAt: new Date() },
+      });
     case "PURCHASE_REQUISITION":
       return prisma.purchaseRequisitionNotification.updateMany({
         where: { ...where, readAt: null },

@@ -2,7 +2,8 @@
 
 "use client";
 
-import { useEffect, useMemo, useState, useCallback } from "react";
+import { Suspense, useEffect, useMemo, useState, useCallback } from "react";
+import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
 import {
@@ -614,6 +615,12 @@ const OrderManagement = () => {
     setSelectedOrderId(id);
     setDetailOpen(true);
   }, []);
+
+  const searchParams = useSearchParams();
+  const notificationOrderId = Number(searchParams.get("orderId"));
+  useEffect(() => {
+    if (Number.isInteger(notificationOrderId) && notificationOrderId > 0) openDetails(notificationOrderId);
+  }, [notificationOrderId, openDetails]);
 
   const handleCloseDetail = useCallback(() => {
     setDetailOpen(false);
@@ -2516,4 +2523,6 @@ const OrderManagement = () => {
   );
 };
 
-export default OrderManagement;
+export default function OrdersPage() {
+  return <Suspense><OrderManagement /></Suspense>;
+}

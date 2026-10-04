@@ -26,6 +26,7 @@ model StorePolicyContent {
 }
 
 model User {
+  orderAdminNotifications                   OrderAdminNotification[]
   id                                        String                                 @id @default(cuid())
   email                                     String                                 @unique
   name                                      String?
@@ -768,6 +769,7 @@ model VatRate {
 }
 
 model Order {
+  adminNotifications      OrderAdminNotification[]
   id                      Int                    @id @default(autoincrement())
   userId                  String?
   name                    String
@@ -1020,6 +1022,25 @@ model CustomerNotification {
 
   @@index([userId, status, createdAt])
   @@index([productId, createdAt])
+}
+
+model OrderAdminNotification {
+  id               Int       @id @default(autoincrement())
+  userId           String
+  orderId          Int
+  stage            String
+  title            String
+  message          String
+  metadata         Json?
+  readAt           DateTime?
+  navigationSeenAt DateTime?
+  createdAt        DateTime  @default(now())
+  user             User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  order            Order     @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@index([userId, readAt, createdAt])
+  @@index([userId, stage, navigationSeenAt])
+  @@index([orderId, createdAt])
 }
 
 model Blog {

@@ -31,6 +31,7 @@ import type { LucideIcon } from "lucide-react";
 import { useState, useEffect, useMemo, useCallback } from "react";
 import { useLocale, useMessages } from "next-intl";
 import { getLocaleDirection } from "@/i18n/config";
+import { useOrderNotifications } from "@/components/admin/use-order-notifications";
 
 type TranslateLabel = (label: string) => string;
 
@@ -190,7 +191,7 @@ const menuItems: MenuItem[] = [
           {
             name: "Notifications",
             href: "/admin/scm/notifications",
-            requiredPermissions: ["scm.access"],
+            requiredPermissions: ["scm.access", "orders.read_all"],
           },
           {
             name: "Exceptions",
@@ -857,6 +858,8 @@ const menuItems: MenuItem[] = [
 ];
 
 interface MenuItemProps {
+  newOrderCount?: number;
+  onOrdersClick?: () => void;
   item: MenuItem;
   pathname: string;
   compactSubSections?: boolean;
@@ -864,6 +867,8 @@ interface MenuItemProps {
 }
 
 const MenuItem = ({
+  newOrderCount = 0,
+  onOrdersClick,
   item,
   pathname,
   compactSubSections = false,
@@ -902,6 +907,7 @@ const MenuItem = ({
       {hasSubItems ? (
         <>
           <button
+            aria-expanded={isOpen}
             onClick={() => setIsOpen(!isOpen)}
             className={cn(
               "w-full flex items-center justify-between px-4 py-2.5 transition-all duration-150 group",
@@ -922,6 +928,9 @@ const MenuItem = ({
                 />
               )}
               <span className="text-sm font-medium">{translateLabel(item.name)}</span>
+              {item.name === "Operations" && !isOpen && newOrderCount > 0 && (
+                <span className="rounded-full bg-primary px-2 py-0.5 text-xs font-semibold text-primary-foreground">{newOrderCount}</span>
+              )}
             </div>
             {isOpen ? (
               <ChevronDown className="h-3.5 w-3.5 text-muted-foreground" />
@@ -1026,6 +1035,7 @@ const MenuItem = ({
                         <Link
                           key={subItem.name}
                           href={subItem.href}
+                          onClick={subItem.href === "/admin/operations/orders" ? onOrdersClick : undefined}
                           className={cn(
                             "relative pl-4 pr-4 py-2 text-xs transition-all duration-150 flex items-center gap-2",
                             isSubItemActive
@@ -1040,6 +1050,9 @@ const MenuItem = ({
                             )}
                           />
                           {translateLabel(subItem.name)}
+                          {subItem.href === "/admin/operations/orders" && newOrderCount > 0 && (
+                            <span className="ml-auto rounded-full bg-primary px-2 py-0.5 text-xs font-semibold text-primary-foreground">{newOrderCount}</span>
+                          )}
                           {isSubItemActive && (
                             <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-primary" />
                           )}
@@ -1079,12 +1092,16 @@ const MenuItem = ({
 
 // Sidebar Content wrapper
 const SidebarContent = ({
+  newOrderCount,
+  onOrdersClick,
   pathname,
   items,
   isWarehouseScopedOnly = false,
   compactSubSections = false,
   translateLabel,
 }: {
+  newOrderCount: number;
+  onOrdersClick: () => void;
   pathname: string;
   items: MenuItem[];
   isWarehouseScopedOnly?: boolean;
@@ -1126,6 +1143,8 @@ const SidebarContent = ({
           <div key={`${section.name}:${section.href ?? "group"}`}>
             <MenuItem
               item={section}
+              newOrderCount={newOrderCount}
+              onOrdersClick={onOrdersClick}
               pathname={pathname}
               translateLabel={translateLabel}
             />
@@ -1143,6 +1162,7 @@ export default function Sidebar({
   onClose?: () => void;
 }) {
   const pathname = usePathname();
+  const { data: orderNotifications, acknowledgeOrders } = useOrderNotifications(true);
   const locale = useLocale();
   const messages = useMessages();
   const direction = getLocaleDirection(locale);
@@ -1339,6 +1359,8 @@ export default function Sidebar({
         </div>
         <div className="flex-1 overflow-y-auto">
           <SidebarContent
+            newOrderCount={orderNotifications?.newOrderCount ?? 0}
+            onOrdersClick={acknowledgeOrders}
             pathname={pathname}
             items={visibleMenuItems}
             compactSubSections
@@ -1381,6 +1403,8 @@ export default function Sidebar({
       </div>
       <div className="flex-1 overflow-y-auto scrollbar-hide-on-idle">
         <SidebarContent
+          newOrderCount={orderNotifications?.newOrderCount ?? 0}
+          onOrdersClick={acknowledgeOrders}
           pathname={pathname}
           items={visibleMenuItems}
           isWarehouseScopedOnly={isWarehouseScopedOnly}

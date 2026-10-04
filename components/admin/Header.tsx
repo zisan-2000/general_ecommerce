@@ -117,12 +117,23 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
   const permissionKeys = Array.isArray((session?.user as any)?.permissions)
     ? (((session?.user as any).permissions as string[]) ?? [])
     : [];
-  const canViewScmNotifications = permissionKeys.includes("scm.access");
+  const canViewScmNotifications = permissionKeys.includes("scm.access") ||
+    ((session?.user as any)?.globalPermissions as string[] | undefined)?.includes("orders.read_all") === true;
   const canViewInvestorNotifications = permissionKeys.includes(
     "investor.notifications.read",
   );
   const canViewAnyAdminNotifications =
     canViewScmNotifications || canViewInvestorNotifications;
+
+  const markNotificationRead = (row: ScmNotificationPreview) => {
+    if (row.readAt) return;
+    void fetch("/api/scm/notifications", {
+      method: "PATCH", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ id: row.id, type: row.type }), keepalive: true,
+    }).then((response) => {
+      if (response.ok) window.dispatchEvent(new Event("admin-notifications-changed"));
+    }).catch((error: unknown) => console.error("Failed to mark notification read:", error));
+  };
 
   useEffect(() => {
     if (!canViewAnyAdminNotifications) {
@@ -142,7 +153,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
 
         if (canViewScmNotifications) {
           requests.push(
-            fetch("/api/scm/notifications?limit=5", {
+            fetch("/api/scm/notifications?limit=5&preview=true", {
               cache: "no-store",
               signal: scmController.signal,
             })
@@ -208,13 +219,18 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
     void fetchNotifications();
     const interval = window.setInterval(() => {
       void fetchNotifications();
-    }, 60000);
+    }, 15000);
+    const refreshNotifications = () => { void fetchNotifications(); };
+    window.addEventListener("admin-notifications-changed", refreshNotifications);
+    window.addEventListener("focus", refreshNotifications);
 
     return () => {
       active = false;
       scmController.abort();
       investorController.abort();
       window.clearInterval(interval);
+      window.removeEventListener("admin-notifications-changed", refreshNotifications);
+      window.removeEventListener("focus", refreshNotifications);
     };
   }, [
     canViewAnyAdminNotifications,
@@ -422,7 +438,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                       <div className="border-b border-border/60 pb-2 last:border-b-0">
                         <div className="flex items-center justify-between px-2 pb-1 pt-1">
                           <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-muted-foreground">
-                            SCM
+                            {t("notifications.ordersAndScm")}
                           </div>
                           <Link
                             href="/admin/scm/notifications"
@@ -441,6 +457,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                               <DropdownMenuItem key={`scm-${row.type}-${row.id}`} asChild>
                                 <Link
                                   href={row.href}
+                                  onClick={() => markNotificationRead(row)}
                                   className="flex flex-col items-start gap-1 whitespace-normal rounded-md px-2 py-2"
                                 >
                                   <div className="flex w-full items-start justify-between gap-2">

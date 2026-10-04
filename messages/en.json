@@ -337,6 +337,7 @@
       "empty": "No admin notifications.",
       "viewAll": "View All",
       "noScm": "No SCM notifications.",
+      "ordersAndScm": "Orders & SCM",
       "investors": "Investors",
       "noInvestors": "No investor notifications."
     },

@@ -7,6 +7,7 @@ import {
   commitOrderInventoryReservations,
 } from "@/lib/inventory";
 import { transitionOrderStatusWithInventory } from "@/lib/order-inventory-lifecycle";
+import { createOrderAdminNotifications } from "@/lib/order-admin-notifications";
 
 export type SslcommerzGatewayData = {
   type?: string;
@@ -224,6 +225,12 @@ export async function processSslcommerzCallback(
       });
       if (changed.count !== 1) return;
 
+      await createOrderAdminNotifications({
+        tx, orderId: payment.orderId!, title: kind === "cancel" ? "Payment cancelled" : "Payment failed",
+        message: `Payment for order #${payment.orderId} ${kind === "cancel" ? "was cancelled" : "failed"}.`,
+        metadata: { event: "ORDER_PAYMENT_STATUS_CHANGED", to: kind === "cancel" ? "VOIDED" : "FAILED" },
+      });
+
       const nextStatus =
         kind === "cancel" ? OrderStatus.CANCELLED : OrderStatus.FAILED;
       const transition = await transitionOrderStatusWithInventory({
@@ -377,6 +384,11 @@ export async function processSslcommerzCallback(
         paymentStatus: "PAID",
         transactionId: String(validation.bank_tran_id || tranId),
       },
+    });
+    await createOrderAdminNotifications({
+      tx, orderId: payment.orderId!, title: "Payment received",
+      message: `Payment for order #${payment.orderId} has been verified successfully.`,
+      metadata: { event: "ORDER_PAYMENT_STATUS_CHANGED", to: "PAID" },
     });
     return { alreadyCaptured: false, capturedNow: true };
   });

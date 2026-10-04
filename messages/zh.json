@@ -337,6 +337,7 @@
       "empty": "暂无管理员通知。",
       "viewAll": "查看全部",
       "noScm": "暂无 SCM 通知。",
+      "ordersAndScm": "订单与 SCM",
       "investors": "投资者",
       "noInvestors": "暂无投资者通知。"
     },

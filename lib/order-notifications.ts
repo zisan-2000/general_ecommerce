@@ -1,7 +1,8 @@
 import { Prisma } from "@/generated/prisma";
 import type { PrismaClient } from "@/generated/prisma";
+import { createOrderAdminNotifications } from "@/lib/order-admin-notifications";
 
-type NotificationClient = Pick<PrismaClient, "customerNotification">;
+type NotificationClient = Pick<PrismaClient, "customerNotification" | "user" | "orderAdminNotification">;
 
 export async function createOrderNotification(params: {
   tx: NotificationClient;
@@ -12,6 +13,7 @@ export async function createOrderNotification(params: {
   targetUrl?: string;
   metadata?: Prisma.InputJsonValue;
 }) {
+  await createOrderAdminNotifications(params);
   if (!params.userId) return null;
 
   return params.tx.customerNotification.create({

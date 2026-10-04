@@ -337,6 +337,7 @@
       "empty": "Tidak ada notifikasi admin.",
       "viewAll": "Lihat Semua",
       "noScm": "Tidak ada notifikasi SCM.",
+      "ordersAndScm": "Pesanan & SCM",
       "investors": "Investor",
       "noInvestors": "Tidak ada notifikasi investor."
     },

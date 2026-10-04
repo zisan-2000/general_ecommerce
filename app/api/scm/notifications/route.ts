@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from "next/server";
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import { getAccessContext } from "@/lib/rbac";
+import { getOrderAdminNotifications } from "@/lib/order-admin-notifications";
+import { prisma } from "@/lib/prisma";
 import {
   getScmInternalNotifications,
   getScmNotificationDeliveryHealth,
@@ -39,7 +41,7 @@ async function resolveAccess() {
     };
   }
 
-  if (!access.hasAny(["scm.access"])) {
+  if (!access.hasAny(["scm.access"]) && !access.hasGlobal("orders.read_all")) {
     return {
       ok: false as const,
       response: NextResponse.json({ error: "Forbidden" }, { status: 403 }),
@@ -57,16 +59,25 @@ export async function GET(request: NextRequest) {
     const unreadOnly = request.nextUrl.searchParams.get("unreadOnly") === "true";
     const limit = toPositiveInt(request.nextUrl.searchParams.get("limit"));
 
-    const payload = await getScmInternalNotifications({
+    const canScm = resolved.access.has("scm.access");
+    const canOrders = resolved.access.hasGlobal("orders.read_all");
+    const preview = request.nextUrl.searchParams.get("preview") === "true";
+    const payload = canScm ? await getScmInternalNotifications({
       userId: resolved.userId,
       unreadOnly,
       limit: limit ?? 50,
-    });
+    }) : { unreadCount: 0, rows: [] };
 
-    const health = await getScmNotificationDeliveryHealth(resolved.userId);
+    const orders = canOrders ? await getOrderAdminNotifications(resolved.userId, limit ?? 50, unreadOnly) : { unreadCount: 0, rows: [] };
+    const health = canScm && !preview ? await getScmNotificationDeliveryHealth(resolved.userId) : { unreadInternalCount: 0, modules: [], recentFailures: [] };
+    health.unreadInternalCount = payload.unreadCount + orders.unreadCount;
+    if (canOrders && !preview) {
+      health.modules.push({ key: "ORDER", label: "Orders", systemCount: await prisma.orderAdminNotification.count({ where: { userId: resolved.userId } }), emailPending: 0, emailFailed: 0, emailSent: 0 });
+    }
 
     return NextResponse.json({
-      ...payload,
+      unreadCount: payload.unreadCount + orders.unreadCount,
+      rows: [...payload.rows, ...orders.rows].sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime() || b.id - a.id).slice(0, Math.min(limit ?? 50, 200)),
       health,
     });
   } catch (error) {
@@ -82,6 +93,7 @@ export async function POST(request: NextRequest) {
   try {
     const resolved = await resolveAccess();
     if (!resolved.ok) return resolved.response;
+    if (!resolved.access.has("scm.access")) return NextResponse.json({ error: "Forbidden" }, { status: 403 });
 
     const body = (await request.json().catch(() => ({}))) as {
       action?: unknown;
@@ -123,7 +135,8 @@ export async function PATCH(request: NextRequest) {
     };
 
     if (Boolean(body.markAll)) {
-      await markAllScmInternalNotificationsRead(resolved.userId);
+      if (resolved.access.has("scm.access")) await markAllScmInternalNotificationsRead(resolved.userId);
+      if (resolved.access.hasGlobal("orders.read_all")) await prisma.orderAdminNotification.updateMany({ where: { userId: resolved.userId, readAt: null }, data: { readAt: new Date() } });
       return NextResponse.json({ ok: true });
     }
 
@@ -133,6 +146,10 @@ export async function PATCH(request: NextRequest) {
         { error: "Notification type and id are required." },
         { status: 400 },
       );
+    }
+
+    if (body.type === "ORDER" ? !resolved.access.hasGlobal("orders.read_all") : !resolved.access.has("scm.access")) {
+      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
     const result = await markScmInternalNotificationRead({
