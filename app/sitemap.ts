@@ -5,11 +5,11 @@ import { getStoreFeatureRegistry } from "@/lib/store-features-server";
 import { disabledProductTypes } from "@/lib/store-features";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
-import { getStorefrontBooks } from "@/lib/book-catalog";
+import { getStorefrontCatalogFacets } from "@/lib/storefront-catalog";
+import { getStorefrontBookDirectory } from "@/lib/book-catalog";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const siteUrl = getSiteUrl();
-  const now = new Date();
   const registry = await getStoreFeatureRegistry();
   const disabledTypes = disabledProductTypes(registry.features);
   const bookVisibility = await getBookProductVisibilityWhere();
@@ -31,7 +31,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ...(registry.features.AUTHORS.enabled
       ? [{ path: "/ecommerce/authors", changeFrequency: "weekly" as const, priority: 0.75 }]
       : []),
-    { path: "/ecommerce/bestsellers", changeFrequency: "daily", priority: 0.8 },
     { path: "/ecommerce/blogs", changeFrequency: "weekly", priority: 0.7 },
     { path: "/ecommerce/about", changeFrequency: "monthly", priority: 0.5 },
     { path: "/ecommerce/contact", changeFrequency: "monthly", priority: 0.6 },
@@ -43,14 +42,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   ] as const;
   const staticRoutes: MetadataRoute.Sitemap = staticRouteDefinitions.map((route) => ({
     url: `${siteUrl}${route.path}`,
-    lastModified: now,
     changeFrequency: route.changeFrequency,
     priority: route.priority,
   }));
 
   try {
     const activeCategoryIds = await getEffectiveStorefrontCategoryIds();
-    const [products, blogs, brands, categories, books] = await Promise.all([
+    const [products, blogs, facets, bookDirectory] = await Promise.all([
       prisma.product.findMany({
         where: {
           deleted: false,
@@ -66,25 +64,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         select: { slug: true, updatedAt: true },
         orderBy: { updatedAt: "desc" },
       }),
-      prisma.brand.findMany({
-        where: { deleted: false },
-        select: { slug: true, updatedAt: true },
-        orderBy: { updatedAt: "desc" },
-      }),
-      prisma.category.findMany({
-        where: { id: { in: activeCategoryIds }, deleted: false },
-        select: { slug: true, updatedAt: true },
-        orderBy: { updatedAt: "desc" },
-      }),
-      registry.features.BOOKS.enabled ? getStorefrontBooks().then((catalog) => catalog.books) : Promise.resolve([]),
+      getStorefrontCatalogFacets(),
+      registry.features.BOOKS.enabled || registry.features.AUTHORS.enabled
+        ? getStorefrontBookDirectory()
+        : Promise.resolve([]),
     ]);
 
-    const authors = new Map<number, Date>();
-    const publishers = new Map<number, Date>();
-    for (const book of books) {
-      const updatedAt = new Date(book.product.updatedAt);
-      if (book.writer && registry.features.AUTHORS.enabled) authors.set(book.writer.id, updatedAt);
-      if (book.publisher) publishers.set(book.publisher.id, updatedAt);
+    const authorIds = new Set<number>();
+    const publisherIds = new Set<number>();
+    for (const book of bookDirectory) {
+      if (registry.features.AUTHORS.enabled && book.writer) authorIds.add(book.writer.id);
+      if (registry.features.BOOKS.enabled && book.publisher) publisherIds.add(book.publisher.id);
     }
 
     return [
@@ -101,27 +91,23 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         changeFrequency: "monthly" as const,
         priority: 0.65,
       })),
-      ...brands.map((brand) => ({
-        url: `${siteUrl}/ecommerce/brands/${encodeURIComponent(brand.slug)}`,
-        lastModified: brand.updatedAt,
+      ...facets.brands.filter((brand) => brand.productCount > 0).map((brand) => ({
+        url: `${siteUrl}/ecommerce/products?brand=${encodeURIComponent(brand.slug)}`,
         changeFrequency: "weekly" as const,
         priority: 0.7,
       })),
-      ...categories.map((category) => ({
+      ...facets.categories.filter((category) => category.productCount > 0).map((category) => ({
         url: `${siteUrl}/ecommerce/products?category=${encodeURIComponent(category.slug)}`,
-        lastModified: category.updatedAt,
         changeFrequency: "weekly" as const,
         priority: 0.7,
       })),
-      ...Array.from(authors, ([id, lastModified]) => ({
+      ...Array.from(authorIds, (id) => ({
         url: `${siteUrl}/ecommerce/authors/${id}`,
-        lastModified,
         changeFrequency: "weekly" as const,
         priority: 0.65,
       })),
-      ...Array.from(publishers, ([id, lastModified]) => ({
+      ...Array.from(publisherIds, (id) => ({
         url: `${siteUrl}/ecommerce/publishers/${id}`,
-        lastModified,
         changeFrequency: "weekly" as const,
         priority: 0.65,
       })),

@@ -1,3 +1,4 @@
+import ServerRichText from "@/components/ecommarce/product-detail/ServerRichText";
 import { cache } from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -23,6 +24,7 @@ import {
   stripHtml,
   toAbsoluteUrl,
   truncateText,
+  serializeJsonLd,
 } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
 
@@ -145,9 +147,21 @@ export default async function ProductPage({ params }: ProductPageProps) {
     ...(product.weight ? [{ label: t("information.weight"), value: String(product.weight) }] : []),
     ...(dimensions ? [{ label: t("information.dimensions"), value: dimensions }] : []),
   ];
+  const settings = await getSiteSettingsForSeo();
+  const breadcrumbJsonLd = {
+    "@context": "https://schema.org", "@type": "BreadcrumbList",
+    itemListElement: [
+      { name: t("breadcrumb.home"), item: toAbsoluteUrl("/") },
+      { name: t("breadcrumb.products"), item: toAbsoluteUrl("/ecommerce/products") },
+      { name: product.category.name, item: toAbsoluteUrl(categoryHref) },
+      { name: product.name, item: toAbsoluteUrl(productHref) },
+    ].map((entry, index) => ({ "@type": "ListItem", position: index + 1, ...entry })),
+  };
   const productJsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
+    "@id": `${toAbsoluteUrl(productHref)}#product`,
+    url: toAbsoluteUrl(productHref),
     name: product.name,
     image: [product.image, ...product.gallery]
       .filter(Boolean)
@@ -167,6 +181,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
         : undefined,
     offers: {
       "@type": "Offer",
+      seller: { "@type": "Organization", "@id": `${getSiteUrl()}#organization`, name: settings.siteTitle },
       url: `${getSiteUrl()}${productHref}`,
       priceCurrency: product.currency,
       price: product.basePrice,
@@ -183,9 +198,10 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(productJsonLd).replace(/</g, "\\u003c"),
+          __html: serializeJsonLd(productJsonLd),
         }}
       />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd) }} />
       <div className="container px-3 py-4 sm:px-6 lg:py-5">
         <nav className="mb-4 flex flex-wrap items-center gap-2 text-[12px] text-muted-foreground" aria-label={t("breadcrumb.label")}>
           <Link href="/" className="hover:text-primary">{t("breadcrumb.home")}</Link>
@@ -232,6 +248,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
             <ProductDetailTabs
               productId={product.id}
               description={product.description || product.shortDesc || ""}
+              descriptionContent={product.description || product.shortDesc ? <ServerRichText content={product.description || product.shortDesc || ""} /> : undefined}
               attributes={product.attributes}
               variantOptions={product.variantOptions}
               specificationGroups={product.specificationGroups}

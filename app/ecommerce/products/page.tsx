@@ -1,3 +1,4 @@
+import { cache } from "react";
 import CatalogDynamicFilters from "@/components/ecommarce/catalog/CatalogDynamicFilters";
 import { catalogFacetPage } from "@/lib/catalog-facet-page";
 import FilterSection from "@/components/ecommarce/catalog/CatalogFilterSection";
@@ -14,13 +15,16 @@ import {
   catalogCanonicalUrl,
   catalogUrl,
   getStorefrontCatalog,
+  getStorefrontCatalogFacets,
   isIndexableCatalogView,
   parseCatalogFilters,
   type CatalogSearchParams,
   type CatalogSort,
 } from "@/lib/storefront-catalog";
-import { getSiteSettingsForSeo, getSiteUrl } from "@/lib/seo";
+import { getSiteSettingsForSeo, getSiteUrl, serializeJsonLd } from "@/lib/seo";
 import { getTranslations } from "next-intl/server";
+
+const getSeoFacets = cache(getStorefrontCatalogFacets);
 
 type ProductsPageProps = {
   searchParams: Promise<CatalogSearchParams>;
@@ -38,27 +42,31 @@ const SORT_OPTIONS: Array<{ value: CatalogSort; labelKey: string }> = [
 export async function generateMetadata({
   searchParams,
 }: ProductsPageProps): Promise<Metadata> {
-  const [filters, settings] = await Promise.all([
+  const [filters, settings, facets] = await Promise.all([
     searchParams.then(parseCatalogFilters),
     getSiteSettingsForSeo(),
+    getSeoFacets(),
   ]);
   const t = await getTranslations("StorefrontCatalog.page");
+  const category = facets.categories.find((item) => item.slug === filters.category || String(item.id) === filters.category);
+  const brand = filters.brands.length === 1 ? facets.brands.find((item) => item.slug === filters.brands[0]) : undefined;
+  const normalized = { ...filters, category: category?.slug ?? filters.category };
   const qualifier = filters.q
     ? t("metadata.searchResults", { query: filters.q })
     : filters.category
-      ? t("metadata.categoryProducts", { category: filters.category.replaceAll("-", " ") })
-      : t("allProducts");
+      ? t("metadata.categoryProducts", { category: category?.name ?? filters.category.replaceAll("-", " ") })
+      : brand ? t("metadata.categoryProducts", { category: brand.name }) : t("allProducts");
 
   return {
     title: { absolute: `${qualifier} — ${settings.siteTitle}` },
     description:
-      t("metadata.description", { site: settings.siteTitle }),
+      t("metadata.description", { site: category?.name || brand?.name ? `${settings.siteTitle}: ${category?.name ?? brand?.name}` : settings.siteTitle }),
     alternates: {
-      canonical: catalogCanonicalUrl(filters),
+      canonical: catalogCanonicalUrl(normalized),
     },
-    robots: isIndexableCatalogView(filters)
+    robots: isIndexableCatalogView(normalized) && (!filters.category || Boolean(category?.productCount)) && (!filters.brands.length || Boolean(brand?.productCount))
       ? undefined
-      : { index: false, follow: true },
+      : { index: false, follow: true, googleBot: { index: false, follow: true } },
   };
 }
 
@@ -229,14 +237,15 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
   const collectionJsonLd = {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    name: t("metadata.catalogName", { site: settings.siteTitle }),
+    url: `${getSiteUrl()}${catalogCanonicalUrl(filters)}`,
+    name: selectedCategory?.name ?? selectedBrandNames[0] ?? t("metadata.catalogName", { site: settings.siteTitle }),
     numberOfItems: pagination.total,
     mainEntity: {
       "@type": "ItemList",
       itemListElement: products.map((product, index) => ({
         "@type": "ListItem",
         position: firstResult + index,
-        url: `${getSiteUrl()}/ecommerce/products/${product.id}`,
+        url: `${getSiteUrl()}/ecommerce/products/${encodeURIComponent(product.slug)}`,
         name: product.name,
       })),
     },
@@ -246,7 +255,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
     <div className="min-h-screen bg-background text-foreground">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(collectionJsonLd) }}
       />
       {filters.q ? (
         <SearchResultsTelemetry
@@ -268,6 +277,11 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
         />
       ) : null}
       <div className="container px-3 pb-5 pt-[76px] sm:px-6 lg:py-8">
+        {(selectedCategory || selectedBrandNames.length === 1) ? <nav aria-label="Breadcrumb" className="mb-4 flex flex-wrap items-center gap-2 text-sm text-muted-foreground">
+          <Link href="/">{settings.siteTitle}</Link><span aria-hidden="true">/</span>
+          <Link href="/ecommerce/products">{t("allProducts")}</Link><span aria-hidden="true">/</span>
+          <span>{selectedCategory?.name ?? selectedBrandNames[0]}</span>
+        </nav> : null}
         <section className="overflow-hidden rounded-3xl border bg-gradient-to-br from-primary/10 via-background to-accent/10 px-5 py-7 sm:px-8 sm:py-10">
           <div className="max-w-3xl">
             <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-bold uppercase tracking-[0.18em] text-primary">
@@ -275,10 +289,10 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
               {t("eyebrow")}
             </span>
             <h1 className="mt-4 text-2xl font-bold tracking-tight sm:text-3xl">
-              {t("heading")}
+              {selectedCategory?.name ?? (selectedBrandNames.length === 1 ? selectedBrandNames[0] : t("heading"))}
             </h1>
             <p className="mt-3 max-w-2xl text-sm text-muted-foreground sm:text-base">
-              {t("description")}
+              {selectedCategory || selectedBrandNames.length === 1 ? t("metadata.description", { site: `${settings.siteTitle}: ${selectedCategory?.name ?? selectedBrandNames[0]}` }) : t("description")}
             </p>
           </div>
         </section>

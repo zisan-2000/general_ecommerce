@@ -1,3 +1,4 @@
+import { serializeJsonLd } from "@/lib/seo";
 import type React from "react";
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
@@ -158,13 +159,13 @@ export default async function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(websiteJsonLd),
+            __html: serializeJsonLd(websiteJsonLd),
           }}
         />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(organizationJsonLd),
+            __html: serializeJsonLd(organizationJsonLd),
           }}
         />
         <NextIntlClientProvider locale={locale}>
