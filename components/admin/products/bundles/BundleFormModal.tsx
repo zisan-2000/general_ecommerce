@@ -832,7 +832,11 @@ export default function BundleFormModal({
 
       const result = await response.json().catch(() => ({}));
       if (!response.ok) {
-        throw new Error(t("errors.save"));
+        const apiMessage =
+          typeof result?.error === "string" && result.error.trim()
+            ? result.error.trim()
+            : t("errors.save");
+        throw new Error(apiMessage);
       }
 
       toast.success(
