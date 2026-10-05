@@ -2730,6 +2730,11 @@
       "productLabel": "उत्पादन",
       "selectProduct": "उत्पादन छान्नुहोस्"
     },
+    "pagination": {
+      "previous": "अघिल्लो",
+      "pageOf": "{page} / {pages} पृष्ठ",
+      "next": "अर्को"
+    },
     "stats": {
       "physicalProducts": "भौतिक उत्पादनहरू",
       "variants": "भेरियन्टहरू",
@@ -2743,10 +2748,10 @@
       "allAttributes": "सबै एट्रिब्युट",
       "attributeValueLabel": "एट्रिब्युट मान",
       "allValues": "सबै मानहरू",
-      "valueProductCount": " ({count} उत्पादन)",
+      "valueProductCount": " (यस पृष्ठमा {count})",
       "variantLabel": "भेरियन्ट",
       "selectVariant": "भेरियन्ट छान्नुहोस्",
-      "productCountInfo": "{count} भौतिक उत्पादनमा {name}: {value}{productSuffix} छ।",
+      "productCountInfo": "यस पृष्ठमा {count} भौतिक उत्पादनमा {name}: {value}{productSuffix} छ।",
       "productIncluded": " (मेल खाएमा \"{name}\" सहित)",
       "selectHint": "स्टक स्तर व्यवस्थापन गर्न उत्पादन र भेरियन्ट छान्नुहोस्।",
       "noWarehouses": "वेयरहाउस फेला परेन। Warehouses बटनबाट एउटा सिर्जना गर्नुहोस्।",

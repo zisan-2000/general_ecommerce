@@ -198,6 +198,32 @@ export async function GET(req: Request) {
         Prisma.sql`SELECT p.id ${query.from} ORDER BY ${query.orderBy}
           LIMIT ${ADMIN_PRODUCTS_PAGE_SIZE} OFFSET ${(page - 1) * ADMIN_PRODUCTS_PAGE_SIZE}`,
       );
+      if (searchParams.get("stockLookup") === "true") {
+        const products = ids.length
+          ? await prisma.product.findMany({
+              where: { id: { in: ids.map((row) => row.id) } },
+              select: {
+                id: true,
+                name: true,
+                type: true,
+                lowStockThreshold: true,
+                category: { select: { name: true } },
+                attributes: {
+                  select: {
+                    id: true,
+                    value: true,
+                    attribute: { select: { id: true, name: true } },
+                  },
+                },
+              },
+            })
+          : [];
+        const byId = new Map(products.map((product) => [product.id, product]));
+        return privateJson({
+          products: ids.map((row) => byId.get(row.id)).filter(Boolean),
+          pagination: { total, page, pages, pageSize: ADMIN_PRODUCTS_PAGE_SIZE },
+        });
+      }
       const products = ids.length ? await prisma.product.findMany({
         where: { id: { in: ids.map((row) => row.id) } },
         include: productInclude,

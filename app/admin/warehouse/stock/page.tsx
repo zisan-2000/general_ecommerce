@@ -6,6 +6,8 @@ import dynamic from "next/dynamic";
 import { toast } from "sonner";
 import {
   AlertTriangle,
+  ChevronLeft,
+  ChevronRight,
   RefreshCw,
   Warehouse as WarehouseIcon,
 } from "lucide-react";
@@ -39,6 +41,19 @@ interface Product {
     value: string;
     attribute?: { id: number; name: string } | null;
   }>;
+}
+
+interface ProductPagination {
+  total: number;
+  page: number;
+  pages: number;
+  pageSize: number;
+}
+
+interface CachedProductPage {
+  products: Product[];
+  pagination: ProductPagination;
+  cachedAt: number;
 }
 
 interface Warehouse {
@@ -88,6 +103,8 @@ interface AttributeValue {
   attributeId: number;
 }
 
+const PRODUCT_PAGE_CACHE_TTL_MS = 30_000;
+
 const StockManagementPage = memo(function StockManagementPage() {
   const t = useTranslations("AdminStockManagement");
   const bundleStock = useTranslations("AdminWarehouseBundleStock");
@@ -96,10 +113,18 @@ const StockManagementPage = memo(function StockManagementPage() {
   const physicalStockDirtyRef = useRef(false);
 
   const detailRequestIdRef = useRef(0);
+  const baseRequestIdRef = useRef(0);
+  const baseDataLoadedRef = useRef(false);
+  const productPageCacheRef = useRef(new Map<string, CachedProductPage>());
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState<Record<number, boolean>>({});
   const [savingVariantThreshold, setSavingVariantThreshold] = useState(false);
   const [search, setSearch] = useState("");
+  const [debouncedSearch, setDebouncedSearch] = useState("");
+  const [productPage, setProductPage] = useState(1);
+  const [productPagination, setProductPagination] = useState<ProductPagination>(
+    { total: 0, page: 1, pages: 1, pageSize: 24 },
+  );
 
   const [products, setProducts] = useState<Product[]>([]);
   const [warehouses, setWarehouses] = useState<Warehouse[]>([]);
@@ -123,17 +148,8 @@ const StockManagementPage = memo(function StockManagementPage() {
   const [warehouseModalOpen, setWarehouseModalOpen] = useState(false);
 
   const physicalProducts = useMemo(() => {
-    const q = search.trim().toLowerCase();
-    return products
-      .filter((p) => p.type === "PHYSICAL")
-      .filter((p) => {
-        if (!q) return true;
-        return (
-          p.name.toLowerCase().includes(q) ||
-          (p.category?.name || "").toLowerCase().includes(q)
-        );
-      });
-  }, [products, search]);
+    return products.filter((product) => product.type === "PHYSICAL");
+  }, [products]);
 
   const selectedProduct = useMemo(() => {
     if (!selectedProductId) return null;
@@ -248,29 +264,114 @@ const StockManagementPage = memo(function StockManagementPage() {
     return entries.map(([key, value]) => `${key}: ${String(value)}`).join(", ");
   };
 
-  const loadBaseData = useCallback(async () => {
+  useEffect(() => {
+    const timeout = window.setTimeout(() => {
+      setDebouncedSearch(search.trim());
+    }, 300);
+    return () => window.clearTimeout(timeout);
+  }, [search]);
+
+  const loadBaseData = useCallback(async (forceRefresh = false) => {
+    const requestId = ++baseRequestIdRef.current;
+    const searchTerm = debouncedSearch.trim();
+    const cacheKey = `${searchTerm.toLowerCase()}:${productPage}`;
+    const cachedPage = productPageCacheRef.current.get(cacheKey);
+
+    if (forceRefresh) {
+      productPageCacheRef.current.clear();
+    } else if (
+      cachedPage &&
+      Date.now() - cachedPage.cachedAt < PRODUCT_PAGE_CACHE_TTL_MS
+    ) {
+      setProducts(cachedPage.products);
+      setProductPagination(cachedPage.pagination);
+      setLoading(false);
+      return;
+    }
+
     try {
       setLoading(true);
-      const [pRes, wRes, aRes] = await Promise.all([
-        fetch("/api/products", { cache: "no-store" }),
-        fetch("/api/warehouses", { cache: "no-store" }),
-        fetch("/api/attributes", { cache: "no-store" }),
+      const params = new URLSearchParams({
+        paginated: "true",
+        stockLookup: "true",
+        type: "PHYSICAL",
+        page: String(productPage),
+      });
+      if (searchTerm) params.set("search", searchTerm);
+
+      const shouldLoadReferenceData = forceRefresh || !baseDataLoadedRef.current;
+      const productRequest = fetch(`/api/products?${params}`, {
+        cache: "no-store",
+      });
+      const referenceDataRequest = shouldLoadReferenceData
+        ? Promise.all([
+            fetch("/api/warehouses", { cache: "no-store" }),
+            fetch("/api/attributes", { cache: "no-store" }),
+          ])
+        : Promise.resolve(null);
+      const [productResponse, referenceResponses] = await Promise.all([
+        productRequest,
+        referenceDataRequest,
       ]);
+      const productData = await productResponse.json();
 
-      const pData = await pRes.json();
-      const wData = await wRes.json();
-      const aData = await aRes.json();
+      if (!productResponse.ok) {
+        throw new Error(productData?.error || t("errors.loadStockData"));
+      }
+      if (
+        !Array.isArray(productData?.products) ||
+        !productData?.pagination
+      ) {
+        throw new Error(t("errors.loadStockData"));
+      }
 
-      setProducts(Array.isArray(pData) ? pData : []);
-      setWarehouses(Array.isArray(wData) ? wData : []);
-      setAttributes(Array.isArray(aData) ? aData : []);
+      let nextWarehouses: Warehouse[] | null = null;
+      let nextAttributes: Attribute[] | null = null;
+      if (referenceResponses) {
+        const [warehouseResponse, attributeResponse] = referenceResponses;
+        const [warehouseData, attributeData] = await Promise.all([
+          warehouseResponse.json(),
+          attributeResponse.json(),
+        ]);
+        if (!warehouseResponse.ok || !attributeResponse.ok) {
+          throw new Error(t("errors.loadStockData"));
+        }
+        nextWarehouses = Array.isArray(warehouseData) ? warehouseData : [];
+        nextAttributes = Array.isArray(attributeData) ? attributeData : [];
+      }
+
+      if (requestId !== baseRequestIdRef.current) return;
+
+      const nextPage: CachedProductPage = {
+        products: productData.products,
+        pagination: productData.pagination,
+        cachedAt: Date.now(),
+      };
+      productPageCacheRef.current.set(cacheKey, nextPage);
+      if (productPageCacheRef.current.size > 10) {
+        const oldestKey = productPageCacheRef.current.keys().next().value;
+        if (oldestKey) productPageCacheRef.current.delete(oldestKey);
+      }
+      setProducts(nextPage.products);
+      setProductPagination(nextPage.pagination);
+      if (nextPage.pagination.page !== productPage) {
+        setProductPage(nextPage.pagination.page);
+      }
+      if (nextWarehouses && nextAttributes) {
+        setWarehouses(nextWarehouses);
+        setAttributes(nextAttributes);
+        baseDataLoadedRef.current = true;
+      }
     } catch (err) {
-      toast.error(t("errors.loadStockData"));
+      if (requestId === baseRequestIdRef.current) {
+        toast.error(
+          err instanceof Error ? err.message : t("errors.loadStockData"),
+        );
+      }
     } finally {
-      setLoading(false);
+      if (requestId === baseRequestIdRef.current) setLoading(false);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [debouncedSearch, productPage, t]);
 
   const loadProductDetails = useCallback(async (productId: number) => {
     const requestId = ++detailRequestIdRef.current;
@@ -424,7 +525,7 @@ const StockManagementPage = memo(function StockManagementPage() {
   }, [selectedProduct]);
 
   const refreshAll = async () => {
-    await loadBaseData();
+    await loadBaseData(true);
     if (selectedProductId) {
       await loadProductDetails(selectedProductId);
     }
@@ -585,7 +686,10 @@ const StockManagementPage = memo(function StockManagementPage() {
             <Input
               placeholder={t("filters.searchPlaceholder")}
               value={search}
-              onChange={(e) => setSearch(e.target.value)}
+              onChange={(e) => {
+                setSearch(e.target.value);
+                setProductPage(1);
+              }}
             />
           </div>
 
@@ -611,6 +715,47 @@ const StockManagementPage = memo(function StockManagementPage() {
                 </option>
               ))}
             </select>
+            {productPagination.pages > 1 && (
+              <div className="mt-2 flex items-center justify-between gap-2">
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="h-8 px-2"
+                  onClick={() =>
+                    setProductPage((page) => Math.max(1, page - 1))
+                  }
+                  disabled={loading || productPagination.page <= 1}
+                  aria-label={t("pagination.previous")}
+                >
+                  <ChevronLeft className="h-4 w-4" />
+                  {t("pagination.previous")}
+                </Button>
+                <span className="text-xs text-muted-foreground">
+                  {t("pagination.pageOf", {
+                    page: productPagination.page,
+                    pages: productPagination.pages,
+                  })}
+                </span>
+                <Button
+                  type="button"
+                  variant="outline"
+                  className="h-8 px-2"
+                  onClick={() =>
+                    setProductPage((page) =>
+                      Math.min(productPagination.pages, page + 1),
+                    )
+                  }
+                  disabled={
+                    loading ||
+                    productPagination.page >= productPagination.pages
+                  }
+                  aria-label={t("pagination.next")}
+                >
+                  {t("pagination.next")}
+                  <ChevronRight className="h-4 w-4" />
+                </Button>
+              </div>
+            )}
           </div>
         </CardContent>
       </Card>
@@ -625,7 +770,7 @@ const StockManagementPage = memo(function StockManagementPage() {
               {loading ? (
                 <span className="inline-block h-8 w-16 bg-muted animate-pulse rounded" />
               ) : (
-                physicalProducts.length
+                productPagination.total
               )}
             </p>
           </CardContent>

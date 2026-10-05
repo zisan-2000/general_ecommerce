@@ -2720,6 +2720,11 @@
       "productLabel": "Produk",
       "selectProduct": "Pilih produk"
     },
+    "pagination": {
+      "previous": "Sebelumnya",
+      "pageOf": "Halaman {page} dari {pages}",
+      "next": "Berikutnya"
+    },
     "stats": {
       "physicalProducts": "Produk Fisik",
       "variants": "Varian",
@@ -2733,10 +2738,10 @@
       "allAttributes": "Semua atribut",
       "attributeValueLabel": "Nilai Atribut",
       "allValues": "Semua nilai",
-      "valueProductCount": " ({count} produk)",
+      "valueProductCount": " ({count} di halaman ini)",
       "variantLabel": "Varian",
       "selectVariant": "Pilih varian",
-      "productCountInfo": "{count} produk fisik memiliki {name}: {value}{productSuffix}.",
+      "productCountInfo": "Di halaman ini, {count} produk fisik memiliki {name}: {value}{productSuffix}.",
       "productIncluded": " (termasuk \"{name}\" jika cocok)",
       "selectHint": "Pilih produk dan varian untuk mengelola tingkat stok.",
       "noWarehouses": "Tidak ada gudang yang ditemukan. Buat satu melalui tombol Gudang.",

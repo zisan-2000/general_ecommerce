@@ -3,6 +3,32 @@
 import React from "react";
 import { Editor } from "@tinymce/tinymce-react";
 
+interface HeadingMenuItem {
+  type: "menuitem";
+  text: string;
+  onAction: () => void;
+}
+
+// Describe the APIs used here; TinyMCE itself is loaded from the cloud.
+interface ScopedHeadingEditor {
+  formatter: {
+    remove: (name: string) => void;
+    apply: (name: string) => void;
+  };
+  ui: {
+    registry: {
+      addMenuButton: (
+        name: string,
+        options: {
+          text: string;
+          tooltip: string;
+          fetch: (callback: (items: HeadingMenuItem[]) => void) => void;
+        },
+      ) => void;
+    };
+  };
+}
+
 interface TinymceEditorProps {
   value: string;
   onChange: (content: string) => void;
@@ -73,7 +99,7 @@ const TinymceEditor: React.FC<TinymceEditorProps> = ({
             )
           : undefined,
         setup: selectionScopedHeadings
-          ? editor => {
+          ? (editor: ScopedHeadingEditor) => {
               const clearScopedHeadings = () => {
                 for (const [formatName] of scopedHeadingFormats) {
                   editor.formatter.remove(formatName);
@@ -83,7 +109,7 @@ const TinymceEditor: React.FC<TinymceEditorProps> = ({
               editor.ui.registry.addMenuButton("selectionheadings", {
                 text: "Paragraph / Heading",
                 tooltip: "Format selected text",
-                fetch: callback => {
+                fetch: (callback: (items: HeadingMenuItem[]) => void) => {
                   callback([
                     {
                       type: "menuitem",

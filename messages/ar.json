@@ -2720,6 +2720,11 @@
       "productLabel": "المنتج",
       "selectProduct": "اختيار منتج"
     },
+    "pagination": {
+      "previous": "السابق",
+      "pageOf": "الصفحة {page} من {pages}",
+      "next": "التالي"
+    },
     "stats": {
       "physicalProducts": "المنتجات المادية",
       "variants": "المتغيرات",
@@ -2733,10 +2738,10 @@
       "allAttributes": "جميع الخصائص",
       "attributeValueLabel": "قيمة الخاصية",
       "allValues": "جميع القيم",
-      "valueProductCount": " ({count} منتجات)",
+      "valueProductCount": " ({count} في هذه الصفحة)",
       "variantLabel": "المتغير",
       "selectVariant": "اختيار متغير",
-      "productCountInfo": "يوجد {count} منتجات مادية تحتوي على {name}: {value}{productSuffix}.",
+      "productCountInfo": "في هذه الصفحة، يوجد {count} منتجات مادية تحتوي على {name}: {value}{productSuffix}.",
       "productIncluded": " (بما في ذلك \"{name}\" إذا كان مطابقًا)",
       "selectHint": "حدد منتجًا ومتغيرًا لإدارة مستويات المخزون.",
       "noWarehouses": "لم يتم العثور على مستودعات. أنشئ واحدًا من زر المستودعات.",
