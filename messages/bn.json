@@ -2705,6 +2705,11 @@
       "productLabel": "পণ্য",
       "selectProduct": "পণ্য নির্বাচন করুন"
     },
+    "pagination": {
+      "previous": "আগের",
+      "pageOf": "{page} / {pages} পৃষ্ঠা",
+      "next": "পরের"
+    },
     "stats": {
       "physicalProducts": "ফিজিক্যাল পণ্য",
       "variants": "ভ্যারিয়েন্ট",
@@ -2718,10 +2723,10 @@
       "allAttributes": "সব অ্যাট্রিবিউট",
       "attributeValueLabel": "অ্যাট্রিবিউট মান",
       "allValues": "সব মান",
-      "valueProductCount": " ({count}টি পণ্য)",
+      "valueProductCount": " (এই পৃষ্ঠায় {count}টি)",
       "variantLabel": "ভ্যারিয়েন্ট",
       "selectVariant": "ভ্যারিয়েন্ট নির্বাচন করুন",
-      "productCountInfo": "{count}টি ফিজিক্যাল পণ্যে {name}: {value} আছে{productSuffix}।",
+      "productCountInfo": "এই পৃষ্ঠায় {count}টি ফিজিক্যাল পণ্যে {name}: {value} আছে{productSuffix}।",
       "productIncluded": " (\"{name}\" মিলে গেলে সহ)",
       "selectHint": "স্টক লেভেল পরিচালনা করতে একটি পণ্য ও ভ্যারিয়েন্ট নির্বাচন করুন।",
       "noWarehouses": "কোনো ওয়্যারহাউস পাওয়া যায়নি। ওয়্যারহাউস বাটন থেকে একটি তৈরি করুন।",

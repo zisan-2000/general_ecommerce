@@ -2687,6 +2687,11 @@
       "productLabel": "商品",
       "selectProduct": "选择商品"
     },
+    "pagination": {
+      "previous": "上一页",
+      "pageOf": "第 {page} 页，共 {pages} 页",
+      "next": "下一页"
+    },
     "stats": {
       "physicalProducts": "实体商品",
       "variants": "变体",
@@ -2700,10 +2705,10 @@
       "allAttributes": "所有属性",
       "attributeValueLabel": "属性值",
       "allValues": "所有值",
-      "valueProductCount": "（{count} 个商品）",
+      "valueProductCount": "（本页 {count} 个）",
       "variantLabel": "变体",
       "selectVariant": "选择变体",
-      "productCountInfo": "有 {count} 个实体商品包含 {name}：{value}{productSuffix}。",
+      "productCountInfo": "本页有 {count} 个实体商品包含 {name}：{value}{productSuffix}。",
       "productIncluded": "（如匹配，则包括“{name}”）",
       "selectHint": "选择商品和变体以管理库存水平。",
       "noWarehouses": "未找到仓库。请通过“仓库”按钮创建一个。",

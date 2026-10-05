@@ -2705,6 +2705,11 @@
       "productLabel": "Product",
       "selectProduct": "Select product"
     },
+    "pagination": {
+      "previous": "Previous",
+      "pageOf": "Page {page} of {pages}",
+      "next": "Next"
+    },
     "stats": {
       "physicalProducts": "Physical Products",
       "variants": "Variants",
@@ -2718,10 +2723,10 @@
       "allAttributes": "All attributes",
       "attributeValueLabel": "Attribute Value",
       "allValues": "All values",
-      "valueProductCount": " ({count} products)",
+      "valueProductCount": " ({count} on this page)",
       "variantLabel": "Variant",
       "selectVariant": "Select variant",
-      "productCountInfo": "{count} physical products have {name}: {value}{productSuffix}.",
+      "productCountInfo": "On this page, {count} physical products have {name}: {value}{productSuffix}.",
       "productIncluded": " (including \"{name}\" if matched)",
       "selectHint": "Select a product and variant to manage stock levels.",
       "noWarehouses": "No warehouses found. Create one from the Warehouses button.",
