@@ -319,7 +319,7 @@ export default function ProductPurchasePanel({
             ) : null}
           </div>
 
-          <div className="p-4 sm:p-5">
+          <div className="min-w-0 p-3 sm:p-5">
             <h1 className="text-[18px] font-bold leading-[1.4] text-foreground sm:text-[20px]">
               {product.name}
             </h1>

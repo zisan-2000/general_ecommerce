@@ -123,7 +123,7 @@ export default function BestSelling({
   const [loading, setLoading] = useState(!hasPreloadedData);
   const [items, setItems] = useState<ProductDTO[]>(() =>
     topSellingData
-      ? normalizeStorefrontProducts(topSellingData, { requireSold: true })
+      ? normalizeStorefrontProducts(topSellingData)
       : [],
   );
   const [reviews, setReviews] = useState<ReviewDTO[]>(() =>
@@ -195,8 +195,7 @@ export default function BestSelling({
         const storefrontProducts = pList.filter(
           (p) =>
             p?.available !== false &&
-            p?.deleted !== true &&
-            toNumber(p?.totalSold ?? p?.soldCount, 0) > 0,
+            p?.deleted !== true,
         );
         const mappedProducts: ProductDTO[] = storefrontProducts.map((p) => {
           const variants = Array.isArray(p?.variants) ? p.variants : [];

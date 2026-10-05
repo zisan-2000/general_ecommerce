@@ -18,13 +18,12 @@ export async function GET() {
         deleted: false,
         available: true,
         categoryId: { in: activeCategoryIds },
+        OR: [{ bestSelling: true }, { soldCount: { gt: 0 } }],
         ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
         ...bookVisibility,
-        soldCount: {
-          gt: 0,
-        },
       },
       orderBy: {
+        bestSelling: "desc",
         soldCount: "desc",
       },
       take: 10,

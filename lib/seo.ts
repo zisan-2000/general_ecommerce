@@ -8,12 +8,15 @@ import {
 
 export type SiteSettingsSeo = ResolvedSiteSettings;
 
+export { resolveSeoSiteUrl } from "@/lib/seo-url";
+import { resolveSeoSiteUrl } from "@/lib/seo-url";
+
 export function getSiteUrl() {
-  return (
-    process.env.NEXT_PUBLIC_BASE_URL ||
-    process.env.NEXT_PUBLIC_SITE_URL ||
-    "http://localhost:3000"
-  ).replace(/\/+$/, "");
+  return resolveSeoSiteUrl(process.env);
+}
+
+export function serializeJsonLd(value: unknown) {
+  return JSON.stringify(value).replace(/</g, "\\u003c");
 }
 
 export function toAbsoluteUrl(path?: string | null) {
@@ -110,9 +113,6 @@ export async function buildDefaultMetadata(): Promise<Metadata> {
       template: `%s | ${settings.siteTitle}`,
     },
     description: settings.defaultSeoDescription,
-    alternates: {
-      canonical: siteUrl,
-    },
     keywords: settings.defaultSeoKeywords,
     authors: [{ name: settings.siteTitle }],
     creator: settings.siteTitle,

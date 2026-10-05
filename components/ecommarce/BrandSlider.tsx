@@ -27,11 +27,14 @@ export default function BrandSlider({
   limit?: number;
 }) {
   const t = useTranslations("Landing.Brands");
+
   const resolvedTitle = title ?? t("title");
   const resolvedSubtitle = subtitle ?? t("subtitle");
+
   const [loading, setLoading] = useState(true);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [error, setError] = useState<string | null>(null);
+
   const [canScrollLeft, setCanScrollLeft] = useState(false);
   const [canScrollRight, setCanScrollRight] = useState(false);
 
@@ -45,22 +48,29 @@ export default function BrandSlider({
         setLoading(true);
         setError(null);
 
-        const brandsData = await cachedFetchJson<Brand[]>("/api/brands?view=storefront", {
-          ttlMs: 5 * 60 * 1000,
-        });
+        const brandsData = await cachedFetchJson<Brand[]>(
+          "/api/brands?view=storefront",
+          {
+            ttlMs: 5 * 60 * 1000,
+          },
+        );
 
         if (!mounted) return;
 
         setBrands(Array.isArray(brandsData) ? brandsData : []);
       } catch (e: any) {
         if (!mounted) return;
+
         setError(e?.message || t("loadError"));
       } finally {
-        if (mounted) setLoading(false);
+        if (mounted) {
+          setLoading(false);
+        }
       }
     };
 
     load();
+
     return () => {
       mounted = false;
     };
@@ -81,22 +91,34 @@ export default function BrandSlider({
 
   const updateScrollControls = useCallback(() => {
     const element = scrollerRef.current;
+
     if (!element) return;
-    const maxScrollLeft = Math.max(0, element.scrollWidth - element.clientWidth);
+
+    const maxScrollLeft = Math.max(
+      0,
+      element.scrollWidth - element.clientWidth,
+    );
+
     setCanScrollLeft(element.scrollLeft > 2);
     setCanScrollRight(element.scrollLeft < maxScrollLeft - 2);
   }, []);
 
   useEffect(() => {
     const element = scrollerRef.current;
+
     if (!element) return;
 
     const frame = window.requestAnimationFrame(updateScrollControls);
-    element.addEventListener("scroll", updateScrollControls, { passive: true });
+
+    element.addEventListener("scroll", updateScrollControls, {
+      passive: true,
+    });
+
     const observer =
       typeof ResizeObserver === "undefined"
         ? null
         : new ResizeObserver(updateScrollControls);
+
     observer?.observe(element);
 
     return () => {
@@ -106,28 +128,38 @@ export default function BrandSlider({
     };
   }, [updateScrollControls, visible.length]);
 
-  const scrollByCards = (dir: "left" | "right") => {
-    const el = scrollerRef.current;
-    if (!el) return;
+  const scrollByCards = (direction: "left" | "right") => {
+    const element = scrollerRef.current;
 
-    const card = el.querySelector<HTMLElement>("[data-brand-card='1']");
-    const cardWidth = card ? card.offsetWidth : 156;
-    const distance = Math.max(cardWidth * 3, el.clientWidth * 0.72);
+    if (!element) return;
 
-    el.scrollBy({
-      left: dir === "left" ? -distance : distance,
+    const card = element.querySelector<HTMLElement>(
+      "[data-brand-card='1']",
+    );
+
+    const cardWidth = card ? card.offsetWidth : 108;
+
+    const distance = Math.max(
+      cardWidth * 5,
+      element.clientWidth * 0.75,
+    );
+
+    element.scrollBy({
+      left: direction === "left" ? -distance : distance,
       behavior: "smooth",
     });
   };
 
   return (
     <section className="w-full bg-background">
-      <div className="w-full px-3 py-5 sm:px-5 sm:py-6">
-        <div className="mb-4 flex items-end justify-between gap-4">
+      <div className="container px-3 py-5 sm:px-5 sm:py-7">
+        {/* Header */}
+        <div className="mb-5 flex items-end justify-between gap-4">
           <div>
-            <h2 className="text-[20px] font-bold tracking-tight text-foreground sm:text-[22px]">
+            <h2 className="text-[20px] font-bold tracking-tight text-foreground sm:text-[24px]">
               {resolvedTitle}
             </h2>
+
             <p className="mt-1 text-[12px] text-muted-foreground sm:text-[13px]">
               {resolvedSubtitle}
             </p>
@@ -138,94 +170,248 @@ export default function BrandSlider({
               type="button"
               onClick={() => scrollByCards("left")}
               disabled={!canScrollLeft}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-muted-foreground shadow-sm transition hover:border-primary/35 hover:bg-muted disabled:cursor-not-allowed disabled:opacity-35"
               aria-label={t("previous")}
+              className="
+                inline-flex h-9 w-9
+                items-center justify-center
+                rounded-full
+                border border-border
+                bg-card
+                text-muted-foreground
+                shadow-sm
+                transition-all
+                hover:border-primary/40
+                hover:bg-primary
+                hover:text-primary-foreground
+                disabled:cursor-not-allowed
+                disabled:opacity-30
+              "
             >
               <ChevronLeft className="h-4 w-4" />
             </button>
+
             <button
               type="button"
               onClick={() => scrollByCards("right")}
               disabled={!canScrollRight}
-              className="inline-flex h-9 w-9 items-center justify-center rounded-full border border-border bg-card text-muted-foreground shadow-sm transition hover:border-primary/35 hover:bg-muted disabled:cursor-not-allowed disabled:opacity-35"
               aria-label={t("next")}
+              className="
+                inline-flex h-9 w-9
+                items-center justify-center
+                rounded-full
+                border border-border
+                bg-card
+                text-muted-foreground
+                shadow-sm
+                transition-all
+                hover:border-primary/40
+                hover:bg-primary
+                hover:text-primary-foreground
+                disabled:cursor-not-allowed
+                disabled:opacity-30
+              "
             >
               <ChevronRight className="h-4 w-4" />
             </button>
+
             <Link
               href="/ecommerce/brands"
-              className="hidden h-9 items-center gap-1 rounded-full border border-border bg-card px-4 text-[11px] font-semibold text-foreground shadow-sm transition hover:border-primary hover:text-primary sm:inline-flex"
+              className="
+                hidden h-9
+                items-center gap-1
+                rounded-full
+                border border-border
+                bg-card
+                px-4
+                text-[11px]
+                font-semibold
+                text-foreground
+                shadow-sm
+                transition
+                hover:border-primary
+                hover:text-primary
+                sm:inline-flex
+              "
             >
-              {t("viewAll")} <ArrowRight className="h-3.5 w-3.5" />
+              {t("viewAll")}
+              <ArrowRight className="h-3.5 w-3.5" />
             </Link>
           </div>
         </div>
 
+        {/* Error */}
         {error ? (
-          <div className="mb-3 rounded-lg border border-destructive/20 bg-destructive/10 p-2 text-xs text-destructive sm:p-3 sm:text-sm">
+          <div className="mb-4 rounded-xl border border-destructive/20 bg-destructive/10 px-4 py-3 text-sm text-destructive">
             {error}
           </div>
         ) : null}
 
-        <div className="relative overflow-hidden">
+        {/* Slider */}
+        <div className="relative">
           <div
             ref={scrollerRef}
-            className="no-scrollbar flex snap-x snap-mandatory gap-3 overflow-x-auto scroll-smooth pb-1"
+            className="
+              no-scrollbar
+              flex snap-x snap-mandatory
+              gap-3 overflow-x-auto
+              scroll-smooth
+              px-1 pb-3
+              sm:gap-4
+              md:gap-5
+            "
           >
             {loading
-              ? Array.from({ length: 8 }).map((_, index) => (
+              ? Array.from({ length: 10 }).map((_, index) => (
                   <div
                     key={index}
-                    className="h-[112px] min-w-[132px] animate-pulse snap-start rounded-lg border border-border bg-card sm:min-w-[156px] lg:min-w-[172px]"
-                  >
-                    <div className="mx-3 mt-3 h-12 rounded bg-muted" />
-                    <div className="mx-3 mt-3 h-3 w-20 rounded bg-muted" />
-                  </div>
+                    className="
+                      h-[84px] w-[84px] min-w-[84px]
+                      animate-pulse
+                      rounded-xl
+                      border border-border
+                      bg-muted
+                      sm:h-[96px] sm:w-[96px] sm:min-w-[96px]
+                      lg:h-[108px] lg:w-[108px] lg:min-w-[108px]
+                    "
+                  />
                 ))
               : visible.map((brand) => (
                   <Link
                     key={brand.id}
                     data-brand-card="1"
-                    href={`/ecommerce/products?brand=${encodeURIComponent(brand.slug)}`}
-                    aria-label={`Shop ${brand.name} products`}
-                    className="group flex h-[112px] min-w-[132px] snap-start flex-col rounded-lg border border-border bg-card p-3 text-card-foreground shadow-[0_1px_2px_rgba(15,23,42,0.05)] transition hover:-translate-y-0.5 hover:border-primary/45 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:min-w-[156px] lg:min-w-[172px]"
+                    href={`/ecommerce/products?brand=${encodeURIComponent(
+                      brand.slug,
+                    )}`}
+                    aria-label={`Shop ${brand.name}`}
+                    title={brand.name}
+                    className="
+                      group
+                      relative
+                      flex
+                      h-[84px] w-[84px] min-w-[84px]
+                      snap-start
+                      items-center justify-center
+                      overflow-hidden
+                      rounded-xl
+                      border border-slate-200/80
+                      bg-white
+                      shadow-[0_3px_12px_rgba(15,23,42,0.05)]
+                      transition-all
+                      duration-300
+
+                      hover:-translate-y-1
+                      hover:border-primary/30
+                      hover:shadow-[0_10px_26px_rgba(15,23,42,0.10)]
+
+                      focus-visible:outline-none
+                      focus-visible:ring-2
+                      focus-visible:ring-primary/30
+
+                      sm:h-[96px] sm:w-[96px] sm:min-w-[96px]
+                      lg:h-[108px] lg:w-[108px] lg:min-w-[108px]
+                    "
                   >
-                    <div className="relative flex h-[54px] items-center justify-center overflow-hidden rounded-md border border-slate-200 bg-white px-3">
-                      {brand.logo ? (
+                    {/* Subtle premium background */}
+                    <div
+                      className="
+                        pointer-events-none
+                        absolute inset-0
+                        bg-gradient-to-br
+                        from-white
+                        via-white
+                        to-slate-50
+                      "
+                    />
+
+                    {/* Hover glow */}
+                    <div
+                      className="
+                        pointer-events-none
+                        absolute -right-10 -top-10
+                        h-20 w-20
+                        rounded-full
+                        bg-primary/0
+                        blur-2xl
+                        transition-all
+                        duration-300
+                        group-hover:bg-primary/10
+                      "
+                    />
+
+                    {/* Logo */}
+                    {brand.logo ? (
+                      <div
+                        className="
+                          relative z-10
+                          h-[44px] w-[58px]
+                          transition-transform
+                          duration-300
+                          group-hover:scale-105
+
+                          sm:h-[50px] sm:w-[68px]
+                          lg:h-[56px] lg:w-[76px]
+                        "
+                      >
                         <Image
                           src={brand.logo}
                           alt={`${brand.name} logo`}
                           fill
-                          sizes="(max-width: 640px) 108px, 140px"
-                          className="object-contain p-2"
+                          sizes="
+                            (max-width: 640px) 58px,
+                            (max-width: 1024px) 68px,
+                            76px
+                          "
+                          className="object-contain"
                         />
-                      ) : (
-                        <span className="max-w-full truncate text-center text-[15px] font-black uppercase tracking-[-0.035em] text-slate-800 sm:text-[16px]">
-                          {brand.name}
-                        </span>
-                      )}
-                    </div>
-
-                    <div className="mt-2 flex min-w-0 items-center justify-between gap-2">
-                      <div className="min-w-0">
-                        <h3 className="truncate text-[11px] font-semibold text-foreground group-hover:text-primary">
-                          {brand.name}
-                        </h3>
-                        <p className="mt-0.5 text-[9px] text-muted-foreground">
-                          {brand.productCount} {brand.productCount === 1 ? "product" : "products"}
-                        </p>
                       </div>
-                      <ArrowRight className="h-3.5 w-3.5 shrink-0 text-muted-foreground/60 transition group-hover:translate-x-0.5 group-hover:text-primary" />
-                    </div>
+                    ) : (
+                      <span
+                        className="
+                          relative z-10
+                          max-w-[75%]
+                          truncate
+                          text-center
+                          text-[11px]
+                          font-black
+                          uppercase
+                          tracking-[-0.03em]
+                          text-slate-700
+                        "
+                      >
+                        {brand.name}
+                      </span>
+                    )}
                   </Link>
                 ))}
           </div>
 
           {!loading && !error && visible.length === 0 ? (
-            <div className="rounded-lg border border-dashed border-border bg-card px-4 py-8 text-center text-[12px] text-muted-foreground">
-              Brand products will appear here when they are available.
+            <div className="rounded-xl border border-dashed border-border bg-card px-4 py-8 text-center text-[12px] text-muted-foreground">
+              Brand logos will appear here when products are available.
             </div>
           ) : null}
+        </div>
+
+        {/* Mobile View All */}
+        <div className="mt-2 flex justify-center sm:hidden">
+          <Link
+            href="/ecommerce/brands"
+            className="
+              inline-flex h-9
+              items-center gap-1.5
+              rounded-full
+              border border-border
+              bg-card
+              px-4
+              text-[11px]
+              font-semibold
+              text-foreground
+              shadow-sm
+            "
+          >
+            {t("viewAll")}
+            <ArrowRight className="h-3.5 w-3.5" />
+          </Link>
         </div>
       </div>
     </section>

@@ -41,6 +41,8 @@ export async function POST(request: NextRequest) {
     const orderItemId = Number(body?.orderItemId);
     const reason = String(body?.reason || "").trim();
     const quantity = toPositiveInt(body?.quantity, 1);
+    const refundMethodKey = String(body?.refundMethod || "").trim();
+    const refundAccount = String(body?.refundAccount || "").trim();
 
     if (!Number.isInteger(orderItemId) || orderItemId <= 0) {
       return NextResponse.json({ error: "Invalid order item." }, { status: 400 });
@@ -49,6 +51,18 @@ export async function POST(request: NextRequest) {
     if (reason.length < 10) {
       return NextResponse.json(
         { error: "Please provide a clear refund reason." },
+        { status: 400 },
+      );
+    }
+    if (!refundMethodKey) {
+      return NextResponse.json(
+        { error: "Please select a refund payment method." },
+        { status: 400 },
+      );
+    }
+    if (refundAccount.length > 200) {
+      return NextResponse.json(
+        { error: "Refund account details are too long." },
         { status: 400 },
       );
     }
@@ -61,6 +75,7 @@ export async function POST(request: NextRequest) {
             id: true,
             userId: true,
             status: true,
+            payment_method: true,
           },
         },
         product: {
@@ -84,6 +99,46 @@ export async function POST(request: NextRequest) {
 
     if (orderItem.order.userId !== access.userId) {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+    }
+
+    let refundMethod: string;
+    if (refundMethodKey === "ORIGINAL") {
+      if (!String(orderItem.order.payment_method).startsWith("SSLCOMMERZ:")) {
+        return NextResponse.json(
+          { error: "Original-method refunds are unavailable for this order." },
+          { status: 400 },
+        );
+      }
+      refundMethod = `Original payment method (${orderItem.order.payment_method})`;
+    } else {
+      const match = /^MANUAL:(\d+)$/.exec(refundMethodKey);
+      if (!match || refundAccount.length < 3) {
+        return NextResponse.json(
+          { error: "Please provide valid refund payment details." },
+          { status: 400 },
+        );
+      }
+      const gateway = await prisma.payment.findFirst({
+        where: { id: Number(match[1]), orderId: null },
+        select: { paymentGatewayData: true },
+      });
+      const gatewayData =
+        gateway?.paymentGatewayData &&
+        typeof gateway.paymentGatewayData === "object" &&
+        !Array.isArray(gateway.paymentGatewayData)
+          ? (gateway.paymentGatewayData as Record<string, unknown>)
+          : null;
+      if (
+        !gatewayData ||
+        String(gatewayData.type || "").toUpperCase() !== "MANUAL" ||
+        gatewayData.isActive === false
+      ) {
+        return NextResponse.json(
+          { error: "Selected refund payment method is unavailable." },
+          { status: 400 },
+        );
+      }
+      refundMethod = String(gatewayData.channel || "Manual payment").trim();
     }
 
     const shipment = await prisma.shipment.findUnique({
@@ -147,6 +202,8 @@ export async function POST(request: NextRequest) {
           amount: new Prisma.Decimal(amount),
           quantity: requestedQuantity,
           reason,
+          refundMethod,
+          refundAccount: refundAccount || null,
           status: "REQUESTED",
         },
       });
@@ -166,6 +223,8 @@ export async function POST(request: NextRequest) {
           status: refund.status,
           amount: refund.amount,
           quantity: refund.quantity,
+          refundMethod: refund.refundMethod,
+          refundAccount: refund.refundAccount,
         },
       });
 

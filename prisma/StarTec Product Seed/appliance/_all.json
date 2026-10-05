@@ -19,12 +19,12 @@
       "name": "Appliance",
       "slug": "appliance",
       "parentSlug": null,
-      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+      "image": "/assets/categories/Appliance.png",
       "isActive": true,
       "sortOrder": 0,
       "showInHeader": true,
       "showInFooter": false,
-      "featured": false
+      "featured": true
     },
     {
       "name": "AC",
@@ -901,10 +901,10 @@
       ],
       "needsReview": false,
       "categorySlug": "appliance",
-      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+      "image": "/assets/categories/Appliance.png",
       "gallery": [],
       "sourceImages": [
-        "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png"
+        "/assets/categories/Appliance.png"
       ],
       "match": {
         "method": "direct-slug",

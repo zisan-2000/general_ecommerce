@@ -9,6 +9,7 @@ import { getActiveFlashSaleProducts } from "@/lib/storefront-flash-sale";
 export async function generateMetadata() {
   const t = await getTranslations("Landing.FlashSale.page");
   return {
+    alternates: { canonical: "/ecommerce/flash-sale" },
     title: t("title"),
     description: t("description"),
   };

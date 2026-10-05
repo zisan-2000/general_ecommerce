@@ -66,7 +66,7 @@ function SideBanner({
           >
             <Image
               src={banner.image}
-              alt=""
+              alt={banner.title}
               fill
               priority={priority && index === 0}
               className="object-cover transition-transform duration-700 group-hover/side:scale-[1.025] motion-reduce:transition-none"
@@ -254,7 +254,7 @@ export default function Hero({
                 >
                   <Image
                     src={banner.image}
-                    alt=""
+                    alt={banner.title}
                     fill
                     priority={index === 0}
                     className="object-cover transition-transform duration-1000 group-hover/hero:scale-[1.018] motion-reduce:transition-none"

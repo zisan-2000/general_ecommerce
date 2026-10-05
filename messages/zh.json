@@ -1038,7 +1038,8 @@
       "unavailable": "不可用",
       "statusHint": "使用商品卡片上的启用/停用操作来更改可用状态。",
       "availableLabel": "可用",
-      "featuredLabel": "精选"
+      "featuredLabel": "精选",
+      "bestSellingLabel": "畅销"
     },
     "cartReminder": {
       "title": "购物车提醒通知",
@@ -1569,6 +1570,7 @@
       "DELIVERED": "已送达",
       "FAILED": "失败",
       "RETURNED": "已退回",
+      "REFUNDED": "已退款",
       "CANCELLED": "已取消"
     },
     "paymentStatus": {
@@ -1695,6 +1697,39 @@
       "viewProofPhoto": "查看凭证照片",
       "noCustomerProof": "客户尚未提交交付凭证。",
       "shipmentAdminNote": "* 只有管理员可以创建/更新货运；其他用户将从 API 收到 Forbidden。"
+    },
+    "refund": {
+      "title": "Refund Claims",
+      "description": "Review the customer's reason and accept or reject each pending claim.",
+      "claimCount": "{count} claim(s)",
+      "unknownItem": "Order item",
+      "summary": "Claim #{id} · Qty {quantity} · {amount}",
+      "customerReason": "Customer reason",
+      "adminNoteLabel": "Admin note",
+      "adminNotePlaceholder": "Required when rejecting; optional when accepting...",
+      "rejectionNoteHint": "A rejection note is required and will be shown to the customer.",
+      "accept": "Accept refund",
+      "reject": "Reject refund",
+      "reviewing": "Saving...",
+      "adminNote": "Admin note",
+      "reviewedOn": "Reviewed on {date}",
+      "acceptSuccess": "Refund accepted and marked as refunded.",
+      "rejectSuccess": "Refund request rejected.",
+      "destination": "Customer refund destination",
+      "paymentTitle": "Send refund payment",
+      "paymentHint": "Send the refund via {method} to {account}, then record the transaction/reference below.",
+      "originalDestination": "original payment method",
+      "transactionPlaceholder": "Refund transaction/reference ID",
+      "markPaid": "Mark payment sent",
+      "transactionId": "Refund transaction/reference",
+      "paidOn": "Payment recorded on {date}",
+      "paymentSuccess": "Refund payment recorded successfully.",
+      "invoiceDownload": "Download invoice",
+      "invoiceDownloading": "Downloading...",
+      "invoiceDownloadFailed": "Failed to download invoice.",
+      "invoiceInvalidFile": "The server did not return a valid PDF invoice.",
+      "status": { "REQUESTED": "Pending review", "APPROVED": "Approved", "REJECTED": "Refund rejected", "COMPLETED": "Refunded" },
+      "errors": { "rejectionNoteRequired": "Please add a rejection note before rejecting this claim.", "reviewFailed": "Failed to review refund request.", "transactionRequired": "Enter the refund transaction/reference before marking payment sent.", "paymentFailed": "Failed to record refund payment." }
     },
     "successModal": {
       "title": "更新成功",
@@ -9832,6 +9867,7 @@
         "saveAddressFailed": "无法保存地址。",
         "emptyCart": "购物车为空。",
         "requiredInformation": "请填写所有必填信息。",
+        "legalConsentRequired": "请同意条款与条件及隐私政策后再提交订单。",
         "waitForUpload": "请等待截图上传完成。",
         "screenshotRequired": "必须上传支付截图。",
         "placeOrderFailedRetry": "提交订单时出现问题，请稍后重试。",
@@ -9864,7 +9900,14 @@
       "screenshotAlt": "支付截图预览",
       "sslRedirect": "提交订单后，您将被重定向至 SSLCommerz。",
       "noPaymentNow": "目前无需付款。",
-      "placeOrder": "提交订单"
+      "placeOrder": "提交订单",
+      "consent": {
+        "prefix": "我同意",
+        "terms": "条款与条件",
+        "and": "和",
+        "privacy": "隐私政策",
+        "suffix": "。"
+      }
     },
     "paymentResult": {
       "success": "支付成功",
@@ -11202,7 +11245,8 @@
       "changePassword": "更改密码",
       "addresses": "地址",
       "wishlist": "愿望清单",
-      "notifications": "通知"
+      "notifications": "通知",
+      "refunded": "已退款"
     },
     "dashboard": {
       "password": "密码",
@@ -11372,6 +11416,8 @@
     "orders": {
       "title": "订单记录",
       "description": "跟踪您最近的订单、付款状态和交货进度。",
+      "refundedTitle": "已退款订单",
+      "refundedDescription": "已接受退款申请的订单会显示在这里。",
       "rewards": "{stars}星星•{credit}信用",
       "empty": "您还没有下任何订单。",
       "orderId": "订单号",
@@ -11394,6 +11440,14 @@
       "backToOrders": "返回订单",
       "backToMyOrders": "返回我的订单",
       "orderDate": "订购日期",
+      "legalConsentTitle": "结账同意记录",
+      "legalConsentHint": "该同意记录于客户提交此订单时保存。",
+      "consentAccepted": "已同意",
+      "consentNotRecorded": "未记录",
+      "termsConsent": "条款与条件",
+      "privacyConsent": "隐私政策",
+      "acceptedAt": "同意时间：{date}",
+      "notRecorded": "无同意记录（历史订单）",
       "status": "地位",
       "orderDelivered": "订单已交付",
       "orderStatus": "订单状态：{status}",
@@ -11470,11 +11524,31 @@
         "reason": "原因",
         "reasonPlaceholder": "告诉我们您为什么需要退款...",
         "submit": "提交退款",
+        "originalPaymentMethod": "原付款方式",
+        "manualPayment": "手动付款",
+        "refundMethod": "退款接收方式",
+        "noRefundMethod": "没有可用的退款方式",
+        "refundAccount": "退款账户/手机号",
+        "refundAccountPlaceholder": "输入接收退款的账户或手机号",
+        "refundDestination": "退款目的地",
+        "refundTransaction": "退款交易/参考号",
+        "unknownItem": "订单商品",
+        "claimSummary": "数量 {quantity} · BDT {amount}",
+        "yourReason": "您的原因",
+        "adminNote": "管理员回复",
+        "status": {
+          "pending": "等待审核",
+          "approved": "已批准 · 待付款",
+          "refunded": "已退款",
+          "rejected": "退款已拒绝"
+        },
         "errors": {
           "window": "退款仅可在交货后 7 天内进行。",
           "reason": "请添加明确的退款原因。",
           "quantity": "该商品已无可退款数量。",
-          "submit": "未能提交退款请求。"
+          "submit": "未能提交退款请求。",
+          "method": "请选择退款接收方式。",
+          "account": "请输入有效的退款账户或手机号。"
         }
       }
     },

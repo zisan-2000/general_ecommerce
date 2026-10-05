@@ -79,6 +79,13 @@ const getOrderStatusConfig = (status: string) => {
         "border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-900 dark:bg-violet-950/40 dark:text-violet-300",
     };
   }
+  if (s === "REFUNDED") {
+    return {
+      labelKey: "refunded",
+      className:
+        "border-violet-200 bg-violet-50 text-violet-700 dark:border-violet-900 dark:bg-violet-950/40 dark:text-violet-300",
+    };
+  }
   if (s === "FAILED") {
     return {
       labelKey: "failed",
@@ -187,7 +194,7 @@ function OrdersPageSkeleton() {
   );
 }
 
-export default function OrdersPage() {
+export function CustomerOrdersPage({ refundedOnly = false }: { refundedOnly?: boolean }) {
   const t = useTranslations("CustomerAccount");
   const locale = useLocale();
   const { data: session } = useSession();
@@ -290,7 +297,14 @@ export default function OrdersPage() {
     fetchOrders();
   }, [t]);
 
-  const orderedList = useMemo(() => orders, [orders]);
+  const statusFilter = refundedOnly ? "REFUNDED" : "ALL";
+  const orderedList = useMemo(
+    () =>
+      statusFilter === "REFUNDED"
+        ? orders.filter((order) => order.status.toUpperCase() === "REFUNDED")
+        : orders,
+    [orders, statusFilter],
+  );
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/25 text-foreground">
@@ -325,10 +339,14 @@ export default function OrdersPage() {
       <div className="mx-auto max-w-6xl px-6 py-10">
         <div className="mb-6">
           <h2 className="text-3xl font-semibold tracking-tight">
-            {t("orders.title")}
+            {statusFilter === "REFUNDED"
+              ? t("orders.refundedTitle")
+              : t("orders.title")}
           </h2>
           <p className="mt-2 text-sm text-muted-foreground">
-            {t("orders.description")}
+            {statusFilter === "REFUNDED"
+              ? t("orders.refundedDescription")
+              : t("orders.description")}
           </p>
           <p className="mt-1 text-xs text-muted-foreground">
             {userName}
@@ -461,4 +479,8 @@ export default function OrdersPage() {
       </div>
     </div>
   );
+}
+
+export default function OrdersPage() {
+  return <CustomerOrdersPage />;
 }

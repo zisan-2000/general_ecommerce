@@ -25,9 +25,11 @@ type OrderStatusType =
   | "DELIVERED"
   | "FAILED"
   | "RETURNED"
+  | "REFUNDED"
   | "CANCELLED";
 
 type PaymentStatusType = "PAID" | "UNPAID" | "REFUNDED";
+type RefundStatusType = "REQUESTED" | "APPROVED" | "REJECTED" | "COMPLETED";
 
 type ShipmentStatusType =
   | "PENDING"
@@ -77,6 +79,31 @@ interface OrderItem {
   }>;
 }
 
+interface OrderRefund {
+  id: number;
+  orderId: number;
+  orderItemId?: number | null;
+  reason: string;
+  adminNote?: string | null;
+  refundMethod: string;
+  refundAccount?: string | null;
+  payoutStatus: "PENDING" | "PAID";
+  payoutTransactionId?: string | null;
+  paidAt?: string | null;
+  status: RefundStatusType;
+  amount: number;
+  quantity?: number | null;
+  createdAt: string;
+  reviewedAt?: string | null;
+  reviewedBy?: { id: string; name?: string | null } | null;
+  paidBy?: { id: string; name?: string | null } | null;
+  orderItem?: {
+    id: number;
+    quantity: number;
+    product?: { id: number; name: string } | null;
+  } | null;
+}
+
 interface Order {
   id: number;
   name: string | null;
@@ -98,9 +125,12 @@ interface Order {
   status: OrderStatusType;
   paymentStatus: PaymentStatusType;
   transactionId?: string | null;
+  termsAcceptedAt?: string | null;
+  privacyPolicyAcceptedAt?: string | null;
   image?: string | null; // payment screenshot URL (from DB)
   createdAt: string;
   orderItems?: OrderItem[];
+  refunds?: OrderRefund[];
   user?: {
     id: string;
     name?: string | null;
@@ -275,6 +305,12 @@ const OrderManagement = () => {
   const [detailLoading, setDetailLoading] = useState(false);
   const [detailError, setDetailError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
+  const [downloadingInvoice, setDownloadingInvoice] = useState(false);
+  const [reviewingRefundId, setReviewingRefundId] = useState<number | null>(null);
+  const [refundNotes, setRefundNotes] = useState<Record<number, string>>({});
+  const [refundTransactionIds, setRefundTransactionIds] = useState<
+    Record<number, string>
+  >({});
 
   // success modal
   const [successOpen, setSuccessOpen] = useState(false);
@@ -423,6 +459,7 @@ const OrderManagement = () => {
       case "FAILED":
         return "bg-rose-500/10 text-rose-600 border-rose-500/20 dark:bg-rose-400/10 dark:text-rose-400 dark:border-rose-400/20";
       case "RETURNED":
+      case "REFUNDED":
         return "bg-violet-500/10 text-violet-600 border-violet-500/20 dark:bg-violet-400/10 dark:text-violet-400 dark:border-violet-400/20";
       case "CANCELLED":
         return "bg-destructive/10 text-destructive border-destructive/20";
@@ -517,6 +554,42 @@ const OrderManagement = () => {
 
     return item.variant.sku || "";
   }, []);
+
+  const downloadInvoice = useCallback(async () => {
+    if (!orderDetail || downloadingInvoice) return;
+    try {
+      setDownloadingInvoice(true);
+      const response = await fetch(`/api/invoice/${orderDetail.id}`, {
+        cache: "no-store",
+      });
+      if (!response.ok) {
+        const payload = await response.json().catch(() => ({}));
+        throw new Error(payload?.error || t("refund.invoiceDownloadFailed"));
+      }
+      const contentType = response.headers.get("content-type") || "";
+      if (!contentType.includes("application/pdf")) {
+        throw new Error(t("refund.invoiceInvalidFile"));
+      }
+      const blob = await response.blob();
+      const url = URL.createObjectURL(blob);
+      const anchor = document.createElement("a");
+      anchor.href = url;
+      anchor.download = `Invoice-${orderDetail.id}.pdf`;
+      document.body.appendChild(anchor);
+      anchor.click();
+      anchor.remove();
+      URL.revokeObjectURL(url);
+    } catch (error) {
+      setErrorMessage(
+        error instanceof Error
+          ? error.message
+          : t("refund.invoiceDownloadFailed"),
+      );
+      setErrorOpen(true);
+    } finally {
+      setDownloadingInvoice(false);
+    }
+  }, [downloadingInvoice, orderDetail, t]);
 
   const getOrderItemImage = useCallback((item?: OrderItem | null) => {
     if (!item) return "";
@@ -633,6 +706,9 @@ const OrderManagement = () => {
     setDeliveryMen([]);
     setDetailError(null);
     setAssignModalOpen(false);
+    setReviewingRefundId(null);
+    setRefundNotes({});
+    setRefundTransactionIds({});
   }, [applyShipmentState]);
 
   useEffect(() => {
@@ -772,6 +848,147 @@ const OrderManagement = () => {
       return `${suffix} - Insufficient stock (${stock.availableUnits}/${stock.requiredUnits})`;
     },
     [warehouseStock, warehouseStockById],
+  );
+
+  const reviewRefund = useCallback(
+    async (refundId: number, decision: "ACCEPT" | "REJECT") => {
+      const adminNote = (refundNotes[refundId] || "").trim();
+      if (decision === "REJECT" && adminNote.length < 3) {
+        setErrorMessage(t("refund.errors.rejectionNoteRequired"));
+        setErrorOpen(true);
+        return;
+      }
+
+      try {
+        setReviewingRefundId(refundId);
+        const response = await fetch(`/api/refunds/${refundId}`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ decision, adminNote }),
+        });
+        const payload = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          throw new Error(payload?.error || t("refund.errors.reviewFailed"));
+        }
+
+        const updated = payload.refund as OrderRefund;
+        setOrderDetail((previous) =>
+          previous
+            ? {
+                ...previous,
+                status:
+                  payload.orderStatus === "REFUNDED"
+                    ? "REFUNDED"
+                    : previous.status,
+                refunds: (previous.refunds || []).map((refund) =>
+                  refund.id === refundId ? updated : refund,
+                ),
+              }
+            : previous,
+        );
+        if (payload.orderStatus === "REFUNDED") {
+          setEditOrderStatus("REFUNDED");
+          setOrders((previous) =>
+            previous.map((order) =>
+              order.id === updated.orderId
+                ? { ...order, status: "REFUNDED" }
+                : order,
+            ),
+          );
+          orderListCache.clear();
+        }
+        setRefundNotes((previous) => {
+          const next = { ...previous };
+          delete next[refundId];
+          return next;
+        });
+        setSuccessMessage(
+          decision === "ACCEPT"
+            ? t("refund.acceptSuccess")
+            : t("refund.rejectSuccess"),
+        );
+        setSuccessOpen(true);
+      } catch (error) {
+        setErrorMessage(
+          error instanceof Error
+            ? error.message
+            : t("refund.errors.reviewFailed"),
+        );
+        setErrorOpen(true);
+      } finally {
+        setReviewingRefundId(null);
+      }
+    },
+    [refundNotes, t],
+  );
+
+  const recordRefundPayment = useCallback(
+    async (refundId: number) => {
+      const transactionId = (refundTransactionIds[refundId] || "").trim();
+      if (transactionId.length < 3) {
+        setErrorMessage(t("refund.errors.transactionRequired"));
+        setErrorOpen(true);
+        return;
+      }
+
+      try {
+        setReviewingRefundId(refundId);
+        const response = await fetch(`/api/refunds/${refundId}/payout`, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ transactionId }),
+        });
+        const payload = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          throw new Error(payload?.error || t("refund.errors.paymentFailed"));
+        }
+
+        const updated = payload.refund as OrderRefund;
+        setOrderDetail((previous) =>
+          previous
+            ? {
+                ...previous,
+                status: "REFUNDED",
+                paymentStatus: "REFUNDED",
+                refunds: (previous.refunds || []).map((refund) =>
+                  refund.id === refundId ? updated : refund,
+                ),
+              }
+            : previous,
+        );
+        setEditOrderStatus("REFUNDED");
+        setEditPaymentStatus("REFUNDED");
+        setOrders((previous) =>
+          previous.map((order) =>
+            order.id === updated.orderId
+              ? {
+                  ...order,
+                  status: "REFUNDED",
+                  paymentStatus: "REFUNDED",
+                }
+              : order,
+          ),
+        );
+        setRefundTransactionIds((previous) => {
+          const next = { ...previous };
+          delete next[refundId];
+          return next;
+        });
+        orderListCache.clear();
+        setSuccessMessage(t("refund.paymentSuccess"));
+        setSuccessOpen(true);
+      } catch (error) {
+        setErrorMessage(
+          error instanceof Error
+            ? error.message
+            : t("refund.errors.paymentFailed"),
+        );
+        setErrorOpen(true);
+      } finally {
+        setReviewingRefundId(null);
+      }
+    },
+    [refundTransactionIds, t],
   );
 
   // ---- UNIFIED SAVE: ORDER + SHIPMENT ----
@@ -1172,6 +1389,12 @@ const OrderManagement = () => {
               </option>
               <option
                 className="bg-background text-foreground"
+                value="REFUNDED"
+              >
+                {t("status.REFUNDED")}
+              </option>
+              <option
+                className="bg-background text-foreground"
                 value="CANCELLED"
               >
                 {t("status.CANCELLED")}
@@ -1458,12 +1681,24 @@ const OrderManagement = () => {
                   </p>
                 )}
               </div>
-              <button
-                onClick={handleCloseDetail}
-                className="w-full rounded-full bg-muted px-3 py-1 text-xs text-muted-foreground hover:bg-muted/80 sm:w-auto"
-              >
-                {t("detail.close")}
-              </button>
+              <div className="flex w-full gap-2 sm:w-auto">
+                <button
+                  type="button"
+                  onClick={() => void downloadInvoice()}
+                  disabled={!orderDetail || downloadingInvoice}
+                  className="flex-1 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold text-primary transition hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50 sm:flex-none"
+                >
+                  {downloadingInvoice
+                    ? t("refund.invoiceDownloading")
+                    : t("refund.invoiceDownload")}
+                </button>
+                <button
+                  onClick={handleCloseDetail}
+                  className="flex-1 rounded-full bg-muted px-3 py-2 text-xs text-muted-foreground hover:bg-muted/80 sm:flex-none"
+                >
+                  {t("detail.close")}
+                </button>
+              </div>
             </div>
 
             {/* Body */}
@@ -1684,6 +1919,56 @@ const OrderManagement = () => {
                     </div>
                   </div>
 
+                  {/* 1.25 Checkout legal consent */}
+                  <div className="rounded-2xl border border-border bg-muted/30 p-4">
+                    <div className="flex flex-col gap-3 sm:flex-row sm:items-start sm:justify-between">
+                      <div>
+                        <h3 className="text-xs font-semibold text-muted-foreground">
+                          {t("detail.legalConsentTitle")}
+                        </h3>
+                        <p className="mt-1 text-xs text-muted-foreground">
+                          {t("detail.legalConsentHint")}
+                        </p>
+                      </div>
+                      {orderDetail.termsAcceptedAt && orderDetail.privacyPolicyAcceptedAt ? (
+                        <span className="inline-flex w-fit items-center rounded-full bg-emerald-100 px-3 py-1 text-[11px] font-semibold text-emerald-800">
+                          {t("detail.consentAccepted")}
+                        </span>
+                      ) : (
+                        <span className="inline-flex w-fit items-center rounded-full bg-amber-100 px-3 py-1 text-[11px] font-semibold text-amber-800">
+                          {t("detail.consentNotRecorded")}
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                      <div className="rounded-xl bg-card px-3 py-2.5">
+                        <p className="text-xs font-medium text-foreground">
+                          {t("detail.termsConsent")}
+                        </p>
+                        <p className="mt-1 text-[11px] text-muted-foreground">
+                          {orderDetail.termsAcceptedAt
+                            ? t("detail.acceptedAt", {
+                                date: formatDateTime(orderDetail.termsAcceptedAt),
+                              })
+                            : t("detail.notRecorded")}
+                        </p>
+                      </div>
+                      <div className="rounded-xl bg-card px-3 py-2.5">
+                        <p className="text-xs font-medium text-foreground">
+                          {t("detail.privacyConsent")}
+                        </p>
+                        <p className="mt-1 text-[11px] text-muted-foreground">
+                          {orderDetail.privacyPolicyAcceptedAt
+                            ? t("detail.acceptedAt", {
+                                date: formatDateTime(orderDetail.privacyPolicyAcceptedAt),
+                              })
+                            : t("detail.notRecorded")}
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
                   {/* 1.5 Payment Screenshot */}
                   {orderDetail.image && (
                     <div className="rounded-2xl bg-muted/30 p-4">
@@ -1867,7 +2152,216 @@ const OrderManagement = () => {
                     </div>
                   </div>
 
-                  {/* 3. Order meta */}
+                  {/* 3. Refund claims */}
+                  {(orderDetail.refunds?.length ?? 0) > 0 && (
+                    <div className="rounded-2xl border border-amber-200 bg-amber-50/60 p-4 dark:border-amber-900 dark:bg-amber-950/20">
+                      <div className="mb-3 flex flex-wrap items-center justify-between gap-2">
+                        <div>
+                          <h3 className="text-sm font-semibold text-foreground">
+                            {t("refund.title")}
+                          </h3>
+                          <p className="mt-1 text-[11px] text-muted-foreground">
+                            {t("refund.description")}
+                          </p>
+                        </div>
+                        <span className="rounded-full bg-amber-100 px-3 py-1 text-[11px] font-semibold text-amber-800 dark:bg-amber-900/50 dark:text-amber-200">
+                          {t("refund.claimCount", {
+                            count: orderDetail.refunds?.length ?? 0,
+                          })}
+                        </span>
+                      </div>
+
+                      <div className="space-y-3">
+                        {orderDetail.refunds?.map((refund) => {
+                          const status = String(refund.status).toUpperCase();
+                          const isPending = status === "REQUESTED";
+                          const isApproved = status === "APPROVED";
+                          const statusClass =
+                            status === "COMPLETED"
+                              ? "border-emerald-200 bg-emerald-50 text-emerald-800 dark:border-emerald-900 dark:bg-emerald-950/30 dark:text-emerald-300"
+                              : status === "REJECTED"
+                                ? "border-red-200 bg-red-50 text-red-800 dark:border-red-900 dark:bg-red-950/30 dark:text-red-300"
+                                : status === "APPROVED"
+                                  ? "border-blue-200 bg-blue-50 text-blue-800 dark:border-blue-900 dark:bg-blue-950/30 dark:text-blue-300"
+                                : "border-amber-200 bg-card text-amber-800 dark:border-amber-900 dark:text-amber-300";
+
+                          return (
+                            <div
+                              key={refund.id}
+                              className={`rounded-xl border p-3 ${statusClass}`}
+                            >
+                              <div className="flex flex-wrap items-start justify-between gap-3">
+                                <div>
+                                  <p className="text-sm font-semibold text-foreground">
+                                    {refund.orderItem?.product?.name ||
+                                      t("refund.unknownItem")}
+                                  </p>
+                                  <p className="mt-1 text-xs text-muted-foreground">
+                                    {t("refund.summary", {
+                                      id: refund.id,
+                                      quantity: refund.quantity ?? 1,
+                                      amount: formatMoney(
+                                        Number(refund.amount),
+                                        orderDetail.currency || "BDT",
+                                      ),
+                                    })}
+                                  </p>
+                                </div>
+                                <span className="rounded-full border border-current/20 px-3 py-1 text-[10px] font-bold uppercase tracking-wide">
+                                  {t(`refund.status.${status}` as any)}
+                                </span>
+                              </div>
+
+                              <div className="mt-3 rounded-lg bg-background/70 p-3 text-xs text-foreground">
+                                <p className="font-semibold">
+                                  {t("refund.customerReason")}
+                                </p>
+                                <p className="mt-1 whitespace-pre-wrap text-muted-foreground">
+                                  {refund.reason}
+                                </p>
+                                <div className="mt-3 border-t border-border/60 pt-3">
+                                  <p className="font-semibold">
+                                    {t("refund.destination")}
+                                  </p>
+                                  <p className="mt-1 text-muted-foreground">
+                                    {refund.refundMethod}
+                                    {refund.refundAccount
+                                      ? ` · ${refund.refundAccount}`
+                                      : ""}
+                                  </p>
+                                </div>
+                              </div>
+
+                              {isPending ? (
+                                <div className="mt-3 space-y-2">
+                                  <label
+                                    htmlFor={`refund-note-${refund.id}`}
+                                    className="text-xs font-semibold text-foreground"
+                                  >
+                                    {t("refund.adminNoteLabel")}
+                                  </label>
+                                  <textarea
+                                    id={`refund-note-${refund.id}`}
+                                    value={refundNotes[refund.id] || ""}
+                                    onChange={(event) =>
+                                      setRefundNotes((previous) => ({
+                                        ...previous,
+                                        [refund.id]: event.target.value,
+                                      }))
+                                    }
+                                    maxLength={1000}
+                                    rows={3}
+                                    placeholder={t("refund.adminNotePlaceholder")}
+                                    className="w-full rounded-xl border border-border bg-card px-3 py-2 text-xs text-foreground outline-none focus:ring-2 focus:ring-primary/30"
+                                  />
+                                  <p className="text-[10px] text-muted-foreground">
+                                    {t("refund.rejectionNoteHint")}
+                                  </p>
+                                  <div className="flex flex-col gap-2 sm:flex-row sm:justify-end">
+                                    <button
+                                      type="button"
+                                      disabled={reviewingRefundId !== null}
+                                      onClick={() => void reviewRefund(refund.id, "REJECT")}
+                                      className="rounded-full border border-red-300 px-4 py-2 text-xs font-semibold text-red-700 transition hover:bg-red-100 disabled:cursor-not-allowed disabled:opacity-50 dark:border-red-800 dark:text-red-300 dark:hover:bg-red-950"
+                                    >
+                                      {reviewingRefundId === refund.id
+                                        ? t("refund.reviewing")
+                                        : t("refund.reject")}
+                                    </button>
+                                    <button
+                                      type="button"
+                                      disabled={reviewingRefundId !== null}
+                                      onClick={() => void reviewRefund(refund.id, "ACCEPT")}
+                                      className="rounded-full bg-emerald-600 px-4 py-2 text-xs font-semibold text-white transition hover:bg-emerald-700 disabled:cursor-not-allowed disabled:opacity-50"
+                                    >
+                                      {reviewingRefundId === refund.id
+                                        ? t("refund.reviewing")
+                                        : t("refund.accept")}
+                                    </button>
+                                  </div>
+                                </div>
+                              ) : isApproved ? (
+                                <div className="mt-3 rounded-xl border border-blue-200 bg-background/80 p-3 dark:border-blue-900">
+                                  <p className="text-xs font-semibold text-foreground">
+                                    {t("refund.paymentTitle")}
+                                  </p>
+                                  <p className="mt-1 text-[11px] text-muted-foreground">
+                                    {t("refund.paymentHint", {
+                                      method: refund.refundMethod,
+                                      account:
+                                        refund.refundAccount ||
+                                        t("refund.originalDestination"),
+                                    })}
+                                  </p>
+                                  <div className="mt-3 flex flex-col gap-2 sm:flex-row">
+                                    <input
+                                      value={refundTransactionIds[refund.id] || ""}
+                                      onChange={(event) =>
+                                        setRefundTransactionIds((previous) => ({
+                                          ...previous,
+                                          [refund.id]: event.target.value,
+                                        }))
+                                      }
+                                      maxLength={200}
+                                      placeholder={t("refund.transactionPlaceholder")}
+                                      className="min-w-0 flex-1 rounded-xl border border-border bg-card px-3 py-2 text-xs text-foreground outline-none focus:ring-2 focus:ring-primary/30"
+                                    />
+                                    <button
+                                      type="button"
+                                      disabled={reviewingRefundId !== null}
+                                      onClick={() =>
+                                        void recordRefundPayment(refund.id)
+                                      }
+                                      className="rounded-full bg-blue-600 px-4 py-2 text-xs font-semibold text-white transition hover:bg-blue-700 disabled:cursor-not-allowed disabled:opacity-50"
+                                    >
+                                      {reviewingRefundId === refund.id
+                                        ? t("refund.reviewing")
+                                        : t("refund.markPaid")}
+                                    </button>
+                                  </div>
+                                </div>
+                              ) : (
+                                <div className="mt-3 text-xs">
+                                  {refund.adminNote && (
+                                    <p>
+                                      <span className="font-semibold">
+                                        {t("refund.adminNote")}:
+                                      </span>{" "}
+                                      {refund.adminNote}
+                                    </p>
+                                  )}
+                                  {refund.reviewedAt && (
+                                    <p className="mt-1 text-muted-foreground">
+                                      {t("refund.reviewedOn", {
+                                        date: formatDateTime(refund.reviewedAt),
+                                      })}
+                                    </p>
+                                  )}
+                                  {refund.payoutTransactionId && (
+                                    <p className="mt-1">
+                                      <span className="font-semibold">
+                                        {t("refund.transactionId")}:
+                                      </span>{" "}
+                                      {refund.payoutTransactionId}
+                                    </p>
+                                  )}
+                                  {refund.paidAt && (
+                                    <p className="mt-1 text-muted-foreground">
+                                      {t("refund.paidOn", {
+                                        date: formatDateTime(refund.paidAt),
+                                      })}
+                                    </p>
+                                  )}
+                                </div>
+                              )}
+                            </div>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  {/* 4. Order meta */}
                   <div className="rounded-2xl bg-muted/30 p-4">
                     <h3 className="mb-3 text-xs font-semibold text-muted-foreground">
                       {t("detail.orderStatusTitle")}
@@ -1900,6 +2394,9 @@ const OrderManagement = () => {
                           <option value="FAILED">{t("status.FAILED")}</option>
                           <option value="RETURNED">
                             {t("status.RETURNED")}
+                          </option>
+                          <option value="REFUNDED">
+                            {t("status.REFUNDED")}
                           </option>
                           <option value="CANCELLED">
                             {t("status.CANCELLED")}
@@ -1947,7 +2444,7 @@ const OrderManagement = () => {
                     </p>
                   </div>
 
-                  {/* 4. Shipment */}
+                  {/* 5. Shipment */}
                   <div className="rounded-2xl bg-muted/30 p-4">
                     <div className="mb-2 flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
                       <h3 className="text-xs font-semibold text-muted-foreground">

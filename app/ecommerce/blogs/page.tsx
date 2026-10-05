@@ -1,3 +1,5 @@
+import { prisma } from "@/lib/prisma";
+import { serializeJsonLd } from "@/lib/seo";
 import type { Metadata } from "next";
 import AllBlogs from "@/components/admin/blog/AllBlogs";
 import {
@@ -34,6 +36,11 @@ export default async function BlogsPage() {
     Promise.resolve(getSiteUrl()),
   ]);
 
+  const [blogs, count] = await Promise.all([
+    prisma.blog.findMany({ take: 10, orderBy: { createdAt: "desc" }, select: { id: true, slug: true, title: true, summary: true, author: true, date: true, image: true, createdAt: true, updatedAt: true } }),
+    prisma.blog.count(),
+  ]);
+  const initialBlogs = blogs.map((blog) => ({ ...blog, date: blog.date.toISOString(), createdAt: blog.createdAt.toISOString(), updatedAt: blog.updatedAt.toISOString() }));
   const blogJsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
@@ -72,11 +79,11 @@ export default async function BlogsPage() {
     <main className="min-h-screen bg-background text-foreground">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(blogJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(blogJsonLd) }}
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd) }}
       />
       <section className="border-b border-border bg-muted/35">
         <div className="container mx-auto px-4 py-10">
@@ -91,7 +98,7 @@ export default async function BlogsPage() {
         </div>
       </section>
       <div className="container mx-auto px-4 py-8">
-        <AllBlogs />
+        <AllBlogs initialBlogs={initialBlogs} initialTotalPages={Math.max(1, Math.ceil(count / 10))} />
       </div>
     </main>
   );

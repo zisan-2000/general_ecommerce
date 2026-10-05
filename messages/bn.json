@@ -1038,7 +1038,8 @@
       "unavailable": "অনুপলব্ধ",
       "statusHint": "উপলব্ধতা পরিবর্তন করতে পণ্য কার্ডের সক্রিয়/নিষ্ক্রিয় ক্রিয়া ব্যবহার করুন।",
       "availableLabel": "উপলব্ধ",
-      "featuredLabel": "ফিচার্ড"
+      "featuredLabel": "ফিচার্ড",
+      "bestSellingLabel": "সর্বাধিক বিক্রিত"
     },
     "cartReminder": {
       "title": "কার্ট রিমাইন্ডার নোটিফিকেশন",
@@ -1569,6 +1570,7 @@
       "DELIVERED": "ডেলিভারি হয়েছে",
       "FAILED": "ব্যর্থ",
       "RETURNED": "ফেরত",
+      "REFUNDED": "রিফান্ডেড",
       "CANCELLED": "বাতিল"
     },
     "paymentStatus": {
@@ -1624,6 +1626,14 @@
       "paymentMethod": "পেমেন্ট পদ্ধতি:",
       "currency": "মুদ্রা:",
       "orderDate": "অর্ডারের তারিখ:",
+      "legalConsentTitle": "চেকআউট সম্মতি",
+      "legalConsentHint": "ক্রেতা অর্ডার দেওয়ার সময় এই সম্মতি রেকর্ড করা হয়েছে।",
+      "consentAccepted": "সম্মতি দেওয়া হয়েছে",
+      "consentNotRecorded": "রেকর্ড নেই",
+      "termsConsent": "শর্তাবলি",
+      "privacyConsent": "গোপনীয়তা নীতিমালা",
+      "acceptedAt": "{date}-এ সম্মতি দেওয়া হয়েছে",
+      "notRecorded": "সম্মতির রেকর্ড নেই (পুরোনো অর্ডার)",
       "deliveryAddress": "ডেলিভারি ঠিকানা",
       "area": "এলাকা: {value}",
       "district": "জেলা: {value}",
@@ -1695,6 +1705,49 @@
       "viewProofPhoto": "প্রমাণ ছবি দেখুন",
       "noCustomerProof": "এখনও কোনো ক্রেতার ডেলিভারি প্রমাণ জমা হয়নি।",
       "shipmentAdminNote": "* শুধুমাত্র অ্যাডমিন শিপমেন্ট তৈরি/আপডেট করতে পারেন; অন্য ব্যবহারকারীরা API থেকে Forbidden পাবেন।"
+    },
+    "refund": {
+      "title": "রিফান্ড দাবি",
+      "description": "ক্রেতার কারণ দেখে প্রতিটি অপেক্ষমাণ দাবি গ্রহণ বা প্রত্যাখ্যান করুন।",
+      "claimCount": "{count}টি দাবি",
+      "unknownItem": "অর্ডারের পণ্য",
+      "summary": "দাবি #{id} · পরিমাণ {quantity} · {amount}",
+      "customerReason": "ক্রেতার কারণ",
+      "adminNoteLabel": "অ্যাডমিন নোট",
+      "adminNotePlaceholder": "প্রত্যাখ্যানের সময় আবশ্যক; গ্রহণের সময় ঐচ্ছিক...",
+      "rejectionNoteHint": "প্রত্যাখ্যানের কারণ লিখতে হবে এবং এটি ক্রেতাকে দেখানো হবে।",
+      "accept": "রিফান্ড গ্রহণ করুন",
+      "reject": "রিফান্ড প্রত্যাখ্যান করুন",
+      "reviewing": "সংরক্ষণ হচ্ছে...",
+      "adminNote": "অ্যাডমিন নোট",
+      "reviewedOn": "{date}-এ পর্যালোচনা করা হয়েছে",
+      "acceptSuccess": "রিফান্ড গ্রহণ করে রিফান্ডেড হিসেবে চিহ্নিত করা হয়েছে।",
+      "rejectSuccess": "রিফান্ডের আবেদন প্রত্যাখ্যান করা হয়েছে।",
+      "destination": "ক্রেতার রিফান্ড গন্তব্য",
+      "paymentTitle": "রিফান্ড পেমেন্ট পাঠান",
+      "paymentHint": "{method} মাধ্যমে {account}-এ টাকা পাঠিয়ে নিচে ট্রানজ্যাকশন/রেফারেন্স লিখুন।",
+      "originalDestination": "আগের পেমেন্ট পদ্ধতি",
+      "transactionPlaceholder": "রিফান্ড ট্রানজ্যাকশন/রেফারেন্স আইডি",
+      "markPaid": "পেমেন্ট পাঠানো হয়েছে",
+      "transactionId": "রিফান্ড ট্রানজ্যাকশন/রেফারেন্স",
+      "paidOn": "{date}-এ পেমেন্ট রেকর্ড করা হয়েছে",
+      "paymentSuccess": "রিফান্ড পেমেন্ট সফলভাবে রেকর্ড করা হয়েছে।",
+      "invoiceDownload": "ইনভয়েস ডাউনলোড",
+      "invoiceDownloading": "ডাউনলোড হচ্ছে...",
+      "invoiceDownloadFailed": "ইনভয়েস ডাউনলোড করা যায়নি।",
+      "invoiceInvalidFile": "সার্ভার সঠিক PDF ইনভয়েস দেয়নি।",
+      "status": {
+        "REQUESTED": "পর্যালোচনার অপেক্ষায়",
+        "APPROVED": "অনুমোদিত",
+        "REJECTED": "রিফান্ড প্রত্যাখ্যাত",
+        "COMPLETED": "রিফান্ডেড"
+      },
+      "errors": {
+        "rejectionNoteRequired": "দাবিটি প্রত্যাখ্যানের আগে কারণ লিখুন।",
+        "reviewFailed": "রিফান্ডের আবেদন পর্যালোচনা করা যায়নি।",
+        "transactionRequired": "পেমেন্ট পাঠানো হিসেবে চিহ্নিত করার আগে ট্রানজ্যাকশন/রেফারেন্স লিখুন।",
+        "paymentFailed": "রিফান্ড পেমেন্ট রেকর্ড করা যায়নি।"
+      }
     },
     "successModal": {
       "title": "আপডেট সফল",
@@ -9838,6 +9891,7 @@
         "saveAddressFailed": "ঠিকানা সংরক্ষণ করা যায়নি।",
         "emptyCart": "আপনার কার্ট খালি।",
         "requiredInformation": "প্রয়োজনীয় সব তথ্য পূরণ করুন।",
+        "legalConsentRequired": "অর্ডার দিতে শর্তাবলি ও গোপনীয়তা নীতিমালায় সম্মতি দিন।",
         "waitForUpload": "স্ক্রিনশট আপলোড শেষ হওয়া পর্যন্ত অপেক্ষা করুন।",
         "screenshotRequired": "পেমেন্টের স্ক্রিনশট প্রয়োজন।",
         "placeOrderFailedRetry": "অর্ডার দিতে সমস্যা হয়েছে। পরে আবার চেষ্টা করুন।",
@@ -9870,7 +9924,14 @@
       "screenshotAlt": "পেমেন্ট স্ক্রিনশটের প্রিভিউ",
       "sslRedirect": "অর্ডার দেওয়ার পর আপনাকে SSLCommerz-এ পাঠানো হবে।",
       "noPaymentNow": "এখন কোনো পেমেন্ট প্রয়োজন নেই।",
-      "placeOrder": "অর্ডার দিন"
+      "placeOrder": "অর্ডার দিন",
+      "consent": {
+        "prefix": "আমি",
+        "terms": "শর্তাবলি",
+        "and": "ও",
+        "privacy": "গোপনীয়তা নীতিমালায়",
+        "suffix": " সম্মতি দিচ্ছি।"
+      }
     },
     "paymentResult": {
       "success": "পেমেন্ট সফল হয়েছে",
@@ -11208,7 +11269,8 @@
       "changePassword": "পাসওয়ার্ড পরিবর্তন",
       "addresses": "ঠিকানা",
       "wishlist": "ইচ্ছেতালিকা",
-      "notifications": "নোটিফিকেশন"
+      "notifications": "নোটিফিকেশন",
+      "refunded": "রিফান্ডেড"
     },
     "dashboard": {
       "password": "পাসওয়ার্ড",
@@ -11378,6 +11440,8 @@
     "orders": {
       "title": "অর্ডারের ইতিহাস",
       "description": "সাম্প্রতিক অর্ডার, পেমেন্ট ও ডেলিভারির অগ্রগতি দেখুন।",
+      "refundedTitle": "রিফান্ডেড অর্ডার",
+      "refundedDescription": "গৃহীত রিফান্ড দাবির অর্ডারগুলো এখানে দেখাবে।",
       "rewards": "{stars} স্টার • {credit} ক্রেডিট",
       "empty": "আপনি এখনও কোনো অর্ডার করেননি।",
       "orderId": "অর্ডার আইডি",
@@ -11476,11 +11540,31 @@
         "reason": "কারণ",
         "reasonPlaceholder": "কেন রিফান্ড চান তা লিখুন...",
         "submit": "রিফান্ড জমা দিন",
+        "originalPaymentMethod": "আগের পেমেন্ট পদ্ধতি",
+        "manualPayment": "ম্যানুয়াল পেমেন্ট",
+        "refundMethod": "যে মাধ্যমে রিফান্ড নেবেন",
+        "noRefundMethod": "কোনো রিফান্ড পদ্ধতি পাওয়া যায়নি",
+        "refundAccount": "রিফান্ড অ্যাকাউন্ট / মোবাইল নম্বর",
+        "refundAccountPlaceholder": "যে অ্যাকাউন্ট বা মোবাইল নম্বরে টাকা নেবেন সেটি লিখুন",
+        "refundDestination": "রিফান্ডের গন্তব্য",
+        "refundTransaction": "রিফান্ড ট্রানজ্যাকশন/রেফারেন্স",
+        "unknownItem": "অর্ডারের পণ্য",
+        "claimSummary": "পরিমাণ {quantity} · BDT {amount}",
+        "yourReason": "আপনার কারণ",
+        "adminNote": "অ্যাডমিনের উত্তর",
+        "status": {
+          "pending": "পর্যালোচনার অপেক্ষায়",
+          "approved": "অনুমোদিত · পেমেন্ট অপেক্ষমাণ",
+          "refunded": "রিফান্ডেড",
+          "rejected": "রিফান্ড প্রত্যাখ্যাত"
+        },
         "errors": {
           "window": "ডেলিভারির ৭ দিনের মধ্যেই রিফান্ড পাওয়া যায়।",
           "reason": "রিফান্ডের পরিষ্কার কারণ লিখুন।",
           "quantity": "এই পণ্যের আর কোনো রিফান্ডযোগ্য পরিমাণ নেই।",
-          "submit": "রিফান্ড অনুরোধ জমা দেওয়া যায়নি।"
+          "submit": "রিফান্ড অনুরোধ জমা দেওয়া যায়নি।",
+          "method": "কীভাবে রিফান্ড নিতে চান তা নির্বাচন করুন।",
+          "account": "সঠিক রিফান্ড অ্যাকাউন্ট বা মোবাইল নম্বর লিখুন।"
         }
       }
     },

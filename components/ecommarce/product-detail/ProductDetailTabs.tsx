@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { type ReactNode, useState } from "react";
 import ProductReviews from "@/components/ecommarce/ProductReviews";
 import ProductRichText from "@/components/ecommarce/product-detail/ProductRichText";
 import { useTranslations } from "next-intl";
@@ -35,6 +35,7 @@ type TabId = (typeof tabs)[number];
 export default function ProductDetailTabs({
   productId,
   description,
+  descriptionContent,
   attributes,
   variantOptions,
   specificationGroups,
@@ -43,6 +44,7 @@ export default function ProductDetailTabs({
 }: {
   productId: number;
   description: string;
+  descriptionContent?: ReactNode;
   attributes: ProductAttribute[];
   variantOptions: ProductVariantOption[];
   specificationGroups: ProductSpecificationGroup;
@@ -84,8 +86,8 @@ export default function ProductDetailTabs({
       </div>
 
       <div className="p-4 sm:p-5">
-        {activeTab === "specifications" ? (
-          <div
+        <div
+            hidden={activeTab !== "specifications"}
             id="product-panel-specifications"
             role="tabpanel"
             aria-labelledby="product-tab-specifications"
@@ -162,10 +164,9 @@ export default function ProductDetailTabs({
               )}
             </dl>
           </div>
-        ) : null}
 
-        {activeTab === "description" ? (
-          <div
+        <div
+            hidden={activeTab !== "description"}
             id="product-panel-description"
             role="tabpanel"
             aria-labelledby="product-tab-description"
@@ -173,7 +174,7 @@ export default function ProductDetailTabs({
             <h2 className="text-[16px] font-bold uppercase tracking-wide text-foreground">
               {t("description")}
             </h2>
-            <ProductRichText
+            {descriptionContent ?? <ProductRichText
               content={description}
               className="mt-4 text-[13px] leading-7 text-muted-foreground sm:text-[14px]"
               fallback={(
@@ -181,9 +182,8 @@ export default function ProductDetailTabs({
                   {t("descriptionFallback")}
                 </p>
               )}
-            />
+            />}
           </div>
-        ) : null}
 
         {activeTab === "reviews" ? (
           <div

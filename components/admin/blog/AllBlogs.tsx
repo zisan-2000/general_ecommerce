@@ -3,7 +3,6 @@
 
 import { useState, useEffect, useMemo, useCallback } from "react";
 import Link from "next/link";
-import { generateSlug } from "@/lib/utils";
 
 interface Blog {
   id: number;
@@ -18,8 +17,7 @@ interface Blog {
 }
 
 // Helper function to format the time since creation in Bengali (e.g., "১৫ মিনিট আগে")
-const formatFacebookTime = (date: string | Date): string => {
-  const now = new Date();
+const formatFacebookTime = (date: string | Date, now: Date): string => {
   const past = new Date(date);
 
   const diffMs = now.getTime() - past.getTime();
@@ -67,11 +65,11 @@ const formatFacebookTime = (date: string | Date): string => {
   });
 };
 
-export default function AllBlogs() {
-  const [blogs, setBlogs] = useState<Blog[]>([]);
-  const [loading, setLoading] = useState(true);
+export default function AllBlogs({ initialBlogs, initialTotalPages = 1 }: { initialBlogs?: Blog[]; initialTotalPages?: number }) {
+  const [blogs, setBlogs] = useState<Blog[]>(initialBlogs ?? []);
+  const [loading, setLoading] = useState(!initialBlogs);
   const [page, setPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
+  const [totalPages, setTotalPages] = useState(initialTotalPages);
   const [cache, setCache] = useState<Map<string, Blog[]>>(new Map());
   const [paginationCache, setPaginationCache] = useState<Map<number, { blogs: Blog[], totalPages: number }>>(new Map());
 
@@ -120,64 +118,22 @@ export default function AllBlogs() {
     }
   }, [cache, paginationCache]);
 
-  // Memoize formatFacebookTime function to prevent re-creation
-  const formatFacebookTime = useMemo(() => (date: string | Date): string => {
-    const now = new Date();
-    const past = new Date(date);
-
-    const diffMs = now.getTime() - past.getTime();
-    const seconds = Math.floor(diffMs / 1000);
-    const minutes = Math.floor(seconds / 60);
-    const hours = Math.floor(minutes / 60);
-    const days = Math.floor(hours / 24);
-
-    // ---- Facebook Short Rules ----
-    if (seconds < 60) return "Just now";
-    if (minutes < 60) return `${minutes}m`;
-    if (hours < 24) return `${hours}h`;
-
-    // ---- Yesterday ----
-    if (days === 1) {
-      return `Yesterday at ${past.toLocaleTimeString("en-US", {
-        hour: "numeric",
-        minute: "2-digit",
-      })}`;
-    }
-
-    // ---- Same Year → March 12 at 3:45 PM ----
-    if (past.getFullYear() === now.getFullYear()) {
-      return past.toLocaleDateString("en-US", {
-        month: "long",
-        day: "numeric",
-      }) + 
-      " at " +
-      past.toLocaleTimeString("en-US", {
-        hour: "numeric",
-        minute: "2-digit",
-      });
-    }
-
-    // ---- Previous Years → March 12, 2022 at 3:45 PM ----
-    return past.toLocaleDateString("en-US", {
-      month: "long",
-      day: "numeric",
-      year: "numeric",
-    }) + 
-    " at " +
-    past.toLocaleTimeString("en-US", {
-      hour: "numeric",
-      minute: "2-digit",
-    });
+  // Keep the server and first browser render identical; localize after hydration.
+  const [displayNow, setDisplayNow] = useState<Date | null>(null);
+  useEffect(() => {
+    setDisplayNow(new Date());
   }, []);
 
   // Memoize blog items to prevent unnecessary re-renders
   const blogItems = useMemo(() => {
     return blogs.map((blog) => ({
       ...blog,
-      href: `/ecommerce/blogs/${blog.slug || generateSlug(blog.title)}`,
-      formattedDate: formatFacebookTime(blog.createdAt),
+      href: `/ecommerce/blogs/${encodeURIComponent(blog.slug || String(blog.id))}`,
+      formattedDate: displayNow
+        ? formatFacebookTime(blog.createdAt, displayNow)
+        : new Date(blog.createdAt).toISOString().slice(0, 10),
     }));
-  }, [blogs, formatFacebookTime]);
+  }, [blogs, displayNow]);
 
   // Memoize pagination buttons
   const paginationButtons = useMemo(() => {
@@ -190,8 +146,14 @@ export default function AllBlogs() {
   }, [totalPages, page]);
 
   useEffect(() => {
+    if (page === 1 && initialBlogs) {
+      setBlogs(initialBlogs);
+      setTotalPages(initialTotalPages);
+      setLoading(false);
+      return;
+    }
     fetchBlogs(page);
-  }, [page, fetchBlogs]);
+  }, [page, fetchBlogs, initialBlogs, initialTotalPages]);
 
   if (loading) {
     return (

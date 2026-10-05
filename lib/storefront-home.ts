@@ -177,12 +177,16 @@ const readStorefrontHomeData = unstable_cache(
           where: {
             deleted: false,
             available: true,
-            soldCount: { gt: 0 },
+            OR: [{ bestSelling: true }, { soldCount: { gt: 0 } }],
             ...typeFilter,
             ...activeCategoryFilter,
             ...bookVisibility,
           },
-          orderBy: [{ soldCount: "desc" }, { updatedAt: "desc" }],
+          orderBy: [
+            { bestSelling: "desc" },
+            { soldCount: "desc" },
+            { updatedAt: "desc" },
+          ],
           take: 20,
           select: storefrontHomeProductSelect,
         }),

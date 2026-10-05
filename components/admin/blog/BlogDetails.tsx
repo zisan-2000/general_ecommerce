@@ -11,7 +11,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import RecentBlogs from "./RecentBlogs";
 import TopSellingProducts from "@/components/ecommarce/TopSellingProducts";
 
-interface Blog {
+export interface Blog {
   id: number;
   slug: string;
   title: string;
@@ -214,17 +214,17 @@ const LoadingSkeleton = () => (
   </div>
 );
 
-export default function BlogDetails() {
+export default function BlogDetails({ initialBlog }: { initialBlog?: Blog }) {
   const router = useRouter();
   const params = useParams<{ slug: string }>();
   const blogSlug = params?.slug;
 
   // State Hooks
-  const [blog, setBlog] = useState<Blog | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [blog, setBlog] = useState<Blog | null>(initialBlog ?? null);
+  const [loading, setLoading] = useState(!initialBlog);
   const [error, setError] = useState<string | null>(null);
   const [blogCache, setBlogCache] = useState<Map<string, Blog>>(new Map());
-  const [isImageLoading, setIsImageLoading] = useState(true);
+  const [isImageLoading, setIsImageLoading] = useState(!initialBlog);
 
   // Memoize the fetch function to prevent unnecessary re-creations
   const fetchBlogDetails = useCallback(
@@ -272,6 +272,7 @@ export default function BlogDetails() {
 
   // Fetch blog data when slug changes
   useEffect(() => {
+    if (initialBlog) return;
     if (!blogSlug) {
       setLoading(false);
       setError("Invalid blog slug");
@@ -279,7 +280,7 @@ export default function BlogDetails() {
     }
 
     fetchBlogDetails(blogSlug);
-  }, [blogSlug, fetchBlogDetails]);
+  }, [blogSlug, fetchBlogDetails, initialBlog]);
 
   // Loading and Error States (Enhanced)
   if (error) {

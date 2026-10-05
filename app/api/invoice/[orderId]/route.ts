@@ -3,6 +3,8 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { createInvoicePdf } from "@/lib/invoice-pdf";
+import { getAccessContext } from "@/lib/rbac";
+import { canAccessWarehouseWithPermission } from "@/lib/warehouse-scope";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -117,12 +119,9 @@ export async function GET(
     }
 
     const userId = (session.user as any).id as string;
-
-    const sessionName =
-      session.user.name || "Customer";
-
-    const sessionEmail =
-      session.user.email || "";
+    const access = await getAccessContext(
+      session.user as { id?: string; role?: string } | undefined,
+    );
 
     // ================= ORDER ID =================
 
@@ -146,14 +145,17 @@ export async function GET(
 
     // ================= FETCH ORDER =================
 
-    const order = await db.order.findFirst({
+    const order = await db.order.findUnique({
       where: {
         id,
-        userId,
       },
 
       select: {
         id: true,
+        userId: true,
+        name: true,
+        email: true,
+        phone_number: true,
 
         createdAt: true,
 
@@ -186,6 +188,7 @@ export async function GET(
             discountValue: true,
           },
         },
+        shipments: { select: { warehouseId: true } },
 
         orderItems: {
           select: {
@@ -222,6 +225,22 @@ export async function GET(
       );
     }
 
+    const ownsOrder = order.userId === userId;
+    const canReadAll = access.has("orders.read_all");
+    if (!ownsOrder && !canReadAll) {
+      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+    }
+    if (!ownsOrder && canReadAll && !access.hasGlobal("orders.read_all")) {
+      const canReadWarehouseOrder = canAccessWarehouseWithPermission(
+        access,
+        "orders.read_all",
+        order.shipments?.warehouseId ?? null,
+      );
+      if (!canReadWarehouseOrder) {
+        return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+      }
+    }
+
     // ================= USER PROFILE =================
 
     const userProfile =
@@ -235,8 +254,8 @@ export async function GET(
         },
       });
 
-    const sessionPhone =
-      userProfile?.phone || "—";
+    const customerPhone =
+      order.phone_number || userProfile?.phone || "—";
 
     // ================= ORDER DATA =================
 
@@ -322,9 +341,9 @@ export async function GET(
       currency,
       orderUrl: invoiceQrValue,
       customer: {
-        name: safeText(sessionName),
-        email: safeText(sessionEmail),
-        phone: safeText(sessionPhone),
+        name: safeText(order.name || session.user.name || "Customer"),
+        email: safeText(order.email || session.user.email || ""),
+        phone: safeText(customerPhone),
       },
       site: siteSettings,
       items: items.map((item) => ({

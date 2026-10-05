@@ -5,9 +5,9 @@ import Link from "next/link";
 import { useFormatter, useTranslations } from "next-intl";
 import { ExternalLink, FileText, Plus, Pencil, Trash2 } from "lucide-react";
 import { toast } from "sonner";
+import TinymceEditor from "@/components/tinymceEditor";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from "@/components/ui/dialog";
 import { AlertDialog, AlertDialogContent, AlertDialogHeader, AlertDialogTitle, AlertDialogDescription, AlertDialogFooter, AlertDialogCancel, AlertDialogAction } from "@/components/ui/alert-dialog";
@@ -115,11 +115,31 @@ export default function PolicyManager({ timeZone }: { timeZone: string }) {
           </article>)}</div>}
       </TabsContent>
       </Tabs>
-      <Dialog open={editorOpen} onOpenChange={open => { if (!saving) setEditorOpen(open); }}>
-        <DialogContent closeLabel={t("close")} className="max-h-[90vh] max-w-2xl overflow-y-auto"><DialogHeader><DialogTitle>{t(editingId ? "editTitle" : "addTitle", { policy: t(form.kind) })}</DialogTitle><DialogDescription>{t("editorDescription")}</DialogDescription></DialogHeader>
+      <Dialog modal={false} open={editorOpen} onOpenChange={open => { if (!saving) setEditorOpen(open); }}>
+        <DialogContent
+          closeLabel={t("close")}
+          className="max-h-[90vh] max-w-2xl overflow-y-auto"
+          onInteractOutside={event => {
+            const target = event.target as HTMLElement;
+            if (target.closest?.(".tox-tinymce-aux, .tox-dialog, .tox-menu, .tox-pop")) {
+              event.preventDefault();
+            }
+          }}
+        ><DialogHeader><DialogTitle>{t(editingId ? "editTitle" : "addTitle", { policy: t(form.kind) })}</DialogTitle><DialogDescription>{t("editorDescription")}</DialogDescription></DialogHeader>
           <form onSubmit={save} className="space-y-4">
             <div><label htmlFor="policy-title" className="mb-1 block text-sm font-medium">{isFaq ? t("question") : isSitemap ? t("linkTitle") : t("sectionTitle")}</label><Input id="policy-title" required maxLength={250} value={form.title} onChange={e => setForm({ ...form, title: e.target.value })} /></div>
-            <div><label htmlFor="policy-content" className="mb-1 block text-sm font-medium">{isFaq ? t("answer") : isSitemap ? t("optionalDescription") : t("content")}</label><Textarea id="policy-content" required={!isSitemap} rows={10} maxLength={100000} value={form.content} onChange={e => setForm({ ...form, content: e.target.value })} /><p className="mt-1 text-xs text-muted-foreground">{t("contentHint")}</p></div>
+            <div>
+              <label className="mb-1 block text-sm font-medium">
+                {isFaq ? t("answer") : isSitemap ? t("optionalDescription") : t("content")}
+              </label>
+              <TinymceEditor
+                value={form.content}
+                onChange={content => setForm(current => ({ ...current, content }))}
+                height={400}
+                selectionScopedHeadings
+              />
+              <p className="mt-1 text-xs text-muted-foreground">{t("contentHint")}</p>
+            </div>
             {isSitemap && <div><label htmlFor="policy-url" className="mb-1 block text-sm font-medium">{t("storefrontLink")}</label><Input id="policy-url" required placeholder="/ecommerce/products" value={form.linkUrl ?? ""} onChange={e => setForm({ ...form, linkUrl: e.target.value })} /></div>}
             <div className="grid gap-4 sm:grid-cols-2"><div><label htmlFor="policy-category" className="mb-1 block text-sm font-medium">{t("category")}</label><Input id="policy-category" maxLength={100} value={form.category} onChange={e => setForm({ ...form, category: e.target.value })} /></div><div><label htmlFor="policy-order" className="mb-1 block text-sm font-medium">{t("displayOrder")}</label><Input id="policy-order" type="number" min={0} max={100000} required value={form.sortOrder} onChange={e => setForm({ ...form, sortOrder: Number(e.target.value) })} /></div></div>
             <div><label htmlFor="policy-date" className="mb-1 block text-sm font-medium">{t("effectiveDate")}</label><Input id="policy-date" type="date" value={form.effectiveDate ?? ""} onChange={e => setForm({ ...form, effectiveDate: e.target.value || null })} /></div>

@@ -51,7 +51,9 @@ model User {
   orders                                    Order[]
   payrollEntries                            PayrollEntry[]
   payrollProfile                            PayrollProfile?
-  refunds                                   Refund[]
+  refunds                                   Refund[]                                @relation("RefundRequester")
+  reviewedRefunds                           Refund[]                                @relation("RefundReviewer")
+  paidRefunds                               Refund[]                                @relation("RefundPayer")
   reviews                                   Review[]
   productQuestions                          ProductQuestion[]                      @relation("ProductQuestionsAsked")
   productQuestionAnswers                    ProductQuestion[]                      @relation("ProductQuestionsAnswered")
@@ -387,6 +389,7 @@ model Product {
   serviceOnlineLink       String?
   available               Boolean                           @default(true)
   featured                Boolean                           @default(false)
+  bestSelling             Boolean                           @default(false)
   image                   String?
   gallery                 String[]
   videoUrl                String?
@@ -437,6 +440,7 @@ model Product {
   @@index([deleted, available, soldCount])
   @@index([deleted, available, basePrice])
   @@index([deleted, available, featured])
+  @@index([deleted, available, bestSelling])
   @@index([deleted, available, flashSaleEnabled, flashSaleStartsAt, flashSaleEndsAt])
   @@index([categoryId, deleted, available])
   @@index([brandId, deleted, available])
@@ -797,6 +801,8 @@ model Order {
   status                  OrderStatus            @default(PENDING)
   paymentStatus           PaymentStatus          @default(UNPAID)
   transactionId           String?
+  termsAcceptedAt         DateTime?
+  privacyPolicyAcceptedAt DateTime?
   createdAt               DateTime               @default(now())
   updatedAt               DateTime               @updatedAt
   couponId                String?
@@ -1499,23 +1505,38 @@ model PayrollAdjustment {
 }
 
 model Refund {
-  id          Int          @id @default(autoincrement())
-  orderId     Int
-  userId      String?
-  paymentId   Int?
-  orderItemId Int?
-  reason      String
-  status      RefundStatus @default(REQUESTED)
-  amount      Decimal      @db.Decimal(10, 2)
-  quantity    Int?
-  createdAt   DateTime     @default(now())
-  updatedAt   DateTime     @updatedAt
-  order       Order        @relation(fields: [orderId], references: [id])
-  orderItem   OrderItem?   @relation(fields: [orderItemId], references: [id])
-  payment     Payment?     @relation(fields: [paymentId], references: [id])
-  user        User?        @relation(fields: [userId], references: [id])
+  id           Int          @id @default(autoincrement())
+  orderId      Int
+  userId       String?
+  paymentId    Int?
+  orderItemId  Int?
+  reason       String
+  adminNote    String?
+  refundMethod String       @default("Original payment method")
+  refundAccount String?
+  reviewedAt   DateTime?
+  reviewedById String?
+  payoutStatus RefundPayoutStatus @default(PENDING)
+  payoutTransactionId String?
+  paidAt       DateTime?
+  paidById     String?
+  status       RefundStatus @default(REQUESTED)
+  amount       Decimal      @db.Decimal(10, 2)
+  quantity     Int?
+  createdAt    DateTime     @default(now())
+  updatedAt    DateTime     @updatedAt
+  order        Order        @relation(fields: [orderId], references: [id])
+  orderItem    OrderItem?   @relation(fields: [orderItemId], references: [id])
+  payment      Payment?     @relation(fields: [paymentId], references: [id])
+  user         User?        @relation("RefundRequester", fields: [userId], references: [id])
+  reviewedBy   User?        @relation("RefundReviewer", fields: [reviewedById], references: [id], onDelete: SetNull)
+  paidBy       User?        @relation("RefundPayer", fields: [paidById], references: [id], onDelete: SetNull)
 
   @@index([userId])
+  @@index([status, createdAt])
+  @@index([reviewedById])
+  @@index([paidById])
+  @@index([payoutStatus, createdAt])
 }
 
 model InventoryLog {
@@ -4507,6 +4528,7 @@ enum OrderStatus {
   CANCELLED
   RETURNED
   FAILED
+  REFUNDED
 }
 
 enum PaymentStatus {
@@ -4554,6 +4576,11 @@ enum RefundStatus {
   APPROVED
   REJECTED
   COMPLETED
+}
+
+enum RefundPayoutStatus {
+  PENDING
+  PAID
 }
 
 enum BannerType {

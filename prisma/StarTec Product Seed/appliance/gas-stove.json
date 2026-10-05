@@ -19,7 +19,7 @@
       "name": "Appliance",
       "slug": "appliance",
       "parentSlug": null,
-      "image": "/images/products/appliance/ac/Hitachi/hitachi-1-5-ton-inverter-ac.png",
+      "image": "/assets/categories/Appliance.png",
       "isActive": true,
       "sortOrder": 0,
       "showInHeader": true,

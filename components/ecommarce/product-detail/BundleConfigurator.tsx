@@ -159,14 +159,14 @@ export default function BundleConfigurator({
   };
 
   return (
-    <div className="mt-4 space-y-4" aria-label={t("configureLabel")}>
-      <div className="rounded-xl border border-primary/20 bg-primary/5 p-4">
-        <div className="flex flex-wrap items-start justify-between gap-3">
-        <div>
+    <div className="mt-4 w-full min-w-0 space-y-3 sm:space-y-4" aria-label={t("configureLabel")}>
+      <div className="min-w-0 overflow-hidden rounded-xl border border-primary/20 bg-primary/5 p-3 sm:p-4">
+        <div className="flex min-w-0 flex-col gap-3 sm:flex-row sm:flex-wrap sm:items-start sm:justify-between">
+          <div className="min-w-0">
             <h2 className="text-base font-bold">{t("title")}</h2>
-            <p className="mt-1 text-xs text-muted-foreground">{t("description")}</p>
-        </div>
-          <div className="text-right" aria-live="polite">
+            <p className="mt-1 break-words text-xs text-muted-foreground">{t("description")}</p>
+          </div>
+          <div className="min-w-0 text-left sm:text-right" aria-live="polite">
             <p className="text-xs font-medium text-muted-foreground">{t("price")}</p>
             <p className="text-xl font-black text-primary">{money(preview.finalPrice, currency, locale)}</p>
             <p className={`text-xs font-semibold ${preview.finalPrice > basePrice ? "text-amber-700" : preview.finalPrice < basePrice ? "text-emerald-700" : "text-muted-foreground"}`}>
@@ -192,18 +192,18 @@ export default function BundleConfigurator({
           .filter((option) => option.isDefault)
           .reduce((total, option) => total + getBundleOptionUnitPrice(option), 0);
         return (
-          <fieldset key={group.id} className={`rounded-xl border p-4 ${selectionValid ? "border-border" : "border-amber-400 bg-amber-50/50"}`}>
-            <legend className="px-1 text-sm font-bold">
+          <fieldset key={group.id} className={`min-w-0 max-w-full rounded-xl border p-3 sm:p-4 ${selectionValid ? "border-border" : "border-amber-400 bg-amber-50/50"}`}>
+            <legend className="max-w-full break-words px-1 text-sm font-bold">
               {group.name} {group.required ? <span className="text-rose-600" aria-label={t("required")}>*</span> : <span className="font-normal text-muted-foreground">({t("optional")})</span>}
             </legend>
-            <p className="mb-3 text-xs text-muted-foreground">
+            <p className="mb-3 break-words text-xs text-muted-foreground">
               {group.selectionType === "FIXED"
                 ? t("includedEveryBundle")
                 : group.minSelect === group.maxSelect
                   ? t("chooseCount", { count: group.maxSelect })
                   : t("chooseRange", { min: group.minSelect, max: group.maxSelect })}
             </p>
-            <div className="grid gap-2 sm:grid-cols-2">
+            <div className="grid min-w-0 grid-cols-1 gap-2 sm:grid-cols-2">
               {group.options.map((option) => {
                 const active = state.optionIds.includes(option.id);
                 const unavailable = !option.product.available || (
@@ -233,7 +233,7 @@ export default function BundleConfigurator({
                     onClick={() => toggleOption(group, option.id)}
                     disabled={group.selectionType === "FIXED" || unavailable || selectionLimitReached}
                     aria-pressed={active}
-                    className={`flex min-h-20 items-center gap-3 rounded-lg border p-3 text-left transition ${
+                    className={`flex min-h-20 w-full min-w-0 items-center gap-2 rounded-lg border p-2.5 text-left transition sm:gap-3 sm:p-3 ${
                       active ? "border-primary bg-primary/5 ring-2 ring-primary/30" : "border-border hover:border-primary/50 hover:bg-muted/40"
                     } disabled:cursor-not-allowed disabled:opacity-60`}
                   >
@@ -241,10 +241,10 @@ export default function BundleConfigurator({
                       <Image src={option.product.image || "/placeholder.svg"} alt="" fill sizes="44px" className="object-contain" />
                     </span>
                     <span className="min-w-0 flex-1">
-                      <span className="block truncate text-xs font-semibold">{option.product.name}</span>
+                      <span className="block line-clamp-2 break-words text-xs font-semibold">{option.product.name}</span>
                       {variantText ? <span className="block truncate text-[11px] text-muted-foreground">{variantText}</span> : null}
-                      <span className="block text-[11px] text-muted-foreground">{t("itemValue", { amount: money(unitPrice, currency, locale) })}</span>
-                      <span className="block text-[11px] font-semibold text-primary">
+                      <span className="block break-words text-[11px] text-muted-foreground">{t("itemValue", { amount: money(unitPrice, currency, locale) })}</span>
+                      <span className="block break-words text-[11px] font-semibold text-primary">
                         {unavailable
                           ? t("outOfStock")
                           : selectionLimitReached
@@ -281,7 +281,7 @@ export default function BundleConfigurator({
               </button>
             ) : null}
             {group.allowQuantityChange && state.optionIds.length > 0 ? (
-              <div className="mt-2 flex items-center gap-2 text-xs">
+              <div className="mt-2 flex flex-wrap items-center gap-2 text-xs">
                 <span className="font-medium">{t("quantityPerBundle")}</span>
                 <button type="button" onClick={() => changeQuantity(group, -1)} disabled={state.quantity <= group.minQuantity} className="rounded border p-1 disabled:opacity-40" aria-label={t("decreaseQuantity", { group: group.name })}><Minus className="h-3 w-3" /></button>
                 <strong>{state.quantity}</strong>
