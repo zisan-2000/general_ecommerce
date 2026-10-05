@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --turbopack",
+    "dev": "cross-env NODE_OPTIONS=--max-old-space-size=6144 next dev --turbopack",
     "build": "cross-env NODE_OPTIONS=--max-old-space-size=6144 next build --turbopack",
     "build:prod": "cross-env NODE_OPTIONS=--max-old-space-size=6144 NODE_ENV=production next build --turbopack",
     "start": "next start",
