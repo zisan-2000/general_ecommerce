@@ -2094,29 +2094,31 @@ export default function ProductAddModal({
                   <Label>{t("additional.availableLabel")}</Label>
                 </label>
               )}
-              <label className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  checked={form.featured}
-                  onChange={(e) =>
-                    setForm((prev) => ({ ...prev, featured: e.target.checked }))
-                  }
-                />
-                <Label>{t("additional.featuredLabel")}</Label>
-              </label>
-              <label className="flex items-center gap-2">
-                <input
-                  type="checkbox"
-                  checked={form.bestSelling}
-                  onChange={(e) =>
-                    setForm((prev) => ({
-                      ...prev,
-                      bestSelling: e.target.checked,
-                    }))
-                  }
-                />
-                <Label>{t("additional.bestSellingLabel")}</Label>
-              </label>
+              <div className="flex flex-wrap items-center gap-x-6 gap-y-3">
+                <label className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={form.featured}
+                    onChange={(e) =>
+                      setForm((prev) => ({ ...prev, featured: e.target.checked }))
+                    }
+                  />
+                  <Label>{t("additional.featuredLabel")}</Label>
+                </label>
+                <label className="flex items-center gap-2">
+                  <input
+                    type="checkbox"
+                    checked={form.bestSelling}
+                    onChange={(e) =>
+                      setForm((prev) => ({
+                        ...prev,
+                        bestSelling: e.target.checked,
+                      }))
+                    }
+                  />
+                  <Label>{t("additional.bestSellingLabel")}</Label>
+                </label>
+              </div>
             </div>
             <div className="rounded-xl border bg-muted/30 p-4">
               <h4 className="font-medium">{t("cartReminder.title")}</h4>
