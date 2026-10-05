@@ -5060,7 +5060,8 @@
     "tabs": {
       "site": "إعدادات الموقع",
       "banners": "إدارة اللافتات",
-      "payments": "إعدادات الدفع"
+      "payments": "إعدادات الدفع",
+      "analytics": "Google Analytics"
     },
     "sections": {
       "site": "عنوان الموقع والشعار",

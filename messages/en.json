@@ -5078,7 +5078,8 @@
     "tabs": {
       "site": "Site Settings",
       "banners": "Banner Management",
-      "payments": "Payment Settings"
+      "payments": "Payment Settings",
+      "analytics": "Google Analytics"
     },
     "sections": {
       "site": "Site Title & Logo",

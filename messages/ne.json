@@ -5070,7 +5070,8 @@
     "tabs": {
       "site": "साइट सेटिङहरू",
       "banners": "ब्यानर व्यवस्थापन",
-      "payments": "भुक्तानी सेटिङहरू"
+      "payments": "भुक्तानी सेटिङहरू",
+      "analytics": "Google Analytics"
     },
     "sections": {
       "site": "साइट शीर्षक र लोगो",

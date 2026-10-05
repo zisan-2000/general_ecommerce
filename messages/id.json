@@ -5060,7 +5060,8 @@
     "tabs": {
       "site": "Pengaturan Situs",
       "banners": "Manajemen Banner",
-      "payments": "Pengaturan Pembayaran"
+      "payments": "Pengaturan Pembayaran",
+      "analytics": "Google Analytics"
     },
     "sections": {
       "site": "Judul & Logo Situs",

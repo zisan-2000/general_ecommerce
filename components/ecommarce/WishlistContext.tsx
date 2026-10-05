@@ -1,4 +1,7 @@
 "use client";
+import { useStorefrontSettings } from "@/providers/storefront-settings-provider";
+import { ecommerceFromRows } from "@/lib/analytics/ecommerce";
+import { trackAddToWishlist } from "@/lib/analytics/data-layer";
 
 import {
   createContext,
@@ -21,6 +24,7 @@ const WishlistContext = createContext<WishlistContextType | undefined>(
 );
 
 export function WishlistProvider({ children }: { children: ReactNode }) {
+  const { currency } = useStorefrontSettings();
   const [wishlistItems, setWishlistItems] = useState<number[]>([]);
 
   // Load wishlist from localStorage on initial render
@@ -48,22 +52,15 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
     if (!wishlistItems.includes(numericId)) {
       setWishlistItems([...wishlistItems, numericId]);
       
-      // Also sync with API if user is authenticated
+      // Wishlist actions are persisted by the calling control; this context owns local state.
       try {
-        const response = await fetch("/api/wishlist", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({ productId: numericId }),
-        });
-        
-        // If API call fails, don't remove from localStorage (keep local state)
-        if (!response.ok && response.status !== 401) {
-          console.warn("Failed to sync with wishlist API");
+        const productResponse = await fetch(`/api/products/${numericId}`);
+        if (productResponse.ok) {
+          const product = await productResponse.json();
+          trackAddToWishlist(ecommerceFromRows([product], product.currency || currency));
         }
       } catch (error) {
-        console.warn("Failed to sync with wishlist API:", error);
+        console.warn("Failed to load wishlist product for analytics:", error);
       }
     }
   };
@@ -75,19 +72,6 @@ export function WishlistProvider({ children }: { children: ReactNode }) {
         : productId;
     setWishlistItems(wishlistItems.filter((id) => id !== numericId));
     
-    // Also sync with API if user is authenticated
-    try {
-      const response = await fetch(`/api/wishlist?productId=${numericId}`, {
-        method: "DELETE",
-      });
-      
-      // If API call fails, don't add back to localStorage (keep local state)
-      if (!response.ok && response.status !== 401) {
-        console.warn("Failed to sync with wishlist API");
-      }
-    } catch (error) {
-      console.warn("Failed to sync with wishlist API:", error);
-    }
   };
 
   const isInWishlist = (productId: number | string) => {

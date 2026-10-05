@@ -762,6 +762,7 @@ export async function POST(
           address_details,
           payment_method,
           total: subtotal,
+          currency: orderItemsData[0]?.currency || "BDT",
           shipping_cost,
           grand_total,
           discount_total,

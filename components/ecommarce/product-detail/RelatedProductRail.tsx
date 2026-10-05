@@ -2,6 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import type { StorefrontCatalogProduct } from "@/lib/storefront-catalog";
 import { getLocale, getTranslations } from "next-intl/server";
+import ProductListTracker from "@/components/analytics/ProductListTracker";
+import { toGA4Item } from "@/lib/analytics/ecommerce";
+import { getSiteSettingsForSeo } from "@/lib/seo";
 
 function money(value: number, locale: string) {
   return `৳${Math.round(value).toLocaleString(locale)}`;
@@ -14,13 +17,25 @@ export default async function RelatedProductRail({
   products: StorefrontCatalogProduct[];
   categoryHref: string;
 }) {
-  const [t, locale] = await Promise.all([
+  const [t, locale, settings] = await Promise.all([
     getTranslations("StorefrontProduct.related"),
     getLocale(),
+    getSiteSettingsForSeo(),
   ]);
   if (products.length === 0) return null;
 
   return (
+    <ProductListTracker
+      listId="related_products_rail"
+      listName="Related products"
+      currency={settings.currency}
+      items={products.slice(0, 8).map((product, index) => toGA4Item({
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        originalPrice: product.originalPrice,
+      }, index + 1))}
+    >
     <aside className="flex h-full min-h-0 flex-col overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-[0_1px_3px_rgba(15,23,42,0.08)]">
       <div className="flex shrink-0 items-center justify-between border-b border-border px-4 py-3.5">
         <h2 className="text-[14px] font-bold text-foreground">{t("title")}</h2>
@@ -42,6 +57,7 @@ export default async function RelatedProductRail({
           return (
             <Link
               key={product.id}
+              data-analytics-item-id={String(product.id)}
               href={`/ecommerce/products/${encodeURIComponent(product.slug)}`}
               className="group grid min-h-[96px] flex-1 grid-cols-[62px_minmax(0,1fr)] content-center gap-3 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#174a92]"
             >
@@ -86,5 +102,6 @@ export default async function RelatedProductRail({
         {t("browseAll")}
       </Link>
     </aside>
+    </ProductListTracker>
   );
 }

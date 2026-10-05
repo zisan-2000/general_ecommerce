@@ -7,6 +7,7 @@ import { toast } from "sonner";
 import BannerManager, { type Banner } from "@/components/Settings/BannerManager";
 import PaymentGatewayManager from "@/components/PaymentSystem";
 import SiteSettingsForm from "@/components/Settings/SiteSettingsForm";
+import GeneralSettings from "@/components/Settings/GeneralSettings";
 import { useTranslations } from "next-intl";
 
 export default function SettingsPage() {
@@ -94,7 +95,7 @@ export default function SettingsPage() {
         onValueChange={setActiveTab}
         className="space-y-4"
       >
-   <TabsList className="grid w-full grid-cols-3 rounded-md bg-primary/10">
+   <TabsList className="grid w-full grid-cols-2 gap-1 rounded-md bg-primary/10 sm:grid-cols-4">
   <TabsTrigger
     value="site"
     className="text-[11px] sm:text-xl data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
@@ -114,6 +115,13 @@ export default function SettingsPage() {
     className="text-[11px] sm:text-xl data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
   >
     {t("tabs.payments")}
+  </TabsTrigger>
+
+  <TabsTrigger
+    value="analytics"
+    className="text-[11px] sm:text-xl data-[state=active]:bg-primary data-[state=active]:text-primary-foreground"
+  >
+    {t("tabs.analytics")}
   </TabsTrigger>
 </TabsList>
 
@@ -166,6 +174,14 @@ export default function SettingsPage() {
             </CardHeader>
             <CardContent>
               <PaymentGatewayManager />
+            </CardContent>
+          </Card>
+        </TabsContent>
+
+        <TabsContent value="analytics" className="space-y-4">
+          <Card>
+            <CardContent className="pt-6">
+              <GeneralSettings />
             </CardContent>
           </Card>
         </TabsContent>

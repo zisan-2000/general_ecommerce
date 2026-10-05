@@ -24,6 +24,9 @@ import GradientBorder from "@/components/ui/GradientBorder";
 import SliderNavButton from "./SliderNavButton";
 import { FaRobot } from "react-icons/fa";
 import { useTranslations } from "next-intl";
+import ProductListTracker from "@/components/analytics/ProductListTracker";
+import { toGA4Item } from "@/lib/analytics/ecommerce";
+import { useStorefrontSettings } from "@/providers/storefront-settings-provider";
 
 type ApiVariant = {
   stock?: number | string | null;
@@ -116,6 +119,7 @@ export default function BestSelling({
 }) {
   const t = useTranslations("Landing.ProductSections.bestSelling");
   const common = useTranslations("Common");
+  const { currency } = useStorefrontSettings();
   const resolvedTitle = title ?? t("title");
   const resolvedSubtitle = subtitle ?? t("subtitle");
   const hasPreloadedData =
@@ -294,6 +298,12 @@ export default function BestSelling({
   };
 
   return (
+    <ProductListTracker
+      listId="best_sellers"
+      listName={resolvedTitle}
+      currency={currency}
+      items={visible.slice(0, 20).map((product, index) => toGA4Item(product, index + 1))}
+    >
     <section className="w-full bg-background">
       <div className="w-full px-5 py-5 sm:px-5 sm:py-5 lg:px-5">
         <div className="flex gap-3 justify-between">
@@ -458,5 +468,6 @@ export default function BestSelling({
         </DialogContent>
       </Dialog>
     </section>
+    </ProductListTracker>
   );
 }

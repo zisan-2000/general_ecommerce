@@ -7,6 +7,9 @@ import { ChevronLeft, ChevronRight, Flame, Zap } from "lucide-react";
 import type { StorefrontHomeData } from "@/lib/storefront-home";
 import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
+import PromotionTracker from "@/components/analytics/PromotionTracker";
+import { toGA4Item } from "@/lib/analytics/ecommerce";
+import { useStorefrontSettings } from "@/providers/storefront-settings-provider";
 
 export type FlashSaleProduct = StorefrontHomeData["flashSaleProducts"][number];
 
@@ -93,6 +96,7 @@ export function FlashSaleCard({ product }: { product: FlashSaleProduct }) {
 
 export default function FlashSale({ productsData }: { productsData: FlashSaleProduct[]; isAuthenticated?: boolean }) {
   const t = useTranslations("Landing.FlashSale");
+  const { currency } = useStorefrontSettings();
   const scrollerRef = useRef<HTMLDivElement | null>(null);
   const products = useMemo(() => productsData.filter((product) => product.flashSale?.active).slice(0, 20), [productsData]);
   const scroll = (direction: "left" | "right") => {
@@ -103,6 +107,18 @@ export default function FlashSale({ productsData }: { productsData: FlashSalePro
   if (products.length === 0) return null;
 
   return (
+    <PromotionTracker
+      promotionId="flash_sale"
+      promotionName="Flash sale"
+      currency={currency}
+      items={products.map((product, index) => toGA4Item({
+        id: product.id,
+        name: product.name,
+        price: product.basePrice,
+        originalPrice: product.flashSale?.regularPrice,
+        quantity: 1,
+      }, index))}
+    >
     <section className="w-full bg-background" aria-labelledby="flash-sale-title">
       <div className="w-full px-5 py-5 sm:px-5 sm:py-5 lg:px-5">
         <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -125,5 +141,6 @@ export default function FlashSale({ productsData }: { productsData: FlashSalePro
         <div className="mt-4 h-px w-full bg-border" />
       </div>
     </section>
+    </PromotionTracker>
   );
 }

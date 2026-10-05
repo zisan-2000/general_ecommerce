@@ -1,6 +1,6 @@
 "use client";
 
-import { useCallback, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import { toast } from "sonner";
 import ProductCard from "@/components/ecommarce/ProductCard";
@@ -11,6 +11,12 @@ import { useProductCompare } from "@/hooks/use-product-compare";
 import { useStorefrontFeatures } from "@/providers/storefront-features-provider";
 import type { StorefrontCatalogProduct } from "@/lib/storefront-catalog";
 import { sendSearchEvent } from "@/lib/search/client-analytics";
+import { ecommerceFromRows } from "@/lib/analytics/ecommerce";
+import {
+  trackSelectItem,
+  trackViewItemList,
+} from "@/lib/analytics/data-layer";
+import { useStorefrontSettings } from "@/providers/storefront-settings-provider";
 import {
   Dialog,
   DialogContent,
@@ -25,16 +31,21 @@ export default function CatalogProductGrid({
   products,
   searchQuery = "",
   resultCount,
+  itemListId,
+  itemListName,
 }: {
   products: StorefrontCatalogProduct[];
   searchQuery?: string;
   resultCount?: number;
+  itemListId?: string;
+  itemListName?: string;
 }) {
   const t = useTranslations("StorefrontCatalog.grid");
   const locale = useLocale();
   const { COMPARE: compareEnabled } = useStorefrontFeatures();
   const { status } = useSession();
   const { addToCart } = useCart();
+  const { currency } = useStorefrontSettings();
   const { addToWishlist, removeFromWishlist, isInWishlist } = useWishlist();
   const {
     count: compareCount,
@@ -43,6 +54,47 @@ export default function CatalogProductGrid({
     toggle: toggleComparedProduct,
   } = useProductCompare();
   const [loginModalOpen, setLoginModalOpen] = useState(false);
+  const trackedList = useRef("");
+  const gridRef = useRef<HTMLDivElement | null>(null);
+  const resolvedListId = itemListId ?? (searchQuery ? "search_results" : "product_catalog");
+  const resolvedListName = itemListName ?? (searchQuery ? "Search results" : "Product catalog");
+  const listKey = `${resolvedListId}:${products.map((product) => product.id).join(",")}`;
+
+  useEffect(() => {
+    const grid = gridRef.current;
+    if (!products.length || trackedList.current === listKey || !grid) return;
+    const sendImpression = () => {
+      if (trackedList.current === listKey) return;
+      trackedList.current = listKey;
+      trackViewItemList({
+        ...ecommerceFromRows(
+          products.map((product, index) => ({
+            id: product.id,
+            name: product.name,
+            price: product.price,
+            originalPrice: product.originalPrice,
+            quantity: 1,
+            index: index + 1,
+          })),
+          currency,
+        ),
+        item_list_id: resolvedListId,
+        item_list_name: resolvedListName,
+      });
+    };
+    if (!("IntersectionObserver" in window)) {
+      sendImpression();
+      return;
+    }
+    const observer = new IntersectionObserver((entries) => {
+      if (entries.some((entry) => entry.isIntersecting)) {
+        sendImpression();
+        observer.disconnect();
+      }
+    }, { threshold: 0.1 });
+    observer.observe(grid);
+    return () => observer.disconnect();
+  }, [currency, listKey, products, resolvedListId, resolvedListName]);
   const formatBDT = useCallback(
     (value: number) => `৳${Math.round(value).toLocaleString(locale)}`,
     [locale],
@@ -121,22 +173,38 @@ export default function CatalogProductGrid({
           <Link href={compareHref} className="font-bold text-primary hover:underline">{t("compareNow")}</Link>
         </div>
       ) : null}
-      <div className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
+      <div ref={gridRef} className="grid grid-cols-2 gap-3 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
         {products.map((product, index) => (
           <div
             key={product.id}
             className="h-full"
             onClickCapture={(event) => {
-              if (!searchQuery) return;
               const target = event.target as HTMLElement;
               if (!target.closest("a[href*='/ecommerce/products/']")) return;
-              sendSearchEvent({
-                event: "RESULT_CLICKED",
-                query: searchQuery,
-                resultCount,
-                productId: product.id,
-                position: index + 1,
+              trackSelectItem({
+                ...ecommerceFromRows(
+                  [{
+                    id: product.id,
+                    name: product.name,
+                    price: product.price,
+                    originalPrice: product.originalPrice,
+                    quantity: 1,
+                    index: index + 1,
+                  }],
+                  currency,
+                ),
+                item_list_id: resolvedListId,
+                item_list_name: resolvedListName,
               });
+              if (searchQuery) {
+                sendSearchEvent({
+                  event: "RESULT_CLICKED",
+                  query: searchQuery,
+                  resultCount,
+                  productId: product.id,
+                  position: index + 1,
+                });
+              }
             }}
           >
           <ProductCard

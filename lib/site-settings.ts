@@ -1,3 +1,4 @@
+import { parseGoogleAnalyticsSettings, resolveGoogleAnalyticsSettings, type GoogleAnalyticsSettings } from "@/lib/analytics/config";
 export const STORE_TYPES = [
   "GENERAL",
   "TECH",
@@ -25,7 +26,7 @@ export const SITE_SETTINGS_DEFAULTS = {
   favicon: "/assets/favicon.png",
 } as const;
 
-export type SiteSettingsInput = {
+export type SiteSettingsInput = GoogleAnalyticsSettings & {
   storeName: string;
   storeTagline: string | null;
   defaultSeoTitle: string | null;
@@ -222,9 +223,13 @@ export function parseSiteSettingsInput(
     return { ok: false, error: "Contact email is invalid" };
   }
 
+  let googleSettings: GoogleAnalyticsSettings;
+  try { googleSettings = parseGoogleAnalyticsSettings(body); }
+  catch (error) { return { ok: false, error: error instanceof Error ? error.message : "Invalid Google tracking configuration" }; }
   return {
     ok: true,
     value: {
+      ...googleSettings,
       storeName,
       storeTagline: cleanOptional(body.storeTagline, MAX_LENGTHS.storeTagline),
       defaultSeoTitle: cleanOptional(body.defaultSeoTitle, MAX_LENGTHS.defaultSeoTitle),
@@ -298,6 +303,7 @@ export function resolveSiteSettings(
     .toUpperCase() as StoreType;
 
   return {
+    ...resolveGoogleAnalyticsSettings(settings),
     storeName,
     siteTitle: storeName,
     storeTagline:

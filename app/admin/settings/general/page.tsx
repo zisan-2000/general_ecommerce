@@ -1,9 +1,5 @@
-import { ThemeSwitcher } from "@/components/theme-switcher";
+import GeneralSettings from "@/components/Settings/GeneralSettings";
 
-export default function GeneralSettings() {
-  return (
-    <div>
-      <ThemeSwitcher />
-    </div>
-  );
+export default function GeneralSettingsPage() {
+  return <GeneralSettings />;
 }
