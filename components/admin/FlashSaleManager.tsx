@@ -2,7 +2,7 @@
 
 import { translateDynamic } from "@/i18n/dynamic-messages";
 import Image from "next/image";
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useTranslations } from "next-intl";
 import {
   CalendarClock,
@@ -45,6 +45,8 @@ type FlashProduct = {
 
 type ListResponse = {
   items: FlashProduct[];
+  categories: { id: number; name: string }[];
+  features: { DIGITAL_PRODUCTS: boolean; SERVICE_PRODUCTS: boolean; BUNDLES: boolean };
   pagination: {
     page: number;
     pageSize: number;
@@ -77,6 +79,11 @@ const price = (value: number) =>
 
 export default function FlashSaleManager() {
   const t = useTranslations("AdminFlashSaleManager");
+  const productT = useTranslations("AdminProductManager");
+  const [categories, setCategories] = useState<ListResponse["categories"]>([]);
+  const [features, setFeatures] = useState<ListResponse["features"]>({ DIGITAL_PRODUCTS: false, SERVICE_PRODUCTS: false, BUNDLES: false });
+  const [filters, setFilters] = useState({ category: "", type: "", availability: "", featured: "", stock: "", sort: "flash-sale" });
+  const requestId = useRef(0);
 
   const [items, setItems] = useState<FlashProduct[]>([]);
   const [pagination, setPagination] = useState<ListResponse["pagination"]>({
@@ -86,6 +93,7 @@ export default function FlashSaleManager() {
     pageCount: 1,
   });
   const [search, setSearch] = useState("");
+  const hasActiveFilters = Boolean(search || filters.category || filters.type || filters.availability || filters.featured || filters.stock || filters.sort !== "flash-sale");
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [selected, setSelected] = useState<FlashProduct | null>(null);
@@ -100,11 +108,13 @@ export default function FlashSaleManager() {
 
   const load = useCallback(
     async (page = 1, term = search) => {
+      const currentRequest = ++requestId.current;
       setLoading(true);
       try {
         const params = new URLSearchParams({
           page: String(page),
           pageSize: "50",
+          ...filters,
         });
         if (term.trim()) params.set("search", term.trim());
         const response = await fetch(`/api/admin/flash-sales?${params}`, {
@@ -115,9 +125,13 @@ export default function FlashSaleManager() {
         };
         if (!response.ok)
           throw new Error(data.error || t("errors.loadProducts"));
+        if (currentRequest !== requestId.current) return;
         setItems(data.items);
         setPagination(data.pagination);
+        setCategories(data.categories);
+        setFeatures(data.features);
       } catch (loadError) {
+        if (currentRequest !== requestId.current) return;
         toast({
           title: t("toasts.loadFailedTitle"),
           description:
@@ -127,16 +141,18 @@ export default function FlashSaleManager() {
           variant: "destructive",
         });
       } finally {
-        setLoading(false);
+        if (currentRequest === requestId.current) setLoading(false);
       }
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [search],
+    [search, filters, t],
   );
 
   useEffect(() => {
     const timer = window.setTimeout(() => void load(1, search), 300);
-    return () => window.clearTimeout(timer);
+    return () => {
+      window.clearTimeout(timer);
+      requestId.current++;
+    };
   }, [load, search]);
 
   const counts = useMemo(
@@ -249,16 +265,57 @@ export default function FlashSaleManager() {
             {t("header.description")}
           </p>
         </div>
-        <div className="relative w-full sm:w-80">
+      </div>
+
+      <Card>
+        <CardContent className="space-y-4 p-4">
+          <div className="flex items-center justify-between gap-3">
+            <h2 className="font-semibold">{productT("filters.title")}</h2>
+            {hasActiveFilters && (
+              <Button variant="ghost" size="sm" onClick={() => {
+                setSearch("");
+                setFilters({ category: "", type: "", availability: "", featured: "", stock: "", sort: "flash-sale" });
+              }}>{productT("filters.clearAll")}</Button>
+            )}
+          </div>
+          <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="relative">
           <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
           <Input
             value={search}
             onChange={(event) => setSearch(event.target.value)}
             placeholder={t("searchPlaceholder")}
+            aria-label={productT("filters.searchPlaceholder")}
             className="pl-9"
           />
         </div>
-      </div>
+            <select aria-label={productT("filters.allCategories")} value={filters.category}
+              onChange={event => setFilters(previous => ({ ...previous, category: event.target.value }))}
+              className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm">
+              <option value="">{productT("filters.allCategories")}</option>
+              {categories.map(category => <option key={category.id} value={category.id}>{category.name}</option>)}
+            </select>
+            {([
+              { key: "type", label: "filters.allTypes", options: [["", "filters.allTypes"], ["PHYSICAL", "productTypes.physical"], ["DIGITAL", "productTypes.digital"], ["SERVICE", "productTypes.service"], ["BUNDLE", "productTypes.bundle"]] },
+              { key: "availability", label: "filters.allAvailability", options: [["", "filters.allAvailability"], ["available", "filters.available"], ["unavailable", "filters.unavailable"]] },
+              { key: "featured", label: "filters.allVisibility", options: [["", "filters.allVisibility"], ["featured", "filters.featured"], ["regular", "filters.regular"]] },
+              { key: "stock", label: "filters.allStockStates", options: [["", "filters.allStockStates"], ["in-stock", "stockStatus.inStock"], ["low-stock", "stockStatus.lowStock"], ["out-of-stock", "stockStatus.outOfStock"], ["non-physical", "stockStatus.nonPhysical"]] },
+              { key: "sort", label: "sort.nameAsc", options: [["name-asc", "sort.nameAsc"], ["name-desc", "sort.nameDesc"], ["category-asc", "sort.categoryAsc"], ["category-desc", "sort.categoryDesc"], ["price-asc", "sort.priceAsc"], ["price-desc", "sort.priceDesc"], ["stock-asc", "sort.stockAsc"], ["stock-desc", "sort.stockDesc"]] },
+            ] as const).map(filter => (
+              <select key={filter.key} aria-label={translateDynamic(productT, filter.label)} value={filters[filter.key]}
+                onChange={event => setFilters(previous => ({ ...previous, [filter.key]: event.target.value }))}
+                className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm">
+                {filter.key === "sort" && <option value="flash-sale">{t("header.title")}</option>}
+                {filter.options.filter(([value]) => filter.key !== "type" ||
+                  (value !== "DIGITAL" || features.DIGITAL_PRODUCTS) &&
+                  (value !== "SERVICE" || features.SERVICE_PRODUCTS) &&
+                  (value !== "BUNDLE" || features.BUNDLES)
+                ).map(([value, label]) => <option key={value} value={value}>{translateDynamic(productT, label)}</option>)}
+              </select>
+            ))}
+          </div>
+        </CardContent>
+      </Card>
 
       <div className="grid gap-3 sm:grid-cols-3">
         {[
