@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState, memo } from "react";
 import { useTranslations } from "next-intl";
+import dynamic from "next/dynamic";
 import { toast } from "sonner";
 import {
   AlertTriangle,
@@ -23,6 +24,9 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import WarehouseManagerModal from "@/components/management/WarehouseManagerModal";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+
+const BundleStockManagement = dynamic(() => import("@/components/admin/warehouse/BundleStockManagement"));
 
 interface Product {
   id: number;
@@ -86,6 +90,10 @@ interface AttributeValue {
 
 const StockManagementPage = memo(function StockManagementPage() {
   const t = useTranslations("AdminStockManagement");
+  const bundleStock = useTranslations("AdminWarehouseBundleStock");
+  const [bundleRefresh, setBundleRefresh] = useState(0);
+  const [stockView, setStockView] = useState("products");
+  const physicalStockDirtyRef = useRef(false);
 
   const detailRequestIdRef = useRef(0);
   const [loading, setLoading] = useState(true);
@@ -543,13 +551,33 @@ const StockManagementPage = memo(function StockManagementPage() {
             <WarehouseIcon className="h-4 w-4 mr-1" />
             {t("actions.warehouses")}
           </Button>
-          <Button variant="outline" onClick={refreshAll} disabled={loading}>
+          <Button variant="outline" onClick={() => {
+            if (stockView === "bundles") {
+              setBundleRefresh((previous) => previous + 1);
+              physicalStockDirtyRef.current = true;
+            } else { void refreshAll(); }
+          }} disabled={stockView === "products" && loading}>
             <RefreshCw className="h-4 w-4 mr-1" />
             {t("actions.refresh")}
           </Button>
         </div>
       </div>
 
+      <Tabs value={stockView} onValueChange={(value) => {
+        setStockView(value);
+        if (value === "products" && physicalStockDirtyRef.current) {
+          physicalStockDirtyRef.current = false;
+          void refreshAll();
+        }
+      }}>
+        <TabsList className="w-fit">
+          <TabsTrigger value="products">{bundleStock("productsTab")}</TabsTrigger>
+          <TabsTrigger value="bundles">{bundleStock("bundlesTab")}</TabsTrigger>
+        </TabsList>
+        <TabsContent value="bundles">
+          <BundleStockManagement refreshKey={bundleRefresh} onStockChange={() => { physicalStockDirtyRef.current = true; }} />
+        </TabsContent>
+        <TabsContent value="products" className="space-y-6">
       <Card>
         <CardContent className="p-4 grid grid-cols-3 gap-4">
           <div className="col-span-2">
@@ -1121,11 +1149,14 @@ const StockManagementPage = memo(function StockManagementPage() {
         </CardContent>
       </Card>
 
+        </TabsContent>
+      </Tabs>
       {warehouseModalOpen && (
         <WarehouseManagerModal
           open={warehouseModalOpen}
           onClose={() => {
             setWarehouseModalOpen(false);
+            setBundleRefresh((previous) => previous + 1);
             void refreshAll();
           }}
         />

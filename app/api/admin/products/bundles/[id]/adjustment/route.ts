@@ -27,18 +27,27 @@ export async function POST(
   try {
     const body = await request.json();
     const quantity = Number(body.quantity);
+    const expectedWarehouseId = body.warehouseId === undefined ? null : Number(body.warehouseId);
+    if (expectedWarehouseId !== null && (!Number.isSafeInteger(expectedWarehouseId) || expectedWarehouseId <= 0)) {
+      return NextResponse.json({ error: "Invalid warehouse id" }, { status: 400 });
+    }
     const reason = String(body.reason ?? "").trim();
     if (!Number.isSafeInteger(quantity) || quantity <= 0 || !reason || reason.length > 250) {
       return NextResponse.json({ error: "A whole-number quantity and adjustment reason are required" }, { status: 400 });
     }
     const result = await prisma.$transaction(async (tx) => {
+      await tx.$queryRaw`SELECT "id" FROM "Product" WHERE "id" = ${bundleId} FOR NO KEY UPDATE`;
       const bundle = await tx.product.findFirst({
-        where: { id: bundleId, type: "BUNDLE", deleted: false },
+        // Archived bundles may still hold finished stock; permit audited stock-out, never assembly.
+        where: { id: bundleId, type: "BUNDLE" },
         select: { bundleFulfillmentMode: true, bundleWarehouseId: true, name: true },
       });
       if (!bundle) throw new Error("Bundle not found");
       if (bundle.bundleFulfillmentMode !== "PREASSEMBLED") throw new Error("Only preassembled bundle stock can be adjusted here");
       if (!bundle.bundleWarehouseId) throw new Error("Bundle fulfillment warehouse is not configured");
+      if (expectedWarehouseId !== null && expectedWarehouseId !== bundle.bundleWarehouseId) {
+        throw new Error("Bundle fulfillment warehouse changed. Refresh stock before adjustment.");
+      }
       if (!access.can("inventory.manage", bundle.bundleWarehouseId)) throw new Error("You do not have inventory access to this warehouse");
 
       const updated = await tx.$queryRaw<Array<{ id: number; quantity: number; reserved: number }>>(

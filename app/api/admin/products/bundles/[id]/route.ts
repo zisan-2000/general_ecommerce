@@ -320,16 +320,25 @@ export async function DELETE(_request: NextRequest, { params }: { params: Promis
   if (featureGate) return featureGate;
   const bundleId = await parseBundleId(params);
   if (!bundleId) return NextResponse.json({ error: "Invalid bundle id" }, { status: 400 });
-  const existing = await prisma.product.findFirst({
-    where: { id: bundleId, type: "BUNDLE", deleted: false },
-    select: { id: true, _count: { select: { orderItems: true } } },
+  const failure = await prisma.$transaction(async (tx) => {
+    await tx.$queryRaw`SELECT "id" FROM "Product" WHERE "id" = ${bundleId} FOR UPDATE`;
+    const existing = await tx.product.findFirst({
+      where: { id: bundleId, type: "BUNDLE", deleted: false },
+      select: { id: true, _count: { select: { orderItems: true } } },
+    });
+    if (!existing) return { error: "Bundle not found", status: 404 };
+    const heldStock = await tx.bundleStockLevel.count({ where: {
+      productId: bundleId, OR: [{ quantity: { gt: 0 } }, { reserved: { gt: 0 } }, { reservations: { some: {} } }],
+    } });
+    if (heldStock > 0) return { error: "Clear finished bundle stock and reservations before deleting this bundle", status: 400 };
+    if (existing._count.orderItems > 0) {
+      await tx.product.update({ where: { id: bundleId }, data: { deleted: true, available: false } });
+    } else {
+      await tx.product.delete({ where: { id: bundleId } });
+    }
+    return null;
   });
-  if (!existing) return NextResponse.json({ error: "Bundle not found" }, { status: 404 });
-  if (existing._count.orderItems > 0) {
-    await prisma.product.update({ where: { id: bundleId }, data: { deleted: true, available: false } });
-  } else {
-    await prisma.product.delete({ where: { id: bundleId } });
-  }
+  if (failure) return NextResponse.json({ error: failure.error }, { status: failure.status });
   revalidateStorefrontCatalog();
   return NextResponse.json({ success: true });
 }

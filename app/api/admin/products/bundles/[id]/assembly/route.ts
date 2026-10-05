@@ -38,6 +38,10 @@ export async function POST(
   try {
     const body = await request.json();
     const quantity = Number(body.quantity);
+    const expectedWarehouseId = body.warehouseId === undefined ? null : Number(body.warehouseId);
+    if (expectedWarehouseId !== null && (!Number.isSafeInteger(expectedWarehouseId) || expectedWarehouseId <= 0)) {
+      return NextResponse.json({ error: "Invalid warehouse id" }, { status: 400 });
+    }
     if (!Number.isSafeInteger(quantity) || quantity <= 0) {
       return NextResponse.json(
         { error: "Assembly quantity must be a whole number greater than 0" },
@@ -47,6 +51,8 @@ export async function POST(
     const assemblyReference = randomUUID();
 
     const result = await prisma.$transaction(async (tx) => {
+      // Serialize assembly against deletion so newly assembled stock cannot be cascaded away.
+      await tx.$queryRaw`SELECT "id" FROM "Product" WHERE "id" = ${bundleId} FOR NO KEY UPDATE`;
       const bundle = await tx.product.findFirst({
         where: { id: bundleId, type: "BUNDLE", deleted: false },
         include: {
@@ -87,6 +93,9 @@ export async function POST(
       }
       if (!bundle.bundleWarehouseId) {
         throw new Error("Select a fulfillment warehouse before assembly");
+      }
+      if (expectedWarehouseId !== null && expectedWarehouseId !== bundle.bundleWarehouseId) {
+        throw new Error("Bundle fulfillment warehouse changed. Refresh stock before assembly.");
       }
       if (!access.can("inventory.manage", bundle.bundleWarehouseId)) {
         throw new Error("You do not have inventory access to this warehouse");

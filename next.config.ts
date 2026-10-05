@@ -4,6 +4,11 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
 const nextConfig: NextConfig = {
+  // Keep isolated stock-verification builds separate from an active dev server.
+  ...(process.env.WAREHOUSE_BUNDLE_VERIFY === "true" ? {
+    distDir: ".next/warehouse-bundle-verification-build",
+    typescript: { tsconfigPath: "tsconfig.warehouse-verification.json" },
+  } : {}),
   compress: true,
   // Allow cross-origin requests from specific development origins
   allowedDevOrigins: ['192.168.0.114'],
