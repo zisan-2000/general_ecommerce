@@ -2,6 +2,7 @@ type SeoEnvironment = {
   NODE_ENV?: string;
   NEXT_PUBLIC_BASE_URL?: string;
   NEXT_PUBLIC_SITE_URL?: string;
+  SEO_ALLOW_LOCAL_ORIGIN?: string;
 };
 
 export function resolveSeoSiteUrl(env: SeoEnvironment): string {
@@ -19,7 +20,9 @@ export function resolveSeoSiteUrl(env: SeoEnvironment): string {
   }
   const host = url.hostname.toLowerCase().replace(/^\[|\]$/g, "").replace(/\.$/, "");
   const nonPublic = host === "localhost" || host.endsWith(".localhost") || host.endsWith(".local") || host.endsWith(".test") || host.endsWith(".invalid") || /^169\.254\./.test(host) || host === "::1" || host === "0.0.0.0" || /^127\./.test(host) || /^10\./.test(host) || /^192\.168\./.test(host) || /^172\.(1[6-9]|2\d|3[01])\./.test(host) || !host.includes(".");
-  if (env.NODE_ENV === "production" && (url.protocol !== "https:" || nonPublic)) {
+  const localOriginAllowed = env.SEO_ALLOW_LOCAL_ORIGIN === "true" &&
+    (host === "localhost" || host.endsWith(".localhost") || host === "::1" || /^127\./.test(host));
+  if (env.NODE_ENV === "production" && !localOriginAllowed && (url.protocol !== "https:" || nonPublic)) {
     throw new Error("Production SEO site URL must use HTTPS and a public hostname.");
   }
   return url.origin;
