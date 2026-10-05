@@ -30,6 +30,17 @@ import {
   PC_BUILDER_STORAGE_KEY,
 } from "@/lib/pc-builder";
 import { useLocale, useTranslations } from "next-intl";
+import CartViewTracker from "@/components/analytics/CartViewTracker";
+import {
+  trackAddPaymentInfo,
+  trackAddShippingInfo,
+  trackPurchase,
+} from "@/lib/analytics/data-layer";
+import {
+  ecommerceFromRows,
+  purchaseFromOrder,
+} from "@/lib/analytics/ecommerce";
+import { useStorefrontSettings } from "@/providers/storefront-settings-provider";
 
 function clearCompletedPcBuilderDraft() {
   try {
@@ -99,6 +110,7 @@ type TaxQuote = {
 export default function CheckoutPage() {
   const t = useTranslations("StorefrontCommerce.checkout");
   const locale = useLocale();
+  const { currency } = useStorefrontSettings();
   const { cartItems, clearCart, replaceCart } = useCart();
   const { data: session, status: sessionStatus } = useSession();
   const router = useRouter();
@@ -677,6 +689,13 @@ export default function CheckoutPage() {
       toast.error(t("errors.validAreaRequired"));
       return;
     }
+    if (shippingQuote) {
+      trackAddShippingInfo({
+        ...ecommerceFromRows(itemsToRender, currency, appliedCoupon?.code),
+        shipping: Number(shippingQuote.shippingCost),
+        shipping_tier: "standard",
+      });
+    }
     setStep("payment");
   };
 
@@ -831,6 +850,18 @@ export default function CheckoutPage() {
 
       const createdOrder = await res.json();
       setPlacedOrder({ ...uiOrderData, orderId: createdOrder.id });
+      if (res.status === 201) {
+        trackAddPaymentInfo({
+          ...ecommerceFromRows(itemsToRender, currency, appliedCoupon?.code),
+          payment_type: isCOD
+            ? "cash_on_delivery"
+            : isSSLCOMMERZ
+              ? "online_payment"
+              : "manual_payment",
+        });
+        const purchasePayload = purchaseFromOrder(createdOrder, currency);
+        if (purchasePayload) trackPurchase(purchasePayload);
+      }
 
       if (isSSLCOMMERZ) {
         const gatewayId = Number(paymentMethod.split(":")[1]);
@@ -977,6 +1008,13 @@ export default function CheckoutPage() {
 
   return (
     <div className="min-h-screen bg-background py-6 sm:py-8 lg:py-12">
+      <CartViewTracker
+        rows={itemsToRender}
+        currency={currency}
+        ready={!isAuthenticated || serverCartItems !== null}
+        checkout
+        coupon={appliedCoupon?.code}
+      />
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-6 sm:mb-8">

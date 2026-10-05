@@ -3912,6 +3912,12 @@ model PasswordResetToken {
 }
 
 model sitesettings {
+  googleTrackingEnabled          Boolean @default(false)
+  googleTagManagerEnabled        Boolean @default(false)
+  googleTagManagerId             String? @db.VarChar(64)
+  googleAnalyticsEnabled         Boolean @default(false)
+  googleAnalyticsMeasurementId   String? @db.VarChar(32)
+  googleAnalyticsDebugMode       Boolean @default(false)
   id                    Int      @id @default(autoincrement())
   logo                  String?
   siteTitle             String?

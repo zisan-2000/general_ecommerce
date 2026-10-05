@@ -1,4 +1,8 @@
 "use client";
+import CartViewTracker from "@/components/analytics/CartViewTracker";
+import { trackRemoveFromCart } from "@/lib/analytics/data-layer";
+import { ecommerceFromRows } from "@/lib/analytics/ecommerce";
+import { useStorefrontSettings } from "@/providers/storefront-settings-provider";
 
 import { useCart } from "@/components/ecommarce/CartContext";
 import { Button } from "@/components/ui/button";
@@ -211,6 +215,7 @@ function CartSkeleton() {
 export default function CartPage() {
   const t = useTranslations("StorefrontCommerce.cart");
   const locale = useLocale();
+  const { currency: analyticsCurrency } = useStorefrontSettings();
   const { cartItems, removeFromCart, updateQuantity, clearCart, replaceCart } =
     useCart();
 
@@ -489,6 +494,7 @@ export default function CartPage() {
       }
 
       // এখানে user নিজে clear করেছে, তাই context clear OK
+      trackRemoveFromCart(ecommerceFromRows(itemsToRender, analyticsCurrency));
       clearCart();
       toast.success(t("success.cleared"));
     } catch (error) {
@@ -518,6 +524,10 @@ export default function CartPage() {
         );
       }
 
+      const removed = itemsToRender.find((item) => item.id === itemId);
+      if (removed && !cartItems.some((item) => item.id === itemId)) {
+        trackRemoveFromCart(ecommerceFromRows([removed], analyticsCurrency));
+      }
       // Always remove from context
       removeFromCart(itemId);
       toast.success(t("success.removed"));
@@ -679,6 +689,11 @@ export default function CartPage() {
             </p>
           )}
         </div>
+        <CartViewTracker
+          rows={itemsToRender}
+          currency={analyticsCurrency}
+          ready={!isAuthenticated || serverCartItems !== null}
+        />
 
         {showAuthSkeleton ? (
           <CartSkeleton />

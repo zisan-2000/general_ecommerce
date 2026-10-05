@@ -1,3 +1,4 @@
+import { GOOGLE_ANALYTICS_DEFAULTS, parseGoogleAnalyticsSettings } from "@/lib/analytics/config";
 // app/api/site/route.ts
 
 import { prisma } from "@/lib/prisma";
@@ -15,6 +16,12 @@ import {
 
 function toSiteSettingsLogSnapshot(settings: {
   id: number;
+  googleTrackingEnabled: boolean;
+  googleTagManagerEnabled: boolean;
+  googleTagManagerId: string | null;
+  googleAnalyticsEnabled: boolean;
+  googleAnalyticsMeasurementId: string | null;
+  googleAnalyticsDebugMode: boolean;
   logo: string | null;
   siteTitle: string | null;
   storeName: string | null;
@@ -44,6 +51,12 @@ function toSiteSettingsLogSnapshot(settings: {
 }) {
   return {
     id: settings.id,
+    googleTrackingEnabled: settings.googleTrackingEnabled,
+    googleTagManagerEnabled: settings.googleTagManagerEnabled,
+    googleTagManagerId: settings.googleTagManagerId,
+    googleAnalyticsEnabled: settings.googleAnalyticsEnabled,
+    googleAnalyticsMeasurementId: settings.googleAnalyticsMeasurementId,
+    googleAnalyticsDebugMode: settings.googleAnalyticsDebugMode,
     logo: settings.logo,
     siteTitle: settings.siteTitle,
     storeName: settings.storeName,
@@ -147,7 +160,12 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
-    const parsed = parseSiteSettingsInput(await req.json());
+    const existingSettings = await prisma.sitesettings.findFirst({ orderBy: { id: "asc" } });
+    const body = await req.json();
+    if (!body || typeof body !== "object" || Array.isArray(body)) return NextResponse.json({ error: "Invalid settings payload" }, { status: 400 });
+    // Older settings forms omit these fields. Preserve the stored tracking configuration.
+    const tracking = Object.fromEntries(Object.keys(GOOGLE_ANALYTICS_DEFAULTS).map((key) => [key, (existingSettings as unknown as Record<string, unknown> | null)?.[key] ?? GOOGLE_ANALYTICS_DEFAULTS[key as keyof typeof GOOGLE_ANALYTICS_DEFAULTS]]));
+    const parsed = parseSiteSettingsInput({ ...tracking, ...body });
     if (!parsed.ok) {
       return NextResponse.json({ error: parsed.error }, { status: 400 });
     }
@@ -156,10 +174,6 @@ export async function POST(req: Request) {
       // Compatibility window: legacy readers continue to receive the current name.
       siteTitle: parsed.value.storeName,
     };
-
-    const existingSettings = await prisma.sitesettings.findFirst({
-      orderBy: { id: "asc" },
-    });
 
     if (!existingSettings) {
       const created = await prisma.sitesettings.create({
@@ -240,6 +254,7 @@ export async function DELETE(req: Request) {
     const updated = await prisma.sitesettings.update({
       where: { id: settings.id },
       data: {
+        ...GOOGLE_ANALYTICS_DEFAULTS,
         logo: null,
         siteTitle: SITE_SETTINGS_DEFAULTS.storeName,
         storeName: SITE_SETTINGS_DEFAULTS.storeName,
@@ -290,5 +305,38 @@ export async function DELETE(req: Request) {
       { error: "Failed to delete site settings" },
       { status: 500 },
     );
+  }
+}
+
+// Narrow update for GeneralSettings: never overwrites store identity, SEO or contact data.
+export async function PATCH(req: Request) {
+  try {
+    const session = await getServerSession(authOptions);
+    const access = await getAccessContext(session?.user as { id?: string; role?: string } | undefined);
+    if (!access.userId) return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    if (!access.has("settings.manage")) return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+    const body = await req.json();
+    if (!body || typeof body !== "object" || Array.isArray(body)) return NextResponse.json({ error: "Invalid tracking configuration" }, { status: 400 });
+    const existing = await prisma.sitesettings.findFirst({ orderBy: { id: "asc" } });
+    const previousTracking = Object.fromEntries(
+      Object.keys(GOOGLE_ANALYTICS_DEFAULTS).map((key) => [
+        key,
+        (existing as unknown as Record<string, unknown> | null)?.[key] ??
+          GOOGLE_ANALYTICS_DEFAULTS[key as keyof typeof GOOGLE_ANALYTICS_DEFAULTS],
+      ]),
+    );
+    let data: ReturnType<typeof parseGoogleAnalyticsSettings>;
+    try { data = parseGoogleAnalyticsSettings({ ...previousTracking, ...body }); }
+    catch (error) { return NextResponse.json({ error: error instanceof Error ? error.message : "Invalid tracking configuration" }, { status: 400 }); }
+    const saved = existing
+      ? await prisma.sitesettings.update({ where: { id: existing.id }, data })
+      : await prisma.sitesettings.create({ data: { ...data, storeName: SITE_SETTINGS_DEFAULTS.storeName, currency: SITE_SETTINGS_DEFAULTS.currency } });
+    await logActivity({ action: "update_google_tracking", entity: "settings", entityId: saved.id, access, request: req,
+      before: existing ? toSiteSettingsLogSnapshot(existing) : undefined, after: data });
+    revalidateTag("site-settings", { expire: 0 });
+    return privateJson(data);
+  } catch (error) {
+    console.error("Google tracking settings update failed", error);
+    return NextResponse.json({ error: "Failed to save Google tracking settings" }, { status: 500 });
   }
 }

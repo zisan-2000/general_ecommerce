@@ -1,4 +1,7 @@
 "use client";
+import { useStorefrontSettings } from "@/providers/storefront-settings-provider";
+import { ecommerceFromRows } from "@/lib/analytics/ecommerce";
+import { trackAddToCart, trackRemoveFromCart } from "@/lib/analytics/data-layer";
 
 import {
   createContext,
@@ -131,6 +134,29 @@ export function CartProvider({ children }: { children: ReactNode }) {
     return [];
   });
 
+  const { currency } = useStorefrontSettings();
+  const previousCartRef = useRef(cartItems);
+  const trackingMutations = useRef(new Set<string>());
+  useEffect(() => {
+    const previous = previousCartRef.current;
+    previousCartRef.current = cartItems;
+    const changedProducts = new Set(trackingMutations.current);
+    trackingMutations.current.clear();
+    const key = (row: CartItem) => JSON.stringify([row.productId, row.variantId ?? null, row.bundleConfigurationKey ?? null, row.pcBuildId ?? null, row.pcBuildSlot ?? null]);
+    for (const productId of changedProducts) {
+      const before = new Map(previous.filter((row) => String(row.productId) === productId).map((row) => [key(row), row]));
+      const after = new Map(cartItems.filter((row) => String(row.productId) === productId).map((row) => [key(row), row]));
+      for (const rowKey of new Set([...before.keys(), ...after.keys()])) {
+        const oldRow = before.get(rowKey), newRow = after.get(rowKey);
+        const delta = (newRow?.quantity ?? 0) - (oldRow?.quantity ?? 0);
+        const row = delta > 0 ? newRow : oldRow;
+        if (!row || !delta) continue;
+        const payload = ecommerceFromRows([{ ...row, quantity: Math.abs(delta) }], currency);
+        if (delta > 0) trackAddToCart(payload); else trackRemoveFromCart(payload);
+      }
+    }
+  }, [cartItems, currency]);
+
   // Product snapshots are populated only for products the shopper interacts with.
   const productCacheRef = useRef(new Map<string, ProductApiItem>());
 
@@ -218,6 +244,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       const vid = normVariant(variantId);
       const nextQty = clamp(Number(quantity) || 0);
 
+      trackingMutations.current.add(pid);
       setCartItems((prev) => {
         const idx = prev.findIndex(
           (x) =>
@@ -452,6 +479,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
       }
 
       const cartVariantKey = normVariant(persistedVariantId);
+      trackingMutations.current.add(pid);
 
       setCartItems((prevItems) => {
         if (fromPcBuilder) {
@@ -502,7 +530,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
                   ...it,
                   id: persistedCartItemId ?? it.id,
                   variantId: persistedVariantId,
-                  price: persistedVariantPrice,
+                  price: Number(persistedBundlePrice ?? persistedVariantPrice),
                   variantLabel: persistedVariantLabel,
                   quantity: nextQty,
                 }
@@ -546,12 +574,16 @@ export function CartProvider({ children }: { children: ReactNode }) {
   );
 
   const removeFromCart = useCallback((id: string | number) => {
+    const row = previousCartRef.current.find((item) => item.id === id);
+    if (row) trackingMutations.current.add(String(row.productId));
     setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
   }, []);
 
   // ✅ quantity < 1 হলে remove
   const updateQuantity = useCallback((id: string | number, quantity: number) => {
     const q = clamp(Number(quantity) || 0);
+    const row = previousCartRef.current.find((item) => item.id === id);
+    if (row) trackingMutations.current.add(String(row.productId));
     setCartItems((prev) => {
       if (q <= 0) return prev.filter((x) => x.id !== id);
       return prev.map((item) => (item.id === id ? { ...item, quantity: q } : item));

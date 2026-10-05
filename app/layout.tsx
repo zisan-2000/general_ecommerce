@@ -1,3 +1,6 @@
+import { Suspense } from "react";
+import GoogleTagManager from "@/components/analytics/GoogleTagManager";
+import GooglePageViewTracker from "@/components/analytics/GooglePageViewTracker";
 import { serializeJsonLd } from "@/lib/seo";
 import type React from "react";
 import type { Metadata } from "next";
@@ -156,6 +159,7 @@ export default async function RootLayout({
         suppressHydrationWarning
         className={`${geistSans.variable} ${geistMono.variable} ${rubik.variable} ${syne.variable} ${lexend.variable} antialiased min-h-screen flex flex-col`}
       >
+        <GoogleTagManager settings={siteSettings} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -179,6 +183,7 @@ export default async function RootLayout({
             }}
           >
             <AnalyticsTracker />
+            <Suspense fallback={null}><GooglePageViewTracker /></Suspense>
             <TreeProvider>
               <CartProvider>
                 <WishlistProvider>

@@ -1,7 +1,7 @@
 // app/ecommerce/user/orders/[invoiceId]/page.tsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useParams } from "next/navigation";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
@@ -20,6 +20,9 @@ import {
 import { DeliveryConfirmationForm } from "@/components/customer/DeliveryConfirmationForm";
 import ProductReviews from "@/components/ecommarce/ProductReviews";
 import { useLocale, useTranslations } from "next-intl";
+import { ecommerceFromRows } from "@/lib/analytics/ecommerce";
+import { trackRefund } from "@/lib/analytics/data-layer";
+import { useStorefrontSettings } from "@/providers/storefront-settings-provider";
 
 interface CartItem {
   id: number | string;
@@ -83,6 +86,7 @@ interface Customer {
 
 interface Order {
   invoiceId: string;
+  currency?: string;
   customer: Customer;
   cartItems?: CartItem[] | null;
   paymentMethod: string;
@@ -385,6 +389,7 @@ function OrderDetailsSkeleton() {
 export default function OrderDetailsPage() {
   const t = useTranslations("CustomerAccount");
   const locale = useLocale();
+  const { currency: storeCurrency } = useStorefrontSettings();
   const money = (value: number) =>
     new Intl.NumberFormat(locale, {
       style: "currency",
@@ -394,6 +399,7 @@ export default function OrderDetailsPage() {
   const invoiceId = params?.invoiceId as string | undefined;
 
   const [order, setOrder] = useState<Order | null>(null);
+  const trackedRefunds = useRef(new Set<string>());
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -568,6 +574,7 @@ export default function OrderDetailsPage() {
 
         const mapped: Order = {
           invoiceId: String(o.id),
+          currency: String(o.currency ?? orderItemsRaw[0]?.currency ?? storeCurrency),
           customer: {
             name: o.name,
             mobile: o.phone_number,
@@ -646,7 +653,46 @@ export default function OrderDetailsPage() {
     };
 
     fetchOrder();
-  }, [invoiceId, t]);
+  }, [invoiceId, storeCurrency, t]);
+
+  useEffect(() => {
+    if (!order) return;
+    for (const refund of order.refunds ?? []) {
+      if (
+        refund.status !== "COMPLETED" ||
+        refund.payoutStatus !== "PAID" ||
+        refund.amount <= 0 ||
+        trackedRefunds.current.has(String(refund.id))
+      ) {
+        continue;
+      }
+      const refundedRows = (order.cartItems ?? []).filter((item) =>
+        refund.orderItemId === null
+          ? true
+          : String(item.id) === String(refund.orderItemId),
+      );
+      const rows = refundedRows.map((item) => ({
+        id: item.productId,
+        name: item.name,
+        price: item.price,
+        quantity:
+          refund.orderItemId !== null && refund.quantity !== null
+            ? refund.quantity
+            : item.quantity,
+        variantId: item.variantId,
+      }));
+      const payload = ecommerceFromRows(rows, order.currency ?? storeCurrency);
+      trackRefund(
+        {
+          ...payload,
+          value: refund.amount,
+          transaction_id: order.invoiceId,
+        },
+        String(refund.id),
+      );
+      trackedRefunds.current.add(String(refund.id));
+    }
+  }, [order, storeCurrency]);
 
   useEffect(() => {
     if (!invoiceId) return;

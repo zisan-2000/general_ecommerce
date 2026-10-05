@@ -54,6 +54,12 @@ const loadSiteSettingsForSeo = unstable_cache(async (): Promise<SiteSettingsSeo>
       prisma.sitesettings.findFirst({
         orderBy: { id: "asc" },
         select: {
+          googleTrackingEnabled: true,
+          googleTagManagerEnabled: true,
+          googleTagManagerId: true,
+          googleAnalyticsEnabled: true,
+          googleAnalyticsMeasurementId: true,
+          googleAnalyticsDebugMode: true,
           siteTitle: true,
           storeName: true,
           storeTagline: true,

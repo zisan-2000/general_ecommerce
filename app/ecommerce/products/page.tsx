@@ -577,6 +577,22 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                 products={products}
                 searchQuery={filters.q}
                 resultCount={pagination.total}
+                itemListId={
+                  filters.q
+                    ? "search_results"
+                    : selectedCategory
+                      ? `category_${selectedCategory.slug}`
+                      : selectedBrandNames.length
+                        ? `brand_${filters.brands[0]}`
+                        : "all_products"
+                }
+                itemListName={
+                  filters.q
+                    ? "Search results"
+                    : selectedCategory?.name ??
+                      selectedBrandNames[0] ??
+                      "All products"
+                }
               />
             ) : (
               <div className="rounded-3xl border border-dashed bg-muted/20 px-6 py-16 text-center">

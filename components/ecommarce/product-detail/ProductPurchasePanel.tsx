@@ -35,6 +35,8 @@ import BundleConfigurator, {
   type BundleConfigurationPreview,
 } from "@/components/ecommarce/product-detail/BundleConfigurator";
 import { useLocale, useTranslations } from "next-intl";
+import ProductViewTracker from "@/components/analytics/ProductViewTracker";
+import { toGA4Item } from "@/lib/analytics/ecommerce";
 
 const money = (value: number, currency: string, locale: string) => {
   if (currency.toUpperCase() === "BDT") {
@@ -258,6 +260,23 @@ export default function ProductPurchasePanel({
 
   return (
     <section className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-[0_1px_3px_rgba(15,23,42,0.08)]">
+        <ProductViewTracker
+          item={toGA4Item({
+            id: product.id,
+            name: product.name,
+            price,
+            originalPrice: originalPrice ?? undefined,
+            brandName: details.brandName,
+            categoryName: details.categoryName,
+            variantId: selectedVariant?.id,
+            variantLabel: selectedVariant
+              ? Object.entries(simpleOptions(selectedVariant.options) ?? {})
+                  .map(([key, value]) => `${key}: ${value}`)
+                  .join(", ") || selectedVariant.sku || undefined
+              : undefined,
+          })}
+          currency={product.currency}
+        />
         <div className="grid lg:grid-cols-[minmax(340px,0.95fr)_minmax(0,1.25fr)]">
           <div className="flex min-w-0 flex-col border-b border-border p-2 lg:border-b-0 lg:border-r">
             <div

@@ -5060,7 +5060,8 @@
     "tabs": {
       "site": "网站设置",
       "banners": "横幅管理",
-      "payments": "支付设置"
+      "payments": "支付设置",
+      "analytics": "Google Analytics"
     },
     "sections": {
       "site": "网站标题与 Logo",

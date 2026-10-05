@@ -270,6 +270,8 @@ export default async function ProductPage({ params }: ProductPageProps) {
             </div>
             <CatalogProductGrid
               products={relatedProducts}
+              itemListId="related_products"
+              itemListName="Related products"
             />
           </section>
         ) : null}
