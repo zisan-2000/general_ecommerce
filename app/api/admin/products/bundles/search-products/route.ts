@@ -12,7 +12,19 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = new URL(request.url);
     const search = searchParams.get('search') || '';
-    const requestedLimit = Number(searchParams.get('limit') || 20);
+    const productIds = (searchParams.get('productIds') || '')
+      .split(',')
+      .map((value) => Number(value.trim()))
+      .filter((value) => Number.isInteger(value) && value > 0)
+      .slice(0, 100);
+    const requestedLimit = Number(searchParams.get('limit') || (productIds.length || 20));
+    const warehouseId = Number(searchParams.get('warehouseId'));
+    if (!Number.isInteger(warehouseId) || warehouseId <= 0) {
+      return NextResponse.json(
+        { error: 'A valid fulfillment warehouse is required' },
+        { status: 400 },
+      );
+    }
     const limit = Number.isInteger(requestedLimit)
       ? Math.min(100, Math.max(1, requestedLimit))
       : 20;
@@ -25,6 +37,8 @@ export async function GET(request: NextRequest) {
       available: true,
       type: { not: 'BUNDLE' }, // Exclude other bundles
     };
+
+    if (productIds.length > 0) where.id = { in: productIds };
 
     if (search) {
       where.OR = [
@@ -100,7 +114,8 @@ export async function GET(request: NextRequest) {
             isDefault: true,
             options: true,
             stockLevels: {
-              select: { quantity: true, reserved: true },
+              where: { warehouseId },
+              select: { warehouseId: true, quantity: true, reserved: true },
             },
           },
           orderBy: { isDefault: 'desc' }

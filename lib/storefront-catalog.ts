@@ -15,6 +15,10 @@ import {
 } from "@/lib/attribute-schema";
 import { getEffectivelyActiveCategoryIds } from "@/lib/category-navigation";
 import { BOOK_PRODUCT_IDENTITY_WHERE, getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
+import {
+  configurableBundleGroupSelect,
+  getDefaultBundleAvailableQuantity,
+} from "@/lib/configurable-bundle";
 
 const CATALOG_PAGE_SIZES = [12, 24, 36] as const;
 export const CATALOG_MAX_PRICE = 99_999_999.99;
@@ -72,6 +76,7 @@ export const catalogProductSelect = {
   slug: true,
   type: true,
   basePrice: true,
+  currency: true,
   originalPrice: true,
   flashSaleEnabled: true,
   flashSalePrice: true,
@@ -84,6 +89,11 @@ export const catalogProductSelect = {
   ratingCount: true,
   updatedAt: true,
   bundleStockLimit: true,
+  bundleWarehouseId: true,
+  bundleFulfillmentMode: true,
+  assembledStockLevels: {
+    select: { warehouseId: true, quantity: true, reserved: true },
+  },
   attributes: {
     orderBy: { id: "asc" as const },
     take: 4,
@@ -119,11 +129,19 @@ export const catalogProductSelect = {
           variants: {
             where: { active: true },
             orderBy: [{ isDefault: "desc" as const }, { id: "asc" as const }],
-            select: { stock: true, isDefault: true },
+            select: {
+              stock: true,
+              isDefault: true,
+              stockLevels: { select: { warehouseId: true, quantity: true, reserved: true } },
+            },
           },
         },
       },
     },
+  },
+  bundleGroups: {
+    orderBy: { sortOrder: "asc" },
+    select: configurableBundleGroupSelect,
   },
 } as const satisfies Prisma.ProductSelect;
 
@@ -314,21 +332,7 @@ function normalizeOptions(value: Prisma.JsonValue) {
 
 export function catalogProductStock(product: RawCatalogProduct) {
   if (product.type === "BUNDLE") {
-    if (product.bundleItems.length === 0) return 0;
-    const derivedStock = product.bundleItems.reduce((available, item) => {
-      if (item.product.deleted || !item.product.available || item.quantity < 1) {
-        return 0;
-      }
-      const variant = item.product.variants[0];
-      const itemStock = variant
-        ? Math.floor(Math.max(0, variant.stock) / item.quantity)
-        : 0;
-      return Math.min(available, itemStock);
-    }, Number.POSITIVE_INFINITY);
-    return Math.max(
-      0,
-      Math.min(derivedStock, product.bundleStockLimit ?? derivedStock),
-    );
+    return getDefaultBundleAvailableQuantity(product);
   }
   if (product.type === "DIGITAL" || product.type === "SERVICE") return 1;
   return product.variants.reduce(
@@ -1208,35 +1212,7 @@ const readCatalog = async (
         },
       });
     }
-    if (filters.inStock) {
-      andFilters.push({
-        OR: [
-          { type: { in: ["DIGITAL", "SERVICE"] } },
-          {
-            type: "BUNDLE",
-            bundleStockLimit: { gt: 0 },
-            bundleItems: {
-              some: {},
-              every: {
-                quantity: { gt: 0 },
-                product: {
-                  deleted: false,
-                  available: true,
-                  variants: {
-                    some: { active: true, stock: { gt: 0 } },
-                  },
-                },
-              },
-            },
-          },
-          {
-            type: "PHYSICAL",
-            variants: { some: { active: true, stock: { gt: 0 } } },
-          },
-        ],
-      });
-    }
-    const where: Prisma.ProductWhereInput = {
+    let where: Prisma.ProductWhereInput = {
       deleted: false,
       available: true,
       categoryId: {
@@ -1261,6 +1237,51 @@ const readCatalog = async (
           }
         : {}),
     };
+    if (filters.inStock) {
+      const bundleCandidates = await prisma.product.findMany({
+        where: {
+          ...where,
+          AND: [...andFilters, { type: "BUNDLE" }],
+        },
+        select: {
+          id: true,
+          name: true,
+          basePrice: true,
+          currency: true,
+          bundleStockLimit: true,
+          bundleWarehouseId: true,
+          bundleFulfillmentMode: true,
+          assembledStockLevels: {
+            select: { warehouseId: true, quantity: true, reserved: true },
+          },
+          bundleGroups: {
+            orderBy: { sortOrder: "asc" },
+            select: configurableBundleGroupSelect,
+          },
+        },
+      });
+      const availableBundleIds = bundleCandidates
+        .filter((bundle) => getDefaultBundleAvailableQuantity(bundle) > 0)
+        .map((bundle) => bundle.id);
+      where = {
+        ...where,
+        AND: [
+          ...andFilters,
+          {
+            OR: [
+              { type: { in: ["DIGITAL", "SERVICE"] } },
+              {
+                type: "PHYSICAL",
+                variants: { some: { active: true, stock: { gt: 0 } } },
+              },
+              ...(availableBundleIds.length
+                ? [{ id: { in: availableBundleIds } }]
+                : []),
+            ],
+          },
+        ],
+      };
+    }
     let products: RawCatalogProduct[];
     let total: number;
     if (filters.q && filters.sort === "relevance") {

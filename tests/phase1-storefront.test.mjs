@@ -244,32 +244,89 @@ test("catalog SEO only indexes stable landing views", () => {
 });
 
 test("catalog bundle stock is constrained by child inventory and quantity", () => {
+  const component = (id, available, stock) => ({
+    id,
+    name: `Component ${id}`,
+    type: "PHYSICAL",
+    available,
+    deleted: false,
+    basePrice: 10,
+    variants: [{
+      id: id * 10,
+      productId: id,
+      sku: `COMP-${id}`,
+      price: 10,
+      currency: "BDT",
+      stock,
+      options: {},
+      active: true,
+      isDefault: true,
+      stockLevels: [{ warehouseId: 1, quantity: stock, reserved: 0 }],
+    }],
+  });
   const bundle = {
+    id: 99,
+    name: "Test bundle",
+    basePrice: 20,
+    currency: "BDT",
+    bundleWarehouseId: 1,
     type: "BUNDLE",
     bundleStockLimit: 10,
     variants: [],
-    bundleItems: [
+    bundleGroups: [
       {
-        quantity: 2,
-        product: {
-          available: true,
-          deleted: false,
-          variants: [{ stock: 7 }],
-        },
+        id: 1,
+        name: "First component",
+        selectionType: "FIXED",
+        pricingMode: "MANUAL",
+        required: true,
+        minSelect: 1,
+        maxSelect: 1,
+        defaultQuantity: 2,
+        minQuantity: 1,
+        maxQuantity: 3,
+        allowQuantityChange: false,
+        sortOrder: 1,
+        options: [{
+          id: 11,
+          productId: 1,
+          variantId: null,
+          isDefault: true,
+          priceAdjustment: 0,
+          sortOrder: 1,
+          product: component(1, true, 7),
+          variant: null,
+        }],
       },
       {
-        quantity: 1,
-        product: {
-          available: true,
-          deleted: false,
-          variants: [{ stock: 5 }],
-        },
+        id: 2,
+        name: "Second component",
+        selectionType: "FIXED",
+        pricingMode: "MANUAL",
+        required: true,
+        minSelect: 1,
+        maxSelect: 1,
+        defaultQuantity: 1,
+        minQuantity: 1,
+        maxQuantity: 3,
+        allowQuantityChange: false,
+        sortOrder: 2,
+        options: [{
+          id: 21,
+          productId: 2,
+          variantId: null,
+          isDefault: true,
+          priceAdjustment: 0,
+          sortOrder: 1,
+          product: component(2, true, 5),
+          variant: null,
+        }],
       },
     ],
   };
 
   assert.equal(catalogProductStock(bundle), 3);
-  bundle.bundleItems[1].product.available = false;
+  bundle.bundleGroups[1].options[0].product.available = false;
   assert.equal(catalogProductStock(bundle), 0);
 });
 

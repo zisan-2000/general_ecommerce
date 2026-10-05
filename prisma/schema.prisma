@@ -400,6 +400,8 @@ model Product {
   inventoryItemClass      InventoryItemClass                @default(CONSUMABLE)
   requiresAssetTag        Boolean                           @default(false)
   bundleStockLimit        Int?
+  bundleWarehouseId       Int?
+  bundleFulfillmentMode   BundleFulfillmentMode                @default(VIRTUAL)
   cartItems               CartItem[]
   dailySnapshots          InventoryDailySnapshot[]
   inventoryLogs           InventoryLog[]
@@ -428,6 +430,8 @@ model Product {
   bundleGroups            BundleGroup[]                     @relation("BundleGroups")
   bundleGroupOptions      BundleGroupOption[]               @relation("BundleOptionProducts")
   orderBundleComponents   OrderBundleComponent[]            @relation("OrderBundleComponentProducts")
+  bundleWarehouse         Warehouse?                        @relation("BundleWarehouse", fields: [bundleWarehouseId], references: [id], onDelete: SetNull)
+  assembledStockLevels    BundleStockLevel[]
 
   @@index([deleted, available, createdAt])
   @@index([deleted, available, soldCount])
@@ -438,6 +442,7 @@ model Product {
   @@index([brandId, deleted, available])
   @@index([writerId, deleted, available])
   @@index([publisherId, deleted, available])
+  @@index([bundleWarehouseId])
 }
 
 model BookMetadata {
@@ -800,8 +805,10 @@ model Order {
   salesChannel            SalesChannel           @default(RETAIL)
   salesQuotationVersionId String?
   commercialContext       Json?
+  fulfillmentWarehouseId  Int?
   deliveryProofs          DeliveryProof[]
   inventoryReservations   InventoryReservation[]
+  bundleStockReservations BundleStockReservation[]
   inventoryLogs           InventoryLog[]
   coupon                  Coupon?                @relation(fields: [couponId], references: [id])
   user                    User?                  @relation(fields: [userId], references: [id])
@@ -818,9 +825,11 @@ model Order {
   partnerLeadWon          PartnerLead?           @relation("PartnerLeadWonOrder")
   commissionEntries       CommissionEntry[]
   businessRiskCases       BusinessRiskCase[]
+  fulfillmentWarehouse    Warehouse?               @relation("OrderFulfillmentWarehouse", fields: [fulfillmentWarehouseId], references: [id], onDelete: SetNull)
 
   @@index([organizationId, order_date])
   @@index([salesChannel, order_date])
+  @@index([fulfillmentWarehouseId])
 }
 
 model Payment {
@@ -874,6 +883,7 @@ model OrderBundleComponent {
   groupName               String
   productId               Int
   variantId               Int?
+  warehouseId             Int?
   productName             String
   variantLabel            String?
   quantityPerBundle       Int      @default(1)
@@ -884,10 +894,12 @@ model OrderBundleComponent {
   orderItem OrderItem       @relation(fields: [orderItemId], references: [id], onDelete: Cascade)
   product   Product         @relation("OrderBundleComponentProducts", fields: [productId], references: [id], onDelete: Restrict)
   variant   ProductVariant? @relation("OrderBundleComponentVariants", fields: [variantId], references: [id], onDelete: Restrict)
+  warehouse Warehouse?      @relation("OrderBundleComponentWarehouse", fields: [warehouseId], references: [id], onDelete: SetNull)
 
   @@index([orderItemId])
   @@index([productId])
   @@index([variantId])
+  @@index([warehouseId])
 }
 
 model ServiceSlot {
@@ -1199,6 +1211,10 @@ model Warehouse {
   transfersTo                      WarehouseTransfer[]               @relation("WarehouseTransferDestination")
   deliveryMen                      DeliveryManProfile[]
   deliveryAssignments              DeliveryAssignment[]
+  bundles                          Product[]                         @relation("BundleWarehouse")
+  assembledBundleStockLevels       BundleStockLevel[]
+  fulfillmentOrders                Order[]                           @relation("OrderFulfillmentWarehouse")
+  orderBundleComponents            OrderBundleComponent[]            @relation("OrderBundleComponentWarehouse")
 
   @@index([country, division, district, area])
   @@index([latitude, longitude])
@@ -1261,6 +1277,36 @@ model StockLevel {
   warehouse        Warehouse              @relation(fields: [warehouseId], references: [id])
 
   @@unique([warehouseId, productVariantId])
+}
+
+model BundleStockLevel {
+  id          Int       @id @default(autoincrement())
+  productId   Int
+  warehouseId Int
+  quantity    Int       @default(0)
+  reserved    Int       @default(0)
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+  product     Product   @relation(fields: [productId], references: [id], onDelete: Cascade)
+  warehouse   Warehouse @relation(fields: [warehouseId], references: [id], onDelete: Cascade)
+  reservations BundleStockReservation[]
+
+  @@unique([productId, warehouseId])
+  @@index([warehouseId])
+}
+
+model BundleStockReservation {
+  id                  Int             @id @default(autoincrement())
+  bundleStockLevelId  Int
+  orderId             Int
+  quantity            Int
+  expiresAt           DateTime?
+  createdAt           DateTime        @default(now())
+  bundleStockLevel    BundleStockLevel @relation(fields: [bundleStockLevelId], references: [id], onDelete: Cascade)
+  order               Order           @relation(fields: [orderId], references: [id], onDelete: Cascade)
+
+  @@index([orderId])
+  @@index([expiresAt])
 }
 
 model InventoryReservation {
@@ -4319,6 +4365,11 @@ enum BundleSelectionType {
 enum BundlePricingMode {
   AUTOMATIC
   MANUAL
+}
+
+enum BundleFulfillmentMode {
+  VIRTUAL
+  PREASSEMBLED
 }
 
 enum AttributeType {

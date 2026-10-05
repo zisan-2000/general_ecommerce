@@ -3,6 +3,11 @@ import { Prisma } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
 import {
+  configurableBundleGroupSelect,
+  getDefaultBundleAvailableQuantity,
+  type ResolvableBundle,
+} from "@/lib/configurable-bundle";
+import {
   compactModelToken,
   normalizeSearchQuery,
   parseSearchIntent,
@@ -340,13 +345,17 @@ export async function getRankedSearchProductIds(rawQuery: unknown, maxCandidates
   return [...pinned, ...ids.filter((id) => !pinned.includes(id))];
 }
 
-function productStock(product: {
+function productStock(product: Pick<
+  ResolvableBundle,
+  "id" | "name" | "basePrice" | "currency" | "bundleStockLimit" | "bundleWarehouseId" | "bundleGroups" | "bundleFulfillmentMode" | "assembledStockLevels"
+> & {
   type: string;
-  bundleStockLimit: number | null;
   variants: Array<{ stock: number }>;
 }) {
   if (product.type === "DIGITAL" || product.type === "SERVICE") return 1;
-  if (product.type === "BUNDLE") return Math.max(0, product.bundleStockLimit ?? 0);
+  if (product.type === "BUNDLE") {
+    return getDefaultBundleAvailableQuantity(product);
+  }
   return product.variants.reduce((sum, variant) => sum + Math.max(0, variant.stock), 0);
 }
 
@@ -449,6 +458,15 @@ export async function getSearchSuggestions(
             flashSaleStartsAt: true,
             flashSaleEndsAt: true,
             bundleStockLimit: true,
+            bundleWarehouseId: true,
+            bundleFulfillmentMode: true,
+            assembledStockLevels: {
+              select: { warehouseId: true, quantity: true, reserved: true },
+            },
+            bundleGroups: {
+              orderBy: { sortOrder: "asc" },
+              select: configurableBundleGroupSelect,
+            },
             brand: { select: { name: true } },
             category: { select: { name: true } },
             variants: {

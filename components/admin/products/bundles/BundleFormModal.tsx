@@ -35,11 +35,12 @@ import {
   mergeDuplicateBundleItems,
   type DiscountType,
 } from "@/lib/bundle";
-import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
+import { computeWarehouseAvailableStockAtWarehouse } from "@/lib/warehouse-stock";
 
 type Category = { id: number; name: string };
 type Brand = { id: number; name: string };
 type VatClass = { id: number; name: string; code: string };
+type Warehouse = { id: number; name: string; code: string; isDefault: boolean };
 
 type BundleSelectedItem = {
   product: any;
@@ -69,6 +70,9 @@ const defaultFormData = {
   currency: "BDT",
   vatClassId: "none",
   bundleStockLimit: "",
+  bundleWarehouseId: "",
+  bundleFulfillmentMode: "VIRTUAL" as "VIRTUAL" | "PREASSEMBLED",
+  assembledStockQuantity: 0,
 };
 
 export const BUNDLE_CREATE_DRAFT_STORAGE_KEY = "admin-bundle-create-draft-v1";
@@ -137,10 +141,25 @@ export default function BundleFormModal({
   const [manualPrice, setManualPrice] = useState("");
   const [selectedItems, setSelectedItems] = useState<BundleSelectedItem[]>([]);
   const [groups, setGroups] = useState<BundleBuilderGroup[]>([]);
+  const groupsRef = useRef<BundleBuilderGroup[]>(groups);
   const [categories, setCategories] = useState<Category[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
   const [vatClasses, setVatClasses] = useState<VatClass[]>([]);
+  const [warehouses, setWarehouses] = useState<Warehouse[]>([]);
   const [draftReady, setDraftReady] = useState(false);
+  const selectedComponentProductIds = useMemo(
+    () => Array.from(new Set(groups.flatMap((group) => group.options.map((option) => option.productId)))).sort((a, b) => a - b),
+    [groups],
+  );
+  const selectedComponentProductIdsKey = selectedComponentProductIds.join(",");
+  const selectedComponentSignature = groups
+    .flatMap((group) => group.options.map((option) => `${option.productId}:${option.variantId ?? 0}:${option.isDefault ? 1 : 0}`))
+    .sort()
+    .join(",");
+
+  useEffect(() => {
+    groupsRef.current = groups;
+  }, [groups]);
 
   const updateTextField = useCallback((
     field: "name" | "sku" | "shortDesc" | "description" | "image" | "bundleStockLimit",
@@ -182,6 +201,7 @@ export default function BundleFormModal({
           fetch("/api/categories"),
           fetch("/api/brands"),
           fetch("/api/vat-classes"),
+          fetch("/api/admin/operations/products/bundles/warehouses"),
         ];
 
         const requests =
@@ -197,6 +217,7 @@ export default function BundleFormModal({
           categoriesRes,
           brandsRes,
           vatClassesRes,
+          warehousesRes,
           bundleRes,
         ] = responses;
 
@@ -204,11 +225,13 @@ export default function BundleFormModal({
           categoriesData,
           brandsData,
           vatClassesData,
+          warehousesData,
           bundleData,
         ] = await Promise.all([
           categoriesRes.json().catch(() => []),
           brandsRes.json().catch(() => []),
           vatClassesRes.json().catch(() => []),
+          warehousesRes.json().catch(() => ({})),
           bundleRes?.json().catch(() => null),
         ]);
 
@@ -216,10 +239,14 @@ export default function BundleFormModal({
           categoriesData.categories || categoriesData || [];
         const nextBrands = brandsData.brands || brandsData || [];
         const nextVatClasses = vatClassesData || [];
+        const nextWarehouses = Array.isArray(warehousesData?.warehouses)
+          ? warehousesData.warehouses
+          : [];
 
         setCategories(nextCategories);
         setBrands(nextBrands);
         setVatClasses(nextVatClasses);
+        setWarehouses(nextWarehouses);
 
         if (isEdit) {
           if (!bundleRes?.ok || !bundleData) {
@@ -250,6 +277,11 @@ export default function BundleFormModal({
               bundleData.bundleStockLimit !== null && bundleData.bundleStockLimit !== undefined
                 ? String(bundleData.bundleStockLimit)
                 : "",
+            bundleWarehouseId: bundleData.bundleWarehouseId
+              ? String(bundleData.bundleWarehouseId)
+              : "",
+            bundleFulfillmentMode: bundleData.bundleFulfillmentMode === "PREASSEMBLED" ? "PREASSEMBLED" : "VIRTUAL",
+            assembledStockQuantity: Number(bundleData._availability?.assembledStock?.quantity ?? 0),
           });
 
           const loadedGroups: BundleBuilderGroup[] = (bundleData.bundleGroups || []).map(
@@ -272,10 +304,15 @@ export default function BundleFormModal({
               maxQuantity: Number(group.maxQuantity ?? 1),
               allowQuantityChange: Boolean(group.allowQuantityChange),
               options: (group.options || []).map((option: any) => {
+                const warehouseId = Number(bundleData.bundleWarehouseId);
                 const availableVariant = option.variant
                   ? {
                       ...option.variant,
-                      stock: computeVariantAvailableStock(option.variant),
+                      stock:
+                        computeWarehouseAvailableStockAtWarehouse(
+                          option.variant,
+                          warehouseId,
+                        ) ?? 0,
                     }
                   : null;
                 const fallbackVariant = option.product.variants?.[0];
@@ -290,7 +327,10 @@ export default function BundleFormModal({
                     stock: availableVariant
                       ? availableVariant.stock
                       : fallbackVariant
-                        ? computeVariantAvailableStock(fallbackVariant)
+                        ? computeWarehouseAvailableStockAtWarehouse(
+                            fallbackVariant,
+                            warehouseId,
+                          ) ?? 0
                         : 0,
                   },
                   variant: availableVariant,
@@ -336,7 +376,12 @@ export default function BundleFormModal({
             setSelectedItems(selectedItemsFromGroups(restoredGroups));
             toast.success(t("success.draftRestored"));
           } else {
-            setFormData(defaultFormData);
+            const defaultWarehouse = nextWarehouses.find((warehouse: Warehouse) => warehouse.isDefault)
+              ?? nextWarehouses[0];
+            setFormData({
+              ...defaultFormData,
+              bundleWarehouseId: defaultWarehouse ? String(defaultWarehouse.id) : "",
+            });
             setGroups([createBundleGroup(), createBundleGroup()]);
           }
           setDraftReady(true);
@@ -383,6 +428,57 @@ export default function BundleFormModal({
     window.addEventListener("pagehide", persistLatestDraft);
     return () => window.removeEventListener("pagehide", persistLatestDraft);
   }, [open, isEdit, draftReady]);
+
+  useEffect(() => {
+    const warehouseId = Number(formData.bundleWarehouseId);
+    if (!open || !warehouseId || selectedComponentProductIds.length === 0) return;
+
+    let cancelled = false;
+    const refreshSelectedComponentStock = async () => {
+      try {
+        const response = await fetch(
+          `/api/admin/products/bundles/search-products?productIds=${selectedComponentProductIdsKey}&warehouseId=${warehouseId}`,
+        );
+        if (!response.ok) return;
+        const data = await response.json();
+        if (cancelled || !Array.isArray(data.products)) return;
+        const productsById = new Map<number, any>(
+          data.products.map((product: any) => [Number(product.id), product]),
+        );
+        const refreshedGroups = groupsRef.current.map((group) => ({
+          ...group,
+          options: group.options.map((option) => {
+            const stockProduct = productsById.get(option.productId);
+            if (!stockProduct) return option;
+            const stockVariants = Array.isArray(stockProduct.variants) ? stockProduct.variants : [];
+            const stockVariant = stockVariants.find((variant: any) => Number(variant.id) === Number(option.variantId))
+              ?? stockVariants.find((variant: any) => variant.isDefault)
+              ?? stockVariants[0];
+            const stock = Number(stockVariant?.stock ?? stockProduct.stock ?? 0);
+            return {
+              ...option,
+              product: option.product
+                ? { ...option.product, stock }
+                : {
+                    ...stockProduct,
+                    defaultPrice: Number(stockProduct.defaultPrice ?? stockProduct.basePrice ?? 0),
+                    stock,
+                  },
+              variant: option.variant
+                ? { ...option.variant, stock }
+                : option.variant,
+            };
+          }),
+        }));
+        setGroups(refreshedGroups);
+        setSelectedItems(selectedItemsFromGroups(refreshedGroups));
+      } catch (error) {
+        console.error("Failed to refresh bundle component stock:", error);
+      }
+    };
+    void refreshSelectedComponentStock();
+    return () => { cancelled = true; };
+  }, [open, formData.bundleWarehouseId, selectedComponentProductIdsKey, selectedComponentSignature]);
 
   const pricingState = useMemo(() => {
     const validItems = selectedItems.filter((item) => item?.product?.id);
@@ -556,7 +652,14 @@ export default function BundleFormModal({
     const requestedBundleStock = formData.bundleStockLimit === ""
       ? null
       : Number(formData.bundleStockLimit);
-    const effectiveBundleStock =
+    const effectiveBundleStock = formData.bundleFulfillmentMode === "PREASSEMBLED"
+      ? Math.min(
+          Math.max(0, formData.assembledStockQuantity),
+          requestedBundleStock !== null && Number.isInteger(requestedBundleStock) && requestedBundleStock >= 0
+            ? requestedBundleStock
+            : Number.POSITIVE_INFINITY,
+        )
+      :
       requestedBundleStock !== null &&
       Number.isInteger(requestedBundleStock) &&
       requestedBundleStock >= 0
@@ -568,7 +671,7 @@ export default function BundleFormModal({
       effectiveBundleStock,
       limitingItems,
     };
-  }, [selectedItems, formData.bundleStockLimit]);
+  }, [selectedItems, formData.bundleStockLimit, formData.bundleFulfillmentMode, formData.assembledStockQuantity]);
 
   const hasOutOfStockItems = selectedItems.some((item) => {
     if (!item?.product || item.product.type !== "PHYSICAL") return false;
@@ -646,6 +749,11 @@ export default function BundleFormModal({
       return;
     }
 
+    if (!formData.bundleWarehouseId) {
+      toast.error(t("validation.warehouseRequired"));
+      return;
+    }
+
     if (groups.length < 2 || groups.some((group) => !group.name.trim() || group.options.length === 0)) {
       toast.error(t("validation.completeGroups"));
       return;
@@ -680,6 +788,8 @@ export default function BundleFormModal({
         bundleStockLimit: formData.bundleStockLimit
           ? parseInt(formData.bundleStockLimit, 10)
           : null,
+        bundleWarehouseId: parseInt(formData.bundleWarehouseId, 10),
+        bundleFulfillmentMode: formData.bundleFulfillmentMode,
         discountType,
         discountValue: parseFloat(discountValue) || 0,
         manualPrice:
@@ -920,6 +1030,44 @@ export default function BundleFormModal({
                           </SelectContent>
                         </Select>
                       </div>
+                      <div>
+                        <Label htmlFor="bundle-warehouse">{t("basic.bundleWarehouse")}</Label>
+                        <Select
+                          value={formData.bundleWarehouseId}
+                          onValueChange={(value) => setFormData((current) => ({ ...current, bundleWarehouseId: value }))}
+                        >
+                          <SelectTrigger id="bundle-warehouse">
+                            <SelectValue placeholder={t("basic.bundleWarehousePlaceholder")} />
+                          </SelectTrigger>
+                          <SelectContent>
+                            {warehouses.map((warehouse) => (
+                              <SelectItem key={warehouse.id} value={String(warehouse.id)}>
+                                {warehouse.name} ({warehouse.code}){warehouse.isDefault ? ` · ${t("basic.defaultWarehouse")}` : ""}
+                              </SelectItem>
+                            ))}
+                          </SelectContent>
+                        </Select>
+                      </div>
+                      <div>
+                        <Label htmlFor="bundle-fulfillment-mode">{t("basic.fulfillmentMode")}</Label>
+                        <Select
+                          value={formData.bundleFulfillmentMode}
+                          onValueChange={(value: "VIRTUAL" | "PREASSEMBLED") => setFormData((current) => ({ ...current, bundleFulfillmentMode: value }))}
+                        >
+                          <SelectTrigger id="bundle-fulfillment-mode">
+                            <SelectValue />
+                          </SelectTrigger>
+                          <SelectContent>
+                            <SelectItem value="VIRTUAL">{t("basic.virtualBundle")}</SelectItem>
+                            <SelectItem value="PREASSEMBLED">{t("basic.preassembledBundle")}</SelectItem>
+                          </SelectContent>
+                        </Select>
+                        <p className="mt-1 text-xs text-muted-foreground">
+                          {formData.bundleFulfillmentMode === "PREASSEMBLED"
+                            ? t("basic.preassembledHint")
+                            : t("basic.virtualHint")}
+                        </p>
+                      </div>
                     </div>
 
                     <div>
@@ -939,7 +1087,12 @@ export default function BundleFormModal({
                         }
                       />
                       <p className="mt-1 text-xs text-muted-foreground">
-                        {t("stock.saleCapHint")}
+                        {formData.bundleFulfillmentMode === "PREASSEMBLED"
+                          ? t("stock.preassembledSaleCapHint")
+                          : t("stock.saleCapHint")}
+                      </p>
+                      <p className="mt-1 text-xs text-muted-foreground">
+                        {t("stock.warehouseStockHint")}
                       </p>
                     </div>
 
@@ -986,6 +1139,7 @@ export default function BundleFormModal({
                       onChange={handleGroupsChange}
                       defaultCategoryId={formData.categoryId}
                       categories={categories}
+                      warehouseId={formData.bundleWarehouseId}
                     />
 
                     {(!validation.isValid || hasOutOfStockItems || pricingState.error) && (
@@ -1187,7 +1341,9 @@ export default function BundleFormModal({
                         {t("availability.saleLimit")}
                       </span>
                       <span className="font-medium">
-                        {formData.bundleStockLimit || t("availability.notSet")}
+                        {formData.bundleStockLimit === ""
+                          ? t("availability.notSet")
+                          : formData.bundleStockLimit}
                       </span>
                     </div>
                     <div className="flex items-center justify-between border-t pt-3">

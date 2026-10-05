@@ -194,7 +194,7 @@ export async function processSslcommerzCallback(
           orderItems: {
             select: {
               quantity: true,
-              product: { select: { type: true } },
+              product: { select: { type: true, bundleFulfillmentMode: true } },
             },
           },
         },
@@ -346,6 +346,13 @@ export async function processSslcommerzCallback(
       item.product.type === "PHYSICAL" ? sum + Number(item.quantity) : sum,
     0,
   );
+  const expectedPreassembledBundleQuantity = order.orderItems.reduce(
+    (sum, item) =>
+      item.product.type === "BUNDLE" && item.product.bundleFulfillmentMode === "PREASSEMBLED"
+        ? sum + Number(item.quantity)
+        : sum,
+    0,
+  );
   const usesLegacyDeduction = safeMeta.inventoryMode === "LEGACY_DEDUCTED";
   const captureResult = await prisma.$transaction(async (tx) => {
     const captured = await tx.payment.updateMany({
@@ -375,6 +382,9 @@ export async function processSslcommerzCallback(
       });
       if (committed.committedQuantity !== expectedPhysicalQuantity) {
         throw new Error("Reserved inventory does not match the paid order");
+      }
+      if (committed.committedBundleQuantity !== expectedPreassembledBundleQuantity) {
+        throw new Error("Reserved preassembled bundle inventory does not match the paid order");
       }
     }
 

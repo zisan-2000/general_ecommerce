@@ -7452,6 +7452,34 @@
         "created": "Dibuat",
         "updated": "Terakhir Diperbarui"
       },
+      "availability": {
+        "title": "Rincian Stok Bundel",
+        "description": "Ini adalah bundel virtual. Komponen tetap tercatat pada inventaris masing-masing dan akan dikurangi dari gudang ini saat dipesan. Batas penjualan adalah batas tambahan, bukan stok komponen.",
+        "preassembledDescription": "Bundel ini dirakit terlebih dahulu. Perakitan mengurangi stok komponen dan pesanan mengurangi stok bundel jadi.",
+        "warehouse": "Gudang pemenuhan",
+        "componentCapacity": "Ketersediaan dari komponen",
+        "assembledStock": "Stok bundel jadi",
+        "saleLimit": "Batas penjualan bundel opsional",
+        "notSet": "Belum diatur",
+        "effectiveStock": "Dapat dijual saat ini"
+      },
+      "assembly": {
+        "quantity": "Jumlah unit yang dirakit",
+        "assemble": "Rakit stok",
+        "assembling": "Merakit...",
+        "description": "Mengurangi komponen tetap dari gudang ini dan menambahkan bundel jadi ke stok.",
+        "success": "Perakitan bundel berhasil dicatat",
+        "invalidQuantity": "Masukkan bilangan bulat lebih besar dari nol",
+        "failed": "Perakitan bundel gagal",
+        "stockOutQuantity": "Jumlah unit jadi yang dikeluarkan",
+        "adjustmentReason": "Alasan (misalnya rusak, kedaluwarsa)",
+        "stockOut": "Catat stok keluar",
+        "adjusting": "Mencatat...",
+        "stockOutDescription": "Mengurangi stok jadi yang tidak dipesan, seperti barang rusak atau kedaluwarsa, dan mencatat alasannya.",
+        "adjustmentRequired": "Masukkan bilangan bulat positif dan alasan",
+        "adjustmentSuccess": "Pengeluaran stok bundel jadi berhasil dicatat",
+        "adjustmentFailed": "Pengeluaran stok bundel gagal"
+      },
       "pricing": {
         "title": "Detail Harga",
         "regularTotal": "Total Reguler:",
@@ -7493,6 +7521,14 @@
         "noBrand": "Tanpa merek",
         "vatClass": "Kelas PPN",
         "vatClassPlaceholder": "Pilih kelas PPN",
+        "bundleWarehouse": "Gudang Pemenuhan *",
+        "bundleWarehousePlaceholder": "Pilih gudang yang akan memenuhi bundel ini",
+        "fulfillmentMode": "Model pemenuhan",
+        "virtualBundle": "Virtual (dirakit saat dipesan)",
+        "preassembledBundle": "Dirakit sebelumnya (stok jadi)",
+        "virtualHint": "Komponen tetap dalam stok masing-masing dan dikurangi saat pesanan dibuat.",
+        "preassembledHint": "Komponen fisik tetap dikurangi saat perakitan; pesanan mengurangi stok bundel jadi.",
+        "defaultWarehouse": "Default",
         "noVatClass": "Tanpa Kelas PPN",
         "available": "Tersedia",
         "featured": "Unggulan"
@@ -7505,10 +7541,12 @@
         "outOfStock": "Beberapa item fisik yang dipilih sedang kehabisan stok"
       },
       "stock": {
-        "fieldLabel": "Stok Bundel",
+        "fieldLabel": "Saldo Penjualan Bundel (Opsional)",
+        "preassembledSaleCapHint": "Batas penjualan tambahan opsional. Stok bundel jadi adalah stok fisik yang tersedia; kosongkan untuk hanya mengandalkan stok tersebut.",
+        "warehouseStockHint": "Ketersediaan komponen dan pengurangan stok pesanan mengikuti gudang yang dipilih. Penerimaan atau pengeluaran stok komponen dikelola dari Inventory.",
         "maxPlaceholder": "Maks {count}",
         "calculatedPlaceholder": "Dihitung dari produk yang dipilih",
-        "saleCapHint": "Batas penjualan global opsional. Biarkan kosong untuk menggunakan kapasitas yang dihitung dari komponen terpilih.",
+        "saleCapHint": "Saldo penjualan bundel opsional untuk gudang ini. Saldo berkurang saat dipesan dan kembali saat dibatalkan; setiap perubahan dicatat. Kosongkan untuk hanya menggunakan stok komponen.",
         "summaryTitle": "Ringkasan Stok Bundel",
         "summaryDescription": "Kapasitas konfigurasi default dari stok komponen yang tersedia",
         "maxBuildable": "Maksimum Bundel yang Dapat Dibuat: {count}",
@@ -7595,6 +7633,7 @@
         "skuRequired": "SKU bundel wajib diisi",
         "descriptionRequired": "Deskripsi bundel wajib diisi",
         "categoryRequired": "Silakan pilih kategori bundel",
+        "warehouseRequired": "Silakan pilih gudang pemenuhan",
         "completeGroups": "Tambahkan setidaknya dua grup pilihan yang lengkap",
         "fixConfiguration": "Silakan perbaiki konfigurasi bundel"
       }
@@ -7655,6 +7694,7 @@
         "searchLabel": "Cari produk atau varian",
         "searchPlaceholder": "Cari nama produk, SKU, atau varian",
         "chooseCategoryHint": "Pilih kategori untuk grup ini untuk menelusuri produk yang memenuhi syarat.",
+        "chooseWarehouseHint": "Pilih gudang pemenuhan bundel sebelum melihat stok komponen.",
         "retry": "Coba Lagi",
         "fixedComplete": "Grup tetap sudah memiliki satu produk yang diizinkan.",
         "loading": "Memuat produk...",

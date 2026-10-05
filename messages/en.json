@@ -6660,6 +6660,34 @@
         "created": "Created",
         "updated": "Last Updated"
       },
+      "availability": {
+        "title": "Bundle Stock Breakdown",
+        "description": "This is a virtual bundle. Components remain in their own inventory and are deducted from this warehouse when ordered. The sale limit is an additional cap, not component stock.",
+        "preassembledDescription": "This bundle is assembled in advance. Assembly consumes component inventory, and orders consume finished bundle stock.",
+        "warehouse": "Fulfillment warehouse",
+        "componentCapacity": "Available from components",
+        "assembledStock": "Finished bundle stock",
+        "saleLimit": "Optional bundle sale limit",
+        "notSet": "Not set",
+        "effectiveStock": "Currently sellable"
+      },
+      "assembly": {
+        "quantity": "Units to assemble",
+        "assemble": "Assemble stock",
+        "assembling": "Assembling...",
+        "description": "Consumes the fixed component quantities from this warehouse and adds finished bundles to stock.",
+        "success": "Bundle assembly recorded successfully",
+        "invalidQuantity": "Enter a whole number greater than zero",
+        "failed": "Bundle assembly failed",
+        "stockOutQuantity": "Finished units to remove",
+        "adjustmentReason": "Reason (e.g. damaged, expired)",
+        "stockOut": "Record stock out",
+        "adjusting": "Recording...",
+        "stockOutDescription": "Removes unreserved finished units, such as damaged or expired stock, and records the reason.",
+        "adjustmentRequired": "Enter a positive whole number and a reason",
+        "adjustmentSuccess": "Finished bundle stock-out recorded",
+        "adjustmentFailed": "Bundle stock-out failed"
+      },
       "pricing": {
         "title": "Pricing Details",
         "regularTotal": "Regular Total:",
@@ -6701,6 +6729,14 @@
         "noBrand": "No brand",
         "vatClass": "VAT Class",
         "vatClassPlaceholder": "Select VAT class",
+        "bundleWarehouse": "Fulfillment Warehouse *",
+        "bundleWarehousePlaceholder": "Select the warehouse that will fulfill this bundle",
+        "fulfillmentMode": "Fulfillment model",
+        "virtualBundle": "Virtual (assemble when ordered)",
+        "preassembledBundle": "Preassembled (finished stock)",
+        "virtualHint": "Components stay in their own stock and are deducted when an order is placed.",
+        "preassembledHint": "Fixed physical components are consumed when you assemble stock; orders deduct finished bundles.",
+        "defaultWarehouse": "Default",
         "noVatClass": "No VAT Class",
         "available": "Available",
         "featured": "Featured"
@@ -6713,10 +6749,12 @@
         "outOfStock": "Some selected physical items are out of stock"
       },
       "stock": {
-        "fieldLabel": "Bundle Stock",
+        "fieldLabel": "Bundle Sale Balance (Optional)",
+        "warehouseStockHint": "Component availability and order deductions use the selected warehouse. Receive or issue component products from Inventory.",
         "maxPlaceholder": "Max {count}",
         "calculatedPlaceholder": "Calculated from selected products",
-        "saleCapHint": "Optional global sale cap. Leave empty to use the capacity calculated from the selected components.",
+        "saleCapHint": "Optional bundle sale balance for this warehouse. Orders decrease it and cancellations restore it; each change is ledgered. Leave empty to rely on component stock only.",
+        "preassembledSaleCapHint": "Optional additional sales cap. Finished bundle stock is the physical stock on hand; leave empty to rely on that stock only.",
         "summaryTitle": "Bundle Stock Summary",
         "summaryDescription": "Default configuration capacity from available component stock",
         "maxBuildable": "Max Buildable Bundles: {count}",
@@ -6806,6 +6844,7 @@
         "skuRequired": "Bundle SKU is required",
         "descriptionRequired": "Bundle description is required",
         "categoryRequired": "Please select a bundle category",
+        "warehouseRequired": "Please select a fulfillment warehouse",
         "completeGroups": "Add at least two complete selection groups",
         "fixConfiguration": "Please fix the bundle configuration"
       }
@@ -6869,6 +6908,7 @@
         "searchLabel": "Find products or variants",
         "searchPlaceholder": "Search product name, SKU or variant",
         "chooseCategoryHint": "Choose a category for this group to browse eligible products.",
+        "chooseWarehouseHint": "Select the bundle's fulfillment warehouse before browsing component stock.",
         "retry": "Retry",
         "fixedComplete": "A fixed group already has its one allowed product.",
         "loading": "Loading products...",

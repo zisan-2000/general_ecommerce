@@ -3,6 +3,11 @@ import "server-only";
 import { Prisma } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import {
+  configurableBundleGroupSelect,
+  getDefaultBundleAvailableQuantity,
+  type ResolvableBundle,
+} from "@/lib/configurable-bundle";
+import {
   deleteTypesenseDocument,
   typesenseSearchEnabled,
   upsertTypesenseDocuments,
@@ -15,9 +20,17 @@ type ClaimedRow = {
   attempts: number;
 };
 
-function stockFor(product: { type: string; bundleStockLimit: number | null; variants: Array<{ stock: number }> }) {
+function stockFor(product: Pick<
+  ResolvableBundle,
+  "id" | "name" | "basePrice" | "currency" | "bundleStockLimit" | "bundleWarehouseId" | "bundleGroups" | "bundleFulfillmentMode" | "assembledStockLevels"
+> & {
+  type: string;
+  variants: Array<{ stock: number }>;
+}) {
   if (product.type === "DIGITAL" || product.type === "SERVICE") return 1;
-  if (product.type === "BUNDLE") return Math.max(0, product.bundleStockLimit ?? 0);
+  if (product.type === "BUNDLE") {
+    return getDefaultBundleAvailableQuantity(product);
+  }
   return product.variants.reduce((sum, variant) => sum + Math.max(0, variant.stock), 0);
 }
 
@@ -67,11 +80,19 @@ export async function processSearchIndexOutbox() {
       where: { id: { in: productIds } },
       select: {
         id: true, name: true, slug: true, sku: true, basePrice: true,
+        currency: true,
         soldCount: true, ratingAvg: true, available: true, deleted: true,
-        type: true, bundleStockLimit: true, updatedAt: true,
+        type: true, bundleStockLimit: true, bundleWarehouseId: true,
+        bundleFulfillmentMode: true,
+        assembledStockLevels: { select: { warehouseId: true, quantity: true, reserved: true } },
+        updatedAt: true,
         brand: { select: { name: true } },
         category: { select: { name: true, slug: true } },
         variants: { where: { active: true }, select: { sku: true, stock: true } },
+        bundleGroups: {
+          orderBy: { sortOrder: "asc" },
+          select: configurableBundleGroupSelect,
+        },
         attributes: { select: { value: true, attribute: { select: { name: true } } } },
       },
     });

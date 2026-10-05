@@ -1,4 +1,4 @@
-import type { Prisma } from "@/generated/prisma";
+import { Prisma } from "@/generated/prisma";
 import { captureVariantInventoryDailySnapshots } from "@/lib/report-history";
 
 type TransactionClient = Prisma.TransactionClient;
@@ -130,13 +130,129 @@ export async function syncVariantWarehouseStock(params: {
   return { warehouseId, stock };
 }
 
-export async function deductVariantInventory(params: {
+export async function deductBundleInventory(params: {
   tx: TransactionClient;
   orderId: number;
+  bundleId: number;
+  warehouseId: number;
+  quantity: number;
+  reason: string;
+}) {
+  const { tx, orderId, bundleId, warehouseId, quantity, reason } = params;
+  if (!Number.isSafeInteger(quantity) || quantity <= 0) {
+    throw new Error("Bundle deduction quantity must be greater than 0");
+  }
+
+  const updated = await tx.product.updateMany({
+    where: {
+      id: bundleId,
+      type: "BUNDLE",
+      bundleWarehouseId: warehouseId,
+      bundleStockLimit: { gte: quantity },
+    },
+    data: { bundleStockLimit: { decrement: quantity } },
+  });
+  if (updated.count !== 1) {
+    throw new Error("Bundle stock changed during checkout. Please try again.");
+  }
+
+  await tx.inventoryLog.create({
+    data: {
+      orderId,
+      productId: bundleId,
+      variantId: null,
+      warehouseId,
+      change: -quantity,
+      reason,
+    },
+  });
+}
+
+const PREASSEMBLED_BUNDLE_STOCK_MOVEMENT = "PREASSEMBLED_BUNDLE_STOCK";
+
+export async function deductPreassembledBundleInventory(params: {
+  tx: TransactionClient;
+  orderId: number;
+  bundleId: number;
+  warehouseId: number;
+  quantity: number;
+  reason: string;
+}) {
+  const { tx, orderId, bundleId, warehouseId, quantity, reason } = params;
+  if (!Number.isSafeInteger(quantity) || quantity <= 0) {
+    throw new Error("Bundle deduction quantity must be greater than 0");
+  }
+
+  const updated = await tx.$queryRaw<Array<{ id: number }>>(
+    Prisma.sql`
+      UPDATE "BundleStockLevel"
+      SET "quantity" = "quantity" - ${quantity}, "updatedAt" = NOW()
+      WHERE "productId" = ${bundleId}
+        AND "warehouseId" = ${warehouseId}
+        AND "quantity" - "reserved" >= ${quantity}
+      RETURNING "id"
+    `,
+  );
+  if (updated.length !== 1) {
+    throw new Error("Assembled bundle stock changed during checkout. Please try again.");
+  }
+
+  await tx.inventoryLog.create({
+    data: {
+      orderId,
+      productId: bundleId,
+      variantId: null,
+      warehouseId,
+      change: -quantity,
+      reason: `${PREASSEMBLED_BUNDLE_STOCK_MOVEMENT}: ${reason}`,
+    },
+  });
+}
+
+export async function reservePreassembledBundleInventory(params: {
+  tx: TransactionClient;
+  orderId: number;
+  bundleId: number;
+  warehouseId: number;
+  quantity: number;
+  reason: string;
+  expiresAt?: Date | null;
+}) {
+  const { tx, orderId, bundleId, warehouseId, quantity, expiresAt } = params;
+  if (!Number.isSafeInteger(quantity) || quantity <= 0) {
+    throw new Error("Bundle reservation quantity must be greater than 0");
+  }
+  const updated = await tx.$queryRaw<Array<{ id: number }>>(
+    Prisma.sql`
+      UPDATE "BundleStockLevel"
+      SET "reserved" = "reserved" + ${quantity}, "updatedAt" = NOW()
+      WHERE "productId" = ${bundleId}
+        AND "warehouseId" = ${warehouseId}
+        AND "quantity" - "reserved" >= ${quantity}
+      RETURNING "id"
+    `,
+  );
+  if (updated.length !== 1) {
+    throw new Error("Assembled bundle stock changed during checkout. Please try again.");
+  }
+  await tx.bundleStockReservation.create({
+    data: {
+      bundleStockLevelId: updated[0].id,
+      orderId,
+      quantity,
+      expiresAt: expiresAt ?? null,
+    },
+  });
+}
+
+export async function deductVariantInventory(params: {
+  tx: TransactionClient;
+  orderId?: number | null;
   productId: number;
   productVariantId: number;
   quantity: number;
   reason: string;
+  warehouseId?: number | null;
 }) {
   const { tx, orderId, productId, productVariantId, quantity, reason } = params;
 
@@ -145,7 +261,10 @@ export async function deductVariantInventory(params: {
   }
 
   const levels = await tx.stockLevel.findMany({
-    where: { productVariantId },
+    where: {
+      productVariantId,
+      ...(params.warehouseId ? { warehouseId: params.warehouseId } : {}),
+    },
     include: {
       warehouse: {
         select: { id: true, code: true, isDefault: true },
@@ -209,6 +328,33 @@ export async function deductVariantInventory(params: {
   return { stock };
 }
 
+export async function recordPreassembledBundleAssembly(params: {
+  tx: TransactionClient;
+  bundleId: number;
+  warehouseId: number;
+  quantity: number;
+  reason: string;
+}) {
+  const { tx, bundleId, warehouseId, quantity, reason } = params;
+  if (!Number.isSafeInteger(quantity) || quantity <= 0) {
+    throw new Error("Assembly quantity must be a whole number greater than 0");
+  }
+  await tx.bundleStockLevel.upsert({
+    where: { productId_warehouseId: { productId: bundleId, warehouseId } },
+    create: { productId: bundleId, warehouseId, quantity, reserved: 0 },
+    update: { quantity: { increment: quantity } },
+  });
+  await tx.inventoryLog.create({
+    data: {
+      productId: bundleId,
+      variantId: null,
+      warehouseId,
+      change: quantity,
+      reason: `PREASSEMBLED_BUNDLE_ASSEMBLY: ${reason}`,
+    },
+  });
+}
+
 export async function reserveVariantInventory(params: {
   tx: TransactionClient;
   productId: number;
@@ -218,6 +364,7 @@ export async function reserveVariantInventory(params: {
   quantity: number;
   reason: string;
   expiresAt?: Date | null;
+  warehouseId?: number | null;
 }) {
   const {
     tx,
@@ -234,7 +381,10 @@ export async function reserveVariantInventory(params: {
   }
 
   const levels = await tx.stockLevel.findMany({
-    where: { productVariantId },
+    where: {
+      productVariantId,
+      ...(params.warehouseId ? { warehouseId: params.warehouseId } : {}),
+    },
     include: {
       warehouse: { select: { id: true, code: true, isDefault: true } },
     },
@@ -344,7 +494,43 @@ export async function commitOrderInventoryReservations(params: {
     await refreshVariantStock(tx, variantId);
     await captureVariantInventoryDailySnapshots(tx, variantId);
   }
-  return { reservationCount: reservations.length, committedQuantity };
+  const bundleReservations = await tx.bundleStockReservation.findMany({
+    where: { orderId },
+    include: { bundleStockLevel: { select: { productId: true, warehouseId: true } } },
+    orderBy: { id: "asc" },
+  });
+  let committedBundleQuantity = 0;
+  for (const reservation of bundleReservations) {
+    const updated = await tx.bundleStockLevel.updateMany({
+      where: {
+        id: reservation.bundleStockLevelId,
+        reserved: { gte: reservation.quantity },
+        quantity: { gte: reservation.quantity },
+      },
+      data: {
+        reserved: { decrement: reservation.quantity },
+        quantity: { decrement: reservation.quantity },
+      },
+    });
+    if (updated.count !== 1) throw new Error("Reserved bundle inventory could not be committed");
+    await tx.inventoryLog.create({
+      data: {
+        orderId,
+        productId: reservation.bundleStockLevel.productId,
+        variantId: null,
+        warehouseId: reservation.bundleStockLevel.warehouseId,
+        change: -reservation.quantity,
+        reason: `${PREASSEMBLED_BUNDLE_STOCK_MOVEMENT}: ${reason}`,
+      },
+    });
+    await tx.bundleStockReservation.delete({ where: { id: reservation.id } });
+    committedBundleQuantity += reservation.quantity;
+  }
+  return {
+    reservationCount: reservations.length + bundleReservations.length,
+    committedQuantity,
+    committedBundleQuantity,
+  };
 }
 
 export async function releaseOrderInventoryReservations(params: {
@@ -385,7 +571,25 @@ export async function releaseOrderInventoryReservations(params: {
     await refreshVariantStock(tx, variantId);
     await captureVariantInventoryDailySnapshots(tx, variantId);
   }
-  return { reservationCount: reservations.length, releasedQuantity };
+  const bundleReservations = await tx.bundleStockReservation.findMany({
+    where: { orderId },
+    select: { id: true, bundleStockLevelId: true, quantity: true },
+    orderBy: { id: "asc" },
+  });
+  let releasedBundleQuantity = 0;
+  for (const reservation of bundleReservations) {
+    const updated = await tx.bundleStockLevel.updateMany({
+      where: { id: reservation.bundleStockLevelId, reserved: { gte: reservation.quantity } },
+      data: { reserved: { decrement: reservation.quantity } },
+    });
+    if (updated.count !== 1) throw new Error("Reserved bundle inventory could not be released");
+    await tx.bundleStockReservation.delete({ where: { id: reservation.id } });
+    releasedBundleQuantity += reservation.quantity;
+  }
+  return {
+    reservationCount: reservations.length + bundleReservations.length,
+    releasedQuantity: releasedQuantity + releasedBundleQuantity,
+  };
 }
 
 export type OrderInventoryMovement = {
@@ -393,11 +597,19 @@ export type OrderInventoryMovement = {
   variantId: number | null;
   warehouseId: number | null;
   change: number;
+  productType?: string;
+  reason?: string;
 };
 
 export type OrderInventoryRestock = {
   productId: number;
   variantId: number;
+  warehouseId: number;
+  quantity: number;
+};
+
+export type OrderBundleInventoryRestock = {
+  productId: number;
   warehouseId: number;
   quantity: number;
 };
@@ -451,6 +663,75 @@ export function buildOrderInventoryRestockPlan(
     );
 }
 
+export function buildOrderBundleInventoryRestockPlan(
+  movements: OrderInventoryMovement[],
+): OrderBundleInventoryRestock[] {
+  const netByAllocation = new Map<
+    string,
+    Omit<OrderBundleInventoryRestock, "quantity"> & { netChange: number }
+  >();
+
+  for (const movement of movements) {
+    if (
+      movement.productType !== "BUNDLE" ||
+      movement.reason?.startsWith(`${PREASSEMBLED_BUNDLE_STOCK_MOVEMENT}:`) ||
+      movement.variantId !== null ||
+      !Number.isSafeInteger(movement.productId) ||
+      !Number.isSafeInteger(movement.warehouseId) ||
+      movement.warehouseId === null ||
+      !Number.isSafeInteger(movement.change)
+    ) {
+      continue;
+    }
+    const key = `${movement.productId}:${movement.warehouseId}`;
+    const current = netByAllocation.get(key);
+    netByAllocation.set(key, {
+      productId: movement.productId,
+      warehouseId: movement.warehouseId,
+      netChange: (current?.netChange ?? 0) + movement.change,
+    });
+  }
+
+  return Array.from(netByAllocation.values())
+    .filter((allocation) => allocation.netChange < 0)
+    .map(({ netChange, ...allocation }) => ({
+      ...allocation,
+      quantity: -netChange,
+    }))
+    .sort(
+      (left, right) =>
+        left.productId - right.productId || left.warehouseId - right.warehouseId,
+    );
+}
+
+export function buildOrderPreassembledBundleRestockPlan(
+  movements: OrderInventoryMovement[],
+): OrderBundleInventoryRestock[] {
+  const netByAllocation = new Map<string, OrderBundleInventoryRestock & { netChange: number }>();
+  for (const movement of movements) {
+    if (
+      movement.productType !== "BUNDLE" ||
+      movement.variantId !== null ||
+      !movement.reason?.startsWith(`${PREASSEMBLED_BUNDLE_STOCK_MOVEMENT}:`) ||
+      !Number.isSafeInteger(movement.productId) ||
+      !Number.isSafeInteger(movement.warehouseId) ||
+      movement.warehouseId === null ||
+      !Number.isSafeInteger(movement.change)
+    ) continue;
+    const key = `${movement.productId}:${movement.warehouseId}`;
+    const current = netByAllocation.get(key);
+    netByAllocation.set(key, {
+      productId: movement.productId,
+      warehouseId: movement.warehouseId,
+      quantity: 0,
+      netChange: (current?.netChange ?? 0) + movement.change,
+    });
+  }
+  return Array.from(netByAllocation.values())
+    .filter((allocation) => allocation.netChange < 0)
+    .map(({ netChange, ...allocation }) => ({ ...allocation, quantity: -netChange }));
+}
+
 export async function restoreOrderInventory(params: {
   tx: TransactionClient;
   orderId: number;
@@ -465,10 +746,22 @@ export async function restoreOrderInventory(params: {
       variantId: true,
       warehouseId: true,
       change: true,
+      reason: true,
+      product: { select: { type: true } },
     },
     orderBy: { id: "asc" },
   });
-  const restockPlan = buildOrderInventoryRestockPlan(movements);
+  const normalizedMovements = movements.map((movement) => ({
+    productId: movement.productId,
+    variantId: movement.variantId,
+    warehouseId: movement.warehouseId,
+    change: movement.change,
+    reason: movement.reason,
+    productType: movement.product?.type,
+  }));
+  const restockPlan = buildOrderInventoryRestockPlan(normalizedMovements);
+  const bundleRestockPlan = buildOrderBundleInventoryRestockPlan(normalizedMovements);
+  const preassembledBundleRestockPlan = buildOrderPreassembledBundleRestockPlan(normalizedMovements);
   const touchedVariants = new Set<number>();
   let restoredQuantity = 0;
 
@@ -504,6 +797,64 @@ export async function restoreOrderInventory(params: {
     restoredQuantity += allocation.quantity;
   }
 
+  let restoredBundleQuantity = 0;
+  for (const allocation of bundleRestockPlan) {
+    const updated = await tx.product.updateMany({
+      where: {
+        id: allocation.productId,
+        type: "BUNDLE",
+        bundleWarehouseId: allocation.warehouseId,
+        bundleStockLimit: { not: null },
+      },
+      data: { bundleStockLimit: { increment: allocation.quantity } },
+    });
+    // The sale cap is optional and can be cleared or moved after checkout.
+    // In that case component stock must still be restored, but the historical
+    // cap must not be recreated against the administrator's current settings.
+    if (updated.count !== 1) continue;
+    await tx.inventoryLog.create({
+      data: {
+        orderId,
+        productId: allocation.productId,
+        variantId: null,
+        warehouseId: allocation.warehouseId,
+        change: allocation.quantity,
+        reason,
+      },
+    });
+    restoredBundleQuantity += allocation.quantity;
+  }
+
+  let restoredPreassembledBundleQuantity = 0;
+  for (const allocation of preassembledBundleRestockPlan) {
+    await tx.bundleStockLevel.upsert({
+      where: {
+        productId_warehouseId: {
+          productId: allocation.productId,
+          warehouseId: allocation.warehouseId,
+        },
+      },
+      create: {
+        productId: allocation.productId,
+        warehouseId: allocation.warehouseId,
+        quantity: allocation.quantity,
+        reserved: 0,
+      },
+      update: { quantity: { increment: allocation.quantity } },
+    });
+    await tx.inventoryLog.create({
+      data: {
+        orderId,
+        productId: allocation.productId,
+        variantId: null,
+        warehouseId: allocation.warehouseId,
+        change: allocation.quantity,
+        reason: `${PREASSEMBLED_BUNDLE_STOCK_MOVEMENT}: ${reason}`,
+      },
+    });
+    restoredPreassembledBundleQuantity += allocation.quantity;
+  }
+
   for (const variantId of touchedVariants) {
     await refreshVariantStock(tx, variantId);
     await captureVariantInventoryDailySnapshots(tx, variantId);
@@ -514,6 +865,9 @@ export async function restoreOrderInventory(params: {
     releasedReservationQuantity: released.releasedQuantity,
     restoredAllocationCount: restockPlan.length,
     restoredQuantity,
+    restoredBundleAllocationCount: bundleRestockPlan.length,
+    restoredBundleQuantity,
+    restoredPreassembledBundleQuantity,
   };
 }
 
@@ -525,7 +879,7 @@ export async function cleanupExpiredInventoryReservations(params: {
   const { tx } = params;
   const now = params.now ?? new Date();
   const batchSize = Math.min(250, Math.max(1, params.batchSize ?? 100));
-  const expired = await tx.inventoryReservation.findMany({
+  const expiredVariant = await tx.inventoryReservation.findMany({
     where: {
       orderId: { not: null },
       expiresAt: { not: null, lte: now },
@@ -535,13 +889,24 @@ export async function cleanupExpiredInventoryReservations(params: {
     take: batchSize,
     orderBy: { id: "asc" },
   });
+  const expiredBundle = await tx.bundleStockReservation.findMany({
+    where: { expiresAt: { not: null, lte: now } },
+    select: { orderId: true },
+    distinct: ["orderId"],
+    take: batchSize,
+    orderBy: { id: "asc" },
+  });
+  const expiredOrders = Array.from(new Set(
+    [...expiredVariant, ...expiredBundle]
+      .map((row) => row.orderId)
+      .filter((orderId): orderId is number => orderId !== null),
+  )).slice(0, batchSize);
 
   let releasedOrders = 0;
   let releasedQuantity = 0;
-  for (const row of expired) {
-    if (!row.orderId) continue;
+  for (const orderId of expiredOrders) {
     const order = await tx.order.findUnique({
-      where: { id: row.orderId },
+      where: { id: orderId },
       select: {
         paymentStatus: true,
         couponId: true,
@@ -557,21 +922,27 @@ export async function cleanupExpiredInventoryReservations(params: {
       continue;
     }
 
-    const released = await releaseOrderInventoryReservations({
+    const restored = await restoreOrderInventory({
       tx,
-      orderId: row.orderId,
+      orderId,
+      reason: `Order #${orderId} expired payment inventory restoration`,
     });
-    if (released.reservationCount === 0) continue;
+    if (
+      restored.releasedReservationCount === 0 &&
+      restored.restoredBundleQuantity === 0 &&
+      restored.restoredQuantity === 0
+      && restored.restoredPreassembledBundleQuantity === 0
+    ) continue;
 
     await tx.payment.updateMany({
       where: {
-        orderId: row.orderId,
+        orderId,
         status: { in: ["INITIATED", "AUTHORIZED"] },
       },
       data: { status: "FAILED" },
     });
     await tx.order.updateMany({
-      where: { id: row.orderId, paymentStatus: "UNPAID" },
+      where: { id: orderId, paymentStatus: "UNPAID" },
       data: { status: "FAILED" },
     });
     if (order.couponId && Number(order.discount_total || 0) > 0) {
@@ -581,10 +952,14 @@ export async function cleanupExpiredInventoryReservations(params: {
       });
     }
     releasedOrders += 1;
-    releasedQuantity += released.releasedQuantity;
+    releasedQuantity +=
+      restored.releasedReservationQuantity +
+      restored.restoredQuantity +
+      restored.restoredBundleQuantity +
+      restored.restoredPreassembledBundleQuantity;
   }
 
-  return { scannedOrders: expired.length, releasedOrders, releasedQuantity };
+  return { scannedOrders: expiredOrders.length, releasedOrders, releasedQuantity };
 }
 
 export async function receiveVariantInventory(params: {

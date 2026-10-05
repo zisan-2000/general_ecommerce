@@ -96,7 +96,9 @@ export function normalizeStorefrontProducts(
           : null;
       const stock =
         type === "BUNDLE"
-          ? toNumber(bundleStockLimit, 0)
+          ? product?.stock !== null && product?.stock !== undefined
+            ? toNumber(product.stock, 0)
+            : toNumber(bundleStockLimit, 0)
           : variants.reduce(
               (sum: number, variant: any) => sum + toNumber(variant?.stock, 0),
               0,

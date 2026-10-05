@@ -7,7 +7,10 @@ import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-ser
 import type { FeatureControlledProductType } from "@/lib/store-features";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
-import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
+import {
+  computeVariantAvailableStock,
+  computeWarehouseAvailableStockAtWarehouse,
+} from "@/lib/warehouse-stock";
 
 type RawProduct = Prisma.ProductGetPayload<{
   select: typeof storefrontProductSelect;
@@ -34,26 +37,37 @@ function serializeProduct(product: RawProduct) {
       ...variant,
       price: resolveFlashSalePricing(product, variant.price).salePrice,
       stock: computeVariantAvailableStock(variant),
-    })),
-    bundleGroups: product.bundleGroups.map((group) => ({
-      ...group,
-      options: group.options.map((option) => ({
+  })),
+  bundleGroups: product.bundleGroups.map((group) => ({
+    ...group,
+    options: group.options.map((option) => {
+      const resolvedVariant = option.variant ??
+        option.product.variants.find((variant) => variant.isDefault && variant.active) ??
+        option.product.variants.find((variant) => variant.active) ??
+        null;
+      const serializeBundleVariant = (variant: typeof resolvedVariant) => variant
+        ? {
+            ...variant,
+            price: Number(variant.price),
+            stock: product.type === "BUNDLE"
+              ? product.bundleWarehouseId
+                ? computeWarehouseAvailableStockAtWarehouse(variant, product.bundleWarehouseId) ?? 0
+                : 0
+              : computeVariantAvailableStock(variant),
+          }
+        : null;
+      return {
         ...option,
         priceAdjustment: Number(option.priceAdjustment),
         product: {
           ...option.product,
           basePrice: Number(option.product.basePrice),
         },
-        variant: option.variant
-          ? {
-              ...option.variant,
-              price: Number(option.variant.price),
-              stock: computeVariantAvailableStock(option.variant),
-            }
-          : null,
-      })),
-    })),
-  };
+        variant: serializeBundleVariant(resolvedVariant),
+      };
+    }),
+  })),
+};
 }
 
 type ProductIdentifier = { id: number } | { slug: string };

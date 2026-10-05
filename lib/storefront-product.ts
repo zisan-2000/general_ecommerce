@@ -1,3 +1,8 @@
+import {
+  configurableBundleVariantOrderBy,
+  configurableBundleVariantSelect,
+} from "@/lib/configurable-bundle";
+
 /**
  * Public product projection.
  *
@@ -39,6 +44,11 @@ export const storefrontProductSelect = {
   createdAt: true,
   updatedAt: true,
   bundleStockLimit: true,
+  bundleWarehouseId: true,
+  bundleFulfillmentMode: true,
+  assembledStockLevels: {
+    select: { warehouseId: true, quantity: true, reserved: true },
+  },
   category: {
     select: { id: true, name: true, slug: true, image: true, parentId: true },
   },
@@ -150,6 +160,11 @@ export const storefrontProductSelect = {
               type: true,
               available: true,
               basePrice: true,
+              variants: {
+                where: { active: true },
+                orderBy: configurableBundleVariantOrderBy,
+                select: configurableBundleVariantSelect,
+              },
             },
           },
           variant: {
@@ -165,7 +180,7 @@ export const storefrontProductSelect = {
               active: true,
               isDefault: true,
               stockLevels: {
-                select: { quantity: true, reserved: true },
+                select: { warehouseId: true, quantity: true, reserved: true },
               },
             },
           },

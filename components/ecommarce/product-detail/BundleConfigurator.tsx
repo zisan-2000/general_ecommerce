@@ -43,12 +43,16 @@ export default function BundleConfigurator({
   currency,
   basePrice,
   stockLimit,
+  fulfillmentMode,
+  assembledStock,
   onChange,
 }: {
   groups: BundleGroup[];
   currency: string;
   basePrice: number;
   stockLimit: number | null;
+  fulfillmentMode?: "VIRTUAL" | "PREASSEMBLED";
+  assembledStock?: number;
   onChange: (preview: BundleConfigurationPreview) => void;
 }) {
   const t = useTranslations("StorefrontProduct.bundle");
@@ -104,9 +108,12 @@ export default function BundleConfigurator({
     const componentCapacity = demand.size
       ? Math.min(...Array.from(demand.values()).map((item) => Math.floor(item.stock / item.quantity)))
       : 99;
+    const fulfillmentCapacity = fulfillmentMode === "PREASSEMBLED"
+      ? Math.max(0, Number(assembledStock ?? 0))
+      : componentCapacity;
     const availableQuantity = stockLimit === null
-      ? componentCapacity
-      : Math.min(componentCapacity, stockLimit);
+      ? fulfillmentCapacity
+      : Math.min(fulfillmentCapacity, stockLimit);
     if (availableQuantity <= 0) valid = false;
     const pricing = calculateConfiguredBundlePricing({ basePrice, groups, selections });
     return {
@@ -117,7 +124,7 @@ export default function BundleConfigurator({
       valid,
       summary,
     };
-  }, [basePrice, groups, selected, stockLimit, t]);
+  }, [assembledStock, basePrice, fulfillmentMode, groups, selected, stockLimit, t]);
 
   useEffect(() => onChange(preview), [onChange, preview]);
 

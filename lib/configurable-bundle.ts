@@ -1,6 +1,9 @@
 import { createHash } from "node:crypto";
 import type { Prisma } from "@/generated/prisma";
-import { computeWarehouseAvailableStock } from "@/lib/warehouse-stock";
+import {
+  computeWarehouseAvailableStock,
+  computeWarehouseAvailableStockAtWarehouse,
+} from "@/lib/warehouse-stock";
 import {
   calculateConfiguredBundlePricing,
   type BundlePricingModeValue,
@@ -54,7 +57,7 @@ type ResolvableVariant = {
   options: unknown;
   active: boolean;
   isDefault: boolean;
-  stockLevels?: Array<{ quantity: number; reserved: number }> | null;
+  stockLevels?: Array<{ warehouseId?: number; quantity: number; reserved: number }> | null;
 };
 
 type ResolvableOption = {
@@ -92,12 +95,43 @@ type ResolvableGroup = {
   options: ResolvableOption[];
 };
 
+type BundleGroupDefinition = Omit<ResolvableGroup, "id" | "options"> & {
+  options: Array<Pick<ResolvableOption, "productId" | "variantId" | "isDefault" | "priceAdjustment" | "sortOrder">>;
+};
+
+/** Ignore database IDs and Decimal representation when preserving unchanged groups. */
+export function haveSameBundleGroupDefinitions(
+  previous: readonly BundleGroupDefinition[],
+  next: readonly BundleGroupDefinition[],
+) {
+  const canonical = (groups: readonly BundleGroupDefinition[]) =>
+    [...groups].sort((left, right) => left.sortOrder - right.sortOrder).map((group) => ({
+      name: group.name, selectionType: group.selectionType, pricingMode: group.pricingMode,
+      required: group.required, minSelect: group.minSelect, maxSelect: group.maxSelect,
+      defaultQuantity: group.defaultQuantity, minQuantity: group.minQuantity,
+      maxQuantity: group.maxQuantity, allowQuantityChange: group.allowQuantityChange,
+      sortOrder: group.sortOrder,
+      options: [...group.options].sort((left, right) => left.sortOrder - right.sortOrder).map((option) => ({
+        productId: option.productId, variantId: option.variantId, isDefault: option.isDefault,
+        priceAdjustment: Number(option.priceAdjustment), sortOrder: option.sortOrder,
+      })),
+    }));
+  return JSON.stringify(canonical(previous)) === JSON.stringify(canonical(next));
+}
+
 export type ResolvableBundle = {
   id: number;
   name: string;
   basePrice: unknown;
   currency: string;
   bundleStockLimit: number | null;
+  bundleWarehouseId: number | null;
+  bundleFulfillmentMode?: "VIRTUAL" | "PREASSEMBLED";
+  assembledStockLevels?: Array<{
+    warehouseId: number;
+    quantity: number;
+    reserved: number;
+  }>;
   bundleGroups: ResolvableGroup[];
 };
 
@@ -123,6 +157,7 @@ export type ResolvedBundleConfiguration = {
   finalPrice: number;
   regularTotal: number;
   availableQuantity: number;
+  warehouseId: number | null;
   configurationKey: string;
 };
 
@@ -277,8 +312,25 @@ export function resolveBundleConfiguration(params: {
   strictWarehouseStock?: boolean;
 }): ResolvedBundleConfiguration {
   const { bundle } = params;
+  if (params.strictWarehouseStock && !bundle.bundleWarehouseId) {
+    throw new Error("Bundle fulfillment warehouse is not configured");
+  }
   if (bundle.bundleGroups.length < 2) {
     throw new Error("Bundle configuration is incomplete");
+  }
+  if (
+    bundle.bundleFulfillmentMode === "PREASSEMBLED" &&
+    bundle.bundleGroups.some((group) =>
+      group.selectionType !== "FIXED" ||
+      !group.required ||
+      group.allowQuantityChange ||
+      group.options.length !== 1 ||
+      !group.options[0]?.isDefault ||
+      group.minQuantity !== group.defaultQuantity ||
+      group.maxQuantity !== group.defaultQuantity,
+    )
+  ) {
+    throw new Error("Preassembled bundles require a fixed, non-editable physical composition");
   }
 
   const requested = parseBundleSelections(params.selections);
@@ -357,7 +409,12 @@ export function resolveBundleConfiguration(params: {
 
       let availableStock: number | null = null;
       if (option.product.type === "PHYSICAL" && variant) {
-        availableStock = computeWarehouseAvailableStock(variant);
+        availableStock = bundle.bundleWarehouseId
+          ? computeWarehouseAvailableStockAtWarehouse(variant, bundle.bundleWarehouseId)
+          : computeWarehouseAvailableStock(variant);
+        if (bundle.bundleWarehouseId && availableStock === null) {
+          availableStock = 0;
+        }
         if (availableStock === null && !params.strictWarehouseStock) {
           availableStock = Math.max(0, Number(variant.stock));
         }
@@ -405,8 +462,14 @@ export function resolveBundleConfiguration(params: {
       )
     : Number.POSITIVE_INFINITY;
   const configuredLimit = bundle.bundleStockLimit ?? Number.POSITIVE_INFINITY;
-  const availableQuantity = Number.isFinite(Math.min(componentCapacity, configuredLimit))
-    ? Math.max(0, Math.min(componentCapacity, configuredLimit))
+  const assembledQuantity = bundle.assembledStockLevels?.find(
+    (level) => level.warehouseId === bundle.bundleWarehouseId,
+  );
+  const fulfillmentCapacity = bundle.bundleFulfillmentMode === "PREASSEMBLED"
+    ? Math.max(0, Number(assembledQuantity?.quantity ?? 0) - Number(assembledQuantity?.reserved ?? 0))
+    : componentCapacity;
+  const availableQuantity = Number.isFinite(Math.min(fulfillmentCapacity, configuredLimit))
+    ? Math.max(0, Math.min(fulfillmentCapacity, configuredLimit))
     : 99;
   const canonicalSelections = [...selections].sort(
     (left, right) => left.groupId - right.groupId || (left.optionId ?? -1) - (right.optionId ?? -1),
@@ -424,11 +487,85 @@ export function resolveBundleConfiguration(params: {
     finalPrice: pricing.finalPrice,
     regularTotal: pricing.regularTotal,
     availableQuantity,
+    warehouseId: bundle.bundleWarehouseId,
     configurationKey,
   };
 }
 
+/** Availability for the bundle's saved default selections, shared by storefront projections. */
+export function getDefaultBundleAvailableQuantity(bundle: ResolvableBundle) {
+  try {
+    return resolveBundleConfiguration({ bundle, strictWarehouseStock: true }).availableQuantity;
+  } catch {
+    // Invalid/incomplete bundles are not sellable; checkout applies the same resolver.
+    return 0;
+  }
+}
+
+export const configurableBundleVariantSelect = {
+  id: true,
+  productId: true,
+  sku: true,
+  price: true,
+  currency: true,
+  stock: true,
+  options: true,
+  active: true,
+  isDefault: true,
+  stockLevels: { select: { warehouseId: true, quantity: true, reserved: true } },
+} satisfies Prisma.ProductVariantSelect;
+
+export const configurableBundleVariantOrderBy = [
+  { isDefault: "desc" },
+  { id: "asc" },
+] satisfies Prisma.ProductVariantOrderByWithRelationInput[];
+
+export const configurableBundleGroupSelect = {
+  id: true,
+  name: true,
+  selectionType: true,
+  pricingMode: true,
+  required: true,
+  minSelect: true,
+  maxSelect: true,
+  defaultQuantity: true,
+  minQuantity: true,
+  maxQuantity: true,
+  allowQuantityChange: true,
+  sortOrder: true,
+  options: {
+    orderBy: { sortOrder: "asc" },
+    select: {
+      id: true,
+      productId: true,
+      variantId: true,
+      isDefault: true,
+      priceAdjustment: true,
+      sortOrder: true,
+      product: {
+        select: {
+          id: true,
+          name: true,
+          type: true,
+          available: true,
+          deleted: true,
+          basePrice: true,
+          variants: {
+            where: { active: true },
+            orderBy: configurableBundleVariantOrderBy,
+            select: configurableBundleVariantSelect,
+          },
+        },
+      },
+      variant: { select: configurableBundleVariantSelect },
+    },
+  },
+} satisfies Prisma.BundleGroupSelect;
+
 export const configurableBundleInclude = {
+  assembledStockLevels: {
+    select: { warehouseId: true, quantity: true, reserved: true },
+  },
   bundleGroups: {
     orderBy: { sortOrder: "asc" },
     include: {
@@ -441,14 +578,14 @@ export const configurableBundleInclude = {
                 where: { active: true },
                 orderBy: [{ isDefault: "desc" }, { id: "asc" }],
                 include: {
-                  stockLevels: { select: { quantity: true, reserved: true } },
+                  stockLevels: { select: { warehouseId: true, quantity: true, reserved: true } },
                 },
               },
             },
           },
           variant: {
             include: {
-              stockLevels: { select: { quantity: true, reserved: true } },
+              stockLevels: { select: { warehouseId: true, quantity: true, reserved: true } },
             },
           },
         },

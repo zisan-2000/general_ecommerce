@@ -18,6 +18,9 @@ const EMPTY_INVENTORY_RESULT = {
   releasedReservationQuantity: 0,
   restoredAllocationCount: 0,
   restoredQuantity: 0,
+  restoredBundleAllocationCount: 0,
+  restoredBundleQuantity: 0,
+  restoredPreassembledBundleQuantity: 0,
 };
 
 export class OrderStatusTransitionError extends Error {

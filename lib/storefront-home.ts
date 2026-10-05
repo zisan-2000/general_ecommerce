@@ -6,6 +6,10 @@ import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-ser
 import type { FeatureControlledProductType } from "@/lib/store-features";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
+import {
+  configurableBundleGroupSelect,
+  getDefaultBundleAvailableQuantity,
+} from "@/lib/configurable-bundle";
 
 export const storefrontHomeProductSelect = {
   id: true,
@@ -31,6 +35,11 @@ export const storefrontHomeProductSelect = {
   createdAt: true,
   updatedAt: true,
   bundleStockLimit: true,
+  bundleWarehouseId: true,
+  bundleFulfillmentMode: true,
+  assembledStockLevels: {
+    select: { warehouseId: true, quantity: true, reserved: true },
+  },
   attributes: {
     orderBy: { id: "asc" as const },
     take: 4,
@@ -62,9 +71,27 @@ export const storefrontHomeProductSelect = {
       quantity: true,
       sortOrder: true,
       product: {
-        select: { id: true, name: true, image: true, available: true },
+        select: {
+          id: true,
+          name: true,
+          image: true,
+          available: true,
+          deleted: true,
+          variants: {
+            where: { active: true },
+            orderBy: [{ isDefault: "desc" as const }, { id: "asc" as const }],
+            select: {
+              isDefault: true,
+              stockLevels: { select: { warehouseId: true, quantity: true, reserved: true } },
+            },
+          },
+        },
       },
     },
+  },
+  bundleGroups: {
+    orderBy: { sortOrder: "asc" as const },
+    select: configurableBundleGroupSelect,
   },
 } as const satisfies Prisma.ProductSelect;
 
@@ -78,8 +105,12 @@ export function serializeStorefrontHomeProduct(
 ) {
   const regularBasePrice = Number(product.basePrice);
   const flashSale = resolveFlashSalePricing(product, regularBasePrice, now);
+  const bundleStock = product.type === "BUNDLE"
+    ? getDefaultBundleAvailableQuantity(product)
+    : undefined;
   return {
     ...product,
+    ...(bundleStock !== undefined ? { stock: bundleStock } : {}),
     basePrice: flashSale.salePrice,
     originalPrice: flashSale.active
       ? flashSale.regularPrice

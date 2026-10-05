@@ -98,6 +98,16 @@ export async function prepareBundleGroups(
   return {
     groups: normalized,
     defaultRegularTotal,
+    preassembledEligible: groups.length > 0 && groups.every((group) =>
+      group.selectionType === "FIXED" &&
+      group.required !== false &&
+      group.allowQuantityChange !== true &&
+      Number(group.minQuantity ?? group.defaultQuantity ?? 1) === Number(group.defaultQuantity ?? 1) &&
+      Number(group.maxQuantity ?? group.defaultQuantity ?? 1) === Number(group.defaultQuantity ?? 1) &&
+      group.options.length === 1 &&
+      group.options[0].isDefault === true &&
+      productById.get(Number(group.options[0].productId))?.type === "PHYSICAL",
+    ),
     legacyDefaultItems: Array.from(legacyDefaultItems.values()).sort(
       (left, right) => left.sortOrder - right.sortOrder,
     ),

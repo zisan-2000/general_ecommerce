@@ -14,6 +14,7 @@ import {
   Tag,
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Separator } from "@/components/ui/separator";
@@ -34,6 +35,10 @@ interface Bundle {
   gallery?: string[];
   available: boolean;
   featured: boolean;
+  bundleStockLimit: number | null;
+  bundleWarehouseId: number | null;
+  bundleFulfillmentMode: "VIRTUAL" | "PREASSEMBLED";
+  bundleWarehouse?: { id: number; name: string; code: string; isDefault: boolean } | null;
   createdAt: string;
   updatedAt: string;
   category?: {
@@ -98,6 +103,12 @@ interface Bundle {
     discountPercentage: number;
     savings: string;
   };
+  _availability: {
+    componentCapacity: number;
+    saleLimit: number | null;
+    effectiveStock: number;
+    assembledStock: { quantity: number; reserved: number } | null;
+  };
 }
 
 export default function BundleDetailPage({
@@ -114,6 +125,11 @@ export default function BundleDetailPage({
   const [loading, setLoading] = useState(true);
   const [bundle, setBundle] = useState<Bundle | null>(null);
   const [editModalOpen, setEditModalOpen] = useState(false);
+  const [assemblyQuantity, setAssemblyQuantity] = useState("1");
+  const [assembling, setAssembling] = useState(false);
+  const [adjustmentQuantity, setAdjustmentQuantity] = useState("1");
+  const [adjustmentReason, setAdjustmentReason] = useState("");
+  const [adjustingStock, setAdjustingStock] = useState(false);
 
   const fetchBundle = async () => {
     try {
@@ -161,6 +177,55 @@ export default function BundleDetailPage({
       hour: "2-digit",
       minute: "2-digit",
     });
+  };
+
+  const assembleBundle = async () => {
+    const quantity = Number(assemblyQuantity);
+    if (!Number.isSafeInteger(quantity) || quantity <= 0) {
+      toast.error(t("assembly.invalidQuantity"));
+      return;
+    }
+    setAssembling(true);
+    try {
+      const response = await fetch(`/api/admin/products/bundles/${bundleId}/assembly`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ quantity }),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || t("assembly.failed"));
+      toast.success(t("assembly.success"));
+      await fetchBundle();
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("assembly.failed"));
+    } finally {
+      setAssembling(false);
+    }
+  };
+
+  const adjustBundleStockOut = async () => {
+    const quantity = Number(adjustmentQuantity);
+    if (!Number.isSafeInteger(quantity) || quantity <= 0 || !adjustmentReason.trim()) {
+      toast.error(t("assembly.adjustmentRequired"));
+      return;
+    }
+    setAdjustingStock(true);
+    try {
+      const response = await fetch(`/api/admin/products/bundles/${bundleId}/adjustment`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ quantity, reason: adjustmentReason.trim() }),
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok) throw new Error(result.error || t("assembly.adjustmentFailed"));
+      toast.success(t("assembly.adjustmentSuccess"));
+      setAdjustmentReason("");
+      await fetchBundle();
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("assembly.adjustmentFailed"));
+    } finally {
+      setAdjustingStock(false);
+    }
   };
 
   if (loading) {
@@ -345,6 +410,104 @@ export default function BundleDetailPage({
 
         {/* Sidebar */}
         <div className="space-y-6">
+          <Card>
+            <CardHeader>
+              <CardTitle>{t("availability.title")}</CardTitle>
+            </CardHeader>
+            <CardContent className="space-y-3">
+              <p className="text-xs text-muted-foreground">
+                {bundle.bundleFulfillmentMode === "PREASSEMBLED"
+                  ? t("availability.preassembledDescription")
+                  : t("availability.description")}
+              </p>
+              <div className="flex items-center justify-between gap-3">
+                <span className="text-sm text-muted-foreground">
+                  {t("availability.warehouse")}
+                </span>
+                <span className="text-right text-sm font-medium">
+                  {bundle.bundleWarehouse
+                    ? `${bundle.bundleWarehouse.name} (${bundle.bundleWarehouse.code})`
+                    : t("availability.notSet")}
+                </span>
+              </div>
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-muted-foreground">
+                  {t("availability.componentCapacity")}
+                </span>
+                <span className="font-medium">
+                  {bundle._availability.componentCapacity}
+                </span>
+              </div>
+              {bundle.bundleFulfillmentMode === "PREASSEMBLED" && (
+                <>
+                  <div className="flex items-center justify-between">
+                    <span className="text-sm text-muted-foreground">{t("availability.assembledStock")}</span>
+                    <span className="font-medium">
+                      {Math.max(0, (bundle._availability.assembledStock?.quantity ?? 0) - (bundle._availability.assembledStock?.reserved ?? 0))}
+                    </span>
+                  </div>
+                  <div className="space-y-2 border-t pt-3">
+                    <label className="text-sm font-medium" htmlFor="bundle-assembly-quantity">{t("assembly.quantity")}</label>
+                    <div className="flex gap-2">
+                      <Input
+                        id="bundle-assembly-quantity"
+                        type="number"
+                        min="1"
+                        step="1"
+                        value={assemblyQuantity}
+                        onChange={(event) => setAssemblyQuantity(event.target.value)}
+                      />
+                      <Button onClick={() => void assembleBundle()} disabled={assembling}>
+                        {assembling ? t("assembly.assembling") : t("assembly.assemble")}
+                      </Button>
+                    </div>
+                    <p className="text-xs text-muted-foreground">{t("assembly.description")}</p>
+                  </div>
+                  <div className="space-y-2 border-t pt-3">
+                    <label className="text-sm font-medium" htmlFor="bundle-stock-out-quantity">{t("assembly.stockOutQuantity")}</label>
+                    <Input
+                      id="bundle-stock-out-quantity"
+                      type="number"
+                      min="1"
+                      step="1"
+                      value={adjustmentQuantity}
+                      onChange={(event) => setAdjustmentQuantity(event.target.value)}
+                    />
+                    <Input
+                      aria-label={t("assembly.adjustmentReason")}
+                      value={adjustmentReason}
+                      onChange={(event) => setAdjustmentReason(event.target.value)}
+                      placeholder={t("assembly.adjustmentReason")}
+                      maxLength={250}
+                    />
+                    <Button variant="outline" onClick={() => void adjustBundleStockOut()} disabled={adjustingStock}>
+                      {adjustingStock ? t("assembly.adjusting") : t("assembly.stockOut")}
+                    </Button>
+                    <p className="text-xs text-muted-foreground">{t("assembly.stockOutDescription")}</p>
+                  </div>
+                </>
+              )}
+              <div className="flex items-center justify-between">
+                <span className="text-sm text-muted-foreground">
+                  {t("availability.saleLimit")}
+                </span>
+                <span className="font-medium">
+                  {bundle._availability.saleLimit === null
+                    ? t("availability.notSet")
+                    : bundle._availability.saleLimit}
+                </span>
+              </div>
+              <div className="flex items-center justify-between border-t pt-3">
+                <span className="text-sm font-semibold">
+                  {t("availability.effectiveStock")}
+                </span>
+                <span className="text-lg font-bold text-primary">
+                  {bundle._availability.effectiveStock}
+                </span>
+              </div>
+            </CardContent>
+          </Card>
+
           {/* Status */}
           <Card>
             <CardHeader>

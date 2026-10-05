@@ -5,6 +5,9 @@ import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-ser
 import { getServerSession } from "next-auth/next";
 import { authOptions } from "@/lib/auth";
 import {
+  deductBundleInventory,
+  deductPreassembledBundleInventory,
+  reservePreassembledBundleInventory,
   deductVariantInventory,
   reserveVariantInventory,
 } from "@/lib/inventory";
@@ -37,7 +40,10 @@ import {
 } from "@/lib/order-public";
 import type { PcBuilderCheckoutBuild } from "@/lib/pc-builder-checkout";
 import { pcBuildSelectionId } from "@/lib/pc-builder-grouping";
-import { computeWarehouseAvailableStock } from "@/lib/warehouse-stock";
+import {
+  computeWarehouseAvailableStock,
+  computeWarehouseAvailableStockAtWarehouse,
+} from "@/lib/warehouse-stock";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 import {
   configurableBundleInclude,
@@ -173,9 +179,10 @@ function assertWarehouseDemandAvailable(
     product: { type: string; name: string };
     variant: {
       id: number;
-      stockLevels?: Array<{ quantity: number; reserved: number }> | null;
+      stockLevels?: Array<{ warehouseId?: number; quantity: number; reserved: number }> | null;
     };
   }>,
+  warehouseId?: number | null,
 ) {
   const demand = new Map<
     number,
@@ -184,7 +191,9 @@ function assertWarehouseDemandAvailable(
 
   for (const item of items) {
     if (item.product.type !== "PHYSICAL") continue;
-    const available = computeWarehouseAvailableStock(item.variant);
+    const available = warehouseId
+      ? computeWarehouseAvailableStockAtWarehouse(item.variant, warehouseId)
+      : computeWarehouseAvailableStock(item.variant);
     if (available === null) {
       throw new Error(`Inventory not configured for: ${item.product.name}`);
     }
@@ -557,6 +566,7 @@ export async function POST(
         }
         const inventoryDemands = configuration.components.flatMap(
           (component) => {
+            if (product.bundleFulfillmentMode === "PREASSEMBLED") return [];
             if (component.variantId === null) return [];
             const group = product.bundleGroups.find(
               (candidate: any) => candidate.id === component.groupId,
@@ -581,12 +591,14 @@ export async function POST(
                 quantity: component.quantity * item.quantity,
                 product: option.product,
                 variant,
+                warehouseId: configuration.warehouseId,
               },
             ];
           },
         );
         const bundleConfiguration = {
           ...configuration,
+          bundleFulfillmentMode: product.bundleFulfillmentMode,
           summary: configuration.components.map(
             (component) =>
               `${component.groupName}: ${component.productName}${component.variantLabel ? ` (${component.variantLabel})` : ""} × ${component.quantity}`,
@@ -607,6 +619,9 @@ export async function POST(
           bundleConfiguration,
           bundleComponents: configuration.components,
           inventoryDemands,
+          bundleWarehouseId: configuration.warehouseId,
+          tracksBundleStock: product.bundleStockLimit !== null,
+          tracksPreassembledBundleStock: product.bundleFulfillmentMode === "PREASSEMBLED",
         };
       }
 
@@ -643,16 +658,28 @@ export async function POST(
         variant: targetVariant,
         bundleConfiguration: null,
         bundleComponents: [],
+        bundleWarehouseId: null,
+        tracksBundleStock: false,
+        tracksPreassembledBundleStock: false,
         inventoryDemands:
           product.type === "PHYSICAL"
-            ? [{ quantity: item.quantity, product, variant: targetVariant }]
+            ? [{ quantity: item.quantity, product, variant: targetVariant, warehouseId: null }]
             : [],
       };
     });
     const inventoryDemands = orderItemsData.flatMap(
       (item) => item.inventoryDemands,
     );
-    assertWarehouseDemandAvailable(inventoryDemands);
+    const bundleWarehouseIds = new Set(
+      orderItemsData
+        .map((item) => item.bundleWarehouseId)
+        .filter((warehouseId): warehouseId is number => warehouseId !== null),
+    );
+    if (bundleWarehouseIds.size > 1) {
+      throw new Error("All bundles in one order must use the same fulfillment warehouse");
+    }
+    const fulfillmentWarehouseId = bundleWarehouseIds.values().next().value ?? null;
+    assertWarehouseDemandAvailable(inventoryDemands, fulfillmentWarehouseId);
 
     const shippingQuote = await calculateShippingQuote({
       country: String(country),
@@ -731,6 +758,7 @@ export async function POST(
           image: isManualPayment ? (image ?? null) : null,
           couponId: couponResult?.coupon.id ?? null,
           commercialContext: orderIdempotencyCommercialContext(idempotency),
+          fulfillmentWarehouseId,
         },
       });
 
@@ -767,6 +795,7 @@ export async function POST(
                     groupName: component.groupName,
                     productId: component.productId,
                     variantId: component.variantId,
+                    warehouseId: item.bundleWarehouseId,
                     productName: component.productName,
                     variantLabel: component.variantLabel,
                     quantityPerBundle: component.quantity,
@@ -784,6 +813,42 @@ export async function POST(
         include: orderResponseInclude(userId),
       });
 
+      for (const item of orderItemsData) {
+        if (!item.tracksBundleStock || !item.bundleWarehouseId) continue;
+        await deductBundleInventory({
+          tx,
+          orderId: o.id,
+          bundleId: item.productId,
+          warehouseId: item.bundleWarehouseId,
+          quantity: item.quantity,
+          reason: `Order #${o.id} bundle stock deduction`,
+        });
+      }
+
+      for (const item of orderItemsData) {
+        if (!item.tracksPreassembledBundleStock || !item.bundleWarehouseId) continue;
+        if (isSSLCOMMERZ) {
+          await reservePreassembledBundleInventory({
+            tx,
+            orderId: o.id,
+            bundleId: item.productId,
+            warehouseId: item.bundleWarehouseId,
+            quantity: item.quantity,
+            reason: `Order #${o.id} SSLCommerz preassembled bundle reservation`,
+            expiresAt: new Date(Date.now() + 45 * 60 * 1000),
+          });
+        } else {
+          await deductPreassembledBundleInventory({
+            tx,
+            orderId: o.id,
+            bundleId: item.productId,
+            warehouseId: item.bundleWarehouseId,
+            quantity: item.quantity,
+            reason: `Order #${o.id} preassembled bundle stock deduction`,
+          });
+        }
+      }
+
       for (const item of inventoryDemands) {
         if (isSSLCOMMERZ)
           await reserveVariantInventory({
@@ -795,6 +860,7 @@ export async function POST(
             quantity: item.quantity,
             reason: `Order #${o.id} SSLCommerz reservation`,
             expiresAt: new Date(Date.now() + 45 * 60 * 1000),
+            warehouseId: fulfillmentWarehouseId,
           });
         else
           await deductVariantInventory({
@@ -804,6 +870,7 @@ export async function POST(
             productVariantId: item.variant.id,
             quantity: item.quantity,
             reason: `Order #${o.id} checkout deduction`,
+            warehouseId: fulfillmentWarehouseId,
           });
       }
 

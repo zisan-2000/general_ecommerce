@@ -272,6 +272,7 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
         deliveryConfirmationToken: true,
         deliveryConfirmationPin: true,
         deliveryConfirmationRequestedAt: true,
+        order: { select: { fulfillmentWarehouseId: true } },
       },
     });
 
@@ -359,6 +360,12 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
     }
     if (warehouseId !== undefined) {
       if (warehouseId === null || warehouseId === "") {
+        if (existingShipment.order.fulfillmentWarehouseId) {
+          return NextResponse.json(
+            { error: "A bundle order must keep its fulfillment warehouse assigned." },
+            { status: 400 },
+          );
+        }
         if (!hasGlobalShipmentManagementAccess(access)) {
           return NextResponse.json(
             { error: "Warehouse-scoped users must keep a warehouse assigned." },
@@ -381,6 +388,15 @@ export async function PATCH(request: NextRequest, { params }: RouteParams) {
         if (!warehouseEntity) {
           return NextResponse.json(
             { error: "Warehouse not found" },
+            { status: 400 },
+          );
+        }
+        if (
+          existingShipment.order.fulfillmentWarehouseId &&
+          warehouseEntity.id !== existingShipment.order.fulfillmentWarehouseId
+        ) {
+          return NextResponse.json(
+            { error: "This order must ship from its bundle fulfillment warehouse" },
             { status: 400 },
           );
         }

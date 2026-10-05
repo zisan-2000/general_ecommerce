@@ -3,9 +3,30 @@ import { readFile } from "node:fs/promises";
 import test from "node:test";
 
 import {
+  getDefaultBundleAvailableQuantity,
+  haveSameBundleGroupDefinitions,
   resolveBundleConfiguration,
   validateBundleAdminGroups,
 } from "../lib/configurable-bundle.ts";
+
+test("sale-cap/price edits preserve identical group definitions and existing cart IDs", () => {
+  const original = [{
+    id: 71, name: "Shirts", selectionType: "FIXED", pricingMode: "AUTOMATIC", required: true,
+    minSelect: 1, maxSelect: 1, defaultQuantity: 2, minQuantity: 2, maxQuantity: 2,
+    allowQuantityChange: false, sortOrder: 0,
+    options: [{ id: 91, productId: 10, variantId: 20, isDefault: true, priceAdjustment: "0.00", sortOrder: 0 }],
+  }];
+  const prepared = structuredClone(original);
+  delete prepared[0].id;
+  delete prepared[0].options[0].id;
+  prepared[0].options[0].priceAdjustment = 0;
+  assert.equal(haveSameBundleGroupDefinitions(original, prepared), true);
+  prepared[0].defaultQuantity = prepared[0].minQuantity = prepared[0].maxQuantity = 3;
+  assert.equal(haveSameBundleGroupDefinitions(original, prepared), false);
+  prepared[0].defaultQuantity = prepared[0].minQuantity = prepared[0].maxQuantity = 2;
+  prepared[0].options[0].variantId = 21;
+  assert.equal(haveSameBundleGroupDefinitions(original, prepared), false);
+});
 
 function variant(id, productId, stock, sku, price) {
   return {
@@ -18,7 +39,7 @@ function variant(id, productId, stock, sku, price) {
     options: { Size: sku },
     active: true,
     isDefault: sku.endsWith("1L") || sku.endsWith("500G") || sku.includes("KEYA"),
-    stockLevels: [{ quantity: stock, reserved: 0 }],
+    stockLevels: [{ warehouseId: 1, quantity: stock, reserved: 0 }],
   };
 }
 
@@ -84,6 +105,7 @@ function fixture() {
     basePrice: 1000,
     currency: "BDT",
     bundleStockLimit: 5,
+    bundleWarehouseId: 1,
     bundleGroups: [
       group({
         id: 1,
@@ -125,6 +147,65 @@ test("default configuration uses defaults, base price, global limit and child in
   assert.equal(resolved.availableQuantity, 5);
   assert.deepEqual(resolved.components.map((component) => component.variantId), [101, 201, 301]);
   assert.equal(resolved.components.some((component) => component.productName === "Shampoo"), false);
+  assert.equal(getDefaultBundleAvailableQuantity(fixture()), resolved.availableQuantity);
+});
+
+test("default storefront availability uses the configured default variants and warehouse", () => {
+  const bundle = fixture();
+  bundle.bundleStockLimit = null;
+  assert.equal(getDefaultBundleAvailableQuantity(bundle), 8);
+
+  bundle.bundleWarehouseId = 2;
+  assert.equal(getDefaultBundleAvailableQuantity(bundle), 0);
+});
+
+test("warehouse selection limits bundle stock to that warehouse and is required at checkout", () => {
+  const elsewhere = fixture();
+  elsewhere.bundleWarehouseId = 2;
+  const result = resolveBundleConfiguration({ bundle: elsewhere, strictWarehouseStock: true });
+  assert.equal(result.warehouseId, 2);
+  assert.equal(result.availableQuantity, 0);
+
+  const unassigned = fixture();
+  unassigned.bundleWarehouseId = null;
+  assert.throws(
+    () => resolveBundleConfiguration({ bundle: unassigned, strictWarehouseStock: true }),
+    /fulfillment warehouse is not configured/,
+  );
+});
+
+test("preassembled availability is based on finished warehouse stock, not component stock", () => {
+  const bundle = fixture();
+  bundle.bundleFulfillmentMode = "PREASSEMBLED";
+  bundle.bundleGroups = bundle.bundleGroups.filter((item) => item.options.some((choice) => choice.isDefault)).map((item) => ({
+    ...item,
+    selectionType: "FIXED",
+    required: true,
+    allowQuantityChange: false,
+    minQuantity: item.defaultQuantity,
+    maxQuantity: item.defaultQuantity,
+    options: item.options.filter((choice) => choice.isDefault),
+  }));
+  bundle.assembledStockLevels = [{ warehouseId: 1, quantity: 6, reserved: 2 }];
+  bundle.bundleStockLimit = 5;
+  assert.equal(getDefaultBundleAvailableQuantity(bundle), 4);
+
+  bundle.assembledStockLevels[0].quantity = 1;
+  assert.equal(getDefaultBundleAvailableQuantity(bundle), 0);
+
+  bundle.assembledStockLevels[0].warehouseId = 2;
+  bundle.assembledStockLevels[0].quantity = 20;
+  bundle.assembledStockLevels[0].reserved = 0;
+  assert.equal(getDefaultBundleAvailableQuantity(bundle), 0);
+});
+
+test("selectable compositions cannot be treated as preassembled stock", () => {
+  const bundle = fixture();
+  bundle.bundleFulfillmentMode = "PREASSEMBLED";
+  assert.throws(
+    () => resolveBundleConfiguration({ bundle, strictWarehouseStock: true }),
+    /fixed, non-editable physical composition/,
+  );
 });
 
 test("variant and product choices change price and configuration-specific stock", () => {
@@ -271,6 +352,33 @@ test("admin validation enforces group semantics and variant-selector product ide
   assert.match(invalid.errors.join("\n"), /must be required/);
 });
 
+test("admin bundle details distinguish component availability from the optional sale cap", async () => {
+  const [api, detailPage, form, messagesEn, messagesBn] = await Promise.all([
+    readFile(new URL("../app/api/admin/products/bundles/[id]/route.ts", import.meta.url), "utf8"),
+    readFile(new URL("../app/admin/operations/products/bundles/[id]/page.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../components/admin/products/bundles/BundleFormModal.tsx", import.meta.url), "utf8"),
+    readFile(new URL("../messages/en.json", import.meta.url), "utf8"),
+    readFile(new URL("../messages/bn.json", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(api, /componentCapacity/);
+  assert.match(api, /saleLimit:\s*bundle\.bundleStockLimit/);
+  assert.match(api, /effectiveStock:\s*getDefaultBundleAvailableQuantity/);
+  assert.match(detailPage, /bundle\._availability\.componentCapacity/);
+  assert.match(detailPage, /bundle\._availability\.saleLimit\s*===\s*null/);
+  assert.match(detailPage, /bundle\._availability\.effectiveStock/);
+  assert.match(form, /formData\.bundleStockLimit\s*===\s*""/);
+  assert.match(form, /t\("availability\.effectiveStock"\)/);
+  assert.equal(
+    JSON.parse(messagesEn).AdminBundles.detail.availability.effectiveStock,
+    "Currently sellable",
+  );
+  assert.equal(
+    JSON.parse(messagesBn).AdminBundles.detail.availability.effectiveStock,
+    "বর্তমানে বিক্রয়যোগ্য",
+  );
+});
+
 test("cart, order, warehouse, admin and storefront retain the configurable-bundle contract", async () => {
   const [cart, order, warehouse, adminCreate, adminUpdate, shipment, categoryPicker, catalogSearch, customerConfigurator, messagesEn, messagesBn] = await Promise.all([
     readFile(new URL("../app/api/cart/route-core.ts", import.meta.url), "utf8"),
@@ -308,6 +416,6 @@ test("cart, order, warehouse, admin and storefront retain the configurable-bundl
   assert.match(catalogSearch, /stockLevels/);
   assert.match(catalogSearch, /reserved/);
   assert.match(customerConfigurator, /calculateConfiguredBundlePricing/);
-  assert.match(customerConfigurator, /Configuration ready/);
+  assert.match(customerConfigurator, /t\("ready"\)/);
   assert.match(customerConfigurator, /selectionLimitReached/);
 });

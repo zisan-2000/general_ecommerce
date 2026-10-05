@@ -56,14 +56,14 @@ test("physical stock counts only active non-negative variant stock", () => {
   assert.equal(stock, 3);
 });
 
-test("bundle and non-inventory product stock use their own rules", () => {
+test("incomplete bundle configuration is unavailable and non-inventory stock uses its own rule", () => {
   assert.equal(
     getProductAvailableStock({
       type: "BUNDLE",
       bundleStockLimit: 6,
       variants: [],
     }),
-    6,
+    0,
   );
   assert.equal(
     getProductAvailableStock({
@@ -72,6 +72,17 @@ test("bundle and non-inventory product stock use their own rules", () => {
       variants: [],
     }),
     99,
+  );
+  assert.equal(
+    getProductAvailableStock({
+      type: "BUNDLE",
+      bundleStockLimit: 4,
+      bundleFulfillmentMode: "PREASSEMBLED",
+      bundleWarehouseId: 1,
+      assembledStockLevels: [{ warehouseId: 1, quantity: 5, reserved: 2 }],
+      variants: [],
+    }),
+    3,
   );
 });
 

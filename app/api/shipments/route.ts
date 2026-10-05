@@ -266,7 +266,7 @@ export async function POST(request: NextRequest) {
     const orderId = Number(body.orderId);
     const courierId = body.courierId ? Number(body.courierId) : null;
     const courierName = body.courier?.trim();
-    const warehouseId =
+    const requestedWarehouseId =
       body.warehouseId === null || body.warehouseId === undefined
         ? null
         : Number(body.warehouseId);
@@ -281,26 +281,11 @@ export async function POST(request: NextRequest) {
         { status: 400 },
       );
     }
-    if (warehouseId !== null && Number.isNaN(warehouseId)) {
+    if (requestedWarehouseId !== null && Number.isNaN(requestedWarehouseId)) {
       return NextResponse.json(
         { error: "Invalid warehouseId" },
         { status: 400 },
       );
-    }
-
-    if (!hasGlobalShipmentManagementAccess(access)) {
-      if (!warehouseId || Number.isNaN(warehouseId)) {
-        return NextResponse.json(
-          {
-            error:
-              "warehouseId is required for warehouse-scoped shipment creation",
-          },
-          { status: 400 },
-        );
-      }
-      if (!canAccessShipmentWarehouse(access, warehouseId)) {
-        return NextResponse.json({ error: "Forbidden" }, { status: 403 });
-      }
     }
 
     const [order, existingShipment] = await Promise.all([
@@ -340,6 +325,28 @@ export async function POST(request: NextRequest) {
 
     if (!order) {
       return NextResponse.json({ error: "Order not found" }, { status: 404 });
+    }
+    const warehouseId = requestedWarehouseId ?? order.fulfillmentWarehouseId;
+    if (
+      order.fulfillmentWarehouseId &&
+      requestedWarehouseId &&
+      requestedWarehouseId !== order.fulfillmentWarehouseId
+    ) {
+      return NextResponse.json(
+        { error: "This order must ship from its bundle fulfillment warehouse" },
+        { status: 400 },
+      );
+    }
+    if (!hasGlobalShipmentManagementAccess(access)) {
+      if (!warehouseId || Number.isNaN(warehouseId)) {
+        return NextResponse.json(
+          { error: "warehouseId is required for warehouse-scoped shipment creation" },
+          { status: 400 },
+        );
+      }
+      if (!canAccessShipmentWarehouse(access, warehouseId)) {
+        return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+      }
     }
     if (!courier || !courier.isActive) {
       return NextResponse.json(

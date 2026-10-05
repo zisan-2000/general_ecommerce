@@ -1,4 +1,8 @@
+import { loadEnvConfig } from "@next/env";
 import { prisma } from "@/lib/prisma";
+import { configurableBundleInclude, resolveBundleConfiguration } from "@/lib/configurable-bundle";
+
+loadEnvConfig(process.cwd());
 
 async function main() {
   const bundles = await prisma.product.findMany({
@@ -8,6 +12,9 @@ async function main() {
       name: true,
       sku: true,
       available: true,
+      bundleWarehouseId: true,
+      bundleFulfillmentMode: true,
+      bundleWarehouse: { select: { id: true } },
       variants: { select: { id: true } },
       bundleGroups: {
         orderBy: { sortOrder: "asc" },
@@ -33,15 +40,12 @@ async function main() {
     },
   });
 
-  if (bundles.length === 0) {
-    throw new Error("No bundle product exists. Run npm run seed:storefront if demo data is required.");
-  }
-
   const errors: string[] = [];
   for (const bundle of bundles) {
     if (bundle.variants.length > 0) {
-      errors.push(`${bundle.name}: parent bundle must remain virtual and cannot own inventory variants`);
+      errors.push(`${bundle.name}: bundle inventory must not use parent product variants`);
     }
+    if (!bundle.bundleWarehouseId || !bundle.bundleWarehouse) errors.push(`${bundle.name}: fulfillment warehouse is missing`);
     if (bundle.bundleGroups.length < 2) {
       errors.push(`${bundle.name}: requires at least two selection groups`);
     }
@@ -80,12 +84,32 @@ async function main() {
   `;
   if (indexes.length !== 1) errors.push("Configured-bundle cart uniqueness index is missing");
 
+  const constraints = await prisma.$queryRaw<Array<{ conname: string }>>`
+    SELECT conname FROM pg_constraint WHERE conname IN (
+      'BundleStockLevel_quantity_nonnegative_check',
+      'BundleStockLevel_reserved_nonnegative_check',
+      'BundleStockLevel_reserved_lte_quantity_check',
+      'BundleStockReservation_quantity_positive_check'
+    )
+  `;
+  if (constraints.length !== 4) errors.push("Finished bundle stock/reservation safety constraints are missing");
+  const invalidStock = await prisma.bundleStockLevel.count({ where: { OR: [{ quantity: { lt: 0 } }, { reserved: { lt: 0 } }] } });
+  if (invalidStock) errors.push("Invalid finished bundle stock records exist");
+  for (const bundle of bundles) {
+    const configuration = await prisma.product.findUniqueOrThrow({ where: { id: bundle.id }, include: configurableBundleInclude });
+    try {
+      resolveBundleConfiguration({ bundle: configuration, strictWarehouseStock: true });
+    } catch (error) {
+      errors.push(`${bundle.name}: ${error instanceof Error ? error.message : String(error)}`);
+    }
+  }
+
   if (errors.length > 0) {
     throw new Error(`Configurable bundle database verification failed:\n- ${errors.join("\n- ")}`);
   }
 
   console.log(
-    `✅ Configurable bundle database ready: ${bundles.length} bundle(s), ${bundles.reduce(
+    `✅ Bundle database infrastructure verified (warehouse, finished stock, reservations, cart uniqueness): ${bundles.length} bundle(s), ${bundles.reduce(
       (total, bundle) => total + bundle.bundleGroups.length,
       0,
     )} group(s).`,

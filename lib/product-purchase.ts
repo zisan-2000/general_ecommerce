@@ -4,7 +4,7 @@ export type ProductPurchaseVariant = {
   price: number;
   stock: number;
   options: unknown;
-  colorImage: string | null;
+  colorImage?: string | null;
   isDefault: boolean;
   active: boolean;
 };
@@ -22,6 +22,11 @@ export type ProductPurchaseData = {
   ratingAvg: number;
   ratingCount: number;
   bundleStockLimit: number | null;
+  bundleWarehouseId?: number | null;
+  bundleFulfillmentMode?: "VIRTUAL" | "PREASSEMBLED";
+  assembledStockQuantity?: number;
+  assembledStockReserved?: number;
+  assembledStockLevels?: Array<{ warehouseId: number; quantity: number; reserved: number }>;
   bundleGroups: Array<{
     id: number;
     name: string;
@@ -72,11 +77,22 @@ export function getDefaultPurchaseVariant(variants: ProductPurchaseVariant[]) {
 }
 
 export function getProductAvailableStock(
-  product: Pick<ProductPurchaseData, "type" | "bundleStockLimit" | "bundleGroups" | "variants">,
+  product: Pick<ProductPurchaseData, "type" | "bundleStockLimit" | "bundleGroups" | "variants" | "bundleFulfillmentMode" | "bundleWarehouseId" | "assembledStockQuantity" | "assembledStockReserved" | "assembledStockLevels">,
 ) {
   if (product.type === "BUNDLE") {
+    if (product.bundleFulfillmentMode === "PREASSEMBLED") {
+      const level = product.assembledStockLevels?.find(
+        (candidate) => candidate.warehouseId === product.bundleWarehouseId,
+      );
+      const stock = Math.max(
+        0,
+        Number(product.assembledStockQuantity ?? level?.quantity ?? 0) -
+          Number(product.assembledStockReserved ?? level?.reserved ?? 0),
+      );
+      return product.bundleStockLimit === null ? stock : Math.min(stock, product.bundleStockLimit);
+    }
     const demand = new Map<number, { stock: number; quantity: number }>();
-    for (const group of product.bundleGroups) {
+    for (const group of product.bundleGroups ?? []) {
       for (const option of group.options.filter((candidate) => candidate.isDefault)) {
         if (option.product.type !== "PHYSICAL" || !option.variant) continue;
         const current = demand.get(option.variant.id) ?? {
@@ -114,7 +130,15 @@ export function toProductPurchaseData(product: ProductPurchaseData): ProductPurc
     ratingAvg: product.ratingAvg,
     ratingCount: product.ratingCount,
     bundleStockLimit: product.bundleStockLimit,
-    bundleGroups: product.bundleGroups.map((group) => ({
+    bundleWarehouseId: product.bundleWarehouseId ?? null,
+    bundleFulfillmentMode: product.bundleFulfillmentMode ?? "VIRTUAL",
+    assembledStockQuantity: product.assembledStockQuantity ?? product.assembledStockLevels?.find(
+      (level) => level.warehouseId === product.bundleWarehouseId,
+    )?.quantity ?? 0,
+    assembledStockReserved: product.assembledStockReserved ?? product.assembledStockLevels?.find(
+      (level) => level.warehouseId === product.bundleWarehouseId,
+    )?.reserved ?? 0,
+    bundleGroups: (product.bundleGroups ?? []).map((group) => ({
       ...group,
       options: group.options.map((option) => ({
         ...option,

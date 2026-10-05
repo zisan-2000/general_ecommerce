@@ -1,4 +1,5 @@
 export type WarehouseStockLevelInput = {
+  warehouseId?: number;
   quantity: number;
   reserved: number;
 };
@@ -18,6 +19,16 @@ export function computeWarehouseAvailableStock(variant: {
   stockLevels?: WarehouseStockLevelInput[] | null;
 }) {
   const levels = Array.isArray(variant.stockLevels) ? variant.stockLevels : [];
+  return levels.length > 0 ? computeAvailableStock(levels) : null;
+}
+
+export function computeWarehouseAvailableStockAtWarehouse(
+  variant: { stockLevels?: WarehouseStockLevelInput[] | null },
+  warehouseId: number,
+) {
+  const levels = Array.isArray(variant.stockLevels)
+    ? variant.stockLevels.filter((level) => level.warehouseId === warehouseId)
+    : [];
   return levels.length > 0 ? computeAvailableStock(levels) : null;
 }
 

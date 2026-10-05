@@ -103,6 +103,7 @@ const GroupCatalogPicker = memo(function GroupCatalogPicker({
   groupIndex,
   categories,
   defaultCategoryId,
+  warehouseId,
   onCategoryChange,
   onAdd,
 }: {
@@ -110,6 +111,7 @@ const GroupCatalogPicker = memo(function GroupCatalogPicker({
   groupIndex: number;
   categories: CatalogCategory[];
   defaultCategoryId: string;
+  warehouseId: string;
   onCategoryChange: (groupIndex: number, categoryId: string) => void;
   onAdd: (groupIndex: number, choice: CatalogChoice) => void;
 }) {
@@ -122,7 +124,7 @@ const GroupCatalogPicker = memo(function GroupCatalogPicker({
   const categoryId = group.catalogCategoryId || defaultCategoryId;
 
   useEffect(() => {
-    if (!categoryId) {
+    if (!categoryId || !warehouseId) {
       setProducts([]);
       setLoadError("");
       setLoading(false);
@@ -133,7 +135,12 @@ const GroupCatalogPicker = memo(function GroupCatalogPicker({
       setLoading(true);
       setLoadError("");
       try {
-        const params = new URLSearchParams({ search, categoryIds: categoryId, limit: "30" });
+        const params = new URLSearchParams({
+          search,
+          categoryIds: categoryId,
+          warehouseId,
+          limit: "30",
+        });
         const response = await fetch(
           `/api/admin/operations/products/bundles/search-products?${params}`,
           { signal: controller.signal },
@@ -155,7 +162,7 @@ const GroupCatalogPicker = memo(function GroupCatalogPicker({
       window.clearTimeout(timer);
       controller.abort();
     };
-  }, [categoryId, retryNonce, search]);
+  }, [categoryId, retryNonce, search, t, warehouseId]);
 
   const choices = useMemo(() => {
     const selectedProductId = group.options[0]?.productId;
@@ -213,7 +220,11 @@ const GroupCatalogPicker = memo(function GroupCatalogPicker({
         </div>
       </div>
 
-      {!categoryId ? (
+      {!warehouseId ? (
+        <p className="rounded border border-dashed p-3 text-sm text-muted-foreground">
+          {t("chooseWarehouseHint")}
+        </p>
+      ) : !categoryId ? (
         <p className="rounded border border-dashed p-3 text-sm text-muted-foreground">
           {t("chooseCategoryHint")}
         </p>
@@ -279,6 +290,7 @@ const GroupCatalogPicker = memo(function GroupCatalogPicker({
   previous.groupIndex === next.groupIndex &&
   previous.categories === next.categories &&
   previous.defaultCategoryId === next.defaultCategoryId &&
+  previous.warehouseId === next.warehouseId &&
   previous.onCategoryChange === next.onCategoryChange &&
   previous.onAdd === next.onAdd,
 );
@@ -288,11 +300,13 @@ function ConfigurableBundleGroupBuilder({
   onChange,
   defaultCategoryId = "",
   categories = [],
+  warehouseId,
 }: {
   groups: BundleBuilderGroup[];
   onChange: (groups: BundleBuilderGroup[]) => void;
   defaultCategoryId?: string;
   categories?: CatalogCategory[];
+  warehouseId: string;
 }) {
   const t = useTranslations("AdminBundles.builder");
   const groupsRef = useRef(groups);
@@ -461,7 +475,13 @@ function ConfigurableBundleGroupBuilder({
                   </div>
                   <div><Label htmlFor={`bundle-group-min-${groupIndex}`}>{t("fields.minChoices")}</Label><Input id={`bundle-group-min-${groupIndex}`} type="number" min={group.required ? 1 : 0} value={group.minSelect} disabled={group.selectionType === "FIXED" || group.selectionType === "OPTIONAL"} onChange={(event) => updateGroup(groupIndex, { minSelect: Number(event.target.value) })} /></div>
                   <div><Label htmlFor={`bundle-group-max-${groupIndex}`}>{t("fields.maxChoices")}</Label><Input id={`bundle-group-max-${groupIndex}`} type="number" min="1" value={group.maxSelect} disabled={group.selectionType === "FIXED"} onChange={(event) => updateGroup(groupIndex, { maxSelect: Number(event.target.value) })} /></div>
-                  <div><Label htmlFor={`bundle-group-default-qty-${groupIndex}`}>{t("fields.defaultQuantity")}</Label><Input id={`bundle-group-default-qty-${groupIndex}`} type="number" min="1" value={group.defaultQuantity} onChange={(event) => updateGroup(groupIndex, { defaultQuantity: Number(event.target.value) })} /></div>
+                  <div><Label htmlFor={`bundle-group-default-qty-${groupIndex}`}>{t("fields.defaultQuantity")}</Label><Input id={`bundle-group-default-qty-${groupIndex}`} type="number" min="1" value={group.defaultQuantity} onChange={(event) => {
+                    const defaultQuantity = Number(event.target.value);
+                    updateGroup(groupIndex, {
+                      defaultQuantity,
+                      ...(!group.allowQuantityChange ? { minQuantity: defaultQuantity, maxQuantity: defaultQuantity } : {}),
+                    });
+                  }} /></div>
                   <label className="flex items-center gap-2 rounded border px-3 py-2 text-sm"><Switch aria-label={t("fields.allowQuantityAria", { number: groupIndex + 1 })} checked={group.allowQuantityChange} onCheckedChange={(allowQuantityChange) => updateGroup(groupIndex, { allowQuantityChange, maxQuantity: allowQuantityChange ? Math.max(2, group.maxQuantity) : group.defaultQuantity, minQuantity: allowQuantityChange ? group.minQuantity : group.defaultQuantity })} />{t("fields.customerQuantity")}</label>
                 </div>
                 {group.allowQuantityChange ? <div className="grid max-w-sm grid-cols-2 gap-3"><div><Label htmlFor={`bundle-group-min-qty-${groupIndex}`}>{t("fields.minQuantity")}</Label><Input id={`bundle-group-min-qty-${groupIndex}`} type="number" min="1" value={group.minQuantity} onChange={(event) => updateGroup(groupIndex, { minQuantity: Number(event.target.value) })} /></div><div><Label htmlFor={`bundle-group-max-qty-${groupIndex}`}>{t("fields.maxQuantity")}</Label><Input id={`bundle-group-max-qty-${groupIndex}`} type="number" min="1" value={group.maxQuantity} onChange={(event) => updateGroup(groupIndex, { maxQuantity: Number(event.target.value) })} /></div></div> : null}
@@ -472,7 +492,8 @@ function ConfigurableBundleGroupBuilder({
               group={group}
               groupIndex={groupIndex}
               categories={categories}
-              defaultCategoryId={defaultCategoryId}
+            defaultCategoryId={defaultCategoryId}
+            warehouseId={warehouseId}
               onCategoryChange={changeCatalogCategory}
               onAdd={addOption}
             />

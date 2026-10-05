@@ -7452,6 +7452,34 @@
         "created": "创建时间",
         "updated": "上次更新"
       },
+      "availability": {
+        "title": "套装库存明细",
+        "description": "这是虚拟套装。组件仍记录在各自商品的库存中，下单时才从此仓库扣减。销售上限是额外限制，不是组件库存。",
+        "preassembledDescription": "此套装会提前组装。组装时扣减组件库存，下单时扣减成品套装库存。",
+        "warehouse": "履约仓库",
+        "componentCapacity": "组件可支持数量",
+        "assembledStock": "成品套装库存",
+        "saleLimit": "可选套装销售上限",
+        "notSet": "未设置",
+        "effectiveStock": "当前可售数量"
+      },
+      "assembly": {
+        "quantity": "组装数量",
+        "assemble": "组装库存",
+        "assembling": "正在组装...",
+        "description": "从此仓库扣除固定组件数量，并将成品套装增加到库存。",
+        "success": "套装组装已成功记录",
+        "invalidQuantity": "请输入大于零的整数",
+        "failed": "套装组装失败",
+        "stockOutQuantity": "要移除的成品数量",
+        "adjustmentReason": "原因（如损坏、过期）",
+        "stockOut": "登记出库",
+        "adjusting": "正在登记...",
+        "stockOutDescription": "扣除未预留的成品（例如损坏或过期库存），并记录原因。",
+        "adjustmentRequired": "请输入正整数和原因",
+        "adjustmentSuccess": "成品套装出库已记录",
+        "adjustmentFailed": "套装出库失败"
+      },
       "pricing": {
         "title": "定价详情",
         "regularTotal": "常规总价：",
@@ -7493,6 +7521,14 @@
         "noBrand": "无品牌",
         "vatClass": "增值税类别",
         "vatClassPlaceholder": "选择增值税类别",
+        "bundleWarehouse": "履约仓库 *",
+        "bundleWarehousePlaceholder": "选择用于发货此套装的仓库",
+        "fulfillmentMode": "履约模式",
+        "virtualBundle": "虚拟（下单时组装）",
+        "preassembledBundle": "预先组装（成品库存）",
+        "virtualHint": "组件保留在各自库存中，并在创建订单时扣减。",
+        "preassembledHint": "组装时扣减固定实体组件；订单扣减成品套装库存。",
+        "defaultWarehouse": "默认",
         "noVatClass": "无增值税类别",
         "available": "可用",
         "featured": "精选"
@@ -7505,10 +7541,12 @@
         "outOfStock": "部分所选实体商品已缺货"
       },
       "stock": {
-        "fieldLabel": "套装库存",
+        "fieldLabel": "套装销售余额（可选）",
+        "preassembledSaleCapHint": "可选的额外销售上限。成品套装库存代表实际现货；留空则仅按该库存销售。",
+        "warehouseStockHint": "组件库存和订单扣减均按所选仓库计算。组件商品的入库和出库请在库存管理中操作。",
         "maxPlaceholder": "最大 {count}",
         "calculatedPlaceholder": "根据所选商品计算",
-        "saleCapHint": "可选的全局销售上限。留空则使用根据所选组件计算出的容量。",
+        "saleCapHint": "此仓库的可选套装销售余额。下单时扣减，取消时恢复，所有变更都会记录。留空则仅按组件库存计算。",
         "summaryTitle": "套装库存摘要",
         "summaryDescription": "基于可用组件库存的默认配置容量",
         "maxBuildable": "最多可组装套装：{count}",
@@ -7595,6 +7633,7 @@
         "skuRequired": "必须填写套装 SKU",
         "descriptionRequired": "必须填写套装描述",
         "categoryRequired": "请选择套装分类",
+        "warehouseRequired": "请选择履约仓库",
         "completeGroups": "请至少添加两个完整的选择组",
         "fixConfiguration": "请修正套装配置"
       }
@@ -7655,6 +7694,7 @@
         "searchLabel": "查找商品或变体",
         "searchPlaceholder": "搜索商品名称、SKU 或变体",
         "chooseCategoryHint": "为此分组选择分类以浏览可用商品。",
+        "chooseWarehouseHint": "查看组件库存前，请先选择套装的履约仓库。",
         "retry": "重试",
         "fixedComplete": "固定分组已经有一个允许的商品。",
         "loading": "正在加载商品...",

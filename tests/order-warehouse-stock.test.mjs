@@ -130,3 +130,40 @@ test("database-backed availability and boolean guard share the same rules", asyn
   assert.equal(await canWarehouseFulfillOrder(client, 50, 2), false);
   assert.equal(await canWarehouseFulfillOrder(client, 50, 999), false);
 });
+
+test("preassembled shipments use finished-stock allocations and the saved warehouse", () => {
+  const availability = buildOrderWarehouseStockAvailability({
+    warehouseIds: [1, 2], fulfillmentWarehouseId: 1,
+    demand: { requiredUnits: 2, hasUntrackedUnits: false, byVariant: new Map(), byBundle: new Map([[44, 2]]) },
+    stockLevels: [], reservations: [], movements: [],
+    bundleStockLevels: [{ warehouseId: 1, productId: 44, quantity: 0, reserved: 0 }, { warehouseId: 2, productId: 44, quantity: 100, reserved: 0 }],
+    bundleMovements: [{ warehouseId: 1, productId: 44, change: -2 }],
+  });
+  assert.equal(availability.requiredUnits, 2);
+  assert.equal(availability.warehouses[0].canFulfill, true);
+  assert.equal(availability.warehouses[1].canFulfill, false);
+});
+
+test("preassembled reservations belong only to their order", () => {
+  const params = {
+    warehouseIds: [1],
+    demand: { requiredUnits: 2, hasUntrackedUnits: false, byVariant: new Map(), byBundle: new Map([[44, 2]]) },
+    stockLevels: [], reservations: [], movements: [],
+    bundleStockLevels: [{ warehouseId: 1, productId: 44, quantity: 3, reserved: 3 }],
+  };
+  assert.equal(buildOrderWarehouseStockAvailability(params).warehouses[0].canFulfill, false);
+  assert.equal(buildOrderWarehouseStockAvailability({ ...params, bundleReservations: [{ warehouseId: 1, productId: 44, quantity: 2 }] }).warehouses[0].canFulfill, true);
+});
+
+test("historical assembled-stock logs keep shipment checks correct after a product mode edit", async () => {
+  const client = createClient();
+  client.order = { findUnique: async () => ({ fulfillmentWarehouseId: 1 }) };
+  client.orderItem.findMany = async () => [{ productId: 44, quantity: 2, variantId: null, bundleConfiguration: {}, product: { type: "BUNDLE", bundleFulfillmentMode: "VIRTUAL" } }];
+  client.orderBundleComponent = { findMany: async () => [{ variantId: 101, quantityPerBundle: 2, orderItem: { productId: 44, quantity: 2 }, product: { type: "PHYSICAL" } }] };
+  client.inventoryLog.findMany = async () => [{ productId: 44, warehouseId: 1, variantId: null, change: -2, reason: "PREASSEMBLED_BUNDLE_STOCK: checkout" }];
+  client.bundleStockLevel = { findMany: async () => [{ productId: 44, warehouseId: 1, quantity: 0, reserved: 0 }] };
+  const availability = await getOrderWarehouseStockAvailability(client, 50);
+  assert.equal(availability.requiredUnits, 2);
+  assert.equal(availability.warehouses[0].canFulfill, true);
+  assert.equal(availability.warehouses[1].canFulfill, false);
+});

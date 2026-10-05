@@ -5,15 +5,18 @@ import { gateStoreFeature } from "@/lib/store-feature-gates-server";
 import { requireProductManager } from "@/lib/product-management-access";
 import { normalizeBundleSku, normalizeBundleStockQuantity } from "@/lib/bundle-inventory";
 import { calculateBundleBasePrice, prepareBundleGroups } from "@/lib/configurable-bundle-admin";
+import { getDefaultBundleAvailableQuantity, haveSameBundleGroupDefinitions } from "@/lib/configurable-bundle";
 
 const detailInclude = {
   category: true,
   brand: true,
   VatClass: true,
+  bundleWarehouse: { select: { id: true, name: true, code: true, isDefault: true } },
   variants: {
     include: { stockLevels: { include: { warehouse: true } } },
     orderBy: { isDefault: "desc" as const },
   },
+  assembledStockLevels: { include: { warehouse: { select: { id: true, name: true, code: true } } } },
   bundleItems: {
     include: {
       product: {
@@ -22,7 +25,7 @@ const detailInclude = {
           brand: true,
           variants: {
             where: { active: true },
-            include: { stockLevels: { select: { quantity: true, reserved: true } } },
+            include: { stockLevels: { select: { warehouseId: true, quantity: true, reserved: true } } },
             orderBy: { isDefault: "desc" as const },
           },
         },
@@ -42,13 +45,13 @@ const detailInclude = {
               brand: true,
               variants: {
                 where: { active: true },
-                include: { stockLevels: { select: { quantity: true, reserved: true } } },
+                include: { stockLevels: { select: { warehouseId: true, quantity: true, reserved: true } } },
                 orderBy: { isDefault: "desc" as const },
               },
             },
           },
           variant: {
-            include: { stockLevels: { select: { quantity: true, reserved: true } } },
+            include: { stockLevels: { select: { warehouseId: true, quantity: true, reserved: true } } },
           },
         },
       },
@@ -89,8 +92,21 @@ function withStats(bundle: any) {
   }, 0);
   const discountAmount = Math.max(0, regularTotal - Number(bundle.basePrice));
   const discountPercentage = regularTotal > 0 ? (discountAmount / regularTotal) * 100 : 0;
+  const componentCapacity = getDefaultBundleAvailableQuantity({
+    ...bundle,
+    bundleStockLimit: null,
+    bundleFulfillmentMode: "VIRTUAL",
+  });
   return {
     ...bundle,
+    _availability: {
+      componentCapacity,
+      saleLimit: bundle.bundleStockLimit,
+      effectiveStock: getDefaultBundleAvailableQuantity(bundle),
+      assembledStock: bundle.assembledStockLevels.find(
+        (level: any) => level.warehouseId === bundle.bundleWarehouseId,
+      ) ?? null,
+    },
     _stats: {
       itemCount: bundle.bundleGroups.length,
       choiceCount: bundle.bundleGroups.reduce((total: number, group: any) => total + group.options.length, 0),
@@ -134,19 +150,43 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
   try {
     const existing = await prisma.product.findFirst({
       where: { id: bundleId, type: "BUNDLE", deleted: false },
-      select: { id: true, slug: true, sku: true },
+      select: {
+        id: true,
+        slug: true,
+        sku: true,
+        bundleStockLimit: true,
+        bundleWarehouseId: true,
+        bundleFulfillmentMode: true,
+        _count: { select: { orderItems: true } },
+      },
     });
     if (!existing) return NextResponse.json({ error: "Bundle not found" }, { status: 404 });
     const body = await request.json();
     const name = String(body.name || "").trim();
     const description = String(body.description || "").trim();
     const categoryId = Number(body.categoryId);
-    if (!name || !description || !Number.isInteger(categoryId) || categoryId <= 0) {
-      return NextResponse.json({ error: "Name, description and category are required" }, { status: 400 });
+    const bundleWarehouseId = Number(body.bundleWarehouseId);
+    if (
+      !name ||
+      !description ||
+      !Number.isInteger(categoryId) ||
+      categoryId <= 0 ||
+      !Number.isInteger(bundleWarehouseId) ||
+      bundleWarehouseId <= 0
+    ) {
+      return NextResponse.json({ error: "Name, description, category and fulfillment warehouse are required" }, { status: 400 });
     }
     const requestedLimit = normalizeBundleStockQuantity(body.bundleStockLimit);
     if (requestedLimit === undefined) {
       return NextResponse.json({ error: "Bundle stock limit must be a whole number of zero or more" }, { status: 400 });
+    }
+    const fulfillmentMode = body.bundleFulfillmentMode === "PREASSEMBLED"
+      ? "PREASSEMBLED"
+      : body.bundleFulfillmentMode == null || body.bundleFulfillmentMode === "VIRTUAL"
+        ? "VIRTUAL"
+        : null;
+    if (!fulfillmentMode) {
+      return NextResponse.json({ error: "Invalid bundle fulfillment mode" }, { status: 400 });
     }
     const slug = name.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/(^-|-$)/g, "");
     const sku = normalizeBundleSku(body.sku, slug, existing.sku);
@@ -157,15 +197,48 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
     if (duplicate) return NextResponse.json({ error: "Another product already uses this name or SKU" }, { status: 409 });
     const rawGroups = Array.isArray(body.groups) ? body.groups : legacyItemsToGroups(body.items);
     const updated = await prisma.$transaction(async (tx) => {
+      const warehouse = await tx.warehouse.findUnique({
+        where: { id: bundleWarehouseId },
+        select: { id: true },
+      });
+      if (!warehouse) throw new Error("Please select a valid fulfillment warehouse");
+      if (
+        existing.bundleWarehouseId &&
+        existing.bundleWarehouseId !== bundleWarehouseId &&
+        existing._count.orderItems > 0
+      ) {
+        throw new Error("A bundle with order history cannot be moved to another warehouse");
+      }
       const prepared = await prepareBundleGroups(tx, rawGroups);
+      if (fulfillmentMode === "PREASSEMBLED" && !prepared.preassembledEligible) {
+        throw new Error("Preassembled bundles require a fixed composition containing only physical products");
+      }
+      const existingAssembledStock = await tx.bundleStockLevel.findFirst({
+        where: { productId: bundleId, OR: [{ quantity: { gt: 0 } }, { reserved: { gt: 0 } }] },
+        select: { id: true },
+      });
+      const previousGroups = await tx.bundleGroup.findMany({
+        where: { bundleId },
+        include: { options: true },
+      });
+      const groupsChanged = !haveSameBundleGroupDefinitions(previousGroups, prepared.groups);
+      if (existingAssembledStock && (
+        existing.bundleFulfillmentMode !== fulfillmentMode ||
+        groupsChanged ||
+        existing.bundleWarehouseId !== bundleWarehouseId
+      )) {
+        throw new Error("Empty all assembled/reserved bundle stock before changing its fulfillment mode or composition");
+      }
       const basePrice = calculateBundleBasePrice({
         regularTotal: prepared.defaultRegularTotal,
         discountType: body.discountType,
         discountValue: body.discountValue,
         manualPrice: body.manualPrice,
       });
-      await tx.bundleGroup.deleteMany({ where: { bundleId } });
-      await tx.productBundleItem.deleteMany({ where: { bundleId } });
+      if (groupsChanged) {
+        await tx.bundleGroup.deleteMany({ where: { bundleId } });
+        await tx.productBundleItem.deleteMany({ where: { bundleId } });
+      }
       const bundle = await tx.product.update({
         where: { id: bundleId },
         data: {
@@ -182,17 +255,49 @@ export async function PUT(request: NextRequest, { params }: { params: Promise<{ 
           image: body.image || null,
           gallery: Array.isArray(body.gallery) ? body.gallery : [],
           bundleStockLimit: requestedLimit,
+          bundleWarehouseId,
+          bundleFulfillmentMode: fulfillmentMode,
           available: body.available !== false,
           featured: Boolean(body.featured),
           VatClassId: body.vatClassId ? Number(body.vatClassId) : null,
-          bundleGroups: {
+          bundleGroups: groupsChanged ? {
             create: prepared.groups.map((group) => ({ ...group, options: { create: group.options } })),
-          },
+          } : undefined,
         },
       });
-      if (prepared.legacyDefaultItems.length > 0) {
+      if (groupsChanged && prepared.legacyDefaultItems.length > 0) {
         await tx.productBundleItem.createMany({
           data: prepared.legacyDefaultItems.map((item) => ({ ...item, bundleId })),
+        });
+      }
+      const previousLimit = existing.bundleStockLimit ?? 0;
+      const nextLimit = requestedLimit ?? 0;
+      const warehouseChanged =
+        existing.bundleWarehouseId !== null &&
+        existing.bundleWarehouseId !== bundleWarehouseId;
+      if (warehouseChanged && previousLimit > 0) {
+        await tx.inventoryLog.create({
+          data: {
+            productId: bundleId,
+            variantId: null,
+            warehouseId: existing.bundleWarehouseId,
+            change: -previousLimit,
+            reason: "Bundle stock moved out during warehouse change",
+          },
+        });
+      }
+      const stockChange = warehouseChanged ? nextLimit : nextLimit - previousLimit;
+      if (stockChange !== 0) {
+        await tx.inventoryLog.create({
+          data: {
+            productId: bundleId,
+            variantId: null,
+            warehouseId: bundleWarehouseId,
+            change: stockChange,
+            reason: warehouseChanged
+              ? "Bundle stock moved in during warehouse change"
+              : "Bundle stock adjustment",
+          },
         });
       }
       return bundle;

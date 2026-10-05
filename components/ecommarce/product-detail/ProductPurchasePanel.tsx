@@ -505,6 +505,8 @@ export default function ProductPurchasePanel({
                 currency={product.currency}
                 basePrice={product.basePrice}
                 stockLimit={product.bundleStockLimit}
+                fulfillmentMode={product.bundleFulfillmentMode}
+                assembledStock={Math.max(0, (product.assembledStockQuantity ?? 0) - (product.assembledStockReserved ?? 0))}
                 onChange={handleBundleChange}
               />
             ) : null}
