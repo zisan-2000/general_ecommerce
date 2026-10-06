@@ -115,6 +115,9 @@ interface DashboardStats {
   totalOrders: number;
   totalProducts: number;
   totalRevenue: number;
+  grossRevenue?: number;
+  refundTotal?: number;
+  completedRefunds?: number;
   pendingOrders: number;
   lowStockProducts: number;
   recentOrders: DashboardOrder[];

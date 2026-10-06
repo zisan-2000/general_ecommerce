@@ -418,7 +418,9 @@ const AdminPage = memo(function AdminPage() {
   );
 
   useEffect(() => {
-    fetchDashboardData(timeRange);
+    // The module-level cache keeps the previous dashboard visible during navigation,
+    // but financial figures must always be refreshed after a refund payout.
+    fetchDashboardData(timeRange, true);
   }, [fetchDashboardData, timeRange]);
 
   const handleRefresh = useCallback(() => {

@@ -156,7 +156,8 @@ export async function getReportsOverview(input: DateRangeInput = {}) {
     prisma.refund.findMany({
       where: {
         status: "COMPLETED",
-        updatedAt: orderDateWhere,
+        payoutStatus: "PAID",
+        paidAt: orderDateWhere,
       },
       include: {
         order: {
@@ -358,9 +359,9 @@ export async function getReportsOverview(input: DateRangeInput = {}) {
     vatTotal = roundMoney(vatTotal + orderVat);
     grandTotal = roundMoney(grandTotal + orderGrand);
 
-    if (order.paymentStatus === "PAID") {
+    if (order.paymentStatus === "PAID" || order.paymentStatus === "REFUNDED") {
       paidTotal = roundMoney(paidTotal + orderGrand);
-    } else {
+    } else if (order.paymentStatus === "UNPAID") {
       unpaidTotal = roundMoney(unpaidTotal + orderGrand);
     }
 
