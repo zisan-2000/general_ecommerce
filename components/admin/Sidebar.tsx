@@ -109,6 +109,11 @@ const menuItems: MenuItem[] = [
         requiredPermissions: ["products.manage"],
       },
       {
+        name: "Flash Sales",
+        href: "/admin/management/flash-sales",
+        requiredPermissions: ["products.manage"],
+      },
+      {
         name: "Reviews",
         href: "/admin/operations/review",
         requiredPermissions: ["reviews.manage"],
@@ -770,11 +775,6 @@ const menuItems: MenuItem[] = [
       {
         name: "Brands",
         href: "/admin/management/brands",
-        requiredPermissions: ["products.manage"],
-      },
-      {
-        name: "Flash Sales",
-        href: "/admin/management/flash-sales",
         requiredPermissions: ["products.manage"],
       },
       {

@@ -4,6 +4,9 @@ import { authOptions } from "@/lib/auth";
 import { getAccessContext } from "@/lib/rbac";
 import { prisma } from "@/lib/prisma";
 import { privateJson } from "@/lib/public-cache";
+import { adminProductQuery } from "@/lib/admin-product-pagination";
+import { Prisma } from "@/generated/prisma";
+import { getStoreFeatureRegistry } from "@/lib/store-features-server";
 
 async function ensureAccess() {
   const session = await getServerSession(authOptions);
@@ -26,34 +29,26 @@ export async function GET(request: Request) {
     }
 
     const url = new URL(request.url);
-    const search = url.searchParams.get("search")?.trim() ?? "";
-    const page = Math.max(1, Number(url.searchParams.get("page")) || 1);
+    const { page, from, orderBy } = adminProductQuery(url.searchParams);
     const pageSize = Math.min(
       100,
       Math.max(10, Number(url.searchParams.get("pageSize")) || 50),
     );
-    const where = {
-      deleted: false,
-      ...(search
-        ? {
-            OR: [
-              { name: { contains: search, mode: "insensitive" as const } },
-              { sku: { contains: search, mode: "insensitive" as const } },
-            ],
-          }
-        : {}),
-    };
+    const sort = url.searchParams.get("sort");
+    const selectedOrder = !sort || sort === "flash-sale"
+      ? Prisma.sql`p."flashSaleEnabled" DESC, p."flashSaleSortOrder" ASC, p."updatedAt" DESC, p.id ASC`
+      : orderBy;
+    const [rows, totals, categories, registry] = await Promise.all([
+      prisma.$queryRaw<{ id: number }[]>(Prisma.sql`SELECT p.id ${from} ORDER BY ${selectedOrder}
+        LIMIT ${pageSize} OFFSET ${(page - 1) * pageSize}`),
+      prisma.$queryRaw<{ total: bigint }[]>(Prisma.sql`SELECT COUNT(*) AS total ${from}`),
+      prisma.category.findMany({ where: { deleted: false }, select: { id: true, name: true }, orderBy: { name: "asc" } }),
+      getStoreFeatureRegistry(),
+    ]);
+    const total = Number(totals[0]?.total ?? 0);
 
-    const [products, total] = await Promise.all([
-      prisma.product.findMany({
-        where,
-        orderBy: [
-          { flashSaleEnabled: "desc" },
-          { flashSaleSortOrder: "asc" },
-          { updatedAt: "desc" },
-        ],
-        skip: (page - 1) * pageSize,
-        take: pageSize,
+    const products = await prisma.product.findMany({
+        where: { id: { in: rows.map(row => row.id) }, deleted: false },
         select: {
           id: true,
           name: true,
@@ -75,12 +70,21 @@ export async function GET(request: Request) {
             select: { stock: true },
           },
         },
-      }),
-      prisma.product.count({ where }),
-    ]);
+      });
+    const productsById = new Map(products.map(product => [product.id, product]));
+    const orderedProducts = rows.flatMap(row => {
+      const product = productsById.get(row.id);
+      return product ? [product] : [];
+    });
 
     return privateJson({
-      items: products.map((product) => ({
+      categories,
+      features: {
+        DIGITAL_PRODUCTS: registry.features.DIGITAL_PRODUCTS.enabled,
+        SERVICE_PRODUCTS: registry.features.SERVICE_PRODUCTS.enabled,
+        BUNDLES: registry.features.BUNDLES.enabled,
+      },
+      items: orderedProducts.map((product) => ({
         ...product,
         basePrice: Number(product.basePrice),
         flashSalePrice:
