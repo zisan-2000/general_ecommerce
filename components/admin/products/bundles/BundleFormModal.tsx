@@ -26,9 +26,10 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 import ConfigurableBundleGroupBuilder, {
-  createBundleGroup,
   type BundleBuilderGroup,
 } from "./ConfigurableBundleGroupBuilder";
+import SimpleBundleBuilder from "./SimpleBundleBuilder";
+import { canEditAsSimpleBundle, type BundleEditorMode } from "./simple-bundle";
 import { ResponsiveInput, ResponsiveTextarea } from "./ResponsiveFormField";
 import {
   calculateBundlePricing,
@@ -85,6 +86,7 @@ type BundleCreateDraft = {
   discountValue: string;
   manualPrice: string;
   groups: BundleBuilderGroup[];
+  editorMode?: BundleEditorMode;
 };
 
 function selectedItemsFromGroups(groups: BundleBuilderGroup[]): BundleSelectedItem[] {
@@ -127,6 +129,7 @@ export default function BundleFormModal({
   onSuccess,
 }: BundleFormModalProps) {
   const t = useTranslations("AdminBundles.form");
+  const simpleT = useTranslations("AdminBundles.simple");
   const locale = useLocale();
   const fileInputRef = useRef<HTMLInputElement | null>(null);
   const latestDraftRef = useRef<BundleCreateDraft | null>(null);
@@ -141,6 +144,7 @@ export default function BundleFormModal({
   const [manualPrice, setManualPrice] = useState("");
   const [selectedItems, setSelectedItems] = useState<BundleSelectedItem[]>([]);
   const [groups, setGroups] = useState<BundleBuilderGroup[]>([]);
+  const [editorMode, setEditorMode] = useState<BundleEditorMode>("SIMPLE");
   const groupsRef = useRef<BundleBuilderGroup[]>(groups);
   const [categories, setCategories] = useState<Category[]>([]);
   const [brands, setBrands] = useState<Brand[]>([]);
@@ -175,6 +179,7 @@ export default function BundleFormModal({
     setManualPrice("");
     setSelectedItems([]);
     setGroups([]);
+    setEditorMode("SIMPLE");
   };
 
   const formatCurrency = (amount: number, currency = "BDT") =>
@@ -323,6 +328,11 @@ export default function BundleFormModal({
                   priceAdjustment: Number(option.priceAdjustment ?? 0),
                   product: {
                     ...option.product,
+                    variants: (option.product.variants || []).map((variant: any) => ({
+                      ...variant,
+                      price: Number(variant.price),
+                      stock: computeWarehouseAvailableStockAtWarehouse(variant, warehouseId) ?? 0,
+                    })),
                     defaultPrice: Number(option.variant?.price ?? option.product.basePrice),
                     stock: availableVariant
                       ? availableVariant.stock
@@ -339,6 +349,7 @@ export default function BundleFormModal({
             }),
           );
           setGroups(loadedGroups);
+          setEditorMode(loadedGroups.length > 0 && canEditAsSimpleBundle(loadedGroups) ? "SIMPLE" : "CONFIGURABLE");
           setSelectedItems(
             loadedGroups.flatMap((group) =>
               group.options
@@ -365,14 +376,13 @@ export default function BundleFormModal({
         } else {
           const draft = readCreateDraft();
           if (draft) {
-            const restoredGroups = draft.groups.length > 0
-              ? draft.groups
-              : [createBundleGroup(), createBundleGroup()];
+            const restoredGroups = draft.groups;
             setFormData({ ...defaultFormData, ...draft.formData });
             setDiscountType(draft.discountType || "PERCENTAGE");
             setDiscountValue(draft.discountValue ?? "15");
             setManualPrice(draft.manualPrice ?? "");
             setGroups(restoredGroups);
+            setEditorMode(draft.editorMode === "CONFIGURABLE" || !canEditAsSimpleBundle(restoredGroups) ? "CONFIGURABLE" : "SIMPLE");
             setSelectedItems(selectedItemsFromGroups(restoredGroups));
             toast.success(t("success.draftRestored"));
           } else {
@@ -382,7 +392,8 @@ export default function BundleFormModal({
               ...defaultFormData,
               bundleWarehouseId: defaultWarehouse ? String(defaultWarehouse.id) : "",
             });
-            setGroups([createBundleGroup(), createBundleGroup()]);
+            setGroups([]);
+            setEditorMode("SIMPLE");
           }
           setDraftReady(true);
         }
@@ -408,7 +419,8 @@ export default function BundleFormModal({
     discountValue,
     manualPrice,
     groups,
-  }), [formData, discountType, discountValue, manualPrice, groups]);
+    editorMode,
+  }), [formData, discountType, discountValue, manualPrice, groups, editorMode]);
 
   useEffect(() => {
     latestDraftRef.current = currentDraft;
@@ -458,7 +470,7 @@ export default function BundleFormModal({
             return {
               ...option,
               product: option.product
-                ? { ...option.product, stock }
+                ? { ...option.product, stock, variants: stockVariants }
                 : {
                     ...stockProduct,
                     defaultPrice: Number(stockProduct.defaultPrice ?? stockProduct.basePrice ?? 0),
@@ -516,10 +528,12 @@ export default function BundleFormModal({
         errors.push(t("validation.stockWholeNumber"));
       }
     }
-    if (groups.length < 2) errors.push(t("validation.twoGroups"));
+    if (groups.length < 2) errors.push(editorMode === "SIMPLE" ? simpleT("minimumItems") : t("validation.twoGroups"));
     const names = new Set<string>();
     for (const [index, group] of groups.entries()) {
-      const label = t("validation.groupLabel", { number: index + 1 });
+      const label = editorMode === "SIMPLE"
+        ? simpleT("itemLabel", { number: index + 1 })
+        : t("validation.groupLabel", { number: index + 1 });
       const normalizedName = group.name.trim().toLowerCase();
       if (!normalizedName) errors.push(t("validation.groupNameRequired", { group: label }));
       if (normalizedName && names.has(normalizedName)) errors.push(t("validation.groupNameDuplicate", { group: label }));
@@ -574,7 +588,7 @@ export default function BundleFormModal({
       }
     }
     return { isValid: errors.length === 0, errors };
-  }, [groups, formData.bundleStockLimit, t]);
+  }, [groups, formData.bundleStockLimit, editorMode, simpleT, t]);
 
   const bundleStockMetrics = useMemo(() => {
     const validItems = selectedItems.filter(
@@ -680,9 +694,21 @@ export default function BundleFormModal({
   });
 
   const handleGroupsChange = useCallback((nextGroups: BundleBuilderGroup[]) => {
+    groupsRef.current = nextGroups;
     setGroups(nextGroups);
     setSelectedItems(selectedItemsFromGroups(nextGroups));
   }, []);
+
+  const canSwitchToSimple = canEditAsSimpleBundle(groups);
+  const handleEditorModeChange = (value: string) => {
+    if (value !== "SIMPLE" && value !== "CONFIGURABLE") return;
+    if (value === "SIMPLE" && !canSwitchToSimple) {
+      toast.error(simpleT("cannotSimplify"));
+      return;
+    }
+    // Both editors share canonical groups: switching never regenerates definitions.
+    setEditorMode(value);
+  };
 
   const closeModal = useCallback(() => onOpenChange(false), [onOpenChange]);
 
@@ -755,7 +781,7 @@ export default function BundleFormModal({
     }
 
     if (groups.length < 2 || groups.some((group) => !group.name.trim() || group.options.length === 0)) {
-      toast.error(t("validation.completeGroups"));
+      toast.error(editorMode === "SIMPLE" ? simpleT("minimumItems") : t("validation.completeGroups"));
       return;
     }
 
@@ -870,9 +896,11 @@ export default function BundleFormModal({
         <DialogHeader className="relative border-b px-6 py-4 pr-16">
           <DialogTitle>{isEdit ? t("dialog.editTitle") : t("dialog.createTitle")}</DialogTitle>
           <DialogDescription>
-            {isEdit
-              ? t("dialog.editDescription")
-              : t("dialog.createDescription")}
+            {editorMode === "SIMPLE"
+              ? simpleT("dialogDescription")
+              : isEdit
+                ? t("dialog.editDescription")
+                : t("dialog.createDescription")}
           </DialogDescription>
           <Button
             type="button"
@@ -1134,17 +1162,41 @@ export default function BundleFormModal({
                   <CardHeader>
                     <CardTitle className="flex items-center gap-2">
                       <Package className="h-5 w-5" />
-                      {t("groups.title")}
+                      {editorMode === "SIMPLE" ? simpleT("title") : t("groups.title")}
                     </CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <ConfigurableBundleGroupBuilder
-                      groups={groups}
-                      onChange={handleGroupsChange}
-                      defaultCategoryId={formData.categoryId}
-                      categories={categories}
-                      warehouseId={formData.bundleWarehouseId}
-                    />
+                    <div className="mb-4 space-y-2">
+                      <Label htmlFor="bundle-editor-mode">{simpleT("modeLabel")}</Label>
+                      <Select value={editorMode} onValueChange={handleEditorModeChange}>
+                        <SelectTrigger id="bundle-editor-mode" aria-describedby="bundle-editor-mode-help"><SelectValue /></SelectTrigger>
+                        <SelectContent>
+                          <SelectItem value="SIMPLE" disabled={editorMode !== "SIMPLE" && !canSwitchToSimple}>{simpleT("simpleMode")}</SelectItem>
+                          <SelectItem value="CONFIGURABLE">{simpleT("configurableMode")}</SelectItem>
+                        </SelectContent>
+                      </Select>
+                      <p id="bundle-editor-mode-help" className="text-xs text-muted-foreground">
+                        {simpleT("modeHint")}
+                        {editorMode === "CONFIGURABLE" && !canSwitchToSimple ? ` ${simpleT("cannotSimplify")}` : ""}
+                      </p>
+                    </div>
+                    {editorMode === "SIMPLE" ? (
+                      <SimpleBundleBuilder
+                        key={formData.bundleWarehouseId}
+                        groups={groups}
+                        onChange={handleGroupsChange}
+                        categories={categories}
+                        warehouseId={formData.bundleWarehouseId}
+                      />
+                    ) : (
+                      <ConfigurableBundleGroupBuilder
+                        groups={groups}
+                        onChange={handleGroupsChange}
+                        defaultCategoryId={formData.categoryId}
+                        categories={categories}
+                        warehouseId={formData.bundleWarehouseId}
+                      />
+                    )}
 
                     {(!validation.isValid || hasOutOfStockItems || pricingState.error) && (
                       <div className="mt-4 rounded-lg border border-destructive/20 bg-destructive/10 p-3" role="alert">

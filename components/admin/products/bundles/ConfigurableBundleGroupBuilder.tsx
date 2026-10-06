@@ -22,7 +22,7 @@ import { Switch } from "@/components/ui/switch";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { ResponsiveInput } from "./ResponsiveFormField";
 
-type CatalogVariant = {
+export type CatalogVariant = {
   id: number;
   sku: string;
   price: number;
@@ -31,7 +31,7 @@ type CatalogVariant = {
   options: unknown;
 };
 
-type CatalogProduct = {
+export type CatalogProduct = {
   id: number;
   name: string;
   image?: string | null;
@@ -43,7 +43,7 @@ type CatalogProduct = {
   variants: CatalogVariant[];
 };
 
-type CatalogCategory = { id: number; name: string };
+export type CatalogCategory = { id: number; name: string };
 
 type CatalogChoice = {
   key: string;
