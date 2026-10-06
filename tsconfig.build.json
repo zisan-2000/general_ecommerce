@@ -1,0 +1,4 @@
+{
+  "extends": "./tsconfig.json",
+  "exclude": ["node_modules", ".next/dev", ".next/warehouse-bundle-verification-build"]
+}
