@@ -128,6 +128,25 @@ export function serializeStorefrontHomeProduct(
       ...variant,
       price: resolveFlashSalePricing(product, variant.price, now).salePrice,
     })),
+    // Nested Prisma prices must also be plain numbers at the Server/Client boundary.
+    bundleGroups: product.bundleGroups.map((group) => ({
+      ...group,
+      options: group.options.map((option) => ({
+        ...option,
+        priceAdjustment: Number(option.priceAdjustment),
+        product: {
+          ...option.product,
+          basePrice: Number(option.product.basePrice),
+          variants: option.product.variants.map((variant) => ({
+            ...variant,
+            price: Number(variant.price),
+          })),
+        },
+        variant: option.variant
+          ? { ...option.variant, price: Number(option.variant.price) }
+          : null,
+      })),
+    })),
   };
 }
 
@@ -372,7 +391,7 @@ const readStorefrontHomeData = unstable_cache(
       },
     };
   },
-  ["storefront-home-v2"],
+  ["storefront-home-v3"],
   {
     revalidate: 30,
     tags: ["storefront-home", "products", "flash-sales", "categories", "banners", "site-settings"],

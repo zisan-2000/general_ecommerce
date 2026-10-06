@@ -45,7 +45,7 @@ const readActiveFlashSales = compressedCache(
       .map((product) => serializeStorefrontHomeProduct(product, now))
       .filter((product) => product.flashSale.active) };
   },
-  ["storefront-flash-sales-paged-v2"],
+  ["storefront-flash-sales-paged-v3"],
   { revalidate: 30, tags: ["flash-sales", "products"] },
 );
 
