@@ -133,10 +133,22 @@ export default function GalleryManagementPage() {
   const [page, setPage] = useState(1);
   const [pageSize, setPageSize] = useState(60);
   const [total, setTotal] = useState(0);
+  const requestRef = useRef<AbortController | null>(null);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => setSearchQuery(search.trim()), 300);
+    return () => clearTimeout(timer);
+  }, [search]);
+
+  useEffect(() => () => requestRef.current?.abort(), []);
 
   const totalPages = Math.max(1, Math.ceil(total / pageSize));
 
   const loadGallery = useCallback(async (opts?: { refresh?: boolean; nextPage?: number }) => {
+    requestRef.current?.abort();
+    const controller = new AbortController();
+    requestRef.current = controller;
     try {
       const nextPage = typeof opts?.nextPage === "number" ? opts.nextPage : page;
       const isInitial = images.length === 0;
@@ -147,6 +159,7 @@ export default function GalleryManagementPage() {
         folder === "all" ? "" : `folder=${encodeURIComponent(folder)}`;
       const query = [
         folderQuery,
+        searchQuery ? `search=${encodeURIComponent(searchQuery)}` : "",
         `page=${nextPage}`,
         `pageSize=${pageSize}`,
         opts?.refresh ? "refresh=1" : "",
@@ -156,6 +169,7 @@ export default function GalleryManagementPage() {
 
       const res = await fetch(`/api/admin/gallery${query ? `?${query}` : ""}`, {
         cache: "no-store",
+        signal: controller.signal,
       });
       const data = (await res
         .json()
@@ -167,6 +181,10 @@ export default function GalleryManagementPage() {
         throw new Error(t("errors.loadFailed"));
       }
 
+      if (controller.signal.aborted) return;
+      setUsageByPath({});
+      setLoading(false);
+      setPageLoading(false);
       setImages(Array.isArray(data.images) ? data.images : []);
       setFolders(Array.isArray(data.folders) ? data.folders : []);
       setPage(typeof data.page === "number" ? data.page : nextPage);
@@ -185,48 +203,43 @@ export default function GalleryManagementPage() {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ paths }),
+            signal: controller.signal,
           });
           const usageData = (await usageRes.json().catch(() => ({}))) as {
             usageByPath?: Record<string, ImageUsageRef[]>;
             error?: string;
           };
 
+          if (controller.signal.aborted) return;
           if (usageRes.ok && usageData?.usageByPath) {
             setUsageByPath(usageData.usageByPath);
           } else {
             setUsageByPath({});
           }
         } finally {
-          setUsageLoading(false);
+          if (!controller.signal.aborted) setUsageLoading(false);
         }
       } else {
         setUsageByPath({});
+        setUsageLoading(false);
       }
     } catch (error: any) {
-      toast.error(error?.message || t("errors.loadFailed"));
+      if (!controller.signal.aborted) toast.error(error?.message || t("errors.loadFailed"));
     } finally {
-      setLoading(false);
-      setPageLoading(false);
+      if (!controller.signal.aborted) {
+        setLoading(false);
+        setPageLoading(false);
+      }
     }
-  }, [folder, images.length, page, pageSize, t]);
+  }, [folder, images.length, page, pageSize, searchQuery, t]);
 
   useEffect(() => {
     setPage(1);
     setSelectedPaths(new Set());
     loadGallery({ nextPage: 1 });
-  }, [folder, pageSize]);
+  }, [folder, pageSize, searchQuery]);
 
-  const filteredImages = useMemo(() => {
-    const term = search.trim().toLowerCase();
-    if (!term) return images;
-
-    return images.filter((image) =>
-      [image.name, image.folder, image.path, image.extension]
-        .join(" ")
-        .toLowerCase()
-        .includes(term),
-    );
-  }, [images, search]);
+  const filteredImages = images;
 
   const totalSize = useMemo(
     () => images.reduce((total, image) => total + image.size, 0),
@@ -517,7 +530,6 @@ export default function GalleryManagementPage() {
   const goToPage = useCallback(
     (next: number) => {
       const target = Math.min(Math.max(1, next), totalPages);
-      setPage(target);
       setSelectedPaths(new Set());
       loadGallery({ nextPage: target });
       window.scrollTo({ top: 0, behavior: "smooth" });

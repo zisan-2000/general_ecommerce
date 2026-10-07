@@ -325,40 +325,46 @@ async function readImages(
   baseRelPath: string,
 ): Promise<GalleryScanResult> {
   const entries = await fs.readdir(baseDir, { withFileTypes: true });
-  const images = [];
+  const images: GalleryImage[] = [];
   const folders = new Set<string>();
 
-  for (const entry of entries) {
-    const relPath = baseRelPath ? `${baseRelPath}/${entry.name}` : entry.name;
-    const fullPath = path.join(baseDir, entry.name);
+  // Bound filesystem work so large galleries do not stat every file serially.
+  let cursor = 0;
+  async function scanEntries() {
+    while (cursor < entries.length) {
+      const entry = entries[cursor++];
+      const relPath = baseRelPath ? `${baseRelPath}/${entry.name}` : entry.name;
+      const fullPath = path.join(baseDir, entry.name);
 
-    if (entry.isDirectory()) {
-      folders.add(toPosixPath(relPath));
-      const nested: GalleryScanResult = await readImages(fullPath, relPath);
-      nested.folders.forEach((nestedFolder: string) =>
-        folders.add(nestedFolder),
-      );
-      images.push(...nested.images);
-      continue;
+      if (entry.isDirectory()) {
+        folders.add(toPosixPath(relPath));
+        const nested: GalleryScanResult = await readImages(fullPath, relPath);
+        nested.folders.forEach((nestedFolder: string) =>
+          folders.add(nestedFolder),
+        );
+        for (const image of nested.images) images.push(image);
+        continue;
+      }
+
+      if (!entry.isFile() || !isImageFile(entry.name)) {
+        continue;
+      }
+
+      const stat = await fs.stat(fullPath);
+      const folder = toPosixPath(path.dirname(relPath));
+
+      images.push({
+        name: entry.name,
+        folder: folder === "." ? "" : folder,
+        path: toPosixPath(relPath),
+        url: toPublicUrl(relPath),
+        size: stat.size,
+        updatedAt: stat.mtime.toISOString(),
+        extension: path.extname(entry.name).replace(".", "").toUpperCase(),
+      });
     }
-
-    if (!entry.isFile() || !isImageFile(entry.name)) {
-      continue;
-    }
-
-    const stat = await fs.stat(fullPath);
-    const folder = toPosixPath(path.dirname(relPath));
-
-    images.push({
-      name: entry.name,
-      folder: folder === "." ? "" : folder,
-      path: toPosixPath(relPath),
-      url: toPublicUrl(relPath),
-      size: stat.size,
-      updatedAt: stat.mtime.toISOString(),
-      extension: path.extname(entry.name).replace(".", "").toUpperCase(),
-    });
   }
+  await Promise.all(Array.from({ length: Math.min(8, entries.length) }, scanEntries));
 
   return {
     folders,
@@ -367,11 +373,12 @@ async function readImages(
 }
 
 function paginate<T>(items: T[], page: number, pageSize: number) {
-  const safePage = Number.isFinite(page) && page > 0 ? Math.floor(page) : 1;
+  const requestedPage = Number.isFinite(page) && page >= 1 ? Math.floor(page) : 1;
   const safeSize =
-    Number.isFinite(pageSize) && pageSize > 0
+    Number.isFinite(pageSize) && pageSize >= 1
       ? Math.min(Math.floor(pageSize), 200)
       : 60;
+  const safePage = Math.min(requestedPage, Math.max(1, Math.ceil(items.length / safeSize)));
   const start = (safePage - 1) * safeSize;
   const end = start + safeSize;
 
@@ -414,7 +421,8 @@ export async function GET(req: Request) {
       images = scan.images;
       images.sort(
         (a: GalleryImage, b: GalleryImage) =>
-          new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime(),
+          new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime() ||
+          a.path.localeCompare(b.path),
       );
       folders = Array.from(scan.folders).sort((a: string, b: string) =>
         a.localeCompare(b),
@@ -422,7 +430,14 @@ export async function GET(req: Request) {
       galleryCache.set(cacheKey, { at: now, images, folders });
     }
 
-    const paged = paginate(images, page, pageSize);
+    const term = (searchParams.get("search") || "").trim().toLowerCase();
+    const matchingImages = term
+      ? images.filter((image) =>
+          [image.name, image.folder, image.path, image.extension]
+            .join(" ").toLowerCase().includes(term),
+        )
+      : images;
+    const paged = paginate(matchingImages, page, pageSize);
 
     return NextResponse.json({
       images: paged.items,
