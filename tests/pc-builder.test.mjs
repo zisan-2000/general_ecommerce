@@ -5,6 +5,7 @@ import "./pc-builder-create-activation.test.mjs";
 import "./pc-builder-placeholder-normalization.test.mjs";
 import "./pc-builder-checkout.test.mjs";
 import "./pc-builder-checkout-lifecycle.test.mjs";
+import "./cart-line-identity.test.mjs";
 import "./pc-builder-order-grouping-atomic.test.mjs";
 import "./pc-builder-prisma-schema.test.mjs";
 import "./pc-builder-shared-variant-builds.test.mjs";

@@ -5,6 +5,7 @@ import { ecommerceFromRows } from "@/lib/analytics/ecommerce";
 import { useStorefrontSettings } from "@/providers/storefront-settings-provider";
 
 import { useCart } from "@/components/ecommarce/CartContext";
+import { serverHasCartLine } from "@/lib/cart-line-identity";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import {
@@ -46,21 +47,6 @@ interface LocalCartItem {
 
 function cartSelectionKey(item: Pick<LocalCartItem, "productId" | "variantId" | "bundleConfigurationKey">) {
   return `${item.productId}:${item.variantId ?? "default"}:${item.bundleConfigurationKey ?? "standard"}`;
-}
-
-function serverHasCartLine(serverItems: any[], localItem: LocalCartItem) {
-  return serverItems.some((serverItem) => {
-    const sameLine =
-      String(serverItem.productId) === String(localItem.productId) &&
-      String(serverItem.pcBuildId ?? "") === String(localItem.pcBuildId ?? "") &&
-      String(serverItem.lineKey ?? "standard") ===
-        String(localItem.bundleConfigurationKey ?? "standard");
-    const sameVariant =
-      String(serverItem.variantId ?? "") === String(localItem.variantId ?? "") ||
-      (!localItem.variantId && serverItem.variantId != null &&
-        !localItem.bundleConfigurationKey && !localItem.pcBuildId);
-    return sameLine && sameVariant;
-  });
 }
 
 function combinePcBuildCompanionQuantities(items: LocalCartItem[]) {

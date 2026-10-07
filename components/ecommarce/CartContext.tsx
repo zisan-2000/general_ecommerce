@@ -435,6 +435,7 @@ export function CartProvider({ children }: { children: ReactNode }) {
               productId: product.id,
               variantId: variant?.id ?? null,
               quantity: add,
+              pcBuilder: false,
               bundleSelections: options?.bundleSelections,
             }),
           });
