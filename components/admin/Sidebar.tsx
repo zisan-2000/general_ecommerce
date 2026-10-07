@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
 import { DEFAULT_SITE_TITLE } from "@/lib/site-defaults";
@@ -1169,6 +1170,7 @@ export default function Sidebar({
   const isRtl = direction === "rtl";
   const { data: session } = useSession();
   const [siteSettings, setSiteSettings] = useState<any>(null);
+  const [failedLogo, setFailedLogo] = useState<string | null>(null);
   const [enabledFeatures, setEnabledFeatures] = useState<Set<string>>(() => new Set());
   const permissionKeys = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])
@@ -1333,8 +1335,24 @@ export default function Sidebar({
   const themeBg = "bg-background";
   const themeBorder = "border-border";
   const siteTitle = siteSettings?.siteTitle?.trim() || DEFAULT_SITE_TITLE;
-  const headerTitle = userRoleLabel || siteTitle;
-  const adminSubtitle = siteTitle ? `${siteTitle}` : "Admin Panel";
+  const siteLogo = typeof siteSettings?.logo === "string"
+    ? siteSettings.logo.trim()
+    : "";
+  const logoMark = siteLogo && failedLogo !== siteLogo ? (
+    <Image
+      src={siteLogo}
+      alt={`${siteTitle} logo`}
+      width={48}
+      height={48}
+      unoptimized
+      className="h-12 w-12 shrink-0 object-contain"
+      onError={() => setFailedLogo(siteLogo)}
+    />
+  ) : (
+    <div className="h-10 w-10 shrink-0 rounded-lg gradient-primary flex items-center justify-center shadow-sm">
+      <LayoutDashboard className="h-5 w-5 text-white" />
+    </div>
+  );
   const sidebarMessages = (
     messages as unknown as Record<string, Record<string, string> | undefined>
   ).AdminSidebar;
@@ -1346,17 +1364,16 @@ export default function Sidebar({
   if (isMobile) {
     return (
       <div dir={direction} className={cn("h-full w-[86vw] max-w-80 flex flex-col", themeBg)}>
-        {/* Modern Header */}
-        <div className="h-20 flex flex-col items-center justify-center border-b border-border px-4">
-          <div className="text-center">
-            <h2 className={cn("font-bold text-lg text-foreground")}>
-              {headerTitle
-                ? headerTitle.charAt(0).toUpperCase() + headerTitle.slice(1)
-                : ""}
-            </h2>
-            <p className="text-xs text-muted-foreground">{adminSubtitle}</p>
+        <Link
+          href={defaultAdminRoute || "/admin"}
+          className="h-20 shrink-0 flex items-center gap-3 border-b border-border px-4"
+        >
+          {logoMark}
+          <div className="min-w-0">
+            <h2 className="truncate font-bold text-lg text-foreground">{siteTitle}</h2>
+            <p className="truncate text-xs text-muted-foreground">{userRoleLabel}</p>
           </div>
-        </div>
+        </Link>
         <div className="flex-1 overflow-y-auto">
           <SidebarContent
             newOrderCount={orderNotifications?.newOrderCount ?? 0}
@@ -1384,22 +1401,19 @@ export default function Sidebar({
     >
       {/* Premium Brand Header */}
       <div className="h-[72px] flex items-center justify-center border-b border-border sticky top-0 z-10 bg-background flex-shrink-0">
-        <div className="flex items-center gap-3">
-          {/* Logo Mark */}
-          <div className="w-8 h-8 rounded-lg gradient-primary flex items-center justify-center shadow-sm">
-            <LayoutDashboard className="h-4 w-4 text-white" />
-          </div>
+        <Link href={defaultAdminRoute || "/admin"} className="flex w-full min-w-0 items-center gap-3 px-4">
+          {logoMark}
 
           {/* Brand Identity */}
-          <div className="flex flex-col">
-            <h2 className="font-bold text-lg text-foreground">{siteTitle}</h2>
+          <div className="flex min-w-0 flex-col">
+            <h2 className="truncate font-bold text-lg text-foreground">{siteTitle}</h2>
             <div className="bg-primary/10 px-2 py-0.5 rounded-full">
               <p className="text-[10px] font-medium text-primary">
                 {userRoleLabel}
               </p>
             </div>
           </div>
-        </div>
+        </Link>
       </div>
       <div className="flex-1 overflow-y-auto scrollbar-hide-on-idle">
         <SidebarContent
