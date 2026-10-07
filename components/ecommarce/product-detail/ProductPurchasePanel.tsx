@@ -1,7 +1,8 @@
 "use client";
 
-import { useCallback, useMemo, useState, type MouseEvent } from "react";
+import { useCallback, useMemo, useState, type PointerEvent } from "react";
 import Image from "next/image";
+import { Dialog, DialogContent, DialogTitle, DialogTrigger } from "@/components/ui/dialog";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import {
@@ -97,6 +98,7 @@ export default function ProductPurchasePanel({
   const [activeImage, setActiveImage] = useState<string | null>(
     defaultVariant?.colorImage ?? product.image ?? product.gallery[0] ?? null,
   );
+  const [galleryOpen, setGalleryOpen] = useState(false);
   const [isImageZoomed, setIsImageZoomed] = useState(false);
   const [imageZoomOrigin, setImageZoomOrigin] = useState({ x: 50, y: 50 });
   const selectedVariant =
@@ -166,7 +168,7 @@ export default function ProductPurchasePanel({
     setImageZoomOrigin({ x: 50, y: 50 });
   };
 
-  const updateImageZoomOrigin = (event: MouseEvent<HTMLDivElement>) => {
+  const updateImageZoomOrigin = (event: PointerEvent<HTMLButtonElement>) => {
     const bounds = event.currentTarget.getBoundingClientRect();
     setImageZoomOrigin({
       x: ((event.clientX - bounds.left) / bounds.width) * 100,
@@ -259,6 +261,7 @@ export default function ProductPurchasePanel({
   };
 
   return (
+    <Dialog open={galleryOpen} onOpenChange={(open) => { setGalleryOpen(open); setIsImageZoomed(false); }}>
     <section className="overflow-hidden rounded-lg border border-border bg-card text-card-foreground shadow-[0_1px_3px_rgba(15,23,42,0.08)]">
         <ProductViewTracker
           item={toGA4Item({
@@ -279,14 +282,18 @@ export default function ProductPurchasePanel({
         />
         <div className="grid lg:grid-cols-[minmax(340px,0.95fr)_minmax(0,1.25fr)]">
           <div className="flex min-w-0 flex-col border-b border-border p-2 lg:border-b-0 lg:border-r">
-            <div
-              className="relative h-[360px] overflow-hidden rounded-md bg-white cursor-zoom-in sm:h-[480px] lg:h-auto lg:min-h-[500px] lg:flex-1"
-              onMouseEnter={(event) => {
+            <DialogTrigger asChild>
+            <button
+              type="button"
+              aria-label={t("viewImage", { number: Math.max(0, images.indexOf(activeImage ?? "")) + 1 })}
+              className="relative block w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary h-[360px] overflow-hidden rounded-md bg-white cursor-zoom-in sm:h-[480px] lg:h-auto lg:min-h-[500px] lg:flex-1"
+              onPointerEnter={(event) => {
+                if (event.pointerType !== "mouse") return;
                 updateImageZoomOrigin(event);
                 setIsImageZoomed(true);
               }}
-              onMouseMove={updateImageZoomOrigin}
-              onMouseLeave={() => {
+              onPointerMove={(event) => { if (event.pointerType === "mouse") updateImageZoomOrigin(event); }}
+              onPointerLeave={() => {
                 setIsImageZoomed(false);
                 setImageZoomOrigin({ x: 50, y: 50 });
               }}
@@ -300,15 +307,12 @@ export default function ProductPurchasePanel({
                 src={activeImage ?? "/placeholder.svg"}
                 alt={product.name}
                 fill
-                priority
+                preload
                 sizes="(max-width: 1024px) 100vw, 42vw"
-                className="object-contain transition-transform duration-200 ease-out motion-reduce:transition-none"
-                style={{
-                  transform: isImageZoomed ? "scale(2.1)" : "scale(1)",
-                  transformOrigin: `${imageZoomOrigin.x}% ${imageZoomOrigin.y}%`,
-                }}
+                className="object-contain"
               />
-            </div>
+            </button>
+            </DialogTrigger>
 
             {images.length > 1 ? (
               <div className="mt-3 flex justify-center gap-2 overflow-x-auto pb-1">
@@ -338,7 +342,19 @@ export default function ProductPurchasePanel({
             ) : null}
           </div>
 
-          <div className="min-w-0 p-3 sm:p-5">
+          <div className="relative min-w-0 p-3 sm:p-5">
+            {isImageZoomed && !galleryOpen ? (
+              <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-20 hidden overflow-hidden bg-white lg:block">
+                <Image
+                  src={activeImage ?? "/placeholder.svg"}
+                  alt=""
+                  fill
+                  sizes="60vw"
+                  className="object-contain"
+                  style={{ transform: "scale(2.1)", transformOrigin: `${imageZoomOrigin.x}% ${imageZoomOrigin.y}%` }}
+                />
+              </div>
+            ) : null}
             <h1 className="text-[18px] font-bold leading-[1.4] text-foreground sm:text-[20px]">
               {product.name}
             </h1>
@@ -621,5 +637,28 @@ export default function ProductPurchasePanel({
           </div>
         </div>
     </section>
+    <DialogContent className="max-h-[95dvh] w-[95vw] max-w-5xl overflow-y-auto" aria-describedby={undefined} closeLabel={locale === "bn" ? "???? ????" : "Close"}
+      onKeyDown={(event) => {
+        if (images.length < 2 || !["ArrowLeft", "ArrowRight"].includes(event.key)) return;
+        event.preventDefault();
+        const index = Math.max(0, images.indexOf(activeImage ?? ""));
+        selectImage(images[(index + (event.key === "ArrowRight" ? 1 : -1) + images.length) % images.length]);
+      }}>
+      <DialogTitle className="pr-6">{product.name}</DialogTitle>
+      <div className="relative h-[60dvh] bg-white">
+        <Image src={activeImage ?? "/placeholder.svg"} alt={product.name} fill sizes="(max-width: 1024px) 95vw, 1024px" className="object-contain" />
+      </div>
+      {images.length > 1 ? (
+        <div className="flex flex-wrap justify-center gap-2">
+          {images.map((image, index) => (
+            <button key={image} type="button" onClick={() => selectImage(image)} aria-label={t("viewImage", { number: index + 1 })} aria-pressed={activeImage === image}
+              className={`relative h-16 w-16 overflow-hidden rounded border bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary ${activeImage === image ? "border-primary ring-2 ring-primary" : "border-border"}`}>
+              <Image src={image} alt="" fill sizes="64px" className="object-contain p-1" />
+            </button>
+          ))}
+        </div>
+      ) : null}
+    </DialogContent>
+    </Dialog>
   );
 }
