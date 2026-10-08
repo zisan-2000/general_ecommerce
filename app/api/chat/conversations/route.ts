@@ -6,6 +6,7 @@ import { logActivity } from "@/lib/activity-log";
 import { prisma } from "@/lib/prisma";
 import { getChatActor, normalizeGuestEmail } from "@/lib/chat";
 import { getAccessContext } from "@/lib/rbac";
+import { validateGuestChatProfile } from "@/lib/chat-guest-profile";
 import {
   chatJson,
   readGuestChatSession,
@@ -145,27 +146,28 @@ export async function POST(request: NextRequest) {
       { canManageChats: access.has("chats.manage") },
     );
     const body = await request.json().catch(() => ({}));
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+      return chatJson({ error: "Invalid chat request." }, { status: 400 });
+    }
 
-    const guestEmail = normalizeGuestEmail(body.guestEmail);
-    const guestName = toCleanText(body.guestName, 120);
+    const guestProfile = actor.userId
+      ? null
+      : validateGuestChatProfile(body.guestName, body.guestEmail);
+    if (guestProfile && !guestProfile.success) {
+      return chatJson(
+        {
+          error: "Enter a valid name and contact email to start a chat.",
+          fieldErrors: guestProfile.errors,
+        },
+        { status: 400 },
+      );
+    }
+    const guestEmail = guestProfile?.success ? guestProfile.profile.guestEmail : null;
+    const guestName = guestProfile?.success ? guestProfile.profile.guestName : null;
     const message = toCleanText(body.message, 4000);
     const quickAction = toCleanText(body.quickAction, 80);
     const orderReference = toCleanText(body.orderReference, 60);
     const forceNew = Boolean(body.forceNew);
-
-    if (!actor.userId && !guestEmail) {
-      return chatJson(
-        { error: "Guest email is required to start a chat." },
-        { status: 400 },
-      );
-    }
-
-    if (!actor.userId && !guestName) {
-      return chatJson(
-        { error: "Guest name is required to start a chat." },
-        { status: 400 },
-      );
-    }
 
     // Validate configuration before writing. Email is contact data, never ownership.
     if (!actor.userId) requireGuestChatSessionSecret();

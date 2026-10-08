@@ -1,10 +1,24 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useRef, useState } from "react";
+import {
+  type FormEvent,
+  useCallback,
+  useEffect,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { useSession } from "next-auth/react";
 import { usePathname } from "next/navigation";
-import { MessageCircle, Send, Star, XCircle } from "lucide-react";
+import { LoaderCircle, MessageCircle, Send, ShieldCheck, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import {
+  type GuestChatProfile,
+  type GuestChatProfileErrors,
+  validateGuestChatProfile,
+} from "@/lib/chat-guest-profile";
 import {
   Sheet,
   SheetContent,
@@ -13,7 +27,6 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import GradientBorder from "../ui/GradientBorder";
 
 type ChatStatus = "OPEN" | "IN_PROGRESS" | "CLOSED";
 type SenderRole = "admin" | "user" | "guest" | string;
@@ -92,6 +105,9 @@ export default function SupportChatWidget() {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
   const [sending, setSending] = useState(false);
+  const [starting, setStarting] = useState(false);
+  const [guestFieldErrors, setGuestFieldErrors] = useState<GuestChatProfileErrors>({});
+  const [resolvedIdentity, setResolvedIdentity] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [conversation, setConversation] = useState<ChatConversation | null>(
     null,
@@ -107,9 +123,19 @@ export default function SupportChatWidget() {
   const [hydrated, setHydrated] = useState(false);
 
   const messageEndRef = useRef<HTMLDivElement | null>(null);
+  const messageInputRef = useRef<HTMLTextAreaElement | null>(null);
+  const guestNameInputRef = useRef<HTMLInputElement | null>(null);
+  const guestEmailInputRef = useRef<HTMLInputElement | null>(null);
+  const startRequestEpochRef = useRef<number | null>(null);
+  const hydrationRequestRef = useRef(0);
   const requestEpochRef = useRef(0);
   const [messageOwner, setMessageOwner] = useState<string | null>(null);
-  const identity = status === "loading" ? "loading" : session?.user?.id ?? "guest";
+  const identity = status === "loading"
+    ? "loading"
+    : session?.user?.id ? `user:${session.user.id}` : "guest";
+  const resolvingConversation = status === "loading" || !hydrated
+    || resolvedIdentity !== identity || (loading && !conversation);
+  const showGuestForm = !resolvingConversation && !session?.user?.id && !conversation;
   const role = getRoleForSession(
     (session?.user as { role?: string } | undefined)?.role,
     (session?.user as { permissions?: string[] } | undefined)?.permissions,
@@ -143,9 +169,13 @@ export default function SupportChatWidget() {
     setConversation(null);
     setMessages([]);
     setMessageOwner(null);
+    setResolvedIdentity(null);
+    setGuestFieldErrors({});
+    startRequestEpochRef.current = null;
     setError(null);
     setLoading(false);
     setSending(false);
+    setStarting(false);
     setDraftMessage("");
     setShowFeedback(false);
     setFeedback("");
@@ -197,14 +227,15 @@ export default function SupportChatWidget() {
   );
 
   const hydrateConversation = useCallback(async () => {
-    if (status === "loading" || !hydrated) return;
+    if (status === "loading" || !hydrated || startRequestEpochRef.current !== null) return;
     const epoch = requestEpochRef.current;
+    const hydrationRequest = ++hydrationRequestRef.current;
     setLoading(true);
     setError(null);
     try {
       // The server scopes anonymous lists to the single cookie-owned conversation.
       const list = await fetchJson<ChatConversation[]>("/api/chat/conversations?limit=10");
-      if (epoch !== requestEpochRef.current) return;
+      if (epoch !== requestEpochRef.current || hydrationRequest !== hydrationRequestRef.current) return;
       const preferred = list.find((item) => item.status !== "CLOSED") ?? list[0] ?? null;
       setConversation(preferred);
       if (preferred) {
@@ -212,21 +243,28 @@ export default function SupportChatWidget() {
       } else {
         setMessages([]);
       }
+      if (epoch === requestEpochRef.current && hydrationRequest === hydrationRequestRef.current) {
+        setResolvedIdentity(identity);
+      }
     } catch (fetchError) {
-      if (epoch !== requestEpochRef.current) return;
+      if (epoch !== requestEpochRef.current || hydrationRequest !== hydrationRequestRef.current) return;
       // No cookie is normal for a first-time guest; do not recover by email.
       if (!session?.user?.id && fetchError instanceof ChatRequestError && fetchError.status === 401) {
         setConversation(null);
         setMessages([]);
+        setResolvedIdentity(identity);
       } else {
         handleChatError(fetchError, "Failed to load conversation.");
       }
     } finally {
-      if (epoch === requestEpochRef.current) setLoading(false);
+      if (epoch === requestEpochRef.current && hydrationRequest === hydrationRequestRef.current) {
+        setLoading(false);
+      }
     }
   }, [
     handleChatError,
     hydrated,
+    identity,
     loadMessages,
     session?.user?.id,
     status,
@@ -238,35 +276,48 @@ export default function SupportChatWidget() {
   }, [hydrateConversation, open]);
 
   useEffect(() => {
-    if (!open || !conversation?.id || status === "loading") return;
+    if (!open || !conversation?.id || starting || resolvingConversation) return;
     const interval = setInterval(() => {
       void loadMessages(conversation.id, true);
     }, 4000);
     return () => clearInterval(interval);
-  }, [conversation?.id, loadMessages, open, status]);
+  }, [conversation?.id, loadMessages, open, resolvingConversation, starting]);
 
   useEffect(() => {
     if (!open) return;
     messageEndRef.current?.scrollIntoView({ behavior: "smooth" });
   }, [messages, open]);
 
-  const persistGuestProfile = useCallback(() => {
+  useEffect(() => {
+    if (!open || resolvingConversation || starting || sending || loading) return;
+    if (showGuestForm) {
+      guestNameInputRef.current?.focus({ preventScroll: true });
+    } else {
+      messageInputRef.current?.focus({ preventScroll: true });
+    }
+  }, [loading, open, resolvingConversation, sending, showGuestForm, starting]);
+
+  const persistGuestProfile = useCallback((profile: GuestChatProfile) => {
     if (typeof window === "undefined") return;
     try {
-      localStorage.setItem(LS_GUEST_NAME, guestName.trim());
-      localStorage.setItem(LS_GUEST_EMAIL, guestEmail.trim().toLowerCase());
+      localStorage.setItem(LS_GUEST_NAME, profile.guestName);
+      localStorage.setItem(LS_GUEST_EMAIL, profile.guestEmail);
     } catch {
       // Contact preferences are optional; credentials are never stored here.
     }
-  }, [guestEmail, guestName]);
+  }, []);
 
   const createConversation = useCallback(
     async (payload?: {
       message?: string;
       quickAction?: string;
       orderReference?: string;
+      guestProfile?: GuestChatProfile;
     }) => {
       const epoch = requestEpochRef.current;
+      // A late resume request must not overwrite a newly created conversation.
+      hydrationRequestRef.current += 1;
+      setLoading(false);
       const body: Record<string, unknown> = {
         message: payload?.message ?? "",
         quickAction: payload?.quickAction ?? "",
@@ -274,8 +325,8 @@ export default function SupportChatWidget() {
       };
 
       if (!session?.user?.id) {
-        body.guestName = guestName.trim();
-        body.guestEmail = guestEmail.trim().toLowerCase();
+        body.guestName = payload?.guestProfile?.guestName ?? guestName.trim();
+        body.guestEmail = payload?.guestProfile?.guestEmail ?? guestEmail.trim().toLowerCase();
       }
 
       const created = await fetchJson<ChatConversation>(
@@ -287,6 +338,9 @@ export default function SupportChatWidget() {
         },
       );
       if (epoch !== requestEpochRef.current) throw new Error("Chat identity changed. Please retry.");
+      if (!created || typeof created.id !== "string" || !created.id) {
+        throw new Error("Chat could not be started. Please try again.");
+      }
       setConversation(created);
       await loadMessages(created.id, false);
       return created;
@@ -299,14 +353,51 @@ export default function SupportChatWidget() {
     ],
   );
 
+  const startGuestChat = useCallback(async (event: FormEvent<HTMLFormElement>) => {
+    event.preventDefault();
+    if (!showGuestForm || starting || startRequestEpochRef.current !== null) return;
+
+    const formData = new FormData(event.currentTarget);
+    const validation = validateGuestChatProfile(formData.get("guestName"), formData.get("guestEmail"));
+    setGuestFieldErrors(validation.success ? {} : validation.errors);
+    if (!validation.success) {
+      if (validation.errors.guestName) guestNameInputRef.current?.focus();
+      else guestEmailInputRef.current?.focus();
+      return;
+    }
+
+    const epoch = requestEpochRef.current;
+    startRequestEpochRef.current = epoch;
+    setStarting(true);
+    setError(null);
+    try {
+      // An empty initial message is supported by the existing create API.
+      // Ownership comes from its HttpOnly cookie, never from these contact fields.
+      await createConversation({ guestProfile: validation.profile });
+      if (epoch !== requestEpochRef.current) return;
+      setGuestName(validation.profile.guestName);
+      setGuestEmail(validation.profile.guestEmail);
+      persistGuestProfile(validation.profile);
+    } catch (startError) {
+      if (epoch !== requestEpochRef.current) return;
+      handleChatError(startError, "Failed to start chat. Please try again.");
+    } finally {
+      if (startRequestEpochRef.current === epoch) startRequestEpochRef.current = null;
+      if (epoch === requestEpochRef.current) setStarting(false);
+    }
+  }, [
+    createConversation,
+    handleChatError,
+    persistGuestProfile,
+    showGuestForm,
+    starting,
+  ]);
+
   const sendMessage = useCallback(
     async (quickAction?: string) => {
-      if (sending || loading || status === "loading" || !hydrated) return;
-      if (!session?.user?.id && !conversation?.id
-        && (guestName.trim().length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(guestEmail.trim()))) {
-        setError("Enter your name and a valid contact email to start a new chat.");
-        return;
-      }
+      if (sending || starting || loading || resolvingConversation) return;
+      // Anonymous customers must submit the profile form before using the composer.
+      if (!session?.user?.id && !conversation?.id) return;
       const epoch = requestEpochRef.current;
       const messageText =
         draftMessage.trim() ||
@@ -320,7 +411,6 @@ export default function SupportChatWidget() {
       setError(null);
       try {
         if (!conversation?.id) {
-          if (!session?.user?.id) persistGuestProfile();
           await createConversation({
             message: messageText,
             quickAction: quickAction ?? "",
@@ -355,17 +445,14 @@ export default function SupportChatWidget() {
       conversation?.id,
       createConversation,
       draftMessage,
-      guestEmail,
-      guestName,
       handleChatError,
-      hydrated,
       loading,
       loadMessages,
       orderReference,
-      persistGuestProfile,
+      resolvingConversation,
       sending,
       session?.user?.id,
-      status,
+      starting,
     ],
   );
 
@@ -412,9 +499,8 @@ export default function SupportChatWidget() {
 
   if (!shouldRender) return null;
 
-  const guestReady = guestName.trim().length > 1 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(guestEmail.trim());
-  const sendDisabled = sending || loading || status === "loading" || !hydrated
-    || (!session?.user?.id && !conversation && !guestReady);
+  const sendDisabled = sending || starting || loading || resolvingConversation
+    || (!session?.user?.id && !conversation);
   // Hide old account data immediately, before the identity-reset effect runs.
   const visibleMessages = messageOwner === identity ? messages : [];
 
@@ -424,6 +510,7 @@ export default function SupportChatWidget() {
         <div className="fixed bottom-[10px] right-1 z-40">
           <button
             type="button"
+            aria-label="Open customer support chat"
             className="group flex h-12 w-12 items-center overflow-hidden rounded-full bg-primary text-primary-foreground shadow-xl transition-all duration-300 pr-3 hover:w-[145px] hover:pr-4"
           >
             <span className="flex h-12 w-12 min-w-12 items-center justify-center">
@@ -439,26 +526,28 @@ export default function SupportChatWidget() {
 
       <SheetContent
         side="right"
-        className="!top-auto !bottom-6 !right-6 h-[60vh] sm:w-[380px] rounded-xl shadow-2xl flex flex-col p-0"
+        className="!top-auto !bottom-2 !right-2 !h-[calc(100dvh_-_1rem)] !max-h-[640px] !w-[calc(100vw_-_1rem)] !max-w-[380px] gap-0 overflow-hidden rounded-xl shadow-2xl flex flex-col p-0 sm:!bottom-6 sm:!right-6 sm:!h-[min(640px,80dvh)] sm:!max-h-[calc(100dvh_-_3rem)]"
       >
-        <div className="rounded-xl">
+        <div className="shrink-0 rounded-xl">
           {/* HEADER */}
-          <SheetHeader className="flex items-center justify-between bg-gradient-to-r from-primary to-primary/90 px-4 py-3 text-primary-foreground rounded-xl">
-            <div>
+          <SheetHeader className="h-auto min-h-16 flex-nowrap items-center justify-between gap-2 bg-gradient-to-r from-primary to-primary/90 px-4 py-3 text-primary-foreground rounded-t-xl">
+            <div className="min-w-0">
               <SheetTitle className="text-sm text-primary-foreground font-semibold">
                 Customer Support
               </SheetTitle>
-              <SheetDescription className="text-[11px] text-primary-foreground/80">
+              <SheetDescription className="p-0 text-[11px] text-primary-foreground/80">
                 Average response under 15 minutes
               </SheetDescription>
             </div>
 
-            <div className="flex items-center gap-2">
+            <div className="flex shrink-0 items-center gap-2">
               <span className="rounded-full bg-accent/20 px-2 py-1 text-[10px] text-primary-foreground">
                 Online
               </span>
 
               <button
+                type="button"
+                aria-label="Hide customer support chat"
                 onClick={() => setOpen(false)}
                 className="rounded-md p-1 hover:bg-white/10"
               >
@@ -469,44 +558,106 @@ export default function SupportChatWidget() {
         </div>
 
         {/* CHAT MESSAGES */}
-        <div className="flex-1 overflow-y-auto bg-muted/30 p-4">
-          {!session?.user?.id && !conversation && (
-            <div className="mb-4 space-y-2">
-              <label className="block text-xs font-medium" htmlFor="support-chat-guest-name">
-                Your name
-              </label>
-              <input
-                id="support-chat-guest-name"
-                autoComplete="name"
-                value={guestName}
-                maxLength={120}
-                onChange={(event) => setGuestName(event.target.value)}
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-              />
-              <label className="block text-xs font-medium" htmlFor="support-chat-guest-email">
-                Contact email
-              </label>
-              <input
-                id="support-chat-guest-email"
-                type="email"
-                autoComplete="email"
-                value={guestEmail}
-                maxLength={254}
-                onChange={(event) => setGuestEmail(event.target.value)}
-                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
-              />
-              <p className="text-xs text-muted-foreground">
-                This browser can reopen your chat for 7 days using a secure cookie. Email alone cannot restore old chats. If that cookie is lost or expires, start a new chat.
-              </p>
-            </div>
-          )}
+        <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain bg-muted/30 p-4">
           {error && (
             <p role="alert" className="mb-3 text-sm text-destructive">{error}</p>
           )}
-          {loading && (
-            <p role="status" className="mb-3 text-xs text-muted-foreground">Loading secure chat…</p>
-          )}
-          {visibleMessages.length === 0 ? (
+          {resolvingConversation ? (
+            <div className="flex min-h-40 flex-col items-center justify-center gap-3 text-center">
+              {loading || status === "loading" || !hydrated ? (
+                <>
+                  <LoaderCircle aria-hidden="true" className="h-6 w-6 animate-spin text-primary" />
+                  <p role="status" className="text-sm text-muted-foreground">Loading secure chat…</p>
+                </>
+              ) : (
+                <Button type="button" variant="outline" onClick={() => void hydrateConversation()}>
+                  Retry opening chat
+                </Button>
+              )}
+            </div>
+          ) : showGuestForm ? (
+            <form
+              noValidate
+              onSubmit={startGuestChat}
+              aria-labelledby="support-chat-welcome-title"
+              aria-busy={starting}
+              className="space-y-5 rounded-xl border border-border bg-card p-4 shadow-sm"
+            >
+              <div className="space-y-2">
+                <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
+                  <MessageCircle aria-hidden="true" className="h-5 w-5" />
+                </span>
+                <h2 id="support-chat-welcome-title" className="text-base font-semibold text-card-foreground">
+                  Let’s start a conversation
+                </h2>
+                <p className="text-sm text-muted-foreground">Tell us your name and contact email so our team can help you.</p>
+              </div>
+
+              <fieldset disabled={starting} className="min-w-0 space-y-4">
+                <div className="space-y-2">
+                  <Label htmlFor="support-chat-guest-name">Your name <span aria-hidden="true">*</span></Label>
+                  <Input
+                    ref={guestNameInputRef}
+                    id="support-chat-guest-name"
+                    name="guestName"
+                    type="text"
+                    autoComplete="name"
+                    required
+                    minLength={2}
+                    maxLength={120}
+                    value={guestName}
+                    placeholder="Enter your name"
+                    aria-invalid={Boolean(guestFieldErrors.guestName)}
+                    aria-describedby={guestFieldErrors.guestName ? "support-chat-name-error" : undefined}
+                    onChange={(event) => {
+                      setGuestName(event.target.value);
+                      setGuestFieldErrors((current) => ({ ...current, guestName: undefined }));
+                    }}
+                    className="h-11 bg-background text-base"
+                  />
+                  {guestFieldErrors.guestName && (
+                    <p id="support-chat-name-error" role="alert" className="text-xs text-destructive">{guestFieldErrors.guestName}</p>
+                  )}
+                </div>
+                <div className="space-y-2">
+                  <Label htmlFor="support-chat-guest-email">Contact email <span aria-hidden="true">*</span></Label>
+                  <Input
+                    ref={guestEmailInputRef}
+                    id="support-chat-guest-email"
+                    name="guestEmail"
+                    type="email"
+                    inputMode="email"
+                    autoComplete="email"
+                    autoCapitalize="none"
+                    spellCheck={false}
+                    required
+                    maxLength={254}
+                    value={guestEmail}
+                    placeholder="name@example.com"
+                    aria-invalid={Boolean(guestFieldErrors.guestEmail)}
+                    aria-describedby={`support-chat-email-help${guestFieldErrors.guestEmail ? " support-chat-email-error" : ""}`}
+                    onChange={(event) => {
+                      setGuestEmail(event.target.value);
+                      setGuestFieldErrors((current) => ({ ...current, guestEmail: undefined }));
+                    }}
+                    className="h-11 bg-background text-base"
+                  />
+                  {guestFieldErrors.guestEmail && (
+                    <p id="support-chat-email-error" role="alert" className="text-xs text-destructive">{guestFieldErrors.guestEmail}</p>
+                  )}
+                  <p id="support-chat-email-help" className="text-xs text-muted-foreground">Used to contact you, not to unlock previous chats.</p>
+                </div>
+                <Button type="submit" disabled={starting} className="h-11 w-full">
+                  {starting ? <LoaderCircle aria-hidden="true" className="animate-spin" /> : <MessageCircle aria-hidden="true" />}
+                  {starting ? "Starting secure chat…" : "Start Chat"}
+                </Button>
+              </fieldset>
+              <div className="flex items-start gap-2 rounded-lg bg-primary/5 p-3 text-xs text-muted-foreground">
+                <ShieldCheck aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                <p>This browser can reopen your chat for 7 days using a secure cookie. If that cookie is lost or expires, start a new chat. Email alone cannot restore old chats.</p>
+              </div>
+            </form>
+          ) : visibleMessages.length === 0 ? (
             <p className="text-sm text-muted-foreground">
               Send your first message. Our team will reply shortly.
             </p>
@@ -527,7 +678,7 @@ export default function SupportChatWidget() {
                           : "bg-card text-card-foreground border border-border"
                       }`}
                     >
-                      <p className="whitespace-pre-wrap">{item.message}</p>
+                      <p className="whitespace-pre-wrap break-words">{item.message}</p>
 
                       <p
                         className={`mt-1 text-[11px] ${
@@ -548,47 +699,55 @@ export default function SupportChatWidget() {
         </div>
 
         {/* INPUT AREA */}
-        <div className="border-t bg-background p-3 space-y-3">
-          {/* QUICK ACTIONS */}
-          <div className="flex flex-wrap gap-2">
-            {QUICK_ACTIONS.map((action) => (
-              <button
-                key={action}
-                type="button"
+        {!resolvingConversation && !showGuestForm && (
+          <div className="shrink-0 border-t bg-background p-3 space-y-3">
+            {/* QUICK ACTIONS */}
+            <div className="flex flex-wrap gap-2">
+              {QUICK_ACTIONS.map((action) => (
+                <button
+                  key={action}
+                  type="button"
+                  disabled={sendDisabled}
+                  className="rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[11px] font-medium text-primary hover:bg-primary/10 disabled:opacity-50"
+                  onClick={() => void sendMessage(action)}
+                >
+                  {action}
+                </button>
+              ))}
+            </div>
+
+            {/* MESSAGE BOX */}
+            <div className="flex items-end gap-2">
+              <textarea
+                ref={messageInputRef}
+                aria-label="Your message"
                 disabled={sendDisabled}
-                className="rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[11px] font-medium text-primary hover:bg-primary/10"
-                onClick={() => void sendMessage(action)}
+                value={draftMessage}
+                onChange={(event) => setDraftMessage(event.target.value)}
+                rows={2}
+                className="min-w-0 flex-1 resize-none rounded-md border border-input bg-background px-3 py-2 text-base sm:text-sm"
+                placeholder="Type your message..."
+                onKeyDown={(event) => {
+                  if (event.key === "Enter" && !event.shiftKey) {
+                    if (event.nativeEvent.isComposing) return;
+                    event.preventDefault();
+                    void sendMessage();
+                  }
+                }}
+              />
+
+              <Button
+                type="button"
+                aria-label="Send message"
+                size="icon"
+                onClick={() => void sendMessage()}
+                disabled={sendDisabled}
               >
-                {action}
-              </button>
-            ))}
+                <Send className="h-4 w-4" />
+              </Button>
+            </div>
           </div>
-
-          {/* MESSAGE BOX */}
-          <div className="flex items-end gap-2">
-            <textarea
-              value={draftMessage}
-              onChange={(event) => setDraftMessage(event.target.value)}
-              rows={2}
-              className="flex-1 resize-none rounded-md border border-input bg-background px-3 py-2 text-sm"
-              placeholder="Type your message..."
-              onKeyDown={(event) => {
-                if (event.key === "Enter" && !event.shiftKey) {
-                  event.preventDefault();
-                  void sendMessage();
-                }
-              }}
-            />
-
-            <Button
-              size="icon"
-              onClick={() => void sendMessage()}
-              disabled={sendDisabled}
-            >
-              <Send className="h-4 w-4" />
-            </Button>
-          </div>
-        </div>
+        )}
       </SheetContent>
     </Sheet>
   );
