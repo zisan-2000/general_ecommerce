@@ -68,7 +68,7 @@ export default async function AboutPage() {
               <Button
                 asChild
                 variant="outline"
-                className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-interaction-foreground"
+                className="border-primary-foreground/40 bg-transparent text-primary-foreground hover:bg-interaction hover:text-interaction-foreground"
               >
                 <Link href="/ecommerce/contact">{t("contact")}</Link>
               </Button>

@@ -268,11 +268,7 @@ body {
 
   .dark {
     color-scheme: dark;
-    /* DeshiPlus orange and green palette. */
-
---brand-energetic-orange: 33.47 100.00% 49.22%; /* #FB8C00 */
-
---brand-fresh-green: 100.48 50.81% 48.63%; /* #66BB3D */
+    /* Brand aliases inherit the shared palette from :root. */
 
     /* Core Colors - Matte Dark */
     --background: var(--palette-primary-h) 50% 8.63%;

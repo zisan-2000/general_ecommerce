@@ -442,10 +442,10 @@ export default function FloatingCartButton() {
 
   const fetchItemVariants = async (item: CartItemWithVariants) => {
     if (itemVariants[item.id]) return itemVariants[item.id];
-    
+
     // Add to loading state
     setLoadingVariants(prev => new Set([...prev, item.id]));
-    
+
     try {
       const res = await fetch(`/api/products/${item.productId}?view=storefront`);
       if (!res.ok) throw new Error(`Product request failed with ${res.status}`);
@@ -474,12 +474,12 @@ export default function FloatingCartButton() {
   };
 
   const handleExpandItem = async (item: CartItemWithVariants) => {
-    setExpandedItems(prev => 
-      prev.has(item.id) 
+    setExpandedItems(prev =>
+      prev.has(item.id)
         ? new Set([...prev].filter(id => id !== item.id))
         : new Set([...prev, item.id])
     );
-    
+
     // Fetch variants if not already loaded
     if (!itemVariants[item.id] && !item.variantId) {
       await fetchItemVariants(item);
@@ -661,8 +661,8 @@ export default function FloatingCartButton() {
                     <div
                       key={`${item.id}-${item.variantId ?? "base"}`}
                       className={`overflow-hidden rounded-md border bg-card ${
-                        needsVariantSelection 
-                          ? 'border-secondary/30 bg-secondary/10' 
+                        needsVariantSelection
+                          ? 'border-secondary/30 bg-secondary/10'
                           : 'border-border'
                       }`}
                     >
@@ -693,7 +693,7 @@ export default function FloatingCartButton() {
                           <div className="mb-2">
                             <span className="text-sm font-medium text-secondary">{t("selectVariant")}:</span>
                           </div>
-                          
+
                           <div className="mt-3 space-y-2">
                             {loadingVariants.has(item.id) ? (
                               <div className="flex items-center justify-center py-4">
@@ -819,8 +819,8 @@ export default function FloatingCartButton() {
                   onClick={handleCheckout}
                   disabled={cartItems.length === 0 || hasUnselectedVariants}
                   className={`h-auto min-h-12 max-w-full whitespace-normal rounded-md px-4 py-3 text-primary-foreground hover:bg-interaction disabled:bg-muted disabled:text-muted-foreground ${
-                    hasUnselectedVariants 
-                      ? 'bg-secondary/10 text-secondary hover:bg-secondary/10' 
+                    hasUnselectedVariants
+                      ? 'bg-secondary/10 text-secondary hover:bg-secondary/10'
                       : 'bg-primary'
                   }`}
                 >
@@ -832,7 +832,7 @@ export default function FloatingCartButton() {
           </div>
         </SheetContent>
       </Sheet>
-      
+
           </>
   );
 }

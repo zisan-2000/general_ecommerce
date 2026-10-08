@@ -239,9 +239,9 @@ export default function Footer({
   );
 
   return (
-    <footer className="border-t border-white/20 bg-footer text-white">
+    <footer className="border-t border-footer-foreground/20 bg-footer text-footer-foreground">
       {/* Features Bar */}
-      <div className="border-b border-white/20 bg-footer">
+      <div className="border-b border-footer-foreground/20 bg-footer">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-x-6 gap-y-5 py-7 md:grid-cols-4">
             {features.map((feature, index) => (
@@ -249,14 +249,14 @@ export default function Footer({
                 key={index}
                 className="flex items-center gap-3 group"
               >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-footer-foreground/20 bg-footer-foreground/10 text-footer-foreground">
                   <feature.icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-white">
+                  <p className="text-sm font-semibold text-footer-foreground">
                     {feature.label}
                   </p>
-                  <p className="text-xs text-white">
+                  <p className="text-xs text-footer-foreground">
                     {feature.desc}
                   </p>
                 </div>
@@ -283,7 +283,7 @@ export default function Footer({
                   />
                 </div>
                 <div className="max-w-[280px]">
-                  <p className="text-xs leading-relaxed text-white">
+                  <p className="text-xs leading-relaxed text-footer-foreground">
                     {siteSettings.storeTagline?.trim() ||
                       t("brand.defaultTagline")}
                   </p>
@@ -293,36 +293,36 @@ export default function Footer({
 
             <div className="space-y-3">
               <div className="flex items-center gap-3 group">
-                <div className="p-2 rounded-lg bg-white/10 text-white group-hover:bg-interaction/15 group-hover:text-interaction transition-all duration-300">
+                <div className="p-2 rounded-lg bg-footer-foreground/10 text-footer-foreground group-hover:bg-interaction/15 group-hover:text-interaction transition-all duration-300">
                   <Phone className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-xs text-white">{t("contact.callUs")}</p>
-                  <p className="text-sm font-medium text-white">
+                  <p className="text-xs text-footer-foreground">{t("contact.callUs")}</p>
+                  <p className="text-sm font-medium text-footer-foreground">
                     {siteSettings.contactNumber || t("contact.phoneUnavailable")}
                   </p>
                 </div>
               </div>
 
               <div className="flex items-center gap-3 group">
-                <div className="p-2 rounded-lg bg-white/10 text-white group-hover:bg-interaction/15 group-hover:text-interaction transition-all duration-300">
+                <div className="p-2 rounded-lg bg-footer-foreground/10 text-footer-foreground group-hover:bg-interaction/15 group-hover:text-interaction transition-all duration-300">
                   <Mail className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-xs text-white">{t("contact.emailUs")}</p>
-                  <p className="text-sm font-medium text-white">
+                  <p className="text-xs text-footer-foreground">{t("contact.emailUs")}</p>
+                  <p className="text-sm font-medium text-footer-foreground">
                     {siteSettings.contactEmail || t("contact.emailUnavailable")}
                   </p>
                 </div>
               </div>
 
               <div className="flex items-start gap-3 group">
-                <div className="p-2 rounded-lg bg-white/10 text-white group-hover:bg-interaction/15 group-hover:text-interaction transition-all duration-300 mt-1">
+                <div className="p-2 rounded-lg bg-footer-foreground/10 text-footer-foreground group-hover:bg-interaction/15 group-hover:text-interaction transition-all duration-300 mt-1">
                   <MapPin className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-xs text-white">{t("contact.address")}</p>
-                  <p className="text-sm font-medium text-white leading-relaxed">
+                  <p className="text-xs text-footer-foreground">{t("contact.address")}</p>
+                  <p className="text-sm font-medium text-footer-foreground leading-relaxed">
                     {siteSettings.address || t("contact.addressUnavailable")}
                   </p>
                 </div>
@@ -338,7 +338,7 @@ export default function Footer({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="p-2 rounded-lg bg-white/10 text-white hover:bg-interaction/15 hover:text-interaction transition-all duration-300"
+                  className="p-2 rounded-lg bg-footer-foreground/10 text-footer-foreground hover:bg-interaction/15 hover:text-interaction transition-all duration-300"
                 >
                   <social.icon className="h-4 w-4" />
                 </a>
@@ -350,7 +350,7 @@ export default function Footer({
           <div className={`lg:col-span-6 grid gap-6 ${categories.length > 0 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2'}`}>
             {/* Quick Links */}
             <div className="relative">
-              <h3 className="text-sm font-semibold text-white mb-5 flex items-center gap-2">
+              <h3 className="text-sm font-semibold text-footer-foreground mb-5 flex items-center gap-2">
                 <span className="h-1 w-5 rounded-full bg-brand-highlight" />
                 {t("sections.quickLinks")}
               </h3>
@@ -359,7 +359,7 @@ export default function Footer({
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white hover:text-interaction hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
+                      className="text-sm text-footer-foreground hover:text-interaction hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
                     >
                       <span className="absolute left-0 w-0 h-px bg-brand-highlight group-hover:w-4 transition-all duration-300" />
                       <ChevronRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300" />
@@ -373,7 +373,7 @@ export default function Footer({
             {/* ✅ Categories (from /api/categories) - Only show if categories exist */}
             {categories.length > 0 && (
               <div className="relative">
-                <h3 className="text-sm font-semibold text-white mb-5 flex items-center gap-2">
+                <h3 className="text-sm font-semibold text-footer-foreground mb-5 flex items-center gap-2">
                   <span className="h-1 w-5 rounded-full bg-brand-highlight" />
                   {t("sections.categories")}
                 </h3>
@@ -382,7 +382,7 @@ export default function Footer({
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-sm text-white hover:text-interaction hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
+                        className="text-sm text-footer-foreground hover:text-interaction hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
                       >
                         <span className="absolute left-0 w-0 h-px bg-brand-highlight group-hover:w-4 transition-all duration-300" />
                         <ChevronRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300" />
@@ -396,7 +396,7 @@ export default function Footer({
 
             {/* Customer Service */}
             <div className="relative">
-              <h3 className="text-sm font-semibold text-white mb-5 flex items-center gap-2">
+              <h3 className="text-sm font-semibold text-footer-foreground mb-5 flex items-center gap-2">
                 <span className="h-1 w-5 rounded-full bg-brand-highlight" />
                 {t("sections.customerService")}
               </h3>
@@ -405,10 +405,10 @@ export default function Footer({
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white hover:text-interaction hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
+                      className="text-sm text-footer-foreground hover:text-interaction hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
                     >
                       <span className="absolute left-0 w-0 h-px bg-brand-highlight group-hover:w-4 transition-all duration-300" />
-                      <link.icon className="h-3.5 w-3.5 text-white/80 group-hover:text-interaction transition-colors duration-300" />
+                      <link.icon className="h-3.5 w-3.5 text-footer-foreground/80 group-hover:text-interaction transition-colors duration-300" />
                       <span className="group-hover:font-medium">{link.label}</span>
                     </Link>
                   </li>
@@ -420,14 +420,14 @@ export default function Footer({
           {/* Newsletter Column */}
           <div className="lg:col-span-3">
             <SpotlightCard
-              className="!p-0 !border-white/20 !bg-white/10 !rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(24,61,35,0.05)]"
+              className="!p-0 !border-footer-foreground/20 !bg-footer-foreground/10 !rounded-2xl overflow-hidden shadow-[0_8px_32px_hsl(var(--palette-ink)/0.05)]"
               spotlightColor="hsl(var(--footer-foreground) / 0.08)"
             >
               <div className="p-6 sm:p-7">
-                <h3 className="text-sm font-semibold text-white mb-2">
+                <h3 className="text-sm font-semibold text-footer-foreground mb-2">
                   {t("newsletter.title")}
                 </h3>
-                <p className="text-xs text-white mb-4">
+                <p className="text-xs text-footer-foreground mb-4">
                   {t("newsletter.description")}
                 </p>
 
@@ -439,9 +439,9 @@ export default function Footer({
                       aria-label={t("newsletter.emailLabel")}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="h-11 w-full rounded-lg border-white/20 bg-footer pr-10 text-white placeholder:text-white/70 focus-visible:ring-brand-highlight"
+                      className="h-11 w-full rounded-lg border-footer-foreground/20 bg-footer pr-10 text-footer-foreground placeholder:text-footer-foreground/70 focus-visible:ring-brand-highlight"
                     />
-                    <Send className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white" />
+                    <Send className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-footer-foreground" />
                   </div>
                   <Button
                     type="submit"
@@ -451,7 +451,7 @@ export default function Footer({
                   >
                     {isSubscribing ? (
                       <span className="flex items-center gap-2">
-                        <div className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                        <div className="h-4 w-4 border-2 border-footer-foreground border-t-transparent rounded-full animate-spin" />
                         {t("newsletter.subscribing")}
                       </span>
                     ) : (
@@ -463,10 +463,10 @@ export default function Footer({
                   </Button>
                 </form>
 
-                <div className="mt-4 pt-4 border-t border-white/20">
+                <div className="mt-4 pt-4 border-t border-footer-foreground/20">
                   <div className="flex items-center gap-2">
-                    <Heart className="h-4 w-4 text-white" />
-                    <p className="text-xs text-white">
+                    <Heart className="h-4 w-4 text-footer-foreground" />
+                    <p className="text-xs text-footer-foreground">
                       {t("secureTransactions")}
                     </p>
                   </div>
@@ -478,10 +478,10 @@ export default function Footer({
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/20 bg-footer">
+      <div className="border-t border-footer-foreground/20 bg-footer">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-white">
+            <p className="text-xs text-footer-foreground">
               {t("rights", {
                 year: currentYear,
                 site: siteSettings.siteTitle?.trim() || DEFAULT_SITE_TITLE,
@@ -497,7 +497,7 @@ export default function Footer({
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-xs text-white hover:text-interaction transition-colors"
+                  className="text-xs text-footer-foreground hover:text-interaction transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -505,13 +505,13 @@ export default function Footer({
             </div>
 
             <div className="flex items-center gap-2">
-              <div className="rounded-md border border-white/20 bg-white/10 px-2.5 py-1.5 text-[11px] font-medium text-white">
+              <div className="rounded-md border border-footer-foreground/20 bg-footer-foreground/10 px-2.5 py-1.5 text-[11px] font-medium text-footer-foreground">
                 Visa
               </div>
-              <div className="rounded-md border border-white/20 bg-white/10 px-2.5 py-1.5 text-[11px] font-medium text-white">
+              <div className="rounded-md border border-footer-foreground/20 bg-footer-foreground/10 px-2.5 py-1.5 text-[11px] font-medium text-footer-foreground">
                 Mastercard
               </div>
-              <div className="rounded-md border border-white/20 bg-white/10 px-2.5 py-1.5 text-[11px] font-medium text-white">
+              <div className="rounded-md border border-footer-foreground/20 bg-footer-foreground/10 px-2.5 py-1.5 text-[11px] font-medium text-footer-foreground">
                 bkash
               </div>
             </div>
