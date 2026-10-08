@@ -173,7 +173,7 @@ export default function InvestorOperationsClient({
           <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-4">
             {data.summary.map((card) => (
               <Link key={card.id} href={card.href}>
-                <Card className="h-full transition-colors hover:border-primary/40">
+                <Card className="h-full transition-colors hover:border-interaction/40">
                   <CardHeader className="pb-2">
                     <CardTitle className="text-sm font-medium text-muted-foreground">
                       {payloadCopy("summary", card.id, "label", card.label)}
@@ -211,7 +211,7 @@ export default function InvestorOperationsClient({
                         <Link
                           key={item.id}
                           href={item.href}
-                          className={`block rounded-lg border p-4 transition-colors hover:border-primary/40 ${toneClasses(item.tone)}`}
+                          className={`block rounded-lg border p-4 transition-colors hover:border-interaction/40 ${toneClasses(item.tone)}`}
                         >
                           <div className="flex items-start justify-between gap-3">
                             <div className="space-y-1">
@@ -249,7 +249,7 @@ export default function InvestorOperationsClient({
                         <Link
                           key={item.id}
                           href={item.href}
-                          className={`block rounded-lg border p-4 transition-colors hover:border-primary/40 ${toneClasses(item.tone)}`}
+                          className={`block rounded-lg border p-4 transition-colors hover:border-interaction/40 ${toneClasses(item.tone)}`}
                         >
                           <div className="flex items-start justify-between gap-3">
                             <div className="space-y-1">
@@ -281,7 +281,7 @@ export default function InvestorOperationsClient({
                       <Link
                         key={item.id}
                         href={item.href}
-                        className="flex items-start justify-between rounded-lg border p-4 transition-colors hover:border-primary/40"
+                        className="flex items-start justify-between rounded-lg border p-4 transition-colors hover:border-interaction/40"
                       >
                         <div className="space-y-1">
                           <p className="font-medium">{payloadCopy("quickLinks", item.id, "label", item.label)}</p>
@@ -347,7 +347,7 @@ export default function InvestorOperationsClient({
                     <Link
                       key={item.id}
                       href={item.href}
-                      className={`flex items-start gap-3 rounded-lg border p-4 transition-colors hover:border-primary/40 ${toneClasses(item.tone)}`}
+                      className={`flex items-start gap-3 rounded-lg border p-4 transition-colors hover:border-interaction/40 ${toneClasses(item.tone)}`}
                     >
                       <Clock3 className="mt-0.5 h-5 w-5 shrink-0" />
                       <div className="min-w-0 flex-1 space-y-1">
@@ -381,7 +381,7 @@ export default function InvestorOperationsClient({
                       <Link
                         key={item.id}
                         href={item.href}
-                        className={`flex items-start gap-3 rounded-lg border p-4 transition-colors hover:border-primary/40 ${toneClasses(item.tone)}`}
+                        className={`flex items-start gap-3 rounded-lg border p-4 transition-colors hover:border-interaction/40 ${toneClasses(item.tone)}`}
                       >
                         <AlertTriangle className="mt-0.5 h-5 w-5 shrink-0" />
                         <div className="min-w-0 flex-1 space-y-1">
@@ -438,7 +438,7 @@ export default function InvestorOperationsClient({
                     <Link
                       key={item.id}
                       href={item.href}
-                      className="flex items-start gap-3 rounded-lg border p-4 transition-colors hover:border-primary/40"
+                      className="flex items-start gap-3 rounded-lg border p-4 transition-colors hover:border-interaction/40"
                     >
                       <item.icon className="mt-0.5 h-5 w-5 text-muted-foreground" />
                       <div className="space-y-1">

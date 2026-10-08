@@ -65,7 +65,7 @@ export function FlashSaleCard({ product }: { product: FlashSaleProduct }) {
   return (
     <article className="group relative flex h-full w-full flex-col overflow-hidden rounded-2xl border border-border bg-gradient-to-br from-card via-card to-muted/40 shadow-[0_8px_20px_rgba(15,23,42,0.08)] transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl">
       <div className="relative aspect-square overflow-hidden bg-gradient-to-br from-muted/30 to-muted/10">
-        <span className="absolute left-3 top-3 z-10 rounded-md bg-emerald-700 px-2.5 py-1 text-xs font-extrabold text-white shadow-sm">{t("save", { amount: formatPrice(sale.savings) })}</span>
+        <span className="absolute left-3 top-3 z-10 rounded-md bg-primary px-2.5 py-1 text-xs font-extrabold text-white shadow-sm">{t("save", { amount: formatPrice(sale.savings) })}</span>
         <Link prefetch={false} href={`/ecommerce/products/${product.id}`} className="relative block h-full w-full" aria-label={t("viewProduct", { name: product.name })}>
           {product.image ? (
             <Image src={product.image} alt={product.name} fill sizes="(max-width: 640px) 72vw, (max-width: 1024px) 38vw, 260px" className="object-cover transition-all duration-500 ease-out group-hover:scale-110" />
@@ -76,7 +76,7 @@ export function FlashSaleCard({ product }: { product: FlashSaleProduct }) {
       </div>
 
       <div className="flex flex-1 flex-col px-3 pb-3 pt-2.5 sm:px-4 sm:pb-3.5 sm:pt-3">
-        <Link prefetch={false} href={`/ecommerce/products/${product.id}`} className="mb-2 line-clamp-2 min-h-[42px] text-[14px] font-semibold leading-snug text-foreground transition-colors group-hover:text-primary sm:min-h-[44px] sm:text-[15px]">{product.name}</Link>
+        <Link prefetch={false} href={`/ecommerce/products/${product.id}`} className="mb-2 line-clamp-2 min-h-[42px] text-[14px] font-semibold leading-snug text-foreground transition-colors group-hover:text-interaction sm:min-h-[44px] sm:text-[15px]">{product.name}</Link>
         <div className="mb-3 mt-1.5 flex min-h-7 flex-wrap items-baseline gap-2">
           <span className="text-[17px] font-bold text-primary sm:text-[18px]">{formatPrice(Number(product.basePrice))}</span>
           <span className="text-[12px] text-muted-foreground line-through sm:text-[13px]">{formatPrice(sale.regularPrice)}</span>
@@ -84,7 +84,7 @@ export function FlashSaleCard({ product }: { product: FlashSaleProduct }) {
 
         <div className="mt-auto space-y-3">
           <FlashSaleCountdown endsAt={sale.endsAt} />
-          <Link prefetch={false} href={`/ecommerce/products/${product.id}`} className="flex h-10 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-orange-500 to-red-600 text-sm font-extrabold text-white shadow-sm transition hover:from-orange-600 hover:to-red-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2">
+          <Link prefetch={false} href={`/ecommerce/products/${product.id}`} className="flex h-10 items-center justify-center gap-2 rounded-lg bg-gradient-to-r from-secondary to-brand-highlight text-sm font-extrabold text-white shadow-sm transition hover:from-secondary-hover hover:to-secondary-hover focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-secondary focus-visible:ring-offset-2">
             <Zap className="h-4 w-4 fill-current" aria-hidden="true" /> {t("viewDeal")}
           </Link>
           <p className="sr-only">{t("stock", { count: stock })}</p>
@@ -124,15 +124,15 @@ export default function FlashSale({ productsData }: { productsData: FlashSalePro
         <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
           <div>
             <div className="mb-1 flex items-center gap-2">
-              <Flame className="h-7 w-7 fill-orange-500 text-orange-500" aria-hidden="true" />
+              <Flame className="h-7 w-7 fill-secondary text-secondary" aria-hidden="true" />
               <h2 id="flash-sale-title" className="text-xl font-bold tracking-tight text-foreground sm:text-2xl">{t("title")}</h2>
             </div>
             <p className="text-base text-muted-foreground">{t("subtitle")}</p>
           </div>
           <div className="flex items-center gap-2">
-            <button type="button" onClick={() => scroll("left")} className="grid h-11 w-11 place-items-center rounded-full border border-border bg-card transition hover:border-orange-500 hover:text-orange-600" aria-label={t("previous")}><ChevronLeft className="h-5 w-5" /></button>
-            <button type="button" onClick={() => scroll("right")} className="grid h-11 w-11 place-items-center rounded-full border border-border bg-card transition hover:border-orange-500 hover:text-orange-600" aria-label={t("next")}><ChevronRight className="h-5 w-5" /></button>
-            <Link href="/ecommerce/flash-sale" className="ml-1 inline-flex h-11 items-center gap-1 rounded-full border border-border bg-card px-5 text-sm font-bold transition hover:border-orange-500 hover:text-orange-600">{t("viewAll")} <ChevronRight className="h-4 w-4" /></Link>
+            <button type="button" onClick={() => scroll("left")} className="grid h-11 w-11 place-items-center rounded-full border border-border bg-card transition hover:border-secondary hover:text-secondary" aria-label={t("previous")}><ChevronLeft className="h-5 w-5" /></button>
+            <button type="button" onClick={() => scroll("right")} className="grid h-11 w-11 place-items-center rounded-full border border-border bg-card transition hover:border-secondary hover:text-secondary" aria-label={t("next")}><ChevronRight className="h-5 w-5" /></button>
+            <Link href="/ecommerce/flash-sale" className="ml-1 inline-flex h-11 items-center gap-1 rounded-full border border-border bg-card px-5 text-sm font-bold transition hover:border-secondary hover:text-secondary">{t("viewAll")} <ChevronRight className="h-4 w-4" /></Link>
           </div>
         </div>
         <div ref={scrollerRef} className="flex snap-x snap-mandatory gap-4 overflow-x-auto pb-3 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">

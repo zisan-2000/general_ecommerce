@@ -151,12 +151,12 @@ export default function ChangePasswordPage() {
       {/* Breadcrumb */}
       <div className="px-6 pt-6">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <Link href="/" className="flex items-center gap-1 hover:text-foreground">
+          <Link href="/" className="flex items-center gap-1 hover:text-interaction">
             <Home className="h-4 w-4" />
             <span>{t("common.home")}</span>
           </Link>
           <span>›</span>
-          <Link href="/ecommerce/user" className="hover:text-foreground">
+          <Link href="/ecommerce/user" className="hover:text-interaction">
             {t("common.account")}
           </Link>
           <span>›</span>
@@ -269,7 +269,7 @@ export default function ChangePasswordPage() {
               <button
                 type="submit"
                 disabled={!canSubmit}
-                className="h-10 px-6 rounded-md bg-primary text-primary-foreground font-semibold text-sm hover:bg-primary/90 disabled:opacity-60"
+                className="h-10 px-6 rounded-md bg-primary text-primary-foreground font-semibold text-sm hover:bg-interaction hover:text-interaction-foreground disabled:opacity-60"
               >
                 {saving ? t("password.updating") : t("password.update")}
               </button>

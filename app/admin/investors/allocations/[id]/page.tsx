@@ -182,7 +182,7 @@ export default function InvestorAllocationDetailPage() {
             <CardTitle className="text-base">{t("allocationDetail.context")}</CardTitle>
           </CardHeader>
           <CardContent className="grid gap-4 md:grid-cols-2 text-sm">
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.investor")}</div><Link href={`/admin/investors/${allocation.investor.id}`} className="mt-1 block font-medium hover:text-primary">{allocation.investor.name} ({allocation.investor.code})</Link></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.investor")}</div><Link href={`/admin/investors/${allocation.investor.id}`} className="mt-1 block font-medium hover:text-interaction">{allocation.investor.name} ({allocation.investor.code})</Link></div>
             <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.investorStatus")}</div><div className="mt-1 font-medium">{t(`enums.investorStatuses.${allocation.investor.status}` as any)} | {t(`enums.kycStatuses.${allocation.investor.kycStatus}` as any)}</div></div>
             <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.variant")}</div><div className="mt-1 font-medium">{allocation.productVariant.product.name} ({allocation.productVariant.sku})</div></div>
             <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("allocationDetail.variantActive")}</div><div className="mt-1 font-medium">{allocation.productVariant.active ? t("common.yes") : t("common.no")}</div></div>
@@ -228,7 +228,7 @@ export default function InvestorAllocationDetailPage() {
           <CardContent className="space-y-3">
             {overlappingAllocations.length > 0 ? (
               overlappingAllocations.map((item) => (
-                <Link key={item.id} href={`/admin/investors/allocations/${item.id}`} className="block rounded-lg border p-3 text-sm hover:border-primary/40 hover:bg-muted/30">
+                <Link key={item.id} href={`/admin/investors/allocations/${item.id}`} className="block rounded-lg border p-3 text-sm hover:border-interaction/40 hover:bg-muted/30">
                   <div className="font-medium">{item.investor.name} ({item.investor.code})</div>
                   <div className="text-muted-foreground">
                     {t(`enums.allocationStatuses.${item.status}` as any)} | {item.participationPercent || "—"} | {fmtDate(item.effectiveFrom, locale)} {"→"} {fmtDate(item.effectiveTo, locale, t("common.openEnded"))}
@@ -250,7 +250,7 @@ export default function InvestorAllocationDetailPage() {
           <CardContent className="space-y-3">
             {investorTransactions.length > 0 ? (
               investorTransactions.map((item) => (
-                <Link key={item.id} href={`/admin/investors/ledger/${item.id}`} className="block rounded-lg border p-3 text-sm hover:border-primary/40 hover:bg-muted/30">
+                <Link key={item.id} href={`/admin/investors/ledger/${item.id}`} className="block rounded-lg border p-3 text-sm hover:border-interaction/40 hover:bg-muted/30">
                   <div className="font-medium">{item.transactionNumber}</div>
                   <div className="text-muted-foreground">
                     {t(`enums.transactionTypes.${item.type}` as any)} | {t(`enums.directions.${item.direction}` as any)} | {fmtMoney(item.amount, locale)} {item.currency}

@@ -79,7 +79,7 @@ export default function BrandFilter({
           <button
             type="button"
             onClick={reset}
-            className="text-xs text-muted-foreground hover:text-foreground underline underline-offset-2"
+            className="text-xs text-muted-foreground hover:text-interaction underline underline-offset-2"
           >
             Reset
           </button>
@@ -105,7 +105,7 @@ export default function BrandFilter({
               return (
                 <label
                   key={brand.id}
-                  className="flex items-center gap-2 text-sm cursor-pointer hover:bg-accent/50 rounded px-2 py-1 transition"
+                  className="flex items-center gap-2 text-sm cursor-pointer hover:bg-interaction/50 rounded px-2 py-1 transition"
                 >
                   <input
                     type="checkbox"

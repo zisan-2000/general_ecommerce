@@ -141,113 +141,126 @@ body {
 @layer base {
   :root {
     color-scheme: light;
-    /* DeshiPlus orange and green palette. */
-
-    --brand-warm-orange: 35.67 100.00% 57.45%; /* #FFA726 */
-
-    --brand-energetic-orange: 33.47 100.00% 49.22%; /* #FB8C00 */
-
-    --brand-primary-green: 133.71 60.69% 33.92%; /* #228B3A */
-
-    --brand-fresh-green: 100.48 50.81% 48.63%; /* #66BB3D */
+    /* EDIT THIS PALETTE: all brand colors and interaction states derive from here.
+       HSL channels keep Tailwind opacity utilities (bg-primary/10) working.
+       Change the primary hue/saturation/lightness and the three companion colors
+       to apply a new palette throughout the project, in both light and dark mode. */
+    --palette-primary-h: 133.71;
+    --palette-primary-s: 60.69%;
+    --palette-primary-l: 33.92%;
+    --palette-primary: var(--palette-primary-h) var(--palette-primary-s) var(--palette-primary-l); /* #228B3A */
+    --palette-secondary: 33.47 100% 49.22%; /* #FB8C00 */
+    --palette-highlight: 35.67 100% 57.45%; /* #FFA726 */
+    --palette-accent: 100.48 50.81% 48.63%; /* #66BB3D */
+    --palette-ink: var(--palette-primary-h) 43.53% 16.67%;
+    --palette-white: 0 0% 100%;
+    --footer: var(--palette-primary-h) var(--palette-primary-s) calc(var(--palette-primary-l) * 0.77);
+    --footer-foreground: var(--palette-white);
+    --interaction: var(--palette-secondary);
+    --interaction-foreground: var(--palette-ink);
+    --secondary-hover: color-mix(in srgb, hsl(var(--secondary)) 90%, white);
+    --brand-warm-orange: var(--palette-highlight);
+    --brand-energetic-orange: var(--palette-secondary);
+    --brand-primary-green: var(--palette-primary);
+    --brand-fresh-green: var(--palette-accent);
 
     /* Core Colors */
-    --background: 100.00 42.86% 97.25%; /* #F7FBF5 */
-    --foreground: 137.84 43.53% 16.67%; /* #183D23 */
+    --background: var(--palette-primary-h) 42.86% 97.25%;
+    --foreground: var(--palette-ink);
 
     --card: 0.00 0.00% 100.00%; /* #FFFFFF */
-    --card-foreground: 137.84 43.53% 16.67%; /* #183D23 */
+    --card-foreground: var(--foreground);
 
     --popover: 0.00 0.00% 100.00%; /* #FFFFFF */
-    --popover-foreground: 137.84 43.53% 16.67%; /* #183D23 */
+    --popover-foreground: var(--foreground);
 
     /* Primary */
-    --primary: 133.71 60.69% 33.92%; /* #228B3A */
-    --primary-foreground: 0.00 0.00% 100.00%; /* #FFFFFF */
+    --primary: var(--palette-primary);
+    --primary-foreground: var(--palette-white);
 
     /* Secondary */
-    --secondary: 35.67 100.00% 57.45%; /* #FFA726 */
-    --secondary-foreground: 137.84 43.53% 16.67%; /* #183D23 */
+    --secondary: var(--palette-secondary);
+    --secondary-foreground: var(--palette-white);
 
     /* Muted Colors */
-    --muted: 96.92 41.94% 93.92%; /* #EEF6E9 */
-    --muted-foreground: 114.29 11.86% 34.71%; /* #50634E */
+    --muted: var(--palette-primary-h) 41.94% 93.92%;
+    --muted-foreground: var(--palette-primary-h) 11.86% 34.71%;
 
     /* Accent */
-    --accent: 100.48 50.81% 48.63%; /* #66BB3D */
-    --accent-foreground: 137.84 43.53% 16.67%; /* #183D23 */
+    --accent: var(--palette-accent);
+    --accent-foreground: var(--palette-ink);
 
     /* Destructive */
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
     /* UI Elements */
-    --border: 101.74 30.67% 85.29%; /* #D5E5CE */
-    --input: 101.74 30.67% 85.29%; /* #D5E5CE */
-    --ring: 133.71 60.69% 33.92%; /* #228B3A */
+    --border: var(--palette-primary-h) 30.67% 85.29%;
+    --input: var(--border);
+    --ring: var(--palette-primary);
 
     --radius: 0.5rem;
 
     /* Charts */
-    --chart-1: 133.71 60.69% 33.92%; /* #228B3A */
-    --chart-2: 33.47 100.00% 49.22%; /* #FB8C00 */
-    --chart-3: 100.48 50.81% 48.63%; /* #66BB3D */
-    --chart-4: 35.67 100.00% 57.45%; /* #FFA726 */
-    --chart-5: 137.84 43.53% 16.67%; /* #183D23 */
+    --chart-1: var(--primary);
+    --chart-2: var(--secondary);
+    --chart-3: var(--accent);
+    --chart-4: var(--palette-highlight);
+    --chart-5: var(--palette-ink);
 
     /* Scrollbar */
-    --scrollbar-thumb: 133.71 60.69% 33.92%; /* #228B3A */
-    --scrollbar-track: 96.92 41.94% 93.92%; /* #EEF6E9 */
-    --scrollbar-thumb-hover: 33.47 100.00% 49.22%; /* #FB8C00 */
+    --scrollbar-thumb: var(--primary);
+    --scrollbar-track: var(--muted);
+    --scrollbar-thumb-hover: var(--secondary);
 
     /* Analytics */
-    --analytics-primary: 133.71 60.69% 33.92%; /* #228B3A */
-    --analytics-secondary: 96.92 41.94% 93.92%; /* #EEF6E9 */
-    --analytics-accent: 33.47 100.00% 49.22%; /* #FB8C00 */
-    --analytics-chart-1: 133.71 60.69% 33.92%; /* #228B3A */
-    --analytics-chart-2: 33.47 100.00% 49.22%; /* #FB8C00 */
-    --analytics-chart-3: 100.48 50.81% 48.63%; /* #66BB3D */
-    --analytics-chart-4: 35.67 100.00% 57.45%; /* #FFA726 */
-    --analytics-chart-5: 137.84 43.53% 16.67%; /* #183D23 */
+    --analytics-primary: var(--primary);
+    --analytics-secondary: var(--muted);
+    --analytics-accent: var(--secondary);
+    --analytics-chart-1: var(--chart-1);
+    --analytics-chart-2: var(--chart-2);
+    --analytics-chart-3: var(--chart-3);
+    --analytics-chart-4: var(--chart-4);
+    --analytics-chart-5: var(--chart-5);
 
     /* Best Seller & Sold Badge */
-    --best-seller-bg: 133.71 60.69% 33.92%; /* #228B3A */
-    --best-seller-text: 0.00 0.00% 100.00%; /* #FFFFFF */
-    --sold-count-bg: 35.67 100.00% 57.45%; /* #FFA726 */
-    --sold-count-text: 137.84 43.53% 16.67%; /* #183D23 */
-    --badge-shadow: 0 4px 6px -1px rgb(34 139 58 / 0.25);
+    --best-seller-bg: var(--primary);
+    --best-seller-text: var(--primary-foreground);
+    --sold-count-bg: var(--secondary);
+    --sold-count-text: var(--secondary-foreground);
+    --badge-shadow: 0 4px 6px -1px hsl(var(--primary) / 0.25);
 
     /* Delivery Proof */
-    --delivery-proof-bg: 133.71 60.69% 33.92%; /* #228B3A */
-    --delivery-proof-text: 0.00 0.00% 100.00%; /* #FFFFFF */
-    --delivery-pin-bg: 96.92 41.94% 93.92%; /* #EEF6E9 */
-    --delivery-pin-text: 137.84 43.53% 16.67%; /* #183D23 */
-    --delivery-pin-value: 137.84 43.53% 16.67%; /* #183D23 */
-    --delivery-link-bg: 96.92 41.94% 93.92%; /* #EEF6E9 */
-    --delivery-link-text: 133.71 60.69% 33.92%; /* #228B3A */
-    --delivery-status-bg: 0.00 0.00% 100.00%; /* #FFFFFF */
-    --delivery-status-text: 114.29 11.86% 34.71%; /* #50634E */
+    --delivery-proof-bg: var(--primary);
+    --delivery-proof-text: var(--primary-foreground);
+    --delivery-pin-bg: var(--muted);
+    --delivery-pin-text: var(--foreground);
+    --delivery-pin-value: var(--foreground);
+    --delivery-link-bg: var(--muted);
+    --delivery-link-text: var(--primary);
+    --delivery-status-bg: var(--card);
+    --delivery-status-text: var(--muted-foreground);
 
     /* Custom Gradients */
-    --gradient-primary: linear-gradient(135deg, #228B3A, #66BB3D);
-    --gradient-soft: linear-gradient(135deg, #F7FBF5, #E2F2DA);
-    --gradient-premium: linear-gradient(135deg, #183D23, #228B3A);
-    --gradient-amber: linear-gradient(135deg, #FFA726, #FB8C00);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-soft: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-premium: linear-gradient(135deg, hsl(var(--footer)), hsl(var(--primary)));
+    --gradient-amber: linear-gradient(135deg, hsl(var(--palette-highlight)), hsl(var(--secondary)));
 
     /* Delivery Summary Card Colors */
-    --delivery-card-assigned: 96.92 41.94% 93.92%; /* #EEF6E9 */
-    --delivery-card-accepted: 100.00 48.00% 90.20%; /* #E2F2DA */
-    --delivery-card-rejected: 17.14 100.00% 95.88%; /* #FFF0EA */
-    --delivery-card-picked: 38.18 100.00% 93.53%; /* #FFF3DE */
-    --delivery-card-in-transit: 37.39 100.00% 86.47%; /* #FFE5BA */
-    --delivery-card-delivered: 100.59 48.57% 86.27%; /* #D6EDCB */
+    --delivery-card-assigned: var(--palette-primary-h) 41.94% 93.92%;
+    --delivery-card-accepted: var(--palette-primary-h) 48.00% 90.20%;
+    --delivery-card-rejected: 17.14 100.00% 95.88%;
+    --delivery-card-picked: var(--palette-primary-h) 100.00% 93.53%;
+    --delivery-card-in-transit: var(--palette-primary-h) 100.00% 86.47%;
+    --delivery-card-delivered: var(--palette-primary-h) 48.57% 86.27%;
 
     /* Stock Management Card Colors */
-    --stock-card-physical-products: 96.92 41.94% 93.92%; /* #EEF6E9 */
-    --stock-card-variants: 100.00 48.00% 90.20%; /* #E2F2DA */
-    --stock-card-total-stock: 100.59 48.57% 86.27%; /* #D6EDCB */
-    --stock-card-low-stock: 38.18 100.00% 93.53%; /* #FFF3DE */
-    --stock-card-out-of-stock: 17.14 100.00% 95.88%; /* #FFF0EA */
+    --stock-card-physical-products: var(--palette-primary-h) 41.94% 93.92%;
+    --stock-card-variants: var(--palette-primary-h) 48.00% 90.20%;
+    --stock-card-total-stock: var(--palette-primary-h) 48.57% 86.27%;
+    --stock-card-low-stock: var(--palette-primary-h) 100.00% 93.53%;
+    --stock-card-out-of-stock: 17.14 100.00% 95.88%;
   }
   /* ========================
      DARK MODE
@@ -257,114 +270,110 @@ body {
     color-scheme: dark;
     /* DeshiPlus orange and green palette. */
 
-    --brand-warm-orange: 35.67 100.00% 57.45%; /* #FFA726 */
+--brand-energetic-orange: 33.47 100.00% 49.22%; /* #FB8C00 */
 
-    --brand-energetic-orange: 33.47 100.00% 49.22%; /* #FB8C00 */
-
-    --brand-primary-green: 133.71 60.69% 33.92%; /* #228B3A */
-
-    --brand-fresh-green: 100.48 50.81% 48.63%; /* #66BB3D */
+--brand-fresh-green: 100.48 50.81% 48.63%; /* #66BB3D */
 
     /* Core Colors - Matte Dark */
-    --background: 139.09 50.00% 8.63%; /* #0B2112 */
-    --foreground: 95.00 46.15% 94.90%; /* #F1F8EC */
+    --background: var(--palette-primary-h) 50% 8.63%;
+    --foreground: var(--palette-white);
 
-    --card: 138.62 47.54% 11.96%; /* #102D19 */
-    --card-foreground: 95.00 46.15% 94.90%; /* #F1F8EC */
+    --card: var(--palette-primary-h) 47.54% 11.96%;
+    --card-foreground: var(--foreground);
 
-    --popover: 138.62 47.54% 11.96%; /* #102D19 */
-    --popover-foreground: 95.00 46.15% 94.90%; /* #F1F8EC */
+    --popover: var(--card);
+    --popover-foreground: var(--foreground);
 
     /* Primary */
-    --primary: 100.48 50.81% 48.63%; /* #66BB3D */
-    --primary-foreground: 139.09 50.00% 8.63%; /* #0B2112 */
+    --primary: var(--palette-primary);
+    --primary-foreground: var(--palette-white);
 
     /* Secondary */
-    --secondary: 35.67 100.00% 57.45%; /* #FFA726 */
-    --secondary-foreground: 139.09 50.00% 8.63%; /* #0B2112 */
+    --secondary: var(--palette-secondary);
+    --secondary-foreground: var(--palette-white);
 
     /* Muted Colors */
-    --muted: 135.56 31.76% 16.67%; /* #1D3824 */
-    --muted-foreground: 100.71 21.54% 74.51%; /* #B9CCB0 */
+    --muted: var(--palette-primary-h) 31.76% 16.67%;
+    --muted-foreground: var(--palette-primary-h) 21.54% 80%;
 
     /* Accent */
-    --accent: 33.47 100.00% 49.22%; /* #FB8C00 */
-    --accent-foreground: 139.09 50.00% 8.63%; /* #0B2112 */
+    --accent: var(--palette-accent);
+    --accent-foreground: var(--palette-ink);
 
     /* Destructive */
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
     /* UI Elements - Matte Borders */
-    --border: 132.86 23.73% 23.14%; /* #2D4933 */
-    --input: 132.86 23.73% 23.14%; /* #2D4933 */
-    --ring: 100.48 50.81% 48.63%; /* #66BB3D */
+    --border: var(--palette-primary-h) 23.73% 23.14%;
+    --input: var(--border);
+    --ring: var(--palette-primary);
 
     --radius: 0.5rem;
 
     /* Charts */
-    --chart-1: 100.48 50.81% 48.63%; /* #66BB3D */
-    --chart-2: 35.67 100.00% 57.45%; /* #FFA726 */
-    --chart-3: 133.71 60.69% 33.92%; /* #228B3A */
-    --chart-4: 33.47 100.00% 49.22%; /* #FB8C00 */
-    --chart-5: 100.71 21.54% 74.51%; /* #B9CCB0 */
+    --chart-1: var(--primary);
+    --chart-2: var(--secondary);
+    --chart-3: var(--accent);
+    --chart-4: var(--palette-highlight);
+    --chart-5: var(--palette-ink);
 
     /* Scrollbar */
-    --scrollbar-thumb: 100.48 50.81% 48.63%; /* #66BB3D */
-    --scrollbar-track: 138.62 47.54% 11.96%; /* #102D19 */
-    --scrollbar-thumb-hover: 35.67 100.00% 57.45%; /* #FFA726 */
+    --scrollbar-thumb: var(--primary);
+    --scrollbar-track: var(--muted);
+    --scrollbar-thumb-hover: var(--secondary);
 
     /* Analytics */
-    --analytics-primary: 100.48 50.81% 48.63%; /* #66BB3D */
-    --analytics-secondary: 135.56 31.76% 16.67%; /* #1D3824 */
-    --analytics-accent: 35.67 100.00% 57.45%; /* #FFA726 */
-    --analytics-chart-1: 100.48 50.81% 48.63%; /* #66BB3D */
-    --analytics-chart-2: 35.67 100.00% 57.45%; /* #FFA726 */
-    --analytics-chart-3: 133.71 60.69% 33.92%; /* #228B3A */
-    --analytics-chart-4: 33.47 100.00% 49.22%; /* #FB8C00 */
-    --analytics-chart-5: 100.71 21.54% 74.51%; /* #B9CCB0 */
+    --analytics-primary: var(--primary);
+    --analytics-secondary: var(--muted);
+    --analytics-accent: var(--secondary);
+    --analytics-chart-1: var(--chart-1);
+    --analytics-chart-2: var(--chart-2);
+    --analytics-chart-3: var(--chart-3);
+    --analytics-chart-4: var(--chart-4);
+    --analytics-chart-5: var(--chart-5);
 
     /* Best Seller & Sold Badge */
-    --best-seller-bg: 100.48 50.81% 48.63%; /* #66BB3D */
-    --best-seller-text: 139.09 50.00% 8.63%; /* #0B2112 */
-    --sold-count-bg: 35.67 100.00% 57.45%; /* #FFA726 */
-    --sold-count-text: 139.09 50.00% 8.63%; /* #0B2112 */
-    --badge-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.35);
+    --best-seller-bg: var(--primary);
+    --best-seller-text: var(--primary-foreground);
+    --sold-count-bg: var(--secondary);
+    --sold-count-text: var(--secondary-foreground);
+    --badge-shadow: 0 4px 6px -1px hsl(var(--primary) / 0.25);
 
     /* Delivery Proof */
-    --delivery-proof-bg: 100.48 50.81% 48.63%; /* #66BB3D */
-    --delivery-proof-text: 139.09 50.00% 8.63%; /* #0B2112 */
+    --delivery-proof-bg: var(--primary);
+    --delivery-proof-text: var(--primary-foreground);
 
-    --delivery-pin-bg: 135.56 31.76% 16.67%; /* #1D3824 */
-    --delivery-pin-text: 95.00 46.15% 94.90%; /* #F1F8EC */
-    --delivery-pin-value: 95.00 46.15% 94.90%; /* #F1F8EC */
+    --delivery-pin-bg: var(--muted);
+    --delivery-pin-text: var(--foreground);
+    --delivery-pin-value: var(--foreground);
 
-    --delivery-link-bg: 135.56 31.76% 16.67%; /* #1D3824 */
-    --delivery-link-text: 100.48 50.81% 48.63%; /* #66BB3D */
+    --delivery-link-bg: var(--muted);
+    --delivery-link-text: var(--primary);
 
-    --delivery-status-bg: 138.62 47.54% 11.96%; /* #102D19 */
-    --delivery-status-text: 100.71 21.54% 74.51%; /* #B9CCB0 */
+    --delivery-status-bg: var(--card);
+    --delivery-status-text: var(--muted-foreground);
 
     /* Custom Gradients */
-    --gradient-primary: linear-gradient(135deg, #228B3A, #66BB3D);
-    --gradient-soft: linear-gradient(135deg, #0B2112, #1D3824);
-    --gradient-premium: linear-gradient(135deg, #102D19, #228B3A);
-    --gradient-amber: linear-gradient(135deg, #FB8C00, #FFA726);
+    --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-soft: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
+    --gradient-premium: linear-gradient(135deg, hsl(var(--footer)), hsl(var(--primary)));
+    --gradient-amber: linear-gradient(135deg, hsl(var(--palette-highlight)), hsl(var(--secondary)));
 
     /* Delivery Summary Card Colors - Matte variants */
-    --delivery-card-assigned: 135.56 31.76% 16.67%; /* #1D3824 */
-    --delivery-card-accepted: 134.21 37.25% 20.00%; /* #204629 */
-    --delivery-card-rejected: 0.00 29.67% 17.84%; /* #3B2020 */
-    --delivery-card-picked: 37.50 36.36% 17.25%; /* #3C301C */
-    --delivery-card-in-transit: 34.50 42.55% 18.43%; /* #43321B */
-    --delivery-card-delivered: 131.05 35.19% 21.18%; /* #23492A */
+    --delivery-card-assigned: var(--palette-primary-h) 31.76% 16.67%;
+    --delivery-card-accepted: var(--palette-primary-h) 37.25% 20.00%;
+    --delivery-card-rejected: 0.00 29.67% 17.84%;
+    --delivery-card-picked: var(--palette-primary-h) 36.36% 17.25%;
+    --delivery-card-in-transit: var(--palette-primary-h) 42.55% 18.43%;
+    --delivery-card-delivered: var(--palette-primary-h) 35.19% 21.18%;
 
     /* Stock Management Card Colors - Matte variants */
-    --stock-card-physical-products: 135.56 31.76% 16.67%; /* #1D3824 */
-    --stock-card-variants: 134.21 37.25% 20.00%; /* #204629 */
-    --stock-card-total-stock: 131.05 35.19% 21.18%; /* #23492A */
-    --stock-card-low-stock: 37.50 36.36% 17.25%; /* #3C301C */
-    --stock-card-out-of-stock: 0.00 29.67% 17.84%; /* #3B2020 */
+    --stock-card-physical-products: var(--palette-primary-h) 31.76% 16.67%;
+    --stock-card-variants: var(--palette-primary-h) 37.25% 20.00%;
+    --stock-card-total-stock: var(--palette-primary-h) 35.19% 21.18%;
+    --stock-card-low-stock: var(--palette-primary-h) 36.36% 17.25%;
+    --stock-card-out-of-stock: 0.00 29.67% 17.84%;
   }
 
 }
@@ -385,39 +394,48 @@ body {
   }
 }
 
+/* Shared button contract: primary -> secondary on hover; secondary -> 10% lighter. */
+@layer components {
+  .btn-primary {
+    @apply bg-primary text-primary-foreground transition-colors;
+  }
+  .btn-primary:where(:not(:disabled):not([aria-disabled="true"])):hover {
+    @apply bg-interaction text-interaction-foreground;
+  }
+  .btn-secondary {
+    @apply bg-secondary text-secondary-foreground transition-colors;
+  }
+  .btn-secondary:where(:not(:disabled):not([aria-disabled="true"])):hover {
+    background-color: var(--secondary-hover);
+  }
+  .btn-accent {
+    @apply bg-accent text-accent-foreground transition-colors;
+  }
+  .btn-accent:where(:not(:disabled):not([aria-disabled="true"])):hover {
+    @apply bg-interaction text-interaction-foreground;
+  }
+  .btn-outline {
+    @apply border border-border bg-background text-foreground transition-colors;
+  }
+  .btn-outline:where(:not(:disabled):not([aria-disabled="true"])):hover {
+    @apply border-interaction bg-interaction text-interaction-foreground;
+  }
+  .btn-ghost {
+    @apply bg-transparent text-foreground transition-colors;
+  }
+  .btn-ghost:where(:not(:disabled):not([aria-disabled="true"])):hover {
+    @apply bg-interaction/15 text-interaction;
+  }
+  .btn-danger {
+    @apply bg-destructive text-destructive-foreground hover:bg-destructive/90 transition-colors;
+  }
+}
+
 /* ========================
    THEME UTILITIES
 ======================== */
 
 @layer utilities {
-  .btn-primary {
-    /* eslint-disable-next-line at-rule-no-unknown */
-    @apply bg-primary text-primary-foreground hover:bg-primary/90 transition;
-  }
-
-  .btn-secondary {
-    @apply bg-secondary text-secondary-foreground transition-all duration-200 ease-in-out;
-  }
-
-  .btn-secondary:hover {
-    @apply scale-105 shadow-lg;
-    background-color: hsl(var(--brand-energetic-orange));
-  }
-
-  .btn-accent {
-    @apply bg-accent text-accent-foreground transition-all duration-200 ease-in-out;
-  }
-
-  .btn-outline {
-    /* eslint-disable-next-line at-rule-no-unknown */
-    @apply border border-border bg-background text-foreground hover:bg-primary/80 hover:text-primary-foreground transition;
-  }
-
-  .btn-danger {
-    /* eslint-disable-next-line at-rule-no-unknown */
-    @apply bg-destructive text-destructive-foreground hover:bg-destructive/90 transition;
-  }
-
   .input-theme {
     /* eslint-disable-next-line at-rule-no-unknown */
     @apply bg-background text-foreground border-border;
@@ -438,7 +456,7 @@ body {
   }
 
   .slider-nav-btn:hover {
-    @apply bg-primary/90;
+    @apply bg-interaction text-interaction-foreground;
   }
 
   /* Best Seller & Sold Badge Utilities */

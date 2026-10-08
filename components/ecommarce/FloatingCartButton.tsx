@@ -662,7 +662,7 @@ export default function FloatingCartButton() {
                       key={`${item.id}-${item.variantId ?? "base"}`}
                       className={`overflow-hidden rounded-md border bg-card ${
                         needsVariantSelection 
-                          ? 'border-orange-200 bg-orange-50' 
+                          ? 'border-secondary/30 bg-secondary/10' 
                           : 'border-border'
                       }`}
                     >
@@ -689,16 +689,16 @@ export default function FloatingCartButton() {
 
                       {/* Variant Selection Section */}
                       {needsVariantSelection && (
-                        <div className="border-t border-orange-200 bg-orange-50 p-3">
+                        <div className="border-t border-secondary/30 bg-secondary/10 p-3">
                           <div className="mb-2">
-                            <span className="text-sm font-medium text-orange-800">{t("selectVariant")}:</span>
+                            <span className="text-sm font-medium text-secondary">{t("selectVariant")}:</span>
                           </div>
                           
                           <div className="mt-3 space-y-2">
                             {loadingVariants.has(item.id) ? (
                               <div className="flex items-center justify-center py-4">
-                                <Loader2 className="h-4 w-4 animate-spin text-orange-600 mr-2" />
-                                <span className="text-sm text-orange-600">{t("loadingVariants")}</span>
+                                <Loader2 className="h-4 w-4 animate-spin text-secondary mr-2" />
+                                <span className="text-sm text-secondary">{t("loadingVariants")}</span>
                               </div>
                             ) : itemVariants[item.id]?.length > 0 ? (
                               itemVariants[item.id].map((variant) => {
@@ -712,16 +712,16 @@ export default function FloatingCartButton() {
                                       "w-full text-left p-3 rounded-lg border transition-all",
                                       outOfStock
                                         ? "border-gray-200 bg-gray-50 cursor-not-allowed opacity-60"
-                                        : "border-orange-300 hover:border-orange-400 hover:bg-orange-100"
+                                        : "border-secondary/30 hover:border-secondary/30 hover:bg-secondary/10"
                                     )}
                                   >
                                     <div className="flex flex-wrap items-center justify-between gap-2">
                                       <div className="flex min-w-0 flex-1 items-center gap-3">
-                                        <div className="h-5 w-5 shrink-0 rounded-full border-2 border-orange-400 flex items-center justify-center">
-                                          <div className="h-2 w-2 rounded-full bg-orange-400" />
+                                        <div className="h-5 w-5 shrink-0 rounded-full border-2 border-secondary/30 flex items-center justify-center">
+                                          <div className="h-2 w-2 rounded-full bg-secondary/10" />
                                         </div>
                                         <div className="min-w-0 break-words">
-                                          <span className="text-sm font-medium text-orange-800">
+                                          <span className="text-sm font-medium text-secondary">
                                             {getVariantLabel(variant)}
                                           </span>
                                           {variant.sku && (
@@ -730,7 +730,7 @@ export default function FloatingCartButton() {
                                         </div>
                                       </div>
                                       <div className="shrink-0 text-right">
-                                        <span className="text-sm font-semibold text-orange-900">
+                                        <span className="text-sm font-semibold text-secondary">
                                           {formatPrice(variant.price, locale)}
                                         </span>
                                         {outOfStock && (
@@ -765,7 +765,7 @@ export default function FloatingCartButton() {
                             onClick={() =>
                               handleUpdateQuantity(item, Math.max(0, item.quantity - 1))
                             }
-                            className="rounded border border-border p-1 text-foreground transition hover:bg-accent"
+                            className="rounded border border-border p-1 text-foreground transition hover:bg-interaction"
                             aria-label={t("decreaseQuantity")}
                           >
                             <Minus className="h-3 w-3" />
@@ -776,7 +776,7 @@ export default function FloatingCartButton() {
                           <button
                             type="button"
                             onClick={() => handleUpdateQuantity(item, item.quantity + 1)}
-                            className="rounded border border-border p-1 text-foreground transition hover:bg-accent"
+                            className="rounded border border-border p-1 text-foreground transition hover:bg-interaction"
                             aria-label={t("increaseQuantity")}
                           >
                             <Plus className="h-3 w-3" />
@@ -818,9 +818,9 @@ export default function FloatingCartButton() {
                 <Button
                   onClick={handleCheckout}
                   disabled={cartItems.length === 0 || hasUnselectedVariants}
-                  className={`h-auto min-h-12 max-w-full whitespace-normal rounded-md px-4 py-3 text-primary-foreground hover:bg-primary disabled:bg-muted disabled:text-muted-foreground ${
+                  className={`h-auto min-h-12 max-w-full whitespace-normal rounded-md px-4 py-3 text-primary-foreground hover:bg-interaction disabled:bg-muted disabled:text-muted-foreground ${
                     hasUnselectedVariants 
-                      ? 'bg-orange-100 text-orange-600 hover:bg-orange-200' 
+                      ? 'bg-secondary/10 text-secondary hover:bg-secondary/10' 
                       : 'bg-primary'
                   }`}
                 >

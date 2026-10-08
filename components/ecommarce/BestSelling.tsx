@@ -321,14 +321,14 @@ export default function BestSelling({
               onClick={() => {
                 console.log("Ask AI clicked");
               }}
-              className="group relative flex w-full items-center gap-2 rounded-full bg-primary px-4 py-2 transition-all duration-200 hover:bg-secondary/90"
+              className="group relative flex w-full items-center gap-2 rounded-full bg-primary px-4 py-2 transition-all duration-200 hover:bg-interaction/90"
             >
               <div className="relative">
                 <FaRobot className="h-4 w-4 text-primary-foreground transition-transform group-hover:scale-110" />
                 <div className="absolute -right-1 -top-1 h-2 w-2 animate-pulse rounded-full border border-background bg-primary" />
               </div>
 
-              <span className="text-sm font-medium text-primary-foreground transition-colors group-hover:text-primary-foreground">
+              <span className="text-sm font-medium text-primary-foreground transition-colors group-hover:text-interaction-foreground">
                 {common("askAi")}
               </span>
             </button>
@@ -453,7 +453,7 @@ export default function BestSelling({
             <button
               type="button"
               onClick={() => setLoginModalOpen(false)}
-              className="h-10 rounded-lg border border-border bg-background px-4 font-semibold text-foreground transition hover:bg-accent"
+              className="h-10 rounded-lg border border-border bg-background px-4 font-semibold text-foreground transition hover:bg-interaction"
             >
               {common("cancel")}
             </button>

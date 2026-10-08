@@ -204,11 +204,11 @@ export default async function ProductPage({ params }: ProductPageProps) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd) }} />
       <div className="container px-3 py-4 sm:px-6 lg:py-5">
         <nav className="mb-4 flex flex-wrap items-center gap-2 text-[12px] text-muted-foreground" aria-label={t("breadcrumb.label")}>
-          <Link href="/" className="hover:text-primary">{t("breadcrumb.home")}</Link>
+          <Link href="/" className="hover:text-interaction">{t("breadcrumb.home")}</Link>
           <span aria-hidden="true">›</span>
-          <Link href="/ecommerce/products" className="hover:text-primary">{t("breadcrumb.products")}</Link>
+          <Link href="/ecommerce/products" className="hover:text-interaction">{t("breadcrumb.products")}</Link>
           <span aria-hidden="true">›</span>
-          <Link href={categoryHref} className="hover:text-primary">
+          <Link href={categoryHref} className="hover:text-interaction">
             {product.category.name}
           </Link>
           <span aria-hidden="true">›</span>

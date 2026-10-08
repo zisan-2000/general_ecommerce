@@ -323,9 +323,9 @@ export default function ProductPurchasePanel({
                     onClick={() => selectImage(image)}
                     aria-label={t("viewImage", { number: index + 1 })}
                     aria-pressed={activeImage === image}
-                    className={`relative h-14 w-14 shrink-0 overflow-hidden rounded border bg-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174a92] sm:h-[60px] sm:w-[60px] ${
+                    className={`relative h-14 w-14 shrink-0 overflow-hidden rounded border bg-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:h-[60px] sm:w-[60px] ${
                       activeImage === image
-                        ? "border-[#174a92] ring-1 ring-[#174a92]"
+                        ? "border-primary ring-1 ring-primary"
                         : "border-slate-200 hover:border-slate-400"
                     }`}
                   >
@@ -377,7 +377,7 @@ export default function ProductPurchasePanel({
               <button
                 type="button"
                 onClick={share}
-                className="inline-flex h-7 items-center gap-1 rounded border border-border px-2 text-[11px] font-medium text-primary hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="inline-flex h-7 items-center gap-1 rounded border border-border px-2 text-[11px] font-medium text-primary hover:bg-interaction focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
               >
                 <Share2 className="h-3.5 w-3.5" aria-hidden="true" />
                 {t("share")}
@@ -458,10 +458,10 @@ export default function ProductPurchasePanel({
                           type="button"
                           onClick={() => selectVariant(variant)}
                           disabled={variant.stock <= 0}
-                          className={`flex min-h-10 items-center justify-between rounded border px-3 py-2 text-left text-[11px] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174a92] disabled:cursor-not-allowed disabled:opacity-40 ${
+                          className={`flex min-h-10 items-center justify-between rounded border px-3 py-2 text-left text-[11px] transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary disabled:cursor-not-allowed disabled:opacity-40 ${
                             selectedVariantId === variant.id
                               ? "border-primary bg-primary/10 text-primary"
-                              : "border-border hover:border-primary/50"
+                              : "border-border hover:border-interaction/50"
                           }`}
                         >
                           <span className="truncate">{label}</span>
@@ -484,7 +484,7 @@ export default function ProductPurchasePanel({
                 {telephoneHref ? (
                   <a
                     href={telephoneHref}
-                    className="inline-flex h-9 items-center gap-2 rounded border border-border px-3 text-[11px] font-medium text-muted-foreground hover:border-primary/40 hover:bg-accent"
+                    className="inline-flex h-9 items-center gap-2 rounded border border-border px-3 text-[11px] font-medium text-muted-foreground hover:border-interaction/40 hover:bg-interaction"
                   >
                     <Phone className="h-4 w-4 text-primary" aria-hidden="true" />
                     <span>{t("hotline")}</span>
@@ -494,7 +494,7 @@ export default function ProductPurchasePanel({
                 {details.contactEmail ? (
                   <a
                     href={`mailto:${details.contactEmail}`}
-                    className="inline-flex h-9 items-center gap-2 rounded border border-border px-3 text-[11px] font-medium text-primary hover:border-primary/40 hover:bg-accent"
+                    className="inline-flex h-9 items-center gap-2 rounded border border-border px-3 text-[11px] font-medium text-primary hover:border-interaction/40 hover:bg-interaction"
                   >
                     <Mail className="h-4 w-4" aria-hidden="true" />
                     {details.contactEmail}
@@ -524,10 +524,10 @@ export default function ProductPurchasePanel({
               </div>
               <div className="rounded-md border border-border bg-muted/60 p-3">
                 <p className="text-[11px] font-medium text-muted-foreground">{t("emiStarts")}</p>
-                <strong className="mt-2 block text-[20px] text-[#2563eb]">
+                <strong className="mt-2 block text-[20px] text-primary">
                   {money(emiMonthly, product.currency, locale)}
                 </strong>
-                <p className="mt-1 inline-flex items-center gap-1 text-[11px] text-[#174a92]">
+                <p className="mt-1 inline-flex items-center gap-1 text-[11px] text-primary">
                   <CreditCard className="h-3.5 w-3.5" aria-hidden="true" />
                   {t("installments")}
                 </p>
@@ -552,7 +552,7 @@ export default function ProductPurchasePanel({
                   type="button"
                   onClick={() => setQuantity((value) => Math.max(1, value - 1))}
                   disabled={quantity <= 1}
-                  className="flex h-full w-10 items-center justify-center text-muted-foreground hover:bg-muted disabled:opacity-40"
+                  className="flex h-full w-10 items-center justify-center text-muted-foreground hover:bg-interaction/15 disabled:opacity-40"
                   aria-label={t("decreaseQuantity")}
                 >
                   <Minus className="h-4 w-4" aria-hidden="true" />
@@ -564,7 +564,7 @@ export default function ProductPurchasePanel({
                   type="button"
                   onClick={() => setQuantity((value) => Math.min(Math.max(1, stock), value + 1))}
                   disabled={stock <= 0 || quantity >= stock}
-                  className="flex h-full w-10 items-center justify-center text-muted-foreground hover:bg-muted disabled:opacity-40"
+                  className="flex h-full w-10 items-center justify-center text-muted-foreground hover:bg-interaction/15 disabled:opacity-40"
                   aria-label={t("increaseQuantity")}
                 >
                   <Plus className="h-4 w-4" aria-hidden="true" />
@@ -574,7 +574,7 @@ export default function ProductPurchasePanel({
                 type="button"
                 onClick={addProduct}
                 disabled={stock <= 0 || (product.type === "BUNDLE" && !bundlePreview?.valid)}
-                className="inline-flex h-10 min-w-[180px] flex-1 items-center justify-center gap-2 rounded bg-primary px-5 text-[12px] font-bold text-primary-foreground transition hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:bg-muted disabled:text-muted-foreground"
+                className="inline-flex h-10 min-w-[180px] flex-1 items-center justify-center gap-2 rounded btn-primary px-5 text-[12px] font-bold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:bg-muted disabled:text-muted-foreground"
               >
                 <ShoppingCart className="h-4 w-4" aria-hidden="true" />
                 {stock > 0 ? t("addToCart") : t("outOfStock")}
@@ -582,7 +582,7 @@ export default function ProductPurchasePanel({
               <button
                 type="button"
                 onClick={toggleWishlist}
-                className="inline-flex h-10 items-center justify-center gap-1.5 rounded border border-border bg-muted px-3 text-[11px] font-semibold text-foreground hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                className="inline-flex h-10 items-center justify-center gap-1.5 rounded border border-border bg-muted px-3 text-[11px] font-semibold text-foreground hover:bg-interaction focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                 aria-pressed={wishlisted}
               >
                 <Heart
@@ -604,7 +604,7 @@ export default function ProductPurchasePanel({
                   className={`inline-flex h-10 items-center justify-center gap-1.5 rounded border border-border px-3 text-[11px] font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring ${
                     compare.isCompared(product.id)
                       ? "bg-primary/10 text-primary"
-                      : "bg-muted text-foreground hover:bg-accent"
+                      : "bg-muted text-foreground hover:bg-interaction"
                   }`}
                   aria-pressed={compare.isCompared(product.id)}
                 >

@@ -72,10 +72,10 @@ export default function ProductDetailTabs({
               aria-selected={selected}
               aria-controls={`product-panel-${tab}`}
               onClick={() => setActiveTab(tab)}
-              className={`relative h-12 shrink-0 px-4 text-[12px] font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#174a92] sm:px-6 ${
+              className={`relative h-12 shrink-0 px-4 text-[12px] font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary sm:px-6 ${
                 selected
-                  ? "text-[#174a92] after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-[#2563eb]"
-                  : "text-muted-foreground hover:text-foreground"
+                  ? "text-primary after:absolute after:inset-x-0 after:bottom-0 after:h-0.5 after:bg-primary"
+                  : "text-muted-foreground hover:text-interaction"
               }`}
             >
               {t(tab)}

@@ -76,8 +76,8 @@ export default function ProductConversionTools({
   return (
     <div className="mt-3 grid gap-2 sm:grid-cols-2">
       <details className="group overflow-hidden rounded-md border border-border bg-card" aria-labelledby="emi-heading">
-        <summary className="flex h-12 cursor-pointer list-none items-center gap-2 px-3 text-foreground transition hover:bg-muted [&::-webkit-details-marker]:hidden">
-          <Calculator className="h-4 w-4 shrink-0 text-[#174a92]" />
+        <summary className="flex h-12 cursor-pointer list-none items-center gap-2 px-3 text-foreground transition hover:bg-interaction/15 [&::-webkit-details-marker]:hidden">
+          <Calculator className="h-4 w-4 shrink-0 text-primary" />
           <span id="emi-heading" className="min-w-0 flex-1 text-[12px] font-bold">{t("emi.title")}</span>
           <span className="text-[10px] font-medium text-muted-foreground">{t("emi.from", { amount: money(price / 12, currency, locale) })}</span>
           <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition group-open:rotate-180" />
@@ -90,13 +90,13 @@ export default function ProductConversionTools({
                 key={option}
                 type="button"
                 onClick={() => setMonths(option)}
-                className={`rounded border px-2.5 py-1 text-[11px] font-bold ${months === option ? "border-primary bg-primary/10 text-primary" : "border-border bg-card hover:border-primary/50"}`}
+                className={`rounded border px-2.5 py-1 text-[11px] font-bold ${months === option ? "border-primary bg-primary/10 text-primary" : "border-border bg-card hover:border-interaction/50"}`}
               >
                 {t("emi.months", { count: option })}
               </button>
             ))}
           </div>
-          <p className="mt-2 text-[16px] font-bold text-[#174a92]">
+          <p className="mt-2 text-[16px] font-bold text-primary">
             {money(price / months, currency, locale)} <span className="text-xs font-medium text-muted-foreground">{t("emi.perMonth")}</span>
           </p>
           <p className="mt-1 text-[10px] leading-4 text-muted-foreground">
@@ -106,8 +106,8 @@ export default function ProductConversionTools({
       </details>
 
       <details className="group overflow-hidden rounded-md border border-border bg-card" aria-labelledby="delivery-heading">
-        <summary className="flex h-12 cursor-pointer list-none items-center gap-2 px-3 text-foreground transition hover:bg-muted [&::-webkit-details-marker]:hidden">
-          <MapPin className="h-4 w-4 shrink-0 text-[#174a92]" />
+        <summary className="flex h-12 cursor-pointer list-none items-center gap-2 px-3 text-foreground transition hover:bg-interaction/15 [&::-webkit-details-marker]:hidden">
+          <MapPin className="h-4 w-4 shrink-0 text-primary" />
           <span id="delivery-heading" className="min-w-0 flex-1 text-[12px] font-bold">{t("delivery.title")}</span>
           <span className="text-[10px] font-medium text-muted-foreground">{t("delivery.checkArea")}</span>
           <ChevronDown className="h-4 w-4 shrink-0 text-muted-foreground transition group-open:rotate-180" />
@@ -140,7 +140,7 @@ export default function ProductConversionTools({
             type="button"
             onClick={checkDelivery}
             disabled={loading}
-            className="mt-2 inline-flex h-9 w-full items-center justify-center gap-2 rounded border border-border bg-card text-[12px] font-bold text-foreground hover:bg-accent disabled:opacity-50"
+            className="mt-2 inline-flex h-9 w-full items-center justify-center gap-2 rounded border border-border bg-card text-[12px] font-bold text-foreground hover:bg-interaction disabled:opacity-50"
           >
             {loading ? <Loader2 className="h-4 w-4 animate-spin" /> : <Truck className="h-4 w-4" />}
             {loading ? t("delivery.checking") : t("delivery.check")}

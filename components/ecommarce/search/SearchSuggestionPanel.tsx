@@ -84,7 +84,7 @@ export default function SearchSuggestionPanel({
                     aria-selected={activeIndex === index}
                     onMouseDown={(event) => event.preventDefault()}
                     onClick={() => onProductSelect(product, index + 1)}
-                    className={`flex w-full items-center gap-3 border-b border-border/70 px-4 py-3 text-left transition last:border-b-0 hover:bg-muted ${
+                    className={`flex w-full items-center gap-3 border-b border-border/70 px-4 py-3 text-left transition last:border-b-0 hover:bg-interaction/15 ${
                       activeIndex === index ? "bg-muted" : ""
                     }`}
                   >
@@ -139,7 +139,7 @@ export default function SearchSuggestionPanel({
                         type="button"
                         onMouseDown={(event) => event.preventDefault()}
                         onClick={() => onCategorySelect(category)}
-                        className="rounded-md border border-border bg-background px-2 py-1 text-xs font-medium hover:border-primary hover:text-primary"
+                        className="rounded-md border border-border bg-background px-2 py-1 text-xs font-medium hover:border-interaction hover:text-interaction"
                       >
                         {category.name}
                       </button>
@@ -159,7 +159,7 @@ export default function SearchSuggestionPanel({
                         type="button"
                         onMouseDown={(event) => event.preventDefault()}
                         onClick={() => onBrandSelect(brand)}
-                        className="rounded-md border border-border bg-background px-2 py-1 text-xs font-medium hover:border-primary hover:text-primary"
+                        className="rounded-md border border-border bg-background px-2 py-1 text-xs font-medium hover:border-interaction hover:text-interaction"
                       >
                         {brand.name}
                       </button>
@@ -179,7 +179,7 @@ export default function SearchSuggestionPanel({
                         type="button"
                         onMouseDown={(event) => event.preventDefault()}
                         onClick={() => onQuerySelect(query)}
-                        className="rounded-md bg-background px-2 py-1 text-xs hover:text-primary"
+                        className="rounded-md bg-background px-2 py-1 text-xs hover:text-interaction"
                       >
                         {query}
                       </button>

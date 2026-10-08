@@ -125,7 +125,7 @@ export default function ContactPageClient({
               <h2 className="text-lg font-bold">{t("information.title")}</h2>
               <div className="mt-5 space-y-4">
                 {contactNumber && (
-                  <a href={`tel:${contactNumber}`} className="flex gap-3 rounded-xl border border-border p-4 hover:border-primary/50">
+                  <a href={`tel:${contactNumber}`} className="flex gap-3 rounded-xl border border-border p-4 hover:border-interaction/50">
                     <Phone className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden />
                     <span>
                       <span className="block text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("information.phone")}</span>
@@ -134,7 +134,7 @@ export default function ContactPageClient({
                   </a>
                 )}
                 {contactEmail && (
-                  <a href={`mailto:${contactEmail}`} className="flex gap-3 rounded-xl border border-border p-4 hover:border-primary/50">
+                  <a href={`mailto:${contactEmail}`} className="flex gap-3 rounded-xl border border-border p-4 hover:border-interaction/50">
                     <Mail className="mt-0.5 h-5 w-5 shrink-0 text-primary" aria-hidden />
                     <span className="min-w-0">
                       <span className="block text-xs font-semibold uppercase tracking-wide text-muted-foreground">{t("information.email")}</span>

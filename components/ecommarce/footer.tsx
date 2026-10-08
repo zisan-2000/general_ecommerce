@@ -239,9 +239,9 @@ export default function Footer({
   );
 
   return (
-    <footer className="border-t border-white/20 bg-[#1A682C] text-white">
+    <footer className="border-t border-white/20 bg-footer text-white">
       {/* Features Bar */}
-      <div className="border-b border-white/20 bg-[#1A682C]">
+      <div className="border-b border-white/20 bg-footer">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-2 gap-x-6 gap-y-5 py-7 md:grid-cols-4">
             {features.map((feature, index) => (
@@ -293,7 +293,7 @@ export default function Footer({
 
             <div className="space-y-3">
               <div className="flex items-center gap-3 group">
-                <div className="p-2 rounded-lg bg-white/10 text-white group-hover:bg-[#FFA726]/15 group-hover:text-[#FFA726] transition-all duration-300">
+                <div className="p-2 rounded-lg bg-white/10 text-white group-hover:bg-interaction/15 group-hover:text-interaction transition-all duration-300">
                   <Phone className="h-4 w-4" />
                 </div>
                 <div>
@@ -305,7 +305,7 @@ export default function Footer({
               </div>
 
               <div className="flex items-center gap-3 group">
-                <div className="p-2 rounded-lg bg-white/10 text-white group-hover:bg-[#FFA726]/15 group-hover:text-[#FFA726] transition-all duration-300">
+                <div className="p-2 rounded-lg bg-white/10 text-white group-hover:bg-interaction/15 group-hover:text-interaction transition-all duration-300">
                   <Mail className="h-4 w-4" />
                 </div>
                 <div>
@@ -317,7 +317,7 @@ export default function Footer({
               </div>
 
               <div className="flex items-start gap-3 group">
-                <div className="p-2 rounded-lg bg-white/10 text-white group-hover:bg-[#FFA726]/15 group-hover:text-[#FFA726] transition-all duration-300 mt-1">
+                <div className="p-2 rounded-lg bg-white/10 text-white group-hover:bg-interaction/15 group-hover:text-interaction transition-all duration-300 mt-1">
                   <MapPin className="h-4 w-4" />
                 </div>
                 <div>
@@ -338,7 +338,7 @@ export default function Footer({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="p-2 rounded-lg bg-white/10 text-white hover:bg-[#FFA726]/15 hover:text-[#FFA726] transition-all duration-300"
+                  className="p-2 rounded-lg bg-white/10 text-white hover:bg-interaction/15 hover:text-interaction transition-all duration-300"
                 >
                   <social.icon className="h-4 w-4" />
                 </a>
@@ -351,7 +351,7 @@ export default function Footer({
             {/* Quick Links */}
             <div className="relative">
               <h3 className="text-sm font-semibold text-white mb-5 flex items-center gap-2">
-                <span className="h-1 w-5 rounded-full bg-[#FFA726]" />
+                <span className="h-1 w-5 rounded-full bg-brand-highlight" />
                 {t("sections.quickLinks")}
               </h3>
               <ul className="space-y-3">
@@ -359,9 +359,9 @@ export default function Footer({
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white hover:text-[#FFA726] hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
+                      className="text-sm text-white hover:text-interaction hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
                     >
-                      <span className="absolute left-0 w-0 h-px bg-[#FFA726] group-hover:w-4 transition-all duration-300" />
+                      <span className="absolute left-0 w-0 h-px bg-brand-highlight group-hover:w-4 transition-all duration-300" />
                       <ChevronRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300" />
                       <span className="group-hover:font-medium">{link.label}</span>
                     </Link>
@@ -374,7 +374,7 @@ export default function Footer({
             {categories.length > 0 && (
               <div className="relative">
                 <h3 className="text-sm font-semibold text-white mb-5 flex items-center gap-2">
-                  <span className="h-1 w-5 rounded-full bg-[#FFA726]" />
+                  <span className="h-1 w-5 rounded-full bg-brand-highlight" />
                   {t("sections.categories")}
                 </h3>
                 <ul className="space-y-3">
@@ -382,9 +382,9 @@ export default function Footer({
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-sm text-white hover:text-[#FFA726] hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
+                        className="text-sm text-white hover:text-interaction hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
                       >
-                        <span className="absolute left-0 w-0 h-px bg-[#FFA726] group-hover:w-4 transition-all duration-300" />
+                        <span className="absolute left-0 w-0 h-px bg-brand-highlight group-hover:w-4 transition-all duration-300" />
                         <ChevronRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300" />
                         <span className="group-hover:font-medium">{link.label}</span>
                       </Link>
@@ -397,7 +397,7 @@ export default function Footer({
             {/* Customer Service */}
             <div className="relative">
               <h3 className="text-sm font-semibold text-white mb-5 flex items-center gap-2">
-                <span className="h-1 w-5 rounded-full bg-[#FFA726]" />
+                <span className="h-1 w-5 rounded-full bg-brand-highlight" />
                 {t("sections.customerService")}
               </h3>
               <ul className="space-y-3">
@@ -405,10 +405,10 @@ export default function Footer({
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-white hover:text-[#FFA726] hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
+                      className="text-sm text-white hover:text-interaction hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
                     >
-                      <span className="absolute left-0 w-0 h-px bg-[#FFA726] group-hover:w-4 transition-all duration-300" />
-                      <link.icon className="h-3.5 w-3.5 text-white/80 group-hover:text-[#FFA726] transition-colors duration-300" />
+                      <span className="absolute left-0 w-0 h-px bg-brand-highlight group-hover:w-4 transition-all duration-300" />
+                      <link.icon className="h-3.5 w-3.5 text-white/80 group-hover:text-interaction transition-colors duration-300" />
                       <span className="group-hover:font-medium">{link.label}</span>
                     </Link>
                   </li>
@@ -421,7 +421,7 @@ export default function Footer({
           <div className="lg:col-span-3">
             <SpotlightCard
               className="!p-0 !border-white/20 !bg-white/10 !rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(24,61,35,0.05)]"
-              spotlightColor="rgba(255, 255, 255, 0.08)"
+              spotlightColor="hsl(var(--footer-foreground) / 0.08)"
             >
               <div className="p-6 sm:p-7">
                 <h3 className="text-sm font-semibold text-white mb-2">
@@ -439,14 +439,15 @@ export default function Footer({
                       aria-label={t("newsletter.emailLabel")}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="h-11 w-full rounded-lg border-white/20 bg-[#1a682c] pr-10 text-white placeholder:text-white/70 focus-visible:ring-[#FFA726]"
+                      className="h-11 w-full rounded-lg border-white/20 bg-footer pr-10 text-white placeholder:text-white/70 focus-visible:ring-brand-highlight"
                     />
                     <Send className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white" />
                   </div>
                   <Button
                     type="submit"
                     disabled={isSubscribing}
-                    className="h-11 w-full rounded-lg !bg-[#FB8C00] font-semibold !text-white hover:!bg-[#FB981A] focus-visible:ring-[#FFA726] transition-colors disabled:opacity-50"
+                    variant="secondary"
+                    className="h-11 w-full rounded-lg font-semibold focus-visible:ring-secondary transition-colors disabled:opacity-50"
                   >
                     {isSubscribing ? (
                       <span className="flex items-center gap-2">
@@ -477,7 +478,7 @@ export default function Footer({
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/20 bg-[#1A682C]">
+      <div className="border-t border-white/20 bg-footer">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-xs text-white">
@@ -496,7 +497,7 @@ export default function Footer({
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-xs text-white hover:text-[#FFA726] transition-colors"
+                  className="text-xs text-white hover:text-interaction transition-colors"
                 >
                   {link.label}
                 </Link>

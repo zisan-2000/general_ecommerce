@@ -81,7 +81,7 @@ function TileCard({ title, href, icon, badgeCount = 0 }: Tile) {
           <div
             className="
               flex h-12 w-12 items-center justify-center rounded-full bg-muted
-              transition-all duration-300 group-hover:bg-accent
+              transition-all duration-300 group-hover:bg-interaction
             "
           >
             <div className="text-foreground">{icon}</div>
@@ -192,7 +192,7 @@ export default function UserDashboardPage() {
     <div className="min-h-screen bg-gradient-to-b from-background via-background to-muted/25 text-foreground">
       <div className="px-6 pt-6">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <Link href="/" className="transition-colors hover:text-foreground">
+          <Link href="/" className="transition-colors hover:text-interaction">
             {t("common.home")}
           </Link>
           <ChevronRight className="h-4 w-4 text-muted-foreground/70" />

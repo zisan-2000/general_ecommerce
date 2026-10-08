@@ -305,7 +305,7 @@ export default function UserTable({
                   <div className="flex items-center space-x-2">
                     <Link
                       href={`/admin/operations/users/${user.id}`}
-                      className="inline-flex items-center px-3 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 group/action shadow-sm"
+                      className="inline-flex items-center px-3 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-interaction hover:text-interaction-foreground transition-all duration-300 group/action shadow-sm"
                       title={t("actions.view")}
                     >
                       <Eye className="h-4 w-4" />
@@ -432,7 +432,7 @@ export default function UserTable({
 
           <div className="modal-action flex items-center justify-end border-t border-border pt-4 gap-2 mt-6">
             <button
-              className="btn btn-ghost bg-secondary hover:bg-secondary/80 p-2 rounded-xl text-secondary-foreground hover:text-secondary-foreground transition-colors"
+              className="btn btn-ghost bg-secondary hover:bg-interaction/80 p-2 rounded-xl text-secondary-foreground hover:text-secondary-foreground transition-colors"
               onClick={() => {
                 const modal = document.getElementById(
                   "ban-modal",

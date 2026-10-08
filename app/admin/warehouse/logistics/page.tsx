@@ -1256,7 +1256,7 @@ export default function LogisticsPage() {
                           className={`group cursor-pointer rounded-2xl border bg-card p-4 transition-all duration-200 hover:shadow-md ${
                             isSelected
                               ? "border-primary shadow-sm ring-1 ring-primary/20"
-                              : "border-border/60 hover:border-primary/30"
+                              : "border-border/60 hover:border-interaction/30"
                           }`}
                           onClick={() => setSelectedShipmentId(shipment.id)}
                           onKeyDown={(event) => {
@@ -1327,7 +1327,7 @@ export default function LogisticsPage() {
                                         nextStatus,
                                       );
                                     }}
-                                    className="flex-1 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-60"
+                                    className="flex-1 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition hover:border-interaction hover:text-interaction disabled:cursor-not-allowed disabled:opacity-60"
                                   >
                                     {updatingId === shipment.id
                                       ? "..."
@@ -1340,7 +1340,7 @@ export default function LogisticsPage() {
                                     target="_blank"
                                     rel="noreferrer"
                                     onClick={(event) => event.stopPropagation()}
-                                    className="flex-1 rounded-full bg-primary px-3 py-1.5 text-center text-xs font-medium text-primary-foreground transition hover:bg-primary/90"
+                                    className="flex-1 rounded-full bg-primary px-3 py-1.5 text-center text-xs font-medium text-primary-foreground transition hover:bg-interaction hover:text-interaction-foreground"
                                   >
                                     {t("operations.trackButton")}
                                   </a>
@@ -1485,7 +1485,7 @@ export default function LogisticsPage() {
                                             nextStatus,
                                           );
                                         }}
-                                        className="rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-60"
+                                        className="rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition hover:border-interaction hover:text-interaction disabled:cursor-not-allowed disabled:opacity-60"
                                       >
                                         {updatingId === shipment.id
                                           ? t("operations.updating")
@@ -1506,7 +1506,7 @@ export default function LogisticsPage() {
                                       onClick={(event) =>
                                         event.stopPropagation()
                                       }
-                                      className="rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-primary-foreground transition hover:bg-primary/90"
+                                      className="rounded-full bg-primary px-4 py-1.5 text-xs font-semibold text-primary-foreground transition hover:bg-interaction hover:text-interaction-foreground"
                                     >
                                       {t("operations.openTracking")}
                                     </a>

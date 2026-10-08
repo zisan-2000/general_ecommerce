@@ -113,9 +113,9 @@ export default function PriceDropAlertButton({
       disabled={loading || !numericProductId}
       aria-pressed={enabled}
       className={cn(
-        "inline-flex items-center justify-center gap-1.5 rounded border border-border bg-muted text-[11px] font-semibold text-foreground transition hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-60",
+        "inline-flex items-center justify-center gap-1.5 rounded border border-border bg-muted text-[11px] font-semibold text-foreground transition hover:bg-interaction focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-60",
         compact ? "h-9 px-3" : "h-10 px-3",
-        enabled && "border-emerald-300 bg-emerald-50 text-emerald-800 hover:bg-emerald-100",
+        enabled && "border-primary/30 bg-primary/10 text-primary hover:bg-interaction hover:text-interaction-foreground",
         className,
       )}
     >

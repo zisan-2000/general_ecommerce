@@ -188,7 +188,7 @@ export default function SubscriberManagement() {
           <Button
             onClick={exportSubscribers}
             variant="outline"
-            className="border-primary text-primary hover:bg-primary hover:text-primary-foreground rounded-lg transition-all duration-300 w-full sm:w-auto"
+            className="border-primary text-primary hover:bg-interaction hover:text-interaction-foreground rounded-lg transition-all duration-300 w-full sm:w-auto"
           >
             <Download className="h-4 w-4 mr-2" />
             <span className="sm:hidden">{t("actions.exportShort")}</span>
@@ -198,7 +198,7 @@ export default function SubscriberManagement() {
             <DialogTrigger asChild>
               <Button
                 onClick={() => setIsAddDialogOpen(true)}
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary w-full sm:w-auto"
+                className="bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground font-semibold px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary w-full sm:w-auto"
               >
                 <Plus className="mr-2 h-4 w-4" />
                 {t("actions.addSubscriber")}
@@ -230,7 +230,7 @@ export default function SubscriberManagement() {
                 </div>
                 <Button
                   type="submit"
-                  className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
+                  className="w-full bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
                 >
                   {t("actions.addSubscriber")}
                 </Button>
@@ -306,7 +306,7 @@ export default function SubscriberManagement() {
           </p>
           <Button
             onClick={() => setIsAddDialogOpen(true)}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary w-full sm:w-auto"
+            className="bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground font-semibold px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary w-full sm:w-auto"
           >
             <Plus className="mr-2 h-4 w-4" />
             {t("actions.addSubscriber")}

@@ -48,7 +48,7 @@ export default function Pagination({
         <button
           onClick={() => onPageChange(1)}
           disabled={currentPage === 1}
-          className="p-2 rounded-lg border border-border bg-background text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-background disabled:hover:text-muted-foreground transition-all duration-300 shadow-sm"
+          className="p-2 rounded-lg border border-border bg-background text-muted-foreground hover:bg-interaction hover:text-interaction-foreground hover:border-interaction disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-background disabled:hover:text-muted-foreground transition-all duration-300 shadow-sm"
           title={t("firstPage")}
         >
           <ChevronsLeft className="h-4 w-4" />
@@ -57,7 +57,7 @@ export default function Pagination({
         <button
           onClick={() => onPageChange(currentPage - 1)}
           disabled={currentPage === 1}
-          className="p-2 rounded-lg border border-border bg-background text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-background disabled:hover:text-muted-foreground transition-all duration-300 shadow-sm"
+          className="p-2 rounded-lg border border-border bg-background text-muted-foreground hover:bg-interaction hover:text-interaction-foreground hover:border-interaction disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-background disabled:hover:text-muted-foreground transition-all duration-300 shadow-sm"
           title={t("previousPage")}
         >
           <ChevronLeft className="h-4 w-4" />
@@ -67,7 +67,7 @@ export default function Pagination({
           <div className="flex items-center space-x-1">
             <button
               onClick={() => onPageChange(1)}
-              className="px-3 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 shadow-sm text-sm font-medium"
+              className="px-3 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-interaction hover:text-interaction-foreground hover:border-interaction transition-all duration-300 shadow-sm text-sm font-medium"
             >
               1
             </button>
@@ -86,7 +86,7 @@ export default function Pagination({
             className={`px-3 py-2 rounded-lg border text-sm font-medium transition-all duration-300 shadow-sm ${
               page === currentPage
                 ? "bg-gradient-to-r from-primary to-primary/90 text-primary-foreground border-primary shadow-md transform scale-105"
-                : "border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary"
+                : "border-border bg-background text-foreground hover:bg-interaction hover:text-interaction-foreground hover:border-interaction"
             }`}
           >
             {page}
@@ -102,7 +102,7 @@ export default function Pagination({
             )}
             <button
               onClick={() => onPageChange(totalPages)}
-              className="px-3 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 shadow-sm text-sm font-medium"
+              className="px-3 py-2 rounded-lg border border-border bg-background text-foreground hover:bg-interaction hover:text-interaction-foreground hover:border-interaction transition-all duration-300 shadow-sm text-sm font-medium"
             >
               {totalPages}
             </button>
@@ -112,7 +112,7 @@ export default function Pagination({
         <button
           onClick={() => onPageChange(currentPage + 1)}
           disabled={currentPage === totalPages}
-          className="p-2 rounded-lg border border-border bg-background text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-background disabled:hover:text-muted-foreground transition-all duration-300 shadow-sm"
+          className="p-2 rounded-lg border border-border bg-background text-muted-foreground hover:bg-interaction hover:text-interaction-foreground hover:border-interaction disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-background disabled:hover:text-muted-foreground transition-all duration-300 shadow-sm"
           title={t("nextPage")}
         >
           <ChevronRight className="h-4 w-4" />
@@ -121,7 +121,7 @@ export default function Pagination({
         <button
           onClick={() => onPageChange(totalPages)}
           disabled={currentPage === totalPages}
-          className="p-2 rounded-lg border border-border bg-background text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-background disabled:hover:text-muted-foreground transition-all duration-300 shadow-sm"
+          className="p-2 rounded-lg border border-border bg-background text-muted-foreground hover:bg-interaction hover:text-interaction-foreground hover:border-interaction disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-background disabled:hover:text-muted-foreground transition-all duration-300 shadow-sm"
           title={t("lastPage")}
         >
           <ChevronsRight className="h-4 w-4" />

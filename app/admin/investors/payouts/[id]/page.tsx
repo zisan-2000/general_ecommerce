@@ -226,8 +226,8 @@ export default function InvestorPayoutDetailPage() {
             <CardTitle className="text-base">{t("payoutDetail.context")}</CardTitle>
           </CardHeader>
           <CardContent className="grid gap-4 md:grid-cols-2 text-sm">
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.investor")}</div><Link href={`/admin/investors/${payout.investor.id}`} className="mt-1 block font-medium hover:text-primary">{payout.investor.name} ({payout.investor.code})</Link></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.run")}</div><Link href={`/admin/investors/profit-runs/${payout.run.id}`} className="mt-1 block font-medium hover:text-primary">{payout.run.runNumber}</Link></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.investor")}</div><Link href={`/admin/investors/${payout.investor.id}`} className="mt-1 block font-medium hover:text-interaction">{payout.investor.name} ({payout.investor.code})</Link></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.run")}</div><Link href={`/admin/investors/profit-runs/${payout.run.id}`} className="mt-1 block font-medium hover:text-interaction">{payout.run.runNumber}</Link></div>
             <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.approved")}</div><div className="mt-1 font-medium">{fmtDate(payout.approvedAt, locale)}</div></div>
             <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.paid")}</div><div className="mt-1 font-medium">{fmtDate(payout.paidAt, locale)}</div></div>
             <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("payoutDetail.holdReason")}</div><div className="mt-1 font-medium">{payout.holdReason || "—"}</div></div>
@@ -236,7 +236,7 @@ export default function InvestorPayoutDetailPage() {
             {payout.transaction ? (
               <div className="md:col-span-2">
                 <div className="text-xs uppercase tracking-wide text-muted-foreground">{t("payoutDetail.ledgerTransaction")}</div>
-                <Link href={`/admin/investors/ledger/${payout.transaction.id}`} className="mt-1 block font-medium hover:text-primary">
+                <Link href={`/admin/investors/ledger/${payout.transaction.id}`} className="mt-1 block font-medium hover:text-interaction">
                   {payout.transaction.transactionNumber}
                 </Link>
               </div>

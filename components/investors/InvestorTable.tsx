@@ -123,7 +123,7 @@ export function InvestorTable({ investors, className = "" }: InvestorTableProps)
                     <div className="space-y-1">
                       <Link
                         href={`/admin/investors/${investor.id}`}
-                        className="font-semibold text-gray-900 transition-colors hover:text-primary group-hover:text-primary"
+                        className="font-semibold text-gray-900 transition-colors hover:text-interaction group-hover:text-primary"
                       >
                         {investor.name}
                       </Link>
@@ -131,7 +131,7 @@ export function InvestorTable({ investors, className = "" }: InvestorTableProps)
                         <span className="text-xs font-mono text-gray-400">{t("idLabel")}</span>
                         <Link
                           href={`/admin/investors/${investor.id}`}
-                          className="text-xs font-mono font-medium text-gray-500 hover:text-primary"
+                          className="text-xs font-mono font-medium text-gray-500 hover:text-interaction"
                         >
                           {investor.code}
                         </Link>

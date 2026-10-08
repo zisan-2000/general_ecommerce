@@ -1349,7 +1349,7 @@ const OrderManagement = () => {
               className="w-full rounded-full border border-border bg-primary px-4 py-2 text-sm text-primary-foreground shadow-sm focus:outline-none lg:w-auto"
             >
               <option
-                className="bg-background text-foreground hover:bg-primary/20"
+                className="bg-background text-foreground hover:bg-interaction/20"
                 value="ALL"
               >
                 {t("status.all")}
@@ -1620,7 +1620,7 @@ const OrderManagement = () => {
                       <div className="px-4 pb-4">
                         <button
                           type="button"
-                          className="w-full rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition hover:bg-primary/90"
+                          className="w-full rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground transition hover:bg-interaction hover:text-interaction-foreground"
                           onClick={() => openDetails(order.id)}
                         >
                           {t("card.viewAssign")}
@@ -1686,7 +1686,7 @@ const OrderManagement = () => {
                   type="button"
                   onClick={() => void downloadInvoice()}
                   disabled={!orderDetail || downloadingInvoice}
-                  className="flex-1 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold text-primary transition hover:bg-primary/20 disabled:cursor-not-allowed disabled:opacity-50 sm:flex-none"
+                  className="flex-1 rounded-full border border-primary/30 bg-primary/10 px-4 py-2 text-xs font-semibold text-primary transition hover:bg-interaction/20 disabled:cursor-not-allowed disabled:opacity-50 sm:flex-none"
                 >
                   {downloadingInvoice
                     ? t("refund.invoiceDownloading")
@@ -1992,7 +1992,7 @@ const OrderManagement = () => {
                             href={orderDetail.image}
                             target="_blank"
                             rel="noreferrer"
-                            className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-[11px] font-medium text-primary-foreground hover:bg-primary/90"
+                            className="inline-flex items-center rounded-full bg-primary px-4 py-2 text-[11px] font-medium text-primary-foreground hover:bg-interaction hover:text-interaction-foreground"
                           >
                             {t("detail.viewScreenshot")}
                             <svg
@@ -2917,7 +2917,7 @@ const OrderManagement = () => {
                       type="button"
                       onClick={handleSaveAll}
                       disabled={saving}
-                      className="w-full rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-60"
+                      className="w-full rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground hover:bg-interaction hover:text-interaction-foreground disabled:opacity-60"
                     >
                       {saving ? t("actions.saving") : t("actions.saveAll")}
                     </button>
@@ -2968,7 +2968,7 @@ const OrderManagement = () => {
             <div className="mt-4 flex justify-end">
               <button
                 onClick={() => setSuccessOpen(false)}
-                className="rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground hover:bg-primary/90"
+                className="rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground hover:bg-interaction hover:text-interaction-foreground"
               >
                 {t("common.ok")}
               </button>
@@ -3008,7 +3008,7 @@ const OrderManagement = () => {
             <div className="mt-4 flex justify-end">
               <button
                 onClick={() => setErrorOpen(false)}
-                className="rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground hover:bg-primary/90"
+                className="rounded-full bg-primary px-4 py-1.5 text-xs font-medium text-primary-foreground hover:bg-interaction hover:text-interaction-foreground"
               >
                 {t("common.ok")}
               </button>

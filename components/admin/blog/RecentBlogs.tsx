@@ -95,7 +95,7 @@ export default function RecentBlogs() {
               href={`/ecommerce/blogs/${blog.slug}`}
               className="group block"
             >
-              <article className="relative flex flex-col gap-3 p-4 rounded-lg border bg-card hover:bg-accent/50 hover:shadow-md transition-all duration-300 overflow-hidden">
+              <article className="relative flex flex-col gap-3 p-4 rounded-lg border bg-card hover:bg-interaction/50 hover:shadow-md transition-all duration-300 overflow-hidden">
                 {/* Hover Effect Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 
@@ -164,7 +164,7 @@ export default function RecentBlogs() {
         {/* View All Link */}
         <Link
           href="/ecommerce/blogs"
-          className="mt-4 block text-center py-3 px-4 rounded-lg border border-dashed border-primary/30 bg-primary/5 hover:bg-primary/10 text-sm font-medium text-primary transition-all hover:border-solid"
+          className="mt-4 block text-center py-3 px-4 rounded-lg border border-dashed border-primary/30 bg-primary/5 hover:bg-interaction/10 text-sm font-medium text-primary transition-all hover:border-solid"
         >
           View All Blogs →
         </Link>

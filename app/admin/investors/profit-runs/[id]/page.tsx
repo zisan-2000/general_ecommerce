@@ -323,12 +323,12 @@ export default function InvestorProfitRunDetailPage() {
             <div key={line.id} className="rounded-lg border p-4 text-sm">
               <div className="flex flex-col gap-1 md:flex-row md:items-center md:justify-between">
                 <div className="font-medium">
-                  <Link href={`/admin/investors/${line.investor.id}`} className="hover:text-primary">
+                  <Link href={`/admin/investors/${line.investor.id}`} className="hover:text-interaction">
                     {line.investor.name} ({line.investor.code})
                   </Link>
                 </div>
                 {line.sourceAllocation ? (
-                  <Link href={`/admin/investors/allocations/${line.sourceAllocation.id}`} className="text-muted-foreground hover:text-primary">
+                  <Link href={`/admin/investors/allocations/${line.sourceAllocation.id}`} className="text-muted-foreground hover:text-interaction">
                     {t("profitRunDetail.sourceAllocation", { id: line.sourceAllocation.id })}
                   </Link>
                 ) : (
@@ -355,14 +355,14 @@ export default function InvestorProfitRunDetailPage() {
                   <div className="text-muted-foreground">{t(`enums.payoutStatuses.${item.status}` as any)}</div>
                 </div>
                 <div className="mt-1 text-muted-foreground">
-                  <Link href={`/admin/investors/${item.investor.id}`} className="hover:text-primary">
+                  <Link href={`/admin/investors/${item.investor.id}`} className="hover:text-interaction">
                     {item.investor.name} ({item.investor.code})
                   </Link>{" "}
                   | {t("profitRunDetail.payoutLine", { amount: fmtMoney(item.payoutAmount, locale), paid: fmtDate(item.paidAt, locale) })}
                 </div>
                 {item.transaction ? (
                   <div className="mt-1 text-muted-foreground">
-                    {t("common.ledger")}: <Link href={`/admin/investors/ledger/${item.transaction.id}`} className="hover:text-primary">{item.transaction.transactionNumber}</Link>
+                    {t("common.ledger")}: <Link href={`/admin/investors/ledger/${item.transaction.id}`} className="hover:text-interaction">{item.transaction.transactionNumber}</Link>
                   </div>
                 ) : null}
               </div>

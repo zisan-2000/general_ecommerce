@@ -128,7 +128,7 @@ export default function InvestorTransactionDetailPage() {
             <CardTitle className="text-base">{t("ledgerDetail.context")}</CardTitle>
           </CardHeader>
           <CardContent className="grid gap-4 md:grid-cols-2 text-sm">
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.investor")}</div><Link className="mt-1 block font-medium hover:text-primary" href={`/admin/investors/${transaction.investor.id}`}>{transaction.investor.name} ({transaction.investor.code})</Link></div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.investor")}</div><Link className="mt-1 block font-medium hover:text-interaction" href={`/admin/investors/${transaction.investor.id}`}>{transaction.investor.name} ({transaction.investor.code})</Link></div>
             <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.type")}</div><div className="mt-1 font-medium">{t(`enums.transactionTypes.${transaction.type}` as any)}</div></div>
             <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("ledgerDetail.transactionDate")}</div><div className="mt-1 font-medium">{fmtDate(transaction.transactionDate, locale)}</div></div>
             <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.createdAt")}</div><div className="mt-1 font-medium">{fmtDate(transaction.createdAt, locale)}</div></div>
@@ -147,7 +147,7 @@ export default function InvestorTransactionDetailPage() {
           <CardContent className="space-y-3 text-sm">
             <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.investorStatus")}</div><div className="mt-1 font-medium">{t(`enums.investorStatuses.${transaction.investor.status}` as any)}</div></div>
             <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("common.kycStatus")}</div><div className="mt-1 font-medium">{t(`enums.kycStatuses.${transaction.investor.kycStatus}` as any)}</div></div>
-            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("ledgerDetail.linkedPayout")}</div>{transaction.payout ? <Link href={`/admin/investors/payouts`} className="mt-1 block font-medium hover:text-primary">{transaction.payout.payoutNumber} | {t(`enums.payoutStatuses.${transaction.payout.status}` as any)}</Link> : <div className="mt-1 font-medium">{t("ledgerDetail.noLinkedPayout")}</div>}</div>
+            <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("ledgerDetail.linkedPayout")}</div>{transaction.payout ? <Link href={`/admin/investors/payouts`} className="mt-1 block font-medium hover:text-interaction">{transaction.payout.payoutNumber} | {t(`enums.payoutStatuses.${transaction.payout.status}` as any)}</Link> : <div className="mt-1 font-medium">{t("ledgerDetail.noLinkedPayout")}</div>}</div>
             {transaction.payout ? <div><div className="text-xs uppercase tracking-wide text-muted-foreground">{t("ledgerDetail.payoutAmount")}</div><div className="mt-1 font-medium">{fmtMoney(transaction.payout.payoutAmount, locale)}</div></div> : null}
           </CardContent>
         </Card>
@@ -163,7 +163,7 @@ export default function InvestorTransactionDetailPage() {
               <Link
                 key={item.id}
                 href={`/admin/investors/ledger/${item.id}`}
-                className="block rounded-lg border p-3 text-sm hover:border-primary/40 hover:bg-muted/30"
+                className="block rounded-lg border p-3 text-sm hover:border-interaction/40 hover:bg-muted/30"
               >
                 <div className="font-medium">{item.transactionNumber}</div>
                 <div className="text-muted-foreground">

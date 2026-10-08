@@ -602,7 +602,7 @@ export default function GalleryManagementPage() {
             </SelectContent>
           </Select>
 
-          <Label className="inline-flex h-9 cursor-pointer items-center justify-center gap-2 rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow hover:bg-primary/90">
+          <Label className="inline-flex h-9 cursor-pointer items-center justify-center gap-2 rounded-md bg-primary px-4 text-sm font-medium text-primary-foreground shadow hover:bg-interaction hover:text-interaction-foreground">
             {uploading ? (
               <Loader2 className="h-4 w-4 animate-spin" />
             ) : (

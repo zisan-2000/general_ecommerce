@@ -88,7 +88,7 @@ export default function UserFilters({
         <div className="sm:flex sm:items-end">
           <button
             onClick={onReset}
-            className="w-full py-2.5 sm:py-3 px-4 rounded-lg sm:rounded-xl bg-background border-border text-muted-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300 font-medium shadow-sm hover:shadow-md flex items-center justify-center space-x-2 group text-sm sm:text-base"
+            className="w-full py-2.5 sm:py-3 px-4 rounded-lg sm:rounded-xl bg-background border-border text-muted-foreground hover:bg-interaction hover:text-interaction-foreground hover:border-interaction transition-all duration-300 font-medium shadow-sm hover:shadow-md flex items-center justify-center space-x-2 group text-sm sm:text-base"
           >
             <RotateCcw className="h-4 w-4 group-hover:rotate-180 transition-transform duration-500" />
             <span>{t("resetFilters")}</span>

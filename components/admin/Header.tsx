@@ -339,7 +339,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
     <header className="w-full h-20 bg-background border-border border-b flex items-center justify-between px-4 sm:px-6 sticky top-0 z-20 shadow-sm">
       {/* Mobile menu toggle */}
       <button
-        className="lg:hidden bg-muted hover:bg-primary/80 transition-all duration-300 hover:scale-105"
+        className="lg:hidden bg-muted hover:bg-interaction hover:text-interaction-foreground transition-all duration-300 hover:scale-105"
         onClick={onMenuClick}
         aria-label={t("toggleMenu")}
       >
@@ -375,7 +375,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
             <Button
               variant="ghost"
               size="sm"
-              className="gap-1.5 rounded-full bg-muted px-2.5 text-foreground hover:bg-primary/80"
+              className="gap-1.5 rounded-full bg-muted px-2.5 text-foreground hover:bg-interaction hover:text-interaction-foreground"
               title={t("changeLanguage")}
               aria-label={t("changeLanguage")}
             >
@@ -409,7 +409,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
               <Button
                 variant="ghost"
                 size="icon"
-                className="rounded-full bg-primary hover:bg-primary/80 text-foreground"
+                className="rounded-full bg-primary hover:bg-interaction hover:text-interaction-foreground text-foreground"
                 title={t("selectTheme")}
               >
                 {darkLikeActiveTheme ? (
@@ -424,7 +424,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                 <DropdownMenuItem
                   key={option.value}
                   onClick={() => setTheme(option.value)}
-                  className="flex items-center hover:bg-primary/80 justify-between"
+                  className="flex items-center hover:bg-interaction hover:text-interaction-foreground justify-between"
                 >
                   <span>{t(`themes.${option.value}`)}</span>
                   {activeTheme === option.value ? (
@@ -442,7 +442,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
               <Button
                 variant="ghost"
                 size="icon"
-                className="relative rounded-full bg-muted hover:bg-primary/80 text-foreground"
+                className="relative rounded-full bg-muted hover:bg-interaction hover:text-interaction-foreground text-foreground"
                 title={t("notifications.title")}
                 aria-label={t("notifications.title")}
               >
@@ -479,7 +479,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                     size="sm"
                     disabled={clearingNotifications || unreadNotificationCount === 0}
                     onClick={() => void clearAllNotifications()}
-                    className="h-8 shrink-0 gap-1.5 rounded-lg px-2 text-xs font-medium text-primary hover:bg-primary/10 hover:text-primary"
+                    className="h-8 shrink-0 gap-1.5 rounded-lg px-2 text-xs font-medium text-primary hover:bg-interaction/10 hover:text-interaction"
                   >
                     {clearingNotifications
                       ? <Loader2 className="h-3.5 w-3.5 animate-spin" aria-hidden="true" />
@@ -504,7 +504,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
                     <Link
                       href={row.href}
                       onClick={() => markNotificationRead(row)}
-                      className="group flex cursor-pointer items-start gap-3 rounded-xl px-3 py-3 text-start hover:bg-primary/5 focus:bg-primary/5 focus:text-foreground"
+                      className="group flex cursor-pointer items-start gap-3 rounded-xl px-3 py-3 text-start hover:bg-interaction/5 focus:bg-primary/5 focus:text-foreground"
                     >
                       <span className="mt-0.5 flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
                         <Bell className="h-4 w-4" aria-hidden="true" />
@@ -541,7 +541,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
           <Button
             variant="ghost"
             size="sm"
-            className="hidden sm:flex bg-muted hover:bg-primary/80 text-foreground border-border hover:border-border rounded-full px-4"
+            className="hidden sm:flex bg-muted hover:bg-interaction hover:text-interaction-foreground text-foreground border-border hover:border-border rounded-full px-4"
           >
             <Home className="w-4 h-4 mr-2" />
             {t("viewSite")}
@@ -549,7 +549,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
           <Button
             variant="ghost"
             size="icon"
-            className="sm:hidden bg-muted hover:bg-primary/80 text-foreground rounded-full"
+            className="sm:hidden bg-muted hover:bg-interaction hover:text-interaction-foreground text-foreground rounded-full"
           >
             <Home className="w-4 h-4" />
           </Button>
@@ -566,7 +566,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
         </div>
 
         <Link href="/admin/profile" title={t("viewProfile")}>
-          <Avatar className="h-9 w-9 border-2 border-border cursor-pointer hover:opacity-80 transition-all duration-300 hover:scale-105 hover:border-primary">
+          <Avatar className="h-9 w-9 border-2 border-border cursor-pointer hover:opacity-80 transition-all duration-300 hover:scale-105 hover:border-interaction">
             <AvatarImage
               src={(session?.user as any)?.image ?? undefined}
               alt={session?.user?.name ?? t("profile")}
@@ -602,7 +602,7 @@ export default function Header({ onMenuClick }: { onMenuClick: () => void }) {
           disabled={isPending}
           variant="ghost"
           size="icon"
-          className="sm:hidden bg-muted hover:bg-primary/80 text-foreground rounded-full"
+          className="sm:hidden bg-muted hover:bg-interaction hover:text-interaction-foreground text-foreground rounded-full"
           title={t("logout")}
         >
           {isPending ? (

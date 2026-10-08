@@ -251,7 +251,7 @@ export default function AllBlogs({ initialBlogs, initialTotalPages = 1 }: { init
                   href={blog.href}
                   aria-label={`Read: ${blog.title}`}
                 >
-                  <div className="bg-card backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-border hover:border-primary/50 transform hover:scale-105 hover:-translate-y-2">
+                  <div className="bg-card backdrop-blur-sm rounded-3xl shadow-xl hover:shadow-2xl transition-all duration-500 overflow-hidden border border-border hover:border-interaction/50 transform hover:scale-105 hover:-translate-y-2">
                     {/* Image Section */}
                     <div className="relative h-48 overflow-hidden">
                       {blog.image ? (
@@ -286,7 +286,7 @@ export default function AllBlogs({ initialBlogs, initialTotalPages = 1 }: { init
                     {/* Content Section */}
                     <div className="p-6">
                       <header>
-                        <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3 hover:text-primary transition-colors duration-300 line-clamp-2 group-hover:translate-x-1 transform">
+                        <h2 className="text-xl sm:text-2xl font-bold text-foreground mb-3 hover:text-interaction transition-colors duration-300 line-clamp-2 group-hover:translate-x-1 transform">
                           {blog.title}
                         </h2>
                       </header>

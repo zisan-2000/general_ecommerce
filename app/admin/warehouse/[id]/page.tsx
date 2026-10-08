@@ -505,7 +505,7 @@ export default function WarehouseDetailsPage() {
                     Search: {search}
                     <button
                       onClick={() => updateURL({ search: null, page: 1 })}
-                      className="ml-1 hover:text-primary/80 dark:hover:text-primary/70"
+                      className="ml-1 hover:text-interaction/80 dark:hover:text-interaction/70"
                     >
                       ×
                     </button>
@@ -520,7 +520,7 @@ export default function WarehouseDetailsPage() {
                     )?.name || category}
                     <button
                       onClick={() => updateURL({ category: null, page: 1 })}
-                      className="ml-1 hover:text-primary/80 dark:hover:text-primary/70"
+                      className="ml-1 hover:text-interaction/80 dark:hover:text-interaction/70"
                     >
                       ×
                     </button>
@@ -532,7 +532,7 @@ export default function WarehouseDetailsPage() {
                     Type: {productType}
                     <button
                       onClick={() => updateURL({ productType: null, page: 1 })}
-                      className="ml-1 hover:text-primary/80 dark:hover:text-primary/70"
+                      className="ml-1 hover:text-interaction/80 dark:hover:text-interaction/70"
                     >
                       ×
                     </button>
@@ -546,7 +546,7 @@ export default function WarehouseDetailsPage() {
                       : "📉 Low Selling"}
                     <button
                       onClick={() => updateURL({ soldFilter: null, page: 1 })}
-                      className="ml-1 hover:text-primary/80 dark:hover:text-primary/70"
+                      className="ml-1 hover:text-interaction/80 dark:hover:text-interaction/70"
                     >
                       ×
                     </button>
@@ -565,7 +565,7 @@ export default function WarehouseDetailsPage() {
                       onClick={() =>
                         updateURL({ dateFrom: null, dateTo: null, page: 1 })
                       }
-                      className="ml-1 hover:text-primary/80 dark:hover:text-primary/70"
+                      className="ml-1 hover:text-interaction/80 dark:hover:text-interaction/70"
                     >
                       ×
                     </button>

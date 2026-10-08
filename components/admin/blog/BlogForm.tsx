@@ -352,14 +352,14 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
 
           <label
             htmlFor="blog-image-upload"
-            className="mt-1 flex flex-col items-center justify-center px-6 pt-5 pb-6 border-2 border-dashed border-border rounded-lg hover:border-primary transition-colors cursor-pointer"
+            className="mt-1 flex flex-col items-center justify-center px-6 pt-5 pb-6 border-2 border-dashed border-border rounded-lg hover:border-interaction transition-colors cursor-pointer"
           >
             <div className="space-y-1 text-center">
               <div className="flex justify-center">
                 <Upload className="h-12 w-12 text-muted-foreground" />
               </div>
               <div className="flex text-sm text-muted-foreground justify-center">
-                <span className="relative font-medium text-primary hover:text-primary/80 focus-within:outline-none">
+                <span className="relative font-medium text-primary hover:text-interaction/80 focus-within:outline-none">
                   {t("actions.uploadImage")}
                 </span>
                 <span className="pl-1">{t("actions.orDragDrop")}</span>
@@ -414,14 +414,14 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
 
           <label
             htmlFor="blog-ad-image-upload"
-            className="mt-1 flex flex-col items-center justify-center px-6 pt-5 pb-6 border-2 border-dashed border-border rounded-lg hover:border-primary transition-colors cursor-pointer"
+            className="mt-1 flex flex-col items-center justify-center px-6 pt-5 pb-6 border-2 border-dashed border-border rounded-lg hover:border-interaction transition-colors cursor-pointer"
           >
             <div className="space-y-1 text-center">
               <div className="flex justify-center">
                 <Upload className="h-12 w-12 text-muted-foreground" />
               </div>
               <div className="flex text-sm text-muted-foreground justify-center">
-                <span className="relative font-medium text-primary hover:text-primary/80 focus-within:outline-none">
+                <span className="relative font-medium text-primary hover:text-interaction/80 focus-within:outline-none">
                   {t("actions.uploadAdImage")}
                 </span>
                 <span className="pl-1">{t("actions.orDragDrop")}</span>
@@ -465,7 +465,7 @@ export default function BlogForm({ blog, onSuccess }: BlogFormProps) {
           <button
             type="submit"
             disabled={loading}
-            className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 disabled:opacity-50"
+            className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-interaction hover:text-interaction-foreground disabled:opacity-50"
           >
             {loading
               ? t("actions.saving")

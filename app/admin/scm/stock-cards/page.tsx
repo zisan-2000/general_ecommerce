@@ -316,7 +316,7 @@ export default function StockCardsPage() {
                         key={`${item.warehouseId}-${item.variantId}`}
                         className={cn(
                           "border-border cursor-pointer transition-colors hover:bg-muted/40",
-                          active && "bg-primary/5 hover:bg-primary/10"
+                          active && "bg-primary/5 hover:bg-interaction/10"
                         )}
                         onClick={() => {
                           const target = { warehouseId: item.warehouseId, variantId: item.variantId };

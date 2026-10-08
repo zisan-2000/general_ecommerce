@@ -1673,7 +1673,7 @@ function FileUpload({
         className={`flex cursor-pointer flex-col items-center justify-center rounded-2xl border border-dashed px-4 py-8 text-center transition ${
           error
             ? "border-destructive bg-muted"
-            : "border-border bg-muted hover:bg-accent"
+            : "border-border bg-muted hover:bg-interaction"
         }`}
       >
         {previewUrl ? (

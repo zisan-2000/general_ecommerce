@@ -1145,7 +1145,7 @@ const StockManagementPage = memo(function StockManagementPage() {
                       className={`w-full border rounded-lg p-3 text-left transition-all duration-200 ${
                         selectedVariantId === variant.id
                           ? "border-primary bg-primary/5 shadow-sm"
-                          : "border-border hover:border-primary/50 hover:bg-accent/50"
+                          : "border-border hover:border-interaction/50 hover:bg-interaction/50"
                       }`}
                     >
                       <p className="font-medium">{variant.sku}</p>

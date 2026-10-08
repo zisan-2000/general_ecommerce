@@ -483,7 +483,7 @@ export default function SupportChatWidget() {
               <button
                 key={action}
                 type="button"
-                className="rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[11px] font-medium text-primary hover:bg-primary/10"
+                className="rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[11px] font-medium text-primary hover:bg-interaction/10"
                 onClick={() => void sendMessage(action)}
               >
                 {action}

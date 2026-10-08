@@ -1118,7 +1118,7 @@ export default function OrderDetailsPage() {
         <div className="mb-8">
           <Link
             href="/ecommerce/user/orders"
-            className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-foreground transition-colors duration-200 mb-4"
+            className="inline-flex items-center text-sm font-medium text-muted-foreground hover:text-interaction transition-colors duration-200 mb-4"
           >
             <svg
               className="w-4 h-4 mr-2"
@@ -1294,7 +1294,7 @@ export default function OrderDetailsPage() {
                           onClick={() =>
                             openReviewModal(item.productId, item.name)
                           }
-                          className="mt-3 inline-flex text-sm font-medium text-primary underline underline-offset-2 transition-colors hover:text-primary/80"
+                          className="mt-3 inline-flex text-sm font-medium text-primary underline underline-offset-2 transition-colors hover:text-interaction/80"
                         >
                           {t("orderDetail.leaveReview")}
                         </button>
@@ -1777,7 +1777,7 @@ export default function OrderDetailsPage() {
               <button
                 type="button"
                 onClick={() => setProofModalOpen(false)}
-                className="rounded-full p-2 text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                className="rounded-full p-2 text-muted-foreground transition hover:bg-interaction/15 hover:text-interaction"
                 aria-label={t("common.close")}
               >
                 <X className="h-5 w-5" />
@@ -1824,7 +1824,7 @@ export default function OrderDetailsPage() {
               <button
                 type="button"
                 onClick={closeReviewModal}
-                className="rounded-full p-2 text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                className="rounded-full p-2 text-muted-foreground transition hover:bg-interaction/15 hover:text-interaction"
                 aria-label={t("common.close")}
               >
                 <X className="h-5 w-5" />
@@ -1874,7 +1874,7 @@ export default function OrderDetailsPage() {
               <button
                 type="button"
                 onClick={closeRefundModal}
-                className="rounded-full p-2 text-muted-foreground transition hover:bg-muted hover:text-foreground"
+                className="rounded-full p-2 text-muted-foreground transition hover:bg-interaction/15 hover:text-interaction"
                 aria-label={t("common.close")}
               >
                 <X className="h-5 w-5" />

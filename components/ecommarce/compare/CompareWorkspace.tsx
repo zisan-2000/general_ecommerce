@@ -229,7 +229,7 @@ export default function CompareWorkspace({ products }: { products: CompareProduc
     });
 
   return (
-    <main className="min-h-screen bg-[#f5f6f8] py-6 dark:bg-background sm:py-8">
+    <main className="min-h-screen bg-muted py-6 dark:bg-background sm:py-8">
       <div className="container max-w-7xl px-3 sm:px-6">
         <div className="border bg-card shadow-sm">
           <div className="flex flex-wrap items-center justify-between gap-4 border-b px-4 py-4 sm:px-6">
@@ -244,11 +244,11 @@ export default function CompareWorkspace({ products }: { products: CompareProduc
             </div>
             <div className="flex flex-wrap gap-2">
               {products.length < PRODUCT_COMPARE_LIMIT ? (
-                <button type="button" onClick={() => openPicker(products.length)} className="inline-flex h-10 items-center gap-2 rounded bg-primary px-4 text-sm font-bold text-primary-foreground hover:bg-primary/90">
+                <button type="button" onClick={() => openPicker(products.length)} className="inline-flex h-10 items-center gap-2 rounded bg-primary px-4 text-sm font-bold text-primary-foreground hover:bg-interaction hover:text-interaction-foreground">
                   <Plus className="h-4 w-4" /> {t("addProduct")}
                 </button>
               ) : null}
-              <button type="button" onClick={() => window.print()} disabled={!products.length} className="inline-flex h-10 items-center gap-2 rounded border px-4 text-sm font-bold hover:border-primary hover:text-primary disabled:opacity-40">
+              <button type="button" onClick={() => window.print()} disabled={!products.length} className="inline-flex h-10 items-center gap-2 rounded border px-4 text-sm font-bold hover:border-interaction hover:text-interaction disabled:opacity-40">
                 <Printer className="h-4 w-4" /> {t("print")}
               </button>
             </div>
@@ -266,14 +266,14 @@ export default function CompareWorkspace({ products }: { products: CompareProduc
                       <th key={product?.id ?? `picker-${index}`} scope="col" className="min-w-64 border-b border-r bg-card p-4 text-left align-top last:border-r-0">
                         {product ? (
                           <div>
-                            <button type="button" onClick={() => openPicker(index)} className="mb-3 flex h-9 w-full items-center justify-between rounded border bg-background px-3 text-xs font-semibold text-muted-foreground hover:border-primary hover:text-primary">
+                            <button type="button" onClick={() => openPicker(index)} className="mb-3 flex h-9 w-full items-center justify-between rounded border bg-background px-3 text-xs font-semibold text-muted-foreground hover:border-interaction hover:text-interaction">
                               <span className="truncate">{t("searchAndSelect")}</span><Search className="h-3.5 w-3.5" />
                             </button>
                             <Link href={`/ecommerce/products/${product.slug || product.id}`} className="group block text-center">
                               <div className="relative mx-auto h-40 w-40 overflow-hidden bg-white">
                                 <Image src={product.image || "/placeholder.svg"} alt="" fill sizes="160px" className="object-contain p-3 transition group-hover:scale-105" />
                               </div>
-                              <span className="mt-3 block line-clamp-2 min-h-10 font-bold group-hover:text-primary">{product.name}</span>
+                              <span className="mt-3 block line-clamp-2 min-h-10 font-bold group-hover:text-interaction">{product.name}</span>
                             </Link>
                             <p className="mt-2 text-center text-xl font-black text-primary">{money(product.basePrice, product.currency, locale)}</p>
                             <div className="mt-3 flex items-center justify-center gap-2">
@@ -282,7 +282,7 @@ export default function CompareWorkspace({ products }: { products: CompareProduc
                             </div>
                           </div>
                         ) : (
-                          <button type="button" onClick={() => openPicker(index)} className="flex min-h-64 w-full flex-col items-center justify-center rounded border-2 border-dashed bg-muted/20 p-6 text-center transition hover:border-primary hover:bg-primary/5">
+                          <button type="button" onClick={() => openPicker(index)} className="flex min-h-64 w-full flex-col items-center justify-center rounded border-2 border-dashed bg-muted/20 p-6 text-center transition hover:border-interaction hover:bg-interaction/5">
                             <span className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary"><Plus className="h-6 w-6" /></span>
                             <span className="mt-3 font-bold">{t("selectProduct")}</span>
                             <span className="mt-1 text-xs text-muted-foreground">{t("searchWithoutLeaving")}</span>
@@ -339,7 +339,7 @@ export default function CompareWorkspace({ products }: { products: CompareProduc
               <div className="grid gap-2 sm:grid-cols-2">
                 {results.map((product) => {
                   const selected = selectedIds.includes(product.id);
-                  return <button key={product.id} type="button" onClick={() => selectProduct(product.id)} disabled={selected && selectedIds[targetIndex] !== product.id} className="flex items-center gap-3 rounded-lg border p-3 text-start transition hover:border-primary hover:bg-primary/5 disabled:cursor-not-allowed disabled:opacity-50">
+                  return <button key={product.id} type="button" onClick={() => selectProduct(product.id)} disabled={selected && selectedIds[targetIndex] !== product.id} className="flex items-center gap-3 rounded-lg border p-3 text-start transition hover:border-interaction hover:bg-interaction/5 disabled:cursor-not-allowed disabled:opacity-50">
                     <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded bg-white"><Image src={product.image || "/placeholder.svg"} alt="" fill sizes="64px" className="object-contain p-1" /></div>
                     <div className="min-w-0 flex-1"><p className="text-[10px] font-bold uppercase tracking-wide text-muted-foreground">{product.brand?.name || product.category.name}</p><p className="mt-1 line-clamp-2 text-sm font-bold">{product.name}</p><p className="mt-1 font-black text-primary">{money(product.basePrice, product.currency, locale)}</p></div>
                     {selected ? <Check className="h-5 w-5 shrink-0 text-emerald-600" /> : <Plus className="h-5 w-5 shrink-0 text-primary" />}

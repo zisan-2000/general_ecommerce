@@ -914,7 +914,7 @@ const MenuItem = ({
               "w-full flex items-center justify-between px-4 py-2.5 transition-all duration-150 group",
               isOpen
                 ? "text-primary bg-primary/8 border-l-2 border-primary"
-                : "text-muted-foreground hover:text-foreground hover:bg-primary/10 hover:border-l-2 hover:border-primary/50 border-l-2 border-transparent",
+                : "text-muted-foreground hover:text-foreground hover:bg-interaction/10 hover:border-l-2 hover:border-interaction/50 border-l-2 border-transparent",
             )}
           >
             <div className="flex items-center gap-3">
@@ -972,7 +972,7 @@ const MenuItem = ({
                                         "relative pl-4 pr-4 py-2 text-xs transition-all duration-150 flex items-center gap-2",
                                         isSubItemActive
                                           ? "text-primary font-medium bg-primary/20 border-l-2 border-primary"
-                                          : "text-muted-foreground/70 hover:text-foreground hover:bg-primary/10",
+                                          : "text-muted-foreground/70 hover:text-foreground hover:bg-interaction/10",
                                       )}
                                     >
                                       <div
@@ -1007,7 +1007,7 @@ const MenuItem = ({
                                       "relative pl-4 pr-4 py-2 text-xs transition-all duration-150 flex items-center gap-2",
                                       isSubItemActive
                                         ? "text-primary font-medium bg-primary/20 border-l-2 border-primary"
-                                        : "text-muted-foreground/70 hover:text-foreground hover:bg-primary/10",
+                                        : "text-muted-foreground/70 hover:text-foreground hover:bg-interaction/10",
                                     )}
                                   >
                                     <div
@@ -1041,7 +1041,7 @@ const MenuItem = ({
                             "relative pl-4 pr-4 py-2 text-xs transition-all duration-150 flex items-center gap-2",
                             isSubItemActive
                               ? "text-primary font-medium bg-primary/20 border-l-2 border-primary"
-                              : "text-muted-foreground/70 hover:text-foreground hover:bg-primary/10",
+                              : "text-muted-foreground/70 hover:text-foreground hover:bg-interaction/10",
                           )}
                         >
                           <div
@@ -1070,8 +1070,8 @@ const MenuItem = ({
           className={cn(
             "flex items-center gap-3 px-4 py-2.5 transition-all duration-150 group",
             isActive
-              ? "text-primary bg-primary/10 hover:bg-primary/20 border-l-2 border-primary"
-              : "text-muted-foreground hover:text-foreground hover:bg-primary/10 hover:border-l-2 hover:border-primary/50 border-l-2 border-transparent",
+              ? "text-primary bg-primary/10 hover:bg-interaction/20 border-l-2 border-primary"
+              : "text-muted-foreground hover:text-foreground hover:bg-interaction/10 hover:border-l-2 hover:border-interaction/50 border-l-2 border-transparent",
           )}
         >
           {item.icon && (

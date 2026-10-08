@@ -124,7 +124,7 @@ export default async function PcBuilderPage({
   }
 
   return (
-    <main className="min-h-screen bg-[#f5f6f8] dark:bg-background">
+    <main className="min-h-screen bg-muted dark:bg-background">
       <section className="border-b bg-card shadow-sm">
         <div className="container flex flex-col gap-4 px-4 py-5 sm:px-6 lg:flex-row lg:items-center lg:justify-between">
           <div className="min-w-0">

@@ -72,7 +72,7 @@ export default function InvestorLayoutClient({ investorName, investorCode, child
         >
           <button
             onClick={() => setSidebarOpen(true)}
-            className="rounded-md p-1.5 text-muted-foreground hover:bg-accent hover:text-foreground"
+            className="rounded-md p-1.5 text-muted-foreground hover:bg-interaction hover:text-foreground"
             aria-label={t("layout.openNavigation")}
           >
             <Menu className="h-5 w-5" />
@@ -91,7 +91,7 @@ export default function InvestorLayoutClient({ investorName, investorCode, child
                     : "light";
                 setTheme(active === "dark" ? "light" : "dark");
               }}
-              className="rounded-md p-1.5 text-muted-foreground hover:bg-accent hover:text-foreground"
+              className="rounded-md p-1.5 text-muted-foreground hover:bg-interaction hover:text-foreground"
               aria-label={t("layout.toggleTheme")}
             >
               {(() => {

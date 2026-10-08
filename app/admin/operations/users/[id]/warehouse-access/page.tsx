@@ -269,7 +269,7 @@ export default function UserWarehouseAccessPage() {
               type="button"
               onClick={handleSave}
               disabled={saving}
-              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition hover:bg-primary/90 disabled:opacity-70"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-5 py-3 text-sm font-medium text-primary-foreground transition hover:bg-interaction hover:text-interaction-foreground disabled:opacity-70"
             >
               {saving ? <Loader2 className="h-4 w-4 animate-spin" /> : <Save className="h-4 w-4" />}
               Save Access

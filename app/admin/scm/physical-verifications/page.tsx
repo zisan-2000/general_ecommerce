@@ -502,7 +502,7 @@ export default function PhysicalVerificationsPage() {
                           "rounded-full border px-2 py-0.5 sm:px-3 sm:py-1 text-[10px] sm:text-xs transition-colors",
                           form.committeeUserIds.includes(user.id)
                             ? "border-primary bg-primary/10 text-primary"
-                            : "border-border text-muted-foreground hover:border-primary/50"
+                            : "border-border text-muted-foreground hover:border-interaction/50"
                         )}
                         onClick={() => toggleCommitteeMember(user.id)}
                       >

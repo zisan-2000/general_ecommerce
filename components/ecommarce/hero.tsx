@@ -62,7 +62,7 @@ function SideBanner({
             href={banner.href ?? FALLBACK_LINK}
             aria-label={`${banner.title}${banner.buttonText ? ` — ${banner.buttonText}` : ""}`}
             tabIndex={index === current ? 0 : -1}
-            className="block h-full w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#174a92]"
+            className="block h-full w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary"
           >
             <Image
               src={banner.image}
@@ -86,8 +86,8 @@ function SideBanner({
               aria-label={`Show ${banner.title}`}
               aria-current={index === current ? "true" : undefined}
               className={cn(
-                "h-1.5 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174a92]",
-                index === current ? "w-5 bg-[#175cd3]" : "w-1.5 bg-slate-300",
+                "h-1.5 rounded-full transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary",
+                index === current ? "w-5 bg-primary" : "w-1.5 bg-slate-300",
               )}
             />
           ))}
@@ -270,7 +270,7 @@ export default function Hero({
                   type="button"
                   onClick={showPreviousHero}
                   aria-label="Show previous promotion"
-                  className="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-slate-900 shadow-[0_3px_12px_rgba(15,23,42,0.18)] transition hover:scale-105 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#175cd3] sm:left-4 sm:h-11 sm:w-11"
+                  className="absolute left-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-slate-900 shadow-[0_3px_12px_rgba(15,23,42,0.18)] transition hover:scale-105 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:left-4 sm:h-11 sm:w-11"
                 >
                   <ChevronLeft className="h-5 w-5" aria-hidden="true" />
                 </button>
@@ -278,7 +278,7 @@ export default function Hero({
                   type="button"
                   onClick={showNextHero}
                   aria-label="Show next promotion"
-                  className="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-slate-900 shadow-[0_3px_12px_rgba(15,23,42,0.18)] transition hover:scale-105 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#175cd3] sm:right-4 sm:h-11 sm:w-11"
+                  className="absolute right-3 top-1/2 z-20 flex h-10 w-10 -translate-y-1/2 items-center justify-center rounded-full bg-white/95 text-slate-900 shadow-[0_3px_12px_rgba(15,23,42,0.18)] transition hover:scale-105 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary sm:right-4 sm:h-11 sm:w-11"
                 >
                   <ChevronRight className="h-5 w-5" aria-hidden="true" />
                 </button>

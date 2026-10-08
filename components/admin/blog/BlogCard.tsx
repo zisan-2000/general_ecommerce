@@ -188,7 +188,7 @@ const BlogCard = memo(function BlogCard() {
           </div>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="flex w-full items-center justify-center space-x-2 rounded-full border border-secondary bg-secondary px-6 py-3 font-semibold text-secondary-foreground transition-all duration-300 hover:scale-105 hover:border-secondary/80 hover:bg-secondary/80 hover:shadow-lg sm:w-auto"
+            className="flex w-full items-center justify-center space-x-2 rounded-full border border-secondary bg-secondary px-6 py-3 font-semibold text-secondary-foreground transition-all duration-300 hover:scale-105 hover:border-interaction/80 hover:bg-interaction/80 hover:shadow-lg sm:w-auto"
           >
             <svg
               className="w-5 h-5"
@@ -344,7 +344,7 @@ const BlogCard = memo(function BlogCard() {
                   <div className="relative z-10 flex flex-col gap-3 border-t border-border pt-4 sm:flex-row sm:items-center sm:justify-between">
                     <Link
                       href={`/admin/management/blogs/edit/${blog.id}`}
-                      className="flex w-full items-center justify-center space-x-2 text-sm font-medium text-primary transition-colors duration-300 hover:text-primary/80 sm:w-auto sm:justify-start"
+                      className="flex w-full items-center justify-center space-x-2 text-sm font-medium text-primary transition-colors duration-300 hover:text-interaction/80 sm:w-auto sm:justify-start"
                       onClick={(e) => e.stopPropagation()}
                     >
                       <svg
@@ -414,7 +414,7 @@ const BlogCard = memo(function BlogCard() {
           <p className="text-muted-foreground mb-6">{t("empty.description")}</p>
           <button
             onClick={() => setIsModalOpen(true)}
-            className="w-full rounded-full border border-secondary bg-secondary px-6 py-3 font-semibold text-secondary-foreground transition-all duration-300 hover:scale-105 hover:border-secondary/80 hover:bg-secondary/80 hover:shadow-lg sm:w-auto"
+            className="w-full rounded-full border border-secondary bg-secondary px-6 py-3 font-semibold text-secondary-foreground transition-all duration-300 hover:scale-105 hover:border-interaction/80 hover:bg-interaction/80 hover:shadow-lg sm:w-auto"
           >
             {t("empty.createPost")}
           </button>

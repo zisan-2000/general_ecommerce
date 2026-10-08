@@ -658,7 +658,7 @@ export default function ProductManager({
               className={
                 availabilityProduct?.available
                   ? "bg-destructive text-destructive-foreground hover:bg-destructive/90"
-                  : "bg-primary text-primary-foreground hover:bg-primary/90"
+                  : "bg-primary text-primary-foreground hover:bg-interaction hover:text-interaction-foreground"
               }
             >
               {isChangingAvailability
@@ -930,7 +930,7 @@ export default function ProductManager({
                 <button
                   type="button"
                   onClick={() => void fetchWarehouseData(undefined, true)}
-                  className="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-border bg-background px-4 py-3 text-sm font-medium text-foreground transition hover:bg-accent sm:w-auto"
+                  className="inline-flex w-full items-center justify-center gap-2 rounded-2xl border border-border bg-background px-4 py-3 text-sm font-medium text-foreground transition hover:bg-interaction sm:w-auto"
                 >
                   <RefreshCw
                     className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`}
@@ -1003,7 +1003,7 @@ export default function ProductManager({
                       onClick={() =>
                         router.push("/admin/operations/products/bundles")
                       }
-                      className="w-full border-primary/20 text-primary hover:bg-primary/10"
+                      className="w-full border-primary/20 text-primary hover:bg-interaction/10"
                     >
                       <Package className="h-4 w-4 mr-1" />{" "}
                       {t("filters.bundles")}
@@ -1423,7 +1423,7 @@ export default function ProductManager({
                           className={`w-full text-xs ${
                             p.available
                               ? "border-destructive/30 text-destructive hover:bg-destructive/10 hover:text-destructive"
-                              : "border-primary/30 text-primary hover:bg-primary/10 hover:text-primary"
+                              : "border-primary/30 text-primary hover:bg-interaction/10 hover:text-interaction"
                           }`}
                         >
                           {p.available ? (

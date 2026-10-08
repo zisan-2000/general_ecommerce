@@ -533,7 +533,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                     className={`rounded-full border px-3 py-1.5 text-xs font-semibold transition ${
                       filters.sort === option.value
                         ? "border-primary bg-primary text-primary-foreground"
-                        : "bg-background hover:border-primary hover:text-primary"
+                        : "bg-background hover:border-interaction hover:text-interaction"
                     }`}
                   >
                     {t(option.labelKey as any)}
@@ -556,7 +556,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                     key={filter.key}
                     href={filter.href}
                     aria-label={t("active.remove", { label: filter.label })}
-                    className="inline-flex items-center gap-1 rounded-full border bg-card px-3 py-1.5 text-xs font-semibold transition hover:border-primary hover:text-primary"
+                    className="inline-flex items-center gap-1 rounded-full border bg-card px-3 py-1.5 text-xs font-semibold transition hover:border-interaction hover:text-interaction"
                   >
                     {filter.label}
                     <span aria-hidden="true">×</span>
@@ -625,7 +625,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                   className={`rounded-lg border px-4 py-2 text-sm font-semibold ${
                     pagination.page <= 1
                       ? "pointer-events-none opacity-40"
-                      : "hover:border-primary hover:text-primary"
+                      : "hover:border-interaction hover:text-interaction"
                   }`}
                 >
                   {t("pagination.previous")}
@@ -644,7 +644,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                         className={`inline-flex h-10 min-w-10 items-center justify-center rounded-lg border px-3 text-sm font-bold ${
                           pagination.page === page
                             ? "border-primary bg-primary text-primary-foreground"
-                            : "hover:border-primary hover:text-primary"
+                            : "hover:border-interaction hover:text-interaction"
                         }`}
                       >
                         {page}
@@ -661,7 +661,7 @@ export default async function ProductsPage({ searchParams }: ProductsPageProps) 
                   className={`rounded-lg border px-4 py-2 text-sm font-semibold ${
                     pagination.page >= pagination.totalPages
                       ? "pointer-events-none opacity-40"
-                      : "hover:border-primary hover:text-primary"
+                      : "hover:border-interaction hover:text-interaction"
                   }`}
                 >
                   {t("pagination.next")}

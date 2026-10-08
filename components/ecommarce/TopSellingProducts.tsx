@@ -76,7 +76,7 @@ export default function TopSellingProducts() {
           <Link
             key={product.id}
             href={`/ecommerce/products/${product.id}`}
-            className="group flex gap-3 rounded-xl border border-border p-3 transition-colors hover:border-primary/40"
+            className="group flex gap-3 rounded-xl border border-border p-3 transition-colors hover:border-interaction/40"
           >
             <div className="relative h-16 w-16 shrink-0 overflow-hidden rounded-lg bg-muted">
               <Image
@@ -93,7 +93,7 @@ export default function TopSellingProducts() {
                   {product.brand.name}
                 </p>
               )}
-              <h3 className="mt-0.5 line-clamp-2 text-xs font-semibold leading-5 group-hover:text-primary">
+              <h3 className="mt-0.5 line-clamp-2 text-xs font-semibold leading-5 group-hover:text-interaction">
                 {product.name}
               </h3>
               <div className="mt-1 flex items-center gap-2">
@@ -107,7 +107,7 @@ export default function TopSellingProducts() {
                 )}
               </div>
             </div>
-            <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-primary" aria-hidden />
+            <ArrowRight className="mt-1 h-4 w-4 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5 group-hover:text-interaction" aria-hidden />
           </Link>
         ))}
       </div>

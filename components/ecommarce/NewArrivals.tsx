@@ -541,7 +541,7 @@ export default function NewArrivals({
               onClick={() => {
                 console.log("Ask AI clicked");
               }}
-              className="group relative flex flex-shrink-0 items-center gap-1.5 sm:gap-2 whitespace-nowrap rounded-full bg-primary transition-all duration-200 hover:bg-secondary/90 active:scale-95 sm:hover:scale-100
+              className="group relative flex flex-shrink-0 items-center gap-1.5 sm:gap-2 whitespace-nowrap rounded-full bg-primary transition-all duration-200 hover:bg-interaction/90 active:scale-95 sm:hover:scale-100
     /* Mobile: smaller padding and hide text */
     px-2 py-2 sm:px-3 sm:py-2 lg:px-4 lg:py-2"
             >
@@ -668,7 +668,7 @@ export default function NewArrivals({
             <button
               type="button"
               onClick={() => setLoginModalOpen(false)}
-              className="h-10 rounded-lg border border-border bg-background px-4 font-semibold text-foreground transition hover:bg-accent"
+              className="h-10 rounded-lg border border-border bg-background px-4 font-semibold text-foreground transition hover:bg-interaction"
             >
               {common("cancel")}
             </button>

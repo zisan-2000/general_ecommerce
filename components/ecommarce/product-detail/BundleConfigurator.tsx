@@ -234,7 +234,7 @@ export default function BundleConfigurator({
                     disabled={group.selectionType === "FIXED" || unavailable || selectionLimitReached}
                     aria-pressed={active}
                     className={`flex min-h-20 w-full min-w-0 items-center gap-2 rounded-lg border p-2.5 text-left transition sm:gap-3 sm:p-3 ${
-                      active ? "border-primary bg-primary/5 ring-2 ring-primary/30" : "border-border hover:border-primary/50 hover:bg-muted/40"
+                      active ? "border-primary bg-primary/5 ring-2 ring-primary/30" : "border-border hover:border-interaction/50 hover:bg-interaction/40"
                     } disabled:cursor-not-allowed disabled:opacity-60`}
                   >
                     <span className="relative h-11 w-11 shrink-0 overflow-hidden rounded bg-white">
@@ -275,7 +275,7 @@ export default function BundleConfigurator({
                   ...current,
                   [group.id]: { ...state, optionIds: [] },
                 }))}
-                className="mt-2 text-[11px] font-semibold text-muted-foreground hover:text-foreground"
+                className="mt-2 text-[11px] font-semibold text-muted-foreground hover:text-interaction"
               >
                 {t("removeOptional")}
               </button>

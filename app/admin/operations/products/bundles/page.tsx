@@ -313,7 +313,7 @@ export default function BundlesPage() {
           {filteredBundles.map((bundle) => (
             <Card
               key={bundle.id}
-              className="overflow-hidden cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:border-primary/50"
+              className="overflow-hidden cursor-pointer transition-all duration-200 hover:scale-[1.02] hover:border-interaction/50"
               onClick={() =>
                 router.push(`/admin/operations/products/bundles/${bundle.id}`)
               }

@@ -51,7 +51,7 @@ export default function AccountMenu() {
                   "flex items-center gap-2 whitespace-nowrap text-sm transition-colors",
                   active
                     ? "text-foreground font-semibold"
-                    : "text-muted-foreground hover:text-foreground",
+                    : "text-muted-foreground hover:text-interaction",
                 ].join(" ")}
               >
                 <span className="text-muted-foreground">{it.icon}</span>

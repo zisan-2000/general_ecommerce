@@ -105,7 +105,7 @@ export default function RelatedProducts({
               <Link
                 key={product.id}
                 href={`/ecommerce/products/${encodeURIComponent(product.slug || String(product.id))}`}
-                className="flex gap-4 rounded-xl border border-border p-4 hover:bg-accent transition"
+                className="flex gap-4 rounded-xl border border-border p-4 hover:bg-interaction transition"
               >
                 <div className="relative h-20 w-20 rounded-lg overflow-hidden bg-card border border-border shrink-0">
                   {product.image ? (

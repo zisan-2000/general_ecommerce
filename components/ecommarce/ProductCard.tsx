@@ -351,7 +351,7 @@ export default function ProductCardCompact({
     <div
       className={cn(
         "group relative flex h-full w-full flex-col overflow-hidden rounded-xl border border-border bg-card text-card-foreground shadow-[0_1px_3px_rgba(15,23,42,0.06)] transition-[border-color,box-shadow,transform] duration-200",
-        "hover:-translate-y-0.5 hover:border-primary/35 hover:shadow-[0_8px_22px_rgba(15,23,42,0.10)]",
+        "hover:-translate-y-0.5 hover:border-interaction/35 hover:shadow-[0_8px_22px_rgba(15,23,42,0.10)]",
         className,
       )}
       onMouseLeave={() => setActiveVariantImage(null)}
@@ -380,12 +380,12 @@ export default function ProductCardCompact({
 
         <div className="pointer-events-none absolute left-3 top-3 z-20 flex flex-col items-start gap-1.5">
           {showSavingsSticker ? (
-            <span className="rounded bg-emerald-700 px-2 py-1 text-[10px] font-bold leading-none text-white shadow-sm sm:text-[11px]">
+            <span className="rounded bg-primary px-2 py-1 text-[10px] font-bold leading-none text-white shadow-sm sm:text-[11px]">
               {t("save", { amount: formatCurrency(savingsAmount) })}
             </span>
           ) : null}
           {isBestSeller ? (
-            <span className="inline-flex items-center gap-1 rounded bg-amber-500 px-2 py-1 text-[9px] font-bold uppercase leading-none text-white shadow-sm">
+            <span className="inline-flex items-center gap-1 rounded bg-secondary px-2 py-1 text-[9px] font-bold uppercase leading-none text-white shadow-sm">
               <Flame className="h-3 w-3" aria-hidden="true" />
               {t("bestSeller")}
             </span>
@@ -425,7 +425,7 @@ export default function ProductCardCompact({
           href={product.href}
           className="min-h-[42px] rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:min-h-[44px]"
         >
-          <h3 className="line-clamp-2 text-[13px] font-semibold leading-[1.45] text-foreground transition-colors group-hover:text-[#FFA726] dark:text-white sm:text-[14px]">
+          <h3 className="line-clamp-2 text-[13px] font-semibold leading-[1.45] text-foreground transition-colors group-hover:text-interaction dark:text-white sm:text-[14px]">
             {product.name}
           </h3>
         </Link>
@@ -513,7 +513,7 @@ export default function ProductCardCompact({
           prefetch={false}
               href={product.href}
               aria-label={t("viewDetailsFor", { name: product.name })}
-              className="flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded bg-primary px-2 text-[11px] font-semibold text-primary-foreground transition hover:bg-[#FFA726] hover:text-[#183D23] dark:text-white dark:hover:text-[#183D23] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 sm:h-9 sm:text-[12px]"
+              className="flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded btn-primary px-2 text-[11px] font-semibold focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 sm:h-9 sm:text-[12px]"
             >
               <Eye className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
               <span className="truncate">{t("viewDetails")}</span>
@@ -528,7 +528,7 @@ export default function ProductCardCompact({
                 "flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded px-2 text-[11px] font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 sm:h-9 sm:text-[12px]",
                 isOutOfStock || isAddingToCart
                   ? "cursor-not-allowed bg-muted text-muted-foreground"
-                  : "bg-primary text-primary-foreground hover:bg-primary/90",
+                  : "btn-primary",
                 buttonAnimate && "animate-bounce-in",
               )}
             >
@@ -552,7 +552,7 @@ export default function ProductCardCompact({
                 "flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded border px-2 text-[11px] font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 sm:h-9 sm:text-[12px]",
                 compared
                   ? "border-primary bg-primary/10 text-primary"
-                  : "border-border bg-muted/60 text-foreground/75 hover:border-primary/30 hover:bg-muted",
+                  : "border-border bg-muted/60 text-foreground/75 hover:border-interaction/30 hover:bg-muted",
               )}
             >
               <GitCompareArrows className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />

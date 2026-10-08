@@ -547,7 +547,7 @@ export default function ReportsDashboard() {
               <TabsTrigger
                 key={key}
                 value={key}
-                className="rounded-2xl px-4 py-2.5 text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground hover:data-[state=active]:bg-primary hover:data-[state=active]:text-primary-foreground hover:bg-primary/80 hover:text-primary-foreground/80"
+                className="rounded-2xl px-4 py-2.5 text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground hover:data-[state=active]:bg-primary hover:data-[state=active]:text-primary-foreground hover:bg-interaction hover:text-interaction-foreground hover:text-interaction-foreground/80"
               >
                 {t(`tabs.${key}`)}
               </TabsTrigger>

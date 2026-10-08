@@ -171,7 +171,7 @@ export default function ProductQuestions({ productId }: { productId: number }) {
                     type="button"
                     onClick={() => answerQuestion(item.id)}
                     disabled={answeringId === item.id || (answers[item.id]?.trim().length || 0) < 2}
-                    className="h-10 rounded-lg border px-4 text-sm font-bold hover:border-primary disabled:opacity-50"
+                    className="h-10 rounded-lg border px-4 text-sm font-bold hover:border-interaction disabled:opacity-50"
                   >
                     {answeringId === item.id ? t("saving") : t("publishAnswer")}
                   </button>

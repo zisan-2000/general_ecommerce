@@ -208,7 +208,7 @@ export default function InvestorRetainedProfitPage() {
                   className={`w-full rounded-lg border p-4 text-left transition-colors ${
                     payload.selectedRunId === run.id
                       ? "border-primary/30 bg-primary/10"
-                      : "border-border bg-card hover:border-primary/40"
+                      : "border-border bg-card hover:border-interaction/40"
                   }`}
                 >
                   <div className="flex flex-col gap-2 md:flex-row md:items-center md:justify-between">

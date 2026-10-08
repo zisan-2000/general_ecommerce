@@ -347,7 +347,7 @@ export function InvestorWorkflowGuide({
                     <Link
                       key={step.id}
                       href={step.href}
-                      className={`inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors hover:border-primary/50 ${
+                      className={`inline-flex items-center gap-2 rounded-full border px-3 py-1.5 text-xs font-medium transition-colors hover:border-interaction/50 ${
                         isPage
                           ? "border-primary/30 bg-primary/10 text-primary"
                           : "border-border bg-background text-foreground"
@@ -372,7 +372,7 @@ export function InvestorWorkflowGuide({
                   <Link
                     key={step.id}
                     href={step.href}
-                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-primary/50"
+                    className="inline-flex items-center gap-2 rounded-full border border-border bg-background px-3 py-1.5 text-xs font-medium text-foreground transition-colors hover:border-interaction/50"
                   >
                     <span>{translateDynamic(t, `steps.${step.id}.title`)}</span>
                     <ArrowRight className="h-3.5 w-3.5 text-muted-foreground" />

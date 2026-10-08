@@ -346,7 +346,7 @@ export default function WishlistPage() {
         <div className="mb-5 flex items-center justify-between gap-3">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition"
+            className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-interaction transition"
           >
             <ArrowLeft className="h-4 w-4" />
             Continue shopping
@@ -448,7 +448,7 @@ export default function WishlistPage() {
                       <button
                         type="button"
                         onClick={() => handleRemoveItem(item.productId)}
-                        className="absolute right-2 top-2 inline-flex h-9 w-9 items-center justify-center rounded-full bg-background/90 border border-border hover:bg-muted transition"
+                        className="absolute right-2 top-2 inline-flex h-9 w-9 items-center justify-center rounded-full bg-background/90 border border-border hover:bg-interaction/15 transition"
                         aria-label="Remove from wishlist"
                         title="Remove"
                       >

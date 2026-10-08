@@ -264,7 +264,7 @@ const CouponManagement = memo(function CouponManagement() {
               onOpenChange={setIsCreateDialogOpen}
             >
               <DialogTrigger asChild>
-                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary">
+                <Button className="bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary">
                   <Plus className="mr-2 h-4 w-4" />
                   {t("actions.createCoupon")}
                 </Button>
@@ -433,7 +433,7 @@ const CouponManagement = memo(function CouponManagement() {
                   </div>
                   <Button
                     type="submit"
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
+                    className="w-full bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
                   >
                     {t("actions.createCoupon")}
                   </Button>
@@ -537,7 +537,7 @@ const CouponManagement = memo(function CouponManagement() {
                       variant="outline"
                       size="sm"
                       onClick={() => openEditDialog(coupon)}
-                      className="border-border text-foreground hover:bg-muted hover:border-primary rounded-lg transition-all duration-300"
+                      className="border-border text-foreground hover:bg-muted hover:border-interaction rounded-lg transition-all duration-300"
                     >
                       <Edit className="h-4 w-4" />
                     </Button>
@@ -572,7 +572,7 @@ const CouponManagement = memo(function CouponManagement() {
               onOpenChange={setIsCreateDialogOpen}
             >
               <DialogTrigger asChild>
-                <Button className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary">
+                <Button className="bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground font-semibold px-6 py-3 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary">
                   <Plus className="mr-2 h-4 w-4" />
                   {t("actions.createCoupon")}
                 </Button>
@@ -743,7 +743,7 @@ const CouponManagement = memo(function CouponManagement() {
               </div>
               <Button
                 type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
+                className="w-full bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
               >
                 {t("actions.updateCoupon")}
               </Button>

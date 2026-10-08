@@ -183,7 +183,7 @@ export default function CatalogFilterForm({
       <button
         type="submit"
         disabled={isPending}
-        className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground transition hover:bg-primary/90 disabled:cursor-wait disabled:opacity-70 lg:hidden"
+        className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground transition hover:bg-interaction hover:text-interaction-foreground disabled:cursor-wait disabled:opacity-70 lg:hidden"
       >
         {isPending ? (
           <LoaderCircle className="h-4 w-4 animate-spin" aria-hidden="true" />

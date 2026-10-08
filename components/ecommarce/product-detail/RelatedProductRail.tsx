@@ -59,7 +59,7 @@ export default async function RelatedProductRail({
               key={product.id}
               data-analytics-item-id={String(product.id)}
               href={`/ecommerce/products/${encodeURIComponent(product.slug)}`}
-              className="group grid min-h-[96px] flex-1 grid-cols-[62px_minmax(0,1fr)] content-center gap-3 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#174a92]"
+              className="group grid min-h-[96px] flex-1 grid-cols-[62px_minmax(0,1fr)] content-center gap-3 py-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary"
             >
               <span className="relative h-[62px] w-[62px] overflow-hidden rounded border border-slate-200 bg-white">
                 <Image
@@ -71,7 +71,7 @@ export default async function RelatedProductRail({
                 />
               </span>
               <span className="min-w-0">
-              <span className="line-clamp-2 text-[11px] font-semibold leading-[1.45] text-foreground group-hover:text-primary">
+              <span className="line-clamp-2 text-[11px] font-semibold leading-[1.45] text-foreground group-hover:text-interaction">
                   {product.name}
                 </span>
                 <span className="mt-1.5 flex flex-wrap items-baseline gap-2">
@@ -97,7 +97,7 @@ export default async function RelatedProductRail({
 
       <Link
         href={categoryHref}
-        className="flex h-11 shrink-0 items-center justify-center border-t border-border bg-muted text-[11px] font-bold text-primary transition hover:bg-accent"
+        className="flex h-11 shrink-0 items-center justify-center border-t border-border bg-muted text-[11px] font-bold text-primary transition hover:bg-interaction"
       >
         {t("browseAll")}
       </Link>

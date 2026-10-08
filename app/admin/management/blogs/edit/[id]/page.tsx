@@ -68,14 +68,14 @@ export default async function EditBlogPage({ params }: EditBlogPageProps) {
           <nav className="mt-4 flex space-x-2 text-sm text-muted-foreground">
             <Link
               href="/admin"
-              className="transition-colors duration-300 hover:text-primary"
+              className="transition-colors duration-300 hover:text-interaction"
             >
               Dashboard
             </Link>
             <span>/</span>
             <Link
               href="/admin/management/blogs"
-              className="transition-colors duration-300 hover:text-primary"
+              className="transition-colors duration-300 hover:text-interaction"
             >
               Blogs
             </Link>

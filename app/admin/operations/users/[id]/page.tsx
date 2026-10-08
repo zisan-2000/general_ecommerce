@@ -445,7 +445,7 @@ export default function UserDetailPage() {
         <div className="mb-8">
           <button
             onClick={() => router.back()}
-            className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-card border text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-all duration-300 mb-6 shadow-sm font-medium"
+            className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-card border text-muted-foreground hover:bg-interaction hover:text-accent-foreground transition-all duration-300 mb-6 shadow-sm font-medium"
           >
             <ArrowLeft className="h-4 w-4" />
             <span>Back to User List</span>
@@ -513,7 +513,7 @@ export default function UserDetailPage() {
 
               <Link
                 href={`/admin/operations/users/${user.id}/warehouse-access`}
-                className="flex items-center space-x-2 px-4 py-2 rounded-xl border border-border bg-card text-foreground hover:bg-accent transition-all duration-300 shadow-sm font-medium"
+                className="flex items-center space-x-2 px-4 py-2 rounded-xl border border-border bg-card text-foreground hover:bg-interaction transition-all duration-300 shadow-sm font-medium"
               >
                 <Shield className="h-4 w-4" />
                 <span>Warehouse Access</span>
@@ -523,7 +523,7 @@ export default function UserDetailPage() {
                 <>
                   <button
                     onClick={() => setShowPasswordModal(true)}
-                    className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 shadow-sm font-medium"
+                    className="flex items-center space-x-2 px-4 py-2 rounded-xl bg-primary text-primary-foreground hover:bg-interaction hover:text-interaction-foreground transition-all duration-300 shadow-sm font-medium"
                   >
                     <Lock className="h-4 w-4" />
                     <span>Change Password</span>
@@ -533,8 +533,8 @@ export default function UserDetailPage() {
                     onClick={() => setEditing(!editing)}
                     className={`flex items-center space-x-2 px-4 py-2 rounded-xl border transition-all duration-300 shadow-sm font-medium ${
                       editing
-                        ? "bg-muted text-muted-foreground border-border hover:bg-accent hover:text-accent-foreground"
-                        : "bg-primary text-primary-foreground border-primary hover:bg-primary/90"
+                        ? "bg-muted text-muted-foreground border-border hover:bg-interaction hover:text-accent-foreground"
+                        : "bg-primary text-primary-foreground border-primary hover:bg-interaction hover:text-interaction-foreground"
                     }`}
                   >
                     {editing ? (
@@ -691,7 +691,7 @@ export default function UserDetailPage() {
                           addresses: [...prev.addresses, ""],
                         }))
                       }
-                      className="text-xs px-3 py-2 rounded-xl border text-foreground hover:bg-accent"
+                      className="text-xs px-3 py-2 rounded-xl border text-foreground hover:bg-interaction"
                     >
                       + Add Another Address
                     </button>
@@ -719,14 +719,14 @@ export default function UserDetailPage() {
                 <div className="flex justify-end space-x-3 pt-6 mt-6 border-t">
                   <button
                     onClick={() => setEditing(false)}
-                    className="px-6 py-2 rounded-xl border text-muted-foreground hover:bg-accent transition-all duration-300 font-medium"
+                    className="px-6 py-2 rounded-xl border text-muted-foreground hover:bg-interaction transition-all duration-300 font-medium"
                   >
                     Cancel
                   </button>
                   <button
                     onClick={handleSave}
                     disabled={saving}
-                    className="flex items-center space-x-2 px-6 py-2 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 font-medium disabled:opacity-50"
+                    className="flex items-center space-x-2 px-6 py-2 rounded-xl bg-primary text-primary-foreground hover:bg-interaction hover:text-interaction-foreground transition-all duration-300 font-medium disabled:opacity-50"
                   >
                     {saving ? (
                       <RefreshCw className="h-4 w-4 animate-spin" />
@@ -756,7 +756,7 @@ export default function UserDetailPage() {
                   {user.orders.map((order) => (
                     <div
                       key={order.id}
-                      className="flex items-center justify-between p-4 border rounded-xl hover:bg-accent/50 transition-all duration-300"
+                      className="flex items-center justify-between p-4 border rounded-xl hover:bg-interaction/50 transition-all duration-300"
                     >
                       <div className="flex-1">
                         <div className="flex items-center space-x-3 mb-2">
@@ -961,7 +961,7 @@ export default function UserDetailPage() {
             <div className="mt-6 flex justify-end space-x-3">
               <button
                 onClick={() => setConfirmAction(null)}
-                className="px-4 py-2 rounded-xl border text-muted-foreground hover:bg-accent transition-all duration-300 text-sm font-medium"
+                className="px-4 py-2 rounded-xl border text-muted-foreground hover:bg-interaction transition-all duration-300 text-sm font-medium"
               >
                 Cancel
               </button>
@@ -1093,14 +1093,14 @@ export default function UserDetailPage() {
                   setPasswordError("");
                   setPasswordData({ newPassword: "", confirmPassword: "" });
                 }}
-                className="px-4 py-2 rounded-xl border text-muted-foreground hover:bg-accent transition-all duration-300 text-sm font-medium"
+                className="px-4 py-2 rounded-xl border text-muted-foreground hover:bg-interaction transition-all duration-300 text-sm font-medium"
               >
                 Cancel
               </button>
               <button
                 onClick={handleChangePassword}
                 disabled={changingPassword}
-                className="px-4 py-2 rounded-xl bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 text-sm font-medium disabled:opacity-50 flex items-center space-x-2"
+                className="px-4 py-2 rounded-xl bg-primary text-primary-foreground hover:bg-interaction hover:text-interaction-foreground transition-all duration-300 text-sm font-medium disabled:opacity-50 flex items-center space-x-2"
               >
                 {changingPassword && (
                   <RefreshCw className="h-4 w-4 animate-spin" />

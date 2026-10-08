@@ -312,7 +312,7 @@ export function CustomerOrdersPage({ refundedOnly = false }: { refundedOnly?: bo
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Link
             href="/"
-            className="flex items-center gap-1 transition-colors hover:text-foreground"
+            className="flex items-center gap-1 transition-colors hover:text-interaction"
           >
             <Home className="h-4 w-4" />
             <span>{t("common.home")}</span>
@@ -322,7 +322,7 @@ export function CustomerOrdersPage({ refundedOnly = false }: { refundedOnly?: bo
 
           <Link
             href="/ecommerce/user"
-            className="transition-colors hover:text-foreground"
+            className="transition-colors hover:text-interaction"
           >
             {t("common.account")}
           </Link>
@@ -386,7 +386,7 @@ export function CustomerOrdersPage({ refundedOnly = false }: { refundedOnly?: bo
                         <span className="font-medium">{t("orders.orderId")}: </span>
                         <Link
                           href={`/ecommerce/user/orders/${order.invoiceId}`}
-                          className="font-medium text-primary underline underline-offset-2 transition-colors hover:text-primary/80 hover:no-underline"
+                          className="font-medium text-primary underline underline-offset-2 transition-colors hover:text-interaction/80 hover:no-underline"
                         >
                           {order.invoiceId}
                         </Link>
@@ -417,7 +417,7 @@ export function CustomerOrdersPage({ refundedOnly = false }: { refundedOnly?: bo
 
                       <Link
                         href={`/ecommerce/user/orders/${order.invoiceId}`}
-                        className="text-sm font-medium text-primary underline underline-offset-2 transition-colors hover:text-primary/80 hover:no-underline"
+                        className="text-sm font-medium text-primary underline underline-offset-2 transition-colors hover:text-interaction/80 hover:no-underline"
                       >
                         {t("orders.trackOrder")} →
                       </Link>

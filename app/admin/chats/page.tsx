@@ -387,7 +387,7 @@ export default function AdminChatsPage() {
                   key={item.id}
                   type="button"
                   onClick={() => setSelectedId(item.id)}
-                  className={`w-full border-b p-3 text-left transition hover:bg-accent ${
+                  className={`w-full border-b p-3 text-left transition hover:bg-interaction ${
                     selectedId === item.id ? "bg-accent/70" : ""
                   }`}
                 >

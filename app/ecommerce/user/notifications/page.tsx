@@ -92,12 +92,12 @@ export default function CustomerNotificationsPage() {
     <div className="min-h-screen bg-background text-foreground">
       <div className="px-6 pt-6">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <Link href="/" className="flex items-center gap-1 transition-colors hover:text-foreground">
+          <Link href="/" className="flex items-center gap-1 transition-colors hover:text-interaction">
             <Home className="h-4 w-4" />
             <span>{t("common.home")}</span>
           </Link>
           <span>/</span>
-          <Link href="/ecommerce/user" className="transition-colors hover:text-foreground">
+          <Link href="/ecommerce/user" className="transition-colors hover:text-interaction">
             {t("common.account")}
           </Link>
           <span>/</span>
@@ -123,7 +123,7 @@ export default function CustomerNotificationsPage() {
             <button
               type="button"
               onClick={markAllRead}
-              className="inline-flex h-9 items-center gap-2 rounded border border-border px-3 text-xs font-semibold hover:bg-accent"
+              className="inline-flex h-9 items-center gap-2 rounded border border-border px-3 text-xs font-semibold hover:bg-interaction"
             >
               <CheckCheck className="h-4 w-4" aria-hidden="true" />
               {t("notifications.markAllRead")}
@@ -152,7 +152,7 @@ export default function CustomerNotificationsPage() {
                 key={item.id}
                 href={item.targetUrl ?? "/ecommerce/user"}
                 onClick={() => item.status === "UNREAD" && void markRead(item.id)}
-                className="block rounded-xl border border-border bg-card p-4 text-card-foreground shadow-sm transition hover:bg-accent/40"
+                className="block rounded-xl border border-border bg-card p-4 text-card-foreground shadow-sm transition hover:bg-interaction/40"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="min-w-0">

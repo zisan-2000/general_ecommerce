@@ -29,6 +29,17 @@ export default {
           DEFAULT: "hsl(var(--secondary))",
           foreground: "hsl(var(--secondary-foreground))",
         },
+        interaction: {
+          DEFAULT: "hsl(var(--interaction))",
+          foreground: "hsl(var(--interaction-foreground))",
+        },
+        "secondary-hover": "var(--secondary-hover)",
+        "brand-highlight": "hsl(var(--palette-highlight))",
+        "brand-ink": "hsl(var(--palette-ink))",
+        footer: {
+          DEFAULT: "hsl(var(--footer))",
+          foreground: "hsl(var(--footer-foreground))",
+        },
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",

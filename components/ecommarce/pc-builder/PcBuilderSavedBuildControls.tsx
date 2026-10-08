@@ -232,13 +232,13 @@ export default function PcBuilderSavedBuildControls() {
 
   return (
     <>
-      <button type="button" onClick={saveCurrent} disabled={saving} className="inline-flex h-10 items-center gap-2 rounded-lg border px-3 text-sm font-bold transition hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-40">
+      <button type="button" onClick={saveCurrent} disabled={saving} className="inline-flex h-10 items-center gap-2 rounded-lg border px-3 text-sm font-bold transition hover:border-interaction hover:text-interaction disabled:cursor-not-allowed disabled:opacity-40">
         {saving ? <Loader2 className="h-4 w-4 animate-spin" aria-hidden="true" /> : <Save className="h-4 w-4" aria-hidden="true" />} Save
       </button>
-      <button type="button" onClick={openSavedBuilds} className="inline-flex h-10 items-center gap-2 rounded-lg border px-3 text-sm font-bold transition hover:border-primary hover:text-primary">
+      <button type="button" onClick={openSavedBuilds} className="inline-flex h-10 items-center gap-2 rounded-lg border px-3 text-sm font-bold transition hover:border-interaction hover:text-interaction">
         <FolderOpen className="h-4 w-4" aria-hidden="true" /> Saved
       </button>
-      <button type="button" onClick={shareCurrent} className="inline-flex h-10 items-center gap-2 rounded-lg border px-3 text-sm font-bold transition hover:border-primary hover:text-primary">
+      <button type="button" onClick={shareCurrent} className="inline-flex h-10 items-center gap-2 rounded-lg border px-3 text-sm font-bold transition hover:border-interaction hover:text-interaction">
         <Copy className="h-4 w-4" aria-hidden="true" /> Share
       </button>
 
@@ -263,7 +263,7 @@ export default function PcBuilderSavedBuildControls() {
                     <div><h3 className="font-bold">{build.name}</h3><p className="mt-1 text-xs text-muted-foreground">{build.slotCount} component{build.slotCount === 1 ? "" : "s"} · Updated {new Date(build.updatedAt).toLocaleString()}</p></div>
                     <div className="flex flex-wrap gap-2">
                       <button type="button" onClick={() => loadBuild(build.id)} disabled={busyId !== null} className="inline-flex h-9 items-center rounded-lg bg-primary px-3 text-xs font-bold text-primary-foreground disabled:opacity-40">{busyId === build.id ? <Loader2 className="mr-1.5 h-3.5 w-3.5 animate-spin" /> : null} Load</button>
-                      <button type="button" onClick={() => copySavedBuild(build.shareToken)} className="inline-flex h-9 items-center gap-1.5 rounded-lg border px-3 text-xs font-bold hover:border-primary hover:text-primary"><Copy className="h-3.5 w-3.5" /> Link</button>
+                      <button type="button" onClick={() => copySavedBuild(build.shareToken)} className="inline-flex h-9 items-center gap-1.5 rounded-lg border px-3 text-xs font-bold hover:border-interaction hover:text-interaction"><Copy className="h-3.5 w-3.5" /> Link</button>
                       <button type="button" onClick={() => deleteBuild(build.id)} disabled={busyId !== null} className="inline-flex h-9 items-center gap-1.5 rounded-lg border px-3 text-xs font-bold text-destructive hover:border-destructive disabled:opacity-40"><Trash2 className="h-3.5 w-3.5" /> Delete</button>
                     </div>
                   </div>

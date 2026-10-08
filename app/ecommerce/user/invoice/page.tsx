@@ -143,7 +143,7 @@ export default function InvoicePage() {
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Link
             href="/"
-            className="flex items-center gap-1 hover:text-foreground transition-colors"
+            className="flex items-center gap-1 hover:text-interaction transition-colors"
           >
             <Home className="h-4 w-4" />
             <span>{t("common.home")}</span>
@@ -151,7 +151,7 @@ export default function InvoicePage() {
           <span>›</span>
           <Link
             href="/ecommerce/user"
-            className="hover:text-foreground transition-colors"
+            className="hover:text-interaction transition-colors"
           >
             {t("common.account")}
           </Link>
@@ -224,7 +224,7 @@ export default function InvoicePage() {
                         type="button"
                         onClick={() => downloadInvoice(o.id)}
                         disabled={downloadingId !== null}
-                        className="h-10 px-4 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 inline-flex items-center gap-2 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+                        className="h-10 px-4 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-interaction hover:text-interaction-foreground inline-flex items-center gap-2 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
                       >
                         {isDownloading ? (
                           <>

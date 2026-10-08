@@ -1792,7 +1792,7 @@ export default function ProductAddModal({
                                             </button>
                                           </div>
                                         ))}
-                                        <label className="inline-flex h-16 cursor-pointer items-center justify-center rounded border border-dashed border-border px-3 text-xs font-medium text-muted-foreground transition hover:border-primary hover:text-foreground">
+                                        <label className="inline-flex h-16 cursor-pointer items-center justify-center rounded border border-dashed border-border px-3 text-xs font-medium text-muted-foreground transition hover:border-interaction hover:text-foreground">
                                           {t("variants.uploadGallery")}
                                           <input
                                             type="file"
@@ -2230,7 +2230,7 @@ export default function ProductAddModal({
             <Button
               type="submit"
               disabled={loading}
-              className="bg-primary text-primary-foreground hover:bg-primary/90"
+              className="bg-primary text-primary-foreground hover:bg-interaction hover:text-interaction-foreground"
             >
               <Zap className="mr-1 h-4 w-4" />
               {editing ? t("actions.update") : t("actions.add")}

@@ -180,9 +180,9 @@ export default function BrandSlider({
                 text-muted-foreground
                 shadow-sm
                 transition-all
-                hover:border-primary/40
-                hover:bg-primary
-                hover:text-primary-foreground
+                hover:border-interaction/40
+                hover:bg-interaction
+                hover:text-interaction-foreground
                 disabled:cursor-not-allowed
                 disabled:opacity-30
               "
@@ -204,9 +204,9 @@ export default function BrandSlider({
                 text-muted-foreground
                 shadow-sm
                 transition-all
-                hover:border-primary/40
-                hover:bg-primary
-                hover:text-primary-foreground
+                hover:border-interaction/40
+                hover:bg-interaction
+                hover:text-interaction-foreground
                 disabled:cursor-not-allowed
                 disabled:opacity-30
               "
@@ -228,8 +228,8 @@ export default function BrandSlider({
                 text-foreground
                 shadow-sm
                 transition
-                hover:border-primary
-                hover:text-primary
+                hover:border-interaction
+                hover:text-interaction
                 sm:inline-flex
               "
             >
@@ -300,7 +300,7 @@ export default function BrandSlider({
                       duration-300
 
                       hover:-translate-y-1
-                      hover:border-primary/30
+                      hover:border-interaction/30
                       hover:shadow-[0_10px_26px_rgba(15,23,42,0.10)]
 
                       focus-visible:outline-none

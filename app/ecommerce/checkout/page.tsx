@@ -1123,7 +1123,7 @@ export default function CheckoutPage() {
                               type="button"
                               onClick={handleSaveAddress}
                               disabled={savingAddress}
-                              className="h-9 bg-primary hover:bg-primary/90 text-primary-foreground"
+                              className="h-9 bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground"
                             >
                               {savingAddress ? t("address.saving") : t("address.saveCurrent")}
                             </Button>
@@ -1196,7 +1196,7 @@ export default function CheckoutPage() {
                   </div>
 
                   <Button
-                    className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-2 sm:py-3 text-base sm:text-lg font-semibold rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="w-full bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground py-2 sm:py-3 text-base sm:text-lg font-semibold rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                     onClick={handleGoToPaymentStep}
                   >
                     {t("nextStep")}
@@ -1235,7 +1235,7 @@ export default function CheckoutPage() {
                     <Button
                       variant="ghost"
                       onClick={() => setStep("payment")}
-                      className="text-foreground/70 hover:text-foreground hover:bg-muted"
+                      className="text-foreground/70 hover:text-interaction hover:bg-muted"
                     >
                       <ArrowLeft className="w-4 h-4 mr-2" />
                       {t("common.back")}
@@ -1321,7 +1321,7 @@ export default function CheckoutPage() {
                   )}
 
                   <Button
-                    className="w-full bg-primary/80 hover:bg-primary text-primary-foreground py-2 sm:py-3 text-base sm:text-lg font-semibold rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="w-full bg-primary/80 hover:bg-interaction text-primary-foreground py-2 sm:py-3 text-base sm:text-lg font-semibold rounded-lg sm:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                     onClick={handleConfirmOrder}
                     disabled={orderConfirmed}
                   >
@@ -1527,13 +1527,13 @@ export default function CheckoutPage() {
 
             <div className="space-y-3">
               <Link href="/ecommerce/user/orders" className="block">
-                <Button className="w-full bg-primary hover:bg-primary/90 text-primary-foreground py-3 rounded-xl">
+                <Button className="w-full bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground py-3 rounded-xl">
                   {t("successModal.trackOrder")}
                 </Button>
               </Link>
 
               <Link href="/ecommerce/products">
-                <Button variant="outline" className="w-full border-border text-foreground hover:bg-muted rounded-xl">
+                <Button variant="outline" className="w-full border-border text-foreground hover:bg-interaction/15 rounded-xl">
                   {t("successModal.continueShopping")}
                 </Button>
               </Link>

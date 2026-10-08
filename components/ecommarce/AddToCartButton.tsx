@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useCart } from "@/components/ecommarce/CartContext";
 import { useTranslations } from "next-intl";
+import { cn } from "@/lib/utils";
 
 export default function AddToCartButton({
   productId,
@@ -51,10 +52,10 @@ export default function AddToCartButton({
       type="button"
       onClick={handleAdd}
       disabled={isDisabled}
-      className={
-        className ||
-        "h-11 px-6 rounded-lg bg-transparent border border-primary hover:bg-primary text-primary hover:text-primary-foreground font-semibold hover:opacity-95 transition disabled:opacity-50 disabled:cursor-not-allowed"
-      }
+      className={cn(
+        "btn-primary h-11 px-6 rounded-lg font-semibold transition disabled:opacity-50 disabled:cursor-not-allowed",
+        className,
+      )}
     >
       {loading
         ? t("adding")

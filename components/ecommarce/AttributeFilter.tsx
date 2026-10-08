@@ -111,7 +111,7 @@ export default function AttributeFilter({
           <button
             type="button"
             onClick={reset}
-            className="text-xs text-muted-foreground hover:text-foreground underline underline-offset-2"
+            className="text-xs text-muted-foreground hover:text-interaction underline underline-offset-2"
           >
             Reset
           </button>
@@ -140,7 +140,7 @@ export default function AttributeFilter({
             return (
               <div key={attr.id} className="border-b border-border/30 pb-3 last:border-b-0">
                 <div
-                  className="flex items-center gap-2 rounded-lg px-2 py-2 hover:bg-accent transition cursor-pointer"
+                  className="flex items-center gap-2 rounded-lg px-2 py-2 hover:bg-interaction transition cursor-pointer"
                   onClick={() => toggleExpand(attr.id)}
                 >
                   <span className="w-5 flex items-center justify-center">
@@ -167,7 +167,7 @@ export default function AttributeFilter({
                       return (
                         <label
                           key={val.id}
-                          className="flex items-center gap-2 text-sm cursor-pointer hover:bg-accent/50 rounded px-2 py-1 transition"
+                          className="flex items-center gap-2 text-sm cursor-pointer hover:bg-interaction/50 rounded px-2 py-1 transition"
                         >
                           <input
                             type="checkbox"

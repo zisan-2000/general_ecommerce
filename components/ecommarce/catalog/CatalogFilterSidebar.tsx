@@ -83,7 +83,7 @@ export default function CatalogFilterSidebar({ children, activeFilterCount }: {
           <div className="flex shrink-0 items-center justify-between gap-2 border-b px-3 py-3">
             <SheetTitle className="flex items-center gap-2 text-base font-bold">{t("filters")}{badge}</SheetTitle>
             <SheetClose asChild>
-              <button type="button" aria-label={locale.startsWith("bn") ? "ফিল্টার বন্ধ করুন" : "Close filters"} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
+              <button type="button" aria-label={locale.startsWith("bn") ? "ফিল্টার বন্ধ করুন" : "Close filters"} className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg hover:bg-interaction/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring">
                 <X className="h-5 w-5" aria-hidden="true" />
               </button>
             </SheetClose>

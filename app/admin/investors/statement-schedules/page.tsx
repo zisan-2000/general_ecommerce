@@ -337,7 +337,7 @@ export default function InvestorStatementSchedulesPage() {
                     <TableRow key={item.id}>
                       <TableCell className="font-medium">
                         {item.investor ? (
-                          <Link href={`/admin/investors/${item.investor.id}`} className="hover:text-primary">
+                          <Link href={`/admin/investors/${item.investor.id}`} className="hover:text-interaction">
                             {item.investor.name} ({item.investor.code})
                           </Link>
                         ) : (

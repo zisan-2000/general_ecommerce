@@ -500,7 +500,7 @@ function QuickAction({
   return (
     <Link
       href={href}
-      className="group flex items-start gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:shadow-md hover:border-primary/30"
+      className="group flex items-start gap-4 rounded-xl border border-border bg-card p-4 transition-all hover:shadow-md hover:border-interaction/30"
     >
       <div className="rounded-lg border border-border bg-muted/30 p-2.5">
         <Icon className="h-5 w-5 text-foreground" />

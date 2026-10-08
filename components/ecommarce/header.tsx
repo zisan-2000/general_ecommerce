@@ -507,7 +507,7 @@ function MobileCategoryTree({
         )}
 
         <div
-          className="flex items-center justify-between gap-3 py-1 transition-colors hover:bg-muted/30"
+          className="flex items-center justify-between gap-3 py-1 transition-colors hover:bg-interaction/30"
           style={{ paddingLeft: padLeft, paddingRight: 10 }}
         >
           <button
@@ -1069,9 +1069,9 @@ export default function Header({
     return left;
   };
   const headerIconClass =
-    "relative flex h-10 w-10 items-center justify-center rounded-full text-[#228B3A] dark:text-white transition-colors hover:bg-[#FFA726]/15 hover:text-[#FB8C00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#228B3A] md:h-10 md:w-10 md:rounded-md";
+    "relative flex h-10 w-10 items-center justify-center rounded-full text-primary dark:text-white transition-colors hover:bg-interaction/15 hover:text-interaction focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary md:h-10 md:w-10 md:rounded-md";
   const desktopActionClass =
-    "hidden h-10 items-center gap-2 rounded-md px-3 text-[13px] font-semibold text-[#228B3A] dark:text-white transition-colors hover:bg-[#FFA726]/15 hover:text-[#FB8C00] lg:flex";
+    "hidden h-10 items-center gap-2 rounded-md px-3 text-[13px] font-semibold text-primary dark:text-white transition-colors hover:bg-interaction/15 hover:text-interaction lg:flex";
 
   const hoveredNavCat = useMemo(() => {
     if (navHoverCatId === null) return null;
@@ -1136,7 +1136,7 @@ export default function Header({
         scrolled ? "shadow-md" : "shadow-none",
       ].join(" ")}
     >
-      <div className="border-b border-[#228B3A]/15 bg-white text-[#183D23] dark:border-white/15 dark:bg-background dark:text-white">
+      <div className="border-b border-primary/15 bg-white text-brand-ink dark:border-white/15 dark:bg-background dark:text-white">
         <div className="container mx-auto flex h-[50px] items-center justify-between gap-3 px-4 md:h-[72px] md:gap-4">
           <Link href="/" className="flex min-w-0 shrink-0 items-center">
             <div className="relative h-[42px] w-[96px] shrink-0 md:h-[60px] md:w-[135px]">
@@ -1168,13 +1168,13 @@ export default function Header({
                   : undefined
               }
               placeholder={t("search.placeholder")}
-              className="h-11 w-full rounded-md border border-[#228B3A]/25 bg-[#228B3A]/5 px-4 pr-12 text-sm text-[#183D23] dark:text-white outline-none placeholder:text-slate-500 dark:placeholder:text-white/60 transition focus:border-[#228B3A] focus:bg-white dark:bg-white/5 dark:focus:bg-card focus:ring-2 focus:ring-[#66BB3D]/20"
+              className="h-11 w-full rounded-md border border-primary/25 bg-primary/5 px-4 pr-12 text-sm text-brand-ink dark:text-white outline-none placeholder:text-slate-500 dark:placeholder:text-white/60 transition focus:border-primary focus:bg-white dark:bg-white/5 dark:focus:bg-card focus:ring-2 focus:ring-accent/20"
             />
 
             <button
               type="button"
               onClick={() => submitCatalogSearch()}
-              className="absolute bottom-0 right-0 top-0 flex w-11 items-center justify-center rounded-r-md bg-[#FFA726] text-[#183D23] transition hover:bg-[#FB8C00]"
+              className="absolute bottom-0 right-0 top-0 flex w-11 items-center justify-center rounded-r-md btn-secondary transition"
               aria-label={t("search.label")}
             >
               <Search className="h-[18px] w-[18px]" />
@@ -1314,11 +1314,11 @@ export default function Header({
               className={`header-search-wrapper relative overflow-visible transition-all duration-300 md:hidden ${mobileSearchOpen ? "w-[42vw] max-w-[170px]" : "w-10"
                 }`}
             >
-              <div className="flex h-10 items-center overflow-hidden rounded-full border border-[#228B3A]/25 bg-[#228B3A]/5">
+              <div className="flex h-10 items-center overflow-hidden rounded-full border border-primary/25 bg-primary/5">
                 <button
                   type="button"
                   onClick={() => setMobileSearchOpen((prev) => !prev)}
-                  className="flex h-10 w-10 shrink-0 items-center justify-center text-[#228B3A] dark:text-white"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center text-primary dark:text-white"
                   aria-label={
                     mobileSearchOpen
                       ? t("search.close")
@@ -1346,7 +1346,7 @@ export default function Header({
                       : undefined
                   }
                   placeholder={t("search.mobilePlaceholder")}
-                  className={`h-10 min-w-0 flex-1 bg-transparent pr-3 text-sm text-[#183D23] dark:text-white outline-none placeholder:text-[#228B3A] dark:text-white/70 transition-all duration-300 ${mobileSearchOpen
+                  className={`h-10 min-w-0 flex-1 bg-transparent pr-3 text-sm text-brand-ink dark:text-white outline-none placeholder:text-primary/70 dark:placeholder:text-white/60 transition-all duration-300 ${mobileSearchOpen
                     ? "opacity-100"
                     : "pointer-events-none w-0 opacity-0"
                     }`}
@@ -1513,7 +1513,7 @@ export default function Header({
                           setProfileOpen(false);
                           await handleSignOut();
                         }}
-                        className="flex w-full items-center gap-2 px-4 py-3 text-sm text-destructive hover:bg-muted disabled:opacity-60"
+                        className="flex w-full items-center gap-2 px-4 py-3 text-sm text-destructive hover:bg-interaction/15 disabled:opacity-60"
                       >
                         <LogOut className="h-4 w-4" />
                         {t("logout")}
@@ -1546,13 +1546,13 @@ export default function Header({
         </div>
       </div>
 
-      <nav className="relative z-[60] hidden border-b border-[#66BB3D]/40 bg-[#228B3A] text-white md:block">
+      <nav className="relative z-[60] hidden border-b border-accent/40 bg-primary text-white md:block">
         <div className="container relative mx-auto overflow-visible px-4">
           <div className="group/nav relative">
             <button
               type="button"
               onClick={() => scrollDesktopNav("left")}
-              className="absolute left-0 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 bg-[#228B3A] text-white shadow-sm transition-all duration-200 opacity-0 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:pointer-events-auto hover:bg-[#66BB3D] active:scale-95"
+              className="absolute left-0 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 bg-primary text-white shadow-sm transition-all duration-200 opacity-0 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:pointer-events-auto hover:bg-interaction active:scale-95"
               aria-label={t("categories.scrollPrevious")}
             >
               <ChevronLeft className="h-4 w-4" />
@@ -1561,7 +1561,7 @@ export default function Header({
             <button
               type="button"
               onClick={() => scrollDesktopNav("right")}
-              className="absolute right-0 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 bg-[#228B3A] text-white shadow-sm transition-all duration-200 opacity-0 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:pointer-events-auto hover:bg-[#66BB3D] active:scale-95"
+              className="absolute right-0 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 bg-primary text-white shadow-sm transition-all duration-200 opacity-0 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:pointer-events-auto hover:bg-interaction active:scale-95"
               aria-label={t("categories.scrollNext")}
             >
               <ChevronRight className="h-4 w-4" />
@@ -1596,7 +1596,7 @@ export default function Header({
                     onClick={() => {
                       goCategoryFromDesktop(cat.slug);
                     }}
-                    className="flex h-11 items-center gap-1 whitespace-nowrap px-3 text-[13px] font-semibold text-white/90 transition-colors hover:text-[#FFA726]"
+                    className="flex h-11 items-center gap-1 whitespace-nowrap px-3 text-[13px] font-semibold text-white/90 transition-colors hover:text-interaction"
                   >
                     <span>{cat.name}</span>
 
@@ -1605,7 +1605,7 @@ export default function Header({
                     )}
                   </button>
 
-                  <div className="absolute bottom-0 left-3 right-3 h-[2px] origin-left scale-x-0 bg-[#FFA726] transition-transform duration-200 group-hover:scale-x-100" />
+                  <div className="absolute bottom-0 left-3 right-3 h-[2px] origin-left scale-x-0 bg-brand-highlight transition-transform duration-200 group-hover:scale-x-100" />
                 </div>
               ))}
             </div>
@@ -1634,7 +1634,7 @@ export default function Header({
                 <Link
                   href={`/ecommerce/products?category=${encodeURIComponent(hoveredNavCat.slug)}`}
                   onClick={() => setNavHoverCatId(null)}
-                  className="text-sm font-semibold text-foreground/70 hover:text-foreground"
+                  className="text-sm font-semibold text-foreground/70 hover:text-interaction"
                 >
                   {t("categories.viewAll")}
                 </Link>
@@ -1684,7 +1684,7 @@ export default function Header({
                             <Link
                               href={`/ecommerce/products?category=${encodeURIComponent(sub.slug)}`}
                               onClick={() => setNavHoverCatId(null)}
-                              className="shrink-0 text-xs font-semibold text-foreground/70 hover:text-foreground"
+                              className="shrink-0 text-xs font-semibold text-foreground/70 hover:text-interaction"
                             >
                               {t("categories.viewAll")}
                             </Link>
@@ -1698,7 +1698,7 @@ export default function Header({
                                 onClick={() => setNavHoverCatId(null)}
                                 data-category-slug={child.slug}
                                 data-menu-level="3-item"
-                                className="flex min-h-9 items-center rounded-md px-2.5 py-2 text-sm text-foreground/80 transition hover:bg-muted hover:text-foreground focus-visible:bg-muted focus-visible:text-foreground"
+                                className="flex min-h-9 items-center rounded-md px-2.5 py-2 text-sm text-foreground/80 transition hover:bg-interaction/15 hover:text-interaction focus-visible:bg-muted focus-visible:text-foreground"
                               >
                                 <span className="truncate">{child.name}</span>
                               </Link>
@@ -1733,7 +1733,7 @@ export default function Header({
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex min-w-0 items-center gap-3"
                 >
-                  <div className="relative h-11 w-[100px] shrink-0 overflow-hidden rounded-xl border border-[#228B3A]/20 bg-white">
+                  <div className="relative h-11 w-[100px] shrink-0 overflow-hidden rounded-xl border border-primary/20 bg-white">
                     <Image
                       src={siteSettings.logo || "/logo_img.png"}
                       alt={t("logoAlt")}
@@ -1774,7 +1774,7 @@ export default function Header({
                 <Link
                   href="/ecommerce/blogs"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex h-11 items-center justify-center rounded-lg border border-border bg-card text-foreground/80 transition hover:border-primary/40 hover:bg-muted hover:text-foreground"
+                  className="flex h-11 items-center justify-center rounded-lg border border-border bg-card text-foreground/80 transition hover:border-interaction/40 hover:bg-interaction/15 hover:text-interaction"
                   aria-label={t("blog")}
                   title={t("blog")}
                 >
@@ -1784,7 +1784,7 @@ export default function Header({
                 <Link
                   href="/ecommerce/wishlist"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex h-11 items-center justify-center rounded-lg border border-border bg-card text-foreground/80 transition hover:border-primary/40 hover:bg-muted hover:text-foreground"
+                  className="flex h-11 items-center justify-center rounded-lg border border-border bg-card text-foreground/80 transition hover:border-interaction/40 hover:bg-interaction/15 hover:text-interaction"
                   aria-label={t("wishlist")}
                   title={t("wishlist")}
                 >
@@ -1794,7 +1794,7 @@ export default function Header({
                 <Link
                   href="/ecommerce/cart"
                   onClick={() => setMobileMenuOpen(false)}
-                  className="flex h-11 items-center justify-center rounded-lg border border-border bg-card text-foreground/80 transition hover:border-primary/40 hover:bg-muted hover:text-foreground"
+                  className="flex h-11 items-center justify-center rounded-lg border border-border bg-card text-foreground/80 transition hover:border-interaction/40 hover:bg-interaction/15 hover:text-interaction"
                   aria-label={t("cart")}
                   title={t("cart")}
                 >
@@ -1823,7 +1823,7 @@ export default function Header({
                         key={action.id}
                         href={actionHref}
                         onClick={() => setMobileMenuOpen(false)}
-                        className="relative flex min-h-20 flex-col items-center justify-center gap-2 rounded-lg border border-border bg-card px-2 py-3 text-center text-foreground transition hover:border-primary/40 hover:bg-muted focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+                        className="relative flex min-h-20 flex-col items-center justify-center gap-2 rounded-lg border border-border bg-card px-2 py-3 text-center text-foreground transition hover:border-interaction/40 hover:bg-interaction/15 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
                         aria-label={`${actionLabel}: ${actionDescription}`}
                       >
                         <ActionIcon

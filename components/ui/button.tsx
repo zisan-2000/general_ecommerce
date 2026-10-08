@@ -15,8 +15,8 @@ const buttonVariants = cva(
         destructive: "btn-danger shadow-sm",
         outline: "btn-outline shadow-sm",
         secondary: "btn-secondary shadow-sm",
-        ghost: "btn-primary shadow hover:bg-primary/85",
-        link: "text-primary underline-offset-4 hover:underline",
+        ghost: "btn-ghost",
+        link: "text-primary underline-offset-4 hover:text-interaction hover:underline",
       },
       size: {
         default: "h-9 px-4 py-2",

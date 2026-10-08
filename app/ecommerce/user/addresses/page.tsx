@@ -367,7 +367,7 @@ export default function AddressesPage() {
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
           <Link
             href="/"
-            className="flex items-center gap-1 hover:text-foreground transition-colors"
+            className="flex items-center gap-1 hover:text-interaction transition-colors"
           >
             <Home className="h-4 w-4" />
             <span>{t("common.home")}</span>
@@ -375,7 +375,7 @@ export default function AddressesPage() {
           <span>›</span>
           <Link
             href="/ecommerce/user"
-            className="hover:text-foreground transition-colors"
+            className="hover:text-interaction transition-colors"
           >
             {t("common.account")}
           </Link>
@@ -398,7 +398,7 @@ export default function AddressesPage() {
           </div>
           <button
             onClick={openAddModal}
-            className="h-10 px-6 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors inline-flex items-center gap-2"
+            className="h-10 px-6 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-interaction hover:text-interaction-foreground transition-colors inline-flex items-center gap-2"
           >
             <Plus className="h-4 w-4" />
             {t("addresses.addNew")}
@@ -426,7 +426,7 @@ export default function AddressesPage() {
               </p>
               <button
                 onClick={openAddModal}
-                className="h-10 px-6 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 transition-colors inline-flex items-center gap-2"
+                className="h-10 px-6 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-interaction hover:text-interaction-foreground transition-colors inline-flex items-center gap-2"
               >
                 <Plus className="h-4 w-4" />
                 {t("addresses.addFirst")}
@@ -470,7 +470,7 @@ export default function AddressesPage() {
                       <button
                         type="button"
                         onClick={() => startEdit(a)}
-                        className="h-9 px-4 rounded-md border border-border bg-background hover:bg-muted transition-colors text-sm font-semibold inline-flex items-center gap-2"
+                        className="h-9 px-4 rounded-md border border-border bg-background hover:bg-interaction/15 transition-colors text-sm font-semibold inline-flex items-center gap-2"
                       >
                         <Pencil className="h-4 w-4" />
                         {t("common.edit")}
@@ -501,7 +501,7 @@ export default function AddressesPage() {
               <button
                 type="button"
                 onClick={resetForm}
-                className="h-8 w-8 rounded-md border border-border bg-background hover:bg-muted transition-colors flex items-center justify-center"
+                className="h-8 w-8 rounded-md border border-border bg-background hover:bg-interaction/15 transition-colors flex items-center justify-center"
                 aria-label={t("common.close")}
               >
                 <X className="h-4 w-4" />
@@ -563,7 +563,7 @@ export default function AddressesPage() {
                           <button
                             type="button"
                             onClick={addDetailLine}
-                            className="h-10 w-10 rounded-md border border-border bg-background hover:bg-muted transition-colors flex items-center justify-center"
+                            className="h-10 w-10 rounded-md border border-border bg-background hover:bg-interaction/15 transition-colors flex items-center justify-center"
                             aria-label={t("addresses.addLine")}
                             title={t("common.add")}
                           >
@@ -576,7 +576,7 @@ export default function AddressesPage() {
                           <button
                             type="button"
                             onClick={() => removeDetailLine(idx)}
-                            className="h-10 w-10 rounded-md border border-border bg-background hover:bg-muted transition-colors flex items-center justify-center"
+                            className="h-10 w-10 rounded-md border border-border bg-background hover:bg-interaction/15 transition-colors flex items-center justify-center"
                             aria-label={t("addresses.removeLine")}
                             title={t("common.remove")}
                           >
@@ -710,7 +710,7 @@ export default function AddressesPage() {
                 <button
                   type="button"
                   onClick={resetForm}
-                  className="h-10 px-6 rounded-md border border-border bg-background text-foreground text-sm font-semibold hover:bg-muted transition-colors"
+                  className="h-10 px-6 rounded-md border border-border bg-background text-foreground text-sm font-semibold hover:bg-interaction/15 transition-colors"
                 >
                   {t("common.cancel")}
                 </button>
@@ -718,7 +718,7 @@ export default function AddressesPage() {
                 <button
                   type="submit"
                   disabled={saving || requiredMissing}
-                  className="h-10 px-6 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-primary/90 disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
+                  className="h-10 px-6 rounded-md bg-primary text-primary-foreground text-sm font-semibold hover:bg-interaction hover:text-interaction-foreground disabled:opacity-60 disabled:cursor-not-allowed transition-colors"
                 >
                   {saving
                     ? t("common.saving")

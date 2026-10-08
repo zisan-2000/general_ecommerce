@@ -44,7 +44,7 @@ export default async function BrandsPage() {
               <Link
                 key={brand.id}
                 href={`/ecommerce/products?brand=${encodeURIComponent(brand.slug)}`}
-                className="group flex min-h-44 flex-col items-center justify-between rounded-3xl border bg-card p-5 text-center shadow-sm transition hover:-translate-y-1 hover:border-primary/40 hover:shadow-lg"
+                className="group flex min-h-44 flex-col items-center justify-between rounded-3xl border bg-card p-5 text-center shadow-sm transition hover:-translate-y-1 hover:border-interaction/40 hover:shadow-lg"
               >
                 <div className="relative h-20 w-full">
                   {brand.logo ? (

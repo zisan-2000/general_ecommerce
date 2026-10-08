@@ -227,7 +227,7 @@ export default function NewsletterManagement() {
                 resetForm();
                 setIsCreateDialogOpen(true);
               }}
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
+              className="bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground font-semibold px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
             >
               <Plus className="mr-2 h-4 w-4" />
               {t("actions.createNewsletter")}
@@ -291,7 +291,7 @@ export default function NewsletterManagement() {
               </div>
               <Button
                 type="submit"
-                className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
+                className="w-full bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
               >
                 {t("actions.createNewsletter")}
               </Button>
@@ -369,7 +369,7 @@ export default function NewsletterManagement() {
                   variant="outline"
                   size="sm"
                   onClick={() => openPreviewDialog(newsletter)}
-                  className="border-border text-foreground hover:bg-muted hover:border-primary rounded-lg transition-all duration-300"
+                  className="border-border text-foreground hover:bg-muted hover:border-interaction rounded-lg transition-all duration-300"
                 >
                   <Eye className="h-4 w-4 mr-1" />
                   {t("actions.preview")}
@@ -378,7 +378,7 @@ export default function NewsletterManagement() {
                   variant="outline"
                   size="sm"
                   onClick={() => openEditDialog(newsletter)}
-                  className="border-border text-foreground hover:bg-muted hover:border-primary rounded-lg transition-all duration-300"
+                  className="border-border text-foreground hover:bg-muted hover:border-interaction rounded-lg transition-all duration-300"
                 >
                   <Edit className="h-4 w-4 mr-1" />
                   {t("actions.edit")}
@@ -426,7 +426,7 @@ export default function NewsletterManagement() {
               resetForm();
               setIsCreateDialogOpen(true);
             }}
-            className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
+            className="bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground font-semibold px-6 rounded-full transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
           >
             <Plus className="mr-2 h-4 w-4" />
             {t("actions.createNewsletter")}
@@ -526,7 +526,7 @@ export default function NewsletterManagement() {
             </div>
             <Button
               type="submit"
-              className="w-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
+              className="w-full bg-primary hover:bg-interaction hover:text-interaction-foreground text-primary-foreground font-semibold rounded-xl transition-all duration-300 hover:shadow-lg hover:scale-105 border border-primary"
             >
               {t("actions.updateNewsletter")}
             </Button>

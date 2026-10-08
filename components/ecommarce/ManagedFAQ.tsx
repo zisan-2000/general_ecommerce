@@ -106,7 +106,7 @@ function FAQPageContent({ entries }: { entries: Entry[] }) {
                     )
                   }
                   aria-expanded={isOpen}
-                  className="flex w-full items-center justify-between gap-4 p-5 text-start hover:bg-muted/40"
+                  className="flex w-full items-center justify-between gap-4 p-5 text-start hover:bg-interaction/40"
                 >
                   <span className="flex items-center gap-3">
                     <span className="rounded-lg bg-primary/10 p-2 text-primary">
@@ -136,7 +136,7 @@ function FAQPageContent({ entries }: { entries: Entry[] }) {
                             type="button"
                             onClick={() => toggleItem(item.id)}
                             aria-expanded={itemOpen}
-                            className="flex w-full items-center justify-between gap-4 px-5 py-4 text-start text-sm font-semibold hover:bg-muted/30"
+                            className="flex w-full items-center justify-between gap-4 px-5 py-4 text-start text-sm font-semibold hover:bg-interaction/30"
                           >
                             <span>{item.question}</span>
                             {itemOpen ? (

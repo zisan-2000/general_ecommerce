@@ -90,7 +90,7 @@ export default async function CategoriesPage() {
                         <Link
                           key={child.id}
                           href={`/ecommerce/products?category=${encodeURIComponent(child.slug)}`}
-                          className="rounded-full border bg-background px-3 py-1.5 text-xs font-semibold transition hover:border-primary hover:text-primary"
+                          className="rounded-full border bg-background px-3 py-1.5 text-xs font-semibold transition hover:border-interaction hover:text-interaction"
                         >
                           {child.name} ({child.productCount})
                         </Link>

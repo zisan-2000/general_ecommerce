@@ -574,7 +574,7 @@ export default function ScmDashboardPage() {
         <div className="grid gap-4 md:grid-cols-2 xl:grid-cols-6">
           {topCards.map((card) => (
             <Link key={card.label} href={card.href} className="block">
-              <Card className="transition-colors hover:border-primary/40 hover:bg-muted/30">
+              <Card className="transition-colors hover:border-interaction/40 hover:bg-muted/30">
                 <CardContent className="pt-6">
                   <div className="text-xs uppercase text-muted-foreground">{card.label}</div>
                   <div className="text-2xl font-semibold">{card.value}</div>

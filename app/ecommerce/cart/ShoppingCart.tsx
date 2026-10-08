@@ -655,7 +655,7 @@ export default function CartPage() {
         <div className="mb-6 flex items-center gap-2 text-sm text-muted-foreground">
           <Link
             href="/"
-            className="inline-flex items-center gap-2 hover:text-foreground transition"
+            className="inline-flex items-center gap-2 hover:text-interaction transition"
           >
             <Home className="h-4 w-4" />
           </Link>
@@ -778,7 +778,7 @@ export default function CartPage() {
                             <div className="flex items-center justify-between gap-3">
                               <div className="flex items-center rounded-xl border border-border overflow-hidden bg-background">
                                 <button
-                                  className="h-10 w-10 grid place-items-center hover:bg-muted transition disabled:opacity-40"
+                                  className="h-10 w-10 grid place-items-center hover:bg-interaction/15 transition disabled:opacity-40"
                                   onClick={() =>
                                     handleUpdateQuantity(item, item.quantity - 1)
                                   }
@@ -791,7 +791,7 @@ export default function CartPage() {
                                   {item.quantity}
                                 </div>
                                 <button
-                                  className="h-10 w-10 grid place-items-center hover:bg-muted transition"
+                                  className="h-10 w-10 grid place-items-center hover:bg-interaction/15 transition"
                                   onClick={() =>
                                     handleUpdateQuantity(item, item.quantity + 1)
                                   }
@@ -813,7 +813,7 @@ export default function CartPage() {
                             </div>
 
                             <button
-                              className="w-full h-10 rounded-xl border border-border bg-muted hover:bg-accent transition text-sm font-semibold flex items-center justify-center gap-2"
+                              className="w-full h-10 rounded-xl border border-border bg-muted hover:bg-interaction transition text-sm font-semibold flex items-center justify-center gap-2"
                               onClick={() => handleRemoveItem(item.id)}
                               aria-label={t("removeItem")}
                             >
@@ -826,7 +826,7 @@ export default function CartPage() {
                         {/* ✅ Desktop: Qty */}
                         <div className="hidden sm:flex items-center rounded-xl border border-border overflow-hidden bg-background">
                           <button
-                            className="h-10 w-10 grid place-items-center hover:bg-muted transition disabled:opacity-40"
+                            className="h-10 w-10 grid place-items-center hover:bg-interaction/15 transition disabled:opacity-40"
                             onClick={() =>
                               handleUpdateQuantity(item, item.quantity - 1)
                             }
@@ -839,7 +839,7 @@ export default function CartPage() {
                             {item.quantity}
                           </div>
                           <button
-                            className="h-10 w-10 grid place-items-center hover:bg-muted transition"
+                            className="h-10 w-10 grid place-items-center hover:bg-interaction/15 transition"
                             onClick={() =>
                               handleUpdateQuantity(item, item.quantity + 1)
                             }
@@ -861,7 +861,7 @@ export default function CartPage() {
                           </div>
 
                           <button
-                            className="h-10 w-10 grid place-items-center rounded-xl hover:bg-muted transition text-muted-foreground hover:text-foreground"
+                            className="h-10 w-10 grid place-items-center rounded-xl hover:bg-interaction/15 transition text-muted-foreground hover:text-interaction"
                             onClick={() => handleRemoveItem(item.id)}
                             aria-label={t("removeItem")}
                           >
@@ -877,7 +877,7 @@ export default function CartPage() {
                 <div className="px-4 sm:px-6 py-5 border-t border-border bg-card/40">
                   <Link
                     href="/"
-                    className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground transition"
+                    className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-interaction transition"
                   >
                     <ArrowLeft className="h-4 w-4" />
                     {t("continueShopping")}

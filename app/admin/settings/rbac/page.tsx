@@ -398,7 +398,7 @@ export default function RbacSettingsPage() {
                   key={role.id}
                   type="button"
                   onClick={() => setSelectedRoleId(role.id)}
-                  className={`w-full border-b p-3 text-left transition-colors hover:bg-primary/10 ${
+                  className={`w-full border-b p-3 text-left transition-colors hover:bg-interaction/10 ${
                     selectedRoleId === role.id
                       ? "bg-primary/20 text-primary"
                       : ""

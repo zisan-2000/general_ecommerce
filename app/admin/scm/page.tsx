@@ -696,7 +696,7 @@ export default function ScmHomePage() {
                 <div className="grid gap-3 sm:grid-cols-2">
                   {visibleQuickStart.map((item) => (
                     <Link key={item.key} href={item.href} className="group">
-                      <Card className="h-full border-border shadow-none transition-all duration-200 hover:border-primary/40 hover:bg-primary/5 hover:shadow-sm">
+                      <Card className="h-full border-border shadow-none transition-all duration-200 hover:border-interaction/40 hover:bg-interaction/5 hover:shadow-sm">
                         <CardContent className="flex items-start gap-3 p-4 sm:p-5">
                           <div className="rounded-xl border border-border bg-background p-2.5 shrink-0">
                             <item.icon className="h-4 w-4 sm:h-5 sm:w-5 text-foreground" />

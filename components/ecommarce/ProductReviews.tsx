@@ -316,7 +316,7 @@ export default function ProductReviews({ productId }: { productId: number }) {
         <div className="px-4 py-3 border-t border-border flex items-center justify-between">
           <button
             type="button"
-            className="h-9 px-3 rounded-lg border border-border hover:bg-muted transition disabled:opacity-50"
+            className="h-9 px-3 rounded-lg border border-border hover:bg-interaction/15 transition disabled:opacity-50"
             disabled={page <= 1}
             onClick={() => setPage((p) => Math.max(1, p - 1))}
           >
@@ -329,7 +329,7 @@ export default function ProductReviews({ productId }: { productId: number }) {
 
           <button
             type="button"
-            className="h-9 px-3 rounded-lg border border-border hover:bg-muted transition disabled:opacity-50"
+            className="h-9 px-3 rounded-lg border border-border hover:bg-interaction/15 transition disabled:opacity-50"
             disabled={page >= pages}
             onClick={() => setPage((p) => Math.min(pages, p + 1))}
           >

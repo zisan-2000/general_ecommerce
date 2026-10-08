@@ -231,7 +231,7 @@ export default function VariantSelector({
                   "rounded-lg border p-3 text-left transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary/40",
                   active
                     ? "border-primary bg-primary/5"
-                    : "border-border bg-background hover:border-primary/50",
+                    : "border-border bg-background hover:border-interaction/50",
                   !inStock && "opacity-50",
                 )}
               >
@@ -299,8 +299,8 @@ export default function VariantSelector({
                           !active &&
                             matchesAny &&
                             (isColorOption
-                              ? "border-border bg-background hover:border-primary/60"
-                              : "border-border bg-background text-foreground hover:border-primary/60"),
+                              ? "border-border bg-background hover:border-interaction/60"
+                              : "border-border bg-background text-foreground hover:border-interaction/60"),
                           !matchesAny &&
                             (isColorOption
                               ? "cursor-not-allowed border-border/40 bg-muted/30 opacity-50"

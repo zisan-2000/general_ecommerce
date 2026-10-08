@@ -277,7 +277,7 @@ export default function WarehouseDashboardPage() {
           type="button"
           key={card.warehouseId}
           onClick={() => void handleWarehouseCardClick(card.warehouseId)}
-          className={`grid gap-3 w-full rounded-2xl border bg-background p-4 text-left transition hover:bg-accent/10 focus:outline-none md:grid-cols-6 ${
+          className={`grid gap-3 w-full rounded-2xl border bg-background p-4 text-left transition hover:bg-interaction/10 focus:outline-none md:grid-cols-6 ${
             isSelected ? "border-primary bg-primary/5" : "border-border"
           }`}
         >
@@ -533,7 +533,7 @@ export default function WarehouseDashboardPage() {
               <button
                 type="button"
                 onClick={() => void refreshAll()}
-                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-border bg-background px-4 py-3 text-sm font-medium text-foreground transition hover:bg-accent"
+                className="inline-flex items-center justify-center gap-2 rounded-2xl border border-border bg-background px-4 py-3 text-sm font-medium text-foreground transition hover:bg-interaction"
               >
                 <RefreshCw
                   className={`h-4 w-4 ${refreshing ? "animate-spin" : ""}`}
@@ -588,7 +588,7 @@ export default function WarehouseDashboardPage() {
                 className={`flex items-center gap-2 rounded-2xl px-4 py-2 text-sm font-medium transition-colors ${
                   activeTab === "overview"
                     ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:bg-accent hover:text-foreground"
+                    : "text-muted-foreground hover:bg-interaction hover:text-foreground"
                 }`}
               >
                 <LayoutDashboard className="h-4 w-4" />
@@ -600,7 +600,7 @@ export default function WarehouseDashboardPage() {
                 className={`flex items-center gap-2 rounded-2xl px-4 py-2 text-sm font-medium transition-colors ${
                   activeTab === "management"
                     ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:bg-accent hover:text-foreground"
+                    : "text-muted-foreground hover:bg-interaction hover:text-foreground"
                 }`}
               >
                 <Settings className="h-4 w-4" />

@@ -620,7 +620,7 @@ export default function PcBuilderClient({
               <button
                 type="button"
                 onClick={share}
-                className="inline-flex items-center gap-1.5 px-2 py-1 text-xs font-bold text-muted-foreground hover:text-primary"
+                className="inline-flex items-center gap-1.5 px-2 py-1 text-xs font-bold text-muted-foreground hover:text-interaction"
               >
                 <Copy className="h-3.5 w-3.5" aria-hidden="true" /> Share
               </button>
@@ -705,7 +705,7 @@ export default function PcBuilderClient({
                               <div className="min-w-0">
                                 <Link
                                   href={`/ecommerce/products/${product.id}`}
-                                  className="line-clamp-1 text-xs font-semibold hover:text-primary hover:underline"
+                                  className="line-clamp-1 text-xs font-semibold hover:text-interaction hover:underline"
                                 >
                                   {product.name}
                                 </Link>
@@ -736,7 +736,7 @@ export default function PcBuilderClient({
                           <button
                             type="button"
                             onClick={() => openSlot(slot.key)}
-                            className="inline-flex h-10 flex-1 items-center justify-center rounded border-2 border-primary px-5 text-xs font-bold text-primary transition hover:bg-primary hover:text-primary-foreground sm:flex-none sm:min-w-[90px]"
+                            className="inline-flex h-10 flex-1 items-center justify-center rounded border-2 border-primary px-5 text-xs font-bold text-primary transition hover:bg-interaction hover:text-interaction-foreground sm:flex-none sm:min-w-[90px]"
                           >
                             {product ? "Change" : "Choose"}
                           </button>
@@ -772,7 +772,7 @@ export default function PcBuilderClient({
                               <div className="min-w-0 flex-1">
                                 <Link
                                   href={`/ecommerce/products/${extra.id}`}
-                                  className="line-clamp-1 text-xs font-semibold hover:text-primary hover:underline"
+                                  className="line-clamp-1 text-xs font-semibold hover:text-interaction hover:underline"
                                 >
                                   {extra.name}
                                 </Link>
@@ -957,7 +957,7 @@ export default function PcBuilderClient({
                 type="button"
                 onClick={addBuildToCart}
                 disabled={!evaluation.canAddToCart || adding}
-                className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground transition hover:bg-primary/90 disabled:cursor-not-allowed disabled:opacity-45"
+                className="inline-flex h-11 w-full items-center justify-center gap-2 rounded-md bg-primary px-5 text-sm font-semibold text-primary-foreground transition hover:bg-interaction hover:text-interaction-foreground disabled:cursor-not-allowed disabled:opacity-45"
               >
                 <ShoppingCart className="h-4 w-4" aria-hidden="true" />
                 {adding
@@ -970,7 +970,7 @@ export default function PcBuilderClient({
                 type="button"
                 onClick={() => window.print()}
                 disabled={!selectedProducts.length && !extraProducts.length}
-                className="inline-flex h-9 w-full items-center justify-center gap-2 rounded-md border text-xs font-medium text-muted-foreground transition hover:border-foreground/30 hover:text-foreground disabled:cursor-not-allowed disabled:opacity-40"
+                className="inline-flex h-9 w-full items-center justify-center gap-2 rounded-md border text-xs font-medium text-muted-foreground transition hover:border-foreground/30 hover:text-interaction disabled:cursor-not-allowed disabled:opacity-40"
               >
                 <Printer className="h-3.5 w-3.5" aria-hidden="true" /> Print
                 build
@@ -1076,7 +1076,7 @@ export default function PcBuilderClient({
                       return (
                         <article
                           key={product.selectionId}
-                          className={`rounded-xl border p-3 transition ${incompatible ? "border-destructive/40" : "hover:border-primary/50"}`}
+                          className={`rounded-xl border p-3 transition ${incompatible ? "border-destructive/40" : "hover:border-interaction/50"}`}
                         >
                           <div className="flex gap-3">
                             <div className="relative h-24 w-24 shrink-0 overflow-hidden rounded-lg border bg-white">
@@ -1159,7 +1159,7 @@ export default function PcBuilderClient({
                             </button>
                             <Link
                               href={`/ecommerce/products/${product.id}`}
-                              className="inline-flex h-10 items-center justify-center rounded-lg border px-3 text-xs font-bold hover:border-primary hover:text-primary"
+                              className="inline-flex h-10 items-center justify-center rounded-lg border px-3 text-xs font-bold hover:border-interaction hover:text-interaction"
                             >
                               Details
                             </Link>
@@ -1184,7 +1184,7 @@ export default function PcBuilderClient({
                       <button
                         type="button"
                         onClick={() => setCompatibleOnly(false)}
-                        className="mt-4 inline-flex h-9 items-center justify-center rounded-lg border px-3 text-xs font-bold transition hover:border-primary hover:text-primary"
+                        className="mt-4 inline-flex h-9 items-center justify-center rounded-lg border px-3 text-xs font-bold transition hover:border-interaction hover:text-interaction"
                       >
                         Show all components
                       </button>
@@ -1197,7 +1197,7 @@ export default function PcBuilderClient({
                       type="button"
                       onClick={loadMorePicker}
                       disabled={pickerLoading || pickerLoadingMore}
-                      className="inline-flex h-10 items-center justify-center rounded-lg border px-4 text-sm font-bold transition hover:border-primary hover:text-primary disabled:cursor-not-allowed disabled:opacity-50"
+                      className="inline-flex h-10 items-center justify-center rounded-lg border px-4 text-sm font-bold transition hover:border-interaction hover:text-interaction disabled:cursor-not-allowed disabled:opacity-50"
                     >
                       {pickerLoadingMore ? "Loading more..." : "Load more"}
                     </button>

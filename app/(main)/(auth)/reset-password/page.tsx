@@ -96,7 +96,7 @@ export default function ResetPasswordPage() {
               </div>
             </div>
             <Link href="/forgot-password" className="block">
-              <Button className="w-full bg-primary hover:bg-primary/90 text-white rounded-lg">
+              <Button className="w-full bg-primary hover:bg-interaction hover:text-interaction-foreground text-white rounded-lg">
                 Request New Link
               </Button>
             </Link>

@@ -1655,7 +1655,7 @@ export default function InvestorWorkspace({
                           <TableCell className="font-medium">
                             <Link
                               href={`/admin/investors/ledger/${item.id}`}
-                              className="hover:text-primary"
+                              className="hover:text-interaction"
                             >
                               {item.transactionNumber}
                             </Link>
@@ -1663,7 +1663,7 @@ export default function InvestorWorkspace({
                           <TableCell>
                             <Link
                               href={`/admin/investors/${item.investor.id}`}
-                              className="hover:text-primary"
+                              className="hover:text-interaction"
                             >
                               {item.investor.name}
                             </Link>
@@ -2006,7 +2006,7 @@ export default function InvestorWorkspace({
                             <TableCell className="font-medium">
                               <Link
                                 href={`/admin/investors/profit-runs/${run.id}`}
-                                className="hover:text-primary"
+                                className="hover:text-interaction"
                               >
                                 {run.runNumber}
                               </Link>
@@ -2646,7 +2646,7 @@ export default function InvestorWorkspace({
                           <TableCell className="font-medium">
                             <Link
                               href={`/admin/investors/payouts/${item.id}`}
-                              className="hover:text-primary"
+                              className="hover:text-interaction"
                             >
                               {item.payoutNumber}
                             </Link>
@@ -2654,7 +2654,7 @@ export default function InvestorWorkspace({
                           <TableCell>
                             <Link
                               href={`/admin/investors/profit-runs/${item.run.id}`}
-                              className="hover:text-primary"
+                              className="hover:text-interaction"
                             >
                               {item.run.runNumber}
                             </Link>
@@ -2996,7 +2996,7 @@ export default function InvestorWorkspace({
                           <TableCell className="font-medium">
                             <Link
                               href={`/admin/investors/allocations/${item.id}`}
-                              className="hover:text-primary"
+                              className="hover:text-interaction"
                             >
                               {t("allocations.list.allocationNumber", {
                                 id: item.id,
@@ -3009,7 +3009,7 @@ export default function InvestorWorkspace({
                           <TableCell className="font-medium">
                             <Link
                               href={`/admin/investors/${item.investor.id}`}
-                              className="hover:text-primary"
+                              className="hover:text-interaction"
                             >
                               {item.investor.name}
                             </Link>
@@ -3299,7 +3299,7 @@ export default function InvestorWorkspace({
                           <div className="space-y-1">
                             <button
                               type="button"
-                              className="text-left font-medium hover:text-primary"
+                              className="text-left font-medium hover:text-interaction"
                               onClick={() =>
                                 setStatementDetailInvestorId(
                                   String(row.investor.id),

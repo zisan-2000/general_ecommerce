@@ -500,7 +500,7 @@ export default function AdminUsersPage() {
                       setCreateError("");
                       setShowCreateModal(true);
                     }}
-                    className="flex items-center space-x-2 px-4 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 font-medium text-sm"
+                    className="flex items-center space-x-2 px-4 py-2.5 rounded-lg bg-primary text-primary-foreground hover:bg-interaction hover:text-interaction-foreground transition-all duration-300 font-medium text-sm"
                   >
                     <UserPlus className="h-4 w-4" />
                     <span>{t("actions.addUser")}</span>
@@ -510,7 +510,7 @@ export default function AdminUsersPage() {
                 <button
                   onClick={handleRefresh}
                   disabled={refreshing}
-                  className="p-2.5 rounded-lg border border-border bg-card text-muted-foreground hover:text-foreground hover:border-primary/50 transition-all duration-300"
+                  className="p-2.5 rounded-lg border border-border bg-card text-muted-foreground hover:text-foreground hover:border-interaction/50 transition-all duration-300"
                   title={t("actions.refreshTitle")}
                 >
                   <RefreshCw
@@ -540,7 +540,7 @@ export default function AdminUsersPage() {
         )}
 
         <div className="mb-6 grid grid-cols-3 gap-2 sm:gap-3 md:gap-4">
-          <div className="rounded-lg border border-border bg-card p-3 transition-colors duration-300 hover:border-primary/30 sm:p-4 md:p-5">
+          <div className="rounded-lg border border-border bg-card p-3 transition-colors duration-300 hover:border-interaction/30 sm:p-4 md:p-5">
             <div className="flex items-center justify-between gap-2">
               <div className="min-w-0">
                 <p className="truncate text-[10px] font-medium uppercase tracking-wide text-muted-foreground sm:text-xs">
@@ -557,7 +557,7 @@ export default function AdminUsersPage() {
             </div>
           </div>
 
-          <div className="rounded-lg border border-border bg-card p-3 transition-colors duration-300 hover:border-primary/30 sm:p-4 md:p-5">
+          <div className="rounded-lg border border-border bg-card p-3 transition-colors duration-300 hover:border-interaction/30 sm:p-4 md:p-5">
             <div className="flex items-center justify-between gap-2">
               <div className="min-w-0">
                 <p className="truncate text-[10px] font-medium uppercase tracking-wide text-muted-foreground sm:text-xs">
@@ -580,7 +580,7 @@ export default function AdminUsersPage() {
             </div>
           </div>
 
-          <div className="rounded-lg border border-border bg-card p-3 transition-colors duration-300 hover:border-primary/30 sm:p-4 md:p-5">
+          <div className="rounded-lg border border-border bg-card p-3 transition-colors duration-300 hover:border-interaction/30 sm:p-4 md:p-5">
             <div className="flex items-center justify-between gap-2">
               <div className="min-w-0">
                 <p className="truncate text-[10px] font-medium uppercase tracking-wide text-muted-foreground sm:text-xs">
@@ -909,7 +909,7 @@ export default function AdminUsersPage() {
                       addresses: [...prev.addresses, ""],
                     }))
                   }
-                  className="text-xs px-3 py-2 rounded-lg border border-dashed border-border text-muted-foreground hover:border-primary hover:text-primary transition-colors"
+                  className="text-xs px-3 py-2 rounded-lg border border-dashed border-border text-muted-foreground hover:border-interaction hover:text-interaction transition-colors"
                 >
                   {t("create.addAnother")}
                 </button>
@@ -932,7 +932,7 @@ export default function AdminUsersPage() {
                 <button
                   type="submit"
                   disabled={creating}
-                  className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors text-sm font-medium disabled:opacity-60 flex items-center gap-2"
+                  className="px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-interaction hover:text-interaction-foreground transition-colors text-sm font-medium disabled:opacity-60 flex items-center gap-2"
                 >
                   {creating && <Loader2 className="h-4 w-4 animate-spin" />}
                   <span>

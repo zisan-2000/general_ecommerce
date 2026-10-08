@@ -148,12 +148,12 @@ export default function WishlistPage() {
     <div className="min-h-screen bg-background text-foreground">
       <div className="px-6 pt-6">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <Link href="/" className="flex items-center gap-1 transition-colors hover:text-foreground">
+          <Link href="/" className="flex items-center gap-1 transition-colors hover:text-interaction">
             <Home className="h-4 w-4" />
             <span>{t("common.home")}</span>
           </Link>
           <span>/</span>
-          <Link href="/ecommerce/user" className="transition-colors hover:text-foreground">
+          <Link href="/ecommerce/user" className="transition-colors hover:text-interaction">
             {t("common.account")}
           </Link>
           <span>/</span>
@@ -184,7 +184,7 @@ export default function WishlistPage() {
               {t("wishlist.emptyDescription")}
             </p>
             <Link href="/">
-              <Button className="rounded-md bg-primary text-primary-foreground hover:bg-primary/90">
+              <Button className="rounded-md bg-primary text-primary-foreground hover:bg-interaction hover:text-interaction-foreground">
                 {t("wishlist.continueShopping")}
               </Button>
             </Link>
