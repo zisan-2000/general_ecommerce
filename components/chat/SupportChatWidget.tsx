@@ -14,6 +14,7 @@ import { AlertCircle, LoaderCircle, MessageCircle, RotateCcw, Send, ShieldCheck,
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { CHAT_AVAILABILITY_POLL_MS, type ChatAvailability, isChatAvailability } from "@/lib/chat-availability";
 import {
   type ChatConversation,
   type ChatMessage,
@@ -86,6 +87,7 @@ export default function SupportChatWidget() {
   const { data: session, status } = useSession();
 
   const [open, setOpen] = useState(false);
+  const [agentStatus, setAgentStatus] = useState<ChatAvailability["status"] | "CHECKING" | "UNKNOWN">("CHECKING");
   const [loading, setLoading] = useState(false);
   const [sending, setSending] = useState(false);
   const [starting, setStarting] = useState(false);
@@ -296,6 +298,74 @@ export default function SupportChatWidget() {
     if (!open) return;
     void hydrateConversation();
   }, [hydrateConversation, open]);
+
+  useEffect(() => {
+    if (!open || !shouldRender) return;
+    let disposed = false;
+    let busy = false;
+    let generation = 0;
+    let recheckRequested = false;
+    let expiryTimer: ReturnType<typeof setTimeout> | undefined;
+    let controller: AbortController | null = null;
+    const poll = async () => {
+      if (disposed || busy || document.visibilityState !== "visible") return;
+      busy = true;
+      controller = new AbortController();
+      const requestGeneration = generation;
+      const startedAt = performance.now();
+      try {
+        const data = await fetchChatJson<ChatAvailability>(
+          "/api/chat/availability", { signal: controller.signal }, isChatAvailability,
+        );
+        if (disposed || requestGeneration !== generation) return;
+        clearTimeout(expiryTimer);
+        // Conservatively subtract the whole round trip; stale leases cannot
+        // keep an Online badge alive if polling or the agent's browser stops.
+        const remaining = Math.max(0, data.availableForMs - (performance.now() - startedAt));
+        setAgentStatus(data.status === "AVAILABLE" && remaining > 0 ? "AVAILABLE" : "UNAVAILABLE");
+        if (data.status === "AVAILABLE" && remaining > 0) {
+          expiryTimer = setTimeout(() => { if (!disposed) setAgentStatus("UNAVAILABLE"); }, remaining);
+        }
+      } catch {
+        if (!disposed && requestGeneration === generation) {
+          clearTimeout(expiryTimer);
+          setAgentStatus("UNKNOWN");
+        }
+      } finally {
+        busy = false;
+        if (!disposed && recheckRequested && document.visibilityState === "visible") {
+          recheckRequested = false;
+          void poll();
+        }
+      }
+    };
+    const visibility = () => {
+      generation += 1;
+      clearTimeout(expiryTimer);
+      controller?.abort();
+      setAgentStatus("CHECKING");
+      if (document.visibilityState === "visible") {
+        if (busy) recheckRequested = true;
+        else void poll();
+      } else {
+        // Browser timers can pause in a hidden tab. Never reuse its stale badge.
+        recheckRequested = false;
+      }
+    };
+    setAgentStatus("CHECKING");
+    void poll();
+    const interval = setInterval(() => void poll(), CHAT_AVAILABILITY_POLL_MS);
+    document.addEventListener("visibilitychange", visibility);
+    window.addEventListener("focus", visibility);
+    return () => {
+      disposed = true;
+      controller?.abort();
+      clearInterval(interval);
+      clearTimeout(expiryTimer);
+      document.removeEventListener("visibilitychange", visibility);
+      window.removeEventListener("focus", visibility);
+    };
+  }, [open, shouldRender]);
 
   useEffect(() => {
     if (!open || !conversation?.id || starting || sending || closing || resolvingConversation) return;
@@ -569,13 +639,21 @@ export default function SupportChatWidget() {
                 Customer Support
               </SheetTitle>
               <SheetDescription className="p-0 text-[11px] text-primary-foreground/80">
-                Average response under 15 minutes
+                {agentStatus === "AVAILABLE" ? "A support agent is available to help."
+                  : agentStatus === "UNAVAILABLE" ? "Leave a message. We’ll reply when an agent is available."
+                  : agentStatus === "CHECKING" ? "Checking support availability…"
+                  : "Agent status unavailable. You can still leave a message."}
               </SheetDescription>
             </div>
 
             <div className="flex shrink-0 items-center gap-2">
-              <span className="rounded-full bg-accent/20 px-2 py-1 text-[10px] text-primary-foreground">
-                Online
+              <span
+                role="status"
+                aria-live="polite"
+                className={`rounded-full px-2 py-1 text-[10px] text-primary-foreground ${agentStatus === "AVAILABLE" ? "bg-emerald-500/30" : "bg-accent/20"}`}
+              >
+                {agentStatus === "AVAILABLE" ? "Available" : agentStatus === "UNAVAILABLE" ? "Offline"
+                  : agentStatus === "CHECKING" ? "Checking…" : "Status unavailable"}
               </span>
 
               <button

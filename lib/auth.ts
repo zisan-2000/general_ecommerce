@@ -7,6 +7,7 @@ import bcrypt from "bcryptjs";
 import { getAccessContext } from "@/lib/rbac";
 import { logActivity } from "@/lib/activity-log";
 import { syncDeliveryManWarehouseAccess } from "@/lib/delivery-man-access";
+import { revokeAgentPresence } from "@/lib/chat-agent-presence";
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(db as never),
@@ -78,11 +79,28 @@ export const authOptions: NextAuthOptions = {
   },
 
   events: {
+    async signIn({ user }) {
+      // Login never opts an agent in; stale workspaces require explicit Available.
+      try {
+        await revokeAgentPresence(user.id);
+      } catch (error) {
+        // An unapplied presence migration must not break existing authentication.
+        console.error("CHAT PRESENCE LOGIN RESET ERROR:", error);
+      }
+    },
     async signOut(message) {
       const tokenUserId =
         typeof message.token?.id === "string" ? message.token.id : null;
       const tokenEmail =
         typeof message.token?.email === "string" ? message.token.email : null;
+
+      if (tokenUserId) {
+        try {
+          await revokeAgentPresence(tokenUserId);
+        } catch (error) {
+          console.error("CHAT PRESENCE LOGOUT RESET ERROR:", error);
+        }
+      }
 
       await logActivity({
         action: "logout",

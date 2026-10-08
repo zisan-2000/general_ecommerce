@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl";
 import { Clock3, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import AgentAvailabilityControl from "@/components/chat/AgentAvailabilityControl";
 
 type ChatStatus = "OPEN" | "IN_PROGRESS" | "CLOSED";
 type ChatPriority = "LOW" | "NORMAL" | "HIGH";
@@ -318,6 +319,8 @@ export default function AdminChatsPage() {
           {t("header.description")}
         </p>
       </div>
+
+      <AgentAvailabilityControl key={adminId ?? "signed-out"} userId={adminId} />
 
       {error ? (
         <Card className="border-destructive bg-destructive/10 p-3 text-sm text-destructive">
