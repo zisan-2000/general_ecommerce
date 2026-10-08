@@ -10,10 +10,25 @@ import {
 } from "react";
 import { useSession } from "next-auth/react";
 import { usePathname } from "next/navigation";
-import { LoaderCircle, MessageCircle, Send, ShieldCheck, XCircle } from "lucide-react";
+import { AlertCircle, LoaderCircle, MessageCircle, RotateCcw, Send, ShieldCheck, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  type ChatConversation,
+  type ChatMessage,
+  type ChatMessagesResponse,
+  type ChatOperation,
+  type ChatUiError,
+  ChatRequestError,
+  createChatMessageId,
+  describeChatError,
+  fetchChatJson,
+  isChatConversation,
+  isChatConversationList,
+  isChatMessage,
+  isChatMessagesResponse,
+} from "@/lib/chat-client";
 import {
   type GuestChatProfile,
   type GuestChatProfileErrors,
@@ -28,26 +43,15 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-type ChatStatus = "OPEN" | "IN_PROGRESS" | "CLOSED";
 type SenderRole = "admin" | "user" | "guest" | string;
 
-type ChatConversation = {
-  id: string;
-  status: ChatStatus;
-  priority: "LOW" | "NORMAL" | "HIGH";
-  guestEmail?: string | null;
-  guestName?: string | null;
-  createdAt: string;
-  updatedAt: string;
-  lastMessageAt?: string | null;
-};
-
-type ChatMessage = {
-  id: string;
-  senderRole: SenderRole;
+type PendingChatMessage = {
+  clientMessageId: string;
+  conversationId: string | null;
   message: string;
-  attachmentUrl?: string | null;
-  createdAt: string;
+  quickAction: string;
+  orderReference: string;
+  originalDraft: string;
 };
 
 const QUICK_ACTIONS = [
@@ -77,27 +81,6 @@ function formatChatTime(iso: string): string {
   return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 }
 
-class ChatRequestError extends Error {
-  constructor(message: string, readonly status: number) {
-    super(message);
-  }
-}
-
-async function fetchJson<T>(url: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(url, {
-    ...init,
-    credentials: "same-origin",
-    cache: "no-store",
-  });
-  const payload = await response.json().catch(() => ({}));
-  if (!response.ok) {
-    const errorMessage =
-      typeof payload?.error === "string" ? payload.error : "Request failed.";
-    throw new ChatRequestError(errorMessage, response.status);
-  }
-  return payload as T;
-}
-
 export default function SupportChatWidget() {
   const pathname = usePathname();
   const { data: session, status } = useSession();
@@ -106,9 +89,12 @@ export default function SupportChatWidget() {
   const [loading, setLoading] = useState(false);
   const [sending, setSending] = useState(false);
   const [starting, setStarting] = useState(false);
+  const [closing, setClosing] = useState(false);
+  const [refreshing, setRefreshing] = useState(false);
   const [guestFieldErrors, setGuestFieldErrors] = useState<GuestChatProfileErrors>({});
   const [resolvedIdentity, setResolvedIdentity] = useState<string | null>(null);
-  const [error, setError] = useState<string | null>(null);
+  const [readError, setReadError] = useState<ChatUiError | null>(null);
+  const [actionError, setActionError] = useState<ChatUiError | null>(null);
   const [conversation, setConversation] = useState<ChatConversation | null>(
     null,
   );
@@ -126,6 +112,16 @@ export default function SupportChatWidget() {
   const messageInputRef = useRef<HTMLTextAreaElement | null>(null);
   const guestNameInputRef = useRef<HTMLInputElement | null>(null);
   const guestEmailInputRef = useRef<HTMLInputElement | null>(null);
+  const guestFormRef = useRef<HTMLFormElement | null>(null);
+  const mutationEpochRef = useRef<number | null>(null);
+  const pendingMessageRef = useRef<PendingChatMessage | null>(null);
+  const messageReadSequenceRef = useRef(0);
+  const messageReadRef = useRef<{
+    epoch: number;
+    conversationId: string;
+    sequence: number;
+    promise: Promise<boolean>;
+  } | null>(null);
   const startRequestEpochRef = useRef<number | null>(null);
   const hydrationRequestRef = useRef(0);
   const requestEpochRef = useRef(0);
@@ -172,10 +168,17 @@ export default function SupportChatWidget() {
     setResolvedIdentity(null);
     setGuestFieldErrors({});
     startRequestEpochRef.current = null;
-    setError(null);
+    mutationEpochRef.current = null;
+    pendingMessageRef.current = null;
+    messageReadSequenceRef.current += 1;
+    messageReadRef.current = null;
+    setReadError(null);
+    setActionError(null);
     setLoading(false);
     setSending(false);
     setStarting(false);
+    setClosing(false);
+    setRefreshing(false);
     setDraftMessage("");
     setShowFeedback(false);
     setFeedback("");
@@ -183,92 +186,111 @@ export default function SupportChatWidget() {
   }, [identity]);
 
   const handleChatError = useCallback(
-    (fetchError: unknown, fallback: string) => {
-      if (!session?.user?.id && fetchError instanceof ChatRequestError
-        && (fetchError.status === 401 || fetchError.status === 403)) {
+    (fetchError: unknown, operation: ChatOperation, messageSent = false) => {
+      const nextError = describeChatError(fetchError, operation, !session?.user?.id, messageSent);
+      if (["authentication", "forbidden", "not-found"].includes(nextError.kind)) {
         setConversation(null);
         setMessages([]);
         setMessageOwner(null);
-        setError("Your secure chat session is unavailable or expired. Start a new chat; email alone cannot restore previous chats.");
-        return;
+        messageReadSequenceRef.current += 1;
+        messageReadRef.current = null;
+        setRefreshing(false);
+        setResolvedIdentity(session?.user?.id ? null : identity);
+        if (operation === "read" && pendingMessageRef.current) {
+          setActionError(describeChatError(fetchError, "send", !session?.user?.id));
+        }
       }
-      setError(fetchError instanceof Error ? fetchError.message : fallback);
+      if (operation === "read") setReadError(nextError);
+      else setActionError(nextError);
     },
-    [session?.user?.id],
+    [identity, session?.user?.id],
   );
 
   const loadMessages = useCallback(
-    async (conversationId: string, silent = true) => {
+    (conversationId: string, silent = true, messageSent = false): Promise<boolean> => {
       const epoch = requestEpochRef.current;
-      const params = new URLSearchParams();
-      params.set("limit", "120");
-      params.set("markRead", "true");
-      if (!silent) setLoading(true);
-      try {
-        const data = await fetchJson<{
-          conversation: ChatConversation;
-          messages: ChatMessage[];
-        }>(
-          `/api/chat/conversations/${conversationId}/messages?${params.toString()}`,
-        );
-        if (epoch !== requestEpochRef.current) return;
-        setConversation(data.conversation);
-        setMessages(data.messages);
-        setMessageOwner(identity);
-        setError(null);
-      } catch (fetchError) {
-        if (epoch !== requestEpochRef.current) return;
-        handleChatError(fetchError, "Failed to load messages.");
-      } finally {
-        if (!silent && epoch === requestEpochRef.current) setLoading(false);
-      }
+      if (!silent) setRefreshing(true);
+      const activeRead = messageReadRef.current;
+      if (activeRead?.epoch === epoch && activeRead.conversationId === conversationId) return activeRead.promise;
+      const sequence = ++messageReadSequenceRef.current;
+      const promise = (async () => {
+        try {
+          const data = await fetchChatJson<ChatMessagesResponse>(
+            `/api/chat/conversations/${conversationId}/messages?limit=120&markRead=true`,
+            undefined,
+            isChatMessagesResponse,
+          );
+          if (data.conversation.id !== conversationId) throw new ChatRequestError("unexpected");
+          if (epoch !== requestEpochRef.current || sequence !== messageReadSequenceRef.current) return false;
+          setConversation(data.conversation);
+          setMessages(data.messages);
+          setMessageOwner(identity);
+          setResolvedIdentity(identity);
+          setReadError(null);
+          // A lost POST response may still have committed. Only the exact UUID
+          // proves delivery; equal message text is not a deduplication key.
+          const pending = pendingMessageRef.current;
+          if (pending?.conversationId === conversationId && mutationEpochRef.current === null
+            && data.messages.some((item) => item.id === pending.clientMessageId)) {
+            pendingMessageRef.current = null;
+            setDraftMessage((current) => current === pending.originalDraft ? "" : current);
+            setActionError((current) => current?.operation === "send" ? null : current);
+          }
+          return true;
+        } catch (fetchError) {
+          if (epoch !== requestEpochRef.current || sequence !== messageReadSequenceRef.current) return false;
+          handleChatError(fetchError, "read", messageSent);
+          return false;
+        } finally {
+          if (messageReadRef.current?.sequence === sequence) messageReadRef.current = null;
+          if (epoch === requestEpochRef.current && sequence === messageReadSequenceRef.current) setRefreshing(false);
+        }
+      })();
+      messageReadRef.current = { epoch, conversationId, sequence, promise };
+      return promise;
     },
     [handleChatError, identity],
   );
 
   const hydrateConversation = useCallback(async () => {
-    if (status === "loading" || !hydrated || startRequestEpochRef.current !== null) return;
+    if (status === "loading" || !hydrated || startRequestEpochRef.current !== null
+      || mutationEpochRef.current !== null) return;
     const epoch = requestEpochRef.current;
     const hydrationRequest = ++hydrationRequestRef.current;
     setLoading(true);
-    setError(null);
+    setReadError(null);
     try {
-      // The server scopes anonymous lists to the single cookie-owned conversation.
-      const list = await fetchJson<ChatConversation[]>("/api/chat/conversations?limit=10");
+      // Anonymous lists are scoped to the single cookie-owned conversation.
+      const list = await fetchChatJson<ChatConversation[]>(
+        "/api/chat/conversations?limit=10", undefined, isChatConversationList,
+      );
       if (epoch !== requestEpochRef.current || hydrationRequest !== hydrationRequestRef.current) return;
       const preferred = list.find((item) => item.status !== "CLOSED") ?? list[0] ?? null;
       setConversation(preferred);
-      if (preferred) {
-        await loadMessages(preferred.id, true);
-      } else {
-        setMessages([]);
-      }
-      if (epoch === requestEpochRef.current && hydrationRequest === hydrationRequestRef.current) {
+      let loaded = true;
+      if (preferred) loaded = await loadMessages(preferred.id, true);
+      else setMessages([]);
+      if (epoch === requestEpochRef.current && hydrationRequest === hydrationRequestRef.current && loaded) {
         setResolvedIdentity(identity);
+        // Recover a create response lost after its secure cookie was received.
+        if (preferred) setActionError((current) => current?.operation === "start" ? null : current);
       }
     } catch (fetchError) {
       if (epoch !== requestEpochRef.current || hydrationRequest !== hydrationRequestRef.current) return;
-      // No cookie is normal for a first-time guest; do not recover by email.
+      // No cookie is normal for a first-time guest. Never recover by email.
       if (!session?.user?.id && fetchError instanceof ChatRequestError && fetchError.status === 401) {
         setConversation(null);
         setMessages([]);
+        setMessageOwner(null);
         setResolvedIdentity(identity);
+        setReadError(null);
       } else {
-        handleChatError(fetchError, "Failed to load conversation.");
+        handleChatError(fetchError, "read");
       }
     } finally {
-      if (epoch === requestEpochRef.current && hydrationRequest === hydrationRequestRef.current) {
-        setLoading(false);
-      }
+      if (epoch === requestEpochRef.current && hydrationRequest === hydrationRequestRef.current) setLoading(false);
     }
-  }, [
-    handleChatError,
-    hydrated,
-    identity,
-    loadMessages,
-    session?.user?.id,
-    status,
-  ]);
+  }, [handleChatError, hydrated, identity, loadMessages, session?.user?.id, status]);
 
   useEffect(() => {
     if (!open) return;
@@ -276,12 +298,12 @@ export default function SupportChatWidget() {
   }, [hydrateConversation, open]);
 
   useEffect(() => {
-    if (!open || !conversation?.id || starting || resolvingConversation) return;
+    if (!open || !conversation?.id || starting || sending || closing || resolvingConversation) return;
     const interval = setInterval(() => {
       void loadMessages(conversation.id, true);
     }, 4000);
     return () => clearInterval(interval);
-  }, [conversation?.id, loadMessages, open, resolvingConversation, starting]);
+  }, [closing, conversation?.id, loadMessages, open, resolvingConversation, sending, starting]);
 
   useEffect(() => {
     if (!open) return;
@@ -289,13 +311,13 @@ export default function SupportChatWidget() {
   }, [messages, open]);
 
   useEffect(() => {
-    if (!open || resolvingConversation || starting || sending || loading) return;
+    if (!open || resolvingConversation || starting || sending || closing || loading) return;
     if (showGuestForm) {
       guestNameInputRef.current?.focus({ preventScroll: true });
     } else {
       messageInputRef.current?.focus({ preventScroll: true });
     }
-  }, [loading, open, resolvingConversation, sending, showGuestForm, starting]);
+  }, [closing, loading, open, resolvingConversation, sending, showGuestForm, starting]);
 
   const persistGuestProfile = useCallback((profile: GuestChatProfile) => {
     if (typeof window === "undefined") return;
@@ -308,58 +330,43 @@ export default function SupportChatWidget() {
   }, []);
 
   const createConversation = useCallback(
-    async (payload?: {
-      message?: string;
-      quickAction?: string;
-      orderReference?: string;
-      guestProfile?: GuestChatProfile;
-    }) => {
+    async (guestProfile?: GuestChatProfile, hydrateMessages = true) => {
       const epoch = requestEpochRef.current;
-      // A late resume request must not overwrite a newly created conversation.
+      // Late reads must not overwrite a newly created conversation.
       hydrationRequestRef.current += 1;
+      messageReadSequenceRef.current += 1;
+      messageReadRef.current = null;
       setLoading(false);
-      const body: Record<string, unknown> = {
-        message: payload?.message ?? "",
-        quickAction: payload?.quickAction ?? "",
-        orderReference: payload?.orderReference ?? "",
-      };
-
+      setRefreshing(false);
+      const body: Record<string, unknown> = { message: "", quickAction: "", orderReference: "" };
       if (!session?.user?.id) {
-        body.guestName = payload?.guestProfile?.guestName ?? guestName.trim();
-        body.guestEmail = payload?.guestProfile?.guestEmail ?? guestEmail.trim().toLowerCase();
+        body.guestName = guestProfile?.guestName ?? guestName.trim();
+        body.guestEmail = guestProfile?.guestEmail ?? guestEmail.trim().toLowerCase();
       }
-
-      const created = await fetchJson<ChatConversation>(
+      const created = await fetchChatJson<ChatConversation>(
         "/api/chat/conversations",
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(body),
-        },
+        { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body) },
+        isChatConversation,
       );
-      if (epoch !== requestEpochRef.current) throw new Error("Chat identity changed. Please retry.");
-      if (!created || typeof created.id !== "string" || !created.id) {
-        throw new Error("Chat could not be started. Please try again.");
-      }
+      if (epoch !== requestEpochRef.current) throw new ChatRequestError("authentication");
       setConversation(created);
-      await loadMessages(created.id, false);
+      setMessageOwner(identity);
+      setResolvedIdentity(identity);
+      if (hydrateMessages) await loadMessages(created.id, false);
       return created;
     },
-    [
-      guestEmail,
-      guestName,
-      loadMessages,
-      session?.user?.id,
-    ],
+    [guestEmail, guestName, identity, loadMessages, session?.user?.id],
   );
 
   const startGuestChat = useCallback(async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    if (!showGuestForm || starting || startRequestEpochRef.current !== null) return;
+    if (!showGuestForm || starting || startRequestEpochRef.current !== null
+      || mutationEpochRef.current !== null) return;
 
     const formData = new FormData(event.currentTarget);
     const validation = validateGuestChatProfile(formData.get("guestName"), formData.get("guestEmail"));
     setGuestFieldErrors(validation.success ? {} : validation.errors);
+    setActionError(null);
     if (!validation.success) {
       if (validation.errors.guestName) guestNameInputRef.current?.focus();
       else guestEmailInputRef.current?.focus();
@@ -369,137 +376,163 @@ export default function SupportChatWidget() {
     const epoch = requestEpochRef.current;
     startRequestEpochRef.current = epoch;
     setStarting(true);
-    setError(null);
     try {
-      // An empty initial message is supported by the existing create API.
-      // Ownership comes from its HttpOnly cookie, never from these contact fields.
-      await createConversation({ guestProfile: validation.profile });
+      // Empty creation keeps first-message retries on the idempotent message API.
+      // Contact fields are not credentials; ownership comes from the HttpOnly cookie.
+      await createConversation(validation.profile);
       if (epoch !== requestEpochRef.current) return;
       setGuestName(validation.profile.guestName);
       setGuestEmail(validation.profile.guestEmail);
       persistGuestProfile(validation.profile);
     } catch (startError) {
       if (epoch !== requestEpochRef.current) return;
-      handleChatError(startError, "Failed to start chat. Please try again.");
+      if (startError instanceof ChatRequestError && startError.kind === "validation") {
+        setGuestFieldErrors({
+          ...(startError.fields?.guestName ? { guestName: "Please enter a valid name (2–120 characters)." } : {}),
+          ...(startError.fields?.guestEmail ? { guestEmail: "Please enter a valid email address." } : {}),
+        });
+      }
+      handleChatError(startError, "start");
     } finally {
       if (startRequestEpochRef.current === epoch) startRequestEpochRef.current = null;
       if (epoch === requestEpochRef.current) setStarting(false);
     }
-  }, [
-    createConversation,
-    handleChatError,
-    persistGuestProfile,
-    showGuestForm,
-    starting,
-  ]);
+  }, [createConversation, handleChatError, persistGuestProfile, showGuestForm, starting]);
 
   const sendMessage = useCallback(
     async (quickAction?: string) => {
-      if (sending || starting || loading || resolvingConversation) return;
-      // Anonymous customers must submit the profile form before using the composer.
+      // The ref locks synchronously, before React renders a disabled button.
+      if (mutationEpochRef.current !== null || startRequestEpochRef.current !== null
+        || sending || starting || closing || loading || resolvingConversation) return;
       if (!session?.user?.id && !conversation?.id) return;
       const epoch = requestEpochRef.current;
-      const messageText =
-        draftMessage.trim() ||
-        (quickAction
-          ? `I need help regarding ${quickAction.toLowerCase()}.`
-          : "");
+      const messageText = draftMessage.trim()
+        || (quickAction ? `I need help regarding ${quickAction.toLowerCase()}.` : "");
+      if (!messageText || messageText.length > 4000) {
+        handleChatError(new ChatRequestError(
+          "validation", 400, messageText ? "MESSAGE_TOO_LONG" : "MESSAGE_EMPTY",
+        ), "send");
+        messageInputRef.current?.focus();
+        return;
+      }
 
-      if (!messageText && !quickAction) return;
-
+      mutationEpochRef.current = epoch;
+      messageReadSequenceRef.current += 1;
+      messageReadRef.current = null;
+      setRefreshing(false);
       setSending(true);
-      setError(null);
+      setActionError(null);
+      // Retain quick-action text too if its request fails.
+      const originalDraft = draftMessage.trim() ? draftMessage : messageText;
+      if (!draftMessage.trim()) setDraftMessage(originalDraft);
       try {
-        if (!conversation?.id) {
-          await createConversation({
-            message: messageText,
-            quickAction: quickAction ?? "",
-            orderReference: orderReference.trim(),
-          });
-        } else {
-          const body: Record<string, unknown> = {
-            message: messageText,
-            quickAction: quickAction ?? "",
-            orderReference: orderReference.trim(),
-          };
-          await fetchJson(
-            `/api/chat/conversations/${conversation.id}/messages`,
-            {
-              method: "POST",
-              headers: { "Content-Type": "application/json" },
-              body: JSON.stringify(body),
-            },
-          );
+        const previous = pendingMessageRef.current;
+        const sameText = previous?.message === messageText;
+        const effectiveAction = quickAction ?? (sameText ? previous?.quickAction : "") ?? "";
+        const reference = orderReference.trim();
+        const reuse = previous && sameText && previous.quickAction === effectiveAction
+          && previous.orderReference === reference
+          && (previous.conversationId === (conversation?.id ?? null));
+        const pending: PendingChatMessage = reuse && previous ? { ...previous, originalDraft } : {
+          clientMessageId: createChatMessageId(),
+          conversationId: conversation?.id ?? null,
+          message: messageText,
+          quickAction: effectiveAction,
+          orderReference: reference,
+          originalDraft,
+        };
+        pendingMessageRef.current = pending;
+        // Do not include the first message in non-idempotent conversation creation.
+        if (!pending.conversationId) {
+          const created = await createConversation(undefined, false);
           if (epoch !== requestEpochRef.current) return;
-          await loadMessages(conversation.id, true);
+          pending.conversationId = created.id;
         }
-        if (epoch === requestEpochRef.current) setDraftMessage("");
-      } catch (sendError) {
+        const createdMessage = await fetchChatJson<ChatMessage>(
+          `/api/chat/conversations/${pending.conversationId}/messages`,
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              message: pending.message, quickAction: pending.quickAction,
+              orderReference: pending.orderReference, clientMessageId: pending.clientMessageId,
+            }),
+          },
+          isChatMessage,
+        );
+        if (createdMessage.id !== pending.clientMessageId
+          || createdMessage.conversationId !== pending.conversationId) throw new ChatRequestError("unexpected");
         if (epoch !== requestEpochRef.current) return;
-        handleChatError(sendError, "Failed to send message.");
+        pendingMessageRef.current = null;
+        setActionError(null);
+        setMessages((current) => current.some((item) => item.id === createdMessage.id)
+          ? current : [...current, createdMessage]);
+        setMessageOwner(identity);
+        setDraftMessage((current) => current === originalDraft ? "" : current);
+        // A refresh failure must not present a Send retry after confirmed delivery.
+        await loadMessages(pending.conversationId, false, true);
+      } catch (sendError) {
+        if (epoch === requestEpochRef.current) handleChatError(sendError, "send");
       } finally {
+        if (mutationEpochRef.current === epoch) mutationEpochRef.current = null;
         if (epoch === requestEpochRef.current) setSending(false);
       }
     },
-    [
-      conversation?.id,
-      createConversation,
-      draftMessage,
-      handleChatError,
-      loading,
-      loadMessages,
-      orderReference,
-      resolvingConversation,
-      sending,
-      session?.user?.id,
-      starting,
-    ],
+    [closing, conversation?.id, createConversation, draftMessage, handleChatError, identity,
+      loading, loadMessages, orderReference, resolvingConversation, sending, session?.user?.id, starting],
   );
 
   const closeConversation = useCallback(async () => {
-    if (!conversation?.id || sending || loading || status === "loading") return;
+    if (!conversation?.id || sending || closing || starting || loading || resolvingConversation
+      || mutationEpochRef.current !== null || startRequestEpochRef.current !== null) return;
     const epoch = requestEpochRef.current;
-    setSending(true);
-    setError(null);
+    mutationEpochRef.current = epoch;
+    messageReadSequenceRef.current += 1;
+    messageReadRef.current = null;
+    setRefreshing(false);
+    setClosing(true);
+    setActionError(null);
     try {
-      const body: Record<string, unknown> = {
-        status: "CLOSED",
-        rating,
-        feedback: feedback.trim(),
-      };
-      const updated = await fetchJson<ChatConversation>(
+      const updated = await fetchChatJson<ChatConversation>(
         `/api/chat/conversations/${conversation.id}`,
         {
-          method: "PATCH",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify(body),
+          method: "PATCH", headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ status: "CLOSED", rating, feedback: feedback.trim() }),
         },
+        isChatConversation,
       );
+      if (updated.id !== conversation.id) throw new ChatRequestError("unexpected");
       if (epoch !== requestEpochRef.current) return;
       setConversation(updated);
       setShowFeedback(false);
       setFeedback("");
-      await loadMessages(updated.id, true);
+      await loadMessages(updated.id, false);
     } catch (closeError) {
-      if (epoch !== requestEpochRef.current) return;
-      handleChatError(closeError, "Failed to close chat.");
+      if (epoch === requestEpochRef.current) handleChatError(closeError, "close");
     } finally {
-      if (epoch === requestEpochRef.current) setSending(false);
+      if (mutationEpochRef.current === epoch) mutationEpochRef.current = null;
+      if (epoch === requestEpochRef.current) setClosing(false);
     }
-  }, [
-    conversation?.id,
-    feedback,
-    handleChatError,
-    loading,
-    loadMessages,
-    rating,
-    sending,
-    status,
-  ]);
+  }, [closing, conversation?.id, feedback, handleChatError, loading, loadMessages,
+    rating, resolvingConversation, sending, starting]);
+
+  const activeError = actionError ?? readError;
+  const requestBusy = loading || starting || sending || closing || refreshing;
+  const retryRequest = () => {
+    if (!activeError?.retryable || requestBusy) return;
+    if (activeError.operation === "send") void sendMessage();
+    else if (activeError.operation === "start" && showGuestForm) guestFormRef.current?.requestSubmit();
+    // Do not blindly repeat a close/feedback PATCH: refresh to check its outcome.
+    else if (conversation?.id) {
+      void loadMessages(conversation.id, false).then((loaded) => {
+        if (loaded) setActionError((current) => current?.operation === "close" ? null : current);
+      });
+    } else void hydrateConversation();
+  };
 
   if (!shouldRender) return null;
 
-  const sendDisabled = sending || starting || loading || resolvingConversation
+  const sendDisabled = sending || starting || closing || loading || resolvingConversation
     || (!session?.user?.id && !conversation);
   // Hide old account data immediately, before the identity-reset effect runs.
   const visibleMessages = messageOwner === identity ? messages : [];
@@ -557,11 +590,48 @@ export default function SupportChatWidget() {
           </SheetHeader>
         </div>
 
+        {activeError && (
+          <div
+            id="support-chat-request-error"
+            role="alert"
+            aria-live="polite"
+            aria-atomic="true"
+            className="max-h-[35%] shrink-0 overflow-y-auto border-b border-destructive/20 bg-destructive/5 px-4 py-3"
+          >
+            <div className="flex items-start gap-2">
+              <AlertCircle aria-hidden="true" className="mt-0.5 h-4 w-4 shrink-0 text-destructive" />
+              <div className="min-w-0 flex-1 space-y-1">
+                <p className="text-sm font-medium text-destructive">{activeError.title}</p>
+                <p className="text-xs leading-relaxed text-foreground">{activeError.message}</p>
+                {activeError.retryable && (
+                  <Button
+                    type="button"
+                    size="sm"
+                    variant="outline"
+                    disabled={requestBusy}
+                    onClick={retryRequest}
+                    className="mt-2 h-8"
+                  >
+                    <RotateCcw aria-hidden="true" className="h-3 w-3" />
+                    {activeError.operation === "send" ? "Retry message"
+                      : activeError.operation === "start" ? "Retry starting chat" : "Refresh chat"}
+                  </Button>
+                )}
+              </div>
+              <button
+                type="button"
+                aria-label="Dismiss chat error"
+                className="shrink-0 rounded p-1 text-muted-foreground hover:bg-destructive/10"
+                onClick={() => actionError ? setActionError(null) : setReadError(null)}
+              >
+                <XCircle aria-hidden="true" className="h-4 w-4" />
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* CHAT MESSAGES */}
         <div className="min-h-0 flex-1 overflow-y-auto overscroll-contain bg-muted/30 p-4">
-          {error && (
-            <p role="alert" className="mb-3 text-sm text-destructive">{error}</p>
-          )}
           {resolvingConversation ? (
             <div className="flex min-h-40 flex-col items-center justify-center gap-3 text-center">
               {loading || status === "loading" || !hydrated ? (
@@ -570,13 +640,14 @@ export default function SupportChatWidget() {
                   <p role="status" className="text-sm text-muted-foreground">Loading secure chat…</p>
                 </>
               ) : (
-                <Button type="button" variant="outline" onClick={() => void hydrateConversation()}>
+                <Button type="button" variant="outline" disabled={requestBusy} onClick={() => void hydrateConversation()}>
                   Retry opening chat
                 </Button>
               )}
             </div>
           ) : showGuestForm ? (
             <form
+              ref={guestFormRef}
               noValidate
               onSubmit={startGuestChat}
               aria-labelledby="support-chat-welcome-title"
@@ -721,6 +792,8 @@ export default function SupportChatWidget() {
               <textarea
                 ref={messageInputRef}
                 aria-label="Your message"
+                aria-invalid={actionError?.operation === "send" && actionError.kind === "validation"}
+                aria-describedby={activeError ? "support-chat-request-error support-chat-send-status" : "support-chat-send-status"}
                 disabled={sendDisabled}
                 value={draftMessage}
                 onChange={(event) => setDraftMessage(event.target.value)}
@@ -738,13 +811,23 @@ export default function SupportChatWidget() {
 
               <Button
                 type="button"
-                aria-label="Send message"
+                aria-label={sending ? "Sending message" : "Send message"}
                 size="icon"
                 onClick={() => void sendMessage()}
                 disabled={sendDisabled}
               >
-                <Send className="h-4 w-4" />
+                {sending
+                  ? <LoaderCircle aria-hidden="true" className="h-4 w-4 animate-spin" />
+                  : <Send aria-hidden="true" className="h-4 w-4" />}
               </Button>
+            </div>
+            <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
+              <p id="support-chat-send-status" role="status" aria-live="polite">
+                {refreshing ? "Refreshing chat…" : sending ? "Sending message…" : closing ? "Updating chat…" : "Enter to send · Shift+Enter for a new line"}
+              </p>
+              <span className={`shrink-0 ${draftMessage.trim().length > 4000 ? "text-destructive" : ""}`}>
+                {draftMessage.trim().length}/4,000
+              </span>
             </div>
           </div>
         )}

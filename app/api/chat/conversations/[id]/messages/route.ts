@@ -1,6 +1,6 @@
 import { NextRequest } from "next/server";
 import { getServerSession } from "next-auth/next";
-import type { ChatStatus } from "@/generated/prisma";
+import { Prisma, type ChatStatus } from "@/generated/prisma";
 import { authOptions } from "@/lib/auth";
 import { logActivity } from "@/lib/activity-log";
 import { prisma } from "@/lib/prisma";
@@ -117,6 +117,9 @@ export async function POST(
       { canManageChats: access.has("chats.manage") },
     );
     const body = await request.json().catch(() => ({}));
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+      return chatJson({ error: "Invalid chat request." }, { status: 400 });
+    }
 
     const guestSession = actor.userId || actor.isAdmin ? null : await readGuestChatSession(request);
     const unownedGuest = rejectUnownedGuestChat(actor, guestSession, id);
@@ -139,10 +142,40 @@ export async function POST(
       return chatJson({ error: "Forbidden." }, { status: 403 });
     }
 
+    if (typeof body.message !== "string" && body.message !== undefined) {
+      return chatJson({ error: "Message must be text." }, { status: 400 });
+    }
+    if (typeof body.message === "string" && body.message.trim().length > 4000) {
+      return chatJson({ error: "Message is too long.", code: "MESSAGE_TOO_LONG" }, { status: 400 });
+    }
+    const clientMessageId = typeof body.clientMessageId === "string" ? body.clientMessageId.toLowerCase() : null;
+    if (body.clientMessageId !== undefined && (!clientMessageId
+      || !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.test(clientMessageId))) {
+      return chatJson({ error: "Invalid message identifier.", code: "INVALID_MESSAGE_ID" }, { status: 400 });
+    }
     const composed = composeMessage(message, quickAction, orderReference);
     if (!composed && !attachmentUrl) {
-      return chatJson({ error: "Message cannot be empty." }, { status: 400 });
+      return chatJson({ error: "Message cannot be empty.", code: "MESSAGE_EMPTY" }, { status: 400 });
     }
+
+    // Ownership is checked before looking up an idempotency ID. The ID is not an
+    // access credential, and retries must match the original actor and payload.
+    const replayMessage = async () => {
+      if (!clientMessageId) return null;
+      const existing = await prisma.chatMessage.findUnique({
+        where: { id: clientMessageId },
+        include: { sender: { select: { id: true, name: true, email: true } } },
+      });
+      if (!existing) return null;
+      if (existing.conversationId !== id || existing.senderId !== actor.userId
+        || existing.senderRole !== actor.senderRole || existing.message !== (composed || "Attachment")
+        || existing.attachmentUrl !== (attachmentUrl || null)) {
+        return chatJson({ error: "Message identifier conflict.", code: "MESSAGE_ID_CONFLICT" }, { status: 409 });
+      }
+      return chatJson(existing);
+    };
+    const replay = await replayMessage();
+    if (replay) return replay;
 
     const nextStatus =
       actor.isAdmin || conversation.status === "CLOSED" ? "IN_PROGRESS" : conversation.status;
@@ -150,9 +183,10 @@ export async function POST(
       ? (nextStatus as ChatStatus)
       : "IN_PROGRESS";
 
-    const createdMessage = await prisma.$transaction(async (tx) => {
+    const createMessage = () => prisma.$transaction(async (tx) => {
       const created = await tx.chatMessage.create({
         data: {
+          ...(clientMessageId ? { id: clientMessageId } : {}),
           conversationId: id,
           senderId: actor.userId,
           senderRole: actor.senderRole,
@@ -175,6 +209,16 @@ export async function POST(
 
       return created;
     });
+    const createdMessage = await createMessage().catch(async (error: unknown) => {
+      // Concurrent retries race on the existing primary key. The losing
+      // transaction rolls back; return the committed original instead.
+      if (clientMessageId && error instanceof Prisma.PrismaClientKnownRequestError && error.code === "P2002") {
+        const concurrentReplay = await replayMessage();
+        if (concurrentReplay) return concurrentReplay;
+      }
+      throw error;
+    });
+    if (createdMessage instanceof Response) return createdMessage;
 
     await logActivity({
       action: actor.isAdmin ? "send_chat_reply" : "send_chat_message",
