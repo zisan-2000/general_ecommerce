@@ -64,13 +64,23 @@ function formatChatTime(iso: string): string {
   return date.toLocaleTimeString([], { hour: "2-digit", minute: "2-digit" });
 }
 
+class ChatRequestError extends Error {
+  constructor(message: string, readonly status: number) {
+    super(message);
+  }
+}
+
 async function fetchJson<T>(url: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(url, init);
+  const response = await fetch(url, {
+    ...init,
+    credentials: "same-origin",
+    cache: "no-store",
+  });
   const payload = await response.json().catch(() => ({}));
   if (!response.ok) {
     const errorMessage =
       typeof payload?.error === "string" ? payload.error : "Request failed.";
-    throw new Error(errorMessage);
+    throw new ChatRequestError(errorMessage, response.status);
   }
   return payload as T;
 }
@@ -97,6 +107,9 @@ export default function SupportChatWidget() {
   const [hydrated, setHydrated] = useState(false);
 
   const messageEndRef = useRef<HTMLDivElement | null>(null);
+  const requestEpochRef = useRef(0);
+  const [messageOwner, setMessageOwner] = useState<string | null>(null);
+  const identity = status === "loading" ? "loading" : session?.user?.id ?? "guest";
   const role = getRoleForSession(
     (session?.user as { role?: string } | undefined)?.role,
     (session?.user as { permissions?: string[] } | undefined)?.permissions,
@@ -113,31 +126,53 @@ export default function SupportChatWidget() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-    setGuestName(localStorage.getItem(LS_GUEST_NAME) || "");
-    setGuestEmail(localStorage.getItem(LS_GUEST_EMAIL) || "");
+    try {
+      setGuestName(localStorage.getItem(LS_GUEST_NAME) || "");
+      setGuestEmail(localStorage.getItem(LS_GUEST_EMAIL) || "");
+      // A legacy ID is not proof of ownership. Only the server's cookie can resume.
+      localStorage.removeItem(LS_CONVERSATION_ID);
+    } catch {
+      // Chat sessions still work if localStorage is unavailable.
+    }
     setHydrated(true);
   }, []);
 
-  const syncConversationToLocal = useCallback(
-    (conversationId: string | null) => {
-      if (typeof window === "undefined") return;
-      if (!conversationId) {
-        localStorage.removeItem(LS_CONVERSATION_ID);
+  useEffect(() => {
+    // Drop stale requests and private messages on login/logout/account switching.
+    requestEpochRef.current += 1;
+    setConversation(null);
+    setMessages([]);
+    setMessageOwner(null);
+    setError(null);
+    setLoading(false);
+    setSending(false);
+    setDraftMessage("");
+    setShowFeedback(false);
+    setFeedback("");
+    return () => { requestEpochRef.current += 1; };
+  }, [identity]);
+
+  const handleChatError = useCallback(
+    (fetchError: unknown, fallback: string) => {
+      if (!session?.user?.id && fetchError instanceof ChatRequestError
+        && (fetchError.status === 401 || fetchError.status === 403)) {
+        setConversation(null);
+        setMessages([]);
+        setMessageOwner(null);
+        setError("Your secure chat session is unavailable or expired. Start a new chat; email alone cannot restore previous chats.");
         return;
       }
-      localStorage.setItem(LS_CONVERSATION_ID, conversationId);
+      setError(fetchError instanceof Error ? fetchError.message : fallback);
     },
-    [],
+    [session?.user?.id],
   );
 
   const loadMessages = useCallback(
     async (conversationId: string, silent = true) => {
+      const epoch = requestEpochRef.current;
       const params = new URLSearchParams();
       params.set("limit", "120");
       params.set("markRead", "true");
-      if (!session?.user?.id && guestEmail)
-        params.set("guestEmail", guestEmail);
-
       if (!silent) setLoading(true);
       try {
         const data = await fetchJson<{
@@ -146,69 +181,55 @@ export default function SupportChatWidget() {
         }>(
           `/api/chat/conversations/${conversationId}/messages?${params.toString()}`,
         );
+        if (epoch !== requestEpochRef.current) return;
         setConversation(data.conversation);
         setMessages(data.messages);
+        setMessageOwner(identity);
         setError(null);
       } catch (fetchError) {
-        setError(
-          fetchError instanceof Error
-            ? fetchError.message
-            : "Failed to load messages.",
-        );
+        if (epoch !== requestEpochRef.current) return;
+        handleChatError(fetchError, "Failed to load messages.");
       } finally {
-        if (!silent) setLoading(false);
+        if (!silent && epoch === requestEpochRef.current) setLoading(false);
       }
     },
-    [guestEmail, session?.user?.id],
+    [handleChatError, identity],
   );
 
   const hydrateConversation = useCallback(async () => {
-    if (status === "loading") return;
+    if (status === "loading" || !hydrated) return;
+    const epoch = requestEpochRef.current;
     setLoading(true);
     setError(null);
     try {
-      if (session?.user?.id) {
-        const list = await fetchJson<ChatConversation[]>(
-          `/api/chat/conversations?limit=10`,
-        );
-        const preferred =
-          list.find((item) => item.status !== "CLOSED") ?? list[0] ?? null;
-        setConversation(preferred);
-        syncConversationToLocal(preferred?.id ?? null);
-        if (preferred) {
-          await loadMessages(preferred.id, true);
-        } else {
-          setMessages([]);
-        }
+      // The server scopes anonymous lists to the single cookie-owned conversation.
+      const list = await fetchJson<ChatConversation[]>("/api/chat/conversations?limit=10");
+      if (epoch !== requestEpochRef.current) return;
+      const preferred = list.find((item) => item.status !== "CLOSED") ?? list[0] ?? null;
+      setConversation(preferred);
+      if (preferred) {
+        await loadMessages(preferred.id, true);
       } else {
-        if (!hydrated) return;
-        const existingId =
-          typeof window !== "undefined"
-            ? localStorage.getItem(LS_CONVERSATION_ID)
-            : null;
-        if (existingId && guestEmail) {
-          await loadMessages(existingId, true);
-        } else {
-          setConversation(null);
-          setMessages([]);
-        }
+        setMessages([]);
       }
     } catch (fetchError) {
-      setError(
-        fetchError instanceof Error
-          ? fetchError.message
-          : "Failed to load conversation.",
-      );
+      if (epoch !== requestEpochRef.current) return;
+      // No cookie is normal for a first-time guest; do not recover by email.
+      if (!session?.user?.id && fetchError instanceof ChatRequestError && fetchError.status === 401) {
+        setConversation(null);
+        setMessages([]);
+      } else {
+        handleChatError(fetchError, "Failed to load conversation.");
+      }
     } finally {
-      setLoading(false);
+      if (epoch === requestEpochRef.current) setLoading(false);
     }
   }, [
-    guestEmail,
+    handleChatError,
     hydrated,
     loadMessages,
     session?.user?.id,
     status,
-    syncConversationToLocal,
   ]);
 
   useEffect(() => {
@@ -217,12 +238,12 @@ export default function SupportChatWidget() {
   }, [hydrateConversation, open]);
 
   useEffect(() => {
-    if (!open || !conversation?.id) return;
+    if (!open || !conversation?.id || status === "loading") return;
     const interval = setInterval(() => {
       void loadMessages(conversation.id, true);
     }, 4000);
     return () => clearInterval(interval);
-  }, [conversation?.id, loadMessages, open]);
+  }, [conversation?.id, loadMessages, open, status]);
 
   useEffect(() => {
     if (!open) return;
@@ -231,8 +252,12 @@ export default function SupportChatWidget() {
 
   const persistGuestProfile = useCallback(() => {
     if (typeof window === "undefined") return;
-    localStorage.setItem(LS_GUEST_NAME, guestName.trim());
-    localStorage.setItem(LS_GUEST_EMAIL, guestEmail.trim().toLowerCase());
+    try {
+      localStorage.setItem(LS_GUEST_NAME, guestName.trim());
+      localStorage.setItem(LS_GUEST_EMAIL, guestEmail.trim().toLowerCase());
+    } catch {
+      // Contact preferences are optional; credentials are never stored here.
+    }
   }, [guestEmail, guestName]);
 
   const createConversation = useCallback(
@@ -241,6 +266,7 @@ export default function SupportChatWidget() {
       quickAction?: string;
       orderReference?: string;
     }) => {
+      const epoch = requestEpochRef.current;
       const body: Record<string, unknown> = {
         message: payload?.message ?? "",
         quickAction: payload?.quickAction ?? "",
@@ -260,9 +286,8 @@ export default function SupportChatWidget() {
           body: JSON.stringify(body),
         },
       );
-
+      if (epoch !== requestEpochRef.current) throw new Error("Chat identity changed. Please retry.");
       setConversation(created);
-      syncConversationToLocal(created.id);
       await loadMessages(created.id, false);
       return created;
     },
@@ -271,12 +296,18 @@ export default function SupportChatWidget() {
       guestName,
       loadMessages,
       session?.user?.id,
-      syncConversationToLocal,
     ],
   );
 
   const sendMessage = useCallback(
     async (quickAction?: string) => {
+      if (sending || loading || status === "loading" || !hydrated) return;
+      if (!session?.user?.id && !conversation?.id
+        && (guestName.trim().length < 2 || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(guestEmail.trim()))) {
+        setError("Enter your name and a valid contact email to start a new chat.");
+        return;
+      }
+      const epoch = requestEpochRef.current;
       const messageText =
         draftMessage.trim() ||
         (quickAction
@@ -289,6 +320,7 @@ export default function SupportChatWidget() {
       setError(null);
       try {
         if (!conversation?.id) {
+          if (!session?.user?.id) persistGuestProfile();
           await createConversation({
             message: messageText,
             quickAction: quickAction ?? "",
@@ -300,9 +332,6 @@ export default function SupportChatWidget() {
             quickAction: quickAction ?? "",
             orderReference: orderReference.trim(),
           };
-          if (!session?.user?.id) {
-            body.guestEmail = guestEmail.trim().toLowerCase();
-          }
           await fetchJson(
             `/api/chat/conversations/${conversation.id}/messages`,
             {
@@ -311,17 +340,15 @@ export default function SupportChatWidget() {
               body: JSON.stringify(body),
             },
           );
+          if (epoch !== requestEpochRef.current) return;
           await loadMessages(conversation.id, true);
         }
-        setDraftMessage("");
+        if (epoch === requestEpochRef.current) setDraftMessage("");
       } catch (sendError) {
-        setError(
-          sendError instanceof Error
-            ? sendError.message
-            : "Failed to send message.",
-        );
+        if (epoch !== requestEpochRef.current) return;
+        handleChatError(sendError, "Failed to send message.");
       } finally {
-        setSending(false);
+        if (epoch === requestEpochRef.current) setSending(false);
       }
     },
     [
@@ -329,14 +356,22 @@ export default function SupportChatWidget() {
       createConversation,
       draftMessage,
       guestEmail,
+      guestName,
+      handleChatError,
+      hydrated,
+      loading,
       loadMessages,
       orderReference,
+      persistGuestProfile,
+      sending,
       session?.user?.id,
+      status,
     ],
   );
 
   const closeConversation = useCallback(async () => {
-    if (!conversation?.id) return;
+    if (!conversation?.id || sending || loading || status === "loading") return;
+    const epoch = requestEpochRef.current;
     setSending(true);
     setError(null);
     try {
@@ -345,9 +380,6 @@ export default function SupportChatWidget() {
         rating,
         feedback: feedback.trim(),
       };
-      if (!session?.user?.id) {
-        body.guestEmail = guestEmail.trim().toLowerCase();
-      }
       const updated = await fetchJson<ChatConversation>(
         `/api/chat/conversations/${conversation.id}`,
         {
@@ -356,31 +388,35 @@ export default function SupportChatWidget() {
           body: JSON.stringify(body),
         },
       );
+      if (epoch !== requestEpochRef.current) return;
       setConversation(updated);
       setShowFeedback(false);
       setFeedback("");
       await loadMessages(updated.id, true);
     } catch (closeError) {
-      setError(
-        closeError instanceof Error
-          ? closeError.message
-          : "Failed to close chat.",
-      );
+      if (epoch !== requestEpochRef.current) return;
+      handleChatError(closeError, "Failed to close chat.");
     } finally {
-      setSending(false);
+      if (epoch === requestEpochRef.current) setSending(false);
     }
   }, [
     conversation?.id,
     feedback,
-    guestEmail,
+    handleChatError,
+    loading,
     loadMessages,
     rating,
-    session?.user?.id,
+    sending,
+    status,
   ]);
 
   if (!shouldRender) return null;
 
-  const guestReady = guestName.trim().length > 1 && guestEmail.includes("@");
+  const guestReady = guestName.trim().length > 1 && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(guestEmail.trim());
+  const sendDisabled = sending || loading || status === "loading" || !hydrated
+    || (!session?.user?.id && !conversation && !guestReady);
+  // Hide old account data immediately, before the identity-reset effect runs.
+  const visibleMessages = messageOwner === identity ? messages : [];
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -434,13 +470,49 @@ export default function SupportChatWidget() {
 
         {/* CHAT MESSAGES */}
         <div className="flex-1 overflow-y-auto bg-muted/30 p-4">
-          {messages.length === 0 ? (
+          {!session?.user?.id && !conversation && (
+            <div className="mb-4 space-y-2">
+              <label className="block text-xs font-medium" htmlFor="support-chat-guest-name">
+                Your name
+              </label>
+              <input
+                id="support-chat-guest-name"
+                autoComplete="name"
+                value={guestName}
+                maxLength={120}
+                onChange={(event) => setGuestName(event.target.value)}
+                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+              />
+              <label className="block text-xs font-medium" htmlFor="support-chat-guest-email">
+                Contact email
+              </label>
+              <input
+                id="support-chat-guest-email"
+                type="email"
+                autoComplete="email"
+                value={guestEmail}
+                maxLength={254}
+                onChange={(event) => setGuestEmail(event.target.value)}
+                className="w-full rounded-md border border-input bg-background px-3 py-2 text-sm"
+              />
+              <p className="text-xs text-muted-foreground">
+                This browser can reopen your chat for 7 days using a secure cookie. Email alone cannot restore old chats. If that cookie is lost or expires, start a new chat.
+              </p>
+            </div>
+          )}
+          {error && (
+            <p role="alert" className="mb-3 text-sm text-destructive">{error}</p>
+          )}
+          {loading && (
+            <p role="status" className="mb-3 text-xs text-muted-foreground">Loading secure chat…</p>
+          )}
+          {visibleMessages.length === 0 ? (
             <p className="text-sm text-muted-foreground">
               Send your first message. Our team will reply shortly.
             </p>
           ) : (
             <div className="space-y-3">
-              {messages.map((item) => {
+              {visibleMessages.map((item) => {
                 const mine = item.senderRole === role;
 
                 return (
@@ -483,6 +555,7 @@ export default function SupportChatWidget() {
               <button
                 key={action}
                 type="button"
+                disabled={sendDisabled}
                 className="rounded-full border border-primary/20 bg-primary/5 px-3 py-1 text-[11px] font-medium text-primary hover:bg-primary/10"
                 onClick={() => void sendMessage(action)}
               >
@@ -510,7 +583,7 @@ export default function SupportChatWidget() {
             <Button
               size="icon"
               onClick={() => void sendMessage()}
-              disabled={sending}
+              disabled={sendDisabled}
             >
               <Send className="h-4 w-4" />
             </Button>

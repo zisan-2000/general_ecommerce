@@ -1,11 +1,17 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { getServerSession } from "next-auth/next";
 import type { ChatPriority, ChatStatus, Prisma } from "@/generated/prisma";
 import { authOptions } from "@/lib/auth";
 import { logActivity } from "@/lib/activity-log";
 import { prisma } from "@/lib/prisma";
-import { canAccessConversation, getChatActor, normalizeGuestEmail } from "@/lib/chat";
+import { canAccessConversation, getChatActor } from "@/lib/chat";
 import { getAccessContext } from "@/lib/rbac";
+import {
+  chatJson,
+  readGuestChatSession,
+  rejectUnownedGuestChat,
+  rejectUnsafeChatMutation,
+} from "@/lib/chat-guest-session";
 
 const CHAT_STATUSES: ChatStatus[] = ["OPEN", "IN_PROGRESS", "CLOSED"];
 const CHAT_PRIORITIES: ChatPriority[] = ["LOW", "NORMAL", "HIGH"];
@@ -48,7 +54,9 @@ export async function GET(
       session?.user as { id?: string; role?: string } | undefined,
       { canManageChats: access.has("chats.manage") },
     );
-    const guestEmail = normalizeGuestEmail(new URL(request.url).searchParams.get("guestEmail"));
+    const guestSession = actor.userId || actor.isAdmin ? null : await readGuestChatSession(request);
+    const unownedGuest = rejectUnownedGuestChat(actor, guestSession, id);
+    if (unownedGuest) return unownedGuest;
 
     const conversation = await prisma.chatConversation.findUnique({
       where: { id },
@@ -59,17 +67,17 @@ export async function GET(
     });
 
     if (!conversation) {
-      return NextResponse.json({ error: "Conversation not found." }, { status: 404 });
+      return chatJson({ error: "Conversation not found." }, { status: 404 });
     }
 
-    if (!canAccessConversation(conversation, actor, guestEmail)) {
-      return NextResponse.json({ error: "Forbidden." }, { status: 403 });
+    if (!canAccessConversation(conversation, actor, guestSession)) {
+      return chatJson({ error: "Forbidden." }, { status: 403 });
     }
 
-    return NextResponse.json(conversation);
+    return chatJson(conversation);
   } catch (error) {
     console.error("CHAT CONVERSATION GET ERROR:", error);
-    return NextResponse.json({ error: "Failed to load conversation." }, { status: 500 });
+    return chatJson({ error: "Failed to load conversation." }, { status: 500 });
   }
 }
 
@@ -78,6 +86,8 @@ export async function PATCH(
   { params }: { params: Promise<{ id: string }> },
 ) {
   try {
+    const unsafeRequest = rejectUnsafeChatMutation(request);
+    if (unsafeRequest) return unsafeRequest;
     const { id } = await params;
     const session = await getServerSession(authOptions);
     const access = await getAccessContext(
@@ -89,7 +99,9 @@ export async function PATCH(
     );
     const body = await request.json().catch(() => ({}));
 
-    const guestEmail = normalizeGuestEmail(body.guestEmail);
+    const guestSession = actor.userId || actor.isAdmin ? null : await readGuestChatSession(request);
+    const unownedGuest = rejectUnownedGuestChat(actor, guestSession, id);
+    if (unownedGuest) return unownedGuest;
     const requestedStatus = typeof body.status === "string" ? body.status : null;
     const requestedPriority = typeof body.priority === "string" ? body.priority : null;
     const requestedAssignedToId =
@@ -113,11 +125,11 @@ export async function PATCH(
     });
 
     if (!conversation) {
-      return NextResponse.json({ error: "Conversation not found." }, { status: 404 });
+      return chatJson({ error: "Conversation not found." }, { status: 404 });
     }
 
-    if (!canAccessConversation(conversation, actor, guestEmail)) {
-      return NextResponse.json({ error: "Forbidden." }, { status: 403 });
+    if (!canAccessConversation(conversation, actor, guestSession)) {
+      return chatJson({ error: "Forbidden." }, { status: 403 });
     }
 
     const updateData: Prisma.ChatConversationUpdateInput = {};
@@ -141,14 +153,14 @@ export async function PATCH(
             select: { id: true },
           });
           if (!user) {
-            return NextResponse.json({ error: "Assigned user not found." }, { status: 400 });
+            return chatJson({ error: "Assigned user not found." }, { status: 400 });
           }
           updateData.assignedTo = { connect: { id: requestedAssignedToId } };
         }
       }
     } else {
       if (requestedStatus && requestedStatus !== "CLOSED") {
-        return NextResponse.json(
+        return chatJson(
           { error: "Only closing chat is allowed for customers." },
           { status: 403 },
         );
@@ -221,9 +233,9 @@ export async function PATCH(
       });
     }
 
-    return NextResponse.json(updated);
+    return chatJson(updated);
   } catch (error) {
     console.error("CHAT CONVERSATION PATCH ERROR:", error);
-    return NextResponse.json({ error: "Failed to update conversation." }, { status: 500 });
+    return chatJson({ error: "Failed to update conversation." }, { status: 500 });
   }
 }

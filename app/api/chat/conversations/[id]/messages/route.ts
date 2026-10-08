@@ -1,11 +1,17 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { getServerSession } from "next-auth/next";
 import type { ChatStatus } from "@/generated/prisma";
 import { authOptions } from "@/lib/auth";
 import { logActivity } from "@/lib/activity-log";
 import { prisma } from "@/lib/prisma";
-import { canAccessConversation, getChatActor, normalizeGuestEmail } from "@/lib/chat";
+import { canAccessConversation, getChatActor } from "@/lib/chat";
 import { getAccessContext } from "@/lib/rbac";
+import {
+  chatJson,
+  readGuestChatSession,
+  rejectUnownedGuestChat,
+  rejectUnsafeChatMutation,
+} from "@/lib/chat-guest-session";
 
 const CHAT_STATUSES: ChatStatus[] = ["OPEN", "IN_PROGRESS", "CLOSED"];
 
@@ -42,7 +48,9 @@ export async function GET(
     );
 
     const { searchParams } = new URL(request.url);
-    const guestEmail = normalizeGuestEmail(searchParams.get("guestEmail"));
+    const guestSession = actor.userId || actor.isAdmin ? null : await readGuestChatSession(request);
+    const unownedGuest = rejectUnownedGuestChat(actor, guestSession, id);
+    if (unownedGuest) return unownedGuest;
     const markRead = searchParams.get("markRead") !== "false";
     const limitRaw = Number(searchParams.get("limit") || "100");
     const limit = Number.isFinite(limitRaw) ? Math.min(Math.max(limitRaw, 1), 200) : 100;
@@ -56,11 +64,11 @@ export async function GET(
     });
 
     if (!conversation) {
-      return NextResponse.json({ error: "Conversation not found." }, { status: 404 });
+      return chatJson({ error: "Conversation not found." }, { status: 404 });
     }
 
-    if (!canAccessConversation(conversation, actor, guestEmail)) {
-      return NextResponse.json({ error: "Forbidden." }, { status: 403 });
+    if (!canAccessConversation(conversation, actor, guestSession)) {
+      return chatJson({ error: "Forbidden." }, { status: 403 });
     }
 
     const messagesDescending = await prisma.chatMessage.findMany({
@@ -85,10 +93,10 @@ export async function GET(
       });
     }
 
-    return NextResponse.json({ conversation, messages });
+    return chatJson({ conversation, messages });
   } catch (error) {
     console.error("CHAT MESSAGES GET ERROR:", error);
-    return NextResponse.json({ error: "Failed to load messages." }, { status: 500 });
+    return chatJson({ error: "Failed to load messages." }, { status: 500 });
   }
 }
 
@@ -97,6 +105,8 @@ export async function POST(
   { params }: { params: Promise<{ id: string }> },
 ) {
   try {
+    const unsafeRequest = rejectUnsafeChatMutation(request);
+    if (unsafeRequest) return unsafeRequest;
     const { id } = await params;
     const session = await getServerSession(authOptions);
     const access = await getAccessContext(
@@ -108,7 +118,9 @@ export async function POST(
     );
     const body = await request.json().catch(() => ({}));
 
-    const guestEmail = normalizeGuestEmail(body.guestEmail);
+    const guestSession = actor.userId || actor.isAdmin ? null : await readGuestChatSession(request);
+    const unownedGuest = rejectUnownedGuestChat(actor, guestSession, id);
+    if (unownedGuest) return unownedGuest;
     const message = toCleanText(body.message);
     const quickAction = toCleanText(body.quickAction, 80);
     const orderReference = toCleanText(body.orderReference, 60);
@@ -120,16 +132,16 @@ export async function POST(
     });
 
     if (!conversation) {
-      return NextResponse.json({ error: "Conversation not found." }, { status: 404 });
+      return chatJson({ error: "Conversation not found." }, { status: 404 });
     }
 
-    if (!canAccessConversation(conversation, actor, guestEmail)) {
-      return NextResponse.json({ error: "Forbidden." }, { status: 403 });
+    if (!canAccessConversation(conversation, actor, guestSession)) {
+      return chatJson({ error: "Forbidden." }, { status: 403 });
     }
 
     const composed = composeMessage(message, quickAction, orderReference);
     if (!composed && !attachmentUrl) {
-      return NextResponse.json({ error: "Message cannot be empty." }, { status: 400 });
+      return chatJson({ error: "Message cannot be empty." }, { status: 400 });
     }
 
     const nextStatus =
@@ -185,9 +197,9 @@ export async function POST(
       },
     });
 
-    return NextResponse.json(createdMessage, { status: 201 });
+    return chatJson(createdMessage, { status: 201 });
   } catch (error) {
     console.error("CHAT MESSAGES POST ERROR:", error);
-    return NextResponse.json({ error: "Failed to send message." }, { status: 500 });
+    return chatJson({ error: "Failed to send message." }, { status: 500 });
   }
 }
