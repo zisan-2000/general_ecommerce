@@ -6,6 +6,7 @@ import { logActivity } from "@/lib/activity-log";
 import { prisma } from "@/lib/prisma";
 import { canAccessConversation, getChatActor } from "@/lib/chat";
 import { getAccessContext } from "@/lib/rbac";
+import { publishChatChange } from "@/lib/pusher-server";
 import {
   chatJson,
   readGuestChatSession,
@@ -98,6 +99,9 @@ export async function PATCH(
       { canManageChats: access.has("chats.manage") },
     );
     const body = await request.json().catch(() => ({}));
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+      return chatJson({ error: "Invalid chat request." }, { status: 400 });
+    }
 
     const guestSession = actor.userId || actor.isAdmin ? null : await readGuestChatSession(request);
     const unownedGuest = rejectUnownedGuestChat(actor, guestSession, id);
@@ -208,6 +212,7 @@ export async function PATCH(
     });
 
     if (updated && (Object.keys(updateData).length > 0 || feedbackMessage)) {
+      await publishChatChange({ conversationId: id, kind: "updated" });
       const action =
         requestedStatus === "CLOSED"
           ? "close_chat_conversation"
@@ -230,7 +235,7 @@ export async function PATCH(
         },
         before: toConversationLogSnapshot(conversation),
         after: toConversationLogSnapshot(updated),
-      });
+      }).catch(() => console.warn("Support chat update saved; activity logging failed."));
     }
 
     return chatJson(updated);

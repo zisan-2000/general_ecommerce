@@ -10,6 +10,8 @@ import {
 } from "react";
 import { useSession } from "next-auth/react";
 import { usePathname } from "next/navigation";
+import { useSupportChatRealtime } from "@/hooks/use-support-chat-realtime";
+import { CHAT_CONNECTION_LABELS } from "@/lib/chat-realtime";
 import { AlertCircle, LoaderCircle, MessageCircle, RotateCcw, Send, ShieldCheck, XCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -18,7 +20,6 @@ import { CHAT_AVAILABILITY_POLL_MS, type ChatAvailability, isChatAvailability } 
 import {
   type ChatConversation,
   type ChatMessage,
-  type ChatMessagesResponse,
   type ChatOperation,
   type ChatUiError,
   ChatRequestError,
@@ -28,7 +29,8 @@ import {
   isChatConversation,
   isChatConversationList,
   isChatMessage,
-  isChatMessagesResponse,
+  mergeChatMessages,
+  synchronizeChatMessages,
 } from "@/lib/chat-client";
 import {
   type GuestChatProfile,
@@ -127,6 +129,8 @@ export default function SupportChatWidget() {
   const startRequestEpochRef = useRef<number | null>(null);
   const hydrationRequestRef = useRef(0);
   const requestEpochRef = useRef(0);
+  const messageDataRef = useRef<{ conversationId: string; messages: ChatMessage[] } | null>(null);
+  const refreshAvailabilityRef = useRef<() => void>(() => {});
   const [messageOwner, setMessageOwner] = useState<string | null>(null);
   const identity = status === "loading"
     ? "loading"
@@ -174,6 +178,7 @@ export default function SupportChatWidget() {
     pendingMessageRef.current = null;
     messageReadSequenceRef.current += 1;
     messageReadRef.current = null;
+    messageDataRef.current = null;
     setReadError(null);
     setActionError(null);
     setLoading(false);
@@ -191,11 +196,21 @@ export default function SupportChatWidget() {
     (fetchError: unknown, operation: ChatOperation, messageSent = false) => {
       const nextError = describeChatError(fetchError, operation, !session?.user?.id, messageSent);
       if (["authentication", "forbidden", "not-found"].includes(nextError.kind)) {
+        // A response that started before access was revoked must not repopulate
+        // this private thread after its channel/API authorization fails.
+        requestEpochRef.current += 1;
+        mutationEpochRef.current = null;
+        startRequestEpochRef.current = null;
+        setLoading(false);
+        setStarting(false);
+        setSending(false);
+        setClosing(false);
         setConversation(null);
         setMessages([]);
         setMessageOwner(null);
         messageReadSequenceRef.current += 1;
         messageReadRef.current = null;
+        messageDataRef.current = null;
         setRefreshing(false);
         setResolvedIdentity(session?.user?.id ? null : identity);
         if (operation === "read" && pendingMessageRef.current) {
@@ -217,15 +232,24 @@ export default function SupportChatWidget() {
       const sequence = ++messageReadSequenceRef.current;
       const promise = (async () => {
         try {
-          const data = await fetchChatJson<ChatMessagesResponse>(
-            `/api/chat/conversations/${conversationId}/messages?limit=120&markRead=true`,
-            undefined,
-            isChatMessagesResponse,
+          const isCurrent = () => epoch === requestEpochRef.current && sequence === messageReadSequenceRef.current;
+          const current = messageDataRef.current?.conversationId === conversationId
+            ? messageDataRef.current.messages : [];
+          const data = await synchronizeChatMessages(
+            conversationId, current,
+            (page) => {
+              const previous = messageDataRef.current?.conversationId === conversationId
+                ? messageDataRef.current.messages : [];
+              messageDataRef.current = { conversationId, messages: mergeChatMessages(previous, page.messages) };
+              setMessages((existing) => mergeChatMessages(
+                existing.filter((message) => message.conversationId === conversationId), page.messages,
+              ));
+            },
+            isCurrent,
           );
           if (data.conversation.id !== conversationId) throw new ChatRequestError("unexpected");
           if (epoch !== requestEpochRef.current || sequence !== messageReadSequenceRef.current) return false;
           setConversation(data.conversation);
-          setMessages(data.messages);
           setMessageOwner(identity);
           setResolvedIdentity(identity);
           setReadError(null);
@@ -233,7 +257,7 @@ export default function SupportChatWidget() {
           // proves delivery; equal message text is not a deduplication key.
           const pending = pendingMessageRef.current;
           if (pending?.conversationId === conversationId && mutationEpochRef.current === null
-            && data.messages.some((item) => item.id === pending.clientMessageId)) {
+            && messageDataRef.current?.messages.some((item) => item.id === pending.clientMessageId)) {
             pendingMessageRef.current = null;
             setDraftMessage((current) => current === pending.originalDraft ? "" : current);
             setActionError((current) => current?.operation === "send" ? null : current);
@@ -353,12 +377,17 @@ export default function SupportChatWidget() {
       }
     };
     setAgentStatus("CHECKING");
+    refreshAvailabilityRef.current = () => {
+      if (busy) recheckRequested = true;
+      else void poll();
+    };
     void poll();
     const interval = setInterval(() => void poll(), CHAT_AVAILABILITY_POLL_MS);
     document.addEventListener("visibilitychange", visibility);
     window.addEventListener("focus", visibility);
     return () => {
       disposed = true;
+      refreshAvailabilityRef.current = () => {};
       controller?.abort();
       clearInterval(interval);
       clearTimeout(expiryTimer);
@@ -367,13 +396,20 @@ export default function SupportChatWidget() {
     };
   }, [open, shouldRender]);
 
-  useEffect(() => {
-    if (!open || !conversation?.id || starting || sending || closing || resolvingConversation) return;
-    const interval = setInterval(() => {
-      void loadMessages(conversation.id, true);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [closing, conversation?.id, loadMessages, open, resolvingConversation, sending, starting]);
+  const { connectionStatus, remoteTyping, notifyTyping, requestSynchronize } = useSupportChatRealtime({
+    enabled: open && shouldRender && status !== "loading" && hydrated,
+    identity,
+    conversationId: resolvedIdentity === identity ? conversation?.id ?? null : null,
+    availability: true,
+    onSynchronize: async () => {
+      if (mutationEpochRef.current !== null || startRequestEpochRef.current !== null) return false;
+      if (conversation?.id && resolvedIdentity === identity) return loadMessages(conversation.id, true);
+      if (session?.user?.id) await hydrateConversation();
+      return true;
+    },
+    onAvailability: () => refreshAvailabilityRef.current(),
+    onAccessError: (error) => handleChatError(error, "read"),
+  });
 
   useEffect(() => {
     if (!open) return;
@@ -487,6 +523,7 @@ export default function SupportChatWidget() {
       }
 
       mutationEpochRef.current = epoch;
+      notifyTyping(false);
       messageReadSequenceRef.current += 1;
       messageReadRef.current = null;
       setRefreshing(false);
@@ -546,10 +583,11 @@ export default function SupportChatWidget() {
       } finally {
         if (mutationEpochRef.current === epoch) mutationEpochRef.current = null;
         if (epoch === requestEpochRef.current) setSending(false);
+        requestSynchronize();
       }
     },
     [closing, conversation?.id, createConversation, draftMessage, handleChatError, identity,
-      loading, loadMessages, orderReference, resolvingConversation, sending, session?.user?.id, starting],
+      loading, loadMessages, notifyTyping, orderReference, requestSynchronize, resolvingConversation, sending, session?.user?.id, starting],
   );
 
   const closeConversation = useCallback(async () => {
@@ -667,6 +705,10 @@ export default function SupportChatWidget() {
             </div>
           </SheetHeader>
         </div>
+
+        <p role="status" aria-live="polite" className="shrink-0 border-b px-4 py-1.5 text-[11px] text-muted-foreground">
+          {CHAT_CONNECTION_LABELS[connectionStatus]}
+        </p>
 
         {activeError && (
           <div
@@ -837,6 +879,7 @@ export default function SupportChatWidget() {
                         }`}
                       >
                         {formatChatTime(item.createdAt)}
+                        {mine ? ` · ${item.isRead ? "Read" : "Sent"}` : ""}
                       </p>
                     </div>
                   </div>
@@ -850,6 +893,9 @@ export default function SupportChatWidget() {
         {/* INPUT AREA */}
         {!resolvingConversation && !showGuestForm && (
           <div className="shrink-0 border-t bg-background p-3 space-y-3">
+            {remoteTyping && (
+              <p role="status" aria-live="polite" className="text-xs text-muted-foreground">Support agent is typing…</p>
+            )}
             {/* QUICK ACTIONS */}
             <div className="flex flex-wrap gap-2">
               {QUICK_ACTIONS.map((action) => (
@@ -874,7 +920,11 @@ export default function SupportChatWidget() {
                 aria-describedby={activeError ? "support-chat-request-error support-chat-send-status" : "support-chat-send-status"}
                 disabled={sendDisabled}
                 value={draftMessage}
-                onChange={(event) => setDraftMessage(event.target.value)}
+                onChange={(event) => {
+                  setDraftMessage(event.target.value);
+                  notifyTyping(Boolean(event.target.value.trim()));
+                }}
+                onBlur={() => notifyTyping(false)}
                 rows={2}
                 className="min-w-0 flex-1 resize-none rounded-md border border-input bg-background px-3 py-2 text-base sm:text-sm"
                 placeholder="Type your message..."

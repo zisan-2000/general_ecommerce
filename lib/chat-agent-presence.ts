@@ -1,6 +1,7 @@
 import "server-only";
 import { prisma } from "@/lib/prisma";
 import { getAccessContext } from "@/lib/rbac";
+import { publishChatAvailability } from "@/lib/pusher-server";
 import {
   CHAT_AGENT_IDLE_MS,
   CHAT_AGENT_LEASE_MS,
@@ -72,6 +73,7 @@ export async function updateAgentPresence(input: {
     FROM "ChatAgentPresence" WHERE "id" = ${input.id} AND "userId" = ${input.userId}
   `)[0];
   if (!row) return null;
+  if (input.action !== "heartbeat" || !requestedAvailable) await publishChatAvailability();
   return { available: remainingLease(row, Date.now()) > 0, revision: row.revision };
 }
 
@@ -103,4 +105,5 @@ export async function revokeAgentPresence(userId: string): Promise<void> {
     UPDATE "ChatAgentPresence" SET "isAvailable" = FALSE, "revision" = 2147483647,
       "updatedAt" = ${new Date()} WHERE "userId" = ${userId}
   `;
+  await publishChatAvailability();
 }

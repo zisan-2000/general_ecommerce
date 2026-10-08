@@ -17,6 +17,7 @@ export type ChatMessage = {
   message: string;
   attachmentUrl?: string | null;
   createdAt: string;
+  isRead?: boolean;
 };
 
 export type ChatErrorKind = "network" | "timeout" | "server" | "validation"
@@ -63,7 +64,8 @@ export function isChatMessage(value: unknown): value is ChatMessage {
   return isRecord(value) && typeof value.id === "string" && Boolean(value.id)
     && typeof value.conversationId === "string" && Boolean(value.conversationId)
     && typeof value.senderRole === "string" && typeof value.message === "string"
-    && typeof value.createdAt === "string";
+    && typeof value.createdAt === "string"
+    && (value.isRead === undefined || typeof value.isRead === "boolean");
 }
 
 export function createChatMessageId(): string {
@@ -82,10 +84,60 @@ export function isChatConversationList(value: unknown): value is ChatConversatio
   return Array.isArray(value) && value.every(isChatConversation);
 }
 
-export type ChatMessagesResponse = { conversation: ChatConversation; messages: ChatMessage[] };
+export type ChatMessagesResponse = {
+  conversation: ChatConversation; messages: ChatMessage[];
+  hasMore?: boolean; nextCursor?: string | null;
+};
 export function isChatMessagesResponse(value: unknown): value is ChatMessagesResponse {
   return isRecord(value) && isChatConversation(value.conversation)
-    && Array.isArray(value.messages) && value.messages.every(isChatMessage);
+    && Array.isArray(value.messages) && value.messages.every(isChatMessage)
+    && (value.hasMore === undefined || typeof value.hasMore === "boolean")
+    && (value.nextCursor === undefined || value.nextCursor === null || typeof value.nextCursor === "string");
+}
+
+export function mergeChatMessages<T extends { id: string; createdAt: string; isRead?: boolean }>(
+  current: T[], incoming: T[],
+): T[] {
+  const byId = new Map(current.map((message) => [message.id, message]));
+  for (const message of incoming) {
+    const previous = byId.get(message.id);
+    // Read confirmations are monotonic, even when HTTP responses arrive out of order.
+    byId.set(message.id, { ...previous, ...message, isRead: previous?.isRead || message.isRead });
+  }
+  return [...byId.values()].sort((a, b) => a.createdAt.localeCompare(b.createdAt) || a.id.localeCompare(b.id));
+}
+
+// Incremental pages first, then a current snapshot for actual read receipts/status.
+// Work is bounded per sync; the caller keeps merged progress for the next attempt.
+export async function synchronizeChatMessages(
+  conversationId: string, current: ChatMessage[],
+  onPage: (page: ChatMessagesResponse) => void,
+  isCurrent: () => boolean,
+): Promise<ChatMessagesResponse> {
+  let cursor = current.at(-1)?.id;
+  const markRead = typeof document !== "undefined" && document.visibilityState === "visible";
+  if (cursor) {
+    for (let pageNumber = 0; pageNumber < 10 && isCurrent(); pageNumber += 1) {
+      const page = await fetchChatJson<ChatMessagesResponse>(
+        `/api/chat/conversations/${encodeURIComponent(conversationId)}/messages?limit=200&markRead=${markRead}&afterId=${encodeURIComponent(cursor)}`,
+        undefined, isChatMessagesResponse,
+      );
+      if (page.conversation.id !== conversationId) throw new ChatRequestError("unexpected");
+      if (!isCurrent()) return page;
+      onPage(page);
+      if (!page.hasMore || !page.nextCursor) break;
+      cursor = page.nextCursor;
+      // Do not jump over unsynchronized pages by merging a later snapshot.
+      if (pageNumber === 9) return page;
+    }
+  }
+  const snapshot = await fetchChatJson<ChatMessagesResponse>(
+    `/api/chat/conversations/${encodeURIComponent(conversationId)}/messages?limit=200&markRead=${markRead}`,
+    undefined, isChatMessagesResponse,
+  );
+  if (snapshot.conversation.id !== conversationId) throw new ChatRequestError("unexpected");
+  if (isCurrent()) onPage(snapshot);
+  return snapshot;
 }
 
 function responseError(status: number, payload: unknown): ChatRequestError {

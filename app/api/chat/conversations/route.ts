@@ -6,6 +6,7 @@ import { logActivity } from "@/lib/activity-log";
 import { prisma } from "@/lib/prisma";
 import { getChatActor, normalizeGuestEmail } from "@/lib/chat";
 import { getAccessContext } from "@/lib/rbac";
+import { publishChatChange } from "@/lib/pusher-server";
 import { validateGuestChatProfile } from "@/lib/chat-guest-profile";
 import {
   chatJson,
@@ -173,6 +174,7 @@ export async function POST(request: NextRequest) {
     if (!actor.userId) requireGuestChatSessionSecret();
     const guestSession = actor.userId ? null : await readGuestChatSession(request);
     let createdGuestConversation = false;
+    let createdConversation = false;
     let conversation = !forceNew && (actor.userId || guestSession)
       ? await prisma.chatConversation.findFirst({
           where: actor.userId
@@ -193,6 +195,7 @@ export async function POST(request: NextRequest) {
         },
       });
       createdGuestConversation = !actor.userId;
+      createdConversation = true;
 
       await logActivity({
         action: "create_chat_conversation",
@@ -215,7 +218,7 @@ export async function POST(request: NextRequest) {
           status: conversation.status,
           priority: conversation.priority,
         },
-      });
+      }).catch(() => console.warn("Support chat conversation saved; activity logging failed."));
     }
 
     const composed = composeMessage(message, quickAction, orderReference);
@@ -252,6 +255,9 @@ export async function POST(request: NextRequest) {
     // Only a newly created guest chat earns a capability; never claim legacy chats
     // by email and never extend a reused session's absolute expiry.
     if (createdGuestConversation) await setGuestChatSession(response, conversation.id);
+    if (createdConversation || composed.length > 0) {
+      await publishChatChange({ conversationId: conversation.id, kind: createdConversation ? "created" : "message" });
+    }
     return response;
   } catch (error) {
     console.error("CHAT CONVERSATIONS POST ERROR:", error);

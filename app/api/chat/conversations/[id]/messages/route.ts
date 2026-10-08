@@ -6,6 +6,7 @@ import { logActivity } from "@/lib/activity-log";
 import { prisma } from "@/lib/prisma";
 import { canAccessConversation, getChatActor } from "@/lib/chat";
 import { getAccessContext } from "@/lib/rbac";
+import { publishChatChange } from "@/lib/pusher-server";
 import {
   chatJson,
   readGuestChatSession,
@@ -53,7 +54,7 @@ export async function GET(
     if (unownedGuest) return unownedGuest;
     const markRead = searchParams.get("markRead") !== "false";
     const limitRaw = Number(searchParams.get("limit") || "100");
-    const limit = Number.isFinite(limitRaw) ? Math.min(Math.max(limitRaw, 1), 200) : 100;
+    const limit = Number.isFinite(limitRaw) ? Math.floor(Math.min(Math.max(limitRaw, 1), 200)) : 100;
 
     const conversation = await prisma.chatConversation.findUnique({
       where: { id },
@@ -71,29 +72,48 @@ export async function GET(
       return chatJson({ error: "Forbidden." }, { status: 403 });
     }
 
-    const messagesDescending = await prisma.chatMessage.findMany({
-      where: { conversationId: id },
-      take: limit,
-      orderBy: { createdAt: "desc" },
+    // Ordered incremental catch-up avoids losing messages after a long disconnect.
+    const afterId = searchParams.get("afterId");
+    const anchor = afterId ? await prisma.chatMessage.findUnique({
+      where: { id: afterId }, select: { conversationId: true, createdAt: true, id: true },
+    }) : null;
+    if (afterId && (!anchor || anchor.conversationId !== id)) {
+      return chatJson({ error: "Invalid message cursor." }, { status: 400 });
+    }
+    const rows = await prisma.chatMessage.findMany({
+      where: {
+        conversationId: id,
+        ...(anchor ? { OR: [
+          { createdAt: { gt: anchor.createdAt } },
+          { createdAt: anchor.createdAt, id: { gt: anchor.id } },
+        ] } : {}),
+      },
+      take: limit + 1,
+      orderBy: [{ createdAt: anchor ? "asc" : "desc" }, { id: anchor ? "asc" : "desc" }],
       include: {
         sender: { select: { id: true, name: true, email: true } },
       },
     });
 
-    const messages = [...messagesDescending].reverse();
+    const hasMore = rows.length > limit;
+    const page = rows.slice(0, limit);
+    const messages = anchor ? page : page.reverse();
 
     if (markRead) {
-      await prisma.chatMessage.updateMany({
+      const read = await prisma.chatMessage.updateMany({
         where: {
           conversationId: id,
           isRead: false,
           senderRole: actor.isAdmin ? { not: "admin" } : "admin",
+          // Only messages actually returned to this reader are confirmed read.
+          id: { in: messages.map((message) => message.id) },
         },
         data: { isRead: true },
       });
+      if (read.count > 0) await publishChatChange({ conversationId: id, kind: "read" });
     }
 
-    return chatJson({ conversation, messages });
+    return chatJson({ conversation, messages, hasMore, nextCursor: messages.at(-1)?.id ?? afterId ?? null });
   } catch (error) {
     console.error("CHAT MESSAGES GET ERROR:", error);
     return chatJson({ error: "Failed to load messages." }, { status: 500 });
@@ -172,6 +192,7 @@ export async function POST(
         || existing.attachmentUrl !== (attachmentUrl || null)) {
         return chatJson({ error: "Message identifier conflict.", code: "MESSAGE_ID_CONFLICT" }, { status: 409 });
       }
+      await publishChatChange({ conversationId: id, kind: "message", messageId: existing.id });
       return chatJson(existing);
     };
     const replay = await replayMessage();
@@ -220,6 +241,8 @@ export async function POST(
     });
     if (createdMessage instanceof Response) return createdMessage;
 
+    await publishChatChange({ conversationId: id, kind: "message", messageId: createdMessage.id });
+
     await logActivity({
       action: actor.isAdmin ? "send_chat_reply" : "send_chat_message",
       entity: "chat",
@@ -239,7 +262,7 @@ export async function POST(
         senderRole: createdMessage.senderRole,
         attachmentUrl: createdMessage.attachmentUrl,
       },
-    });
+    }).catch(() => console.warn("Support chat message saved; activity logging failed."));
 
     return chatJson(createdMessage, { status: 201 });
   } catch (error) {
