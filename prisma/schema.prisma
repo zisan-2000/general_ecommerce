@@ -46,6 +46,7 @@ model User {
   assignedChats                             ChatConversation[]                     @relation("AssignedChats")
   userChats                                 ChatConversation[]                     @relation("UserChats")
   chatMessages                              ChatMessage[]
+  chatAgentPresences                         ChatAgentPresence[]
   deliveryProofs                            DeliveryProof[]
   inventoryReservations                     InventoryReservation[]
   orders                                    Order[]
@@ -4310,6 +4311,20 @@ model GeoIpCache {
 
   @@index([updatedAt])
   @@map("geo_ip_cache")
+}
+
+model ChatAgentPresence {
+  id              String   @id @db.VarChar(36)
+  userId          String
+  isAvailable     Boolean  @default(false)
+  revision        Int      @default(0)
+  lastHeartbeatAt DateTime @db.Timestamp(3)
+  lastActivityAt  DateTime @db.Timestamp(3)
+  updatedAt       DateTime @updatedAt @db.Timestamp(3)
+  user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([isAvailable, lastHeartbeatAt])
+  @@index([userId])
 }
 
 model ChatConversation {

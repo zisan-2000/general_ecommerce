@@ -1,11 +1,19 @@
 "use client";
 
-import { useCallback, useEffect, useMemo, useState } from "react";
+import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useSession } from "next-auth/react";
 import { useTranslations } from "next-intl";
-import { Clock3, Send } from "lucide-react";
+import { Clock3, LoaderCircle, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
+import AgentAvailabilityControl from "@/components/chat/AgentAvailabilityControl";
+import { useSupportChatRealtime } from "@/hooks/use-support-chat-realtime";
+import { CHAT_CONNECTION_LABELS } from "@/lib/chat-realtime";
+import {
+  type ChatMessage as BaseChatMessage, ChatRequestError, createChatMessageId,
+  describeChatError, fetchChatJson, isChatConversationList, isChatMessage,
+  mergeChatMessages, synchronizeChatMessages,
+} from "@/lib/chat-client";
 
 type ChatStatus = "OPEN" | "IN_PROGRESS" | "CLOSED";
 type ChatPriority = "LOW" | "NORMAL" | "HIGH";
@@ -34,25 +42,9 @@ type ChatConversationListItem = {
   _count: { messages: number };
 };
 
-type ChatMessage = {
-  id: string;
-  senderRole: string;
-  message: string;
-  createdAt: string;
-  attachmentUrl?: string | null;
+type ChatMessage = BaseChatMessage & {
   sender?: { id: string; name?: string | null; email?: string | null } | null;
 };
-
-async function fetchJson<T>(url: string, init?: RequestInit): Promise<T> {
-  const response = await fetch(url, init);
-  const payload = await response.json().catch(() => ({}));
-  if (!response.ok) {
-    throw new Error(
-      typeof payload?.error === "string" ? payload.error : "Request failed.",
-    );
-  }
-  return payload as T;
-}
 
 interface ChatsQueryState {
   statusFilter: "ALL" | ChatStatus;
@@ -60,15 +52,6 @@ interface ChatsQueryState {
   assignmentFilter: "all" | "me" | "unassigned";
   selectedId: string | null;
 }
-
-const conversationsCache = new Map<string, ChatConversationListItem[]>();
-const messagesCache = new Map<string, ChatMessage[]>();
-let lastChatsQueryState: ChatsQueryState = {
-  statusFilter: "ALL",
-  priorityFilter: "ALL",
-  assignmentFilter: "all",
-  selectedId: null,
-};
 
 const getConversationsCacheKey = (query: Omit<ChatsQueryState, "selectedId">) =>
   JSON.stringify({
@@ -89,71 +72,99 @@ export default function AdminChatsPage() {
     [t],
   );
 
-  const initialConversationsCacheKey = getConversationsCacheKey({
-    statusFilter: lastChatsQueryState.statusFilter,
-    priorityFilter: lastChatsQueryState.priorityFilter,
-    assignmentFilter: lastChatsQueryState.assignmentFilter,
-  });
-  const initialConversations =
-    conversationsCache.get(initialConversationsCacheKey) ?? [];
-
   const [conversations, setConversations] = useState<
     ChatConversationListItem[]
-  >(() => initialConversations);
-  const [selectedId, setSelectedId] = useState<string | null>(
-    lastChatsQueryState.selectedId,
-  );
-  const [messages, setMessages] = useState<ChatMessage[]>(
-    () =>
-      (lastChatsQueryState.selectedId
-        ? messagesCache.get(lastChatsQueryState.selectedId)
-        : undefined) ?? [],
-  );
+  >([]);
+  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [draft, setDraft] = useState("");
   const [statusFilter, setStatusFilter] = useState<"ALL" | ChatStatus>(
-    lastChatsQueryState.statusFilter,
+    "ALL",
   );
   const [priorityFilter, setPriorityFilter] = useState<"ALL" | ChatPriority>(
-    lastChatsQueryState.priorityFilter,
+    "ALL",
   );
   const [assignmentFilter, setAssignmentFilter] = useState<
     "all" | "me" | "unassigned"
-  >(lastChatsQueryState.assignmentFilter);
-  const [loadingList, setLoadingList] = useState(
-    () => initialConversations.length === 0,
-  );
+  >("all");
+  const [loadingList, setLoadingList] = useState(true);
   const [loadingMessages, setLoadingMessages] = useState(false);
   const [saving, setSaving] = useState(false);
+  const [sendingReply, setSendingReply] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [viewIdentity, setViewIdentity] = useState<string | null>(null);
+  const [messageConversationId, setMessageConversationId] = useState<string | null>(null);
+  const epochRef = useRef(0);
+  const selectedRef = useRef<string | null>(null);
+  const listSequence = useRef(0);
+  const messageSequence = useRef(0);
+  const mutationRef = useRef<number | null>(null);
+  const messagesCache = useRef(new Map<string, ChatMessage[]>());
+  const draftCache = useRef(new Map<string, string>());
+  const pendingReplies = useRef(new Map<string, { id: string; text: string; originalDraft: string }>());
+  const messageRequest = useRef<{ id: string; epoch: number; sequence: number; promise: Promise<boolean> } | null>(null);
+  const queryKey = getConversationsCacheKey({ statusFilter, priorityFilter, assignmentFilter });
+  const queryRef = useRef(queryKey);
+
+  const handleFailure = useCallback((failure: unknown, operation: "read" | "send" | "close") => {
+    setError(describeChatError(failure, operation, false).message);
+    if (failure instanceof ChatRequestError && [401, 403].includes(failure.status ?? 0)) {
+      epochRef.current += 1;
+      messagesCache.current.clear();
+      draftCache.current.clear();
+      pendingReplies.current.clear();
+      mutationRef.current = null;
+      messageRequest.current = null;
+      setSaving(false);
+      setSendingReply(false);
+      setLoadingMessages(false);
+      setLoadingList(false);
+      setMessages([]);
+      setConversations([]);
+      setSelectedId(null);
+      setViewIdentity(null);
+    }
+  }, []);
+
+  useEffect(() => {
+    epochRef.current += 1;
+    messagesCache.current.clear();
+    draftCache.current.clear();
+    pendingReplies.current.clear();
+    mutationRef.current = null;
+    messageRequest.current = null;
+    selectedRef.current = null;
+    setConversations([]);
+    setMessages([]);
+    setSelectedId(null);
+    setMessageConversationId(null);
+    setDraft("");
+    setError(null);
+    setSaving(false);
+    setSendingReply(false);
+    setViewIdentity(adminId);
+    return () => { epochRef.current += 1; };
+  }, [adminId]);
+
+  useEffect(() => { queryRef.current = queryKey; }, [queryKey]);
 
   const selectedConversation = useMemo(
-    () => conversations.find((item) => item.id === selectedId) ?? null,
-    [conversations, selectedId],
+    () => viewIdentity === adminId ? conversations.find((item) => item.id === selectedId) ?? null : null,
+    [adminId, conversations, selectedId, viewIdentity],
   );
 
   const loadConversations = useCallback(
-    async (silent = true, force = false) => {
+    async (silent = true) => {
+      if (!adminId) return false;
+      // Always request current DB state. Component-local message caches are only
+      // for thread history, never a substitute for list revalidation.
+      const epoch = epochRef.current;
+      const sequence = ++listSequence.current;
       const cacheKey = getConversationsCacheKey({
         statusFilter,
         priorityFilter,
         assignmentFilter,
       });
-
-      if (!force && !silent) {
-        const cached = conversationsCache.get(cacheKey);
-        if (cached) {
-          setConversations(cached);
-          setSelectedId((prev) => {
-            if (!prev && cached.length > 0) return cached[0].id;
-            if (prev && !cached.some((item) => item.id === prev)) {
-              return cached[0]?.id ?? null;
-            }
-            return prev;
-          });
-          setLoadingList(false);
-          return;
-        }
-      }
 
       if (!silent) setLoadingList(true);
       try {
@@ -163,11 +174,14 @@ export default function AdminChatsPage() {
         if (statusFilter !== "ALL") params.set("status", statusFilter);
         if (priorityFilter !== "ALL") params.set("priority", priorityFilter);
 
-        const list = await fetchJson<ChatConversationListItem[]>(
+        const list = await fetchChatJson<ChatConversationListItem[]>(
           `/api/chat/conversations?${params.toString()}`,
+          undefined,
+          (value): value is ChatConversationListItem[] => isChatConversationList(value)
+            && value.every((item) => "_count" in item && !!item._count && typeof item._count === "object"
+              && "messages" in item._count && typeof item._count.messages === "number"),
         );
-
-        conversationsCache.set(cacheKey, list);
+        if (epoch !== epochRef.current || sequence !== listSequence.current || cacheKey !== queryRef.current) return false;
         setConversations(list);
         setSelectedId((prev) => {
           if (!prev && list.length > 0) return list[0].id;
@@ -175,54 +189,58 @@ export default function AdminChatsPage() {
             return list[0]?.id ?? null;
           return prev;
         });
+        setError((current) => current?.startsWith("We could not refresh") ? null : current);
+        return true;
       } catch (fetchError) {
-        setError(
-          fetchError instanceof Error
-            ? fetchError.message
-            : t("errors.loadChats"),
-        );
+        if (epoch === epochRef.current && sequence === listSequence.current) handleFailure(fetchError, "read");
+        return false;
       } finally {
-        if (!silent) setLoadingList(false);
+        if (epoch === epochRef.current && sequence === listSequence.current) setLoadingList(false);
       }
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [assignmentFilter, priorityFilter, statusFilter],
+    [adminId, assignmentFilter, handleFailure, priorityFilter, statusFilter],
   );
 
   const loadMessages = useCallback(
-    async (conversationId: string, silent = true) => {
-      if (!silent) {
-        const cached = messagesCache.get(conversationId);
-        if (cached) {
-          setMessages(cached);
-          setLoadingMessages(false);
-          return;
-        }
+    (conversationId: string, silent = true): Promise<boolean> => {
+      const epoch = epochRef.current;
+      if (messageRequest.current?.id === conversationId && messageRequest.current.epoch === epoch) {
+        return messageRequest.current.promise;
       }
-
+      const sequence = ++messageSequence.current;
+      const isCurrent = () => epoch === epochRef.current && sequence === messageSequence.current
+        && selectedRef.current === conversationId;
       if (!silent) setLoadingMessages(true);
-      try {
-        const data = await fetchJson<{
-          messages: ChatMessage[];
-          conversation: ChatConversationListItem;
-        }>(
-          `/api/chat/conversations/${conversationId}/messages?limit=200&markRead=true`,
-        );
-
-        messagesCache.set(conversationId, data.messages);
-        setMessages(data.messages);
-      } catch (fetchError) {
-        setError(
-          fetchError instanceof Error
-            ? fetchError.message
-            : t("errors.loadMessages"),
-        );
-      } finally {
-        if (!silent) setLoadingMessages(false);
-      }
+      const promise = (async () => {
+        try {
+          await synchronizeChatMessages(conversationId, messagesCache.current.get(conversationId) ?? [], (page) => {
+            const merged = mergeChatMessages(messagesCache.current.get(conversationId) ?? [], page.messages);
+            messagesCache.current.set(conversationId, merged);
+            setMessages((current) => mergeChatMessages(
+              current.filter((message) => message.conversationId === conversationId), page.messages,
+            ));
+            setMessageConversationId(conversationId);
+            const pending = pendingReplies.current.get(conversationId);
+            if (pending && mutationRef.current === null && merged.some((message) => message.id === pending.id)) {
+              pendingReplies.current.delete(conversationId);
+              setDraft((current) => current === pending.originalDraft ? "" : current);
+              if (draftCache.current.get(conversationId) === pending.originalDraft) draftCache.current.delete(conversationId);
+              setError(null);
+            }
+          }, isCurrent);
+          return isCurrent();
+        } catch (fetchError) {
+          if (isCurrent()) handleFailure(fetchError, "read");
+          return false;
+        } finally {
+          if (messageRequest.current?.sequence === sequence) messageRequest.current = null;
+          if (isCurrent()) setLoadingMessages(false);
+        }
+      })();
+      messageRequest.current = { id: conversationId, epoch, sequence, promise };
+      return promise;
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [],
+    [handleFailure],
   );
 
   useEffect(() => {
@@ -230,26 +248,30 @@ export default function AdminChatsPage() {
   }, [loadConversations]);
 
   useEffect(() => {
-    lastChatsQueryState = {
-      statusFilter,
-      priorityFilter,
-      assignmentFilter,
-      selectedId,
-    };
-  }, [assignmentFilter, priorityFilter, selectedId, statusFilter]);
-
-  useEffect(() => {
+    selectedRef.current = selectedId;
+    messageSequence.current += 1;
+    messageRequest.current = null;
+    setMessages(selectedId ? messagesCache.current.get(selectedId) ?? [] : []);
+    setMessageConversationId(selectedId);
+    setDraft(selectedId ? draftCache.current.get(selectedId) ?? "" : "");
+    setLoadingMessages(false);
     if (!selectedId) return;
     void loadMessages(selectedId, false);
   }, [loadMessages, selectedId]);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      void loadConversations(true);
-      if (selectedId) void loadMessages(selectedId, true);
-    }, 5000);
-    return () => clearInterval(interval);
-  }, [loadConversations, loadMessages, selectedId]);
+  const { connectionStatus, remoteTyping, notifyTyping, requestSynchronize } = useSupportChatRealtime({
+    enabled: Boolean(adminId && viewIdentity === adminId), identity: adminId ?? "signed-out",
+    conversationId: selectedId, admin: true,
+    onSynchronize: async () => {
+      if (mutationRef.current !== null) return false;
+      const results = await Promise.all([
+        loadConversations(true),
+        selectedId ? loadMessages(selectedId, true) : Promise.resolve(true),
+      ]);
+      return results.every(Boolean);
+    },
+    onAccessError: (failure) => handleFailure(failure, "read"),
+  });
 
   const updateConversation = useCallback(
     async (
@@ -259,54 +281,78 @@ export default function AdminChatsPage() {
         assignedToId: string | null;
       }>,
     ) => {
-      if (!selectedId) return;
+      if (!selectedId || mutationRef.current !== null) return;
+      const epoch = epochRef.current;
+      mutationRef.current = epoch;
       setSaving(true);
       try {
-        await fetchJson(`/api/chat/conversations/${selectedId}`, {
+        await fetchChatJson(`/api/chat/conversations/${selectedId}`, {
           method: "PATCH",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload),
         });
-        conversationsCache.clear();
-        await loadConversations(true, true);
+        if (epoch !== epochRef.current) return;
+        setError(null);
+        await loadConversations(true);
       } catch (updateError) {
-        setError(
-          updateError instanceof Error
-            ? updateError.message
-            : t("errors.updateConversation"),
-        );
+        if (epoch === epochRef.current) handleFailure(updateError, "close");
       } finally {
-        setSaving(false);
+        if (mutationRef.current === epoch) mutationRef.current = null;
+        if (epoch === epochRef.current) setSaving(false);
+        requestSynchronize();
       }
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    [loadConversations, selectedId],
+    [handleFailure, loadConversations, requestSynchronize, selectedId],
   );
 
   const sendReply = useCallback(async () => {
     const text = draft.trim();
-    if (!selectedId || !text) return;
-
+    if (!selectedId || !text || mutationRef.current !== null) return;
+    if (text.length > 4000) {
+      handleFailure(new ChatRequestError("validation", 400, "MESSAGE_TOO_LONG"), "send");
+      return;
+    }
+    const epoch = epochRef.current;
+    const conversationId = selectedId;
+    mutationRef.current = epoch;
+    messageSequence.current += 1;
+    messageRequest.current = null;
+    notifyTyping(false);
     setSaving(true);
+    setSendingReply(true);
     try {
-      await fetchJson(`/api/chat/conversations/${selectedId}/messages`, {
+      const previous = pendingReplies.current.get(conversationId);
+      const pending = previous?.text === text ? previous
+        : { id: createChatMessageId(), text, originalDraft: draft };
+      pendingReplies.current.set(conversationId, pending);
+      const created = await fetchChatJson<ChatMessage>(`/api/chat/conversations/${conversationId}/messages`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: text }),
-      });
-      setDraft("");
-      messagesCache.delete(selectedId);
-      conversationsCache.clear();
-      await loadMessages(selectedId, true);
-      await loadConversations(true, true);
+        body: JSON.stringify({ message: pending.text, clientMessageId: pending.id }),
+      }, isChatMessage);
+      if (created.id !== pending.id || created.conversationId !== conversationId) throw new ChatRequestError("unexpected");
+      if (epoch !== epochRef.current) return;
+      pendingReplies.current.delete(conversationId);
+      if (draftCache.current.get(conversationId) === pending.originalDraft) draftCache.current.delete(conversationId);
+      if (selectedRef.current === conversationId) {
+        setDraft((current) => current === pending.originalDraft ? "" : current);
+        setMessages((current) => mergeChatMessages(current, [created]));
+      }
+      setError(null);
+      if (selectedRef.current === conversationId) await loadMessages(conversationId, true);
+      await loadConversations(true);
     } catch (sendError) {
-      setError(
-        sendError instanceof Error ? sendError.message : t("errors.sendReply"),
-      );
+      if (epoch === epochRef.current) handleFailure(sendError, "send");
     } finally {
-      setSaving(false);
+      if (mutationRef.current === epoch) mutationRef.current = null;
+      if (epoch === epochRef.current) setSaving(false);
+      if (epoch === epochRef.current) setSendingReply(false);
+      requestSynchronize();
     }
-  }, [draft, loadConversations, loadMessages, selectedId, t]);
+  }, [draft, handleFailure, loadConversations, loadMessages, notifyTyping, requestSynchronize, selectedId]);
+
+  const visibleConversations = viewIdentity === adminId ? conversations : [];
+  const visibleMessages = viewIdentity === adminId && messageConversationId === selectedId ? messages : [];
 
   return (
     <div className="space-y-4 p-4 md:p-6">
@@ -319,9 +365,18 @@ export default function AdminChatsPage() {
         </p>
       </div>
 
+      <AgentAvailabilityControl key={adminId ?? "signed-out"} userId={adminId} />
+      <p role="status" aria-live="polite" className="text-xs text-muted-foreground">
+        {CHAT_CONNECTION_LABELS[adminId && viewIdentity === adminId ? connectionStatus : "denied"]}
+      </p>
+
       {error ? (
-        <Card className="border-destructive bg-destructive/10 p-3 text-sm text-destructive">
+        <Card role="alert" className="border-destructive bg-destructive/10 p-3 text-sm text-destructive">
           {error}
+          <Button className="ml-3" size="sm" variant="outline" disabled={saving}
+            onClick={() => { requestSynchronize(); void loadConversations(false); }}>
+            Refresh chat
+          </Button>
         </Card>
       ) : null}
 
@@ -364,7 +419,7 @@ export default function AdminChatsPage() {
           <option value="unassigned">{t("filters.unassigned")}</option>
         </select>
         <Button
-          onClick={() => void loadConversations(false, true)}
+          onClick={() => void loadConversations(false)}
           disabled={loadingList}
         >
           {t("actions.refresh")}
@@ -374,15 +429,15 @@ export default function AdminChatsPage() {
       <div className="grid gap-4 lg:grid-cols-[360px_minmax(0,1fr)]">
         <Card className="h-[72vh] overflow-hidden">
           <div className="border-b p-3 text-sm font-semibold text-foreground">
-            {t("conversations.title", { count: conversations.length })}
+            {t("conversations.title", { count: visibleConversations.length })}
           </div>
           <div className="h-[calc(72vh-52px)] overflow-y-auto">
-            {conversations.length === 0 ? (
+            {visibleConversations.length === 0 ? (
               <p className="p-3 text-sm text-muted-foreground">
                 {t("conversations.empty")}
               </p>
             ) : (
-              conversations.map((item) => (
+              visibleConversations.map((item) => (
                 <button
                   key={item.id}
                   type="button"
@@ -509,16 +564,16 @@ export default function AdminChatsPage() {
               </div>
 
               <div className="flex-1 space-y-3 overflow-y-auto bg-muted p-4">
-                {loadingMessages && messages.length === 0 ? (
+                {loadingMessages && visibleMessages.length === 0 ? (
                   <p className="text-sm text-muted-foreground">
                     {t("thread.loadingMessages")}
                   </p>
-                ) : messages.length === 0 ? (
+                ) : visibleMessages.length === 0 ? (
                   <p className="text-sm text-muted-foreground">
                     {t("thread.noMessages")}
                   </p>
                 ) : (
-                  messages.map((message) => {
+                  visibleMessages.map((message) => {
                     const mine = message.senderRole === "admin";
                     return (
                       <div
@@ -564,6 +619,7 @@ export default function AdminChatsPage() {
                                 minute: "2-digit",
                               },
                             )}
+                            {mine ? ` · ${message.isRead ? "Read" : "Sent"}` : ""}
                           </p>
                         </div>
                       </div>
@@ -573,15 +629,24 @@ export default function AdminChatsPage() {
               </div>
 
               <div className="border-t p-3">
+                {remoteTyping && <p role="status" aria-live="polite" className="mb-2 text-xs text-muted-foreground">Customer is typing…</p>}
                 <div className="flex items-end gap-2">
                   <textarea
                     value={draft}
-                    onChange={(event) => setDraft(event.target.value)}
+                    disabled={saving || loadingMessages}
+                    aria-label={t("thread.replyPlaceholder")}
+                    onChange={(event) => {
+                      setDraft(event.target.value);
+                      if (selectedId) draftCache.current.set(selectedId, event.target.value);
+                      notifyTyping(Boolean(event.target.value.trim()));
+                    }}
+                    onBlur={() => notifyTyping(false)}
                     rows={2}
                     className="min-h-[44px] flex-1 resize-none rounded-md border border-input bg-background px-3 py-2 text-sm"
                     placeholder={t("thread.replyPlaceholder")}
                     onKeyDown={(event) => {
                       if (event.key === "Enter" && !event.shiftKey) {
+                        if (event.nativeEvent.isComposing) return;
                         event.preventDefault();
                         void sendReply();
                       }
@@ -590,11 +655,15 @@ export default function AdminChatsPage() {
                   <Button
                     size="icon"
                     onClick={() => void sendReply()}
-                    disabled={saving || !draft.trim()}
+                    aria-label={sendingReply ? "Sending reply" : "Send reply"}
+                    disabled={saving || loadingMessages || !draft.trim()}
                   >
-                    <Send className="h-4 w-4" />
+                    {sendingReply ? <LoaderCircle aria-hidden="true" className="h-4 w-4 animate-spin" /> : <Send aria-hidden="true" className="h-4 w-4" />}
                   </Button>
                 </div>
+                <p role="status" aria-live="polite" className="mt-2 text-xs text-muted-foreground">
+                  {sendingReply ? "Sending reply…" : saving ? "Saving chat change…" : "Enter to send · Shift+Enter for a new line"}
+                </p>
               </div>
             </div>
           )}

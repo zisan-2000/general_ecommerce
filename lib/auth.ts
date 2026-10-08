@@ -7,6 +7,8 @@ import bcrypt from "bcryptjs";
 import { getAccessContext } from "@/lib/rbac";
 import { logActivity } from "@/lib/activity-log";
 import { syncDeliveryManWarehouseAccess } from "@/lib/delivery-man-access";
+import { revokeAgentPresence } from "@/lib/chat-agent-presence";
+import { logChatAvailability } from "@/lib/chat-availability-diagnostics";
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(db as never),
@@ -78,11 +80,22 @@ export const authOptions: NextAuthOptions = {
   },
 
   events: {
+    // Signing in neither opts into chat nor revokes another valid workspace.
+    // Stale workspaces expire through their existing heartbeat and idle leases.
     async signOut(message) {
       const tokenUserId =
         typeof message.token?.id === "string" ? message.token.id : null;
       const tokenEmail =
         typeof message.token?.email === "string" ? message.token.email : null;
+
+      if (tokenUserId) {
+        try {
+          await revokeAgentPresence(tokenUserId);
+        } catch {
+          // Presence setup must not break logout or expose raw database errors.
+          logChatAvailability("presence-revoke-failed", { reason: "logout" });
+        }
+      }
 
       await logActivity({
         action: "logout",

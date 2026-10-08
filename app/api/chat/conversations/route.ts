@@ -1,4 +1,4 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 import { getServerSession } from "next-auth/next";
 import { Prisma, type ChatPriority, type ChatStatus } from "@/generated/prisma";
 import { authOptions } from "@/lib/auth";
@@ -6,6 +6,15 @@ import { logActivity } from "@/lib/activity-log";
 import { prisma } from "@/lib/prisma";
 import { getChatActor, normalizeGuestEmail } from "@/lib/chat";
 import { getAccessContext } from "@/lib/rbac";
+import { publishChatChange } from "@/lib/pusher-server";
+import { validateGuestChatProfile } from "@/lib/chat-guest-profile";
+import {
+  chatJson,
+  readGuestChatSession,
+  rejectUnsafeChatMutation,
+  requireGuestChatSessionSecret,
+  setGuestChatSession,
+} from "@/lib/chat-guest-session";
 
 const CHAT_STATUSES: ChatStatus[] = ["OPEN", "IN_PROGRESS", "CLOSED"];
 const CHAT_PRIORITIES: ChatPriority[] = ["LOW", "NORMAL", "HIGH"];
@@ -44,7 +53,6 @@ export async function GET(request: NextRequest) {
     );
     const { searchParams } = new URL(request.url);
 
-    const guestEmail = normalizeGuestEmail(searchParams.get("guestEmail"));
     const status = searchParams.get("status");
     const priority = searchParams.get("priority");
     const assignedTo = searchParams.get("assignedTo");
@@ -78,13 +86,16 @@ export async function GET(request: NextRequest) {
       }
     } else if (actor.userId) {
       where.userId = actor.userId;
-    } else if (guestEmail) {
-      where.guestEmail = guestEmail;
     } else {
-      return NextResponse.json(
-        { error: "Guest email is required for unauthenticated access." },
-        { status: 401 },
-      );
+      const guestSession = await readGuestChatSession(request);
+      if (!guestSession) {
+        return chatJson(
+          { error: "A valid guest chat session is required.", code: "GUEST_CHAT_SESSION_REQUIRED" },
+          { status: 401 },
+        );
+      }
+      where.id = guestSession.conversationId;
+      where.userId = null;
     }
 
     const conversations = await prisma.chatConversation.findMany({
@@ -116,15 +127,17 @@ export async function GET(request: NextRequest) {
       messages: undefined,
     }));
 
-    return NextResponse.json(payload);
+    return chatJson(payload);
   } catch (error) {
     console.error("CHAT CONVERSATIONS GET ERROR:", error);
-    return NextResponse.json({ error: "Failed to load conversations." }, { status: 500 });
+    return chatJson({ error: "Failed to load conversations." }, { status: 500 });
   }
 }
 
 export async function POST(request: NextRequest) {
   try {
+    const unsafeRequest = rejectUnsafeChatMutation(request);
+    if (unsafeRequest) return unsafeRequest;
     const session = await getServerSession(authOptions);
     const access = await getAccessContext(
       session?.user as { id?: string; role?: string } | undefined,
@@ -134,33 +147,39 @@ export async function POST(request: NextRequest) {
       { canManageChats: access.has("chats.manage") },
     );
     const body = await request.json().catch(() => ({}));
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+      return chatJson({ error: "Invalid chat request." }, { status: 400 });
+    }
 
-    const guestEmail = normalizeGuestEmail(body.guestEmail);
-    const guestName = toCleanText(body.guestName, 120);
+    const guestProfile = actor.userId
+      ? null
+      : validateGuestChatProfile(body.guestName, body.guestEmail);
+    if (guestProfile && !guestProfile.success) {
+      return chatJson(
+        {
+          error: "Enter a valid name and contact email to start a chat.",
+          fieldErrors: guestProfile.errors,
+        },
+        { status: 400 },
+      );
+    }
+    const guestEmail = guestProfile?.success ? guestProfile.profile.guestEmail : null;
+    const guestName = guestProfile?.success ? guestProfile.profile.guestName : null;
     const message = toCleanText(body.message, 4000);
     const quickAction = toCleanText(body.quickAction, 80);
     const orderReference = toCleanText(body.orderReference, 60);
     const forceNew = Boolean(body.forceNew);
 
-    if (!actor.userId && !guestEmail) {
-      return NextResponse.json(
-        { error: "Guest email is required to start a chat." },
-        { status: 400 },
-      );
-    }
-
-    if (!actor.userId && !guestName) {
-      return NextResponse.json(
-        { error: "Guest name is required to start a chat." },
-        { status: 400 },
-      );
-    }
-
-    let conversation = !forceNew
+    // Validate configuration before writing. Email is contact data, never ownership.
+    if (!actor.userId) requireGuestChatSessionSecret();
+    const guestSession = actor.userId ? null : await readGuestChatSession(request);
+    let createdGuestConversation = false;
+    let createdConversation = false;
+    let conversation = !forceNew && (actor.userId || guestSession)
       ? await prisma.chatConversation.findFirst({
           where: actor.userId
             ? { userId: actor.userId, status: { in: ["OPEN", "IN_PROGRESS"] } }
-            : { guestEmail: guestEmail!, status: { in: ["OPEN", "IN_PROGRESS"] } },
+            : { id: guestSession!.conversationId, userId: null, status: { in: ["OPEN", "IN_PROGRESS"] } },
           orderBy: { updatedAt: "desc" },
         })
       : null;
@@ -175,6 +194,8 @@ export async function POST(request: NextRequest) {
           priority: "NORMAL",
         },
       });
+      createdGuestConversation = !actor.userId;
+      createdConversation = true;
 
       await logActivity({
         action: "create_chat_conversation",
@@ -197,7 +218,7 @@ export async function POST(request: NextRequest) {
           status: conversation.status,
           priority: conversation.priority,
         },
-      });
+      }).catch(() => console.warn("Support chat conversation saved; activity logging failed."));
     }
 
     const composed = composeMessage(message, quickAction, orderReference);
@@ -230,9 +251,16 @@ export async function POST(request: NextRequest) {
       },
     });
 
-    return NextResponse.json(latest, { status: 201 });
+    const response = chatJson(latest, { status: 201 });
+    // Only a newly created guest chat earns a capability; never claim legacy chats
+    // by email and never extend a reused session's absolute expiry.
+    if (createdGuestConversation) await setGuestChatSession(response, conversation.id);
+    if (createdConversation || composed.length > 0) {
+      await publishChatChange({ conversationId: conversation.id, kind: createdConversation ? "created" : "message" });
+    }
+    return response;
   } catch (error) {
     console.error("CHAT CONVERSATIONS POST ERROR:", error);
-    return NextResponse.json({ error: "Failed to create conversation." }, { status: 500 });
+    return chatJson({ error: "Failed to create conversation." }, { status: 500 });
   }
 }

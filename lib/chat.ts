@@ -1,11 +1,12 @@
 import type { ChatConversation } from "@/generated/prisma";
+import type { VerifiedGuestChatSession } from "@/lib/chat-guest-session";
 
 type SessionUser = {
   id?: string;
   role?: string;
 } | null | undefined;
 
-type ConversationAccessShape = Pick<ChatConversation, "userId" | "guestEmail">;
+type ConversationAccessShape = Pick<ChatConversation, "id" | "userId">;
 
 export type ChatActor = {
   userId: string | null;
@@ -42,10 +43,12 @@ export function getChatActor(
 export function canAccessConversation(
   conversation: ConversationAccessShape,
   actor: ChatActor,
-  guestEmail: string | null,
+  guestSession: VerifiedGuestChatSession | null,
 ): boolean {
   if (actor.isAdmin) return true;
   if (actor.userId) return conversation.userId === actor.userId;
-  if (!guestEmail || !conversation.guestEmail) return false;
-  return conversation.guestEmail.toLowerCase() === guestEmail.toLowerCase();
+  return conversation.userId === null
+    && guestSession !== null
+    && guestSession.conversationId === conversation.id
+    && guestSession.expiresAt > Math.floor(Date.now() / 1000);
 }
