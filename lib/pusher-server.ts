@@ -1,5 +1,6 @@
 import "server-only";
 import Pusher from "pusher";
+import { logChatAvailability } from "@/lib/chat-availability-diagnostics";
 import {
   CHAT_ADMIN_CHANNEL, CHAT_AVAILABILITY_CHANNEL, CHAT_AVAILABILITY_EVENT,
   CHAT_CHANGED_EVENT, CHAT_TYPING_EVENT, conversationChannel,
@@ -43,7 +44,9 @@ export function publishChatTyping(conversationId: string, typing: ChatTyping) {
   return publish(conversationChannel(conversationId), CHAT_TYPING_EVENT, typing);
 }
 
-export function publishChatAvailability() {
+export async function publishChatAvailability() {
   // Public invalidation only. The existing availability API is authoritative.
-  return publish(CHAT_AVAILABILITY_CHANNEL, CHAT_AVAILABILITY_EVENT, { version: 1 });
+  const published = await publish(CHAT_AVAILABILITY_CHANNEL, CHAT_AVAILABILITY_EVENT, { version: 1 });
+  logChatAvailability("availability-event-publish", { published });
+  return published;
 }

@@ -17,6 +17,7 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CHAT_AVAILABILITY_POLL_MS, type ChatAvailability, isChatAvailability } from "@/lib/chat-availability";
+import { logChatAvailability } from "@/lib/chat-availability-diagnostics";
 import {
   type ChatConversation,
   type ChatMessage,
@@ -333,7 +334,13 @@ export default function SupportChatWidget() {
     let controller: AbortController | null = null;
     const poll = async () => {
       if (disposed || busy || document.visibilityState !== "visible") return;
+      if (!navigator.onLine) {
+        clearTimeout(expiryTimer);
+        setAgentStatus("UNKNOWN");
+        return;
+      }
       busy = true;
+      recheckRequested = false;
       controller = new AbortController();
       const requestGeneration = generation;
       const startedAt = performance.now();
@@ -341,34 +348,64 @@ export default function SupportChatWidget() {
         const data = await fetchChatJson<ChatAvailability>(
           "/api/chat/availability", { signal: controller.signal }, isChatAvailability,
         );
-        if (disposed || requestGeneration !== generation) return;
+        if (disposed || requestGeneration !== generation) {
+          logChatAvailability("widget-availability-response-ignored", { reason: "superseded-read" });
+          return;
+        }
         clearTimeout(expiryTimer);
         // Conservatively subtract the whole round trip; stale leases cannot
         // keep an Online badge alive if polling or the agent's browser stops.
         const remaining = Math.max(0, data.availableForMs - (performance.now() - startedAt));
-        setAgentStatus(data.status === "AVAILABLE" && remaining > 0 ? "AVAILABLE" : "UNAVAILABLE");
-        if (data.status === "AVAILABLE" && remaining > 0) {
-          expiryTimer = setTimeout(() => { if (!disposed) setAgentStatus("UNAVAILABLE"); }, remaining);
+        logChatAvailability("widget-availability-result", { status: data.status, availableForMs: remaining });
+        if (data.status === "UNAVAILABLE") {
+          setAgentStatus("UNAVAILABLE");
+        } else if (remaining > 0) {
+          setAgentStatus("AVAILABLE");
+          expiryTimer = setTimeout(() => {
+            if (disposed) return;
+            // This snapshot expiring does not prove that all agents are Away:
+            // another heartbeat or workspace may have extended availability.
+            setAgentStatus(navigator.onLine ? "CHECKING" : "UNKNOWN");
+            refreshAvailability();
+          }, remaining);
+        } else {
+          // Do not label a slow/expired AVAILABLE response as confirmed Offline.
+          setAgentStatus("CHECKING");
+          // Bounded retry delay avoids a tight loop at the lease boundary.
+          expiryTimer = setTimeout(refreshAvailability, 1_000);
         }
-      } catch {
+      } catch (error: unknown) {
         if (!disposed && requestGeneration === generation) {
           clearTimeout(expiryTimer);
           setAgentStatus("UNKNOWN");
+          const failure = error instanceof ChatRequestError ? error : new ChatRequestError("unexpected");
+          logChatAvailability("widget-availability-failed", {
+            reason: failure.code, errorKind: failure.kind, httpStatus: failure.status,
+          });
         }
       } finally {
         busy = false;
-        if (!disposed && recheckRequested && document.visibilityState === "visible") {
+        if (!disposed && recheckRequested && document.visibilityState === "visible" && navigator.onLine) {
           recheckRequested = false;
           void poll();
         }
       }
     };
+    const refreshAvailability = () => {
+      if (disposed) return;
+      // An invalidation arriving during a request makes that snapshot stale.
+      // Coalesce events into one fresh read, rather than applying the old result.
+      generation += 1;
+      logChatAvailability("widget-availability-refresh", { reason: "event-or-expiry", visibility: document.visibilityState });
+      if (busy) recheckRequested = true;
+      else void poll();
+    };
     const visibility = () => {
       generation += 1;
       clearTimeout(expiryTimer);
       controller?.abort();
-      setAgentStatus("CHECKING");
-      if (document.visibilityState === "visible") {
+      setAgentStatus(navigator.onLine ? "CHECKING" : "UNKNOWN");
+      if (document.visibilityState === "visible" && navigator.onLine) {
         if (busy) recheckRequested = true;
         else void poll();
       } else {
@@ -376,15 +413,14 @@ export default function SupportChatWidget() {
         recheckRequested = false;
       }
     };
-    setAgentStatus("CHECKING");
-    refreshAvailabilityRef.current = () => {
-      if (busy) recheckRequested = true;
-      else void poll();
-    };
+    setAgentStatus(navigator.onLine ? "CHECKING" : "UNKNOWN");
+    refreshAvailabilityRef.current = refreshAvailability;
     void poll();
     const interval = setInterval(() => void poll(), CHAT_AVAILABILITY_POLL_MS);
     document.addEventListener("visibilitychange", visibility);
     window.addEventListener("focus", visibility);
+    window.addEventListener("online", visibility);
+    window.addEventListener("offline", visibility);
     return () => {
       disposed = true;
       refreshAvailabilityRef.current = () => {};
@@ -393,6 +429,8 @@ export default function SupportChatWidget() {
       clearTimeout(expiryTimer);
       document.removeEventListener("visibilitychange", visibility);
       window.removeEventListener("focus", visibility);
+      window.removeEventListener("online", visibility);
+      window.removeEventListener("offline", visibility);
     };
   }, [open, shouldRender]);
 
@@ -706,8 +744,9 @@ export default function SupportChatWidget() {
           </SheetHeader>
         </div>
 
-        <p role="status" aria-live="polite" className="shrink-0 border-b px-4 py-1.5 text-[11px] text-muted-foreground">
-          {CHAT_CONNECTION_LABELS[connectionStatus]}
+        <p role="status" aria-live="polite" title="Message connection status. Support agent availability is shown above."
+          className="shrink-0 border-b px-4 py-1.5 text-[11px] text-muted-foreground">
+          {connectionStatus === "live" ? "Live message connection active" : CHAT_CONNECTION_LABELS[connectionStatus]}
         </p>
 
         {activeError && (

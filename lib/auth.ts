@@ -8,6 +8,7 @@ import { getAccessContext } from "@/lib/rbac";
 import { logActivity } from "@/lib/activity-log";
 import { syncDeliveryManWarehouseAccess } from "@/lib/delivery-man-access";
 import { revokeAgentPresence } from "@/lib/chat-agent-presence";
+import { logChatAvailability } from "@/lib/chat-availability-diagnostics";
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(db as never),
@@ -79,15 +80,8 @@ export const authOptions: NextAuthOptions = {
   },
 
   events: {
-    async signIn({ user }) {
-      // Login never opts an agent in; stale workspaces require explicit Available.
-      try {
-        await revokeAgentPresence(user.id);
-      } catch (error) {
-        // An unapplied presence migration must not break existing authentication.
-        console.error("CHAT PRESENCE LOGIN RESET ERROR:", error);
-      }
-    },
+    // Signing in neither opts into chat nor revokes another valid workspace.
+    // Stale workspaces expire through their existing heartbeat and idle leases.
     async signOut(message) {
       const tokenUserId =
         typeof message.token?.id === "string" ? message.token.id : null;
@@ -97,8 +91,9 @@ export const authOptions: NextAuthOptions = {
       if (tokenUserId) {
         try {
           await revokeAgentPresence(tokenUserId);
-        } catch (error) {
-          console.error("CHAT PRESENCE LOGOUT RESET ERROR:", error);
+        } catch {
+          // Presence setup must not break logout or expose raw database errors.
+          logChatAvailability("presence-revoke-failed", { reason: "logout" });
         }
       }
 

@@ -2,6 +2,7 @@
 
 import { useCallback, useEffect, useRef, useState } from "react";
 import type Pusher from "pusher-js";
+import { logChatAvailability } from "@/lib/chat-availability-diagnostics";
 import {
   ChatRequestError, fetchChatJson,
 } from "@/lib/chat-client";
@@ -145,6 +146,11 @@ export function useSupportChatRealtime(options: Options) {
         requestSync();
       });
       channel.bind(CHAT_AVAILABILITY_EVENT, () => {
+        if (name !== CHAT_AVAILABILITY_CHANNEL) return;
+        logChatAvailability("availability-event-received", {
+          reason: active() ? "refresh-authoritative-api" : "deferred-until-visible-or-online",
+          visibility: document.visibilityState,
+        });
         if (active()) callbacks.current.onAvailability?.();
       });
       channel.bind(CHAT_TYPING_EVENT, (payload: unknown) => {
