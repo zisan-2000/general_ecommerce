@@ -10224,6 +10224,7 @@
       "description": "Tanyakan tentang kompatibilitas, spesifikasi, atau pembelian.",
       "askQuestion": "Ajukan pertanyaan",
       "placeholder": "Apa yang ingin Anda ketahui tentang produk ini?",
+      "lengthHint": "Masukkan 5?500 karakter. Spasi di awal dan akhir tidak dihitung dalam panjang minimum.",
       "submit": "Kirim pertanyaan",
       "signInToAsk": "Masuk untuk bertanya",
       "loading": "Memuat pertanyaan...",

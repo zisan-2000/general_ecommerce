@@ -68,7 +68,9 @@ export default function ProductQuestions({ productId }: { productId: number }) {
         body: JSON.stringify({ productId, question: value }),
       });
       const data = await response.json().catch(() => null);
-      if (!response.ok) throw new Error(t("errors.submit"));
+      if (!response.ok) {
+        throw new Error(typeof data?.error === "string" ? data.error : t("errors.submit"));
+      }
       setQuestion("");
       toast.success(t("success.submitted"));
       await loadQuestions(true);
@@ -116,16 +118,21 @@ export default function ProductQuestions({ productId }: { productId: number }) {
         <textarea
           id="product-question"
           value={question}
+          maxLength={500}
+          aria-describedby="product-question-hint product-question-count"
           onChange={(event) => setQuestion(event.target.value.slice(0, 500))}
           placeholder={t("placeholder")}
           className="mt-2 min-h-24 w-full rounded-xl border bg-background p-3 text-sm outline-none focus:ring-2 focus:ring-primary/30"
         />
+        <p id="product-question-hint" className="mt-2 text-xs text-muted-foreground">
+          {t("lengthHint")}
+        </p>
         <div className="mt-2 flex items-center justify-between gap-3">
-          <span className="text-xs text-muted-foreground">{question.length}/500</span>
+          <span id="product-question-count" className="text-xs text-muted-foreground">{question.length}/500</span>
           <button
             type="button"
             onClick={askQuestion}
-            disabled={submitting || question.trim().length < 5}
+            disabled={submitting || status === "loading" || (status === "authenticated" && question.trim().length < 5)}
             className="inline-flex h-10 items-center gap-2 rounded-xl bg-primary px-4 text-sm font-bold text-primary-foreground disabled:opacity-50"
           >
             {submitting ? <Loader2 className="h-4 w-4 animate-spin" /> : <HelpCircle className="h-4 w-4" />}

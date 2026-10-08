@@ -10224,6 +10224,7 @@
       "description": "询问兼容性、规格或购买相关问题。",
       "askQuestion": "提出问题",
       "placeholder": "您想了解此商品的哪些信息？",
+      "lengthHint": "??? 5?500 ????????????????????",
       "submit": "提交问题",
       "signInToAsk": "登录后提问",
       "loading": "正在加载问题...",

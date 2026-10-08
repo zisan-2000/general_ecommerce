@@ -10248,6 +10248,7 @@
       "description": "Ask about compatibility, specifications, or purchasing.",
       "askQuestion": "Ask a question",
       "placeholder": "What would you like to know about this product?",
+      "lengthHint": "Enter 5?500 characters. Leading and trailing spaces do not count toward the minimum.",
       "submit": "Submit question",
       "signInToAsk": "Sign in to ask",
       "loading": "Loading questions...",
