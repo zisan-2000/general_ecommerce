@@ -184,37 +184,37 @@ interface CategoryNode extends CategoryDTO {
 function normalizeCategoryList(list: CategoryDTO[]): CategoryDTO[] {
   return Array.isArray(list)
     ? list.map((c: any) => ({
-        id: Number(c.id),
+      id: Number(c.id),
 
-        name: String(c.name),
+      name: String(c.name),
 
-        slug: String(c.slug),
+      slug: String(c.slug),
 
-        image: c.image ?? null,
+      image: c.image ?? null,
 
-        isActive: c.isActive !== false,
+      isActive: c.isActive !== false,
 
-        sortOrder: Number.isInteger(Number(c.sortOrder)) ? Number(c.sortOrder) : 0,
+      sortOrder: Number.isInteger(Number(c.sortOrder)) ? Number(c.sortOrder) : 0,
 
-        showInHeader: c.showInHeader !== false,
+      showInHeader: c.showInHeader !== false,
 
-        showInFooter: c.showInFooter !== false,
+      showInFooter: c.showInFooter !== false,
 
-        featured: c.featured === true,
+      featured: c.featured === true,
 
-        parentId: (() => {
-          const rawParentId = c.parentId ?? c.parent_id;
+      parentId: (() => {
+        const rawParentId = c.parentId ?? c.parent_id;
 
-          const parentId =
-            rawParentId === null ||
+        const parentId =
+          rawParentId === null ||
             rawParentId === undefined ||
             rawParentId === ""
-              ? null
-              : Number(rawParentId);
+            ? null
+            : Number(rawParentId);
 
-          return Number.isFinite(parentId) ? parentId : null;
-        })(),
-      }))
+        return Number.isFinite(parentId) ? parentId : null;
+      })(),
+    }))
     : [];
 }
 
@@ -366,12 +366,11 @@ function DesktopCategoryDropdown({
                   setActiveSubId(null);
                 }}
                 onClick={() => go(p.slug)}
-                className={`${ddItemBase} ${
-                  isActive ? ddItemActive : ddItemInactive
-                }`}
+                className={`${ddItemBase} ${isActive ? ddItemActive : ddItemInactive
+                  }`}
                 title={p.name}
               >
-                <span className="truncate font-medium">{p.name}</span>
+                <span className="truncate font-semibold">{p.name}</span>
 
                 {hasSub ? <ChevronRight className="h-4 w-4" /> : <span />}
               </button>
@@ -398,9 +397,8 @@ function DesktopCategoryDropdown({
                   type="button"
                   onMouseEnter={() => setActiveSubId(s.id)}
                   onClick={() => go(s.slug)}
-                  className={`${ddItemBase} ${
-                    isActive ? ddItemActive : ddItemInactive
-                  }`}
+                  className={`${ddItemBase} ${isActive ? ddItemActive : ddItemInactive
+                    }`}
                   title={s.name}
                 >
                   <span className="truncate">{s.name}</span>
@@ -529,7 +527,7 @@ function MobileCategoryTree({
               </span>
             )}
 
-            <span className="truncate text-[15px] font-medium text-foreground">
+            <span className="truncate text-[15px] font-semibold text-foreground">
               {node.name}
             </span>
           </button>
@@ -548,9 +546,8 @@ function MobileCategoryTree({
             >
               <ChevronRight
                 aria-hidden="true"
-                className={`h-5 w-5 transition-transform ${
-                  isOpen ? "rotate-90" : ""
-                }`}
+                className={`h-5 w-5 transition-transform ${isOpen ? "rotate-90" : ""
+                  }`}
               />
             </button>
           ) : null}
@@ -762,31 +759,31 @@ export default function Header({
 
         const mapped: CategoryDTO[] = Array.isArray(data)
           ? data.map((c) => ({
-              id: Number(c.id),
+            id: Number(c.id),
 
-              name: String(c.name),
+            name: String(c.name),
 
-              slug: String(c.slug),
+            slug: String(c.slug),
 
-              image: c.image ?? null,
+            image: c.image ?? null,
 
-              isActive: c.isActive !== false,
+            isActive: c.isActive !== false,
 
-              sortOrder: Number.isInteger(Number(c.sortOrder)) ? Number(c.sortOrder) : 0,
+            sortOrder: Number.isInteger(Number(c.sortOrder)) ? Number(c.sortOrder) : 0,
 
-              showInHeader: c.showInHeader !== false,
+            showInHeader: c.showInHeader !== false,
 
-              showInFooter: c.showInFooter !== false,
+            showInFooter: c.showInFooter !== false,
 
-              featured: c.featured === true,
+            featured: c.featured === true,
 
-              parentId:
-                c.parentId === null ||
+            parentId:
+              c.parentId === null ||
                 c.parentId === undefined ||
                 c.parentId === ""
-                  ? null
-                  : Number(c.parentId),
-            }))
+                ? null
+                : Number(c.parentId),
+          }))
           : [];
 
         setCategoryTree(buildCategoryTree(mapped));
@@ -1072,9 +1069,9 @@ export default function Header({
     return left;
   };
   const headerIconClass =
-    "relative flex h-10 w-10 items-center justify-center rounded-full text-white transition-colors hover:bg-white/10 md:h-10 md:w-10 md:rounded-md md:text-white/90 md:hover:bg-white/10 md:hover:text-white";
+    "relative flex h-10 w-10 items-center justify-center rounded-full text-[#228B3A] dark:text-white transition-colors hover:bg-[#FFA726]/15 hover:text-[#FB8C00] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#228B3A] md:h-10 md:w-10 md:rounded-md";
   const desktopActionClass =
-    "hidden h-10 items-center gap-2 rounded-md px-3 text-[13px] font-medium text-white/90 transition-colors hover:bg-white/10 hover:text-white lg:flex";
+    "hidden h-10 items-center gap-2 rounded-md px-3 text-[13px] font-semibold text-[#228B3A] dark:text-white transition-colors hover:bg-[#FFA726]/15 hover:text-[#FB8C00] lg:flex";
 
   const hoveredNavCat = useMemo(() => {
     if (navHoverCatId === null) return null;
@@ -1134,30 +1131,22 @@ export default function Header({
   return (
     <header
       className={[
-        "sticky top-0 z-50 bg-background/95 backdrop-blur-md text-foreground transition-shadow duration-200",
+        "sticky top-0 z-50 bg-background/95 backdrop-blur-md text-foreground font-semibold transition-shadow duration-200",
 
         scrolled ? "shadow-md" : "shadow-none",
       ].join(" ")}
     >
-      <div className="border-b border-slate-800/60 bg-[#0f172a] text-white">
+      <div className="border-b border-[#228B3A]/15 bg-white text-[#183D23] dark:border-white/15 dark:bg-background dark:text-white">
         <div className="container mx-auto flex h-[50px] items-center justify-between gap-3 px-4 md:h-[72px] md:gap-4">
-          <Link href="/" className="flex min-w-0 shrink-0 items-center gap-2.5">
-            <div className="relative h-9 w-9 shrink-0 overflow-hidden rounded-md bg-white md:h-10 md:w-10">
+          <Link href="/" className="flex min-w-0 shrink-0 items-center">
+            <div className="relative h-[42px] w-[96px] shrink-0 md:h-[60px] md:w-[135px]">
               <Image
-                src={siteSettings.logo || "/assets/examplelogo.jpg"}
+                src={siteSettings.logo || "/logo_img.png"}
                 alt={t("logoAlt")}
                 fill
                 className="object-contain"
-                sizes="(max-width: 767px) 36px, 40px"
+                sizes="(max-width: 767px) 96px, 135px"
               />
-            </div>
-
-            <div className="hidden leading-none sm:block">
-              <div className="max-w-[190px] truncate text-lg font-semibold tracking-tight text-white">
-                {siteSettings.storeName ||
-                  siteSettings.siteTitle ||
-                  DEFAULT_SITE_TITLE}
-              </div>
             </div>
           </Link>
 
@@ -1179,13 +1168,13 @@ export default function Header({
                   : undefined
               }
               placeholder={t("search.placeholder")}
-              className="h-11 w-full rounded-md border border-white/10 bg-white/95 px-4 pr-12 text-sm text-slate-900 outline-none placeholder:text-slate-400 transition focus:border-white/30 focus:bg-white focus:ring-2 focus:ring-white/20"
+              className="h-11 w-full rounded-md border border-[#228B3A]/25 bg-[#228B3A]/5 px-4 pr-12 text-sm text-[#183D23] dark:text-white outline-none placeholder:text-slate-500 dark:placeholder:text-white/60 transition focus:border-[#228B3A] focus:bg-white dark:bg-white/5 dark:focus:bg-card focus:ring-2 focus:ring-[#66BB3D]/20"
             />
 
             <button
               type="button"
               onClick={() => submitCatalogSearch()}
-              className="absolute bottom-0 right-0 top-0 flex w-11 items-center justify-center text-slate-500 transition hover:text-slate-800"
+              className="absolute bottom-0 right-0 top-0 flex w-11 items-center justify-center rounded-r-md bg-[#FFA726] text-[#183D23] transition hover:bg-[#FB8C00]"
               aria-label={t("search.label")}
             >
               <Search className="h-[18px] w-[18px]" />
@@ -1220,17 +1209,16 @@ export default function Header({
                 <Link
                   key={action.id}
                   href={actionHref}
-                  className={`${desktopActionClass} relative ${
-                    action.id === "pc-builder" ? "lg:hidden xl:flex" : ""
-                  }`}
+                  className={`${desktopActionClass} relative ${action.id === "pc-builder" ? "lg:hidden xl:flex" : ""
+                    }`}
                   aria-label={`${actionLabel}: ${actionDescription}`}
                   title={actionDescription}
                 >
                   <ActionIcon className="h-[18px] w-[18px]" aria-hidden="true" />
                   <span>{actionLabel}</span>
                   {action.id === "compare" &&
-                  hasMounted &&
-                  compareCount > 0 ? (
+                    hasMounted &&
+                    compareCount > 0 ? (
                     <span className="absolute -right-1.5 -top-1.5 flex h-4 min-w-4 items-center justify-center rounded-full bg-destructive px-1 text-[10px] font-bold leading-none text-destructive-foreground">
                       {compareCount}
                     </span>
@@ -1323,15 +1311,14 @@ export default function Header({
             </Link>
 
             <div
-              className={`header-search-wrapper relative overflow-visible transition-all duration-300 md:hidden ${
-                mobileSearchOpen ? "w-[42vw] max-w-[170px]" : "w-10"
-              }`}
+              className={`header-search-wrapper relative overflow-visible transition-all duration-300 md:hidden ${mobileSearchOpen ? "w-[42vw] max-w-[170px]" : "w-10"
+                }`}
             >
-              <div className="flex h-10 items-center overflow-hidden rounded-full border border-white/15 bg-white/5">
+              <div className="flex h-10 items-center overflow-hidden rounded-full border border-[#228B3A]/25 bg-[#228B3A]/5">
                 <button
                   type="button"
                   onClick={() => setMobileSearchOpen((prev) => !prev)}
-                  className="flex h-10 w-10 shrink-0 items-center justify-center text-white"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center text-[#228B3A] dark:text-white"
                   aria-label={
                     mobileSearchOpen
                       ? t("search.close")
@@ -1359,11 +1346,10 @@ export default function Header({
                       : undefined
                   }
                   placeholder={t("search.mobilePlaceholder")}
-                  className={`h-10 min-w-0 flex-1 bg-transparent pr-3 text-sm text-white outline-none placeholder:text-white/60 transition-all duration-300 ${
-                    mobileSearchOpen
-                      ? "opacity-100"
-                      : "pointer-events-none w-0 opacity-0"
-                  }`}
+                  className={`h-10 min-w-0 flex-1 bg-transparent pr-3 text-sm text-[#183D23] dark:text-white outline-none placeholder:text-[#228B3A] dark:text-white/70 transition-all duration-300 ${mobileSearchOpen
+                    ? "opacity-100"
+                    : "pointer-events-none w-0 opacity-0"
+                    }`}
                 />
               </div>
 
@@ -1560,13 +1546,13 @@ export default function Header({
         </div>
       </div>
 
-      <nav className="relative z-[60] hidden border-b border-border bg-background text-foreground md:block">
+      <nav className="relative z-[60] hidden border-b border-[#66BB3D]/40 bg-[#228B3A] text-white md:block">
         <div className="container relative mx-auto overflow-visible px-4">
           <div className="group/nav relative">
             <button
               type="button"
               onClick={() => scrollDesktopNav("left")}
-              className="absolute left-0 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background text-foreground shadow-sm transition-all duration-200 opacity-0 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:pointer-events-auto hover:bg-muted active:scale-95"
+              className="absolute left-0 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 bg-[#228B3A] text-white shadow-sm transition-all duration-200 opacity-0 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:pointer-events-auto hover:bg-[#66BB3D] active:scale-95"
               aria-label={t("categories.scrollPrevious")}
             >
               <ChevronLeft className="h-4 w-4" />
@@ -1575,7 +1561,7 @@ export default function Header({
             <button
               type="button"
               onClick={() => scrollDesktopNav("right")}
-              className="absolute right-0 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-border bg-background text-foreground shadow-sm transition-all duration-200 opacity-0 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:pointer-events-auto hover:bg-muted active:scale-95"
+              className="absolute right-0 top-1/2 z-20 flex h-7 w-7 -translate-y-1/2 items-center justify-center rounded-full border border-white/25 bg-[#228B3A] text-white shadow-sm transition-all duration-200 opacity-0 pointer-events-none group-hover/nav:opacity-100 group-hover/nav:pointer-events-auto hover:bg-[#66BB3D] active:scale-95"
               aria-label={t("categories.scrollNext")}
             >
               <ChevronRight className="h-4 w-4" />
@@ -1610,16 +1596,16 @@ export default function Header({
                     onClick={() => {
                       goCategoryFromDesktop(cat.slug);
                     }}
-                    className="flex h-11 items-center gap-1 whitespace-nowrap px-3 text-[13px] font-medium text-foreground/80 transition-colors hover:text-foreground"
+                    className="flex h-11 items-center gap-1 whitespace-nowrap px-3 text-[13px] font-semibold text-white/90 transition-colors hover:text-[#FFA726]"
                   >
                     <span>{cat.name}</span>
 
                     {cat.children.length > 0 && (
-                      <ChevronDown className="h-3.5 w-3.5 text-muted-foreground transition-transform duration-200 group-hover:rotate-180" />
+                      <ChevronDown className="h-3.5 w-3.5 text-white/70 transition-transform duration-200 group-hover:rotate-180" />
                     )}
                   </button>
 
-                  <div className="absolute bottom-0 left-3 right-3 h-[2px] origin-left scale-x-0 bg-foreground transition-transform duration-200 group-hover:scale-x-100" />
+                  <div className="absolute bottom-0 left-3 right-3 h-[2px] origin-left scale-x-0 bg-[#FFA726] transition-transform duration-200 group-hover:scale-x-100" />
                 </div>
               ))}
             </div>
@@ -1648,7 +1634,7 @@ export default function Header({
                 <Link
                   href={`/ecommerce/products?category=${encodeURIComponent(hoveredNavCat.slug)}`}
                   onClick={() => setNavHoverCatId(null)}
-                  className="text-sm font-medium text-foreground/70 hover:text-foreground"
+                  className="text-sm font-semibold text-foreground/70 hover:text-foreground"
                 >
                   {t("categories.viewAll")}
                 </Link>
@@ -1669,7 +1655,7 @@ export default function Header({
                       <Link
                         href={`/ecommerce/products?category=${encodeURIComponent(sub.slug)}`}
                         onClick={() => setNavHoverCatId(null)}
-                        className="group/item flex min-h-10 items-center justify-between gap-3 rounded-md px-2.5 py-2 text-[13px] font-medium text-foreground/90 transition hover:bg-muted"
+                        className="group/item flex min-h-10 items-center justify-between gap-3 rounded-md px-2.5 py-2 text-[13px] font-semibold text-foreground/90 transition hover:bg-muted"
                       >
                         <span className="truncate">{sub.name}</span>
                         {hasChildren && (
@@ -1686,11 +1672,10 @@ export default function Header({
                           aria-label={t("categories.subcategories", {
                             name: sub.name,
                           })}
-                          className={`pointer-events-none invisible absolute top-0 z-30 w-72 rounded-lg border border-border bg-popover p-2 opacity-0 shadow-xl transition duration-150 group-hover/sub:pointer-events-auto group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:pointer-events-auto group-focus-within/sub:visible group-focus-within/sub:opacity-100 ${
-                            opensToLeft
-                              ? "right-[calc(100%-0.25rem)]"
-                              : "left-[calc(100%-0.25rem)]"
-                          }`}
+                          className={`pointer-events-none invisible absolute top-0 z-30 w-72 rounded-lg border border-border bg-popover p-2 opacity-0 shadow-xl transition duration-150 group-hover/sub:pointer-events-auto group-hover/sub:visible group-hover/sub:opacity-100 group-focus-within/sub:pointer-events-auto group-focus-within/sub:visible group-focus-within/sub:opacity-100 ${opensToLeft
+                            ? "right-[calc(100%-0.25rem)]"
+                            : "left-[calc(100%-0.25rem)]"
+                            }`}
                         >
                           <div className="mb-1 flex items-center justify-between gap-3 border-b border-border px-2 py-2">
                             <span className="truncate text-[11px] font-semibold uppercase tracking-wide text-muted-foreground">
@@ -1699,7 +1684,7 @@ export default function Header({
                             <Link
                               href={`/ecommerce/products?category=${encodeURIComponent(sub.slug)}`}
                               onClick={() => setNavHoverCatId(null)}
-                              className="shrink-0 text-xs font-medium text-foreground/70 hover:text-foreground"
+                              className="shrink-0 text-xs font-semibold text-foreground/70 hover:text-foreground"
                             >
                               {t("categories.viewAll")}
                             </Link>
@@ -1748,13 +1733,13 @@ export default function Header({
                   onClick={() => setMobileMenuOpen(false)}
                   className="flex min-w-0 items-center gap-3"
                 >
-                  <div className="relative h-11 w-11 shrink-0 overflow-hidden rounded-xl border border-border bg-muted">
+                  <div className="relative h-11 w-[100px] shrink-0 overflow-hidden rounded-xl border border-[#228B3A]/20 bg-white">
                     <Image
-                      src={siteSettings.logo || "/assets/examplelogo.jpg"}
+                      src={siteSettings.logo || "/logo_img.png"}
                       alt={t("logoAlt")}
                       fill
                       className="object-contain"
-                      sizes="44px"
+                      sizes="100px"
                     />
                   </div>
 
@@ -1849,8 +1834,8 @@ export default function Header({
                           {actionLabel}
                         </span>
                         {action.id === "compare" &&
-                        hasMounted &&
-                        compareCount > 0 ? (
+                          hasMounted &&
+                          compareCount > 0 ? (
                           <span className="absolute right-2 top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-destructive px-1 text-[10px] font-bold leading-none text-destructive-foreground shadow-sm">
                             {compareCount}
                           </span>

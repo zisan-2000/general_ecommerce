@@ -54,8 +54,43 @@ type GalleryCacheEntry = {
   folders: string[];
 };
 
-const CACHE_TTL_MS = 30_000;
+const CACHE_TTL_MS = 5 * 60_000;
 const galleryCache = new Map<string, GalleryCacheEntry>();
+let pendingScan: Promise<GalleryCacheEntry> | null = null;
+let galleryGeneration = 0;
+
+function invalidateGalleryIndex() {
+  galleryGeneration += 1;
+  galleryCache.clear();
+  pendingScan = null;
+}
+
+async function getGalleryIndex(refresh: boolean): Promise<GalleryCacheEntry> {
+  const cached = galleryCache.get("__ALL__");
+  if (!refresh && cached && Date.now() - cached.at < CACHE_TTL_MS) return cached;
+  if (pendingScan) return pendingScan;
+
+  const generation = galleryGeneration;
+  const scanPromise = (async () => {
+    const scan = await readImages(publicRoot, "");
+    scan.images.sort((a, b) =>
+      b.updatedAt.localeCompare(a.updatedAt) || a.path.localeCompare(b.path),
+    );
+    const entry = {
+      at: Date.now(),
+      images: scan.images,
+      folders: Array.from(scan.folders).sort((a, b) => a.localeCompare(b)),
+    };
+    if (generation === galleryGeneration) galleryCache.set("__ALL__", entry);
+    return entry;
+  })();
+  pendingScan = scanPromise;
+  try {
+    return await scanPromise;
+  } finally {
+    if (pendingScan === scanPromise) pendingScan = null;
+  }
+}
 
 function replaceStringsDeep(value: unknown, fromValues: string[], toValue: string): unknown {
   if (typeof value === "string") {
@@ -404,31 +439,11 @@ export async function GET(req: Request) {
 
     await fs.mkdir(targetDir, { recursive: true });
 
-    const cacheKey = folder || "__ALL__";
-    const now = Date.now();
-    const cached = galleryCache.get(cacheKey);
-    const canUseCache =
-      !refresh && cached && now - cached.at < CACHE_TTL_MS;
-
-    let images: GalleryImage[];
-    let folders: string[];
-
-    if (canUseCache) {
-      images = cached.images;
-      folders = cached.folders;
-    } else {
-      const scan: GalleryScanResult = await readImages(targetDir, folder);
-      images = scan.images;
-      images.sort(
-        (a: GalleryImage, b: GalleryImage) =>
-          new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime() ||
-          a.path.localeCompare(b.path),
-      );
-      folders = Array.from(scan.folders).sort((a: string, b: string) =>
-        a.localeCompare(b),
-      );
-      galleryCache.set(cacheKey, { at: now, images, folders });
-    }
+    const index = await getGalleryIndex(refresh);
+    const images = folder
+      ? index.images.filter((image) => image.folder === folder || image.folder.startsWith(`${folder}/`))
+      : index.images;
+    const folders = index.folders;
 
     const term = (searchParams.get("search") || "").trim().toLowerCase();
     const matchingImages = term
@@ -667,7 +682,7 @@ export async function DELETE(req: Request) {
     }
 
     // Bust cache on delete (best-effort).
-    galleryCache.clear();
+    invalidateGalleryIndex();
     revalidateStorefrontCatalog();
 
     return NextResponse.json({ success: true, deleted, blocked, notFound, failed });
@@ -726,7 +741,7 @@ export async function PUT(req: Request) {
       await fs.unlink(/* turbopackIgnore: true */ oldTarget).catch(() => null);
     }
 
-    galleryCache.clear();
+    invalidateGalleryIndex();
 
     const stat = await fs.stat(/* turbopackIgnore: true */ target);
     const folder = toPosixPath(path.dirname(finalRelPath));

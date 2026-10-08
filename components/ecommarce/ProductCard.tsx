@@ -364,7 +364,7 @@ export default function ProductCardCompact({
           prefetch={false}
           href={product.href}
           aria-label={t("viewProduct", { name: product.name })}
-          className="relative block h-full w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-[#174a92]"
+          className="relative block h-full w-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-ring"
         >
           <Image
             key={primaryImageSrc}
@@ -423,9 +423,9 @@ export default function ProductCardCompact({
         <Link
           prefetch={false}
           href={product.href}
-          className="min-h-[42px] rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174a92] sm:min-h-[44px]"
+          className="min-h-[42px] rounded-sm focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring sm:min-h-[44px]"
         >
-          <h3 className="line-clamp-2 text-[13px] font-semibold leading-[1.45] text-foreground transition-colors group-hover:text-primary sm:text-[14px]">
+          <h3 className="line-clamp-2 text-[13px] font-semibold leading-[1.45] text-foreground transition-colors group-hover:text-[#FFA726] dark:text-white sm:text-[14px]">
             {product.name}
           </h3>
         </Link>
@@ -474,8 +474,8 @@ export default function ProductCardCompact({
                 onFocus={() => swatch.image && setActiveVariantImage(swatch.image)}
                 onBlur={() => setActiveVariantImage(null)}
                 className={cn(
-                  "h-4 w-4 rounded-full border border-black/15 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.65)] transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174a92] focus-visible:ring-offset-1",
-                  selectedVariantIndex === index && "ring-2 ring-[#174a92] ring-offset-1",
+                  "h-4 w-4 rounded-full border border-black/15 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.65)] transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1",
+                  selectedVariantIndex === index && "ring-2 ring-ring ring-offset-1",
                 )}
                 style={{ backgroundColor: swatch.color }}
                 title={swatch.label}
@@ -513,7 +513,7 @@ export default function ProductCardCompact({
           prefetch={false}
               href={product.href}
               aria-label={t("viewDetailsFor", { name: product.name })}
-              className="flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded bg-[#174a92] px-2 text-[11px] font-semibold text-white transition hover:bg-[#103b76] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174a92] focus-visible:ring-offset-1 sm:h-9 sm:text-[12px]"
+              className="flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded bg-primary px-2 text-[11px] font-semibold text-primary-foreground transition hover:bg-[#FFA726] hover:text-[#183D23] dark:text-white dark:hover:text-[#183D23] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 sm:h-9 sm:text-[12px]"
             >
               <Eye className="h-3.5 w-3.5 shrink-0" aria-hidden="true" />
               <span className="truncate">{t("viewDetails")}</span>
@@ -525,10 +525,10 @@ export default function ProductCardCompact({
               disabled={isOutOfStock || isAddingToCart}
               onClick={handleAddToCart}
               className={cn(
-                "flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded px-2 text-[11px] font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174a92] focus-visible:ring-offset-1 sm:h-9 sm:text-[12px]",
+                "flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded px-2 text-[11px] font-semibold transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 sm:h-9 sm:text-[12px]",
                 isOutOfStock || isAddingToCart
                   ? "cursor-not-allowed bg-muted text-muted-foreground"
-                  : "bg-[#174a92] text-white hover:bg-[#103b76]",
+                  : "bg-primary text-primary-foreground hover:bg-primary/90",
                 buttonAnimate && "animate-bounce-in",
               )}
             >
@@ -549,9 +549,9 @@ export default function ProductCardCompact({
               onClick={() => void onCompareClick()}
               aria-pressed={compared}
               className={cn(
-                "flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded border px-2 text-[11px] font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#174a92] focus-visible:ring-offset-1 sm:h-9 sm:text-[12px]",
+                "flex h-8 min-w-0 flex-1 items-center justify-center gap-1.5 rounded border px-2 text-[11px] font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-1 sm:h-9 sm:text-[12px]",
                 compared
-                  ? "border-[#174a92] bg-blue-50 text-[#174a92]"
+                  ? "border-primary bg-primary/10 text-primary"
                   : "border-border bg-muted/60 text-foreground/75 hover:border-primary/30 hover:bg-muted",
               )}
             >

@@ -135,6 +135,8 @@ export default function GalleryManagementPage() {
   const [total, setTotal] = useState(0);
   const requestRef = useRef<AbortController | null>(null);
   const [searchQuery, setSearchQuery] = useState("");
+  const galleryStateRef = useRef({ page, hasImages: false });
+  galleryStateRef.current = { page, hasImages: images.length > 0 };
 
   useEffect(() => {
     const timer = setTimeout(() => setSearchQuery(search.trim()), 300);
@@ -150,8 +152,9 @@ export default function GalleryManagementPage() {
     const controller = new AbortController();
     requestRef.current = controller;
     try {
-      const nextPage = typeof opts?.nextPage === "number" ? opts.nextPage : page;
-      const isInitial = images.length === 0;
+      const nextPage = typeof opts?.nextPage === "number" ? opts.nextPage : galleryStateRef.current.page;
+      const isInitial = !galleryStateRef.current.hasImages;
+      setUsageLoading(false);
       if (isInitial) setLoading(true);
       else setPageLoading(true);
 
@@ -231,13 +234,13 @@ export default function GalleryManagementPage() {
         setPageLoading(false);
       }
     }
-  }, [folder, images.length, page, pageSize, searchQuery, t]);
+  }, [folder, pageSize, searchQuery, t]);
 
   useEffect(() => {
     setPage(1);
     setSelectedPaths(new Set());
     loadGallery({ nextPage: 1 });
-  }, [folder, pageSize, searchQuery]);
+  }, [loadGallery]);
 
   const filteredImages = images;
 
@@ -530,17 +533,19 @@ export default function GalleryManagementPage() {
   const goToPage = useCallback(
     (next: number) => {
       const target = Math.min(Math.max(1, next), totalPages);
+      if (target === page || loading || pageLoading) return;
       setSelectedPaths(new Set());
       loadGallery({ nextPage: target });
       window.scrollTo({ top: 0, behavior: "smooth" });
     },
-    [loadGallery, totalPages],
+    [loadGallery, totalPages, page, loading, pageLoading],
   );
 
   const paginationItems = useMemo(() => {
     const lastPage = totalPages;
     const current = page;
     if (lastPage <= 1) return [] as Array<number | "...">;
+    if (lastPage <= 11) return Array.from({ length: lastPage }, (_, index) => index + 1);
 
     const siblings = 3; // how many pages on each side of current
     const boundary = 2; // always show first 2 and last 2
@@ -1036,6 +1041,7 @@ const GalleryImageCard = React.memo(function GalleryImageCard({
           alt={image.name}
           className="h-full w-full object-contain"
           loading="lazy"
+          decoding="async"
         />
       </div>
 

@@ -141,119 +141,113 @@ body {
 @layer base {
   :root {
     color-scheme: light;
-    /* ========================
-   ECOMMERCE COLOR PALETTE - LIGHT MODE
-   Palette: Blue Scale
-   50  #eff6ff
-   100 #dbeafe
-   200 #bfdbfe
-   300 #93c5fd
-   400 #60a5fa
-   500 #3b82f6
-   600 #2563eb
-   700 #1d4ed8
-   800 #1e40af
-   900 #1e3a8a
-   950 #172554
-  ======================== */
+    /* DeshiPlus orange and green palette. */
+
+    --brand-warm-orange: 35.67 100.00% 57.45%; /* #FFA726 */
+
+    --brand-energetic-orange: 33.47 100.00% 49.22%; /* #FB8C00 */
+
+    --brand-primary-green: 133.71 60.69% 33.92%; /* #228B3A */
+
+    --brand-fresh-green: 100.48 50.81% 48.63%; /* #66BB3D */
 
     /* Core Colors */
-    --background: 214 100% 97%; /* #eff6ff */
-    --foreground: 226 71% 14%; /* #172554 */
+    --background: 100.00 42.86% 97.25%; /* #F7FBF5 */
+    --foreground: 137.84 43.53% 16.67%; /* #183D23 */
 
-    --card: 0 0% 100%;
-    --card-foreground: 226 71% 14%;
+    --card: 0.00 0.00% 100.00%; /* #FFFFFF */
+    --card-foreground: 137.84 43.53% 16.67%; /* #183D23 */
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 226 71% 14%;
+    --popover: 0.00 0.00% 100.00%; /* #FFFFFF */
+    --popover-foreground: 137.84 43.53% 16.67%; /* #183D23 */
 
-    /* Primary — Blue #2563eb */
-    --primary: 221 83% 53%; /* #2563eb */
-    --primary-foreground: 0 0% 100%;
+    /* Primary */
+    --primary: 133.71 60.69% 33.92%; /* #228B3A */
+    --primary-foreground: 0.00 0.00% 100.00%; /* #FFFFFF */
 
-    /* Secondary — Deep Blue #1e40af */
-    --secondary: 224 64% 33%; /* #1e40af */
-    --secondary-foreground: 0 0% 100%;
+    /* Secondary */
+    --secondary: 35.67 100.00% 57.45%; /* #FFA726 */
+    --secondary-foreground: 137.84 43.53% 16.67%; /* #183D23 */
 
     /* Muted Colors */
-    --muted: 214 100% 97%; /* #eff6ff */
-    --muted-foreground: 217 33% 35%;
+    --muted: 96.92 41.94% 93.92%; /* #EEF6E9 */
+    --muted-foreground: 114.29 11.86% 34.71%; /* #50634E */
 
-    /* Accent — Bright Blue #3b82f6 */
-    --accent: 217 91% 60%; /* #3b82f6 */
-    --accent-foreground: 226 71% 14%;
+    /* Accent */
+    --accent: 100.48 50.81% 48.63%; /* #66BB3D */
+    --accent-foreground: 137.84 43.53% 16.67%; /* #183D23 */
 
     /* Destructive */
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
     /* UI Elements */
-    --border: 213 97% 87%; /* #bfdbfe */
-    --input: 213 97% 87%; /* #bfdbfe */
-    --ring: 221 83% 53%; /* #2563eb */
+    --border: 101.74 30.67% 85.29%; /* #D5E5CE */
+    --input: 101.74 30.67% 85.29%; /* #D5E5CE */
+    --ring: 133.71 60.69% 33.92%; /* #228B3A */
 
     --radius: 0.5rem;
 
     /* Charts */
-    --chart-1: 221 83% 53%; /* #2563eb */
-    --chart-2: 217 91% 60%; /* #3b82f6 */
-    --chart-3: 224 64% 33%; /* #1e40af */
-    --chart-4: 213 94% 68%; /* #60a5fa */
-    --chart-5: 212 96% 78%; /* #93c5fd */
+    --chart-1: 133.71 60.69% 33.92%; /* #228B3A */
+    --chart-2: 33.47 100.00% 49.22%; /* #FB8C00 */
+    --chart-3: 100.48 50.81% 48.63%; /* #66BB3D */
+    --chart-4: 35.67 100.00% 57.45%; /* #FFA726 */
+    --chart-5: 137.84 43.53% 16.67%; /* #183D23 */
 
     /* Scrollbar */
-    --scrollbar-thumb: 221 83% 53%; /* #2563eb */
-    --scrollbar-track: 214 100% 97%; /* #eff6ff */
-    --scrollbar-thumb-hover: 224 64% 33%; /* #1e40af */
+    --scrollbar-thumb: 133.71 60.69% 33.92%; /* #228B3A */
+    --scrollbar-track: 96.92 41.94% 93.92%; /* #EEF6E9 */
+    --scrollbar-thumb-hover: 33.47 100.00% 49.22%; /* #FB8C00 */
 
     /* Analytics */
-    --analytics-primary: 221 83% 53%; /* #2563eb */
-    --analytics-secondary: 214 100% 97%; /* #eff6ff */
-    --analytics-accent: 217 91% 60%; /* #3b82f6 */
-    --analytics-chart-1: 221 83% 53%; /* #2563eb */
-    --analytics-chart-2: 217 91% 60%; /* #3b82f6 */
-    --analytics-chart-3: 224 64% 33%; /* #1e40af */
-    --analytics-chart-4: 213 94% 68%; /* #60a5fa */
-    --analytics-chart-5: 212 96% 78%; /* #93c5fd */
+    --analytics-primary: 133.71 60.69% 33.92%; /* #228B3A */
+    --analytics-secondary: 96.92 41.94% 93.92%; /* #EEF6E9 */
+    --analytics-accent: 33.47 100.00% 49.22%; /* #FB8C00 */
+    --analytics-chart-1: 133.71 60.69% 33.92%; /* #228B3A */
+    --analytics-chart-2: 33.47 100.00% 49.22%; /* #FB8C00 */
+    --analytics-chart-3: 100.48 50.81% 48.63%; /* #66BB3D */
+    --analytics-chart-4: 35.67 100.00% 57.45%; /* #FFA726 */
+    --analytics-chart-5: 137.84 43.53% 16.67%; /* #183D23 */
 
     /* Best Seller & Sold Badge */
-    --best-seller-bg: 221 83% 53%; /* #2563eb */
-    --best-seller-text: 0 0% 100%;
-    --sold-count-bg: 217 91% 60%; /* #3b82f6 */
-    --sold-count-text: 226 71% 14%;
-    --badge-shadow: 0 4px 6px -1px rgb(37 99 235 / 0.25);
+    --best-seller-bg: 133.71 60.69% 33.92%; /* #228B3A */
+    --best-seller-text: 0.00 0.00% 100.00%; /* #FFFFFF */
+    --sold-count-bg: 35.67 100.00% 57.45%; /* #FFA726 */
+    --sold-count-text: 137.84 43.53% 16.67%; /* #183D23 */
+    --badge-shadow: 0 4px 6px -1px rgb(34 139 58 / 0.25);
 
     /* Delivery Proof */
-    --delivery-proof-bg: 221 83% 53%; /* #2563eb */
-    --delivery-proof-text: 0 0% 100%;
-    --delivery-pin-bg: 214 100% 97%; /* #eff6ff */
-    --delivery-pin-text: 226 71% 14%;
-    --delivery-pin-value: 226 71% 14%;
-    --delivery-link-bg: 214 100% 97%; /* #eff6ff */
-    --delivery-link-text: 224 64% 33%; /* #1e40af */
-    --delivery-status-bg: 0 0% 100%;
-    --delivery-status-text: 217 33% 25%;
+    --delivery-proof-bg: 133.71 60.69% 33.92%; /* #228B3A */
+    --delivery-proof-text: 0.00 0.00% 100.00%; /* #FFFFFF */
+    --delivery-pin-bg: 96.92 41.94% 93.92%; /* #EEF6E9 */
+    --delivery-pin-text: 137.84 43.53% 16.67%; /* #183D23 */
+    --delivery-pin-value: 137.84 43.53% 16.67%; /* #183D23 */
+    --delivery-link-bg: 96.92 41.94% 93.92%; /* #EEF6E9 */
+    --delivery-link-text: 133.71 60.69% 33.92%; /* #228B3A */
+    --delivery-status-bg: 0.00 0.00% 100.00%; /* #FFFFFF */
+    --delivery-status-text: 114.29 11.86% 34.71%; /* #50634E */
 
     /* Custom Gradients */
-    --gradient-primary: linear-gradient(135deg, #1e40af, #2563eb);
-    --gradient-soft: linear-gradient(135deg, #eff6ff, #dbeafe);
-    --gradient-premium: linear-gradient(135deg, #1d4ed8, #3b82f6);
-    --gradient-amber: linear-gradient(135deg, #60a5fa, #2563eb);
+    --gradient-primary: linear-gradient(135deg, #228B3A, #66BB3D);
+    --gradient-soft: linear-gradient(135deg, #F7FBF5, #E2F2DA);
+    --gradient-premium: linear-gradient(135deg, #183D23, #228B3A);
+    --gradient-amber: linear-gradient(135deg, #FFA726, #FB8C00);
 
     /* Delivery Summary Card Colors */
-    --delivery-card-assigned: 214 100% 97%; /* #eff6ff */
-    --delivery-card-accepted: 214 95% 93%; /* #dbeafe */
-    --delivery-card-rejected: 213 97% 87%; /* #bfdbfe */
-    --delivery-card-picked: 212 96% 78%; /* #93c5fd */
-    --delivery-card-in-transit: 213 94% 68%; /* #60a5fa */
-    --delivery-card-delivered: 217 91% 60%; /* #3b82f6 */
+    --delivery-card-assigned: 96.92 41.94% 93.92%; /* #EEF6E9 */
+    --delivery-card-accepted: 100.00 48.00% 90.20%; /* #E2F2DA */
+    --delivery-card-rejected: 17.14 100.00% 95.88%; /* #FFF0EA */
+    --delivery-card-picked: 38.18 100.00% 93.53%; /* #FFF3DE */
+    --delivery-card-in-transit: 37.39 100.00% 86.47%; /* #FFE5BA */
+    --delivery-card-delivered: 100.59 48.57% 86.27%; /* #D6EDCB */
 
     /* Stock Management Card Colors */
-    --stock-card-physical-products: 214 100% 97%; /* #eff6ff */
-    --stock-card-variants: 214 95% 93%; /* #dbeafe */
-    --stock-card-total-stock: 213 97% 87%; /* #bfdbfe */
-    --stock-card-low-stock: 212 96% 78%; /* #93c5fd */
-    --stock-card-out-of-stock: 213 94% 68%; /* #60a5fa */
+    --stock-card-physical-products: 96.92 41.94% 93.92%; /* #EEF6E9 */
+    --stock-card-variants: 100.00 48.00% 90.20%; /* #E2F2DA */
+    --stock-card-total-stock: 100.59 48.57% 86.27%; /* #D6EDCB */
+    --stock-card-low-stock: 38.18 100.00% 93.53%; /* #FFF3DE */
+    --stock-card-out-of-stock: 17.14 100.00% 95.88%; /* #FFF0EA */
   }
   /* ========================
      DARK MODE
@@ -261,122 +255,116 @@ body {
 
   .dark {
     color-scheme: dark;
-    /* ========================
-     ECOMMERCE COLOR PALETTE - DARK MODE (Matte Finish)
-     Palette: Blue Scale
-     50  #eff6ff
-     100 #dbeafe
-     200 #bfdbfe
-     300 #93c5fd
-     400 #60a5fa
-     500 #3b82f6
-     600 #2563eb
-     700 #1d4ed8
-     800 #1e40af
-     900 #1e3a8a
-     950 #172554
-  ======================== */
+    /* DeshiPlus orange and green palette. */
+
+    --brand-warm-orange: 35.67 100.00% 57.45%; /* #FFA726 */
+
+    --brand-energetic-orange: 33.47 100.00% 49.22%; /* #FB8C00 */
+
+    --brand-primary-green: 133.71 60.69% 33.92%; /* #228B3A */
+
+    --brand-fresh-green: 100.48 50.81% 48.63%; /* #66BB3D */
 
     /* Core Colors - Matte Dark */
-    --background: 222 47% 8%; /* matte dark background */
-    --foreground: 214 100% 97%; /* #eff6ff */
+    --background: 139.09 50.00% 8.63%; /* #0B2112 */
+    --foreground: 95.00 46.15% 94.90%; /* #F1F8EC */
 
-    --card: 222 47% 10%; /* matte card background */
-    --card-foreground: 214 100% 97%;
+    --card: 138.62 47.54% 11.96%; /* #102D19 */
+    --card-foreground: 95.00 46.15% 94.90%; /* #F1F8EC */
 
-    --popover: 222 47% 10%;
-    --popover-foreground: 214 100% 97%;
+    --popover: 138.62 47.54% 11.96%; /* #102D19 */
+    --popover-foreground: 95.00 46.15% 94.90%; /* #F1F8EC */
 
-    /* Primary — Vibrant Blue for dark mode */
-    --primary: 213 94% 68%; /* #60a5fa */
-    --primary-foreground: 222 47% 8%; /* matte dark background */
+    /* Primary */
+    --primary: 100.48 50.81% 48.63%; /* #66BB3D */
+    --primary-foreground: 139.09 50.00% 8.63%; /* #0B2112 */
 
-    /* Secondary — Muted Blue */
-    --secondary: 222 35% 16%; /* desaturated for matte feel */
-    --secondary-foreground: 214 100% 97%;
+    /* Secondary */
+    --secondary: 35.67 100.00% 57.45%; /* #FFA726 */
+    --secondary-foreground: 139.09 50.00% 8.63%; /* #0B2112 */
 
     /* Muted Colors */
-    --muted: 222 30% 18%;
-    --muted-foreground: 213 97% 87%; /* #bfdbfe */
+    --muted: 135.56 31.76% 16.67%; /* #1D3824 */
+    --muted-foreground: 100.71 21.54% 74.51%; /* #B9CCB0 */
 
-    /* Accent — Strong Blue */
-    --accent: 217 91% 60%; /* #3b82f6 */
-    --accent-foreground: 214 100% 97%;
+    /* Accent */
+    --accent: 33.47 100.00% 49.22%; /* #FB8C00 */
+    --accent-foreground: 139.09 50.00% 8.63%; /* #0B2112 */
 
     /* Destructive */
     --destructive: 0 70% 50%;
     --destructive-foreground: 0 0% 100%;
 
     /* UI Elements - Matte Borders */
-    --border: 222 30% 20%;
-    --input: 222 30% 20%;
-    --ring: 213 94% 68%; /* #60a5fa */
+    --border: 132.86 23.73% 23.14%; /* #2D4933 */
+    --input: 132.86 23.73% 23.14%; /* #2D4933 */
+    --ring: 100.48 50.81% 48.63%; /* #66BB3D */
 
     --radius: 0.5rem;
 
     /* Charts */
-    --chart-1: 213 94% 68%; /* #60a5fa */
-    --chart-2: 217 91% 60%; /* #3b82f6 */
-    --chart-3: 212 96% 78%; /* #93c5fd */
-    --chart-4: 221 83% 53%; /* #2563eb */
-    --chart-5: 213 97% 87%; /* #bfdbfe */
+    --chart-1: 100.48 50.81% 48.63%; /* #66BB3D */
+    --chart-2: 35.67 100.00% 57.45%; /* #FFA726 */
+    --chart-3: 133.71 60.69% 33.92%; /* #228B3A */
+    --chart-4: 33.47 100.00% 49.22%; /* #FB8C00 */
+    --chart-5: 100.71 21.54% 74.51%; /* #B9CCB0 */
 
     /* Scrollbar */
-    --scrollbar-thumb: 217 91% 60%; /* #3b82f6 */
-    --scrollbar-track: 222 47% 10%;
-    --scrollbar-thumb-hover: 213 94% 68%; /* #60a5fa */
+    --scrollbar-thumb: 100.48 50.81% 48.63%; /* #66BB3D */
+    --scrollbar-track: 138.62 47.54% 11.96%; /* #102D19 */
+    --scrollbar-thumb-hover: 35.67 100.00% 57.45%; /* #FFA726 */
 
     /* Analytics */
-    --analytics-primary: 213 94% 68%; /* #60a5fa */
-    --analytics-secondary: 222 35% 16%;
-    --analytics-accent: 217 91% 60%; /* #3b82f6 */
-    --analytics-chart-1: 213 94% 68%; /* #60a5fa */
-    --analytics-chart-2: 217 91% 60%; /* #3b82f6 */
-    --analytics-chart-3: 212 96% 78%; /* #93c5fd */
-    --analytics-chart-4: 221 83% 53%; /* #2563eb */
-    --analytics-chart-5: 213 97% 87%; /* #bfdbfe */
+    --analytics-primary: 100.48 50.81% 48.63%; /* #66BB3D */
+    --analytics-secondary: 135.56 31.76% 16.67%; /* #1D3824 */
+    --analytics-accent: 35.67 100.00% 57.45%; /* #FFA726 */
+    --analytics-chart-1: 100.48 50.81% 48.63%; /* #66BB3D */
+    --analytics-chart-2: 35.67 100.00% 57.45%; /* #FFA726 */
+    --analytics-chart-3: 133.71 60.69% 33.92%; /* #228B3A */
+    --analytics-chart-4: 33.47 100.00% 49.22%; /* #FB8C00 */
+    --analytics-chart-5: 100.71 21.54% 74.51%; /* #B9CCB0 */
 
     /* Best Seller & Sold Badge */
-    --best-seller-bg: 213 94% 68%; /* #60a5fa */
-    --best-seller-text: 222 47% 8%;
-    --sold-count-bg: 217 91% 60%; /* #3b82f6 */
-    --sold-count-text: 214 100% 97%;
+    --best-seller-bg: 100.48 50.81% 48.63%; /* #66BB3D */
+    --best-seller-text: 139.09 50.00% 8.63%; /* #0B2112 */
+    --sold-count-bg: 35.67 100.00% 57.45%; /* #FFA726 */
+    --sold-count-text: 139.09 50.00% 8.63%; /* #0B2112 */
     --badge-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.35);
 
     /* Delivery Proof */
-    --delivery-proof-bg: 213 94% 68%; /* #60a5fa */
-    --delivery-proof-text: 222 47% 8%;
+    --delivery-proof-bg: 100.48 50.81% 48.63%; /* #66BB3D */
+    --delivery-proof-text: 139.09 50.00% 8.63%; /* #0B2112 */
 
-    --delivery-pin-bg: 222 35% 16%;
-    --delivery-pin-text: 214 100% 97%;
-    --delivery-pin-value: 214 100% 97%;
+    --delivery-pin-bg: 135.56 31.76% 16.67%; /* #1D3824 */
+    --delivery-pin-text: 95.00 46.15% 94.90%; /* #F1F8EC */
+    --delivery-pin-value: 95.00 46.15% 94.90%; /* #F1F8EC */
 
-    --delivery-link-bg: 222 35% 16%;
-    --delivery-link-text: 213 94% 68%; /* #60a5fa */
+    --delivery-link-bg: 135.56 31.76% 16.67%; /* #1D3824 */
+    --delivery-link-text: 100.48 50.81% 48.63%; /* #66BB3D */
 
-    --delivery-status-bg: 222 47% 10%;
-    --delivery-status-text: 213 97% 87%; /* #bfdbfe */
+    --delivery-status-bg: 138.62 47.54% 11.96%; /* #102D19 */
+    --delivery-status-text: 100.71 21.54% 74.51%; /* #B9CCB0 */
 
-    /* Custom Gradients - Muted for matte finish */
-    --gradient-primary: linear-gradient(135deg, #1e3a8a, #3b82f6);
-    --gradient-soft: linear-gradient(135deg, #0f172a, #1e293b);
-    --gradient-premium: linear-gradient(135deg, #1e40af, #2563eb);
-    --gradient-amber: linear-gradient(135deg, #2563eb, #60a5fa);
+    /* Custom Gradients */
+    --gradient-primary: linear-gradient(135deg, #228B3A, #66BB3D);
+    --gradient-soft: linear-gradient(135deg, #0B2112, #1D3824);
+    --gradient-premium: linear-gradient(135deg, #102D19, #228B3A);
+    --gradient-amber: linear-gradient(135deg, #FB8C00, #FFA726);
 
     /* Delivery Summary Card Colors - Matte variants */
-    --delivery-card-assigned: 222 35% 16%;
-    --delivery-card-accepted: 221 45% 16%;
-    --delivery-card-rejected: 0 60% 16%;
-    --delivery-card-picked: 217 45% 16%;
-    --delivery-card-in-transit: 222 35% 18%;
-    --delivery-card-delivered: 213 50% 18%;
+    --delivery-card-assigned: 135.56 31.76% 16.67%; /* #1D3824 */
+    --delivery-card-accepted: 134.21 37.25% 20.00%; /* #204629 */
+    --delivery-card-rejected: 0.00 29.67% 17.84%; /* #3B2020 */
+    --delivery-card-picked: 37.50 36.36% 17.25%; /* #3C301C */
+    --delivery-card-in-transit: 34.50 42.55% 18.43%; /* #43321B */
+    --delivery-card-delivered: 131.05 35.19% 21.18%; /* #23492A */
 
     /* Stock Management Card Colors - Matte variants */
-    --stock-card-physical-products: 222 35% 16%;
-    --stock-card-variants: 221 45% 16%;
-    --stock-card-total-stock: 213 50% 18%;
-    --stock-card-low-stock: 217 45% 16%;
-    --stock-card-out-of-stock: 0 60% 16%;
+    --stock-card-physical-products: 135.56 31.76% 16.67%; /* #1D3824 */
+    --stock-card-variants: 134.21 37.25% 20.00%; /* #204629 */
+    --stock-card-total-stock: 131.05 35.19% 21.18%; /* #23492A */
+    --stock-card-low-stock: 37.50 36.36% 17.25%; /* #3C301C */
+    --stock-card-out-of-stock: 0.00 29.67% 17.84%; /* #3B2020 */
   }
 
 }
@@ -408,18 +396,16 @@ body {
   }
 
   .btn-secondary {
-    @apply text-white transition-all duration-200 ease-in-out;
-    background-color: #f2b50b;
+    @apply bg-secondary text-secondary-foreground transition-all duration-200 ease-in-out;
   }
 
   .btn-secondary:hover {
     @apply scale-105 shadow-lg;
-    background-color: #d99f08;
+    background-color: hsl(var(--brand-energetic-orange));
   }
 
   .btn-accent {
-    @apply text-white transition-all duration-200 ease-in-out;
-    background-color: #25671e;
+    @apply bg-accent text-accent-foreground transition-all duration-200 ease-in-out;
   }
 
   .btn-outline {

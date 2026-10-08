@@ -239,24 +239,24 @@ export default function Footer({
   );
 
   return (
-    <footer className="bg-card border-t border-border">
+    <footer className="border-t border-white/20 bg-[#1A682C] text-white">
       {/* Features Bar */}
-      <div className="border-b border-border bg-muted/30 shadow-sm">
+      <div className="border-b border-white/20 bg-[#1A682C]">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 py-6">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-5 py-7 md:grid-cols-4">
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 group cursor-pointer"
+                className="flex items-center gap-3 group"
               >
-                <div className="p-2 rounded-lg bg-primary/5 text-primary">
+                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl border border-white/20 bg-white/10 text-white">
                   <feature.icon className="h-5 w-5" />
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-foreground">
+                  <p className="text-sm font-semibold text-white">
                     {feature.label}
                   </p>
-                  <p className="text-xs text-muted-foreground">
+                  <p className="text-xs text-white">
                     {feature.desc}
                   </p>
                 </div>
@@ -267,72 +267,62 @@ export default function Footer({
       </div>
 
       {/* Main Footer Content */}
-      <div className="container mx-auto px-4 py-12">
+      <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12">
           {/* Brand Column */}
           <div className="lg:col-span-3 space-y-6">
             <Link href="/" className="inline-block group">
-              <div className="flex items-center gap-3">
-                <div className="bg-primary rounded-2xl text-primary-foreground">
+              <div className="flex flex-col items-start gap-3">
+                <div className="relative h-[88px] w-[198px] shrink-0 md:h-[104px] md:w-[234px]">
                   <Image
-                    src={siteSettings.logo || "/assets/examplelogo.jpg"}
+                    src={siteSettings.logo || "/logo_img.png"}
                     alt={t("logoAlt")}
-                    width={50}
-                    height={50}
-                    className="object-contain rounded-2xl"
+                    fill
+                    sizes="(max-width: 767px) 198px, 234px"
+                    className="object-contain p-2"
                   />
                 </div>
-                <div>
-                  <h3 className="text-xl font-bold text-foreground">
-                    {siteSettings.storeName?.trim() ||
-                      siteSettings.siteTitle?.trim() ||
-                      DEFAULT_SITE_TITLE}
-                  </h3>
-                  <p className="text-xs text-muted-foreground">
-                    {siteSettings.storeTagline ||
+                <div className="max-w-[280px]">
+                  <p className="text-xs leading-relaxed text-white">
+                    {siteSettings.storeTagline?.trim() ||
                       t("brand.defaultTagline")}
                   </p>
                 </div>
               </div>
             </Link>
 
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {siteSettings.footerDescription ||
-                t("brand.defaultDescription")}
-            </p>
-
             <div className="space-y-3">
-              <div className="flex items-center gap-3 group cursor-pointer">
-                <div className="p-2 rounded-lg bg-muted text-muted-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+              <div className="flex items-center gap-3 group">
+                <div className="p-2 rounded-lg bg-white/10 text-white group-hover:bg-[#FFA726]/15 group-hover:text-[#FFA726] transition-all duration-300">
                   <Phone className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground">{t("contact.callUs")}</p>
-                  <p className="text-sm font-medium text-foreground">
+                  <p className="text-xs text-white">{t("contact.callUs")}</p>
+                  <p className="text-sm font-medium text-white">
                     {siteSettings.contactNumber || t("contact.phoneUnavailable")}
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-center gap-3 group cursor-pointer">
-                <div className="p-2 rounded-lg bg-muted text-muted-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
+              <div className="flex items-center gap-3 group">
+                <div className="p-2 rounded-lg bg-white/10 text-white group-hover:bg-[#FFA726]/15 group-hover:text-[#FFA726] transition-all duration-300">
                   <Mail className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground">{t("contact.emailUs")}</p>
-                  <p className="text-sm font-medium text-foreground">
+                  <p className="text-xs text-white">{t("contact.emailUs")}</p>
+                  <p className="text-sm font-medium text-white">
                     {siteSettings.contactEmail || t("contact.emailUnavailable")}
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 group cursor-pointer">
-                <div className="p-2 rounded-lg bg-muted text-muted-foreground group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 mt-1">
+              <div className="flex items-start gap-3 group">
+                <div className="p-2 rounded-lg bg-white/10 text-white group-hover:bg-[#FFA726]/15 group-hover:text-[#FFA726] transition-all duration-300 mt-1">
                   <MapPin className="h-4 w-4" />
                 </div>
                 <div>
-                  <p className="text-xs text-muted-foreground">{t("contact.address")}</p>
-                  <p className="text-sm font-medium text-foreground leading-relaxed">
+                  <p className="text-xs text-white">{t("contact.address")}</p>
+                  <p className="text-sm font-medium text-white leading-relaxed">
                     {siteSettings.address || t("contact.addressUnavailable")}
                   </p>
                 </div>
@@ -348,7 +338,7 @@ export default function Footer({
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="p-2 rounded-lg bg-muted text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-all duration-300"
+                  className="p-2 rounded-lg bg-white/10 text-white hover:bg-[#FFA726]/15 hover:text-[#FFA726] transition-all duration-300"
                 >
                   <social.icon className="h-4 w-4" />
                 </a>
@@ -360,19 +350,18 @@ export default function Footer({
           <div className={`lg:col-span-6 grid gap-6 ${categories.length > 0 ? 'grid-cols-2 md:grid-cols-3' : 'grid-cols-2'}`}>
             {/* Quick Links */}
             <div className="relative">
-              <div className="absolute -left-3 top-0 w-1 h-6 bg-gradient-to-b from-primary to-primary/50 rounded-full" />
-              <h3 className="text-sm font-bold text-foreground mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <h3 className="text-sm font-semibold text-white mb-5 flex items-center gap-2">
+                <span className="h-1 w-5 rounded-full bg-[#FFA726]" />
                 {t("sections.quickLinks")}
               </h3>
-              <ul className="space-y-1.5">
+              <ul className="space-y-3">
                 {quickLinks.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-muted-foreground hover:text-foreground hover:pl-2 flex items-center gap-2 group transition-all duration-300 relative"
+                      className="text-sm text-white hover:text-[#FFA726] hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
                     >
-                      <span className="absolute left-0 w-0 h-px bg-primary group-hover:w-4 transition-all duration-300" />
+                      <span className="absolute left-0 w-0 h-px bg-[#FFA726] group-hover:w-4 transition-all duration-300" />
                       <ChevronRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300" />
                       <span className="group-hover:font-medium">{link.label}</span>
                     </Link>
@@ -384,19 +373,18 @@ export default function Footer({
             {/* ✅ Categories (from /api/categories) - Only show if categories exist */}
             {categories.length > 0 && (
               <div className="relative">
-                <div className="absolute -left-3 top-0 w-1 h-6 bg-gradient-to-b from-primary to-primary/50 rounded-full" />
-                <h3 className="text-sm font-bold text-foreground mb-4 flex items-center gap-2">
-                  <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+                <h3 className="text-sm font-semibold text-white mb-5 flex items-center gap-2">
+                  <span className="h-1 w-5 rounded-full bg-[#FFA726]" />
                   {t("sections.categories")}
                 </h3>
-                <ul className="space-y-1.5">
+                <ul className="space-y-3">
                   {categories.slice(0, 10).map((link) => (
                     <li key={link.href}>
                       <Link
                         href={link.href}
-                        className="text-sm text-muted-foreground hover:text-foreground hover:pl-2 flex items-center gap-2 group transition-all duration-300 relative"
+                        className="text-sm text-white hover:text-[#FFA726] hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
                       >
-                        <span className="absolute left-0 w-0 h-px bg-primary group-hover:w-4 transition-all duration-300" />
+                        <span className="absolute left-0 w-0 h-px bg-[#FFA726] group-hover:w-4 transition-all duration-300" />
                         <ChevronRight className="h-3 w-3 opacity-0 group-hover:opacity-100 transition-all duration-300" />
                         <span className="group-hover:font-medium">{link.label}</span>
                       </Link>
@@ -408,20 +396,19 @@ export default function Footer({
 
             {/* Customer Service */}
             <div className="relative">
-              <div className="absolute -left-3 top-0 w-1 h-6 bg-gradient-to-b from-primary to-primary/50 rounded-full" />
-              <h3 className="text-sm font-bold text-foreground mb-4 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
+              <h3 className="text-sm font-semibold text-white mb-5 flex items-center gap-2">
+                <span className="h-1 w-5 rounded-full bg-[#FFA726]" />
                 {t("sections.customerService")}
               </h3>
-              <ul className="space-y-1.5">
+              <ul className="space-y-3">
                 {customerService.map((link) => (
                   <li key={link.href}>
                     <Link
                       href={link.href}
-                      className="text-sm text-muted-foreground hover:text-foreground hover:pl-2 flex items-center gap-2 group transition-all duration-300 relative"
+                      className="text-sm text-white hover:text-[#FFA726] hover:translate-x-1 flex items-center gap-2 group transition-all duration-300 relative"
                     >
-                      <span className="absolute left-0 w-0 h-px bg-primary group-hover:w-4 transition-all duration-300" />
-                      <link.icon className="h-3.5 w-3.5 text-primary/70 group-hover:text-primary transition-colors duration-300" />
+                      <span className="absolute left-0 w-0 h-px bg-[#FFA726] group-hover:w-4 transition-all duration-300" />
+                      <link.icon className="h-3.5 w-3.5 text-white/80 group-hover:text-[#FFA726] transition-colors duration-300" />
                       <span className="group-hover:font-medium">{link.label}</span>
                     </Link>
                   </li>
@@ -433,14 +420,14 @@ export default function Footer({
           {/* Newsletter Column */}
           <div className="lg:col-span-3">
             <SpotlightCard
-              className="!p-0 !border-border !bg-card !rounded-xl overflow-hidden"
-              spotlightColor="rgba(0, 229, 255, 0.1)"
+              className="!p-0 !border-white/20 !bg-white/10 !rounded-2xl overflow-hidden shadow-[0_8px_32px_rgba(24,61,35,0.05)]"
+              spotlightColor="rgba(255, 255, 255, 0.08)"
             >
-              <div className="bg-muted/30 rounded-xl p-6 border border-border">
-                <h3 className="text-sm font-semibold text-foreground mb-2">
+              <div className="p-6 sm:p-7">
+                <h3 className="text-sm font-semibold text-white mb-2">
                   {t("newsletter.title")}
                 </h3>
-                <p className="text-xs text-muted-foreground mb-4">
+                <p className="text-xs text-white mb-4">
                   {t("newsletter.description")}
                 </p>
 
@@ -452,18 +439,18 @@ export default function Footer({
                       aria-label={t("newsletter.emailLabel")}
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
-                      className="w-full bg-background border-border text-foreground placeholder:text-muted-foreground/50 pr-10"
+                      className="h-11 w-full rounded-lg border-white/20 bg-[#1a682c] pr-10 text-white placeholder:text-white/70 focus-visible:ring-[#FFA726]"
                     />
-                    <Send className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                    <Send className="absolute right-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-white" />
                   </div>
                   <Button
                     type="submit"
                     disabled={isSubscribing}
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 transition-all duration-300 disabled:opacity-50"
+                    className="h-11 w-full rounded-lg !bg-[#FB8C00] font-semibold !text-white hover:!bg-[#FB981A] focus-visible:ring-[#FFA726] transition-colors disabled:opacity-50"
                   >
                     {isSubscribing ? (
                       <span className="flex items-center gap-2">
-                        <div className="h-4 w-4 border-2 border-primary-foreground border-t-transparent rounded-full animate-spin" />
+                        <div className="h-4 w-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
                         {t("newsletter.subscribing")}
                       </span>
                     ) : (
@@ -475,10 +462,10 @@ export default function Footer({
                   </Button>
                 </form>
 
-                <div className="mt-4 pt-4 border-t border-border">
+                <div className="mt-4 pt-4 border-t border-white/20">
                   <div className="flex items-center gap-2">
-                    <Heart className="h-4 w-4 text-primary" />
-                    <p className="text-xs text-muted-foreground">
+                    <Heart className="h-4 w-4 text-white" />
+                    <p className="text-xs text-white">
                       {t("secureTransactions")}
                     </p>
                   </div>
@@ -490,10 +477,10 @@ export default function Footer({
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-border bg-muted/30">
+      <div className="border-t border-white/20 bg-[#1A682C]">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
-            <p className="text-xs text-muted-foreground">
+            <p className="text-xs text-white">
               {t("rights", {
                 year: currentYear,
                 site: siteSettings.siteTitle?.trim() || DEFAULT_SITE_TITLE,
@@ -509,7 +496,7 @@ export default function Footer({
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-xs text-muted-foreground hover:text-foreground transition-colors"
+                  className="text-xs text-white hover:text-[#FFA726] transition-colors"
                 >
                   {link.label}
                 </Link>
@@ -517,13 +504,13 @@ export default function Footer({
             </div>
 
             <div className="flex items-center gap-2">
-              <div className="px-2 py-1 bg-background border border-border rounded text-xs text-muted-foreground">
+              <div className="rounded-md border border-white/20 bg-white/10 px-2.5 py-1.5 text-[11px] font-medium text-white">
                 Visa
               </div>
-              <div className="px-2 py-1 bg-background border border-border rounded text-xs text-muted-foreground">
+              <div className="rounded-md border border-white/20 bg-white/10 px-2.5 py-1.5 text-[11px] font-medium text-white">
                 Mastercard
               </div>
-              <div className="px-2 py-1 bg-background border border-border rounded text-xs text-muted-foreground">
+              <div className="rounded-md border border-white/20 bg-white/10 px-2.5 py-1.5 text-[11px] font-medium text-white">
                 bkash
               </div>
             </div>
