@@ -23,6 +23,14 @@ type Options = {
   onAccessError: (error: ChatRequestError) => void;
 };
 
+type LoginSessionResponse = { user?: { id?: string } | null };
+function isLoginSessionResponse(value: unknown): value is LoginSessionResponse {
+  if (!value || typeof value !== "object" || Array.isArray(value)) return false;
+  if (!("user" in value) || value.user === null) return true;
+  return typeof value.user === "object" && !Array.isArray(value.user)
+    && (!("id" in value.user) || typeof value.user.id === "string");
+}
+
 export function useSupportChatRealtime(options: Options) {
   const { enabled, identity, conversationId, admin = false, availability = false } = options;
   const callbacks = useRef(options);
@@ -208,9 +216,37 @@ export function useSupportChatRealtime(options: Options) {
                 renewals.set(params.channelName, setTimeout(() => renew(params.channelName),
                   Math.max(250, remaining - Math.min(5_000, remaining / 2))));
                 callback(null, { auth: authorization.auth });
-              }).catch((error: unknown) => {
+              }).catch(async (error: unknown) => {
                 if (disposed || denied || pusher?.connection.socket_id !== params.socketId) return;
                 const failure = error instanceof ChatRequestError ? error : new ChatRequestError("unexpected");
+                const expectedUserId = admin ? identity : identity.startsWith("user:") ? identity.slice(5) : null;
+                if (failure.status === 401 && expectedUserId) {
+                  // A channel failure is not proof of logout. Recheck the current
+                  // cookie through NextAuth before the UI drops private chat state.
+                  // This endpoint also performs NextAuth's normal cookie rotation.
+                  try {
+                    const session = await fetchChatJson<LoginSessionResponse>("/api/auth/session", {
+                      signal: controller.signal,
+                    }, isLoginSessionResponse);
+                    if (disposed || denied || pusher?.connection.socket_id !== params.socketId) return;
+                    if (session.user?.id === expectedUserId) {
+                      live = false;
+                      setConnectionStatus("fallback");
+                      planSync();
+                      requestSync();
+                      callback(failure, null);
+                      return;
+                    }
+                  } catch {
+                    if (disposed || denied || pusher?.connection.socket_id !== params.socketId) return;
+                    // An unavailable session endpoint is not evidence of expiry.
+                    live = false;
+                    setConnectionStatus("fallback");
+                    planSync();
+                    callback(failure, null);
+                    return;
+                  }
+                }
                 if ([401, 403, 404].includes(failure.status ?? 0)) accessFailure(failure);
                 else { live = false; setConnectionStatus("fallback"); planSync(); }
                 callback(failure, null);

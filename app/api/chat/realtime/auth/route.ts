@@ -1,6 +1,6 @@
 import type { NextRequest } from "next/server";
 import { chatJson, rejectUnsafeChatMutation } from "@/lib/chat-guest-session";
-import { getRealtimeChatActor, requireRealtimeConversation } from "@/lib/chat-realtime-access";
+import { getRealtimeChatActor, rejectInvalidRealtimeLogin, requireRealtimeConversation } from "@/lib/chat-realtime-access";
 import { CHAT_ADMIN_CHANNEL, CHAT_AUTH_RECHECK_MS, conversationIdFromChannel } from "@/lib/chat-realtime";
 import { getChatPusher } from "@/lib/pusher-server";
 import { rateLimitRequest } from "@/lib/request-security";
@@ -20,6 +20,11 @@ export async function POST(request: NextRequest) {
     const id = conversationIdFromChannel(body.channelName);
     if (!isAdminChannel && !id) return chatJson({ error: "Channel not permitted." }, { status: 403 });
     const context = await getRealtimeChatActor(request);
+    const invalidLogin = rejectInvalidRealtimeLogin(context);
+    if (invalidLogin) return invalidLogin;
+    if (isAdminChannel && !context.actor.userId) {
+      return chatJson({ error: "A valid login session is required.", code: "CHAT_LOGIN_SESSION_INVALID" }, { status: 401 });
+    }
     if (!context.actor.userId && !context.guestSession) {
       return chatJson({ error: "A valid guest chat session is required.", code: "GUEST_CHAT_SESSION_REQUIRED" }, { status: 401 });
     }
@@ -38,7 +43,8 @@ export async function POST(request: NextRequest) {
     }
     const validForMs = Math.min(CHAT_AUTH_RECHECK_MS, context.expiresAt - Date.now());
     if (!Number.isFinite(validForMs) || validForMs <= 0) {
-      return chatJson({ error: "Chat session expired." }, { status: 401 });
+      return chatJson({ error: "Chat session expired.", code: context.actor.userId
+        ? "CHAT_LOGIN_SESSION_INVALID" : "GUEST_CHAT_SESSION_REQUIRED" }, { status: 401 });
     }
     const pusher = getChatPusher();
     if (!pusher) return chatJson({ error: "Live chat is not configured." }, { status: 503 });
