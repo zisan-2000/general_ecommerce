@@ -481,6 +481,7 @@ export async function POST(
       return NextResponse.json({ error: "Invalid upload path" }, { status: 400 });
     }
     const relPath = slug.join("/");
+    if (slug[0] === "chat-attachments") return NextResponse.json({ error: "Not found" }, { status: 404 });
     const prefix = slug[0];
     const requiresScmProposalScope = isScmProposalPath(relPath);
     const requiresScmGrnScope = isScmGrnPath(relPath);
@@ -657,6 +658,7 @@ export async function GET(
       return NextResponse.json({ error: "Bad path" }, { status: 400 });
     }
     const relPath = slug.join("/");
+    if (slug[0] === "chat-attachments") return NextResponse.json({ error: "Not found" }, { status: 404 });
     
     if (relPath.includes("..")) {
       return NextResponse.json({ error: "Bad path" }, { status: 400 });

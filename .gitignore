@@ -43,6 +43,7 @@ yarn-error.log*
 next-env.d.ts
 
 # Uploads
+/.private-upload/
 /public/uploads/
 /public/pdf.worker.min.mjs
 

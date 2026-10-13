@@ -18,6 +18,9 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { CHAT_AVAILABILITY_POLL_MS, type ChatAvailability, isChatAvailability } from "@/lib/chat-availability";
 import { logChatAvailability } from "@/lib/chat-availability-diagnostics";
+import ChatAttachmentPicker from "@/components/chat/ChatAttachmentPicker";
+import ChatAttachment from "@/components/chat/ChatAttachment";
+import { chatMessageRequest } from "@/lib/chat-attachments";
 import {
   type ChatConversation,
   type ChatMessage,
@@ -56,6 +59,7 @@ type PendingChatMessage = {
   quickAction: string;
   orderReference: string;
   originalDraft: string;
+  file: File | null;
 };
 
 const QUICK_ACTIONS = [
@@ -107,6 +111,7 @@ export default function SupportChatWidget() {
   const [guestName, setGuestName] = useState("");
   const [guestEmail, setGuestEmail] = useState("");
   const [draftMessage, setDraftMessage] = useState("");
+  const [attachmentFile, setAttachmentFile] = useState<File | null>(null);
   const [orderReference, setOrderReference] = useState("");
   const [showFeedback, setShowFeedback] = useState(false);
   const [rating, setRating] = useState<number>(5);
@@ -188,6 +193,7 @@ export default function SupportChatWidget() {
     setClosing(false);
     setRefreshing(false);
     setDraftMessage("");
+    setAttachmentFile(null);
     setShowFeedback(false);
     setFeedback("");
     return () => { requestEpochRef.current += 1; };
@@ -261,6 +267,7 @@ export default function SupportChatWidget() {
             && messageDataRef.current?.messages.some((item) => item.id === pending.clientMessageId)) {
             pendingMessageRef.current = null;
             setDraftMessage((current) => current === pending.originalDraft ? "" : current);
+            setAttachmentFile((current) => current === pending.file ? null : current);
             setActionError((current) => current?.operation === "send" ? null : current);
           }
           return true;
@@ -552,7 +559,7 @@ export default function SupportChatWidget() {
       const epoch = requestEpochRef.current;
       const messageText = draftMessage.trim()
         || (quickAction ? `I need help regarding ${quickAction.toLowerCase()}.` : "");
-      if (!messageText || messageText.length > 4000) {
+      if ((!messageText && !attachmentFile) || messageText.length > 4000) {
         handleChatError(new ChatRequestError(
           "validation", 400, messageText ? "MESSAGE_TOO_LONG" : "MESSAGE_EMPTY",
         ), "send");
@@ -576,6 +583,7 @@ export default function SupportChatWidget() {
         const effectiveAction = quickAction ?? (sameText ? previous?.quickAction : "") ?? "";
         const reference = orderReference.trim();
         const reuse = previous && sameText && previous.quickAction === effectiveAction
+          && previous.file === attachmentFile
           && previous.orderReference === reference
           && (previous.conversationId === (conversation?.id ?? null));
         const pending: PendingChatMessage = reuse && previous ? { ...previous, originalDraft } : {
@@ -585,6 +593,7 @@ export default function SupportChatWidget() {
           quickAction: effectiveAction,
           orderReference: reference,
           originalDraft,
+          file: attachmentFile,
         };
         pendingMessageRef.current = pending;
         // Do not include the first message in non-idempotent conversation creation.
@@ -595,14 +604,10 @@ export default function SupportChatWidget() {
         }
         const createdMessage = await fetchChatJson<ChatMessage>(
           `/api/chat/conversations/${pending.conversationId}/messages`,
-          {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({
-              message: pending.message, quickAction: pending.quickAction,
-              orderReference: pending.orderReference, clientMessageId: pending.clientMessageId,
-            }),
-          },
+          chatMessageRequest({
+            message: pending.message, quickAction: pending.quickAction,
+            orderReference: pending.orderReference, clientMessageId: pending.clientMessageId,
+          }, pending.file),
           isChatMessage,
         );
         if (createdMessage.id !== pending.clientMessageId
@@ -614,6 +619,7 @@ export default function SupportChatWidget() {
           ? current : [...current, createdMessage]);
         setMessageOwner(identity);
         setDraftMessage((current) => current === originalDraft ? "" : current);
+        setAttachmentFile((current) => current === pending.file ? null : current);
         // A refresh failure must not present a Send retry after confirmed delivery.
         await loadMessages(pending.conversationId, false, true);
       } catch (sendError) {
@@ -624,7 +630,7 @@ export default function SupportChatWidget() {
         requestSynchronize();
       }
     },
-    [closing, conversation?.id, createConversation, draftMessage, handleChatError, identity,
+    [attachmentFile, closing, conversation?.id, createConversation, draftMessage, handleChatError, identity,
       loading, loadMessages, notifyTyping, orderReference, requestSynchronize, resolvingConversation, sending, session?.user?.id, starting],
   );
 
@@ -902,13 +908,14 @@ export default function SupportChatWidget() {
                     className={`flex ${mine ? "justify-end" : "justify-start"}`}
                   >
                     <div
-                      className={`max-w-[85%] rounded-lg px-3 py-2 text-sm shadow-sm ${
+                      className={`min-w-0 max-w-[85%] rounded-xl px-3 py-2 text-sm shadow-sm ${
                         mine
                           ? "bg-primary text-primary-foreground"
                           : "bg-card text-card-foreground border border-border"
                       }`}
                     >
-                      <p className="whitespace-pre-wrap break-words">{item.message}</p>
+                      {item.message === "Attachment" && item.attachmentUrl ? null : <p className="whitespace-pre-wrap break-words">{item.message}</p>}
+                      <ChatAttachment key={item.attachmentUrl} url={item.attachmentUrl} conversationId={item.conversationId} messageId={item.id} />
 
                       <p
                         className={`mt-1 text-[11px] ${
@@ -931,7 +938,7 @@ export default function SupportChatWidget() {
 
         {/* INPUT AREA */}
         {!resolvingConversation && !showGuestForm && (
-          <div className="shrink-0 border-t bg-background p-3 space-y-3">
+          <div className="max-h-[50%] shrink-0 overflow-y-auto overscroll-contain border-t bg-background p-3 space-y-3">
             {remoteTyping && (
               <p role="status" aria-live="polite" className="text-xs text-muted-foreground">Support agent is typing…</p>
             )}
@@ -951,6 +958,9 @@ export default function SupportChatWidget() {
             </div>
 
             {/* MESSAGE BOX */}
+            <ChatAttachmentPicker file={attachmentFile} disabled={sendDisabled} uploading={sending && !!attachmentFile}
+              onChange={(file) => { setAttachmentFile(file); setActionError(null); }}
+              onError={(code) => handleChatError(new ChatRequestError("validation", 400, code), "send")} />
             <div className="flex items-end gap-2">
               <textarea
                 ref={messageInputRef}
@@ -981,7 +991,7 @@ export default function SupportChatWidget() {
                 aria-label={sending ? "Sending message" : "Send message"}
                 size="icon"
                 onClick={() => void sendMessage()}
-                disabled={sendDisabled}
+                disabled={sendDisabled || (!draftMessage.trim() && !attachmentFile)}
               >
                 {sending
                   ? <LoaderCircle aria-hidden="true" className="h-4 w-4 animate-spin" />
@@ -990,7 +1000,7 @@ export default function SupportChatWidget() {
             </div>
             <div className="flex items-center justify-between gap-2 text-xs text-muted-foreground">
               <p id="support-chat-send-status" role="status" aria-live="polite">
-                {refreshing ? "Refreshing chat…" : sending ? "Sending message…" : closing ? "Updating chat…" : "Enter to send · Shift+Enter for a new line"}
+                {refreshing ? "Refreshing chat…" : sending ? (attachmentFile ? "Uploading attachment…" : "Sending message…") : closing ? "Updating chat…" : "Enter to send · Shift+Enter for a new line"}
               </p>
               <span className={`shrink-0 ${draftMessage.trim().length > 4000 ? "text-destructive" : ""}`}>
                 {draftMessage.trim().length}/4,000

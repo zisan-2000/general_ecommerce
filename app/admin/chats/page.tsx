@@ -7,6 +7,9 @@ import { Clock3, LoaderCircle, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import AgentAvailabilityControl from "@/components/chat/AgentAvailabilityControl";
+import ChatAttachmentPicker from "@/components/chat/ChatAttachmentPicker";
+import ChatAttachment from "@/components/chat/ChatAttachment";
+import { chatMessageRequest } from "@/lib/chat-attachments";
 import { useSupportChatRealtime } from "@/hooks/use-support-chat-realtime";
 import { CHAT_CONNECTION_LABELS } from "@/lib/chat-realtime";
 import {
@@ -78,6 +81,7 @@ export default function AdminChatsPage() {
   const [selectedId, setSelectedId] = useState<string | null>(null);
   const [messages, setMessages] = useState<ChatMessage[]>([]);
   const [draft, setDraft] = useState("");
+  const [attachmentFile, setAttachmentFile] = useState<File | null>(null);
   const [statusFilter, setStatusFilter] = useState<"ALL" | ChatStatus>(
     "ALL",
   );
@@ -91,6 +95,7 @@ export default function AdminChatsPage() {
   const [loadingMessages, setLoadingMessages] = useState(false);
   const [saving, setSaving] = useState(false);
   const [sendingReply, setSendingReply] = useState(false);
+  const [sendingConversationId, setSendingConversationId] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [viewIdentity, setViewIdentity] = useState<string | null>(null);
   const [messageConversationId, setMessageConversationId] = useState<string | null>(null);
@@ -101,7 +106,8 @@ export default function AdminChatsPage() {
   const mutationRef = useRef<number | null>(null);
   const messagesCache = useRef(new Map<string, ChatMessage[]>());
   const draftCache = useRef(new Map<string, string>());
-  const pendingReplies = useRef(new Map<string, { id: string; text: string; originalDraft: string }>());
+  const fileDraftCache = useRef(new Map<string, File>());
+  const pendingReplies = useRef(new Map<string, { id: string; text: string; originalDraft: string; file: File | null }>());
   const messageRequest = useRef<{ id: string; epoch: number; sequence: number; promise: Promise<boolean> } | null>(null);
   const queryKey = getConversationsCacheKey({ statusFilter, priorityFilter, assignmentFilter });
   const queryRef = useRef(queryKey);
@@ -112,11 +118,14 @@ export default function AdminChatsPage() {
       epochRef.current += 1;
       messagesCache.current.clear();
       draftCache.current.clear();
+      fileDraftCache.current.clear();
+      setAttachmentFile(null);
       pendingReplies.current.clear();
       mutationRef.current = null;
       messageRequest.current = null;
       setSaving(false);
       setSendingReply(false);
+      setSendingConversationId(null);
       setLoadingMessages(false);
       setLoadingList(false);
       setMessages([]);
@@ -130,6 +139,7 @@ export default function AdminChatsPage() {
     epochRef.current += 1;
     messagesCache.current.clear();
     draftCache.current.clear();
+    fileDraftCache.current.clear();
     pendingReplies.current.clear();
     mutationRef.current = null;
     messageRequest.current = null;
@@ -139,9 +149,11 @@ export default function AdminChatsPage() {
     setSelectedId(null);
     setMessageConversationId(null);
     setDraft("");
+    setAttachmentFile(null);
     setError(null);
     setSaving(false);
     setSendingReply(false);
+    setSendingConversationId(null);
     setViewIdentity(adminId);
     return () => { epochRef.current += 1; };
   }, [adminId]);
@@ -225,6 +237,8 @@ export default function AdminChatsPage() {
               pendingReplies.current.delete(conversationId);
               setDraft((current) => current === pending.originalDraft ? "" : current);
               if (draftCache.current.get(conversationId) === pending.originalDraft) draftCache.current.delete(conversationId);
+              if (fileDraftCache.current.get(conversationId) === pending.file) fileDraftCache.current.delete(conversationId);
+              setAttachmentFile((current) => current === pending.file ? null : current);
               setError(null);
             }
           }, isCurrent);
@@ -254,6 +268,7 @@ export default function AdminChatsPage() {
     setMessages(selectedId ? messagesCache.current.get(selectedId) ?? [] : []);
     setMessageConversationId(selectedId);
     setDraft(selectedId ? draftCache.current.get(selectedId) ?? "" : "");
+    setAttachmentFile(selectedId ? fileDraftCache.current.get(selectedId) ?? null : null);
     setLoadingMessages(false);
     if (!selectedId) return;
     void loadMessages(selectedId, false);
@@ -307,7 +322,7 @@ export default function AdminChatsPage() {
 
   const sendReply = useCallback(async () => {
     const text = draft.trim();
-    if (!selectedId || !text || mutationRef.current !== null) return;
+    if (!selectedId || (!text && !attachmentFile) || mutationRef.current !== null || loadingMessages) return;
     if (text.length > 4000) {
       handleFailure(new ChatRequestError("validation", 400, "MESSAGE_TOO_LONG"), "send");
       return;
@@ -320,22 +335,23 @@ export default function AdminChatsPage() {
     notifyTyping(false);
     setSaving(true);
     setSendingReply(true);
+    setSendingConversationId(conversationId);
     try {
       const previous = pendingReplies.current.get(conversationId);
-      const pending = previous?.text === text ? previous
-        : { id: createChatMessageId(), text, originalDraft: draft };
+      const pending = previous?.text === text && previous.file === attachmentFile ? previous
+        : { id: createChatMessageId(), text, originalDraft: draft, file: attachmentFile };
       pendingReplies.current.set(conversationId, pending);
-      const created = await fetchChatJson<ChatMessage>(`/api/chat/conversations/${conversationId}/messages`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ message: pending.text, clientMessageId: pending.id }),
-      }, isChatMessage);
+      const created = await fetchChatJson<ChatMessage>(`/api/chat/conversations/${conversationId}/messages`,
+        chatMessageRequest({ message: pending.text, clientMessageId: pending.id }, pending.file), isChatMessage);
       if (created.id !== pending.id || created.conversationId !== conversationId) throw new ChatRequestError("unexpected");
       if (epoch !== epochRef.current) return;
       pendingReplies.current.delete(conversationId);
       if (draftCache.current.get(conversationId) === pending.originalDraft) draftCache.current.delete(conversationId);
+      if (fileDraftCache.current.get(conversationId) === pending.file) fileDraftCache.current.delete(conversationId);
+      messagesCache.current.set(conversationId, mergeChatMessages(messagesCache.current.get(conversationId) ?? [], [created]));
       if (selectedRef.current === conversationId) {
         setDraft((current) => current === pending.originalDraft ? "" : current);
+        setAttachmentFile((current) => current === pending.file ? null : current);
         setMessages((current) => mergeChatMessages(current, [created]));
       }
       setError(null);
@@ -347,9 +363,10 @@ export default function AdminChatsPage() {
       if (mutationRef.current === epoch) mutationRef.current = null;
       if (epoch === epochRef.current) setSaving(false);
       if (epoch === epochRef.current) setSendingReply(false);
+      if (epoch === epochRef.current) setSendingConversationId(null);
       requestSynchronize();
     }
-  }, [draft, handleFailure, loadConversations, loadMessages, notifyTyping, requestSynchronize, selectedId]);
+  }, [attachmentFile, draft, handleFailure, loadConversations, loadMessages, loadingMessages, notifyTyping, requestSynchronize, selectedId]);
 
   const visibleConversations = viewIdentity === adminId ? conversations : [];
   const visibleMessages = viewIdentity === adminId && messageConversationId === selectedId ? messages : [];
@@ -581,29 +598,16 @@ export default function AdminChatsPage() {
                         className={`flex ${mine ? "justify-end" : "justify-start"}`}
                       >
                         <div
-                          className={`max-w-[80%] rounded-2xl px-3 py-2 text-sm shadow-sm ${
+                          className={`min-w-0 max-w-[80%] rounded-2xl px-3 py-2 text-sm shadow-sm ${
                             mine
                               ? "bg-primary text-primary-foreground"
                               : "bg-card text-card-foreground border border-border"
                           }`}
                         >
-                          <p className="whitespace-pre-wrap">
+                          {message.message === "Attachment" && message.attachmentUrl ? null : <p className="whitespace-pre-wrap break-words">
                             {message.message}
-                          </p>
-                          {message.attachmentUrl ? (
-                            <a
-                              href={message.attachmentUrl}
-                              target="_blank"
-                              rel="noreferrer"
-                              className={`mt-1 block text-xs underline ${
-                                mine
-                                  ? "text-primary-foreground/80"
-                                  : "text-primary"
-                              }`}
-                            >
-                              {t("thread.viewAttachment")}
-                            </a>
-                          ) : null}
+                          </p>}
+                          <ChatAttachment key={message.attachmentUrl} url={message.attachmentUrl} conversationId={message.conversationId} messageId={message.id} />
                           <p
                             className={`mt-1 text-[11px] ${
                               mine
@@ -630,6 +634,18 @@ export default function AdminChatsPage() {
 
               <div className="border-t p-3">
                 {remoteTyping && <p role="status" aria-live="polite" className="mb-2 text-xs text-muted-foreground">Customer is typing…</p>}
+                <div className="mb-3">
+                  <ChatAttachmentPicker file={attachmentFile} disabled={saving || loadingMessages} uploading={sendingReply && sendingConversationId === selectedId && !!attachmentFile}
+                    onChange={(file) => {
+                      setAttachmentFile(file);
+                      if (selectedId) {
+                        if (file) fileDraftCache.current.set(selectedId, file);
+                        else fileDraftCache.current.delete(selectedId);
+                      }
+                      setError(null);
+                    }}
+                    onError={(code) => handleFailure(new ChatRequestError("validation", 400, code), "send")} />
+                </div>
                 <div className="flex items-end gap-2">
                   <textarea
                     value={draft}
@@ -642,7 +658,7 @@ export default function AdminChatsPage() {
                     }}
                     onBlur={() => notifyTyping(false)}
                     rows={2}
-                    className="min-h-[44px] flex-1 resize-none rounded-md border border-input bg-background px-3 py-2 text-sm"
+                    className="min-h-[44px] min-w-0 flex-1 resize-none rounded-md border border-input bg-background px-3 py-2 text-sm"
                     placeholder={t("thread.replyPlaceholder")}
                     onKeyDown={(event) => {
                       if (event.key === "Enter" && !event.shiftKey) {
@@ -656,13 +672,13 @@ export default function AdminChatsPage() {
                     size="icon"
                     onClick={() => void sendReply()}
                     aria-label={sendingReply ? "Sending reply" : "Send reply"}
-                    disabled={saving || loadingMessages || !draft.trim()}
+                    disabled={saving || loadingMessages || (!draft.trim() && !attachmentFile)}
                   >
                     {sendingReply ? <LoaderCircle aria-hidden="true" className="h-4 w-4 animate-spin" /> : <Send aria-hidden="true" className="h-4 w-4" />}
                   </Button>
                 </div>
                 <p role="status" aria-live="polite" className="mt-2 text-xs text-muted-foreground">
-                  {sendingReply ? "Sending reply…" : saving ? "Saving chat change…" : "Enter to send · Shift+Enter for a new line"}
+                  {sendingReply ? (sendingConversationId !== selectedId ? "Sending reply in another conversation…" : attachmentFile ? "Uploading attachment…" : "Sending reply…") : saving ? "Saving chat change…" : "Enter to send · Shift+Enter for a new line"}
                 </p>
               </div>
             </div>

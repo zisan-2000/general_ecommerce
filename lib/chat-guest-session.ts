@@ -94,7 +94,7 @@ export function chatJson(body: unknown, init?: ResponseInit): NextResponse {
   return NextResponse.json(body, { ...init, headers });
 }
 
-export function rejectUnsafeChatMutation(request: NextRequest): NextResponse | null {
+export function rejectUnsafeChatMutation(request: NextRequest, options?: { allowMultipart?: boolean }): NextResponse | null {
   const fetchSite = request.headers.get("sec-fetch-site")?.toLowerCase();
   const origin = request.headers.get("origin");
   let trustedOrigin = false;
@@ -115,8 +115,9 @@ export function rejectUnsafeChatMutation(request: NextRequest): NextResponse | n
   if (!trustedOrigin || fetchSite === "cross-site") {
     return chatJson({ error: "Untrusted chat request origin." }, { status: 403 });
   }
-  if (request.headers.get("content-type")?.split(";")[0].trim().toLowerCase() !== "application/json") {
-    return chatJson({ error: "Chat requests must use application/json." }, { status: 415 });
+  const contentType = request.headers.get("content-type")?.split(";")[0].trim().toLowerCase();
+  if (contentType !== "application/json" && !(options?.allowMultipart && contentType === "multipart/form-data")) {
+    return chatJson({ error: "Unsupported chat request format." }, { status: 415 });
   }
   return null;
 }

@@ -3,7 +3,9 @@ import path from "path";
 import { del, get, put } from "@vercel/blob";
 
 const LOCAL_UPLOAD_ROOT = path.join(/* turbopackIgnore: true */ process.cwd(), "public", "upload");
+const LOCAL_CHAT_UPLOAD_ROOT = path.join(/* turbopackIgnore: true */ process.cwd(), ".private-upload");
 const PRIVATE_PREFIXES = new Set([
+  "chat-attachments",
   "delivery-proofs",
   "delivery-man-documents",
   "digital-assets",
@@ -19,14 +21,18 @@ function isProduction() {
   return process.env.NODE_ENV === "production";
 }
 
-function hasBlobStorage() {
-  return Boolean(process.env.BLOB_READ_WRITE_TOKEN);
+function blobToken(relPath: string) {
+  return relPath.startsWith("chat-attachments/")
+    ? process.env.CHAT_ATTACHMENT_BLOB_READ_WRITE_TOKEN || process.env.BLOB_READ_WRITE_TOKEN
+    : process.env.BLOB_READ_WRITE_TOKEN;
 }
 
-function requireProductionBlobStorage() {
-  if (isProduction() && !hasBlobStorage()) {
+function requireProductionBlobStorage(relPath: string) {
+  if (isProduction() && !blobToken(relPath)) {
     throw new Error(
-      "Production upload storage is not configured. Set BLOB_READ_WRITE_TOKEN.",
+      relPath.startsWith("chat-attachments/")
+        ? "Private chat storage is not configured. Set CHAT_ATTACHMENT_BLOB_READ_WRITE_TOKEN for a private store."
+        : "Production upload storage is not configured. Set BLOB_READ_WRITE_TOKEN.",
     );
   }
 }
@@ -54,8 +60,9 @@ function normalizeRelativePath(relPath: string) {
 }
 
 function localPath(relPath: string) {
-  const target = path.resolve(/* turbopackIgnore: true */ LOCAL_UPLOAD_ROOT, relPath);
-  if (!target.startsWith(`${LOCAL_UPLOAD_ROOT}${path.sep}`)) {
+  const root = relPath.startsWith("chat-attachments/") ? LOCAL_CHAT_UPLOAD_ROOT : LOCAL_UPLOAD_ROOT;
+  const target = path.resolve(/* turbopackIgnore: true */ root, relPath);
+  if (!target.startsWith(`${root}${path.sep}`)) {
     throw new Error("Invalid local upload storage path.");
   }
   return target;
@@ -76,10 +83,11 @@ export async function storeUpload(input: {
   contentType: string;
 }) {
   const relPath = normalizeRelativePath(input.relPath);
-  requireProductionBlobStorage();
+  requireProductionBlobStorage(relPath);
 
-  if (hasBlobStorage()) {
+  if (blobToken(relPath)) {
     await put(blobPath(relPath), input.data, {
+      token: blobToken(relPath),
       access: isPrivateUploadPath(relPath) ? "private" : "public",
       addRandomSuffix: false,
       allowOverwrite: false,
@@ -96,10 +104,11 @@ export async function storeUpload(input: {
 
 export async function readUpload(relPathInput: string) {
   const relPath = normalizeRelativePath(relPathInput);
-  requireProductionBlobStorage();
+  requireProductionBlobStorage(relPath);
 
-  if (hasBlobStorage()) {
+  if (blobToken(relPath)) {
     const result = await get(blobPath(relPath), {
+      token: blobToken(relPath),
       access: isPrivateUploadPath(relPath) ? "private" : "public",
       useCache: !isPrivateUploadPath(relPath),
     });
@@ -121,10 +130,10 @@ export async function readUpload(relPathInput: string) {
 
 export async function deleteUpload(relPathInput: string) {
   const relPath = normalizeRelativePath(relPathInput);
-  requireProductionBlobStorage();
+  requireProductionBlobStorage(relPath);
 
-  if (hasBlobStorage()) {
-    await del(blobPath(relPath));
+  if (blobToken(relPath)) {
+    await del(blobPath(relPath), { token: blobToken(relPath) });
     return;
   }
 

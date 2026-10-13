@@ -35,6 +35,7 @@ const KNOWN_CODES = [
   "GUEST_CHAT_SESSION_REQUIRED", "MESSAGE_TOO_LONG", "MESSAGE_EMPTY",
   "INVALID_MESSAGE_ID", "MESSAGE_ID_CONFLICT",
   "CHAT_PRESENCE_SCHEMA_UNAVAILABLE", "CHAT_PRESENCE_UNAVAILABLE",
+  "CHAT_FILE_TOO_LARGE", "CHAT_FILE_TYPE", "CHAT_FILE_INVALID", "CHAT_UPLOAD_UNAVAILABLE",
 ] as const;
 type ChatErrorCode = typeof KNOWN_CODES[number];
 
@@ -66,6 +67,7 @@ export function isChatMessage(value: unknown): value is ChatMessage {
     && typeof value.conversationId === "string" && Boolean(value.conversationId)
     && typeof value.senderRole === "string" && typeof value.message === "string"
     && typeof value.createdAt === "string"
+    && (value.attachmentUrl === undefined || value.attachmentUrl === null || typeof value.attachmentUrl === "string")
     && (value.isRead === undefined || typeof value.isRead === "boolean");
 }
 
@@ -226,10 +228,14 @@ export function describeChatError(
   if (failure.code === "MESSAGE_ID_CONFLICT") {
     reasons.validation = "This retry does not match the original message. Refresh the chat before sending again.";
   }
+  if (failure.code === "CHAT_FILE_TOO_LARGE") reasons.validation = "Choose a file of 4 MB or less.";
+  if (failure.code === "CHAT_FILE_TYPE") reasons.validation = "Choose an image, PDF, DOCX, XLSX, TXT or CSV file.";
+  if (failure.code === "CHAT_FILE_INVALID") reasons.validation = "The file is empty or its content does not match its type. Choose a valid file.";
+  if (failure.code === "CHAT_UPLOAD_UNAVAILABLE") reasons.server = "Secure upload service is temporarily unavailable. Please try again later.";
   const actions: Record<ChatOperation, string> = {
     read: messageSent ? "Your message was sent, but we could not refresh the chat." : "We could not refresh the chat.",
     start: "We could not start your chat.",
-    send: "We could not confirm that your message was sent. Your text has been kept.",
+    send: "We could not confirm that your message was sent. Your draft and any selected file have been kept.",
     close: "We could not confirm the chat update. Your feedback has been kept; refresh the chat to check.",
   };
   return {

@@ -7,6 +7,10 @@ import { prisma } from "@/lib/prisma";
 import { canAccessConversation, getChatActor } from "@/lib/chat";
 import { getAccessContext } from "@/lib/rbac";
 import { publishChatChange } from "@/lib/pusher-server";
+import { ChatAttachmentError, prepareChatAttachment, readChatMessageBody } from "@/lib/chat-attachment-server";
+import { parseChatAttachmentUrl } from "@/lib/chat-attachments";
+import { deleteUpload, storeUpload } from "@/lib/upload-storage";
+import { rateLimitRequest } from "@/lib/request-security";
 import {
   chatJson,
   readGuestChatSession,
@@ -15,6 +19,7 @@ import {
 } from "@/lib/chat-guest-session";
 
 const CHAT_STATUSES: ChatStatus[] = ["OPEN", "IN_PROGRESS", "CLOSED"];
+export const runtime = "nodejs";
 
 function toCleanText(value: unknown, max = 4000): string {
   if (typeof value !== "string") return "";
@@ -124,8 +129,9 @@ export async function POST(
   request: NextRequest,
   { params }: { params: Promise<{ id: string }> },
 ) {
+  let cleanupCandidate: { messageId: string; url: string; relPath: string } | null = null;
   try {
-    const unsafeRequest = rejectUnsafeChatMutation(request);
+    const unsafeRequest = rejectUnsafeChatMutation(request, { allowMultipart: true });
     if (unsafeRequest) return unsafeRequest;
     const { id } = await params;
     const session = await getServerSession(authOptions);
@@ -136,18 +142,9 @@ export async function POST(
       session?.user as { id?: string; role?: string } | undefined,
       { canManageChats: access.has("chats.manage") },
     );
-    const body = await request.json().catch(() => ({}));
-    if (!body || typeof body !== "object" || Array.isArray(body)) {
-      return chatJson({ error: "Invalid chat request." }, { status: 400 });
-    }
-
     const guestSession = actor.userId || actor.isAdmin ? null : await readGuestChatSession(request);
     const unownedGuest = rejectUnownedGuestChat(actor, guestSession, id);
     if (unownedGuest) return unownedGuest;
-    const message = toCleanText(body.message);
-    const quickAction = toCleanText(body.quickAction, 80);
-    const orderReference = toCleanText(body.orderReference, 60);
-    const attachmentUrl = toCleanText(body.attachmentUrl, 2000);
 
     const conversation = await prisma.chatConversation.findUnique({
       where: { id },
@@ -162,6 +159,25 @@ export async function POST(
       return chatJson({ error: "Forbidden." }, { status: 403 });
     }
 
+    if (request.headers.get("content-type")?.toLowerCase().startsWith("multipart/form-data")) {
+      const limits = await Promise.all([
+        rateLimitRequest(request, { scope: "chat-upload-ip", limit: 24, windowMs: 10 * 60_000 }),
+        rateLimitRequest(request, { scope: "chat-upload-owner", identifier: actor.userId ?? id, limit: 12, windowMs: 10 * 60_000 }),
+      ]).catch(() => {
+        console.warn("Support chat upload rate-limit service is unavailable.");
+        throw new ChatAttachmentError("CHAT_UPLOAD_UNAVAILABLE", 503);
+      });
+      const denied = limits.find((limit) => !limit.allowed);
+      if (denied) return chatJson({ error: "Too many attachments. Please try again later." }, {
+        status: 429, headers: { "Retry-After": String(denied.retryAfter) },
+      });
+    }
+    const { body, file } = await readChatMessageBody(request);
+    const message = toCleanText(body.message);
+    const quickAction = toCleanText(body.quickAction, 80);
+    const orderReference = toCleanText(body.orderReference, 60);
+    // Never accept arbitrary external URLs or another conversation's attachment.
+    if (body.attachmentUrl !== undefined && body.attachmentUrl !== null && body.attachmentUrl !== "") throw new ChatAttachmentError("CHAT_FILE_INVALID");
     if (typeof body.message !== "string" && body.message !== undefined) {
       return chatJson({ error: "Message must be text." }, { status: 400 });
     }
@@ -173,6 +189,9 @@ export async function POST(
       || !/^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/.test(clientMessageId))) {
       return chatJson({ error: "Invalid message identifier.", code: "INVALID_MESSAGE_ID" }, { status: 400 });
     }
+    if (file && !clientMessageId) return chatJson({ error: "Invalid message identifier.", code: "INVALID_MESSAGE_ID" }, { status: 400 });
+    const attachment = file ? await prepareChatAttachment(file, id, clientMessageId!) : null;
+    const attachmentUrl = attachment?.url ?? "";
     const composed = composeMessage(message, quickAction, orderReference);
     if (!composed && !attachmentUrl) {
       return chatJson({ error: "Message cannot be empty.", code: "MESSAGE_EMPTY" }, { status: 400 });
@@ -187,9 +206,14 @@ export async function POST(
         include: { sender: { select: { id: true, name: true, email: true } } },
       });
       if (!existing) return null;
+      const storedAttachment = parseChatAttachmentUrl(existing.attachmentUrl);
+      const sameAttachment = attachment
+        ? storedAttachment !== null && storedAttachment.conversationId === id && storedAttachment.messageId === clientMessageId
+          && storedAttachment.hash === attachment.hash && storedAttachment.extension === attachment.extension
+        : existing.attachmentUrl === null;
       if (existing.conversationId !== id || existing.senderId !== actor.userId
         || existing.senderRole !== actor.senderRole || existing.message !== (composed || "Attachment")
-        || existing.attachmentUrl !== (attachmentUrl || null)) {
+        || !sameAttachment) {
         return chatJson({ error: "Message identifier conflict.", code: "MESSAGE_ID_CONFLICT" }, { status: 409 });
       }
       await publishChatChange({ conversationId: id, kind: "message", messageId: existing.id });
@@ -197,6 +221,18 @@ export async function POST(
     };
     const replay = await replayMessage();
     if (replay) return replay;
+
+    if (attachment) {
+      cleanupCandidate = { messageId: clientMessageId!, url: attachment.url, relPath: attachment.relPath };
+      try {
+        // Store privately before the short DB transaction. No DB lock is held
+        // during network I/O; each retry has its own independently cleaned path.
+        await storeUpload({ relPath: attachment.relPath, data: attachment.data, contentType: attachment.contentType });
+      } catch {
+        console.warn("Support chat private attachment storage is unavailable; check private store configuration.");
+        throw new ChatAttachmentError("CHAT_UPLOAD_UNAVAILABLE", 503);
+      }
+    }
 
     const nextStatus =
       actor.isAdmin || conversation.status === "CLOSED" ? "IN_PROGRESS" : conversation.status;
@@ -266,7 +302,18 @@ export async function POST(
 
     return chatJson(createdMessage, { status: 201 });
   } catch (error) {
+    if (error instanceof ChatAttachmentError) return chatJson({ error: "Attachment could not be accepted.", code: error.code }, { status: error.status });
     console.error("CHAT MESSAGES POST ERROR:", error);
     return chatJson({ error: "Failed to send message." }, { status: 500 });
+  } finally {
+    if (cleanupCandidate) {
+      const candidate = cleanupCandidate;
+      // A response failure does not imply rollback. Check the association before
+      // cleanup; an unavailable DB leaves a private orphan, not a broken message.
+      await prisma.chatMessage.findUnique({ where: { id: candidate.messageId }, select: { attachmentUrl: true } })
+        .then(async (committed) => {
+          if (committed?.attachmentUrl !== candidate.url) await deleteUpload(candidate.relPath);
+        }).catch(() => console.warn("Private chat upload cleanup could not be confirmed."));
+    }
   }
 }
