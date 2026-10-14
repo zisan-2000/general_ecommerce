@@ -678,17 +678,54 @@ export async function PUT(
         orderBy: { id: "asc" },
       });
 
-      if (body.lowStockThreshold !== undefined && !hasVariantsPayload) {
+      if (!hasVariantsPayload && existingVariants.length === 1) {
         const simpleVariant = existingVariants.find(
           (variant) =>
             variant.isDefault &&
             Object.keys((variant.options as Record<string, unknown>) ?? {}).length === 0,
         );
 
-        if (simpleVariant && existingVariants.length === 1) {
-          await tx.productVariant.update({
+        if (simpleVariant) {
+          const savedVariant = await tx.productVariant.update({
             where: { id: simpleVariant.id },
-            data: { lowStockThreshold: nextLowStockThreshold },
+            data: {
+              sku:
+                body.sku !== undefined
+                  ? body.sku && String(body.sku).trim()
+                    ? String(body.sku).trim().slice(0, 64)
+                    : simpleVariant.sku
+                  : simpleVariant.sku,
+              // The product detail page prices the selected default variant.
+              // Keep a simple product's internal variant aligned with basePrice.
+              price: nextBasePrice,
+              costPrice:
+                nextBaseCostPrice !== undefined
+                  ? nextBaseCostPrice
+                  : simpleVariant.costPrice,
+              currency,
+              lowStockThreshold: nextLowStockThreshold,
+              digitalAssetId:
+                body.digitalAssetId !== undefined
+                  ? body.digitalAssetId
+                    ? Number(body.digitalAssetId)
+                    : null
+                  : simpleVariant.digitalAssetId,
+            },
+          });
+
+          if (effectiveType === "PHYSICAL" && nextSimpleStock !== null) {
+            await syncVariantWarehouseStock({
+              tx,
+              productId: id,
+              productVariantId: savedVariant.id,
+              quantity: nextSimpleStock,
+              reason: "Admin stock sync",
+            });
+          }
+
+          await ensureVariantCodes(tx, {
+            productId: id,
+            variantId: savedVariant.id,
           });
         }
       }
