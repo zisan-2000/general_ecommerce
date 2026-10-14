@@ -118,7 +118,10 @@ Staff assignee-র global payment-management permission থাকতে হব�
   এটি dashboard detection; email/SMS পাঠানো হয় না।
 - **Network:** HTTP errors, timeout, connection error এবং available allowlisted
   DNS/TLS/socket error code। Latency fetch শুরু থেকে response headers পর্যন্ত।
-  Actual packet loss মাপতে আলাদা host/network monitoring প্রয়োজন।
+  Advanced view-এ Windows host counters, approved localhost TCP probe, charts,
+  historical alerts ও Request ID correlation আছে। TCP packet loss N/A। Setup,
+  আলাদা monitoring filters ও manual checks:
+  [Advanced Network Monitoring Manual](advanced-network-monitoring-manual.md)।
 
 Default history/monitoring window 30 days; একটি query-তে সর্বোচ্চ 90-day range।
 পুরোনো range আলাদাভাবে বেছে নেওয়া যায়। CSV-তে সর্বোচ্চ 5,000 rows; বেশি হলে

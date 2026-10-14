@@ -11,6 +11,9 @@ export type PaymentLogContext = {
 };
 type PaymentEventInput = PaymentLogContext & {
   requestId?: string;
+  networkAgentId?: string;
+  requestStartedAt?: Date;
+  requestCompletedAt?: Date;
   operation: PaymentOperation; outcome: PaymentOutcome; httpStatus?: number; durationMs?: number;
   gatewayStatus?: unknown; detailCode?: "INVALID_RESPONSE" | "INVALID_CALLBACK" | "CALLBACK_REFERENCE_MISMATCH" |
     "VERIFICATION_MISMATCH" | "SETTLEMENT_REJECTED" | "INITIALIZE_REJECTED" | "REFUND_RECORDED" |
@@ -50,6 +53,8 @@ export async function recordPaymentEvent(event: PaymentEventInput) {
     await prisma.paymentEvent.create({ data: {
       provider: event.provider, operation: event.operation, outcome: event.outcome,
       requestId: event.requestId,
+      networkAgentId: event.networkAgentId,
+      requestStartedAt: event.requestStartedAt, requestCompletedAt: event.requestCompletedAt,
       paymentId: event.paymentId ?? matched?.id ?? null, orderId: event.orderId ?? matched?.orderId ?? null,
       transactionId, actorUserId: event.actorUserId ?? null,
       httpStatus: event.httpStatus, durationMs: event.durationMs === undefined ? undefined
@@ -67,19 +72,22 @@ export async function recordPaymentEvent(event: PaymentEventInput) {
 export async function paymentFetch(context: PaymentLogContext, operation: "AUTH" | "INITIALIZE" | "STATUS_QUERY" | "VERIFY",
   input: string | URL, init: Omit<RequestInit, "signal"> & { timeoutMs: number }) {
   const requestId = randomUUID();
+  const configuredAgent = process.env.PAYMENT_NETWORK_AGENT_ID;
+  const networkAgentId = configuredAgent && /^[A-Za-z0-9_-]{1,64}$/.test(configuredAgent) ? configuredAgent : undefined;
   const { timeoutMs, ...options } = init;
-  await recordPaymentEvent({ ...context, requestId, operation, outcome: "REQUEST_STARTED" });
+  await recordPaymentEvent({ ...context, requestId, networkAgentId, requestStartedAt: new Date(), operation, outcome: "REQUEST_STARTED" });
+  const requestStartedAt = new Date();
   const started = performance.now();
   try {
     // The network deadline starts at fetch, after the diagnostic insert.
     const response = await fetch(input, { ...options, signal: AbortSignal.timeout(timeoutMs) });
-    await recordPaymentEvent({ ...context, requestId, operation, outcome: response.ok ? "HTTP_SUCCESS" : "HTTP_ERROR",
+    await recordPaymentEvent({ ...context, requestId, networkAgentId, requestStartedAt, requestCompletedAt: new Date(), operation, outcome: response.ok ? "HTTP_SUCCESS" : "HTTP_ERROR",
       httpStatus: response.status, durationMs: performance.now() - started });
     return response;
   } catch (error) {
     const name = error instanceof Error ? error.name : "";
     const code = safeNetworkCode(error);
-    await recordPaymentEvent({ ...context, requestId, operation, detailCode: code,
+    await recordPaymentEvent({ ...context, requestId, networkAgentId, requestStartedAt, requestCompletedAt: new Date(), operation, detailCode: code,
       outcome: name === "TimeoutError" || name === "AbortError" || code === "ETIMEDOUT" ? "TIMEOUT" : "CONNECTION_ERROR",
       durationMs: performance.now() - started });
     throw error;

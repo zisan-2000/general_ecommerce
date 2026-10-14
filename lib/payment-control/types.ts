@@ -5,6 +5,7 @@ export type PaymentRow = {
 };
 export type EventRow = {
   requestId: string | null;
+  networkAgentId?: string | null; requestStartedAt?: string | null; requestCompletedAt?: string | null;
   id: string; paymentId: number | null; orderId: number | null; transactionId: string | null; provider: string;
   operation: string; outcome: string; httpStatus: number | null; durationMs: number | null;
   gatewayStatus: string | null; detailCode: string | null; createdAt: string;

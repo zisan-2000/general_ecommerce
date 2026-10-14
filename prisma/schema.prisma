@@ -866,6 +866,9 @@ model Payment {
 model PaymentEvent {
   id            String   @id @default(uuid())
   requestId     String?  @db.VarChar(36)
+  networkAgentId String? @db.VarChar(64)
+  requestStartedAt DateTime?
+  requestCompletedAt DateTime?
   paymentId     Int?
   orderId       Int?
   transactionId String?  @db.VarChar(50)
@@ -884,6 +887,112 @@ model PaymentEvent {
   @@index([transactionId, createdAt])
   @@index([provider, operation, createdAt])
   @@index([requestId])
+  @@index([networkAgentId, createdAt])
+}
+
+// Measured diagnostics only. No packet capture, IP payloads, headers or credentials.
+model NetworkMonitorAgent {
+  id             String @id @db.VarChar(64)
+  label          String @db.VarChar(100)
+  enabled        Boolean @default(false)
+  createdById    String
+  lastObservedAt DateTime?
+  lastSeenAt     DateTime?
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  targets        NetworkProbeTarget[]
+  hostSamples    NetworkHostSample[]
+}
+
+model NetworkProbeTarget {
+  id             String @id @default(uuid())
+  agentId        String @db.VarChar(64)
+  label          String @db.VarChar(100)
+  address        String @db.VarChar(45)
+  protocol       String @db.VarChar(10)
+  port           Int?
+  intervalSeconds Int @default(60)
+  timeoutMs      Int @default(3000)
+  enabled        Boolean @default(false)
+  version        Int @default(1)
+  approvedById   String
+  approvedAt     DateTime @default(now())
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  agent          NetworkMonitorAgent @relation(fields: [agentId], references: [id], onDelete: Restrict)
+  samples        NetworkProbeSample[]
+
+  @@index([agentId, enabled])
+}
+
+model NetworkHostSample {
+  id             String @id
+  agentId        String @db.VarChar(64)
+  sessionId      String @db.VarChar(36)
+  sequence       Int
+  adapterKey     String? @db.VarChar(64)
+  observedAt     DateTime
+  receivedAt     DateTime @default(now())
+  intervalStartAt DateTime?
+  counterState   String @db.VarChar(20)
+  packetsSent    BigInt?
+  packetsReceived BigInt?
+  packetsDropped BigInt?
+  tcpRetransmissions BigInt?
+  tcpConnectionFailures BigInt?
+  sentDelta      BigInt?
+  receivedDelta  BigInt?
+  droppedDelta   BigInt?
+  retransmissionsDelta BigInt?
+  connectionFailuresDelta BigInt?
+  agent          NetworkMonitorAgent @relation(fields: [agentId], references: [id], onDelete: Restrict)
+  probes         NetworkProbeSample[]
+
+  @@unique([agentId, sessionId, sequence])
+  @@index([agentId, observedAt, id])
+}
+
+model NetworkProbeSample {
+  id             String @id @default(uuid())
+  sampleId       String
+  targetId       String
+  targetVersion  Int
+  targetLabel    String @db.VarChar(100)
+  address        String @db.VarChar(45)
+  protocol       String @db.VarChar(10)
+  port           Int?
+  startedAt      DateTime
+  completedAt    DateTime
+  outcome        String @db.VarChar(20)
+  latencyMs      Float?
+  elapsedMs      Float
+  errorCode      String? @db.VarChar(40)
+  sample         NetworkHostSample @relation(fields: [sampleId], references: [id], onDelete: Restrict)
+  target         NetworkProbeTarget @relation(fields: [targetId], references: [id], onDelete: Restrict)
+
+  @@unique([sampleId, targetId])
+  @@index([targetId, completedAt, id])
+}
+
+model NetworkMonitorAlert {
+  id             String @id @default(uuid())
+  dedupeKey      String @unique @db.VarChar(200)
+  scope          String @db.VarChar(20)
+  agentId        String? @db.VarChar(64)
+  targetId       String?
+  requestId      String? @db.VarChar(36)
+  code           String @db.VarChar(40)
+  status         String @default("OPEN") @db.VarChar(20)
+  value          Float?
+  threshold      Float?
+  firstSeenAt    DateTime @default(now())
+  lastSeenAt     DateTime @default(now())
+  resolvedAt     DateTime?
+  occurrences    Int @default(1)
+  updatedAt      DateTime @updatedAt
+
+  @@index([agentId, status, lastSeenAt])
+  @@index([scope, status])
 }
 
 model PaymentReconciliation {

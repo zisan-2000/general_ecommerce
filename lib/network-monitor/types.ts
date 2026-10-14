@@ -1,0 +1,27 @@
+import type { EventRow } from "@/lib/payment-control/types";
+export type Agent = { id: string; label: string; enabled: boolean; lastObservedAt: string | null; lastSeenAt: string | null };
+export type Target = { id: string; agentId: string; label: string; address: string; protocol: string; port: number | null;
+  intervalSeconds: number; timeoutMs: number; enabled: boolean; version: number };
+export type HostSample = { id: string; observedAt: string; intervalStartAt: string | null; counterState: string;
+  adapterKey: string | null; packetsSent: string | null; packetsReceived: string | null; packetsDropped: string | null;
+  tcpRetransmissions: string | null; tcpConnectionFailures: string | null; sentDelta: string | null;
+  receivedDelta: string | null; droppedDelta: string | null; retransmissionsDelta: string | null; connectionFailuresDelta: string | null };
+export type ProbeSample = { id: string; targetId: string; targetVersion: number; targetLabel: string; address: string;
+  protocol: string; port: number | null; startedAt: string; completedAt: string; outcome: string; latencyMs: number | null;
+  elapsedMs: number; errorCode: string | null };
+export type NetworkData = {
+  agents: Agent[]; agentId: string | null; range: { start: string; end: string }; page: number; pageSize: number; sampleLimit: number;
+  thresholds: { lossPct: number; probeLatencyMs: number; apiLatencyMs: number; minimumLossSamples: number };
+  hosts: HostSample[]; probes: ProbeSample[]; apiEvents: EventRow[]; hostHistory: HostSample[];
+  probeHistory: ProbeSample[]; apiHistory: EventRow[]; totals: { host: number; probe: number; api: number }; hostStale: boolean;
+  targets: Array<Target & { attempts: number; successes: number; timeouts: number; failures: number;
+    averageLatencyMs: number | null; jitterMs: number | null; jitterPairs: number; packetLossPct: number | null;
+    echoAttempts: number | null; echoReplies: number | null; latest: ProbeSample | null; stale: boolean }>;
+  alerts: Array<{ id: string; scope: string; agentId: string | null; targetId: string | null; requestId: string | null;
+    code: string; status: string; value: number | null; threshold: number | null; occurrences: number; firstSeenAt: string; lastSeenAt: string; resolvedAt: string | null }>;
+  api: { count: number; averageMs: number | null; maxMs: number | null; summary: Array<{ provider: string; outcome: string; _count: { _all: number } }> };
+  correlation: { requestId: string; events: EventRow[]; agentId: string | null; requestStartedAt: string | null;
+    requestCompletedAt: string | null; hostSamples: HostSample[]; probeSamples: ProbeSample[]; available: boolean; windowSeconds: number } | null;
+};
+export type MonitorConfiguration = { agents: Array<Agent & { targets: Target[] }>;
+  allowedProbes: Array<{ address: string; protocol: string; port: number | null; minIntervalSeconds: number }>; hostIntervalSeconds: number };

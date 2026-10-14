@@ -1,10 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import type { DashboardData, DisputeRow, EventRow, PaymentDetail, PaymentRow, RefundRow, StaffOption, SimulationRun } from "@/lib/payment-control/types";
 
 const api = "/api/admin/payment-control";
+const NetworkMonitoringPanel = dynamic(() => import("./NetworkMonitoringPanel"), { ssr: false, loading: () => <p role="status">Loading network monitoring…</p> });
 const inputClass = "w-full rounded border bg-background px-3 py-2 text-sm";
 const buttonClass = "rounded border px-3 py-2 text-sm hover:bg-muted disabled:opacity-50";
 const panelClass = "rounded-lg border bg-card p-4 space-y-4";
@@ -38,7 +40,7 @@ function PaymentTable({ payments, onSelect }: { payments: PaymentRow[]; onSelect
       <td className="p-2"><Badge>{p.status}</Badge> / {p.order?.paymentStatus}</td><td className="p-2">{date(p.createdAt)}</td>
     </tr>)}</tbody></table>{payments.length === 0 && <p className="py-6 text-muted-foreground">No payments match these filters.</p>}</div>;
 }
-function EventTable({ events, onSelect }: { events: EventRow[]; onSelect?: (id: number) => void }) {
+function EventTable({ events, onSelect, onRequest }: { events: EventRow[]; onSelect?: (id: number) => void; onRequest?: (id: string) => void }) {
   return <div className="overflow-x-auto"><table className="w-full text-left text-sm">
     <caption className="sr-only">Payment event timeline</caption>
     <thead><tr>{["Time", "Gateway / Transaction", "Phase", "Result", "HTTP", "Latency", "Detail"].map((t) => <th scope="col" className="border-b p-2" key={t}>{t}</th>)}</tr></thead>
@@ -46,7 +48,7 @@ function EventTable({ events, onSelect }: { events: EventRow[]; onSelect?: (id: 
       <td className="p-2">{date(e.createdAt)}</td><td className="p-2">{e.provider}<br />{e.paymentId && onSelect
         ? <button className="text-primary underline" onClick={() => onSelect(e.paymentId!)}>{e.transactionId || "#" + e.paymentId}</button> : e.transactionId || "Unlinked attempt"}
         {e.orderId && <span className="block text-xs">Order #{e.orderId}</span>}</td>
-      <td className="p-2">{e.operation}{e.requestId && <span className="block text-xs text-muted-foreground" title={e.requestId}>Request {e.requestId.slice(0, 8)}</span>}</td><td className="p-2"><Badge>{e.outcome}</Badge></td><td className="p-2">{e.httpStatus ?? "—"}</td>
+      <td className="p-2">{e.operation}{e.requestId && (onRequest ? <button className="block text-xs underline" title={e.requestId} onClick={() => onRequest(e.requestId!)}>Request {e.requestId.slice(0, 8)}</button> : <span className="block text-xs text-muted-foreground" title={e.requestId}>Request {e.requestId.slice(0, 8)}</span>)}</td><td className="p-2"><Badge>{e.outcome}</Badge></td><td className="p-2">{e.httpStatus ?? "—"}</td>
       <td className="p-2">{metric(e.durationMs)}</td><td className="p-2">{e.detailCode || e.gatewayStatus || "—"}</td>
     </tr>)}</tbody></table>{events.length === 0 && <p className="py-4 text-muted-foreground">No recorded events.</p>}</div>;
 }
@@ -98,7 +100,7 @@ function DisputeEditor({ dispute, staff, onSaved }: { dispute: DisputeRow; staff
         {a.resolution && <p className="whitespace-pre-wrap">{a.resolution}</p>}</li>)}</ul></details>
   </article>;
 }
-function DetailPanel({ detail, staff, onRefresh, onMore }: { detail: PaymentDetail; staff: StaffOption[]; onRefresh: () => void; onMore: () => Promise<void> }) {
+function DetailPanel({ detail, staff, onRefresh, onMore, onRequest }: { detail: PaymentDetail; staff: StaffOption[]; onRefresh: () => void; onMore: () => Promise<void>; onRequest: (id: string) => void }) {
   const [busy, setBusy] = useState(false);
   const [notice, setNotice] = useState("");
   const retryKey = useRef<{ fingerprint: string; key: string } | null>(null);
@@ -130,7 +132,7 @@ function DetailPanel({ detail, staff, onRefresh, onMore }: { detail: PaymentDeta
       <button className={buttonClass} disabled={busy} onClick={compare}>Compare gateway status</button></div>
     <p className="text-sm text-muted-foreground">Comparison sends a server-side status query and records the result. It does not capture a payment, send a refund, or change inventory.</p>
     {notice && <p role="status" className="rounded bg-muted p-3 text-sm">{notice}</p>}
-    <section className="space-y-2"><h3 className="font-semibold">Timeline</h3><EventTable events={detail.events} />
+    <section className="space-y-2"><h3 className="font-semibold">Timeline</h3><EventTable events={detail.events} onRequest={onRequest} />
       {detail.nextBefore && <button className={buttonClass} disabled={busy} onClick={async () => {
         setBusy(true); try { await onMore(); } catch (error) { setNotice(message(error)); } finally { setBusy(false); }
       }}>Load older events</button>}</section>
@@ -259,6 +261,8 @@ export default function PaymentControlCenter() {
   const [query, setQuery] = useState("page=1");
   const [refresh, setRefresh] = useState(0);
   const [tab, setTab] = useState<Tab>("history");
+  const [selectedRequest, setSelectedRequest] = useState<string | undefined>();
+  function networkContext(id: string) { setSelectedRequest(id); setTab("network"); }
   const [data, setData] = useState<DashboardData | null>(null);
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
@@ -324,7 +328,7 @@ export default function PaymentControlCenter() {
         <label className="text-sm">From (UTC)<input name="from" type="date" className={inputClass} /></label>
         <label className="text-sm">To (UTC)<input name="to" type="date" className={inputClass} /></label>
         <button className={buttonClass}>Apply filters</button>
-      </div><p className="text-xs text-muted-foreground">Default: last 30 days. Maximum: 90 days. Transaction filters apply to history/CSV; gateway/date apply to network metrics and alerts.</p>
+      </div><p className="text-xs text-muted-foreground">Default: last 30 days. Maximum: 90 days. Transaction filters apply to history/CSV; gateway/date apply to the summary and payment alerts. Advanced Network Monitoring has separate filters.</p>
     </form>
     {error && <p role="alert" className="rounded border border-destructive p-3 text-destructive">{error}</p>}
     {loading && <p role="status">Loading payment diagnostics…</p>}
@@ -344,16 +348,13 @@ export default function PaymentControlCenter() {
         {data.alerts.map((alert) => <div key={alert.kind + alert.paymentId} className="rounded border p-3 flex flex-wrap gap-3 items-center"><Badge>{alert.kind}</Badge>
           <button className="text-primary underline" onClick={() => select(alert.paymentId)}>{alert.provider} · {alert.transactionId || "#" + alert.paymentId} · Order #{alert.orderId}</button></div>)}
         {data.alerts.length === 0 && <p className="text-muted-foreground">No alerts in the scanned records.</p>}</section>}
-      {tab === "network" && <section className={panelClass}><h2 className="font-semibold">Network monitoring</h2>
-        <p className="text-sm text-muted-foreground">Timeout and connection errors are application observations. Actual packet loss needs separate host/network monitoring. No packet-loss percentage is inferred here.</p>
-        <div className="flex flex-wrap gap-2">{data.network.summary.map((row) => <p className="rounded border p-2 text-sm" key={row.provider + row.outcome}>{row.provider} · {row.outcome}: {row._count._all}</p>)}</div>
-        <h3 className="font-medium">Latest 50 API phase results</h3><EventTable events={data.network.recentRequests} onSelect={select} /></section>}
+      {tab === "network" && <NetworkMonitoringPanel key={selectedRequest || "network"} initialRequestId={selectedRequest} onPayment={select} />}
       {(tab === "disputes" || tab === "refunds") && <CaseAndRefundList key={tab} kind={tab} refresh={refresh} canRecordRefund={data.canRecordRefund} staff={data.staff} onSelect={select} onSaved={reload} />}
       {tab === "simulations" && <SimulationPanel enabled={data.simulations.enabled} eps={data.simulations.eps} />}
     </>}
     {selectedId !== null && <section className={panelClass}><div className="flex justify-between items-center"><h2 className="font-semibold">Payment details #{selectedId}</h2>
       <button className={buttonClass} onClick={() => setSelectedId(null)}>Close details</button></div>
       {detailLoading && <p role="status">Loading transaction…</p>}{detailError && <p role="alert" className="text-destructive">{detailError}</p>}
-      {detail && <DetailPanel key={detail.payment.id} detail={detail} staff={data?.staff || []} onRefresh={reload} onMore={older} />}</section>}
+      {detail && <DetailPanel key={detail.payment.id} detail={detail} staff={data?.staff || []} onRefresh={reload} onMore={older} onRequest={networkContext} />}</section>}
   </main>;
 }
