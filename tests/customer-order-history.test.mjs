@@ -26,6 +26,7 @@ async function requestThroughProxy(
   const context = vm.createContext({
     URL,
     console,
+    process: { env: { NODE_ENV: "test" } },
     NextResponse: {
       next: () => ({ status: 200 }),
       json: (body, options) => ({ body, status: options.status }),
