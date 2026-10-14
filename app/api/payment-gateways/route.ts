@@ -29,6 +29,7 @@ export async function GET(request: NextRequest) {
 
       const type = String(data.type || '').toUpperCase();
       if (type === 'EPS') {
+        if (data.isActive !== true) return list;
         list.push({ id: payment.id, paymentGatewayData: { type: 'EPS' } });
         return list;
       }

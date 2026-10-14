@@ -89,7 +89,7 @@ function AdminLayoutContent({ children }: { children: React.ReactNode }) {
   const { openMobile, toggleSidebar, setOpenMobile } = useSidebar();
   const { data: session, status } = useSession();
   const locale = useLocale();
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "";
   const router = useRouter();
   const contentDirection = getLocaleDirection(locale);
   const isRtl = contentDirection === "rtl";

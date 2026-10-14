@@ -57,7 +57,7 @@ const navItems = [
 ] as const;
 
 export default function InvestorNav({ investorName, investorCode, onNavClick }: InvestorNavProps) {
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "";
   const router = useRouter();
   const { theme, setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);

@@ -110,7 +110,7 @@ function maskAccount(value?: string | null) {
 export default function InvestorPayoutDetailPage() {
   const t = useTranslations("AdminInvestors.pages");
   const locale = useLocale();
-  const params = useParams<{ id: string }>();
+  const params = useParams<{ id: string }>() ?? { id: "" };
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.globalPermissions)
     ? ((session?.user as any).globalPermissions as string[])

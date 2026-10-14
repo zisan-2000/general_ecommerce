@@ -110,7 +110,7 @@ function fmtMoney(value: string, locale: string) {
 export default function InvestorProfitRunDetailPage() {
   const t = useTranslations("AdminInvestors.pages");
   const locale = useLocale();
-  const params = useParams<{ id: string }>();
+  const params = useParams<{ id: string }>() ?? { id: "" };
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.globalPermissions)
     ? ((session?.user as any).globalPermissions as string[])

@@ -121,7 +121,7 @@ export default function InvestorDetailPage() {
     const key = `enums.${group}.${value}` as any;
     return t.has(key) ? t(key) : value;
   };
-  const params = useParams<{ id: string }>();
+  const params = useParams<{ id: string }>() ?? { id: "" };
   const { data: session } = useSession();
   const globalPermissions = Array.isArray((session?.user as any)?.globalPermissions)
     ? ((session?.user as any).globalPermissions as string[])

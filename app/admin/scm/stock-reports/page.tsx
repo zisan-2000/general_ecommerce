@@ -63,7 +63,7 @@ function fmtDate(value: Date) {
 
 export default function StockReportsPage() {
   const tScm = useTranslations("ScmAuto");
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])

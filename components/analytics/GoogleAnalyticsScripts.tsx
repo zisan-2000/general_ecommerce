@@ -10,6 +10,8 @@ export default function GoogleAnalyticsScripts({ settings }: { settings: GoogleA
   useEffect(() => {
     if (mode === "direct") {
       window.dataLayer ??= [];
+      // Preserve gtag's existing Arguments-object queue protocol.
+      // eslint-disable-next-line prefer-rest-params
       window.gtag = function () { window.dataLayer!.push(arguments); };
       window.gtag("js", new Date());
       window.gtag("config", settings.googleAnalyticsMeasurementId, {

@@ -4,8 +4,8 @@ import { usePathname, useSearchParams } from "next/navigation";
 import { trackPageView, trackSessionStart } from "@/lib/analytics/data-layer";
 
 export default function GooglePageViewTracker() {
-  const pathname = usePathname();
-  const params = useSearchParams();
+  const pathname = usePathname() ?? "";
+  const params = useSearchParams() ?? new URLSearchParams();
   const query = params.toString();
   const last = useRef("");
   useEffect(() => {

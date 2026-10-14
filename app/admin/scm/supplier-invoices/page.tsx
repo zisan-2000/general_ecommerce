@@ -227,7 +227,7 @@ function computeLandedAllocation(purchaseOrder: PurchaseOrderOption) {
 export default function SupplierInvoicesAdminPage() {
   const locale = useLocale();
   const t = useTranslations("AdminSupplierInvoices");
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const requestedPurchaseOrderId = searchParams.get("purchaseOrderId") || "";
   const requestedGoodsReceiptId = searchParams.get("goodsReceiptId") || "";
   const { data: session } = useSession();

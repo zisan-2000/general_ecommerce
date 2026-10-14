@@ -38,7 +38,7 @@ async function readJson<T>(response: Response, fallbackMessage: string): Promise
 }
 
 export default function PurchaseOrdersPage() {
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const { data: session } = useSession();
   const t = useTranslations("AdminPurchaseOrders");
   const permissions = Array.isArray((session?.user as any)?.permissions)

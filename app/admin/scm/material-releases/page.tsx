@@ -112,7 +112,7 @@ function formatMoney(value: string | number | null | undefined) {
 
 export default function MaterialReleasesPage() {
   const t = useTranslations("AdminMaterialReleases");
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])

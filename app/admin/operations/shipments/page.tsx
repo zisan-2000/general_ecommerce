@@ -105,13 +105,15 @@ function shipmentStatusPill(status: ShipmentStatusType) {
           ? "border-sky-200 bg-sky-50 text-sky-700"
           : "border-amber-200 bg-amber-50 text-amber-700";
 
-  return (status: ShipmentStatusType, label: string) => (
+  return function ShipmentStatusPill(_status: ShipmentStatusType, label: string) {
+    return (
     <span
       className={`inline-flex rounded-full border px-3 py-1 text-xs font-medium ${className}`}
     >
       {label}
     </span>
-  );
+    );
+  };
 }
 
 export default function AdminShipmentsPage() {

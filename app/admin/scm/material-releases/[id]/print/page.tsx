@@ -76,8 +76,8 @@ function formatMoney(value: string | number | null | undefined) {
 
 export default function MaterialReleasePrintPage() {
   const tScm = useTranslations("ScmAuto");
-  const params = useParams<{ id: string }>();
-  const searchParams = useSearchParams();
+  const params = useParams<{ id: string }>() ?? { id: "" };
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const printType = (searchParams.get("type") || "challan").toLowerCase();
 
   const [loading, setLoading] = useState(true);

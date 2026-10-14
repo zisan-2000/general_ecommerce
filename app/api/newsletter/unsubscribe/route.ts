@@ -2,8 +2,6 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { prisma } from "@/lib/prisma"; // Import your Prisma client
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 // Helper function to handle both Resend and Prisma updates
 async function handleUnsubscribe(email: string) {
     const resendEmail = email.trim().toLowerCase();
@@ -15,6 +13,7 @@ async function handleUnsubscribe(email: string) {
     if (process.env.RESEND_API_KEY && process.env.RESEND_AUDIENCE_ID) {
         // 1. Update contact in Resend Audience
         try {
+            const resend = new Resend(process.env.RESEND_API_KEY);
             // Use contacts.update to set unsubscribed: true
             const { error } = await resend.contacts.update({
                 audienceId: process.env.RESEND_AUDIENCE_ID,

@@ -121,7 +121,8 @@ export async function synchronizeChatMessages(
   const markRead = typeof document !== "undefined" && document.visibilityState === "visible";
   if (cursor) {
     for (let pageNumber = 0; pageNumber < 10 && isCurrent(); pageNumber += 1) {
-      const page = await fetchChatJson<ChatMessagesResponse>(
+      if (!cursor) break;
+      const page: ChatMessagesResponse = await fetchChatJson<ChatMessagesResponse>(
         `/api/chat/conversations/${encodeURIComponent(conversationId)}/messages?limit=200&markRead=${markRead}&afterId=${encodeURIComponent(cursor)}`,
         undefined, isChatMessagesResponse,
       );

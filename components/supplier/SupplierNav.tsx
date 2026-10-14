@@ -36,7 +36,7 @@ const navItems = [
 ];
 
 export default function SupplierNav({ supplierName, supplierCode }: SupplierNavProps) {
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "";
   const router = useRouter();
   const [unreadCount, setUnreadCount] = useState(0);
 

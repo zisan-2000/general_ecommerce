@@ -1161,7 +1161,7 @@ export default function Sidebar({
   isMobile?: boolean;
   onClose?: () => void;
 }) {
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "";
   const { data: orderNotifications, acknowledgeOrders } = useOrderNotifications(true);
   const locale = useLocale();
   const messages = useMessages();

@@ -7,6 +7,7 @@ import { transitionOrderStatusWithInventory } from "@/lib/order-inventory-lifecy
 import { createOrderAdminNotifications } from "@/lib/order-admin-notifications";
 import { syncCommissionEntriesForOrderStatus } from "@/lib/business-network/commission";
 import { epsObject } from "@/lib/eps-settings";
+import { resolveSeoSiteUrl } from "@/lib/seo-url";
 
 export class EpsError extends Error {
   constructor(message: string, readonly status = 502) { super(message); }
@@ -38,7 +39,7 @@ export async function findEpsGateway(id: number | null) {
   if (!id) return null;
   const gateway = await prisma.payment.findFirst({ where: { id, orderId: null } });
   const data = epsObject(gateway?.paymentGatewayData);
-  return gateway && data.type === "EPS" && data.isActive !== false ? { gateway, data } : null;
+  return gateway && data.type === "EPS" && data.isActive === true ? { gateway, data } : null;
 }
 
 export function createEpsTransactionId() {
@@ -50,10 +51,10 @@ export function epsPublicOrigin() {
   const configured = process.env.NEXT_PUBLIC_APP_URL || process.env.NEXT_PUBLIC_BASE_URL ||
     process.env.NEXT_PUBLIC_SITE_URL || process.env.APP_URL || process.env.NEXTAUTH_URL;
   try {
-    const url = new URL(configured ?? "");
-    if (!["http:", "https:"].includes(url.protocol) || url.username || url.password) throw new Error();
-    return url.origin;
-  } catch { throw new EpsError("Configure an application public URL for EPS callbacks", 503); }
+    // Apply the existing public-origin validator even for local Sandbox testing.
+    // This rejects HTTP, loopback/private hosts, and URLs with paths or credentials.
+    return resolveSeoSiteUrl({ NODE_ENV: "production", NEXT_PUBLIC_BASE_URL: configured });
+  } catch { throw new EpsError("Configure a public HTTPS application URL for EPS callbacks", 503); }
 }
 
 function callbackSignature(transactionId: string) {

@@ -106,7 +106,7 @@ function formatMoney(value: string | number) {
 
 export default function ComparativeStatementsPage() {
   const t = useTranslations("AdminComparativeStatements");
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])

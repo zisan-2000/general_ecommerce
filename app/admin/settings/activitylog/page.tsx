@@ -113,7 +113,7 @@ function getChanges(metadata: Record<string, unknown> | null | undefined): Activ
 export default function ActivityLogPage() {
   const t = useTranslations("AdminActivityLog");
   const locale = useLocale();
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const [logs, setLogs] = useState<ActivityLogRow[]>([]);
   const [entities, setEntities] = useState<string[]>([]);
   const [entity, setEntity] = useState(searchParams.get("entity") || "");

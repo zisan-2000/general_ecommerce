@@ -40,7 +40,7 @@ export default function CatalogFilterForm({
   className,
 }: CatalogFilterFormProps) {
   const t = useTranslations("StorefrontCatalog.filters");
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "";
   const router = useRouter();
   const debounceRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const formRef = useRef<HTMLFormElement>(null);

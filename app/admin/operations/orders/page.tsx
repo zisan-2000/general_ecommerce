@@ -689,7 +689,7 @@ const OrderManagement = () => {
     setDetailOpen(true);
   }, []);
 
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const notificationOrderId = Number(searchParams.get("orderId"));
   useEffect(() => {
     if (Number.isInteger(notificationOrderId) && notificationOrderId > 0) openDetails(notificationOrderId);

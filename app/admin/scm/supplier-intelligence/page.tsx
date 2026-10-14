@@ -230,7 +230,7 @@ function Pagination({ currentPage, totalPages, onPageChange }: {
 export default function SupplierIntelligencePage() {
   const t = useTranslations("AdminSupplierIntelligence");
   const locale = useLocale();
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const { data: session } = useSession();
   const globalPermissions = Array.isArray(
     (session?.user as any)?.globalPermissions,

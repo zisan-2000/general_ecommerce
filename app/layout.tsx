@@ -4,6 +4,7 @@ import GooglePageViewTracker from "@/components/analytics/GooglePageViewTracker"
 import { serializeJsonLd } from "@/lib/seo";
 import type React from "react";
 import type { Metadata } from "next";
+import { connection } from "next/server";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale } from "next-intl/server";
 import { Geist, Geist_Mono } from "next/font/google";
@@ -72,6 +73,7 @@ const lexend = Lexend({
 });
 
 export async function generateMetadata(): Promise<Metadata> {
+  await connection();
   return buildDefaultMetadata();
 }
 
@@ -88,6 +90,8 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Database-backed store configuration belongs to an incoming request, not the build.
+  await connection();
   const siteUrl = getSiteUrl();
   const [siteSettings, registry, locale] = await Promise.all([
     getSiteSettingsForSeo(),

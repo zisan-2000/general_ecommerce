@@ -94,7 +94,7 @@ function fmtMoney(value: string | null | undefined, locale: string) {
 export default function InvestorAllocationDetailPage() {
   const t = useTranslations("AdminInvestors.pages");
   const locale = useLocale();
-  const params = useParams<{ id: string }>();
+  const params = useParams<{ id: string }>() ?? { id: "" };
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
   const [payload, setPayload] = useState<Payload | null>(null);

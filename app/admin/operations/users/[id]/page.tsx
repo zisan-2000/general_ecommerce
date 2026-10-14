@@ -73,7 +73,7 @@ interface UserDetail {
 }
 
 export default function UserDetailPage() {
-  const params = useParams();
+  const params = useParams() ?? { id: "" };
   const router = useRouter();
   const { data: session } = useSession();
   const [user, setUser] = useState<UserDetail | null>(null);

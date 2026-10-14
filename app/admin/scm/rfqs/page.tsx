@@ -39,7 +39,7 @@ async function readJson<T>(response: Response, fallback: string): Promise<T> {
 
 export default function RfqPage() {
   const t = useTranslations("AdminRfqs");
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])

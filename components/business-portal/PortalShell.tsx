@@ -38,7 +38,7 @@ function PortalSidebar({
   compact: boolean;
   unreadNotifications: number;
 }) {
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "";
   const { permissions, activeCapabilities } = context.activeMembership;
   return (
     <aside className="flex h-full flex-col bg-slate-950 text-slate-200 dark:bg-slate-950">

@@ -63,7 +63,7 @@ function formatDate(value: string | null, fallback: string) {
 
 export default function PurchaseRequisitionsPage() {
   const t = useTranslations("AdminPurchaseRequisitions");
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])

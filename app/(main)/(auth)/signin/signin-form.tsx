@@ -39,7 +39,7 @@ const SigninForm = () => {
   const [formError, setFormError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const router = useRouter();
-  const search = useSearchParams();
+  const search = useSearchParams() ?? new URLSearchParams();
   const returnUrl = sanitizeReturnUrl(
     search.get("returnUrl") || search.get("callbackUrl"),
   );

@@ -369,7 +369,7 @@ function StatusSummary({
 
 export default function ScmDashboardPage() {
   const tScm = useTranslations("ScmAuto");
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const { data: session } = useSession();
   const t = useTranslations("AdminScmDashboard");
   const permissions = Array.isArray((session?.user as any)?.permissions)

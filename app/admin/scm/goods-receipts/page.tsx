@@ -156,7 +156,7 @@ function getInitialEvaluationDraft(allowedRoles: ReceiptRole[]): EvaluationDraft
 }
 
 export default function GoodsReceiptsPage() {
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const { data: session } = useSession();
   const t = useTranslations("AdminGoodsReceipts");
   const locale = useLocale();

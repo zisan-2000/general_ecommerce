@@ -111,7 +111,7 @@ function formatDateTime(value: string | null, fallback: string) {
 
 export default function MaterialRequestsPage() {
   const t = useTranslations("AdminMaterialRequests");
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const { data: session } = useSession();
   const userId = (session?.user as any)?.id as string | undefined;
 

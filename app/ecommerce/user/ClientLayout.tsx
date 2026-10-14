@@ -42,7 +42,7 @@ export default function UserLayout({
   const [profileImage, setProfileImage] = useState<string | undefined>(
     undefined,
   );
-  const pathname = usePathname();
+  const pathname = usePathname() ?? "";
   const router = useRouter();
 
   // not logged in হলে signin এ পাঠাই

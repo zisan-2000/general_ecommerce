@@ -46,7 +46,7 @@ type WarehouseAccessPayload = {
 };
 
 export default function UserWarehouseAccessPage() {
-  const params = useParams<{ id: string }>();
+  const params = useParams<{ id: string }>() ?? { id: "" };
   const { data: session } = useSession();
   const [data, setData] = useState<WarehouseAccessPayload | null>(null);
   const [loading, setLoading] = useState(true);

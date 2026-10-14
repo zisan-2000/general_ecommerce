@@ -16,7 +16,7 @@ const capabilityOptions = [
 ] as const;
 
 export default function BusinessApplicationForm() {
-  const { status } = useSession(); const router = useRouter(); const searchParams = useSearchParams(); const requested = searchParams.get("capability");
+  const { status } = useSession(); const router = useRouter(); const searchParams = useSearchParams() ?? new URLSearchParams(); const requested = searchParams.get("capability");
   const [selected, setSelected] = useState<string[]>(requested && capabilityOptions.some(([value]) => value === requested) ? [requested] : ["CORPORATE_BUYER"]);
   const [busy, setBusy] = useState(false);
   async function submit(event: React.FormEvent<HTMLFormElement>) {

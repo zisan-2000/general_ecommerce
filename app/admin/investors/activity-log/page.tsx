@@ -109,7 +109,7 @@ export default function InvestorActivityLogPage() {
     const key = `enums.${group}.${value}` as any;
     return t.has(key) ? t(key) : value;
   };
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const [logs, setLogs] = useState<ActivityLogRow[]>([]);
   const [entities, setEntities] = useState<string[]>([]);
   const [entity, setEntity] = useState(searchParams.get("entity") || "");

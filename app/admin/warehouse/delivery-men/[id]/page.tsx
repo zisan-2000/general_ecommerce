@@ -58,7 +58,7 @@ const TAB_DEFINITIONS: Array<{
 ];
 
 export default function DeliveryManDetailsPage() {
-  const params = useParams();
+  const params = useParams() ?? { id: "" };
   const router = useRouter();
   const deliveryManId = params.id as string;
 

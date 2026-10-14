@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { connection } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { getSiteUrl } from "@/lib/seo";
 import { getStoreFeatureRegistry } from "@/lib/store-features-server";
@@ -9,6 +10,8 @@ import { getStorefrontCatalogFacets } from "@/lib/storefront-catalog";
 import { getStorefrontBookDirectory } from "@/lib/book-catalog";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+  // Keep the same live catalogue/filter logic without requiring DB secrets at build time.
+  await connection();
   const siteUrl = getSiteUrl();
   const registry = await getStoreFeatureRegistry();
   const disabledTypes = disabledProductTypes(registry.features);

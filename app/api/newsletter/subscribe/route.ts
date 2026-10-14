@@ -2,8 +2,6 @@ import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { prisma } from "@/lib/prisma"; // আপনার Prisma ক্লায়েন্ট ইমপোর্ট করুন
 
-const resend = new Resend(process.env.RESEND_API_KEY);
-
 export async function POST(req: Request) {
   try {
     const { email } = await req.json();
@@ -25,6 +23,7 @@ export async function POST(req: Request) {
     // Only try Resend if configured
     if (process.env.RESEND_API_KEY && process.env.RESEND_AUDIENCE_ID) {
       try {
+        const resend = new Resend(process.env.RESEND_API_KEY);
         // Resend SDK ব্যবহার করে কন্টাক্ট তৈরি
         const { data, error } = await resend.contacts.create({
           audienceId: process.env.RESEND_AUDIENCE_ID!,

@@ -85,7 +85,7 @@ function getStockStatusColor(available: number, quantity: number) {
 
 export default function StockCardsPage() {
   const tScm = useTranslations("ScmAuto");
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const { data: session } = useSession();
   const permissions = Array.isArray((session?.user as any)?.permissions)
     ? ((session?.user as any).permissions as string[])

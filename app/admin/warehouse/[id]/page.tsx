@@ -77,8 +77,8 @@ function FieldRow({ label, value }: { label: string; value: any }) {
 }
 
 export default function WarehouseDetailsPage() {
-  const params = useParams<{ id: string }>();
-  const searchParams = useSearchParams();
+  const params = useParams<{ id: string }>() ?? { id: "" };
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const router = useRouter();
   const id = params?.id;
 

@@ -71,6 +71,8 @@ export async function setGuestChatSession(
     salt: SESSION_SALT,
     maxAge: GUEST_CHAT_SESSION_MAX_AGE,
     token: {
+      // A guest token satisfies the shared JWT type without a login user ID.
+      id: "",
       purpose: SESSION_PURPOSE,
       version: 1,
       conversationId,

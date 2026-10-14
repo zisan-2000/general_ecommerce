@@ -306,7 +306,7 @@ export default function InvestorWorkspace({
     const key = `enums.${group}.${value}` as any;
     return t.has(key) ? t(key) : value;
   };
-  const searchParams = useSearchParams();
+  const searchParams = useSearchParams() ?? new URLSearchParams();
   const defaultStatementFrom = useMemo(() => {
     const date = new Date();
     date.setDate(date.getDate() - 30);
