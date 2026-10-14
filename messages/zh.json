@@ -5013,6 +5013,17 @@
     }
   },
   "AdminPaymentGateway": {
+    "eps": {
+      "credentials": "EPS Sandbox credentials are configured through server environment variables.",
+      "active": "Show EPS in checkout",
+      "terminalHelp": "Enter only EPS-confirmed final failure/cancellation status strings, separated by commas. Leave blank until confirmed; unknown statuses retain inventory.",
+      "failureStatuses": "Confirmed final failure statuses",
+      "cancellationStatuses": "Confirmed final cancellation statuses",
+      "disabled": "EPS is disabled in checkout",
+      "confirmed": "EPS Technical Team has confirmed the Sandbox API contract. Live EPS remains disabled.",
+      "orderId": "Order ID to verify",
+      "verify": "Verify EPS payment"
+    },
     "title": "支付网关管理",
     "dialog": {
       "addTitle": "添加新支付网关",
@@ -9967,6 +9978,13 @@
       "totalPayable": "应付总额",
       "cashOnDelivery": "货到付款",
       "manualPayment": "手动支付",
+      "epsResume": "Resume EPS payment",
+      "epsVerify": "Check EPS payment",
+      "epsPendingOrder": "Check EPS payment for order #{id}. Confirm this payment before placing another order.",
+      "epsDescription": "Pay securely via EPS",
+      "epsRedirect": "You will be redirected to EPS after placing the order.",
+      "epsEmail": "Email for EPS payment",
+      "epsPostcode": "Postcode for EPS payment",
       "sslDescription": "通过 SSLCommerz 安全支付",
       "manualDescription": "手动支付（需要截图和交易编号）",
       "codDescription": "收到商品时付款",
@@ -9991,6 +10009,7 @@
     "paymentResult": {
       "success": "支付成功",
       "cancelled": "支付已取消",
+      "pending": "Payment verification pending",
       "unsuccessful": "支付失败",
       "verified": "您的支付已通过验证。",
       "unpaid": "您的订单仍未支付。",

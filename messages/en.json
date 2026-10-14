@@ -5031,6 +5031,17 @@
     }
   },
   "AdminPaymentGateway": {
+    "eps": {
+      "credentials": "EPS Sandbox credentials are configured through server environment variables.",
+      "active": "Show EPS in checkout",
+      "terminalHelp": "Enter only EPS-confirmed final failure/cancellation status strings, separated by commas. Leave blank until confirmed; unknown statuses retain inventory.",
+      "failureStatuses": "Confirmed final failure statuses",
+      "cancellationStatuses": "Confirmed final cancellation statuses",
+      "disabled": "EPS is disabled in checkout",
+      "confirmed": "EPS Technical Team has confirmed the Sandbox API contract. Live EPS remains disabled.",
+      "orderId": "Order ID to verify",
+      "verify": "Verify EPS payment"
+    },
     "title": "Payment Gateway Management",
     "dialog": {
       "addTitle": "Add New Payment Gateway",
@@ -9991,6 +10002,13 @@
       "totalPayable": "Total payable",
       "cashOnDelivery": "Cash on Delivery",
       "manualPayment": "Manual Payment",
+      "epsResume": "Resume EPS payment",
+      "epsVerify": "Check EPS payment",
+      "epsPendingOrder": "Check EPS payment for order #{id}. Confirm this payment before placing another order.",
+      "epsDescription": "Pay securely via EPS",
+      "epsRedirect": "You will be redirected to EPS after placing the order.",
+      "epsEmail": "Email for EPS payment",
+      "epsPostcode": "Postcode for EPS payment",
       "sslDescription": "Pay securely via SSLCommerz",
       "manualDescription": "Manual payment (screenshot and transaction ID required)",
       "codDescription": "Pay when you receive the product",
@@ -10015,6 +10033,7 @@
     "paymentResult": {
       "success": "Payment successful",
       "cancelled": "Payment cancelled",
+      "pending": "Payment verification pending",
       "unsuccessful": "Payment unsuccessful",
       "verified": "Your payment has been verified.",
       "unpaid": "Your order remains unpaid.",

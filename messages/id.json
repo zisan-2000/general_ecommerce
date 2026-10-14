@@ -5013,6 +5013,17 @@
     }
   },
   "AdminPaymentGateway": {
+    "eps": {
+      "credentials": "EPS Sandbox credentials are configured through server environment variables.",
+      "active": "Show EPS in checkout",
+      "terminalHelp": "Enter only EPS-confirmed final failure/cancellation status strings, separated by commas. Leave blank until confirmed; unknown statuses retain inventory.",
+      "failureStatuses": "Confirmed final failure statuses",
+      "cancellationStatuses": "Confirmed final cancellation statuses",
+      "disabled": "EPS is disabled in checkout",
+      "confirmed": "EPS Technical Team has confirmed the Sandbox API contract. Live EPS remains disabled.",
+      "orderId": "Order ID to verify",
+      "verify": "Verify EPS payment"
+    },
     "title": "Manajemen Gateway Pembayaran",
     "dialog": {
       "addTitle": "Tambah Gateway Pembayaran Baru",
@@ -9967,6 +9978,13 @@
       "totalPayable": "Total yang harus dibayar",
       "cashOnDelivery": "Bayar di Tempat",
       "manualPayment": "Pembayaran Manual",
+      "epsResume": "Resume EPS payment",
+      "epsVerify": "Check EPS payment",
+      "epsPendingOrder": "Check EPS payment for order #{id}. Confirm this payment before placing another order.",
+      "epsDescription": "Pay securely via EPS",
+      "epsRedirect": "You will be redirected to EPS after placing the order.",
+      "epsEmail": "Email for EPS payment",
+      "epsPostcode": "Postcode for EPS payment",
       "sslDescription": "Bayar dengan aman melalui SSLCommerz",
       "manualDescription": "Pembayaran manual (tangkapan layar dan ID transaksi wajib)",
       "codDescription": "Bayar saat Anda menerima produk",
@@ -9991,6 +10009,7 @@
     "paymentResult": {
       "success": "Pembayaran berhasil",
       "cancelled": "Pembayaran dibatalkan",
+      "pending": "Payment verification pending",
       "unsuccessful": "Pembayaran gagal",
       "verified": "Pembayaran Anda telah diverifikasi.",
       "unpaid": "Pesanan Anda masih belum dibayar.",

@@ -13,6 +13,13 @@ type PaymentGateway = {
 };
 
 type Props = {
+  epsPendingOrderId: number | null;
+  epsVerificationBusy: boolean;
+  onVerifyEpsPayment: () => void;
+  epsEmail: string;
+  onEpsEmailChange: (value: string) => void;
+  epsPostcode: string;
+  onEpsPostcodeChange: (value: string) => void;
   paymentGateways: PaymentGateway[];
   selectedMethod: string;
   onMethodChange: (v: string) => void;
@@ -33,6 +40,8 @@ type Props = {
 };
 
 export default function PaymentMethodSelector({
+  epsEmail, onEpsEmailChange, epsPostcode, onEpsPostcodeChange,
+  epsPendingOrderId, epsVerificationBusy, onVerifyEpsPayment,
   paymentGateways,
   selectedMethod,
   onMethodChange,
@@ -54,7 +63,7 @@ export default function PaymentMethodSelector({
   const apiMethods = (Array.isArray(paymentGateways) ? paymentGateways : [])
     .map((p) => {
       const pg = p?.paymentGatewayData || {};
-      const type = String(pg?.type || "").toUpperCase(); // "SSLCOMMERZ" | "MANUAL"
+      const type = String(pg?.type || "").toUpperCase();
       if (!type) return null;
 
       // ইউনিক key বানাই, যাতে একাধিক manual channel আলাদা হয়
@@ -94,6 +103,7 @@ export default function PaymentMethodSelector({
 
   const isCOD = selectedMethod === "CashOnDelivery";
   const isSSL = selectedMethod?.startsWith("SSLCOMMERZ:");
+  const isEPS = selectedMethod?.startsWith("EPS:");
   const isManual = selectedMethod?.startsWith("MANUAL:");
 
   const selectedManual = methods.find((m) => m.key === selectedMethod);
@@ -132,6 +142,7 @@ export default function PaymentMethodSelector({
                     {t("sslDescription")}
                   </div>
                 )}
+                {m.type === "EPS" && <div className="text-xs text-muted-foreground">{t("epsDescription")}</div>}
 
                 {/* Manual info */}
                 {m.type === "MANUAL" && (
@@ -151,6 +162,7 @@ export default function PaymentMethodSelector({
                 name="payment_method"
                 className="h-4 w-4"
                 checked={selectedMethod === m.key}
+                disabled={epsPendingOrderId !== null}
                 onChange={() => onMethodChange(m.key)}
               />
             </label>
@@ -208,6 +220,15 @@ export default function PaymentMethodSelector({
       )}
 
       {/* SSL / COD হলে extra কিছু লাগবে না */}
+      {isEPS && (
+        <div className="rounded-xl border border-border p-4 space-y-4">
+          <p className="text-sm text-muted-foreground">{t("epsRedirect")}</p>
+          <LabeledInput id="eps-email" label={t("epsEmail")} type="email" required value={epsEmail}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => onEpsEmailChange(event.target.value)} />
+          <LabeledInput id="eps-postcode" label={t("epsPostcode")} required maxLength={20} value={epsPostcode}
+            onChange={(event: React.ChangeEvent<HTMLInputElement>) => onEpsPostcodeChange(event.target.value)} />
+        </div>
+      )}
       {(isSSL || isCOD) && (
         <div className="text-sm text-muted-foreground">
           {isSSL ? t("sslRedirect") : t("noPaymentNow")}
@@ -248,9 +269,15 @@ export default function PaymentMethodSelector({
         </div>
       </div>
 
-      <Button className="w-full" onClick={onNext} disabled={!selectedMethod || !legalConsentAccepted}>
-        {t("placeOrder")}
+      <Button className="w-full" onClick={onNext} disabled={!selectedMethod || !legalConsentAccepted || epsVerificationBusy}>
+        {epsPendingOrderId !== null ? t("epsResume") : t("placeOrder")}
       </Button>
+      {epsPendingOrderId !== null && (
+        <div className="rounded border p-3 space-y-2" role="status">
+          <p className="text-sm">{t("epsPendingOrder", { id: epsPendingOrderId })}</p>
+          <Button variant="outline" onClick={onVerifyEpsPayment} disabled={epsVerificationBusy}>{t("epsVerify")}</Button>
+        </div>
+      )}
     </div>
   );
 }

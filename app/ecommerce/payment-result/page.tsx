@@ -9,6 +9,7 @@ export default async function PaymentResultPage({
 }) {
   const params = await searchParams;
   const success = params.status === "success";
+  const pending = params.status === "pending";
   const t = await getTranslations("StorefrontCommerce.paymentResult");
 
   return (
@@ -19,7 +20,7 @@ export default async function PaymentResultPage({
           {success ? "✓" : "!"}
         </div>
         <h1 className="mt-4 text-2xl font-bold">
-          {success ? t("success") : params.status === "cancelled" ? t("cancelled") : t("unsuccessful")}
+          {success ? t("success") : pending ? t("pending") : params.status === "cancelled" ? t("cancelled") : t("unsuccessful")}
         </h1>
         <p className="mt-2 text-muted-foreground">
           {params.message || (success ? t("verified") : t("unpaid"))}

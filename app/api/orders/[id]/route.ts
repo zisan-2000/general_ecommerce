@@ -8,7 +8,8 @@ import { canAccessWarehouseWithPermission } from "@/lib/warehouse-scope";
 import { logActivity } from "@/lib/activity-log";
 import { createOrderNotification } from "@/lib/order-notifications";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
-import { OrderStatus } from "@/generated/prisma";
+import { OrderStatus, Prisma } from "@/generated/prisma";
+import { EpsError } from "@/lib/eps";
 import { syncCommissionEntriesForOrderStatus } from "@/lib/business-network/commission";
 import {
   type AllowedOrderStatusTransitions,
@@ -190,6 +191,7 @@ export async function PATCH(
         status: true,
         paymentStatus: true,
         transactionId: true,
+        payment_method: true,
         name: true,
         email: true,
       },
@@ -277,6 +279,16 @@ export async function PATCH(
     }
 
     const result = await prisma.$transaction(async (tx) => {
+      if (existingOrder.payment_method.startsWith("EPS:")) {
+        await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Order" WHERE "id" = ${orderId} FOR UPDATE`);
+        const epsOrder = await tx.order.findUniqueOrThrow({ where: { id: orderId } });
+        if ((paymentStatus && paymentStatus !== epsOrder.paymentStatus) || transactionId !== undefined) {
+          throw new EpsError("EPS payment status and transaction ID can only be updated by verified settlement", 409);
+        }
+        if (epsOrder.paymentStatus === "UNPAID" && requestedStatus && !["PENDING", "FAILED", "CANCELLED"].includes(requestedStatus)) {
+          throw new EpsError("Verify the EPS payment before processing this order", 409);
+        }
+      }
       let previousStatus = existingOrder.status;
       let statusChanged = false;
       let updatedOrder;
@@ -381,6 +393,7 @@ export async function PATCH(
     if (error instanceof OrderStatusTransitionError) {
       return NextResponse.json({ error: error.message }, { status: 400 });
     }
+    if (error instanceof EpsError) return NextResponse.json({ error: error.message }, { status: error.status });
     console.error("Error updating order:", error);
     return NextResponse.json(
       { error: "Internal server error" },

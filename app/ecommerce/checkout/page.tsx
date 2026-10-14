@@ -121,6 +121,9 @@ export default function CheckoutPage() {
   const [name, setName] = useState("");
   const [mobile, setMobile] = useState("");
   const [email, setEmail] = useState("");
+  const [epsPostcode, setEpsPostcode] = useState("");
+  const [pendingEpsPayment, setPendingEpsPayment] = useState<{ orderId: number; paymentInitToken: string | null } | null>(null);
+  const [epsVerificationBusy, setEpsVerificationBusy] = useState(false);
   const [country, setCountry] = useState("Bangladesh");
   const [location, setLocation] = useState(""); // district
   const [area, setArea] = useState<AllowedShippingArea>(ALLOWED_SHIPPING_AREAS[0]);
@@ -752,7 +755,38 @@ export default function CheckoutPage() {
     }
   };
 
+  const handleVerifyEpsPayment = async () => {
+    if (!pendingEpsPayment || epsVerificationBusy) return;
+    setEpsVerificationBusy(true);
+    try {
+      const response = await fetch("/api/eps/status", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(pendingEpsPayment) });
+      const result = await response.json();
+      if (!response.ok) { toast.error(result.error || t("errors.gatewayStartFailed")); return; }
+      if (result.status === "pending") { toast.message(result.message); return; }
+      const target = new URL("/ecommerce/payment-result", window.location.origin);
+      target.searchParams.set("status", result.status);
+      target.searchParams.set("message", result.message);
+      window.location.href = target.toString();
+    } catch { toast.error(t("errors.gatewayStartFailed")); }
+    finally { setEpsVerificationBusy(false); }
+  };
+
+  const handleResumeEpsPayment = async () => {
+    if (!pendingEpsPayment || epsVerificationBusy) return;
+    setEpsVerificationBusy(true);
+    try {
+      const response = await fetch("/api/eps/init", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(pendingEpsPayment) });
+      const result = await response.json();
+      if (!response.ok || !result.redirectUrl) { toast.error(result.error || t("errors.gatewayStartFailed")); return; }
+      window.location.href = result.redirectUrl;
+    } catch { toast.error(t("errors.gatewayStartFailed")); }
+    finally { setEpsVerificationBusy(false); }
+  };
+
   const handlePlaceOrder = async () => {
+    if (pendingEpsPayment) { await handleResumeEpsPayment(); return; }
     if (itemsToRender.length === 0) {
       toast.error(t("errors.emptyCart"));
       return;
@@ -760,7 +794,13 @@ export default function CheckoutPage() {
 
     const isCOD = paymentMethod === "CashOnDelivery";
     const isSSLCOMMERZ = paymentMethod.startsWith("SSLCOMMERZ:");
-    const isManualPayment = !isCOD && !isSSLCOMMERZ;
+    const isEPS = paymentMethod.startsWith("EPS:");
+    const isOnlinePayment = isSSLCOMMERZ || isEPS;
+    const isManualPayment = !isCOD && !isOnlinePayment;
+    if (isEPS && (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email) || !epsPostcode.trim())) {
+      toast.error(t("errors.requiredInformation"));
+      return;
+    }
 
     if (
       !name ||
@@ -825,6 +865,7 @@ export default function CheckoutPage() {
       area: area || "N/A",
       address_details: deliveryAddress || "N/A",
       payment_method: paymentMethod,
+      ...(isEPS ? { epsPostcode: epsPostcode.trim() } : {}),
       items,
       transactionId: isManualPayment ? transactionId : null,
       paymentStatus: computedPaymentStatus,
@@ -849,13 +890,14 @@ export default function CheckoutPage() {
       }
 
       const createdOrder = await res.json();
+      if (isEPS) setPendingEpsPayment({ orderId: createdOrder.id, paymentInitToken: createdOrder.paymentInitToken || null });
       setPlacedOrder({ ...uiOrderData, orderId: createdOrder.id });
       if (res.status === 201) {
         trackAddPaymentInfo({
           ...ecommerceFromRows(itemsToRender, currency, appliedCoupon?.code),
           payment_type: isCOD
             ? "cash_on_delivery"
-            : isSSLCOMMERZ
+            : isOnlinePayment
               ? "online_payment"
               : "manual_payment",
         });
@@ -863,9 +905,9 @@ export default function CheckoutPage() {
         if (purchasePayload) trackPurchase(purchasePayload);
       }
 
-      if (isSSLCOMMERZ) {
+      if (isOnlinePayment) {
         const gatewayId = Number(paymentMethod.split(":")[1]);
-        const initRes = await fetch("/api/sslcommerz/init", {
+        const initRes = await fetch(isEPS ? "/api/eps/init" : "/api/sslcommerz/init", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -877,7 +919,7 @@ export default function CheckoutPage() {
 
         const initData = await initRes.json().catch(() => null);
         if (!initRes.ok || !initData?.redirectUrl) {
-          toast.error(t("errors.gatewayStartFailed"));
+          toast.error(isEPS && initData?.error ? initData.error : t("errors.gatewayStartFailed"));
           return;
         }
 
@@ -1207,6 +1249,13 @@ export default function CheckoutPage() {
               {/* Step 2 */}
               {step === "payment" && (
                 <PaymentMethodSelector
+                  epsEmail={email}
+                  onEpsEmailChange={setEmail}
+                  epsPostcode={epsPostcode}
+                  onEpsPostcodeChange={setEpsPostcode}
+                  epsPendingOrderId={pendingEpsPayment?.orderId ?? null}
+                  epsVerificationBusy={epsVerificationBusy}
+                  onVerifyEpsPayment={handleVerifyEpsPayment}
                   paymentGateways={paymentGateways}
                   selectedMethod={paymentMethod}
                   onMethodChange={setPaymentMethod}

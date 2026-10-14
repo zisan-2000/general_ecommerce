@@ -30,6 +30,7 @@ import {
   isPaymentInitSigningConfigured,
 } from "@/lib/sslcommerz";
 import { rateLimitRequest } from "@/lib/request-security";
+import { EpsError, epsConfig, epsGatewayId, epsPublicOrigin, findEpsGateway } from "@/lib/eps";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
 import {
@@ -102,7 +103,7 @@ function buildOrderSuccessResponse({
 }) {
   const customerOrder = redactCustomerOrder(order);
   const response = NextResponse.json(
-    isSSLCOMMERZ
+    (isSSLCOMMERZ || epsGatewayId(order.payment_method) !== null)
       ? { ...customerOrder, paymentInitToken: createPaymentInitToken(order.id) }
       : customerOrder,
     {
@@ -371,7 +372,13 @@ export async function POST(
     const paymentMethod = String(payment_method || "");
     const isCOD = paymentMethod === "CashOnDelivery";
     const isSSLCOMMERZ = /^SSLCOMMERZ:\d+$/i.test(paymentMethod);
-    const isManualPayment = !isCOD && !isSSLCOMMERZ;
+    const isEPS = epsGatewayId(paymentMethod) !== null;
+    const isOnlinePayment = isSSLCOMMERZ || isEPS;
+    const isManualPayment = !isCOD && !isOnlinePayment;
+    const epsPostcode = typeof body.epsPostcode === "string" ? body.epsPostcode.trim() : "";
+    if (isEPS && (!epsPostcode || epsPostcode.length > 20 || typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))) {
+      return NextResponse.json({ error: "EPS requires a valid email and postcode" }, { status: 400 });
+    }
     const manualGatewayMatch = paymentMethod.match(/^MANUAL:.{1,80}:(\d+)$/i);
 
     if (
@@ -431,7 +438,7 @@ export async function POST(
       country,
       district,
       area,
-      addressDetails: address_details,
+      addressDetails: isEPS ? JSON.stringify([address_details, epsPostcode]) : address_details,
       paymentMethod,
       items: normalizedItems,
       transactionId: isManualPayment ? transactionId : null,
@@ -462,6 +469,13 @@ export async function POST(
         });
     }
 
+    if (isEPS) {
+      const gateway = await findEpsGateway(epsGatewayId(paymentMethod));
+      if (!gateway) return NextResponse.json({ error: "Selected EPS gateway is unavailable" }, { status: 400 });
+      epsConfig();
+      epsPublicOrigin();
+      if (!isPaymentInitSigningConfigured()) return NextResponse.json({ error: "EPS payment signing is not configured" }, { status: 503 });
+    }
     if (isSSLCOMMERZ) {
       const gatewayId = gatewayIdFromMethod(paymentMethod);
       const gateway = await findSslcommerzGateway(gatewayId);
@@ -770,12 +784,12 @@ export async function POST(
           taxSnapshot: taxQuote,
           status: "PENDING",
           paymentStatus: "UNPAID",
-          transactionId: transactionId ?? null,
+          transactionId: isEPS ? null : (transactionId ?? null),
           termsAcceptedAt: legalConsentAcceptedAt,
           privacyPolicyAcceptedAt: legalConsentAcceptedAt,
           image: isManualPayment ? (image ?? null) : null,
           couponId: couponResult?.coupon.id ?? null,
-          commercialContext: orderIdempotencyCommercialContext(idempotency),
+          commercialContext: { ...orderIdempotencyCommercialContext(idempotency), ...(isEPS ? { epsPostcode } : {}) },
           fulfillmentWarehouseId,
         },
       });
@@ -845,15 +859,15 @@ export async function POST(
 
       for (const item of orderItemsData) {
         if (!item.tracksPreassembledBundleStock || !item.bundleWarehouseId) continue;
-        if (isSSLCOMMERZ) {
+        if (isOnlinePayment) {
           await reservePreassembledBundleInventory({
             tx,
             orderId: o.id,
             bundleId: item.productId,
             warehouseId: item.bundleWarehouseId,
             quantity: item.quantity,
-            reason: `Order #${o.id} SSLCommerz preassembled bundle reservation`,
-            expiresAt: new Date(Date.now() + 45 * 60 * 1000),
+            reason: `Order #${o.id} ${isEPS ? "EPS" : "SSLCommerz"} preassembled bundle reservation`,
+            expiresAt: isEPS ? null : new Date(Date.now() + 45 * 60 * 1000),
           });
         } else {
           await deductPreassembledBundleInventory({
@@ -868,7 +882,7 @@ export async function POST(
       }
 
       for (const item of inventoryDemands) {
-        if (isSSLCOMMERZ)
+        if (isOnlinePayment)
           await reserveVariantInventory({
             tx,
             productId: item.product.id,
@@ -876,8 +890,8 @@ export async function POST(
             orderId: o.id,
             userId: userId ?? null,
             quantity: item.quantity,
-            reason: `Order #${o.id} SSLCommerz reservation`,
-            expiresAt: new Date(Date.now() + 45 * 60 * 1000),
+            reason: `Order #${o.id} ${isEPS ? "EPS" : "SSLCommerz"} reservation`,
+            expiresAt: isEPS ? null : new Date(Date.now() + 45 * 60 * 1000),
             warehouseId: fulfillmentWarehouseId,
           });
         else
@@ -956,6 +970,7 @@ export async function POST(
       replayed: transactionResult.replayed,
     });
   } catch (error: any) {
+    if (error instanceof EpsError) return NextResponse.json({ error: error.message }, { status: error.status });
     console.error("Error creating order:", error);
     if (error instanceof OrderIdempotencyError)
       return NextResponse.json(

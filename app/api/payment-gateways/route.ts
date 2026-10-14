@@ -28,6 +28,10 @@ export async function GET(request: NextRequest) {
       if (data.isActive === false) return list;
 
       const type = String(data.type || '').toUpperCase();
+      if (type === 'EPS') {
+        list.push({ id: payment.id, paymentGatewayData: { type: 'EPS' } });
+        return list;
+      }
       if (type === 'SSLCOMMERZ') {
         list.push({
           id: payment.id,

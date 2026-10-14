@@ -4,6 +4,7 @@ import { prisma } from '@/lib/prisma';
 import { authOptions } from '@/lib/auth';
 import { logActivity } from '@/lib/activity-log';
 import { getAccessContext } from '@/lib/rbac';
+import { normalizeEpsGatewaySettings } from '@/lib/eps-settings';
 
 function toPaymentLogSnapshot(payment: {
   id: number;
@@ -31,6 +32,7 @@ function gatewayObject(value: unknown): Record<string, any> {
 
 function redactGatewayData(value: unknown) {
   const data = gatewayObject(value);
+  if (String(data.type || '').toUpperCase() === 'EPS') return normalizeEpsGatewaySettings(data);
   if (String(data.type || '').toUpperCase() !== 'SSLCOMMERZ') return data;
   const { storePassword: _secret, ...safe } = data;
   return { ...safe, hasStorePassword: Boolean(data.storePassword) };
@@ -85,10 +87,15 @@ export async function POST(request: NextRequest) {
 
     const body = await request.json();
     const { paymentGatewayData, orderId, amount } = body;
-    const gatewayData = gatewayObject(paymentGatewayData);
+    let gatewayData = gatewayObject(paymentGatewayData);
     const gatewayType = String(gatewayData.type || '').toUpperCase();
-    if (!['MANUAL', 'SSLCOMMERZ'].includes(gatewayType)) {
+    if (!['MANUAL', 'SSLCOMMERZ', 'EPS'].includes(gatewayType)) {
       return NextResponse.json({ error: 'Invalid payment gateway type' }, { status: 400 });
+    }
+    if (gatewayType === 'EPS') {
+      if (orderId !== undefined && orderId !== null) return NextResponse.json({ error: 'Gateway settings cannot create EPS transaction records' }, { status: 400 });
+      try { gatewayData = normalizeEpsGatewaySettings(gatewayData); }
+      catch (error) { return NextResponse.json({ error: error instanceof Error ? error.message : 'Invalid EPS settings' }, { status: 400 }); }
     }
     if (gatewayType === 'SSLCOMMERZ' && (!String(gatewayData.storeId || '').trim() || !String(gatewayData.storePassword || '').trim())) {
       return NextResponse.json({ error: 'Store ID and Store Password are required' }, { status: 400 });

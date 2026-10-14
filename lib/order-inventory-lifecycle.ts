@@ -12,6 +12,9 @@ const INVENTORY_RELEASE_STATUSES = new Set<OrderStatus>([
   OrderStatus.FAILED,
   OrderStatus.RETURNED,
 ]);
+const UNPAID_EPS_STATUSES = new Set<OrderStatus>([
+  OrderStatus.PENDING, OrderStatus.CONFIRMED, OrderStatus.FAILED, OrderStatus.CANCELLED,
+]);
 
 const EMPTY_INVENTORY_RESULT = {
   releasedReservationCount: 0,
@@ -83,10 +86,14 @@ export async function transitionOrderStatusWithInventory(params: {
 
   const before = await tx.order.findUnique({
     where: { id: orderId },
-    select: { status: true },
+    select: { status: true, payment_method: true, paymentStatus: true },
   });
   if (!before) {
     throw new Error(`Order #${orderId} was not found during status transition`);
+  }
+  if (before.payment_method?.startsWith("EPS:") && before.paymentStatus === "UNPAID" &&
+      !UNPAID_EPS_STATUSES.has(nextStatus)) {
+    throw new OrderStatusTransitionError(before.status, nextStatus);
   }
 
   const changed = before.status !== nextStatus;
@@ -100,6 +107,10 @@ export async function transitionOrderStatusWithInventory(params: {
 
   const shouldRestoreInventory =
     params.restoreInventory ?? INVENTORY_RELEASE_STATUSES.has(nextStatus);
+  if (shouldRestoreInventory && before.payment_method?.startsWith("EPS:") && before.paymentStatus === "UNPAID") {
+    const activeEpsAttempt = await tx.payment.count({ where: { orderId, provider: "EPS", status: { in: ["INITIATED", "AUTHORIZED"] } } });
+    if (activeEpsAttempt) throw new OrderStatusTransitionError(before.status, nextStatus);
+  }
   const inventory = shouldRestoreInventory
     ? await restoreOrderInventory({ tx, orderId, reason })
     : EMPTY_INVENTORY_RESULT;

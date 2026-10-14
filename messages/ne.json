@@ -5023,6 +5023,17 @@
     }
   },
   "AdminPaymentGateway": {
+    "eps": {
+      "credentials": "EPS Sandbox credentials are configured through server environment variables.",
+      "active": "Show EPS in checkout",
+      "terminalHelp": "Enter only EPS-confirmed final failure/cancellation status strings, separated by commas. Leave blank until confirmed; unknown statuses retain inventory.",
+      "failureStatuses": "Confirmed final failure statuses",
+      "cancellationStatuses": "Confirmed final cancellation statuses",
+      "disabled": "EPS is disabled in checkout",
+      "confirmed": "EPS Technical Team has confirmed the Sandbox API contract. Live EPS remains disabled.",
+      "orderId": "Order ID to verify",
+      "verify": "Verify EPS payment"
+    },
     "title": "भुक्तानी गेटवे व्यवस्थापन",
     "dialog": {
       "addTitle": "नयाँ भुक्तानी गेटवे थप्नुहोस्",
@@ -9977,6 +9988,13 @@
       "totalPayable": "कुल भुक्तानीयोग्य",
       "cashOnDelivery": "डेलिभरीमा नगद",
       "manualPayment": "म्यानुअल भुक्तानी",
+      "epsResume": "Resume EPS payment",
+      "epsVerify": "Check EPS payment",
+      "epsPendingOrder": "Check EPS payment for order #{id}. Confirm this payment before placing another order.",
+      "epsDescription": "Pay securely via EPS",
+      "epsRedirect": "You will be redirected to EPS after placing the order.",
+      "epsEmail": "Email for EPS payment",
+      "epsPostcode": "Postcode for EPS payment",
       "sslDescription": "SSLCommerz मार्फत सुरक्षित भुक्तानी गर्नुहोस्",
       "manualDescription": "म्यानुअल भुक्तानी (स्क्रिनसट र कारोबार आईडी आवश्यक)",
       "codDescription": "उत्पादन प्राप्त गर्दा भुक्तानी गर्नुहोस्",
@@ -10001,6 +10019,7 @@
     "paymentResult": {
       "success": "भुक्तानी सफल भयो",
       "cancelled": "भुक्तानी रद्द भयो",
+      "pending": "Payment verification pending",
       "unsuccessful": "भुक्तानी असफल भयो",
       "verified": "तपाईंको भुक्तानी प्रमाणित भयो।",
       "unpaid": "तपाईंको अर्डर अझै भुक्तानी भएको छैन।",

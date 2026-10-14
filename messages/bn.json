@@ -5031,6 +5031,17 @@
     }
   },
   "AdminPaymentGateway": {
+    "eps": {
+      "credentials": "EPS Sandbox credentials সার্ভারের environment variables-এ কনফিগার করতে হবে।",
+      "active": "Checkout-এ EPS দেখান",
+      "terminalHelp": "শুধু EPS নিশ্চিত করা চূড়ান্ত failure/cancellation status লিখুন, কমা দিয়ে আলাদা করুন। নিশ্চিত না হওয়া পর্যন্ত ফাঁকা রাখুন; অজানা status-এ inventory সংরক্ষিত থাকবে।",
+      "failureStatuses": "নিশ্চিত চূড়ান্ত failure status",
+      "cancellationStatuses": "নিশ্চিত চূড়ান্ত cancellation status",
+      "disabled": "Checkout-এ EPS বন্ধ আছে",
+      "confirmed": "EPS Technical Team Sandbox API contract নিশ্চিত করেছে। Live EPS বন্ধ আছে।",
+      "orderId": "যে Order ID-এর পেমেন্ট যাচাই করবেন",
+      "verify": "EPS পেমেন্ট যাচাই করুন"
+    },
     "title": "পেমেন্ট গেটওয়ে ব্যবস্থাপনা",
     "dialog": {
       "addTitle": "নতুন পেমেন্ট গেটওয়ে যোগ করুন",
@@ -9991,6 +10002,13 @@
       "totalPayable": "মোট পরিশোধযোগ্য",
       "cashOnDelivery": "ক্যাশ অন ডেলিভারি",
       "manualPayment": "ম্যানুয়াল পেমেন্ট",
+      "epsResume": "EPS পেমেন্ট আবার খুলুন",
+      "epsVerify": "EPS পেমেন্ট যাচাই করুন",
+      "epsPendingOrder": "অর্ডার #{id}-এর EPS পেমেন্ট যাচাই করুন। আবার অর্ডার তৈরি করার আগে এই পেমেন্টের অবস্থা নিশ্চিত করুন।",
+      "epsDescription": "EPS-এর মাধ্যমে নিরাপদে পেমেন্ট করুন",
+      "epsRedirect": "অর্ডার দেওয়ার পর আপনাকে EPS পেমেন্ট পেজে পাঠানো হবে।",
+      "epsEmail": "EPS পেমেন্টের জন্য ইমেইল",
+      "epsPostcode": "EPS পেমেন্টের জন্য পোস্টকোড",
       "sslDescription": "SSLCommerz-এর মাধ্যমে নিরাপদে পেমেন্ট করুন",
       "manualDescription": "ম্যানুয়াল পেমেন্ট (স্ক্রিনশট ও ট্রানজ্যাকশন আইডি প্রয়োজন)",
       "codDescription": "পণ্য পাওয়ার সময় মূল্য পরিশোধ করুন",
@@ -10015,6 +10033,7 @@
     "paymentResult": {
       "success": "পেমেন্ট সফল হয়েছে",
       "cancelled": "পেমেন্ট বাতিল হয়েছে",
+      "pending": "পেমেন্ট যাচাই অপেক্ষমাণ",
       "unsuccessful": "পেমেন্ট ব্যর্থ হয়েছে",
       "verified": "আপনার পেমেন্ট যাচাই হয়েছে।",
       "unpaid": "আপনার অর্ডার এখনও অপরিশোধিত।",

@@ -9,8 +9,13 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "@/components/u
 import { Plus, Trash2, Edit, Save, Copy, Check } from "lucide-react";
 import { toast } from "sonner";
 import { useLocale, useTranslations } from "next-intl";
+import { EPS_INITIALIZE_CONTRACT } from "@/lib/eps-settings";
 
 interface PaymentGatewayData {
+  isActive?: boolean;
+  initializeContract?: string;
+  failureStatuses?: string[];
+  cancellationStatuses?: string[];
   type?: string;
   channel?: string;
   accountNumbers?: string[];
@@ -40,7 +45,7 @@ export default function PaymentGatewayManager() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   // Form states
-  const [gatewayType, setGatewayType] = useState<"MANUAL" | "SSLCOMMERZ">(
+  const [gatewayType, setGatewayType] = useState<"MANUAL" | "SSLCOMMERZ" | "EPS">(
     "MANUAL"
   );
 
@@ -54,6 +59,31 @@ export default function PaymentGatewayManager() {
   const [sslFailUrl, setSslFailUrl] = useState("");
   const [sslCancelUrl, setSslCancelUrl] = useState("");
   const [sslIpnUrl, setSslIpnUrl] = useState("");
+  const [epsActive, setEpsActive] = useState(false);
+  const [epsFailureStatuses, setEpsFailureStatuses] = useState("");
+  const [epsCancellationStatuses, setEpsCancellationStatuses] = useState("");
+  const [epsVerifyOrderId, setEpsVerifyOrderId] = useState("");
+  const [epsVerifyBusy, setEpsVerifyBusy] = useState(false);
+
+  const epsSettings = (): PaymentGatewayData => ({
+    type: "EPS", isActive: epsActive,
+    initializeContract: EPS_INITIALIZE_CONTRACT,
+    failureStatuses: epsFailureStatuses.split(",").map((value) => value.trim()).filter(Boolean),
+    cancellationStatuses: epsCancellationStatuses.split(",").map((value) => value.trim()).filter(Boolean),
+  });
+
+  const verifyEpsOrder = async () => {
+    if (!/^\d+$/.test(epsVerifyOrderId) || Number(epsVerifyOrderId) <= 0) return;
+    setEpsVerifyBusy(true);
+    try {
+      const response = await fetch("/api/eps/status", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ orderId: Number(epsVerifyOrderId) }) });
+      const result = await response.json();
+      if (!response.ok) toast.error(result.error || t("errors.fetchFailed"));
+      else toast.message(`${result.status}: ${result.message}`);
+    } catch { toast.error(t("errors.fetchFailed")); }
+    finally { setEpsVerifyBusy(false); }
+  };
 
   const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
@@ -91,6 +121,9 @@ export default function PaymentGatewayManager() {
     setSslFailUrl("");
     setSslCancelUrl("");
     setSslIpnUrl("");
+    setEpsActive(false);
+    setEpsFailureStatuses("");
+    setEpsCancellationStatuses("");
 
     setEditingId(null);
     setIsDialogOpen(false);
@@ -99,6 +132,7 @@ export default function PaymentGatewayManager() {
   const getGatewayType = (data: PaymentGatewayData | null | undefined) => {
     const type = String((data as any)?.type || "").toUpperCase();
     if (type === "SSLCOMMERZ") return "SSLCOMMERZ" as const;
+    if (type === "EPS") return "EPS" as const;
     return "MANUAL" as const;
   };
 
@@ -157,6 +191,8 @@ export default function PaymentGatewayManager() {
           channel: channel.trim(),
           accountNumbers: validAccounts,
         };
+      } else if (gatewayType === "EPS") {
+        paymentData = epsSettings();
       } else {
         if (!sslStoreId.trim() || (!editingId && !sslStorePassword.trim())) {
           toast.error(t("validation.credentialsRequired"));
@@ -220,6 +256,8 @@ export default function PaymentGatewayManager() {
           channel: channel.trim(),
           accountNumbers: validAccounts,
         };
+      } else if (gatewayType === "EPS") {
+        paymentData = epsSettings();
       } else {
         if (!sslStoreId.trim()) {
           toast.error(t("validation.storeIdRequired"));
@@ -300,6 +338,10 @@ export default function PaymentGatewayManager() {
             ? payment.paymentGatewayData.accountNumbers
             : [""]
         );
+      } else if (inferredType === "EPS") {
+        setEpsActive(payment.paymentGatewayData.isActive !== false);
+        setEpsFailureStatuses((payment.paymentGatewayData.failureStatuses || []).join(", "));
+        setEpsCancellationStatuses((payment.paymentGatewayData.cancellationStatuses || []).join(", "));
       } else {
         setSslStoreId(payment.paymentGatewayData.storeId || "");
         setSslStorePassword(payment.paymentGatewayData.storePassword || "");
@@ -414,16 +456,32 @@ export default function PaymentGatewayManager() {
                 id="gatewayType"
                 value={gatewayType}
                 onChange={(e) => {
-                  const next = e.target.value === "SSLCOMMERZ" ? "SSLCOMMERZ" : "MANUAL";
+                  const next = e.target.value === "EPS" ? "EPS" : e.target.value === "SSLCOMMERZ" ? "SSLCOMMERZ" : "MANUAL";
                   setGatewayType(next);
                 }}
                 className="w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-sm"
               >
                 <option value="MANUAL">{t("gatewayTypes.manual")}</option>
                 <option value="SSLCOMMERZ">SSLCommerz</option>
+                <option value="EPS">EPS</option>
               </select>
             </div>
 
+            {gatewayType === "EPS" && (
+              <div className="space-y-3 rounded border p-3">
+                <p className="text-sm text-muted-foreground">{t("eps.credentials")}</p>
+                <label className="flex items-start gap-2 text-sm">
+                  <input type="checkbox" checked={epsActive} onChange={(event) => setEpsActive(event.target.checked)} />
+                  {t("eps.active")}
+                </label>
+                <p className="text-sm text-muted-foreground">{t("eps.confirmed")}</p>
+                <p className="text-xs text-muted-foreground">{t("eps.terminalHelp")}</p>
+                <Label htmlFor="eps-failure-statuses">{t("eps.failureStatuses")}</Label>
+                <Input id="eps-failure-statuses" value={epsFailureStatuses} onChange={(event) => setEpsFailureStatuses(event.target.value)} />
+                <Label htmlFor="eps-cancellation-statuses">{t("eps.cancellationStatuses")}</Label>
+                <Input id="eps-cancellation-statuses" value={epsCancellationStatuses} onChange={(event) => setEpsCancellationStatuses(event.target.value)} />
+              </div>
+            )}
             {/* Channel Input */}
             {gatewayType === "MANUAL" && (
               <div className="space-y-2">
@@ -607,6 +665,7 @@ export default function PaymentGatewayManager() {
                   <CardTitle className="text-lg" style={{ color: 'hsl(var(--foreground))' }}>
                     {getGatewayType(payment.paymentGatewayData) === "SSLCOMMERZ"
                       ? "SSLCommerz"
+                      : getGatewayType(payment.paymentGatewayData) === "EPS" ? "EPS"
                       : payment.paymentGatewayData?.channel || t("labels.unnamedChannel")}
                   </CardTitle>
                   <div className="flex gap-1">
@@ -680,6 +739,16 @@ export default function PaymentGatewayManager() {
                       {t("labels.noAccountNumbers")}
                     </p>
                   )
+                ) : getGatewayType(payment.paymentGatewayData) === "EPS" ? (
+                  <div className="space-y-2 text-sm">
+                    <p>{t("eps.credentials")}</p>
+                    <p>{payment.paymentGatewayData?.isActive === false ? t("eps.disabled") : t("eps.active")}</p>
+                    <p>{t("eps.confirmed")}</p>
+                    <Label htmlFor={`eps-verify-order-${payment.id}`}>{t("eps.orderId")}</Label>
+                    <Input id={`eps-verify-order-${payment.id}`} inputMode="numeric" value={epsVerifyOrderId}
+                      onChange={(event) => setEpsVerifyOrderId(event.target.value)} />
+                    <Button onClick={verifyEpsOrder} disabled={epsVerifyBusy || !/^\d+$/.test(epsVerifyOrderId)}>{t("eps.verify")}</Button>
+                  </div>
                 ) : (
                   <div className="space-y-2">
                     <Label className="text-sm font-medium">{t("labels.configuration")}:</Label>

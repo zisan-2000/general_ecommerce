@@ -94,7 +94,7 @@ test("checkout route performs replay lookup before stock validation and rechecks
   );
   assert.match(
     route,
-    /commercialContext:\s*orderIdempotencyCommercialContext\(idempotency\)/,
+    /commercialContext:\s*\{\s*\.\.\.orderIdempotencyCommercialContext\(idempotency\)/,
   );
   assert.match(route, /if \(!transactionResult\.replayed\)/);
   assert.match(

@@ -909,6 +909,7 @@ export async function cleanupExpiredInventoryReservations(params: {
       where: { id: orderId },
       select: {
         paymentStatus: true,
+        payment_method: true,
         couponId: true,
         discount_total: true,
         payments: { select: { status: true } },
@@ -916,6 +917,7 @@ export async function cleanupExpiredInventoryReservations(params: {
     });
     if (
       !order ||
+      order.payment_method?.startsWith("EPS:") ||
       order.paymentStatus === "PAID" ||
       order.payments.some((payment) => payment.status === "CAPTURED")
     ) {
