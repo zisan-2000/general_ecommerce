@@ -26,6 +26,7 @@ model StorePolicyContent {
 }
 
 model User {
+  assignedPaymentDisputes                    PaymentDispute[] @relation("PaymentDisputeAssignee")
   orderAdminNotifications                   OrderAdminNotification[]
   id                                        String                                 @id @default(cuid())
   email                                     String                                 @unique
@@ -852,6 +853,117 @@ model Payment {
   updatedAt          DateTime     @updatedAt
   order              Order?       @relation(fields: [orderId], references: [id])
   refunds            Refund[]
+  controlEvents      PaymentEvent[]
+  reconciliations    PaymentReconciliation[]
+  disputes           PaymentDispute[]
+
+  @@index([provider, createdAt, id])
+  @@index([orderId, status])
+}
+
+// Diagnostic data is separate from gateway settings and settlement state.
+// Never store raw requests, responses, headers, session keys or customer/card data.
+model PaymentEvent {
+  id            String   @id @default(uuid())
+  requestId     String?  @db.VarChar(36)
+  paymentId     Int?
+  orderId       Int?
+  transactionId String?  @db.VarChar(50)
+  provider      String   @db.VarChar(20)
+  operation     String   @db.VarChar(40)
+  outcome       String   @db.VarChar(40)
+  httpStatus    Int?
+  durationMs    Int?
+  gatewayStatus String?  @db.VarChar(40)
+  detailCode    String?  @db.VarChar(60)
+  actorUserId   String?
+  createdAt     DateTime @default(now())
+  payment       Payment? @relation(fields: [paymentId], references: [id], onDelete: SetNull)
+
+  @@index([paymentId, createdAt, id])
+  @@index([transactionId, createdAt])
+  @@index([provider, operation, createdAt])
+  @@index([requestId])
+}
+
+model PaymentReconciliation {
+  id               String   @id @default(uuid())
+  paymentId        Int
+  databaseStatus   String   @db.VarChar(20)
+  orderStatus      String   @db.VarChar(20)
+  gatewayStatus    String   @db.VarChar(40)
+  result           String   @db.VarChar(40)
+  amountMatches    Boolean?
+  referenceMatches Boolean?
+  actorUserId      String?
+  createdAt        DateTime @default(now())
+  payment          Payment  @relation(fields: [paymentId], references: [id], onDelete: Restrict)
+
+  @@index([paymentId, createdAt, id])
+  @@index([result, createdAt])
+}
+
+model PaymentDispute {
+  id             String   @id @default(uuid())
+  paymentId      Int
+  idempotencyKey String   @unique @db.VarChar(80)
+  category       String   @db.VarChar(30)
+  complaint      String   @db.VarChar(2000)
+  status         String   @default("OPEN") @db.VarChar(20)
+  assignedToId   String?
+  createdById    String
+  resolution     String?  @db.VarChar(2000)
+  version        Int      @default(1)
+  createdAt      DateTime @default(now())
+  updatedAt      DateTime @updatedAt
+  payment        Payment  @relation(fields: [paymentId], references: [id], onDelete: Restrict)
+  assignedTo     User?    @relation("PaymentDisputeAssignee", fields: [assignedToId], references: [id], onDelete: SetNull)
+  evidence       PaymentDisputeEvidence[]
+  activities     PaymentDisputeActivity[]
+
+  @@index([paymentId, createdAt])
+  @@index([status, assignedToId, updatedAt])
+}
+
+model PaymentDisputeEvidence {
+  id          String   @id @default(uuid())
+  disputeId   String
+  label       String   @db.VarChar(120)
+  note        String   @db.VarChar(2000)
+  url         String?  @db.VarChar(1000)
+  actorUserId String
+  createdAt   DateTime @default(now())
+  dispute     PaymentDispute @relation(fields: [disputeId], references: [id], onDelete: Restrict)
+
+  @@index([disputeId, createdAt])
+}
+
+model PaymentDisputeActivity {
+  id           String   @id @default(uuid())
+  disputeId    String
+  action       String   @db.VarChar(30)
+  fromStatus   String?  @db.VarChar(20)
+  toStatus     String   @db.VarChar(20)
+  assignedToId String?
+  resolution   String?  @db.VarChar(2000)
+  actorUserId  String
+  createdAt    DateTime @default(now())
+  dispute      PaymentDispute @relation(fields: [disputeId], references: [id], onDelete: Restrict)
+
+  @@index([disputeId, createdAt])
+}
+
+// Simulations have no Payment/Order/Inventory foreign keys and cannot settle money.
+model PaymentSandboxRun {
+  id             String   @id @default(uuid())
+  idempotencyKey String   @unique @db.VarChar(80)
+  provider       String   @db.VarChar(20)
+  scenario       String   @db.VarChar(30)
+  result         Json
+  actorUserId    String
+  createdAt      DateTime @default(now())
+
+  @@index([createdAt])
 }
 
 model OrderItem {

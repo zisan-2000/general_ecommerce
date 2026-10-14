@@ -4,6 +4,7 @@ import { Prisma } from "@/generated/prisma";
 import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { rateLimitRequest } from "@/lib/request-security";
+import { recordPaymentEvent, type PaymentLogContext } from "@/lib/payment-control/telemetry";
 import { verifyPaymentInitToken } from "@/lib/sslcommerz";
 import { epsObject, EPS_INITIALIZE_CONTRACT } from "@/lib/eps-settings";
 import { buildEpsInitializeBody, createEpsTransactionId, EpsError, epsCallbackUrls, epsConfig,
@@ -12,6 +13,7 @@ import { buildEpsInitializeBody, createEpsTransactionId, EpsError, epsCallbackUr
 export const runtime = "nodejs";
 
 export async function POST(request: NextRequest) {
+  let logContext: PaymentLogContext = { provider: "EPS" };
   try {
     const limit = await rateLimitRequest(request, { scope: "eps-init", limit: 10, windowMs: 600_000 });
     if (!limit.allowed) return NextResponse.json({ error: "Too many EPS payment attempts" }, {
@@ -35,9 +37,10 @@ export async function POST(request: NextRequest) {
     if (!found) throw new EpsError("EPS gateway is unavailable", 503);
     const config = epsConfig();
     const transactionId = createEpsTransactionId();
+    logContext = { provider: "EPS", transactionId, orderId };
     const urls = epsCallbackUrls(transactionId);
     // Authenticate before creating an attempt: failures here cannot create a remote payment.
-    const token = await getEpsToken();
+    const token = await getEpsToken(logContext);
     const attempt = await prisma.$transaction(async (tx) => {
       await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Order" WHERE "id" = ${orderId} FOR UPDATE`);
       const current = await tx.order.findUniqueOrThrow({ where: { id: orderId }, include: {
@@ -68,9 +71,14 @@ export async function POST(request: NextRequest) {
       } });
       return { reused: false as const, payment, payload };
     });
-    if (attempt.reused) return NextResponse.json({ redirectUrl: attempt.redirectUrl, tranId: attempt.transactionId, reused: true }, { headers: { "Cache-Control": "private, no-store" } });
+    if (attempt.reused) {
+      await recordPaymentEvent({ provider: "EPS", orderId, transactionId: attempt.transactionId ?? undefined,
+        operation: "INITIALIZE", outcome: "DUPLICATE" });
+      return NextResponse.json({ redirectUrl: attempt.redirectUrl, tranId: attempt.transactionId, reused: true }, { headers: { "Cache-Control": "private, no-store" } });
+    }
     // No DB transaction remains open across a network request. The durable attempt blocks duplicate init.
-    const initialized = await initializeEpsPayment(attempt.payload, token);
+    logContext = { ...logContext, paymentId: attempt.payment.id };
+    const initialized = await initializeEpsPayment(attempt.payload, token, logContext);
     await prisma.$transaction(async (tx) => {
       await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Order" WHERE "id" = ${orderId} FOR UPDATE`);
       const current = await tx.payment.findUniqueOrThrow({ where: { id: attempt.payment.id } });
@@ -80,8 +88,10 @@ export async function POST(request: NextRequest) {
         epsTransactionId: initialized.epsTransactionId,
       } as Prisma.InputJsonObject } });
     });
+    await recordPaymentEvent({ ...logContext, operation: "INITIALIZE", outcome: "SUCCESS" });
     return NextResponse.json({ redirectUrl: initialized.redirectUrl, tranId: transactionId }, { headers: { "Cache-Control": "private, no-store" } });
   } catch (error) {
+    await recordPaymentEvent({ ...logContext, operation: "INITIALIZE", outcome: "ERROR", detailCode: "INITIALIZE_REJECTED" });
     // Never log provider payloads, customer data, bearer tokens or credentials.
     return NextResponse.json({ error: error instanceof EpsError ? error.message : "Could not initialize EPS payment; check pending payment status" },
       { status: error instanceof EpsError ? error.status : 500 });

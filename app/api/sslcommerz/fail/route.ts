@@ -6,7 +6,7 @@ async function handle(request: NextRequest) {
   const result = await processSslcommerzCallback(request, "fail");
   revalidateStorefrontCatalog();
   const url = new URL("/ecommerce/payment-result", getPublicBaseUrl(request));
-  url.searchParams.set("status", "failed");
+  url.searchParams.set("status", result.status);
   url.searchParams.set("message", result.message);
   if (result.orderId) url.searchParams.set("orderId", String(result.orderId));
   return NextResponse.redirect(url, 303);

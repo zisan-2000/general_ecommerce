@@ -457,6 +457,7 @@ const adminPagePermissionRules: PermissionRule[] = [
     ],
     globalOnly: true,
   },
+  { prefix: "/admin/payment-control", permissions: ["settings.payment.manage", "settings.manage"], globalOnly: true },
   { prefix: "/admin/reports", permissions: ["reports.read"] },
   {
     prefix: "/admin/settings/activitylog",
@@ -631,6 +632,7 @@ const investorPagePermissionRules: PermissionRule[] = [
 ];
 
 const apiPermissionRules: PermissionRule[] = [
+  { prefix: "/api/admin/payment-control", permissions: ["settings.payment.manage", "settings.manage"], globalOnly: true },
   {
     prefix: "/api/supplier/overview",
     methods: ["GET"],

@@ -6,6 +6,9 @@ import { getAccessContext } from "@/lib/rbac";
 import { canAccessWarehouseWithPermission } from "@/lib/warehouse-scope";
 import { createOrderNotification } from "@/lib/order-notifications";
 import { logActivity } from "@/lib/activity-log";
+import { Prisma } from "@/generated/prisma";
+import { PaymentControlError } from "@/lib/payment-control/authorization";
+import { recordPaymentEvent, type PaymentLogContext } from "@/lib/payment-control/telemetry";
 
 export async function POST(
   request: NextRequest,
@@ -78,7 +81,29 @@ export async function POST(
     }
 
     const paidAt = new Date();
+    const refundTelemetry: { context?: PaymentLogContext } = {};
     const refund = await prisma.$transaction(async (tx) => {
+      await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Order" WHERE "id" = ${existing.orderId} FOR UPDATE`);
+      // Serialize identical payout references even when they target different orders.
+      // No credential/account/reference text is logged by payment telemetry.
+      await tx.$queryRaw(Prisma.sql`SELECT pg_advisory_xact_lock(hashtextextended(${transactionId}, 0))`);
+      const duplicateReference = await tx.refund.findFirst({ where: {
+        payoutTransactionId: transactionId, payoutStatus: "PAID", id: { not: refundId },
+      }, select: { id: true } });
+      if (duplicateReference) throw new PaymentControlError("This payout reference is already recorded", 409);
+      const current = await tx.refund.findUniqueOrThrow({ where: { id: refundId } });
+      if (current.status !== "APPROVED" || current.payoutStatus !== "PENDING") return null;
+      const order = await tx.order.findUniqueOrThrow({ where: { id: existing.orderId } });
+      const paidTotal = await tx.refund.aggregate({ where: { orderId: existing.orderId, payoutStatus: "PAID" }, _sum: { amount: true } });
+      const captured = await tx.payment.findFirst({ where: { orderId: existing.orderId,
+        status: { in: ["CAPTURED", "REFUNDED"] } }, orderBy: { id: "desc" } });
+      const online = /^(EPS|SSLCOMMERZ):/.test(order.payment_method);
+      if (online && !captured?.amount) throw new PaymentControlError("No captured payment found; reconcile before recording a refund", 409);
+      if (current.paymentId && captured && current.paymentId !== captured.id) throw new PaymentControlError("Refund does not match the captured payment", 409);
+      const limit = captured?.amount && captured.amount.lessThan(order.grand_total) ? captured.amount : order.grand_total;
+      if (current.amount.lessThanOrEqualTo(0) || (paidTotal._sum.amount ?? new Prisma.Decimal(0)).add(current.amount).greaterThan(limit)) {
+        throw new PaymentControlError("Refund total would exceed the amount paid", 409);
+      }
       const claimed = await tx.refund.updateMany({
         where: {
           id: refundId,
@@ -91,9 +116,14 @@ export async function POST(
           payoutTransactionId: transactionId,
           paidAt,
           paidById: access.userId,
+          ...(captured ? { paymentId: captured.id } : {}),
         },
       });
       if (claimed.count !== 1) return null;
+      if (captured?.provider === "EPS" || captured?.provider === "SSLCOMMERZ") {
+        refundTelemetry.context = { provider: captured.provider, paymentId: captured.id, orderId: existing.orderId,
+          transactionId: captured.externalId ?? undefined, actorUserId: access.userId! };
+      }
 
       await tx.order.update({
         where: { id: existing.orderId },
@@ -137,6 +167,11 @@ export async function POST(
       );
     }
 
+    if (refundTelemetry.context) {
+      await recordPaymentEvent({ ...refundTelemetry.context, operation: "REFUND",
+        outcome: "SUCCESS", detailCode: "REFUND_RECORDED" });
+    }
+
     await logActivity({
       action: "pay_refund",
       entity: "refund",
@@ -161,6 +196,7 @@ export async function POST(
       paymentStatus: "REFUNDED",
     });
   } catch (error) {
+    if (error instanceof PaymentControlError) return NextResponse.json({ error: error.message }, { status: error.status });
     console.error("Failed to record refund payment:", error);
     return NextResponse.json(
       { error: "Failed to record refund payment." },

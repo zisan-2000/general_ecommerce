@@ -75,6 +75,12 @@ const menuItems: MenuItem[] = [
     name: "Overview",
     items: [
       {
+        name: "Payment Control Center",
+        href: "/admin/payment-control",
+        icon: Landmark,
+        requiredGlobalPermissions: ["settings.payment.manage", "settings.manage"],
+      },
+      {
         name: "Dashboard",
         href: "/admin",
         icon: LayoutDashboard,

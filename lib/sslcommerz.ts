@@ -1,13 +1,15 @@
 import { createHmac, randomUUID, timingSafeEqual } from "crypto";
 import { NextRequest } from "next/server";
 import { prisma } from "@/lib/prisma";
-import { OrderStatus } from "@/generated/prisma";
+import { OrderStatus, Prisma } from "@/generated/prisma";
 import { syncCommissionEntriesForOrderStatus } from "@/lib/business-network/commission";
 import {
   commitOrderInventoryReservations,
 } from "@/lib/inventory";
 import { transitionOrderStatusWithInventory } from "@/lib/order-inventory-lifecycle";
 import { createOrderAdminNotifications } from "@/lib/order-admin-notifications";
+import { paymentFetch, recordPaymentEvent } from "@/lib/payment-control/telemetry";
+import { querySslcommerzPayment, paymentAmountMatches } from "@/lib/payment-control/gateway-query";
 
 export type SslcommerzGatewayData = {
   type?: string;
@@ -171,17 +173,11 @@ export async function readSslcommerzPayload(request: NextRequest) {
   };
 }
 
-function closeEnough(left: unknown, right: unknown) {
-  const a = Number(left);
-  const b = Number(right);
-  return Number.isFinite(a) && Number.isFinite(b) && Math.abs(a - b) < 0.01;
-}
-
-export async function processSslcommerzCallback(
+async function processSslcommerzCallbackCore(
   request: NextRequest,
   kind: CallbackKind,
+  posted: Record<string, any>,
 ) {
-  const posted = await readSslcommerzPayload(request);
   const tranId = String(posted.tran_id || "").trim();
 
   if (!tranId) return { ok: false, orderId: null, message: "Transaction ID is missing" };
@@ -195,44 +191,67 @@ export async function processSslcommerzCallback(
             select: {
               quantity: true,
               product: { select: { type: true, bundleFulfillmentMode: true } },
+              bundleComponents: { select: { quantityPerBundle: true, variantId: true,
+                product: { select: { type: true } } } },
             },
           },
         },
       },
     },
   });
-  if (!payment || !payment.orderId || !payment.order) {
+  if (!payment || payment.provider !== "SSLCOMMERZ" || !payment.orderId || !payment.order) {
     return { ok: false, orderId: null, message: "Payment transaction was not found" };
   }
   const order = payment.order;
+  await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: payment.id, orderId: payment.orderId,
+    transactionId: tranId, operation: "CALLBACK", outcome: "RECEIVED", detailCode: kind === "success" ? "CALLBACK_SUCCESS"
+      : kind === "fail" ? "CALLBACK_FAIL" : kind === "cancel" ? "CALLBACK_CANCEL" : "CALLBACK_IPN" });
 
   if (payment.status === "CAPTURED" && payment.order.paymentStatus === "PAID") {
     return { ok: true, orderId: payment.orderId, message: "Payment already verified" };
   }
 
   if (posted.value_a && Number(posted.value_a) !== payment.orderId) {
+    await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: payment.id, orderId: payment.orderId,
+      transactionId: tranId, operation: "CALLBACK", outcome: "MISMATCH", detailCode: "CALLBACK_REFERENCE_MISMATCH" });
     return { ok: false, orderId: payment.orderId, message: "Order reference does not match" };
   }
 
   if (kind === "fail" || kind === "cancel") {
-    await prisma.$transaction(async (tx) => {
+    // A browser callback is not proof that a remotely created charge failed.
+    // V4 transaction-query confirms FAILED; unconfirmed cancellation stays pending.
+    let checked: Awaited<ReturnType<typeof querySslcommerzPayment>>;
+    try { checked = await querySslcommerzPayment(payment); }
+    catch { return { ok: false, orderId: payment.orderId, message: "Gateway has not confirmed a final payment status; manual review required" }; }
+    if (!checked.referenceMatches || !checked.amountMatches || checked.status !== "FAILED") {
+      await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: payment.id, orderId: payment.orderId,
+        transactionId: tranId, operation: "VERIFY", outcome: "PENDING", gatewayStatus: checked.status });
+      return { ok: false, orderId: payment.orderId, message: "Gateway has not confirmed a final unsuccessful payment; verification is pending" };
+    }
+    const closed = await prisma.$transaction(async (tx) => {
+      await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Order" WHERE "id" = ${payment.orderId!} FOR UPDATE`);
+      const currentOrder = await tx.order.findUniqueOrThrow({ where: { id: payment.orderId! } });
+      if (currentOrder.paymentStatus !== "UNPAID" ||
+          currentOrder.payment_method.toUpperCase() !== `SSLCOMMERZ:${asObject(payment.paymentGatewayData).gatewayId}` ||
+          currentOrder.currency !== payment.currency || !payment.amount?.equals(currentOrder.grand_total)) return false;
+      if (await tx.payment.count({ where: { orderId: payment.orderId!, id: { not: payment.id },
+        status: { in: ["INITIATED", "AUTHORIZED"] } } })) return false;
       const changed = await tx.payment.updateMany({
         where: {
           id: payment.id,
           status: { in: ["INITIATED", "AUTHORIZED"] },
         },
-        data: { status: kind === "cancel" ? "VOIDED" : "FAILED" },
+        data: { status: "FAILED" },
       });
-      if (changed.count !== 1) return;
+      if (changed.count !== 1) return false;
 
       await createOrderAdminNotifications({
-        tx, orderId: payment.orderId!, title: kind === "cancel" ? "Payment cancelled" : "Payment failed",
-        message: `Payment for order #${payment.orderId} ${kind === "cancel" ? "was cancelled" : "failed"}.`,
-        metadata: { event: "ORDER_PAYMENT_STATUS_CHANGED", to: kind === "cancel" ? "VOIDED" : "FAILED" },
+        tx, orderId: payment.orderId!, title: "Payment failed",
+        message: `Payment for order #${payment.orderId} failed after gateway verification.`,
+        metadata: { event: "ORDER_PAYMENT_STATUS_CHANGED", to: "FAILED" },
       });
 
-      const nextStatus =
-        kind === "cancel" ? OrderStatus.CANCELLED : OrderStatus.FAILED;
+      const nextStatus = OrderStatus.FAILED;
       const transition = await transitionOrderStatusWithInventory({
         tx,
         orderId: payment.orderId!,
@@ -253,11 +272,19 @@ export async function processSslcommerzCallback(
           data: { usedCount: { decrement: 1 } },
         });
       }
+      return true;
     });
+    if (!closed) {
+      const current = await prisma.payment.findUnique({ where: { id: payment.id }, select: { status: true, order: { select: { paymentStatus: true } } } });
+      if (current?.status === "CAPTURED" && current.order?.paymentStatus === "PAID") {
+        return { ok: true, orderId: payment.orderId, message: "Payment already verified" };
+      }
+      return { ok: false, orderId: payment.orderId, message: "Payment attempt already closed or requires manual review" };
+    }
     return {
       ok: false,
       orderId: payment.orderId,
-      message: kind === "cancel" ? "Payment was cancelled" : "Payment failed",
+      message: "Gateway confirmed payment failure",
     };
   }
 
@@ -266,7 +293,11 @@ export async function processSslcommerzCallback(
 
   const transactionMeta = asObject(payment.paymentGatewayData);
   const gatewayId = Number(transactionMeta.gatewayId);
-  const found = await findSslcommerzGateway(Number.isFinite(gatewayId) ? gatewayId : null);
+  // Disabling new checkout sessions must not disable verification of existing attempts.
+  const originalGateway = Number.isSafeInteger(gatewayId) && gatewayId > 0
+    ? await prisma.payment.findFirst({ where: { id: gatewayId, orderId: null } }) : null;
+  const originalData = asObject(originalGateway?.paymentGatewayData);
+  const found = originalGateway && originalData.type === "SSLCOMMERZ" ? { gateway: originalGateway, data: originalData } : null;
   if (!found) return { ok: false, orderId: payment.orderId, message: "Gateway is unavailable" };
 
   const storeId = String(found.data.storeId || "").trim();
@@ -276,7 +307,7 @@ export async function processSslcommerzCallback(
   }
 
   const validationUrl = new URL(
-    sslcommerzEndpoint(Boolean(found.data.sandbox), "validation"),
+    sslcommerzEndpoint(typeof transactionMeta.sandbox === "boolean" ? transactionMeta.sandbox : Boolean(found.data.sandbox), "validation"),
   );
   validationUrl.searchParams.set("val_id", valId);
   validationUrl.searchParams.set("store_id", storeId);
@@ -286,35 +317,40 @@ export async function processSslcommerzCallback(
 
   let response: Response;
   try {
-    response = await fetch(validationUrl, {
+    response = await paymentFetch({ provider: "SSLCOMMERZ", paymentId: payment.id,
+      orderId: payment.orderId, transactionId: tranId }, "VERIFY", validationUrl, {
       method: "GET",
       cache: "no-store",
-      signal: AbortSignal.timeout(30_000),
+      timeoutMs: 30_000,
     });
   } catch (error) {
-    console.error("SSLCOMMERZ VALIDATION ERROR:", error);
     return { ok: false, orderId: payment.orderId, message: "Payment validation service is unavailable" };
   }
   const validation = asObject(await response.json().catch(() => ({})));
   const validationStatus = String(validation.status || "").toUpperCase();
-  const expectedAmount = Number(payment.amount);
   const valid =
     response.ok &&
     ["VALID", "VALIDATED"].includes(validationStatus) &&
     String(validation.tran_id || "") === tranId &&
     (!validation.value_a || Number(validation.value_a) === payment.orderId) &&
     (!validation.value_b || Number(validation.value_b) === found.gateway.id) &&
-    closeEnough(validation.amount, expectedAmount) &&
-    String(validation.currency || payment.currency).toUpperCase() === payment.currency.toUpperCase();
+    paymentAmountMatches(validation.amount, payment.amount) &&
+    String(validation.currency || "").toUpperCase() === payment.currency.toUpperCase();
 
   if (!valid) {
+    await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: payment.id, orderId: payment.orderId,
+      transactionId: tranId, operation: "VERIFY", outcome: "MISMATCH", gatewayStatus: validationStatus,
+      detailCode: "VERIFICATION_MISMATCH" });
     return { ok: false, orderId: payment.orderId, message: "Payment validation failed" };
   }
+  await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: payment.id, orderId: payment.orderId,
+    transactionId: tranId, operation: "VERIFY", outcome: "SUCCESS", gatewayStatus: validationStatus });
 
   const riskLevel = Number(validation.risk_level || 0);
   const safeMeta = {
     type: "SSLCOMMERZ_TRANSACTION",
     gatewayId: found.gateway.id,
+    sandbox: typeof transactionMeta.sandbox === "boolean" ? transactionMeta.sandbox : Boolean(found.data.sandbox),
     inventoryMode:
       String(transactionMeta.inventoryMode || "").toUpperCase() === "LEGACY_DEDUCTED"
         ? "LEGACY_DEDUCTED"
@@ -330,8 +366,10 @@ export async function processSslcommerzCallback(
   };
 
   if (riskLevel === 1) {
-    await prisma.payment.update({
-      where: { id: payment.id },
+    await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: payment.id, orderId: payment.orderId,
+      transactionId: tranId, operation: "VERIFY", outcome: "PENDING", detailCode: "RISK_REVIEW" });
+    await prisma.payment.updateMany({
+      where: { id: payment.id, status: { in: ["INITIATED", "AUTHORIZED"] } },
       data: { status: "AUTHORIZED", paymentGatewayData: safeMeta },
     });
     return {
@@ -343,7 +381,11 @@ export async function processSslcommerzCallback(
 
   const expectedPhysicalQuantity = order.orderItems.reduce(
     (sum, item) =>
-      item.product.type === "PHYSICAL" ? sum + Number(item.quantity) : sum,
+      sum + (item.product.type === "PHYSICAL" ? item.quantity :
+        item.product.type === "BUNDLE" && item.product.bundleFulfillmentMode !== "PREASSEMBLED"
+          ? item.bundleComponents.reduce((quantity, component) => quantity +
+            (component.product.type === "PHYSICAL" && component.variantId !== null ? component.quantityPerBundle * item.quantity : 0), 0)
+          : 0),
     0,
   );
   const expectedPreassembledBundleQuantity = order.orderItems.reduce(
@@ -355,6 +397,21 @@ export async function processSslcommerzCallback(
   );
   const usesLegacyDeduction = safeMeta.inventoryMode === "LEGACY_DEDUCTED";
   const captureResult = await prisma.$transaction(async (tx) => {
+    await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Order" WHERE "id" = ${payment.orderId!} FOR UPDATE`);
+    const currentOrder = await tx.order.findUniqueOrThrow({ where: { id: payment.orderId! } });
+    const currentPayment = await tx.payment.findUniqueOrThrow({ where: { id: payment.id } });
+    const anotherCapture = await tx.payment.findFirst({ where: { orderId: payment.orderId!,
+      id: { not: payment.id }, status: { in: ["CAPTURED", "REFUNDED"] } } });
+    if (anotherCapture || currentOrder.paymentStatus === "REFUNDED" ||
+        currentOrder.paymentStatus === "PAID" && currentPayment.status !== "CAPTURED") {
+      throw new Error("Order already settled through another payment or refund");
+    }
+    if (currentPayment.status !== "CAPTURED" && (
+        !["PENDING", "CONFIRMED"].includes(currentOrder.status) ||
+        currentOrder.payment_method.toUpperCase() !== `SSLCOMMERZ:${found.gateway.id}` ||
+        currentOrder.currency !== payment.currency || !payment.amount?.equals(currentOrder.grand_total))) {
+      throw new Error("Order is no longer eligible for payment capture; manual review required");
+    }
     const captured = await tx.payment.updateMany({
       where: {
         id: payment.id,
@@ -415,4 +472,23 @@ export async function processSslcommerzCallback(
   }
 
   return { ok: true, orderId: payment.orderId, message: "Payment verified successfully" };
+}
+
+export async function processSslcommerzCallback(request: NextRequest, kind: CallbackKind) {
+  const posted = await readSslcommerzPayload(request);
+  const rawId = String(posted.tran_id || "");
+  const transactionId = /^[A-Za-z0-9_-]{1,50}$/.test(rawId) ? rawId : undefined;
+  try {
+    const result = await processSslcommerzCallbackCore(request, kind, posted);
+    if (result.orderId) await recordPaymentEvent({ provider: "SSLCOMMERZ", transactionId, operation: "SETTLEMENT",
+      outcome: result.ok ? result.message === "Payment already verified" ? "DUPLICATE" : "SUCCESS"
+        : result.message === "Gateway confirmed payment failure" ? "FAILED"
+          : kind === "fail" || kind === "cancel" ? "PENDING" : "REJECTED" });
+    // Customer result pages must distinguish an unconfirmed outcome from failure.
+    return { ...result, status: result.ok ? "success" : result.message === "Gateway confirmed payment failure" ? "failed" : "pending" };
+  } catch (error) {
+    await recordPaymentEvent({ provider: "SSLCOMMERZ", transactionId, operation: "SETTLEMENT",
+      outcome: "ERROR", detailCode: "SETTLEMENT_REJECTED" });
+    throw error;
+  }
 }

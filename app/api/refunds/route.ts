@@ -6,13 +6,10 @@ import { authOptions } from "@/lib/auth";
 import { prisma } from "@/lib/prisma";
 import { getAccessContext } from "@/lib/rbac";
 import { logActivity } from "@/lib/activity-log";
+import { PaymentControlError } from "@/lib/payment-control/authorization";
 
 const REFUND_WINDOW_DAYS = 7;
 const REFUNDABLE_STATUSES = new Set(["REQUESTED", "APPROVED", "COMPLETED"]);
-
-function roundMoney(value: number) {
-  return Math.round((value + Number.EPSILON) * 100) / 100;
-}
 
 function toPositiveInt(value: unknown, fallback = 1) {
   const parsed = Number(value ?? fallback);
@@ -191,15 +188,22 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    const amount = roundMoney(Number(orderItem.price) * requestedQuantity);
-
     const created = await prisma.$transaction(async (tx) => {
+      await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Order" WHERE "id" = ${orderItem.orderId} FOR UPDATE`);
+      const currentItem = await tx.orderItem.findUniqueOrThrow({ where: { id: orderItem.id }, select: { orderId: true, quantity: true, price: true } });
+      // Recheck under the same order lock used by payout and payment capture.
+      const currentRefunds = await tx.refund.findMany({ where: { orderItemId: orderItem.id,
+        status: { in: ["REQUESTED", "APPROVED", "COMPLETED"] } }, select: { quantity: true } });
+      const currentReserved = currentRefunds.reduce((sum, refund) => sum + (refund.quantity ?? 0), 0);
+      if (currentItem.orderId !== orderItem.orderId || currentReserved + requestedQuantity > currentItem.quantity) {
+        throw new PaymentControlError("Refund quantity changed; reload before requesting another refund", 409);
+      }
       const refund = await tx.refund.create({
         data: {
           orderId: orderItem.orderId,
           orderItemId: orderItem.id,
           userId: access.userId,
-          amount: new Prisma.Decimal(amount),
+          amount: currentItem.price.mul(requestedQuantity),
           quantity: requestedQuantity,
           reason,
           refundMethod,
@@ -224,7 +228,7 @@ export async function POST(request: NextRequest) {
           amount: refund.amount,
           quantity: refund.quantity,
           refundMethod: refund.refundMethod,
-          refundAccount: refund.refundAccount,
+          hasRefundAccount: Boolean(refund.refundAccount),
         },
       });
 
@@ -238,6 +242,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ refund: created }, { status: 201 });
   } catch (error) {
+    if (error instanceof PaymentControlError) return NextResponse.json({ error: error.message }, { status: error.status });
     console.error("Failed to create refund:", error);
     return NextResponse.json(
       { error: "Failed to create refund request." },

@@ -8,6 +8,7 @@ import { createOrderAdminNotifications } from "@/lib/order-admin-notifications";
 import { syncCommissionEntriesForOrderStatus } from "@/lib/business-network/commission";
 import { epsObject } from "@/lib/eps-settings";
 import { resolveSeoSiteUrl } from "@/lib/seo-url";
+import { paymentFetch, recordPaymentEvent, type PaymentLogContext } from "@/lib/payment-control/telemetry";
 
 export class EpsError extends Error {
   constructor(message: string, readonly status = 502) { super(message); }
@@ -82,11 +83,13 @@ export function verifyEpsCallbackState(transactionId: string, state: string) {
   return actual.length === expected.length && timingSafeEqual(actual, expected);
 }
 
-async function epsRequest(path: string, hashInput: string, token?: string, body?: unknown) {
+async function epsRequest(path: string, hashInput: string, token?: string, body?: unknown,
+  context?: Omit<PaymentLogContext, "provider">) {
   const config = epsConfig();
   let response: Response;
   try {
-    response = await fetch(`${config.baseUrl}${path}`, {
+    response = await paymentFetch({ ...context, provider: "EPS" }, path === "/Auth/GetToken" ? "AUTH"
+      : path === "/EPSEngine/InitializeEPS" ? "INITIALIZE" : "STATUS_QUERY", `${config.baseUrl}${path}`, {
       method: body === undefined ? "GET" : "POST",
       headers: {
         "Content-Type": "application/json",
@@ -94,19 +97,24 @@ async function epsRequest(path: string, hashInput: string, token?: string, body?
         ...(token ? { Authorization: `Bearer ${token}` } : {}),
       },
       ...(body === undefined ? {} : { body: JSON.stringify(body) }),
-      cache: "no-store", redirect: "error", signal: AbortSignal.timeout(20_000),
+      cache: "no-store", redirect: "error", timeoutMs: 20_000,
     });
   } catch { throw new EpsError("EPS request could not be confirmed; payment remains pending"); }
   if (!response.ok) throw new EpsError("EPS returned an unsuccessful HTTP response; payment remains pending");
   const payload: unknown = await response.json().catch(() => null);
-  if (!payload || typeof payload !== "object" || Array.isArray(payload)) throw new EpsError("EPS returned an invalid response; payment remains pending");
+  if (!payload || typeof payload !== "object" || Array.isArray(payload)) {
+    await recordPaymentEvent({ ...context, provider: "EPS", operation: path === "/Auth/GetToken" ? "AUTH"
+      : path === "/EPSEngine/InitializeEPS" ? "INITIALIZE" : "STATUS_QUERY", outcome: "ERROR", detailCode: "INVALID_RESPONSE" });
+    throw new EpsError("EPS returned an invalid response; payment remains pending");
+  }
   return epsObject(payload);
 }
 
-export async function getEpsToken() {
+export async function getEpsToken(context?: Omit<PaymentLogContext, "provider">) {
   const config = epsConfig();
-  const payload = await epsRequest("/Auth/GetToken", config.username, undefined, { userName: config.username, password: config.password });
+  const payload = await epsRequest("/Auth/GetToken", config.username, undefined, { userName: config.username, password: config.password }, context);
   if (typeof payload.token !== "string" || !payload.token || payload.errorCode || payload.errorMessage) {
+    await recordPaymentEvent({ ...context, provider: "EPS", operation: "AUTH", outcome: "REJECTED", detailCode: "AUTHENTICATION_REJECTED" });
     throw new EpsError("EPS authentication failed");
   }
   return payload.token;
@@ -154,22 +162,29 @@ export function buildEpsInitializeBody(order: EpsCustomerOrder, transactionId: s
   };
 }
 
-export async function initializeEpsPayment(body: ReturnType<typeof buildEpsInitializeBody>, token: string) {
-  const payload = await epsRequest("/EPSEngine/InitializeEPS", body.merchantTransactionId, token, body);
-  if (payload.ErrorCode || payload.ErrorMessage) throw new EpsError("EPS initialization was not confirmed; verify the attempt before retrying");
+export async function initializeEpsPayment(body: ReturnType<typeof buildEpsInitializeBody>, token: string,
+  context?: Omit<PaymentLogContext, "provider">) {
+  const payload = await epsRequest("/EPSEngine/InitializeEPS", body.merchantTransactionId, token, body,
+    { ...context, transactionId: body.merchantTransactionId });
+  if (payload.ErrorCode || payload.ErrorMessage) {
+    await recordPaymentEvent({ ...context, provider: "EPS", transactionId: body.merchantTransactionId,
+      operation: "INITIALIZE", outcome: "REJECTED", detailCode: "INITIALIZE_REJECTED" });
+    throw new EpsError("EPS initialization was not confirmed; verify the attempt before retrying");
+  }
   return { redirectUrl: epsRedirectUrl(payload.RedirectURL),
     epsTransactionId: typeof payload.TransactionId === "string" ? payload.TransactionId : null };
 }
 
-export async function verifyEpsPayment(transactionId: string, token?: string) {
+export async function verifyEpsPayment(transactionId: string, token?: string,
+  context?: Omit<PaymentLogContext, "provider">) {
   if (!/^\d{10,30}$/.test(transactionId)) throw new EpsError("Invalid EPS transaction ID", 400);
   return epsRequest(`/EPSEngine/CheckMerchantTransactionStatus?merchantTransactionId=${encodeURIComponent(transactionId)}`,
-    transactionId, token ?? await getEpsToken());
+    transactionId, token ?? await getEpsToken({ ...context, transactionId }), undefined, { ...context, transactionId });
 }
 
 export type EpsVerificationResult = { status: "success" | "failed" | "cancelled" | "pending"; message: string };
 
-export async function reconcileEpsPayment(transactionId: string, request?: Request): Promise<EpsVerificationResult> {
+async function reconcileEpsPaymentCore(transactionId: string, request?: Request): Promise<EpsVerificationResult> {
   const payment = await prisma.payment.findUnique({ where: { externalId: transactionId } });
   if (!payment?.orderId || payment.provider !== "EPS") throw new EpsError("EPS payment was not found", 404);
   const originalMeta = epsObject(payment.paymentGatewayData);
@@ -177,10 +192,17 @@ export async function reconcileEpsPayment(transactionId: string, request?: Reque
   // Verification remains available if the gateway has been disabled.
   const gateway = await prisma.payment.findFirst({ where: { id: Number(originalMeta.gatewayId), orderId: null } });
   const settings = epsObject(gateway?.paymentGatewayData);
-  const verification = await verifyEpsPayment(transactionId);
+  const logContext = { provider: "EPS" as const, transactionId, paymentId: payment.id, orderId: payment.orderId };
+  const verification = await verifyEpsPayment(transactionId, undefined, logContext);
   const valid = verification.MerchantTransactionId === transactionId &&
     epsMoney(verification.TotalAmount) !== null && epsMoney(verification.TotalAmount) === epsMoney(payment.amount) &&
     typeof verification.Status === "string";
+  const verificationOutcome = !valid || verification.Status === "Success" && (verification.ErrorCode || verification.ErrorMessage) ? "MISMATCH"
+    : verification.Status === "Success" ? "SUCCESS"
+      : Array.isArray(settings.failureStatuses) && settings.failureStatuses.includes(verification.Status) ? "FAILED"
+        : Array.isArray(settings.cancellationStatuses) && settings.cancellationStatuses.includes(verification.Status) ? "CANCELLED" : "PENDING";
+  await recordPaymentEvent({ ...logContext, operation: "VERIFY", outcome: verificationOutcome,
+    gatewayStatus: verification.Status, ...(!valid ? { detailCode: "VERIFICATION_MISMATCH" as const } : {}) });
   if (!valid) throw new EpsError("EPS status, transaction ID or amount verification failed; payment remains pending", 409);
   const status = verification.Status as string;
   const failure = Array.isArray(settings.failureStatuses) && settings.failureStatuses.includes(status);
@@ -283,4 +305,20 @@ export async function reconcileEpsPayment(transactionId: string, request?: Reque
       metadata: { event: "ORDER_PAYMENT_STATUS_CHANGED", to: success ? "PAID" : cancelled ? "VOIDED" : "FAILED" } });
     return { status: success ? "success" : cancelled ? "cancelled" : "failed", message: success ? "EPS payment verified successfully" : "EPS confirmed a final unsuccessful payment status" };
   });
+}
+
+export async function reconcileEpsPayment(transactionId: string, request?: Request): Promise<EpsVerificationResult> {
+  try {
+    const result = await reconcileEpsPaymentCore(transactionId, request);
+    await recordPaymentEvent({ provider: "EPS", transactionId, operation: "SETTLEMENT",
+      outcome: result.message === "Payment already verified" ? "DUPLICATE"
+        : result.status === "success" ? "SUCCESS" : result.status === "failed" ? "FAILED"
+          : result.status === "cancelled" ? "CANCELLED" : "PENDING" });
+    return result;
+  } catch (error) {
+    await recordPaymentEvent({ provider: "EPS", transactionId, operation: "SETTLEMENT",
+      outcome: error instanceof EpsError && error.status === 409 ? "MISMATCH" : "ERROR",
+      detailCode: "SETTLEMENT_REJECTED" });
+    throw error;
+  }
 }

@@ -3,6 +3,9 @@ import { getServerSession } from "next-auth/next";
 import { prisma } from "@/lib/prisma";
 import { authOptions } from "@/lib/auth";
 import { rateLimitRequest } from "@/lib/request-security";
+import { Prisma } from "@/generated/prisma";
+import { paymentFetch, recordPaymentEvent, type PaymentLogContext } from "@/lib/payment-control/telemetry";
+import { PaymentControlError } from "@/lib/payment-control/authorization";
 import {
   callbackUrls,
   createSslcommerzTransactionId,
@@ -22,6 +25,7 @@ type SslcommerzInitBody = {
 };
 
 export async function POST(request: NextRequest) {
+  let logContext: PaymentLogContext = { provider: "SSLCOMMERZ" };
   try {
     const rateLimit = await rateLimitRequest(request, {
       scope: "sslcommerz-init",
@@ -120,25 +124,22 @@ export async function POST(request: NextRequest) {
         : {};
       const redirectUrl = String(activeMeta.redirectUrl || "");
       if (redirectUrl && activePayment.status === "INITIATED" && sessionIsFresh) {
+        await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: activePayment.id, orderId: order.id,
+          transactionId: activePayment.externalId ?? undefined, operation: "INITIALIZE", outcome: "DUPLICATE" });
         return NextResponse.json({
           redirectUrl,
           tranId: activePayment.externalId,
           reused: true,
         });
       }
-      if (activePayment.status === "AUTHORIZED" || sessionIsFresh) {
-        return NextResponse.json(
-          { error: "A payment attempt is already in progress for this order" },
-          { status: 409 },
-        );
-      }
-      await prisma.payment.update({
-        where: { id: activePayment.id },
-        data: { status: "FAILED" },
-      });
+      return NextResponse.json(
+        { error: "A payment attempt is already in progress; verify its status before retrying" },
+        { status: 409 },
+      );
     }
 
     const tranId = createSslcommerzTransactionId(order.id);
+    logContext = { provider: "SSLCOMMERZ", transactionId: tranId, orderId: order.id };
     const urls = callbackUrls(request, data);
     const hasPhysicalItems = order.orderItems.some(
       (item) => item.product.type === "PHYSICAL",
@@ -148,23 +149,34 @@ export async function POST(request: NextRequest) {
         ? "RESERVATION"
         : "LEGACY_DEDUCTED";
 
-    const payment = await prisma.payment.create({
-      data: {
-        orderId: order.id,
-        amount,
-        currency: order.currency || "BDT",
-        provider: "SSLCOMMERZ",
-        status: "INITIATED",
-        externalId: tranId,
-        paymentGatewayData: {
-          type: "SSLCOMMERZ_TRANSACTION",
-          gatewayId: gateway!.id,
-          sandbox,
-          inventoryMode,
-          initiatedAt: new Date().toISOString(),
+    const payment = await prisma.$transaction(async (tx) => {
+      await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Order" WHERE "id" = ${order.id} FOR UPDATE`);
+      const current = await tx.order.findUniqueOrThrow({ where: { id: order.id } });
+      if (current.payment_method !== order.payment_method || current.paymentStatus !== "UNPAID" ||
+          ["FAILED", "CANCELLED", "RETURNED", "REFUNDED"].includes(current.status) ||
+          !current.grand_total.equals(order.grand_total) || current.currency !== order.currency ||
+          await tx.payment.count({ where: { orderId: order.id, status: { in: ["INITIATED", "AUTHORIZED", "CAPTURED", "REFUNDED"] } } })) {
+        throw new PaymentControlError("Order has changed or an attempt already exists; verify it before retrying", 409);
+      }
+      return tx.payment.create({
+        data: {
+          orderId: order.id,
+          amount,
+          currency: order.currency || "BDT",
+          provider: "SSLCOMMERZ",
+          status: "INITIATED",
+          externalId: tranId,
+          paymentGatewayData: {
+            type: "SSLCOMMERZ_TRANSACTION",
+            gatewayId: gateway!.id,
+            sandbox,
+            inventoryMode,
+            initiatedAt: new Date().toISOString(),
+          },
         },
-      },
+      });
     });
+    logContext = { ...logContext, paymentId: payment.id };
 
     const form = new URLSearchParams();
     form.set("store_id", storeId);
@@ -195,21 +207,20 @@ export async function POST(request: NextRequest) {
 
     let res: Response;
     try {
-      res = await fetch(endpoint, {
+      res = await paymentFetch(logContext, "INITIALIZE", endpoint, {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: form.toString(),
-        signal: AbortSignal.timeout(30_000),
+        timeoutMs: 30_000,
       });
     } catch (error) {
-      await prisma.payment.update({ where: { id: payment.id }, data: { status: "FAILED" } });
-      console.error("SSLCOMMERZ SESSION ERROR:", error);
+      // Unknown network outcome is not proof of failure. Keep the durable attempt pending.
       return NextResponse.json({ error: "Could not connect to SSLCommerz" }, { status: 502 });
     }
 
     const payload = await res.json().catch(() => null);
     if (!res.ok || !payload) {
-      await prisma.payment.update({ where: { id: payment.id }, data: { status: "FAILED" } });
+      await recordPaymentEvent({ ...logContext, operation: "INITIALIZE", outcome: "ERROR", detailCode: "INVALID_RESPONSE" });
       return NextResponse.json(
         { error: "Failed to initiate SSLCommerz payment" },
         { status: 502 },
@@ -218,33 +229,39 @@ export async function POST(request: NextRequest) {
 
     const gatewayPageUrl = String(payload.GatewayPageURL || "");
     if (!gatewayPageUrl) {
-      await prisma.payment.update({ where: { id: payment.id }, data: { status: "FAILED" } });
+      await recordPaymentEvent({ ...logContext, operation: "INITIALIZE", outcome: "ERROR", detailCode: "INVALID_RESPONSE" });
       return NextResponse.json(
         { error: payload.failedreason || "GatewayPageURL missing" },
         { status: 502 },
       );
     }
-    await prisma.payment.update({
-      where: { id: payment.id },
-      data: {
-        paymentGatewayData: {
-          type: "SSLCOMMERZ_TRANSACTION",
-          gatewayId: gateway!.id,
-          sandbox,
-          inventoryMode,
-          initiatedAt: new Date().toISOString(),
-          redirectUrl: gatewayPageUrl,
-          sessionKey: String(payload.sessionkey || "") || null,
+    await prisma.$transaction(async (tx) => {
+      await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Order" WHERE "id" = ${order.id} FOR UPDATE`);
+      const current = await tx.payment.findUniqueOrThrow({ where: { id: payment.id } });
+      if (current.status !== "INITIATED") throw new PaymentControlError("Payment changed during initialization; check its verified status", 409);
+      await tx.payment.update({
+        where: { id: payment.id },
+        data: {
+          paymentGatewayData: {
+            type: "SSLCOMMERZ_TRANSACTION",
+            gatewayId: gateway!.id,
+            sandbox,
+            inventoryMode,
+            initiatedAt: new Date().toISOString(),
+            redirectUrl: gatewayPageUrl,
+            sessionKey: String(payload.sessionkey || "") || null,
+          },
         },
-      },
+      });
     });
 
+    await recordPaymentEvent({ ...logContext, operation: "INITIALIZE", outcome: "SUCCESS" });
     return NextResponse.json({ redirectUrl: gatewayPageUrl, tranId });
   } catch (error) {
-    console.error("SSLCOMMERZ INIT ERROR:", error);
+    await recordPaymentEvent({ ...logContext, operation: "INITIALIZE", outcome: "ERROR", detailCode: "INITIALIZE_REJECTED" });
     return NextResponse.json(
-      { error: "Failed to initiate SSLCommerz payment" },
-      { status: 500 },
+      { error: error instanceof PaymentControlError ? error.message : "Failed to initiate SSLCommerz payment" },
+      { status: error instanceof PaymentControlError ? error.status : 500 },
     );
   }
 }
