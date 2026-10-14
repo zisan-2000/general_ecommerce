@@ -11,7 +11,10 @@ const nextConfig: NextConfig = {
   } : {}),
   compress: true,
   // Allow cross-origin requests from specific development origins
-  allowedDevOrigins: ['192.168.0.114'],
+  allowedDevOrigins: [
+    '192.168.0.114',
+    'crawling-gauging-supernova.ngrok-free.dev',
+  ],
   experimental: {
     serverSourceMaps: false,
     // Avoid the persistent cache database compaction failure during builds.

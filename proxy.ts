@@ -1940,7 +1940,10 @@ export default async function proxy(request: NextRequest) {
   let session: SessionShape = null;
 
   try {
-    const response = await fetch(new URL("/api/auth/session", request.url), {
+    const sessionOrigin = process.env.NODE_ENV === "development"
+      ? "http://127.0.0.1:3000"
+      : request.url;
+    const response = await fetch(new URL("/api/auth/session", sessionOrigin), {
       headers: {
         cookie: request.headers.get("cookie") || "",
       },
