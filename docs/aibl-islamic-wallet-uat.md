@@ -17,13 +17,14 @@
 Set these **outside Git** (deployment secret manager / private .env):
 
     AIBL_WALLET_ENV=uat
-    AIBL_WALLET_UAT_HOST=iwtest.aibl.com.bd
+    AIBL_WALLET_UAT_HOST=iwpay.aibl.com.bd
+    AIBL_WALLET_IWPAY_UAT_CONFIRMED=false
     AIBL_WALLET_API_USER=
     AIBL_WALLET_API_PASS=
     AIBL_WALLET_MERCHANT_ID=
     AIBL_WALLET_ACCESS_KEY=
 
-The default is the PDF/Postman test host. Using iwpay.aibl.com.bd is rejected unless AIBL_WALLET_IWPAY_UAT_CONFIRMED=true is also explicitly set **after the bank confirms it is a UAT gateway for these credentials**. Live mode always returns 503.
+The user selected **iwpay.aibl.com.bd** from the supplied UAT credentials note. This is the intended UAT integration host; because the PDF/Postman instead use iwtest, confirm with the bank that iwpay is safe for UAT and not a live-money endpoint before making network calls. Keep AIBL_WALLET_IWPAY_UAT_CONFIRMED=false until then. Live mode always returns 503.
 
 Also configure public HTTPS NEXT_PUBLIC_APP_URL or NEXT_PUBLIC_BASE_URL and NEXTAUTH_SECRET or AUTH_SECRET for callback signing. Never use localhost as the bank callback origin. Register and activate an AIBL Wallet gateway in Admin > Payment Settings **only after** configuration and staging sign-off.
 
