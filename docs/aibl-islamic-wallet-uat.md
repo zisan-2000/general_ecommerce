@@ -6,9 +6,9 @@
 
 - AIBL Islamic Wallet Payment Gateway preliminary v1.0: token = POST form-url-encoded PGService/token; order creation = POST form-url-encoded PGService/orderID; verification = POST form-url-encoded PGService/verify.
 - PG callback documented as POST, with RESCODE, STATUS, AMOUNT, MESSAGE, SESSIONKEY, TRANSNO and BILLNO. A callback is **never** proof of payment.
-- The PDF/Postman point to iwtest.aibl.com.bd (UAT API /iwPGAPI; hosted /iwepayuat/epayment/{OrderID}); the supplied UAT credentials note points to iwpay.aibl.com.bd (API /iwPGAPI; hosted /iwepay/epayment/{OrderID}). These hosts are not interchangeable without bank confirmation.
+- The PDF/Postman point to iwtest.aibl.com.bd (UAT API /iwPGAPI; hosted /iwepayuat/epayment/{OrderID}); the supplied UAT credentials note points to iwpay.aibl.com.bd (API /iwPGAPI; hosted /iwepay/epayment/{OrderID}). For this implementation, the user-provided UAT credentials file takes precedence over the preliminary PDF/Postman example host. Do not silently switch to iwtest.
 - The Postman collection contains only token/orderID calls, no verify request. It has placeholder redirect URLs ("1"), a hardcoded token and test credentials. Do not import/commit this collection with embedded secrets, and never use those placeholders.
-- The PDF describes walletNo as required; the provided orderID Postman request leaves it blank and the screenshot shows wallet entry on the hosted page. Our UAT attempt sends an empty walletNo for bank-hosted entry; **confirm this is accepted** before enabling.
+- The PDF describes walletNo as required; the provided orderID Postman request leaves it blank and the screenshot shows wallet entry on the hosted page. The Postman request leaves walletNo blank, while the PDF lists it as a parameter. Code can follow the supplied example; test this behavior with bank UAT before treating it as verified.
 - Verify response documented as code=200, msg="Order Verified", transactionID. Confirm actual capitalization/types with bank-hosted UAT evidence. No authoritative unsuccessful transaction verification mapping was provided; browser DECLINE/CANCEL and non-200 verify are kept PENDING for manual review. Do not release inventory based on browser data alone.
 - Callback URLs include a signed query-state and bill reference. Confirm bank preserves query strings when posting to approved_url, decline_url and cancel_url.
 
@@ -18,13 +18,12 @@ Set these **outside Git** (deployment secret manager / private .env):
 
     AIBL_WALLET_ENV=uat
     AIBL_WALLET_UAT_HOST=iwpay.aibl.com.bd
-    AIBL_WALLET_IWPAY_UAT_CONFIRMED=false
     AIBL_WALLET_API_USER=
     AIBL_WALLET_API_PASS=
     AIBL_WALLET_MERCHANT_ID=
     AIBL_WALLET_ACCESS_KEY=
 
-The user selected **iwpay.aibl.com.bd** from the supplied UAT credentials note. This is the intended UAT integration host; because the PDF/Postman instead use iwtest, confirm with the bank that iwpay is safe for UAT and not a live-money endpoint before making network calls. Keep AIBL_WALLET_IWPAY_UAT_CONFIRMED=false until then. Live mode always returns 503.
+Use **iwpay.aibl.com.bd** as specified in the issued UAT Credentials.txt file. PDF/Postman `iwtest` URLs are examples from an earlier document and must not override the issued credential file. Additional bank confirmation is not required to write the integration. Run payment-flow tests only in the authorized UAT account and confirm no real-money charging if the bank's environment behavior is unclear. Live mode remains unsupported.
 
 Also configure public HTTPS NEXT_PUBLIC_APP_URL or NEXT_PUBLIC_BASE_URL and NEXTAUTH_SECRET or AUTH_SECRET for callback signing. Never use localhost as the bank callback origin. Register and activate an AIBL Wallet gateway in Admin > Payment Settings **only after** configuration and staging sign-off.
 
@@ -50,7 +49,7 @@ The supplied credential text/Postman are sensitive. Rotate UAT credentials if th
 
 ## Staging acceptance tests (no live transfers)
 
-- Bank confirmation of UAT hostname, callback behavior, walletNo rule, verify response field casing, and terminal outcome contract.
+- UAT test against the credentials-file host; capture and validate callback behavior, walletNo rule, verify response field casing, and terminal outcome mapping against actual bank responses.
 - Authenticated and guest payment attempts, server-side amount and BDT enforcement, signed callback state and amount mismatch rejection.
 - Real verified success: payment CAPTURED, order PAID, inventory committed exactly once. Duplicate callbacks/status/cron must be idempotent.
 - Browser cancel/decline and non-200 verification: pending/manual review, never early stock release.
