@@ -485,7 +485,7 @@ export async function processSslcommerzCallback(request: NextRequest, kind: Call
         : result.message === "Gateway confirmed payment failure" ? "FAILED"
           : kind === "fail" || kind === "cancel" ? "PENDING" : "REJECTED" });
     // Customer result pages must distinguish an unconfirmed outcome from failure.
-    return { ...result, status: result.ok ? "success" : result.message === "Gateway confirmed payment failure" ? "failed" : "pending" };
+    return { ...result, resultTransactionId: transactionId, status: result.ok ? "success" : result.message === "Gateway confirmed payment failure" ? "failed" : "pending" };
   } catch (error) {
     await recordPaymentEvent({ provider: "SSLCOMMERZ", transactionId, operation: "SETTLEMENT",
       outcome: "ERROR", detailCode: "SETTLEMENT_REJECTED" });

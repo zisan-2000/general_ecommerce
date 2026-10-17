@@ -25,7 +25,7 @@ import Image from "next/image";
 import { useState, useEffect, useRef, useMemo, useCallback } from "react";
 import { toast } from "sonner";
 import { useRouter } from "next/navigation";
-import { useSession, signIn } from "@/lib/auth-client";
+import { useSession } from "@/lib/auth-client";
 import { useLocale, useTranslations } from "next-intl";
 
 interface LocalCartItem {
@@ -469,10 +469,12 @@ export default function CartPage() {
 
   const handleCheckout = async () => {
     if (!isAuthenticated) {
-      sessionStorage.setItem("pendingCheckout", JSON.stringify(cartItems));
-      sessionStorage.setItem("redirectAfterLogin", "/ecommerce/checkout");
-      toast.info(t("errors.loginRequired"));
-      await signIn(undefined, { callbackUrl: "/ecommerce/checkout" });
+      try {
+        sessionStorage.setItem("pendingCheckout", JSON.stringify(cartItems));
+        sessionStorage.setItem("redirectAfterLogin", "/ecommerce/checkout");
+      } catch { /* Guest checkout can continue when session storage is unavailable. */ }
+      // Checkout offers sign-in and an explicit AIBL guest option.
+      router.push("/ecommerce/checkout");
       return;
     }
     router.push("/ecommerce/checkout");

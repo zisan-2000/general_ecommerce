@@ -918,6 +918,7 @@ export async function cleanupExpiredInventoryReservations(params: {
     if (
       !order ||
       order.payment_method?.startsWith("EPS:") ||
+      order.payment_method?.startsWith("AIBL_WALLET:") ||
       order.paymentStatus === "PAID" ||
       order.payments.some((payment) => payment.status === "CAPTURED")
     ) {

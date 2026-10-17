@@ -112,6 +112,14 @@ function DetailPanel({ detail, staff, onRefresh, onMore, onRequest }: { detail: 
       onRefresh();
     } catch (error) { setNotice(message(error)); } finally { setBusy(false); }
   }
+  async function verifyAibl() {
+    setBusy(true); setNotice("");
+    try {
+      const result = await readJson<{ status: string; message: string }>("/api/aibl-wallet/status",
+        postJson({ orderId: detail.payment.orderId, tranId: detail.payment.externalId }));
+      setNotice(`${result.status}: ${result.message}`); onRefresh();
+    } catch (error) { setNotice(message(error)); } finally { setBusy(false); }
+  }
   async function createCase(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     const form = event.currentTarget;
@@ -131,6 +139,12 @@ function DetailPanel({ detail, staff, onRefresh, onMore, onRequest }: { detail: 
       <p className="text-sm">Order #{p.orderId} · {p.provider} · {p.amount} {p.currency} · <Badge>{p.status}</Badge> / {p.order?.paymentStatus}</p></div>
       <button className={buttonClass} disabled={busy} onClick={compare}>Compare gateway status</button></div>
     <p className="text-sm text-muted-foreground">Comparison sends a server-side status query and records the result. It does not capture a payment, send a refund, or change inventory.</p>
+    {p.provider === "AIBL_WALLET" && <section className="rounded border p-3 space-y-2 text-sm">
+      <p>AIBL UAT · Bank OrderID: {detail.aibl?.bankOrderId || "N/A"} · Verified transaction: {detail.aibl?.bankTransactionId || "N/A"}</p>
+      <p>Initialization validated: {detail.aibl?.initializationValidated ? "Yes" : "No"} · Review: {detail.aibl?.review || "See timeline"}</p>
+      <p>Verification can capture a bank-confirmed payment and commit its reservations. Unknown outcomes remain pending.</p>
+      <button className={buttonClass} disabled={busy || !["INITIATED", "AUTHORIZED"].includes(p.status)} onClick={verifyAibl}>Verify and settle pending AIBL payment</button>
+    </section>}
     {notice && <p role="status" className="rounded bg-muted p-3 text-sm">{notice}</p>}
     <section className="space-y-2"><h3 className="font-semibold">Timeline</h3><EventTable events={detail.events} onRequest={onRequest} />
       {detail.nextBefore && <button className={buttonClass} disabled={busy} onClick={async () => {
@@ -316,14 +330,14 @@ export default function PaymentControlCenter() {
   const failedRequests = data?.network.summary.filter((row) => row.outcome !== "HTTP_SUCCESS").reduce((n, row) => n + row._count._all, 0) ?? 0;
   return <main className="p-4 md:p-6 space-y-6">
     <header className="flex flex-wrap items-center justify-between gap-3"><div><h1 className="text-2xl font-semibold">Payment Control Center</h1>
-      <p className="text-sm text-muted-foreground">EPS Sandbox & SSLCommerz · Transaction diagnostics and staff review</p></div>
+      <p className="text-sm text-muted-foreground">EPS Sandbox, SSLCommerz & AIBL Wallet UAT · Transaction diagnostics and staff review</p></div>
       <div className="flex gap-2"><Link className={buttonClass} href="/admin/settings/payment">Gateway settings</Link>
         <button className={buttonClass} onClick={reload} disabled={loading}>Refresh</button>
         <button className={buttonClass} onClick={exportCsv} disabled={exporting || loading}>Export filtered CSV</button></div></header>
     <form onSubmit={filter} className={panelClass}>
       <div className="grid gap-3 md:grid-cols-3 xl:grid-cols-6">
         <label className="text-sm">Order / Transaction<input name="q" placeholder="Order ID or transaction ID" maxLength={50} className={inputClass} /></label>
-        <label className="text-sm">Gateway<select name="provider" className={inputClass}><option value="">All gateways</option><option>EPS</option><option>SSLCOMMERZ</option></select></label>
+        <label className="text-sm">Gateway<select name="provider" className={inputClass}><option value="">All gateways</option><option>EPS</option><option>SSLCOMMERZ</option><option>AIBL_WALLET</option></select></label>
         <label className="text-sm">Payment status<select name="status" className={inputClass}><option value="">All statuses</option>{["INITIATED", "AUTHORIZED", "CAPTURED", "FAILED", "REFUNDED", "VOIDED"].map((s) => <option key={s}>{s}</option>)}</select></label>
         <label className="text-sm">From (UTC)<input name="from" type="date" className={inputClass} /></label>
         <label className="text-sm">To (UTC)<input name="to" type="date" className={inputClass} /></label>

@@ -97,7 +97,7 @@ export async function POST(
       const paidTotal = await tx.refund.aggregate({ where: { orderId: existing.orderId, payoutStatus: "PAID" }, _sum: { amount: true } });
       const captured = await tx.payment.findFirst({ where: { orderId: existing.orderId,
         status: { in: ["CAPTURED", "REFUNDED"] } }, orderBy: { id: "desc" } });
-      const online = /^(EPS|SSLCOMMERZ):/.test(order.payment_method);
+      const online = /^(EPS|SSLCOMMERZ|AIBL_WALLET):/.test(order.payment_method);
       if (online && !captured?.amount) throw new PaymentControlError("No captured payment found; reconcile before recording a refund", 409);
       if (current.paymentId && captured && current.paymentId !== captured.id) throw new PaymentControlError("Refund does not match the captured payment", 409);
       const limit = captured?.amount && captured.amount.lessThan(order.grand_total) ? captured.amount : order.grand_total;
@@ -120,7 +120,7 @@ export async function POST(
         },
       });
       if (claimed.count !== 1) return null;
-      if (captured?.provider === "EPS" || captured?.provider === "SSLCOMMERZ") {
+      if (captured?.provider === "EPS" || captured?.provider === "SSLCOMMERZ" || captured?.provider === "AIBL_WALLET") {
         refundTelemetry.context = { provider: captured.provider, paymentId: captured.id, orderId: existing.orderId,
           transactionId: captured.externalId ?? undefined, actorUserId: access.userId! };
       }

@@ -31,6 +31,9 @@ import {
 } from "@/lib/sslcommerz";
 import { rateLimitRequest } from "@/lib/request-security";
 import { EpsError, epsConfig, epsGatewayId, epsPublicOrigin, findEpsGateway } from "@/lib/eps";
+import { aiblWalletGatewayId } from "@/lib/aibl-wallet-settings";
+import { aiblWalletConfig, aiblWalletPublicOrigin, findAiblWalletGateway, AiblWalletError } from "@/lib/aibl-wallet";
+import { attachAiblPending } from "@/lib/aibl-wallet-http";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
 import {
@@ -103,14 +106,15 @@ function buildOrderSuccessResponse({
 }) {
   const customerOrder = redactCustomerOrder(order);
   const response = NextResponse.json(
-    (isSSLCOMMERZ || epsGatewayId(order.payment_method) !== null)
-      ? { ...customerOrder, paymentInitToken: createPaymentInitToken(order.id) }
+    (isSSLCOMMERZ || epsGatewayId(order.payment_method) !== null || aiblWalletGatewayId(order.payment_method) !== null)
+      ? { ...customerOrder, paymentInitToken: createPaymentInitToken(order.id, aiblWalletGatewayId(order.payment_method) ? 24 * 60 * 60000 : undefined) }
       : customerOrder,
     {
       status: replayed ? 200 : 201,
       headers: { "Idempotency-Replayed": replayed ? "true" : "false" },
     },
   );
+  if (aiblWalletGatewayId(order.payment_method) !== null) attachAiblPending(response, order.id);
   if (partnerAttributionCookieValue) {
     response.cookies.set(
       PARTNER_ATTRIBUTION_COOKIE,
@@ -373,7 +377,8 @@ export async function POST(
     const isCOD = paymentMethod === "CashOnDelivery";
     const isSSLCOMMERZ = /^SSLCOMMERZ:\d+$/i.test(paymentMethod);
     const isEPS = epsGatewayId(paymentMethod) !== null;
-    const isOnlinePayment = isSSLCOMMERZ || isEPS;
+    const isAiblWallet = aiblWalletGatewayId(paymentMethod) !== null;
+    const isOnlinePayment = isSSLCOMMERZ || isEPS || isAiblWallet;
     const isManualPayment = !isCOD && !isOnlinePayment;
     const epsPostcode = typeof body.epsPostcode === "string" ? body.epsPostcode.trim() : "";
     if (isEPS && (!epsPostcode || epsPostcode.length > 20 || typeof email !== "string" || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))) {
@@ -469,6 +474,11 @@ export async function POST(
         });
     }
 
+    if (isAiblWallet) {
+      if (!await findAiblWalletGateway(aiblWalletGatewayId(paymentMethod))) return NextResponse.json({ error: "Selected AIBL Wallet gateway is unavailable" }, { status: 400 });
+      aiblWalletConfig(); aiblWalletPublicOrigin();
+      if (!isPaymentInitSigningConfigured()) return NextResponse.json({ error: "AIBL payment signing is not configured" }, { status: 503 });
+    }
     if (isEPS) {
       const gateway = await findEpsGateway(epsGatewayId(paymentMethod));
       if (!gateway) return NextResponse.json({ error: "Selected EPS gateway is unavailable" }, { status: 400 });
@@ -695,6 +705,9 @@ export async function POST(
             : [],
       };
     });
+    if (isAiblWallet && orderItemsData.some((item) => item.currency !== "BDT")) {
+      return NextResponse.json({ error: "AIBL Wallet requires a BDT order" }, { status: 400 });
+    }
     const inventoryDemands = orderItemsData.flatMap(
       (item) => item.inventoryDemands,
     );
@@ -784,7 +797,7 @@ export async function POST(
           taxSnapshot: taxQuote,
           status: "PENDING",
           paymentStatus: "UNPAID",
-          transactionId: isEPS ? null : (transactionId ?? null),
+          transactionId: isEPS || isAiblWallet ? null : (transactionId ?? null),
           termsAcceptedAt: legalConsentAcceptedAt,
           privacyPolicyAcceptedAt: legalConsentAcceptedAt,
           image: isManualPayment ? (image ?? null) : null,
@@ -866,8 +879,8 @@ export async function POST(
             bundleId: item.productId,
             warehouseId: item.bundleWarehouseId,
             quantity: item.quantity,
-            reason: `Order #${o.id} ${isEPS ? "EPS" : "SSLCommerz"} preassembled bundle reservation`,
-            expiresAt: isEPS ? null : new Date(Date.now() + 45 * 60 * 1000),
+            reason: `Order #${o.id} ${isAiblWallet ? "AIBL Wallet" : isEPS ? "EPS" : "SSLCommerz"} preassembled bundle reservation`,
+            expiresAt: isEPS || isAiblWallet ? null : new Date(Date.now() + 45 * 60 * 1000),
           });
         } else {
           await deductPreassembledBundleInventory({
@@ -890,8 +903,8 @@ export async function POST(
             orderId: o.id,
             userId: userId ?? null,
             quantity: item.quantity,
-            reason: `Order #${o.id} ${isEPS ? "EPS" : "SSLCommerz"} reservation`,
-            expiresAt: isEPS ? null : new Date(Date.now() + 45 * 60 * 1000),
+            reason: `Order #${o.id} ${isAiblWallet ? "AIBL Wallet" : isEPS ? "EPS" : "SSLCommerz"} reservation`,
+            expiresAt: isEPS || isAiblWallet ? null : new Date(Date.now() + 45 * 60 * 1000),
             warehouseId: fulfillmentWarehouseId,
           });
         else
@@ -970,7 +983,7 @@ export async function POST(
       replayed: transactionResult.replayed,
     });
   } catch (error: any) {
-    if (error instanceof EpsError) return NextResponse.json({ error: error.message }, { status: error.status });
+    if (error instanceof EpsError || error instanceof AiblWalletError) return NextResponse.json({ error: error.message }, { status: error.status });
     console.error("Error creating order:", error);
     if (error instanceof OrderIdempotencyError)
       return NextResponse.json(

@@ -2,9 +2,10 @@ import "server-only";
 import { Prisma, type PaymentState } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import { PaymentControlError } from "./authorization";
+import { aiblWalletObject } from "@/lib/aibl-wallet-settings";
 
 const statuses = ["INITIATED", "AUTHORIZED", "CAPTURED", "FAILED", "REFUNDED", "VOIDED"] as const;
-const providers = ["EPS", "SSLCOMMERZ"] as const;
+const providers = ["EPS", "SSLCOMMERZ", "AIBL_WALLET"] as const;
 export const paymentProjection = {
   id: true, orderId: true, amount: true, currency: true, provider: true, status: true,
   externalId: true, createdAt: true, updatedAt: true,
@@ -82,7 +83,13 @@ export async function getPaymentDetails(id: number, before?: string | null) {
       payoutTransactionId: true, reviewedAt: true, paidAt: true, createdAt: true,
     }, orderBy: { createdAt: "desc" }, take: 100 }),
   ]);
-  return { payment, events: events.slice(0, 100), nextBefore: events.length > 100
+  const aiblRecord = payment.provider === "AIBL_WALLET" ? await prisma.payment.findUnique({ where: { id }, select: { paymentGatewayData: true } }) : null;
+  const meta = aiblWalletObject(aiblRecord?.paymentGatewayData);
+  const safeRef = (value: unknown) => typeof value === "string" && /^[A-Za-z0-9_-]{1,160}$/.test(value) ? value : null;
+  const aibl = aiblRecord ? { bankOrderId: safeRef(meta.bankOrderId), bankTransactionId: safeRef(meta.bankTransactionId),
+    initializationValidated: meta.initializationValidated === true,
+    review: meta.initializeReview === "INVALID_RESPONSE_OR_AMOUNT" ? "INVALID_RESPONSE_OR_AMOUNT" : meta.verification === "PENDING_REVIEW" ? "PENDING_REVIEW" : null } : null;
+  return { payment, aibl, events: events.slice(0, 100), nextBefore: events.length > 100
     ? `${events[99].createdAt.toISOString()}_${events[99].id}` : null, reconciliations, disputes, refunds };
 }
 

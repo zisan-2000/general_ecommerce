@@ -28,6 +28,10 @@ export async function GET(request: NextRequest) {
       if (data.isActive === false) return list;
 
       const type = String(data.type || '').toUpperCase();
+      if (type === 'AIBL_WALLET') {
+        if (data.isActive === true) list.push({ id: payment.id, paymentGatewayData: { type: 'AIBL_WALLET', environment: 'uat' } });
+        return list;
+      }
       if (type === 'EPS') {
         if (data.isActive !== true) return list;
         list.push({ id: payment.id, paymentGatewayData: { type: 'EPS' } });

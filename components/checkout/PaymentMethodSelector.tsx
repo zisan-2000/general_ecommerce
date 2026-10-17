@@ -13,6 +13,10 @@ type PaymentGateway = {
 };
 
 type Props = {
+  aiblGuestOnly?: boolean;
+  aiblPendingOrderId?: number | null;
+  aiblBusy?: boolean;
+  onVerifyAiblPayment?: () => void;
   epsPendingOrderId: number | null;
   epsVerificationBusy: boolean;
   onVerifyEpsPayment: () => void;
@@ -40,6 +44,8 @@ type Props = {
 };
 
 export default function PaymentMethodSelector({
+  aiblGuestOnly = false,
+  aiblPendingOrderId = null, aiblBusy = false, onVerifyAiblPayment,
   epsEmail, onEpsEmailChange, epsPostcode, onEpsPostcodeChange,
   epsPendingOrderId, epsVerificationBusy, onVerifyEpsPayment,
   paymentGateways,
@@ -77,6 +83,7 @@ export default function PaymentMethodSelector({
           ? "SSLCOMMERZ"
           : type === "MANUAL"
             ? String(pg?.channel || t("manualPayment"))
+            : type === "AIBL_WALLET" ? "AIBL Islamic Wallet"
             : type;
 
       return {
@@ -97,13 +104,14 @@ export default function PaymentMethodSelector({
 
   // 2) চাইলে Cash On Delivery সবসময় দেখাতে পারো (API-তে না থাকলেও)
   const methods = [
-    { key: "CashOnDelivery", type: "COD", title: t("cashOnDelivery"), pg: null as any },
+    ...(!aiblGuestOnly ? [{ key: "CashOnDelivery", type: "COD", title: t("cashOnDelivery"), pg: null as any }] : []),
     ...apiMethods,
   ];
 
   const isCOD = selectedMethod === "CashOnDelivery";
   const isSSL = selectedMethod?.startsWith("SSLCOMMERZ:");
   const isEPS = selectedMethod?.startsWith("EPS:");
+  const isAibl = selectedMethod?.startsWith("AIBL_WALLET:");
   const isManual = selectedMethod?.startsWith("MANUAL:");
 
   const selectedManual = methods.find((m) => m.key === selectedMethod);
@@ -143,6 +151,7 @@ export default function PaymentMethodSelector({
                   </div>
                 )}
                 {m.type === "EPS" && <div className="text-xs text-muted-foreground">{t("epsDescription")}</div>}
+                {m.type === "AIBL_WALLET" && <div className="text-xs text-muted-foreground">Continue securely on the AIBL Islamic Wallet payment page.</div>}
 
                 {/* Manual info */}
                 {m.type === "MANUAL" && (
@@ -162,7 +171,7 @@ export default function PaymentMethodSelector({
                 name="payment_method"
                 className="h-4 w-4"
                 checked={selectedMethod === m.key}
-                disabled={epsPendingOrderId !== null}
+                disabled={epsPendingOrderId !== null || aiblPendingOrderId !== null}
                 onChange={() => onMethodChange(m.key)}
               />
             </label>
@@ -269,9 +278,14 @@ export default function PaymentMethodSelector({
         </div>
       </div>
 
-      <Button className="w-full" onClick={onNext} disabled={!selectedMethod || !legalConsentAccepted || epsVerificationBusy}>
-        {epsPendingOrderId !== null ? t("epsResume") : t("placeOrder")}
+      {isAibl && <p className="text-sm text-muted-foreground">You will enter your wallet details on the bank-hosted payment page.</p>}
+      <Button className="w-full" onClick={onNext} disabled={(!selectedMethod && aiblPendingOrderId === null) || (!legalConsentAccepted && aiblPendingOrderId === null) || epsVerificationBusy || aiblBusy}>
+        {aiblPendingOrderId !== null ? "Resume AIBL payment" : epsPendingOrderId !== null ? t("epsResume") : t("placeOrder")}
       </Button>
+      {aiblPendingOrderId !== null && <div role="status" className="space-y-2 rounded border p-3">
+        <p>Pending AIBL payment for order #{aiblPendingOrderId}. This order will be reused.</p>
+        <Button variant="outline" onClick={onVerifyAiblPayment} disabled={aiblBusy}>Verify pending payment</Button>
+      </div>}
       {epsPendingOrderId !== null && (
         <div className="rounded border p-3 space-y-2" role="status">
           <p className="text-sm">{t("epsPendingOrder", { id: epsPendingOrderId })}</p>

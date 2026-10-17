@@ -10,6 +10,7 @@ import { createOrderNotification } from "@/lib/order-notifications";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { OrderStatus, Prisma } from "@/generated/prisma";
 import { EpsError } from "@/lib/eps";
+import { AiblWalletError } from "@/lib/aibl-wallet";
 import { syncCommissionEntriesForOrderStatus } from "@/lib/business-network/commission";
 import {
   type AllowedOrderStatusTransitions,
@@ -279,6 +280,16 @@ export async function PATCH(
     }
 
     const result = await prisma.$transaction(async (tx) => {
+      if (existingOrder.payment_method.startsWith("AIBL_WALLET:")) {
+        await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Order" WHERE "id" = ${orderId} FOR UPDATE`);
+        const current = await tx.order.findUniqueOrThrow({ where: { id: orderId } });
+        if ((paymentStatus && paymentStatus !== current.paymentStatus) || transactionId !== undefined) {
+          throw new AiblWalletError("AIBL payment status and transaction reference require verified settlement", 409);
+        }
+        if (current.paymentStatus === "UNPAID" && requestedStatus && !["PENDING", "FAILED", "CANCELLED"].includes(requestedStatus)) {
+          throw new AiblWalletError("Verify AIBL payment before processing this order", 409);
+        }
+      }
       if (existingOrder.payment_method.startsWith("EPS:")) {
         await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Order" WHERE "id" = ${orderId} FOR UPDATE`);
         const epsOrder = await tx.order.findUniqueOrThrow({ where: { id: orderId } });
@@ -393,7 +404,7 @@ export async function PATCH(
     if (error instanceof OrderStatusTransitionError) {
       return NextResponse.json({ error: error.message }, { status: 400 });
     }
-    if (error instanceof EpsError) return NextResponse.json({ error: error.message }, { status: error.status });
+    if (error instanceof EpsError || error instanceof AiblWalletError) return NextResponse.json({ error: error.message }, { status: error.status });
     console.error("Error updating order:", error);
     return NextResponse.json(
       { error: "Internal server error" },

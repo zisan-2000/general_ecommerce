@@ -4,6 +4,7 @@ import { epsObject } from "@/lib/eps-settings";
 import { rateLimitRequest } from "@/lib/request-security";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { recordPaymentEvent, type PaymentLogContext } from "@/lib/payment-control/telemetry";
+import { attachPaymentResult } from "@/lib/payment-result";
 
 export async function handleEpsCallback(request: NextRequest) {
   let status = "pending";
@@ -54,5 +55,5 @@ export async function handleEpsCallback(request: NextRequest) {
   url.searchParams.set("status", status);
   url.searchParams.set("message", message);
   // No customer/order details or guest authorization tokens appear in the return URL.
-  return NextResponse.redirect(url, 303);
+  return attachPaymentResult(NextResponse.redirect(url, 303), logContext.transactionId, "EPS");
 }

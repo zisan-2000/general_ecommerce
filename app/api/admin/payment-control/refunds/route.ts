@@ -10,7 +10,7 @@ export async function GET(request: NextRequest) {
     if (status && !["REQUESTED", "APPROVED", "REJECTED", "COMPLETED"].includes(status)) throw new PaymentControlError("Invalid refund status");
     if (!Number.isSafeInteger(page) || page < 1 || page > 10000) throw new PaymentControlError("Invalid page");
     const where = { order: { payment_method: { startsWith: "EPS:" } } };
-    const refundWhere = { OR: [where, { order: { payment_method: { startsWith: "SSLCOMMERZ:" } } }],
+    const refundWhere = { OR: [where, { order: { payment_method: { startsWith: "SSLCOMMERZ:" } } }, { order: { payment_method: { startsWith: "AIBL_WALLET:" } } }],
       ...(status ? { status: status as "REQUESTED" | "APPROVED" | "REJECTED" | "COMPLETED" } : {}) };
     const [total, refunds] = await Promise.all([
       prisma.refund.count({ where: refundWhere }),

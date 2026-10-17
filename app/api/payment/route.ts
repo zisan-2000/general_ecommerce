@@ -5,6 +5,7 @@ import { authOptions } from '@/lib/auth';
 import { logActivity } from '@/lib/activity-log';
 import { getAccessContext } from '@/lib/rbac';
 import { normalizeEpsGatewaySettings } from '@/lib/eps-settings';
+import { normalizeAiblWalletGatewaySettings } from '@/lib/aibl-wallet-settings';
 
 function toPaymentLogSnapshot(payment: {
   id: number;
@@ -32,6 +33,7 @@ function gatewayObject(value: unknown): Record<string, any> {
 
 function redactGatewayData(value: unknown) {
   const data = gatewayObject(value);
+  if (String(data.type || '').toUpperCase() === 'AIBL_WALLET') return normalizeAiblWalletGatewaySettings(data);
   if (String(data.type || '').toUpperCase() === 'EPS') return normalizeEpsGatewaySettings(data);
   if (String(data.type || '').toUpperCase() !== 'SSLCOMMERZ') return data;
   const { storePassword: _secret, ...safe } = data;
@@ -89,8 +91,13 @@ export async function POST(request: NextRequest) {
     const { paymentGatewayData, orderId, amount } = body;
     let gatewayData = gatewayObject(paymentGatewayData);
     const gatewayType = String(gatewayData.type || '').toUpperCase();
-    if (!['MANUAL', 'SSLCOMMERZ', 'EPS'].includes(gatewayType)) {
+    if (!['MANUAL', 'SSLCOMMERZ', 'EPS', 'AIBL_WALLET'].includes(gatewayType)) {
       return NextResponse.json({ error: 'Invalid payment gateway type' }, { status: 400 });
+    }
+    if (gatewayType === 'AIBL_WALLET') {
+      if (!access.hasGlobal('settings.payment.manage') && !access.hasGlobal('settings.manage')) return NextResponse.json({ error: 'Global payment management permission required' }, { status: 403 });
+      if (orderId !== undefined && orderId !== null) return NextResponse.json({ error: 'Gateway settings cannot create transaction records' }, { status: 400 });
+      gatewayData = normalizeAiblWalletGatewaySettings(gatewayData);
     }
     if (gatewayType === 'EPS') {
       if (orderId !== undefined && orderId !== null) return NextResponse.json({ error: 'Gateway settings cannot create EPS transaction records' }, { status: 400 });

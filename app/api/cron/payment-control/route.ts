@@ -22,7 +22,7 @@ export async function GET(request: NextRequest) {
         SELECT MAX(r."createdAt") AS "checkedAt" FROM "PaymentReconciliation" r WHERE r."paymentId" = p."id"
       ) r ON true
       WHERE p."orderId" IS NOT NULL AND p."externalId" IS NOT NULL
-        AND p."provider" IN ('EPS', 'SSLCOMMERZ')
+        AND p."provider" IN ('EPS', 'SSLCOMMERZ', 'AIBL_WALLET')
         AND p."createdAt" > NOW() - INTERVAL '90 days'
         AND p."createdAt" < NOW() - INTERVAL '1 minute'
         AND (r."checkedAt" IS NULL OR r."checkedAt" < NOW() - INTERVAL '5 minutes')

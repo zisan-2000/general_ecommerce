@@ -13,6 +13,7 @@ export function normalizeAiblWalletGatewaySettings(value: unknown) {
     type: AIBL_WALLET_GATEWAY_TYPE,
     isActive: input.isActive === true,
     contract: AIBL_WALLET_CONTRACT,
+    environment: "uat",
   };
 }
 
@@ -33,14 +34,14 @@ export function aiblMoney(value: unknown): string | null {
 
 export function aiblVerifiedTransaction(value: unknown): string | null {
   const data = aiblWalletObject(value);
-  const code = data.code ?? data.Code;
-  const message = data.msg ?? data.Msg;
-  const transactionId = data.transactionID ?? data.TransactionID ?? data.transactionId;
-  if (String(code) !== "200" || typeof message !== "string" ||
-      message.trim().toLowerCase() !== "order verified" ||
-      typeof transactionId !== "string" && typeof transactionId !== "number") return null;
+  const code = data.code;
+  const message = data.msg;
+  const transactionId = data.transactionID;
+  // No undocumented aliases, case folding or message normalization.
+  if ((code !== 200 && code !== "200") || message !== "Order Verified" ||
+      (typeof transactionId !== "string" && !(typeof transactionId === "number" && Number.isSafeInteger(transactionId) && transactionId > 0))) return null;
   const safeId = String(transactionId);
-  return /^[A-Za-z0-9_-]{1,100}$/.test(safeId) ? safeId : null;
+  return /^[A-Za-z0-9][A-Za-z0-9_-]{0,99}$/.test(safeId) && !/^0+$/.test(safeId) ? safeId : null;
 }
 
 export function aiblProviderOrderId(value: unknown): string | null {

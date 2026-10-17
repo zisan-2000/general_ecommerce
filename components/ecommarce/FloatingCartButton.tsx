@@ -22,7 +22,7 @@ import {
   SheetHeader,
   SheetTitle,
 } from "@/components/ui/sheet";
-import { useSession, signIn } from "@/lib/auth-client";
+import { useSession } from "@/lib/auth-client";
 import { toast } from "sonner";
 import { cn } from "@/lib/utils";
 import { useLocale, useTranslations } from "next-intl";
@@ -378,11 +378,14 @@ export default function FloatingCartButton() {
 
   const handleCheckout = async () => {
     if (!isAuthenticated) {
+      if (hasUnselectedVariants) { toast.error(t("errors.selectAllVariants")); return; }
       // Store cart items for after login
-      sessionStorage.setItem("pendingCheckout", JSON.stringify(cartItems));
-      sessionStorage.setItem("redirectAfterLogin", "/ecommerce/checkout");
-      toast.info(t("errors.loginRequired"));
-      await signIn(undefined, { callbackUrl: "/ecommerce/checkout" });
+      try {
+        sessionStorage.setItem("pendingCheckout", JSON.stringify(cartItems));
+        sessionStorage.setItem("redirectAfterLogin", "/ecommerce/checkout");
+      } catch { /* Guest checkout can continue when session storage is unavailable. */ }
+      setOpen(false);
+      router.push("/ecommerce/checkout");
       return;
     }
 

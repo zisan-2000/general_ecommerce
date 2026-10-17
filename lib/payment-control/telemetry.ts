@@ -2,7 +2,7 @@ import "server-only";
 import { randomUUID } from "node:crypto";
 import { prisma } from "@/lib/prisma";
 
-export type PaymentProvider = "EPS" | "SSLCOMMERZ";
+export type PaymentProvider = "EPS" | "SSLCOMMERZ" | "AIBL_WALLET";
 export type PaymentOperation = "AUTH" | "INITIALIZE" | "STATUS_QUERY" | "VERIFY" | "CALLBACK" | "SETTLEMENT" | "REFUND";
 export type PaymentOutcome = "REQUEST_STARTED" | "HTTP_SUCCESS" | "HTTP_ERROR" | "TIMEOUT" | "CONNECTION_ERROR" |
   "RECEIVED" | "REJECTED" | "SUCCESS" | "PENDING" | "FAILED" | "CANCELLED" | "DUPLICATE" | "MISMATCH" | "ERROR";

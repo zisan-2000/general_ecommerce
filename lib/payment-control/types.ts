@@ -28,6 +28,7 @@ export type ReconciliationRow = {
   amountMatches: boolean | null; referenceMatches: boolean | null; createdAt: string;
 };
 export type PaymentDetail = {
+  aibl?: { bankOrderId: string | null; bankTransactionId: string | null; initializationValidated: boolean; review: string | null } | null;
   payment: PaymentRow; events: EventRow[]; nextBefore: string | null;
   reconciliations: ReconciliationRow[]; disputes: DisputeRow[]; refunds: RefundRow[];
 };
