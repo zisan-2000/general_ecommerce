@@ -131,14 +131,14 @@ export default function CheckoutPage() {
   useEffect(() => {
     const controller = new AbortController();
     fetch("/api/aibl-wallet/pending", { cache: "no-store", signal: controller.signal }).then((r) => r.json()).then((value) => {
-      if (!controller.signal.aborted && value.completed === true) { window.location.href = "/ecommerce/payment-result"; return; }
+      if (!controller.signal.aborted && value.completed === true) { router.replace("/ecommerce/payment-result"); router.refresh(); return; }
       if (!controller.signal.aborted && Number.isSafeInteger(value.pending?.orderId) && value.pending.orderId > 0) {
         setPendingAiblPayment((current) => current ?? { orderId: value.pending.orderId });
         setAiblGuestCheckout(true);
       }
     }).catch(() => undefined);
     return () => controller.abort();
-  }, []);
+  }, [router]);
   async function handleAiblPayment(action: "init" | "status") {
     if (!pendingAiblPayment || aiblBusy) return;
     setAiblBusy(true);
@@ -147,7 +147,7 @@ export default function CheckoutPage() {
       const value = await response.json();
       if (!response.ok) { toast.error(value.error || "AIBL payment is awaiting review"); return; }
       if (action === "init" && value.redirectUrl) { window.location.href = value.redirectUrl; return; }
-      if (value.status === "success") { window.location.href = "/ecommerce/payment-result"; return; }
+      if (value.status === "success") { router.replace("/ecommerce/payment-result"); router.refresh(); return; }
       toast.message(value.message || "AIBL payment is pending; inventory remains reserved");
     } catch { toast.error("Payment could not be confirmed. Verify the existing order before retrying."); }
     finally { setAiblBusy(false); }
@@ -187,12 +187,17 @@ export default function CheckoutPage() {
   const [appliedCoupon, setAppliedCoupon] = useState<any>(null);
   const [validatingCoupon, setValidatingCoupon] = useState(false);
 
-  const isAuthenticated = !!session;
+  // A blocked/revoked session can still contain `expires` without a user.
+  // Match the cart API's identity requirement instead of testing object truthiness.
+  const sessionUserId = sessionStatus === "authenticated" && typeof session?.user?.id === "string"
+    ? session.user.id : null;
+  const isAuthenticated = Boolean(sessionUserId);
 
   // Server cart
   const [serverCartItems, setServerCartItems] = useState<any[] | null>(null);
   const [loadingServerCart, setLoadingServerCart] = useState(false);
   const [cartSynced, setCartSynced] = useState(false);
+  const [cartAuthRequired, setCartAuthRequired] = useState(false);
   // `cartSynced` is state, so it does not commit before the async sync re-enters.
   // This ref blocks the duplicate run (StrictMode / cartItems change) that would
   // otherwise POST the same items twice.
@@ -225,21 +230,23 @@ export default function CheckoutPage() {
 
   useEffect(() => {
     setCartSynced(false);
-  }, [isAuthenticated]);
+    setCartAuthRequired(false);
+    setServerCartItems(null);
+  }, [sessionUserId]);
 
   // Preserve sign-in cart recovery; AIBL guests can explicitly continue without signing in.
   useEffect(() => {
-    if (!isMounted || sessionStatus !== "unauthenticated") return;
+    if (!isMounted || sessionStatus === "loading" || isAuthenticated) return;
 
     try {
       sessionStorage.setItem("pendingCheckout", JSON.stringify(cartItems));
       sessionStorage.setItem("redirectAfterLogin", "/ecommerce/checkout");
     } catch {}
 
-  }, [isMounted, sessionStatus, cartItems, router]);
+  }, [isMounted, sessionStatus, isAuthenticated, cartItems]);
 
   useEffect(() => {
-    if (!isMounted || cartSynced || syncInFlightRef.current) return;
+    if (!isMounted || cartSynced || cartAuthRequired || syncInFlightRef.current) return;
 
     if (!isAuthenticated) {
       setServerCartItems(null);
@@ -248,13 +255,26 @@ export default function CheckoutPage() {
 
     syncInFlightRef.current = true;
 
+    const requiresSignIn = (response: Response) => {
+      if (response.status !== 401) return false;
+      // Keep the local mirror for login recovery; never turn an auth failure
+      // into an empty server cart or automatically retry protected requests.
+      try {
+        sessionStorage.setItem("pendingCheckout", JSON.stringify(cartItems));
+        sessionStorage.setItem("redirectAfterLogin", "/ecommerce/checkout");
+      } catch { /* The local cart remains available when session storage is blocked. */ }
+      setServerCartItems(null);
+      setCartAuthRequired(true);
+      return true;
+    };
+
     const fetchServerCart = async () => {
       try {
         setLoadingServerCart(true);
         const res = await fetch("/api/cart", { cache: "no-store" });
+        if (requiresSignIn(res)) return null;
         if (!res.ok) {
           console.error("Failed to load server cart:", res.status);
-          setServerCartItems([]);
           return null;
         }
 
@@ -308,6 +328,7 @@ export default function CheckoutPage() {
         setLoadingServerCart(true);
 
         const serverRes = await fetch("/api/cart", { cache: "no-store" });
+        if (requiresSignIn(serverRes)) return;
         let allSynced = false;
 
         if (serverRes.ok) {
@@ -344,6 +365,7 @@ export default function CheckoutPage() {
               }),
             });
 
+            if (requiresSignIn(res)) return;
             if (!res.ok) {
               const detail = await res.text().catch(() => "");
               console.error(
@@ -365,6 +387,7 @@ export default function CheckoutPage() {
           }
         } else {
           console.error("Failed to load server cart:", serverRes.status);
+          return;
         }
 
         // Replace the local mirror only after every guest line is safely on server.
@@ -372,7 +395,6 @@ export default function CheckoutPage() {
         if (allSynced && refreshedItems) replaceCart(refreshedItems);
       } catch (err) {
         console.error("Error syncing guest cart to server:", err);
-        await fetchServerCart();
       } finally {
         syncInFlightRef.current = false;
         setLoadingServerCart(false);
@@ -381,7 +403,7 @@ export default function CheckoutPage() {
     };
 
     syncGuestCartToServer();
-  }, [isAuthenticated, isMounted, cartItems, clearCart, replaceCart, cartSynced]);
+  }, [isAuthenticated, isMounted, cartItems, clearCart, replaceCart, cartSynced, cartAuthRequired]);
 
   const parseAddressDetails = (details: UserAddress["details"]) => {
     if (Array.isArray(details)) return details.filter(Boolean).join(", ");
@@ -1051,7 +1073,7 @@ export default function CheckoutPage() {
   if (
     !isMounted ||
     sessionStatus === "loading" ||
-    (isAuthenticated && (loadingServerCart || !cartSynced))
+    (isAuthenticated && !cartAuthRequired && (loadingServerCart || !cartSynced))
   ) {
     return (
       <div className="min-h-screen bg-background py-6 sm:py-8 lg:py-12">
@@ -1081,11 +1103,12 @@ export default function CheckoutPage() {
     );
   }
 
-  if (sessionStatus === "unauthenticated" && !aiblGuestCheckout) return <main className="mx-auto max-w-xl space-y-4 p-8">
+  if (cartAuthRequired || (!isAuthenticated && !aiblGuestCheckout)) return <main className="mx-auto max-w-xl space-y-4 p-8">
     <h1 className="text-2xl font-semibold">Continue to checkout</h1>
+    {cartAuthRequired && <p role="alert" className="text-sm text-muted-foreground">Your login session could not be verified. Your cart has been kept. Please sign in again to continue.</p>}
     <Link className="block rounded border p-3 text-center" href="/signin?callbackUrl=%2Fecommerce%2Fcheckout">Sign in</Link>
-    <Button className="w-full" disabled={!paymentGateways.some((gateway) => gateway.paymentGatewayData?.type === "AIBL_WALLET")}
-      onClick={() => setAiblGuestCheckout(true)}>Continue as guest with AIBL Islamic Wallet</Button>
+    {!cartAuthRequired && <Button className="w-full" disabled={!paymentGateways.some((gateway) => gateway.paymentGatewayData?.type === "AIBL_WALLET")}
+      onClick={() => setAiblGuestCheckout(true)}>Continue as guest with AIBL Islamic Wallet</Button>}
     <p className="text-sm text-muted-foreground">Sign in to use Cash On Delivery, Manual Payment, EPS or SSLCommerz.</p>
   </main>;
 

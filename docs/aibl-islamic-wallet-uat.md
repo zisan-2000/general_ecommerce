@@ -8,13 +8,15 @@ Prisma execution, database connection, bank API request বা payment transacti
 
 ## Reference এবং API contract
 
-Supplied credentials note-এর public URLs authoritative:
+২০২৬-১০-১৮ তারিখে ব্যবহারকারীর দেওয়া bank confirmation অনুযায়ী API ও hosted base
+সংশোধিত। এই confirmation আগের credentials note-এর URL-গুলোকে supersede করে:
 
-- API: `https://iwpay.aibl.com.bd/iwPGAPI/`
-- Hosted: `https://iwpay.aibl.com.bd/iwepay/epayment/{OrderID}`
+- API: `https://iwtest.aibl.com.bd/iwPGAPI/`
+- Hosted: `https://iwtest.aibl.com.bd/iwepayuat/epayment/{OrderID}`
 
-PDF-এর ছয়টি page ও supplied Postman-এর দুইটি request review করা হয়েছে। PDF/Postman-এর
-`iwtest`/`iwepayuat` example host দিয়ে issued URLs override করা হয়নি। Postman-এর
+PDF-এর ছয়টি page ও supplied Postman-এর দুইটি request review করা হয়েছে। Hosted URL
+bank-confirmed base থেকে তৈরি হয়; Token, orderID ও verify একই confirmed API base
+ব্যবহার করে। Merchant callback URL তৈরির origin/path/signed state অপরিবর্তিত। Postman-এর
 placeholder callback URLs, embedded credentials/token বা example bill/amount কোডে
 আনা হয়নি। Documents-এর sample commands execution instructions হিসেবে নেওয়া হয়নি।
 
@@ -45,8 +47,8 @@ PCC read-only comparison-এর echoed amount/reference match columns তাই 
 
 ```env
 AIBL_WALLET_ENV=uat
-AIBL_WALLET_API_BASE_URL=https://iwpay.aibl.com.bd/iwPGAPI/
-AIBL_WALLET_HOSTED_BASE_URL=https://iwpay.aibl.com.bd/iwepay/epayment/
+AIBL_WALLET_API_BASE_URL=https://iwtest.aibl.com.bd/iwPGAPI/
+AIBL_WALLET_HOSTED_BASE_URL=https://iwtest.aibl.com.bd/iwepayuat/epayment/
 AIBL_WALLET_API_USER=
 AIBL_WALLET_API_PASS=
 AIBL_WALLET_MERCHANT_ID=
@@ -56,6 +58,11 @@ AIBL_WALLET_ACCESS_KEY=
 URLs exact trailing slash-সহ দরকার। Different host/path, HTTP, query credentials
 বা `AIBL_WALLET_ENV=live` reject হবে। `.env.example`-এ শুধু public configuration ও
 empty credential placeholders আছে। `.env.local` পড়া/পরিবর্তন করা হয়নি।
+
+API base account fingerprint-এর অংশ। আগের base-এ তৈরি কোনো persisted payment
+attempt থাকলে সেটিকে নতুন host-এ স্বয়ংক্রিয়ভাবে rebind বা reinitialize করা হবে না;
+account mismatch হলে verification/resume manual review চাইবে। Existing order,
+attempt, fingerprint বা inventory reservation এই URL correction-এ পরিবর্তন হয় না।
 
 আরও প্রয়োজন:
 
@@ -69,7 +76,7 @@ empty credential placeholders আছে। `.env.local` পড়া/পরিব�
 Public HTTPS origin দিয়েই browser checkout খুলুন; bank callbacks ও Secure cookies
 একই origin-এ ফিরতে হবে। Localhost/private HTTP callback ব্যবহার করবেন না।
 **Actual payment test-এর আগে issued UAT account/wallet real funds charge করে কি না
-যাচাই করুন। `iwpay` hostname বা ENV-এর `uat` label একা সেই নিশ্চয়তা দেয় না।**
+যাচাই করুন। Hostname বা ENV-এর `uat` label একা সেই নিশ্চয়তা দেয় না।**
 
 ## Payment এবং inventory flow
 
@@ -93,7 +100,9 @@ Public HTTPS origin দিয়েই browser checkout খুলুন; bank callb
    orderID পাঠায়; race-এ unused auth token discard হতে পারে।
 7. Returned OrderID/amount validate করে sanitized bank ID সংরক্ষণ হয়। Invalid
    amount/structure হলে redirect বন্ধ এবং attempt pending; raw payload সংরক্ষিত নয়।
-8. Callback POST JSON অথবা form-urlencoded, maximum 16 KB। Signed query state,
+8. Callback POST JSON, form-urlencoded অথবা multipart/form-data, maximum 16 KB।
+   Multipart body bounded হওয়ার পর native FormData parser চলে; duplicate fields,
+   file uploads ও malformed multipart reject হয়। Signed query state,
    exact `BILLNO` ও `AMOUNT` validate হয়। Non-empty `TRANSNO` supplied হলে successful
    server verification-এর transaction ID-এর সঙ্গে মেলানো হয়। `SESSIONKEY`, raw
    `MESSAGE`, payload বা token সংরক্ষণ/log করা হয় না।
@@ -115,6 +124,128 @@ Public HTTPS origin দিয়েই browser checkout খুলুন; bank callb
 AIBL-এর automatic refund API implement করা হয়নি। Customer existing manual refund
 channel বেছে নেবে। Existing approved refund payout tracking এখন AIBL captured
 amount cap/duplicate-reference protections-ও প্রয়োগ করে; এটি bank-এ টাকা পাঠায় না।
+
+### Callback rejection diagnostics
+
+পুরোনো `CALLBACK_REFERENCE_MISMATCH` event bill এবং amount-এর একাধিক condition
+একত্রে বোঝাত; raw callback সংরক্ষিত না থাকায় historical event-এর exact কারণ এখন
+পুনরুদ্ধার করা যায় না। Multipart support-এর ঘাটতি পৃথক confirmed issue ছিল;
+unsupported multipart 415 দিত, reference-mismatch event নয়।
+
+নতুন callback rejection-এ fixed detail codes পাওয়া যাবে:
+
+- `BILLNO_MISMATCH`: exact uppercase `BILLNO` signed attempt-এর সমান নয়/missing।
+- `AMOUNT_MISSING`: `AMOUNT` absent, null অথবা empty string।
+- `AMOUNT_INVALID`: বিদ্যমান strict money parser value গ্রহণ করেনি।
+- `AMOUNT_MISMATCH`: valid normalized amount stored Payment amount-এর সমান নয়।
+
+একাধিক condition fail হলে একই callback Request ID-তে একাধিক event থাকে। নতুন
+AIBL telemetry-তে full transaction reference রাখা হয় না; internal Payment ID,
+Order ID ও Request ID correlation ব্যবহার হয়। পুরোনো DB events পরিবর্তন করা হয়নি।
+Values, raw fields/body, OTP, SESSIONKEY বা reference fragments log হয় না।
+Bill/amount-এর aliases, trimming, comma removal বা অতিরিক্ত decimal rounding যোগ
+হয়নি। Invalid callback verification শুরু করে না। Valid callback আগের মতো bank
+verify-এর exact success ও atomic inventory/payment settlement-এর উপর নির্ভর করে।
+
+নিজে পরবর্তী অনুমোদিত UAT-এ form-urlencoded এবং multipart callback, duplicate
+fields/file/oversized body rejection ও প্রতিটি detail code যাচাই করুন। Valid
+payment-এ expected timeline CALLBACK → STATUS_QUERY → VERIFY → SETTLEMENT এবং
+CAPTURED/PAID once; callback/cron race-এ দ্বিতীয় inventory commit নয়। ইতোমধ্যে
+settled Order #4 reset বা নতুন payment attempt তৈরি করার প্রয়োজন নেই।
+
+### Live verification diagnostics (Order #5 investigation)
+
+এই diagnostics historical failure-এর root cause প্রমাণ করে না; updated handler-এ
+পরবর্তী authorized verification-এর runtime evidence সংগ্রহ করে। Security checks,
+bank request fields, UNKNOWN handling ও settlement decisions অপরিবর্তিত। কোনো
+নতুন schema/migration বা environment variable প্রয়োজন নেই। Existing
+`PAYMENT_CONTROL_LOGGING_ENABLED` অবশ্যই `false` হবে না।
+
+`/admin/payment-control` → existing AIBL transaction → **Timeline**-এ নতুন
+`DIAGNOSTIC` events দেখা যাবে। Guard/presence observations-এ `SUCCESS` = PASS/true,
+`REJECTED` = FAIL/false। Decimal-instance observation বা optional alternative field
+absent হওয়া নিজে payment rejection নয়; actual guards ও failure stage একসঙ্গে দেখুন।
+Diagnostic events আলাদা operation হওয়ায় API request/latency metrics-এ গণনা হয় না।
+
+| Fixed diagnostic codes | Meaning |
+| --- | --- |
+| `AIBL_CONFIG_UAT`, `AIBL_CONFIG_API_URL`, `AIBL_CONFIG_HOSTED_URL`, `AIBL_CONFIG_CREDENTIALS_PRESENT` | Live handler configuration checks; values never stored |
+| `AIBL_ORDER_ID`, `AIBL_MERCHANT_BILL_FORMAT`, `AIBL_BANK_ORDER_ID` | Existing attempt identifiers pass existing validation |
+| `AIBL_AMOUNT_DECIMAL_INSTANCE`, `AIBL_AMOUNT_DECIMAL_RECOGNIZED` | `instanceof Prisma.Decimal` and optional `Prisma.Decimal.isDecimal()` observations |
+| `AIBL_AMOUNT_STRING_VALID` | Recognized Decimal's string parses, or original primitive parses; diagnostic candidate only |
+| `AIBL_AMOUNT_VALID`, `AIBL_AMOUNT_NONZERO` | Actual unchanged conversion produces valid, nonzero money |
+| `AIBL_CURRENCY_BDT`, `AIBL_ACCOUNT_FINGERPRINT_MATCH`, `AIBL_INITIALIZATION_VALIDATED` | Currency, stored/runtime fingerprint equality and initialization |
+| `AIBL_ORDER_EXISTS`, `AIBL_ORDER_GATEWAY_MATCH`, `AIBL_ORDER_CURRENCY_BDT`, `AIBL_ORDER_TOTAL_MATCH` | Linked Order checks; not evaluated when attempt guards fail |
+| `AIBL_BANK_SUCCESS_CONFIRMED` | Existing strict bank success validator accepts the response |
+
+| Failure stage | Meaning |
+| --- | --- |
+| `PRE_VERIFY_VALIDATION_FAILED` | Before verify request: config/attempt/Order validation or its evaluation/read failed |
+| `BANK_VERIFY_REQUEST_FAILED` | Verify request preparation/transport or response timeout failed |
+| `BANK_VERIFY_RESPONSE_REJECTED` | Non-2xx, malformed/bounded-response failure, or unconfirmed strict success; UNKNOWN still remains pending |
+| `SETTLEMENT_VALIDATION_FAILED` | Callback verified-reference mismatch or an explicit AIBL validation error inside settlement |
+| `DATABASE_SETTLEMENT_FAILED` | Settlement transaction/operation failed; includes inventory, lifecycle or notification errors, not proof of a database-engine fault |
+
+Existing `SETTLEMENT_REJECTED` remains. Same server-generated Request ID joins its
+stage event, query guard results, `STATUS_QUERY`, `VERIFY` and settlement. Callback
+uses its existing UUID throughout verification. Authorized status responses also
+return `X-Payment-Request-Id`; do not share cookies, request bodies, signed URLs or
+bank references. Standalone PCC comparison/cron queries get server-generated IDs.
+Failure before authorized payment lookup may have a response ID without payment
+events; this is separate from `queryAiblWalletPayment()` validation.
+
+Settlement failures additionally identify the last operation/check using
+`AIBL_SETTLEMENT_DATABASE_READ`, `AIBL_SETTLEMENT_ATTEMPT`,
+`AIBL_SETTLEMENT_CAPTURE_STATE`, `AIBL_SETTLEMENT_ORDER_STATE`,
+`AIBL_SETTLEMENT_OTHER_PAYMENT`, `AIBL_SETTLEMENT_OTHER_TRANSACTION`,
+`AIBL_SETTLEMENT_INVENTORY_SNAPSHOT`, `AIBL_SETTLEMENT_CALLBACK_REFERENCE`,
+`AIBL_SETTLEMENT_INVENTORY_COMMIT`, `AIBL_SETTLEMENT_WRITE`,
+`AIBL_SETTLEMENT_ORDER_LIFECYCLE` or `AIBL_SETTLEMENT_NOTIFICATIONS`.
+These events are persisted after rollback; no independent diagnostic connection
+is opened while holding settlement locks.
+
+Callback diagnostics run only after signed state and payment lookup pass:
+
+- `AIBL_CB_CONTENT_*`: `FORM_URLENCODED`, `MULTIPART`, `JSON`, `OTHER` or `MISSING`.
+  Header values/boundaries are not stored. A parser rejection can have only this
+  category and `INVALID_CALLBACK`, without parsed-field observations.
+- `AIBL_CB_BILLNO_PRESENT`, `AIBL_CB_AMOUNT_PRESENT`: exact uppercase own-property presence.
+- `AIBL_CB_ALT_BILL_CAMEL/LOWER/SNAKE/PASCAL`: presence of `billNo`, `billno`,
+  `bill_no`, `BillNo`, respectively. `AIBL_CB_ALT_AMOUNT_LOWER/PASCAL` observes
+  `amount`, `Amount`. These names are observations, not accepted bank aliases.
+- `AIBL_CB_BILLNO_TYPE_*`, `AIBL_CB_AMOUNT_TYPE_*`: `STRING`, `NUMBER`, `NULL`,
+  `MISSING` or `OTHER`; never actual field values. An empty string remains type
+  STRING and is independently rejected as `AMOUNT_MISSING`.
+
+Order #5-এ নতুন charge ছাড়া নিজে evidence সংগ্রহ করার ধাপ:
+
+1. Dev server চালু থাকলে প্রথম observation-এর আগে restart করবেন না; hot reload-এ
+   updated handler আসতে দিন। এতে restart করে failure হারিয়ে যাওয়ার ঝুঁকি কমে।
+2. Admin PCC-তে Order #5-এর **existing** AIBL transaction খুলুন। Checkout retry,
+   initialization, নতুন payment, reset বা database edit করবেন না।
+3. শুধু status তুলনা চাইলে **Compare gateway status** ব্যবহার করুন: bank verify
+   query ও reconciliation/diagnostic records হয়; settlement/inventory হয় না।
+   এটি `/api/aibl-wallet/status` handler-এর runtime-এর সমতুল্য প্রমাণ নয়।
+4. সমস্যাযুক্ত একই handler পরীক্ষা করতে **Verify and settle pending AIBL payment**
+   একবার চাপুন। এটি existing bank OrderID দিয়ে শুধু verify করে; নতুন token/orderID
+   বা charge তৈরি করে না। Bank success ও সব checks pass হলে existing behavior
+   অনুযায়ী CAPTURED/PAID ও inventory commit হতে পারে।
+5. Browser Network-এ ওই status response থেকে শুধু HTTP status,
+   `X-Payment-Request-Id` এবং sanitized error message নোট করুন। PCC details
+   refresh/reopen করুন (error হলে UI নিজে refresh নাও করতে পারে)। Timeline-এর
+   একই Request ID-এর diagnostics ও terminal events সংগ্রহ করুন; প্রয়োজনে
+   **Load older events**। Complete trace-এর জন্য Timeline ব্যবহার করুন;
+   Network correlation preview bounded হতে পারে।
+6. `AIBL_ACCOUNT_FINGERPRINT_MATCH` FAIL হলে runtime/account mismatch প্রমাণিত।
+   `AMOUNT_DECIMAL_INSTANCE` FAIL, `AMOUNT_DECIMAL_RECOGNIZED` ও
+   `AMOUNT_STRING_VALID` PASS, কিন্তু `AMOUNT_VALID` FAIL হলে Decimal class
+   identity/conversion path-এর সমস্যা নির্দেশ করে। Evidence অনুযায়ী পরে fix করুন;
+   কোনো guard disable বা stored fingerprint/amount সম্পাদনা করবেন না।
+
+Old callback-এর missing metadata এই পরিবর্তন দিয়ে উদ্ধার করা যাবে না। Future
+legitimate callback বা isolated offline mock-এ নতুন metadata দেখা যাবে; Order #5
+নিয়ে artificial callback, নতুন payment বা raw payload logging প্রয়োজন নেই।
+Implementation-এর সময় API, tests, build, migration বা database writes চালানো হয়নি।
 
 ## Checkout এবং result page
 
@@ -209,9 +340,40 @@ npm run test:warehouse-bundle-stock
 ```
 
 প্রকৃত bank requests-এর আগে UAT charging boundary নিশ্চিত করুন। অন্য secrets বা
-credentials report-এ দেবেন না। Future automated coverage-এ AIBL transport mocks,
-callback validation, cross-order duplicate bank references ও concurrent settlement
-assertions যোগ করা প্রয়োজন; এই implementation-এ test execution হয়নি।
+credentials report-এ দেবেন না। নিচের offline suite-এ transport mocks, callback
+validation, duplicate bank references ও concurrent settlement assertions আছে;
+agent suite execute করেনি।
+
+## Isolated offline callback tests
+
+Project root থেকে PowerShell-এ চালান:
+
+```powershell
+npm run test:aibl-wallet:offline
+```
+
+শুধু দুইটি named suite চলে; integration/database suites চালু হয় না। Existing
+`node:test`, TypeScript এবং VM pattern reuse হয়েছে; নতুন dependency নেই। Test
+helper actual callback/parser, HMAC validation, verify response validation,
+settlement, inventory commit ও order lifecycle source চালায়। Bank transport,
+Prisma operations, reporting/commission/notification writes এবং HTTP response
+adapters memory-only। Rate limiter/cache/result receipt boundary mock করা হয়েছে;
+এসব boundary-এর পূর্ণ runtime behavior এই suite-এর coverage নয়।
+
+`.env`/`.env.local`, real credentials ও PrismaClient import হয় না। প্রতিটি fixture
+নিজস্ব synthetic environment/state পায়; Order ID `900004`, real Order #4 নয়।
+Unapproved imports এবং native fetch fail closed; intercepted verify transport
+শুধু in-memory HTTP response ফেরায়, কোনো request পাঠায় না।
+
+Expected result: 33 tests PASS, 0 FAIL। URL-encoded/multipart, duplicate/file/body
+rejection, চারটি field diagnostic code, invalid state, SUCCESS/UNKNOWN/timeout,
+transaction mismatch, duplicate/concurrent callback এবং rollback cover হয়।
+Unknown result-এ Payment INITIATED ও Order UNPAID থাকে; stock/reservations retained।
+Success-এ CAPTURED/PAID ও physical stock commit একবার।
+
+Lock serialization ও rollback এখানে in-memory model; এটি বাস্তব PostgreSQL
+locking/constraints, provider behavior, browser cookies বা real UAT success-এর
+প্রমাণ নয়। User-run ফলাফল না পাওয়া পর্যন্ত suite-এর PASS দাবি করা হচ্ছে না।
 
 ## Cron scheduling
 

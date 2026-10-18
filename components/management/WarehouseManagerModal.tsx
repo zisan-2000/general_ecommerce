@@ -56,7 +56,6 @@ export default function WarehouseManagerModal({ open, onClose }: Props) {
   useEffect(() => {
     if (!open) return;
     load();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   const createWarehouse = async () => {

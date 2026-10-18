@@ -70,7 +70,6 @@ export default function SubscriberManagement() {
     } finally {
       setLoading(false);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [showToast]);
 
   useEffect(() => {

@@ -125,7 +125,6 @@ export default function WarehouseTransfersPage() {
     if (canRead) {
       void loadData();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canRead]);
 
   const visibleTransfers = useMemo(() => {

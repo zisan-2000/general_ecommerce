@@ -74,7 +74,6 @@ export default function RfqPage() {
 
   useEffect(() => {
     void loadData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [status]);
 
   const visible = useMemo(() => {

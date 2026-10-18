@@ -123,7 +123,6 @@ export default function AttributesManagerModal({ open, onClose }: Props) {
   useEffect(() => {
     if (!open) return;
     load();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open]);
 
   useEffect(() => {

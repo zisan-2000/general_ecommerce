@@ -1,5 +1,5 @@
 import "server-only";
-import { createHash, createHmac, randomBytes, timingSafeEqual } from "node:crypto";
+import { createHash, createHmac, randomBytes, randomUUID, timingSafeEqual } from "node:crypto";
 import { Prisma, OrderStatus } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import { resolveSeoSiteUrl } from "@/lib/seo-url";
@@ -7,20 +7,26 @@ import { commitOrderInventoryReservations } from "@/lib/inventory";
 import { transitionOrderStatusWithInventory } from "@/lib/order-inventory-lifecycle";
 import { syncCommissionEntriesForOrderStatus } from "@/lib/business-network/commission";
 import { createOrderAdminNotifications } from "@/lib/order-admin-notifications";
-import { paymentFetch, recordPaymentEvent, type PaymentLogContext } from "@/lib/payment-control/telemetry";
+import { paymentFetch, recordPaymentEvent, type PaymentLogContext, type AiblDiagnosticCode, type AiblDiagnosticStage } from "@/lib/payment-control/telemetry";
 import { aiblMoney, aiblProviderOrderId, aiblVerifiedTransaction, aiblWalletGatewayId,
   aiblWalletObject, AIBL_WALLET_CONTRACT } from "@/lib/aibl-wallet-settings";
 
 export class AiblWalletError extends Error {
-  constructor(message: string, readonly status = 502) { super(message); }
+  constructor(message: string, readonly status = 502, readonly diagnosticStage?: AiblDiagnosticStage) { super(message); }
 }
 type Context = Omit<PaymentLogContext, "provider">;
+async function recordAiblChecks(context: Context, checks: ReadonlyArray<readonly [AiblDiagnosticCode, boolean]>) {
+  for (const [detailCode, passed] of checks) {
+    await recordPaymentEvent({ ...context, provider: "AIBL_WALLET", operation: "DIAGNOSTIC",
+      outcome: passed ? "SUCCESS" : "REJECTED", detailCode });
+  }
+}
 export function aiblWalletConfig() {
   if (process.env.AIBL_WALLET_ENV !== "uat") throw new AiblWalletError("AIBL Wallet supports the configured UAT environment only", 503);
   const apiBaseUrl = process.env.AIBL_WALLET_API_BASE_URL;
   const hostedBaseUrl = process.env.AIBL_WALLET_HOSTED_BASE_URL;
-  if (apiBaseUrl !== "https://iwpay.aibl.com.bd/iwPGAPI/" ||
-      hostedBaseUrl !== "https://iwpay.aibl.com.bd/iwepay/epayment/") {
+  if (apiBaseUrl !== "https://iwtest.aibl.com.bd/iwPGAPI/" ||
+      hostedBaseUrl !== "https://iwtest.aibl.com.bd/iwepayuat/epayment/") {
     throw new AiblWalletError("Configure the issued allowlisted AIBL UAT API and hosted URLs", 503);
   }
   const apiUser = process.env.AIBL_WALLET_API_USER;
@@ -76,8 +82,10 @@ async function bankRequest(kind: "token" | "orderID" | "verify", fields: Record<
       config.apiBaseUrl + "PGService/" + kind, { method: "POST", cache: "no-store", redirect: "error", timeoutMs: 20000,
         headers: { "Content-Type": "application/x-www-form-urlencoded", Accept: "application/json" },
         body: new URLSearchParams(fields).toString() });
-  } catch { throw new AiblWalletError("AIBL request could not be confirmed; keep the payment pending"); }
-  if (!response.ok) throw new AiblWalletError("AIBL returned an unsuccessful HTTP response; keep the payment pending");
+  } catch { throw new AiblWalletError("AIBL request could not be confirmed; keep the payment pending", 502,
+    kind === "verify" ? "BANK_VERIFY_REQUEST_FAILED" : undefined); }
+  if (!response.ok) throw new AiblWalletError("AIBL returned an unsuccessful HTTP response; keep the payment pending", 502,
+    kind === "verify" ? "BANK_VERIFY_RESPONSE_REJECTED" : undefined);
   // Bounded response; never log the token, bank payload or arbitrary error text.
   let value: unknown;
   try {
@@ -93,7 +101,8 @@ async function bankRequest(kind: "token" | "orderID" | "verify", fields: Record<
     const timedOut = error instanceof Error && ["AbortError", "TimeoutError"].includes(error.name);
     await recordPaymentEvent({ ...context, provider: "AIBL_WALLET", operation, outcome: timedOut ? "TIMEOUT" : "ERROR",
       ...(timedOut ? {} : { detailCode: "INVALID_RESPONSE" as const }) });
-    throw new AiblWalletError(timedOut ? "AIBL response timed out; keep payment pending" : "AIBL returned an unrecognized response; manual review may be required");
+    throw new AiblWalletError(timedOut ? "AIBL response timed out; keep payment pending" : "AIBL returned an unrecognized response; manual review may be required", 502,
+      kind === "verify" ? timedOut ? "BANK_VERIFY_REQUEST_FAILED" : "BANK_VERIFY_RESPONSE_REJECTED" : undefined);
   }
   return aiblWalletObject(value);
 }
@@ -108,23 +117,73 @@ export async function getAiblWalletToken(context: Context) {
   return value.token; // One-time token: consume once for this initialization; never persist/cache/reuse.
 }
 export async function queryAiblWalletPayment(payment: { id: number; orderId: number | null; externalId: string | null;
-  provider?: string | null; currency: string; amount: unknown; paymentGatewayData: unknown }, actorUserId?: string) {
-  const config = aiblWalletConfig(); const meta = aiblWalletObject(payment.paymentGatewayData);
-  const bankOrderId = aiblProviderOrderId(meta.bankOrderId); const amount = aiblMoney(payment.amount instanceof Prisma.Decimal ? payment.amount.toString() : payment.amount);
-  if (!payment.orderId || !validAiblBill(payment.externalId) || !bankOrderId || !amount || amount === "0.00" ||
-      payment.currency !== "BDT" || meta.accountFingerprint !== config.accountFingerprint || meta.initializationValidated !== true) {
-    throw new AiblWalletError("AIBL attempt lacks a validated bank order/account/amount; manual review required", 409);
+  provider?: string | null; currency: string; amount: unknown; paymentGatewayData: unknown }, actorUserId?: string, requestId: string = randomUUID()) {
+  const context: Context = { paymentId: payment.id, orderId: payment.orderId ?? undefined, actorUserId, requestId };
+  let stage: AiblDiagnosticStage = "PRE_VERIFY_VALIDATION_FAILED";
+  try {
+    await recordAiblChecks(context, [
+      ["AIBL_CONFIG_UAT", process.env.AIBL_WALLET_ENV === "uat"],
+      ["AIBL_CONFIG_API_URL", process.env.AIBL_WALLET_API_BASE_URL === "https://iwtest.aibl.com.bd/iwPGAPI/"],
+      ["AIBL_CONFIG_HOSTED_URL", process.env.AIBL_WALLET_HOSTED_BASE_URL === "https://iwtest.aibl.com.bd/iwepayuat/epayment/"],
+      ["AIBL_CONFIG_CREDENTIALS_PRESENT", [process.env.AIBL_WALLET_API_USER, process.env.AIBL_WALLET_API_PASS,
+        process.env.AIBL_WALLET_MERCHANT_ID, process.env.AIBL_WALLET_ACCESS_KEY].every((value) => Boolean(value?.trim()))],
+    ]);
+    const config = aiblWalletConfig(); const meta = aiblWalletObject(payment.paymentGatewayData);
+    const decimalInstance = payment.amount instanceof Prisma.Decimal;
+    let decimalRecognized = false;
+    let amountStringValid = false;
+    // Optional observations must not change the original validation behavior.
+    try {
+      decimalRecognized = typeof Prisma.Decimal.isDecimal === "function" && Prisma.Decimal.isDecimal(payment.amount);
+      amountStringValid = Boolean(aiblMoney(decimalRecognized ? (payment.amount as { toString(): string }).toString() : payment.amount));
+    } catch { /* Fixed FAIL observations below; no arbitrary error details. */ }
+    await recordAiblChecks(context, [
+      ["AIBL_AMOUNT_DECIMAL_INSTANCE", decimalInstance],
+      ["AIBL_AMOUNT_DECIMAL_RECOGNIZED", decimalRecognized],
+      // Observation only: this candidate NEVER replaces the existing amount conversion.
+      ["AIBL_AMOUNT_STRING_VALID", amountStringValid],
+    ]);
+    const bankOrderId = aiblProviderOrderId(meta.bankOrderId);
+    // Decimal instances from another runtime/module can fail instanceof. Keep exact string precision.
+    const amount = aiblMoney(Prisma.Decimal.isDecimal(payment.amount) ? payment.amount.toString() : payment.amount);
+    await recordAiblChecks(context, [
+      ["AIBL_ORDER_ID", Boolean(payment.orderId)], ["AIBL_MERCHANT_BILL_FORMAT", validAiblBill(payment.externalId)],
+      ["AIBL_BANK_ORDER_ID", Boolean(bankOrderId)], ["AIBL_AMOUNT_VALID", Boolean(amount)],
+      ["AIBL_AMOUNT_NONZERO", Boolean(amount && amount !== "0.00")], ["AIBL_CURRENCY_BDT", payment.currency === "BDT"],
+      ["AIBL_ACCOUNT_FINGERPRINT_MATCH", meta.accountFingerprint === config.accountFingerprint],
+      ["AIBL_INITIALIZATION_VALIDATED", meta.initializationValidated === true],
+    ]);
+    if (!payment.orderId || !validAiblBill(payment.externalId) || !bankOrderId || !amount || amount === "0.00" ||
+        payment.currency !== "BDT" || meta.accountFingerprint !== config.accountFingerprint || meta.initializationValidated !== true) {
+      throw new AiblWalletError("AIBL attempt lacks a validated bank order/account/amount; manual review required", 409);
+    }
+    const order = await prisma.order.findUnique({ where: { id: payment.orderId }, select: { payment_method: true, grand_total: true, currency: true } });
+    await recordAiblChecks(context, [
+      ["AIBL_ORDER_EXISTS", Boolean(order)], ["AIBL_ORDER_GATEWAY_MATCH", Boolean(order && order.payment_method === `AIBL_WALLET:${meta.gatewayId}`)],
+      ["AIBL_ORDER_CURRENCY_BDT", order?.currency === "BDT"],
+      ["AIBL_ORDER_TOTAL_MATCH", Boolean(order && aiblMoney(order.grand_total.toString()) === amount)],
+    ]);
+    if (!order || order.payment_method !== `AIBL_WALLET:${meta.gatewayId}` || order.currency !== "BDT" ||
+        aiblMoney(order.grand_total.toString()) !== amount) throw new AiblWalletError("AIBL order amount, currency or reference changed; manual review required", 409);
+    stage = "BANK_VERIFY_REQUEST_FAILED";
+    const payload = await bankRequest("verify", { ...authenticationFields(), accessKey: config.accessKey,
+      OrderID: bankOrderId, amount, bill_no: payment.externalId },
+    { ...context, orderId: payment.orderId, transactionId: payment.externalId });
+    stage = "BANK_VERIFY_RESPONSE_REJECTED";
+    const transactionId = aiblVerifiedTransaction(payload);
+    await recordAiblChecks(context, [["AIBL_BANK_SUCCESS_CONFIRMED", Boolean(transactionId)]]);
+    if (!transactionId) await recordPaymentEvent({ ...context, provider: "AIBL_WALLET", operation: "DIAGNOSTIC",
+      outcome: "PENDING", detailCode: "BANK_VERIFY_RESPONSE_REJECTED" });
+    return { transactionId,
+      // The documented verification response has no echoed amount/currency/bill fields.
+      // Request parameters are bound to the validated initialization and authoritative DB values.
+      code: payload.code === 200 || payload.code === "200" ? "200" : "UNKNOWN" };
+  } catch (error) {
+    const failureStage = error instanceof AiblWalletError && error.diagnosticStage ? error.diagnosticStage : stage;
+    await recordPaymentEvent({ ...context, provider: "AIBL_WALLET", operation: "DIAGNOSTIC", outcome: "ERROR", detailCode: failureStage });
+    if (error instanceof AiblWalletError) throw new AiblWalletError(error.message, error.status, failureStage);
+    throw error;
   }
-  const order = await prisma.order.findUnique({ where: { id: payment.orderId }, select: { payment_method: true, grand_total: true, currency: true } });
-  if (!order || order.payment_method !== `AIBL_WALLET:${meta.gatewayId}` || order.currency !== "BDT" ||
-      aiblMoney(order.grand_total.toString()) !== amount) throw new AiblWalletError("AIBL order amount, currency or reference changed; manual review required", 409);
-  const payload = await bankRequest("verify", { ...authenticationFields(), accessKey: config.accessKey,
-    OrderID: bankOrderId, amount, bill_no: payment.externalId },
-  { paymentId: payment.id, orderId: payment.orderId, transactionId: payment.externalId, actorUserId });
-  return { transactionId: aiblVerifiedTransaction(payload),
-    // The documented verification response has no echoed amount/currency/bill fields.
-    // Request parameters are bound to the validated initialization and authoritative DB values.
-    code: payload.code === 200 || payload.code === "200" ? "200" : "UNKNOWN" };
 }
 
 export async function initializeAiblWalletOrder(orderId: number, requestedGatewayId?: unknown) {
@@ -209,16 +268,21 @@ export async function initializeAiblWalletOrder(orderId: number, requestedGatewa
 }
 
 export type AiblVerificationResult = { status: "success" | "pending"; message: string };
-export async function reconcileAiblWalletPayment(bill: string, request?: Request, callbackTransactionId?: string): Promise<AiblVerificationResult> {
+export async function reconcileAiblWalletPayment(bill: string, request?: Request, callbackTransactionId?: string, requestId: string = randomUUID()): Promise<AiblVerificationResult> {
   const payment = validAiblBill(bill) ? await prisma.payment.findUnique({ where: { externalId: bill } }) : null;
   if (!payment?.orderId || payment.provider !== "AIBL_WALLET") throw new AiblWalletError("AIBL payment attempt not found", 404);
-  const context = { provider: "AIBL_WALLET" as const, orderId: payment.orderId, paymentId: payment.id, transactionId: bill };
+  const context = { provider: "AIBL_WALLET" as const, orderId: payment.orderId, paymentId: payment.id, transactionId: bill, requestId };
+  let stage: AiblDiagnosticStage = "PRE_VERIFY_VALIDATION_FAILED";
+  let settlementCheck: AiblDiagnosticCode = "AIBL_SETTLEMENT_CALLBACK_REFERENCE";
   try {
-    const verified = await queryAiblWalletPayment(payment);
+    const verified = await queryAiblWalletPayment(payment, undefined, requestId);
+    stage = "SETTLEMENT_VALIDATION_FAILED";
     if (callbackTransactionId && verified.transactionId && verified.transactionId !== callbackTransactionId) {
       throw new AiblWalletError("AIBL callback transaction differs from verified transaction; manual review required", 409);
     }
     await recordPaymentEvent({ ...context, operation: "VERIFY", outcome: verified.transactionId ? "SUCCESS" : "PENDING" });
+    stage = "DATABASE_SETTLEMENT_FAILED";
+    settlementCheck = "AIBL_SETTLEMENT_DATABASE_READ";
     const result = await prisma.$transaction(async (tx): Promise<AiblVerificationResult> => {
       await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Order" WHERE "id" = ${payment.orderId!} FOR UPDATE`);
       const current = await tx.payment.findUniqueOrThrow({ where: { id: payment.id } });
@@ -227,17 +291,20 @@ export async function reconcileAiblWalletPayment(bill: string, request?: Request
         orderItems: { include: { product: { select: { type: true, bundleFulfillmentMode: true, bundleWarehouseId: true } },
           bundleComponents: { select: { quantityPerBundle: true, variantId: true, warehouseId: true, product: { select: { type: true } } } } } },
       } });
+      settlementCheck = "AIBL_SETTLEMENT_ATTEMPT";
       if (current.provider !== "AIBL_WALLET" || current.orderId !== payment.orderId || current.externalId !== bill || meta.initializationValidated !== true || meta.accountFingerprint !== aiblWalletConfig().accountFingerprint ||
           meta.bankOrderId !== aiblWalletObject(payment.paymentGatewayData).bankOrderId ||
           aiblMoney(current.amount?.toString()) !== aiblMoney(payment.amount?.toString()) || current.currency !== "BDT") {
         throw new AiblWalletError("AIBL attempt changed during verification; manual review required", 409);
       }
       if (current.status === "CAPTURED") {
+        settlementCheck = "AIBL_SETTLEMENT_CAPTURE_STATE";
         if (order.paymentStatus !== "PAID" || verified.transactionId && meta.bankTransactionId !== verified.transactionId) {
           throw new AiblWalletError("AIBL capture conflicts with current payment state; manual review required", 409);
         }
         return { status: "success", message: "Payment already verified" };
       }
+      settlementCheck = "AIBL_SETTLEMENT_ORDER_STATE";
       if (!["INITIATED", "AUTHORIZED"].includes(current.status) || order.paymentStatus !== "UNPAID" ||
           order.payment_method !== `AIBL_WALLET:${meta.gatewayId}` || !["PENDING", "CONFIRMED"].includes(order.status) ||
           order.currency !== "BDT" || aiblMoney(order.grand_total.toString()) !== aiblMoney(current.amount?.toString())) {
@@ -245,17 +312,21 @@ export async function reconcileAiblWalletPayment(bill: string, request?: Request
       }
       const nextMeta = { ...meta, lastCheckedAt: new Date().toISOString(), verification: verified.transactionId ? "VERIFIED" : "PENDING_REVIEW" };
       if (!verified.transactionId) {
+        settlementCheck = "AIBL_SETTLEMENT_WRITE";
         await tx.payment.update({ where: { id: current.id }, data: { paymentGatewayData: nextMeta as Prisma.InputJsonObject } });
         return { status: "pending", message: "AIBL has not confirmed payment; inventory remains reserved" };
       }
+      settlementCheck = "AIBL_SETTLEMENT_OTHER_PAYMENT";
       if (await tx.payment.findFirst({ where: { orderId: order.id, status: { in: ["CAPTURED", "REFUNDED"] } } })) {
         throw new AiblWalletError("Another payment already settled this order; manual review required", 409);
       }
+      settlementCheck = "AIBL_SETTLEMENT_OTHER_TRANSACTION";
       await tx.$queryRaw(Prisma.sql`SELECT pg_advisory_xact_lock(hashtextextended(${"aibl:transaction:" + verified.transactionId}, 0))::text AS "locked"`);
       if (await tx.payment.findFirst({ where: { provider: "AIBL_WALLET", id: { not: current.id },
         paymentGatewayData: { path: ["bankTransactionId"], equals: verified.transactionId } }, select: { id: true } })) {
         throw new AiblWalletError("AIBL transaction is already captured by another attempt; manual review required", 409);
       }
+      settlementCheck = "AIBL_SETTLEMENT_INVENTORY_SNAPSHOT";
       const expectedVariants = new Map<string, number>(); const expectedBundles = new Map<string, number>();
       const actualVariants = new Map<string, number>(); const actualBundles = new Map<string, number>();
       const expectedComponentsByWarehouse = new Map<string, number>(); const actualVariantsByWarehouse = new Map<string, number>();
@@ -296,15 +367,19 @@ export async function reconcileAiblWalletPayment(bill: string, request?: Request
           [...expectedComponentsByWarehouse].some(([key, quantity]) => (actualVariantsByWarehouse.get(key) ?? 0) < quantity)) {
         throw new AiblWalletError("AIBL inventory reservations differ from the order; settlement rolled back, manual review required", 409);
       }
+      settlementCheck = "AIBL_SETTLEMENT_INVENTORY_COMMIT";
       await commitOrderInventoryReservations({ tx, orderId: order.id, reason: `Order #${order.id} AIBL verified payment` });
+      settlementCheck = "AIBL_SETTLEMENT_WRITE";
       await tx.payment.update({ where: { id: current.id }, data: { status: "CAPTURED", paymentGatewayData: {
         ...nextMeta, bankTransactionId: verified.transactionId, verifiedAt: new Date().toISOString(),
       } as Prisma.InputJsonObject } });
       await tx.order.update({ where: { id: order.id }, data: { paymentStatus: "PAID", transactionId: verified.transactionId } });
       if (order.status === "PENDING") {
+        settlementCheck = "AIBL_SETTLEMENT_ORDER_LIFECYCLE";
         await transitionOrderStatusWithInventory({ tx, orderId: order.id, nextStatus: OrderStatus.CONFIRMED, reason: `Order #${order.id} AIBL verified payment` });
         await syncCommissionEntriesForOrderStatus({ tx, orderId: order.id, orderStatus: OrderStatus.CONFIRMED, request });
       }
+      settlementCheck = "AIBL_SETTLEMENT_NOTIFICATIONS";
       await createOrderAdminNotifications({ tx, orderId: order.id, title: "Payment received",
         message: `AIBL Wallet payment for order #${order.id} was verified.`, metadata: { event: "ORDER_PAYMENT_STATUS_CHANGED", to: "PAID" } });
       return { status: "success", message: "AIBL Wallet payment verified successfully" };
@@ -312,6 +387,12 @@ export async function reconcileAiblWalletPayment(bill: string, request?: Request
     await recordPaymentEvent({ ...context, operation: "SETTLEMENT", outcome: result.status === "pending" ? "PENDING" : result.message === "Payment already verified" ? "DUPLICATE" : "SUCCESS" });
     return result;
   } catch (error) {
+    const failureStage = error instanceof AiblWalletError && error.diagnosticStage ? error.diagnosticStage
+      : stage === "DATABASE_SETTLEMENT_FAILED" && error instanceof AiblWalletError ? "SETTLEMENT_VALIDATION_FAILED" : stage;
+    // Log after rollback, never through a separate connection while holding transaction locks.
+    if (stage !== "PRE_VERIFY_VALIDATION_FAILED") await recordPaymentEvent({ ...context, operation: "DIAGNOSTIC",
+      outcome: "ERROR", detailCode: settlementCheck });
+    await recordPaymentEvent({ ...context, operation: "DIAGNOSTIC", outcome: "ERROR", detailCode: failureStage });
     await recordPaymentEvent({ ...context, operation: "SETTLEMENT", outcome: error instanceof AiblWalletError && error.status === 409 ? "MISMATCH" : "ERROR", detailCode: "SETTLEMENT_REJECTED" });
     if (error instanceof AiblWalletError) throw error;
     throw new AiblWalletError("AIBL settlement could not complete; keep payment pending for manual review", 409);

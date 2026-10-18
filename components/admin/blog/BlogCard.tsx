@@ -76,7 +76,6 @@ const BlogCard = memo(function BlogCard() {
 
   useEffect(() => {
     fetchBlogs();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [page, debouncedSearchTerm]);
 
   const handleDelete = async (id: number) => {

@@ -118,7 +118,6 @@ export default function ShipmentCreateForm({
     loadCouriers();
     loadOrders();
     loadWarehouses();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const selectedCourier = useMemo(

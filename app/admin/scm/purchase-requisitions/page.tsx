@@ -101,7 +101,6 @@ export default function PurchaseRequisitionsPage() {
 
   useEffect(() => {
     void loadRequisitions();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [statusFilter]);
 
   const visibleRequisitions = useMemo(() => {

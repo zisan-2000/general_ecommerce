@@ -210,7 +210,6 @@ export default function DeliveryManEnlistmentForm() {
     };
 
     loadWarehouses();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const selectedWarehouseLabel = useMemo(() => {

@@ -296,7 +296,6 @@ export default function ProductRelationsModal({
       notes: "",
     });
     void loadAll();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [open, product?.id]);
 
   useEffect(() => {
@@ -334,7 +333,6 @@ export default function ProductRelationsModal({
     return () => {
       active = false;
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [booksEnabled, open, product?.id]);
 
   const saveBookMetadata = async () => {

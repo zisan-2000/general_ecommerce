@@ -139,7 +139,6 @@ export default function WarehouseFormModal({
 
   useEffect(() => {
     fetchCountries();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -148,7 +147,6 @@ export default function WarehouseFormModal({
     } else {
       setDistricts([]);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [form.division, form.country]);
 
   useEffect(() => {
@@ -198,7 +196,6 @@ export default function WarehouseFormModal({
     }
     setError(null);
     setSuccess(null);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [editingWarehouse, countries.length]);
 
   const fetchCountries = async () => {

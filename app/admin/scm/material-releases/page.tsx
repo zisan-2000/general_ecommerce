@@ -157,7 +157,6 @@ export default function MaterialReleasesPage() {
     if (canRead) {
       void loadData();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canRead]);
 
   const visibleReleases = useMemo(() => {

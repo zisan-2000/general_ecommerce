@@ -18,27 +18,35 @@ export function requireAiblSameOrigin(request: Request) {
 export async function readAiblBody(request: Request) {
   const reader = request.body?.getReader();
   if (!reader) throw new AiblWalletError("Payment body is required", 400);
-  let bytes = 0; let text = ""; const decoder = new TextDecoder();
+  let bytes = 0; const chunks: Uint8Array[] = [];
   try {
     while (true) { const part = await reader.read(); if (part.done) break; bytes += part.value.byteLength;
       if (bytes > 16384) { await reader.cancel(); throw new AiblWalletError("Payment body exceeds 16 KB", 413); }
-      text += decoder.decode(part.value, { stream: true }); }
-    text += decoder.decode();
+      chunks.push(part.value); }
+    const buffer = new Uint8Array(bytes);
+    let offset = 0;
+    for (const chunk of chunks) { buffer.set(chunk, offset); offset += chunk.byteLength; }
     const type = request.headers.get("content-type")?.split(";")[0].trim().toLowerCase();
     if (type === "application/json") {
-      const value: unknown = JSON.parse(text);
+      const value: unknown = JSON.parse(new TextDecoder().decode(buffer));
       if (!value || typeof value !== "object" || Array.isArray(value)) throw new Error();
       return aiblWalletObject(value);
     }
-    if (type === "application/x-www-form-urlencoded") {
+    if (type === "application/x-www-form-urlencoded" || type === "multipart/form-data") {
       const result: Record<string, unknown> = Object.create(null);
-      for (const [key, value] of new URLSearchParams(text)) {
+      // Parse only the already bounded body. Preserve the multipart boundary;
+      // never call request.formData() on an unbounded incoming stream.
+      const fields = type === "multipart/form-data"
+        ? await new Response(buffer, { headers: { "Content-Type": request.headers.get("content-type")! } }).formData()
+        : new URLSearchParams(new TextDecoder().decode(buffer));
+      for (const [key, value] of fields) {
         if (Object.hasOwn(result, key)) throw new AiblWalletError("Duplicate callback fields are invalid", 400);
+        if (typeof value !== "string") throw new AiblWalletError("Payment form fields must be text; files are not accepted", 400);
         result[key] = value;
       }
       return result;
     }
-    throw new AiblWalletError("Use JSON or form-urlencoded payment data", 415);
+    throw new AiblWalletError("Use JSON, form-urlencoded or multipart payment data", 415);
   } catch (error) {
     if (error instanceof AiblWalletError) throw error;
     throw new AiblWalletError("Invalid payment body", 400);

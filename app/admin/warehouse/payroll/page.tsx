@@ -308,7 +308,6 @@ export default function AdminPayrollPage() {
 
   useEffect(() => {
     loadData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const selectedProfile = useMemo(
