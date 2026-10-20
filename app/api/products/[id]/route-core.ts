@@ -815,7 +815,12 @@ export async function PUT(
           });
         }
       } else if (
-        hasVariantsPayload &&
+        // Imported/legacy simple products may not have an internal variant yet.
+        // An explicit stock edit must create it instead of silently discarding stock.
+        (hasVariantsPayload ||
+          (existingVariants.length === 0 &&
+            effectiveVariantOptions.length === 0 &&
+            nextSimpleStock !== null)) &&
         (effectiveType === "PHYSICAL" || effectiveType === "DIGITAL" || effectiveType === "SERVICE")
       ) {
         const defaultVariant =
