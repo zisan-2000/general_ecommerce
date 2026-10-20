@@ -147,9 +147,9 @@ export function createOfflineAibl(t, options = {}) {
   const Prisma = { Decimal: OfflineDecimal, sql: (strings, ...values) => ({ text: strings.join("?"), values }) };
   const OrderStatus = Object.fromEntries("PENDING CONFIRMED PROCESSING SHIPPED DELIVERED CANCELLED FAILED RETURNED".split(" ").map(v => [v, v]));
   function load(path, imports) {
-    const module = { exports: {} };
+    const loadedModule = { exports: {} };
     const context = vm.createContext({
-      module, exports: module.exports,
+      module: loadedModule, exports: loadedModule.exports,
       require: (name) => Object.hasOwn(imports, name) ? imports[name] : forbidden("unapproved import " + name),
       process: Object.freeze({ env }),
       URL, URLSearchParams, Request, Response, Headers, FormData, Blob, TextDecoder, TextEncoder,
@@ -158,7 +158,7 @@ export function createOfflineAibl(t, options = {}) {
       console: { warn: () => forbidden("unexpected warning"), error: () => forbidden("unexpected error log"), log: () => forbidden("unexpected log") },
     }, { codeGeneration: { strings: false, wasm: false } });
     new vm.Script(sourceCode(path), { filename: path }).runInContext(context);
-    return module.exports;
+    return loadedModule.exports;
   }
   const generated = { Prisma, OrderStatus };
   const settings = load("lib/aibl-wallet-settings.ts", {});

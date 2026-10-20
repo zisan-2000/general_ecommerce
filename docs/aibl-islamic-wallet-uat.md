@@ -101,6 +101,13 @@ Public HTTPS origin দিয়েই browser checkout খুলুন; bank callb
 7. Returned OrderID/amount validate করে sanitized bank ID সংরক্ষণ হয়। Invalid
    amount/structure হলে redirect বন্ধ এবং attempt pending; raw payload সংরক্ষিত নয়।
 8. Callback POST JSON, form-urlencoded অথবা multipart/form-data, maximum 16 KB।
+   Observed HTML form-এর `data` field-এ JSON string callback-only parser decode করে;
+   exact `BILLNO`, `AMOUNT`, `TRANSNO` শুধু parsed object থেকে আসে। সাতটি observed
+   auxiliary outer name explicit allowlist-এ আছে; values সম্পূর্ণ ignore/discard হয়।
+   Documented flat callbacks-ও supported; init/status body parsing অপরিবর্তিত। Unknown
+   outer field, mixed reference sources, duplicate form/JSON keys (escaped-equivalent keys-সহ), non-object
+   JSON, recursive envelope বা nested object/array values reject হয়। Raw JSON,
+   parser error fragments, SESSIONKEY বা full references log হয় না।
    Multipart body bounded হওয়ার পর native FormData parser চলে; duplicate fields,
    file uploads ও malformed multipart reject হয়। Signed query state,
    exact `BILLNO` ও `AMOUNT` validate হয়। Non-empty `TRANSNO` supplied হলে successful
@@ -152,6 +159,155 @@ fields/file/oversized body rejection ও প্রতিটি detail code য�
 payment-এ expected timeline CALLBACK → STATUS_QUERY → VERIFY → SETTLEMENT এবং
 CAPTURED/PAID once; callback/cron race-এ দ্বিতীয় inventory commit নয়। ইতোমধ্যে
 settled Order #4 reset বা নতুন payment attempt তৈরি করার প্রয়োজন নেই।
+
+### Confirmed ngrok callback envelope — current behavior
+
+User-confirmed actual ngrok traffic-এ এই exact outer names পাওয়া গেছে:
+`data`, `access_token`, `economic`, `mobile_no`, `paid_amount`, `reference_no`,
+`responsecode`, `transaction_id`। পুরোনো `Object.keys(body).length !== 1` guard
+এই valid observed shape-কে JSON parsing-এর আগেই reject করছিল। এখন শুধু এই সাতটি
+auxiliary name explicit allowlist-এ আছে; `data`-only envelopes-ও supported।
+
+- `data` অবশ্যই JSON-string text form field; URL-encoded/multipart দুটোই supported।
+  URL decoding একবারই হয়। Outer JSON envelope, files, duplicate form fields,
+  unknown/case-variant/bracketed names এবং 16 KB-এর বেশি request reject হয়।
+- Auxiliary values text হতে হবে এবং পুরো request-এর একই size cap-এর মধ্যে থাকবে।
+  তাদের format/semantics অনুমান করা হয় না; authentication, payment routing,
+  amount/reference matching বা settlement-এ কোনো auxiliary value ব্যবহার হয় না।
+  JSON-looking metadata text-ও কখনো recursively decode বা merge করা হয় না।
+- `reference_no`, `paid_amount`, `transaction_id` কখনো `BILLNO`, `AMOUNT`, `TRANSNO`
+  হিসেবে map হয় না। Exact inner JSON references, signed state, bank verification,
+  locked atomic settlement ও duplicate inventory protection অপরিবর্তিত।
+- Parser শুধু decoded inner object ফেরত দেয়; outer token/mobile/reference/status
+  values return, persist, log বা diagnostics-এ expose করা হয় না।
+- Auxiliary field থাকলে `data` আবশ্যক; legacy flat references দিয়ে ওই envelope
+  fallback করতে পারে না। Valid legacy flat callbacks শুধু সাতটি documented keys
+  (`RESCODE`, `STATUS`, `AMOUNT`, `MESSAGE`, `SESSIONKEY`, `TRANSNO`, `BILLNO`) ব্যবহার করে।
+  Unknown legacy fields ও object/array values reject হয়।
+  Legacy JSON duplicate keys-ও callback-only mode-এ reject হয় (`AIBL_CB_BODY_JSON_DUPLICATE_KEY`);
+  init/status JSON parsing-এর default আচরণ অপরিবর্তিত।
+- Nested data object/array, recursive envelope ও duplicate JSON keys-এর আগের
+  rejection বজায় আছে। HTTP/JSON `STATUS` বা outer responsecode একা PAID করতে পারে না।
+
+`AIBL_CB_OUTER_AUX_IGNORED` একটি fixed progress event। `AIBL_CB_AUX_WITHOUT_DATA`
+ও `AIBL_CB_AUX_TYPE_INVALID` envelope errors আলাদা করে। Unknown-envelope counts-এ
+allowed auxiliary names unknown হিসেবে গণনা হয় না; values কখনো log হয় না।
+Other extra keys এবং outer uppercase BILLNO/AMOUNT/TRANSNO (matching হলেও) reject হয়।
+
+Offline regressions exact eight-field shape, all three callback routes, ignored
+conflicting metadata, inner validation/verified transaction matching, UNKNOWN
+bank result, signed state, unknown/duplicate/bracketed names, files, malformed JSON,
+size limits, legacy compatibility এবং duplicate settlement cover করে।
+Run `npm run test:aibl-wallet:offline`, `npm run typecheck`, `npm run lint` নিজে।
+Implementation-এর সময় tests/build/API/database operations চালানো হয়নি। Actual UAT
+success দাবি করা হয়নি; outer fields-এর business semantics এখনো unconfirmed এবং unused।
+
+### Order #8 outer-field investigation (historical; superseded above)
+
+Read-only audit-এ Request ID prefix `5a9fad49`-এর একটি request পাওয়া গেছে:
+FORM_URLENCODED → OUTER_BODY_PARSED → DATA_PRESENT → OUTER_FIELDS_UNEXPECTED →
+INVALID_CALLBACK। Payment INITIATED এবং Order PENDING/UNPAID। Exact rejecting
+condition: `data` উপস্থিত থাকার পরে `Object.keys(body).length !== 1`। অতিরিক্ত
+decoded outer keys থাকায় nested JSON parsing-এর আগেই request reject হয়েছে।
+সেই JSON valid ছিল বা bill/amount matching pass করত—এটি এখনো প্রমাণিত নয়।
+
+Existing safe events অতিরিক্ত keys-এর নাম/সংখ্যা সংরক্ষণ করেনি; dev log-এও request
+prefix নেই। AIBL এখনো কোনো additional outer field-এর exact name/type/purpose বা
+non-authoritative status নিশ্চিত করেনি। তাই acceptance restriction পরিবর্তন হয়নি।
+Extra decoded keys genuine additional controls নাকি incorrect form encoding থেকে
+হয়েছে, শুধু existing events দিয়ে সেটিও নির্ধারণ করা যায় না।
+
+নতুন diagnostics শুধুমাত্র unexpected outer-field rejection-এর আগে emit হবে:
+
+- `AIBL_CB_OUTER_EXTRA_COUNT_0` ... `_10`, অথবা `_GT10`: `data` ছাড়া distinct outer
+  keys-এর সংখ্যা; দশের বেশি হলে capped category। Duplicate fields আগেই reject হয়।
+- `AIBL_CB_OUTER_UNKNOWN_COUNT_0` ... `_10`, অথবা `_GT10`: নিচের fixed documented
+  names ছাড়া বাকি extra keys-এর সংখ্যা। কোনো unknown key name/hash/value log হয় না।
+- `AIBL_CB_OUTER_FIELD_RESCODE`, `_STATUS`, `_AMOUNT`, `_MESSAGE`, `_SESSIONKEY`,
+  `_TRANSNO`, `_BILLNO`: bank-documented JSON key-টি ভুল outer level-এ উপস্থিত।
+  এগুলো presence-only fixed labels; field values/type coercion/aliases যোগ হয়নি।
+  Recognition acceptance-এর অনুমতি নয়; এই fields-ও reject হয়।
+
+Timeline-এর একই Request ID-তে সব observations এবং original rejection দেখা যাবে।
+এগুলো `DIAGNOSTIC / RECEIVED`; field counts zero/nonzero নিজে payment success নয়।
+Raw field names arbitrary হওয়ায় সেগুলো অনুমান বা log না করে unknown count রাখা হয়।
+কোনো auxiliary allowlist এখনো নেই; common HTML/CSRF field names-ও অনুমান করা হয়নি।
+
+AIBL-এর কাছ থেকে শুধু নিম্নের structural তথ্য প্রয়োজন, কোনো actual value নয়:
+
+1. বাস্তব callback form-এর প্রতিটি outer key-এর exact case-sensitive নাম।
+2. প্রতিটির type, purpose, optional/required status, multiplicity ও length bounds।
+3. কোনটি auxiliary এবং কেন সেটি ignore করা নিরাপদ; authentication/signature,
+   payment routing, BILLNO, AMOUNT বা TRANSNO-তে এর কোনো প্রভাব নেই কি না।
+4. Payment references/amount-এর একমাত্র authoritative callback source exact `data`
+   JSON কি না; mixed-source fields কেন পাঠানো হয়, যদি পাঠানো হয়।
+5. `application/x-www-form-urlencoded` data ঠিক একবার encode হয় কি না, বিশেষ করে
+   JSON-এর literal `&`, `+`, `%`, `=` ও UTF-8 text। Values বাদ দেওয়া field-name/type
+   list যথেষ্ট; SESSIONKEY, OTP, signed URLs বা raw callback পাঠানোর প্রয়োজন নেই।
+
+Contract নিশ্চিত হলে সম্ভাব্য minimal fix হলো শুধু confirmed non-authoritative
+auxiliary names ও bounded text shape-এর explicit allowlist; unknown extras ও mixed
+payment references reject থাকবে। Bill/amount/TRANSNO শুধু parsed `data` থেকে যাবে,
+bank verification ও atomic/idempotent settlement অপরিবর্তিত থাকবে। এখন এটি
+implement করা হয়নি। Legitimate auxiliary acceptance test-এর পরিবর্তে বর্তমান tests
+safe presence/count diagnostics, unknown-name privacy, matching/conflicting mixed
+references, duplicate extras ও file rejection cover করে। নতুন tests execute হয়নি।
+
+Run `npm run test:aibl-wallet:offline` নিজে; updated runtime-এর structure জানতে
+bank-supported existing callback redelivery ব্যবহার করা যায়—নতুন charge দরকার নেই।
+Unknown count nonzero থাকলে bank field-name contract এখনো প্রয়োজন হবে। Order #8
+বা অন্য কোনো database record investigation-এর সময় পরিবর্তন করা হয়নি।
+
+### Order #7 parsing investigation
+
+Read-only audit-এ Request ID prefix `c5aff01a`-এর একটি request পাওয়া গেছে:
+`AIBL_CB_CONTENT_FORM_URLENCODED` → `INVALID_CALLBACK` (REJECTED)। Field-presence,
+STATUS_QUERY, VERIFY বা settlement events নেই; Order/Payment PENDING/UNPAID এবং
+INITIATED। Historical exception message/payload রাখা হয়নি; local dev log-এও এই
+request-এর error reason পাওয়া যায়নি। তাই exact rejection branch প্রমাণিত নয়।
+Normal telemetry অনুযায়ী failure window callback body/envelope parsing-এর মধ্যে;
+missing events একা `readAiblBody()` নাকি nested JSON parser throw করেছে তা বলে না।
+
+নতুন fixed diagnostics একই Request/Payment/Order ID-তে Timeline-এ থাকবে:
+
+| Codes (all prefixed `AIBL_CB_`) | Meaning |
+| --- | --- |
+| `BODY_MISSING`, `BODY_READ_FAILED`, `BODY_TOO_LARGE`, `BODY_DECODE_FAILED` | Missing stream, read failure, existing 16 KB limit, buffering/decoding stage |
+| `FORM_MALFORMED`, `FORM_DUPLICATE_FIELD`, `FORM_FILE_REJECTED` | Native form parser failure, duplicate outer field, file rejected |
+| `CONTENT_UNSUPPORTED`, `BODY_JSON_INVALID`, `BODY_JSON_NOT_OBJECT` | Unsupported media type or invalid direct JSON body |
+| `OUTER_BODY_PARSED`, `DATA_PRESENT`, `DATA_JSON_PARSED` | Successful parser milestones, outcome RECEIVED |
+| `DATA_MISSING` | No exact `data` property; observation only, legacy flat callbacks still supported |
+| `ENVELOPE_CONTENT_INVALID`, `OUTER_FIELDS_UNEXPECTED`, `DATA_TYPE_INVALID` | Non-form envelope, extra outer fields, non-string data |
+| `DATA_JSON_INVALID`, `DATA_JSON_NOT_OBJECT`, `DATA_RECURSIVE`, `DATA_NESTED_VALUE`, `DATA_JSON_DUPLICATE_KEY` | Nested JSON syntax/shape/duplicate-key rejection |
+| `BODY_PARSE_FAILED` | Unexpected parser exception without a typed reason |
+| `RATE_LIMIT_FAILED/REJECTED`, `STATE_CHECK_FAILED/INVALID`, `PAYMENT_LOOKUP_FAILED/NOT_FOUND`, `FIELD_VALIDATION_FAILED`, `TRANSNO_INVALID`, `VERIFY_FAILED`, `RESULT_FAILED` | Other callback failure stages; existing specific verify/settlement diagnostics still apply |
+
+Existing `INVALID_CALLBACK` remains for compatibility, accompanied by its fixed
+stage/reason. No arbitrary error text or arbitrary outer field names, raw JSON, SESSIONKEY,
+OTP, credentials or bank references are added to logs. Typed errors keep existing
+HTTP statuses/messages. Progress diagnostics must not change acceptance if logging
+is unavailable. No schema/migration or new configuration is needed.
+
+URL-encoded decoding still occurs exactly once using `URLSearchParams`; then
+`JSON.parse(data)` parses JSON. No `decodeURIComponent` fallback, HTML unescaping,
+double-JSON parsing or alternative field alias is added. The standard URL parser
+is permissive about malformed percent sequences; `FORM_MALFORMED` is not a claim
+that every malformed URL escape throws. Invalid resulting JSON still rejects.
+Only the seven traffic-confirmed auxiliary names described above are exempt from
+outer-field rejection; all other extra names and mixed reference sources still reject.
+
+Use `npm run test:aibl-wallet:offline` for focused tests of reason codes and raw
+wire decoding, including literal plus/percent/UTF-8 preservation, double encoding,
+extra submit fields, stream failures and the existing rejection cases. These are
+synthetic branch regressions, not a reproduction of the unknown Order #7 payload;
+tests/build/typecheck were not executed during this investigation.
+
+After loading updated handlers, a bank-supported redelivery of the existing
+callback, or a provider-confirmed sanitized reproduction, is needed to identify
+the real branch. Do not create a new charge just to collect diagnostics. Reopen
+the existing transaction Timeline and collect fixed codes for the new Request ID.
+PCC manual verification tests a different path and cannot confirm callback parsing.
+Any later authorized redelivery still requires bank verification before settlement.
 
 ### Live verification diagnostics (Order #5 investigation)
 
@@ -365,9 +521,12 @@ adapters memory-only। Rate limiter/cache/result receipt boundary mock কর�
 Unapproved imports এবং native fetch fail closed; intercepted verify transport
 শুধু in-memory HTTP response ফেরায়, কোনো request পাঠায় না।
 
-Expected result: 33 tests PASS, 0 FAIL। URL-encoded/multipart, duplicate/file/body
+Expected result: সব tests PASS, 0 FAIL। URL-encoded/multipart, nested JSON `data`, duplicate/file/body
 rejection, চারটি field diagnostic code, invalid state, SUCCESS/UNKNOWN/timeout,
 transaction mismatch, duplicate/concurrent callback এবং rollback cover হয়।
+Nested format-এ approved/decline/cancel routes, UNKNOWN bank response, malformed/
+ambiguous/oversized envelope, duplicate escaped JSON keys, exact casing rejection,
+safe diagnostics, transaction matching ও duplicate settlement-ও cover হয়।
 Unknown result-এ Payment INITIATED ও Order UNPAID থাকে; stock/reservations retained।
 Success-এ CAPTURED/PAID ও physical stock commit একবার।
 
