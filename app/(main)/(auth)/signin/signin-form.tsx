@@ -75,7 +75,8 @@ const SigninForm = () => {
             sessionStorage.removeItem("redirectAfterLogin");
 
             if (Array.isArray(cartItems) && cartItems.length > 0) {
-              window.location.assign("/ecommerce/checkout");
+              router.replace("/ecommerce/checkout");
+              router.refresh();
               return;
             }
           } catch {
@@ -91,7 +92,8 @@ const SigninForm = () => {
         const postLoginUrl = returnUrl
           ? `/post-login?returnUrl=${encodeURIComponent(returnUrl)}`
           : "/post-login";
-        window.location.assign(postLoginUrl);
+        router.replace(postLoginUrl);
+        router.refresh();
         return;
       }
 

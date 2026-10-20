@@ -1,12 +1,14 @@
 "use client";
 
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useSession } from "next-auth/react";
 import { useCart } from "@/components/ecommarce/CartContext";
 import {
   PC_BUILDER_EXTRA_ITEMS_STORAGE_KEY,
   PC_BUILDER_STORAGE_KEY,
 } from "@/lib/pc-builder";
+import { trackPurchase } from "@/lib/analytics/data-layer";
+import type { EcommercePayload } from "@/lib/analytics/ecommerce";
 
 function clearCompletedPcBuilderDraft() {
   try {
@@ -17,12 +19,22 @@ function clearCompletedPcBuilderDraft() {
   }
 }
 
-export default function PaymentResultClient({ success }: { success: boolean }) {
+export default function PaymentResultClient({ success, paymentId, orderId, provider, purchase }: {
+  success: boolean; paymentId: number | null; orderId: number | null; provider: string | null; purchase: EcommercePayload | null;
+}) {
   const { clearCart } = useCart();
-  const { data: session } = useSession();
+  const { data: session, status: sessionStatus } = useSession();
+  const handled = useRef(false);
+  const [busy, setBusy] = useState(false); const [notice, setNotice] = useState("");
 
   useEffect(() => {
-    if (!success) return;
+    if (!success || !paymentId) return;
+    if (purchase) trackPurchase(purchase); // Analytics consent and transaction dedupe remain in trackPurchase.
+    if (sessionStatus === "loading") return;
+    if (handled.current) return;
+    handled.current = true;
+    const key = `payment_cart_cleared_${paymentId}`;
+    try { if (localStorage.getItem(key)) return; } catch { /* In-memory fallback. */ }
     clearCompletedPcBuilderDraft();
     clearCart();
     if (session?.user) {
@@ -30,7 +42,23 @@ export default function PaymentResultClient({ success }: { success: boolean }) {
         .then(() => window.dispatchEvent(new Event("serverCartCleared")))
         .catch(() => undefined);
     }
-  }, [clearCart, session?.user, success]);
+    try { localStorage.setItem(key, "1"); } catch { /* Browser storage is optional. */ }
+  }, [clearCart, session?.user, sessionStatus, success, paymentId, purchase]);
 
-  return null;
+  async function verify() {
+    if (busy || !orderId) return;
+    setBusy(true); setNotice("");
+    try {
+      const response = await fetch("/api/aibl-wallet/status", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ orderId }) });
+      const value = await response.json();
+      if (!response.ok) { setNotice(value.error || "Payment verification unavailable"); return; }
+      if (value.status === "success") { window.location.reload(); return; }
+      setNotice(value.message || "Payment remains pending. Inventory is reserved.");
+    } catch { setNotice("Payment could not be confirmed. Please check again later."); }
+    finally { setBusy(false); }
+  }
+  return !success && provider === "AIBL_WALLET" ? <div className="mt-4 space-y-2">
+    <button className="rounded border px-3 py-2 disabled:opacity-50" onClick={verify} disabled={busy}>Verify pending payment</button>
+    {notice && <p role="status" className="text-sm">{notice}</p>}
+  </div> : null;
 }

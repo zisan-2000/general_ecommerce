@@ -10,6 +10,7 @@ import { Plus, Trash2, Edit, Save, Copy, Check } from "lucide-react";
 import { toast } from "sonner";
 import { useLocale, useTranslations } from "next-intl";
 import { EPS_INITIALIZE_CONTRACT } from "@/lib/eps-settings";
+import { normalizeAiblWalletGatewaySettings } from "@/lib/aibl-wallet-settings";
 
 interface PaymentGatewayData {
   isActive?: boolean;
@@ -45,7 +46,7 @@ export default function PaymentGatewayManager() {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
   // Form states
-  const [gatewayType, setGatewayType] = useState<"MANUAL" | "SSLCOMMERZ" | "EPS">(
+  const [gatewayType, setGatewayType] = useState<"MANUAL" | "SSLCOMMERZ" | "EPS" | "AIBL_WALLET">(
     "MANUAL"
   );
 
@@ -60,6 +61,20 @@ export default function PaymentGatewayManager() {
   const [sslCancelUrl, setSslCancelUrl] = useState("");
   const [sslIpnUrl, setSslIpnUrl] = useState("");
   const [epsActive, setEpsActive] = useState(false);
+  const [aiblActive, setAiblActive] = useState(false);
+  const [aiblVerifyOrderId, setAiblVerifyOrderId] = useState("");
+  const [aiblVerifyBusy, setAiblVerifyBusy] = useState(false);
+  async function verifyAiblOrder() {
+    if (!/^\d+$/.test(aiblVerifyOrderId) || Number(aiblVerifyOrderId) <= 0 || aiblVerifyBusy) return;
+    setAiblVerifyBusy(true);
+    try {
+      const response = await fetch("/api/aibl-wallet/status", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ orderId: Number(aiblVerifyOrderId) }) });
+      const value = await response.json();
+      if (!response.ok) toast.error(value.error || "AIBL verification unavailable");
+      else toast.message(`${value.status}: ${value.message}`);
+    } catch { toast.error("AIBL verification unavailable"); }
+    finally { setAiblVerifyBusy(false); }
+  }
   const [epsFailureStatuses, setEpsFailureStatuses] = useState("");
   const [epsCancellationStatuses, setEpsCancellationStatuses] = useState("");
   const [epsVerifyOrderId, setEpsVerifyOrderId] = useState("");
@@ -122,6 +137,7 @@ export default function PaymentGatewayManager() {
     setSslCancelUrl("");
     setSslIpnUrl("");
     setEpsActive(false);
+    setAiblActive(false);
     setEpsFailureStatuses("");
     setEpsCancellationStatuses("");
 
@@ -133,6 +149,7 @@ export default function PaymentGatewayManager() {
     const type = String((data as any)?.type || "").toUpperCase();
     if (type === "SSLCOMMERZ") return "SSLCOMMERZ" as const;
     if (type === "EPS") return "EPS" as const;
+    if (type === "AIBL_WALLET") return "AIBL_WALLET" as const;
     return "MANUAL" as const;
   };
 
@@ -191,6 +208,8 @@ export default function PaymentGatewayManager() {
           channel: channel.trim(),
           accountNumbers: validAccounts,
         };
+      } else if (gatewayType === "AIBL_WALLET") {
+        paymentData = normalizeAiblWalletGatewaySettings({ isActive: aiblActive });
       } else if (gatewayType === "EPS") {
         paymentData = epsSettings();
       } else {
@@ -256,6 +275,8 @@ export default function PaymentGatewayManager() {
           channel: channel.trim(),
           accountNumbers: validAccounts,
         };
+      } else if (gatewayType === "AIBL_WALLET") {
+        paymentData = normalizeAiblWalletGatewaySettings({ isActive: aiblActive });
       } else if (gatewayType === "EPS") {
         paymentData = epsSettings();
       } else {
@@ -338,6 +359,8 @@ export default function PaymentGatewayManager() {
             ? payment.paymentGatewayData.accountNumbers
             : [""]
         );
+      } else if (inferredType === "AIBL_WALLET") {
+        setAiblActive(payment.paymentGatewayData.isActive === true);
       } else if (inferredType === "EPS") {
         setEpsActive(payment.paymentGatewayData.isActive !== false);
         setEpsFailureStatuses((payment.paymentGatewayData.failureStatuses || []).join(", "));
@@ -456,7 +479,7 @@ export default function PaymentGatewayManager() {
                 id="gatewayType"
                 value={gatewayType}
                 onChange={(e) => {
-                  const next = e.target.value === "EPS" ? "EPS" : e.target.value === "SSLCOMMERZ" ? "SSLCOMMERZ" : "MANUAL";
+                  const next = e.target.value === "AIBL_WALLET" ? "AIBL_WALLET" : e.target.value === "EPS" ? "EPS" : e.target.value === "SSLCOMMERZ" ? "SSLCOMMERZ" : "MANUAL";
                   setGatewayType(next);
                 }}
                 className="w-full h-10 rounded-md border border-input bg-background px-3 py-2 text-sm"
@@ -464,9 +487,15 @@ export default function PaymentGatewayManager() {
                 <option value="MANUAL">{t("gatewayTypes.manual")}</option>
                 <option value="SSLCOMMERZ">SSLCommerz</option>
                 <option value="EPS">EPS</option>
+                <option value="AIBL_WALLET">AIBL Islamic Wallet (UAT)</option>
               </select>
             </div>
 
+            {gatewayType === "AIBL_WALLET" && <div className="space-y-3 rounded border p-3 text-sm">
+              <p>AIBL Islamic Wallet · UAT only. Configure credentials in server environment variables.</p>
+              <label className="flex gap-2"><input type="checkbox" checked={aiblActive} onChange={(event) => setAiblActive(event.target.checked)} /> Enable AIBL Islamic Wallet</label>
+              <p>Before payment testing, confirm that the issued UAT account cannot charge real funds. Live mode is unavailable.</p>
+            </div>}
             {gatewayType === "EPS" && (
               <div className="space-y-3 rounded border p-3">
                 <p className="text-sm text-muted-foreground">{t("eps.credentials")}</p>
@@ -665,6 +694,7 @@ export default function PaymentGatewayManager() {
                   <CardTitle className="text-lg" style={{ color: 'hsl(var(--foreground))' }}>
                     {getGatewayType(payment.paymentGatewayData) === "SSLCOMMERZ"
                       ? "SSLCommerz"
+                      : getGatewayType(payment.paymentGatewayData) === "AIBL_WALLET" ? "AIBL Islamic Wallet"
                       : getGatewayType(payment.paymentGatewayData) === "EPS" ? "EPS"
                       : payment.paymentGatewayData?.channel || t("labels.unnamedChannel")}
                   </CardTitle>
@@ -739,6 +769,15 @@ export default function PaymentGatewayManager() {
                       {t("labels.noAccountNumbers")}
                     </p>
                   )
+                ) : getGatewayType(payment.paymentGatewayData) === "AIBL_WALLET" ? (
+                  <div className="space-y-3 text-sm">
+                    <p>UAT only · {payment.paymentGatewayData?.isActive === true ? "Enabled" : "Disabled"}</p>
+                    <p>Credentials are configured on the server. Pending verification remains available when disabled.</p>
+                    <Label htmlFor={`aibl-order-${payment.id}`}>Order ID to verify</Label>
+                    <Input id={`aibl-order-${payment.id}`} inputMode="numeric" value={aiblVerifyOrderId} onChange={(event) => setAiblVerifyOrderId(event.target.value)} />
+                    <Button onClick={verifyAiblOrder} disabled={aiblVerifyBusy || !/^\d+$/.test(aiblVerifyOrderId)}>Verify pending payment</Button>
+                    <a href="/admin/payment-control" className="block underline">Payment attempts, timeline and manual review</a>
+                  </div>
                 ) : getGatewayType(payment.paymentGatewayData) === "EPS" ? (
                   <div className="space-y-2 text-sm">
                     <p>{t("eps.credentials")}</p>

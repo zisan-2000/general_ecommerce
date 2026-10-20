@@ -7,12 +7,13 @@ import { PaymentControlError } from "./authorization";
 import { recordPaymentEvent, safeGatewayStatus, type PaymentProvider } from "./telemetry";
 
 import { querySslcommerzPayment, paymentAmountMatches } from "./gateway-query";
+import { queryAiblWalletPayment } from "@/lib/aibl-wallet";
 
 export async function compareGatewayPayment(paymentId: number, actorUserId: string) {
   const payment = await prisma.payment.findUnique({ where: { id: paymentId }, include: {
     order: { select: { paymentStatus: true } },
   } });
-  if (!payment?.orderId || !payment.externalId || !["EPS", "SSLCOMMERZ"].includes(payment.provider || "")) {
+  if (!payment?.orderId || !payment.externalId || !["EPS", "SSLCOMMERZ", "AIBL_WALLET"].includes(payment.provider || "")) {
     throw new PaymentControlError("Online payment attempt not found", 404);
   }
   const provider = payment.provider as PaymentProvider;
@@ -39,6 +40,12 @@ export async function compareGatewayPayment(paymentId: number, actorUserId: stri
         : Array.isArray(settings.failureStatuses) && settings.failureStatuses.includes(response.Status) ? "FAILED"
           : Array.isArray(settings.cancellationStatuses) && settings.cancellationStatuses.includes(response.Status) ? "CANCELLED" : "UNKNOWN";
       if (response.Status === "Success" && (response.ErrorCode || response.ErrorMessage)) result = "MISMATCH";
+    } else if (provider === "AIBL_WALLET") {
+      const response = await queryAiblWalletPayment(payment, actorUserId);
+      gatewayStatus = response.transactionId ? "ORDER_VERIFIED" : "UNKNOWN";
+      remoteFinal = response.transactionId ? "SUCCESS" : "UNKNOWN";
+      // AIBL documents no echoed bill/amount/currency in verify. Do not fabricate matches.
+      referenceMatches = null; amountMatches = null;
     } else {
       const response = await querySslcommerzPayment(payment, actorUserId);
       gatewayStatus = safeGatewayStatus(response.status);

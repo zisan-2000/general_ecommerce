@@ -38,9 +38,9 @@ export function adminProductQuery(params: URLSearchParams) {
     FROM "ProductVariant" v WHERE v."productId" = p.id
   ) inventory ON true` : Prisma.empty;
   if (stock === "non-physical") conditions.push(Prisma.sql`p.type <> 'PHYSICAL'`);
-  if (stock === "in-stock") conditions.push(Prisma.sql`p.type = 'PHYSICAL' AND (inventory.count = 0 OR (inventory.total > 0 AND NOT inventory.low))`);
+  if (stock === "in-stock") conditions.push(Prisma.sql`p.type = 'PHYSICAL' AND inventory.total > 0 AND NOT inventory.low`);
   if (stock === "low-stock") conditions.push(Prisma.sql`p.type = 'PHYSICAL' AND inventory.total > 0 AND inventory.low`);
-  if (stock === "out-of-stock") conditions.push(Prisma.sql`p.type = 'PHYSICAL' AND inventory.count > 0 AND inventory.total <= 0`);
+  if (stock === "out-of-stock") conditions.push(Prisma.sql`p.type = 'PHYSICAL' AND inventory.total <= 0`);
   const fields: Record<string, Prisma.Sql> = {
     name: Prisma.sql`LOWER(p.name)`,
     category: Prisma.sql`LOWER(c.name)`,

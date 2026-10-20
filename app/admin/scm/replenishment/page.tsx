@@ -200,7 +200,6 @@ export default function ReplenishmentPlanningPage() {
     if (canRead) {
       void loadData(warehouseFilter);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [canRead, warehouseFilter]);
 
   useEffect(() => {

@@ -134,13 +134,11 @@ export default function ReorderAlertsPage() {
 
   useEffect(() => {
     void loadAll();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
     if (!canRead) return;
     void loadAlerts();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [warehouseId, status, search, canRead]);
 
   const createManual = async () => {

@@ -95,6 +95,8 @@ export async function transitionOrderStatusWithInventory(params: {
       !UNPAID_EPS_STATUSES.has(nextStatus)) {
     throw new OrderStatusTransitionError(before.status, nextStatus);
   }
+  if (before.payment_method?.startsWith("AIBL_WALLET:") && before.paymentStatus === "UNPAID" &&
+      !UNPAID_EPS_STATUSES.has(nextStatus)) throw new OrderStatusTransitionError(before.status, nextStatus);
 
   const changed = before.status !== nextStatus;
   if (
@@ -107,6 +109,10 @@ export async function transitionOrderStatusWithInventory(params: {
 
   const shouldRestoreInventory =
     params.restoreInventory ?? INVENTORY_RELEASE_STATUSES.has(nextStatus);
+  if (shouldRestoreInventory && before.payment_method?.startsWith("AIBL_WALLET:") && before.paymentStatus === "UNPAID") {
+    const uncertain = await tx.payment.count({ where: { orderId, provider: "AIBL_WALLET", status: { in: ["INITIATED", "AUTHORIZED", "CAPTURED"] } } });
+    if (uncertain) throw new OrderStatusTransitionError(before.status, nextStatus);
+  }
   if (shouldRestoreInventory && before.payment_method?.startsWith("EPS:") && before.paymentStatus === "UNPAID") {
     const activeEpsAttempt = await tx.payment.count({ where: { orderId, provider: "EPS", status: { in: ["INITIATED", "AUTHORIZED"] } } });
     if (activeEpsAttempt) throw new OrderStatusTransitionError(before.status, nextStatus);

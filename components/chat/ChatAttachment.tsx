@@ -24,7 +24,6 @@ export default function ChatAttachment({ url, conversationId, messageId }: {
           {!loaded && !failed ? <LoaderCircle aria-label="Loading image" className="absolute h-5 w-5 animate-spin text-muted-foreground" /> : null}
           {!failed ? (
             // Ownership cookies must reach the route, never an image optimizer.
-            // eslint-disable-next-line @next/next/no-img-element
             <img key={attempt} src={`${url}?preview=1`} alt="Shared support chat image" loading="lazy" referrerPolicy="no-referrer"
               width={256} height={192} onLoad={() => setLoaded(true)} onError={() => setFailed(true)}
               className={`max-h-52 w-full object-contain ${loaded ? "" : "opacity-0"}`} />

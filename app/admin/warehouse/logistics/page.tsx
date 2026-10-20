@@ -682,7 +682,6 @@ export default function LogisticsPage() {
     } finally {
       setWarehousesLoading(false);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadShipments = useCallback(async () => {
@@ -700,7 +699,6 @@ export default function LogisticsPage() {
     } finally {
       setLoading(false);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

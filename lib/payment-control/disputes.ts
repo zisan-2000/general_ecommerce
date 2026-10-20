@@ -52,7 +52,7 @@ export async function createPaymentDispute(input: unknown, actorUserId: string) 
   const category = String(body.category ?? "");
   if (!["COMPLAINT", "PAYMENT_MISMATCH", "REFUND", "DUPLICATE_CHARGE"].includes(category)) throw new PaymentControlError("Invalid dispute category");
   const complaint = safeCaseText(body.complaint, "Complaint", 10);
-  const payment = await prisma.payment.findFirst({ where: { id: paymentId, orderId: { not: null }, provider: { in: ["EPS", "SSLCOMMERZ"] } }, select: { id: true } });
+  const payment = await prisma.payment.findFirst({ where: { id: paymentId, orderId: { not: null }, provider: { in: ["EPS", "SSLCOMMERZ", "AIBL_WALLET"] } }, select: { id: true } });
   if (!payment) throw new PaymentControlError("Payment not found", 404);
   const assignedToId = await validateAssignee(body.assignedToId);
   const findRetry = async () => {

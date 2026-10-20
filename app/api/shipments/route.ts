@@ -326,6 +326,9 @@ export async function POST(request: NextRequest) {
     if (!order) {
       return NextResponse.json({ error: "Order not found" }, { status: 404 });
     }
+    if (order.payment_method.startsWith("AIBL_WALLET:") && order.paymentStatus !== "PAID") {
+      return NextResponse.json({ error: "Verify AIBL Wallet payment before creating a shipment" }, { status: 409 });
+    }
     if (order.payment_method.startsWith("EPS:") && order.paymentStatus !== "PAID") {
       return NextResponse.json({ error: "Verify the EPS payment before creating a shipment" }, { status: 409 });
     }

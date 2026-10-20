@@ -137,9 +137,11 @@ function Invoke-ApprovedProbe([object]$Target) {
 }
 
 Write-Host 'Collector started. Measurements only; packet capture disabled. Ctrl+C stops collection.'
+$collectorStage = 'CONFIGURATION'
 try {
     while ($true) {
         $cycleStart = [DateTime]::UtcNow
+        $collectorStage = 'CONFIGURATION'
         $configResult = Invoke-MonitorRequest '/api/network-monitor/config' $null
         if ($configResult.code -eq 200) {
             $candidate = $configResult.body
@@ -152,6 +154,7 @@ try {
             $configuration = $null; $leaseUntil = [DateTime]::MinValue; $queue.Clear()
         }
         $probes = @()
+        $collectorStage = 'APPROVED_PROBE'
         if ($null -ne $configuration -and [DateTime]::UtcNow -lt $leaseUntil) {
             foreach ($target in @($configuration.targets)) {
                 # Sequential and rate limited; no overlap, retries, scans or payload requests.
@@ -171,15 +174,18 @@ try {
             }
         }
         # Enforce >=60 seconds between host observations even if connection timing changes.
+        $collectorStage = 'HOST_COUNTERS'
         $hostWait = ($lastHostAt.AddSeconds(60) - [DateTime]::UtcNow).TotalMilliseconds
         if ($hostWait -gt 0) { Start-Sleep -Milliseconds ([int][Math]::Ceiling($hostWait) + 20) }
-        $host = Get-HostCounters
+        $hostCounters = Get-HostCounters
         $lastHostAt = [DateTime]::UtcNow; $sequence++
+        $collectorStage = 'QUEUE'
         $queue.Add(@{ id = [Guid]::NewGuid().ToString(); sessionId = $sessionId; sequence = $sequence;
-            observedAt = $lastHostAt.ToString('o'); host = $host; probes = @($probes) })
+            observedAt = $lastHostAt.ToString('o'); host = $hostCounters; probes = @($probes) })
         # A bounded RAM buffer allows a short localhost outage to appear after restart. No disk spooling.
         while ($queue.Count -gt 4 -or ($queue.Count -gt 0 -and
             ([DateTime]::UtcNow - [DateTime]::Parse($queue[0].observedAt).ToUniversalTime()).TotalSeconds -gt 270)) { $queue.RemoveAt(0) }
+        $collectorStage = 'INGESTION'
         while ($queue.Count -gt 0) {
             $result = Invoke-MonitorRequest '/api/network-monitor/ingest' $queue[0]
             if ($result.code -eq 200 -or $result.code -in @(400, 409, 413)) { $queue.RemoveAt(0); continue }
@@ -187,8 +193,16 @@ try {
             Write-Host 'Monitoring upload unavailable; no response body or credentials logged.'
             break
         }
+        $collectorStage = 'SAMPLING_WAIT'
         $delay = ($cycleStart.AddSeconds(60) - [DateTime]::UtcNow).TotalMilliseconds
         if ($delay -gt 0) { Start-Sleep -Milliseconds ([int][Math]::Ceiling($delay)) }
     }
-} catch { Write-Host 'Collector stopped; review configuration and OS availability. Raw exception details suppressed.' }
+} catch {
+    # Only fixed codes and a locally assigned stage are safe to print. Never emit $_ or exception text.
+    $failureCode = 'COLLECTOR_RUNTIME_FAILURE'
+    if ($_.Exception -is [System.Management.Automation.SessionStateUnauthorizedAccessException]) {
+        $failureCode = 'COLLECTOR_VARIABLE_WRITE_REJECTED'
+    }
+    Write-Host "Collector stopped; diagnostic=$failureCode; stage=$collectorStage. Raw exception details suppressed."
+}
 finally { $client.Dispose(); $handler.Dispose(); $queue.Clear(); $agentToken = $null }

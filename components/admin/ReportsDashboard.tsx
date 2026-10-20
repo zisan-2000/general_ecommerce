@@ -319,7 +319,6 @@ export default function ReportsDashboard() {
 
   useEffect(() => {
     void load(from, to);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const apply = () =>

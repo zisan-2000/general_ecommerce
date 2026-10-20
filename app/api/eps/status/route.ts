@@ -8,6 +8,7 @@ import { verifyPaymentInitToken } from "@/lib/sslcommerz";
 import { EpsError, reconcileEpsPayment } from "@/lib/eps";
 import { epsObject } from "@/lib/eps-settings";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
+import { attachPaymentResult } from "@/lib/payment-result";
 
 export const runtime = "nodejs";
 
@@ -32,7 +33,7 @@ export async function POST(request: NextRequest) {
     if (!payment?.externalId) throw new EpsError("EPS payment attempt was not found", 404);
     const result = await reconcileEpsPayment(payment.externalId, request);
     revalidateStorefrontCatalog();
-    return NextResponse.json(result, { headers: { "Cache-Control": "private, no-store" } });
+    return attachPaymentResult(NextResponse.json(result, { headers: { "Cache-Control": "private, no-store" } }), payment.externalId, "EPS");
   } catch (error) {
     return NextResponse.json({ error: error instanceof EpsError ? error.message : "EPS payment verification is unavailable" },
       { status: error instanceof EpsError ? error.status : 500 });

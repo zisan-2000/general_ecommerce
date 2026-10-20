@@ -465,7 +465,6 @@ export default function SuppliersPage() {
 
   useEffect(() => {
     void loadSuppliers();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {

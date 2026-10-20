@@ -5,6 +5,7 @@ import { authOptions } from '@/lib/auth';
 import { logActivity } from '@/lib/activity-log';
 import { getAccessContext } from '@/lib/rbac';
 import { normalizeEpsGatewaySettings } from '@/lib/eps-settings';
+import { normalizeAiblWalletGatewaySettings } from '@/lib/aibl-wallet-settings';
 
 function toPaymentLogSnapshot(payment: {
   id: number;
@@ -32,6 +33,7 @@ function gatewayObject(value: unknown): Record<string, any> {
 
 function redactGatewayData(value: unknown) {
   const data = gatewayObject(value);
+  if (String(data.type || '').toUpperCase() === 'AIBL_WALLET') return normalizeAiblWalletGatewaySettings(data);
   if (String(data.type || '').toUpperCase() === 'EPS') return normalizeEpsGatewaySettings(data);
   if (String(data.type || '').toUpperCase() !== 'SSLCOMMERZ') return data;
   const { storePassword: _secret, ...safe } = data;
@@ -69,8 +71,12 @@ export async function PUT(
     const incoming = gatewayObject(paymentGatewayData);
     const previous = gatewayObject(existing.paymentGatewayData);
     const type = String(incoming.type || previous.type || '').toUpperCase();
+    if ((type === 'AIBL_WALLET' || previous.type === 'AIBL_WALLET') &&
+        !access.hasGlobal('settings.payment.manage') && !access.hasGlobal('settings.manage')) {
+      return NextResponse.json({ error: 'Global payment management permission required' }, { status: 403 });
+    }
     if (existing.orderId !== null) return NextResponse.json({ error: 'Transaction records cannot be edited as gateway settings' }, { status: 400 });
-    if (!['MANUAL', 'SSLCOMMERZ', 'EPS'].includes(type)) {
+    if (!['MANUAL', 'SSLCOMMERZ', 'EPS', 'AIBL_WALLET'].includes(type)) {
       return NextResponse.json({ error: 'Invalid payment gateway type' }, { status: 400 });
     }
     let mergedGatewayData: Record<string, any> = {
@@ -80,6 +86,7 @@ export async function PUT(
         ? { storePassword: previous.storePassword }
         : {}),
     };
+    if (type === 'AIBL_WALLET') mergedGatewayData = normalizeAiblWalletGatewaySettings(mergedGatewayData);
     if (type === 'EPS') {
       try { mergedGatewayData = normalizeEpsGatewaySettings(mergedGatewayData); }
       catch (error) { return NextResponse.json({ error: error instanceof Error ? error.message : 'Invalid EPS settings' }, { status: 400 }); }
@@ -156,6 +163,10 @@ export async function DELETE(
     }
 
     if (existing.orderId !== null) return NextResponse.json({ error: 'Transaction records cannot be deleted as gateway settings' }, { status: 400 });
+    if (gatewayObject(existing.paymentGatewayData).type === 'AIBL_WALLET' &&
+        !access.hasGlobal('settings.payment.manage') && !access.hasGlobal('settings.manage')) {
+      return NextResponse.json({ error: 'Global payment management permission required' }, { status: 403 });
+    }
     await prisma.payment.delete({
       where: { id: paymentId },
     });

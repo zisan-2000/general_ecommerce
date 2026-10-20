@@ -21,6 +21,7 @@
     "test:search": "tsx --test tests/search.test.mjs",
     "test:order-inventory": "node --import tsx --test tests/order-inventory-lifecycle.test.mjs tests/order-warehouse-stock.test.mjs",
     "test:order-idempotency": "node --import tsx --test tests/order-idempotency.test.mjs",
+    "test:aibl-wallet:offline": "node --test --test-concurrency=1 tests/aibl-wallet-callback.test.mjs tests/aibl-wallet-settlement.test.mjs",
     "test:configurable-bundles": "node --import tsx --test tests/configurable-bundles.test.mjs",
     "test:warehouse-bundle-stock": "node --import tsx --test tests/warehouse-bundle-stock.test.mjs",
     "verify:configurable-bundles-db": "tsx scripts/verify-configurable-bundles.ts",

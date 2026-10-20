@@ -83,7 +83,7 @@ function calculateStock(product: any) {
 
 function getProductInventorySummary(product: any) {
   const variants = Array.isArray(product?.variants) ? product.variants : [];
-  if (product?.type !== "PHYSICAL" || variants.length === 0) {
+  if (product?.type !== "PHYSICAL") {
     return {
       totalStock: 0,
       status: "IN_STOCK" as const,

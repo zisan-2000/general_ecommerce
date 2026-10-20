@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useMemo, useState, useEffect } from "react";
 import {
   AlertTriangle,
@@ -74,6 +75,7 @@ function DetailRow({ icon, label, value }: { icon: React.ReactNode; label: strin
 }
 
 export default function InvitationAcceptanceClient({ token }: { token: string }) {
+  const router = useRouter();
   const { data: session, status: sessionStatus } = useSession();
   const [details, setDetails] = useState<InvitationDetails | null>(null);
   const [loading, setLoading] = useState(true);
@@ -145,7 +147,8 @@ export default function InvitationAcceptanceClient({ token }: { token: string })
 
   async function useDifferentAccount() {
     await signOut({ redirect: false });
-    window.location.assign(signInHref);
+    router.replace(signInHref);
+    router.refresh();
   }
 
   const organizationName = details?.organization.displayName || details?.organization.legalName || "this organization";

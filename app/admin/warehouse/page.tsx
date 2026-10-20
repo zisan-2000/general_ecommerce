@@ -154,7 +154,6 @@ export default function WarehouseDashboardPage() {
         setRefreshing(false);
       }
     },
-    // eslint-disable-next-line react-hooks/exhaustive-deps
     [],
   );
 

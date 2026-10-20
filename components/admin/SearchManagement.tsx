@@ -92,7 +92,6 @@ export default function SearchManagement() {
     } finally {
       setLoading(false);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [days]);
 
   useEffect(() => {

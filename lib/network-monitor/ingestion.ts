@@ -1,5 +1,5 @@
 import "server-only";
-import { Prisma } from "@/generated/prisma";
+import { Prisma, type NetworkProbeSample } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import { PaymentControlError } from "@/lib/payment-control/authorization";
 import { approvedTarget, counter, integer, object, timestamp, uuidPattern } from "./policy";
@@ -22,7 +22,7 @@ export async function ingestNetworkSample(agentId: string, input: Record<string,
   if (!Array.isArray(input.probes) || input.probes.length > 4) throw new PaymentControlError("At most four approved probe samples allowed");
   const entries = input.probes.map(object);
   const seen = new Set<string>();
-  const probes = [];
+  const probes: Omit<NetworkProbeSample, "id" | "sampleId">[] = [];
   for (const entry of entries) {
     const targetId = String(entry.targetId ?? "");
     if (!uuidPattern.test(targetId) || seen.has(targetId)) throw new PaymentControlError("Invalid/duplicate target sample");

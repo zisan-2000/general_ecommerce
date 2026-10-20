@@ -91,7 +91,7 @@ export default function NetworkMonitoringPanel({ initialRequestId, onPayment }: 
   const currentHost = data?.hosts[0];
   return <section className="space-y-4" aria-label="Advanced network monitoring">
     <div className={panel}><h2 className="font-semibold">Advanced network monitoring</h2>
-      <p className="text-sm text-muted-foreground">Host, probe and Payment API measurements have separate scopes. Only recorded observations appear. TCP packet loss and packet counts are N/A. No EPS/SSLCommerz internal network metrics are inferred.</p>
+      <p className="text-sm text-muted-foreground">Host, probe and Payment API measurements have separate scopes. Only recorded observations appear. TCP packet loss and packet counts are N/A. No EPS/SSLCommerz/AIBL internal network metrics are inferred.</p>
       <div className="flex flex-wrap items-end gap-3">
         <label className="text-sm">Collector<select className={input + " block"} value={agentId} onChange={(e) => { setAgentId(e.target.value); setPage(1); }}><option value="">First registered collector</option>{data?.agents.map((a) => <option key={a.id} value={a.id}>{a.label} · {a.enabled ? "enabled" : "disabled"}</option>)}</select></label>
         <label className="text-sm">Monitoring range<select className={input + " block"} value={hours} onChange={(e) => { setHours(e.target.value); setPage(1); }}>{[1, 6, 24, 168].map((n) => <option key={n} value={n}>{n} hours</option>)}</select></label>
@@ -128,11 +128,11 @@ export default function NetworkMonitoringPanel({ initialRequestId, onPayment }: 
             gapMs={t.intervalSeconds * 2500} lines={[{ key: "latency", label: "Latency ms", color: "#2563eb" }]} />
         </article>)}
       </section>
-      <section className={panel}><h3 className="font-semibold">Payment API level · EPS / SSLCommerz</h3>
+      <section className={panel}><h3 className="font-semibold">Payment API level · EPS / SSLCommerz / AIBL Wallet</h3>
         <Metrics values={[["Recorded requests in range", String(data.api.count)], ["Average fetch-to-headers", ms(data.api.averageMs)], ["Maximum fetch-to-headers", ms(data.api.maxMs)], ["API packet counts / packet loss", "N/A"]]} />
         <div className="flex flex-wrap gap-3 text-sm">{data.api.summary.map((s) => <span key={s.provider + s.outcome}>{s.provider} {s.outcome}: {s._count._all}</span>)}</div>
-        <Trend title="Payment API response / failure elapsed (ms)" rows={data.apiEvents.map((e) => ({ at: Date.parse(e.requestCompletedAt || e.createdAt), EPS: e.provider === "EPS" ? e.durationMs : null, SSLCOMMERZ: e.provider === "SSLCOMMERZ" ? e.durationMs : null }))}
-          gapMs={120000} lines={[{ key: "EPS", label: "EPS elapsed ms", color: "#2563eb" }, { key: "SSLCOMMERZ", label: "SSLCommerz elapsed ms", color: "#9333ea" }]} />
+        <Trend title="Payment API response / failure elapsed (ms)" rows={data.apiEvents.map((e) => ({ at: Date.parse(e.requestCompletedAt || e.createdAt), EPS: e.provider === "EPS" ? e.durationMs : null, SSLCOMMERZ: e.provider === "SSLCOMMERZ" ? e.durationMs : null, AIBL_WALLET: e.provider === "AIBL_WALLET" ? e.durationMs : null }))}
+          gapMs={120000} lines={[{ key: "EPS", label: "EPS elapsed ms", color: "#2563eb" }, { key: "SSLCOMMERZ", label: "SSLCommerz elapsed ms", color: "#9333ea" }, { key: "AIBL_WALLET", label: "AIBL elapsed ms", color: "#0891b2" }]} />
       </section>
       <section className={panel}><h3 className="font-semibold">Network alert history (latest 100)</h3>
         <p className="text-xs">Probe latency threshold {data.thresholds.probeLatencyMs}ms · API threshold {data.thresholds.apiLatencyMs}ms · approved ICMP no-reply threshold {data.thresholds.lossPct}% with at least {data.thresholds.minimumLossSamples} recent samples. Collector ingestion evaluates host/probe alerts; dashboard refresh evaluates the latest API outcomes. Missing data does not resolve an alert. No external notifications are sent.</p>

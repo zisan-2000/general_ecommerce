@@ -124,16 +124,21 @@ export default function BestSelling({
   const resolvedSubtitle = subtitle ?? t("subtitle");
   const hasPreloadedData =
     topSellingData !== undefined && reviewsData !== undefined;
-  const [loading, setLoading] = useState(!hasPreloadedData);
-  const [items, setItems] = useState<ProductDTO[]>(() =>
-    topSellingData
-      ? normalizeStorefrontProducts(topSellingData)
-      : [],
+  const [fetchLoading, setLoading] = useState(!hasPreloadedData);
+  const [fetchedItems, setItems] = useState<ProductDTO[]>([]);
+  const [fetchedReviews, setReviews] = useState<ReviewDTO[]>([]);
+  const [fetchError, setError] = useState<string | null>(null);
+  // Fresh server props must replace the previous stock snapshot on refresh.
+  const items = useMemo(
+    () => topSellingData !== undefined ? normalizeStorefrontProducts(topSellingData) : fetchedItems,
+    [topSellingData, fetchedItems],
   );
-  const [reviews, setReviews] = useState<ReviewDTO[]>(() =>
-    reviewsData ? normalizeStorefrontReviews(reviewsData) : [],
+  const reviews = useMemo(
+    () => reviewsData !== undefined ? normalizeStorefrontReviews(reviewsData) : fetchedReviews,
+    [reviewsData, fetchedReviews],
   );
-  const [error, setError] = useState<string | null>(null);
+  const loading = !hasPreloadedData && fetchLoading;
+  const error = hasPreloadedData ? null : fetchError;
   const [loginModalOpen, setLoginModalOpen] = useState(false);
 
   const scrollerRef = useRef<HTMLDivElement | null>(null);

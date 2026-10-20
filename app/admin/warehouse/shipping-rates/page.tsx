@@ -103,7 +103,6 @@ export default function ShippingRatesPage() {
 
   useEffect(() => {
     loadData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadCountries = async () => {
@@ -170,12 +169,10 @@ export default function ShippingRatesPage() {
         </div>
       </div>
     ));
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [rates, t]);
 
   useEffect(() => {
     loadCountries();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const beginEdit = (rate: ShippingRate) => {

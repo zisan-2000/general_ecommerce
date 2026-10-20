@@ -140,17 +140,26 @@ export default function FeaturedProducts({
     productsData !== undefined &&
     categoriesData !== undefined &&
     reviewsData !== undefined;
-  const [loading, setLoading] = useState(!hasPreloadedData);
-  const [items, setItems] = useState<ProductDTO[]>(() =>
-    productsData ? normalizeStorefrontProducts(productsData) : [],
+  const [fetchLoading, setLoading] = useState(!hasPreloadedData);
+  const [fetchedItems, setItems] = useState<ProductDTO[]>([]);
+  const [fetchedCategories, setCategories] = useState<CategoryDTO[]>([]);
+  const [fetchedReviews, setReviews] = useState<ReviewDTO[]>([]);
+  const [fetchError, setError] = useState<string | null>(null);
+  // Fresh server props must replace the previous stock snapshot on refresh.
+  const items = useMemo(
+    () => productsData !== undefined ? normalizeStorefrontProducts(productsData) : fetchedItems,
+    [productsData, fetchedItems],
   );
-  const [categories, setCategories] = useState<CategoryDTO[]>(() =>
-    categoriesData ? normalizeStorefrontCategories(categoriesData) : [],
+  const categories = useMemo(
+    () => categoriesData !== undefined ? normalizeStorefrontCategories(categoriesData) : fetchedCategories,
+    [categoriesData, fetchedCategories],
   );
-  const [reviews, setReviews] = useState<ReviewDTO[]>(() =>
-    reviewsData ? normalizeStorefrontReviews(reviewsData) : [],
+  const reviews = useMemo(
+    () => reviewsData !== undefined ? normalizeStorefrontReviews(reviewsData) : fetchedReviews,
+    [reviewsData, fetchedReviews],
   );
-  const [error, setError] = useState<string | null>(null);
+  const loading = !hasPreloadedData && fetchLoading;
+  const error = hasPreloadedData ? null : fetchError;
   const [loginModalOpen, setLoginModalOpen] = useState(false);
 
   const [active, setActive] = useState<"ALL" | string>("ALL");

@@ -103,7 +103,6 @@ export function DeliveryDashboardClient() {
 
   useEffect(() => {
     void loadAssignments();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const groupedAssignments = useMemo(() => {
