@@ -87,7 +87,9 @@ export function normalizeStorefrontProducts(
           toNumber(product?.totalSold ?? product?.soldCount, 0) > 0),
     )
     .map<StorefrontClientProduct>((product) => {
-      const variants = Array.isArray(product?.variants) ? product.variants : [];
+      const variants = Array.isArray(product?.variants)
+        ? product.variants.filter((variant: any) => variant?.active !== false)
+        : [];
       const type = product?.type ? String(product.type) : undefined;
       const bundleStockLimit =
         product?.bundleStockLimit !== null &&
@@ -99,10 +101,13 @@ export function normalizeStorefrontProducts(
           ? product?.stock !== null && product?.stock !== undefined
             ? toNumber(product.stock, 0)
             : toNumber(bundleStockLimit, 0)
-          : variants.reduce(
-              (sum: number, variant: any) => sum + toNumber(variant?.stock, 0),
-              0,
-            );
+          : type === "DIGITAL" || type === "SERVICE"
+            ? 1
+            : variants.reduce(
+                (sum: number, variant: any) =>
+                  sum + computeVariantAvailableStock(variant),
+                0,
+              );
 
       return {
         id: product.id,
@@ -157,3 +162,4 @@ export function normalizeStorefrontProducts(
       };
     });
 }
+import { computeVariantAvailableStock } from "@/lib/warehouse-stock";

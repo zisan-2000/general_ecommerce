@@ -256,7 +256,7 @@ export default function ProductCardCompact({
         product.available !== undefined;
   const effectiveStock =
     product.type === "BUNDLE"
-      ? Number(product.bundleStockLimit ?? product.stock ?? 0)
+      ? Number(product.stock ?? product.bundleStockLimit ?? 0)
       : Number(product.stock ?? 0);
 
   const isOutOfStock =

@@ -20,7 +20,10 @@ import {
   privateJson,
   publicJson,
 } from "@/lib/public-cache";
-import { storefrontProductSelect } from "@/lib/storefront-product";
+import {
+  serializeStorefrontProductInventory,
+  storefrontProductSelect,
+} from "@/lib/storefront-product";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { applyFlashSalePricingToProduct } from "@/lib/flash-sale";
 import { parseProductAttributeInput } from "@/lib/product-attribute-input";
@@ -332,7 +335,9 @@ export async function GET(req: Request) {
     return storefront
       ? publicJson(
           productsWithRatings.map((product) =>
-            applyFlashSalePricingToProduct(product),
+            serializeStorefrontProductInventory(
+              applyFlashSalePricingToProduct(product),
+            ),
           ),
           { maxAge: 0, staleWhileRevalidate: 0 },
         )

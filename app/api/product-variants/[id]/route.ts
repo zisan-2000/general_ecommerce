@@ -1,8 +1,13 @@
 import { prisma } from "@/lib/prisma";
 import {
   AvailableStockEditConflictError,
+  InventoryDeletionConflictError,
+  deleteVariantIfSafe,
   setVariantAvailableStock,
 } from "@/lib/inventory";
+import { authOptions } from "@/lib/auth";
+import { getAccessContext } from "@/lib/rbac";
+import { getServerSession } from "next-auth/next";
 import { normalizeLowStockThreshold } from "@/lib/stock-status";
 import { ensureVariantCodes } from "@/lib/product-codes";
 import { Prisma } from "@/generated/prisma";
@@ -30,6 +35,17 @@ export async function PUT(
   { params }: { params: Promise<{ id: string }> },
 ) {
   try {
+    const session = await getServerSession(authOptions);
+    const access = await getAccessContext(
+      session?.user as { id?: string; role?: string } | undefined,
+    );
+    if (!access.userId) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    if (!access.has("products.manage")) {
+      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+    }
+
     const { id: idParam } = await params;
     const id = Number(idParam);
     if (!id || Number.isNaN(id)) {
@@ -207,24 +223,56 @@ export async function DELETE(
   { params }: { params: Promise<{ id: string }> },
 ) {
   try {
+    const session = await getServerSession(authOptions);
+    const access = await getAccessContext(
+      session?.user as { id?: string; role?: string } | undefined,
+    );
+    if (!access.userId) {
+      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+    }
+    if (!access.has("products.manage")) {
+      return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+    }
+
     const { id: idParam } = await params;
     const id = Number(idParam);
     if (!id || Number.isNaN(id)) {
       return NextResponse.json({ error: "Invalid id" }, { status: 400 });
     }
 
-    await prisma.$transaction(async (tx) => {
-      await tx.productCode.deleteMany({ where: { variantId: id } });
-      await tx.stockLevel.deleteMany({ where: { productVariantId: id } });
-      await tx.inventoryLog.deleteMany({ where: { variantId: id } });
-      await tx.productVariant.delete({ where: { id } });
-    });
+    const deleted = await prisma.$transaction((tx) =>
+      deleteVariantIfSafe(tx, id),
+    );
+    if (!deleted) {
+      return NextResponse.json({ error: "Variant not found" }, { status: 404 });
+    }
 
     revalidateStorefrontCatalog();
 
     return NextResponse.json({ message: "Deleted successfully" });
   } catch (error) {
     console.error("DELETE PRODUCT VARIANT ERROR:", error);
+    if (error instanceof InventoryDeletionConflictError) {
+      return NextResponse.json(
+        { error: error.message, code: error.code },
+        { status: 409 },
+      );
+    }
+    if (
+      error &&
+      typeof error === "object" &&
+      "code" in error &&
+      error.code === "P2003"
+    ) {
+      return NextResponse.json(
+        {
+          error:
+            "This variant is referenced by business records and cannot be deleted; deactivate it instead",
+          code: "VARIANT_IS_REFERENCED",
+        },
+        { status: 409 },
+      );
+    }
     return NextResponse.json(
       { error: "Failed to delete variant" },
       { status: 500 },

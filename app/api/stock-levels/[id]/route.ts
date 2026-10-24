@@ -1,10 +1,12 @@
 import { prisma } from "@/lib/prisma";
 import { authOptions } from "@/lib/auth";
 import { logActivity } from "@/lib/activity-log";
-import { refreshVariantStock } from "@/lib/inventory";
+import {
+  InventoryDeletionConflictError,
+  deleteStockLevelIfEmpty,
+} from "@/lib/inventory";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { getAccessContext } from "@/lib/rbac";
-import { captureVariantInventoryDailySnapshots } from "@/lib/report-history";
 import { getServerSession } from "next-auth/next";
 import { NextResponse } from "next/server";
 
@@ -70,24 +72,18 @@ export async function DELETE(
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
-    await prisma.stockLevel.delete({ where: { id } });
-
-    await refreshVariantStock(prisma, existing.productVariantId);
-    revalidateStorefrontCatalog();
-    await captureVariantInventoryDailySnapshots(prisma, existing.productVariantId);
-
-    const change = -Number(existing.quantity);
-    if (change !== 0 && existing.variant.product.type === "PHYSICAL") {
-      await prisma.inventoryLog.create({
-        data: {
-          productId: existing.variant.product.id,
-          variantId: existing.productVariantId,
-          warehouseId: existing.warehouseId,
-          change,
-          reason: `Admin stock level deleted (${existing.warehouse.code})`,
-        },
-      });
+    const deleted = await prisma.$transaction((tx) =>
+      deleteStockLevelIfEmpty(tx, id),
+    );
+    if (!deleted) {
+      return NextResponse.json(
+        { error: "Stock level changed after it was loaded; reload and try again" },
+        { status: 409 },
+      );
     }
+
+    revalidateStorefrontCatalog();
+    const change = 0;
 
     await logActivity({
       action: "delete_stock_level",
@@ -106,6 +102,27 @@ export async function DELETE(
     return NextResponse.json({ message: "Deleted successfully" });
   } catch (error) {
     console.error("DELETE STOCK LEVEL ERROR:", error);
+    if (error instanceof InventoryDeletionConflictError) {
+      return NextResponse.json(
+        { error: error.message, code: error.code },
+        { status: 409 },
+      );
+    }
+    if (
+      error &&
+      typeof error === "object" &&
+      "code" in error &&
+      error.code === "P2003"
+    ) {
+      return NextResponse.json(
+        {
+          error:
+            "This stock level gained a reservation or reference during deletion; reload and try again",
+          code: "STOCK_LEVEL_CHANGED",
+        },
+        { status: 409 },
+      );
+    }
     return NextResponse.json(
       { error: "Failed to delete stock level" },
       { status: 500 },

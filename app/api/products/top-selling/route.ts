@@ -1,7 +1,10 @@
 import { NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { publicJson } from "@/lib/public-cache";
-import { resolveFlashSalePricing } from "@/lib/flash-sale";
+import {
+  serializeStorefrontHomeProduct,
+  storefrontHomeProductSelect,
+} from "@/lib/storefront-home";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-server";
 import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
@@ -28,38 +31,22 @@ export async function GET() {
       },
       take: 10,
       select: {
-        id: true,
-        name: true,
-        image: true,
-        basePrice: true,
-        originalPrice: true,
-        currency: true,
-        flashSaleEnabled: true,
-        flashSalePrice: true,
-        flashSaleStartsAt: true,
-        flashSaleEndsAt: true,
+        ...storefrontHomeProductSelect,
         brand: { select: { name: true } },
       },
     });
 
     return publicJson(
       top.map((product) => {
-        const pricing = resolveFlashSalePricing(product);
+        const serialized = serializeStorefrontHomeProduct(product);
         return {
-          id: product.id,
-          name: product.name,
-          image: product.image,
-          price: pricing.salePrice,
-          originalPrice: pricing.active
-            ? pricing.regularPrice
-            : product.originalPrice === null
-              ? null
-              : Number(product.originalPrice),
-          currency: product.currency,
-          brand: product.brand,
+          ...serialized,
+          // Preserve the legacy endpoint field while sharing the same payload
+          // semantics used by server-preloaded homepage products.
+          price: serialized.basePrice,
         };
       }),
-      { maxAge: 60, staleWhileRevalidate: 300 },
+      { maxAge: 0, staleWhileRevalidate: 0 },
     );
   } catch (error) {
     console.error('Error fetching top selling products:', error);

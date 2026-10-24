@@ -10,6 +10,8 @@ type CachedFetchOptions = {
   ttlMs?: number;
   key?: string;
   init?: RequestInit;
+  /** Inventory responses share only an in-flight request and are never retained. */
+  freshness?: "metadata" | "inventory";
 };
 
 const DEFAULT_TTL_MS = 60_000;
@@ -32,17 +34,27 @@ export async function cachedFetchJson<T = unknown>(
   url: string,
   options: CachedFetchOptions = {}
 ): Promise<T> {
-  const { ttlMs = DEFAULT_TTL_MS, key, init } = options;
-  const method = (init?.method ?? "GET").toUpperCase();
+  const {
+    ttlMs = DEFAULT_TTL_MS,
+    key,
+    init,
+    freshness = "metadata",
+  } = options;
+  const effectiveTtlMs = freshness === "inventory" ? 0 : ttlMs;
+  const effectiveInit =
+    freshness === "inventory" ? { ...init, cache: "no-store" as const } : init;
+  const method = (effectiveInit?.method ?? "GET").toUpperCase();
 
   if (method !== "GET") {
-    const res = await fetch(url, init);
+    const res = await fetch(url, effectiveInit);
     if (!res.ok) throw new Error(`Request failed: ${res.status}`);
     return (await res.json()) as T;
   }
 
   const now = Date.now();
-  const cacheKey = buildCacheKey(url, init, key);
+  const baseCacheKey = buildCacheKey(url, effectiveInit, key);
+  const cacheKey =
+    freshness === "inventory" ? `inventory:${baseCacheKey}` : baseCacheKey;
   const existing = cacheStore.get(cacheKey);
 
   if (existing?.data !== undefined && existing.expiresAt > now) {
@@ -53,7 +65,7 @@ export async function cachedFetchJson<T = unknown>(
     return (await existing.promise) as T;
   }
 
-  const requestPromise = fetch(url, init)
+  const requestPromise = fetch(url, effectiveInit)
     .then(async (res) => {
       if (!res.ok) {
         throw new Error(`Request failed: ${res.status} ${res.statusText}`);
@@ -61,10 +73,14 @@ export async function cachedFetchJson<T = unknown>(
       return (await res.json()) as T;
     })
     .then((data) => {
-      cacheStore.set(cacheKey, {
-        data,
-        expiresAt: Date.now() + ttlMs,
-      });
+      if (effectiveTtlMs > 0) {
+        cacheStore.set(cacheKey, {
+          data,
+          expiresAt: Date.now() + effectiveTtlMs,
+        });
+      } else {
+        cacheStore.delete(cacheKey);
+      }
       return data;
     })
     .catch((error) => {
@@ -73,7 +89,7 @@ export async function cachedFetchJson<T = unknown>(
     });
 
   cacheStore.set(cacheKey, {
-    expiresAt: now + ttlMs,
+    expiresAt: now + effectiveTtlMs,
     promise: requestPromise,
   });
 

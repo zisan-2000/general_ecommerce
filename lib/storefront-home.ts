@@ -8,9 +8,8 @@ import { getEffectiveStorefrontCategoryIds } from "@/lib/category-navigation-ser
 import { getBookProductVisibilityWhere } from "@/lib/book-product-visibility-server";
 import {
   configurableBundleGroupSelect,
-  getDefaultBundleAvailableQuantity,
 } from "@/lib/configurable-bundle";
-import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
+import { serializeStorefrontProductInventory } from "@/lib/storefront-product";
 
 export const storefrontHomeProductSelect = {
   id: true,
@@ -110,12 +109,8 @@ export function serializeStorefrontHomeProduct(
 ) {
   const regularBasePrice = Number(product.basePrice);
   const flashSale = resolveFlashSalePricing(product, regularBasePrice, now);
-  const bundleStock = product.type === "BUNDLE"
-    ? getDefaultBundleAvailableQuantity(product)
-    : undefined;
-  return {
+  return serializeStorefrontProductInventory({
     ...product,
-    ...(bundleStock !== undefined ? { stock: bundleStock } : {}),
     basePrice: flashSale.salePrice,
     originalPrice: flashSale.active
       ? flashSale.regularPrice
@@ -132,7 +127,6 @@ export function serializeStorefrontHomeProduct(
     variants: product.variants.map((variant) => ({
       ...variant,
       price: resolveFlashSalePricing(product, variant.price, now).salePrice,
-      stock: computeVariantAvailableStock(variant),
     })),
     // Nested Prisma prices must also be plain numbers at the Server/Client boundary.
     bundleGroups: product.bundleGroups.map((group) => ({
@@ -153,7 +147,7 @@ export function serializeStorefrontHomeProduct(
           : null,
       })),
     })),
-  };
+  });
 }
 
 const readStorefrontHomeData = unstable_cache(

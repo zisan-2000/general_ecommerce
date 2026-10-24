@@ -383,10 +383,13 @@ export function serializeCatalogProduct(product: RawCatalogProduct) {
     flashSale,
     bundleStockLimit: product.bundleStockLimit,
     variants: product.variants.map((variant) => ({
-      ...variant,
+      id: variant.id,
+      sku: variant.sku,
       price: resolveFlashSalePricing(product, variant.price).salePrice,
       stock: computeVariantAvailableStock(variant),
       options: normalizeOptions(variant.options),
+      colorImage: variant.colorImage,
+      isDefault: variant.isDefault,
     })),
     bundleItems: product.bundleItems.map((item) => ({
       quantity: item.quantity,

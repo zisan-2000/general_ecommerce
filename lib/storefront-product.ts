@@ -1,7 +1,88 @@
 import {
   configurableBundleVariantOrderBy,
   configurableBundleVariantSelect,
+  getDefaultBundleAvailableQuantity,
 } from "@/lib/configurable-bundle";
+import {
+  computeVariantAvailableStock,
+  computeWarehouseAvailableStockAtWarehouse,
+} from "@/lib/warehouse-stock";
+
+type PublicStockVariant = {
+  stock: unknown;
+  stockLevels?: Array<{
+    warehouseId?: number;
+    quantity: number;
+    reserved: number;
+  }> | null;
+};
+
+function serializePublicVariant<T extends PublicStockVariant>(
+  variant: T,
+  warehouseId?: number | null,
+) {
+  const warehouseStock = warehouseId
+    ? computeWarehouseAvailableStockAtWarehouse(variant, warehouseId)
+    : null;
+  const stock = warehouseId
+    ? (warehouseStock ?? 0)
+    : computeVariantAvailableStock(variant);
+  const publicVariant = { ...variant };
+  delete publicVariant.stockLevels;
+  return { ...publicVariant, stock };
+}
+
+/** Converts private inventory rows into the public sellable-stock projection. */
+export function serializeStorefrontProductInventory<
+  T extends {
+    type?: string;
+    variants?: readonly PublicStockVariant[];
+    bundleWarehouseId?: number | null;
+    assembledStockLevels?: unknown;
+    bundleGroups?: Array<{
+      options: Array<{
+        product: { variants: PublicStockVariant[] };
+        variant: PublicStockVariant | null;
+      }>;
+    }>;
+  },
+>(product: T) {
+  const productStock =
+    product.type === "BUNDLE"
+      ? getDefaultBundleAvailableQuantity(
+          product as unknown as Parameters<
+            typeof getDefaultBundleAvailableQuantity
+          >[0],
+        )
+      : product.type === "DIGITAL" || product.type === "SERVICE"
+        ? 1
+        : undefined;
+  const publicProduct = { ...product };
+  delete publicProduct.assembledStockLevels;
+
+  return {
+    ...publicProduct,
+    ...(productStock === undefined ? {} : { stock: productStock }),
+    variants: (product.variants ?? []).map((variant) =>
+      serializePublicVariant(variant),
+    ),
+    bundleGroups: (product.bundleGroups ?? []).map((group) => ({
+      ...group,
+      options: group.options.map((option) => ({
+        ...option,
+        product: {
+          ...option.product,
+          variants: option.product.variants.map((variant) =>
+            serializePublicVariant(variant, product.bundleWarehouseId),
+          ),
+        },
+        variant: option.variant
+          ? serializePublicVariant(option.variant, product.bundleWarehouseId)
+          : null,
+      })),
+    })),
+  };
+}
 
 /**
  * Public product projection.

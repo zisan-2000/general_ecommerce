@@ -221,7 +221,7 @@ export default function FeaturedProducts({
         const pData =
           productsData ??
           (await cachedFetchJson<any>("/api/products?view=storefront", {
-            ttlMs: 2 * 60 * 1000,
+            freshness: "inventory",
           }));
         const cData =
           categoriesData ??

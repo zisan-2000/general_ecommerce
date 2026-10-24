@@ -86,12 +86,6 @@ function toNumber(v: any, fallback = 0) {
   return Number.isFinite(n) ? n : fallback;
 }
 
-function computeStockFromVariants(variants?: ApiVariant[] | null) {
-  const list = Array.isArray(variants) ? variants : [];
-  if (!list.length) return 0;
-  return list.reduce((sum, v) => sum + toNumber(v?.stock, 0), 0);
-}
-
 function formatBDT(n: number) {
   return `${Math.round(n).toLocaleString("en-US")}৳`;
 }
@@ -190,7 +184,7 @@ export default function BestSelling({
         const pData =
           topSellingData ??
           (await cachedFetchJson<any>("/api/products/top-selling", {
-            ttlMs: 2 * 60 * 1000,
+            freshness: "inventory",
           }));
         const rData =
           reviewsData ??
@@ -201,52 +195,9 @@ export default function BestSelling({
         const pList: any[] = Array.isArray(pData) ? pData : (pData?.data ?? []);
         const rList = normalizeReviewsPayload(rData);
 
-        const storefrontProducts = pList.filter(
-          (p) =>
-            p?.available !== false &&
-            p?.deleted !== true,
-        );
-        const mappedProducts: ProductDTO[] = storefrontProducts.map((p) => {
-          const variants = Array.isArray(p?.variants) ? p.variants : [];
-          const type = p?.type ? String(p.type) : undefined;
-          const bundleStockLimit =
-            p?.bundleStockLimit !== null && p?.bundleStockLimit !== undefined
-              ? p.bundleStockLimit
-              : null;
-
-          const stock =
-            type === "BUNDLE"
-              ? toNumber(bundleStockLimit, 0)
-              : computeStockFromVariants(variants);
-
-          const basePrice = toNumber(p?.basePrice, 0);
-          const originalPrice =
-            p?.originalPrice !== null && p?.originalPrice !== undefined
-              ? toNumber(p.originalPrice, 0)
-              : null;
-
-          return {
-            id: p.id,
-            name: String(p.name ?? ""),
-            slug: String(p.slug ?? ""),
-            image: p.image ?? null,
-            basePrice,
-            originalPrice,
-            currency: String(p.currency ?? "BDT"),
-            createdAt: p.createdAt ? String(p.createdAt) : undefined,
-            ratingAvg: toNumber(p.ratingAvg, 0),
-            ratingCount: toNumber(p.ratingCount, 0),
-            totalSold: p.totalSold ?? p.soldCount ?? null,
-            rank: p.rank ?? null,
-            variants,
-            type,
-            bundleStockLimit,
-            bundleItems: p.bundleItems,
-            bundleItemCount: p.bundleItemCount,
-            bundleSavings: p.bundleSavings,
-            stock,
-          };
-        });
+        const mappedProducts = normalizeStorefrontProducts(
+          pList,
+        ) as ProductDTO[];
 
         const mappedReviews: ReviewDTO[] = rList.map((r) => ({
           id: r.id,

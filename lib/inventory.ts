@@ -40,6 +40,26 @@ export class AvailableStockEditConflictError extends Error {
   }
 }
 
+export type InventoryDeletionConflictCode =
+  | "STOCK_LEVEL_HAS_RESERVATIONS"
+  | "STOCK_LEVEL_HAS_INVENTORY"
+  | "STOCK_LEVEL_CHANGED"
+  | "VARIANT_HAS_INVENTORY"
+  | "VARIANT_HAS_RESERVATIONS"
+  | "VARIANT_HAS_ORDER_HISTORY"
+  | "VARIANT_HAS_INVENTORY_HISTORY"
+  | "VARIANT_IS_REFERENCED";
+
+export class InventoryDeletionConflictError extends Error {
+  constructor(
+    public readonly code: InventoryDeletionConflictCode,
+    message: string,
+  ) {
+    super(message);
+    this.name = "InventoryDeletionConflictError";
+  }
+}
+
 export async function getPrimaryWarehouseId(tx: InventoryClient) {
   const warehouse = await tx.warehouse.findFirst({
     orderBy: [{ isDefault: "desc" }, { id: "asc" }],
@@ -180,6 +200,21 @@ export async function setVariantAvailableStock(params: {
     throw new Error("Expected available stock must be a whole number (0 or more)");
   }
 
+  // Acquire a row lock before inspecting warehouse levels. This serializes a
+  // first legacy-stock initialization with reservations and competing edits.
+  await tx.$executeRaw`
+    UPDATE "ProductVariant"
+    SET "stock" = "stock"
+    WHERE "id" = ${productVariantId}
+  `;
+  const legacyVariant = await tx.productVariant.findUnique({
+    where: { id: productVariantId },
+    select: { stock: true },
+  });
+  if (!legacyVariant) {
+    throw new Error("Product variant not found");
+  }
+
   const levels = await tx.stockLevel.findMany({
     where: { productVariantId },
     select: { id: true, warehouseId: true, quantity: true, reserved: true },
@@ -202,7 +237,9 @@ export async function setVariantAvailableStock(params: {
     );
   }
 
-  const currentAvailable = computeAvailableStock(levels);
+  const legacyAvailable = Math.max(0, Number(legacyVariant.stock));
+  const currentAvailable =
+    levels.length > 0 ? computeAvailableStock(levels) : legacyAvailable;
   if (
     expectedAvailableQuantity !== undefined &&
     expectedAvailableQuantity !== null &&
@@ -275,7 +312,9 @@ export async function setVariantAvailableStock(params: {
         reserved: 0,
       },
     });
-    change = availableQuantity;
+    // The legacy value is the pre-existing baseline. Record only the explicit
+    // administrator adjustment instead of inventing a historical receipt.
+    change = availableQuantity - currentAvailable;
   }
 
   const stock = await refreshVariantStock(tx, productVariantId);
@@ -293,6 +332,132 @@ export async function setVariantAvailableStock(params: {
   await captureVariantInventoryDailySnapshots(tx, productVariantId);
 
   return { changed: true, warehouseId, stock };
+}
+
+export async function deleteVariantIfSafe(
+  tx: TransactionClient,
+  productVariantId: number,
+) {
+  const variant = await tx.productVariant.findUnique({
+    where: { id: productVariantId },
+    include: {
+      stockLevels: {
+        select: {
+          id: true,
+          quantity: true,
+          reserved: true,
+          _count: { select: { reservations: true } },
+        },
+      },
+      _count: {
+        select: {
+          orderItems: true,
+          orderBundleComponents: true,
+          inventoryLogs: true,
+          dailySnapshots: true,
+          warehouseDailySnapshots: true,
+          cartItems: true,
+          bundleGroupOptions: true,
+        },
+      },
+    },
+  });
+  if (!variant) return null;
+
+  if (
+    variant.stockLevels.some(
+      (level) => level._count.reservations > 0 || level.reserved > 0,
+    )
+  ) {
+    throw new InventoryDeletionConflictError(
+      "VARIANT_HAS_RESERVATIONS",
+      "This variant has inventory reservations; release or complete them before deleting it",
+    );
+  }
+  if (variant.stockLevels.some((level) => level.quantity > 0)) {
+    throw new InventoryDeletionConflictError(
+      "VARIANT_HAS_INVENTORY",
+      "This variant still has on-hand inventory; reconcile every warehouse to zero before deleting it",
+    );
+  }
+  if (variant._count.orderItems > 0 || variant._count.orderBundleComponents > 0) {
+    throw new InventoryDeletionConflictError(
+      "VARIANT_HAS_ORDER_HISTORY",
+      "This variant has order history and cannot be deleted; deactivate it instead",
+    );
+  }
+  if (
+    variant._count.inventoryLogs > 0 ||
+    variant._count.dailySnapshots > 0 ||
+    variant._count.warehouseDailySnapshots > 0
+  ) {
+    throw new InventoryDeletionConflictError(
+      "VARIANT_HAS_INVENTORY_HISTORY",
+      "This variant has inventory history and cannot be deleted; deactivate it instead",
+    );
+  }
+  if (variant._count.cartItems > 0 || variant._count.bundleGroupOptions > 0) {
+    throw new InventoryDeletionConflictError(
+      "VARIANT_IS_REFERENCED",
+      "This variant is still referenced and cannot be deleted; deactivate it instead",
+    );
+  }
+
+  await tx.stockLevel.deleteMany({ where: { productVariantId } });
+  await tx.productCode.deleteMany({ where: { variantId: productVariantId } });
+  await tx.productVariant.delete({ where: { id: productVariantId } });
+  return variant;
+}
+
+/**
+ * Removes an empty warehouse row without deleting reservations or inventory
+ * history. The compare-and-delete condition protects the decision from a
+ * concurrent quantity/reservation update inside the same transaction.
+ */
+export async function deleteStockLevelIfEmpty(
+  tx: TransactionClient,
+  stockLevelId: number,
+) {
+  const current = await tx.stockLevel.findUnique({
+    where: { id: stockLevelId },
+    select: {
+      id: true,
+      productVariantId: true,
+      quantity: true,
+      reserved: true,
+      _count: { select: { reservations: true } },
+    },
+  });
+  if (!current) return null;
+
+  if (current.reserved > 0 || current._count.reservations > 0) {
+    throw new InventoryDeletionConflictError(
+      "STOCK_LEVEL_HAS_RESERVATIONS",
+      "This stock level has reservations; release or complete them before deletion",
+    );
+  }
+  if (current.quantity > 0) {
+    throw new InventoryDeletionConflictError(
+      "STOCK_LEVEL_HAS_INVENTORY",
+      "Adjust this warehouse's on-hand quantity to zero before deleting the stock level",
+    );
+  }
+
+  const deleted = await tx.stockLevel.deleteMany({
+    where: { id: stockLevelId, quantity: 0, reserved: 0 },
+  });
+  if (deleted.count !== 1) {
+    throw new InventoryDeletionConflictError(
+      "STOCK_LEVEL_CHANGED",
+      "Stock level changed during deletion; reload and try again",
+    );
+  }
+
+  // Persist the derived zero before this transaction commits so a removed last
+  // level cannot expose the variant's old legacy fallback value.
+  await refreshVariantStock(tx, current.productVariantId);
+  await captureVariantInventoryDailySnapshots(tx, current.productVariantId);
+  return current;
 }
 
 export async function deductBundleInventory(params: {

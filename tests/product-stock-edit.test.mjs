@@ -13,12 +13,13 @@ const compile = (source) => ts.transpileModule(source, {
   },
 }).outputText;
 const forbidden = () => { throw new Error("Offline stock test blocked an external dependency"); };
-function loadSource(path, imports = {}) {
+function loadSource(path, imports = {}, globals = {}) {
   const loadedModule = { exports: {} };
   const context = vm.createContext({
     module: loadedModule, exports: loadedModule.exports, Error,
     require: (name) => Object.hasOwn(imports, name) ? imports[name] : forbidden(),
     fetch: forbidden,
+    ...globals,
   }, { codeGeneration: { strings: false, wasm: false } });
   new vm.Script(compile(readSource(path)), { filename: path }).runInContext(context);
   return loadedModule.exports;
@@ -26,8 +27,10 @@ function loadSource(path, imports = {}) {
 
 const variants = loadSource("lib/product-variants.ts");
 const stockStatus = loadSource("lib/stock-status.ts");
-const clientData = loadSource("lib/storefront-client-data.ts");
 const warehouseStock = loadSource("lib/warehouse-stock.ts");
+const clientData = loadSource("lib/storefront-client-data.ts", {
+  "@/lib/warehouse-stock": warehouseStock,
+});
 const inventory = loadSource("lib/inventory.ts", {
   "@/generated/prisma": { Prisma: {} },
   "@/lib/report-history": { captureVariantInventoryDailySnapshots: async () => {} },
@@ -68,6 +71,7 @@ function createEditor({
   const tx = {
     product: { update: async ({ data }) => Object.assign(state.product, data) },
     productVariant: {
+      findUnique: async ({ where }) => state.variants.find((row) => row.id === where.id) ?? null,
       findMany: async () => state.variants.map((row) => ({ ...row,
         stockLevels: state.levels.filter((level) => level.productVariantId === row.id), orderItems: [] })),
       create: async ({ data }) => { const row = { id: 902, ...data }; state.variants.push(row); return row; },
@@ -101,6 +105,7 @@ function createEditor({
       },
     },
     inventoryLog: { create: async ({ data }) => state.logs.push(data) },
+    $executeRaw: async () => 1,
   };
   const prisma = {
     product: { findFirst: async () => snapshot() },
@@ -290,6 +295,239 @@ test("admin badge treats a physical product without variants as out of stock", (
   assert.equal(context.getProductInventorySummary({ type: "SERVICE", variants: [] }).status, "IN_STOCK");
 });
 
+test("legacy stock 8 with no warehouse rows can be explicitly changed to 12", async () => {
+  const editor = createEditor({ existingVariant: { stock: 8 }, levels: [] });
+  const response = await editor.edit({ stock: 12, expectedAvailableStock: 8 });
+  assert.equal(response.status, 200);
+  assert.equal(editor.state().levels.length, 1);
+  assert.equal(editor.state().levels[0].quantity, 12);
+  assert.equal(editor.state().variants[0].stock, 12);
+  assert.equal(editor.state().logs[0].change, 4);
+});
+
+test("legacy zero stock initializes one warehouse row only after an explicit edit", async () => {
+  const editor = createEditor({ existingVariant: { stock: 0 }, levels: [] });
+  assert.equal(
+    (await editor.edit({ stock: 15, expectedAvailableStock: 0 })).status,
+    200,
+  );
+  assert.equal(editor.state().levels.length, 1);
+  assert.equal(editor.state().levels[0].quantity, 15);
+  assert.equal(editor.state().logs[0].change, 15);
+});
+
+test("metadata-only legacy edit preserves fallback stock without creating inventory", async () => {
+  const editor = createEditor({ existingVariant: { stock: 8 }, levels: [] });
+  assert.equal((await editor.edit({ name: "Legacy renamed", stock: 8 })).status, 200);
+  assert.equal(editor.state().variants[0].stock, 8);
+  assert.equal(editor.state().levels.length, 0);
+  assert.equal(editor.state().logs.length, 0);
+});
+
+test("repeated legacy stock save does not duplicate the initialized level", async () => {
+  const editor = createEditor({ existingVariant: { stock: 8 }, levels: [] });
+  assert.equal(
+    (await editor.edit({ stock: 12, expectedAvailableStock: 8 })).status,
+    200,
+  );
+  assert.equal(
+    (await editor.edit({ stock: 12, expectedAvailableStock: 12 })).status,
+    200,
+  );
+  assert.equal(editor.state().levels.length, 1);
+  assert.equal(editor.state().logs.length, 1);
+});
+
+test("concurrent legacy initialization serializes and rejects the stale writer", async () => {
+  const state = { stock: 8, levels: [], logs: [] };
+  let transactionTail = Promise.resolve();
+  const runTransaction = async (work) => {
+    const previous = transactionTail;
+    let release;
+    transactionTail = new Promise((resolve) => { release = resolve; });
+    await previous;
+    const tx = {
+      $executeRaw: async () => 1,
+      productVariant: {
+        findUnique: async () => ({ stock: state.stock }),
+        update: async ({ data }) => { state.stock = data.stock; },
+      },
+      warehouse: { findFirst: async () => ({ id: 7 }) },
+      stockLevel: {
+        findMany: async () => state.levels,
+        create: async ({ data }) => {
+          if (state.levels.length) throw new Error("duplicate warehouse level");
+          state.levels.push({ id: 1, ...data });
+        },
+      },
+      inventoryLog: { create: async ({ data }) => state.logs.push(data) },
+    };
+    try { return await work(tx); }
+    finally { release(); }
+  };
+  const edit = (availableQuantity) => runTransaction((tx) =>
+    inventory.setVariantAvailableStock({
+      tx, productId: 901, productVariantId: 902, availableQuantity,
+      expectedAvailableQuantity: 8, reason: "offline concurrent edit",
+    }));
+
+  const results = await Promise.allSettled([edit(12), edit(13)]);
+  assert.equal(results.filter((result) => result.status === "fulfilled").length, 1);
+  assert.equal(results.filter((result) => result.status === "rejected").length, 1);
+  assert.equal(results.find((result) => result.status === "rejected").reason.code, "AVAILABLE_STOCK_CHANGED");
+  assert.equal(state.levels.length, 1);
+  assert.equal(state.stock, 12);
+});
+
+test("legacy stock initialization fails safely when no warehouse exists", async () => {
+  const editor = createEditor({
+    existingVariant: { stock: 8 },
+    levels: [],
+    warehouse: false,
+  });
+  assert.equal(
+    (await editor.edit({ stock: 12, expectedAvailableStock: 8 })).status,
+    400,
+  );
+  assert.equal(editor.state().levels.length, 0);
+  assert.equal(editor.state().variants[0].stock, 8);
+  assert.equal(editor.state().logs.length, 0);
+});
+
+function createDeletionTransaction({ quantity = 0, reserved = 0, reservations = 0 } = {}) {
+  const state = {
+    level: { id: 31, productVariantId: 902, quantity, reserved },
+    variantStock: 99,
+    snapshots: 0,
+  };
+  const tx = {
+    stockLevel: {
+      findUnique: async () => state.level
+        ? { ...state.level, _count: { reservations } }
+        : null,
+      deleteMany: async ({ where }) => {
+        if (!state.level || state.level.quantity !== where.quantity || state.level.reserved !== where.reserved) {
+          return { count: 0 };
+        }
+        state.level = null;
+        return { count: 1 };
+      },
+      findMany: async () => state.level ? [state.level] : [],
+    },
+    productVariant: {
+      update: async ({ data }) => { state.variantStock = data.stock; },
+    },
+  };
+  return { tx, state };
+}
+
+test("reserved stock-level deletion is rejected without mutation", async () => {
+  const { tx, state } = createDeletionTransaction({ reserved: 1, reservations: 1 });
+  await assert.rejects(
+    inventory.deleteStockLevelIfEmpty(tx, 31),
+    (error) => error.code === "STOCK_LEVEL_HAS_RESERVATIONS",
+  );
+  assert.equal(state.level.reserved, 1);
+  assert.equal(state.variantStock, 99);
+});
+
+test("positive on-hand stock-level deletion is rejected without mutation", async () => {
+  const { tx, state } = createDeletionTransaction({ quantity: 4 });
+  await assert.rejects(
+    inventory.deleteStockLevelIfEmpty(tx, 31),
+    (error) => error.code === "STOCK_LEVEL_HAS_INVENTORY",
+  );
+  assert.equal(state.level.quantity, 4);
+  assert.equal(state.variantStock, 99);
+});
+
+test("deleting a zero stock-level clears stale legacy fallback atomically", async () => {
+  const { tx, state } = createDeletionTransaction();
+  const deleted = await inventory.deleteStockLevelIfEmpty(tx, 31);
+  assert.equal(deleted.id, 31);
+  assert.equal(state.level, null);
+  assert.equal(state.variantStock, 0);
+});
+
+function variantDeletionTx(overrides = {}) {
+  const calls = { stockLevels: 0, productCodes: 0, variants: 0 };
+  const variant = {
+    id: 902,
+    stockLevels: [],
+    _count: {
+      orderItems: 0, orderBundleComponents: 0, inventoryLogs: 0,
+      dailySnapshots: 0, warehouseDailySnapshots: 0, cartItems: 0,
+      bundleGroupOptions: 0,
+    },
+    ...overrides,
+  };
+  return {
+    calls,
+    tx: {
+      productVariant: {
+        findUnique: async () => variant,
+        delete: async () => { calls.variants++; },
+      },
+      stockLevel: { deleteMany: async () => { calls.stockLevels++; } },
+      productCode: { deleteMany: async () => { calls.productCodes++; } },
+    },
+  };
+}
+
+for (const [name, overrides, code] of [
+  ["reservation", { stockLevels: [{ quantity: 0, reserved: 1, _count: { reservations: 1 } }] }, "VARIANT_HAS_RESERVATIONS"],
+  ["positive inventory", { stockLevels: [{ quantity: 1, reserved: 0, _count: { reservations: 0 } }] }, "VARIANT_HAS_INVENTORY"],
+  ["order history", { _count: { orderItems: 1, orderBundleComponents: 0, inventoryLogs: 0, dailySnapshots: 0, warehouseDailySnapshots: 0, cartItems: 0, bundleGroupOptions: 0 } }, "VARIANT_HAS_ORDER_HISTORY"],
+  ["inventory history", { _count: { orderItems: 0, orderBundleComponents: 0, inventoryLogs: 1, dailySnapshots: 0, warehouseDailySnapshots: 0, cartItems: 0, bundleGroupOptions: 0 } }, "VARIANT_HAS_INVENTORY_HISTORY"],
+]) {
+  test(`variant with ${name} cannot be deleted`, async () => {
+    const { tx, calls } = variantDeletionTx(overrides);
+    await assert.rejects(
+      inventory.deleteVariantIfSafe(tx, 902),
+      (error) => error.code === code,
+    );
+    assert.deepEqual(calls, { stockLevels: 0, productCodes: 0, variants: 0 });
+  });
+}
+
+test("unreferenced zero-stock variant deletion removes only disposable rows", async () => {
+  const { tx, calls } = variantDeletionTx({
+    stockLevels: [{ quantity: 0, reserved: 0, _count: { reservations: 0 } }],
+  });
+  const deleted = await inventory.deleteVariantIfSafe(tx, 902);
+  assert.equal(deleted.id, 902);
+  assert.deepEqual(calls, { stockLevels: 1, productCodes: 1, variants: 1 });
+});
+
+test("dedicated stock and variant deletion routes reject unauthenticated callers", async () => {
+  let transactions = 0;
+  const response = { json: (body, options = {}) => ({ body, status: options.status ?? 200 }) };
+  const authImports = {
+    "@/lib/prisma": { prisma: { $transaction: async () => { transactions++; } } },
+    "@/lib/auth": { authOptions: {} },
+    "@/lib/rbac": { getAccessContext: async () => ({ userId: null, has: () => false }) },
+    "next-auth/next": { getServerSession: async () => null },
+    "next/server": { NextResponse: response },
+    "@/lib/inventory": inventory,
+    "@/lib/storefront-catalog-cache": { revalidateStorefrontCatalog: () => {} },
+    "@/lib/activity-log": { logActivity: async () => {} },
+    "@/lib/stock-status": { normalizeLowStockThreshold: () => 10 },
+    "@/lib/product-codes": { ensureVariantCodes: async () => {} },
+    "@/generated/prisma": { Prisma: { sql: () => {}, join: () => {} } },
+  };
+  const stockRoute = loadSource("app/api/stock-levels/[id]/route.ts", authImports);
+  const variantRoute = loadSource("app/api/product-variants/[id]/route.ts", authImports);
+  assert.equal(
+    (await stockRoute.DELETE({}, { params: Promise.resolve({ id: "31" }) })).status,
+    401,
+  );
+  assert.equal(
+    (await variantRoute.DELETE({}, { params: Promise.resolve({ id: "902" }) })).status,
+    401,
+  );
+  assert.equal(transactions, 0);
+});
+
 test("storefront projections select active variants only", () => {
   for (const path of ["lib/storefront-product.ts", "lib/storefront-home.ts", "lib/storefront-catalog.ts"]) {
     const source = readSource(path);
@@ -312,6 +550,79 @@ test("warehouse levels override stale legacy variant stock", () => {
     }),
     13,
   );
+});
+
+test("public product projection exposes available stock without private warehouse rows", () => {
+  const storefrontProduct = loadSource("lib/storefront-product.ts", {
+    "@/lib/configurable-bundle": {
+      configurableBundleVariantOrderBy: [],
+      configurableBundleVariantSelect: {},
+      getDefaultBundleAvailableQuantity: () => 0,
+    },
+    "@/lib/warehouse-stock": warehouseStock,
+  });
+  const projected = storefrontProduct.serializeStorefrontProductInventory({
+    id: 901,
+    type: "PHYSICAL",
+    variants: [
+      {
+        id: 902,
+        stock: 0,
+        active: true,
+        stockLevels: [{ warehouseId: 7, quantity: 15, reserved: 2 }],
+      },
+    ],
+  });
+  assert.equal(projected.variants[0].stock, 13);
+  assert.equal("stockLevels" in projected.variants[0], false);
+});
+
+test("storefront normalization excludes inactive variants and shares projected stock semantics", () => {
+  const [product] = clientData.normalizeStorefrontProducts([{
+    id: 901, name: "Stocked", slug: "stocked", image: null,
+    basePrice: 100, originalPrice: null, currency: "BDT", available: true,
+    variants: [
+      { id: 1, active: false, stock: 99 },
+      { id: 2, active: true, stock: 0, stockLevels: [{ quantity: 8, reserved: 3 }] },
+    ],
+  }]);
+  assert.equal(product.variants.length, 1);
+  assert.equal(product.stock, 5);
+});
+
+test("storefront availability keeps zero physical stock unavailable and non-inventory products sellable", () => {
+  const [physical, digital, service] = clientData.normalizeStorefrontProducts([
+    { id: 1, name: "Empty", slug: "empty", available: true, variants: [{ active: true, stock: 0 }] },
+    { id: 2, name: "Download", slug: "download", available: true, type: "DIGITAL", variants: [] },
+    { id: 3, name: "Consulting", slug: "consulting", available: true, type: "SERVICE", variants: [] },
+  ]);
+  assert.equal(physical.stock, 0);
+  assert.equal(digital.stock, 1);
+  assert.equal(service.stock, 1);
+});
+
+test("inventory-sensitive client fetches are not retained while metadata remains cacheable", async () => {
+  let calls = 0;
+  const clientCache = loadSource("lib/client-cache-fetch.ts", {}, {
+    fetch: async () => {
+      calls++;
+      return {
+        ok: true,
+        status: 200,
+        statusText: "OK",
+        json: async () => ({ call: calls }),
+      };
+    },
+  });
+  const firstStock = await clientCache.cachedFetchJson("/stock", { freshness: "inventory" });
+  const secondStock = await clientCache.cachedFetchJson("/stock", { freshness: "inventory" });
+  assert.equal(firstStock.call, 1);
+  assert.equal(secondStock.call, 2);
+
+  const firstMetadata = await clientCache.cachedFetchJson("/categories", { ttlMs: 60_000 });
+  const secondMetadata = await clientCache.cachedFetchJson("/categories", { ttlMs: 60_000 });
+  assert.equal(firstMetadata.call, 3);
+  assert.equal(secondMetadata.call, 3);
 });
 
 test("successful inventory edits invalidate all storefront stock views", () => {

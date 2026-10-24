@@ -1,7 +1,10 @@
 import { unstable_cache } from "next/cache";
 import { Prisma } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
-import { storefrontProductSelect } from "@/lib/storefront-product";
+import {
+  serializeStorefrontProductInventory,
+  storefrontProductSelect,
+} from "@/lib/storefront-product";
 import { resolveFlashSalePricing } from "@/lib/flash-sale";
 import { getDisabledStorefrontProductTypes } from "@/lib/store-feature-gates-server";
 import type { FeatureControlledProductType } from "@/lib/store-features";
@@ -18,7 +21,7 @@ type RawProduct = Prisma.ProductGetPayload<{
 
 function serializeProduct(product: RawProduct) {
   const flashSale = resolveFlashSalePricing(product);
-  return {
+  return serializeStorefrontProductInventory({
     ...product,
     basePrice: flashSale.salePrice,
     originalPrice: flashSale.active
@@ -37,37 +40,45 @@ function serializeProduct(product: RawProduct) {
       ...variant,
       price: resolveFlashSalePricing(product, variant.price).salePrice,
       stock: computeVariantAvailableStock(variant),
-  })),
-  bundleGroups: product.bundleGroups.map((group) => ({
-    ...group,
-    options: group.options.map((option) => {
-      const resolvedVariant = option.variant ??
-        option.product.variants.find((variant) => variant.isDefault && variant.active) ??
-        option.product.variants.find((variant) => variant.active) ??
-        null;
-      const serializeBundleVariant = (variant: typeof resolvedVariant) => variant
-        ? {
-            ...variant,
-            price: Number(variant.price),
-            stock: product.type === "BUNDLE"
-              ? product.bundleWarehouseId
-                ? computeWarehouseAvailableStockAtWarehouse(variant, product.bundleWarehouseId) ?? 0
-                : 0
-              : computeVariantAvailableStock(variant),
-          }
-        : null;
-      return {
-        ...option,
-        priceAdjustment: Number(option.priceAdjustment),
-        product: {
-          ...option.product,
-          basePrice: Number(option.product.basePrice),
-        },
-        variant: serializeBundleVariant(resolvedVariant),
-      };
-    }),
-  })),
-};
+    })),
+    bundleGroups: product.bundleGroups.map((group) => ({
+      ...group,
+      options: group.options.map((option) => {
+        const resolvedVariant =
+          option.variant ??
+          option.product.variants.find(
+            (variant) => variant.isDefault && variant.active,
+          ) ??
+          option.product.variants.find((variant) => variant.active) ??
+          null;
+        const serializeBundleVariant = (variant: typeof resolvedVariant) =>
+          variant
+            ? {
+                ...variant,
+                price: Number(variant.price),
+                stock:
+                  product.type === "BUNDLE"
+                    ? product.bundleWarehouseId
+                      ? (computeWarehouseAvailableStockAtWarehouse(
+                          variant,
+                          product.bundleWarehouseId,
+                        ) ?? 0)
+                      : 0
+                    : computeVariantAvailableStock(variant),
+              }
+            : null;
+        return {
+          ...option,
+          priceAdjustment: Number(option.priceAdjustment),
+          product: {
+            ...option.product,
+            basePrice: Number(option.product.basePrice),
+          },
+          variant: serializeBundleVariant(resolvedVariant),
+        };
+      }),
+    })),
+  });
 }
 
 type ProductIdentifier = { id: number } | { slug: string };

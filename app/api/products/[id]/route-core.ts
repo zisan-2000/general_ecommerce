@@ -3,6 +3,8 @@ import { authOptions } from "@/lib/auth";
 import { logActivity } from "@/lib/activity-log";
 import {
   AvailableStockEditConflictError,
+  InventoryDeletionConflictError,
+  deleteVariantIfSafe,
   setVariantAvailableStock,
   syncVariantWarehouseStock,
 } from "@/lib/inventory";
@@ -19,7 +21,10 @@ import { NextResponse } from "next/server";
 import { Prisma, type ProductType } from "@/generated/prisma";
 import slugify from "slugify";
 import { isStorefrontRequest, privateJson, publicJson } from "@/lib/public-cache";
-import { storefrontProductSelect } from "@/lib/storefront-product";
+import {
+  serializeStorefrontProductInventory,
+  storefrontProductSelect,
+} from "@/lib/storefront-product";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { applyFlashSalePricingToProduct } from "@/lib/flash-sale";
 import { evaluatePriceDropAlertsForProduct } from "@/lib/price-drop-alerts";
@@ -250,10 +255,15 @@ export async function GET(
 
     const data = attachVariantColorImages(product, colorImageMap);
     return storefront
-      ? publicJson(applyFlashSalePricingToProduct(data), {
-          maxAge: 0,
-          staleWhileRevalidate: 0,
-        })
+      ? publicJson(
+          serializeStorefrontProductInventory(
+            applyFlashSalePricingToProduct(data),
+          ),
+          {
+            maxAge: 0,
+            staleWhileRevalidate: 0,
+          },
+        )
       : privateJson(data);
   } catch (err) {
     return NextResponse.json(
@@ -770,18 +780,7 @@ export async function PUT(
         for (const staleVariant of existingVariants.filter(
           (variant) => !incomingIds.has(variant.id),
         )) {
-          const hasInventory = staleVariant.stockLevels.some(
-            (level) => Number(level.quantity) > 0 || Number(level.reserved) > 0,
-          );
-          const hasOrders = staleVariant.orderItems.length > 0;
-
-          if (hasInventory || hasOrders) {
-            throw new Error(
-              `Cannot remove variant ${staleVariant.sku} because it already has stock or order history`,
-            );
-          }
-
-          await tx.productVariant.delete({ where: { id: staleVariant.id } });
+          await deleteVariantIfSafe(tx, staleVariant.id);
         }
 
         for (let index = 0; index < nextVariants.length; index += 1) {
@@ -986,22 +985,37 @@ export async function PUT(
     console.error(err);
     const message =
       err instanceof Error ? err.message : "Failed to update product";
-    const status = err instanceof AvailableStockEditConflictError
-      ? 409
-      : typeof message === "string" &&
-      (message.startsWith("Cannot remove variant") ||
-        message.startsWith("A warehouse is required") ||
-        message.startsWith("Stock quantity") ||
-        message.startsWith("Available stock") ||
-        message.startsWith("Expected available stock"))
-        ? 400
-        : 500;
+    const isReferenceConflict = Boolean(
+      err &&
+        typeof err === "object" &&
+        "code" in err &&
+        err.code === "P2003",
+    );
+    const status =
+      err instanceof AvailableStockEditConflictError ||
+      err instanceof InventoryDeletionConflictError
+        ? 409
+        : isReferenceConflict
+          ? 409
+          : typeof message === "string" &&
+              (message.startsWith("Cannot remove variant") ||
+                message.startsWith("A warehouse is required") ||
+                message.startsWith("Stock quantity") ||
+                message.startsWith("Available stock") ||
+                message.startsWith("Expected available stock"))
+            ? 400
+            : 500;
     return NextResponse.json(
       {
-        error: message,
-        ...(err instanceof AvailableStockEditConflictError
+        error: isReferenceConflict
+          ? "A product variant is referenced by business records and cannot be deleted; deactivate it instead"
+          : message,
+        ...(err instanceof AvailableStockEditConflictError ||
+        err instanceof InventoryDeletionConflictError
           ? { code: err.code }
-          : {}),
+          : isReferenceConflict
+            ? { code: "VARIANT_IS_REFERENCED" }
+            : {}),
       },
       { status }
     );
