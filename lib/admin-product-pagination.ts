@@ -33,9 +33,19 @@ export function adminProductQuery(params: URLSearchParams) {
   const sort = params.get("sort") || "name-asc";
   const needsStock = Boolean(stock && stock !== "non-physical") || sort.split("-")[0] === "stock";
   const stockJoin = needsStock ? Prisma.sql`LEFT JOIN LATERAL (
-    SELECT COUNT(*) AS count, COALESCE(SUM(v.stock), 0) AS total,
-      BOOL_OR(v.stock <= GREATEST(0, COALESCE(v."lowStockThreshold", p."lowStockThreshold", 10))) AS low
-    FROM "ProductVariant" v WHERE v."productId" = p.id
+    SELECT COUNT(*) AS count, COALESCE(SUM(v.available), 0) AS total,
+      BOOL_OR(v.available <= GREATEST(0, COALESCE(v."lowStockThreshold", p."lowStockThreshold", 10))) AS low
+    FROM (
+      SELECT pv.id, pv."lowStockThreshold",
+        CASE WHEN COUNT(sl.id) > 0
+          THEN COALESCE(SUM(GREATEST(sl.quantity - sl.reserved, 0)), 0)
+          ELSE GREATEST(pv.stock, 0)
+        END AS available
+      FROM "ProductVariant" pv
+      LEFT JOIN "StockLevel" sl ON sl."productVariantId" = pv.id
+      WHERE pv."productId" = p.id AND pv.active = true
+      GROUP BY pv.id, pv."lowStockThreshold", pv.stock
+    ) v
   ) inventory ON true` : Prisma.empty;
   if (stock === "non-physical") conditions.push(Prisma.sql`p.type <> 'PHYSICAL'`);
   if (stock === "in-stock") conditions.push(Prisma.sql`p.type = 'PHYSICAL' AND inventory.total > 0 AND NOT inventory.low`);

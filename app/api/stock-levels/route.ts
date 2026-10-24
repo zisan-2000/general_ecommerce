@@ -1,7 +1,10 @@
 import { prisma } from "@/lib/prisma";
 import { authOptions } from "@/lib/auth";
 import { logActivity } from "@/lib/activity-log";
-import { refreshVariantStock } from "@/lib/inventory";
+import {
+  AvailableStockEditConflictError,
+  refreshVariantStock,
+} from "@/lib/inventory";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 import { getAccessContext } from "@/lib/rbac";
 import { captureVariantInventoryDailySnapshots } from "@/lib/report-history";
@@ -120,6 +123,14 @@ export async function POST(req: Request) {
     const warehouseId = Number(body.warehouseId);
     const productVariantId = Number(body.productVariantId);
     const quantity = Number(body.quantity);
+    const expectedQuantity =
+      body.expectedQuantity !== undefined && body.expectedQuantity !== null
+        ? Number(body.expectedQuantity)
+        : null;
+    const expectedReserved =
+      body.expectedReserved !== undefined && body.expectedReserved !== null
+        ? Number(body.expectedReserved)
+        : null;
 
     if (!warehouseId || Number.isNaN(warehouseId)) {
       return NextResponse.json(
@@ -133,9 +144,20 @@ export async function POST(req: Request) {
         { status: 400 },
       );
     }
-    if (!Number.isFinite(quantity) || quantity < 0) {
+    if (!Number.isSafeInteger(quantity) || quantity < 0) {
       return NextResponse.json(
-        { error: "Quantity must be 0 or more" },
+        { error: "Quantity must be a whole number (0 or more)" },
+        { status: 400 },
+      );
+    }
+    if (
+      (expectedQuantity !== null &&
+        (!Number.isSafeInteger(expectedQuantity) || expectedQuantity < 0)) ||
+      (expectedReserved !== null &&
+        (!Number.isSafeInteger(expectedReserved) || expectedReserved < 0))
+    ) {
+      return NextResponse.json(
+        { error: "Expected inventory values must be whole numbers (0 or more)" },
         { status: 400 },
       );
     }
@@ -160,46 +182,88 @@ export async function POST(req: Request) {
       );
     }
 
-    const existing = await prisma.stockLevel.findUnique({
-      where: {
-        warehouseId_productVariantId: { warehouseId, productVariantId },
-      },
-    });
-
-    const updated = await prisma.stockLevel.upsert({
-      where: {
-        warehouseId_productVariantId: { warehouseId, productVariantId },
-      },
-      create: {
-        warehouseId,
-        productVariantId,
-        quantity,
-        reserved: 0,
-      },
-      update: {
-        quantity,
-      },
-      include: { warehouse: true },
-    });
-
-    const oldQty = existing ? Number(existing.quantity) : 0;
-    const change = quantity - oldQty;
-
-    await refreshVariantStock(prisma, productVariantId);
-    revalidateStorefrontCatalog();
-    await captureVariantInventoryDailySnapshots(prisma, productVariantId);
-
-    if (change !== 0) {
-      await prisma.inventoryLog.create({
-        data: {
-          productId: variant.product.id,
-          variantId: productVariantId,
-          warehouseId,
-          change,
-          reason: `Admin stock level adjustment (${updated.warehouse.code})`,
+    const result = await prisma.$transaction(async (tx) => {
+      const existing = await tx.stockLevel.findUnique({
+        where: {
+          warehouseId_productVariantId: { warehouseId, productVariantId },
         },
       });
-    }
+      const currentQuantity = Number(existing?.quantity ?? 0);
+      const currentReserved = Number(existing?.reserved ?? 0);
+
+      if (
+        quantity !== currentQuantity &&
+        (expectedQuantity === null || expectedReserved === null)
+      ) {
+        throw new AvailableStockEditConflictError(
+          "EXPECTED_AVAILABLE_STOCK_REQUIRED",
+          "Reload warehouse inventory before changing its quantity",
+        );
+      }
+
+      if (
+        (expectedQuantity !== null && expectedQuantity !== currentQuantity) ||
+        (expectedReserved !== null && expectedReserved !== currentReserved)
+      ) {
+        throw new AvailableStockEditConflictError(
+          "AVAILABLE_STOCK_CHANGED",
+          "Warehouse inventory changed after it was loaded; reload and try again",
+        );
+      }
+      if (quantity < currentReserved) {
+        throw new AvailableStockEditConflictError(
+          "INVALID_INVENTORY_STATE",
+          "On-hand quantity cannot be lower than the reserved quantity",
+        );
+      }
+
+      if (existing) {
+        const changed = await tx.stockLevel.updateMany({
+          where: {
+            id: existing.id,
+            quantity: existing.quantity,
+            reserved: existing.reserved,
+          },
+          data: { quantity },
+        });
+        if (changed.count !== 1) {
+          throw new AvailableStockEditConflictError(
+            "AVAILABLE_STOCK_CHANGED",
+            "Warehouse inventory changed during this edit; reload and try again",
+          );
+        }
+      } else {
+        await tx.stockLevel.create({
+          data: { warehouseId, productVariantId, quantity, reserved: 0 },
+        });
+      }
+
+      const updated = await tx.stockLevel.findUniqueOrThrow({
+        where: {
+          warehouseId_productVariantId: { warehouseId, productVariantId },
+        },
+        include: { warehouse: true },
+      });
+      const change = quantity - currentQuantity;
+
+      await refreshVariantStock(tx, productVariantId);
+      await captureVariantInventoryDailySnapshots(tx, productVariantId);
+      if (change !== 0) {
+        await tx.inventoryLog.create({
+          data: {
+            productId: variant.product.id,
+            variantId: productVariantId,
+            warehouseId,
+            change,
+            reason: `Admin stock level adjustment (${updated.warehouse.code})`,
+          },
+        });
+      }
+
+      return { existing, updated, change };
+    });
+    const { existing, updated, change } = result;
+    revalidateStorefrontCatalog();
 
     await logActivity({
       action: existing ? "update_stock_level" : "create_stock_level",
@@ -221,6 +285,12 @@ export async function POST(req: Request) {
     return NextResponse.json(updated);
   } catch (error) {
     console.error("POST STOCK LEVEL ERROR:", error);
+    if (error instanceof AvailableStockEditConflictError) {
+      return NextResponse.json(
+        { error: error.message, code: error.code },
+        { status: 409 },
+      );
+    }
     return NextResponse.json(
       { error: "Failed to save stock level" },
       { status: 500 },

@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
+import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
 import { useTranslations } from "next-intl";
 import { Edit3, Plus, Printer, RefreshCw, Trash2, X } from "lucide-react";
 
@@ -402,7 +403,7 @@ export default function ProductRelationsModal({
       sku: v.sku || "",
       price: String(v.price ?? ""),
       currency: v.currency || "USD",
-      stock: String(v.stock ?? 0),
+      stock: String(computeVariantAvailableStock(v)),
       option1Name: o1?.[0] || "",
       option1Value: o1?.[1] != null ? String(o1[1]) : "",
       option2Name: o2?.[0] || "",
@@ -468,7 +469,7 @@ export default function ProductRelationsModal({
       toast.error(t("errors.priceRequired"));
       return;
     }
-    if (!Number.isFinite(stock) || stock < 0) {
+    if (!Number.isSafeInteger(stock) || stock < 0) {
       toast.error(t("errors.invalidStock"));
       return;
     }
@@ -481,12 +482,23 @@ export default function ProductRelationsModal({
       options[variantForm.option2Name.trim()] = variantForm.option2Value;
     }
 
+    const originalAvailableStock = editingVariant
+      ? computeVariantAvailableStock(editingVariant)
+      : null;
+    const stockChanged = !editingVariant || stock !== originalAvailableStock;
     const payload: any = {
       productId: product.id,
       sku,
       price,
       currency: variantForm.currency || "USD",
-      stock,
+      ...(stockChanged
+        ? {
+            stock,
+            ...(editingVariant
+              ? { expectedAvailableStock: originalAvailableStock }
+              : {}),
+          }
+        : {}),
       options,
       digitalAssetId: variantForm.digitalAssetId
         ? Number(variantForm.digitalAssetId)
@@ -541,7 +553,6 @@ export default function ProductRelationsModal({
           sku: variant.sku,
           price: variant.price,
           currency: variant.currency,
-          stock: variant.stock,
           options: variant.options ?? {},
           digitalAssetId: variant.digitalAssetId ?? null,
           regenerateCodes: true,
@@ -604,10 +615,14 @@ export default function ProductRelationsModal({
   const saveStockLevel = async (warehouseId: number) => {
     if (!selectedVariant) return;
     const qty = Number(stockDraft[warehouseId]);
-    if (!Number.isFinite(qty) || qty < 0) {
+    if (!Number.isSafeInteger(qty) || qty < 0) {
       toast.error(t("errors.invalidQuantity"));
       return;
     }
+
+    const existingLevel = selectedVariant.stockLevels?.find(
+      (level) => level.warehouseId === warehouseId,
+    );
 
     try {
       const res = await fetch("/api/stock-levels", {
@@ -617,6 +632,8 @@ export default function ProductRelationsModal({
           warehouseId,
           productVariantId: selectedVariant.id,
           quantity: qty,
+          expectedQuantity: existingLevel?.quantity ?? 0,
+          expectedReserved: existingLevel?.reserved ?? 0,
         }),
       });
       const data = await res.json().catch(() => ({}));

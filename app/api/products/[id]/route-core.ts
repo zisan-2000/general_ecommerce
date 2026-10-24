@@ -1,7 +1,11 @@
 import { prisma } from "@/lib/prisma";
 import { authOptions } from "@/lib/auth";
 import { logActivity } from "@/lib/activity-log";
-import { syncVariantWarehouseStock } from "@/lib/inventory";
+import {
+  AvailableStockEditConflictError,
+  setVariantAvailableStock,
+  syncVariantWarehouseStock,
+} from "@/lib/inventory";
 import {
   getVariantMediaMeta,
   normalizeVariantOptions,
@@ -164,7 +168,8 @@ type VariantPayload = {
   sku: string;
   price: number;
   costPrice: number | null;
-  stock: number;
+  stock: number | null;
+  expectedAvailableStock: number | null;
   lowStockThreshold: number;
   currency: string;
   digitalAssetId: number | null;
@@ -386,12 +391,27 @@ export async function PUT(
 
     const nextSimpleStock =
       body.stock !== undefined && body.stock !== null ? Number(body.stock) : null;
+    const expectedSimpleAvailableStock =
+      body.expectedAvailableStock !== undefined &&
+      body.expectedAvailableStock !== null
+        ? Number(body.expectedAvailableStock)
+        : null;
     if (
       nextSimpleStock !== null &&
-      (!Number.isFinite(nextSimpleStock) || nextSimpleStock < 0)
+      (!Number.isSafeInteger(nextSimpleStock) || nextSimpleStock < 0)
     ) {
       return NextResponse.json(
-        { error: "Stock must be a number (0 or more)" },
+        { error: "Stock must be a whole number (0 or more)" },
+        { status: 400 },
+      );
+    }
+    if (
+      expectedSimpleAvailableStock !== null &&
+      (!Number.isSafeInteger(expectedSimpleAvailableStock) ||
+        expectedSimpleAvailableStock < 0)
+    ) {
+      return NextResponse.json(
+        { error: "Expected available stock must be a whole number (0 or more)" },
         { status: 400 },
       );
     }
@@ -472,8 +492,13 @@ export async function PUT(
           effectiveType === "PHYSICAL"
             ? item?.stock !== undefined && item?.stock !== null
               ? Number(item.stock)
-              : 0
-            : 0;
+              : null
+            : null;
+        const expectedAvailableStock =
+          item?.expectedAvailableStock !== undefined &&
+          item?.expectedAvailableStock !== null
+            ? Number(item.expectedAvailableStock)
+            : null;
         const skuRaw =
           typeof item?.sku === "string" && item.sku.trim()
             ? item.sku.trim()
@@ -485,6 +510,7 @@ export async function PUT(
           price,
           costPrice,
           stock,
+          expectedAvailableStock,
           lowStockThreshold: normalizeLowStockThreshold(
             item?.lowStockThreshold,
             nextLowStockThreshold,
@@ -510,12 +536,15 @@ export async function PUT(
           variant.price < 0 ||
           (variant.costPrice !== null &&
             (!Number.isFinite(variant.costPrice) || variant.costPrice < 0)) ||
-          !Number.isFinite(variant.stock) ||
-          variant.stock < 0,
+          (variant.stock !== null &&
+            (!Number.isSafeInteger(variant.stock) || variant.stock < 0)) ||
+          (variant.expectedAvailableStock !== null &&
+            (!Number.isSafeInteger(variant.expectedAvailableStock) ||
+              variant.expectedAvailableStock < 0)),
       )
     ) {
       return NextResponse.json(
-        { error: "Variant price/stock must be valid numbers" },
+        { error: "Variant price/stock must contain valid whole stock quantities" },
         { status: 400 },
       );
     }
@@ -714,12 +743,13 @@ export async function PUT(
           });
 
           if (effectiveType === "PHYSICAL" && nextSimpleStock !== null) {
-            await syncVariantWarehouseStock({
+            await setVariantAvailableStock({
               tx,
               productId: id,
               productVariantId: savedVariant.id,
-              quantity: nextSimpleStock,
-              reason: "Admin stock sync",
+              availableQuantity: nextSimpleStock,
+              expectedAvailableQuantity: expectedSimpleAvailableStock,
+              reason: "Admin available stock edit",
             });
           }
 
@@ -771,7 +801,6 @@ export async function PUT(
                   price: variant.price,
                   costPrice: variant.costPrice,
                   currency: variant.currency,
-                  stock: 0,
                   lowStockThreshold: variant.lowStockThreshold,
                   isDefault: false,
                   active: variant.active,
@@ -801,13 +830,26 @@ export async function PUT(
             WHERE "id" = ${savedVariant.id}
           `;
 
-          await syncVariantWarehouseStock({
-            tx,
-            productId: id,
-            productVariantId: savedVariant.id,
-            quantity: effectiveType === "PHYSICAL" ? variant.stock : 0,
-            reason: "Admin variant stock sync",
-          });
+          if (effectiveType === "PHYSICAL" && variant.stock !== null) {
+            if (existingVariant) {
+              await setVariantAvailableStock({
+                tx,
+                productId: id,
+                productVariantId: savedVariant.id,
+                availableQuantity: variant.stock,
+                expectedAvailableQuantity: variant.expectedAvailableStock,
+                reason: "Admin variant available stock edit",
+              });
+            } else {
+              await syncVariantWarehouseStock({
+                tx,
+                productId: id,
+                productVariantId: savedVariant.id,
+                quantity: variant.stock,
+                reason: "Admin initial variant stock",
+              });
+            }
+          }
 
           await ensureVariantCodes(tx, {
             productId: id,
@@ -838,7 +880,6 @@ export async function PUT(
                 costPrice:
                   nextBaseCostPrice !== undefined ? nextBaseCostPrice : defaultVariant.costPrice,
                 currency,
-                stock: 0,
                 lowStockThreshold: nextLowStockThreshold,
                 isDefault: true,
                 active: true,
@@ -878,14 +919,25 @@ export async function PUT(
           data: { isDefault: false },
         });
 
-        if (effectiveType === "PHYSICAL") {
-          await syncVariantWarehouseStock({
-            tx,
-            productId: id,
-            productVariantId: savedVariant.id,
-            quantity: nextSimpleStock ?? 0,
-            reason: "Admin stock sync",
-          });
+        if (effectiveType === "PHYSICAL" && nextSimpleStock !== null) {
+          if (defaultVariant) {
+            await setVariantAvailableStock({
+              tx,
+              productId: id,
+              productVariantId: savedVariant.id,
+              availableQuantity: nextSimpleStock,
+              expectedAvailableQuantity: expectedSimpleAvailableStock,
+              reason: "Admin available stock edit",
+            });
+          } else {
+            await syncVariantWarehouseStock({
+              tx,
+              productId: id,
+              productVariantId: savedVariant.id,
+              quantity: nextSimpleStock,
+              reason: "Admin initial stock",
+            });
+          }
         }
 
         await ensureVariantCodes(tx, {
@@ -934,15 +986,23 @@ export async function PUT(
     console.error(err);
     const message =
       err instanceof Error ? err.message : "Failed to update product";
-    const status =
-      typeof message === "string" &&
+    const status = err instanceof AvailableStockEditConflictError
+      ? 409
+      : typeof message === "string" &&
       (message.startsWith("Cannot remove variant") ||
         message.startsWith("A warehouse is required") ||
-        message.startsWith("Stock quantity"))
+        message.startsWith("Stock quantity") ||
+        message.startsWith("Available stock") ||
+        message.startsWith("Expected available stock"))
         ? 400
         : 500;
     return NextResponse.json(
-      { error: message },
+      {
+        error: message,
+        ...(err instanceof AvailableStockEditConflictError
+          ? { code: err.code }
+          : {}),
+      },
       { status }
     );
   }

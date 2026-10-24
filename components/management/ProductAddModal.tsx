@@ -21,6 +21,7 @@ import {
   normalizeVariantMediaMeta,
 } from "@/lib/product-variants";
 import { type CatalogAttributeType } from "@/lib/attribute-schema";
+import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
 import {
   parseSpecificationGroupsInput,
   type SpecificationGroupInput,
@@ -219,6 +220,19 @@ const emptyVariantOption = (): VariantOptionForm => ({
   valueInput: "",
 });
 const clean = (value: string) => value.trim();
+
+function editingVariantAvailableStock(editing: any, variantId?: number) {
+  const variants = Array.isArray(editing?.variants) ? editing.variants : [];
+  if (variantId !== undefined) {
+    const variant = variants.find((item: any) => Number(item?.id) === variantId);
+    return variant ? computeVariantAvailableStock(variant) : null;
+  }
+  return variants.reduce(
+    (sum: number, variant: any) =>
+      sum + computeVariantAvailableStock(variant),
+    0,
+  );
+}
 
 const COMPUTER_VARIANT_OPTION_NAMES = [
   "Capacity",
@@ -604,7 +618,7 @@ export default function ProductAddModal({
           price: String(variant?.price ?? ""),
           costPrice:
             variant?.costPrice != null ? String(variant.costPrice) : "",
-          stock: String(Number(variant?.stock) || 0),
+          stock: String(computeVariantAvailableStock(variant)),
           lowStockThreshold: String(Number(variant?.lowStockThreshold) || 10),
           active:
             variant?.active !== undefined ? Boolean(variant.active) : true,
@@ -1058,7 +1072,7 @@ export default function ProductAddModal({
         variant.price < 0 ||
         (variant.costPrice !== null &&
           (!Number.isFinite(variant.costPrice) || variant.costPrice < 0)) ||
-        !Number.isFinite(variant.stock) ||
+        !Number.isSafeInteger(variant.stock) ||
         variant.stock < 0 ||
         !Number.isFinite(variant.lowStockThreshold) ||
         variant.lowStockThreshold < 0,
@@ -1086,7 +1100,7 @@ export default function ProductAddModal({
             : 0
         : undefined;
 
-    if (stock !== undefined && (!Number.isFinite(stock) || stock < 0)) {
+    if (stock !== undefined && (!Number.isSafeInteger(stock) || stock < 0)) {
       toast.error(t("errors.invalidStock"));
       return;
     }
@@ -1179,20 +1193,42 @@ export default function ProductAddModal({
 
       if (!editing) payload.available = form.available;
 
-      if (stock !== undefined) payload.stock = stock;
+      if (form.type === "PHYSICAL" && !hasVariants && stock !== undefined) {
+        const originalAvailable = editingVariantAvailableStock(editing);
+        if (!editing || stock !== originalAvailable) {
+          payload.stock = stock;
+          if (editing) payload.expectedAvailableStock = originalAvailable;
+        }
+      }
       if (hasVariants) {
-        payload.variants = normalizedVariants.map((variant) => ({
-          id: variant.id,
-          sku: variant.sku,
-          price: variant.price,
-          costPrice: variant.costPrice,
-          currency: form.currency || "USD",
-          stock: form.type === "PHYSICAL" ? variant.stock : 0,
-          lowStockThreshold: variant.lowStockThreshold,
-          active: variant.active,
-          colorImage: variant.colorImage,
-          options: variant.options,
-        }));
+        payload.variants = normalizedVariants.map((variant) => {
+          const originalAvailable = variant.id
+            ? editingVariantAvailableStock(editing, variant.id)
+            : null;
+          const stockChanged =
+            form.type === "PHYSICAL" &&
+            (!editing || !variant.id || originalAvailable !== variant.stock);
+
+          return {
+            id: variant.id,
+            sku: variant.sku,
+            price: variant.price,
+            costPrice: variant.costPrice,
+            currency: form.currency || "USD",
+            ...(stockChanged
+              ? {
+                  stock: variant.stock,
+                  ...(variant.id && originalAvailable !== null
+                    ? { expectedAvailableStock: originalAvailable }
+                    : {}),
+                }
+              : {}),
+            lowStockThreshold: variant.lowStockThreshold,
+            active: variant.active,
+            colorImage: variant.colorImage,
+            options: variant.options,
+          };
+        });
       }
 
       if (editing) await onSubmit(editing.id, payload);
@@ -1439,6 +1475,8 @@ export default function ProductAddModal({
                       <Label>{t("variants.simpleStock")}</Label>
                       <Input
                         type="number"
+                        min="0"
+                        step="1"
                         value={form.stockQty}
                         onChange={(e) =>
                           setForm((prev) => ({
@@ -1462,6 +1500,9 @@ export default function ProductAddModal({
                         }
                       />
                     </div>
+                    <p className="text-xs text-muted-foreground md:col-span-2">
+                      {t("variants.stockSemantics")}
+                    </p>
                   </div>
                 )}
               </div>
@@ -1864,6 +1905,8 @@ export default function ProductAddModal({
                                   <td className="px-2 py-3">
                                     <Input
                                       type="number"
+                                      min="0"
+                                      step="1"
                                       value={row.stock}
                                       onChange={(e) =>
                                         updateVariantRow(index, {

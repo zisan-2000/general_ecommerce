@@ -24,6 +24,22 @@ export function computeAvailableStock(
   );
 }
 
+export type AvailableStockEditConflictCode =
+  | "EXPECTED_AVAILABLE_STOCK_REQUIRED"
+  | "AVAILABLE_STOCK_CHANGED"
+  | "MULTI_WAREHOUSE_STOCK_EDIT_REQUIRED"
+  | "INVALID_INVENTORY_STATE";
+
+export class AvailableStockEditConflictError extends Error {
+  constructor(
+    public readonly code: AvailableStockEditConflictCode,
+    message: string,
+  ) {
+    super(message);
+    this.name = "AvailableStockEditConflictError";
+  }
+}
+
 export async function getPrimaryWarehouseId(tx: InventoryClient) {
   const warehouse = await tx.warehouse.findFirst({
     orderBy: [{ isDefault: "desc" }, { id: "asc" }],
@@ -61,8 +77,8 @@ export async function syncVariantWarehouseStock(params: {
 }) {
   const { tx, productId, productVariantId, quantity, reason } = params;
 
-  if (!Number.isFinite(quantity) || quantity < 0) {
-    throw new Error("Stock quantity must be 0 or more");
+  if (!Number.isSafeInteger(quantity) || quantity < 0) {
+    throw new Error("Stock quantity must be a whole number (0 or more)");
   }
 
   const warehouseId =
@@ -128,6 +144,155 @@ export async function syncVariantWarehouseStock(params: {
   await captureVariantInventoryDailySnapshots(tx, productVariantId);
 
   return { warehouseId, stock };
+}
+
+/**
+ * Changes the sellable (available) quantity of an existing variant without
+ * treating that derived value as physical on-hand inventory. An edit is only
+ * unambiguous when the variant has zero or one warehouse stock level.
+ */
+export async function setVariantAvailableStock(params: {
+  tx: TransactionClient;
+  productId: number;
+  productVariantId: number;
+  availableQuantity: number;
+  expectedAvailableQuantity?: number | null;
+  reason: string;
+}) {
+  const {
+    tx,
+    productId,
+    productVariantId,
+    availableQuantity,
+    expectedAvailableQuantity,
+    reason,
+  } = params;
+
+  if (!Number.isSafeInteger(availableQuantity) || availableQuantity < 0) {
+    throw new Error("Available stock must be a whole number (0 or more)");
+  }
+  if (
+    expectedAvailableQuantity !== undefined &&
+    expectedAvailableQuantity !== null &&
+    (!Number.isSafeInteger(expectedAvailableQuantity) ||
+      expectedAvailableQuantity < 0)
+  ) {
+    throw new Error("Expected available stock must be a whole number (0 or more)");
+  }
+
+  const levels = await tx.stockLevel.findMany({
+    where: { productVariantId },
+    select: { id: true, warehouseId: true, quantity: true, reserved: true },
+    orderBy: { id: "asc" },
+  });
+
+  if (
+    levels.some(
+      (level) =>
+        !Number.isSafeInteger(level.quantity) ||
+        !Number.isSafeInteger(level.reserved) ||
+        level.quantity < 0 ||
+        level.reserved < 0 ||
+        level.reserved > level.quantity,
+    )
+  ) {
+    throw new AvailableStockEditConflictError(
+      "INVALID_INVENTORY_STATE",
+      "Inventory has an invalid quantity/reservation combination; review it in the Inventory page",
+    );
+  }
+
+  const currentAvailable = computeAvailableStock(levels);
+  if (
+    expectedAvailableQuantity !== undefined &&
+    expectedAvailableQuantity !== null &&
+    expectedAvailableQuantity !== currentAvailable
+  ) {
+    throw new AvailableStockEditConflictError(
+      "AVAILABLE_STOCK_CHANGED",
+      "Available stock changed after this product was loaded; reload and try again",
+    );
+  }
+
+  if (availableQuantity === currentAvailable) {
+    return {
+      changed: false,
+      warehouseId: levels[0]?.warehouseId ?? null,
+      stock: currentAvailable,
+    };
+  }
+
+  if (expectedAvailableQuantity === undefined || expectedAvailableQuantity === null) {
+    throw new AvailableStockEditConflictError(
+      "EXPECTED_AVAILABLE_STOCK_REQUIRED",
+      "Reload the product before changing available stock",
+    );
+  }
+
+  if (levels.length > 1) {
+    throw new AvailableStockEditConflictError(
+      "MULTI_WAREHOUSE_STOCK_EDIT_REQUIRED",
+      "Inventory is stored in multiple warehouses; adjust each warehouse from the Inventory page",
+    );
+  }
+
+  let warehouseId: number | null = levels[0]?.warehouseId ?? null;
+  let change = 0;
+
+  if (levels.length === 1) {
+    const level = levels[0];
+    const nextOnHandQuantity = availableQuantity + level.reserved;
+    if (!Number.isSafeInteger(nextOnHandQuantity)) {
+      throw new Error("Resulting on-hand stock is too large");
+    }
+    const updated = await tx.stockLevel.updateMany({
+      where: {
+        id: level.id,
+        quantity: level.quantity,
+        reserved: level.reserved,
+      },
+      data: { quantity: nextOnHandQuantity },
+    });
+    if (updated.count !== 1) {
+      throw new AvailableStockEditConflictError(
+        "AVAILABLE_STOCK_CHANGED",
+        "Available stock changed during this edit; reload and try again",
+      );
+    }
+    change = nextOnHandQuantity - level.quantity;
+  } else {
+    warehouseId = await getPrimaryWarehouseId(tx);
+    if (!warehouseId) {
+      throw new Error(
+        "A warehouse is required before adding stock to a physical product",
+      );
+    }
+    await tx.stockLevel.create({
+      data: {
+        warehouseId,
+        productVariantId,
+        quantity: availableQuantity,
+        reserved: 0,
+      },
+    });
+    change = availableQuantity;
+  }
+
+  const stock = await refreshVariantStock(tx, productVariantId);
+  if (change !== 0 && warehouseId !== null) {
+    await tx.inventoryLog.create({
+      data: {
+        productId,
+        variantId: productVariantId,
+        warehouseId,
+        change,
+        reason,
+      },
+    });
+  }
+  await captureVariantInventoryDailySnapshots(tx, productVariantId);
+
+  return { changed: true, warehouseId, stock };
 }
 
 export async function deductBundleInventory(params: {

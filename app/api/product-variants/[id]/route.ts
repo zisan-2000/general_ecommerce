@@ -1,5 +1,8 @@
 import { prisma } from "@/lib/prisma";
-import { syncVariantWarehouseStock } from "@/lib/inventory";
+import {
+  AvailableStockEditConflictError,
+  setVariantAvailableStock,
+} from "@/lib/inventory";
 import { normalizeLowStockThreshold } from "@/lib/stock-status";
 import { ensureVariantCodes } from "@/lib/product-codes";
 import { Prisma } from "@/generated/prisma";
@@ -80,17 +83,27 @@ export async function PUT(
 
     const hasStockUpdate = body.stock !== undefined;
     const newStockValue = Number(body.stock ?? 0);
-    if (hasStockUpdate && (!Number.isFinite(newStockValue) || newStockValue < 0)) {
+    const expectedAvailableStock =
+      body.expectedAvailableStock !== undefined &&
+      body.expectedAvailableStock !== null
+        ? Number(body.expectedAvailableStock)
+        : null;
+    if (hasStockUpdate && (!Number.isSafeInteger(newStockValue) || newStockValue < 0)) {
       return NextResponse.json(
-        { error: "Stock must be a number (0 or more)" },
+        { error: "Stock must be a whole number (0 or more)" },
         { status: 400 },
       );
     }
-
-    const stock =
-      hasStockUpdate && existing.product.type === "PHYSICAL"
-        ? newStockValue
-        : 0;
+    if (
+      expectedAvailableStock !== null &&
+      (!Number.isSafeInteger(expectedAvailableStock) ||
+        expectedAvailableStock < 0)
+    ) {
+      return NextResponse.json(
+        { error: "Expected available stock must be a whole number (0 or more)" },
+        { status: 400 },
+      );
+    }
     const nextColorImage =
       body.colorImage !== undefined
         ? typeof body.colorImage === "string" && body.colorImage.trim()
@@ -110,7 +123,6 @@ export async function PUT(
           price,
           costPrice,
           currency,
-          ...(hasStockUpdate ? { stock: 0 } : {}),
           lowStockThreshold,
           digitalAssetId:
             body.digitalAssetId !== undefined
@@ -131,13 +143,14 @@ export async function PUT(
         `;
       }
 
-      if (hasStockUpdate) {
-        await syncVariantWarehouseStock({
+      if (hasStockUpdate && existing.product.type === "PHYSICAL") {
+        await setVariantAvailableStock({
           tx,
           productId: existing.product.id,
           productVariantId: id,
-          quantity: stock,
-          reason: "Admin variant stock adjustment",
+          availableQuantity: newStockValue,
+          expectedAvailableQuantity: expectedAvailableStock,
+          reason: "Admin variant available stock edit",
         });
       }
       await ensureVariantCodes(tx, {
@@ -172,6 +185,12 @@ export async function PUT(
     console.error("PUT PRODUCT VARIANT ERROR:", error);
     if (error?.code === "P2002") {
       return NextResponse.json({ error: "SKU already exists" }, { status: 400 });
+    }
+    if (error instanceof AvailableStockEditConflictError) {
+      return NextResponse.json(
+        { error: error.message, code: error.code },
+        { status: 409 },
+      );
     }
     return NextResponse.json(
       { error: "Failed to update variant" },

@@ -7,6 +7,7 @@ import {
   getDefaultBundleAvailableQuantity,
   type ResolvableBundle,
 } from "@/lib/configurable-bundle";
+import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
 import {
   compactModelToken,
   normalizeSearchQuery,
@@ -350,13 +351,19 @@ function productStock(product: Pick<
   "id" | "name" | "basePrice" | "currency" | "bundleStockLimit" | "bundleWarehouseId" | "bundleGroups" | "bundleFulfillmentMode" | "assembledStockLevels"
 > & {
   type: string;
-  variants: Array<{ stock: number }>;
+  variants: Array<{
+    stock: number;
+    stockLevels?: Array<{ quantity: number; reserved: number }>;
+  }>;
 }) {
   if (product.type === "DIGITAL" || product.type === "SERVICE") return 1;
   if (product.type === "BUNDLE") {
     return getDefaultBundleAvailableQuantity(product);
   }
-  return product.variants.reduce((sum, variant) => sum + Math.max(0, variant.stock), 0);
+  return product.variants.reduce(
+    (sum, variant) => sum + computeVariantAvailableStock(variant),
+    0,
+  );
 }
 
 function pinAndLimit<T extends { id: number }>(rows: T[], pinnedIds: number[], limit: number) {
@@ -471,7 +478,10 @@ export async function getSearchSuggestions(
             category: { select: { name: true } },
             variants: {
               where: { active: true },
-              select: { stock: true },
+              select: {
+                stock: true,
+                stockLevels: { select: { quantity: true, reserved: true } },
+              },
             },
           },
         })

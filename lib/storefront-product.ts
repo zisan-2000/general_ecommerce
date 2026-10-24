@@ -80,6 +80,7 @@ export const storefrontProductSelect = {
     },
   },
   variants: {
+    where: { active: true },
     orderBy: { id: "asc" as const },
     select: {
       id: true,

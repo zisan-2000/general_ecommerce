@@ -7,6 +7,7 @@ import {
   getDefaultBundleAvailableQuantity,
   type ResolvableBundle,
 } from "@/lib/configurable-bundle";
+import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
 import {
   deleteTypesenseDocument,
   typesenseSearchEnabled,
@@ -25,13 +26,19 @@ function stockFor(product: Pick<
   "id" | "name" | "basePrice" | "currency" | "bundleStockLimit" | "bundleWarehouseId" | "bundleGroups" | "bundleFulfillmentMode" | "assembledStockLevels"
 > & {
   type: string;
-  variants: Array<{ stock: number }>;
+  variants: Array<{
+    stock: number;
+    stockLevels?: Array<{ quantity: number; reserved: number }>;
+  }>;
 }) {
   if (product.type === "DIGITAL" || product.type === "SERVICE") return 1;
   if (product.type === "BUNDLE") {
     return getDefaultBundleAvailableQuantity(product);
   }
-  return product.variants.reduce((sum, variant) => sum + Math.max(0, variant.stock), 0);
+  return product.variants.reduce(
+    (sum, variant) => sum + computeVariantAvailableStock(variant),
+    0,
+  );
 }
 
 export async function enqueueFullSearchReindex() {
@@ -88,7 +95,14 @@ export async function processSearchIndexOutbox() {
         updatedAt: true,
         brand: { select: { name: true } },
         category: { select: { name: true, slug: true } },
-        variants: { where: { active: true }, select: { sku: true, stock: true } },
+        variants: {
+          where: { active: true },
+          select: {
+            sku: true,
+            stock: true,
+            stockLevels: { select: { quantity: true, reserved: true } },
+          },
+        },
         bundleGroups: {
           orderBy: { sortOrder: "asc" },
           select: configurableBundleGroupSelect,

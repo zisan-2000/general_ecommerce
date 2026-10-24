@@ -21,6 +21,7 @@ import {
   configurableBundleGroupSelect,
   getDefaultBundleAvailableQuantity,
 } from "@/lib/configurable-bundle";
+import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
 
 const CATALOG_PAGE_SIZES = [12, 24, 36] as const;
 export const CATALOG_MAX_PRICE = 99_999_999.99;
@@ -115,6 +116,9 @@ export const catalogProductSelect = {
       options: true,
       colorImage: true,
       isDefault: true,
+      stockLevels: {
+        select: { quantity: true, reserved: true },
+      },
     },
   },
   bundleItems: {
@@ -338,7 +342,7 @@ export function catalogProductStock(product: RawCatalogProduct) {
   }
   if (product.type === "DIGITAL" || product.type === "SERVICE") return 1;
   return product.variants.reduce(
-    (total, variant) => total + Math.max(0, variant.stock),
+    (total, variant) => total + computeVariantAvailableStock(variant),
     0,
   );
 }
@@ -381,6 +385,7 @@ export function serializeCatalogProduct(product: RawCatalogProduct) {
     variants: product.variants.map((variant) => ({
       ...variant,
       price: resolveFlashSalePricing(product, variant.price).salePrice,
+      stock: computeVariantAvailableStock(variant),
       options: normalizeOptions(variant.options),
     })),
     bundleItems: product.bundleItems.map((item) => ({

@@ -55,6 +55,7 @@ import DigitalAssetManagerModal from "./DigitalAssetManagerModal";
 import type { InventoryStatus } from "@/lib/stock-status";
 import SpotlightCard from "../SpotlightCard";
 import { getProductAvailabilityAction } from "@/lib/product-availability";
+import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
 
 type WarehouseOption = {
   id: number;
@@ -73,10 +74,13 @@ type WarehouseStats = {
 
 const PRODUCTS_PER_PAGE = 24;
 
-function calculateStock(product: any) {
+function calculateStock(product: any, activeOnly = false) {
   if (!product.variants || product.variants.length === 0) return 0;
-  return product.variants.reduce(
-    (acc: number, variant: any) => acc + (variant.stock || 0),
+  return product.variants
+    .filter((variant: any) => !activeOnly || variant.active === true)
+    .reduce(
+    (acc: number, variant: any) =>
+      acc + computeVariantAvailableStock(variant),
     0,
   );
 }
@@ -86,6 +90,7 @@ function getProductInventorySummary(product: any) {
   if (product?.type !== "PHYSICAL") {
     return {
       totalStock: 0,
+      sellableStock: 0,
       status: "IN_STOCK" as const,
       lowCount: 0,
       outCount: 0,
@@ -93,9 +98,11 @@ function getProductInventorySummary(product: any) {
   }
 
   const totalStock = calculateStock(product);
-  const statuses = variants.map((variant: any) =>
+  const activeVariants = variants.filter((variant: any) => variant.active === true);
+  const sellableStock = calculateStock(product, true);
+  const statuses = activeVariants.map((variant: any) =>
     getInventoryStatus(
-      variant?.stock,
+      computeVariantAvailableStock(variant),
       variant?.lowStockThreshold ?? product?.lowStockThreshold,
     ),
   );
@@ -107,7 +114,7 @@ function getProductInventorySummary(product: any) {
   ).length;
 
   const status: InventoryStatus =
-    totalStock <= 0
+    sellableStock <= 0
       ? "OUT_OF_STOCK"
       : lowCount > 0 || outCount > 0
         ? "LOW_STOCK"
@@ -115,6 +122,7 @@ function getProductInventorySummary(product: any) {
 
   return {
     totalStock,
+    sellableStock,
     status,
     lowCount,
     outCount,
@@ -1325,9 +1333,10 @@ export default function ProductManager({
                                 }),
                               },
                               {
-                                label: t("card.threshold"),
+                                label: t("card.sellableStock"),
                                 value: t("card.stockUnits", {
-                                  count: p.lowStockThreshold ?? 10,
+                                  count:
+                                    getProductInventorySummary(p).sellableStock,
                                 }),
                               },
                             ]

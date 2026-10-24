@@ -10,6 +10,7 @@ import {
   configurableBundleGroupSelect,
   getDefaultBundleAvailableQuantity,
 } from "@/lib/configurable-bundle";
+import { computeVariantAvailableStock } from "@/lib/warehouse-stock";
 
 export const storefrontHomeProductSelect = {
   id: true,
@@ -49,6 +50,7 @@ export const storefrontHomeProductSelect = {
     },
   },
   variants: {
+    where: { active: true },
     orderBy: { id: "asc" as const },
     select: {
       id: true,
@@ -61,6 +63,9 @@ export const storefrontHomeProductSelect = {
       colorImage: true,
       isDefault: true,
       active: true,
+      stockLevels: {
+        select: { quantity: true, reserved: true },
+      },
     },
   },
   bundleItems: {
@@ -127,6 +132,7 @@ export function serializeStorefrontHomeProduct(
     variants: product.variants.map((variant) => ({
       ...variant,
       price: resolveFlashSalePricing(product, variant.price, now).salePrice,
+      stock: computeVariantAvailableStock(variant),
     })),
     // Nested Prisma prices must also be plain numbers at the Server/Client boundary.
     bundleGroups: product.bundleGroups.map((group) => ({
