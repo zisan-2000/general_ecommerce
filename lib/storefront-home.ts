@@ -81,14 +81,6 @@ export const storefrontHomeProductSelect = {
           image: true,
           available: true,
           deleted: true,
-          variants: {
-            where: { active: true },
-            orderBy: [{ isDefault: "desc" as const }, { id: "asc" as const }],
-            select: {
-              isDefault: true,
-              stockLevels: { select: { warehouseId: true, quantity: true, reserved: true } },
-            },
-          },
         },
       },
     },

@@ -48,6 +48,7 @@ export type InventoryDeletionConflictCode =
   | "VARIANT_HAS_RESERVATIONS"
   | "VARIANT_HAS_ORDER_HISTORY"
   | "VARIANT_HAS_INVENTORY_HISTORY"
+  | "VARIANT_INVENTORY_CHANGED"
   | "VARIANT_IS_REFERENCED";
 
 export class InventoryDeletionConflictError extends Error {
@@ -338,6 +339,13 @@ export async function deleteVariantIfSafe(
   tx: TransactionClient,
   productVariantId: number,
 ) {
+  // Serialize deletion with legacy initialization and direct variant-stock
+  // edits before inspecting either inventory representation.
+  await tx.$executeRaw`
+    UPDATE "ProductVariant"
+    SET "stock" = "stock"
+    WHERE "id" = ${productVariantId}
+  `;
   const variant = await tx.productVariant.findUnique({
     where: { id: productVariantId },
     include: {
@@ -363,6 +371,13 @@ export async function deleteVariantIfSafe(
     },
   });
   if (!variant) return null;
+
+  if (variant.stockLevels.length === 0 && Number(variant.stock) > 0) {
+    throw new InventoryDeletionConflictError(
+      "VARIANT_HAS_INVENTORY",
+      "This legacy variant still has stock; reconcile it to zero before deleting it",
+    );
+  }
 
   if (
     variant.stockLevels.some(
@@ -403,9 +418,34 @@ export async function deleteVariantIfSafe(
     );
   }
 
-  await tx.stockLevel.deleteMany({ where: { productVariantId } });
+  const stockLevelIds = variant.stockLevels.map((level) => level.id);
+  if (stockLevelIds.length > 0) {
+    const deletedLevels = await tx.stockLevel.deleteMany({
+      where: {
+        id: { in: stockLevelIds },
+        productVariantId,
+        quantity: 0,
+        reserved: 0,
+        reservations: { none: {} },
+      },
+    });
+    if (deletedLevels.count !== stockLevelIds.length) {
+      throw new InventoryDeletionConflictError(
+        "VARIANT_INVENTORY_CHANGED",
+        "Variant inventory changed during deletion; reload and try again",
+      );
+    }
+  }
   await tx.productCode.deleteMany({ where: { variantId: productVariantId } });
-  await tx.productVariant.delete({ where: { id: productVariantId } });
+  const deletedVariant = await tx.productVariant.deleteMany({
+    where: { id: productVariantId, stock: variant.stock },
+  });
+  if (deletedVariant.count !== 1) {
+    throw new InventoryDeletionConflictError(
+      "VARIANT_INVENTORY_CHANGED",
+      "Variant stock changed during deletion; reload and try again",
+    );
+  }
   return variant;
 }
 

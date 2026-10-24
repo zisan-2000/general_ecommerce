@@ -17,6 +17,20 @@ type PublicStockVariant = {
   }> | null;
 };
 
+type PublicBundleItemInput = {
+  product: object;
+};
+
+function serializePublicBundleItem<T extends PublicBundleItemInput>(item: T) {
+  const publicProduct = { ...item.product } as T["product"] & {
+    variants?: unknown;
+  };
+  // Bundle-item inventory is used only by server calculations. Product cards
+  // need the item identity/media, never warehouse or reservation details.
+  delete publicProduct.variants;
+  return { ...item, product: publicProduct };
+}
+
 function serializePublicVariant<T extends PublicStockVariant>(
   variant: T,
   warehouseId?: number | null,
@@ -39,6 +53,7 @@ export function serializeStorefrontProductInventory<
     variants?: readonly PublicStockVariant[];
     bundleWarehouseId?: number | null;
     assembledStockLevels?: unknown;
+    bundleItems?: readonly PublicBundleItemInput[];
     bundleGroups?: Array<{
       options: Array<{
         product: { variants: PublicStockVariant[] };
@@ -65,6 +80,9 @@ export function serializeStorefrontProductInventory<
     ...(productStock === undefined ? {} : { stock: productStock }),
     variants: (product.variants ?? []).map((variant) =>
       serializePublicVariant(variant),
+    ),
+    bundleItems: (product.bundleItems ?? []).map((item) =>
+      serializePublicBundleItem(item),
     ),
     bundleGroups: (product.bundleGroups ?? []).map((group) => ({
       ...group,

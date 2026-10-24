@@ -449,10 +449,11 @@ test("deleting a zero stock-level clears stale legacy fallback atomically", asyn
   assert.equal(state.variantStock, 0);
 });
 
-function variantDeletionTx(overrides = {}) {
+function variantDeletionTx(overrides = {}, options = {}) {
   const calls = { stockLevels: 0, productCodes: 0, variants: 0 };
   const variant = {
     id: 902,
+    stock: 0,
     stockLevels: [],
     _count: {
       orderItems: 0, orderBundleComponents: 0, inventoryLogs: 0,
@@ -464,11 +465,23 @@ function variantDeletionTx(overrides = {}) {
   return {
     calls,
     tx: {
+      $executeRaw: async () => 1,
       productVariant: {
         findUnique: async () => variant,
-        delete: async () => { calls.variants++; },
+        deleteMany: async () => {
+          calls.variants++;
+          return { count: options.variantDeleteCount ?? 1 };
+        },
       },
-      stockLevel: { deleteMany: async () => { calls.stockLevels++; } },
+      stockLevel: {
+        deleteMany: async () => {
+          calls.stockLevels++;
+          return {
+            count:
+              options.stockLevelDeleteCount ?? variant.stockLevels.length,
+          };
+        },
+      },
       productCode: { deleteMany: async () => { calls.productCodes++; } },
     },
   };
@@ -492,11 +505,36 @@ for (const [name, overrides, code] of [
 
 test("unreferenced zero-stock variant deletion removes only disposable rows", async () => {
   const { tx, calls } = variantDeletionTx({
-    stockLevels: [{ quantity: 0, reserved: 0, _count: { reservations: 0 } }],
+    stockLevels: [{ id: 31, quantity: 0, reserved: 0, _count: { reservations: 0 } }],
   });
   const deleted = await inventory.deleteVariantIfSafe(tx, 902);
   assert.equal(deleted.id, 902);
   assert.deepEqual(calls, { stockLevels: 1, productCodes: 1, variants: 1 });
+});
+
+test("legacy positive stock without StockLevels protects the variant from deletion", async () => {
+  const { tx, calls } = variantDeletionTx({ stock: 8, stockLevels: [] });
+  await assert.rejects(
+    inventory.deleteVariantIfSafe(tx, 902),
+    (error) => error.code === "VARIANT_HAS_INVENTORY",
+  );
+  assert.deepEqual(calls, { stockLevels: 0, productCodes: 0, variants: 0 });
+});
+
+test("concurrent stock-level change stops variant deletion before dependent rows", async () => {
+  const { tx, calls } = variantDeletionTx(
+    {
+      stockLevels: [
+        { id: 31, quantity: 0, reserved: 0, _count: { reservations: 0 } },
+      ],
+    },
+    { stockLevelDeleteCount: 0 },
+  );
+  await assert.rejects(
+    inventory.deleteVariantIfSafe(tx, 902),
+    (error) => error.code === "VARIANT_INVENTORY_CHANGED",
+  );
+  assert.deepEqual(calls, { stockLevels: 1, productCodes: 0, variants: 0 });
 });
 
 test("dedicated stock and variant deletion routes reject unauthenticated callers", async () => {
@@ -572,9 +610,29 @@ test("public product projection exposes available stock without private warehous
         stockLevels: [{ warehouseId: 7, quantity: 15, reserved: 2 }],
       },
     ],
+    bundleItems: [
+      {
+        id: 51,
+        quantity: 1,
+        product: {
+          id: 903,
+          name: "Bundle component",
+          variants: [
+            {
+              stock: 4,
+              stockLevels: [
+                { warehouseId: 7, quantity: 5, reserved: 1 },
+              ],
+            },
+          ],
+        },
+      },
+    ],
   });
   assert.equal(projected.variants[0].stock, 13);
   assert.equal("stockLevels" in projected.variants[0], false);
+  assert.equal(projected.bundleItems[0].product.name, "Bundle component");
+  assert.equal("variants" in projected.bundleItems[0].product, false);
 });
 
 test("storefront normalization excludes inactive variants and shares projected stock semantics", () => {
