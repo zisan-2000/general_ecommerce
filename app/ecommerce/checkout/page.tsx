@@ -316,7 +316,22 @@ export default function CheckoutPage() {
     };
 
     const syncGuestCartToServer = async () => {
-      if (cartItems.length === 0) {
+      let pendingCheckoutItems: any[] | null = null;
+      try {
+        if (sessionStorage.getItem("redirectAfterLogin") === "/ecommerce/checkout") {
+          const pending = JSON.parse(sessionStorage.getItem("pendingCheckout") ?? "null");
+          if (Array.isArray(pending) && pending.length > 0) {
+            pendingCheckoutItems = pending;
+          }
+        }
+      } catch {
+        // Fall back to the live local cart when storage is unavailable/corrupt.
+      }
+
+      const isLoginRecovery = pendingCheckoutItems !== null;
+      const localItems = pendingCheckoutItems ?? cartItems;
+
+      if (localItems.length === 0) {
         const items = await fetchServerCart();
         if (items) replaceCart(items);
         syncInFlightRef.current = false;
@@ -335,21 +350,23 @@ export default function CheckoutPage() {
           const serverData = await serverRes.json();
           const existingItems = Array.isArray(serverData.items) ? serverData.items : [];
 
-          const itemsToSync = cartItems.filter(
-            (localItem) =>
-              !existingItems.some((serverItem: any) => {
-                const sameLine =
-                  String(serverItem.productId) === String(localItem.productId) &&
-                  String(serverItem.pcBuildId ?? "") === String(localItem.pcBuildId ?? "") &&
-                  String(serverItem.lineKey ?? "standard") ===
-                    String(localItem.bundleConfigurationKey ?? "standard");
-                const sameVariant =
-                  String(serverItem.variantId ?? "") === String(localItem.variantId ?? "") ||
-                  (!localItem.variantId && serverItem.variantId != null &&
-                    !localItem.bundleConfigurationKey && !localItem.pcBuildId);
-                return sameLine && sameVariant;
-              }),
-          );
+          const itemsToSync = isLoginRecovery
+            ? localItems
+            : localItems.filter(
+                (localItem) =>
+                  !existingItems.some((serverItem: any) => {
+                    const sameLine =
+                      String(serverItem.productId) === String(localItem.productId) &&
+                      String(serverItem.pcBuildId ?? "") === String(localItem.pcBuildId ?? "") &&
+                      String(serverItem.lineKey ?? "standard") ===
+                        String(localItem.bundleConfigurationKey ?? "standard");
+                    const sameVariant =
+                      String(serverItem.variantId ?? "") === String(localItem.variantId ?? "") ||
+                      (!localItem.variantId && serverItem.variantId != null &&
+                        !localItem.bundleConfigurationKey && !localItem.pcBuildId);
+                    return sameLine && sameVariant;
+                  }),
+              );
 
           const failed: Array<string | number> = [];
 
@@ -362,6 +379,7 @@ export default function CheckoutPage() {
                 variantId: item.variantId ?? null,
                 quantity: item.quantity,
                 bundleSelections: item.bundleSelections ?? undefined,
+                ...(isLoginRecovery ? { quantityMode: "set" } : {}),
               }),
             });
 
@@ -392,7 +410,15 @@ export default function CheckoutPage() {
 
         // Replace the local mirror only after every guest line is safely on server.
         const refreshedItems = await fetchServerCart();
-        if (allSynced && refreshedItems) replaceCart(refreshedItems);
+        if (allSynced && refreshedItems) {
+          replaceCart(refreshedItems);
+          if (isLoginRecovery) {
+            try {
+              sessionStorage.removeItem("pendingCheckout");
+              sessionStorage.removeItem("redirectAfterLogin");
+            } catch {}
+          }
+        }
       } catch (err) {
         console.error("Error syncing guest cart to server:", err);
       } finally {

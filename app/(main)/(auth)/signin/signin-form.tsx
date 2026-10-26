@@ -71,14 +71,18 @@ const SigninForm = () => {
         if (redirectAfterLogin === "/ecommerce/checkout" && pendingCheckout) {
           try {
             const cartItems = JSON.parse(pendingCheckout);
-            sessionStorage.removeItem("pendingCheckout");
-            sessionStorage.removeItem("redirectAfterLogin");
 
             if (Array.isArray(cartItems) && cartItems.length > 0) {
+              // Checkout consumes this snapshot only after its idempotent
+              // guest-cart sync succeeds. Clearing it here makes retries use
+              // the additive cart endpoint and can multiply the quantity.
               router.replace("/ecommerce/checkout");
               router.refresh();
               return;
             }
+
+            sessionStorage.removeItem("pendingCheckout");
+            sessionStorage.removeItem("redirectAfterLogin");
           } catch {
             sessionStorage.removeItem("pendingCheckout");
             sessionStorage.removeItem("redirectAfterLogin");
