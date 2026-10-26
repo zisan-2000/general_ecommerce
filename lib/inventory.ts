@@ -88,6 +88,36 @@ export async function refreshVariantStock(
   return stock;
 }
 
+/**
+ * A simple product has one optionless default variant, which is the inventory
+ * row used by storefront and checkout. Older imports could leave that row
+ * inactive; once it has stock, keeping it inactive makes real inventory
+ * impossible to sell. This deliberately does not reactivate disabled options
+ * on products that have multiple variants.
+ */
+export async function activateStockedSimpleProductVariant(
+  tx: TransactionClient,
+  productVariantId: number,
+  availableStock: number,
+) {
+  if (availableStock <= 0) return;
+
+  await tx.$executeRaw`
+    UPDATE "ProductVariant" AS variant
+    SET "active" = true, "updatedAt" = CURRENT_TIMESTAMP
+    WHERE variant."id" = ${productVariantId}
+      AND variant."active" = false
+      AND variant."isDefault" = true
+      AND variant."options" = '{}'::jsonb
+      AND NOT EXISTS (
+        SELECT 1
+        FROM "ProductVariant" AS sibling
+        WHERE sibling."productId" = variant."productId"
+          AND sibling."id" <> variant."id"
+      )
+  `;
+}
+
 export async function syncVariantWarehouseStock(params: {
   tx: TransactionClient;
   productId: number;

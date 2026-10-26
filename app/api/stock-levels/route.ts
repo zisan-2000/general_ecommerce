@@ -2,6 +2,7 @@ import { prisma } from "@/lib/prisma";
 import { authOptions } from "@/lib/auth";
 import { logActivity } from "@/lib/activity-log";
 import {
+  activateStockedSimpleProductVariant,
   AvailableStockEditConflictError,
   refreshVariantStock,
 } from "@/lib/inventory";
@@ -246,7 +247,12 @@ export async function POST(req: Request) {
       });
       const change = quantity - currentQuantity;
 
-      await refreshVariantStock(tx, productVariantId);
+      const availableStock = await refreshVariantStock(tx, productVariantId);
+      await activateStockedSimpleProductVariant(
+        tx,
+        productVariantId,
+        availableStock,
+      );
       await captureVariantInventoryDailySnapshots(tx, productVariantId);
       if (change !== 0) {
         await tx.inventoryLog.create({
