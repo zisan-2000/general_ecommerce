@@ -16,6 +16,10 @@ import {
   configurableBundleInclude,
   resolveBundleConfiguration,
 } from '@/lib/configurable-bundle';
+import {
+  normalizeCartQuantityWriteMode,
+  resolveCartQuantity,
+} from '@/lib/cart-quantity';
 
 async function findStandardCartItem(
   userId: string,
@@ -147,6 +151,7 @@ export async function POST(request: NextRequest) {
         ? Number(body.variantId)
         : null;
     const quantity = Number(body.quantity ?? 1);
+    const quantityMode = normalizeCartQuantityWriteMode(body.quantityMode);
 
     if (!productId || Number.isNaN(productId) || quantity <= 0) {
       return NextResponse.json(
@@ -211,7 +216,11 @@ export async function POST(request: NextRequest) {
       });
       const lineKey = `bundle:${configuration.configurationKey}`;
       const existing = await findConfiguredBundleCartItem(userId, productId, lineKey);
-      const nextQuantity = (existing?.quantity ?? 0) + quantity;
+      const nextQuantity = resolveCartQuantity(
+        existing?.quantity ?? 0,
+        quantity,
+        quantityMode,
+      );
       if (nextQuantity > configuration.availableQuantity) {
         return NextResponse.json(
           { error: `Requested bundle quantity exceeds available stock. Available: ${configuration.availableQuantity}` },
@@ -224,14 +233,17 @@ export async function POST(request: NextRequest) {
           (component) => `${component.groupName}: ${component.productName}${component.variantLabel ? ` (${component.variantLabel})` : ""} × ${component.quantity}`,
         ),
       };
-      const incrementConfiguredLine = async (id: number) => {
+      const writeConfiguredLine = async (id: number) => {
         const updated = await prisma.cartItem.updateMany({
           where: {
             id,
-            quantity: { lte: configuration.availableQuantity - quantity },
+            ...(quantityMode === 'increment'
+              ? { quantity: { lte: configuration.availableQuantity - quantity } }
+              : {}),
           },
           data: {
-            quantity: { increment: quantity },
+            quantity:
+              quantityMode === 'set' ? quantity : { increment: quantity },
             bundleConfiguration,
             lastReminderAt: null,
           },
@@ -243,7 +255,7 @@ export async function POST(request: NextRequest) {
       };
       let cartItem;
       if (existing) {
-        cartItem = await incrementConfiguredLine(existing.id);
+        cartItem = await writeConfiguredLine(existing.id);
       } else {
         try {
           cartItem = await prisma.cartItem.create({
@@ -260,7 +272,7 @@ export async function POST(request: NextRequest) {
           if (!(error && typeof error === "object" && "code" in error && error.code === "P2002")) throw error;
           const raced = await findConfiguredBundleCartItem(userId, productId, lineKey);
           if (!raced) throw error;
-          cartItem = await incrementConfiguredLine(raced.id);
+          cartItem = await writeConfiguredLine(raced.id);
         }
       }
       return NextResponse.json(cartItem, { status: 201 });
@@ -317,7 +329,11 @@ export async function POST(request: NextRequest) {
     let cartItem;
 
     if (existing) {
-      const nextQuantity = existing.quantity + quantity;
+      const nextQuantity = resolveCartQuantity(
+        existing.quantity,
+        quantity,
+        quantityMode,
+      );
       if (product.type === 'PHYSICAL' && Number(availableStock) < nextQuantity) {
         return NextResponse.json(
           { error: 'Requested quantity exceeds available stock' },
@@ -328,7 +344,8 @@ export async function POST(request: NextRequest) {
       cartItem = await prisma.cartItem.update({
         where: { id: existing.id },
           data: {
-            quantity: nextQuantity,
+            quantity:
+              quantityMode === 'set' ? quantity : { increment: quantity },
             lastReminderAt: null,
           },
         });
