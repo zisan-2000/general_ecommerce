@@ -9,7 +9,11 @@ import { recordPaymentEvent, safeGatewayStatus, type PaymentProvider } from "./t
 import { querySslcommerzPayment, paymentAmountMatches } from "./gateway-query";
 import { queryAiblWalletPayment } from "@/lib/aibl-wallet";
 
-export async function compareGatewayPayment(paymentId: number, actorUserId: string) {
+type ComparisonInitiator =
+  | { kind: "ADMIN"; requestId: string; permission: "SETTINGS_PAYMENT_MANAGE" | "SETTINGS_MANAGE" }
+  | { kind: "CRON"; requestId: string; jobName: "PAYMENT_CONTROL_RECONCILIATION" };
+
+export async function compareGatewayPayment(paymentId: number, actorUserId: string, initiator: ComparisonInitiator) {
   const payment = await prisma.payment.findUnique({ where: { id: paymentId }, include: {
     order: { select: { paymentStatus: true } },
   } });
@@ -17,7 +21,15 @@ export async function compareGatewayPayment(paymentId: number, actorUserId: stri
     throw new PaymentControlError("Online payment attempt not found", 404);
   }
   const provider = payment.provider as PaymentProvider;
-  const context = { provider, paymentId, orderId: payment.orderId, transactionId: payment.externalId, actorUserId };
+  const requestId = initiator.requestId;
+  const scheduledJob = initiator.kind === "CRON";
+  const context = { provider, paymentId, orderId: payment.orderId, transactionId: payment.externalId,
+    actorUserId: scheduledJob ? undefined : actorUserId, requestId };
+  const initiatorCode = scheduledJob ? "INITIATOR_CRON_PAYMENT_CONTROL_RECONCILIATION"
+    : initiator.kind === "ADMIN" && initiator.permission === "SETTINGS_PAYMENT_MANAGE"
+      ? "INITIATOR_ADMIN_PAYMENT_MANAGE" : initiator.kind === "ADMIN"
+        ? "INITIATOR_ADMIN_SETTINGS_MANAGE" : "INITIATOR_ADMIN_AUTHORIZED";
+  await recordPaymentEvent({ ...context, operation: "DIAGNOSTIC", outcome: "SUCCESS", detailCode: initiatorCode });
   let gatewayStatus = "UNKNOWN";
   let referenceMatches: boolean | null = null;
   let amountMatches: boolean | null = null;
@@ -41,13 +53,13 @@ export async function compareGatewayPayment(paymentId: number, actorUserId: stri
           : Array.isArray(settings.cancellationStatuses) && settings.cancellationStatuses.includes(response.Status) ? "CANCELLED" : "UNKNOWN";
       if (response.Status === "Success" && (response.ErrorCode || response.ErrorMessage)) result = "MISMATCH";
     } else if (provider === "AIBL_WALLET") {
-      const response = await queryAiblWalletPayment(payment, actorUserId);
+      const response = await queryAiblWalletPayment(payment, scheduledJob ? undefined : actorUserId, requestId);
       gatewayStatus = response.transactionId ? "ORDER_VERIFIED" : "UNKNOWN";
       remoteFinal = response.transactionId ? "SUCCESS" : "UNKNOWN";
       // AIBL documents no echoed bill/amount/currency in verify. Do not fabricate matches.
       referenceMatches = null; amountMatches = null;
     } else {
-      const response = await querySslcommerzPayment(payment, actorUserId);
+      const response = await querySslcommerzPayment(payment, scheduledJob ? undefined : actorUserId, requestId);
       gatewayStatus = safeGatewayStatus(response.status);
       referenceMatches = response.referenceMatches;
       amountMatches = response.amountMatches;

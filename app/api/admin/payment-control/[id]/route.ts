@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { randomUUID } from "node:crypto";
 import { requirePaymentControlAccess, paymentControlErrorResponse, positiveId } from "@/lib/payment-control/authorization";
 import { getPaymentDetails } from "@/lib/payment-control/queries";
 import { compareGatewayPayment } from "@/lib/payment-control/reconciliation";
@@ -16,7 +17,9 @@ export async function GET(request: NextRequest, context: Context) {
 export async function POST(request: NextRequest, context: Context) {
   try {
     const access = await requirePaymentControlAccess(request, true);
-    const result = await compareGatewayPayment(positiveId((await context.params).id), access.userId!);
-    return NextResponse.json({ reconciliation: result }, { headers: { "Cache-Control": "private, no-store" } });
+    const requestId = randomUUID();
+    const permission = access.hasGlobal("settings.payment.manage") ? "SETTINGS_PAYMENT_MANAGE" : "SETTINGS_MANAGE";
+    const result = await compareGatewayPayment(positiveId((await context.params).id), access.userId!, { kind: "ADMIN", requestId, permission });
+    return NextResponse.json({ reconciliation: result }, { headers: { "Cache-Control": "private, no-store", "X-Payment-Request-Id": requestId } });
   } catch (error) { return paymentControlErrorResponse(error); }
 }

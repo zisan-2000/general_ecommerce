@@ -48,6 +48,8 @@ export function createOfflineAibl(t, options = {}) {
   const audit = { forbiddenEffects: 0, transactions: 0, rollbacks: 0, inventoryCommitCalls: 0 };
   const env = Object.freeze({
     NODE_ENV: "test", AIBL_WALLET_ENV: "uat",
+    PAYMENT_TRANSPORT_MONITORING_MODE: "off", PAYMENT_TRANSPORT_STORAGE_ENABLED: "false",
+    PAYMENT_TRANSPORT_INSTRUMENTED_APPROVED: "false",
     AIBL_WALLET_API_BASE_URL: "https://iwtest.aibl.com.bd/iwPGAPI/",
     AIBL_WALLET_HOSTED_BASE_URL: "https://iwtest.aibl.com.bd/iwepayuat/epayment/",
     AIBL_WALLET_API_USER: "OFFLINE_USER", AIBL_WALLET_API_PASS: "NOT_A_REAL_PASSWORD",
@@ -163,8 +165,24 @@ export function createOfflineAibl(t, options = {}) {
   const generated = { Prisma, OrderStatus };
   const settings = load("lib/aibl-wallet-settings.ts", {});
   const seo = load("lib/seo-url.ts", {});
+  // Exact telemetry import boundary only. Never load the real monitor or its
+  // diagnostics/storage/Undici dependencies in this isolated VM. Match the real
+  // OFF-mode exports: no capture and no dispatcher, with no I/O or subscriptions.
+  const transportMonitor = Object.freeze({
+    beginPaymentTransport: async (_provider, _operation, _requestId, _input) => {
+      assert.equal(env.PAYMENT_TRANSPORT_MONITORING_MODE, "off");
+      assert.equal(env.PAYMENT_TRANSPORT_STORAGE_ENABLED, "false");
+      assert.equal(env.PAYMENT_TRANSPORT_INSTRUMENTED_APPROVED, "false");
+      return null;
+    },
+    paymentTransportDispatcher: async capture => {
+      if (capture !== null) return forbidden("enabled transport monitoring");
+      return undefined;
+    },
+  });
   const telemetry = load("lib/payment-control/telemetry.ts", {
     "server-only": {}, "node:crypto": crypto, "@/lib/prisma": { prisma },
+    "./transport-monitor": transportMonitor,
   });
   const inventory = load("lib/inventory.ts", {
     "@/generated/prisma": generated,
@@ -220,7 +238,7 @@ export function createOfflineAibl(t, options = {}) {
     return req;
   }
   const harness = {
-    wallet, http, callback: callback.handleAiblWalletCallback, request, events, bankRequests, audit,
+    wallet, http, callback: callback.handleAiblWalletCallback, request, events, bankRequests, audit, transportMonitor,
     state: () => state,
     assertOffline: () => assert.equal(audit.forbiddenEffects, 0, "Unexpected side effect was blocked"),
   };

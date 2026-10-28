@@ -1,10 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
+import { randomUUID } from "node:crypto";
 import { Prisma, OrderStatus } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import { reconcileEpsPayment } from "@/lib/eps";
 import { transitionOrderStatusWithInventory } from "@/lib/order-inventory-lifecycle";
 import { syncCommissionEntriesForOrderStatus } from "@/lib/business-network/commission";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
+import { recordPaymentEvent } from "@/lib/payment-control/telemetry";
 
 export const runtime = "nodejs";
 export const maxDuration = 300;
@@ -23,7 +25,11 @@ export async function GET(request: NextRequest) {
     for (const payment of payments) {
       if (!payment.externalId) continue;
       results.checked++;
-      try { const result = await reconcileEpsPayment(payment.externalId, request); results[result.status]++; }
+      const requestId = randomUUID();
+      await recordPaymentEvent({ provider: "EPS", paymentId: payment.id, orderId: payment.orderId ?? undefined,
+        transactionId: payment.externalId, requestId, operation: "DIAGNOSTIC", outcome: "SUCCESS",
+        detailCode: "INITIATOR_CRON_EPS_RECONCILIATION" });
+      try { const result = await reconcileEpsPayment(payment.externalId, request, { requestId }); results[result.status]++; }
       catch {
         results.errors++;
         // Advance failed checks so a repeatedly unavailable attempt cannot starve the queue.

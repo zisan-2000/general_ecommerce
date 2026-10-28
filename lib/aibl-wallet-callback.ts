@@ -37,6 +37,7 @@ export async function handleAiblWalletCallback(request: NextRequest) {
     if (!payment?.orderId || payment.provider !== "AIBL_WALLET") throw new AiblWalletError("Unknown payment callback", 400);
     context.paymentId = payment.id;
     context.orderId = payment.orderId;
+    await recordPaymentEvent({ ...context, operation: "DIAGNOSTIC", outcome: "SUCCESS", detailCode: "CALLBACK_STATE_VALIDATED" });
     const contentType = request.headers.get("content-type")?.split(";")[0].trim().toLowerCase();
     const contentCode: AiblDiagnosticCode = contentType === "application/x-www-form-urlencoded" ? "AIBL_CB_CONTENT_FORM_URLENCODED"
       : contentType === "multipart/form-data" ? "AIBL_CB_CONTENT_MULTIPART"
@@ -75,6 +76,7 @@ export async function handleAiblWalletCallback(request: NextRequest) {
     failureCode = "AIBL_CB_TRANSNO_INVALID";
     if (transactionId !== undefined && transactionId !== "" &&
         (typeof transactionId !== "string" || !/^[A-Za-z0-9_-]{1,100}$/.test(transactionId))) throw new AiblWalletError("Invalid callback transaction reference", 400);
+    await recordPaymentEvent({ ...context, operation: "DIAGNOSTIC", outcome: "SUCCESS", detailCode: "CALLBACK_PAYLOAD_VALIDATED" });
     trustedBill = bill;
     // SESSIONKEY/MESSAGE are neither trusted nor persisted. STATUS/RESCODE never settle an order.
     await recordPaymentEvent({ ...context, operation: "CALLBACK", outcome: "RECEIVED", detailCode:

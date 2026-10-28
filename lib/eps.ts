@@ -184,7 +184,8 @@ export async function verifyEpsPayment(transactionId: string, token?: string,
 
 export type EpsVerificationResult = { status: "success" | "failed" | "cancelled" | "pending"; message: string };
 
-async function reconcileEpsPaymentCore(transactionId: string, request?: Request): Promise<EpsVerificationResult> {
+async function reconcileEpsPaymentCore(transactionId: string, request?: Request,
+  telemetryContext: Pick<PaymentLogContext, "requestId" | "actorUserId"> = {}): Promise<EpsVerificationResult> {
   const payment = await prisma.payment.findUnique({ where: { externalId: transactionId } });
   if (!payment?.orderId || payment.provider !== "EPS") throw new EpsError("EPS payment was not found", 404);
   const originalMeta = epsObject(payment.paymentGatewayData);
@@ -192,7 +193,7 @@ async function reconcileEpsPaymentCore(transactionId: string, request?: Request)
   // Verification remains available if the gateway has been disabled.
   const gateway = await prisma.payment.findFirst({ where: { id: Number(originalMeta.gatewayId), orderId: null } });
   const settings = epsObject(gateway?.paymentGatewayData);
-  const logContext = { provider: "EPS" as const, transactionId, paymentId: payment.id, orderId: payment.orderId };
+  const logContext = { ...telemetryContext, provider: "EPS" as const, transactionId, paymentId: payment.id, orderId: payment.orderId };
   const verification = await verifyEpsPayment(transactionId, undefined, logContext);
   const valid = verification.MerchantTransactionId === transactionId &&
     epsMoney(verification.TotalAmount) !== null && epsMoney(verification.TotalAmount) === epsMoney(payment.amount) &&
@@ -307,16 +308,17 @@ async function reconcileEpsPaymentCore(transactionId: string, request?: Request)
   });
 }
 
-export async function reconcileEpsPayment(transactionId: string, request?: Request): Promise<EpsVerificationResult> {
+export async function reconcileEpsPayment(transactionId: string, request?: Request,
+  telemetryContext: Pick<PaymentLogContext, "requestId" | "actorUserId"> = {}): Promise<EpsVerificationResult> {
   try {
-    const result = await reconcileEpsPaymentCore(transactionId, request);
-    await recordPaymentEvent({ provider: "EPS", transactionId, operation: "SETTLEMENT",
+    const result = await reconcileEpsPaymentCore(transactionId, request, telemetryContext);
+    await recordPaymentEvent({ ...telemetryContext, provider: "EPS", transactionId, operation: "SETTLEMENT",
       outcome: result.message === "Payment already verified" ? "DUPLICATE"
         : result.status === "success" ? "SUCCESS" : result.status === "failed" ? "FAILED"
           : result.status === "cancelled" ? "CANCELLED" : "PENDING" });
     return result;
   } catch (error) {
-    await recordPaymentEvent({ provider: "EPS", transactionId, operation: "SETTLEMENT",
+    await recordPaymentEvent({ ...telemetryContext, provider: "EPS", transactionId, operation: "SETTLEMENT",
       outcome: error instanceof EpsError && error.status === 409 ? "MISMATCH" : "ERROR",
       detailCode: "SETTLEMENT_REJECTED" });
     throw error;

@@ -14,7 +14,7 @@ export function paymentAmountMatches(value: unknown, expected: Prisma.Decimal | 
 type QueryPayment = { id: number; orderId: number | null; externalId: string | null; currency: string;
   amount: Prisma.Decimal | null; paymentGatewayData: unknown };
 
-export async function querySslcommerzPayment(payment: QueryPayment, actorUserId?: string) {
+export async function querySslcommerzPayment(payment: QueryPayment, actorUserId?: string, requestId?: string) {
   if (!payment.orderId || !payment.externalId) throw new PaymentControlError("Payment reference is missing", 409);
   const meta = epsObject(payment.paymentGatewayData);
   const gatewayId = Number(meta.gatewayId);
@@ -35,7 +35,7 @@ export async function querySslcommerzPayment(payment: QueryPayment, actorUserId?
   endpoint.searchParams.set("v", "1");
   endpoint.searchParams.set("format", "json");
   const response = await paymentFetch({ provider: "SSLCOMMERZ", paymentId: payment.id,
-    orderId: payment.orderId, transactionId: payment.externalId, actorUserId }, "STATUS_QUERY", endpoint, {
+    orderId: payment.orderId, transactionId: payment.externalId, actorUserId, requestId }, "STATUS_QUERY", endpoint, {
     method: "GET", cache: "no-store", redirect: "error", timeoutMs: 30_000,
   });
   if (!response.ok) throw new PaymentControlError("Gateway status check failed", 502);

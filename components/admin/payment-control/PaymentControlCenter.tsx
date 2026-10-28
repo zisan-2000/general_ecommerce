@@ -4,6 +4,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { useEffect, useRef, useState, type FormEvent } from "react";
 import type { DashboardData, DisputeRow, EventRow, PaymentDetail, PaymentRow, RefundRow, StaffOption, SimulationRun } from "@/lib/payment-control/types";
+import { requestInspectorHref } from "@/lib/payment-control/inspector-types";
 
 const api = "/api/admin/payment-control";
 const NetworkMonitoringPanel = dynamic(() => import("./NetworkMonitoringPanel"), { ssr: false, loading: () => <p role="status">Loading network monitoring…</p> });
@@ -41,16 +42,24 @@ function PaymentTable({ payments, onSelect }: { payments: PaymentRow[]; onSelect
     </tr>)}</tbody></table>{payments.length === 0 && <p className="py-6 text-muted-foreground">No payments match these filters.</p>}</div>;
 }
 function EventTable({ events, onSelect, onRequest }: { events: EventRow[]; onSelect?: (id: number) => void; onRequest?: (id: string) => void }) {
+  // Scope links to this render's visible rows, using the full request ID.
+  const linkedRequests = new Set<string>();
   return <div className="overflow-x-auto"><table className="w-full text-left text-sm">
     <caption className="sr-only">Payment event timeline</caption>
     <thead><tr>{["Time", "Gateway / Transaction", "Phase", "Result", "HTTP", "Latency", "Detail"].map((t) => <th scope="col" className="border-b p-2" key={t}>{t}</th>)}</tr></thead>
-    <tbody>{events.map((e) => <tr key={e.id} className="border-b">
+    <tbody>{events.map((e) => {
+      const showTechnicalDetails = !!e.requestId && !linkedRequests.has(e.requestId);
+      if (e.requestId) linkedRequests.add(e.requestId);
+      return <tr key={e.id} className="border-b">
       <td className="p-2">{date(e.createdAt)}</td><td className="p-2">{e.provider}<br />{e.paymentId && onSelect
         ? <button className="text-primary underline" onClick={() => onSelect(e.paymentId!)}>{e.transactionId || "#" + e.paymentId}</button> : e.transactionId || "Unlinked attempt"}
         {e.orderId && <span className="block text-xs">Order #{e.orderId}</span>}</td>
-      <td className="p-2">{e.operation}{e.requestId && (onRequest ? <button className="block text-xs underline" title={e.requestId} onClick={() => onRequest(e.requestId!)}>Request {e.requestId.slice(0, 8)}</button> : <span className="block text-xs text-muted-foreground" title={e.requestId}>Request {e.requestId.slice(0, 8)}</span>)}</td><td className="p-2"><Badge>{e.outcome}</Badge></td><td className="p-2">{e.httpStatus ?? "—"}</td>
+      <td className="p-2">{e.operation}{e.requestId && <span className="block space-y-1 text-xs" title={e.requestId}>
+        {showTechnicalDetails && <Link className="block text-primary underline" href={requestInspectorHref(e.requestId)} target="_blank" rel="noopener noreferrer">View technical details</Link>}
+        {onRequest && <button className="underline" onClick={() => onRequest(e.requestId!)}>Network context · {e.requestId.slice(0, 8)}</button>}
+      </span>}</td><td className="p-2"><Badge>{e.outcome}</Badge></td><td className="p-2">{e.httpStatus ?? "—"}</td>
       <td className="p-2">{metric(e.durationMs)}</td><td className="p-2">{e.detailCode || e.gatewayStatus || "—"}</td>
-    </tr>)}</tbody></table>{events.length === 0 && <p className="py-4 text-muted-foreground">No recorded events.</p>}</div>;
+    </tr>; })}</tbody></table>{events.length === 0 && <p className="py-4 text-muted-foreground">No recorded events.</p>}</div>;
 }
 function Pager({ page, total, size = 25, onPage }: { page: number; total: number; size?: number; onPage: (page: number) => void }) {
   return <div className="flex items-center gap-3"><button className={buttonClass} disabled={page <= 1} onClick={() => onPage(page - 1)}>Previous</button>

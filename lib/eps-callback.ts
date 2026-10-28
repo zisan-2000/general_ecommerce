@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { randomUUID } from "node:crypto";
 import { EpsError, epsPublicOrigin, reconcileEpsPayment, verifyEpsCallbackState } from "@/lib/eps";
 import { epsObject } from "@/lib/eps-settings";
 import { rateLimitRequest } from "@/lib/request-security";
@@ -9,14 +10,15 @@ import { attachPaymentResult } from "@/lib/payment-result";
 export async function handleEpsCallback(request: NextRequest) {
   let status = "pending";
   let message = "EPS payment could not be verified yet. Please check payment status.";
-  let logContext: PaymentLogContext = { provider: "EPS" };
+  let logContext: PaymentLogContext = { provider: "EPS", requestId: randomUUID() };
   try {
     const attempt = request.nextUrl.searchParams.get("attempt") ?? "";
     const state = request.nextUrl.searchParams.get("state") ?? "";
     const limit = await rateLimitRequest(request, { scope: "eps-callback", limit: 30, windowMs: 60_000 });
     if (!limit.allowed) throw new EpsError("Payment verification is busy; please check again shortly", 429);
     if (!verifyEpsCallbackState(attempt, state)) throw new EpsError("Invalid payment callback", 400);
-    logContext = { provider: "EPS", transactionId: attempt };
+    logContext = { ...logContext, transactionId: attempt };
+    await recordPaymentEvent({ ...logContext, operation: "DIAGNOSTIC", outcome: "SUCCESS", detailCode: "CALLBACK_STATE_VALIDATED" });
     await recordPaymentEvent({ ...logContext, operation: "CALLBACK", outcome: "RECEIVED", detailCode:
       request.nextUrl.pathname.endsWith("/success") ? "CALLBACK_SUCCESS" : request.nextUrl.pathname.endsWith("/fail")
         ? "CALLBACK_FAIL" : "CALLBACK_CANCEL" });
@@ -37,7 +39,7 @@ export async function handleEpsCallback(request: NextRequest) {
         throw new EpsError("Callback transaction ID does not match", 400);
       }
     }
-    const result = await reconcileEpsPayment(attempt, request);
+    const result = await reconcileEpsPayment(attempt, request, { requestId: logContext.requestId });
     status = result.status;
     message = result.message;
     revalidateStorefrontCatalog();
