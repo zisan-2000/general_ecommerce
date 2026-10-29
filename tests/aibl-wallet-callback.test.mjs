@@ -18,6 +18,16 @@ function rawCallbackRequest(h, body, contentType = "application/x-www-form-urlen
   Object.defineProperty(request, "nextUrl", { value: url });
   return request;
 }
+async function bufferedCallbackRequest(request) {
+  // Finish native FormData serialization before the size-limit test cancels its
+  // input. Node 24.22.1's outgoing FormData producer otherwise enqueues after
+  // cancellation, unlike the incoming HTTP bytes this fixture represents.
+  // Preserve exact encoded bytes, boundary, signed URL and all parser checks.
+  const body = await request.arrayBuffer();
+  const buffered = new Request(request.url, { method: request.method, headers: request.headers, body });
+  Object.defineProperty(buffered, "nextUrl", { value: new URL(request.url) });
+  return buffered;
+}
 
 for (const encoding of ["urlencoded", "multipart"]) {
   for (const kind of ["approved", "decline", "cancel"]) {
@@ -72,7 +82,7 @@ for (const encoding of ["urlencoded", "multipart"]) {
 
   test(`observed ${encoding} auxiliary token remains subject to the 16 KB request limit`, async t => {
     const h = createOfflineAibl(t);
-    await h.callback(h.request({ encoding, fields: observedCallbackFields({}, { access_token: "x".repeat(17000) }) }));
+    await h.callback(await bufferedCallbackRequest(h.request({ encoding, fields: observedCallbackFields({}, { access_token: "x".repeat(17000) }) })));
     assert.ok(h.events.some(event => event.detailCode === "AIBL_CB_BODY_TOO_LARGE"));
     assert.equal(h.bankRequests.length, 0); assertUnsettled(h);
   });
@@ -319,12 +329,26 @@ for (const encoding of ["urlencoded", "multipart"]) {
   test(`nested ${encoding} rejects an oversized encoded request`, async t => {
     const h = createOfflineAibl(t);
     const fields = nestedCallbackFields({ MESSAGE: "x".repeat(17000) });
-    await assert.rejects(h.http.readAiblCallbackBody(h.request({ encoding, fields })), error => error.status === 413 && error.diagnosticCode === "AIBL_CB_BODY_TOO_LARGE");
-    await h.callback(h.request({ encoding, fields }));
+    await assert.rejects(h.http.readAiblCallbackBody(await bufferedCallbackRequest(h.request({ encoding, fields }))), error => error.status === 413 && error.diagnosticCode === "AIBL_CB_BODY_TOO_LARGE");
+    await h.callback(await bufferedCallbackRequest(h.request({ encoding, fields })));
     assert.ok(h.events.some(event => event.detailCode === "AIBL_CB_BODY_TOO_LARGE"));
     assert.equal(h.bankRequests.length, 0); assert.equal(h.audit.transactions, 0); assertUnsettled(h);
   });
 }
+
+test("oversized incoming-style chunked stream is cancelled and rejected before verification", async t => {
+  const h = createOfflineAibl(t); let cancelled = 0;
+  const body = new ReadableStream({
+    start(controller) { controller.enqueue(new Uint8Array(8000)); controller.enqueue(new Uint8Array(9000)); },
+    cancel() { cancelled++; },
+  });
+  const request = new Request(h.request().url, { method: "POST", body, duplex: "half",
+    headers: { "Content-Type": "multipart/form-data; boundary=offline" } });
+  Object.defineProperty(request, "nextUrl", { value: new URL(request.url) });
+  await h.callback(request);
+  assert.equal(cancelled, 1); assert.equal(h.bankRequests.length, 0); assert.equal(h.audit.transactions, 0);
+  assert.ok(h.events.some(event => event.detailCode === "AIBL_CB_BODY_TOO_LARGE")); assertUnsettled(h);
+});
 
 test("nested multipart rejects files under data or alongside data", async t => {
   for (const fields of [

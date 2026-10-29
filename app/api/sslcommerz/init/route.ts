@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { randomUUID } from "node:crypto";
 import { getServerSession } from "next-auth/next";
 import { prisma } from "@/lib/prisma";
 import { authOptions } from "@/lib/auth";
@@ -25,7 +26,7 @@ type SslcommerzInitBody = {
 };
 
 export async function POST(request: NextRequest) {
-  let logContext: PaymentLogContext = { provider: "SSLCOMMERZ" };
+  let logContext: PaymentLogContext = { provider: "SSLCOMMERZ", requestId: randomUUID() };
   try {
     const rateLimit = await rateLimitRequest(request, {
       scope: "sslcommerz-init",
@@ -71,6 +72,12 @@ export async function POST(request: NextRequest) {
     if (!ownsAuthenticatedOrder && !hasGuestToken) {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
+    if (ownsAuthenticatedOrder && sessionUserId) {
+      logContext = { ...logContext, actorUserId: sessionUserId };
+      await recordPaymentEvent({ ...logContext, orderId: order.id, operation: "DIAGNOSTIC", outcome: "SUCCESS",
+        detailCode: "INITIATOR_AUTHENTICATED_CUSTOMER" });
+    } else await recordPaymentEvent({ ...logContext, orderId: order.id, operation: "DIAGNOSTIC", outcome: "SUCCESS",
+      detailCode: "INITIATOR_GUEST_CHECKOUT" });
 
     if (
       !isSslcommerzMethod(order.payment_method) ||
@@ -124,7 +131,7 @@ export async function POST(request: NextRequest) {
         : {};
       const redirectUrl = String(activeMeta.redirectUrl || "");
       if (redirectUrl && activePayment.status === "INITIATED" && sessionIsFresh) {
-        await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: activePayment.id, orderId: order.id,
+        await recordPaymentEvent({ ...logContext, paymentId: activePayment.id, orderId: order.id,
           transactionId: activePayment.externalId ?? undefined, operation: "INITIALIZE", outcome: "DUPLICATE" });
         return NextResponse.json({
           redirectUrl,
@@ -139,7 +146,7 @@ export async function POST(request: NextRequest) {
     }
 
     const tranId = createSslcommerzTransactionId(order.id);
-    logContext = { provider: "SSLCOMMERZ", transactionId: tranId, orderId: order.id };
+    logContext = { ...logContext, transactionId: tranId, orderId: order.id };
     const urls = callbackUrls(request, data);
     const hasPhysicalItems = order.orderItems.some(
       (item) => item.product.type === "PHYSICAL",

@@ -3,6 +3,24 @@ import test from "node:test";
 import { Decimal as ForeignDecimal } from "@prisma/client/runtime/library";
 import { BILL, BANK_ORDER, SUCCESS, OfflineDecimal, createOfflineAibl, assertSettledOnce, assertUnsettled } from "./helpers/aibl-wallet-offline.mjs";
 
+test("disabled transport-monitor boundary loads telemetry offline and preserves callback/verification idempotency", async t => {
+  const h = createOfflineAibl(t);
+  assert.equal(Object.isFrozen(h.transportMonitor), true);
+  assert.deepEqual(Object.keys(h.transportMonitor).sort(), ["beginPaymentTransport", "paymentTransportDispatcher"]);
+  const capture = await h.transportMonitor.beginPaymentTransport("AIBL_WALLET", "VERIFY",
+    "11111111-1111-4111-8111-111111111111", "https://iwtest.aibl.com.bd/iwPGAPI/PGService/verify");
+  assert.equal(capture, null);
+  assert.equal(await h.transportMonitor.paymentTransportDispatcher(capture), undefined);
+
+  await h.callback(h.request());
+  const result = await h.wallet.reconcileAiblWalletPayment(BILL);
+  assert.equal(result.status, "success");
+  assert.equal(h.bankRequests.length, 2); // Both are the existing in-memory verification mock.
+  assertSettledOnce(h);
+  assert.ok(h.events.some(event => event.operation === "SETTLEMENT" && event.outcome === "DUPLICATE"));
+  h.assertOffline();
+});
+
 test("real verify request binds stored bank OrderID, merchant bill and DB amount", async t => {
   const h = createOfflineAibl(t);
   const result = await h.wallet.reconcileAiblWalletPayment(BILL);

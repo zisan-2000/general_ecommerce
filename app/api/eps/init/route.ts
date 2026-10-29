@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { randomUUID } from "node:crypto";
 import { getServerSession } from "next-auth/next";
 import { Prisma } from "@/generated/prisma";
 import { authOptions } from "@/lib/auth";
@@ -13,7 +14,7 @@ import { buildEpsInitializeBody, createEpsTransactionId, EpsError, epsCallbackUr
 export const runtime = "nodejs";
 
 export async function POST(request: NextRequest) {
-  let logContext: PaymentLogContext = { provider: "EPS" };
+  let logContext: PaymentLogContext = { provider: "EPS", requestId: randomUUID() };
   try {
     const limit = await rateLimitRequest(request, { scope: "eps-init", limit: 10, windowMs: 600_000 });
     if (!limit.allowed) return NextResponse.json({ error: "Too many EPS payment attempts" }, {
@@ -29,6 +30,12 @@ export async function POST(request: NextRequest) {
     if (!(order.userId ? order.userId === userId : verifyPaymentInitToken(order.id, body.paymentInitToken))) {
       throw new EpsError("Forbidden", 403);
     }
+    if (userId && order.userId === userId) {
+      logContext = { ...logContext, actorUserId: userId };
+      await recordPaymentEvent({ ...logContext, orderId, operation: "DIAGNOSTIC", outcome: "SUCCESS",
+        detailCode: "INITIATOR_AUTHENTICATED_CUSTOMER" });
+    } else await recordPaymentEvent({ ...logContext, orderId, operation: "DIAGNOSTIC", outcome: "SUCCESS",
+      detailCode: "INITIATOR_GUEST_CHECKOUT" });
     const gatewayId = epsGatewayId(order.payment_method);
     if (!gatewayId || (body.gatewayId !== undefined && Number(body.gatewayId) !== gatewayId)) {
       throw new EpsError("EPS gateway does not match the order", 400);
@@ -37,7 +44,7 @@ export async function POST(request: NextRequest) {
     if (!found) throw new EpsError("EPS gateway is unavailable", 503);
     const config = epsConfig();
     const transactionId = createEpsTransactionId();
-    logContext = { provider: "EPS", transactionId, orderId };
+    logContext = { ...logContext, transactionId, orderId };
     const urls = epsCallbackUrls(transactionId);
     // Authenticate before creating an attempt: failures here cannot create a remote payment.
     const token = await getEpsToken(logContext);
@@ -72,7 +79,7 @@ export async function POST(request: NextRequest) {
       return { reused: false as const, payment, payload };
     });
     if (attempt.reused) {
-      await recordPaymentEvent({ provider: "EPS", orderId, transactionId: attempt.transactionId ?? undefined,
+      await recordPaymentEvent({ ...logContext, transactionId: attempt.transactionId ?? undefined,
         operation: "INITIALIZE", outcome: "DUPLICATE" });
       return NextResponse.json({ redirectUrl: attempt.redirectUrl, tranId: attempt.transactionId, reused: true }, { headers: { "Cache-Control": "private, no-store" } });
     }

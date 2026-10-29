@@ -177,6 +177,7 @@ async function processSslcommerzCallbackCore(
   request: NextRequest,
   kind: CallbackKind,
   posted: Record<string, any>,
+  requestId: string,
 ) {
   const tranId = String(posted.tran_id || "").trim();
 
@@ -203,8 +204,10 @@ async function processSslcommerzCallbackCore(
     return { ok: false, orderId: null, message: "Payment transaction was not found" };
   }
   const order = payment.order;
-  await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: payment.id, orderId: payment.orderId,
-    transactionId: tranId, operation: "CALLBACK", outcome: "RECEIVED", detailCode: kind === "success" ? "CALLBACK_SUCCESS"
+  const callbackContext = { provider: "SSLCOMMERZ" as const, paymentId: payment.id, orderId: payment.orderId,
+    transactionId: tranId, requestId };
+  await recordPaymentEvent({ ...callbackContext,
+    operation: "CALLBACK", outcome: "RECEIVED", detailCode: kind === "success" ? "CALLBACK_SUCCESS"
       : kind === "fail" ? "CALLBACK_FAIL" : kind === "cancel" ? "CALLBACK_CANCEL" : "CALLBACK_IPN" });
 
   if (payment.status === "CAPTURED" && payment.order.paymentStatus === "PAID") {
@@ -212,22 +215,22 @@ async function processSslcommerzCallbackCore(
   }
 
   if (posted.value_a && Number(posted.value_a) !== payment.orderId) {
-    await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: payment.id, orderId: payment.orderId,
-      transactionId: tranId, operation: "CALLBACK", outcome: "MISMATCH", detailCode: "CALLBACK_REFERENCE_MISMATCH" });
+    await recordPaymentEvent({ ...callbackContext, operation: "CALLBACK", outcome: "MISMATCH", detailCode: "CALLBACK_REFERENCE_MISMATCH" });
     return { ok: false, orderId: payment.orderId, message: "Order reference does not match" };
   }
+  await recordPaymentEvent({ ...callbackContext, operation: "DIAGNOSTIC", outcome: "SUCCESS", detailCode: "CALLBACK_CORRELATION_VALIDATED" });
 
   if (kind === "fail" || kind === "cancel") {
     // A browser callback is not proof that a remotely created charge failed.
     // V4 transaction-query confirms FAILED; unconfirmed cancellation stays pending.
     let checked: Awaited<ReturnType<typeof querySslcommerzPayment>>;
-    try { checked = await querySslcommerzPayment(payment); }
+    try { checked = await querySslcommerzPayment(payment, undefined, requestId); }
     catch { return { ok: false, orderId: payment.orderId, message: "Gateway has not confirmed a final payment status; manual review required" }; }
     if (!checked.referenceMatches || !checked.amountMatches || checked.status !== "FAILED") {
-      await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: payment.id, orderId: payment.orderId,
-        transactionId: tranId, operation: "VERIFY", outcome: "PENDING", gatewayStatus: checked.status });
+      await recordPaymentEvent({ ...callbackContext, operation: "VERIFY", outcome: "PENDING", gatewayStatus: checked.status });
       return { ok: false, orderId: payment.orderId, message: "Gateway has not confirmed a final unsuccessful payment; verification is pending" };
     }
+    await recordPaymentEvent({ ...callbackContext, operation: "VERIFY", outcome: "FAILED", gatewayStatus: checked.status });
     const closed = await prisma.$transaction(async (tx) => {
       await tx.$queryRaw(Prisma.sql`SELECT "id" FROM "Order" WHERE "id" = ${payment.orderId!} FOR UPDATE`);
       const currentOrder = await tx.order.findUniqueOrThrow({ where: { id: payment.orderId! } });
@@ -318,7 +321,7 @@ async function processSslcommerzCallbackCore(
   let response: Response;
   try {
     response = await paymentFetch({ provider: "SSLCOMMERZ", paymentId: payment.id,
-      orderId: payment.orderId, transactionId: tranId }, "VERIFY", validationUrl, {
+      orderId: payment.orderId, transactionId: tranId, requestId }, "VERIFY", validationUrl, {
       method: "GET",
       cache: "no-store",
       timeoutMs: 30_000,
@@ -338,13 +341,11 @@ async function processSslcommerzCallbackCore(
     String(validation.currency || "").toUpperCase() === payment.currency.toUpperCase();
 
   if (!valid) {
-    await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: payment.id, orderId: payment.orderId,
-      transactionId: tranId, operation: "VERIFY", outcome: "MISMATCH", gatewayStatus: validationStatus,
+      await recordPaymentEvent({ ...callbackContext, operation: "VERIFY", outcome: "MISMATCH", gatewayStatus: validationStatus,
       detailCode: "VERIFICATION_MISMATCH" });
     return { ok: false, orderId: payment.orderId, message: "Payment validation failed" };
   }
-  await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: payment.id, orderId: payment.orderId,
-    transactionId: tranId, operation: "VERIFY", outcome: "SUCCESS", gatewayStatus: validationStatus });
+  await recordPaymentEvent({ ...callbackContext, operation: "VERIFY", outcome: "SUCCESS", gatewayStatus: validationStatus });
 
   const riskLevel = Number(validation.risk_level || 0);
   const safeMeta = {
@@ -366,8 +367,7 @@ async function processSslcommerzCallbackCore(
   };
 
   if (riskLevel === 1) {
-    await recordPaymentEvent({ provider: "SSLCOMMERZ", paymentId: payment.id, orderId: payment.orderId,
-      transactionId: tranId, operation: "VERIFY", outcome: "PENDING", detailCode: "RISK_REVIEW" });
+    await recordPaymentEvent({ ...callbackContext, operation: "VERIFY", outcome: "PENDING", detailCode: "RISK_REVIEW" });
     await prisma.payment.updateMany({
       where: { id: payment.id, status: { in: ["INITIATED", "AUTHORIZED"] } },
       data: { status: "AUTHORIZED", paymentGatewayData: safeMeta },
@@ -475,19 +475,20 @@ async function processSslcommerzCallbackCore(
 }
 
 export async function processSslcommerzCallback(request: NextRequest, kind: CallbackKind) {
+  const requestId = randomUUID();
   const posted = await readSslcommerzPayload(request);
   const rawId = String(posted.tran_id || "");
   const transactionId = /^[A-Za-z0-9_-]{1,50}$/.test(rawId) ? rawId : undefined;
   try {
-    const result = await processSslcommerzCallbackCore(request, kind, posted);
-    if (result.orderId) await recordPaymentEvent({ provider: "SSLCOMMERZ", transactionId, operation: "SETTLEMENT",
+    const result = await processSslcommerzCallbackCore(request, kind, posted, requestId);
+    if (result.orderId) await recordPaymentEvent({ provider: "SSLCOMMERZ", requestId, transactionId, operation: "SETTLEMENT",
       outcome: result.ok ? result.message === "Payment already verified" ? "DUPLICATE" : "SUCCESS"
         : result.message === "Gateway confirmed payment failure" ? "FAILED"
           : kind === "fail" || kind === "cancel" ? "PENDING" : "REJECTED" });
     // Customer result pages must distinguish an unconfirmed outcome from failure.
     return { ...result, resultTransactionId: transactionId, status: result.ok ? "success" : result.message === "Gateway confirmed payment failure" ? "failed" : "pending" };
   } catch (error) {
-    await recordPaymentEvent({ provider: "SSLCOMMERZ", transactionId, operation: "SETTLEMENT",
+    await recordPaymentEvent({ provider: "SSLCOMMERZ", requestId, transactionId, operation: "SETTLEMENT",
       outcome: "ERROR", detailCode: "SETTLEMENT_REJECTED" });
     throw error;
   }

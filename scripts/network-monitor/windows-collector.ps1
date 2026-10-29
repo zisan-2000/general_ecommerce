@@ -135,6 +135,24 @@ function Invoke-ApprovedProbe([object]$Target) {
         completedAt = [DateTime]::UtcNow.ToString('o'); outcome = $outcome; latencyMs = $latency;
         elapsedMs = $watch.Elapsed.TotalMilliseconds; errorCode = $errorCode }
 }
+function Test-ApprovedProbeTarget([object]$Target) {
+    if ($null -eq $Target) { return $false }
+    $ip = $null
+    $parsedId = [Guid]::Empty
+    $interval = 0; $timeout = 0; $version = 0
+    if (-not [Guid]::TryParse([string]$Target.id, [ref]$parsedId) -or
+        -not [Net.IPAddress]::TryParse([string]$Target.address, [ref]$ip) -or
+        -not [int]::TryParse([string]$Target.intervalSeconds, [ref]$interval) -or
+        -not [int]::TryParse([string]$Target.timeoutMs, [ref]$timeout) -or
+        -not [int]::TryParse([string]$Target.version, [ref]$version) -or
+        $version -lt 1 -or $interval -lt 60 -or $interval -gt 3600 -or $timeout -lt 100 -or $timeout -gt 5000 -or
+        $Target.protocol -notin @('TCP', 'ICMP')) { return $false }
+    if ($Target.protocol -eq 'TCP') {
+        $port = 0
+        if (-not [int]::TryParse([string]$Target.port, [ref]$port) -or $port -lt 1 -or $port -gt 65535) { return $false }
+    }
+    return $true
+}
 
 Write-Host 'Collector started. Measurements only; packet capture disabled. Ctrl+C stops collection.'
 $collectorStage = 'CONFIGURATION'
@@ -157,19 +175,29 @@ try {
         $collectorStage = 'APPROVED_PROBE'
         if ($null -ne $configuration -and [DateTime]::UtcNow -lt $leaseUntil) {
             foreach ($target in @($configuration.targets)) {
-                # Sequential and rate limited; no overlap, retries, scans or payload requests.
-                if ([DateTime]::UtcNow -ge $leaseUntil) { break }
-                if ($lastProbe.ContainsKey($target.id)) {
-                    $remaining = ($lastProbe[$target.id].AddSeconds([int]$target.intervalSeconds) - [DateTime]::UtcNow).TotalMilliseconds
-                    if ($remaining -gt 10000) { continue }
-                    if ($remaining -gt 0) { Start-Sleep -Milliseconds ([int][Math]::Ceiling($remaining) + 20) }
+                try {
+                    # Defensively reject malformed server configuration; never broaden the server approval policy.
+                    if (-not (Test-ApprovedProbeTarget $target)) {
+                        Write-Host 'Probe skipped; approved target configuration is invalid.'
+                        continue
+                    }
+                    # Sequential and rate limited; no overlap, retries, scans or payload requests.
                     if ([DateTime]::UtcNow -ge $leaseUntil) { break }
-                }
-                $lastProbe[$target.id] = [DateTime]::UtcNow
-                $measurement = Invoke-ApprovedProbe $target
-                if ($null -ne $measurement) {
-                    $lastProbe[$target.id] = [DateTime]::Parse($measurement.startedAt).ToUniversalTime()
-                    $probes += $measurement
+                    if ($lastProbe.ContainsKey($target.id)) {
+                        $remaining = ($lastProbe[$target.id].AddSeconds([int]$target.intervalSeconds) - [DateTime]::UtcNow).TotalMilliseconds
+                        if ($remaining -gt 10000) { continue }
+                        if ($remaining -gt 0) { Start-Sleep -Milliseconds ([int][Math]::Ceiling($remaining) + 20) }
+                        if ([DateTime]::UtcNow -ge $leaseUntil) { break }
+                    }
+                    $lastProbe[$target.id] = [DateTime]::UtcNow
+                    $measurement = Invoke-ApprovedProbe $target
+                    if ($null -ne $measurement) {
+                        $lastProbe[$target.id] = [DateTime]::Parse($measurement.startedAt).ToUniversalTime()
+                        $probes += $measurement
+                    }
+                } catch {
+                    # A bad target must not terminate host sampling or ingestion. Exception text is never emitted.
+                    Write-Host 'Probe skipped; safe target processing failure.'
                 }
             }
         }

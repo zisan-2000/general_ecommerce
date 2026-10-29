@@ -24,6 +24,8 @@
 # misc
 .DS_Store
 *.pem
+!tests/fixtures/payment-transport/localhost-cert.pem
+!tests/fixtures/payment-transport/localhost-key.pem
 
 # debug
 npm-debug.log*

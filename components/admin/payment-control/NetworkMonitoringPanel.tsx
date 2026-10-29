@@ -1,9 +1,11 @@
 "use client";
+import Link from "next/link";
 import { useEffect, useState, type FormEvent, type ReactNode } from "react";
 import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import type { EventRow } from "@/lib/payment-control/types";
 import type { HostSample, NetworkData, ProbeSample } from "@/lib/network-monitor/types";
 import NetworkMonitorSettings from "./NetworkMonitorSettings";
+import { requestInspectorHref } from "@/lib/payment-control/inspector-types";
 const input = "rounded border bg-background px-3 py-2 text-sm";
 const button = input + " disabled:opacity-50";
 const panel = "rounded-lg border bg-card p-4 space-y-4";
@@ -58,7 +60,8 @@ function ApiTable({ rows, onRequest, onPayment }: { rows: EventRow[]; onRequest:
   return <Table caption="Payment API observations · all gateways/hosts" headings={["Time (UTC)", "Gateway / phase", "Payment", "Request ID / host binding", "HTTP / outcome", "Latency", "Error code"]}>
     {rows.map((row) => <tr key={row.id} className="border-b"><td className="p-2">{time(row.createdAt)}</td><td className="p-2">{row.provider} · {row.operation}</td>
       <td className="p-2">{row.paymentId ? <button className="underline" onClick={() => onPayment(row.paymentId!)}>#{row.paymentId}</button> : "Unlinked"}</td>
-      <td className="p-2">{row.requestId ? <button className="underline break-all" onClick={() => onRequest(row.requestId!)}>{row.requestId}</button> : "N/A"}<br />{row.networkAgentId || "Host N/A"}</td>
+      <td className="p-2">{row.requestId ? <span className="space-y-1"><Link className="block break-all text-primary underline" href={requestInspectorHref(row.requestId)} target="_blank" rel="noopener noreferrer">{row.requestId}</Link>
+        <button className="text-xs underline" onClick={() => onRequest(row.requestId!)}>Correlate here</button></span> : "N/A"}<br />{row.networkAgentId || "Host N/A"}</td>
       <td className="p-2">{row.httpStatus ?? "N/A"} · {row.outcome}</td><td className="p-2">{ms(row.durationMs)}</td><td className="p-2">{row.detailCode || "N/A"}</td></tr>)}
   </Table>;
 }
@@ -138,12 +141,14 @@ export default function NetworkMonitoringPanel({ initialRequestId, onPayment }: 
         <p className="text-xs">Probe latency threshold {data.thresholds.probeLatencyMs}ms · API threshold {data.thresholds.apiLatencyMs}ms · approved ICMP no-reply threshold {data.thresholds.lossPct}% with at least {data.thresholds.minimumLossSamples} recent samples. Collector ingestion evaluates host/probe alerts; dashboard refresh evaluates the latest API outcomes. Missing data does not resolve an alert. No external notifications are sent.</p>
         <Table caption="Open and resolved alerts" headings={["Scope / collector", "Alert / target", "Status", "Last triggering value / threshold", "Timeline (UTC)", "Triggering Request ID"]}>{data.alerts.map((a) => <tr key={a.id} className="border-b">
           <td className="p-2">{a.scope} · {a.agentId || "Host N/A"}</td><td className="p-2">{a.code}<br />{data.targets.find((t) => t.id === a.targetId)?.label || a.targetId || "—"}</td><td className="p-2">{a.status} · {a.occurrences} observations</td>
-          <td className="p-2">{count(a.value)} / {count(a.threshold)}</td><td className="p-2">First: {time(a.firstSeenAt)}<br />Latest observation: {time(a.lastSeenAt)}<br />Resolved: {time(a.resolvedAt)}</td><td className="p-2">{a.requestId ? <button className="underline break-all" onClick={() => setRequestId(a.requestId!)}>{a.requestId}</button> : "N/A"}</td></tr>)}</Table>
+          <td className="p-2">{count(a.value)} / {count(a.threshold)}</td><td className="p-2">First: {time(a.firstSeenAt)}<br />Latest observation: {time(a.lastSeenAt)}<br />Resolved: {time(a.resolvedAt)}</td><td className="p-2">{a.requestId ? <span className="space-y-1"><Link className="block break-all text-primary underline" href={requestInspectorHref(a.requestId)} target="_blank" rel="noopener noreferrer">View technical details</Link>
+            <button className="text-xs underline" onClick={() => setRequestId(a.requestId!)}>Correlate {a.requestId.slice(0, 8)}</button></span> : "N/A"}</td></tr>)}</Table>
         {!data.alerts.length && <p>No recorded alerts.</p>}
       </section>
       <section className={panel}><h3 className="font-semibold">Request ID correlation</h3>
         <form onSubmit={correlate} className="flex flex-wrap gap-2"><label className="flex-1">Exact payment Request ID<input key={requestId} name="requestId" className={input + " w-full"} defaultValue={requestId} placeholder="UUID from payment timeline" maxLength={36} /></label><button className={button}>Find context</button><button type="button" className={button} onClick={() => setRequestId("")}>Clear</button></form>
         {data.correlation && <><p className="text-sm">{data.correlation.available ? `Explicit host ${data.correlation.agentId}, request ${time(data.correlation.requestStartedAt)} – ${time(data.correlation.requestCompletedAt)}; context ±${data.correlation.windowSeconds}s.` : "Host correlation N/A: no completed request with explicit host binding and timing. Legacy/unbound data is retained."} Nearby OS/probe measurements show temporal context, not proof of a payment-specific network cause.</p>
+          <Link className="inline-block text-sm text-primary underline" href={requestInspectorHref(data.correlation.requestId)} target="_blank" rel="noopener noreferrer">View all technical details in a new tab</Link>
           <ApiTable rows={data.correlation.events} onRequest={setRequestId} onPayment={onPayment} />
           <HostTable rows={data.correlation.hostSamples} /><ProbeTable rows={data.correlation.probeSamples} />
           {!data.correlation.events.length && <p>Request ID not found.</p>}

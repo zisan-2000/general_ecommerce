@@ -891,6 +891,22 @@ model PaymentEvent {
 }
 
 // Measured diagnostics only. No packet capture, IP payloads, headers or credentials.
+model PaymentTransportEvidence {
+  // Bounded rolling telemetry, independent of authoritative payment records.
+  slot         Int      @id
+  attemptId    String   @unique @db.VarChar(36)
+  requestId    String   @db.VarChar(36)
+  connectionId String?  @db.VarChar(36)
+  provider     String   @db.VarChar(20)
+  operation    String   @db.VarChar(40)
+  startedAt    DateTime
+  expiresAt    DateTime
+  evidence     Json     @db.JsonB
+
+  @@index([requestId, startedAt])
+  @@index([expiresAt])
+}
+
 model NetworkMonitorAgent {
   id             String @id @db.VarChar(64)
   label          String @db.VarChar(100)

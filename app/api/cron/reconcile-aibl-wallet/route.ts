@@ -1,8 +1,9 @@
-import { timingSafeEqual } from "node:crypto";
+import { randomUUID, timingSafeEqual } from "node:crypto";
 import { NextRequest, NextResponse } from "next/server";
 import { prisma } from "@/lib/prisma";
 import { reconcileAiblWalletPayment } from "@/lib/aibl-wallet";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
+import { recordPaymentEvent } from "@/lib/payment-control/telemetry";
 export const runtime = "nodejs";
 export const maxDuration = 300;
 export async function GET(request: NextRequest) {
@@ -16,7 +17,10 @@ export async function GET(request: NextRequest) {
     for (const payment of payments) {
       if (!payment.externalId) continue;
       results.checked++;
-      try { const result = await reconcileAiblWalletPayment(payment.externalId, request); results[result.status]++; }
+      const requestId = randomUUID();
+      await recordPaymentEvent({ provider: "AIBL_WALLET", paymentId: payment.id, orderId: payment.orderId ?? undefined,
+        requestId, operation: "DIAGNOSTIC", outcome: "SUCCESS", detailCode: "INITIATOR_CRON_AIBL_RECONCILIATION" });
+      try { const result = await reconcileAiblWalletPayment(payment.externalId, request, undefined, requestId); results[result.status]++; }
       catch { results.errors++; }
       // Failed/missing-OrderID checks rotate to the back of the bounded queue.
       await prisma.payment.updateMany({ where: { id: payment.id, status: { in: ["INITIATED", "AUTHORIZED"] } }, data: { updatedAt: new Date() } });

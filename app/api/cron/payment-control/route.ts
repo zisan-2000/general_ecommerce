@@ -1,4 +1,5 @@
 import { NextRequest, NextResponse } from "next/server";
+import { randomUUID } from "node:crypto";
 import { Prisma } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import { compareGatewayPayment } from "@/lib/payment-control/reconciliation";
@@ -31,7 +32,9 @@ export async function GET(request: NextRequest) {
     const results: Record<string, number> = {};
     for (const payment of candidates) {
       try {
-        const comparison = await compareGatewayPayment(payment.id, "system:payment-control-cron");
+        const comparison = await compareGatewayPayment(payment.id, "system:payment-control-cron", {
+          kind: "CRON", requestId: randomUUID(), jobName: "PAYMENT_CONTROL_RECONCILIATION",
+        });
         results[comparison.result] = (results[comparison.result] ?? 0) + 1;
       } catch { results.ERROR = (results.ERROR ?? 0) + 1; }
     }

@@ -1,6 +1,7 @@
 import "server-only";
 import { randomUUID } from "node:crypto";
 import { prisma } from "@/lib/prisma";
+import { beginPaymentTransport, paymentTransportDispatcher } from "./transport-monitor";
 
 export type PaymentProvider = "EPS" | "SSLCOMMERZ" | "AIBL_WALLET";
 export type PaymentOperation = "AUTH" | "INITIALIZE" | "STATUS_QUERY" | "VERIFY" | "CALLBACK" | "SETTLEMENT" | "REFUND" | "DIAGNOSTIC";
@@ -40,6 +41,13 @@ export type AiblDiagnosticCode = AiblDiagnosticStage | AiblCallbackDiagnosticCod
   `AIBL_CB_${"BILLNO_PRESENT" | "AMOUNT_PRESENT" | "ALT_BILL_CAMEL" | "ALT_BILL_LOWER" |
     "ALT_BILL_SNAKE" | "ALT_BILL_PASCAL" | "ALT_AMOUNT_LOWER" | "ALT_AMOUNT_PASCAL"}` |
   `AIBL_CB_${"BILLNO" | "AMOUNT"}_TYPE_${"STRING" | "NUMBER" | "NULL" | "MISSING" | "OTHER"}`;
+export type InitiatorDiagnosticCode = "INITIATOR_SCHEDULED_CRON" | "INITIATOR_GUEST_CHECKOUT" |
+  "INITIATOR_GUEST_RECONCILIATION" | "INITIATOR_AUTHENTICATED_CUSTOMER" | "INITIATOR_ADMIN_AUTHORIZED" |
+  "INITIATOR_ADMIN_PAYMENT_MANAGE" | "INITIATOR_ADMIN_SETTINGS_MANAGE" |
+  "INITIATOR_ADMIN_SCOPED_PAYMENT_MANAGE" | "INITIATOR_ADMIN_SCOPED_SETTINGS_MANAGE" |
+  "INITIATOR_CRON_AIBL_RECONCILIATION" | "INITIATOR_CRON_EPS_RECONCILIATION" |
+  "INITIATOR_CRON_PAYMENT_CONTROL_RECONCILIATION" | "CALLBACK_STATE_VALIDATED" |
+  "CALLBACK_CORRELATION_VALIDATED" | "CALLBACK_PAYLOAD_VALIDATED";
 type PaymentEventInput = PaymentLogContext & {
   requestId?: string;
   networkAgentId?: string;
@@ -50,12 +58,14 @@ type PaymentEventInput = PaymentLogContext & {
     "BILLNO_MISMATCH" | "AMOUNT_MISSING" | "AMOUNT_INVALID" | "AMOUNT_MISMATCH" |
     "VERIFICATION_MISMATCH" | "SETTLEMENT_REJECTED" | "INITIALIZE_REJECTED" | "REFUND_RECORDED" |
     "STATUS_CHECK_FAILED" | "ACCOUNT_CONFIGURATION_MISMATCH" | "RISK_REVIEW" | "INVALID_REFERENCE" |
-    "AUTHENTICATION_REJECTED" | "CALLBACK_SUCCESS" | "CALLBACK_FAIL" | "CALLBACK_CANCEL" | "CALLBACK_IPN" | NetworkErrorCode | AiblDiagnosticCode;
+    "AUTHENTICATION_REJECTED" | "CALLBACK_SUCCESS" | "CALLBACK_FAIL" | "CALLBACK_CANCEL" | "CALLBACK_IPN" |
+    NetworkErrorCode | AiblDiagnosticCode | InitiatorDiagnosticCode;
 };
 type NetworkErrorCode = "ECONNRESET" | "ECONNREFUSED" | "ETIMEDOUT" | "ENOTFOUND" | "EAI_AGAIN" |
   "ERR_SSL_PACKET_LENGTH_TOO_LONG" | "CERT_HAS_EXPIRED" | "UNABLE_TO_VERIFY_LEAF_SIGNATURE" | "DEPTH_ZERO_SELF_SIGNED_CERT";
 const networkCodes = new Set<NetworkErrorCode>(["ECONNRESET", "ECONNREFUSED", "ETIMEDOUT", "ENOTFOUND", "EAI_AGAIN",
   "ERR_SSL_PACKET_LENGTH_TOO_LONG", "CERT_HAS_EXPIRED", "UNABLE_TO_VERIFY_LEAF_SIGNATURE", "DEPTH_ZERO_SELF_SIGNED_CERT"]);
+const requestIdPattern = /^[a-f0-9]{8}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{4}-[a-f0-9]{12}$/i;
 function safeNetworkCode(error: unknown) {
   if (!error || typeof error !== "object") return undefined;
   const source = error as { code?: unknown; cause?: { code?: unknown } };
@@ -105,25 +115,49 @@ export async function recordPaymentEvent(event: PaymentEventInput) {
 export async function paymentFetch(context: PaymentLogContext, operation: "AUTH" | "INITIALIZE" | "STATUS_QUERY" | "VERIFY",
   input: string | URL, init: Omit<RequestInit, "signal"> & { timeoutMs: number }) {
   // AIBL verification shares one server-generated ID with guards and settlement.
-  const requestId = context.provider === "AIBL_WALLET" && context.requestId ? context.requestId : randomUUID();
+  // Callers may propagate one server-generated correlation ID across related
+  // gateway operations. Invalid/external values are never accepted.
+  const requestId = context.requestId && requestIdPattern.test(context.requestId)
+    ? context.requestId
+    : randomUUID();
   const configuredAgent = process.env.PAYMENT_NETWORK_AGENT_ID;
   const networkAgentId = configuredAgent && /^[A-Za-z0-9_-]{1,64}$/.test(configuredAgent) ? configuredAgent : undefined;
   const { timeoutMs, ...options } = init;
   await recordPaymentEvent({ ...context, requestId, networkAgentId, requestStartedAt: new Date(), operation, outcome: "REQUEST_STARTED" });
+  let capture: Awaited<ReturnType<typeof beginPaymentTransport>> = null;
+  let dispatcher: Awaited<ReturnType<typeof paymentTransportDispatcher>> = undefined;
+  try {
+    capture = await beginPaymentTransport(context.provider, operation, requestId, input);
+    dispatcher = await paymentTransportDispatcher(capture);
+  } catch {
+    try { capture?.finish(); } catch { /* best effort */ }
+    capture = null;
+  }
+  const finishTransport = (error?: unknown) => {
+    try { capture?.finish(error); } catch { /* telemetry cannot change payment results */ }
+  };
   const requestStartedAt = new Date();
   const started = performance.now();
   try {
     // The network deadline starts at fetch, after the diagnostic insert.
-    const response = await fetch(input, { ...options, signal: AbortSignal.timeout(timeoutMs) });
-    await recordPaymentEvent({ ...context, requestId, networkAgentId, requestStartedAt, requestCompletedAt: new Date(), operation, outcome: response.ok ? "HTTP_SUCCESS" : "HTTP_ERROR",
-      httpStatus: response.status, durationMs: performance.now() - started });
+    const response = await (capture ? capture.run(() => fetch(input, {
+      ...options, signal: AbortSignal.timeout(timeoutMs), ...(dispatcher ? { dispatcher } : {}),
+    })) : fetch(input, { ...options, signal: AbortSignal.timeout(timeoutMs) }));
+    const requestCompletedAt = new Date();
+    const durationMs = performance.now() - started;
+    finishTransport();
+    await recordPaymentEvent({ ...context, requestId, networkAgentId, requestStartedAt, requestCompletedAt, operation, outcome: response.ok ? "HTTP_SUCCESS" : "HTTP_ERROR",
+      httpStatus: response.status, durationMs });
     return response;
   } catch (error) {
+    const requestCompletedAt = new Date();
+    const durationMs = performance.now() - started;
+    finishTransport(error);
     const name = error instanceof Error ? error.name : "";
     const code = safeNetworkCode(error);
-    await recordPaymentEvent({ ...context, requestId, networkAgentId, requestStartedAt, requestCompletedAt: new Date(), operation, detailCode: code,
+    await recordPaymentEvent({ ...context, requestId, networkAgentId, requestStartedAt, requestCompletedAt, operation, detailCode: code,
       outcome: name === "TimeoutError" || name === "AbortError" || code === "ETIMEDOUT" ? "TIMEOUT" : "CONNECTION_ERROR",
-      durationMs: performance.now() - started });
+      durationMs });
     throw error;
   }
 }

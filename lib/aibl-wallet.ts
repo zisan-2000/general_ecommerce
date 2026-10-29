@@ -186,7 +186,11 @@ export async function queryAiblWalletPayment(payment: { id: number; orderId: num
   }
 }
 
-export async function initializeAiblWalletOrder(orderId: number, requestedGatewayId?: unknown) {
+export async function initializeAiblWalletOrder(
+  orderId: number,
+  requestedGatewayId?: unknown,
+  telemetryContext: Pick<Context, "actorUserId" | "requestId"> = {},
+) {
   const original = await prisma.order.findUnique({ where: { id: orderId } });
   const gatewayId = aiblWalletGatewayId(original?.payment_method);
   if (!original || !gatewayId || requestedGatewayId !== undefined && Number(requestedGatewayId) !== gatewayId) {
@@ -208,7 +212,7 @@ export async function initializeAiblWalletOrder(orderId: number, requestedGatewa
     throw new AiblWalletError("A payment attempt already exists; verify it before further action", 409);
   }
   if (previous) return reuse(previous);
-  const bill = aiblBillNo(); const context = { orderId, transactionId: bill };
+  const bill = aiblBillNo(); const context = { ...telemetryContext, orderId, transactionId: bill };
   const urls = aiblWalletCallbackUrls(bill);
   const token = await getAiblWalletToken(context);
   const claimed = await prisma.$transaction(async (tx) => {
@@ -268,14 +272,21 @@ export async function initializeAiblWalletOrder(orderId: number, requestedGatewa
 }
 
 export type AiblVerificationResult = { status: "success" | "pending"; message: string };
-export async function reconcileAiblWalletPayment(bill: string, request?: Request, callbackTransactionId?: string, requestId: string = randomUUID()): Promise<AiblVerificationResult> {
+export async function reconcileAiblWalletPayment(
+  bill: string,
+  request?: Request,
+  callbackTransactionId?: string,
+  requestId: string = randomUUID(),
+  actorUserId?: string,
+): Promise<AiblVerificationResult> {
   const payment = validAiblBill(bill) ? await prisma.payment.findUnique({ where: { externalId: bill } }) : null;
   if (!payment?.orderId || payment.provider !== "AIBL_WALLET") throw new AiblWalletError("AIBL payment attempt not found", 404);
-  const context = { provider: "AIBL_WALLET" as const, orderId: payment.orderId, paymentId: payment.id, transactionId: bill, requestId };
+  const context = { provider: "AIBL_WALLET" as const, orderId: payment.orderId, paymentId: payment.id,
+    transactionId: bill, requestId, actorUserId };
   let stage: AiblDiagnosticStage = "PRE_VERIFY_VALIDATION_FAILED";
   let settlementCheck: AiblDiagnosticCode = "AIBL_SETTLEMENT_CALLBACK_REFERENCE";
   try {
-    const verified = await queryAiblWalletPayment(payment, undefined, requestId);
+    const verified = await queryAiblWalletPayment(payment, actorUserId, requestId);
     stage = "SETTLEMENT_VALIDATION_FAILED";
     if (callbackTransactionId && verified.transactionId && verified.transactionId !== callbackTransactionId) {
       throw new AiblWalletError("AIBL callback transaction differs from verified transaction; manual review required", 409);
