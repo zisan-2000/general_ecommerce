@@ -66,7 +66,12 @@ const readBookCatalog = compressedCache(
     const page = Math.min(storefrontPage(options.page), Math.max(1, Math.ceil(total / STOREFRONT_PAGE_SIZE)));
     const rows = await prisma.product.findMany({
       where,
-      orderBy: [{ soldCount: "desc" }, { createdAt: "desc" }, { id: "desc" }],
+      orderBy: [
+        { featured: "desc" },
+        { soldCount: "desc" },
+        { createdAt: "desc" },
+        { id: "desc" },
+      ],
       skip: (page - 1) * STOREFRONT_PAGE_SIZE,
       take: STOREFRONT_PAGE_SIZE,
       select: bookProductSelect,
@@ -92,7 +97,7 @@ const readBookCatalog = compressedCache(
     });
     return { books, page, total };
   },
-  ["storefront-book-catalog-paged-v2"],
+  ["storefront-book-catalog-paged-v3-featured-first"],
   { revalidate: 60, tags: ["storefront-catalog", "storefront-books", "products"] },
 );
 

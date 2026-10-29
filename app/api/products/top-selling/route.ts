@@ -25,10 +25,12 @@ export async function GET() {
         ...(disabledTypes.length ? { type: { notIn: disabledTypes } } : {}),
         ...bookVisibility,
       },
-      orderBy: {
-        bestSelling: "desc",
-        soldCount: "desc",
-      },
+      orderBy: [
+        { featured: "desc" },
+        { bestSelling: "desc" },
+        { soldCount: "desc" },
+        { id: "desc" },
+      ],
       take: 10,
       select: {
         ...storefrontHomeProductSelect,
