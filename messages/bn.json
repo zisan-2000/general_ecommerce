@@ -2457,6 +2457,7 @@
     }
   },
   "AdminBannerManager": {
+    "description": "Upload promotional banners and control exactly where each banner sends shoppers.",
     "title": "ব্যানার ব্যবস্থাপনা",
     "bannerAlt": "স্টোর ব্যানার",
     "previewAlt": "ব্যানার প্রিভিউ",
@@ -2466,6 +2467,11 @@
       "active": "সক্রিয়",
       "inactive": "নিষ্ক্রিয়"
     },
+    "destinations": {
+      "catalog": "All products",
+      "category": "Specific category",
+      "custom": "Custom internal route"
+    },
     "bannerTypes": {
       "HERO": "হিরো",
       "BANNER1": "ব্যানার ১",
@@ -2474,6 +2480,18 @@
       "POPUP": "পপআপ"
     },
     "fields": {
+      "subtitle": "Subtitle / offer badge",
+      "description": "Description",
+      "destinationType": "Click destination",
+      "category": "Category",
+      "chooseCategory": "Choose a category",
+      "loadingCategories": "Loading categories...",
+      "customRoute": "Custom internal route",
+      "customRouteHint": "Use a route beginning with /, for example /ecommerce/products?brand=example.",
+      "buttonText": "Button text (optional)",
+      "buttonTextPlaceholder": "Shop now",
+      "chooseImage": "Choose banner image",
+      "uploading": "Uploading image...",
       "title": "শিরোনাম",
       "image": "ব্যানার ছবি",
       "type": "ধরন",
@@ -2481,10 +2499,12 @@
       "active": "সক্রিয়"
     },
     "modal": {
+      "description": "Set the banner content, placement and storefront destination.",
       "titleNew": "নতুন ব্যানার",
       "titleEdit": "ব্যানার সম্পাদনা"
     },
     "actions": {
+      "previewDestination": "Preview destination",
       "addBanner": "ব্যানার যোগ করুন",
       "edit": "সম্পাদনা",
       "delete": "মুছুন",
@@ -2497,6 +2517,9 @@
       "updated": "ব্যানার আপডেট হয়েছে"
     },
     "errors": {
+      "categoriesLoadFailed": "Categories could not be loaded",
+      "categoryRequired": "Choose a destination category",
+      "invalidDestination": "Enter a valid internal route beginning with /",
       "titleImageRequired": "শিরোনাম ও ছবি আবশ্যক",
       "uploadFailed": "আপলোড ব্যর্থ হয়েছে",
       "imageUploadFailed": "ছবি আপলোড ব্যর্থ হয়েছে",

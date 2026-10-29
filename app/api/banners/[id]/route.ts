@@ -6,6 +6,8 @@ import { logActivity } from "@/lib/activity-log";
 import { getAccessContext } from "@/lib/rbac";
 import { getServerSession } from "next-auth/next";
 import { NextResponse } from "next/server";
+import { parseBannerLink } from "@/lib/banner-link";
+import { revalidateStorefrontBanners } from "@/lib/banner-cache";
 
 function toBannerLogSnapshot(banner: {
   id: number;
@@ -86,7 +88,17 @@ export async function PUT(req: Request, { params }: { params: Promise<{ id: stri
 
     const { id: idParam } = await params;
     const id = parseInt(idParam);
-    const body = await req.json();
+    const body = await req.json().catch(() => null);
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+      return NextResponse.json({ error: "Invalid banner payload" }, { status: 400 });
+    }
+    const buttonLink = parseBannerLink(body.buttonLink);
+    if (!buttonLink.ok) {
+      return NextResponse.json(
+        { error: "Banner destination must be a valid internal route" },
+        { status: 400 },
+      );
+    }
     const existing = await prisma.banner.findUnique({
       where: { id },
     });
@@ -105,7 +117,7 @@ export async function PUT(req: Request, { params }: { params: Promise<{ id: stri
         mobileImage: body.mobileImage || null,
 
         buttonText: body.buttonText || null,
-        buttonLink: body.buttonLink || null,
+        buttonLink: buttonLink.value,
 
         position: body.position ?? 0,
         isActive: body.isActive ?? true,
@@ -116,6 +128,8 @@ export async function PUT(req: Request, { params }: { params: Promise<{ id: stri
         type: body.type || "HERO",
       },
     });
+
+    revalidateStorefrontBanners();
 
     await logActivity({
       action: "update_banner",
@@ -168,6 +182,8 @@ export async function DELETE(req: Request, { params }: { params: Promise<{ id: s
     const banner = await prisma.banner.delete({
       where: { id },
     });
+
+    revalidateStorefrontBanners();
 
     await logActivity({
       action: "delete_banner",

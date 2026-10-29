@@ -2437,6 +2437,7 @@
     }
   },
   "AdminBannerManager": {
+    "description": "Upload promotional banners and control exactly where each banner sends shoppers.",
     "title": "横幅管理",
     "bannerAlt": "商城横幅",
     "previewAlt": "横幅预览",
@@ -2446,6 +2447,11 @@
       "active": "启用",
       "inactive": "未启用"
     },
+    "destinations": {
+      "catalog": "All products",
+      "category": "Specific category",
+      "custom": "Custom internal route"
+    },
     "bannerTypes": {
       "HERO": "主横幅",
       "BANNER1": "横幅 1",
@@ -2454,6 +2460,18 @@
       "POPUP": "弹窗"
     },
     "fields": {
+      "subtitle": "Subtitle / offer badge",
+      "description": "Description",
+      "destinationType": "Click destination",
+      "category": "Category",
+      "chooseCategory": "Choose a category",
+      "loadingCategories": "Loading categories...",
+      "customRoute": "Custom internal route",
+      "customRouteHint": "Use a route beginning with /, for example /ecommerce/products?brand=example.",
+      "buttonText": "Button text (optional)",
+      "buttonTextPlaceholder": "Shop now",
+      "chooseImage": "Choose banner image",
+      "uploading": "Uploading image...",
       "title": "标题",
       "image": "横幅图片",
       "type": "类型",
@@ -2461,10 +2479,12 @@
       "active": "启用"
     },
     "modal": {
+      "description": "Set the banner content, placement and storefront destination.",
       "titleNew": "新建横幅",
       "titleEdit": "编辑横幅"
     },
     "actions": {
+      "previewDestination": "Preview destination",
       "addBanner": "添加横幅",
       "edit": "编辑",
       "delete": "删除",
@@ -2477,6 +2497,9 @@
       "updated": "横幅已更新"
     },
     "errors": {
+      "categoriesLoadFailed": "Categories could not be loaded",
+      "categoryRequired": "Choose a destination category",
+      "invalidDestination": "Enter a valid internal route beginning with /",
       "titleImageRequired": "必须填写标题和图片",
       "uploadFailed": "上传失败",
       "imageUploadFailed": "图片上传失败",

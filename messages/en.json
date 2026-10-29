@@ -2457,6 +2457,7 @@
     }
   },
   "AdminBannerManager": {
+    "description": "Upload promotional banners and control exactly where each banner sends shoppers.",
     "title": "Banner Management",
     "bannerAlt": "Store banner",
     "previewAlt": "Banner preview",
@@ -2466,6 +2467,11 @@
       "active": "Active",
       "inactive": "Inactive"
     },
+    "destinations": {
+      "catalog": "All products",
+      "category": "Specific category",
+      "custom": "Custom internal route"
+    },
     "bannerTypes": {
       "HERO": "HERO",
       "BANNER1": "BANNER1",
@@ -2474,6 +2480,18 @@
       "POPUP": "POPUP"
     },
     "fields": {
+      "subtitle": "Subtitle / offer badge",
+      "description": "Description",
+      "destinationType": "Click destination",
+      "category": "Category",
+      "chooseCategory": "Choose a category",
+      "loadingCategories": "Loading categories...",
+      "customRoute": "Custom internal route",
+      "customRouteHint": "Use a route beginning with /, for example /ecommerce/products?brand=example.",
+      "buttonText": "Button text (optional)",
+      "buttonTextPlaceholder": "Shop now",
+      "chooseImage": "Choose banner image",
+      "uploading": "Uploading image...",
       "title": "Title",
       "image": "Banner Image",
       "type": "Type",
@@ -2481,10 +2499,12 @@
       "active": "Active"
     },
     "modal": {
+      "description": "Set the banner content, placement and storefront destination.",
       "titleNew": "New Banner",
       "titleEdit": "Edit Banner"
     },
     "actions": {
+      "previewDestination": "Preview destination",
       "addBanner": "Add Banner",
       "edit": "Edit",
       "delete": "Delete",
@@ -2497,6 +2517,9 @@
       "updated": "Banner updated"
     },
     "errors": {
+      "categoriesLoadFailed": "Categories could not be loaded",
+      "categoryRequired": "Choose a destination category",
+      "invalidDestination": "Enter a valid internal route beginning with /",
       "titleImageRequired": "Title and Image required",
       "uploadFailed": "Upload failed",
       "imageUploadFailed": "Image upload failed",

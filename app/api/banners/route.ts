@@ -7,6 +7,8 @@ import { getAccessContext } from "@/lib/rbac";
 import { getServerSession } from "next-auth/next";
 import { NextResponse } from "next/server";
 import { isStorefrontRequest, privateJson, publicJson } from "@/lib/public-cache";
+import { parseBannerLink } from "@/lib/banner-link";
+import { revalidateStorefrontBanners } from "@/lib/banner-cache";
 
 function toBannerLogSnapshot(banner: {
   id: number;
@@ -98,7 +100,17 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
-    const body = await req.json();
+    const body = await req.json().catch(() => null);
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+      return NextResponse.json({ error: "Invalid banner payload" }, { status: 400 });
+    }
+    const buttonLink = parseBannerLink(body.buttonLink);
+    if (!buttonLink.ok) {
+      return NextResponse.json(
+        { error: "Banner destination must be a valid internal route" },
+        { status: 400 },
+      );
+    }
 
     const banner = await prisma.banner.create({
       data: {
@@ -110,7 +122,7 @@ export async function POST(req: Request) {
         mobileImage: body.mobileImage || null,
 
         buttonText: body.buttonText || null,
-        buttonLink: body.buttonLink || null,
+        buttonLink: buttonLink.value,
 
         position: body.position ?? 0,
         isActive: body.isActive ?? true,
@@ -133,6 +145,8 @@ export async function POST(req: Request) {
       },
       after: toBannerLogSnapshot(banner),
     });
+
+    revalidateStorefrontBanners();
 
     return NextResponse.json(banner);
   } catch (error) {

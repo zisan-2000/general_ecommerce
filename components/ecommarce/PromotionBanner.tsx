@@ -223,13 +223,9 @@ function PromoCard({
               </div>
 
               {banner.buttonText && (
-                <button
-                  type="button"
-                  onClick={(e) => e.stopPropagation()}
-                  className="inline-flex h-11 items-center justify-center rounded-full bg-white px-5 text-sm font-bold text-black transition hover:bg-primary hover:text-primary-foreground"
-                >
+                <span className="inline-flex h-11 items-center justify-center rounded-full bg-white px-5 text-sm font-bold text-black transition group-hover:bg-primary group-hover:text-primary-foreground">
                   {banner.buttonText}
-                </button>
+                </span>
               )}
             </div>
           </div>

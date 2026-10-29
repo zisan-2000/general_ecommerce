@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 import GradientBorder from "@/components/ui/GradientBorder";
 
 interface Banner {
@@ -54,24 +55,35 @@ export default function PopupBanner({ banners }: PopupBannerProps) {
           </button>
 
           {/* Image */}
-          <div className="relative w-full h-80">
-            <Image
-              src={popupBanner.image}
-              alt={popupBanner.title}
-              fill
-              className="object-contain rounded"
-            />
-          </div>
+          {popupBanner.buttonLink ? (
+            <Link href={popupBanner.buttonLink} className="relative block h-80 w-full">
+              <Image
+                src={popupBanner.image}
+                alt={popupBanner.title}
+                fill
+                className="rounded object-contain"
+              />
+            </Link>
+          ) : (
+            <div className="relative h-80 w-full">
+              <Image
+                src={popupBanner.image}
+                alt={popupBanner.title}
+                fill
+                className="rounded object-contain"
+              />
+            </div>
+          )}
 
           {/* Button */}
           {popupBanner.buttonText && popupBanner.buttonLink && (
             <div className="mt-5 text-center">
-              <a
+              <Link
                 href={popupBanner.buttonLink}
                 className="btn-primary px-6 py-2 rounded-md inline-block transition"
               >
                 {popupBanner.buttonText}
-              </a>
+              </Link>
             </div>
           )}
         </div>

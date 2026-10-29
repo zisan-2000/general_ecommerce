@@ -4,7 +4,10 @@ import { useState, useEffect } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
-import BannerManager, { type Banner } from "@/components/Settings/BannerManager";
+import BannerManager, {
+  type Banner,
+  type BannerMutationInput,
+} from "@/components/Settings/BannerManager";
 import PaymentGatewayManager from "@/components/PaymentSystem";
 import SiteSettingsForm from "@/components/Settings/SiteSettingsForm";
 import GeneralSettings from "@/components/Settings/GeneralSettings";
@@ -28,7 +31,7 @@ export default function SettingsPage() {
     }
   };
 
-  const handleCreateBanner = async (data: any) => {
+  const handleCreateBanner = async (data: BannerMutationInput) => {
     try {
       const res = await fetch("/api/banners", {
         method: "POST",
@@ -36,16 +39,20 @@ export default function SettingsPage() {
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) throw new Error();
+      if (!res.ok) {
+        const payload = await res.json().catch(() => ({}));
+        throw new Error(payload?.error || t("toasts.createFailed"));
+      }
 
       await loadBanners();
       toast.success(t("toasts.created"));
-    } catch {
-      toast.error(t("toasts.createFailed"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("toasts.createFailed"));
+      throw error;
     }
   };
 
-  const handleUpdateBanner = async (id: number, data: any) => {
+  const handleUpdateBanner = async (id: number, data: BannerMutationInput) => {
     try {
       const res = await fetch(`/api/banners/${id}`, {
         method: "PUT",
@@ -53,12 +60,16 @@ export default function SettingsPage() {
         body: JSON.stringify(data),
       });
 
-      if (!res.ok) throw new Error();
+      if (!res.ok) {
+        const payload = await res.json().catch(() => ({}));
+        throw new Error(payload?.error || t("toasts.updateFailed"));
+      }
 
       await loadBanners();
       toast.success(t("toasts.updated"));
-    } catch {
-      toast.error(t("toasts.updateFailed"));
+    } catch (error) {
+      toast.error(error instanceof Error ? error.message : t("toasts.updateFailed"));
+      throw error;
     }
   };
 
