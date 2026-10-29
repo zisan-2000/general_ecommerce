@@ -1415,6 +1415,7 @@
       "bundle": "حزمة"
     },
     "sort": {
+      "newest": "الأحدث أولاً",
       "nameAsc": "الاسم (A-Z)",
       "nameDesc": "الاسم (Z-A)",
       "categoryAsc": "الفئة (A-Z)",
@@ -3820,42 +3821,59 @@
   },
   "AdminBrandManager": {
     "header": {
-      "title": "إدارة العلامات التجارية"
+      "title": "إدارة العلامات التجارية",
+      "subtitle": "إدارة هويات العلامات التجارية والشعارات وعلاقات المنتجات من مكان واحد."
     },
     "actions": {
       "addBrand": "إضافة علامة تجارية",
       "saving": "جارٍ الحفظ...",
       "create": "إنشاء",
-      "update": "تحديث"
+      "update": "تحديث",
+      "edit": "تعديل العلامة التجارية",
+      "delete": "حذف العلامة التجارية",
+      "deleting": "جارٍ الحذف...",
+      "cancel": "إلغاء",
+      "retry": "إعادة المحاولة"
     },
     "empty": {
       "title": "لم يتم العثور على علامات تجارية",
-      "description": "انقر الزر أدناه لإضافة علامة تجارية جديدة"
+      "description": "انقر الزر أدناه لإضافة علامة تجارية جديدة",
+      "searchDescription": "جرّب اسمًا مختلفًا أو امسح البحث."
     },
     "card": {
       "noLogo": "لا يوجد شعار",
-      "logoAlt": "شعار {name}"
+      "logoAlt": "شعار {name}",
+      "products": "{count} منتجات"
     },
     "modal": {
       "titleNew": "علامة تجارية جديدة",
-      "titleEdit": "تعديل العلامة التجارية"
+      "titleEdit": "تعديل العلامة التجارية",
+      "description": "أضف اسمًا واضحًا وشعارًا اختياريًا عالي الجودة."
     },
     "form": {
       "name": "الاسم",
       "logo": "الشعار",
       "noImage": "لا توجد صورة",
       "logoPreviewAlt": "معاينة شعار العلامة التجارية",
-      "removeImage": "إزالة الصورة"
+      "removeImage": "إزالة الصورة",
+      "namePlaceholder": "أدخل اسم العلامة التجارية",
+      "logoHint": "يفضل استخدام PNG أو JPG أو WEBP أو SVG بخلفية شفافة."
     },
     "success": {
       "created": "تم إنشاء العلامة التجارية",
-      "updated": "تم تحديث العلامة التجارية"
+      "updated": "تم تحديث العلامة التجارية",
+      "deleted": "تم حذف العلامة التجارية"
     },
     "errors": {
       "nameRequired": "اسم العلامة التجارية مطلوب",
       "imageUploadFailed": "فشل رفع الصورة",
-      "saveFailed": "فشل حفظ العلامة التجارية"
-    }
+      "saveFailed": "فشل حفظ العلامة التجارية",
+      "deleteFailed": "فشل حذف العلامة التجارية"
+    },
+    "stats": { "totalBrands": "إجمالي العلامات", "productsOnPage": "منتجات الصفحة", "currentPage": "الصفحة الحالية" },
+    "search": { "placeholder": "البحث بالاسم أو الرابط...", "clear": "مسح البحث", "results": "تم العثور على {count} علامة" },
+    "pagination": { "label": "ترقيم صفحات العلامات", "previous": "الصفحة السابقة", "next": "الصفحة التالية", "summary": "الصفحة {page} من {pages} · الإجمالي {total}" },
+    "deleteDialog": { "title": "حذف هذه العلامة؟", "description": "ستتم إزالة {name} من القوائم النشطة مع الاحتفاظ بسجل المنتجات." }
   },
   "AdminFlashSaleManager": {
     "header": {

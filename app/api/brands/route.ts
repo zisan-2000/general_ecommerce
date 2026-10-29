@@ -41,9 +41,35 @@ function toBrandLogSnapshot(brand: {
 ========================= */
 export async function GET(req: Request) {
   try {
-    const brands = await prisma.brand.findMany({
-      where: { deleted: false },
+    const searchParams = new URL(req.url).searchParams;
+    const storefront = isStorefrontRequest(req);
+    const paginated = !storefront && searchParams.get("paginated") === "true";
+    const search = searchParams.get("search")?.trim() ?? "";
+    const requestedPage = Number(searchParams.get("page") || 1);
+    const requestedPageSize = Number(searchParams.get("pageSize") || 12);
+    const page = Number.isSafeInteger(requestedPage) && requestedPage > 0
+      ? requestedPage
+      : 1;
+    const pageSize = Number.isSafeInteger(requestedPageSize)
+      ? Math.min(Math.max(requestedPageSize, 8), 48)
+      : 12;
+    const where = {
+      deleted: false,
+      ...(paginated && search
+        ? {
+            OR: [
+              { name: { contains: search, mode: "insensitive" as const } },
+              { slug: { contains: search, mode: "insensitive" as const } },
+            ],
+          }
+        : {}),
+    };
+
+    const [brands, total] = await Promise.all([
+      prisma.brand.findMany({
+      where,
       orderBy: { id: "desc" },
+      ...(paginated ? { skip: (page - 1) * pageSize, take: pageSize } : {}),
       include: {
         _count: {
           select: {
@@ -53,7 +79,9 @@ export async function GET(req: Request) {
           },
         },
       },
-    });
+      }),
+      paginated ? prisma.brand.count({ where }) : Promise.resolve(0),
+    ]);
 
     const data = brands.map((b) => ({
         id: b.id,
@@ -64,7 +92,20 @@ export async function GET(req: Request) {
         createdAt: b.createdAt,
         updatedAt: b.updatedAt,
       }));
-    return isStorefrontRequest(req)
+    if (paginated) {
+      const pages = Math.max(1, Math.ceil(total / pageSize));
+      return privateJson({
+        brands: data,
+        pagination: {
+          total,
+          page: Math.min(page, pages),
+          pages,
+          pageSize,
+        },
+      });
+    }
+
+    return storefront
       ? publicJson(data, { maxAge: 300, staleWhileRevalidate: 1800 })
       : privateJson(data);
   } catch (error) {

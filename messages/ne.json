@@ -1415,6 +1415,7 @@
       "bundle": "बन्डल"
     },
     "sort": {
+      "newest": "नयाँ पहिले",
       "nameAsc": "नाम (A-Z)",
       "nameDesc": "नाम (Z-A)",
       "categoryAsc": "श्रेणी (A-Z)",
@@ -3830,42 +3831,59 @@
   },
   "AdminBrandManager": {
     "header": {
-      "title": "ब्रान्ड व्यवस्थापन"
+      "title": "ब्रान्ड व्यवस्थापन",
+      "subtitle": "ब्रान्ड पहिचान, लोगो र उत्पादन सम्बन्ध एउटै ठाउँबाट व्यवस्थापन गर्नुहोस्।"
     },
     "actions": {
       "addBrand": "ब्रान्ड थप्नुहोस्",
       "saving": "सेभ हुँदैछ...",
       "create": "सिर्जना गर्नुहोस्",
-      "update": "अपडेट गर्नुहोस्"
+      "update": "अपडेट गर्नुहोस्",
+      "edit": "ब्रान्ड सम्पादन",
+      "delete": "ब्रान्ड मेटाउनुहोस्",
+      "deleting": "मेटाइँदैछ...",
+      "cancel": "रद्द गर्नुहोस्",
+      "retry": "फेरि प्रयास गर्नुहोस्"
     },
     "empty": {
       "title": "कुनै ब्रान्ड फेला परेन",
-      "description": "नयाँ ब्रान्ड थप्न तलको बटन क्लिक गर्नुहोस्"
+      "description": "नयाँ ब्रान्ड थप्न तलको बटन क्लिक गर्नुहोस्",
+      "searchDescription": "अर्को नाम प्रयास गर्नुहोस् वा खोज खाली गर्नुहोस्।"
     },
     "card": {
       "noLogo": "लोगो छैन",
-      "logoAlt": "{name} लोगो"
+      "logoAlt": "{name} लोगो",
+      "products": "{count} उत्पादन"
     },
     "modal": {
       "titleNew": "नयाँ ब्रान्ड",
-      "titleEdit": "ब्रान्ड सम्पादन गर्नुहोस्"
+      "titleEdit": "ब्रान्ड सम्पादन गर्नुहोस्",
+      "description": "स्पष्ट नाम र वैकल्पिक उच्च गुणस्तरको लोगो थप्नुहोस्।"
     },
     "form": {
       "name": "नाम",
       "logo": "लोगो",
       "noImage": "तस्बिर छैन",
       "logoPreviewAlt": "ब्रान्ड लोगो पूर्वावलोकन",
-      "removeImage": "तस्बिर हटाउनुहोस्"
+      "removeImage": "तस्बिर हटाउनुहोस्",
+      "namePlaceholder": "ब्रान्ड नाम लेख्नुहोस्",
+      "logoHint": "पारदर्शी पृष्ठभूमिको PNG, JPG, WEBP वा SVG उत्तम हुन्छ।"
     },
     "success": {
       "created": "ब्रान्ड सिर्जना भयो",
-      "updated": "ब्रान्ड अपडेट भयो"
+      "updated": "ब्रान्ड अपडेट भयो",
+      "deleted": "ब्रान्ड मेटाइयो"
     },
     "errors": {
       "nameRequired": "ब्रान्ड नाम आवश्यक छ",
       "imageUploadFailed": "तस्बिर अपलोड असफल भयो",
-      "saveFailed": "ब्रान्ड सेभ गर्न असफल भयो"
-    }
+      "saveFailed": "ब्रान्ड सेभ गर्न असफल भयो",
+      "deleteFailed": "ब्रान्ड मेटाउन असफल भयो"
+    },
+    "stats": { "totalBrands": "कुल ब्रान्ड", "productsOnPage": "यस पृष्ठका उत्पादन", "currentPage": "हालको पृष्ठ" },
+    "search": { "placeholder": "नाम वा स्लगबाट ब्रान्ड खोज्नुहोस्...", "clear": "खोज खाली गर्नुहोस्", "results": "{count} ब्रान्ड भेटिए" },
+    "pagination": { "label": "ब्रान्ड पृष्ठांकन", "previous": "अघिल्लो पृष्ठ", "next": "अर्को पृष्ठ", "summary": "पृष्ठ {page}/{pages} · कुल {total}" },
+    "deleteDialog": { "title": "यो ब्रान्ड मेटाउने?", "description": "{name} सक्रिय सूचीबाट हटाइनेछ। पुरानो उत्पादन इतिहास सुरक्षित रहनेछ।" }
   },
   "AdminFlashSaleManager": {
     "header": {
