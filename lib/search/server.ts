@@ -261,7 +261,7 @@ async function rankedProductCandidates(
         OR ${similarityMatch}
         OR ${Prisma.join(termConditions, " OR ")}
       )
-    ORDER BY "score" DESC, p."soldCount" DESC, p."id" DESC
+    ORDER BY p."featured" DESC, "score" DESC, p."soldCount" DESC, p."id" DESC
     LIMIT ${Math.max(limit * 8, 48)}
   `);
 }
@@ -287,7 +287,7 @@ async function fallbackProductCandidates(
       ],
     },
     select: { id: true },
-    orderBy: [{ soldCount: "desc" }, { id: "desc" }],
+    orderBy: [{ featured: "desc" }, { soldCount: "desc" }, { id: "desc" }],
     take: Math.max(limit * 8, 48),
   });
   return products.map((product, index) => ({
@@ -366,10 +366,15 @@ function productStock(product: Pick<
   );
 }
 
-function pinAndLimit<T extends { id: number }>(rows: T[], pinnedIds: number[], limit: number) {
+function prioritizeFeaturedPinAndLimit<T extends { id: number; featured: boolean }>(
+  rows: T[],
+  pinnedIds: number[],
+  limit: number,
+) {
   const rank = new Map(pinnedIds.map((id, index) => [id, index]));
   return [...rows]
     .sort((left, right) => {
+      if (left.featured !== right.featured) return left.featured ? -1 : 1;
       const leftRank = rank.get(left.id);
       const rightRank = rank.get(right.id);
       if (leftRank !== undefined && rightRank !== undefined) return leftRank - rightRank;
@@ -456,6 +461,7 @@ export async function getSearchSuggestions(
             name: true,
             slug: true,
             image: true,
+            featured: true,
             type: true,
             basePrice: true,
             originalPrice: true,
@@ -521,7 +527,8 @@ export async function getSearchSuggestions(
 
   const productById = new Map(products.map((product) => [product.id, product]));
   const matchedSkuById = new Map(ranked.map((row) => [row.id, row.matchedVariantSku]));
-  const orderedProducts: SearchSuggestionProduct[] = ranked.flatMap((candidate) => {
+  const orderedProducts: Array<SearchSuggestionProduct & { featured: boolean }> =
+    ranked.flatMap((candidate) => {
     const product = productById.get(candidate.id);
     if (!product) return [];
     const pricing = resolveFlashSalePricing(product);
@@ -541,12 +548,17 @@ export async function getSearchSuggestions(
       brand: product.brand?.name ?? null,
       category: product.category.name,
       matchedVariantSku: matchedSkuById.get(product.id) ?? null,
+      featured: product.featured,
     };
     if (intent.minPrice !== null && result.price < intent.minPrice) return [];
     if (intent.maxPrice !== null && result.price > intent.maxPrice) return [];
     return [result];
-  });
-  const limitedProducts = pinAndLimit(orderedProducts, config.pinProductIds, limit);
+    });
+  const limitedProducts = prioritizeFeaturedPinAndLimit(
+    orderedProducts,
+    config.pinProductIds,
+    limit,
+  ).map(({ featured: _featured, ...product }) => product);
   const suggestedQueries = Array.from(
     new Set([...config.suggestedQueries, ...popularQueries]),
   )

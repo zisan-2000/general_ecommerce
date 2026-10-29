@@ -37,7 +37,12 @@ const readActiveFlashSales = compressedCache(
     const products = await prisma.product.findMany({
       where,
       skip: (page - 1) * STOREFRONT_PAGE_SIZE,
-      orderBy: [{ flashSaleSortOrder: "asc" }, { flashSaleEndsAt: "asc" }, { id: "asc" }],
+      orderBy: [
+        { featured: "desc" },
+        { flashSaleSortOrder: "asc" },
+        { flashSaleEndsAt: "asc" },
+        { id: "asc" },
+      ],
       take: STOREFRONT_PAGE_SIZE,
       select: storefrontHomeProductSelect,
     });
@@ -45,7 +50,7 @@ const readActiveFlashSales = compressedCache(
       .map((product) => serializeStorefrontHomeProduct(product, now))
       .filter((product) => product.flashSale.active) };
   },
-  ["storefront-flash-sales-paged-v3"],
+  ["storefront-flash-sales-paged-v4-featured-first"],
   { revalidate: 30, tags: ["flash-sales", "products"] },
 );
 

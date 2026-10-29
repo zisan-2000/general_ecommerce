@@ -970,7 +970,9 @@
       "currency": "Mata Uang",
       "category": "Kategori *",
       "brand": "Merek",
-      "select": "Pilih"
+      "select": "Pilih",
+      "searchBrand": "Cari merek...",
+      "noBrandsFound": "Merek tidak ditemukan"
     },
     "productTypes": {
       "PHYSICAL": "FISIK",
@@ -1413,6 +1415,7 @@
       "bundle": "Bundel"
     },
     "sort": {
+      "newest": "Terbaru lebih dulu",
       "nameAsc": "Nama (A-Z)",
       "nameDesc": "Nama (Z-A)",
       "categoryAsc": "Kategori (A-Z)",
@@ -3823,42 +3826,59 @@
   },
   "AdminBrandManager": {
     "header": {
-      "title": "Manajemen Merek"
+      "title": "Manajemen Merek",
+      "subtitle": "Kelola identitas merek, logo, dan relasi produk dari satu tempat."
     },
     "actions": {
       "addBrand": "Tambah Merek",
       "saving": "Menyimpan...",
       "create": "Buat",
-      "update": "Perbarui"
+      "update": "Perbarui",
+      "edit": "Edit merek",
+      "delete": "Hapus merek",
+      "deleting": "Menghapus...",
+      "cancel": "Batal",
+      "retry": "Coba lagi"
     },
     "empty": {
       "title": "Tidak ada merek yang ditemukan",
-      "description": "Klik tombol di bawah untuk menambahkan merek baru"
+      "description": "Klik tombol di bawah untuk menambahkan merek baru",
+      "searchDescription": "Coba nama lain atau hapus pencarian."
     },
     "card": {
       "noLogo": "Tidak Ada Logo",
-      "logoAlt": "Logo {name}"
+      "logoAlt": "Logo {name}",
+      "products": "{count} produk"
     },
     "modal": {
       "titleNew": "Merek Baru",
-      "titleEdit": "Edit Merek"
+      "titleEdit": "Edit Merek",
+      "description": "Tambahkan nama yang jelas dan logo berkualitas jika tersedia."
     },
     "form": {
       "name": "Nama",
       "logo": "Logo",
       "noImage": "Tidak ada gambar",
       "logoPreviewAlt": "Pratinjau logo merek",
-      "removeImage": "Hapus gambar"
+      "removeImage": "Hapus gambar",
+      "namePlaceholder": "Masukkan nama merek",
+      "logoHint": "PNG, JPG, WEBP, atau SVG dengan latar transparan paling sesuai."
     },
     "success": {
       "created": "Merek dibuat",
-      "updated": "Merek diperbarui"
+      "updated": "Merek diperbarui",
+      "deleted": "Merek dihapus"
     },
     "errors": {
       "nameRequired": "Nama merek wajib diisi",
       "imageUploadFailed": "Unggah gambar gagal",
-      "saveFailed": "Gagal menyimpan merek"
-    }
+      "saveFailed": "Gagal menyimpan merek",
+      "deleteFailed": "Gagal menghapus merek"
+    },
+    "stats": { "totalBrands": "Total merek", "productsOnPage": "Produk di halaman", "currentPage": "Halaman saat ini" },
+    "search": { "placeholder": "Cari nama atau slug merek...", "clear": "Hapus pencarian", "results": "{count} merek ditemukan", "sortLabel": "Urutkan merek", "newest": "Terbaru lebih dulu", "nameAsc": "Nama: A–Z", "nameDesc": "Nama: Z–A" },
+    "pagination": { "label": "Paginasi merek", "previous": "Halaman sebelumnya", "next": "Halaman berikutnya", "summary": "Halaman {page} dari {pages} · total {total}" },
+    "deleteDialog": { "title": "Hapus merek ini?", "description": "{name} akan dihapus dari daftar aktif. Riwayat produk tetap tersimpan." }
   },
   "AdminFlashSaleManager": {
     "header": {

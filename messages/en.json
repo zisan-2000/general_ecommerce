@@ -970,7 +970,9 @@
       "currency": "Currency",
       "category": "Category *",
       "brand": "Brand",
-      "select": "Select"
+      "select": "Select",
+      "searchBrand": "Search brands...",
+      "noBrandsFound": "No brands found"
     },
     "productTypes": {
       "PHYSICAL": "PHYSICAL",
@@ -1414,6 +1416,7 @@
       "bundle": "Bundle"
     },
     "sort": {
+      "newest": "Newest first",
       "nameAsc": "Name (A-Z)",
       "nameDesc": "Name (Z-A)",
       "categoryAsc": "Category (A-Z)",
@@ -3843,42 +3846,59 @@
   },
   "AdminBrandManager": {
     "header": {
-      "title": "Brand Management"
+      "title": "Brand Management",
+      "subtitle": "Organize brand identities, logos, and product relationships from one place."
     },
     "actions": {
       "addBrand": "Add Brand",
       "saving": "Saving...",
       "create": "Create",
-      "update": "Update"
+      "update": "Update",
+      "edit": "Edit brand",
+      "delete": "Delete brand",
+      "deleting": "Deleting...",
+      "cancel": "Cancel",
+      "retry": "Retry"
     },
     "empty": {
       "title": "No brands Found",
-      "description": "Click the button below to add a new brand"
+      "description": "Click the button below to add a new brand",
+      "searchDescription": "Try a different brand name or clear the search."
     },
     "card": {
       "noLogo": "No Logo",
-      "logoAlt": "{name} logo"
+      "logoAlt": "{name} logo",
+      "products": "{count} products"
     },
     "modal": {
       "titleNew": "New Brand",
-      "titleEdit": "Edit Brand"
+      "titleEdit": "Edit Brand",
+      "description": "Add a clear brand name and an optional high-quality logo."
     },
     "form": {
       "name": "Name",
       "logo": "Logo",
       "noImage": "No image",
       "logoPreviewAlt": "Brand logo preview",
-      "removeImage": "Remove image"
+      "removeImage": "Remove image",
+      "namePlaceholder": "Enter brand name",
+      "logoHint": "PNG, JPG, WEBP or SVG with a transparent background works best."
     },
     "success": {
       "created": "Brand created",
-      "updated": "Brand updated"
+      "updated": "Brand updated",
+      "deleted": "Brand deleted"
     },
     "errors": {
       "nameRequired": "Brand name required",
       "imageUploadFailed": "Image upload failed",
-      "saveFailed": "Failed to save brand"
-    }
+      "saveFailed": "Failed to save brand",
+      "deleteFailed": "Failed to delete brand"
+    },
+    "stats": { "totalBrands": "Total brands", "productsOnPage": "Products on page", "currentPage": "Current page" },
+    "search": { "placeholder": "Search by brand name or slug...", "clear": "Clear search", "results": "{count} brands found", "sortLabel": "Sort brands", "newest": "Newest first", "nameAsc": "Name: A–Z", "nameDesc": "Name: Z–A" },
+    "pagination": { "label": "Brand pagination", "previous": "Previous page", "next": "Next page", "summary": "Page {page} of {pages} · {total} total" },
+    "deleteDialog": { "title": "Delete this brand?", "description": "{name} will be removed from active brand lists. Existing product history will be preserved." }
   },
   "AdminFlashSaleManager": {
     "header": {

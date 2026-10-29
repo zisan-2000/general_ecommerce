@@ -159,7 +159,7 @@ export default function ProductManager({
   const [availabilityFilter, setAvailabilityFilter] = useState("");
   const [featuredFilter, setFeaturedFilter] = useState("");
   const [stockFilter, setStockFilter] = useState("");
-  const [sortBy, setSortBy] = useState("name-asc");
+  const [sortBy, setSortBy] = useState("created-desc");
   const [modalOpen, setModalOpen] = useState(false);
   const [editing, setEditing] = useState<any>(null);
   const [manageOpen, setManageOpen] = useState(false);
@@ -225,7 +225,7 @@ export default function ProductManager({
     setAvailabilityFilter("");
     setFeaturedFilter("");
     setStockFilter("");
-    setSortBy("name-asc");
+    setSortBy("created-desc");
     setCurrentPage(1);
   };
 
@@ -1115,6 +1115,7 @@ export default function ProductManager({
                 onChange={(e) => setSortBy(e.target.value)}
                 className={filterSelectClass}
               >
+                <option value="created-desc">{t("sort.newest")}</option>
                 <option value="name-asc">{t("sort.nameAsc")}</option>
                 <option value="name-desc">{t("sort.nameDesc")}</option>
                 <option value="category-asc">{t("sort.categoryAsc")}</option>

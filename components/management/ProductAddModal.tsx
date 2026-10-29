@@ -8,13 +8,19 @@ import {
   type FormEvent,
 } from "react";
 import Image from "next/image";
-import { Plus, X, Zap } from "lucide-react";
+import { Check, ChevronDown, Plus, Search, X, Zap } from "lucide-react";
 import { toast } from "sonner";
 import { useTranslations } from "next-intl";
 
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
 import {
   getVariantMediaMeta,
   normalizeVariantOptions,
@@ -175,6 +181,109 @@ interface Props {
     DIGITAL_PRODUCTS: boolean;
     SERVICE_PRODUCTS: boolean;
   };
+}
+
+function SearchableBrandSelect({
+  brands,
+  value,
+  onChange,
+  selectText,
+  searchText,
+  emptyText,
+}: {
+  brands: Entity[];
+  value: string;
+  onChange: (value: string) => void;
+  selectText: string;
+  searchText: string;
+  emptyText: string;
+}) {
+  const [open, setOpen] = useState(false);
+  const [query, setQuery] = useState("");
+  const selectedBrand = useMemo(
+    () => brands.find((brand) => String(brand.id) === value) ?? null,
+    [brands, value],
+  );
+  const filteredBrands = useMemo(() => {
+    const normalizedQuery = query.trim().toLocaleLowerCase();
+    return [...brands]
+      .sort((left, right) => left.name.localeCompare(right.name))
+      .filter(
+        (brand) =>
+          !normalizedQuery ||
+          brand.name.toLocaleLowerCase().includes(normalizedQuery),
+      );
+  }, [brands, query]);
+
+  return (
+    <DropdownMenu
+      open={open}
+      onOpenChange={(nextOpen) => {
+        setOpen(nextOpen);
+        if (!nextOpen) setQuery("");
+      }}
+    >
+      <DropdownMenuTrigger asChild>
+        <Button
+          type="button"
+          variant="outline"
+          className="h-10 w-full min-w-0 justify-between bg-background px-3 font-normal"
+          aria-label={selectText}
+        >
+          <span className="min-w-0 truncate text-left" title={selectedBrand?.name}>
+            {selectedBrand?.name ?? selectText}
+          </span>
+          <ChevronDown className="ml-2 h-4 w-4 shrink-0 opacity-50" />
+        </Button>
+      </DropdownMenuTrigger>
+      <DropdownMenuContent
+        align="start"
+        className="w-[var(--radix-dropdown-menu-trigger-width)] max-w-[calc(100vw-1rem)] overflow-hidden p-0"
+        onCloseAutoFocus={(event) => event.preventDefault()}
+      >
+        <div className="border-b p-2">
+          <div className="flex items-center gap-2 rounded-md border bg-background px-2">
+            <Search className="h-4 w-4 shrink-0 text-muted-foreground" />
+            <Input
+              autoFocus
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              onKeyDown={(event) => event.stopPropagation()}
+              placeholder={searchText}
+              aria-label={searchText}
+              className="h-9 border-0 px-0 shadow-none focus-visible:ring-0"
+            />
+          </div>
+        </div>
+        <div className="max-h-64 overflow-y-auto overscroll-contain p-1">
+          <DropdownMenuItem onSelect={() => onChange("")} className="min-w-0">
+            <Check
+              className={`h-4 w-4 shrink-0 ${value ? "invisible" : "visible"}`}
+            />
+            <span className="truncate">{selectText}</span>
+          </DropdownMenuItem>
+          {filteredBrands.map((brand) => (
+            <DropdownMenuItem
+              key={brand.id}
+              onSelect={() => onChange(String(brand.id))}
+              className="min-w-0"
+              title={brand.name}
+            >
+              <Check
+                className={`h-4 w-4 shrink-0 ${value === String(brand.id) ? "visible" : "invisible"}`}
+              />
+              <span className="min-w-0 flex-1 truncate">{brand.name}</span>
+            </DropdownMenuItem>
+          ))}
+          {filteredBrands.length === 0 ? (
+            <p className="px-3 py-6 text-center text-sm text-muted-foreground">
+              {emptyText}
+            </p>
+          ) : null}
+        </div>
+      </DropdownMenuContent>
+    </DropdownMenu>
+  );
 }
 
 const emptyForm: ProductForm = {
@@ -1428,20 +1537,16 @@ export default function ProductAddModal({
               </div>
               <div>
                 <Label>{t("basic.brand")}</Label>
-                <select
-                  className="w-full rounded border border-border bg-background p-2"
+                <SearchableBrandSelect
+                  brands={brands}
                   value={form.brandId}
-                  onChange={(e) =>
-                    setForm((prev) => ({ ...prev, brandId: e.target.value }))
+                  onChange={(brandId) =>
+                    setForm((prev) => ({ ...prev, brandId }))
                   }
-                >
-                  <option value="">{t("basic.select")}</option>
-                  {brands.map((brand) => (
-                    <option key={brand.id} value={brand.id}>
-                      {brand.name}
-                    </option>
-                  ))}
-                </select>
+                  selectText={t("basic.select")}
+                  searchText={t("basic.searchBrand")}
+                  emptyText={t("basic.noBrandsFound")}
+                />
               </div>
             </div>
           </section>

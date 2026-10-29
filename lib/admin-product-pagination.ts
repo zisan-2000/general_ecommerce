@@ -30,7 +30,7 @@ export function adminProductQuery(params: URLSearchParams) {
       WHERE v."productId" = p.id AND sl."warehouseId" = ${warehouse} AND sl.quantity > 0))`);
   }
   const stock = params.get("stock");
-  const sort = params.get("sort") || "name-asc";
+  const sort = params.get("sort") || "created-desc";
   const needsStock = Boolean(stock && stock !== "non-physical") || sort.split("-")[0] === "stock";
   const stockJoin = needsStock ? Prisma.sql`LEFT JOIN LATERAL (
     SELECT COUNT(*) AS count, COALESCE(SUM(v.available), 0) AS total,
@@ -52,13 +52,15 @@ export function adminProductQuery(params: URLSearchParams) {
   if (stock === "low-stock") conditions.push(Prisma.sql`p.type = 'PHYSICAL' AND inventory.total > 0 AND inventory.low`);
   if (stock === "out-of-stock") conditions.push(Prisma.sql`p.type = 'PHYSICAL' AND inventory.total <= 0`);
   const fields: Record<string, Prisma.Sql> = {
+    created: Prisma.sql`p."createdAt"`,
     name: Prisma.sql`LOWER(p.name)`,
     category: Prisma.sql`LOWER(c.name)`,
     price: Prisma.sql`p."basePrice"`,
     stock: Prisma.sql`CASE WHEN p.type = 'PHYSICAL' THEN inventory.total ELSE -1 END`,
   };
   const [field, direction] = sort.split("-");
-  const orderBy = Prisma.sql`${fields[field] ?? fields.name} ${direction === "desc" ? Prisma.sql`DESC` : Prisma.sql`ASC`}, p.id ASC`;
+  const descending = direction === "desc";
+  const orderBy = Prisma.sql`${fields[field] ?? fields.created} ${descending ? Prisma.sql`DESC` : Prisma.sql`ASC`}, p.id ${descending ? Prisma.sql`DESC` : Prisma.sql`ASC`}`;
   const from = Prisma.sql`FROM "Product" p
     LEFT JOIN "Category" c ON c.id = p."categoryId"
     LEFT JOIN "Brand" b ON b.id = p."brandId"

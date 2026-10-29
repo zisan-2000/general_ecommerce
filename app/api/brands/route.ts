@@ -10,6 +10,20 @@ import slugify from "slugify";
 import { isStorefrontRequest, privateJson, publicJson } from "@/lib/public-cache";
 import { revalidateStorefrontCatalog } from "@/lib/storefront-catalog-cache";
 
+function createBrandSlug(name: string) {
+  const asciiSlug = slugify(name, { lower: true, strict: true });
+  if (asciiSlug) return asciiSlug;
+
+  // `slugify` drops scripts it cannot transliterate (for example Bangla).
+  // Keep those letters in a valid, stable URL slug instead of creating an
+  // empty slug that subsequently collides with every similar brand name.
+  return name
+    .normalize("NFKC")
+    .toLocaleLowerCase()
+    .replace(/[^\p{Letter}\p{Number}]+/gu, "-")
+    .replace(/^-+|-+$/g, "");
+}
+
 function toBrandLogSnapshot(brand: {
   name: string;
   slug: string;
@@ -27,9 +41,42 @@ function toBrandLogSnapshot(brand: {
 ========================= */
 export async function GET(req: Request) {
   try {
-    const brands = await prisma.brand.findMany({
-      where: { deleted: false },
-      orderBy: { id: "desc" },
+    const searchParams = new URL(req.url).searchParams;
+    const storefront = isStorefrontRequest(req);
+    const paginated = !storefront && searchParams.get("paginated") === "true";
+    const search = searchParams.get("search")?.trim() ?? "";
+    const sort = searchParams.get("sort") ?? "newest";
+    const requestedPage = Number(searchParams.get("page") || 1);
+    const requestedPageSize = Number(searchParams.get("pageSize") || 12);
+    const page = Number.isSafeInteger(requestedPage) && requestedPage > 0
+      ? requestedPage
+      : 1;
+    const pageSize = Number.isSafeInteger(requestedPageSize)
+      ? Math.min(Math.max(requestedPageSize, 8), 48)
+      : 12;
+    const where = {
+      deleted: false,
+      ...(paginated && search
+        ? {
+            OR: [
+              { name: { contains: search, mode: "insensitive" as const } },
+              { slug: { contains: search, mode: "insensitive" as const } },
+            ],
+          }
+        : {}),
+    };
+    const orderBy =
+      sort === "name-asc"
+        ? [{ name: "asc" as const }, { id: "asc" as const }]
+        : sort === "name-desc"
+          ? [{ name: "desc" as const }, { id: "desc" as const }]
+          : [{ createdAt: "desc" as const }, { id: "desc" as const }];
+
+    const [brands, total] = await Promise.all([
+      prisma.brand.findMany({
+      where,
+      orderBy: paginated ? orderBy : { id: "desc" },
+      ...(paginated ? { skip: (page - 1) * pageSize, take: pageSize } : {}),
       include: {
         _count: {
           select: {
@@ -39,7 +86,9 @@ export async function GET(req: Request) {
           },
         },
       },
-    });
+      }),
+      paginated ? prisma.brand.count({ where }) : Promise.resolve(0),
+    ]);
 
     const data = brands.map((b) => ({
         id: b.id,
@@ -50,10 +99,24 @@ export async function GET(req: Request) {
         createdAt: b.createdAt,
         updatedAt: b.updatedAt,
       }));
-    return isStorefrontRequest(req)
+    if (paginated) {
+      const pages = Math.max(1, Math.ceil(total / pageSize));
+      return privateJson({
+        brands: data,
+        pagination: {
+          total,
+          page: Math.min(page, pages),
+          pages,
+          pageSize,
+        },
+      });
+    }
+
+    return storefront
       ? publicJson(data, { maxAge: 300, staleWhileRevalidate: 1800 })
       : privateJson(data);
   } catch (error) {
+    console.error("GET BRANDS ERROR:", error);
     return NextResponse.json(
       { error: "Failed to fetch brands" },
       { status: 500 }
@@ -77,50 +140,98 @@ export async function POST(req: Request) {
       return NextResponse.json({ error: "Forbidden" }, { status: 403 });
     }
 
-    const { name, logo } = await req.json();
+    const body = await req.json().catch(() => null);
+    if (!body || typeof body !== "object" || Array.isArray(body)) {
+      return NextResponse.json({ error: "Invalid brand payload" }, { status: 400 });
+    }
 
-    if (!name)
+    const normalizedName = String((body as Record<string, unknown>).name ?? "").trim();
+    const logoValue = (body as Record<string, unknown>).logo;
+    const normalizedLogo =
+      typeof logoValue === "string" && logoValue.trim() ? logoValue.trim() : null;
+
+    if (!normalizedName)
       return NextResponse.json(
         { error: "Brand name required" },
         { status: 400 }
       );
 
-    const slug = slugify(name, { lower: true, strict: true });
+    const slug = createBrandSlug(normalizedName);
+    if (!slug) {
+      return NextResponse.json(
+        { error: "Brand name must contain at least one letter or number" },
+        { status: 400 },
+      );
+    }
 
-    const exists = await prisma.brand.findUnique({
-      where: { slug },
-    });
+    const [slugOwner, nameOwner] = await Promise.all([
+      prisma.brand.findUnique({ where: { slug } }),
+      prisma.brand.findUnique({ where: { name: normalizedName } }),
+    ]);
 
-    if (exists)
+    if (
+      (slugOwner && !slugOwner.deleted) ||
+      (nameOwner && !nameOwner.deleted) ||
+      (slugOwner && nameOwner && slugOwner.id !== nameOwner.id)
+    )
       return NextResponse.json(
         { error: "Brand already exists" },
-        { status: 400 }
+        { status: 409 }
       );
 
-    const brand = await prisma.brand.create({
-      data: {
-        name,
-        slug,
-        logo: logo || null,
-      },
-    });
+    const existing = slugOwner ?? nameOwner;
+
+    // A soft-deleted row still owns its unique name and slug. Restore it so
+    // admins can add that brand again without a database constraint failure.
+    const brand = existing
+      ? await prisma.brand.update({
+          where: { id: existing.id },
+          data: {
+            name: normalizedName,
+            slug,
+            logo: normalizedLogo,
+            deleted: false,
+          },
+        })
+      : await prisma.brand.create({
+          data: {
+            name: normalizedName,
+            slug,
+            logo: normalizedLogo,
+          },
+        });
 
     await logActivity({
-      action: "create",
+      action: existing ? "restore" : "create",
       entity: "brand",
       entityId: brand.id,
       access,
       request: req,
       metadata: {
-        message: `Brand created: ${brand.name}`,
+        message: existing
+          ? `Brand restored: ${brand.name}`
+          : `Brand created: ${brand.name}`,
       },
+      before: existing ? toBrandLogSnapshot(existing) : null,
       after: toBrandLogSnapshot(brand),
     });
 
     revalidateStorefrontCatalog();
 
-    return NextResponse.json(brand, { status: 201 });
-  } catch {
+    return NextResponse.json(brand, { status: existing ? 200 : 201 });
+  } catch (error) {
+    console.error("POST BRAND ERROR:", error);
+    if (
+      error &&
+      typeof error === "object" &&
+      "code" in error &&
+      error.code === "P2002"
+    ) {
+      return NextResponse.json(
+        { error: "Brand already exists" },
+        { status: 409 },
+      );
+    }
     return NextResponse.json(
       { error: "Failed to create brand" },
       { status: 500 }

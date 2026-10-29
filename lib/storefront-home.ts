@@ -180,7 +180,11 @@ const readStorefrontHomeData = unstable_cache(
             flashSaleStartsAt: { lte: now },
             flashSaleEndsAt: { gt: now },
           },
-          orderBy: [{ flashSaleSortOrder: "asc" }, { flashSaleEndsAt: "asc" }],
+          orderBy: [
+            { featured: "desc" },
+            { flashSaleSortOrder: "asc" },
+            { flashSaleEndsAt: "asc" },
+          ],
           take: 80,
           select: storefrontHomeProductSelect,
         }),
@@ -194,6 +198,7 @@ const readStorefrontHomeData = unstable_cache(
             ...bookVisibility,
           },
           orderBy: [
+            { featured: "desc" },
             { bestSelling: "desc" },
             { soldCount: "desc" },
             { updatedAt: "desc" },
@@ -383,7 +388,7 @@ const readStorefrontHomeData = unstable_cache(
       },
     };
   },
-  ["storefront-home-v3"],
+  ["storefront-home-v4-featured-first"],
   {
     revalidate: 30,
     tags: ["storefront-home", "products", "flash-sales", "categories", "banners", "site-settings"],

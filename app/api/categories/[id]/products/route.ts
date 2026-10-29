@@ -48,7 +48,7 @@ export async function GET(
         ...bookVisibility,
         categoryId: { in: categoryIds },
       },
-      orderBy: { id: "desc" },
+      orderBy: [{ featured: "desc" }, { id: "desc" }],
       include: {
         category: true,
         brand: true,

@@ -78,6 +78,7 @@ export const catalogProductSelect = {
   name: true,
   slug: true,
   type: true,
+  featured: true,
   basePrice: true,
   currency: true,
   originalPrice: true,
@@ -368,6 +369,7 @@ export function serializeCatalogProduct(product: RawCatalogProduct) {
     price,
     originalPrice,
     available: true,
+    featured: product.featured,
     image: product.image,
     shortDesc: product.shortDesc,
     specifications: product.attributes.map((item) => ({
@@ -1007,12 +1009,13 @@ function descendantCategoryIds(
 function catalogOrderBy(
   sort: CatalogSort,
 ): Prisma.ProductOrderByWithRelationInput[] {
-  if (sort === "relevance") return [{ soldCount: "desc" }, { id: "desc" }];
-  if (sort === "popular") return [{ soldCount: "desc" }, { id: "desc" }];
-  if (sort === "price-asc") return [{ basePrice: "asc" }, { id: "desc" }];
-  if (sort === "price-desc") return [{ basePrice: "desc" }, { id: "desc" }];
-  if (sort === "name-asc") return [{ name: "asc" }, { id: "desc" }];
-  return [{ createdAt: "desc" }, { id: "desc" }];
+  const featuredFirst = { featured: "desc" } as const;
+  if (sort === "relevance") return [featuredFirst, { soldCount: "desc" }, { id: "desc" }];
+  if (sort === "popular") return [featuredFirst, { soldCount: "desc" }, { id: "desc" }];
+  if (sort === "price-asc") return [featuredFirst, { basePrice: "asc" }, { id: "desc" }];
+  if (sort === "price-desc") return [featuredFirst, { basePrice: "desc" }, { id: "desc" }];
+  if (sort === "name-asc") return [featuredFirst, { name: "asc" }, { id: "desc" }];
+  return [featuredFirst, { createdAt: "desc" }, { id: "desc" }];
 }
 
 async function readDynamicFacets(
@@ -1303,10 +1306,17 @@ const readCatalog = async (
       } else {
         const eligibleRows = await prisma.product.findMany({
           where: { ...where, id: { in: rankedIds } },
-          select: { id: true },
+          select: { id: true, featured: true },
         });
         const eligible = new Set(eligibleRows.map((row) => row.id));
-        const orderedIds = rankedIds.filter((id) => eligible.has(id));
+        const featuredIds = new Set(
+          eligibleRows.filter((row) => row.featured).map((row) => row.id),
+        );
+        const eligibleRankedIds = rankedIds.filter((id) => eligible.has(id));
+        const orderedIds = [
+          ...eligibleRankedIds.filter((id) => featuredIds.has(id)),
+          ...eligibleRankedIds.filter((id) => !featuredIds.has(id)),
+        ];
         total = orderedIds.length;
         filters.page = Math.min(filters.page, Math.max(1, Math.ceil(total / filters.perPage)));
         const skip = (filters.page - 1) * filters.perPage;

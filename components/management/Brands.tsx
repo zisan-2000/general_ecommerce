@@ -1,35 +1,111 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { useTranslations } from "next-intl";
+import {
+  Boxes,
+  Building2,
+  ChevronLeft,
+  ChevronRight,
+  Edit3,
+  ImageIcon,
+  Package,
+  Plus,
+  Search,
+  Trash2,
+  X,
+} from "lucide-react";
+import { toast } from "sonner";
+import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import {
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
+} from "@/components/ui/dialog";
+import {
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+} from "@/components/ui/alert-dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Plus, Edit3, Trash2, X } from "lucide-react";
-import { toast } from "sonner";
-import SpotlightCard from "../SpotlightCard";
+import { Skeleton } from "@/components/ui/skeleton";
+import type {
+  AdminBrand,
+  BrandPagination,
+  BrandSort,
+} from "@/app/admin/management/brands/page";
+
+type BrandPayload = { name: string; logo: string | null };
+
+interface BrandManagerProps {
+  brands: AdminBrand[];
+  pagination: BrandPagination;
+  search: string;
+  sort: BrandSort;
+  loading: boolean;
+  error: string;
+  onSearchChange: (value: string) => void;
+  onSortChange: (value: BrandSort) => void;
+  onPageChange: (page: number) => void;
+  onRetry: () => void;
+  onCreate: (payload: BrandPayload) => Promise<void>;
+  onUpdate: (id: number, payload: BrandPayload) => Promise<void>;
+  onDelete: (id: number) => Promise<void>;
+}
+
+function pageNumbers(current: number, total: number) {
+  const start = Math.max(1, Math.min(current - 2, total - 4));
+  const end = Math.min(total, start + 4);
+  return Array.from({ length: Math.max(0, end - start + 1) }, (_, index) =>
+    start + index,
+  );
+}
 
 export default function BrandManager({
   brands,
+  pagination,
+  search,
+  sort,
   loading,
+  error,
+  onSearchChange,
+  onSortChange,
+  onPageChange,
+  onRetry,
   onCreate,
   onUpdate,
   onDelete,
-}: any) {
+}: BrandManagerProps) {
   const t = useTranslations("AdminBrandManager");
-
   const [modalOpen, setModalOpen] = useState(false);
-  const [editing, setEditing] = useState<any>(null);
+  const [editing, setEditing] = useState<AdminBrand | null>(null);
+  const [deleting, setDeleting] = useState<AdminBrand | null>(null);
   const [submitting, setSubmitting] = useState(false);
-
+  const [deletingBusy, setDeletingBusy] = useState(false);
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [imagePreviewUrl, setImagePreviewUrl] = useState<string | null>(null);
   const [fileInputKey, setFileInputKey] = useState(0);
+  const [form, setForm] = useState<BrandPayload>({ name: "", logo: null });
 
-  const [form, setForm] = useState({
-    name: "",
-    logo: null as string | null,
-  });
+  const productCount = useMemo(
+    () => brands.reduce((total, brand) => total + brand.productCount, 0),
+    [brands],
+  );
+  const visiblePages = useMemo(
+    () => pageNumbers(pagination.page, pagination.pages),
+    [pagination.page, pagination.pages],
+  );
 
   useEffect(() => {
     return () => {
@@ -39,279 +115,437 @@ export default function BrandManager({
     };
   }, [imagePreviewUrl]);
 
-  /* =========================
-     MODAL CONTROL
-  ========================= */
-
-  const closeModal = () => {
-    setModalOpen(false);
+  const resetModal = () => {
+    if (imagePreviewUrl?.startsWith("blob:")) URL.revokeObjectURL(imagePreviewUrl);
     setEditing(null);
-    setSubmitting(false);
     setImageFile(null);
     setImagePreviewUrl(null);
-    setFileInputKey((k) => k + 1);
+    setFileInputKey((value) => value + 1);
     setForm({ name: "", logo: null });
   };
 
   const openAdd = () => {
-    setEditing(null);
-    setImageFile(null);
-    setImagePreviewUrl(null);
-    setFileInputKey((k) => k + 1);
-    setForm({ name: "", logo: null });
+    resetModal();
     setModalOpen(true);
   };
 
-  const openEdit = (brand: any) => {
+  const openEdit = (brand: AdminBrand) => {
+    resetModal();
     setEditing(brand);
-    setImageFile(null);
-    setImagePreviewUrl(brand.logo ?? null);
-    setFileInputKey((k) => k + 1);
-    setForm({ name: brand.name, logo: brand.logo ?? null });
+    setImagePreviewUrl(brand.logo);
+    setForm({ name: brand.name, logo: brand.logo });
     setModalOpen(true);
   };
-
-  /* =========================
-     IMAGE UPLOAD
-  ========================= */
 
   const uploadBrandImage = async (file: File) => {
     const formData = new FormData();
     formData.append("file", file);
-
-    const res = await fetch("/api/upload/brands", {
+    const response = await fetch("/api/upload/brands", {
       method: "POST",
       body: formData,
     });
-
-    const data = await res.json().catch(() => ({}));
+    const data = await response.json().catch(() => ({}));
     const fileUrl =
       typeof data?.url === "string"
         ? data.url
         : typeof data?.fileUrl === "string"
           ? data.fileUrl
           : null;
-
-    if (!res.ok || !data?.success || !fileUrl) {
+    if (!response.ok || !data?.success || !fileUrl) {
       throw new Error(
         data?.error || data?.message || t("errors.imageUploadFailed"),
       );
     }
-
     return fileUrl;
   };
 
-  /* =========================
-     SUBMIT
-  ========================= */
-
   const submit = async () => {
-    if (!form.name.trim()) {
+    const name = form.name.trim();
+    if (!name) {
       toast.error(t("errors.nameRequired"));
       return;
     }
-
     try {
       setSubmitting(true);
-
-      let logoUrl = form.logo ?? null;
-
-      if (imageFile) {
-        logoUrl = await uploadBrandImage(imageFile);
-      }
-
-      const payload = {
-        name: form.name,
-        logo: logoUrl,
-      };
-
+      const logo = imageFile ? await uploadBrandImage(imageFile) : form.logo;
       if (editing) {
-        await onUpdate(editing.id, payload);
+        await onUpdate(editing.id, { name, logo });
         toast.success(t("success.updated"));
       } else {
-        await onCreate(payload);
+        await onCreate({ name, logo });
         toast.success(t("success.created"));
       }
-
-      closeModal();
-    } catch (err: any) {
-      toast.error(err?.message || t("errors.saveFailed"));
+      setModalOpen(false);
+      resetModal();
+    } catch (submitError) {
+      toast.error(
+        submitError instanceof Error ? submitError.message : t("errors.saveFailed"),
+      );
     } finally {
       setSubmitting(false);
     }
   };
 
-  /* =========================
-     UI
-  ========================= */
+  const confirmDelete = async () => {
+    if (!deleting) return;
+    try {
+      setDeletingBusy(true);
+      await onDelete(deleting.id);
+      toast.success(t("success.deleted"));
+      setDeleting(null);
+    } catch (deleteError) {
+      toast.error(
+        deleteError instanceof Error
+          ? deleteError.message
+          : t("errors.deleteFailed"),
+      );
+    } finally {
+      setDeletingBusy(false);
+    }
+  };
 
   return (
-    <div className="p-8">
-      <div className="flex justify-between mb-6">
-        <h1 className="text-2xl font-bold">{t("header.title")}</h1>
-        <Button onClick={openAdd}>
-          <Plus size={16} className="mr-2" />
-          {t("actions.addBrand")}
-        </Button>
-      </div>
-
-      {loading ? (
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
-          {[...Array(8)].map((_, index) => (
-            <div key={index} className="border rounded-lg p-4 bg-card">
-              <div className="h-20 bg-muted animate-pulse rounded overflow-hidden" />
-              <div className="h-4 bg-muted animate-pulse rounded mt-3" />
-              <div className="flex gap-2 mt-3">
-                <div className="h-8 bg-muted animate-pulse rounded flex-1" />
-                <div className="h-8 bg-muted animate-pulse rounded w-8" />
+    <main className="min-h-screen bg-muted/20 p-4 sm:p-6 lg:p-8">
+      <div className="mx-auto max-w-7xl space-y-6">
+        <section className="relative overflow-hidden rounded-2xl border bg-card p-6 shadow-sm sm:p-8">
+          <div className="pointer-events-none absolute -right-16 -top-20 h-56 w-56 rounded-full bg-primary/10 blur-3xl" />
+          <div className="relative flex flex-col gap-5 sm:flex-row sm:items-center sm:justify-between">
+            <div className="flex items-start gap-4">
+              <div className="grid h-12 w-12 shrink-0 place-items-center rounded-xl bg-primary text-primary-foreground shadow-sm">
+                <Building2 className="h-6 w-6" />
               </div>
-            </div>
-          ))}
-        </div>
-      ) : brands.length === 0 ? (
-        <div className="text-center py-12">
-          <h3 className="text-lg font-medium mb-2">{t("empty.title")}</h3>
-          <p className="text-muted-foreground mb-6">{t("empty.description")}</p>
-          <Button onClick={openAdd}>
-            <Plus size={16} className="mr-2" />
-            {t("actions.addBrand")}
-          </Button>
-        </div>
-      ) : (
-        <div className="grid grid-cols-2 md:grid-cols-6 gap-6">
-          {brands.map((b: any) => (
-            <SpotlightCard key={b.id}>
-              <div className="h-20 flex items-center justify-center bg-muted rounded overflow-hidden">
-                {b.logo ? (
-                  <img
-                    src={b.logo}
-                    className="h-full object-contain"
-                    alt={t("card.logoAlt", { name: b.name })}
-                  />
-                ) : (
-                  <span className="text-xs text-muted-foreground">
-                    {t("card.noLogo")}
-                  </span>
-                )}
-              </div>
-
-              <h3 className="mt-3 font-medium">{b.name}</h3>
-
-              <div className="flex gap-2 mt-3">
-                <Button
-                  size="sm"
-                  className="btn-primary"
-                  onClick={() => openEdit(b)}
-                >
-                  <Edit3 size={14} />
-                </Button>
-                <Button
-                  size="sm"
-                  variant="destructive"
-                  onClick={() => onDelete(b.id)}
-                >
-                  <Trash2 size={14} />
-                </Button>
-              </div>
-            </SpotlightCard>
-          ))}
-        </div>
-      )}
-
-      {/* Modal */}
-      {modalOpen && (
-        <div
-          className="fixed inset-0 bg-black/40 flex items-center justify-center p-4"
-          onClick={closeModal}
-        >
-          <div
-            className="bg-card p-6 rounded-lg w-[400px] relative"
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex justify-between mb-4">
-              <h2 className="text-xl font-bold">
-                {editing ? t("modal.titleEdit") : t("modal.titleNew")}
-              </h2>
-              <Button size="icon" variant="ghost" onClick={closeModal}>
-                <X size={18} />
-              </Button>
-            </div>
-
-            <div className="space-y-4">
               <div>
-                <Label>{t("form.name")}</Label>
+                <h1 className="text-2xl font-bold tracking-tight sm:text-3xl">
+                  {t("header.title")}
+                </h1>
+                <p className="mt-1 max-w-2xl text-sm text-muted-foreground sm:text-base">
+                  {t("header.subtitle")}
+                </p>
+              </div>
+            </div>
+            <Button onClick={openAdd} size="lg" className="shrink-0 shadow-sm">
+              <Plus className="mr-2 h-4 w-4" />
+              {t("actions.addBrand")}
+            </Button>
+          </div>
+        </section>
+
+        <section className="grid gap-4 sm:grid-cols-3">
+          {[
+            { icon: Building2, value: pagination.total, label: t("stats.totalBrands") },
+            { icon: Package, value: productCount, label: t("stats.productsOnPage") },
+            {
+              icon: Boxes,
+              value: `${pagination.page}/${pagination.pages}`,
+              label: t("stats.currentPage"),
+            },
+          ].map((stat) => (
+            <Card key={stat.label} className="border-border/70 shadow-sm">
+              <CardContent className="flex items-center gap-4 p-5">
+                <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary/10 text-primary">
+                  <stat.icon className="h-5 w-5" />
+                </div>
+                <div>
+                  <p className="text-2xl font-bold">{stat.value}</p>
+                  <p className="text-xs font-medium uppercase tracking-wide text-muted-foreground">
+                    {stat.label}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </section>
+
+        <Card className="border-border/70 shadow-sm">
+          <CardContent className="p-4 sm:p-5">
+            <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+              <div className="flex w-full flex-col gap-3 sm:flex-row lg:max-w-2xl">
+                <div className="relative min-w-0 flex-1">
+                <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 <Input
-                  value={form.name}
-                  onChange={(e) => setForm({ ...form, name: e.target.value })}
+                  value={search}
+                  onChange={(event) => onSearchChange(event.target.value)}
+                  placeholder={t("search.placeholder")}
+                  className="h-11 pl-10 pr-10"
                 />
+                {search ? (
+                  <button
+                    type="button"
+                    onClick={() => onSearchChange("")}
+                    className="absolute right-3 top-1/2 -translate-y-1/2 rounded-sm text-muted-foreground hover:text-foreground"
+                    aria-label={t("search.clear")}
+                  >
+                    <X className="h-4 w-4" />
+                  </button>
+                ) : null}
+                </div>
+                <select
+                  value={sort}
+                  onChange={(event) => onSortChange(event.target.value as BrandSort)}
+                  aria-label={t("search.sortLabel")}
+                  className="h-11 rounded-md border border-input bg-background px-3 text-sm shadow-sm outline-none focus:ring-2 focus:ring-ring sm:w-48"
+                >
+                  <option value="newest">{t("search.newest")}</option>
+                  <option value="name-asc">{t("search.nameAsc")}</option>
+                  <option value="name-desc">{t("search.nameDesc")}</option>
+                </select>
               </div>
+              <p className="text-sm text-muted-foreground">
+                {t("search.results", { count: pagination.total })}
+              </p>
+            </div>
+          </CardContent>
+        </Card>
 
-              <div>
-                <Label>{t("form.logo")}</Label>
-                <div className="flex items-center gap-3">
-                  <div className="h-12 w-12 border rounded overflow-hidden bg-muted flex items-center justify-center">
-                    {imagePreviewUrl ? (
+        {error ? (
+          <Card className="border-destructive/40">
+            <CardContent className="flex flex-col items-center gap-3 p-8 text-center">
+              <p className="text-sm text-destructive">{error}</p>
+              <Button variant="outline" onClick={onRetry}>{t("actions.retry")}</Button>
+            </CardContent>
+          </Card>
+        ) : loading ? (
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {Array.from({ length: 8 }, (_, index) => (
+              <Card key={index} className="overflow-hidden">
+                <CardContent className="space-y-4 p-5">
+                  <Skeleton className="h-28 w-full" />
+                  <Skeleton className="h-5 w-2/3" />
+                  <Skeleton className="h-4 w-1/2" />
+                  <Skeleton className="h-9 w-full" />
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        ) : brands.length === 0 ? (
+          <Card className="border-dashed">
+            <CardContent className="flex flex-col items-center px-6 py-16 text-center">
+              <div className="mb-4 grid h-14 w-14 place-items-center rounded-full bg-muted">
+                <Search className="h-6 w-6 text-muted-foreground" />
+              </div>
+              <h2 className="text-lg font-semibold">{t("empty.title")}</h2>
+              <p className="mt-1 max-w-md text-sm text-muted-foreground">
+                {search ? t("empty.searchDescription") : t("empty.description")}
+              </p>
+              {!search ? (
+                <Button onClick={openAdd} className="mt-5">
+                  <Plus className="mr-2 h-4 w-4" />{t("actions.addBrand")}
+                </Button>
+              ) : null}
+            </CardContent>
+          </Card>
+        ) : (
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {brands.map((brand) => (
+              <Card
+                key={brand.id}
+                className="group overflow-hidden border-border/70 shadow-sm transition hover:-translate-y-0.5 hover:border-primary/30 hover:shadow-md"
+              >
+                <CardContent className="p-5">
+                  <div className="flex h-28 items-center justify-center overflow-hidden rounded-xl border bg-muted/40 p-4">
+                    {brand.logo ? (
                       <img
-                        src={imagePreviewUrl}
-                        className="h-full w-full object-cover"
-                        alt={t("form.logoPreviewAlt")}
+                        src={brand.logo}
+                        alt={t("card.logoAlt", { name: brand.name })}
+                        className="h-full w-full object-contain transition duration-300 group-hover:scale-105"
                       />
                     ) : (
-                      <span className="text-[10px] text-muted-foreground">
-                        {t("form.noImage")}
-                      </span>
+                      <div className="flex flex-col items-center gap-2 text-muted-foreground">
+                        <ImageIcon className="h-7 w-7" />
+                        <span className="text-xs">{t("card.noLogo")}</span>
+                      </div>
                     )}
                   </div>
+                  <div className="mt-4 min-w-0">
+                    <h2 className="truncate font-semibold" title={brand.name}>
+                      {brand.name}
+                    </h2>
+                    <p className="mt-1 truncate text-xs text-muted-foreground" title={brand.slug}>
+                      /{brand.slug}
+                    </p>
+                  </div>
+                  <div className="mt-4 flex items-center justify-between gap-3">
+                    <Badge variant="secondary" className="font-medium">
+                      <Package className="mr-1 h-3 w-3" />
+                      {t("card.products", { count: brand.productCount })}
+                    </Badge>
+                    <div className="flex gap-1">
+                      <Button
+                        type="button"
+                        size="icon"
+                        variant="ghost"
+                        onClick={() => openEdit(brand)}
+                        aria-label={t("actions.edit")}
+                      >
+                        <Edit3 className="h-4 w-4" />
+                      </Button>
+                      <Button
+                        type="button"
+                        size="icon"
+                        variant="ghost"
+                        className="text-destructive hover:bg-destructive/10 hover:text-destructive"
+                        onClick={() => setDeleting(brand)}
+                        aria-label={t("actions.delete")}
+                      >
+                        <Trash2 className="h-4 w-4" />
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        )}
 
+        {!error && pagination.pages > 1 ? (
+          <nav className="flex flex-col items-center justify-between gap-3 rounded-xl border bg-card p-4 shadow-sm sm:flex-row" aria-label={t("pagination.label")}>
+            <p className="text-sm text-muted-foreground">
+              {t("pagination.summary", {
+                page: pagination.page,
+                pages: pagination.pages,
+                total: pagination.total,
+              })}
+            </p>
+            <div className="flex items-center gap-1">
+              <Button
+                variant="outline"
+                size="icon"
+                disabled={loading || pagination.page <= 1}
+                onClick={() => onPageChange(pagination.page - 1)}
+                aria-label={t("pagination.previous")}
+              >
+                <ChevronLeft className="h-4 w-4" />
+              </Button>
+              {visiblePages.map((pageNumber) => (
+                <Button
+                  key={pageNumber}
+                  variant={pageNumber === pagination.page ? "default" : "outline"}
+                  size="icon"
+                  disabled={loading}
+                  onClick={() => onPageChange(pageNumber)}
+                >
+                  {pageNumber}
+                </Button>
+              ))}
+              <Button
+                variant="outline"
+                size="icon"
+                disabled={loading || pagination.page >= pagination.pages}
+                onClick={() => onPageChange(pagination.page + 1)}
+                aria-label={t("pagination.next")}
+              >
+                <ChevronRight className="h-4 w-4" />
+              </Button>
+            </div>
+          </nav>
+        ) : null}
+      </div>
+
+      <Dialog
+        open={modalOpen}
+        onOpenChange={(open) => {
+          if (submitting) return;
+          setModalOpen(open);
+          if (!open) resetModal();
+        }}
+      >
+        <DialogContent className="sm:max-w-lg">
+          <DialogHeader>
+            <DialogTitle>{editing ? t("modal.titleEdit") : t("modal.titleNew")}</DialogTitle>
+            <DialogDescription>{t("modal.description")}</DialogDescription>
+          </DialogHeader>
+          <div className="space-y-5 py-2">
+            <div className="space-y-2">
+              <Label htmlFor="brand-name">{t("form.name")}</Label>
+              <Input
+                id="brand-name"
+                value={form.name}
+                maxLength={200}
+                autoFocus
+                onChange={(event) => setForm((value) => ({ ...value, name: event.target.value }))}
+                placeholder={t("form.namePlaceholder")}
+              />
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="brand-logo">{t("form.logo")}</Label>
+              <div className="flex items-center gap-4 rounded-xl border bg-muted/20 p-4">
+                <div className="grid h-20 w-20 shrink-0 place-items-center overflow-hidden rounded-lg border bg-background p-2">
+                  {imagePreviewUrl ? (
+                    <img src={imagePreviewUrl} className="h-full w-full object-contain" alt={t("form.logoPreviewAlt")} />
+                  ) : (
+                    <ImageIcon className="h-6 w-6 text-muted-foreground" />
+                  )}
+                </div>
+                <div className="min-w-0 flex-1 space-y-2">
                   <Input
+                    id="brand-logo"
                     key={fileInputKey}
                     type="file"
                     accept="image/*"
-                    onChange={(e) => {
-                      const file = e.target.files?.[0];
+                    onChange={(event) => {
+                      const file = event.target.files?.[0];
                       if (!file) return;
-
-                      if (imagePreviewUrl?.startsWith("blob:")) {
-                        URL.revokeObjectURL(imagePreviewUrl);
-                      }
-
+                      if (imagePreviewUrl?.startsWith("blob:")) URL.revokeObjectURL(imagePreviewUrl);
                       setImageFile(file);
                       setImagePreviewUrl(URL.createObjectURL(file));
                     }}
                   />
+                  <p className="text-xs text-muted-foreground">{t("form.logoHint")}</p>
                 </div>
-
-                {(imagePreviewUrl || form.logo) && (
-                  <Button
-                    size="sm"
-                    variant="outline"
-                    className="mt-2"
-                    onClick={() => {
-                      if (imagePreviewUrl?.startsWith("blob:")) {
-                        URL.revokeObjectURL(imagePreviewUrl);
-                      }
-                      setImageFile(null);
-                      setImagePreviewUrl(null);
-                      setFileInputKey((k) => k + 1);
-                      setForm({ ...form, logo: null });
-                    }}
-                  >
-                    {t("form.removeImage")}
-                  </Button>
-                )}
               </div>
-
-              <Button onClick={submit} disabled={submitting} className="w-full">
-                {submitting
-                  ? t("actions.saving")
-                  : editing
-                    ? t("actions.update")
-                    : t("actions.create")}
-              </Button>
+              {(imagePreviewUrl || form.logo) ? (
+                <Button
+                  type="button"
+                  size="sm"
+                  variant="ghost"
+                  className="text-destructive"
+                  onClick={() => {
+                    if (imagePreviewUrl?.startsWith("blob:")) URL.revokeObjectURL(imagePreviewUrl);
+                    setImageFile(null);
+                    setImagePreviewUrl(null);
+                    setFileInputKey((value) => value + 1);
+                    setForm((value) => ({ ...value, logo: null }));
+                  }}
+                >
+                  <Trash2 className="mr-2 h-4 w-4" />{t("form.removeImage")}
+                </Button>
+              ) : null}
             </div>
           </div>
-        </div>
-      )}
-    </div>
+          <DialogFooter>
+            <Button type="button" variant="outline" disabled={submitting} onClick={() => setModalOpen(false)}>
+              {t("actions.cancel")}
+            </Button>
+            <Button type="button" disabled={submitting} onClick={submit}>
+              {submitting ? t("actions.saving") : editing ? t("actions.update") : t("actions.create")}
+            </Button>
+          </DialogFooter>
+        </DialogContent>
+      </Dialog>
+
+      <AlertDialog open={Boolean(deleting)} onOpenChange={(open) => !open && !deletingBusy && setDeleting(null)}>
+        <AlertDialogContent>
+          <AlertDialogHeader>
+            <AlertDialogTitle>{t("deleteDialog.title")}</AlertDialogTitle>
+            <AlertDialogDescription>
+              {t("deleteDialog.description", { name: deleting?.name ?? "" })}
+            </AlertDialogDescription>
+          </AlertDialogHeader>
+          <AlertDialogFooter>
+            <AlertDialogCancel disabled={deletingBusy}>{t("actions.cancel")}</AlertDialogCancel>
+            <AlertDialogAction
+              disabled={deletingBusy}
+              onClick={(event) => {
+                event.preventDefault();
+                void confirmDelete();
+              }}
+              className="bg-destructive text-destructive-foreground hover:bg-destructive/90"
+            >
+              {deletingBusy ? t("actions.deleting") : t("actions.delete")}
+            </AlertDialogAction>
+          </AlertDialogFooter>
+        </AlertDialogContent>
+      </AlertDialog>
+    </main>
   );
 }

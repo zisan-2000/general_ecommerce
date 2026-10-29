@@ -279,7 +279,7 @@ export async function GET(req: Request) {
     if (storefront && searchParams.get("fields") === "summary") {
       const summaries = await prisma.product.findMany({
         where: whereClause,
-        orderBy: { id: "desc" },
+        orderBy: [{ featured: "desc" }, { id: "desc" }],
         select: {
           id: true,
           name: true,
@@ -296,7 +296,7 @@ export async function GET(req: Request) {
     const products: any[] = storefront
       ? await prisma.product.findMany({
           where: whereClause,
-          orderBy: { id: "desc" },
+          orderBy: [{ featured: "desc" }, { id: "desc" }],
           select: {
             ...storefrontProductSelect,
             _count: { select: { reviews: true } },

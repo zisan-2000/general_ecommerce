@@ -59,6 +59,7 @@ type ProductDTO = {
   basePrice: number;
   originalPrice: number | null;
   currency: string;
+  featured: boolean;
   createdAt: string;
   ratingAvg: number;
   ratingCount: number;
@@ -275,6 +276,7 @@ export default function NewArrivals({
             basePrice,
             originalPrice,
             currency: String(p.currency ?? "BDT"),
+            featured: Boolean(p.featured),
             createdAt: String(p.createdAt ?? ""),
             ratingAvg: toNumber(p.ratingAvg, 0),
             ratingCount: toNumber(p.ratingCount, 0),
@@ -349,6 +351,7 @@ export default function NewArrivals({
     const list = [...items];
     list.sort(
       (a, b) =>
+        Number(Boolean(b.featured)) - Number(Boolean(a.featured)) ||
         new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
     );
     return list;
