@@ -73,7 +73,7 @@ test("checkout route performs replay lookup before stock validation and rechecks
   const [route, helper, migration] = await Promise.all([
     read("../app/api/orders/route-core.ts"),
     read("../lib/order-idempotency.ts"),
-    read("../prisma/migrations/20260903_order_checkout_idempotency/migration.sql"),
+    read("../prisma/migrations-release/20261029121000_order_checkout_lookup_index/migration.sql"),
   ]);
 
   const earlyReplay = route.search(

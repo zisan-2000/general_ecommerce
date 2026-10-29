@@ -3,6 +3,7 @@ import { Prisma, type PaymentState } from "@/generated/prisma";
 import { prisma } from "@/lib/prisma";
 import { PaymentControlError } from "./authorization";
 import { aiblWalletObject } from "@/lib/aibl-wallet-settings";
+import { tracePaymentId } from "./diagnostic-policy";
 
 const statuses = ["INITIATED", "AUTHORIZED", "CAPTURED", "FAILED", "REFUNDED", "VOIDED"] as const;
 const providers = ["EPS", "SSLCOMMERZ", "AIBL_WALLET"] as const;
@@ -34,11 +35,12 @@ export function paymentFilters(params: URLSearchParams) {
   const page = Number(params.get("page") || 1);
   if (!Number.isSafeInteger(page) || page < 1 || page > 10000) throw new PaymentControlError("Invalid page");
   const orderId = Number(q);
+  const tracedId = tracePaymentId(q);
   const where: Prisma.PaymentWhereInput = {
     orderId: { not: null }, provider: provider || { in: [...providers] },
     ...(status ? { status: status as PaymentState } : {}),
     createdAt: { gte: start, lte: end },
-    ...(q ? { OR: [{ externalId: { contains: q, mode: "insensitive" } },
+    ...(tracedId ? { id: tracedId } : q ? { OR: [{ externalId: { contains: q, mode: "insensitive" } },
       ...(Number.isSafeInteger(orderId) && orderId > 0 ? [{ orderId }] : [])] } : {}),
   };
   return { where, page, start, end, provider };

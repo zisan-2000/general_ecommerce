@@ -11,12 +11,14 @@ type ReturningConnector = (options: buildConnector.Options, callback: buildConne
 function tlsMetadata(socket: TLSSocket) {
   const cipher = socket.getCipher()?.standardName ?? socket.getCipher()?.name ?? null;
   const version = socket.getProtocol();
+  const expiry = Date.parse(socket.getPeerCertificate?.()?.valid_to ?? "");
   return {
     tlsVersion: version === "TLSv1.2" || version === "TLSv1.3" ? version : null,
     cipherSuite: cipher && /^(TLS_|ECDHE-|DHE-|AES|CHACHA20)[A-Z0-9_-]{1,72}$/.test(cipher) ? cipher : null,
     alpnProtocol: socket.alpnProtocol === "http/1.1" || socket.alpnProtocol === "h2" ? socket.alpnProtocol : null,
     certificateValidated: socket.authorized === true,
     sessionResumed: socket.isSessionReused(),
+    certificateExpiresAt: Number.isFinite(expiry) ? new Date(expiry).toISOString() : null,
   } as const;
 }
 

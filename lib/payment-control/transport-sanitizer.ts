@@ -44,6 +44,7 @@ const evidenceSchema = z.object({
       cipherSuite: z.string().regex(/^(TLS_|ECDHE-|DHE-|AES|CHACHA20)[A-Z0-9_-]{1,72}$/).nullable(),
       alpnProtocol: z.enum(["http/1.1", "h2"]).nullable(), certificateValidated: z.boolean().nullable(),
       sessionResumed: z.boolean().nullable(),
+      certificateExpiresAt: timestamp.nullable().optional(),
     }),
   }).nullable(),
 });

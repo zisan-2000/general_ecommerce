@@ -1,4 +1,7 @@
 export const SYSTEM_PERMISSIONS = [
+  { key: "payments.diagnostics.capture", description: "Authorize bounded payment packet capture and readiness jobs." },
+  { key: "payments.diagnostics.export", description: "Export sanitized payment investigation reports." },
+  { key: "payments.diagnostics.evidence", description: "Download restricted payment PCAPNG evidence." },
   {
     key: "admin.panel.access",
     description: "Access admin panel UI routes.",

@@ -88,7 +88,7 @@ test("successful checkout clears the completed PC Builder draft in every payment
     assert.match(source, /PC_BUILDER_EXTRA_ITEMS_STORAGE_KEY/);
     assert.match(source, /clearCompletedPcBuilderDraft\(\)/);
   }
-  assert.match(paymentResult, /if \(!success\) return/);
+  assert.match(paymentResult, /if \(!success \|\| !paymentId\) return/);
 });
 
 test("cart quantity controls keep the validated unit locked and use a standard companion line", async () => {

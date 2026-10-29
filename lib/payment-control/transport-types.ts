@@ -24,6 +24,7 @@ export type ConnectionEvidence = {
     alpnProtocol: "http/1.1" | "h2" | null;
     certificateValidated: boolean | null;
     sessionResumed: boolean | null;
+    certificateExpiresAt?: string | null;
   };
 };
 export type TransportAttemptEvidence = {

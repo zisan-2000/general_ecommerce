@@ -46,6 +46,9 @@ next-env.d.ts
 
 # Uploads
 /.private-upload/
+/.payment-evidence/
+*.pcapng
+*.pcap
 /public/uploads/
 /public/pdf.worker.min.mjs
 

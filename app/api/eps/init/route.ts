@@ -14,7 +14,13 @@ import { buildEpsInitializeBody, createEpsTransactionId, EpsError, epsCallbackUr
 export const runtime = "nodejs";
 
 export async function POST(request: NextRequest) {
-  let logContext: PaymentLogContext = { provider: "EPS", requestId: randomUUID() };
+  const requestId = randomUUID();
+  const response = await initialize(request, requestId);
+  response.headers.set("X-Payment-Request-Id", requestId);
+  return response;
+}
+async function initialize(request: NextRequest, requestId: string) {
+  let logContext: PaymentLogContext = { provider: "EPS", requestId };
   try {
     const limit = await rateLimitRequest(request, { scope: "eps-init", limit: 10, windowMs: 600_000 });
     if (!limit.allowed) return NextResponse.json({ error: "Too many EPS payment attempts" }, {

@@ -4,6 +4,10 @@ import createNextIntlPlugin from "next-intl/plugin";
 const withNextIntl = createNextIntlPlugin("./i18n/request.ts");
 
 const nextConfig: NextConfig = {
+  ...(process.env.PAYMENT_DIAGNOSTICS_VERIFY_BUILD === "true" ? {
+    distDir: ".next/payment-diagnostics-verification-build",
+    typescript: { tsconfigPath: "tsconfig.payment-diagnostics-verification.json" },
+  } : {}),
   // Keep isolated stock-verification builds separate from an active dev server.
   ...(process.env.WAREHOUSE_BUNDLE_VERIFY === "true" ? {
     distDir: ".next/warehouse-bundle-verification-build",
@@ -41,6 +45,15 @@ const nextConfig: NextConfig = {
     '/*': [
       './generated/prisma/schema.prisma',
       './generated/prisma/*.node',
+    ],
+  },
+  // Runtime secrets and customer/diagnostic evidence are provisioned separately
+  // from server code. Prisma otherwise traces the local repository .env file.
+  // These exclusions do not remove or change files on a running local/VPS host.
+  outputFileTracingExcludes: {
+    '/*': [
+      './.env*', './**/.env*', './.private-upload/**/*', './.payment-evidence/**/*',
+      './**/*.pcap', './**/*.pcapng', './**/*.pcapng.*',
     ],
   },
   // Additional build optimizations

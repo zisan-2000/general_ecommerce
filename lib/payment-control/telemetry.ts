@@ -4,7 +4,7 @@ import { prisma } from "@/lib/prisma";
 import { beginPaymentTransport, paymentTransportDispatcher } from "./transport-monitor";
 
 export type PaymentProvider = "EPS" | "SSLCOMMERZ" | "AIBL_WALLET";
-export type PaymentOperation = "AUTH" | "INITIALIZE" | "STATUS_QUERY" | "VERIFY" | "CALLBACK" | "SETTLEMENT" | "REFUND" | "DIAGNOSTIC";
+export type PaymentOperation = "AUTH" | "INITIALIZE" | "STATUS_QUERY" | "VERIFY" | "CALLBACK" | "SETTLEMENT" | "REFUND" | "DIAGNOSTIC" | "FRONTEND";
 export type PaymentOutcome = "REQUEST_STARTED" | "HTTP_SUCCESS" | "HTTP_ERROR" | "TIMEOUT" | "CONNECTION_ERROR" |
   "RECEIVED" | "REJECTED" | "SUCCESS" | "PENDING" | "FAILED" | "CANCELLED" | "DUPLICATE" | "MISMATCH" | "ERROR";
 export type PaymentLogContext = {
@@ -59,6 +59,8 @@ type PaymentEventInput = PaymentLogContext & {
     "VERIFICATION_MISMATCH" | "SETTLEMENT_REJECTED" | "INITIALIZE_REJECTED" | "REFUND_RECORDED" |
     "STATUS_CHECK_FAILED" | "ACCOUNT_CONFIGURATION_MISMATCH" | "RISK_REVIEW" | "INVALID_REFERENCE" |
     "AUTHENTICATION_REJECTED" | "CALLBACK_SUCCESS" | "CALLBACK_FAIL" | "CALLBACK_CANCEL" | "CALLBACK_IPN" |
+    "FRONTEND_VALIDATION_PASSED" | "FRONTEND_API_FAILED" | "FRONTEND_NETWORK_INTERRUPTED" |
+    "FRONTEND_REDIRECT_REQUESTED" | "FRONTEND_REDIRECT_FAILED" |
     NetworkErrorCode | AiblDiagnosticCode | InitiatorDiagnosticCode;
 };
 type NetworkErrorCode = "ECONNRESET" | "ECONNREFUSED" | "ETIMEDOUT" | "ENOTFOUND" | "EAI_AGAIN" |

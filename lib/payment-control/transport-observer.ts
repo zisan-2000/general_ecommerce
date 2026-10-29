@@ -44,7 +44,7 @@ function finished(start: Stamp, end: Stamp, error?: unknown): TransportMetric {
     errorCode: error ? transportErrorCode(error) : null };
 }
 export type TlsMetadata = { tlsVersion: string | null; cipherSuite: string | null;
-  alpnProtocol: "http/1.1" | "h2" | null; certificateValidated: boolean; sessionResumed: boolean };
+  alpnProtocol: "http/1.1" | "h2" | null; certificateValidated: boolean; sessionResumed: boolean; certificateExpiresAt?: string | null };
 
 // A connection never owns a payment request. Only sendHeaders(request, socket), or
 // the identical connector error object on request:error, establishes attribution.

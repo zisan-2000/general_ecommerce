@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { diagnosticPaymentFetch, diagnosticPaymentRedirect } from "@/lib/payment-control/browser-diagnostics";
 import Image from "next/image";
 import { useCart } from "@/components/ecommarce/CartContext";
 import { Button } from "@/components/ui/button";
@@ -143,10 +144,10 @@ export default function CheckoutPage() {
     if (!pendingAiblPayment || aiblBusy) return;
     setAiblBusy(true);
     try {
-      const response = await fetch(`/api/aibl-wallet/${action}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(pendingAiblPayment) });
+      const response = await diagnosticPaymentFetch(`/api/aibl-wallet/${action}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(pendingAiblPayment) }, pendingAiblPayment);
       const value = await response.json();
       if (!response.ok) { toast.error(value.error || "AIBL payment is awaiting review"); return; }
-      if (action === "init" && value.redirectUrl) { window.location.href = value.redirectUrl; return; }
+      if (action === "init" && value.redirectUrl) { diagnosticPaymentRedirect(value.redirectUrl, response, pendingAiblPayment); return; }
       if (value.status === "success") { router.replace("/ecommerce/payment-result"); router.refresh(); return; }
       toast.message(value.message || "AIBL payment is pending; inventory remains reserved");
     } catch { toast.error("Payment could not be confirmed. Verify the existing order before retrying."); }
@@ -849,11 +850,11 @@ export default function CheckoutPage() {
     if (!pendingEpsPayment || epsVerificationBusy) return;
     setEpsVerificationBusy(true);
     try {
-      const response = await fetch("/api/eps/init", { method: "POST", headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(pendingEpsPayment) });
+      const response = await diagnosticPaymentFetch("/api/eps/init", { method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(pendingEpsPayment) }, pendingEpsPayment);
       const result = await response.json();
       if (!response.ok || !result.redirectUrl) { toast.error(result.error || t("errors.gatewayStartFailed")); return; }
-      window.location.href = result.redirectUrl;
+      diagnosticPaymentRedirect(result.redirectUrl, response, pendingEpsPayment);
     } catch { toast.error(t("errors.gatewayStartFailed")); }
     finally { setEpsVerificationBusy(false); }
   };
@@ -989,7 +990,8 @@ export default function CheckoutPage() {
 
       if (isOnlinePayment) {
         const gatewayId = Number(paymentMethod.split(":")[1]);
-        const initRes = await fetch(isAiblWallet ? "/api/aibl-wallet/init" : isEPS ? "/api/eps/init" : "/api/sslcommerz/init", {
+        const diagnosticContext = { orderId: createdOrder.id, paymentInitToken: createdOrder.paymentInitToken || null };
+        const initRes = await diagnosticPaymentFetch(isAiblWallet ? "/api/aibl-wallet/init" : isEPS ? "/api/eps/init" : "/api/sslcommerz/init", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
@@ -997,7 +999,7 @@ export default function CheckoutPage() {
             gatewayId,
             paymentInitToken: createdOrder.paymentInitToken || null,
           }),
-        });
+        }, diagnosticContext);
 
         const initData = await initRes.json().catch(() => null);
         if (!initRes.ok || !initData?.redirectUrl) {
@@ -1005,7 +1007,7 @@ export default function CheckoutPage() {
           return;
         }
 
-        window.location.href = String(initData.redirectUrl);
+        diagnosticPaymentRedirect(String(initData.redirectUrl), initRes, diagnosticContext);
         return;
       }
 
