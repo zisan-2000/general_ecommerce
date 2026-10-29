@@ -970,7 +970,9 @@
       "currency": "العملة",
       "category": "الفئة *",
       "brand": "العلامة التجارية",
-      "select": "اختيار"
+      "select": "اختيار",
+      "searchBrand": "البحث عن العلامات التجارية...",
+      "noBrandsFound": "لم يتم العثور على علامات تجارية"
     },
     "productTypes": {
       "PHYSICAL": "مادي",

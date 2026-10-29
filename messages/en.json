@@ -970,7 +970,9 @@
       "currency": "Currency",
       "category": "Category *",
       "brand": "Brand",
-      "select": "Select"
+      "select": "Select",
+      "searchBrand": "Search brands...",
+      "noBrandsFound": "No brands found"
     },
     "productTypes": {
       "PHYSICAL": "PHYSICAL",

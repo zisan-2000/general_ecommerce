@@ -170,10 +170,9 @@ export default function ProductsPage() {
       setDigitalAssets(productsPageCache.digitalAssets);
       setFeatures(productsPageCache.features);
       setLoading(false);
-      return;
     }
 
-    setLoading(true);
+    if (!productsPageCache) setLoading(true);
     try {
       const featureResponse = await fetch("/api/store-features", {
         cache: "no-store",
@@ -189,7 +188,7 @@ export default function ProductsPage() {
         BUNDLES: featurePayload?.features?.BUNDLES ?? true,
         BOOKS: featurePayload?.features?.BOOKS ?? false,
       };
-      const [c, b, vat, da] = await Promise.all([
+      const results = await Promise.allSettled([
         fetchJsonArray<Category>("/api/categories", "categories"),
         fetchJsonArray<Brand>("/api/brands", "brands"),
         fetchJsonArray<VatClass>("/api/vat-classes", "VAT classes"),
@@ -198,13 +197,30 @@ export default function ProductsPage() {
           : Promise.resolve([]),
       ]);
 
-      productsPageCache = {
-        categories: c,
-        brands: b,
-        vatClasses: vat,
-        digitalAssets: da,
-        features: nextFeatures,
-      };
+      const [categoryResult, brandResult, vatResult, digitalAssetResult] = results;
+      const c = categoryResult.status === "fulfilled" ? categoryResult.value : [];
+      const b = brandResult.status === "fulfilled" ? brandResult.value : [];
+      const vat = vatResult.status === "fulfilled" ? vatResult.value : [];
+      const da =
+        digitalAssetResult.status === "fulfilled" ? digitalAssetResult.value : [];
+
+      for (const result of results) {
+        if (result.status === "rejected") {
+          console.error("Error loading product reference data:", result.reason);
+        }
+      }
+
+      // Do not permanently cache a partial response. Successful lists still
+      // render now, and a later visit retries whichever endpoint failed.
+      productsPageCache = results.every((result) => result.status === "fulfilled")
+        ? {
+            categories: c,
+            brands: b,
+            vatClasses: vat,
+            digitalAssets: da,
+            features: nextFeatures,
+          }
+        : null;
 
       setCategories(c);
       setBrands(b);

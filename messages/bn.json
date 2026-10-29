@@ -970,7 +970,9 @@
       "currency": "মুদ্রা",
       "category": "ক্যাটাগরি *",
       "brand": "ব্র্যান্ড",
-      "select": "নির্বাচন করুন"
+      "select": "নির্বাচন করুন",
+      "searchBrand": "ব্র্যান্ড খুঁজুন...",
+      "noBrandsFound": "কোনো ব্র্যান্ড পাওয়া যায়নি"
     },
     "productTypes": {
       "PHYSICAL": "ফিজিক্যাল",

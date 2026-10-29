@@ -9,10 +9,16 @@ const BrandsPage = memo(function BrandsPage() {
 
   const fetchBrands = useCallback(async () => {
     setLoading(true);
-    const res = await fetch("/api/brands", { cache: "no-store" });
-    const data = await res.json();
-    setBrands(data || []);
-    setLoading(false);
+    try {
+      const res = await fetch("/api/brands", { cache: "no-store" });
+      const data = await res.json().catch(() => null);
+      if (!res.ok) {
+        throw new Error(data?.error || "Failed to load brands");
+      }
+      setBrands(Array.isArray(data) ? data : []);
+    } finally {
+      setLoading(false);
+    }
   }, []);
 
   useEffect(() => {
@@ -26,7 +32,8 @@ const BrandsPage = memo(function BrandsPage() {
       body: JSON.stringify(payload),
     });
 
-    if (!res.ok) throw new Error("Create failed");
+    const data = await res.json().catch(() => null);
+    if (!res.ok) throw new Error(data?.error || "Create failed");
     await fetchBrands();
   };
 
@@ -37,7 +44,8 @@ const BrandsPage = memo(function BrandsPage() {
       body: JSON.stringify(payload),
     });
 
-    if (!res.ok) throw new Error("Update failed");
+    const data = await res.json().catch(() => null);
+    if (!res.ok) throw new Error(data?.error || "Update failed");
     await fetchBrands();
   };
 
@@ -46,7 +54,8 @@ const BrandsPage = memo(function BrandsPage() {
       method: "DELETE",
     });
 
-    if (!res.ok) throw new Error("Delete failed");
+    const data = await res.json().catch(() => null);
+    if (!res.ok) throw new Error(data?.error || "Delete failed");
     await fetchBrands();
   };
 

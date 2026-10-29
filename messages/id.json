@@ -970,7 +970,9 @@
       "currency": "Mata Uang",
       "category": "Kategori *",
       "brand": "Merek",
-      "select": "Pilih"
+      "select": "Pilih",
+      "searchBrand": "Cari merek...",
+      "noBrandsFound": "Merek tidak ditemukan"
     },
     "productTypes": {
       "PHYSICAL": "FISIK",

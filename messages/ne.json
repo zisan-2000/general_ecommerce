@@ -970,7 +970,9 @@
       "currency": "मुद्रा",
       "category": "श्रेणी *",
       "brand": "ब्रान्ड",
-      "select": "छान्नुहोस्"
+      "select": "छान्नुहोस्",
+      "searchBrand": "ब्रान्ड खोज्नुहोस्...",
+      "noBrandsFound": "कुनै ब्रान्ड फेला परेन"
     },
     "productTypes": {
       "PHYSICAL": "भौतिक",

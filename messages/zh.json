@@ -970,7 +970,9 @@
       "currency": "货币",
       "category": "分类 *",
       "brand": "品牌",
-      "select": "选择"
+      "select": "选择",
+      "searchBrand": "搜索品牌...",
+      "noBrandsFound": "未找到品牌"
     },
     "productTypes": {
       "PHYSICAL": "实体商品",
