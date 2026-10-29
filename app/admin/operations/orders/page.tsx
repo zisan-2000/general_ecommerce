@@ -2,7 +2,7 @@
 
 "use client";
 
-import { Suspense, useEffect, useMemo, useState, useCallback } from "react";
+import { Suspense, useEffect, useMemo, useState, useCallback, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
@@ -16,6 +16,14 @@ import {
   ASSIGNMENT_STATUS_LABELS,
 } from "@/components/delivery/AssignmentStatusBadge";
 import { getVariantMediaMeta } from "@/lib/product-variants";
+import {
+  AdminOrderEditError,
+  adminOrderGateway,
+  buildAdminOrderPatch,
+  gatewayConfirmationBlocked,
+  shipmentOrderStatusUpdate,
+  verifyAdminOrderPayment,
+} from "@/lib/admin-order-editor";
 
 type OrderStatusType =
   | "PENDING"
@@ -305,6 +313,9 @@ const OrderManagement = () => {
   const [detailLoading, setDetailLoading] = useState(false);
   const [detailError, setDetailError] = useState<string | null>(null);
   const [saving, setSaving] = useState(false);
+  const [verifyingPayment, setVerifyingPayment] = useState(false);
+  const [verificationNotice, setVerificationNotice] = useState<string | null>(null);
+  const detailGeneration = useRef(0);
   const [downloadingInvoice, setDownloadingInvoice] = useState(false);
   const [reviewingRefundId, setReviewingRefundId] = useState<number | null>(null);
   const [refundNotes, setRefundNotes] = useState<Record<number, string>>({});
@@ -685,6 +696,8 @@ const OrderManagement = () => {
 
   // Memoize handler functions
   const openDetails = useCallback((id: number) => {
+    detailGeneration.current += 1;
+    setVerificationNotice(null);
     setSelectedOrderId(id);
     setDetailOpen(true);
   }, []);
@@ -696,6 +709,8 @@ const OrderManagement = () => {
   }, [notificationOrderId, openDetails]);
 
   const handleCloseDetail = useCallback(() => {
+    detailGeneration.current += 1;
+    setVerificationNotice(null);
     setDetailOpen(false);
     setSelectedOrderId(null);
     setOrderDetail(null);
@@ -991,53 +1006,58 @@ const OrderManagement = () => {
     [refundTransactionIds, t],
   );
 
+  const handleVerifyPayment = useCallback(async () => {
+    if (!orderDetail || orderDetail.id !== selectedOrderId || saving || verifyingPayment || !adminOrderGateway(orderDetail)) return;
+    const generation = detailGeneration.current;
+    try {
+      setVerifyingPayment(true);
+      setVerificationNotice(null);
+      const { order: refreshed } = await verifyAdminOrderPayment(orderDetail);
+      orderListCache.clear();
+      if (generation !== detailGeneration.current) return;
+      setOrderDetail(refreshed);
+      setEditOrderStatus(refreshed.status);
+      setEditPaymentStatus(refreshed.paymentStatus);
+      setEditTransactionId(refreshed.transactionId || "");
+      setOrders((previous) => previous.map((order) => order.id === refreshed.id ? { ...order, ...refreshed } : order));
+      setVerificationNotice(t("detail.paymentVerificationResult", { status: t(`paymentStatus.${refreshed.paymentStatus}`) }));
+    } catch (error: unknown) {
+      if (generation !== detailGeneration.current) return;
+      setErrorMessage(error instanceof Error ? error.message : t("errors.genericError"));
+      setErrorOpen(true);
+    } finally {
+      setVerifyingPayment(false);
+    }
+  }, [orderDetail, selectedOrderId, saving, verifyingPayment, t]);
+
   // ---- UNIFIED SAVE: ORDER + SHIPMENT ----
   const handleSaveAll = useCallback(async () => {
-    if (!orderDetail) return;
+    if (!orderDetail || saving || verifyingPayment) return;
 
     try {
       setSaving(true);
 
-      // 1) Update Order (image DB theke already ache, ekhane change korchi na)
-      const orderRes = await fetch(`/api/orders/${orderDetail.id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          status: editOrderStatus,
-          paymentStatus: editPaymentStatus,
-          transactionId: editTransactionId || null,
-        }),
+      // Gateway-owned payment fields never belong to an admin order PATCH.
+      const orderPatch = buildAdminOrderPatch(orderDetail, {
+        status: editOrderStatus, paymentStatus: editPaymentStatus, transactionId: editTransactionId,
       });
+      if (orderPatch) {
+        const orderRes = await fetch(`/api/orders/${orderDetail.id}`, {
+          method: "PATCH",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(orderPatch),
+        });
+        const orderData = await orderRes.json().catch(() => ({}));
+        if (!orderRes.ok) {
+          throw new Error(orderData?.error || "Order update failed");
+        }
 
-      const orderData = await orderRes.json().catch(() => ({}));
-      if (!orderRes.ok) {
-        throw new Error(orderData?.error || "Order update failed");
+        // Use the server response; never overwrite payment state with a draft.
+        setOrderDetail((prev) => prev ? { ...prev, ...orderData } : prev);
+        setOrders((prev) => prev.map((order) =>
+          order.id === orderDetail.id ? { ...order, ...orderData } : order,
+        ));
       }
-
-      // local order state sync
-      setOrderDetail((prev) =>
-        prev
-          ? {
-              ...prev,
-              status: editOrderStatus,
-              paymentStatus: editPaymentStatus,
-              transactionId: editTransactionId || null,
-            }
-          : prev,
-      );
-      setOrders((prev) =>
-        prev.map((o) =>
-          o.id === orderDetail.id
-            ? {
-                ...o,
-                status: editOrderStatus,
-                paymentStatus: editPaymentStatus,
-              }
-            : o,
-        ),
-      );
 
       // Clear cache to force refresh on next load
       orderListCache.clear();
@@ -1116,16 +1136,7 @@ const OrderManagement = () => {
         applyShipmentState(data as Shipment);
       }
 
-      const shipmentToOrderStatus =
-        editShipmentStatus === "DELIVERED"
-          ? "DELIVERED"
-          : editShipmentStatus === "RETURNED"
-            ? "RETURNED"
-            : editShipmentStatus === "FAILED"
-              ? "FAILED"
-              : editShipmentStatus === "CANCELLED"
-                ? "CANCELLED"
-                : null;
+      const shipmentToOrderStatus = shipmentOrderStatusUpdate(shipment?.status, editShipmentStatus, editOrderStatus);
 
       if (shipmentToOrderStatus && shipmentToOrderStatus !== editOrderStatus) {
         try {
@@ -1142,6 +1153,7 @@ const OrderManagement = () => {
           const autoData = await autoRes.json().catch(() => ({}));
 
           if (autoRes.ok) {
+            setEditOrderStatus(shipmentToOrderStatus);
             setOrderDetail((prev) =>
               prev ? { ...prev, status: shipmentToOrderStatus } : prev,
             );
@@ -1165,14 +1177,18 @@ const OrderManagement = () => {
         "Order and shipment information updated successfully ✅",
       );
       setSuccessOpen(true);
-    } catch (err: any) {
-      setErrorMessage(err?.message || "Problem updating information");
+    } catch (err: unknown) {
+      setErrorMessage(err instanceof AdminOrderEditError ? t("detail.verifyBeforeConfirm")
+        : err instanceof Error ? err.message : "Problem updating information");
       setErrorOpen(true);
     } finally {
       setSaving(false);
     }
   }, [
     orderDetail,
+    saving,
+    verifyingPayment,
+    t,
     editOrderStatus,
     editPaymentStatus,
     editTransactionId,
@@ -1190,6 +1206,7 @@ const OrderManagement = () => {
   ]);
 
   const currentAssignment = shipment?.deliveryAssignments?.[0] ?? null;
+  const paymentGateway = orderDetail ? adminOrderGateway(orderDetail) : null;
   const selectedShipmentForAssignment = useMemo<ShipmentAssignmentOption[]>(
     () =>
       shipment
@@ -2373,6 +2390,7 @@ const OrderManagement = () => {
                         </p>
                         <select
                           value={editOrderStatus}
+                          disabled={saving || verifyingPayment}
                           onChange={(e) =>
                             setEditOrderStatus(
                               e.target.value as OrderStatusType,
@@ -2381,7 +2399,7 @@ const OrderManagement = () => {
                           className="w-full rounded-xl border border-border bg-card px-2 py-2 text-xs"
                         >
                           <option value="PENDING">{t("status.PENDING")}</option>
-                          <option value="CONFIRMED">
+                          <option value="CONFIRMED" disabled={gatewayConfirmationBlocked(orderDetail, "CONFIRMED")}>
                             {t("status.CONFIRMED")}
                           </option>
                           <option value="PROCESSING">
@@ -2408,7 +2426,10 @@ const OrderManagement = () => {
                           {t("detail.paymentStatusLabel")}
                         </p>
                         <select
-                          value={editPaymentStatus}
+                          value={paymentGateway ? orderDetail.paymentStatus : editPaymentStatus}
+                          disabled={!!paymentGateway || saving || verifyingPayment}
+                          aria-label={t("detail.paymentStatusLabel")}
+                          aria-describedby={paymentGateway ? "gateway-payment-note" : undefined}
                           onChange={(e) =>
                             setEditPaymentStatus(
                               e.target.value as PaymentStatusType,
@@ -2432,7 +2453,11 @@ const OrderManagement = () => {
                           {t("detail.transactionIdLabel")}
                         </p>
                         <input
-                          value={editTransactionId}
+                          value={paymentGateway ? orderDetail.transactionId || "" : editTransactionId}
+                          readOnly={!!paymentGateway}
+                          disabled={saving || verifyingPayment}
+                          aria-label={t("detail.transactionIdLabel")}
+                          aria-describedby={paymentGateway ? "gateway-payment-note" : undefined}
                           onChange={(e) => setEditTransactionId(e.target.value)}
                           placeholder={t("detail.transactionIdPlaceholder")}
                           className="w-full rounded-xl border border-border bg-card px-3 py-2 text-xs outline-none"
@@ -2442,6 +2467,18 @@ const OrderManagement = () => {
                     <p className="mt-1 text-[10px] text-muted-foreground">
                       {t("detail.adminOnlyNote")}
                     </p>
+                    {paymentGateway && <div className="mt-3 space-y-2 text-xs">
+                      <p id="gateway-payment-note" className="text-muted-foreground">{t("detail.gatewayPaymentReadOnly")}</p>
+                      {gatewayConfirmationBlocked(orderDetail, "CONFIRMED") && <p>{t("detail.verifyBeforeConfirm")}</p>}
+                      <button type="button" onClick={handleVerifyPayment}
+                        disabled={saving || verifyingPayment || orderDetail.paymentStatus !== "UNPAID"}
+                        className="rounded-xl border border-border px-3 py-2 hover:bg-muted disabled:opacity-60">
+                        {verifyingPayment ? t("detail.verifyingPayment") : t("detail.verifyGatewayPayment", {
+                          gateway: paymentGateway === "EPS" ? "EPS" : "AIBL Wallet",
+                        })}
+                      </button>
+                      {verificationNotice && <p role="status">{verificationNotice}</p>}
+                    </div>}
                   </div>
 
                   {/* 5. Shipment */}
@@ -2916,7 +2953,7 @@ const OrderManagement = () => {
                     <button
                       type="button"
                       onClick={handleSaveAll}
-                      disabled={saving}
+                      disabled={saving || verifyingPayment}
                       className="w-full rounded-full bg-primary px-4 py-2 text-xs font-medium text-primary-foreground hover:bg-primary/90 disabled:opacity-60"
                     >
                       {saving ? t("actions.saving") : t("actions.saveAll")}
