@@ -22,6 +22,7 @@
     "test:search": "tsx --test tests/search.test.mjs",
     "test:order-inventory": "node --import tsx --test tests/order-inventory-lifecycle.test.mjs tests/order-warehouse-stock.test.mjs",
     "test:order-idempotency": "node --import tsx --test tests/order-idempotency.test.mjs",
+    "test:admin-order-editor": "tsx --test tests/admin-order-gateway-edit.test.mjs",
     "test:aibl-wallet:offline": "node --test --test-concurrency=1 tests/aibl-wallet-callback.test.mjs tests/aibl-wallet-settlement.test.mjs",
     "test:payment-inspector": "node --test tests/payment-technical-inspector.test.mjs",
     "inspect:payment": "tsx scripts/payment-inspector.mjs",
