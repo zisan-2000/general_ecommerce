@@ -3891,7 +3891,7 @@
       "deleteFailed": "Failed to delete brand"
     },
     "stats": { "totalBrands": "Total brands", "productsOnPage": "Products on page", "currentPage": "Current page" },
-    "search": { "placeholder": "Search by brand name or slug...", "clear": "Clear search", "results": "{count} brands found" },
+    "search": { "placeholder": "Search by brand name or slug...", "clear": "Clear search", "results": "{count} brands found", "sortLabel": "Sort brands", "newest": "Newest first", "nameAsc": "Name: A–Z", "nameDesc": "Name: Z–A" },
     "pagination": { "label": "Brand pagination", "previous": "Previous page", "next": "Next page", "summary": "Page {page} of {pages} · {total} total" },
     "deleteDialog": { "title": "Delete this brand?", "description": "{name} will be removed from active brand lists. Existing product history will be preserved." }
   },

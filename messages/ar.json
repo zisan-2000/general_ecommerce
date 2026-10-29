@@ -3871,7 +3871,7 @@
       "deleteFailed": "فشل حذف العلامة التجارية"
     },
     "stats": { "totalBrands": "إجمالي العلامات", "productsOnPage": "منتجات الصفحة", "currentPage": "الصفحة الحالية" },
-    "search": { "placeholder": "البحث بالاسم أو الرابط...", "clear": "مسح البحث", "results": "تم العثور على {count} علامة" },
+    "search": { "placeholder": "البحث بالاسم أو الرابط...", "clear": "مسح البحث", "results": "تم العثور على {count} علامة", "sortLabel": "ترتيب العلامات", "newest": "الأحدث أولاً", "nameAsc": "الاسم: A–Z", "nameDesc": "الاسم: Z–A" },
     "pagination": { "label": "ترقيم صفحات العلامات", "previous": "الصفحة السابقة", "next": "الصفحة التالية", "summary": "الصفحة {page} من {pages} · الإجمالي {total}" },
     "deleteDialog": { "title": "حذف هذه العلامة؟", "description": "ستتم إزالة {name} من القوائم النشطة مع الاحتفاظ بسجل المنتجات." }
   },

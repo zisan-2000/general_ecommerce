@@ -20,6 +20,8 @@ export interface BrandPagination {
   pageSize: number;
 }
 
+export type BrandSort = "newest" | "name-asc" | "name-desc";
+
 const EMPTY_PAGINATION: BrandPagination = {
   total: 0,
   page: 1,
@@ -31,6 +33,7 @@ export default function BrandsPage() {
   const [brands, setBrands] = useState<AdminBrand[]>([]);
   const [pagination, setPagination] = useState(EMPTY_PAGINATION);
   const [search, setSearch] = useState("");
+  const [sort, setSort] = useState<BrandSort>("newest");
   const [debouncedSearch, setDebouncedSearch] = useState("");
   const [page, setPage] = useState(1);
   const [revision, setRevision] = useState(0);
@@ -44,7 +47,7 @@ export default function BrandsPage() {
 
   useEffect(() => {
     setPage(1);
-  }, [debouncedSearch]);
+  }, [debouncedSearch, sort]);
 
   useEffect(() => {
     const controller = new AbortController();
@@ -52,6 +55,7 @@ export default function BrandsPage() {
       paginated: "true",
       page: String(page),
       pageSize: "12",
+      sort,
     });
     if (debouncedSearch) params.set("search", debouncedSearch);
 
@@ -86,7 +90,7 @@ export default function BrandsPage() {
     })();
 
     return () => controller.abort();
-  }, [debouncedSearch, page, revision]);
+  }, [debouncedSearch, page, revision, sort]);
 
   const refresh = useCallback(() => setRevision((value) => value + 1), []);
 
@@ -131,9 +135,11 @@ export default function BrandsPage() {
       brands={brands}
       pagination={pagination}
       search={search}
+      sort={sort}
       loading={loading}
       error={error}
       onSearchChange={setSearch}
+      onSortChange={setSort}
       onPageChange={setPage}
       onRetry={refresh}
       onCreate={handleCreate}

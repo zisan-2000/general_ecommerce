@@ -3871,7 +3871,7 @@
       "deleteFailed": "Gagal menghapus merek"
     },
     "stats": { "totalBrands": "Total merek", "productsOnPage": "Produk di halaman", "currentPage": "Halaman saat ini" },
-    "search": { "placeholder": "Cari nama atau slug merek...", "clear": "Hapus pencarian", "results": "{count} merek ditemukan" },
+    "search": { "placeholder": "Cari nama atau slug merek...", "clear": "Hapus pencarian", "results": "{count} merek ditemukan", "sortLabel": "Urutkan merek", "newest": "Terbaru lebih dulu", "nameAsc": "Nama: A–Z", "nameDesc": "Nama: Z–A" },
     "pagination": { "label": "Paginasi merek", "previous": "Halaman sebelumnya", "next": "Halaman berikutnya", "summary": "Halaman {page} dari {pages} · total {total}" },
     "deleteDialog": { "title": "Hapus merek ini?", "description": "{name} akan dihapus dari daftar aktif. Riwayat produk tetap tersimpan." }
   },

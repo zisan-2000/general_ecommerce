@@ -43,6 +43,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 import type {
   AdminBrand,
   BrandPagination,
+  BrandSort,
 } from "@/app/admin/management/brands/page";
 
 type BrandPayload = { name: string; logo: string | null };
@@ -51,9 +52,11 @@ interface BrandManagerProps {
   brands: AdminBrand[];
   pagination: BrandPagination;
   search: string;
+  sort: BrandSort;
   loading: boolean;
   error: string;
   onSearchChange: (value: string) => void;
+  onSortChange: (value: BrandSort) => void;
   onPageChange: (page: number) => void;
   onRetry: () => void;
   onCreate: (payload: BrandPayload) => Promise<void>;
@@ -73,9 +76,11 @@ export default function BrandManager({
   brands,
   pagination,
   search,
+  sort,
   loading,
   error,
   onSearchChange,
+  onSortChange,
   onPageChange,
   onRetry,
   onCreate,
@@ -253,8 +258,9 @@ export default function BrandManager({
 
         <Card className="border-border/70 shadow-sm">
           <CardContent className="p-4 sm:p-5">
-            <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-              <div className="relative w-full sm:max-w-md">
+            <div className="flex flex-col gap-3 lg:flex-row lg:items-center lg:justify-between">
+              <div className="flex w-full flex-col gap-3 sm:flex-row lg:max-w-2xl">
+                <div className="relative min-w-0 flex-1">
                 <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
                 <Input
                   value={search}
@@ -272,6 +278,17 @@ export default function BrandManager({
                     <X className="h-4 w-4" />
                   </button>
                 ) : null}
+                </div>
+                <select
+                  value={sort}
+                  onChange={(event) => onSortChange(event.target.value as BrandSort)}
+                  aria-label={t("search.sortLabel")}
+                  className="h-11 rounded-md border border-input bg-background px-3 text-sm shadow-sm outline-none focus:ring-2 focus:ring-ring sm:w-48"
+                >
+                  <option value="newest">{t("search.newest")}</option>
+                  <option value="name-asc">{t("search.nameAsc")}</option>
+                  <option value="name-desc">{t("search.nameDesc")}</option>
+                </select>
               </div>
               <p className="text-sm text-muted-foreground">
                 {t("search.results", { count: pagination.total })}

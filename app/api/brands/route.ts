@@ -45,6 +45,7 @@ export async function GET(req: Request) {
     const storefront = isStorefrontRequest(req);
     const paginated = !storefront && searchParams.get("paginated") === "true";
     const search = searchParams.get("search")?.trim() ?? "";
+    const sort = searchParams.get("sort") ?? "newest";
     const requestedPage = Number(searchParams.get("page") || 1);
     const requestedPageSize = Number(searchParams.get("pageSize") || 12);
     const page = Number.isSafeInteger(requestedPage) && requestedPage > 0
@@ -64,11 +65,17 @@ export async function GET(req: Request) {
           }
         : {}),
     };
+    const orderBy =
+      sort === "name-asc"
+        ? [{ name: "asc" as const }, { id: "asc" as const }]
+        : sort === "name-desc"
+          ? [{ name: "desc" as const }, { id: "desc" as const }]
+          : [{ createdAt: "desc" as const }, { id: "desc" as const }];
 
     const [brands, total] = await Promise.all([
       prisma.brand.findMany({
       where,
-      orderBy: { id: "desc" },
+      orderBy: paginated ? orderBy : { id: "desc" },
       ...(paginated ? { skip: (page - 1) * pageSize, take: pageSize } : {}),
       include: {
         _count: {

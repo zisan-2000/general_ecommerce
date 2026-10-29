@@ -3891,7 +3891,7 @@
       "deleteFailed": "ব্র্যান্ড মুছে ফেলা যায়নি"
     },
     "stats": { "totalBrands": "মোট ব্র্যান্ড", "productsOnPage": "এই পৃষ্ঠার পণ্য", "currentPage": "বর্তমান পৃষ্ঠা" },
-    "search": { "placeholder": "ব্র্যান্ডের নাম বা স্লাগ দিয়ে খুঁজুন...", "clear": "সার্চ মুছুন", "results": "{count}টি ব্র্যান্ড পাওয়া গেছে" },
+    "search": { "placeholder": "ব্র্যান্ডের নাম বা স্লাগ দিয়ে খুঁজুন...", "clear": "সার্চ মুছুন", "results": "{count}টি ব্র্যান্ড পাওয়া গেছে", "sortLabel": "ব্র্যান্ড সাজান", "newest": "নতুন আগে", "nameAsc": "নাম: A–Z", "nameDesc": "নাম: Z–A" },
     "pagination": { "label": "ব্র্যান্ড পেজিনেশন", "previous": "আগের পৃষ্ঠা", "next": "পরের পৃষ্ঠা", "summary": "পৃষ্ঠা {page}/{pages} · মোট {total}" },
     "deleteDialog": { "title": "এই ব্র্যান্ড মুছবেন?", "description": "{name} সক্রিয় ব্র্যান্ড তালিকা থেকে সরানো হবে। পুরোনো পণ্যের ইতিহাস সংরক্ষিত থাকবে।" }
   },
